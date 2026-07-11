@@ -1,0 +1,1269 @@
+{
+  "topic_id": "administracao-financeira-e-orcamentaria-afo",
+  "topic_title": "Administração Financeira e Orçamentária (AFO)",
+  "discipline": "Administração Financeira e Orçamentária",
+  "sections": [
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-01",
+      "title": "Introdução à Administração Financeira e Orçamentária",
+      "content_markdown": "A Administração Financeira e Orçamentária (AFO) é um ramo do estudo voltado para a compreensão de como o Estado planeja, capta, gerencia e despende os recursos públicos para atender às necessidades da sociedade. Para facilitar a compreensão e o domínio completo da disciplina, o conteúdo programático é estruturado em grandes eixos temáticos, que abrangem desde os conceitos doutrinários até as normas constitucionais e legais mais recentes.",
+      "callouts": [],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Qual é o foco principal da Administração Financeira e Orçamentária (AFO)?",
+          "answer": "A AFO foca em como o Estado planeja, capta, gerencia e despende os recursos públicos para atender às necessidades da sociedade."
+        },
+        {
+          "question": "Quais são os principais eixos temáticos da AFO?",
+          "answer": "Os eixos temáticos abrangem desde os conceitos doutrinários até as normas constitucionais e legais mais recentes, como Orçamento Público, Receita Pública e Despesa Pública."
+        },
+        {
+          "question": "Por que a AFO é importante para o Estado?",
+          "answer": "A AFO é essencial para garantir que o Estado utilize seus recursos de forma eficiente e transparente, atendendo às necessidades da sociedade."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    resumo[\"Resumo visual<br/>ver detalhes no texto\"]\n    grupo_1[\"Administração Financeira e<br/>Orçamentária; Orçamento<br/>Público; Tipos de Orçamento;<br/>Princípios Orçamentários\"]\n    resumo --> grupo_1\n    grupo_2[\"Leis Orçamentárias PPA LDO<br/>LOA; Créditos Adicionais;<br/>Ciclo Orçamentário; Receita<br/>Pública\"]\n    resumo --> grupo_2\n    grupo_3[\"Classificações MCASP;<br/>Estágios da Receita; Dívida<br/>Ativa; Regras da LRF\"]\n    resumo --> grupo_3\n    grupo_4[\"Despesa Pública;<br/>Classificações da Despesa;<br/>Estágios da Despesa; Restos<br/>a Pagar e DEA\"]\n    resumo --> grupo_4\n    grupo_5[\"Regras de Pessoal LRF\"]\n    resumo --> grupo_5"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-02",
+      "title": "Tipos de Orçamento Público",
+      "content_markdown": "O orçamento público evoluiu historicamente de um mero instrumento de controle político e contábil para uma ferramenta essencial de planejamento e desenvolvimento econômico. O estudo das tipologias orçamentárias analisa essa evolução e as características de cada modelo:\n\n*   **Orçamento Tradicional (Clássico):** Focado estritamente no controle político e na limitação de gastos. Não há preocupação com o planejamento ou com os resultados das ações governamentais.\n*   **Orçamento de Desempenho (Funcional):** Introduz a preocupação com o que o governo faz, embora ainda falte uma vinculação estreita com um planejamento centralizado de longo prazo.\n*   **Orçamento-Programa:** O modelo moderno, adotado no Brasil, que integra o planejamento às ações governamentais. Cada despesa está vinculada a um programa de trabalho e a objetivos específicos.\n*   **Orçamento Base-Zero (OBZ):** Metodologia em que todas as despesas devem ser justificadas a cada novo ciclo orçamentário, não havendo direito adquirido a dotações anteriores.\n*   **Orçamento Participativo:** Mecanismo que permite a participação direta da sociedade na definição de prioridades para a alocação de parte dos recursos públicos.",
+      "callouts": [],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Qual tipo de orçamento foca apenas no controle político e na limitação de gastos?",
+          "answer": "O Orçamento Tradicional (Clássico)."
+        },
+        {
+          "question": "Qual modelo orçamentário é adotado no Brasil e integra planejamento e ações governamentais?",
+          "answer": "O Orçamento-Programa."
+        },
+        {
+          "question": "No Orçamento Base-Zero, qual a premissa principal para as despesas?",
+          "answer": "Todas as despesas devem ser justificadas a cada novo ciclo orçamentário, partindo do zero, sem direito adquirido a dotações anteriores."
+        },
+        {
+          "question": "O que caracteriza o Orçamento de Desempenho?",
+          "answer": "Ele se preocupa com o que o governo faz, mas ainda sem uma vinculação estreita com o planejamento de longo prazo."
+        }
+      ],
+      "mermaid_mindmap": "graph TD\n    A[Tipos de Orçamento Público]\n    A --> B[\"Tradicional (Clássico)\"]\n    A --> C[\"Desempenho (Funcional)\"]\n    A --> D[Programa]\n    A --> E[\"Base-Zero (OBZ)\"]\n    A --> F[Participativo]"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-03",
+      "title": "Fundamentos do Orçamento Público: Constituição Federal e Lei 4.320",
+      "content_markdown": "O arcabouço jurídico do orçamento brasileiro encontra-se fundamentado na Constituição Federal de 1988 e na Lei Federal nº 4.320/1964. Esses diplomas regulam a elaboração, a execução e o controle do orçamento público.\n\n### Princípios Orçamentários\n\nOs princípios orçamentários são regras básicas e norteadoras que devem ser obrigatoriamente observadas na elaboração e na execução das leis orçamentárias. Eles garantem a transparência, o controle e a consistência das finanças públicas.\n\n*   **Unidade:** O orçamento deve ser uno, ou seja, cada ente da federação deve possuir apenas um orçamento para cada exercício financeiro.\n*   **Universalidade:** O orçamento deve conter todas as receitas e todas as despesas de forma global.\n*   **Anualidade (Periodicidade):** O orçamento deve ser elaborado para vigorar durante um período correspondente ao exercício financeiro (que no Brasil coincide com o ano civil).\n*   **Exclusividade:** A lei orçamentária anual não conterá matéria estranha à previsão da receita e à fixação da despesa, ressalvadas a autorização para abertura de créditos suplementares e a contratação de operações de crédito.\n*   **Orçamento Bruto:** Todas as parcelas de receita e de despesa devem constar do orçamento pelos seus valores brutos, sem deduções.\n*   **Não Vinculação (Não Afetação) das Receitas de Impostos:** É vedada a vinculação de receita de impostos a órgão, fundo ou despesa, ressalvadas as exceções expressas na Constituição Federal.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Principais Diretrizes",
+          "text": "Os princípios orçamentários são regras básicas e norteadoras que devem ser obrigatoriamente observadas na elaboração e na execução das leis orçamentárias, garantindo transparência, controle e consistência das finanças públicas."
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "UUAEON",
+          "meaning": "Unidade, Universalidade, Anualidade, Exclusividade, Orçamento Bruto, Não Vinculação",
+          "description": "Mnemônico para lembrar os principais princípios orçamentários."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Quais são os dois diplomas legais que fundamentam o orçamento brasileiro?",
+          "answer": "A Constituição Federal de 1988 e a Lei Federal nº 4.320/1964."
+        },
+        {
+          "question": "O que o princípio da Unidade estabelece?",
+          "answer": "Que cada ente da federação deve possuir apenas um orçamento para cada exercício financeiro."
+        },
+        {
+          "question": "Qual princípio proíbe a vinculação de receita de impostos a órgão, fundo ou despesa?",
+          "answer": "O princípio da Não Vinculação (ou Não Afetação) das Receitas de Impostos."
+        },
+        {
+          "question": "O que o princípio da Exclusividade veda na LOA?",
+          "answer": "Matéria estranha à previsão da receita e à fixação da despesa, com ressalvas para créditos suplementares e operações de crédito."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    Principios_Orcamentarios_0[\"Princípios Orçamentários\"]\n    Unidade_1[\"Unidade\"]\n    Universalidade_2[\"Universalidade\"]\n    Anualidade_3[\"Anualidade\"]\n    Exclusividade_4[\"Exclusividade\"]\n    Orcamento_Bruto_5[\"Orçamento Bruto\"]\n    Nao_Vinculacao_de_Impostos_6[\"Não Vinculação de Impostos\"]\n    Principios_Orcamentarios_0 --> Unidade_1\n    Principios_Orcamentarios_0 --> Universalidade_2\n    Principios_Orcamentarios_0 --> Anualidade_3\n    Principios_Orcamentarios_0 --> Exclusividade_4\n    Principios_Orcamentarios_0 --> Orcamento_Bruto_5\n    Principios_Orcamentarios_0 --> Nao_Vinculacao_de_Impostos_6"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-04",
+      "title": "Leis Orçamentárias: PPA, LDO e LOA",
+      "content_markdown": "O modelo de planejamento e orçamento brasileiro é composto por três leis de iniciativa do Poder Executivo, que atuam de forma integrada:\n\n1.  **Plano Plurianual (PPA):** Instrumento de planejamento de médio prazo que estabelece, de forma regionalizada, as diretrizes, objetivos e metas da administração pública para as despesas de capital e outras delas decorrentes, bem como para as relativas aos programas de duração continuada.\n2.  **Lei de Diretrizes Orçamentárias (LDO):** Compreende as metas e prioridades da administração pública, orienta a elaboração da Lei Orçamentária Anual, dispõe sobre as alterações na legislação tributária e estabelece a política de aplicação das agências financeiras oficiais de fomento.\n3.  **Lei Orçamentária Anual (LOA):** Estima as receitas e fixa as despesas para o exercício financeiro, sendo composta por três orçamentos:\n    *   Orçamento Fiscal.\n    *   Orçamento da Seguridade Social.\n    *   Orçamento de Investimento das Empresas Estatais.",
+      "callouts": [],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Qual é a função principal do Plano Plurianual (PPA)?",
+          "answer": "Estabelecer as diretrizes, objetivos e metas de médio prazo da administração pública, de forma regionalizada."
+        },
+        {
+          "question": "Como a Lei de Diretrizes Orçamentárias (LDO) se relaciona com a LOA?",
+          "answer": "A LDO orienta a elaboração da Lei Orçamentária Anual (LOA), definindo metas e prioridades."
+        },
+        {
+          "question": "Quais são os três orçamentos que compõem a Lei Orçamentária Anual (LOA)?",
+          "answer": "Orçamento Fiscal, Orçamento da Seguridade Social e Orçamento de Investimento das Empresas Estatais."
+        },
+        {
+          "question": "Qual lei orçamentária dispõe sobre as alterações na legislação tributária?",
+          "answer": "A Lei de Diretrizes Orçamentárias (LDO)."
+        }
+      ],
+      "mermaid_mindmap": "graph TD\n    PPA[Plano Plurianual - PPA] -->|Diretrizes, Objetivos e Metas| LDO[\"Lei de Diretrizes<br/>Orçamentárias - LDO\"]\n    LDO -->|Metas e Prioridades| LOA[Lei Orçamentária Anual - LOA]"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-05",
+      "title": "Créditos Adicionais: Tipos e Finalidades",
+      "content_markdown": "Os créditos adicionais são autorizações de despesa não computadas ou insuficientemente dotadas na Lei de Orçamento. Eles servem para dar flexibilidade à execução orçamentária diante de imprevistos.\n\n| Tipo de Crédito | Finalidade | Autorização Legislativa | Fonte de Recursos |\n| :--- | :--- | :--- | :--- |\n| **Suplementares** | Reforço de dotação orçamentária já existente. | Prévia (pode ser na própria LOA). | Exige indicação de recursos disponíveis. |\n| **Especiais** | Destinados a despesas para as quais não haja dotação orçamentária específica. | Prévia (por lei específica). | Exige indicação de recursos disponíveis. |\n| **Extraordinários** | Destinados a despesas urgentes e imprevistas (guerra, comoção interna ou calamidade pública). | Dispensada a autorização prévia (abertos por Medida Provisória na União). | Não exige indicação prévia de recursos. |",
+      "callouts": [],
+      "mnemonics": [
+        {
+          "key": "SEE",
+          "meaning": "Suplementares, Especiais, Extraordinários",
+          "description": "Mnemônico para lembrar os tipos de créditos adicionais."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Qual a finalidade de um Crédito Suplementar?",
+          "answer": "Reforçar uma dotação orçamentária já existente que se mostrou insuficiente."
+        },
+        {
+          "question": "Quando um Crédito Especial é utilizado?",
+          "answer": "Para despesas para as quais não haja dotação orçamentária específica na LOA."
+        },
+        {
+          "question": "Qual tipo de crédito adicional é usado para despesas urgentes e imprevistas, como guerra ou calamidade pública?",
+          "answer": "Créditos Extraordinários."
+        },
+        {
+          "question": "Qual tipo de crédito adicional dispensa autorização legislativa prévia?",
+          "answer": "Créditos Extraordinários, que podem ser abertos por Medida Provisória na União."
+        }
+      ],
+      "mermaid_mindmap": "graph TD\n    A[Créditos Adicionais]\n    A --> B[\"Suplementares: Reforço de<br/>dotação existente\"]\n    A --> C[\"Especiais: Despesa nova sem<br/>dotação\"]\n    A --> D[\"Extraordinários: Urgentes e<br/>Imprevistos\"]"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-06",
+      "title": "Prazos e Ciclos do Orçamento Público",
+      "content_markdown": "Os prazos para envio e devolução dos projetos de lei do PPA, da LDO e da LOA são definidos na Constituição Federal e no Ato das Disposições Constitucionais Transitórias (ADCT). Esses prazos garantem a harmonia e a tempestividade do processo de planejamento.\n\n### Ciclo Macro Orçamentário (Ciclo de 8 Fases)\n\nO ciclo macro orçamentário compreende um processo contínuo e dinâmico que envolve o planejamento de longo prazo até a avaliação final das políticas públicas. Ele é composto por oito fases integradas:\n\n1.  **Formulação do Planejamento de Longo Prazo**\n2.  **Elaboração das Diretrizes e Metas**\n3.  **Proposição do Orçamento Anual**\n4.  **Apreciação e Aprovação Legislativa**\n5.  **Execução Orçamentária e Financeira**\n6.  **Monitoramento da Execução**\n7.  **Controle e Avaliação dos Resultados**\n8.  **Julgamento das Contas Públicas**\n\n### Ciclo \"Micro\" Orçamentário (Somente LOA)\n\nFocado exclusivamente na Lei Orçamentária Anual, o ciclo micro orçamentário detalha as etapas pelas quais a LOA passa anualmente:\n1.  **Elaboração:** Consolidação das propostas setoriais pelo Poder Executivo.\n2.  **Discussão, Votação e Aprovação:** Fase que ocorre no âmbito do Poder Legislativo.\n3.  **Execução:** Realização das receitas e despesas autorizadas ao longo do exercício.\n4.  **Controle e Avaliação:** Fiscalização interna e externa (com auxílio dos Tribunais de Contas) sobre a regularidade da aplicação dos recursos.",
+      "callouts": [],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Quem define os prazos para envio e devolução dos projetos de lei do PPA, LDO e LOA?",
+          "answer": "A Constituição Federal e o Ato das Disposições Constitucionais Transitórias (ADCT)."
+        },
+        {
+          "question": "Quantas fases compõem o Ciclo Macro Orçamentário?",
+          "answer": "Oito fases."
+        },
+        {
+          "question": "Qual a primeira fase do Ciclo Macro Orçamentário?",
+          "answer": "Formulação do Planejamento de Longo Prazo."
+        },
+        {
+          "question": "Quais são as quatro etapas do Ciclo Micro Orçamentário (focado na LOA)?",
+          "answer": "Elaboração, Discussão/Votação/Aprovação, Execução e Controle/Avaliação."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    F1[\"1. Formulação do<br/>Planejamento de Longo Prazo\"] --> F2[\"2. Elaboração das Diretrizes<br/>e Metas\"]\n    F2 --> F3[\"3. Proposição do Orçamento<br/>Anual\"]\n    F3 --> F4[\"4. Apreciação e Aprovação<br/>Legislativa\"]\n    F4 --> F5[\"5. Execução Orçamentária e<br/>Financeira\"]\n    F5 --> F6[6. Monitoramento da Execução]\n    F6 --> F7[\"7. Controle e Avaliação dos<br/>Resultados\"]\n    F7 --> F8[\"8. Julgamento das Contas<br/>Públicas\"]\n    F8 --> F1"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-07",
+      "title": "Despesa com Pessoal e Vedações Orçamentárias",
+      "content_markdown": "### Despesa com Pessoal (Art. 169 da CF)\n\nA despesa com pessoal ativo e inativo da administração pública direta e indireta (incluindo autarquias e fundações) está sujeita a limites estritos estabelecidos em lei complementar, visando à sustentabilidade fiscal do Estado. A concessão de qualquer vantagem ou aumento de remuneração depende de:\n*   Prévia dotação orçamentária suficiente para atender às projeções de despesa de pessoal e aos acréscimos dela decorrentes.\n*   Autorização específica na Lei de Diretrizes Orçamentárias (LDO), ressalvadas as empresas públicas e as sociedades de economia mista.\n\n### Vedações (Art. 167 da CF)\n\nA Constituição Federal estabelece uma série de proibições em matéria orçamentária para evitar desvios de finalidade e desequilíbrios fiscais. Entre as principais vedações, destacam-se:\n*   O início de programas ou projetos não incluídos na LOA.\n*   A realização de despesas ou a assunção de obrigações diretas que excedam os créditos orçamentários ou adicionais.\n*   A realização de operações de créditos que excedam o montante das despesas de capital, ressalvadas as autorizadas mediante créditos suplementares ou especiais com finalidade precisa, aprovados pelo Poder Legislativo por maioria absoluta (conhecida como a **Regra de Ouro**).\n*   A vinculação de receita de impostos a órgãos, fundos ou despesas, salvo exceções constitucionais.\n\n### Emenda Constitucional 109/2021 (\"PEC Emergencial\")\n\nA Emenda Constitucional nº 109/2021 introduziu mecanismos de ajuste fiscal e gatilhos para conter o crescimento das despesas públicas quando estas atingirem determinados patamares críticos. Ela alterou regras financeiras e orçamentárias na Constituição Federal, permitindo a suspensão de reajustes de pessoal, criação de cargos e outras medidas de contenção de gastos em situações de emergência fiscal ou calamidade pública nacional.",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Regra de Ouro",
+          "text": "É vedada a realização de operações de crédito que excedam o montante das despesas de capital, salvo exceções específicas aprovadas pelo Poder Legislativo por maioria absoluta."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Quais são os dois requisitos para a concessão de vantagem ou aumento de remuneração de pessoal?",
+          "answer": "Prévia dotação orçamentária suficiente e autorização específica na LDO (com ressalvas para EP e SEM)."
+        },
+        {
+          "question": "O que a 'Regra de Ouro' do Art. 167 da CF proíbe?",
+          "answer": "A realização de operações de crédito que excedam o montante das despesas de capital, salvo exceções."
+        },
+        {
+          "question": "Qual a principal mudança trazida pela EC 109/2021?",
+          "answer": "Introduziu mecanismos de ajuste fiscal e gatilhos para conter o crescimento das despesas públicas, permitindo a suspensão de reajustes de pessoal e outras medidas em emergências fiscais."
+        },
+        {
+          "question": "É permitido iniciar programas ou projetos não incluídos na LOA?",
+          "answer": "Não, o Art. 167 da CF veda o início de programas ou projetos não incluídos na LOA."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    Vedacoes_Orcamentarias___Art__167_CF_0[\"Vedações Orçamentárias -<br/>Art. 167 CF\"]\n    Proibido_Iniciar_Programas_nao_na_LOA_1[\"Proibido Iniciar Programas<br/>não na LOA\"]\n    Proibido_Despesas_que_Excedam_Creditos_2[\"Proibido Despesas que<br/>Excedam Créditos\"]\n    Proibido_Operacoes_de_Credito___Despesas_de_Capital__Regra_de_Ouro__3[\"Proibido Operações de<br/>Crédito > Despesas de<br/>Capital (Regra de Ouro)\"]\n    Proibido_Vinculacao_de_Receita_de_Impostos_4[\"Proibido Vinculação de<br/>Receita de Impostos\"]\n    Vedacoes_Orcamentarias___Art__167_CF_0 --> Proibido_Iniciar_Programas_nao_na_LOA_1\n    Vedacoes_Orcamentarias___Art__167_CF_0 --> Proibido_Despesas_que_Excedam_Creditos_2\n    Vedacoes_Orcamentarias___Art__167_CF_0 --> Proibido_Operacoes_de_Credito___Despesas_de_Capital__Regra_de_Ouro__3\n    Vedacoes_Orcamentarias___Art__167_CF_0 --> Proibido_Vinculacao_de_Receita_de_Impostos_4"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-08",
+      "title": "Receita Pública: Conceitos e Classificações",
+      "content_markdown": "A receita pública representa a entrada de recursos financeiros nos cofres do Estado, utilizada para financiar as despesas públicas e a prestação de serviços à sociedade.\n\n### Conceitos Básicos e Forma de Ingresso\n\nOs recursos que entram nos cofres públicos podem ser classificados quanto à sua natureza e permanência:\n\n*   **Ingressos Extraorçamentários:** Recursos de caráter temporário que entram no caixa do Estado, mas sobre os quais o poder público é mero depositário (ex.: fianças, depósitos judiciais, emissão de papel-moeda). Não integram a LOA e devem ser devolvidos posteriormente.\n*   **Receitas Orçamentárias:** Recursos financeiros que pertencem ao Estado, integram o patrimônio público sem contrapartida de devolução e são utilizados para financiar as despesas constantes na LOA.\n\n### Classificação da Receita Orçamentária Segundo o MCASP\n\nDe acordo com o Manual de Contabilidade Aplicada ao Setor Público (MCASP), as receitas orçamentárias são classificadas sob diferentes perspectivas para fins de planejamento e controle:\n\n*   **Receitas Correntes**\n    *   Impostos, Taxas e Contribuições de Melhoria\n    *   Contribuições\n    *   Receita Patrimonial\n    *   Receita Agropecuária\n    *   Receita Industrial\n    *   Receita de Serviços\n    *   Transferências Correntes\n    *   Outras Receitas Correntes\n*   **Receitas de Capital**\n    *   Operações de Crédito\n    *   Alienação de Bens\n    *   Amortização de Empréstimos\n    *   Transferências de Capital\n    *   Outras Receitas de Capital",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Ingressos Extraorçamentários",
+          "text": "São recursos de caráter temporário que o Estado é mero depositário, não integram a LOA e devem ser devolvidos, como fianças e depósitos judiciais."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "O que são Receitas Orçamentárias?",
+          "answer": "São recursos financeiros que pertencem ao Estado, integram o patrimônio público sem contrapartida de devolução e financiam as despesas da LOA."
+        },
+        {
+          "question": "Cite um exemplo de Ingresso Extraorçamentário.",
+          "answer": "Fianças, depósitos judiciais ou emissão de papel-moeda."
+        },
+        {
+          "question": "Quais são as duas grandes categorias de Receita Orçamentária segundo o MCASP?",
+          "answer": "Receitas Correntes e Receitas de Capital."
+        },
+        {
+          "question": "A Receita Patrimonial é classificada como Receita Corrente ou de Capital?",
+          "answer": "Receita Corrente."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    resumo[\"Resumo visual<br/>ver detalhes no texto\"]\n    grupo_1[\"Receita Orçamentária;<br/>Receitas Correntes; Receitas<br/>de Capital; Impostos, Taxas<br/>e Contribuições de Melhoria\"]\n    resumo --> grupo_1\n    grupo_2[\"Contribuições; Receita<br/>Patrimonial; Receita<br/>Agropecuária; Receita<br/>Industrial\"]\n    resumo --> grupo_2\n    grupo_3[\"Receita de Serviços;<br/>Transferências Correntes;<br/>Outras Receitas Correntes;<br/>Operações de Crédito\"]\n    resumo --> grupo_3\n    grupo_4[\"Alienação de Bens;<br/>Amortização de Empréstimos;<br/>Transferências de Capital;<br/>Outras Receitas de Capital\"]\n    resumo --> grupo_4"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-09",
+      "title": "Dívida Ativa e Classificações Adicionais da Receita",
+      "content_markdown": "### Dívida Ativa (DA)\n\nA Dívida Ativa representa o conjunto de créditos tributários e não tributários em favor da Fazenda Pública, não pagos pelos contribuintes dentro dos prazos de vencimento. Após regular inscrição pelo órgão competente, esses créditos passam a gozar de presunção de certeza e liquidez, servindo de título para cobrança amigável ou judicial.\n\n*   **Dívida Ativa Tributária:** Proveniente de tributos não pagos (impostos, taxas e contribuições de melhoria).\n*   **Dívida Ativa Não Tributária:** Proveniente de outras obrigações não adimplidas (multas de trânsito, aluguéis, reposições de pessoal, etc.).\n\n### Outras Classificações da Receita Orçamentária\n\nAs receitas também podem ser classificadas quanto à sua origem e poder de tributação:\n*   **Receitas Originárias:** Decorrentes da exploração do próprio patrimônio do Estado (atuação sob o regime de direito privado, como aluguéis e venda de produtos).\n*   **Receitas Derivadas:** Obtidas pelo Estado mediante o uso de seu poder de império, constrangendo o particular a entregar parte de sua riqueza (tributos e multas).\n\n### Recursos que Não São Reconhecidos como Receita Orçamentária\n\nDeterminados ingressos financeiros não alteram a situação líquida do Estado e não se enquadram como receita orçamentária, tais como as operações de Antecipação de Receita Orçamentária (ARO), que constituem passivos financeiros de curto prazo destinados a suprir insuficiências momentâneas de caixa.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "ARO não é Receita Orçamentária",
+          "text": "As operações de Antecipação de Receita Orçamentária (ARO) são passivos financeiros de curto prazo para suprir insuficiências de caixa e não são reconhecidas como receita orçamentária."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "O que é Dívida Ativa?",
+          "answer": "É o conjunto de créditos tributários e não tributários em favor da Fazenda Pública, não pagos pelos contribuintes dentro dos prazos de vencimento."
+        },
+        {
+          "question": "Qual a diferença entre Dívida Ativa Tributária e Não Tributária?",
+          "answer": "Tributária provém de tributos não pagos; Não Tributária provém de outras obrigações não adimplidas (ex: multas, aluguéis)."
+        },
+        {
+          "question": "O que são Receitas Originárias?",
+          "answer": "São receitas decorrentes da exploração do próprio patrimônio do Estado, atuando sob regime de direito privado (ex: aluguéis, venda de produtos)."
+        },
+        {
+          "question": "As operações de Antecipação de Receita Orçamentária (ARO) são consideradas receita orçamentária?",
+          "answer": "Não, são passivos financeiros de curto prazo para suprir insuficiências momentâneas de caixa."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    Divida_Ativa_0[\"Dívida Ativa\"]\n    Conceito_1[\"Conceito\"]\n    Creditos_tributarios_e_nao_tributarios_2[\"Créditos tributários e não<br/>tributários\"]\n    Nao_pagos_no_prazo_3[\"Não pagos no prazo\"]\n    Presuncao_de_certeza_e_liquidez_4[\"Presunção de certeza e<br/>liquidez\"]\n    Tipos_5[\"Tipos\"]\n    Divida_Ativa_Tributaria_6[\"Dívida Ativa Tributária\"]\n    Divida_Ativa_Nao_Tributaria_7[\"Dívida Ativa Não Tributária\"]\n    Divida_Ativa_0 --> Conceito_1\n    Conceito_1 --> Creditos_tributarios_e_nao_tributarios_2\n    Conceito_1 --> Nao_pagos_no_prazo_3\n    Conceito_1 --> Presuncao_de_certeza_e_liquidez_4\n    Divida_Ativa_0 --> Tipos_5\n    Tipos_5 --> Divida_Ativa_Tributaria_6\n    Tipos_5 --> Divida_Ativa_Nao_Tributaria_7"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-10",
+      "title": "Estágios e Regime Contábil da Receita Pública",
+      "content_markdown": "### Estágios da Receita (PLAR)\n\nA execução da receita pública percorre etapas sucessivas e encadeadas, conhecidas pelo mnemônico **PLAR**:\n\n1.  **Previsão:** Estimativa de arrecadação constante na LOA.\n2.  **Lançamento:** Ato administrativo que identifica o sujeito passivo, o fato gerador e calcula o montante do tributo devido.\n3.  **Arrecadação:** Momento em que o contribuinte realiza o pagamento do tributo junto aos agentes arrecadadores autorizados (bancos).\n4.  **Recolhimento:** Transferência dos valores arrecadados pelos bancos para a conta única do Tesouro Público.\n\n### Regime Contábil da Receita\n\nPara fins orçamentários, adota-se o **Regime de Caixa** para as receitas, registrando-as no momento de seu efetivo recolhimento aos cofres públicos, conforme determina a Lei nº 4.320/1964.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Regime de Caixa para Receitas",
+          "text": "Para fins orçamentários, as receitas são registradas no momento de seu efetivo recolhimento aos cofres públicos, seguindo o Regime de Caixa."
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "PLAR",
+          "meaning": "Previsão, Lançamento, Arrecadação, Recolhimento",
+          "description": "Mnemônico para lembrar os estágios da receita pública."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Quais são os quatro estágios da receita pública?",
+          "answer": "Previsão, Lançamento, Arrecadação e Recolhimento (PLAR)."
+        },
+        {
+          "question": "O que ocorre na fase de Lançamento da receita?",
+          "answer": "É o ato administrativo que identifica o sujeito passivo, o fato gerador e calcula o montante do tributo devido."
+        },
+        {
+          "question": "Qual o regime contábil adotado para as receitas, para fins orçamentários?",
+          "answer": "O Regime de Caixa."
+        },
+        {
+          "question": "O que significa a fase de Recolhimento da receita?",
+          "answer": "É a transferência dos valores arrecadados pelos bancos para a conta única do Tesouro Público."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    P[Previsão] --> L[Lançamento]\n    L --> A[Arrecadação]\n    A --> R[Recolhimento]"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-11",
+      "title": "Receita Pública sob a LRF: Previsão e Renúncia",
+      "content_markdown": "A Lei de Responsabilidade Fiscal (LRF) impõe regras rígidas para garantir a responsabilidade na gestão fiscal no que tange à previsão, arrecadação e renúncia de receitas.\n\n### Previsão e Arrecadação (Arts. 11, 12 e 13)\n\nA LRF estabelece que a previsão de receitas deve observar normas técnicas e legais, considerando os efeitos das alterações na legislação, da inflação e do crescimento econômico. Além disso, constitui requisito essencial da responsabilidade na gestão fiscal a instituição, previsão e efetiva arrecadação de todos os tributos da competência constitucional do ente federativo.\n\n### Renúncia de Receita (Art. 14)\n\nA renúncia de receita ocorre quando o Estado abre mão de arrecadar tributos para incentivar determinados setores ou regiões. Ela compreende anistia, remissão, subsídio, crédito presumido, concessão de isenção em caráter não geral, alteração de alíquota ou modificação de base de cálculo que implique redução discriminada de tributos.\n\n#### Requisitos para Concessão de Renúncia\n\nPara conceder qualquer benefício tributário que caracterize renúncia de receita, o gestor público deve demonstrar que a medida foi acompanhada de:\n*   Estimativa do impacto orçamentário-financeiro no exercício em que deva iniciar sua vigência e nos dois seguintes.\n*   Demonstração de que a renúncia foi considerada na estimativa de receita da lei orçamentária e de que não afetará as metas de resultados fiscais previstas no Anexo de Metas Fiscais (AMF) da LDO; **OU**\n*   Medidas de compensação, no período mencionado, por meio do aumento de receita, proveniente da elevação de alíquotas, ampliação da base de cálculo, majoração ou criação de tributo ou contribuição.",
+      "callouts": [
+        {
+          "type": "tip",
+          "title": "Requisitos da Renúncia de Receita",
+          "text": "Para conceder renúncia de receita, o gestor deve apresentar estimativa de impacto e demonstrar que a renúncia foi considerada na LOA sem afetar metas fiscais, OU apresentar medidas de compensação."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "O que a LRF exige em relação à previsão de receitas?",
+          "answer": "Que observe normas técnicas e legais, considerando efeitos de alterações na legislação, inflação e crescimento econômico."
+        },
+        {
+          "question": "O que é renúncia de receita?",
+          "answer": "É quando o Estado abre mão de arrecadar tributos para incentivar setores ou regiões, incluindo anistia, remissão, subsídio, etc."
+        },
+        {
+          "question": "Qual documento deve ser consultado para verificar se a renúncia de receita afeta as metas fiscais?",
+          "answer": "O Anexo de Metas Fiscais (AMF) da LDO."
+        },
+        {
+          "question": "Cite uma medida de compensação para a renúncia de receita.",
+          "answer": "Aumento de receita por elevação de alíquotas, ampliação da base de cálculo, majoração ou criação de tributo ou contribuição."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    Renuncia_de_Receita___LRF_0[\"Renúncia de Receita - LRF\"]\n    Conceito_1[\"Conceito\"]\n    Estado_abre_mao_de_arrecadar_tributos_2[\"Estado abre mão de arrecadar<br/>tributos\"]\n    Anistia__remissao__subsidio__isencao_nao_geral_3[\"Anistia, remissão, subsídio,<br/>isenção não geral\"]\n    Requisitos_4[\"Requisitos\"]\n    Estimativa_de_impacto_orcamentario_financeiro_5[\"Estimativa de impacto<br/>orçamentário-financeiro\"]\n    Nao_afetar_metas_fiscais__AMF_da_LDO__6[\"Não afetar metas fiscais<br/>(AMF da LDO)\"]\n    OU_Medidas_de_compensacao__aumento_de_receita__7[\"OU Medidas de compensação<br/>(aumento de receita)\"]\n    Renuncia_de_Receita___LRF_0 --> Conceito_1\n    Conceito_1 --> Estado_abre_mao_de_arrecadar_tributos_2\n    Conceito_1 --> Anistia__remissao__subsidio__isencao_nao_geral_3\n    Renuncia_de_Receita___LRF_0 --> Requisitos_4\n    Requisitos_4 --> Estimativa_de_impacto_orcamentario_financeiro_5\n    Requisitos_4 --> Nao_afetar_metas_fiscais__AMF_da_LDO__6\n    Requisitos_4 --> OU_Medidas_de_compensacao__aumento_de_receita__7"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-12",
+      "title": "Despesa Pública: Conceito e Classificações",
+      "content_markdown": "A despesa pública corresponde ao conjunto de dispêndios realizados pelo Estado para o funcionamento dos serviços públicos, investimentos e manutenção das atividades estatais.\n\n### Classificações da Despesa Orçamentária\n\nA despesa pública é classificada sob múltiplos critérios para permitir uma análise detalhada de onde, como e por quem os recursos estão sendo aplicados:\n\n*   **Classificação Institucional:** Responde a quem realiza a despesa (órgãos e unidades orçamentárias).\n*   **Classificação Funcional:** Responde em qual área de atuação governamental a despesa será realizada (funções e subfunções, ex.: Saúde, Educação, Segurança). É de aplicação nacional obrigatória.\n*   **Estrutura Programática:** Organiza as ações do governo em Programas, Projetos, Atividades e Operações Especiais.\n*   **Classificação por Natureza da Despesa:** Estruturada em códigos que identificam a Categoria Econômica, o Grupo de Natureza da Despesa (GND), a Modalidade de Aplicação e o Elemento de Despesa.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Classificação Funcional",
+          "text": "A Classificação Funcional indica a área de atuação governamental da despesa (ex: Saúde, Educação) e é de aplicação nacional obrigatória."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "O que é despesa pública?",
+          "answer": "É o conjunto de dispêndios realizados pelo Estado para o funcionamento dos serviços públicos, investimentos e manutenção das atividades estatais."
+        },
+        {
+          "question": "Qual classificação da despesa responde 'a quem realiza a despesa'?",
+          "answer": "A Classificação Institucional."
+        },
+        {
+          "question": "Qual classificação da despesa é de aplicação nacional obrigatória?",
+          "answer": "A Classificação Funcional."
+        },
+        {
+          "question": "Quais são os componentes da Classificação por Natureza da Despesa?",
+          "answer": "Categoria Econômica, Grupo de Natureza da Despesa (GND), Modalidade de Aplicação e Elemento de Despesa."
+        }
+      ],
+      "mermaid_mindmap": "graph TD\n    ND[Natureza da Despesa] --> CE[Categoria Econômica]\n    ND --> GND[Grupo de Natureza da Despesa]\n    ND --> MA[Modalidade de Aplicação]\n    ND --> ED[Elemento de Despesa]\n    \n    CE --> CE1[Despesas Correntes]\n    CE --> CE2[Despesas de Capital]"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-13",
+      "title": "Estágios da Despesa, Restos a Pagar e DEA",
+      "content_markdown": "### Estágios da Despesa Orçamentária\n\nA execução da despesa pública percorre três estágios fundamentais após a sua fixação na LOA:\n\n1.  **Empenho:** Ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de implemento de condição. Reserva a dotação orçamentária para um credor específico.\n2.  **Liquidação:** Verificação do direito adquirido pelo credor tendo por base os títulos e documentos comprobatórios do respectivo crédito. Consiste na comprovação de que o serviço foi prestado ou o bem foi entregue.\n3.  **Pagamento:** Despacho emitido por autoridade competente determinando que a despesa liquidada seja paga, mediante ordem de pagamento e movimentação de recursos na conta bancária do ente público.\n\n### Restos a Pagar (RAP) ou Resíduos Passivos\n\nConsideram-se Restos a Pagar as despesas empenhadas mas não pagas até o dia 31 de dezembro, término do exercício financeiro. Eles dividem-se em:\n*   **Restos a Pagar Processados:** Despesas que percorreram as fases de empenho e liquidação, restando apenas o pagamento.\n*   **Restos a Pagar Não Processados:** Despesas que foram apenas empenhadas, dependendo ainda da fase de liquidação para que o pagamento possa ser efetuado.\n\n### Despesas de Exercícios Anteriores (DEA)\n\nAs Despesas de Exercícios Anteriores correspondem a compromissos financeiros gerados em exercícios encerrados, para os quais o orçamento respectivo continha crédito próprio, com saldo suficiente, mas que não foram processados na época própria. Podem ser pagas à conta de dotação específica constante no orçamento vigente.\n\n### Suprimento de Fundos (Regime de Adiantamento)\n\nConsiste na entrega de numerário a servidor, sempre precedida de empenho na dotação própria, para o atendimento de despesas que, por sua natureza, não possam subordinar-se ao processo normal de aplicação (ex.: despesas de caráter secreto, miúdas e de pronto pagamento, ou de caráter urgente).\n\n### Regime Contábil da Despesa\n\nDiferentemente da receita, adota-se o **Regime de Competência** para as despesas públicas sob a ótica orçamentária, considerando-as realizadas no exercício financeiro em que foram legalmente empenhadas, conforme as diretrizes da Lei nº 4.320/1964.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Regime de Competência para Despesas",
+          "text": "Para fins orçamentários, as despesas são consideradas realizadas no exercício financeiro em que foram legalmente empenhadas, seguindo o Regime de Competência."
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "ELP",
+          "meaning": "Empenho, Liquidação, Pagamento",
+          "description": "Mnemônico para lembrar os estágios da despesa orçamentária."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Quais são os três estágios da despesa orçamentária?",
+          "answer": "Empenho, Liquidação e Pagamento (ELP)."
+        },
+        {
+          "question": "O que é o Empenho na despesa pública?",
+          "answer": "É o ato que cria para o Estado uma obrigação de pagamento, reservando a dotação orçamentária para um credor específico."
+        },
+        {
+          "question": "Qual a diferença entre Restos a Pagar Processados e Não Processados?",
+          "answer": "Processados já passaram por empenho e liquidação; Não Processados foram apenas empenhados, faltando a liquidação."
+        },
+        {
+          "question": "Qual o regime contábil adotado para as despesas públicas, para fins orçamentários?",
+          "answer": "O Regime de Competência."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    F[Fixação] --> E[Empenho]\n    E --> L[Liquidação]\n    L --> P[Pagamento]"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-14",
+      "title": "Despesa Pública sob a LRF: Geração e DOCC",
+      "content_markdown": "A Lei de Responsabilidade Fiscal estabelece limites e condições para a criação, expansão ou aperfeiçoamento de ações governamentais que acarretem aumento de despesas.\n\n### Geração da Despesa\n\nA criação, expansão ou aperfeiçoamento de ação governamental que acarrete aumento da despesa será acompanhada de:\n*   Estimativa do impacto orçamentário-financeiro no exercício em que deva entrar em vigor e nos dois subsequentes.\n*   Declaração do ordenador da despesa de que o aumento tem adequação orçamentária e financeira com a LOA e compatibilidade com o PPA e com a LDO.\n\n### Despesa Obrigatória de Caráter Continuado (DOCC)\n\nA DOCC é a despesa corrente derivada de lei, medida provisória ou ato administrativo normativo que fixe para o ente a obrigação legal de sua execução por um período superior a dois exercícios. A sua criação exige a demonstração da origem dos recursos para seu custeio e medidas de compensação para evitar o desequilíbrio das contas públicas.",
+      "callouts": [
+        {
+          "type": "tip",
+          "title": "Requisitos para DOCC",
+          "text": "A criação de Despesa Obrigatória de Caráter Continuado (DOCC) exige a demonstração da origem dos recursos para seu custeio e medidas de compensação para evitar o desequilíbrio das contas públicas."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Quais são os dois requisitos para a criação ou aumento de despesa governamental?",
+          "answer": "Estimativa do impacto orçamentário-financeiro e declaração de adequação e compatibilidade com LOA, PPA e LDO."
+        },
+        {
+          "question": "O que caracteriza uma Despesa Obrigatória de Caráter Continuado (DOCC)?",
+          "answer": "É uma despesa corrente derivada de lei ou ato normativo que fixa a obrigação de sua execução por mais de dois exercícios."
+        },
+        {
+          "question": "O que é necessário demonstrar para criar uma DOCC?",
+          "answer": "A origem dos recursos para seu custeio e medidas de compensação para evitar o desequilíbrio das contas públicas."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    Despesa_Publica_na_LRF_0[\"Despesa Pública na LRF\"]\n    Geracao_da_Despesa_1[\"Geração da Despesa\"]\n    Estimativa_de_Impacto_2[\"Estimativa de Impacto\"]\n    Adequacao_e_Compatibilidade__LOA__PPA__LDO__3[\"Adequação e Compatibilidade<br/>(LOA, PPA, LDO)\"]\n    Despesa_Obrigatoria_de_Carater_Continuado__DOCC__4[\"Despesa Obrigatória de<br/>Caráter Continuado (DOCC)\"]\n    Definicao_5[\"Definição\"]\n    Requisitos_para_Criacao_6[\"Requisitos para Criação\"]\n    Despesa_Publica_na_LRF_0 --> Geracao_da_Despesa_1\n    Geracao_da_Despesa_1 --> Estimativa_de_Impacto_2\n    Geracao_da_Despesa_1 --> Adequacao_e_Compatibilidade__LOA__PPA__LDO__3\n    Despesa_Publica_na_LRF_0 --> Despesa_Obrigatoria_de_Carater_Continuado__DOCC__4\n    Despesa_Obrigatoria_de_Carater_Continuado__DOCC__4 --> Definicao_5\n    Despesa_Obrigatoria_de_Carater_Continuado__DOCC__4 --> Requisitos_para_Criacao_6"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-15",
+      "title": "Limites e Controle da Despesa com Pessoal na LRF",
+      "content_markdown": "### Das Despesas com Pessoal\n\nA despesa total com pessoal é um dos pontos mais controlados pela LRF, dada a sua rigidez e impacto no orçamento de longo prazo.\n\n#### Limites da Despesa Total com Pessoal\n\nA despesa total com pessoal, em cada período de apuração e em cada ente da Federação, não poderá exceder os percentuais da Receita Corrente Líquida (RCL) fixados na LRF:\n\n*   União: Limite Máximo: 50% da RCL\n*   Estados e DF: Limite Máximo: 60% da RCL\n*   Municípios: Limite Máximo: 60% da RCL\n\nEsses limites globais são repartidos internamente entre os Poderes Executivo, Legislativo e Judiciário, bem como o Ministério Público e o Tribunal de Contas, conforme os percentuais específicos definidos na legislação para cada esfera da federação.\n\n#### Controle da Despesa com Pessoal\n\nA LRF estabelece limites de alerta e prudenciais para evitar que o ente atinja o limite máximo:\n*   **Limite de Alerta (90% do limite máximo):** Emitido pelos Tribunais de Contas como sinalização de atenção.\n*   **Limite Prudencial (95% do limite máximo):** Restringe a concessão de vantagens, aumentos, criação de cargos, contratação de pessoal (salvo reposição de aposentadoria ou falecimento nas áreas de educação, saúde e segurança) e pagamento de horas extras.\n\n#### Aumento da Despesa com Pessoal\n\nÉ nulo de pleno direito o ato que provoque aumento da despesa com pessoal e não atenda às exigências de dotação prévia e autorização na LDO, ou que seja praticado nos 180 dias anteriores ao final do mandato do titular do respectivo Poder ou órgão.",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Restrições do Limite Prudencial",
+          "text": "Ao atingir o Limite Prudencial (95% do limite máximo), o ente fica impedido de conceder vantagens, aumentos, criar cargos, contratar pessoal (com exceções) e pagar horas extras."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Qual o limite máximo da despesa total com pessoal para a União, em relação à RCL?",
+          "answer": "50% da Receita Corrente Líquida (RCL)."
+        },
+        {
+          "question": "Qual o limite máximo da despesa total com pessoal para Estados, DF e Municípios, em relação à RCL?",
+          "answer": "60% da Receita Corrente Líquida (RCL)."
+        },
+        {
+          "question": "O que acontece quando um ente atinge o Limite de Alerta da despesa com pessoal?",
+          "answer": "Os Tribunais de Contas emitem uma sinalização de atenção."
+        },
+        {
+          "question": "Quando um ato que provoca aumento da despesa com pessoal é nulo de pleno direito?",
+          "answer": "Quando não atende às exigências de dotação prévia e autorização na LDO, ou é praticado nos 180 dias anteriores ao final do mandato."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    Limites_Globais_de_Despesa_com_Pessoal____da_RCL__0[\"Limites Globais de Despesa<br/>com Pessoal (% da RCL)\"]\n    Uniao__Limite_Maximo__50____50_1[\"União (Limite Máximo: 50%):<br/>50\"]\n    Estados_e_DF__Limite_Maximo__60____60_2[\"Estados e DF (Limite Máximo:<br/>60%): 60\"]\n    Municipios__Limite_Maximo__60____60_3[\"Municípios (Limite Máximo:<br/>60%): 60\"]\n    Limites_Globais_de_Despesa_com_Pessoal____da_RCL__0 --> Uniao__Limite_Maximo__50____50_1\n    Limites_Globais_de_Despesa_com_Pessoal____da_RCL__0 --> Estados_e_DF__Limite_Maximo__60____60_2\n    Limites_Globais_de_Despesa_com_Pessoal____da_RCL__0 --> Municipios__Limite_Maximo__60____60_3"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-16",
+      "title": "Despesas com Seguridade Social e Mínimos Constitucionais",
+      "content_markdown": "### Despesas com a Seguridade Social\n\nNenhum benefício ou serviço da seguridade social poderá ser criado, majorado ou estendido sem a correspondente fonte de custeio total, garantindo o equilíbrio atuarial do sistema de previdência, assistência social e saúde.\n\n### Limites Mínimos de Aplicação em Saúde e Educação\n\nA Constituição Federal estabelece vinculações constitucionais de receitas para aplicação mínima em ações e serviços públicos de saúde e na manutenção e desenvolvimento do ensino. Esses percentuais mínimos incidem sobre receitas de impostos e transferências constitucionais, devendo ser rigorosamente cumpridos pelos entes federativos sob pena de sanções e intervenção.",
+      "callouts": [],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Qual a condição para a criação ou majoração de benefício da seguridade social?",
+          "answer": "A existência de correspondente fonte de custeio total, garantindo o equilíbrio atuarial."
+        },
+        {
+          "question": "O que a Constituição Federal estabelece para Saúde e Educação em relação às receitas?",
+          "answer": "Vinculações constitucionais de receitas para aplicação mínima em ações e serviços públicos de saúde e na manutenção e desenvolvimento do ensino."
+        },
+        {
+          "question": "Sobre quais receitas incidem os percentuais mínimos para Saúde e Educação?",
+          "answer": "Sobre receitas de impostos e transferências constitucionais."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    Despesas_Vinculadas_0[\"Despesas Vinculadas\"]\n    Seguridade_Social_1[\"Seguridade Social\"]\n    Criacao_Majoracao_exige_fonte_de_custeio_2[\"Criação/Majoração exige<br/>fonte de custeio\"]\n    Equilibrio_atuarial_3[\"Equilíbrio atuarial\"]\n    Limites_Minimos_Constitucionais_4[\"Limites Mínimos<br/>Constitucionais\"]\n    Saude_5[\"Saúde\"]\n    Educacao_6[\"Educação\"]\n    Incidem_sobre_impostos_e_transferencias_7[\"Incidem sobre impostos e<br/>transferências\"]\n    Descumprimento_gera_sancoes_8[\"Descumprimento gera sanções\"]\n    Despesas_Vinculadas_0 --> Seguridade_Social_1\n    Seguridade_Social_1 --> Criacao_Majoracao_exige_fonte_de_custeio_2\n    Seguridade_Social_1 --> Equilibrio_atuarial_3\n    Despesas_Vinculadas_0 --> Limites_Minimos_Constitucionais_4\n    Limites_Minimos_Constitucionais_4 --> Saude_5\n    Limites_Minimos_Constitucionais_4 --> Educacao_6\n    Limites_Minimos_Constitucionais_4 --> Incidem_sobre_impostos_e_transferencias_7\n    Limites_Minimos_Constitucionais_4 --> Descumprimento_gera_sancoes_8"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-17",
+      "title": "Evolução Histórica dos Modelos Orçamentários",
+      "content_markdown": "O orçamento público evoluiu de um mero instrumento de controle contábil e político para uma ferramenta complexa de planejamento e gestão estratégica. A seguir, são detalhados os diferentes tipos de orçamento que marcaram essa evolução.",
+      "callouts": [],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Como o orçamento público evoluiu historicamente?",
+          "answer": "De um mero instrumento de controle contábil e político para uma ferramenta complexa de planejamento e gestão estratégica."
+        },
+        {
+          "question": "Qual a importância de estudar a evolução dos modelos orçamentários?",
+          "answer": "Permite compreender as características e o contexto de cada tipo de orçamento e sua aplicação atual."
+        }
+      ],
+      "mermaid_mindmap": "graph TD\n    A[Evolução do Orçamento] --> B[Orçamento Tradicional]\n    A --> C[Orçamento Desempenho]\n    A --> D[Orçamento Programa]\n    A --> E[Orçamento Base Zero]\n    A --> F[Orçamento Incremental]\n    A --> G[Orçamento Participativo]\n    A --> H[Novo Orçamento Desempenho]\n    A --> I[P.A.R.T.]\n    \n    style B fill:#f9f,stroke:#333,stroke-width:2px\n    style D fill:#bbf,stroke:#333,stroke-width:2px\n    style I fill:#fbf,stroke:#333,stroke-width:2px"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-18",
+      "title": "Orçamento Tradicional e Orçamento de Desempenho",
+      "content_markdown": "### Orçamento Tradicional (Clássico)\n\nO Orçamento Tradicional caracteriza-se por possuir apenas **uma dimensão**: o **objeto do gasto** (ou seja, foca estritamente em \"o que vai ser comprado\", desconsiderando os objetivos finais daquela aquisição).\n\n*   **Foco Principal:** Controle político e conformidade legal.\n*   **Ênfase:** Aspectos puramente contábeis e financeiros. É um documento de previsão de receita e autorização de despesas com foco exclusivo no gasto.\n*   **Distribuição de Recursos:** Assim como ocorre no Orçamento Incremental, a alocação de recursos para as Unidades Orçamentárias (UOs) é realizada com base nos gastos efetuados no exercício anterior, aplicando-se apenas um ajuste percentual discricionário.\n\n### Orçamento Desempenho (Realizações)\n\nEste modelo serve como um degrau intermediário de transição para o orçamento moderno. Ele introduz **duas dimensões** de análise: o **objeto do gasto** e o **programa de trabalho**.\n\n*   **Foco Principal:** Instrumento de apoio à tomada de decisão da administração pública.\n*   **Premissa:** Busca-se compreender o que o governo **faz** (suas ações e realizações) e não apenas o que o governo **compra**. A ênfase é deslocada para os resultados práticos.\n*   **Limitação:** Apesar do avanço, ainda não se configurava como um Orçamento-Programa completo, pois **não existia vinculação direta** entre o orçamento e o planejamento governamental de longo prazo.",
+      "callouts": [
+        {
+          "type": "tip",
+          "title": "Mnemônico de Memorização",
+          "text": "Associe a letra \"D\" de Desempenho a Duas dimensões."
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "D de Desempenho",
+          "meaning": "Duas dimensões",
+          "description": "Ajuda a lembrar que o Orçamento de Desempenho considera duas dimensões: objeto do gasto e programa de trabalho."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Qual a única dimensão considerada no Orçamento Tradicional?",
+          "answer": "O objeto do gasto (o que vai ser comprado)."
+        },
+        {
+          "question": "Qual o foco principal do Orçamento Tradicional?",
+          "answer": "Controle político e conformidade legal, com ênfase em aspectos contábeis e financeiros."
+        },
+        {
+          "question": "Quantas dimensões o Orçamento de Desempenho introduz?",
+          "answer": "Duas dimensões: o objeto do gasto e o programa de trabalho."
+        },
+        {
+          "question": "Qual a principal limitação do Orçamento de Desempenho?",
+          "answer": "Não existia vinculação direta entre o orçamento e o planejamento governamental de longo prazo."
+        }
+      ],
+      "mermaid_mindmap": "graph TD\n    A[Orçamento Tradicional] --> A1[\"Foco: Objeto do Gasto (1<br/>dimensão)\"]\n    A --> A2[\"Ênfase: Controle Político e<br/>Contábil\"]\n    B[Orçamento Desempenho] --> B1[\"Foco: Objeto do Gasto +<br/>Programa de Trabalho (2<br/>dimensões)\"]\n    B --> B2[\"Ênfase: O que o governo faz<br/>(resultados práticos)\"]"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-19",
+      "title": "Orçamento-Programa: Modelo Moderno e Indicadores",
+      "content_markdown": "### Orçamento Programa\n\nRepresenta o modelo mais moderno e integrado de gestão pública, materializado no Brasil por meio da integração entre o Plano Plurianual (PPA), a Lei de Diretrizes Orçamentárias (LDO) e a Lei Orçamentária Anual (LOA), sob as diretrizes da Lei 4.320/1964.\n\n*   **Foco Principal:** Instrumento de **planejamento** que estabelece **metas e objetivos**, permitindo a avaliação e o monitoramento constante dos resultados por meio de indicadores de desempenho.\n*   **O Tripé Orçamentário (Três Dimensões):**\n    1.  Planejamento\n    2.  Programação\n    3.  Orçamentação\n*   **Elementos Essenciais:** Definição clara de objetivos e propósitos; estruturação em programas; mensuração dos custos de cada programa e avaliação sistemática dos resultados.\n*   **Fragilidade:** Apresenta como principal dificuldade prática a complexidade na identificação e mensuração exata dos produtos finais dos serviços públicos.\n*   **Histórico no Brasil:** A partir de **1974**, a classificação funcional-programática tornou-se **obrigatória para todos os entes federativos** (União, Estados, Distrito Federal e Municípios).\n\n#### Indicadores de Desempenho no Orçamento-Programa\n\nPara avaliar a execução dos programas, utilizam-se três dimensões de indicadores:\n\n| Indicador | Conceito | Exemplo Prático |\n| :--- | :--- | :--- |\n| **Eficácia** | Atingimento das metas quantitativas (foco no produto intermediário/meio). | Perda de 1 kg por semana em um programa de saúde. |\n| **Efetividade** | Impacto real e transformador das ações na sociedade (foco no resultado final). | Emagrecimento saudável e melhoria da qualidade de vida global do indivíduo. |\n| **Eficiência** | Relação entre os benefícios gerados e os custos incorridos (relação custo-benefício e custo de oportunidade). | Obter o máximo de exames realizados utilizando o menor volume de recursos financeiros possível. |",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Fragilidade do Orçamento-Programa",
+          "text": "A principal dificuldade prática do Orçamento-Programa é a complexidade na identificação e mensuração exata dos produtos finais dos serviços públicos."
+        },
+        {
+          "type": "info",
+          "title": "Obrigatório no Brasil desde 1974",
+          "text": "A classificação funcional-programática tornou-se obrigatória para todos os entes federativos no Brasil a partir de 1974."
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "EFE",
+          "meaning": "Eficácia, Efetividade, Eficiência",
+          "description": "Mnemônico para lembrar os três indicadores de desempenho no Orçamento-Programa."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Qual o foco principal do Orçamento-Programa?",
+          "answer": "É um instrumento de planejamento que estabelece metas e objetivos, permitindo avaliação e monitoramento dos resultados por indicadores de desempenho."
+        },
+        {
+          "question": "Quais são as três dimensões do 'Tripé Orçamentário' no Orçamento-Programa?",
+          "answer": "Planejamento, Programação e Orçamentação."
+        },
+        {
+          "question": "O que o indicador de Eficácia avalia?",
+          "answer": "O atingimento das metas quantitativas, com foco no produto intermediário/meio."
+        },
+        {
+          "question": "Qual indicador de desempenho foca no impacto real e transformador das ações na sociedade?",
+          "answer": "A Efetividade."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    Orcamento_Programa_0[\"Orçamento-Programa\"]\n    Foco_Principal_1[\"Foco Principal\"]\n    Planejamento_2[\"Planejamento\"]\n    Metas_e_Objetivos_3[\"Metas e Objetivos\"]\n    Avaliacao_e_Monitoramento_4[\"Avaliação e Monitoramento\"]\n    Tripe_Orcamentario_5[\"Tripé Orçamentário\"]\n    Planejamento_6[\"Planejamento\"]\n    Programacao_7[\"Programação\"]\n    Orcamentacao_8[\"Orçamentação\"]\n    Indicadores_de_Desempenho_9[\"Indicadores de Desempenho\"]\n    Eficacia__metas_quantitativas__10[\"Eficácia (metas<br/>quantitativas)\"]\n    Efetividade__impacto_real__11[\"Efetividade (impacto real)\"]\n    Eficiencia__custo_beneficio__12[\"Eficiência (custo-benefício)\"]\n    Orcamento_Programa_0 --> Foco_Principal_1\n    Foco_Principal_1 --> Planejamento_2\n    Foco_Principal_1 --> Metas_e_Objetivos_3\n    Foco_Principal_1 --> Avaliacao_e_Monitoramento_4\n    Orcamento_Programa_0 --> Tripe_Orcamentario_5\n    Tripe_Orcamentario_5 --> Planejamento_6\n    Tripe_Orcamentario_5 --> Programacao_7\n    Tripe_Orcamentario_5 --> Orcamentacao_8\n    Orcamento_Programa_0 --> Indicadores_de_Desempenho_9\n    Indicadores_de_Desempenho_9 --> Eficacia__metas_quantitativas__10\n    Indicadores_de_Desempenho_9 --> Efetividade__impacto_real__11\n    Indicadores_de_Desempenho_9 --> Eficiencia__custo_beneficio__12"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-20",
+      "title": "Orçamento Base Zero e Orçamento Incremental",
+      "content_markdown": "### Orçamento Base Zero (OBZ)\n\nDesenvolvido na década de 1970 nos Estados Unidos, este modelo rompe com a lógica de repetição histórica dos gastos.\n\n*   **Premissa:** A cada novo ciclo orçamentário, **todas as despesas devem ser integralmente justificadas**, partindo-se do zero. Não há direito adquirido a dotações anteriores.\n*   **Foco Principal:** Eficiência alocativa. O modelo não se preocupa prioritariamente com as classificações contábeis, mas sim com a real necessidade e o porquê de se realizar cada despesa.\n*   **Limitação:** Devido à necessidade de reavaliação total a cada ano, gera um alto custo operacional e dificulta a continuidade e a execução de planos de médio e longo prazo.\n\n### Orçamento Incremental\n\nModelo tradicional que simplifica o processo de elaboração orçamentária por meio da repetição.\n\n*   **Premissa:** Toma-se como base os **gastos realizados no exercício anterior**, aplicando-se apenas **ajustes marginais** (para cima ou para baixo) nas receitas e despesas para o ano corrente.\n*   **Limitação:** Caracteriza-se pela **ausência de planejamento** e pela perpetuação de ineficiências históricas, pois as despesas passadas raramente são questionadas.",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Limitação do OBZ",
+          "text": "O Orçamento Base Zero (OBZ) gera alto custo operacional e dificulta a continuidade de planos de médio e longo prazo devido à reavaliação total das despesas a cada ano."
+        },
+        {
+          "type": "warning",
+          "title": "Limitação do Orçamento Incremental",
+          "text": "O Orçamento Incremental perpetua ineficiências históricas e carece de planejamento, pois as despesas passadas raramente são questionadas."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Qual a premissa fundamental do Orçamento Base Zero (OBZ)?",
+          "answer": "Todas as despesas devem ser integralmente justificadas a cada novo ciclo orçamentário, partindo do zero."
+        },
+        {
+          "question": "Qual o foco principal do OBZ?",
+          "answer": "Eficiência alocativa, preocupando-se com a real necessidade e o porquê de cada despesa."
+        },
+        {
+          "question": "Como o Orçamento Incremental elabora o orçamento para o ano corrente?",
+          "answer": "Toma como base os gastos do exercício anterior, aplicando apenas ajustes marginais."
+        },
+        {
+          "question": "Qual a principal desvantagem do Orçamento Incremental?",
+          "answer": "A ausência de planejamento e a perpetuação de ineficiências históricas."
+        }
+      ],
+      "mermaid_mindmap": "graph TD\n    A[\"Orçamento Base Zero (OBZ)\"] --> A1[\"Premissa: Justificar todas<br/>as despesas do zero\"]\n    A --> A2[\"Foco: Eficiência alocativa\"]\n    B[Orçamento Incremental] --> B1[\"Premissa: Ajustes marginais<br/>sobre gastos anteriores\"]\n    B --> B2[\"Limitação: Ausência de<br/>planejamento e perpetuação<br/>de ineficiências\"]"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-21",
+      "title": "Orçamento Participativo e Novo Orçamento de Desempenho",
+      "content_markdown": "### Orçamento Participativo\n\nModelo que busca democratizar a decisão sobre a alocação dos recursos públicos.\n\n*   **Premissa:** Combina mecanismos de democracia direta (participação direta dos cidadãos em assembleias e fóruns) com a democracia representativa (atuação dos poderes Legislativo e Executivo).\n*   **Limitação:** Embora apresente elevado valor democrático, possui uma operacionalização **extremamente trabalhosa** e complexa.\n*   **Aplicação no Brasil:** **Não é utilizado no âmbito da União** (que adota o Orçamento-Programa). A participação do cidadão em nível federal ocorre por meio de audiências públicas e denúncias, mecanismos que não devem ser confundidos com o Orçamento Participativo propriamente dito.\n\n### Novo Orçamento Desempenho\n\nCriado em 1993 durante a administração de Bill Clinton nos Estados Unidos, este modelo buscou modernizar a gestão pública com foco na contratualização de resultados.\n\n*   **As Três Novas Dimensões:**\n    1.  Estrutura do programa.\n    2.  Sistema de determinação e controle de custos.\n    3.  Sistema de mensuração de desempenho.\n*   **Foco Principal:** Orientação voltada para os **resultados finais** obtidos pela ação governamental, e não apenas para a entrega física de produtos intermediários.",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Limitação do Orçamento Participativo",
+          "text": "Apesar do valor democrático, o Orçamento Participativo possui operacionalização extremamente trabalhosa e complexa, e não é utilizado no âmbito da União no Brasil."
+        },
+        {
+          "type": "info",
+          "title": "Três Novas Dimensões do Novo Orçamento Desempenho",
+          "text": "As dimensões são: estrutura do programa, sistema de determinação e controle de custos, e sistema de mensuração de desempenho, com foco nos resultados finais."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Qual a premissa do Orçamento Participativo?",
+          "answer": "Combinar mecanismos de democracia direta e representativa para democratizar a decisão sobre a alocação de recursos públicos."
+        },
+        {
+          "question": "O Orçamento Participativo é utilizado no âmbito da União no Brasil?",
+          "answer": "Não, a União adota o Orçamento-Programa. A participação cidadã ocorre por outros mecanismos."
+        },
+        {
+          "question": "Quando e onde foi criado o Novo Orçamento Desempenho?",
+          "answer": "Em 1993, nos Estados Unidos, durante a administração de Bill Clinton."
+        },
+        {
+          "question": "Qual o foco principal do Novo Orçamento Desempenho?",
+          "answer": "Orientação voltada para os resultados finais obtidos pela ação governamental."
+        }
+      ],
+      "mermaid_mindmap": "graph TD\n    A[Orçamento Participativo] --> A1[\"Premissa: Democracia Direta<br/>+ Representativa\"]\n    A --> A2[\"Limitação: Operacionalização<br/>complexa\"]\n    B[Novo Orçamento Desempenho] --> B1[\"Foco: Resultados Finais\"]\n    B --> B2[Três Novas Dimensões]"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-22",
+      "title": "P.A.R.T.: Ferramenta de Avaliação de Programas",
+      "content_markdown": "### P.A.R.T. (Program Assessment Rating Tool)\n\nImplementado em 2003 durante a gestão de George W. Bush nos Estados Unidos como uma evolução metodológica de avaliação.\n\n*   **Limitação/Problema:** Enfrentou conflitos políticos e operacionais semelhantes aos do Orçamento Base Zero devido à rigidez na avaliação de programas concorrentes.\n*   **Estrutura de Avaliação (Quatro Dimensões):**\n    *   **Finalidade e Objetivos:** Peso de 20% na avaliação.\n    *   **Planejamento Estratégico:** Peso de 10% na avaliação.\n    *   **Gestão:** Peso de 20% na avaliação.\n    *   **Resultados:** Peso de 50% na avaliação (ênfase majoritária).",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Limitação do P.A.R.T.",
+          "text": "O P.A.R.T. enfrentou conflitos políticos e operacionais devido à rigidez na avaliação de programas concorrentes, similar ao Orçamento Base Zero."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Quando e onde foi implementado o P.A.R.T.?",
+          "answer": "Em 2003, nos Estados Unidos, durante a gestão de George W. Bush."
+        },
+        {
+          "question": "Qual a principal limitação do P.A.R.T.?",
+          "answer": "Enfrentou conflitos políticos e operacionais devido à rigidez na avaliação de programas concorrentes."
+        },
+        {
+          "question": "Qual dimensão da estrutura de avaliação do P.A.R.T. possui o maior peso?",
+          "answer": "Resultados, com peso de 50%."
+        },
+        {
+          "question": "Cite uma das quatro dimensões de avaliação do P.A.R.T.",
+          "answer": "Finalidade e Objetivos, Planejamento Estratégico, Gestão ou Resultados."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    P_A_R_T____Program_Assessment_Rating_Tool_0[\"P.A.R.T. - Program<br/>Assessment Rating Tool\"]\n    Implementacao_1[\"Implementação\"]\n    n_2003__EUA__George_W__Bush__2[\"2003, EUA (George W. Bush)\"]\n    Limitacao_3[\"Limitação\"]\n    Conflitos_politicos_e_operacionais_4[\"Conflitos políticos e<br/>operacionais\"]\n    Rigidez_na_avaliacao_5[\"Rigidez na avaliação\"]\n    Estrutura_de_Avaliacao__4_Dimensoes__6[\"Estrutura de Avaliação (4<br/>Dimensões)\"]\n    Finalidade_e_Objetivos__20___7[\"Finalidade e Objetivos (20%)\"]\n    Planejamento_Estrategico__10___8[\"Planejamento Estratégico<br/>(10%)\"]\n    Gestao__20___9[\"Gestão (20%)\"]\n    Resultados__50___10[\"Resultados (50%)\"]\n    P_A_R_T____Program_Assessment_Rating_Tool_0 --> Implementacao_1\n    Implementacao_1 --> n_2003__EUA__George_W__Bush__2\n    P_A_R_T____Program_Assessment_Rating_Tool_0 --> Limitacao_3\n    Limitacao_3 --> Conflitos_politicos_e_operacionais_4\n    Limitacao_3 --> Rigidez_na_avaliacao_5\n    P_A_R_T____Program_Assessment_Rating_Tool_0 --> Estrutura_de_Avaliacao__4_Dimensoes__6\n    Estrutura_de_Avaliacao__4_Dimensoes__6 --> Finalidade_e_Objetivos__20___7\n    Estrutura_de_Avaliacao__4_Dimensoes__6 --> Planejamento_Estrategico__10___8\n    Estrutura_de_Avaliacao__4_Dimensoes__6 --> Gestao__20___9\n    Estrutura_de_Avaliacao__4_Dimensoes__6 --> Resultados__50___10"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-23",
+      "title": "Caráter Autorizativo vs. Impositivo do Orçamento",
+      "content_markdown": "A obrigatoriedade da execução das despesas aprovadas na LOA define o caráter político-jurídico do orçamento de um país.\n\n### Orçamento Autorizativo\n*   **Aprovação:** A despesa necessita de autorização legislativa prévia (fase de aprovação da LOA).\n*   **Execução:** O Poder Executivo **não é obrigado** a realizar todas as despesas autorizadas na lei aprovada.\n*   **Aplicação:** É o modelo adotado como regra geral no Brasil, embora mitigado por diversas vinculações constitucionais e regras de impositividade de emendas parlamentares.\n\n### Orçamento Impositivo\n*   **Aprovação:** Segue o rito legislativo normal de aprovação.\n*   **Execução:** O Poder Executivo **tem o dever legal** de executar as despesas que foram fixadas no orçamento aprovado, limitando a discricionariedade do gestor na gestão do fluxo de caixa.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Orçamento Autorizativo no Brasil",
+          "text": "O modelo autorizativo é a regra geral no Brasil, onde o Executivo não é obrigado a realizar todas as despesas autorizadas, mas é mitigado por vinculações e impositividade de emendas."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Qual a principal característica do Orçamento Autorizativo?",
+          "answer": "O Poder Executivo não é obrigado a realizar todas as despesas autorizadas na lei aprovada."
+        },
+        {
+          "question": "Qual o modelo de orçamento adotado como regra geral no Brasil?",
+          "answer": "O Orçamento Autorizativo."
+        },
+        {
+          "question": "No Orçamento Impositivo, qual o dever do Poder Executivo?",
+          "answer": "Tem o dever legal de executar as despesas que foram fixadas no orçamento aprovado."
+        },
+        {
+          "question": "O que o caráter impositivo do orçamento limita?",
+          "answer": "A discricionariedade do gestor na gestão do fluxo de caixa."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    inicio[\"Início\"] --> LOA_Aprovada[\"LOA Aprovada\"]\n    LOA_Aprovada[\"LOA Aprovada\"] -->|Executivo decide se executa| Orcamento_Autorizativo[\"Orçamento Autorizativo\"]\n    LOA_Aprovada[\"LOA Aprovada\"] -->|Executivo é obrigado a executar| Orcamento_Impositivo[\"Orçamento Impositivo\"]"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-24",
+      "title": "Princípios Orçamentários: Detalhamento e Exceções",
+      "content_markdown": "Os princípios orçamentários são regras básicas e norteadoras que devem ser obrigatoriamente observadas na elaboração, aprovação e execução das leis orçamentárias (PPA, LDO e LOA).\n\n| Princípio | Conceito e Explicação | Exceções e Particularidades |\n| :---: | :--- | :--- |\n| **Unidade** *(ou Totalidade)* | O orçamento deve ser **uno para cada ente federativo** em cada exercício financeiro. A LOA é única, mas consolida três esferas (Fiscal, Seguridade Social e Investimento das Estatais) — conceito moderno de *Totalidade*. | **Não possui exceção.**<br>⚠️ *Atenção:* A existência dos três orçamentos na LOA (OF, OS, OI) não viola este princípio, pois todos estão consolidados em uma única lei. |\n| **Anualidade** *(ou Periodicidade)* | O orçamento deve referir-se a um período limitado de tempo, denominado exercício financeiro, que **coincide com o ano civil** (1º de janeiro a 31 de dezembro, conforme a Lei 4.320). Em regra, créditos autorizados para um ano não podem ser utilizados no seguinte. | **Créditos Especiais e Extraordinários** autorizados nos **últimos 4 meses** do exercício financeiro podem ser reabertos no ano seguinte, limitados aos seus saldos remanescentes.<br>*Exemplo:* Se um crédito especial de 100 foi aberto em outubro e apenas 40 foram executados, o saldo de 60 poderá ser reaberto no exercício seguinte. |\n| **Universalidade** | A LOA deve conter **todas as receitas** (inclusive operações de crédito/receitas de capital) e **todas as despesas** públicas de forma global. | 1. **Ingressos extraorçamentários** (ex: ARO, emissão de papel-moeda, depósitos em caução).<br>2. **Receitas operacionais das empresas estatais independentes**.<br>⚠️ *Cuidado:* As exceções aplicam-se apenas à previsão de receitas. No tocante à fixação de despesas, **não há exceção**: todas as despesas devem estar na LOA. |\n| **Orçamento Bruto** | Todas as receitas e despesas devem constar na LOA pelos seus **valores totais (brutos)**, sendo expressamente **vedada qualquer dedução** ou compensação líquida (Art. 6º da Lei 4.320). | **Não possui exceção.**<br>⚠️ *Cuidado:* Mesmo nos casos de transferências constitucionais de receitas entre entes, os valores devem ser registrados pelo montante bruto. |\n| **Exclusividade** | A LOA não pode conter matéria estranha à **previsão de receitas** e à **fixação de despesas** (Art. 165, § 8º da CF/88). | 1. Autorização para abertura de **créditos suplementares**.<br>2. Autorização para contratação de **operações de crédito**, inclusive por **Antecipação de Receita Orçamentária (ARO)** (empréstimo de curto prazo para cobrir insuficiência momentânea de caixa). |\n| **Especificação** *(ou Especialização)* | É **proibida a concessão de autorizações globais** na LOA. As receitas e despesas devem ser discriminadas detalhadamente, demonstrando a origem dos recursos e sua aplicação. | 1. **Reserva de Contingência**.<br>2. **Programas Especiais de Trabalho** (ex: orçamento sigiloso da ABIN para despesas de capital em regime de execução especial). |\n| **Equilíbrio** | O montante das despesas fixadas não deve superar o total das receitas previstas para o exercício financeiro. | **Créditos Suplementares ou Especiais** abertos ao longo do ano.<br>⚠️ *Atenção:* A CF/88 não previu este princípio de forma expressa. Além disso, o equilíbrio é **verificado na fase de planejamento** (elaboração da proposta), e não necessariamente na execução real. |",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Unidade e os Três Orçamentos",
+          "text": "A existência dos três orçamentos na LOA (Fiscal, Seguridade Social, Investimento das Estatais) não viola o princípio da Unidade, pois todos estão consolidados em uma única lei."
+        },
+        {
+          "type": "warning",
+          "title": "Exceções da Universalidade",
+          "text": "Ingressos extraorçamentários e receitas operacionais de estatais independentes são exceções à Universalidade na previsão de receitas. Para despesas, não há exceção."
+        },
+        {
+          "type": "info",
+          "title": "Exceções da Exclusividade",
+          "text": "A LOA pode conter autorização para abertura de créditos suplementares e contratação de operações de crédito (inclusive ARO), sem violar o princípio da Exclusividade."
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "UUAEEOE",
+          "meaning": "Unidade, Universalidade, Anualidade, Exclusividade, Orçamento Bruto, Especificação, Equilíbrio",
+          "description": "Mnemônico para lembrar os principais princípios orçamentários e suas características."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Qual princípio orçamentário permite a reabertura de créditos especiais e extraordinários no ano seguinte?",
+          "answer": "O princípio da Anualidade, com a exceção de créditos autorizados nos últimos 4 meses do exercício."
+        },
+        {
+          "question": "O que o princípio do Orçamento Bruto veda?",
+          "answer": "Qualquer dedução ou compensação líquida nas receitas e despesas, que devem constar pelos seus valores totais."
+        },
+        {
+          "question": "Qual a exceção ao princípio da Especificação?",
+          "answer": "A Reserva de Contingência e os Programas Especiais de Trabalho."
+        },
+        {
+          "question": "O princípio do Equilíbrio é expresso na CF/88?",
+          "answer": "Não, a CF/88 não o previu de forma expressa, e ele é verificado na fase de planejamento, não necessariamente na execução."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    resumo[\"Resumo visual<br/>ver detalhes no texto\"]\n    grupo_1[\"Princípios Orçamentários;<br/>Unidade; Uno por<br/>ente/exercício; Não viola 3<br/>orçamentos\"]\n    resumo --> grupo_1\n    grupo_2[\"Anualidade; Ano civil;<br/>Créditos<br/>Especiais/Extraordinários<br/>(últimos 4 meses) reabrem;<br/>Universalidade\"]\n    resumo --> grupo_2\n    grupo_3[\"Todas receitas e despesas;<br/>Exceções: Ingressos<br/>extraorçamentários, receitas<br/>estatais independentes;<br/>Orçamento Bruto; Valores<br/>totais, sem deduções\"]\n    resumo --> grupo_3\n    grupo_4[\"Sem exceção; Exclusividade;<br/>Não matéria estranha;<br/>Exceções: Créditos<br/>suplementares, operações de<br/>crédito (ARO)\"]\n    resumo --> grupo_4\n    grupo_5[\"Especificação; Proibido<br/>autorizações globais;<br/>Exceções: Reserva de<br/>Contingência, Programas<br/>Especiais; Equilíbrio\"]\n    resumo --> grupo_5\n    grupo_6[\"Despesas não superam<br/>receitas; Não expresso na<br/>CF/88\"]\n    resumo --> grupo_6"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-25",
+      "title": "Princípio da Não Afetação das Receitas e Suas Exceções",
+      "content_markdown": "O princípio da **não afetação das receitas** (ou princípio da não vinculação) estabelece que é **vedada** a vinculação de receitas provenientes de **impostos** a qualquer órgão, fundo ou despesa.\n\n### Exceções Constitucionais ao Princípio da Não Afetação\n\nA própria Constituição Federal estabelece exceções taxativas a essa regra, permitindo a vinculação de receitas de impostos para finalidades específicas:\n\n1.  **Repartição Constitucional de Receitas**: Transferências obrigatórias de recursos tributários aos Estados, Distrito Federal e Municípios (como o Fundo de Participação dos Municípios - FPM e o Fundo de Participação dos Estados - FPE).\n2.  **Saúde**: Recursos mínimos destinados às ações e serviços públicos de saúde.\n3.  **Ensino**: Recursos destinados à manutenção e desenvolvimento do ensino (mínimo de 18% dos impostos líquidos na esfera federal) e ao FUNDEF/FUNDEB.\n4.  **Atividades da Administração Tributária**: Vinculação de recursos para o financiamento das atividades da administração tributária (órgãos de fiscalização e arrecadação).\n5.  **Garantias em Operações de Crédito por ARO**: Vinculação de impostos como garantia em operações de crédito por Antecipação de Receita Orçamentária (ARO).\n6.  **Contragarantia à União**: Oferecimento de receitas de impostos como contragarantia à União na concessão de garantias em operações de crédito.\n7.  **Pagamento de Débitos com a União**: Vinculação para o pagamento de débitos ou obrigações contraídas perante a União.\n8.  **Desvinculação de Receitas da União (DRU)**: Mecanismo que permite a desvinculação de parte das receitas correntes da União (conforme alteração trazida pela Emenda Constitucional nº 93 de 2016).",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Atenção de Prova",
+          "text": "A vedação da não afetação aplica-se exclusivamente aos impostos. Taxas, contribuições de melhoria e contribuições sociais/especiais podem ter suas receitas vinculadas por lei."
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "RSMA GDC D",
+          "meaning": "Repartição, Saúde, MDE, Adm Tributária, Garantias ARO, Contragarantia, Débitos União, DRU",
+          "description": "Mnemônico para lembrar as exceções constitucionais ao princípio da não afetação das receitas de impostos."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Qual o princípio que veda a vinculação de receitas de impostos?",
+          "answer": "O Princípio da Não Afetação das Receitas (ou Não Vinculação)."
+        },
+        {
+          "question": "A vedação da não afetação se aplica a taxas e contribuições de melhoria?",
+          "answer": "Não, aplica-se exclusivamente aos impostos. Taxas e contribuições podem ter receitas vinculadas."
+        },
+        {
+          "question": "Cite uma exceção constitucional ao princípio da não afetação.",
+          "answer": "Repartição tributária constitucional, Saúde, Ensino, Atividades da Administração Tributária, Garantias em ARO, Contragarantia à União, Pagamento de Débitos com a União, ou DRU."
+        },
+        {
+          "question": "Para qual finalidade a DRU permite a desvinculação de receitas?",
+          "answer": "Permite a desvinculação de parte das receitas correntes da União."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    A[Princípio da Não Afetação] --> B(Regra Geral: VEDADA a vinculação de IMPOSTOS a órgão, fundo ou despesa)\n    A --> C{Exceções Constitucionais}\n    C --> C1[\"1. Repartição tributária<br/>constitucional FPM e FPE\"]\n    C --> C2[\"2. Ações e Serviços Públicos<br/>de Saúde\"]\n    C --> C3[\"3. Manutenção e<br/>Desenvolvimento do Ensino -<br/>MDE / FUNDEF\"]\n    C --> C4[\"4. Atividades da<br/>Administração Tributária\"]\n    C --> C5[\"5. Garantias às operações de<br/>crédito por ARO\"]\n    C --> C6[6. Contragarantia à União]\n    C --> C7[\"7. Pagamento de débitos com<br/>a União\"]\n    C --> C8[\"8. DRU - Desvinculação de<br/>Receitas da União EC 93/2016\"]"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-26",
+      "title": "Unidade de Caixa, Proibição do Estorno e Alterações Orçamentárias",
+      "content_markdown": "### Unidade de Caixa e Proibição do Estorno\n\n| Princípio | Explicação Detalhada | Exceções e Particularidades para Concursos |\n| :--- | :--- | :--- |\n| **Unidade de Caixa** | Todas as **receitas** (sejam elas orçamentárias ou extraorçamentárias) **devem ser recolhidas a um caixa único**, sendo expressamente **vedada a fragmentação** de recursos em caixas especiais (Art. 56 da Lei nº 4.320/64). | **Regra Geral:** Não comporta exceções.<br><br>⚠️ **Pegadinha de Prova:** Se a banca citar a **Conta Única do Tesouro Nacional (TN)**, a existência de contas especiais para as **Unidades Gestoras no Exterior** (como embaixadas e consulados) é considerada uma **exceção prática** para fins de concurso. |\n| **Proibição do Estorno** | É expressamente **vedada** a transposição, o remanejamento ou a transferência de recursos de uma categoria de programação para outra, ou de um órgão para outro, **sem prévia autorização legislativa**. | **Exceção Constitucional:** Atividades de **Ciência, Tecnologia (C&T) e Inovação** podem ter seus recursos remanejados, transpostos ou transferidos por meio de ato do Poder Executivo (**Decreto**), **sem a necessidade de prévia autorização legislativa**. |\n\n#### Diferenciação Técnica das Alterações Orçamentárias\n\nPara evitar confusões comuns em provas, diferencie os três conceitos de movimentação de recursos:\n\n*   **Remanejamento**: Ocorre quando os recursos são retirados de um **órgão** e alocados em **outro órgão**.\n*   **Transposição**: Ocorre dentro do **mesmo órgão**, mas há uma mudança no **programa de trabalho** (muda-se a ação governamental).\n*   **Transferência**: Ocorre dentro do **mesmo órgão** e do **mesmo programa de trabalho**, mas há alteração na **categoria econômica da despesa** (por exemplo, transformar uma despesa corrente em despesa de capital).",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Pegadinha de Prova: Unidade de Caixa",
+          "text": "Embora a regra geral da Unidade de Caixa não comporte exceções, para concursos, as contas especiais de Unidades Gestoras no Exterior (embaixadas, consulados) são consideradas uma exceção prática."
+        },
+        {
+          "type": "info",
+          "title": "Exceção à Proibição do Estorno",
+          "text": "Recursos para atividades de Ciência, Tecnologia e Inovação podem ser remanejados, transpostos ou transferidos por Decreto do Executivo, sem prévia autorização legislativa."
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "RTT",
+          "meaning": "Remanejamento, Transposição, Transferência",
+          "description": "Mnemônico para diferenciar os tipos de alterações orçamentárias."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "O que o princípio da Unidade de Caixa estabelece?",
+          "answer": "Todas as receitas devem ser recolhidas a um caixa único, vedada a fragmentação em caixas especiais."
+        },
+        {
+          "question": "Qual a exceção à Proibição do Estorno?",
+          "answer": "Recursos para atividades de Ciência, Tecnologia e Inovação podem ser alterados por Decreto do Executivo."
+        },
+        {
+          "question": "Quando ocorre o Remanejamento de recursos?",
+          "answer": "Quando os recursos são retirados de um órgão e alocados em outro órgão."
+        },
+        {
+          "question": "Qual a diferença entre Transposição e Transferência?",
+          "answer": "Transposição muda o programa de trabalho dentro do mesmo órgão; Transferência muda a categoria econômica da despesa dentro do mesmo órgão e programa."
+        }
+      ],
+      "mermaid_mindmap": "graph TD\n    A[\"Alterações Orçamentárias Sem<br/>Autorização\"] --> B[Remanejamento]\n    A --> C[Transposição]\n    A --> D[Transferência]\n    B --> B1[De um órgão para outro]\n    C --> C1[\"Mesmo órgão, mas muda o<br/>programa\"]\n    D --> D1[\"Mesmo órgão e programa, muda<br/>a categoria econômica\"]\n    E[Exceção] --> F[\"Atividades de C&T e<br/>Inovação: permitida<br/>alteração por DECRETO do<br/>Executivo\"]"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-27",
+      "title": "Outros Princípios Orçamentários Relevantes",
+      "content_markdown": "Abaixo estão listados os princípios que, embora menos cobrados em provas, possuem relevância fundamental para a compreensão da estrutura orçamentária:\n\n*   **Transparência**: Garante que qualquer cidadão tenha livre acesso às informações do orçamento. Este princípio vai além da simples publicação oficial (publicidade); ele exige que as informações sejam apresentadas de forma clara, compreensível e acessível para que a sociedade possa entender o destino dos recursos públicos.\n*   **Programação**: Determina que o orçamento deve servir como um elo de ligação entre o planejamento estratégico de médio/longo prazo e as ações concretas do governo. Conforme o Art. 165, §4º da Constituição Federal, os planos e programas nacionais, regionais e setoriais devem ser elaborados em estrita consonância com o Plano Plurianual (PPA) e apreciados pelo Congresso Nacional.\n*   **Clareza**: Exige a utilização de uma linguagem simples, clara e perfeitamente compreensível para todas as pessoas que, por dever profissional ou por interesse cidadão, necessitem manusear e analisar as peças orçamentárias.\n*   **Exatidão**: Estabelece que a Lei Orçamentária Anual (LOA) deve ser elaborada com o devido rigor técnico. Deve-se evitar o superdimensionamento das despesas ou a subavaliação proposital dos gastos, garantindo estimativas realistas.\n*   **Uniformidade**: A estrutura e a classificação do orçamento devem ser mantidas consistentes ao longo dos exercícios financeiros e mandatos, permitindo a comparação histórica dos dados.\n*   **Legalidade**: Reflete o princípio básico do Direito Administrativo, segundo o qual a Administração Pública só pode agir, realizar despesas ou arrecadar receitas nos termos expressamente autorizados por lei.",
+      "callouts": [
+        {
+          "type": "tip",
+          "title": "Dica de Prova: Uniformidade",
+          "text": "A existência de divergências de classificação orçamentária entre entes federativos distintos (ex: União e Município) não fere o princípio da uniformidade."
+        },
+        {
+          "type": "warning",
+          "title": "Cuidado: Legalidade",
+          "text": "Não confunda o princípio da legalidade administrativa (fazer apenas o que a lei autoriza) com a obrigatoriedade formal de o orçamento ser instituído por meio de uma lei em sentido estrito (princípio da reserva de lei)."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Qual princípio garante o livre acesso e a clareza das informações orçamentárias para a sociedade?",
+          "answer": "O princípio da Transparência."
+        },
+        {
+          "question": "O que o princípio da Programação determina?",
+          "answer": "Que o orçamento deve ser um elo entre o planejamento estratégico de médio/longo prazo e as ações concretas do governo."
+        },
+        {
+          "question": "O que o princípio da Exatidão exige na elaboração da LOA?",
+          "answer": "Rigor técnico, evitando superdimensionamento de despesas ou subavaliação proposital de gastos, garantindo estimativas realistas."
+        },
+        {
+          "question": "A divergência de classificação orçamentária entre entes federativos distintos fere o princípio da Uniformidade?",
+          "answer": "Não, a uniformidade se refere à consistência dentro do mesmo ente ao longo do tempo."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    Outros_Principios_Orcamentarios_0[\"Outros Princípios<br/>Orçamentários\"]\n    Transparencia_1[\"Transparência\"]\n    Acesso_livre_e_claro_2[\"Acesso livre e claro\"]\n    Programacao_3[\"Programação\"]\n    Elo_entre_planejamento_e_acoes_4[\"Elo entre planejamento e<br/>ações\"]\n    Clareza_5[\"Clareza\"]\n    Linguagem_simples_e_compreensivel_6[\"Linguagem simples e<br/>compreensível\"]\n    Exatidao_7[\"Exatidão\"]\n    Rigor_tecnico__estimativas_realistas_8[\"Rigor técnico, estimativas<br/>realistas\"]\n    Uniformidade_9[\"Uniformidade\"]\n    Consistencia_da_estrutura_e_classificacao_10[\"Consistência da estrutura e<br/>classificação\"]\n    Legalidade_11[\"Legalidade\"]\n    Administracao_age_conforme_a_lei_12[\"Administração age conforme a<br/>lei\"]\n    Outros_Principios_Orcamentarios_0 --> Transparencia_1\n    Transparencia_1 --> Acesso_livre_e_claro_2\n    Outros_Principios_Orcamentarios_0 --> Programacao_3\n    Programacao_3 --> Elo_entre_planejamento_e_acoes_4\n    Outros_Principios_Orcamentarios_0 --> Clareza_5\n    Clareza_5 --> Linguagem_simples_e_compreensivel_6\n    Outros_Principios_Orcamentarios_0 --> Exatidao_7\n    Exatidao_7 --> Rigor_tecnico__estimativas_realistas_8\n    Outros_Principios_Orcamentarios_0 --> Uniformidade_9\n    Uniformidade_9 --> Consistencia_da_estrutura_e_classificacao_10\n    Outros_Principios_Orcamentarios_0 --> Legalidade_11\n    Legalidade_11 --> Administracao_age_conforme_a_lei_12"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-28",
+      "title": "Leis Orçamentárias: Competência e Disposições Constitucionais",
+      "content_markdown": "### Competência Legislativa\n\nA competência para legislar sobre matéria de direito financeiro e **\"Orçamento\"** é **concorrente** entre a União, os Estados e o Distrito Federal.\n\n### O Papel da Lei Complementar em Matéria Orçamentária\n\nCabe à **Lei Complementar** estabelecer as normas gerais sobre finanças públicas. Como a referida Lei Complementar de finanças públicas ainda não foi formalmente editada pelo Congresso Nacional, utiliza-se a **Lei nº 4.320/1964** (que foi recepcionada pela Constituição Federal de 1988 com status de Lei Complementar).\n\nCabe a este instrumento legal dispor sobre:\n*   O exercício financeiro, a vigência, os prazos, a elaboração e a organização do Plano Plurianual (PPA), da Lei de Diretrizes Orçamentárias (LDO) e da Lei Orçamentária Anual (LOA).\n*   As normas gerais de gestão financeira e patrimonial da Administração Direta e Indireta.\n*   As condições para a criação, instituição e funcionamento de **fundos públicos**.\n*   Os critérios para garantir uma **execução equitativa** do orçamento.\n*   Os procedimentos a serem adotados quando houver impedimentos de ordem técnica ou legal para a execução das despesas.\n*   As regras para o cumprimento de **Restos a Pagar (RAP)**.\n*   A limitação das programações de caráter obrigatório destinadas às ações e serviços públicos de **saúde**.\n\n### Disposições Constitucionais Relevantes\n\n#### Rastreabilidade e Transparência de Dados (Art. 163-A da CF - Introduzido em 2020)\n\nA União, os Estados, o Distrito Federal e os Municípios têm o dever de disponibilizar suas informações e dados contábeis, orçamentários e fiscais. Essa disponibilização deve observar a periodicidade, o formato e o sistema unificado definidos pelo **órgão central de contabilidade da União** (Secretaria do Tesouro Nacional - STN), com o objetivo de assegurar a **rastreabilidade**, a **comparabilidade** e a **publicidade** dos dados, que devem ser divulgados em meio eletrônico de amplo acesso público.\n\n#### Caráter Impositivo do Orçamento (Art. 165, §10º da CF)\n\nA administração pública tem o **dever de executar as programações orçamentárias** previstas na LOA, adotando todas as medidas e meios necessários para garantir a efetiva entrega de bens e serviços à sociedade.\n\n#### Avaliação de Políticas Públicas (Art. 165, §16 da CF - Introduzido em 2021)\n\nO PPA, a LDO e a LOA devem, obrigatoriamente, observar e incorporar, no que couber, os **resultados do monitoramento e da avaliação das políticas públicas** realizados pelo poder público.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Nota sobre Prazos",
+          "text": "Devido à ausência da Lei Complementar definitiva de normas gerais, os Estados podem exercer competência legislativa plena para alterar os prazos de envio e devolução de seus instrumentos de planejamento orçamentário."
+        },
+        {
+          "type": "warning",
+          "title": "Crime de Responsabilidade",
+          "text": "O não cumprimento dos prazos estabelecidos para o envio das propostas orçamentárias configura Crime de Responsabilidade."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Qual a competência legislativa para legislar sobre direito financeiro e orçamento?",
+          "answer": "É competência concorrente entre a União, os Estados e o Distrito Federal."
+        },
+        {
+          "question": "Qual lei estabelece as normas gerais sobre finanças públicas no Brasil, com status de Lei Complementar?",
+          "answer": "A Lei nº 4.320/1964."
+        },
+        {
+          "question": "Qual o objetivo do Art. 163-A da CF, sobre rastreabilidade e transparência de dados?",
+          "answer": "Assegurar a rastreabilidade, comparabilidade e publicidade dos dados contábeis, orçamentários e fiscais em meio eletrônico."
+        },
+        {
+          "question": "O que o Art. 165, §10º da CF estabelece sobre o caráter impositivo do orçamento?",
+          "answer": "A administração pública tem o dever de executar as programações orçamentárias previstas na LOA."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    Leis_Orcamentarias_0[\"Leis Orçamentárias\"]\n    Competencia_Legislativa_1[\"Competência Legislativa\"]\n    Concorrente__Uniao__Estados__DF__2[\"Concorrente (União, Estados,<br/>DF)\"]\n    Papel_da_Lei_Complementar_3[\"Papel da Lei Complementar\"]\n    Normas_gerais_sobre_financas_publicas_4[\"Normas gerais sobre finanças<br/>públicas\"]\n    Lei_4_320_1964__recepcionada__5[\"Lei 4.320/1964<br/>(recepcionada)\"]\n    Dispoe_sobre_PPA__LDO__LOA__fundos_publicos__RAP__saude_6[\"Dispõe sobre PPA, LDO, LOA,<br/>fundos públicos, RAP, saúde\"]\n    Disposicoes_Constitucionais_Relevantes_7[\"Disposições Constitucionais<br/>Relevantes\"]\n    Art__163_A__Rastreabilidade_e_Transparencia_8[\"Art. 163-A: Rastreabilidade<br/>e Transparência\"]\n    Art__165___10___Carater_Impositivo_9[\"Art. 165, §10º: Caráter<br/>Impositivo\"]\n    Art__165___16__Avaliacao_de_Politicas_Publicas_10[\"Art. 165, §16: Avaliação de<br/>Políticas Públicas\"]\n    Leis_Orcamentarias_0 --> Competencia_Legislativa_1\n    Competencia_Legislativa_1 --> Concorrente__Uniao__Estados__DF__2\n    Leis_Orcamentarias_0 --> Papel_da_Lei_Complementar_3\n    Papel_da_Lei_Complementar_3 --> Normas_gerais_sobre_financas_publicas_4\n    Papel_da_Lei_Complementar_3 --> Lei_4_320_1964__recepcionada__5\n    Papel_da_Lei_Complementar_3 --> Dispoe_sobre_PPA__LDO__LOA__fundos_publicos__RAP__saude_6\n    Leis_Orcamentarias_0 --> Disposicoes_Constitucionais_Relevantes_7\n    Disposicoes_Constitucionais_Relevantes_7 --> Art__163_A__Rastreabilidade_e_Transparencia_8\n    Disposicoes_Constitucionais_Relevantes_7 --> Art__165___10___Carater_Impositivo_9\n    Disposicoes_Constitucionais_Relevantes_7 --> Art__165___16__Avaliacao_de_Politicas_Publicas_10"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-29",
+      "title": "Plano Plurianual (PPA): Características e Regras",
+      "content_markdown": "O Plano Plurianual (PPA) é o instrumento de planejamento de **médio prazo** que define a atuação governamental em nível estratégico e tático.\n\n### Características Principais do PPA\n*   **Duração e Periodicidade**: Possui vigência de **4 anos**.\n*   **Descompasso com o Mandato Presidencial**: A vigência do PPA não coincide com o mandato do chefe do Poder Executivo. Ele inicia-se no segundo ano do mandato atual e estende-se até o primeiro ano do mandato subsequente.\n*   **Revisão**: Pode ser revisado anualmente para se adequar a novas realidades.\n*   **Regionalização**: Deve ser elaborado de forma **regionalizada**.\n*   **Conteúdo Constitucional (DOM)**: Estabelece as **Diretrizes, Objetivos e Metas** da Administração Pública Federal para:\n    *   As **Despesas de Capital (DK)** e outras delas decorrentes.\n    *   As despesas relativas aos **programas de duração continuada** (cujo critério de classificação não é o tempo de duração, mas sim o fato de estarem diretamente vinculados à atividade-fim do órgão, como o Programa de Aceleração do Crescimento - PAC).\n\n### Regra de Ouro dos Investimentos\nNenhum investimento cuja execução ultrapasse o período de **um exercício financeiro** poderá ser iniciado sem que tenha sido previamente incluído no PPA, ou sem que haja lei específica que autorize a sua inclusão. O descumprimento dessa regra constitui **crime de responsabilidade**.\n\n### Coexistência com Outros Planos\nO PPA coexiste com planos nacionais, regionais e setoriais de desenvolvimento. Esses planos também são instituídos por leis apreciadas pelo Congresso Nacional e:\n*   **Devem estar em estrita consonância** com o PPA vigente.\n*   **Podem ter caráter de longo prazo**, com vigência que ultrapassa o período de 4 anos do PPA.\n\n### Vigência do PPA\n\n![][image4]",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Nota de Prova: Regionalização do PPA",
+          "text": "A regionalização no PPA não se limita às divisões geográficas tradicionais, mas refere-se a divisões de planejamento e 'regiões administrativas' definidas pelo governo."
+        },
+        {
+          "type": "warning",
+          "title": "Crime de Responsabilidade",
+          "text": "O descumprimento da Regra de Ouro dos Investimentos (iniciar investimento plurianual sem PPA ou lei específica) constitui crime de responsabilidade."
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "DOM",
+          "meaning": "Diretrizes, Objetivos, Metas",
+          "description": "Mnemônico para lembrar o conteúdo constitucional do PPA."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Qual a duração da vigência do Plano Plurianual (PPA)?",
+          "answer": "Quatro anos."
+        },
+        {
+          "question": "O PPA coincide com o mandato do chefe do Poder Executivo?",
+          "answer": "Não, ele inicia no segundo ano do mandato atual e se estende até o primeiro ano do mandato subsequente."
+        },
+        {
+          "question": "Quais são os três elementos que o PPA estabelece, conforme seu conteúdo constitucional (DOM)?",
+          "answer": "Diretrizes, Objetivos e Metas."
+        },
+        {
+          "question": "O que a 'Regra de Ouro dos Investimentos' do PPA proíbe?",
+          "answer": "Iniciar investimento com execução superior a um exercício financeiro sem prévia inclusão no PPA ou lei específica."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    resumo[\"Resumo visual<br/>ver detalhes no texto\"]\n    grupo_1[\"Plano Plurianual - PPA;<br/>Natureza; Planejamento de<br/>médio prazo; Nível<br/>estratégico e tático\"]\n    resumo --> grupo_1\n    grupo_2[\"Características; Vigência de<br/>4 anos; Descompasso com<br/>mandato; Revisão anual\"]\n    resumo --> grupo_2\n    grupo_3[\"Regionalizado; Conteúdo<br/>(DOM); Diretrizes; Objetivos\"]\n    resumo --> grupo_3\n    grupo_4[\"Metas; Despesas de Capital;<br/>Programas de Duração<br/>Continuada; Regra de Ouro<br/>dos Investimentos\"]\n    resumo --> grupo_4\n    grupo_5[\"Investimentos plurianuais<br/>exigem PPA ou lei específica\"]\n    resumo --> grupo_5"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-30",
+      "title": "Lei de Diretrizes Orçamentárias (LDO): Atribuições",
+      "content_markdown": "A Lei de Diretrizes Orçamentárias (LDO) atua como um elo de ligação entre o planejamento estratégico (PPA) e a execução operacional (LOA).\n\n### Atribuições da LDO na Constituição Federal de 1988\n*   **Orientação da LOA**: Serve como guia para a elaboração da Lei Orçamentária Anual do exercício seguinte. Possui vigência e produção de efeitos por aproximadamente **1,5 ano** (abrangendo o período de elaboração da LOA e o ano de sua execução).\n*   **Metas e Prioridades**: Define as metas e prioridades da Administração Pública Federal para o exercício subsequente.\n*   **Política Fiscal**: Estabelece as diretrizes de política fiscal e suas respectivas metas, em conformidade com uma trajetória sustentável da dívida pública.\n*   **Legislação Tributária**: Dispõe sobre alterações na legislação tributária (não se trata de uma lei meramente autorizativa; é por meio dela que se definem as diretrizes para as *Renúncias de Receita*).\n*   **Agências de Fomento**: Estabelece a política de aplicação de recursos das agências financeiras oficiais de fomento (como Caixa Econômica Federal, Banco do Brasil e BNDES).\n*   **Despesas de Pessoal**: Autoriza a concessão de vantagens, aumento de despesas com pessoal, criação de cargos, funções ou alterações de carreiras, bem como admissões e contratações.\n\n### Atribuições da LDO na Lei de Responsabilidade Fiscal (LRF - Art. 4º)\n\nA LRF expandiu as funções da LDO, exigindo que ela disponha também sobre:\n*   O **equilíbrio** fiscal entre receitas e despesas.\n*   Os critérios e a forma para a **limitação de empenho e movimentação financeira** (conhecido na prática como *Decreto de Contingenciamento*).\n*   O controle de custos e a avaliação dos resultados dos programas financiados com recursos públicos.\n*   As condições e exigências para a realização de **transferências de recursos** a entidades públicas e privadas.",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Exceção: Despesas de Pessoal na LDO",
+          "text": "A autorização prévia da LDO para despesas de pessoal (vantagens, aumentos, etc.) não é necessária para Empresas Públicas (EP) e Sociedades de Economia Mista (SEM)."
+        },
+        {
+          "type": "info",
+          "title": "Decreto de Contingenciamento",
+          "text": "A LDO deve dispor sobre os critérios e a forma para a limitação de empenho e movimentação financeira, o que na prática é conhecido como Decreto de Contingenciamento."
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "MPOAT",
+          "meaning": "Metas, Prioridades, Orientação, Alterações Tributárias, Agências de Fomento",
+          "description": "Mnemônico para lembrar as principais atribuições da LDO na Constituição Federal."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Qual a principal função da LDO em relação à LOA?",
+          "answer": "Orientar a elaboração da Lei Orçamentária Anual do exercício seguinte."
+        },
+        {
+          "question": "A LDO dispõe sobre alterações na legislação tributária?",
+          "answer": "Sim, ela define as diretrizes para as renúncias de receita."
+        },
+        {
+          "question": "Qual a vigência e produção de efeitos da LDO?",
+          "answer": "Aproximadamente 1,5 ano, abrangendo o período de elaboração da LOA e o ano de sua execução."
+        },
+        {
+          "question": "A LDO precisa autorizar despesas de pessoal para Empresas Públicas e Sociedades de Economia Mista?",
+          "answer": "Não, essa é uma exceção à regra geral."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    resumo[\"Resumo visual<br/>ver detalhes no texto\"]\n    grupo_1[\"Lei de Diretrizes<br/>Orçamentárias - LDO; Função;<br/>Elo PPA e LOA; Vigência ~1,5<br/>ano\"]\n    resumo --> grupo_1\n    grupo_2[\"Atribuições (CF/88);<br/>Orientação da LOA; Metas e<br/>Prioridades; Política Fiscal\"]\n    resumo --> grupo_2\n    grupo_3[\"Legislação Tributária;<br/>Agências de Fomento;<br/>Despesas de Pessoal (com<br/>exceção EP/SEM); Atribuições<br/>(LRF)\"]\n    resumo --> grupo_3\n    grupo_4[\"Equilíbrio Fiscal; Limitação<br/>de Empenho<br/>(Contingenciamento);<br/>Controle de Custos e<br/>Avaliação; Transferências de<br/>Recursos\"]\n    resumo --> grupo_4"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-31",
+      "title": "Anexos da LDO: AMF, ARF e Políticas Macroeconômicas",
+      "content_markdown": "O projeto da LDO deve ser obrigatoriamente acompanhado por anexos específicos de alta relevância fiscal:\n\n### 1. Anexo de Metas Fiscais (AMF)\n\nApresenta as metas anuais, expressas em valores correntes e constantes, relativas a receitas, despesas, resultado nominal, resultado primário e montante da dívida pública, para o exercício a que se referirem e para os dois seguintes (projeção de rolagem de 3 anos).\n\nO AMF deve conter ainda:\n*   **Avaliação do cumprimento das metas** fiscais estabelecidas para o ano anterior.\n*   **Demonstrativo das metas anuais**, comparando-as com as metas fixadas nos três exercícios anteriores, acompanhado de memória e metodologia de cálculo.\n*   **Evolução do Patrimônio Líquido (PL)** nos últimos três exercícios, detalhando a origem e a aplicação dos recursos obtidos com a alienação de ativos (venda de bens).\n*   **Avaliação financeira e atuarial** dos regimes de previdência (RGPS e RPPS), do Fundo de Amparo ao Trabalhador (FAT) e de outros fundos e programas de natureza atuarial.\n*   **Demonstrativo da estimativa e compensação da renúncia de receita** tributária.\n*   **Demonstrativo da margem de expansão** das Despesas Obrigatórias de Caráter Continuado (DOCC) para o exercício de referência e os dois seguintes.\n\n### 2. Anexo de Riscos Fiscais (ARF)\n\nDocumento onde são avaliados os **passivos contingentes** e outros riscos capazes de afetar o equilíbrio das contas públicas, detalhando as providências e medidas a serem adotadas caso esses riscos se concretizem.\n\n### 3. Anexo dos Objetivos das Políticas Monetária, Creditícia e Cambial\n\nAcompanha especificamente a mensagem que encaminha o Projeto de LDO da União. Deve conter os objetivos das políticas monetária, creditícia e cambial, os parâmetros e projeções para suas principais variáveis e agregados, além das metas de inflação fixadas para o exercício subsequente.",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Pegadinha de Prova: Precatórios no ARF",
+          "text": "O pagamento de Precatórios é uma despesa certa e prevista no orçamento, portanto, NÃO é considerado um Passivo Contingente e não integra o Anexo de Riscos Fiscais."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Qual anexo da LDO apresenta as metas anuais de receitas, despesas, resultado nominal e primário?",
+          "answer": "O Anexo de Metas Fiscais (AMF)."
+        },
+        {
+          "question": "O que o AMF deve conter sobre o Patrimônio Líquido?",
+          "answer": "A evolução do Patrimônio Líquido nos últimos três exercícios, detalhando origem e aplicação de recursos de alienação de ativos."
+        },
+        {
+          "question": "Qual anexo da LDO avalia os passivos contingentes e outros riscos fiscais?",
+          "answer": "O Anexo de Riscos Fiscais (ARF)."
+        },
+        {
+          "question": "Precatórios são considerados passivos contingentes no ARF?",
+          "answer": "Não, precatórios são despesas certas e previstas, não integrando o Anexo de Riscos Fiscais."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    resumo[\"Resumo visual<br/>ver detalhes no texto\"]\n    grupo_1[\"Anexos da LDO; Anexo de<br/>Metas Fiscais (AMF); Metas<br/>anuais (receitas, despesas,<br/>resultados, dívida);<br/>Avaliação de cumprimento de<br/>metas anteriores\"]\n    resumo --> grupo_1\n    grupo_2[\"Evolução do Patrimônio<br/>Líquido; Avaliação atuarial<br/>de previdência; Estimativa e<br/>compensação de renúncia de<br/>receita; Margem de expansão<br/>de DOCC\"]\n    resumo --> grupo_2\n    grupo_3[\"Anexo de Riscos Fiscais<br/>(ARF); Avalia passivos<br/>contingentes e riscos;<br/>Detalha providências e<br/>medidas; Precatórios NÃO são<br/>passivos contingentes\"]\n    resumo --> grupo_3\n    grupo_4[\"Anexo dos Objetivos das<br/>Políticas Monetária,<br/>Creditícia e Cambial;<br/>Objetivos e projeções de<br/>políticas macroeconômicas;<br/>Metas de inflação\"]\n    resumo --> grupo_4"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-32",
+      "title": "Lei Orçamentária Anual (LOA): Estrutura Tripartite",
+      "content_markdown": "A **Lei Orçamentária Anual (LOA)** é o instrumento que discrimina a previsão das receitas e a fixação das despesas públicas para o exercício financeiro. Ela evidencia a política econômica e financeira do governo, bem como o seu programa de trabalho.\n\n### A Estrutura Tripartite da LOA\n\nA LOA é composta por três orçamentos distintos, que atuam de forma integrada para cobrir todas as ações do setor público:\n\n### 1. Orçamento Fiscal (OF)\nAbrange os recursos destinados ao funcionamento dos poderes públicos e de suas estruturas administrativas.\n*   **Administração Direta (ADMD):** Todos os Poderes da União (Executivo, Legislativo e Judiciário), incluindo seus respectivos fundos.\n*   **Administração Indireta (ADMI):** Autarquias, Fundações Públicas e as **Estatais Dependentes**.\n\n### 2. Orçamento de Investimento (OI)\nRefere-se às empresas em que a União, de forma direta ou indireta, detenha a maioria do capital social com direito a voto (empresas controladas).\n*   **Regra de Ouro do OI:** Constam neste orçamento **apenas os investimentos**. As despesas operacionais e de custeio dessas empresas não integram a LOA.\n\n### 3. Orçamento da Seguridade Social (OSS)\nDestina-se a financiar as ações de proteção social, cobrindo três áreas finalísticas: **Saúde, Assistência Social e Previdência Social**.\n*   **Abrangência:** Todas as entidades e órgãos vinculados à Administração Direta e Indireta (Autarquias, Fundações e Estatais Dependentes), além de fundos e fundações públicas (Exemplos: INSS, ANS, Previc, EBSERH).\n*   **Particularidade do SUS:** O Sistema Único de Saúde integra o Orçamento da Seguridade Social da União, porém ele também é financiado por recursos dos Estados, do Distrito Federal e dos Municípios. Essas contrapartidas locais constam nos orçamentos de seus respectivos entes e **não** integram o orçamento da União.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Conceito de Estatal Dependente",
+          "text": "É a empresa controlada que recebe recursos financeiros do ente controlador (União) para pagamento de despesas de custeio, pessoal ou capital (exceto aumento de participação acionária)."
+        },
+        {
+          "type": "tip",
+          "title": "Regra de Ouro do Orçamento de Investimento (OI)",
+          "text": "No Orçamento de Investimento, constam apenas os investimentos das empresas controladas pela União; as despesas operacionais e de custeio dessas empresas não integram a LOA."
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "FIS",
+          "meaning": "Fiscal, Investimento, Seguridade Social",
+          "description": "Mnemônico para lembrar os três orçamentos que compõem a LOA."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Qual o instrumento que discrimina a previsão das receitas e a fixação das despesas públicas para o exercício financeiro?",
+          "answer": "A Lei Orçamentária Anual (LOA)."
+        },
+        {
+          "question": "Quais são os três orçamentos que compõem a LOA?",
+          "answer": "Orçamento Fiscal (OF), Orçamento de Investimento (OI) e Orçamento da Seguridade Social (OSS)."
+        },
+        {
+          "question": "O que o Orçamento Fiscal abrange?",
+          "answer": "Recursos para o funcionamento dos poderes públicos, Administração Direta e Indireta (autarquias, fundações e estatais dependentes)."
+        },
+        {
+          "question": "Quais áreas finalísticas o Orçamento da Seguridade Social cobre?",
+          "answer": "Saúde, Assistência Social e Previdência Social."
+        }
+      ],
+      "mermaid_mindmap": "graph TD\n    LOA[Lei Orçamentária Anual - LOA] --> OF[Orçamento Fiscal - OF]\n    LOA --> OI[\"Orçamento de Investimento -<br/>OI\"]\n    LOA --> OSS[\"Orçamento da Seguridade<br/>Social - OSS\"]\n\n    subgraph OF_Det [Orçamento Fiscal]\n        OF1[Poderes da União - ADMD]\n        OF2[Fundos Públicos]\n        OF3[\"Autarquias, Fundações e<br/>Estatais Dependentes - ADMI\"]\n    end\n\n    subgraph OI_Det [Orçamento de Investimento]\n        OI1[\"Empresas Controladas pela<br/>União\"]\n        OI2[\"Apenas Despesas de<br/>Investimento\"]\n    end\n\n    subgraph OSS_Det [Orçamento da Seguridade Social]\n        OSS1[Saúde]\n        OSS2[Assistência Social]\n        OSS3[Previdência Social]\n    end\n\n    OF --> OF_Det\n    OI --> OI_Det\n    OSS --> OSS_Det"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-33",
+      "title": "Exclusões da LOA e Auxílio a Empresas Lucrativas",
+      "content_markdown": "### Não fazem parte da LOA:\n*   **Conselhos Profissionais** (embora possuam natureza jurídica de autarquias federais, com exceção da OAB);\n*   Entidades do **Sistema S** (SESI, SENAI, SESC, etc.);\n*   **ONGs** (Organizações Não Governamentais).\n\n### Diretriz de Redução de Desigualdades\nOs orçamentos da União (PPA + OF + OI) têm, entre suas funções essenciais, a atribuição de **reduzir as desigualdades inter-regionais**, adotando como critério orientador o **critério populacional**.\n\n### Auxílio Financeiro a Empresas de Fins Lucrativos\n\nDe acordo com o Artigo 19 da Lei 4.320/64, a LOA **não consignará ajuda financeira**, a qualquer título, a empresas que possuam fins lucrativos.\n\n*   **Exceção:** Essa concessão só será permitida se estiver **expressamente autorizada em lei especial**.",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Pegadinha de Prova!",
+          "text": "Conselhos Profissionais (exceto OAB), entidades do Sistema S e ONGs NÃO fazem parte da LOA."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Cite uma entidade que, apesar de sua relevância, não faz parte da LOA.",
+          "answer": "Conselhos Profissionais (exceto OAB), entidades do Sistema S ou ONGs."
+        },
+        {
+          "question": "Qual a atribuição essencial dos orçamentos da União em relação às desigualdades?",
+          "answer": "Reduzir as desigualdades inter-regionais, adotando o critério populacional."
+        },
+        {
+          "question": "A LOA pode consignar ajuda financeira a empresas de fins lucrativos?",
+          "answer": "Não, salvo se expressamente autorizada em lei especial."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    Exclusoes_da_LOA_0[\"Exclusões da LOA\"]\n    Conselhos_Profissionais__exceto_OAB__1[\"Conselhos Profissionais<br/>(exceto OAB)\"]\n    Entidades_do_Sistema_S__SESI__SENAI__SESC__2[\"Entidades do Sistema S<br/>(SESI, SENAI, SESC)\"]\n    ONGs__Organizacoes_Nao_Governamentais__3[\"ONGs (Organizações Não<br/>Governamentais)\"]\n    Exclusoes_da_LOA_0 --> Conselhos_Profissionais__exceto_OAB__1\n    Exclusoes_da_LOA_0 --> Entidades_do_Sistema_S__SESI__SENAI__SESC__2\n    Exclusoes_da_LOA_0 --> ONGs__Organizacoes_Nao_Governamentais__3"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-34",
+      "title": "Documentos Acompanhantes da LOA",
+      "content_markdown": "Para garantir a transparência e a consistência do planejamento orçamentário, a LOA deve ser acompanhada pelos seguintes documentos:\n\n*   **Reserva de Contingência:** Dotação global cujo valor (calculado com base na Receita Corrente Líquida - RCL) e forma de utilização devem estar previamente estabelecidos na Lei de Diretrizes Orçamentárias (LDO).\n*   **Demonstrativo de Compatibilidade:** Documento que atesta a compatibilidade da programação dos orçamentos com os objetivos e metas fixados no Anexo de Metas Fiscais (AMF) da LDO.\n*   **Medidas Compensatórias:** Detalhamento das compensações destinadas a cobrir renúncias de receitas e o aumento de Despesas Obrigatórias de Caráter Continuado (DOCC).\n*   **Demonstrativo Regionalizado de Renúncia de Receita:** Apresentação do efeito decorrente de isenções, anistias, remissões, subsídios e benefícios de natureza financeira, tributária e creditícia sobre as receitas e despesas públicas.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Reserva de Contingência",
+          "text": "É uma dotação global cujo valor e forma de utilização devem ser estabelecidos na LDO, calculada com base na Receita Corrente Líquida (RCL)."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Qual documento que acompanha a LOA atesta a compatibilidade da programação com as metas fiscais da LDO?",
+          "answer": "O Demonstrativo de Compatibilidade."
+        },
+        {
+          "question": "O que são as Medidas Compensatórias que acompanham a LOA?",
+          "answer": "São o detalhamento das compensações para cobrir renúncias de receitas e aumento de Despesas Obrigatórias de Caráter Continuado (DOCC)."
+        },
+        {
+          "question": "O que a Reserva de Contingência representa?",
+          "answer": "Uma dotação global, com valor e forma de utilização definidos na LDO, calculada com base na RCL."
+        },
+        {
+          "question": "Qual documento apresenta o efeito de benefícios fiscais sobre receitas e despesas?",
+          "answer": "O Demonstrativo Regionalizado de Renúncia de Receita."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    Documentos_que_Acompanham_a_LOA_0[\"Documentos que Acompanham a<br/>LOA\"]\n    Reserva_de_Contingencia_1[\"Reserva de Contingência\"]\n    Demonstrativo_de_Compatibilidade_2[\"Demonstrativo de<br/>Compatibilidade\"]\n    Medidas_Compensatorias_3[\"Medidas Compensatórias\"]\n    Demonstrativo_Regionalizado_de_Renuncia_de_Receita_4[\"Demonstrativo Regionalizado<br/>de Renúncia de Receita\"]\n    Documentos_que_Acompanham_a_LOA_0 --> Reserva_de_Contingencia_1\n    Documentos_que_Acompanham_a_LOA_0 --> Demonstrativo_de_Compatibilidade_2\n    Documentos_que_Acompanham_a_LOA_0 --> Medidas_Compensatorias_3\n    Documentos_que_Acompanham_a_LOA_0 --> Demonstrativo_Regionalizado_de_Renuncia_de_Receita_4"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-35",
+      "title": "Créditos Adicionais: Detalhamento e Vigência",
+      "content_markdown": "Os créditos adicionais são autorizações de despesas não computadas ou insuficientemente dotadas na Lei de Orçamento. Eles classificam-se em três modalidades:\n\n| Característica | Crédito Suplementar | Crédito Especial | Crédito Extraordinário |\n| :--- | :---: | :---: | :---: |\n| **Finalidade** | **Reforçar** dotação orçamentária já existente, mas que se mostrou insuficiente. | **Criar** dotação para despesa nova, não prevista na LOA. | Atender a despesas **imprevisíveis e urgentes** (guerra, calamidade pública ou comoção interna). |\n| **Exige indicação de fonte?** | **Sim** | **Sim** | **Não** |\n| **Instrumento de Autorização (União)** | **Lei** (vedado o uso de Medida Provisória). | **Lei específica** (vedado o uso de Medida Provisória). | **Medida Provisória (MPV)**. Não há autorização legislativa prévia. O STF julga a admissibilidade dos requisitos de urgência e imprevisibilidade. |\n| **Instrumento de Abertura (União)** | **Decreto** do Poder Executivo. | **Decreto** do Poder Executivo. | **Medida Provisória (MPV)**. |\n| **Instrumento (Estados, DF e Municípios)** | **Lei** autoriza e **Decreto** abre. | **Lei** autoriza e **Decreto** abre. | **Decreto** ou **Medida Provisória** (se houver previsão na legislação local). |\n\n### Regra de Vigência e Reabertura dos Créditos Adicionais\n\nOs créditos adicionais possuem vigência adstrita ao exercício financeiro em que foram autorizados. No entanto, os créditos **Especiais** e **Extraordinários** possuem uma regra de exceção quanto à sua temporalidade:\n\n*   **Regra Geral:** Vigência até 31 de dezembro do exercício de autorização.\n*   **Exceção (Apenas para Especiais e Extraordinários):** Se o ato de autorização for promulgado nos **últimos 4 meses do exercício** (de 1º de setembro a 31 de dezembro), o crédito poderá ser **reaberto** no limite do seu saldo e incorporado à LOA do exercício subsequente.",
+      "callouts": [
+        {
+          "type": "info",
+          "title": "Exceção de Vigência para Créditos Especiais e Extraordinários",
+          "text": "Se autorizados nos últimos 4 meses do exercício (Set-Dez), Créditos Especiais e Extraordinários podem ser reabertos no exercício seguinte, no limite do saldo."
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "SEE",
+          "meaning": "Suplementares, Especiais, Extraordinários",
+          "description": "Mnemônico para lembrar os tipos de créditos adicionais."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Qual a finalidade de um Crédito Suplementar?",
+          "answer": "Reforçar dotação orçamentária já existente e insuficiente."
+        },
+        {
+          "question": "Qual tipo de crédito adicional não exige indicação de fonte de recursos?",
+          "answer": "Crédito Extraordinário."
+        },
+        {
+          "question": "Qual instrumento autoriza e abre um Crédito Extraordinário na União?",
+          "answer": "Medida Provisória (MPV)."
+        },
+        {
+          "question": "Quando um Crédito Especial ou Extraordinário pode ser reaberto no exercício seguinte?",
+          "answer": "Se o ato de autorização for promulgado nos últimos 4 meses do exercício (1º de setembro a 31 de dezembro)."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    inicio[\"Início\"] --> Autorizacao[\"Autorização\"]\n    Autorizacao[\"Autorização\"] -->|Promulgado entre Jan e Ago| Primeiros8Meses[\"Primeiros8Meses\"]\n    Autorizacao[\"Autorização\"] -->|Promulgado entre Set e Dez| Ultimos4Meses[\"Ultimos4Meses\"]\n    Primeiros8Meses[\"Primeiros8Meses\"] -->|Vigência limitada ao exercício atual| ExpiraEm31Dez[\"ExpiraEm31Dez\"]\n    Ultimos4Meses[\"Ultimos4Meses\"] -->|Pode ser reaberto no exercício seguinte| ReaberturaPermitida[\"ReaberturaPermitida\"]\n    ReaberturaPermitida[\"ReaberturaPermitida\"] -->|Incorporado ao orçamento do ano seguinte pelo saldo restante| IncorporacaoLOA[\"IncorporaçãoLOA\"]\n    ExpiraEm31Dez[\"ExpiraEm31Dez\"] --> fim[\"Fim\"]\n    IncorporacaoLOA[\"IncorporaçãoLOA\"] --> fim[\"Fim\"]"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-36",
+      "title": "Fontes de Recursos para Créditos Suplementares e Especiais",
+      "content_markdown": "Para a abertura de créditos suplementares e especiais, é obrigatória a existência de recursos disponíveis. O ordenamento jurídico prevê as seguintes fontes (Mnemônico: *\"Anula Opera Crédito, Supera Excesso da Reserva de Veto\"*):\n\n### 1. Anulação de Dotações\nAnulação parcial ou total de dotações orçamentárias ou de créditos adicionais já autorizados (Lei 4.320/64, Art. 43, §1º, III).\n\n### 2. Operações de Crédito\nRecursos decorrentes de empréstimos e financiamentos autorizados por lei.\n\n### 3. Superávit Financeiro\nApurado no Balanço Patrimonial do exercício anterior.\n\n### 4. Excesso de Arrecadação (EA)\nO saldo positivo resultante da diferença entre a receita realizada e a receita prevista, considerando-se a tendência do exercício.\n\n### 5. Reserva de Contingência\nDotação global não destinada especificamente a nenhum órgão, unidade orçamentária, programa ou categoria econômica, cujos recursos são reservados para a abertura de créditos adicionais (Decreto-Lei nº 200/67, Art. 91).\n\n### 6. Recursos sem Despesa Correspondente (Veto ou Emenda)\nRecursos que, em decorrência de veto presidencial ou emendas parlamentares aprovadas, ficarem sem despesas correspondentes na LOA (CF/88).",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Pegadinha de Prova: ARO como fonte",
+          "text": "Operações de Crédito por Antecipação de Receita Orçamentária (ARO) NÃO podem ser utilizadas como fonte para abertura de créditos adicionais, pois são extraorçamentárias."
+        },
+        {
+          "type": "warning",
+          "title": "Atenção: Economia de Despesas",
+          "text": "A simples 'economia de despesas' (valor executado menor que o previsto) NÃO constitui fonte para abertura de créditos adicionais."
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "Anula Opera Crédito, Supera Excesso da Reserva de Veto",
+          "meaning": "Anulação de Dotações, Operações de Crédito, Superávit Financeiro, Excesso de Arrecadação, Reserva de Contingência, Recursos sem Despesa Correspondente (Veto ou Emenda)",
+          "description": "Mnemônico para lembrar as fontes de recursos para créditos suplementares e especiais."
+        }
+      ],
+      "flashcards": [
+        {
+          "question": "Cite uma fonte de recursos para abertura de créditos suplementares e especiais.",
+          "answer": "Anulação de Dotações, Operações de Crédito, Superávit Financeiro, Excesso de Arrecadação, Reserva de Contingência ou Recursos sem Despesa Correspondente (Veto ou Emenda)."
+        },
+        {
+          "question": "O Superávit Financeiro é apurado em qual documento?",
+          "answer": "No Balanço Patrimonial do exercício anterior."
+        },
+        {
+          "question": "As operações de ARO podem ser usadas como fonte para créditos adicionais?",
+          "answer": "Não, pois possuem natureza extraorçamentária."
+        },
+        {
+          "question": "O que é Excesso de Arrecadação?",
+          "answer": "É o saldo positivo resultante da diferença entre a receita realizada e a receita prevista, considerando a tendência do exercício."
+        }
+      ],
+      "mermaid_mindmap": "flowchart TD\n    Fontes_de_Recursos_para_Creditos_Adicionais_0[\"Fontes de Recursos para<br/>Créditos Adicionais\"]\n    Anulacao_de_Dotacoes_1[\"Anulação de Dotações\"]\n    Operacoes_de_Credito__exceto_ARO__2[\"Operações de Crédito (exceto<br/>ARO)\"]\n    Superavit_Financeiro__exercicio_anterior__3[\"Superávit Financeiro<br/>(exercício anterior)\"]\n    Excesso_de_Arrecadacao_4[\"Excesso de Arrecadação\"]\n    Reserva_de_Contingencia_5[\"Reserva de Contingência\"]\n    Recursos_sem_Despesa_Correspondente__Veto_Emenda__6[\"Recursos sem Despesa<br/>Correspondente (Veto/Emenda)\"]\n    Fontes_de_Recursos_para_Creditos_Adicionais_0 --> Anulacao_de_Dotacoes_1\n    Fontes_de_Recursos_para_Creditos_Adicionais_0 --> Operacoes_de_Credito__exceto_ARO__2\n    Fontes_de_Recursos_para_Creditos_Adicionais_0 --> Superavit_Financeiro__exercicio_anterior__3\n    Fontes_de_Recursos_para_Creditos_Adicionais_0 --> Excesso_de_Arrecadacao_4\n    Fontes_de_Recursos_para_Creditos_Adicionais_0 --> Reserva_de_Contingencia_5\n    Fontes_de_Recursos_para_Creditos_Adicionais_0 --> Recursos_sem_Despesa_Correspondente__Veto_Emenda__6"
+    },
+    {
+      "section_id": "administracao-financeira-e-orcamentaria-afo-sec-37",
+      "title": "Prazos e Ciclos Orçamentários Finais",
+      "content_markdown": "### Prazos dos Instrumentos de Planejamento\n\nNo âmbito federal, os prazos para envio e devolução das leis orçamentárias são definidos pelo **Ato das Disposições Constitucionais Transitórias (ADCT)**.\n\n*   **Autonomia dos Entes:** Estados, Distrito Federal e Municípios possuem autonomia para estabelecer seus próprios prazos em suas respectivas Constituições Estaduais e Leis Orgânicas.\n*   **Regra de Continuidade Legislativa:** A sessão legislativa do Congresso Nacional **não será interrompida** para o recesso parlamentar de julho sem que ocorra a prévia aprovação do Projeto de Lei de Diretrizes Orçamentárias (PLDO).\n*   **Sanção por Descumprimento:** O não cumprimento dos prazos estabelecidos para o envio das propostas orçamentárias configura **Crime de Responsabilidade**.\n\n### Ciclos Orçamentários\n\nO processo orçamentário pode ser analisado sob duas perspectivas de ciclo:\n\n### Ciclo Macro Orçamentário (8 Fases)\nAbrange o planejamento integrado de médio e curto prazo de todas as leis orçamentárias (PPA, LDO e LOA):\n\n1.  Elaboração do PPA\n2.  Aprovação do PPA\n3.  Elaboração da LDO\n4.  Aprovação da LDO\n5.  Elaboração do PLOA\n6.  Aprovação da LOA\n7.  Execução Orçamentária\n8.  Controle e Avaliação\n\n### Ciclo Micro Orçamentário (Focado na LOA)\nRestringe-se ao fluxo anual de tramitação e execução da Lei Orçamentária Anual:\n\n1.  Elaboração do PLOA\n2.  Discussão, Votação e Aprovação\n3.  Execução Orçamentária\n4.  Controle e Avaliação",
+      "callouts": [
+        {
+          "type": "warning",
+          "title": "Crime de Responsabilidade",
+          "text": "O não cumprimento dos prazos estabelecidos para o envio das propostas orçamentárias configura Crime de Responsabilidade."
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "question": "Quem define os prazos para envio e devolução das leis orçamentárias no âmbito federal?",
+          "answer": "O Ato das Disposições Constitucionais Transitórias (ADCT)."
+        },
+        {
+          "question": "Estados, DF e Municípios podem estabelecer seus próprios prazos orçamentários?",
+          "answer": "Sim, possuem autonomia para isso em suas Constituições Estaduais e Leis Orgânicas."
+        },
+        {
+          "question": "O que impede a interrupção da sessão legislativa do Congresso Nacional em julho?",
+          "answer": "A prévia aprovação do Projeto de Lei de Diretrizes Orçamentárias (PLDO)."
+        },
+        {
+          "question": "Qual a consequência do não cumprimento dos prazos de envio das propostas orçamentárias?",
+          "answer": "Configura Crime de Responsabilidade."
+        }
+      ],
+      "mermaid_mindmap": "graph TD\n    1[1. Elaboração do PPA] --> 2[2. Aprovação do PPA]\n    2 --> 3[3. Elaboração da LDO]\n    3 --> 4[4. Aprovação da LDO]\n    4 --> 5[5. Elaboração do PLOA]\n    5 --> 6[6. Aprovação da LOA]\n    6 --> 7[7. Execução Orçamentária]\n    7 --> 8[8. Controle e Avaliação]"
+    }
+  ]
+}
