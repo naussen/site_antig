@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {
+  AlertTriangle,
   ArrowUpRight,
   BookOpen,
   CalendarDays,
@@ -39,6 +40,7 @@ export default async function DashboardPage() {
   let completedSectionIds = new Set<string>();
   let preferredDisciplines: string[] | null = null;
   let preferencesAvailable = true;
+  const loadErrors: string[] = [];
 
   try {
     const { data, error } = await supabase
@@ -48,6 +50,7 @@ export default async function DashboardPage() {
 
     if (error) {
       console.error("Erro ao buscar tópicos:", error);
+      loadErrors.push("Não foi possível carregar a biblioteca de tópicos.");
     } else if (data) {
       topics = data;
     }
@@ -66,6 +69,7 @@ export default async function DashboardPage() {
 
       if (progressError) {
         console.error("Erro ao buscar progresso:", progressError);
+        loadErrors.push("Não foi possível carregar seu progresso.");
       } else if (progressData) {
         completedSectionIds = new Set(
           progressData.map((progress) => progress.section_id)
@@ -86,12 +90,14 @@ export default async function DashboardPage() {
         console.error(
           `Erro ao buscar preferências do Dashboard: ${formatSupabaseError(preferencesError)}`
         );
+        loadErrors.push("Não foi possível carregar suas preferências do Dashboard.");
       }
     } else if (preferences?.visible_disciplines) {
       preferredDisciplines = preferences.visible_disciplines as string[];
     }
   } catch (error) {
     console.error("Exceção ao buscar tópicos:", error);
+    loadErrors.push("O Dashboard não conseguiu carregar todos os seus dados.");
   }
 
   const progressByTopic = topics.reduce((acc, topic) => {
@@ -247,6 +253,29 @@ export default async function DashboardPage() {
             )}
           </div>
         </header>
+
+        {loadErrors.length > 0 && (
+          <div
+            className="mt-6 flex items-start gap-3 rounded-2xl border p-4 text-sm"
+            style={{
+              background: "var(--callout-warning-bg)",
+              borderColor: "var(--callout-warning-border)",
+              color: "var(--callout-warning-text)",
+            }}
+            role="alert"
+          >
+            <AlertTriangle size={19} className="mt-0.5 shrink-0" />
+            <div>
+              <p className="font-semibold">Alguns dados personalizados não foram carregados.</p>
+              <ul className="mt-1 list-disc space-y-1 pl-4">
+                {Array.from(new Set(loadErrors)).map((message) => (
+                  <li key={message}>{message}</li>
+                ))}
+              </ul>
+              <p className="mt-2 text-xs">Atualize a página para tentar novamente.</p>
+            </div>
+          </div>
+        )}
 
         {suggestedTopic && suggestedProgress && (
           <section

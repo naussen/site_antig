@@ -1,6 +1,6 @@
 "use client";
 
-import { CheckSquare, Square, ChevronRight, ChevronsLeft } from "lucide-react";
+import { AlertCircle, CheckSquare, Square, ChevronRight, ChevronsLeft, Loader2 } from "lucide-react";
 import type { SectionRow } from "@/types/database";
 
 interface SidebarNavProps {
@@ -12,6 +12,8 @@ interface SidebarNavProps {
   progressPercent: number;
   completedCount: number;
   totalCount: number;
+  progressLoading?: boolean;
+  progressError?: string | null;
   onClose?: () => void;
 }
 
@@ -24,6 +26,8 @@ export function SidebarNav({
   progressPercent,
   completedCount,
   totalCount,
+  progressLoading = false,
+  progressError = null,
   onClose,
 }: SidebarNavProps) {
   return (
@@ -63,6 +67,18 @@ export function SidebarNav({
             }}
           />
         </div>
+        {progressLoading && (
+          <p className="mt-2 flex items-center gap-1.5 text-xs" style={{ color: "var(--text-muted)" }}>
+            <Loader2 size={12} className="animate-spin" />
+            Carregando seu progresso...
+          </p>
+        )}
+        {progressError && (
+          <p className="mt-2 flex items-start gap-1.5 text-xs" style={{ color: "var(--callout-warning-text)" }} role="alert">
+            <AlertCircle size={13} className="mt-0.5 shrink-0" />
+            {progressError}
+          </p>
+        )}
         {onClose && (
           <button
             onClick={onClose}

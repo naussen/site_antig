@@ -33,7 +33,7 @@ export function NotesPanel({
   sectionTitleMap,
   onClose,
 }: NotesPanelProps) {
-  const { notes, loading, saveNote, deleteNote } = useNotes(
+  const { notes, loading, error: loadError, saveNote, deleteNote, refetch } = useNotes(
     userId,
     allSectionIds,
     sectionId
@@ -54,6 +54,15 @@ export function NotesPanel({
       setErrorMsg("Erro ao salvar nota");
     } finally {
       setIsSaving(false);
+    }
+  };
+
+  const handleDelete = async (noteId: string) => {
+    setErrorMsg("");
+    try {
+      await deleteNote(noteId);
+    } catch {
+      setErrorMsg("Não foi possível excluir a nota.");
     }
   };
 
@@ -167,10 +176,10 @@ export function NotesPanel({
 
         {/* Botão de Salvar e mensagens */}
         <div className="flex items-center justify-between gap-2">
-          {errorMsg ? (
+          {errorMsg || loadError ? (
             <div className="flex items-center gap-1 text-xs text-red-500 font-medium">
               <AlertCircle size={14} />
-              <span>{errorMsg}</span>
+              <span>{errorMsg || loadError}</span>
             </div>
           ) : (
             <div className="text-[10px]" style={{ color: "var(--text-muted)", opacity: 0.8 }}>
@@ -200,6 +209,23 @@ export function NotesPanel({
 
       {/* Lista de notas salvas — seção ativa primeiro, depois o resto do tópico */}
       <div className="flex-1 flex flex-col min-h-0 overflow-y-auto">
+        {loadError && (
+          <div
+            className="mx-4 mt-3 rounded-xl border p-3 text-xs"
+            style={{ borderColor: "var(--callout-warning-border)", color: "var(--callout-warning-text)" }}
+            role="alert"
+          >
+            <p>{loadError}</p>
+            <button
+              type="button"
+              onClick={() => void refetch()}
+              className="mt-2 font-semibold underline underline-offset-2 cursor-pointer"
+            >
+              Tentar novamente
+            </button>
+          </div>
+        )}
+
         {/* Notas da seção ativa */}
         <div className="px-4 pt-3 pb-1 flex items-center justify-between shrink-0">
           <span className="text-[11px] font-bold uppercase tracking-wider" style={{ color: "var(--text-muted)" }}>
@@ -209,19 +235,24 @@ export function NotesPanel({
         </div>
 
         <div className="px-4 pb-3 space-y-2.5">
-          {activeNotes.length === 0 ? (
+          {loading ? (
+            <div className="flex items-center justify-center gap-2 py-6 text-xs" style={{ color: "var(--text-muted)" }}>
+              <Loader2 size={13} className="animate-spin" />
+              Carregando suas notas...
+            </div>
+          ) : !loadError && activeNotes.length === 0 ? (
             <div className="text-center py-6 opacity-50 text-xs" style={{ color: "var(--text-muted)" }}>
               Nenhuma nota nesta seção.
             </div>
-          ) : (
+          ) : !loadError ? (
             activeNotes.map((note, index) => (
               <NoteCard
                 key={note.id || `${note.section_id}-${note.updated_at}-${index}`}
                 note={note}
-                onDelete={deleteNote}
+                onDelete={handleDelete}
               />
             ))
-          )}
+          ) : null}
         </div>
 
         {/* Notas das demais seções do tópico */}
@@ -239,7 +270,7 @@ export function NotesPanel({
                   key={note.id || `${note.section_id}-${note.updated_at}-${index}`}
                   note={note}
                   sectionLabel={sectionTitleMap[note.section_id]}
-                  onDelete={deleteNote}
+                  onDelete={handleDelete}
                 />
               ))}
             </div>

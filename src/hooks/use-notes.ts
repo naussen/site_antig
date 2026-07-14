@@ -1,12 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { UserNote } from "@/types/database";
 
 interface UseNotesReturn {
   notes: UserNote[];
   loading: boolean;
+  error: string | null;
   saveNote: (content: string) => Promise<UserNote | null>;
   deleteNote: (id: string) => Promise<void>;
   refetch: () => Promise<void>;
@@ -22,41 +23,69 @@ export function useNotes(
   sectionId: string | string[],
   activeSectionId?: string
 ): UseNotesReturn {
-  const [notes, setNotes] = useState<UserNote[]>([]);
-  const [loading, setLoading] = useState(false);
+  const sectionIds = useMemo(
+    () => (Array.isArray(sectionId) ? sectionId : [sectionId]),
+    [sectionId]
+  );
+  const contextKey =
+    userId && sectionIds.length > 0
+      ? JSON.stringify([userId, sectionIds])
+      : "";
+  const requestIdRef = useRef(0);
+  const [notesState, setNotesState] = useState<{
+    contextKey: string;
+    notes: UserNote[];
+  }>({ contextKey: "", notes: [] });
+  const [loadState, setLoadState] = useState<{
+    contextKey: string;
+    loading: boolean;
+    error: string | null;
+  }>({ contextKey: "", loading: false, error: null });
+
+  const notes = notesState.contextKey === contextKey ? notesState.notes : [];
+  const loading =
+    Boolean(contextKey) &&
+    (loadState.contextKey !== contextKey || loadState.loading);
+  const error = loadState.contextKey === contextKey ? loadState.error : null;
 
   // sectionId ativo para inserts (sempre string única)
   const targetSectionId =
     activeSectionId ?? (Array.isArray(sectionId) ? sectionId[0] : sectionId);
 
   const fetchNotes = useCallback(async () => {
-    if (!userId) {
-      setNotes([]);
+    const requestId = ++requestIdRef.current;
+
+    if (!userId || sectionIds.length === 0) {
       return;
     }
 
-    const ids = Array.isArray(sectionId) ? sectionId : [sectionId];
-    if (ids.length === 0) {
-      setNotes([]);
-      return;
-    }
-
-    setLoading(true);
+    setLoadState({ contextKey, loading: true, error: null });
     const supabase = createClient();
     const { data, error } = await supabase
       .from("user_notes")
       .select("*")
       .eq("user_id", userId)
-      .in("section_id", ids)
+      .in("section_id", sectionIds)
       .order("updated_at", { ascending: false });
+
+    if (requestId !== requestIdRef.current) {
+      return;
+    }
 
     if (error) {
       console.error("Erro ao buscar notas:", error);
-    } else if (data) {
-      setNotes(data as UserNote[]);
+      setNotesState({ contextKey, notes: [] });
+      setLoadState({
+        contextKey,
+        loading: false,
+        error: "Não foi possível carregar suas notas.",
+      });
+      return;
     }
-    setLoading(false);
-  }, [userId, sectionId]);
+
+    setNotesState({ contextKey, notes: (data ?? []) as UserNote[] });
+    setLoadState({ contextKey, loading: false, error: null });
+  }, [contextKey, sectionIds, userId]);
 
   useEffect(() => {
     // O efeito sincroniza o estado local com as notas persistidas no Supabase.
@@ -85,7 +114,11 @@ export function useNotes(
     }
 
     const newNote = data as UserNote;
-    setNotes((prev) => [newNote, ...prev]);
+    setNotesState((previous) =>
+      previous.contextKey === contextKey
+        ? { contextKey, notes: [newNote, ...previous.notes] }
+        : previous
+    );
     return newNote;
   };
 
@@ -104,8 +137,15 @@ export function useNotes(
       throw error;
     }
 
-    setNotes((prev) => prev.filter((n) => n.id !== noteId));
+    setNotesState((previous) =>
+      previous.contextKey === contextKey
+        ? {
+            contextKey,
+            notes: previous.notes.filter((note) => note.id !== noteId),
+          }
+        : previous
+    );
   };
 
-  return { notes, loading, saveNote, deleteNote, refetch: fetchNotes };
+  return { notes, loading, error, saveNote, deleteNote, refetch: fetchNotes };
 }

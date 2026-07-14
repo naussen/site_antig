@@ -60,6 +60,8 @@ export function StudyPageClient({ topic, sections, userId }: StudyPageClientProp
     completedCount,
     totalCount,
     progressPercent,
+    loading: progressLoading,
+    error: progressError,
   } = useSectionProgress(userId, sectionIds);
 
   const handleSectionClick = useCallback((sectionId: string) => {
@@ -137,6 +139,8 @@ export function StudyPageClient({ topic, sections, userId }: StudyPageClientProp
           progressPercent={progressPercent}
           completedCount={completedCount}
           totalCount={totalCount}
+          progressLoading={progressLoading}
+          progressError={progressError}
           onClose={() => setSidebarOpen(false)}
         />
       </aside>
