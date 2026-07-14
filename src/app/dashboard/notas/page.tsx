@@ -1,19 +1,19 @@
 import Link from "next/link";
-import { ArrowLeft, BookOpen, StickyNote, Calendar } from "lucide-react";
+import { AlertCircle, BookOpen, StickyNote } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
-import { MarkdownViewer } from "@/components/study/markdown-viewer";
+import { NoteCard } from "./note-card";
 
 export default async function NotesPage() {
   const supabase = await createClient();
-  const { data: { session } } = await supabase.auth.getSession();
+  const { data: { user } } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (!user) {
     redirect("/login");
   }
 
   // Fetch all notes for the user, including section and topic data
-  const { data: notesData } = await supabase
+  const { data: notesData, error: notesError } = await supabase
     .from("user_notes")
     .select(`
       id,
@@ -30,7 +30,24 @@ export default async function NotesPage() {
         )
       )
     `)
+    .eq("user_id", user.id)
     .neq("content", "");
+
+  type NotesQueryRow = {
+    id: string | null;
+    content: string;
+    updated_at: string;
+    sections: {
+      section_id: string;
+      title: string;
+      sort_order: number;
+      topics: {
+        topic_id: string;
+        title: string;
+        discipline: string | null;
+      } | null;
+    } | null;
+  };
 
   // Transformar e agrupar os dados
   type EnrichedNote = {
@@ -48,13 +65,15 @@ export default async function NotesPage() {
   const validNotes: EnrichedNote[] = [];
 
   if (notesData) {
-    notesData.forEach((note: any) => {
+    (notesData as unknown as NotesQueryRow[]).forEach((note) => {
       // Ignora notas vazias ou compostas apenas por espaços
       if (!note.content || note.content.trim() === "") return;
+      // Ações de edição/exclusão exigem o UUID introduzido na migration 004.
+      if (!note.id) return;
       if (!note.sections || !note.sections.topics) return;
 
       validNotes.push({
-        id: note.id || `${note.sections.section_id}-${note.updated_at}`,
+        id: note.id,
         content: note.content,
         updated_at: note.updated_at,
         section_id: note.sections.section_id,
@@ -92,7 +111,29 @@ export default async function NotesPage() {
         {/* Header global já renderizado pelo layout.tsx */}
 
       <section className="max-w-5xl mx-auto">
-        {validNotes.length === 0 ? (
+        {notesError ? (
+          <div
+            role="alert"
+            className="flex flex-col items-center rounded-3xl px-6 py-16 text-center"
+            style={{
+              background: "var(--callout-warning-bg)",
+              border: "1px solid var(--callout-warning-border)",
+            }}
+          >
+            <AlertCircle
+              size={40}
+              className="mb-4"
+              style={{ color: "var(--callout-warning-text)" }}
+              aria-hidden="true"
+            />
+            <p className="text-base font-semibold" style={{ color: "var(--callout-warning-text)" }}>
+              Não foi possível carregar suas notas.
+            </p>
+            <p className="mt-1 text-sm" style={{ color: "var(--text-secondary)" }}>
+              Atualize a página para tentar novamente.
+            </p>
+          </div>
+        ) : validNotes.length === 0 ? (
           <div
             className="text-center py-16 rounded-3xl"
             style={{
@@ -142,38 +183,23 @@ export default async function NotesPage() {
                     <div key={topicTitle} className="space-y-4 ml-2 sm:ml-6 border-l-2 pl-4" style={{ borderColor: "var(--accent-soft)" }}>
                       <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: "var(--text-primary)" }}>
                         <span className="w-2 h-2 rounded-full" style={{ background: "var(--accent)" }}></span>
-                        {topicTitle}
+                        <Link
+                          href={`/${grouped[discipline][topicTitle][0].topic_id}`}
+                          className="rounded-sm underline-offset-4 transition-opacity hover:underline hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-2"
+                          style={{ outlineColor: "var(--accent)" }}
+                          title={`Abrir o material: ${topicTitle}`}
+                        >
+                          {topicTitle}
+                        </Link>
                       </h3>
                       
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {grouped[discipline][topicTitle].map((note) => (
-                          <div
+                          <NoteCard
                             key={note.id}
-                            className="p-5 rounded-xl transition-all"
-                            style={{
-                              background: "var(--bg-card)",
-                              border: "1px solid var(--border)",
-                              boxShadow: "var(--shadow)",
-                            }}
-                          >
-                            <div className="flex justify-between items-start mb-3">
-                              <Link 
-                                href={`/${note.topic_id}#${note.section_id}`}
-                                className="text-sm font-medium hover:underline flex-1 pr-2"
-                                style={{ color: "var(--accent)" }}
-                                title="Ir para o resumo"
-                              >
-                                📌 {note.section_title}
-                              </Link>
-                              <div className="flex items-center gap-1 text-[10px] shrink-0" style={{ color: "var(--text-muted)" }}>
-                                <Calendar size={12} />
-                                {new Date(note.updated_at).toLocaleDateString("pt-BR")}
-                              </div>
-                            </div>
-                            <div className="text-sm text-primary break-words overflow-x-auto">
-                              <MarkdownViewer content={note.content} />
-                            </div>
-                          </div>
+                            note={note}
+                            userId={user.id}
+                          />
                         ))}
                       </div>
                     </div>

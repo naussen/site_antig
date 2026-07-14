@@ -6,9 +6,9 @@ import { redirect } from "next/navigation";
 
 export default async function HomePage() {
   const supabase = await createClient();
-  const { data: { session } } = await supabase.auth.getSession();
+  const { data: { user } } = await supabase.auth.getUser();
 
-  if (session) {
+  if (user) {
     redirect("/dashboard");
   }
   return (

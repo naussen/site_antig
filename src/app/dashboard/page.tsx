@@ -28,9 +28,10 @@ type TopicProgress = {
 
 export default async function DashboardPage() {
   const supabase = await createClient();
-  const { data: { session } } = await supabase.auth.getSession();
+  // getUser valida o token contra o servidor — mais seguro que getSession (local-only)
+  const { data: { user } } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (!user) {
     redirect("/login");
   }
 
@@ -59,7 +60,7 @@ export default async function DashboardPage() {
       const { data: progressData, error: progressError } = await supabase
         .from("user_progress")
         .select("section_id")
-        .eq("user_id", session.user.id)
+        .eq("user_id", user.id)
         .eq("completed", true)
         .in("section_id", allSectionIds);
 
@@ -75,7 +76,7 @@ export default async function DashboardPage() {
     const { data: preferences, error: preferencesError } = await supabase
       .from("user_dashboard_preferences")
       .select("visible_disciplines")
-      .eq("user_id", session.user.id)
+      .eq("user_id", user.id)
       .maybeSingle();
 
     if (preferencesError) {

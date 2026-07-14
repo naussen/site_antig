@@ -8,10 +8,10 @@ import { isMissingTableError } from "@/lib/supabase/errors";
 export async function saveDashboardDisciplines(formData: FormData) {
   const supabase = await createClient();
   const {
-    data: { session },
-  } = await supabase.auth.getSession();
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (!user) {
     redirect("/login");
   }
 
@@ -43,7 +43,7 @@ export async function saveDashboardDisciplines(formData: FormData) {
 
   const { error } = await supabase.from("user_dashboard_preferences").upsert(
     {
-      user_id: session.user.id,
+      user_id: user.id,
       visible_disciplines: showAll ? null : selectedDisciplines,
     },
     { onConflict: "user_id" }

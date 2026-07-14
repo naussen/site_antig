@@ -1,6 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
-import { AppDock } from "@/components/navigation/app-dock";
+import { DashboardNavigation } from "@/components/navigation/dashboard-navigation";
 
 export default async function DashboardLayout({
   children,
@@ -8,22 +8,20 @@ export default async function DashboardLayout({
   children: React.ReactNode;
 }) {
   const supabase = await createClient();
-  const { data: { session } } = await supabase.auth.getSession();
+  // getUser valida o token contra o servidor — mais seguro que getSession (local-only)
+  const { data: { user } } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (!user) {
     redirect("/login");
   }
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ background: "var(--bg-primary)" }}>
-      {/* Conteúdo Principal (Resumos ou Notas) com padding bottom para o Dock */}
-      <div className="flex-1 flex flex-col min-w-0 pb-20 md:pb-24">
+    <div className="min-h-screen lg:flex" style={{ background: "var(--bg-primary)" }}>
+      <DashboardNavigation userEmail={user.email ?? null} />
+
+      <div className="min-w-0 flex-1">
         {children}
       </div>
-
-      {/* Dock de Navegação Estilo macOS */}
-      <AppDock userEmail={session.user.email ?? null} />
     </div>
   );
 }
-

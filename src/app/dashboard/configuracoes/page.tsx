@@ -8,10 +8,10 @@ import { formatSupabaseError, isMissingTableError } from "@/lib/supabase/errors"
 export default async function DashboardSettingsPage() {
   const supabase = await createClient();
   const {
-    data: { session },
-  } = await supabase.auth.getSession();
+    data: { user },
+  } = await supabase.auth.getUser();
 
-  if (!session) {
+  if (!user) {
     redirect("/login");
   }
 
@@ -23,7 +23,7 @@ export default async function DashboardSettingsPage() {
     supabase
       .from("user_dashboard_preferences")
       .select("visible_disciplines")
-      .eq("user_id", session.user.id)
+      .eq("user_id", user.id)
       .maybeSingle(),
   ]);
 
