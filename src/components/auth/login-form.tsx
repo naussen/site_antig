@@ -73,12 +73,13 @@ export function LoginForm() {
         if (error) throw error;
         setSuccess(true);
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Erro no login:", error);
-      if (error.message?.includes("rate limit")) {
+      const message = error instanceof Error ? error.message : "";
+      if (message.includes("rate limit")) {
         alert("Limite de envio de emails excedido no Supabase. Use uma senha de teste ou Google.");
       } else {
-        alert(error.message || "Ocorreu um erro ao tentar entrar. Tente novamente.");
+        alert(message || "Ocorreu um erro ao tentar entrar. Tente novamente.");
       }
     } finally {
       setLoading(false);

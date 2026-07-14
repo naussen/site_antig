@@ -44,7 +44,9 @@ export interface TopicImport {
 }
 
 // =============================================================================
-// Tipos que espelham as rows do banco (Supabase)
+// GRUPO B — Conteúdo editorial global (compartilhado entre todos os usuários)
+// Leitura aberta para autenticados. Escrita apenas via service role (admin).
+// Sem user_id, sem isolamento pessoal.
 // =============================================================================
 
 export interface TopicRow {
@@ -67,6 +69,12 @@ export interface SectionRow {
   created_at: string;
 }
 
+// =============================================================================
+// GRUPO A — Dados pessoais do usuário (isolados por login, RLS obrigatório)
+// Toda tabela deste grupo tem user_id NOT NULL e FK para auth.users(id).
+// Toda leitura/escrita deve ser filtrada por session.user.id.
+// =============================================================================
+
 export interface UserProgress {
   user_id: string;
   section_id: string;
@@ -75,10 +83,20 @@ export interface UserProgress {
 }
 
 export interface UserNote {
+  /** UUID gerado pelo Supabase (migration 004+). Obrigatório para delete. */
   id?: string;
   user_id: string;
   section_id: string;
   content: string;
+  updated_at: string;
+}
+
+/** Preferências pessoais de exibição do Dashboard.
+ *  visible_disciplines = null → mostra todas as disciplinas.
+ *  visible_disciplines = string[] → restringe às selecionadas. */
+export interface UserDashboardPreferences {
+  user_id: string;
+  visible_disciplines: string[] | null;
   updated_at: string;
 }
 

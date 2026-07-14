@@ -57,15 +57,11 @@ export default async function TopicPage({ params }: TopicPageProps) {
     notFound();
   }
 
-  const userEmail = session.user.email ?? null;
-
   return (
     <StudyPageClient
       topic={topic}
       sections={sections}
       userId={userId}
-      userEmail={userEmail}
     />
   );
 }
-

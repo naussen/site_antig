@@ -19,13 +19,15 @@ interface UseNotesReturn {
  */
 export function useNotes(
   userId: string | null,
-  sectionId: string | string[]
+  sectionId: string | string[],
+  activeSectionId?: string
 ): UseNotesReturn {
   const [notes, setNotes] = useState<UserNote[]>([]);
   const [loading, setLoading] = useState(false);
 
   // sectionId ativo para inserts (sempre string única)
-  const activeSectionId = Array.isArray(sectionId) ? sectionId[0] : sectionId;
+  const targetSectionId =
+    activeSectionId ?? (Array.isArray(sectionId) ? sectionId[0] : sectionId);
 
   const fetchNotes = useCallback(async () => {
     if (!userId) {
@@ -57,18 +59,20 @@ export function useNotes(
   }, [userId, sectionId]);
 
   useEffect(() => {
+    // O efeito sincroniza o estado local com as notas persistidas no Supabase.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     fetchNotes();
   }, [fetchNotes]);
 
   const saveNote = async (content: string): Promise<UserNote | null> => {
-    if (!userId || !activeSectionId || !content.trim()) return null;
+    if (!userId || !targetSectionId || !content.trim()) return null;
     const supabase = createClient();
 
     const { data, error } = await supabase
       .from("user_notes")
       .insert({
         user_id: userId,
-        section_id: activeSectionId,
+        section_id: targetSectionId,
         content: content.trim(),
         updated_at: new Date().toISOString(),
       })
@@ -86,13 +90,14 @@ export function useNotes(
   };
 
   const deleteNote = async (noteId: string): Promise<void> => {
-    if (!noteId) return;
+    if (!userId || !noteId) return;
     const supabase = createClient();
 
     const { error } = await supabase
       .from("user_notes")
       .delete()
-      .eq("id", noteId);
+      .eq("id", noteId)
+      .eq("user_id", userId);
 
     if (error) {
       console.error("Erro ao deletar nota:", error);

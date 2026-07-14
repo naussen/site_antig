@@ -32,6 +32,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    // O tema salvo só pode ser lido após a hidratação no navegador.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setThemeState(getInitialTheme());
     setMounted(true);
   }, []);

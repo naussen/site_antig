@@ -2,7 +2,8 @@
 
 import { useCallback, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
-import { ListTree, PanelLeftOpen } from "lucide-react";
+import Link from "next/link";
+import { ArrowLeft, ListTree, StickyNote, X } from "lucide-react";
 import type { SectionRow, TopicRow } from "@/types/database";
 import { useSectionProgress } from "@/hooks/use-section-progress";
 import { SidebarNav } from "@/components/study/sidebar-nav";
@@ -11,7 +12,6 @@ import { CalloutList } from "@/components/study/callout-block";
 import { MnemonicList } from "@/components/study/mnemonic-card";
 import { FlashcardDeck } from "@/components/study/flashcard-deck";
 import { NotesPanel } from "@/components/study/notes-panel";
-import { AppDock } from "@/components/navigation/app-dock";
 
 // Mermaid: import dinâmico com ssr: false para evitar hydration errors
 const MermaidViewer = dynamic(
@@ -31,21 +31,18 @@ interface StudyPageClientProps {
   topic: TopicRow;
   sections: SectionRow[];
   userId: string;
-  userEmail: string | null;
 }
 
 /**
- * Client Component: monta o layout de 3 colunas (sidebar + conteúdo + notes).
- * Gerencia estado de navegação, progresso e sidebar/notes toggles para mobile.
+ * Client Component: mantém o conteúdo como área principal e abre sumário/notas
+ * em painéis sobrepostos. O estado persistente continua nos hooks por usuário.
  */
-export function StudyPageClient({ topic, sections, userId, userEmail }: StudyPageClientProps) {
+export function StudyPageClient({ topic, sections, userId }: StudyPageClientProps) {
   const [activeSectionId, setActiveSectionId] = useState<string | null>(
     sections[0]?.section_id ?? null
   );
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [sidebarVisible, setSidebarVisible] = useState(true);
   const [notesOpen, setNotesOpen] = useState(false);
-  const [notesVisible, setNotesVisible] = useState(true);
 
   const sectionIds = useMemo(
     () => sections.map((s) => s.section_id),
@@ -78,54 +75,58 @@ export function StudyPageClient({ topic, sections, userId, userEmail }: StudyPag
   const activeSection = sections.find(
     (s) => s.section_id === activeSectionId
   );
-  const expandedReadingWidth = !sidebarVisible && !notesVisible;
-  const contentWidthClass = expandedReadingWidth
-    ? "max-w-[1440px]"
-    : !sidebarVisible || !notesVisible
-      ? "max-w-[1280px]"
-      : "max-w-[1120px]";
+
+  const openSidebar = () => {
+    setNotesOpen(false);
+    setSidebarOpen(true);
+  };
+
+  const openNotes = () => {
+    setSidebarOpen(false);
+    setNotesOpen(true);
+  };
 
   return (
     <>
-      {/* Sidebar overlay (mobile) */}
-      {sidebarOpen && (
+      {(sidebarOpen || notesOpen) && (
         <div
-          className="fixed inset-0 z-40 bg-black/30 lg:hidden"
-          onClick={() => setSidebarOpen(false)}
+          className="fixed inset-0 z-40 bg-black/40 backdrop-blur-[1px]"
+          onClick={() => {
+            setSidebarOpen(false);
+            setNotesOpen(false);
+          }}
+          aria-hidden="true"
         />
       )}
 
       <button
         type="button"
-        className="study-navigation-trigger lg:hidden"
-        onClick={() => {
-          setSidebarVisible(true);
-          setSidebarOpen(true);
+        className="fixed left-0 top-1/2 z-30 flex -translate-y-1/2 flex-col items-center gap-2 rounded-r-2xl border border-l-0 px-2 py-4 text-xs font-bold shadow-lg transition-transform hover:translate-x-0.5"
+        style={{
+          background: "var(--bg-card)",
+          borderColor: "var(--border)",
+          color: "var(--accent)",
         }}
-        aria-label="Abrir menu de navegação do resumo"
+        onClick={openSidebar}
+        aria-label="Abrir sumário e checklist do resumo"
         aria-expanded={sidebarOpen}
         aria-controls="study-sidebar"
       >
-        <span className="study-navigation-trigger-icon" aria-hidden="true">
-          <ListTree size={28} strokeWidth={2.2} />
-        </span>
-        <span>Sumário</span>
+        <ListTree size={22} aria-hidden="true" />
+        <span className="[writing-mode:vertical-rl]">Sumário</span>
       </button>
 
-      {/* Sidebar */}
       <aside
         id="study-sidebar"
-        className={`
-          fixed lg:static inset-y-0 left-0 z-40 w-72 lg:w-80 border-r overflow-y-auto shrink-0
-          transition-transform duration-300 lg:translate-x-0
-          ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
-          ${sidebarVisible ? "lg:block" : "lg:hidden"}
-        `}
+        className={`fixed inset-y-0 left-0 z-50 w-[min(88vw,360px)] overflow-y-auto border-r transition-transform duration-300 ${
+          sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
         style={{
           borderColor: "var(--border)",
           background: "var(--bg-sidebar)",
-          top: "0",
         }}
+        aria-hidden={!sidebarOpen}
+        inert={!sidebarOpen}
       >
         <SidebarNav
           sections={sections}
@@ -136,33 +137,61 @@ export function StudyPageClient({ topic, sections, userId, userEmail }: StudyPag
           progressPercent={progressPercent}
           completedCount={completedCount}
           totalCount={totalCount}
-          onClose={() => {
-            setSidebarVisible(false);
-            setSidebarOpen(false);
-          }}
+          onClose={() => setSidebarOpen(false)}
         />
       </aside>
 
-      {!sidebarVisible && (
-        <button
-          onClick={() => setSidebarVisible(true)}
-          className="fixed left-4 top-4 z-30 hidden items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-black/5 dark:hover:bg-white/5 lg:flex"
-          style={{
-            background: "var(--bg-card)",
-            borderColor: "var(--border)",
-            color: "var(--text-secondary)",
-          }}
-          aria-label="Mostrar sumário"
-          title="Mostrar sumário"
-        >
-          <PanelLeftOpen size={18} />
-          Sumário
-        </button>
-      )}
-
-      {/* Main content */}
       <main className="min-w-0 flex-1 overflow-y-auto">
-        <div className={`w-full ${contentWidthClass} mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-8 pb-28 transition-[max-width] duration-300`}>
+        <header
+          className="sticky top-0 z-20 border-b px-4 py-3 backdrop-blur-xl sm:px-6 lg:px-8"
+          style={{
+            background: "color-mix(in srgb, var(--bg-primary) 88%, transparent)",
+            borderColor: "var(--border)",
+          }}
+        >
+          <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-3">
+            <div className="flex min-w-0 items-center gap-3">
+              <Link
+                href="/dashboard"
+                className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border transition-colors hover:border-[var(--accent)]"
+                style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
+                aria-label="Voltar para a biblioteca"
+                title="Voltar para a biblioteca"
+              >
+                <ArrowLeft size={19} />
+              </Link>
+              <div className="min-w-0">
+                <p className="truncate text-sm font-bold" style={{ color: "var(--text-primary)" }}>
+                  {topic.title}
+                </p>
+                <p className="text-xs" style={{ color: "var(--text-muted)" }}>
+                  {completedCount}/{totalCount} seções · {progressPercent}%
+                </p>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={openNotes}
+              className="flex shrink-0 items-center gap-2 rounded-xl border px-3 py-2 text-sm font-semibold transition-colors hover:border-[var(--accent)]"
+              style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
+              aria-label="Abrir notas da seção atual"
+              aria-expanded={notesOpen}
+              aria-controls="study-notes"
+            >
+              <StickyNote size={18} />
+              <span className="hidden sm:inline">Notas</span>
+            </button>
+          </div>
+          <div className="absolute inset-x-0 bottom-0 h-0.5" style={{ background: "var(--progress-bg)" }}>
+            <div
+              className="h-full transition-[width] duration-300"
+              style={{ width: `${progressPercent}%`, background: "var(--progress-bar)" }}
+            />
+          </div>
+        </header>
+
+        <div className="mx-auto w-full max-w-[1280px] px-5 py-8 pb-20 sm:px-8 lg:px-12 xl:px-16">
           {/* Título do tópico */}
           <h1
             className="text-3xl font-bold mb-8"
@@ -249,51 +278,38 @@ export function StudyPageClient({ topic, sections, userId, userEmail }: StudyPag
         </div>
       </main>
 
-      {/* Notes overlay (mobile) */}
-      {notesOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-black/30 lg:hidden"
-          onClick={() => setNotesOpen(false)}
-        />
-      )}
-
-      {/* Notes panel */}
       <aside
-        className={`
-          fixed lg:static inset-y-0 right-0 z-40 w-72 border-l overflow-y-auto shrink-0
-          transition-transform duration-300 lg:translate-x-0
-          ${notesOpen ? "translate-x-0" : "translate-x-full lg:translate-x-0"}
-          ${notesVisible ? "lg:flex" : "lg:hidden"}
-        `}
+        id="study-notes"
+        className={`fixed inset-y-0 right-0 z-50 flex w-[min(92vw,420px)] overflow-y-auto border-l transition-transform duration-300 ${
+          notesOpen ? "translate-x-0" : "translate-x-full"
+        }`}
         style={{
           borderColor: "var(--border)",
-          top: "0",
+          background: "var(--bg-card)",
         }}
+        aria-hidden={!notesOpen}
+        inert={!notesOpen}
       >
         {activeSection && (
           <NotesPanel
+            key={activeSection.section_id}
             userId={userId}
             sectionId={activeSection.section_id}
             sectionTitle={activeSection.title}
             allSectionIds={sectionIds}
             sectionTitleMap={sectionTitleMap}
-            onClose={() => {
-              setNotesVisible(false);
-              setNotesOpen(false);
-            }}
+            onClose={() => setNotesOpen(false)}
           />
         )}
+        {!activeSection && (
+          <div className="flex flex-1 flex-col items-center justify-center gap-3 p-6 text-center">
+            <X size={24} style={{ color: "var(--text-muted)" }} />
+            <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+              Nenhuma seção disponível para anotações.
+            </p>
+          </div>
+        )}
       </aside>
-
-      {/* Dock de Navegação Estilo macOS */}
-      <AppDock 
-        userEmail={userEmail} 
-        notesVisible={notesVisible || notesOpen}
-        onToggleNotes={() => {
-          setNotesVisible(!notesVisible);
-          setNotesOpen(!notesOpen);
-        }}
-      />
     </>
   );
 }

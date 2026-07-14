@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import {
   StickyNote,
   Loader2,
@@ -8,7 +8,7 @@ import {
   Trash2,
   Calendar,
   Save,
-  Image,
+  Image as ImageIcon,
   ChevronsRight,
 } from "lucide-react";
 import { useNotes } from "@/hooks/use-notes";
@@ -33,16 +33,15 @@ export function NotesPanel({
   sectionTitleMap,
   onClose,
 }: NotesPanelProps) {
-  const { notes, loading, saveNote, deleteNote } = useNotes(userId, allSectionIds);
+  const { notes, loading, saveNote, deleteNote } = useNotes(
+    userId,
+    allSectionIds,
+    sectionId
+  );
   const [draft, setDraft] = useState("");
   const [isSaving, setIsSaving] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-
-  useEffect(() => {
-    setDraft("");
-    setErrorMsg("");
-  }, [sectionId]);
 
   const handleSave = async () => {
     if (!draft.trim()) return;
@@ -161,7 +160,7 @@ export function NotesPanel({
             className="absolute bottom-2 right-2 flex items-center gap-1 opacity-40 group-hover:opacity-75 transition-opacity text-[10px] pointer-events-none"
             style={{ color: "var(--text-muted)" }}
           >
-            <Image size={10} />
+            <ImageIcon size={10} />
             <span>Ctrl+V print</span>
           </div>
         </div>

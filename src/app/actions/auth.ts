@@ -20,7 +20,7 @@ export async function forceCreateConfirmedUser(email: string, password: string) 
 
   // Tenta criar o usuário pelo painel de admin, o que não dispara o rate limit 
   // de envio de emails e já marca o email_confirm como true.
-  const { data, error } = await supabaseAdmin.auth.admin.createUser({
+  const { error } = await supabaseAdmin.auth.admin.createUser({
     email,
     password,
     email_confirm: true,
