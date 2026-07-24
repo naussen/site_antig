@@ -1,0 +1,78 @@
+{
+  "topic_id": "fundamentos-da-republica",
+  "discipline": "Direito Constitucional",
+  "topic_title": "Fundamentos da República",
+  "sections": [
+    {
+      "section_id": "fundamentos-da-republica-sec-01",
+      "title": "A República Federativa do Brasil e Seus Fundamentos Essenciais",
+      "content_markdown": "A **República Federativa do Brasil** é um **Estado Democrático de Direito**, resultado da união indissolúvel de seus Estados, Municípios e do Distrito Federal. Essa estrutura é sustentada por cinco fundamentos primordiais, que são a base de toda a ordem jurídica e social do país:\n\n1.  **Soberania**: A capacidade do Estado de exercer seu poder de forma suprema dentro de seu território e de forma independente nas relações internacionais.\n2.  **Cidadania**: A condição de indivíduo que possui direitos e deveres civis, políticos e sociais, participando ativamente da vida do Estado.\n3.  **Dignidade da Pessoa Humana**: O valor intrínseco de cada ser humano, que deve ser respeitado e protegido, sendo um dos pilares da ordem constitucional.\n4.  **Valores Sociais do Trabalho e da Livre Iniciativa**: Reconhecimento da importância do trabalho como meio de subsistência e realização pessoal, e da livre iniciativa como motor do desenvolvimento econômico, ambos com função social.\n5.  **Pluralismo Político**: A coexistência de diversas ideias, ideologias e partidos políticos, garantindo a liberdade de expressão e a participação democrática de diferentes visões na sociedade.",
+      "callouts": [
+        {
+          "text": "Este conceito une a ideia de Estado de Direito (submissão à lei) com a de Estado Democrático (participação popular). Significa que o poder é exercido com base na lei e legitimado pela vontade do povo.",
+          "type": "info",
+          "title": "Estado Democrático de Direito"
+        },
+        {
+          "text": "Não confunda 'objetivos' com 'fundamentos'. Os fundamentos são a base, a essência do Estado. Os objetivos são as metas a serem alcançadas. Ambos estão no Art. 1º e 3º da CF/88, respectivamente.",
+          "type": "warning",
+          "title": "Cuidado com a Pegadinha!"
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "SOCIDIVAPLU",
+          "meaning": "Soberania, Cidadania, Dignidade da Pessoa Humana, Valores Sociais do Trabalho e da Livre Iniciativa, Pluralismo Político",
+          "description": "Para memorizar os 5 fundamentos da República Federativa do Brasil, use a sigla **SOCIDIVAPLU**. Cada sílaba representa um fundamento, facilitando a lembrança em momentos de prova."
+        }
+      ],
+      "flashcards": [
+        {
+          "answer": "A República Federativa do Brasil constitui-se em **Estado Democrático de Direito**.",
+          "question": "Qual a forma de Estado da República Federativa do Brasil?"
+        },
+        {
+          "answer": "Os fundamentos são: **Soberania, Cidadania, Dignidade da Pessoa Humana, Valores Sociais do Trabalho e da Livre Iniciativa, e Pluralismo Político**.",
+          "question": "Cite os cinco fundamentos da República Federativa do Brasil."
+        },
+        {
+          "answer": "A união dos Estados, Municípios e do Distrito Federal é **indissolúvel**.",
+          "question": "A união dos entes federativos no Brasil é dissolúvel ou indissolúvel?"
+        },
+        {
+          "answer": "Significa que o Estado brasileiro tem poder supremo dentro de seu território e é independente nas relações internacionais.",
+          "question": "O que significa o fundamento da 'Soberania'?"
+        }
+      ],
+      "mermaid_mindmap": "mindmap\n  root((Fundamentos da RFB))\n    Estado Democrático de Direito\n    União Indissolúvel\n    Fundamentos\n      Soberania\n      Cidadania\n      Dignidade da Pessoa Humana\n      Valores Sociais\n        Trabalho\n        Livre Iniciativa\n      Pluralismo Político"
+    },
+    {
+      "section_id": "fundamentos-da-republica-sec-02",
+      "title": "A Soberania Popular: De Onde Emana o Poder",
+      "content_markdown": "O **poder** na República Federativa do Brasil tem uma única fonte: o **povo**. Isso significa que toda a autoridade e legitimidade para governar derivam da vontade popular. O exercício desse poder pode ocorrer de duas formas principais, conforme estabelecido pela Constituição:\n\n1.  **Indiretamente**: Por meio de **representantes eleitos** (deputados, senadores, presidente, governadores, prefeitos, etc.), que agem em nome do povo.\n2.  **Diretamente**: Através de mecanismos de **democracia direta**, como plebiscitos, referendos e iniciativa popular, onde o povo decide sobre questões importantes sem intermediários.",
+      "callouts": [
+        {
+          "text": "Lembre-se que a Constituição prevê um sistema misto: predominantemente representativo (indireto), mas com importantes instrumentos de participação direta do povo. Isso é crucial para entender a dinâmica da soberania popular.",
+          "type": "tip",
+          "title": "Democracia Direta vs. Indireta"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "answer": "Todo o poder emana do **povo**.",
+          "question": "De quem emana todo o poder na República Federativa do Brasil?"
+        },
+        {
+          "answer": "O povo exerce o poder por meio de **representantes eleitos** (forma indireta) ou **diretamente**, nos termos da Constituição.",
+          "question": "Quais as duas formas de exercício do poder pelo povo, segundo a Constituição?"
+        },
+        {
+          "answer": "Plebiscito, referendo ou iniciativa popular.",
+          "question": "Cite um exemplo de exercício direto do poder pelo povo."
+        }
+      ],
+      "mermaid_mindmap": "graph TD\n  A[Povo] --> B{Exerce o Poder}\n  B --> C[Representantes Eleitos]\n  B --> D[Diretamente]\n  C --> E[Democracia Representativa]\n  D --> F[Plebiscito, Referendo, Iniciativa Popular]\n  E & F --> G[Nos Termos da Constituição]"
+    }
+  ]
+}

@@ -3,13 +3,14 @@
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { Loader2, Mail } from "lucide-react";
-import { forceCreateConfirmedUser } from "@/app/actions/auth";
+
+type SuccessMode = "magic-link" | "sign-up" | null;
 
 export function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
+  const [successMode, setSuccessMode] = useState<SuccessMode>(null);
   const [isSignUp, setIsSignUp] = useState(false);
   const supabase = createClient();
 
@@ -38,32 +39,35 @@ export function LoginForm() {
     try {
       setLoading(true);
       
-      if (password) {
-        if (isSignUp) {
-          // MODO CADASTRO BYPASS ADMIN
-          // Chama a server action que usa a Service Role Key para contornar qualquer limite 
-          // de emails e já cria o usuário validado na mesma hora.
-          await forceCreateConfirmedUser(email, password);
-          
-          // Imediatamente após criar (ou se já existir validado), faz o login
-          const { error } = await supabase.auth.signInWithPassword({
-            email,
-            password,
-          });
-          
-          if (error) throw error;
+      if (isSignUp) {
+        if (password.length < 6) {
+          throw new Error("A senha deve ter pelo menos 6 caracteres.");
+        }
+
+        const { data, error } = await supabase.auth.signUp({
+          email,
+          password,
+          options: {
+            emailRedirectTo: `${window.location.origin}/auth/callback`,
+          },
+        });
+
+        if (error) throw error;
+
+        if (data.session) {
           window.location.href = "/dashboard";
         } else {
-          // MODO LOGIN
-          const { error } = await supabase.auth.signInWithPassword({
-            email,
-            password,
-          });
-          if (error) throw error;
-          window.location.href = "/dashboard";
+          setSuccessMode("sign-up");
         }
+      } else if (password) {
+        const { error } = await supabase.auth.signInWithPassword({
+          email,
+          password,
+        });
+
+        if (error) throw error;
+        window.location.href = "/dashboard";
       } else {
-        // Se não tem senha, usa o Magic Link
         const { error } = await supabase.auth.signInWithOtp({
           email,
           options: {
@@ -71,13 +75,13 @@ export function LoginForm() {
           },
         });
         if (error) throw error;
-        setSuccess(true);
+        setSuccessMode("magic-link");
       }
     } catch (error: unknown) {
       console.error("Erro no login:", error);
       const message = error instanceof Error ? error.message : "";
       if (message.includes("rate limit")) {
-        alert("Limite de envio de emails excedido no Supabase. Use uma senha de teste ou Google.");
+        alert("Limite de envio de e-mails excedido no Supabase. Aguarde antes de tentar novamente ou entre com Google.");
       } else {
         alert(message || "Ocorreu um erro ao tentar entrar. Tente novamente.");
       }
@@ -86,7 +90,9 @@ export function LoginForm() {
     }
   };
 
-  if (success) {
+  if (successMode) {
+    const isSignUpConfirmation = successMode === "sign-up";
+
     return (
       <div 
         className="p-6 text-center rounded-xl" 
@@ -99,9 +105,11 @@ export function LoginForm() {
         <div className="w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center" style={{ background: "var(--callout-tip-bg)", color: "var(--callout-tip-border)" }}>
           <Mail size={24} />
         </div>
-        <h3 className="font-semibold mb-2" style={{ color: "var(--text-primary)" }}>Link enviado!</h3>
+        <h3 className="font-semibold mb-2" style={{ color: "var(--text-primary)" }}>
+          {isSignUpConfirmation ? "Confirme seu cadastro!" : "Link enviado!"}
+        </h3>
         <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
-          Verifique a caixa de entrada de <strong>{email}</strong> e clique no link mágico para entrar.
+          Verifique a caixa de entrada de <strong>{email}</strong> e clique no link para {isSignUpConfirmation ? "confirmar sua conta" : "entrar"}.
         </p>
       </div>
     );
@@ -144,6 +152,8 @@ export function LoginForm() {
         <input
           id="password"
           type="password"
+          required={isSignUp}
+          minLength={isSignUp ? 6 : undefined}
           placeholder="Sua senha secreta"
           value={password}
           onChange={(e) => setPassword(e.target.value)}

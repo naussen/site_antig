@@ -42,15 +42,6 @@ export function normalizeMermaidChart(chart: string) {
     .join("\n");
 }
 
-function varySimpleFlowchartLayout(chart: string, variant: number) {
-  if (variant === 0 || /(^|\n)\s*subgraph\b/i.test(chart)) return chart;
-
-  return chart.replace(
-    /^(\s*(?:flowchart|graph))\s+(?:TD|TB)\b/i,
-    "$1 LR",
-  );
-}
-
 function clampZoom(value: number) {
   return Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, Number(value.toFixed(2))));
 }
@@ -91,10 +82,7 @@ function MermaidViewerClient({ chart }: MermaidViewerClientProps) {
   const renderIdRef = useRef(0);
   const normalizedChart = useMemo(() => normalizeMermaidChart(chart), [chart]);
   const variant = useMemo(() => hashChart(normalizedChart) % 3, [normalizedChart]);
-  const displayChart = useMemo(
-    () => varySimpleFlowchartLayout(normalizedChart, variant),
-    [normalizedChart, variant],
-  );
+  const displayChart = normalizedChart;
 
   useEffect(() => {
     if (!displayChart || !containerRef.current) return;

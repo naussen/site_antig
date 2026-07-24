@@ -1,4 +1,6 @@
 import { AlertTriangle, Info, Lightbulb } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import type { Callout } from "@/types/database";
 
 const CALLOUT_CONFIG = {
@@ -55,12 +57,22 @@ export function CalloutBlock({ callout }: CalloutBlockProps) {
         >
           {callout.title}
         </p>
-        <p
+        <div
           className="text-sm leading-relaxed"
           style={{ color: `var(${config.textVar})`, opacity: 0.9 }}
         >
-          {callout.text}
-        </p>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            allowedElements={["p", "strong", "em", "code", "del", "br"]}
+            unwrapDisallowed
+            components={{
+              p: ({ children }) => <p>{children}</p>,
+              strong: ({ children }) => <strong className="font-bold">{children}</strong>,
+            }}
+          >
+            {callout.text}
+          </ReactMarkdown>
+        </div>
       </div>
     </div>
   );

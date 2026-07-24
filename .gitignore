@@ -33,6 +33,9 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# local service-account credentials
+/project-c8f1d291-2056-41e9-807-ee15ca055744.json
+
 # vercel
 .vercel
 

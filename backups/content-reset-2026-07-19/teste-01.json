@@ -1,0 +1,33 @@
+{
+  "topic_id": "teste-01",
+  "discipline": "Geral",
+  "topic_title": "Exemplo de Resumo Interativo",
+  "sections": [
+    {
+      "section_id": "s1",
+      "title": "Introdução aos Mnemônicos",
+      "content_markdown": "Aprenda a criar mnemônicos eficientes.",
+      "callouts": [
+        {
+          "text": "Revise 24h após o estudo.",
+          "type": "tip",
+          "title": "Dica"
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "CRAZY",
+          "meaning": "Criativo, Rápido, Animado",
+          "description": "Use isso para lembrar..."
+        }
+      ],
+      "flashcards": [
+        {
+          "answer": "Um cartão com pergunta de um lado e resposta do outro.",
+          "question": "O que é um flashcard?"
+        }
+      ],
+      "mermaid_mindmap": ""
+    }
+  ]
+}

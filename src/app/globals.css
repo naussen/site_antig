@@ -201,14 +201,19 @@ body {
   inset: 0;
   backface-visibility: hidden;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: flex-start;
   border-radius: var(--radius);
-  padding: 2rem;
+  padding: 0;
+  overflow: hidden;
 }
 
 .flashcard-back {
   transform: rotateY(180deg);
+}
+
+.flashcard-content-scroll {
+  scrollbar-gutter: stable;
 }
 
 /* =============================================================================

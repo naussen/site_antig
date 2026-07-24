@@ -3,7 +3,7 @@
 import { useCallback, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { ArrowLeft, ListTree, StickyNote, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, ListTree, StickyNote, X } from "lucide-react";
 import type { SectionRow, TopicRow } from "@/types/database";
 import { useSectionProgress } from "@/hooks/use-section-progress";
 import { SidebarNav } from "@/components/study/sidebar-nav";
@@ -31,13 +31,21 @@ interface StudyPageClientProps {
   topic: TopicRow;
   sections: SectionRow[];
   userId: string;
+  previousTopic: Pick<TopicRow, "topic_id" | "title"> | null;
+  nextTopic: Pick<TopicRow, "topic_id" | "title"> | null;
 }
 
 /**
  * Client Component: mantém o conteúdo como área principal e abre sumário/notas
  * em painéis sobrepostos. O estado persistente continua nos hooks por usuário.
  */
-export function StudyPageClient({ topic, sections, userId }: StudyPageClientProps) {
+export function StudyPageClient({
+  topic,
+  sections,
+  userId,
+  previousTopic,
+  nextTopic,
+}: StudyPageClientProps) {
   const [activeSectionId, setActiveSectionId] = useState<string | null>(
     sections[0]?.section_id ?? null
   );
@@ -279,6 +287,84 @@ export function StudyPageClient({ topic, sections, userId }: StudyPageClientProp
               )}
             </article>
           ))}
+
+          {(previousTopic || nextTopic) && (
+            <nav
+              className="mt-16 grid gap-3 border-t pt-8 sm:grid-cols-2"
+              style={{ borderColor: "var(--border)" }}
+              aria-label={`Navegação entre módulos de ${topic.discipline}`}
+            >
+              {previousTopic && (
+                <Link
+                  href={`/${previousTopic.topic_id}`}
+                  className="group flex min-w-0 items-center gap-3 rounded-2xl border p-4 transition-all hover:-translate-y-0.5 hover:border-[var(--accent)] hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:p-5"
+                  style={{
+                    background: "var(--bg-card)",
+                    borderColor: "var(--border)",
+                    color: "var(--text-primary)",
+                  }}
+                  aria-label={`Módulo anterior: ${previousTopic.title}`}
+                >
+                  <span
+                    className="grid h-10 w-10 shrink-0 place-items-center rounded-xl"
+                    style={{
+                      background: "var(--accent-soft)",
+                      color: "var(--accent)",
+                    }}
+                    aria-hidden="true"
+                  >
+                    <ArrowLeft size={20} />
+                  </span>
+                  <span className="min-w-0">
+                    <span
+                      className="block text-xs font-bold uppercase tracking-[0.12em]"
+                      style={{ color: "var(--text-muted)" }}
+                    >
+                      Módulo anterior
+                    </span>
+                    <span className="mt-1 block line-clamp-2 text-sm font-bold leading-snug sm:text-base">
+                      {previousTopic.title}
+                    </span>
+                  </span>
+                </Link>
+              )}
+
+              {nextTopic && (
+                <Link
+                  href={`/${nextTopic.topic_id}`}
+                  className="group flex min-w-0 items-center justify-end gap-3 rounded-2xl border p-4 text-right transition-all hover:-translate-y-0.5 hover:border-[var(--accent)] hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:col-start-2 sm:p-5"
+                  style={{
+                    background: "var(--bg-card)",
+                    borderColor: "var(--border)",
+                    color: "var(--text-primary)",
+                  }}
+                  aria-label={`Próximo módulo: ${nextTopic.title}`}
+                >
+                  <span className="min-w-0">
+                    <span
+                      className="block text-xs font-bold uppercase tracking-[0.12em]"
+                      style={{ color: "var(--text-muted)" }}
+                    >
+                      Próximo módulo
+                    </span>
+                    <span className="mt-1 block line-clamp-2 text-sm font-bold leading-snug sm:text-base">
+                      {nextTopic.title}
+                    </span>
+                  </span>
+                  <span
+                    className="grid h-10 w-10 shrink-0 place-items-center rounded-xl"
+                    style={{
+                      background: "var(--accent-soft)",
+                      color: "var(--accent)",
+                    }}
+                    aria-hidden="true"
+                  >
+                    <ArrowRight size={20} />
+                  </span>
+                </Link>
+              )}
+            </nav>
+          )}
         </div>
       </main>
 

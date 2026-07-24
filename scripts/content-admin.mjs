@@ -1,0 +1,703 @@
+import { readFile, readdir, writeFile } from "node:fs/promises";
+import { join } from "node:path";
+import { pathToFileURL } from "node:url";
+import { parseArgs } from "node:util";
+import { createClient } from "@supabase/supabase-js";
+import { z } from "zod";
+
+const PAGE_SIZE = 1_000;
+
+const CalloutSchema = z.object({
+  type: z.enum(["warning", "info", "tip"]),
+  title: z.string().min(1),
+  text: z.string().min(1),
+});
+
+const MnemonicSchema = z.object({
+  key: z.string().min(1),
+  meaning: z.string().min(1),
+  description: z.string().min(1),
+});
+
+const FlashcardSchema = z.object({
+  question: z.string().min(1),
+  answer: z.string().min(1),
+});
+
+const SectionImportSchema = z.object({
+  section_id: z.string().min(1),
+  title: z.string().min(1),
+  content_markdown: z.string().default(""),
+  callouts: z.array(CalloutSchema).default([]),
+  mnemonics: z.array(MnemonicSchema).default([]),
+  flashcards: z.array(FlashcardSchema).default([]),
+  mermaid_mindmap: z.string().optional().default(""),
+});
+
+const TopicImportSchema = z.object({
+  topic_id: z.string().min(1),
+  discipline: z.string().default("Geral"),
+  topic_title: z.string().min(1),
+  sections: z.array(SectionImportSchema).min(1, "Pelo menos uma seção é obrigatória"),
+});
+
+export function validateImportPayload(payload) {
+  const parsed = TopicImportSchema.safeParse(payload);
+
+  if (!parsed.success) {
+    const details = z.prettifyError(parsed.error);
+    throw new Error(`JSON de conteúdo inválido:\n${details}`);
+  }
+
+  const sectionIds = parsed.data.sections.map((section) => section.section_id);
+  const duplicateIds = sectionIds.filter((id, index) => sectionIds.indexOf(id) !== index);
+
+  if (duplicateIds.length > 0) {
+    throw new Error(
+      `section_id duplicado no arquivo: ${[...new Set(duplicateIds)].join(", ")}`
+    );
+  }
+
+  return parsed.data;
+}
+
+export function requireText(value, label) {
+  const normalized = value?.trim();
+  if (!normalized) {
+    throw new Error(`${label} é obrigatório.`);
+  }
+  return normalized;
+}
+
+export function assertConfirmation(expected, received) {
+  if (received !== expected) {
+    throw new Error(`Confirmação inválida. Use --confirm "${expected}".`);
+  }
+}
+
+export function assertBatchMode(dryRun, apply) {
+  if (dryRun === apply) {
+    throw new Error("Use exatamente um modo no lote: --dry-run ou --apply.");
+  }
+}
+
+export function validateBatchEntries(entries) {
+  const topicFiles = new Map();
+  const sectionFiles = new Map();
+  const conflicts = [];
+
+  for (const entry of entries) {
+    const previousTopicFile = topicFiles.get(entry.payload.topic_id);
+    if (previousTopicFile) {
+      conflicts.push(
+        `topic_id ${entry.payload.topic_id} aparece em ${previousTopicFile} e ${entry.filePath}`
+      );
+    } else {
+      topicFiles.set(entry.payload.topic_id, entry.filePath);
+    }
+
+    for (const section of entry.payload.sections) {
+      const previousSection = sectionFiles.get(section.section_id);
+      if (previousSection) {
+        conflicts.push(
+          `section_id ${section.section_id} aparece em ${previousSection.filePath} ` +
+            `(módulo ${previousSection.topicId}) e ${entry.filePath} ` +
+            `(módulo ${entry.payload.topic_id})`
+        );
+      } else {
+        sectionFiles.set(section.section_id, {
+          filePath: entry.filePath,
+          topicId: entry.payload.topic_id,
+        });
+      }
+    }
+  }
+
+  if (conflicts.length > 0) {
+    throw new Error(`Conflitos internos no lote:\n- ${conflicts.join("\n- ")}`);
+  }
+
+  return entries;
+}
+
+function getAdminClient() {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (!url || !serviceRoleKey) {
+    throw new Error(
+      "Defina NEXT_PUBLIC_SUPABASE_URL e SUPABASE_SERVICE_ROLE_KEY no ambiente ou em .env.local."
+    );
+  }
+
+  return createClient(url, serviceRoleKey, {
+    auth: { persistSession: false, autoRefreshToken: false },
+  });
+}
+
+function unwrap(result, context) {
+  if (result.error) {
+    throw new Error(`${context}: ${result.error.message}`);
+  }
+  return result.data;
+}
+
+async function fetchAll(buildQuery) {
+  const rows = [];
+
+  for (let from = 0; ; from += PAGE_SIZE) {
+    const data = unwrap(
+      await buildQuery().range(from, from + PAGE_SIZE - 1),
+      "Falha ao consultar conteúdo"
+    );
+    rows.push(...data);
+    if (data.length < PAGE_SIZE) break;
+  }
+
+  return rows;
+}
+
+async function getTopic(supabase, topicId) {
+  const data = unwrap(
+    await supabase
+      .from("topics")
+      .select("topic_id,title,discipline,created_at")
+      .eq("topic_id", topicId)
+      .maybeSingle(),
+    "Falha ao consultar módulo"
+  );
+
+  if (!data) throw new Error(`Módulo não encontrado: ${topicId}`);
+  return data;
+}
+
+async function getSections(supabase, topicId) {
+  return fetchAll(() =>
+    supabase
+      .from("sections")
+      .select(
+        "section_id,topic_id,title,content_markdown,callouts,mnemonics,flashcards,mermaid_mindmap,sort_order,created_at"
+      )
+      .eq("topic_id", topicId)
+      .order("sort_order", { ascending: true })
+  );
+}
+
+async function listContent(supabase, values) {
+  const discipline = values.discipline?.trim();
+  const topics = await fetchAll(() => {
+    let query = supabase
+      .from("topics")
+      .select("topic_id,title,discipline,created_at")
+      .order("discipline")
+      .order("title");
+    if (discipline) query = query.eq("discipline", discipline);
+    return query;
+  });
+
+  const sections = await fetchAll(() => supabase.from("sections").select("topic_id"));
+  const sectionCounts = new Map();
+  for (const section of sections) {
+    sectionCounts.set(section.topic_id, (sectionCounts.get(section.topic_id) ?? 0) + 1);
+  }
+
+  const output = topics.map((topic) => ({
+    disciplina: topic.discipline,
+    modulo: topic.title,
+    topic_id: topic.topic_id,
+    secoes: sectionCounts.get(topic.topic_id) ?? 0,
+  }));
+
+  if (values.json) console.log(JSON.stringify(output, null, 2));
+  else if (output.length === 0) console.log("Nenhum módulo encontrado.");
+  else console.table(output);
+}
+
+async function inspectContent(supabase, topicId, values) {
+  const topic = await getTopic(supabase, topicId);
+  const sections = await getSections(supabase, topicId);
+  const output = {
+    topic_id: topic.topic_id,
+    discipline: topic.discipline,
+    topic_title: topic.title,
+    sections: sections.map(({ section_id, title, sort_order }) => ({
+      section_id,
+      title,
+      sort_order,
+    })),
+  };
+
+  if (values.json) console.log(JSON.stringify(output, null, 2));
+  else {
+    console.log(`Módulo: ${topic.title}`);
+    console.log(`Disciplina: ${topic.discipline}`);
+    console.log(`ID: ${topic.topic_id}`);
+    console.table(output.sections);
+  }
+}
+
+async function readJsonFile(filePath) {
+  const raw = await readFile(filePath, "utf8");
+  try {
+    return JSON.parse(raw.replace(/^\uFEFF/, ""));
+  } catch (error) {
+    throw new Error(
+      `JSON malformado em ${filePath}: ${error instanceof Error ? error.message : String(error)}`
+    );
+  }
+}
+
+async function readBatchDirectory(directoryPath) {
+  let directoryEntries;
+  try {
+    directoryEntries = await readdir(directoryPath, { withFileTypes: true });
+  } catch (error) {
+    throw new Error(
+      `Não foi possível ler a pasta ${directoryPath}: ` +
+        `${error instanceof Error ? error.message : String(error)}`
+    );
+  }
+
+  const jsonFiles = directoryEntries
+    .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith(".json"))
+    .map((entry) => entry.name)
+    .sort((left, right) => left.localeCompare(right, "pt-BR", { numeric: true }));
+
+  if (jsonFiles.length === 0) {
+    throw new Error(`Nenhum arquivo .json encontrado em ${directoryPath}.`);
+  }
+
+  const entries = [];
+  const errors = [];
+  for (const fileName of jsonFiles) {
+    const filePath = join(directoryPath, fileName);
+    try {
+      entries.push({
+        filePath,
+        payload: validateImportPayload(await readJsonFile(filePath)),
+      });
+    } catch (error) {
+      errors.push(`${filePath}: ${error instanceof Error ? error.message : String(error)}`);
+    }
+  }
+
+  if (errors.length > 0) {
+    throw new Error(`Preflight encontrou JSONs inválidos:\n- ${errors.join("\n- ")}`);
+  }
+
+  return validateBatchEntries(entries);
+}
+
+async function findSectionOwnershipConflicts(supabase, payload) {
+  const sectionIds = payload.sections.map((section) => section.section_id);
+  const conflicts = [];
+
+  for (let index = 0; index < sectionIds.length; index += 200) {
+    const batch = sectionIds.slice(index, index + 200);
+    const existing = unwrap(
+      await supabase.from("sections").select("section_id,topic_id").in("section_id", batch),
+      "Falha ao verificar IDs das seções"
+    );
+    conflicts.push(
+      ...existing.filter((section) => section.topic_id !== payload.topic_id)
+    );
+  }
+
+  return conflicts;
+}
+
+async function findBatchSectionOwnershipConflicts(supabase, entries) {
+  const expectedOwners = new Map();
+  for (const entry of entries) {
+    for (const section of entry.payload.sections) {
+      expectedOwners.set(section.section_id, entry.payload.topic_id);
+    }
+  }
+
+  const sectionIds = [...expectedOwners.keys()];
+  const conflicts = [];
+  for (let index = 0; index < sectionIds.length; index += 200) {
+    const batch = sectionIds.slice(index, index + 200);
+    const existing = unwrap(
+      await supabase.from("sections").select("section_id,topic_id").in("section_id", batch),
+      "Falha ao verificar IDs das seções do lote"
+    );
+    conflicts.push(
+      ...existing.filter(
+        (section) => section.topic_id !== expectedOwners.get(section.section_id)
+      )
+    );
+  }
+
+  return conflicts;
+}
+
+async function upsertImportPayload(supabase, payload, context = "importação") {
+  unwrap(
+    await supabase.from("topics").upsert(
+      {
+        topic_id: payload.topic_id,
+        discipline: payload.discipline,
+        title: payload.topic_title,
+      },
+      { onConflict: "topic_id" }
+    ),
+    `Falha ao salvar módulo (${context})`
+  );
+
+  const sectionRows = payload.sections.map((section, sortOrder) => ({
+    section_id: section.section_id,
+    topic_id: payload.topic_id,
+    title: section.title,
+    content_markdown: section.content_markdown || null,
+    callouts: section.callouts,
+    mnemonics: section.mnemonics,
+    flashcards: section.flashcards,
+    mermaid_mindmap: section.mermaid_mindmap || null,
+    sort_order: sortOrder,
+  }));
+
+  unwrap(
+    await supabase.from("sections").upsert(sectionRows, { onConflict: "section_id" }),
+    `Falha ao salvar seções (${context})`
+  );
+}
+
+async function importContent(supabase, filePath, values) {
+  const payload = validateImportPayload(await readJsonFile(filePath));
+  const conflicts = await findSectionOwnershipConflicts(supabase, payload);
+
+  if (conflicts.length > 0) {
+    const details = conflicts
+      .map((item) => `${item.section_id} pertence a ${item.topic_id}`)
+      .join("; ");
+    throw new Error(`Importação bloqueada por conflito de IDs: ${details}`);
+  }
+
+  const existingSections = await getSectionsIfTopicExists(supabase, payload.topic_id);
+  const incomingIds = new Set(payload.sections.map((section) => section.section_id));
+  const staleSections = existingSections.filter((section) => !incomingIds.has(section.section_id));
+
+  console.log(`Arquivo: ${filePath}`);
+  console.log(`Módulo: ${payload.topic_title} (${payload.topic_id})`);
+  console.log(`Disciplina: ${payload.discipline}`);
+  console.log(`Seções recebidas: ${payload.sections.length}`);
+  console.log(`Seções atuais ausentes no arquivo: ${staleSections.length}`);
+
+  if (values.replace && staleSections.length > 0) {
+    console.log("Seções que serão excluídas com --replace:");
+    console.table(staleSections.map(({ section_id, title }) => ({ section_id, title })));
+  }
+
+  if (!values.apply) {
+    console.log("Pré-visualização concluída. Execute novamente com --apply para importar.");
+    return;
+  }
+
+  // Valida toda a autorização destrutiva antes da primeira escrita para evitar
+  // que uma confirmação ausente resulte em uma importação parcialmente aplicada.
+  if (values.replace && staleSections.length > 0) {
+    assertConfirmation(payload.topic_id, values.confirm);
+  }
+
+  await upsertImportPayload(supabase, payload, filePath);
+
+  if (values.replace && staleSections.length > 0) {
+    unwrap(
+      await supabase
+        .from("sections")
+        .delete()
+        .in("section_id", staleSections.map((section) => section.section_id)),
+      "Falha ao excluir seções ausentes"
+    );
+  }
+
+  console.log("Importação concluída com sucesso.");
+}
+
+async function importBatch(supabase, directoryPath, values) {
+  assertBatchMode(values.dryRun, values.apply);
+  if (values.replace) {
+    throw new Error("import-batch não aceita --replace; o lote nunca exclui seções ausentes.");
+  }
+
+  console.log(`Preflight da pasta: ${directoryPath}`);
+  const entries = await readBatchDirectory(directoryPath);
+  const expectedOwners = new Map(
+    entries.flatMap((entry) =>
+      entry.payload.sections.map((section) => [section.section_id, entry.payload.topic_id])
+    )
+  );
+  const conflicts = await findBatchSectionOwnershipConflicts(supabase, entries);
+
+  if (conflicts.length > 0) {
+    const details = conflicts
+      .map(
+        (item) =>
+          `${item.section_id} pertence a ${item.topic_id}, mas o lote atribui a ` +
+          `${expectedOwners.get(item.section_id)}`
+      )
+      .join("; ");
+    throw new Error(`Importação em lote bloqueada por conflito de IDs: ${details}`);
+  }
+
+  const summary = entries.map((entry, index) => ({
+    ordem: index + 1,
+    arquivo: entry.filePath,
+    topic_id: entry.payload.topic_id,
+    modulo: entry.payload.topic_title,
+    secoes: entry.payload.sections.length,
+  }));
+  const sectionCount = entries.reduce(
+    (total, entry) => total + entry.payload.sections.length,
+    0
+  );
+
+  console.table(summary);
+  console.log(`Preflight aprovado: ${entries.length} módulo(s), ${sectionCount} seção(ões).`);
+
+  if (values.dryRun) {
+    console.log("Simulação concluída sem escritas. Revise a saída e use --apply para importar.");
+    return;
+  }
+
+  console.log("Iniciando importação efetiva após preflight integral...");
+  for (const [index, entry] of entries.entries()) {
+    console.log(`[${index + 1}/${entries.length}] ${entry.filePath}`);
+    await upsertImportPayload(supabase, entry.payload, entry.filePath);
+  }
+  console.log(
+    `Importação em lote concluída: ${entries.length} módulo(s), ${sectionCount} seção(ões).`
+  );
+}
+
+async function getSectionsIfTopicExists(supabase, topicId) {
+  const topic = unwrap(
+    await supabase.from("topics").select("topic_id").eq("topic_id", topicId).maybeSingle(),
+    "Falha ao consultar módulo existente"
+  );
+  return topic ? getSections(supabase, topicId) : [];
+}
+
+async function exportContent(supabase, topicId, outputPath, values) {
+  const topic = await getTopic(supabase, topicId);
+  const sections = await getSections(supabase, topicId);
+  const payload = {
+    topic_id: topic.topic_id,
+    discipline: topic.discipline,
+    topic_title: topic.title,
+    sections: sections.map((section) => ({
+      section_id: section.section_id,
+      title: section.title,
+      content_markdown: section.content_markdown ?? "",
+      callouts: section.callouts ?? [],
+      mnemonics: section.mnemonics ?? [],
+      flashcards: section.flashcards ?? [],
+      mermaid_mindmap: section.mermaid_mindmap ?? "",
+    })),
+  };
+
+  await writeFile(outputPath, `${JSON.stringify(payload, null, 2)}\n`, {
+    encoding: "utf8",
+    flag: values.force ? "w" : "wx",
+  });
+  console.log(`Backup exportado para: ${outputPath}`);
+}
+
+async function renameTopic(supabase, topicId, newTitle, values) {
+  const topic = await getTopic(supabase, topicId);
+  console.log(`Título atual: ${topic.title}`);
+  console.log(`Novo título: ${newTitle}`);
+  if (!values.apply) return console.log("Pré-visualização. Use --apply para confirmar.");
+
+  unwrap(
+    await supabase.from("topics").update({ title: newTitle }).eq("topic_id", topicId),
+    "Falha ao renomear módulo"
+  );
+  console.log("Módulo renomeado com sucesso. O topic_id e a URL foram preservados.");
+}
+
+async function renameSection(supabase, sectionId, newTitle, values) {
+  const section = unwrap(
+    await supabase
+      .from("sections")
+      .select("section_id,title,topic_id")
+      .eq("section_id", sectionId)
+      .maybeSingle(),
+    "Falha ao consultar seção"
+  );
+  if (!section) throw new Error(`Seção não encontrada: ${sectionId}`);
+
+  console.log(`Título atual: ${section.title}`);
+  console.log(`Novo título: ${newTitle}`);
+  if (!values.apply) return console.log("Pré-visualização. Use --apply para confirmar.");
+
+  unwrap(
+    await supabase.from("sections").update({ title: newTitle }).eq("section_id", sectionId),
+    "Falha ao renomear seção"
+  );
+  console.log("Seção renomeada com sucesso. O section_id foi preservado.");
+}
+
+async function renameDiscipline(supabase, oldName, newName, values) {
+  const topics = await fetchAll(() =>
+    supabase
+      .from("topics")
+      .select("topic_id,title,discipline")
+      .eq("discipline", oldName)
+      .order("title")
+  );
+  if (topics.length === 0) throw new Error(`Disciplina não encontrada: ${oldName}`);
+
+  console.log(`${topics.length} módulo(s): "${oldName}" → "${newName}"`);
+  console.table(topics.map(({ topic_id, title }) => ({ topic_id, modulo: title })));
+  if (!values.apply) return console.log("Pré-visualização. Use --apply para confirmar.");
+
+  unwrap(
+    await supabase.from("topics").update({ discipline: newName }).eq("discipline", oldName),
+    "Falha ao renomear disciplina"
+  );
+  console.log("Disciplina renomeada com sucesso.");
+}
+
+async function deleteTopic(supabase, topicId, values) {
+  const topic = await getTopic(supabase, topicId);
+  const sections = await getSections(supabase, topicId);
+  console.log(`Excluir módulo: ${topic.title} (${topic.topic_id})`);
+  console.log(`Seções afetadas: ${sections.length}`);
+  console.log("Notas e progresso vinculados às seções também serão excluídos pelo banco.");
+  if (!values.apply) return console.log("Pré-visualização. Use --apply --confirm <topic_id>.");
+
+  assertConfirmation(topicId, values.confirm);
+  unwrap(
+    await supabase.from("topics").delete().eq("topic_id", topicId),
+    "Falha ao excluir módulo"
+  );
+  console.log("Módulo excluído com sucesso.");
+}
+
+async function deleteSection(supabase, sectionId, values) {
+  const section = unwrap(
+    await supabase
+      .from("sections")
+      .select("section_id,title,topic_id")
+      .eq("section_id", sectionId)
+      .maybeSingle(),
+    "Falha ao consultar seção"
+  );
+  if (!section) throw new Error(`Seção não encontrada: ${sectionId}`);
+
+  console.log(`Excluir seção: ${section.title} (${section.section_id})`);
+  console.log("Notas e progresso vinculados a esta seção também serão excluídos pelo banco.");
+  if (!values.apply) return console.log("Pré-visualização. Use --apply --confirm <section_id>.");
+
+  assertConfirmation(sectionId, values.confirm);
+  unwrap(
+    await supabase.from("sections").delete().eq("section_id", sectionId),
+    "Falha ao excluir seção"
+  );
+  console.log("Seção excluída com sucesso.");
+}
+
+function printHelp() {
+  console.log(`
+Administração de conteúdo PRO Resumos
+
+Uso:
+  npm run content -- list [--discipline "Nome"] [--json]
+  npm run content -- inspect <topic-id> [--json]
+  npm run content -- import <arquivo.json> [--apply] [--replace --confirm <topic-id>]
+  npm run content -- import-batch <pasta> (--dry-run | --apply)
+  npm run content -- export <topic-id> <saida.json> [--force]
+  npm run content -- rename-topic <topic-id> "Novo título" [--apply]
+  npm run content -- rename-section <section-id> "Novo título" [--apply]
+  npm run content -- rename-discipline "Nome atual" "Novo nome" [--apply]
+  npm run content -- delete-topic <topic-id> [--apply --confirm <topic-id>]
+  npm run content -- delete-section <section-id> [--apply --confirm <section-id>]
+
+Regras de segurança:
+  - Escritas são apenas pré-visualizadas sem --apply.
+  - Exclusões e importação com --replace exigem confirmação literal.
+  - IDs técnicos não são renomeados por esta ferramenta.
+`);
+}
+
+export async function main(argv = process.argv.slice(2)) {
+  const { values, positionals } = parseArgs({
+    args: argv,
+    allowPositionals: true,
+    strict: true,
+    options: {
+      apply: { type: "boolean", default: false },
+      "dry-run": { type: "boolean", default: false },
+      confirm: { type: "string" },
+      discipline: { type: "string" },
+      force: { type: "boolean", default: false },
+      json: { type: "boolean", default: false },
+      replace: { type: "boolean", default: false },
+      help: { type: "boolean", short: "h", default: false },
+    },
+  });
+
+  const [command, ...args] = positionals;
+  if (!command || command === "help" || values.help) return printHelp();
+
+  values.dryRun = values["dry-run"];
+
+  const supabase = getAdminClient();
+  switch (command) {
+    case "list":
+      return listContent(supabase, values);
+    case "inspect":
+      return inspectContent(supabase, requireText(args[0], "topic-id"), values);
+    case "import":
+      return importContent(supabase, requireText(args[0], "arquivo.json"), values);
+    case "import-batch":
+      return importBatch(supabase, requireText(args[0], "pasta"), values);
+    case "export":
+      return exportContent(
+        supabase,
+        requireText(args[0], "topic-id"),
+        requireText(args[1], "arquivo de saída"),
+        values
+      );
+    case "rename-topic":
+      return renameTopic(
+        supabase,
+        requireText(args[0], "topic-id"),
+        requireText(args[1], "novo título"),
+        values
+      );
+    case "rename-section":
+      return renameSection(
+        supabase,
+        requireText(args[0], "section-id"),
+        requireText(args[1], "novo título"),
+        values
+      );
+    case "rename-discipline":
+      return renameDiscipline(
+        supabase,
+        requireText(args[0], "disciplina atual"),
+        requireText(args[1], "nova disciplina"),
+        values
+      );
+    case "delete-topic":
+      return deleteTopic(supabase, requireText(args[0], "topic-id"), values);
+    case "delete-section":
+      return deleteSection(supabase, requireText(args[0], "section-id"), values);
+    default:
+      throw new Error(`Comando desconhecido: ${command}. Use "npm run content -- help".`);
+  }
+}
+
+const isDirectExecution = process.argv[1]
+  ? import.meta.url === pathToFileURL(process.argv[1]).href
+  : false;
+
+if (isDirectExecution) {
+  main().catch((error) => {
+    console.error(`Erro: ${error instanceof Error ? error.message : String(error)}`);
+    process.exitCode = 1;
+  });
+}

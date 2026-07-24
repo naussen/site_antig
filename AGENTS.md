@@ -28,7 +28,7 @@ Para cada tarefa de implementação, siga este fluxo:
 
 ## Escopo permitido
 
-Trabalhe apenas dentro de `C:\site_antig` quando estiver neste projeto.
+Trabalhe dentro de `C:\site_antig` quando estiver neste projeto.
 
 Não crie, altere ou apague arquivos fora deste diretório. Não modifique arquivos sensíveis como `.env.local`, credenciais, tokens, chaves, arquivos de configuração pessoal do usuário ou conteúdo interno de `.git`.
 

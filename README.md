@@ -23,7 +23,7 @@ O projeto recebe materiais em JSON, normalmente gerados por um pipeline externo 
 - Página pública inicial em `/`.
 - Login em `/login` com:
   - Magic Link por e-mail;
-  - login/cadastro com senha;
+  - login/cadastro com senha pelo fluxo público do Supabase;
   - login Google via OAuth;
   - callback em `/auth/callback`.
 - Dashboard protegido em `/dashboard`.
@@ -40,6 +40,9 @@ O projeto recebe materiais em JSON, normalmente gerados por um pipeline externo 
 - Progresso por seção.
 - Notas por seção com auto-save e suporte a Markdown/imagens.
 - Painel de notas em `/dashboard/notas`, agrupado por disciplina e tópico.
+- No painel de notas, ações de abrir, editar e excluir cada nota.
+- No painel de notas, nome do tópico como link para abrir o material relacionado.
+- Estados personalizados de notas e progresso isolados por usuário, com feedback explícito de carregamento e falha.
 - Temas Light, Dark e Sepia.
 - App Dock inferior com navegação, tema, notas/sumário e logout.
 - API de importação `POST /api/import`.
@@ -85,7 +88,8 @@ Outros documentos relevantes:
 
 - `AGENTS.md`: regras obrigatórias para agentes de IA neste projeto.
 - `ECOSSISTEMA.md`: visão unificada do pipeline PYGEM2 → Site.
-- `PROXIMOS_PASSOS_SITE.md`: backlog priorizado e estado atual.
+- `plano_redesenho.md`: roadmap técnico consolidado.
+- `PROXIMOS_PASSOS_SITE.md`: backlog operacional curto e estado atual.
 - `guia_envio_materiais.md`: guia operacional para preparar e enviar materiais.
 - `supabase/migrations/*`: schema e políticas do banco.
 
@@ -106,6 +110,7 @@ Regras de segurança:
 - `NEXT_PUBLIC_*` pode ser usado no cliente.
 - `SUPABASE_SERVICE_ROLE_KEY` nunca deve ir para Client Components.
 - Service role deve ficar restrita a Route Handlers, Server Actions administrativas ou scripts controlados.
+- O cadastro de usuários não usa service role; ele respeita a confirmação de e-mail configurada no Supabase.
 
 ## Rodando localmente
 
@@ -222,4 +227,4 @@ Quando a alteração tocar interface, verificar manualmente:
 
 ## Estado do roadmap
 
-Consulte [`PROXIMOS_PASSOS_SITE.md`](./PROXIMOS_PASSOS_SITE.md) para o estado atual consolidado e o backlog priorizado.
+Consulte [`plano_redesenho.md`](./plano_redesenho.md) para o roadmap técnico consolidado e [`PROXIMOS_PASSOS_SITE.md`](./PROXIMOS_PASSOS_SITE.md) para o backlog operacional curto.

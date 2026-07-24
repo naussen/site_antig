@@ -55,20 +55,19 @@ export default async function DashboardPage() {
       topics = data;
     }
 
-    const allSectionIds = topics.flatMap((topic) =>
-      topic.sections.map((section) => section.section_id)
-    );
+    const hasSections = topics.some((topic) => topic.sections.length > 0);
 
-    if (allSectionIds.length > 0) {
+    if (hasSections) {
       const { data: progressData, error: progressError } = await supabase
         .from("user_progress")
         .select("section_id")
         .eq("user_id", user.id)
-        .eq("completed", true)
-        .in("section_id", allSectionIds);
+        .eq("completed", true);
 
       if (progressError) {
-        console.error("Erro ao buscar progresso:", progressError);
+        console.error(
+          `Erro ao buscar progresso: ${formatSupabaseError(progressError)}`
+        );
         loadErrors.push("Não foi possível carregar seu progresso.");
       } else if (progressData) {
         completedSectionIds = new Set(

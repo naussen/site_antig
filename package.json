@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "content": "node --env-file-if-exists=.env.local scripts/content-admin.mjs",
+    "test:content": "node --test tests/content-admin.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",

@@ -18,6 +18,13 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
 
   const total = flashcards.length;
   const current = flashcards[currentIndex];
+  const isLawCard = current?.question.trim().startsWith("[LETRA DA LEI]");
+  const displayQuestion = current?.question
+    .replace(
+      /^\[(?:CERTO\/ERRADO|LETRA DA LEI|CEBRASPE[^\]]*|CESPE[^\]]*|FGV[^\]]*|FCC[^\]]*)\]\s*/i,
+      "",
+    )
+    .trim();
 
   const flip = useCallback(() => setIsFlipped((prev) => !prev), []);
 
@@ -70,7 +77,7 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
       {/* Card com flip 3D */}
       <div
         className="flashcard-perspective w-full"
-        style={{ height: "220px" }}
+        style={{ height: "clamp(210px, 30.8vh, 294px)" }}
         role="button"
         tabIndex={0}
         onClick={flip}
@@ -91,18 +98,35 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
           <div
             className="flashcard-face"
             style={{
-              background: `linear-gradient(135deg, var(--flashcard-front), var(--mnemonic-gradient-to))`,
+              background: "var(--bg-card)",
+              border: "2px solid var(--accent)",
               boxShadow: "var(--shadow-lg)",
               cursor: "pointer",
             }}
           >
-            <div className="text-center">
-              <span className="text-xs uppercase tracking-widest text-white/60 block mb-3">
-                Pergunta
-              </span>
-              <p className="text-white font-medium text-lg leading-relaxed">
-                {current.question}
-              </p>
+            <div className="flex h-full w-full flex-col">
+              <div
+                className="flex items-center justify-between gap-3 border-b px-5 py-3"
+                style={{ background: "var(--accent-soft)", borderColor: "var(--accent)" }}
+              >
+                <span
+                  className="text-xs font-bold uppercase tracking-widest"
+                  style={{ color: "var(--accent)" }}
+                >
+                  {isLawCard ? "Letra da lei" : "Certo ou errado"}
+                </span>
+                <span className="text-xs font-semibold" style={{ color: "var(--text-muted)" }}>
+                  Toque para ver o gabarito
+                </span>
+              </div>
+              <div className="flashcard-content-scroll flex min-h-0 flex-1 items-center overflow-y-auto px-6 py-5 sm:px-8">
+                <p
+                  className="w-full whitespace-pre-line text-left text-base font-semibold leading-7 sm:text-lg"
+                  style={{ color: "var(--text-primary)" }}
+                >
+                  {displayQuestion}
+                </p>
+              </div>
             </div>
           </div>
 
@@ -110,18 +134,35 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
           <div
             className="flashcard-face flashcard-back"
             style={{
-              background: `linear-gradient(135deg, var(--flashcard-back), var(--callout-tip-border))`,
+              background: "var(--bg-card)",
+              border: "2px solid var(--callout-tip-border)",
               boxShadow: "var(--shadow-lg)",
               cursor: "pointer",
             }}
           >
-            <div className="text-center">
-              <span className="text-xs uppercase tracking-widest text-white/60 block mb-3">
-                Resposta
-              </span>
-              <p className="text-white font-medium text-base leading-relaxed">
-                {current.answer}
-              </p>
+            <div className="flex h-full w-full flex-col">
+              <div
+                className="border-b px-5 py-3"
+                style={{
+                  background: "var(--callout-tip-bg)",
+                  borderColor: "var(--callout-tip-border)",
+                }}
+              >
+                <span
+                  className="text-xs font-bold uppercase tracking-widest"
+                  style={{ color: "var(--callout-tip-text)" }}
+                >
+                  Gabarito e justificativa
+                </span>
+              </div>
+              <div className="flashcard-content-scroll flex min-h-0 flex-1 items-center overflow-y-auto px-6 py-5 sm:px-8">
+                <p
+                  className="w-full whitespace-pre-line text-left text-base font-medium leading-7"
+                  style={{ color: "var(--text-primary)" }}
+                >
+                  {current.answer}
+                </p>
+              </div>
             </div>
           </div>
         </div>

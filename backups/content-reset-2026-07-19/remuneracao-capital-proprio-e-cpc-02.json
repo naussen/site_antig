@@ -1,0 +1,296 @@
+{
+  "topic_id": "remuneracao-capital-proprio-e-cpc-02",
+  "discipline": "Contabilidade",
+  "topic_title": "Remuneração de Capital Próprio e CPC 02: Efeitos das Mudanças nas Taxas de Câmbio",
+  "sections": [
+    {
+      "section_id": "remuneracao-capital-proprio-e-cpc-02-sec-01",
+      "title": "Remuneração de Capital Próprio e Lucros Retidos",
+      "content_markdown": "A remuneração de capital próprio e a gestão de lucros retidos envolvem diversas formas de distribuição ou reinvestimento dos resultados de uma entidade, impactando diretamente o patrimônio líquido. Os principais componentes relacionados a este tema incluem:\n\n*   **Dividendos**: Valores distribuídos exclusivamente com base no resultado gerado no próprio exercício social.\n*   **Juros sobre Capital Próprio (JSCP)**: Uma forma de remuneração aos acionistas, calculada sobre o patrimônio líquido da empresa.\n*   **Lucros Retidos**: Lucros que são destinados à formação de reservas ou ao aumento do Capital Social.\n*   **Prejuízo do Exercício**: Quando há um prejuízo, este é considerado com sinal negativo, representando a redução do capital próprio ou dos lucros retidos.\n*   **Participação dos Não Controladores**: Parcela dos lucros retidos atribuível aos acionistas minoritários (não controladores).",
+      "callouts": [
+        {
+          "text": "Os dividendos são distribuídos com base **apenas** no resultado do próprio exercício social, não de exercícios anteriores.",
+          "type": "info",
+          "title": "Dividendos"
+        },
+        {
+          "text": "O JSCP é uma forma de remuneração aos acionistas calculada sobre o patrimônio líquido da empresa.",
+          "type": "info",
+          "title": "Juros sobre Capital Próprio (JSCP)"
+        },
+        {
+          "text": "Lucros retidos podem ser destinados à formação de reservas ou ao aumento do Capital Social.",
+          "type": "info",
+          "title": "Lucros Retidos"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: Dividendos referem-se apenas aos valores distribuídos com base no resultado do próprio exercício social.",
+          "question": "[CERTO/ERRADO] Dividendos são valores distribuídos com base em resultados de exercícios anteriores."
+        },
+        {
+          "answer": "Gabarito: CERTO. Justificativa: O JSCP é uma forma de remuneração aos acionistas, calculada sobre o patrimônio líquido da empresa.",
+          "question": "[CERTO/ERRADO] Os Juros sobre Capital Próprio (JSCP) são calculados sobre o patrimônio líquido da empresa."
+        },
+        {
+          "answer": "Gabarito: CERTO. Justificativa: Os lucros retidos podem ser destinados à formação de reservas ou ao aumento do Capital Social.",
+          "question": "[CERTO/ERRADO] Lucros retidos podem ser utilizados para aumentar o Capital Social."
+        },
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: O prejuízo do exercício é apresentado com sinal negativo, representando a redução do capital próprio ou dos lucros retidos.",
+          "question": "[CERTO/ERRADO] O prejuízo do exercício aumenta o capital próprio da entidade."
+        }
+      ],
+      "mermaid_mindmap": ""
+    },
+    {
+      "section_id": "remuneracao-capital-proprio-e-cpc-02-sec-02",
+      "title": "CPC 02 - Efeitos das Mudanças nas Taxas de Câmbio: Introdução e Definições",
+      "content_markdown": "O CPC 02 estabelece os princípios para o tratamento contábil de transações em moeda estrangeira e de operações no exterior, bem como para a conversão de demonstrações contábeis para uma moeda de apresentação diferente.\n\nUma entidade pode realizar atividades em moeda estrangeira de duas maneiras principais:\n\n*   **Transações em Moedas Estrangeiras**: Envolvem operações como empréstimos, importações e exportações que são denominadas em uma moeda diferente da moeda funcional da entidade.\n*   **Operações no Exterior**: Referem-se a atividades de matrizes, filiais, sucursais, subsidiárias ou outras estruturas operacionais localizadas em outros países, que podem ter sua própria moeda funcional.",
+      "callouts": [
+        {
+          "text": "O CPC 02 define como tratar transações em moeda estrangeira, operações no exterior e a conversão de demonstrações contábeis para uma moeda de apresentação diferente.",
+          "type": "info",
+          "title": "Propósito do CPC 02"
+        },
+        {
+          "text": "São operações como empréstimos, importações e exportações denominadas em moeda diferente da moeda funcional da entidade.",
+          "type": "info",
+          "title": "Transações em Moedas Estrangeiras"
+        },
+        {
+          "text": "Referem-se a estruturas operacionais (filiais, subsidiárias) localizadas em outros países.",
+          "type": "info",
+          "title": "Operações no Exterior"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: O CPC 02 também estabelece princípios para o tratamento contábil de transações em moeda estrangeira e de operações no exterior.",
+          "question": "[CERTO/ERRADO] O CPC 02 trata exclusivamente da conversão de demonstrações contábeis para uma moeda de apresentação diferente."
+        },
+        {
+          "answer": "Gabarito: CERTO. Justificativa: Transações em moedas estrangeiras envolvem operações como empréstimos, importações e exportações denominadas em uma moeda diferente da moeda funcional.",
+          "question": "[CERTO/ERRADO] Empréstimos e exportações em moeda estrangeira são exemplos de 'Transações em Moedas Estrangeiras' conforme o CPC 02."
+        },
+        {
+          "answer": "Gabarito: CERTO. Justificativa: Operações no exterior referem-se a atividades de matrizes, filiais, sucursais, entre outras, localizadas em outros países.",
+          "question": "[CERTO/ERRADO] Filiais localizadas em outros países são consideradas 'Operações no Exterior' pelo CPC 02."
+        }
+      ],
+      "mermaid_mindmap": ""
+    },
+    {
+      "section_id": "remuneracao-capital-proprio-e-cpc-02-sec-03",
+      "title": "CPC 02 - Moeda Funcional e Alteração da Moeda Funcional",
+      "content_markdown": "A **Moeda Funcional** é a moeda do ambiente econômico principal no qual a entidade opera. Sua determinação exige julgamento da administração, considerando fatores econômicos relevantes, como as moedas que influenciam majoritariamente as operações, financiamentos e fluxos de caixa. Embora seja incomum, uma empresa no Brasil pode ter o dólar ou o euro como sua moeda funcional, caso a maior parte de suas atividades esteja vinculada a essas moedas.\n\nCaso ocorra uma **Alteração da Moeda Funcional**, o impacto deve ser aplicado de forma **prospectiva**, ou seja, apenas às operações futuras. A conversão dos itens das demonstrações financeiras para a nova moeda funcional deve ser realizada utilizando a taxa de câmbio vigente na data da alteração.",
+      "callouts": [
+        {
+          "text": "É a moeda do ambiente econômico principal da entidade, e sua determinação requer julgamento da administração com base em fatores econômicos relevantes.",
+          "type": "info",
+          "title": "Moeda Funcional"
+        },
+        {
+          "text": "O impacto de uma alteração na moeda funcional é sempre aplicado de forma **prospectiva**, afetando apenas operações futuras, e a conversão é feita pela taxa vigente na data da alteração.",
+          "type": "warning",
+          "title": "Alteração da Moeda Funcional"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: A Moeda Funcional é a moeda do ambiente econômico principal no qual a entidade opera, o que pode não ser a moeda local de constituição.",
+          "question": "[CERTO/ERRADO] A Moeda Funcional é sempre a moeda do país onde a entidade está legalmente constituída."
+        },
+        {
+          "answer": "Gabarito: CERTO. Justificativa: A definição da moeda funcional exige julgamento da administração, analisando os fatores econômicos que mais impactam a entidade.",
+          "question": "[CERTO/ERRADO] A determinação da moeda funcional requer julgamento da administração, considerando fatores econômicos relevantes."
+        },
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: Uma alteração na moeda funcional deve ser aplicada de forma prospectiva, ou seja, apenas às operações futuras.",
+          "question": "[CERTO/ERRADO] Uma alteração na moeda funcional deve ser aplicada de forma retrospectiva, ajustando períodos anteriores."
+        },
+        {
+          "answer": "Gabarito: CERTO. Justificativa: A conversão dos itens para a nova moeda funcional é realizada utilizando a taxa de câmbio vigente na data da alteração.",
+          "question": "[CERTO/ERRADO] Na alteração da moeda funcional, a conversão dos itens deve ser feita pela taxa cambial vigente na data da alteração."
+        }
+      ],
+      "mermaid_mindmap": ""
+    },
+    {
+      "section_id": "remuneracao-capital-proprio-e-cpc-02-sec-04",
+      "title": "CPC 02 - Conversão ao Término do Período de Reporte",
+      "content_markdown": "Ao final de cada período de reporte (geralmente o balanço), as demonstrações contábeis precisam ser ajustadas para refletir as taxas de câmbio vigentes, conforme as seguintes regras:\n\n| Tipo de Item Contábil | Taxa de Câmbio Aplicável | Observações |\n| :-------------------- | :----------------------- | :---------- |\n| **Resultados**        |                          |             |\n| Receitas e Despesas   | Taxa na data da **transação** | Se a taxa de câmbio flutuar significativamente, o uso da taxa média pode ser inadequado. |\n|                       | Taxa **MÉDIA** do período | Utilizada quando a taxa na data da transação não é praticável ou quando as flutuações são pequenas. |\n| **Conversão das Demonstrações Contábeis (DC)** | | |\n| Ativo, Passivo e Patrimônio Líquido (PL) | Taxa de **FECHAMENTO** | Itens são \"atualizados\" conforme a taxa de câmbio na data do balanço. |\n| Capital Social        | Taxa **HISTÓRICA**       | Corresponde à taxa de câmbio do dia em que o capital foi integralizado. |",
+      "callouts": [
+        {
+          "text": "Devem ser convertidas pela taxa na data da transação ou, se não for praticável ou as flutuações forem pequenas, pela taxa média do período.",
+          "type": "info",
+          "title": "Receitas e Despesas"
+        },
+        {
+          "text": "São convertidos pela taxa de fechamento, ou seja, a taxa vigente na data do balanço.",
+          "type": "info",
+          "title": "Ativo, Passivo e PL"
+        },
+        {
+          "text": "É convertido pela taxa histórica, que é a taxa de câmbio do dia em que o capital foi integralizado.",
+          "type": "info",
+          "title": "Capital Social"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: Preferencialmente, utiliza-se a taxa na data da transação; a taxa média é usada quando a taxa na data da transação não é praticável ou as flutuações são pequenas.",
+          "question": "[CERTO/ERRADO] Receitas e despesas em moeda estrangeira devem ser convertidas utilizando-se sempre a taxa de câmbio média do período de reporte."
+        },
+        {
+          "answer": "Gabarito: CERTO. Justificativa: Ativos, passivos e o Patrimônio Líquido (exceto Capital Social) são atualizados conforme a taxa de câmbio na data do balanço (taxa de fechamento).",
+          "question": "[CERTO/ERRADO] Ativos e passivos em moeda estrangeira são convertidos para a moeda de apresentação utilizando a taxa de câmbio de fechamento."
+        },
+        {
+          "answer": "Gabarito: CERTO. Justificativa: O Capital Social é um item que mantém a taxa histórica de conversão.",
+          "question": "[CERTO/ERRADO] O Capital Social é convertido utilizando a taxa de câmbio histórica, ou seja, a taxa do dia da integralização."
+        },
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: O Patrimônio Líquido, exceto o Capital Social, é convertido pela taxa de fechamento.",
+          "question": "[CERTO/ERRADO] O Patrimônio Líquido, exceto o Capital Social, é convertido pela taxa histórica."
+        }
+      ],
+      "mermaid_mindmap": ""
+    },
+    {
+      "section_id": "remuneracao-capital-proprio-e-cpc-02-sec-05",
+      "title": "CPC 02 - Ajuste Acumulado de Conversão (AAC)",
+      "content_markdown": "O **Ajuste Acumulado de Conversão (AAC)** representa a diferença que surge da conversão de demonstrações financeiras de uma moeda funcional para uma moeda de apresentação diferente. Ele é originado principalmente por duas situações:\n\n*   **Capital Social:** Diferença entre a Taxa de Fechamento e a Taxa Histórica aplicada na conversão do Capital Social.\n*   **Lucros Acumulados:** Diferença entre a Taxa de Fechamento e a Taxa Média do período utilizada na conversão dos Lucros Acumulados.\n\n#### Operações (Investimentos)\n\nO ajuste no valor de um investimento realizado no exterior, decorrente da variação da taxa de câmbio, **não** é reconhecido como receita ou despesa no resultado do período. Em vez disso, é registrado diretamente no **Patrimônio Líquido (PL)**, na conta de Ajuste Acumulado de Conversão. A lógica por trás disso é que as variações cambiais em investimentos de longo prazo no exterior são consideradas ajustes de capital, e não resultados operacionais.\n\n**Exemplo de Ajuste em Investimento no Exterior:**\n\nConsidere um investimento de US$ 100.000 em uma subsidiária no exterior.\n\n| Ano  | Investimento (U$) | Taxa de Câmbio (R$) | Valor (R$) |\n| :--- | :---------------- | :------------------ | :--------- |\n| 2012 | 100.000           | 1,50                | 150.000    |\n| 2013 | 100.000           | 1,75                | 175.000    |\n\nNeste cenário, o valor do investimento em Reais aumentou de R$ 150.000 para R$ 175.000 devido à valorização do dólar em relação ao real. O aumento de R$ 25.000 (R$ 175.000 - R$ 150.000) é lançado diretamente no Patrimônio Líquido.\n\n**Lançamento Contábil:**\n\n```\nD – Investimento no Exterior (Ativo)         25.000\nC – Ajuste Acumulado de Conversão (PL)       25.000\n```\n\nÉ importante ressaltar que o AAC, seja ele positivo ou negativo, é um componente dos **Outros Resultados Abrangentes (ORA)**, que por sua vez, faz parte da Demonstração do Resultado Abrangente (DRA).",
+      "callouts": [
+        {
+          "text": "O AAC é a diferença da conversão de demonstrações financeiras entre moedas, originado principalmente pela diferença de taxas (fechamento vs. histórica para Capital Social, e fechamento vs. média para Lucros Acumulados).",
+          "type": "info",
+          "title": "Definição e Origem do AAC"
+        },
+        {
+          "text": "Variações cambiais em investimentos no exterior não afetam o resultado do período, mas são registradas diretamente no Patrimônio Líquido (PL) como AAC, pois são consideradas ajustes de capital.",
+          "type": "tip",
+          "title": "Variação Cambial em Investimentos"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "answer": "Gabarito: CERTO. Justificativa: O AAC representa a diferença que surge da conversão de demonstrações financeiras de uma moeda funcional para uma moeda de apresentação diferente.",
+          "question": "[CERTO/ERRADO] O Ajuste Acumulado de Conversão (AAC) surge da conversão de demonstrações financeiras de uma moeda funcional para uma moeda de apresentação diferente."
+        },
+        {
+          "answer": "Gabarito: CERTO. Justificativa: Esta é uma das principais origens do AAC.",
+          "question": "[CERTO/ERRADO] A diferença entre a Taxa de Fechamento e a Taxa Histórica aplicada na conversão do Capital Social contribui para o AAC."
+        },
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: É registrado diretamente no Patrimônio Líquido (PL), na conta de Ajuste Acumulado de Conversão.",
+          "question": "[CERTO/ERRADO] O ajuste no valor de um investimento no exterior, decorrente da variação cambial, é reconhecido como receita ou despesa no resultado do período."
+        },
+        {
+          "answer": "Gabarito: CERTO. Justificativa: O AAC faz parte dos Outros Resultados Abrangentes (ORA) e da Demonstração do Resultado Abrangente (DRA).",
+          "question": "[CERTO/ERRADO] O AAC é um componente dos Outros Resultados Abrangentes (ORA)."
+        }
+      ],
+      "mermaid_mindmap": ""
+    },
+    {
+      "section_id": "remuneracao-capital-proprio-e-cpc-02-sec-06",
+      "title": "CPC 02 - Exemplos Práticos de Cálculo do AAC",
+      "content_markdown": "Considere a empresa Beta que controla a subsidiária integral Gama, sediada na França. Os demonstrativos de Gama para o ano X0 são fornecidos.\n\n**1. Indicação do valor em R$ a ser reconhecido no resultado do exercício de Beta em 31/12/X0:**\n\nO Lucro Líquido (LL) de Gama, que será reconhecido no resultado de Beta, é calculado utilizando a **Taxa Média** do período.\n\n*   Lucro Líquido (LL) de Gama: 11.250 (em moeda estrangeira)\n*   Taxa Média: 2,20\n*   **Resultado do Exercício (LL) em R$ = 11.250 x 2,20 = R$ 24.750**\n\n**2. Indicação do valor em R$ da conta Ajuste Acumulado de Conversão (AAC) na Cia Beta em 31/12/X0:**\n\nPara calcular o AAC total, é necessário considerar as variações cambiais no Lucro Líquido e no Capital Social.\n\n*   **Passo 1: Calcular o AAC derivado da variação cambial no Lucro Líquido (LL):**\n    *   LL convertido pela Taxa Média: R$ 24.750\n    *   LL convertido pela Taxa de Fechamento: 11.250 x 2,40 = R$ 27.000\n    *   **AAC devido ao LL = R$ 27.000 - R$ 24.750 = R$ 2.250**\n\n*   **Passo 2: Calcular o AAC derivado da variação cambial no Capital Social (CS):**\n    *   Capital Social (CS) no início do período (Taxa Histórica): 100.000 x 2,00 = R$ 200.000\n    *   Capital Social (CS) no fim do período (Taxa de Fechamento): 100.000 x 2,40 = R$ 240.000\n    *   **AAC devido ao CS = R$ 240.000 - R$ 200.000 = R$ 40.000**\n\n*   **AAC TOTAL = AAC devido ao LL + AAC devido ao CS = R$ 2.250 + R$ 40.000 = R$ 42.250**\n\n**3. Indicação do valor em R$ do investimento da Cia Beta em 31/12/X0:**\n\nComo Beta é controladora integral de Gama, o investimento de Beta corresponde a 100% do Patrimônio Líquido (PL) de Gama. Para determinar o valor do investimento, é necessário converter o PL de Gama para a moeda de apresentação de Beta utilizando a **Taxa de Fechamento**.\n\n*   Patrimônio Líquido de Gama (PLGAMA) = Lucro Líquido (LL) + Capital Social (CS)\n*   PLGAMA = 11.250 (LL) + 100.000 (CS) = € 111.250\n*   Utilizando a Taxa de Fechamento: € 111.250 x 2,40 = **R$ 267.000**",
+      "callouts": [],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: O Lucro Líquido da subsidiária é convertido utilizando a Taxa Média do período para reconhecimento no resultado da controladora.",
+          "question": "[CERTO/ERRADO] No cálculo do resultado do exercício de uma controladora referente a uma subsidiária no exterior, o Lucro Líquido da subsidiária é convertido pela taxa de câmbio de fechamento."
+        },
+        {
+          "answer": "Gabarito: CERTO. Justificativa: Esta é a forma correta de calcular a parcela do AAC referente ao Capital Social.",
+          "question": "[CERTO/ERRADO] O AAC derivado da variação cambial no Capital Social é calculado pela diferença entre o Capital Social convertido pela Taxa de Fechamento e pela Taxa Histórica."
+        },
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: O valor do investimento é determinado convertendo o Patrimônio Líquido da subsidiária para a moeda de apresentação da controladora utilizando a Taxa de Fechamento.",
+          "question": "[CERTO/ERRADO] O valor do investimento da controladora em uma subsidiária integral no exterior, ao final do período, é determinado convertendo o Patrimônio Líquido da subsidiária pela taxa de câmbio média."
+        }
+      ],
+      "mermaid_mindmap": ""
+    },
+    {
+      "section_id": "remuneracao-capital-proprio-e-cpc-02-sec-07",
+      "title": "CPC 02 - Transações em Moeda Estrangeira e Variações Cambiais",
+      "content_markdown": "Diferentemente das operações no exterior que geram AAC no PL, as transações em moeda estrangeira (como empréstimos, exportações e importações) têm suas diferenças cambiais reconhecidas diretamente no resultado do período. Essas diferenças são classificadas como:\n\n*   **Variação Cambial Ativa (VCA):** Quando a variação cambial gera uma receita para a entidade.\n*   **Variação Cambial Passiva (VCP):** Quando a variação cambial gera uma despesa para a entidade.\n\n**Exemplo 1: Empréstimo em Moeda Estrangeira**\n\nUma empresa contrai um empréstimo de US$ 10.000 em 01/05/2017, com quitação prevista para 01/02/2018. As taxas de câmbio são:\n\n*   01/05/2017: R$ 1,80\n*   31/12/2017: R$ 1,95\n\n**Análise:**\n\n1.  **No dia do empréstimo (01/05/2017):** O valor do empréstimo é registrado em R$ 10.000 x 1,80 = **R$ 18.000**.\n2.  **Ao término do exercício (31/12/2017):** As demonstrações contábeis (DC) devem ser atualizadas para o câmbio de fechamento. O novo valor do empréstimo é R$ 10.000 x 1,95 = **R$ 19.500**.\n\nA diferença de R$ 1.500 (R$ 19.500 - R$ 18.000) representa um aumento no passivo do empréstimo, o que gera uma despesa financeira para a empresa.\n\n**Reconhecimento ao final de 2017:**\n\n*   Empréstimo reconhecido: R$ 19.500\n*   Despesa financeira (Variação Cambial Passiva): R$ 1.500\n\n**Exemplo 2: Venda a Prazo (Exportação)**\n\nEm 01/07/2017, uma empresa realiza uma venda a prazo para um cliente no exterior no valor de US$ 200.000. As taxas de câmbio são:\n\n*   01/07/2017: R$ 3,20\n*   31/07/2017: R$ 3,00\n*   Taxa Média (julho): R$ 3,10\n\n**Análise:**\n\n1.  **No dia da venda (01/07/2017):** A empresa reconhece uma receita de venda de R$ 200.000 x 3,20 = **R$ 640.000**.\n2.  **Ao final do mês (31/07/2017):** A taxa de câmbio é R$ 3,00. O valor da duplicata a receber (ativo) é atualizado para R$ 200.000 x 3,00 = **R$ 600.000**.\n\nHouve uma diminuição no valor do ativo (Duplicata a Receber) de R$ 40.000 (R$ 640.000 - R$ 600.000), o que gera uma despesa financeira para a empresa.\n\n**Reconhecimento ao final de julho:**\n\n*   Receita de Vendas: R$ 640.000\n*   Despesa financeira (Variação Cambial Passiva): R$ 40.000",
+      "callouts": [
+        {
+          "text": "Ocorre quando a variação cambial gera uma receita para a entidade, sendo reconhecida diretamente no resultado do período.",
+          "type": "info",
+          "title": "Variação Cambial Ativa (VCA)"
+        },
+        {
+          "text": "Ocorre quando a variação cambial gera uma despesa para a entidade, sendo reconhecida diretamente no resultado do período.",
+          "type": "info",
+          "title": "Variação Cambial Passiva (VCP)"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: As diferenças cambiais de transações em moeda estrangeira são reconhecidas diretamente no resultado do período.",
+          "question": "[CERTO/ERRADO] As diferenças cambiais decorrentes de transações em moeda estrangeira, como empréstimos e exportações, são reconhecidas diretamente no Patrimônio Líquido."
+        },
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: Uma VCA ocorre quando a variação cambial gera uma receita para a entidade.",
+          "question": "[CERTO/ERRADO] Uma Variação Cambial Ativa (VCA) ocorre quando a variação cambial gera uma despesa para a entidade."
+        },
+        {
+          "answer": "Gabarito: CERTO. Justificativa: O aumento do passivo em Reais representa uma despesa financeira, caracterizando uma Variação Cambial Passiva.",
+          "question": "[CERTO/ERRADO] No exemplo de um empréstimo em moeda estrangeira, se o valor em Reais do passivo aumenta devido à variação cambial, isso gera uma Variação Cambial Passiva."
+        }
+      ],
+      "mermaid_mindmap": "graph TD\n    A[\"Transações em Moeda<br/>Estrangeira\"] --> B[Diferenças Cambiais]\n    B --> C[Reconhecidas no Resultado]\n    C --> C1[\"Variação Cambial Ativa<br/>(Receita)\"]\n    C --> C2[\"Variação Cambial Passiva<br/>(Despesa)\"]\n    class A readableRoot;\n    class B,C,C1,C2 readableItem;\n    classDef default fill:#F8FAFC,stroke:#A78BFA,stroke-width:1.4px,color:#111827;\n    classDef readableRoot fill:#EDE9FE,stroke:#6D28D9,stroke-width:2.4px,color:#111827;\n    classDef readableItem fill:#FFFFFF,stroke:#A78BFA,stroke-width:1.4px,color:#111827;\n    classDef readableImportant fill:#FEF3C7,stroke:#D97706,stroke-width:2px,color:#111827;\n    classDef readableCritical fill:#FEE2E2,stroke:#DC2626,stroke-width:2.2px,color:#111827;\n    classDef readableProcess fill:#E0F2FE,stroke:#0284C7,stroke-width:1.8px,color:#111827;\n    classDef readableAccent fill:#ECFEFF,stroke:#0891B2,stroke-width:1.6px,color:#111827;"
+    },
+    {
+      "section_id": "remuneracao-capital-proprio-e-cpc-02-sec-08",
+      "title": "CPC 02 - Pontos Chave sobre Variações Cambiais",
+      "content_markdown": "Algumas observações importantes sobre o tratamento das variações cambiais:\n\n*   As **disponibilidades de caixa em moeda estrangeira** (dinheiro em espécie ou em contas bancárias) estão sujeitas a Variação Cambial Ativa (VCA) ou Passiva (VCP), sendo reconhecidas no resultado. Elas **não** são contabilizadas no Ajuste Acumulado de Conversão (AAC).\n*   A **importação de mercadorias** deve ser mensurada pela conversão da moeda estrangeira utilizando a taxa de câmbio vigente na data do **DESEMBARAÇO aduaneiro**. Este é o momento em que a mercadoria é liberada pela alfândega.\n*   **Cuidado! Valorização do Real:** Quando ocorre a valorização do Real em relação a uma moeda estrangeira, a taxa cambial (R$ por unidade de moeda estrangeira) **diminui**. Isso implica que o valor em Reais de um ativo ou passivo em moeda estrangeira será **reduzido**. Consequentemente, essa redução geralmente resulta em uma **Variação Cambial PASSIVA** (despesa), pois o valor do ativo diminui ou o valor do passivo aumenta em termos de Real.",
+      "callouts": [
+        {
+          "text": "As variações cambiais sobre disponibilidades de caixa em moeda estrangeira são reconhecidas no resultado do período (VCA/VCP), e **não** no Ajuste Acumulado de Conversão (AAC).",
+          "type": "warning",
+          "title": "Disponibilidades em Moeda Estrangeira"
+        },
+        {
+          "text": "A mensuração de importações em moeda estrangeira deve usar a taxa de câmbio vigente na data do **desembaraço aduaneiro**.",
+          "type": "tip",
+          "title": "Importação de Mercadorias"
+        },
+        {
+          "text": "A valorização do Real (diminuição da taxa cambial) geralmente gera uma **Variação Cambial Passiva (despesa)**, pois reduz o valor em Reais de ativos em moeda estrangeira ou aumenta o valor de passivos.",
+          "type": "warning",
+          "title": "Valorização do Real"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: As variações cambiais sobre disponibilidades de caixa em moeda estrangeira são reconhecidas diretamente no resultado do período (VCA ou VCP).",
+          "question": "[CERTO/ERRADO] As variações cambiais sobre disponibilidades de caixa em moeda estrangeira são contabilizadas no Ajuste Acumulado de Conversão (AAC)."
+        },
+        {
+          "answer": "Gabarito: CERTO. Justificativa: A data do desembaraço aduaneiro é o momento correto para a conversão da moeda estrangeira na importação de mercadorias.",
+          "question": "[CERTO/ERRADO] A importação de mercadorias deve ser mensurada pela taxa de câmbio vigente na data do desembaraço aduaneiro."
+        },
+        {
+          "answer": "Gabarito: ERRADO. Justificativa: A valorização do Real (diminuição da taxa cambial) geralmente resulta em uma Variação Cambial Passiva (despesa), pois o valor em Reais de um ativo em moeda estrangeira é reduzido.",
+          "question": "[CERTO/ERRADO] A valorização do Real em relação a uma moeda estrangeira geralmente resulta em uma Variação Cambial Ativa para a entidade."
+        }
+      ],
+      "mermaid_mindmap": ""
+    }
+  ]
+}

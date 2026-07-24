@@ -7,6 +7,8 @@ interface TopicPageProps {
   params: Promise<{ topicId: string }>;
 }
 
+type AdjacentTopic = Pick<TopicRow, "topic_id" | "title">;
+
 /**
  * Server Component: busca o tópico e suas seções do Supabase.
  * Passa os dados puros para o Client Component que monta a UI interativa.
@@ -16,6 +18,8 @@ export default async function TopicPage({ params }: TopicPageProps) {
 
   let topic: TopicRow | null = null;
   let sections: SectionRow[] = [];
+  let previousTopic: AdjacentTopic | null = null;
+  let nextTopic: AdjacentTopic | null = null;
 
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
@@ -49,6 +53,30 @@ export default async function TopicPage({ params }: TopicPageProps) {
     if (sectionsData) {
       sections = sectionsData;
     }
+
+    const { data: disciplineTopics } = await supabase
+      .from("topics")
+      .select("topic_id,title,created_at")
+      .eq("discipline", topicData.discipline)
+      .order("created_at", { ascending: true })
+      .order("topic_id", { ascending: true });
+
+    if (disciplineTopics) {
+      const currentTopicIndex = disciplineTopics.findIndex(
+        (disciplineTopic) => disciplineTopic.topic_id === topicId
+      );
+
+      if (currentTopicIndex > 0) {
+        previousTopic = disciplineTopics[currentTopicIndex - 1];
+      }
+
+      if (
+        currentTopicIndex >= 0 &&
+        currentTopicIndex < disciplineTopics.length - 1
+      ) {
+        nextTopic = disciplineTopics[currentTopicIndex + 1];
+      }
+    }
   } catch {
     notFound();
   }
@@ -62,6 +90,8 @@ export default async function TopicPage({ params }: TopicPageProps) {
       topic={topic}
       sections={sections}
       userId={userId}
+      previousTopic={previousTopic}
+      nextTopic={nextTopic}
     />
   );
 }
