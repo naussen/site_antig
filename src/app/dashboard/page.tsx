@@ -285,7 +285,7 @@ export default async function DashboardPage() {
             <div className="flex min-w-0 items-start gap-4">
               <span
                 className="grid h-11 w-11 shrink-0 place-items-center rounded-xl"
-                style={{ background: "var(--accent)", color: "var(--bg-card)" }}
+                style={{ background: "var(--action)", color: "var(--action-foreground)" }}
               >
                 <CirclePlay size={22} />
               </span>
@@ -304,7 +304,7 @@ export default async function DashboardPage() {
             <Link
               href={`/${suggestedTopic.topic_id}`}
               className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-bold transition-transform hover:-translate-y-0.5"
-              style={{ background: "var(--accent)", color: "var(--bg-card)" }}
+              style={{ background: "var(--action)", color: "var(--action-foreground)" }}
             >
               Continuar estudando
               <ArrowUpRight size={17} />

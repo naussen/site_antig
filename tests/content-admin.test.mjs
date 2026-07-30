@@ -50,6 +50,51 @@ test("rejeita section_id duplicado no mesmo arquivo", () => {
   assert.throws(() => validateImportPayload(payload), /section_id duplicado/);
 });
 
+test("rejeita section_id fora da sequência canônica", () => {
+  const payload = validPayload();
+  payload.sections[0].section_id = "direito-constitucional-sec-09";
+
+  assert.throws(() => validateImportPayload(payload), /ID fora do padrão sequencial/);
+});
+
+test("rejeita título de seção duplicado sem diferenciar caixa ou acento", () => {
+  const payload = validPayload();
+  payload.sections.push({
+    ...payload.sections[0],
+    section_id: "direito-constitucional-sec-02",
+    title: "introducao",
+  });
+
+  assert.throws(() => validateImportPayload(payload), /Título de seção duplicado/);
+});
+
+test("rejeita título descritivo em caixa alta e preserva siglas", () => {
+  const payload = validPayload();
+  payload.sections[0].title = "AUDITORIA INTERNA (NBC TI 01)";
+  assert.throws(() => validateImportPayload(payload), /capitalização editorial/);
+
+  payload.sections[0].title = "ICMS";
+  assert.doesNotThrow(() => validateImportPayload(payload));
+
+  payload.sections[0].title = "IPVA";
+  payload.sections[0].content_markdown = "O IPVA é um imposto estadual.";
+  assert.doesNotThrow(() => validateImportPayload(payload));
+
+  payload.sections[0].title = "ERRO";
+  payload.sections[0].content_markdown = "O erro é uma distorção não intencional.";
+  assert.throws(() => validateImportPayload(payload), /capitalização editorial/);
+});
+
+test("rejeita DOUTINA e seção sem conteúdo útil", () => {
+  const typoPayload = validPayload();
+  typoPayload.sections[0].title = "Princípios de controle interno (DOUTINA)";
+  assert.throws(() => validateImportPayload(typoPayload), /doutrina/);
+
+  const emptyPayload = validPayload();
+  emptyPayload.sections[0].content_markdown = "";
+  assert.throws(() => validateImportPayload(emptyPayload), /não possui conteúdo/);
+});
+
 test("rejeita payload sem seções", () => {
   const payload = validPayload();
   payload.sections = [];

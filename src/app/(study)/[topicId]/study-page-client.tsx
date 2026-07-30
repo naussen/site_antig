@@ -3,9 +3,19 @@
 import { useCallback, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, ListTree, StickyNote, X } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Brain,
+  Layers3,
+  ListTree,
+  Map as MapIcon,
+  StickyNote,
+  X,
+} from "lucide-react";
 import type { SectionRow, TopicRow } from "@/types/database";
 import { useSectionProgress } from "@/hooks/use-section-progress";
+import { DashboardNavigation } from "@/components/navigation/dashboard-navigation";
 import { SidebarNav } from "@/components/study/sidebar-nav";
 import { MarkdownViewer } from "@/components/study/markdown-viewer";
 import { CalloutList } from "@/components/study/callout-block";
@@ -31,6 +41,7 @@ interface StudyPageClientProps {
   topic: TopicRow;
   sections: SectionRow[];
   userId: string;
+  userEmail: string | null;
   previousTopic: Pick<TopicRow, "topic_id" | "title"> | null;
   nextTopic: Pick<TopicRow, "topic_id" | "title"> | null;
 }
@@ -43,14 +54,15 @@ export function StudyPageClient({
   topic,
   sections,
   userId,
+  userEmail,
   previousTopic,
   nextTopic,
 }: StudyPageClientProps) {
   const [activeSectionId, setActiveSectionId] = useState<string | null>(
     sections[0]?.section_id ?? null
   );
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [notesOpen, setNotesOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const sectionIds = useMemo(
     () => sections.map((s) => s.section_id),
@@ -74,8 +86,6 @@ export function StudyPageClient({
 
   const handleSectionClick = useCallback((sectionId: string) => {
     setActiveSectionId(sectionId);
-    setSidebarOpen(false);
-
     const element = document.getElementById(`section-${sectionId}`);
     if (element) {
       element.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -86,23 +96,21 @@ export function StudyPageClient({
     (s) => s.section_id === activeSectionId
   );
 
+  const openNotes = () => {
+    setNotesOpen(true);
+  };
+
   const openSidebar = () => {
     setNotesOpen(false);
     setSidebarOpen(true);
   };
 
-  const openNotes = () => {
-    setSidebarOpen(false);
-    setNotesOpen(true);
-  };
-
   return (
     <>
-      {(sidebarOpen || notesOpen) && (
+      {notesOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/40 backdrop-blur-[1px]"
           onClick={() => {
-            setSidebarOpen(false);
             setNotesOpen(false);
           }}
           aria-hidden="true"
@@ -111,7 +119,7 @@ export function StudyPageClient({
 
       <button
         type="button"
-        className="fixed left-0 top-1/2 z-30 flex -translate-y-1/2 flex-col items-center gap-2 rounded-r-2xl border border-l-0 px-2 py-4 text-xs font-bold shadow-lg transition-transform hover:translate-x-0.5"
+        className="hidden fixed left-0 top-1/2 z-30 flex -translate-y-1/2 flex-col items-center gap-2 rounded-r-2xl border border-l-0 px-2 py-4 text-xs font-bold shadow-lg transition-transform hover:translate-x-0.5"
         style={{
           background: "var(--bg-card)",
           borderColor: "var(--border)",
@@ -128,7 +136,7 @@ export function StudyPageClient({
 
       <aside
         id="study-sidebar"
-        className={`fixed inset-y-0 left-0 z-50 w-[min(88vw,360px)] overflow-y-auto border-r transition-transform duration-300 ${
+        className={`hidden fixed inset-y-0 left-0 z-50 w-[min(88vw,360px)] overflow-y-auto border-r transition-transform duration-300 ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
         style={{
@@ -152,6 +160,15 @@ export function StudyPageClient({
           onClose={() => setSidebarOpen(false)}
         />
       </aside>
+
+      <DashboardNavigation
+        userEmail={userEmail}
+        studySections={sections}
+        progressMap={progressMap}
+        activeSectionId={activeSectionId}
+        onToggleProgress={toggleProgress}
+        onSectionClick={handleSectionClick}
+      />
 
       <main className="min-w-0 flex-1 overflow-y-auto">
         <header
@@ -205,39 +222,102 @@ export function StudyPageClient({
 
         <div className="mx-auto w-full max-w-[1280px] px-5 py-8 pb-20 sm:px-8 lg:px-12 xl:px-16">
           {/* Título do tópico */}
-          <h1
-            className="text-3xl font-bold mb-8"
-            style={{ color: "var(--text-primary)" }}
+          <section
+            className="study-module-hero mb-12"
+            aria-labelledby="study-module-title"
           >
-            {topic.title}
-          </h1>
+            <div className="study-module-kicker">
+              <span>{topic.discipline}</span>
+              <span>
+                {sections.length} {sections.length === 1 ? "seção" : "seções"}
+              </span>
+            </div>
+
+            <p className="study-module-eyebrow">Módulo de estudo</p>
+            <h1 id="study-module-title" className="study-module-title">
+              {topic.title}
+            </h1>
+
+            <div className="study-module-progress">
+              <div>
+                <span style={{ color: "var(--text-secondary)" }}>
+                  {progressLoading
+                    ? "Carregando progresso..."
+                    : `${completedCount} de ${totalCount} seções concluídas`}
+                </span>
+                <strong style={{ color: "var(--accent)" }}>
+                  {progressPercent}%
+                </strong>
+              </div>
+              <div
+                className="h-1.5 overflow-hidden rounded-full"
+                style={{ background: "var(--progress-bg)" }}
+                aria-hidden="true"
+              >
+                <div
+                  className="h-full rounded-full transition-[width] duration-300"
+                  style={{
+                    width: `${progressPercent}%`,
+                    background: "var(--progress-bar)",
+                  }}
+                />
+              </div>
+            </div>
+          </section>
 
           {/* Renderizar todas as seções */}
           {sections.map((section, index) => (
             <article
               key={section.section_id}
               id={`section-${section.section_id}`}
-              className="mb-12 scroll-mt-20"
+              className="mb-16 scroll-mt-20"
+              aria-labelledby={`section-title-${section.section_id}`}
             >
               {/* Título da seção */}
-              <h2
-                className="text-xl font-bold mb-4 pb-2 border-b"
-                style={{
-                  color: "var(--text-primary)",
-                  borderColor: "var(--border)",
-                }}
-              >
-                <span
-                  className="text-xs font-mono mr-2 px-2 py-0.5 rounded"
-                  style={{
-                    background: "var(--accent-soft)",
-                    color: "var(--accent)",
-                  }}
-                >
+              <header className="study-section-heading">
+                <span className="study-section-number" aria-hidden="true">
                   {String(index + 1).padStart(2, "0")}
                 </span>
-                {section.title}
-              </h2>
+                <div>
+                  <p>Seção {String(index + 1).padStart(2, "0")}</p>
+                  <h2 id={`section-title-${section.section_id}`}>
+                    {section.title}
+                  </h2>
+                  {(section.mermaid_mindmap ||
+                    (section.mnemonics && section.mnemonics.length > 0) ||
+                    (section.flashcards && section.flashcards.length > 0)) && (
+                    <div
+                      className="study-section-resources"
+                      aria-label="Recursos disponíveis nesta seção"
+                    >
+                      {section.mermaid_mindmap && (
+                        <span>
+                          <MapIcon size={12} aria-hidden="true" />
+                          Mapa
+                        </span>
+                      )}
+                      {section.mnemonics && section.mnemonics.length > 0 && (
+                        <span>
+                          <Brain size={12} aria-hidden="true" />
+                          {section.mnemonics.length}{" "}
+                          {section.mnemonics.length === 1
+                            ? "mnemônico"
+                            : "mnemônicos"}
+                        </span>
+                      )}
+                      {section.flashcards && section.flashcards.length > 0 && (
+                        <span>
+                          <Layers3 size={12} aria-hidden="true" />
+                          {section.flashcards.length}{" "}
+                          {section.flashcards.length === 1
+                            ? "flashcard"
+                            : "flashcards"}
+                        </span>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </header>
 
               {/* Markdown content */}
               {section.content_markdown && (
@@ -253,15 +333,18 @@ export function StudyPageClient({
 
               {/* Mermaid mindmap */}
               {section.mermaid_mindmap && (
-                <div className="mt-6">
-                  <h3
-                    className="text-sm font-semibold uppercase tracking-wider mb-3 flex items-center gap-2"
-                    style={{ color: "var(--text-muted)" }}
-                  >
-                    🗺️ Mapa Mental
-                  </h3>
-                  <MermaidViewer chart={section.mermaid_mindmap} />
-                </div>
+                <section className="study-resource-block mt-8">
+                  <div className="study-resource-heading">
+                    <h3>
+                      <MapIcon size={17} aria-hidden="true" />
+                      Mapa mental
+                    </h3>
+                    <span>Visão esquemática</span>
+                  </div>
+                  <div className="study-resource-body">
+                    <MermaidViewer chart={section.mermaid_mindmap} />
+                  </div>
+                </section>
               )}
 
               {/* Mnemônicos */}
@@ -280,10 +363,9 @@ export function StudyPageClient({
 
               {/* Divider entre seções */}
               {index < sections.length - 1 && (
-                <hr
-                  className="mt-10"
-                  style={{ borderColor: "var(--border)" }}
-                />
+                <div className="study-section-divider mt-14" aria-hidden="true">
+                  <span />
+                </div>
               )}
             </article>
           ))}

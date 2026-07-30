@@ -72,17 +72,21 @@ export function MnemonicList({ mnemonics }: MnemonicListProps) {
   if (mnemonics.length === 0) return null;
 
   return (
-    <div className="space-y-3">
-      <h3
-        className="text-sm font-semibold uppercase tracking-wider flex items-center gap-2"
-        style={{ color: "var(--text-muted)" }}
-      >
-        <Brain size={14} />
-        Mnemônicos
-      </h3>
-      {mnemonics.map((mnemonic, index) => (
-        <MnemonicCard key={`${mnemonic.key}-${index}`} mnemonic={mnemonic} />
-      ))}
-    </div>
+    <section className="study-resource-block">
+      <div className="study-resource-heading">
+        <h3>
+          <Brain size={17} aria-hidden="true" />
+          Mnemônicos
+        </h3>
+        <span>
+          {mnemonics.length} {mnemonics.length === 1 ? "recurso" : "recursos"}
+        </span>
+      </div>
+      <div className="study-resource-body space-y-3">
+        {mnemonics.map((mnemonic, index) => (
+          <MnemonicCard key={`${mnemonic.key}-${index}`} mnemonic={mnemonic} />
+        ))}
+      </div>
+    </section>
   );
 }

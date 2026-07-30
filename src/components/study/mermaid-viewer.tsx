@@ -4,6 +4,9 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { Expand, RotateCcw, X, ZoomIn, ZoomOut } from "lucide-react";
 import { useTheme } from "@/components/theme-provider";
+import { normalizeMermaidChart } from "@/lib/mermaid/normalize-mermaid-chart";
+
+export { normalizeMermaidChart } from "@/lib/mermaid/normalize-mermaid-chart";
 
 interface MermaidViewerClientProps {
   chart: string;
@@ -21,25 +24,6 @@ function hashChart(chart: string) {
   }
 
   return hash;
-}
-
-/** Corrige somente artefatos comuns de transporte, sem reescrever a estrutura. */
-export function normalizeMermaidChart(chart: string) {
-  const withoutFence = chart
-    .trim()
-    .replace(/^```(?:mermaid)?\s*\r?\n/i, "")
-    .replace(/\r?\n```\s*$/i, "");
-
-  return withoutFence
-    .split(/\r?\n/)
-    .map((line) =>
-      line.replace(
-        /\["([^"\]]*)\["([^"\]]+)"\]([^"\]]*)"\]/g,
-        (_match, before: string, quoted: string, after: string) =>
-          `["${before}'${quoted}'${after}"]`,
-      ),
-    )
-    .join("\n");
 }
 
 function clampZoom(value: number) {
@@ -62,6 +46,48 @@ function parseSvgSize(svgElement: SVGSVGElement) {
     width: Number.isFinite(width) && width > 0 ? width : 800,
     height: Number.isFinite(height) && height > 0 ? height : 420,
   };
+}
+
+function applyCoherentPalette(svgElement: SVGSVGElement, theme: string) {
+  const palette = theme === "dark"
+    ? {
+        root: "#7562E8",
+        node: ["#302A4A", "#3A3357", "#29253D"],
+        stroke: "#B8ACFF",
+        text: "#F5F3FF",
+        edge: "#9B8BEA",
+      }
+    : theme === "sepia"
+      ? {
+          root: "#765C22",
+          node: ["#E9DDBA", "#F1E8CF", "#DDD0A8"],
+          stroke: "#9A7B2F",
+          text: "#3D3529",
+          edge: "#9A7B2F",
+        }
+      : {
+          root: "#4F46C5",
+          node: ["#EEEAFE", "#F5F2FF", "#E5E1FA"],
+          stroke: "#887CE2",
+          text: "#24213D",
+          edge: "#8174D8",
+        };
+
+  svgElement.querySelectorAll<SVGGElement>(".node").forEach((node, index) => {
+    const fill = index === 0 ? palette.root : palette.node[(index - 1) % palette.node.length];
+    node.querySelectorAll<SVGElement>("rect, polygon, circle, ellipse, path").forEach((shape) => {
+      shape.style.fill = fill;
+      shape.style.stroke = palette.stroke;
+    });
+    node.querySelectorAll<SVGElement>("text, tspan, foreignObject, div").forEach((label) => {
+      label.style.color = index === 0 ? "#FFFFFF" : palette.text;
+      label.style.fill = index === 0 ? "#FFFFFF" : palette.text;
+    });
+  });
+
+  svgElement.querySelectorAll<SVGElement>(".edgePath path, .flowchart-link, .edge-pattern-solid").forEach((edge) => {
+    edge.style.stroke = palette.edge;
+  });
 }
 
 /**
@@ -116,6 +142,7 @@ function MermaidViewerClient({ chart }: MermaidViewerClientProps) {
 
           const svgElement = containerRef.current.querySelector("svg");
           if (svgElement) {
+            applyCoherentPalette(svgElement, theme);
             svgElement.style.display = "block";
             svgElement.style.maxWidth = "none";
             svgElement.style.height = "auto";

@@ -90,6 +90,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
       topic={topic}
       sections={sections}
       userId={userId}
+      userEmail={user.email ?? null}
       previousTopic={previousTopic}
       nextTopic={nextTopic}
     />

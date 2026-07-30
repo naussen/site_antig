@@ -23,6 +23,56 @@ const FlashcardSchema = z.object({
   answer: z.string().min(1),
 });
 
+const KNOWN_ACRONYMS = new Set([
+  "AFO", "CIDE", "CLT", "CPC", "CPP", "CTN", "CVM", "DRE", "FRF",
+  "ICMS", "ISS", "LDO", "LINDB", "LOA", "LRF", "NBC", "PPA", "RT",
+  "STF", "STJ", "TA", "TCE", "TCU", "TI",
+]);
+
+function normalizeTitleKey(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase("pt-BR")
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function collectContextualAcronyms(value: string) {
+  return new Set(
+    (value.match(/\b[\p{Lu}\d]{2,12}\b/gu) ?? [])
+      .filter((token) => /\p{Lu}/u.test(token))
+  );
+}
+
+function isAllowedUppercaseTitle(
+  value: string,
+  contextualAcronyms: Set<string>
+) {
+  const words = value.match(/[\p{L}\p{N}]+/gu) ?? [];
+  return words.length > 0 && words.every((word) =>
+    KNOWN_ACRONYMS.has(word.toUpperCase())
+    || contextualAcronyms.has(word)
+    || /^(?:[IVXLCDM]+|\d+)$/i.test(word)
+  );
+}
+
+function isPredominantlyUppercaseTitle(
+  value: string,
+  contextualAcronyms: Set<string>
+) {
+  const letters = value.match(/\p{L}/gu) ?? [];
+  if (
+    letters.length < 2
+    || isAllowedUppercaseTitle(value, contextualAcronyms)
+  ) return false;
+  const uppercaseCount = letters.filter(
+    (letter) => letter === letter.toLocaleUpperCase("pt-BR")
+  ).length;
+  return uppercaseCount / letters.length >= 0.8;
+}
+
 const SectionImportSchema = z.object({
   section_id: z.string().min(1),
   title: z.string().min(1),
@@ -38,6 +88,86 @@ const TopicImportSchema = z.object({
   discipline: z.string().default("Geral"),
   topic_title: z.string().min(1),
   sections: z.array(SectionImportSchema).min(1, "Pelo menos uma seção é obrigatória"),
+}).superRefine((topic, context) => {
+  const seenSectionIds = new Set<string>();
+  const seenSectionTitles = new Set<string>();
+  const contentContext = topic.sections.map((section) => JSON.stringify({
+    content_markdown: section.content_markdown,
+    callouts: section.callouts,
+    mnemonics: section.mnemonics,
+    flashcards: section.flashcards,
+    mermaid_mindmap: section.mermaid_mindmap,
+  })).join("\n");
+  const contextualAcronyms = collectContextualAcronyms(contentContext);
+
+  if (isPredominantlyUppercaseTitle(topic.topic_title, contextualAcronyms)) {
+    context.addIssue({
+      code: "custom",
+      path: ["topic_title"],
+      message: "Use capitalização editorial no título; preserve maiúsculas somente em siglas.",
+    });
+  }
+
+  topic.sections.forEach((section, index) => {
+    const expectedSectionId = `${topic.topic_id}-sec-${String(index + 1).padStart(2, "0")}`;
+    if (section.section_id !== expectedSectionId) {
+      context.addIssue({
+        code: "custom",
+        path: ["sections", index, "section_id"],
+        message: `ID fora do padrão sequencial. Esperado: ${expectedSectionId}.`,
+      });
+    }
+
+    if (seenSectionIds.has(section.section_id)) {
+      context.addIssue({
+        code: "custom",
+        path: ["sections", index, "section_id"],
+        message: "section_id duplicado no mesmo tópico.",
+      });
+    }
+    seenSectionIds.add(section.section_id);
+
+    const titleKey = normalizeTitleKey(section.title);
+    if (seenSectionTitles.has(titleKey)) {
+      context.addIssue({
+        code: "custom",
+        path: ["sections", index, "title"],
+        message: "Título de seção duplicado no mesmo tópico.",
+      });
+    }
+    seenSectionTitles.add(titleKey);
+
+    if (isPredominantlyUppercaseTitle(section.title, contextualAcronyms)) {
+      context.addIssue({
+        code: "custom",
+        path: ["sections", index, "title"],
+        message: "Use capitalização editorial; preserve maiúsculas somente em siglas.",
+      });
+    }
+
+    if (/\bDOUTINA\b/i.test(JSON.stringify(section))) {
+      context.addIssue({
+        code: "custom",
+        path: ["sections", index],
+        message: "Erro ortográfico encontrado: use 'doutrina', não 'doutina'.",
+      });
+    }
+
+    const hasUsefulContent = Boolean(
+      section.content_markdown.trim()
+      || section.mermaid_mindmap.trim()
+      || section.callouts.length
+      || section.mnemonics.length
+      || section.flashcards.length
+    );
+    if (!hasUsefulContent) {
+      context.addIssue({
+        code: "custom",
+        path: ["sections", index],
+        message: "A seção não possui conteúdo nem recurso didático.",
+      });
+    }
+  });
 });
 
 // =============================================================================

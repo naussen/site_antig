@@ -16,7 +16,7 @@ export default async function DashboardLayout({
   }
 
   return (
-    <div className="min-h-screen lg:flex" style={{ background: "var(--bg-primary)" }}>
+    <div className="min-h-screen lg:flex" style={{ background: "var(--dashboard-bg)" }}>
       <DashboardNavigation userEmail={user.email ?? null} />
 
       <div className="min-w-0 flex-1">

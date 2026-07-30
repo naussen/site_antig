@@ -96,8 +96,8 @@ export default async function HomePage() {
             href="/login" 
             className="inline-flex items-center gap-2 text-base font-semibold px-8 py-4 rounded-full transition-all hover:-translate-y-1"
             style={{ 
-              background: "var(--accent)", 
-              color: "white",
+              background: "var(--action)",
+              color: "var(--action-foreground)",
               boxShadow: "0 10px 25px -5px var(--accent-soft)"
             }}
           >

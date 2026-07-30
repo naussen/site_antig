@@ -159,8 +159,8 @@ export default async function NotesPage() {
               href="/dashboard"
               className="inline-block mt-6 px-6 py-2 rounded-lg font-medium transition-colors hover:opacity-90"
               style={{ 
-                background: "var(--accent)", 
-                color: "white",
+                background: "var(--action)",
+                color: "var(--action-foreground)",
               }}
             >
               Voltar aos Resumos

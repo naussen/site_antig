@@ -170,10 +170,29 @@ Validação principal:
 - `discipline`: string, padrão `"Geral"` se ausente.
 - `topic_title`: string não vazia.
 - `sections`: array com pelo menos uma seção.
+- `section_id`: sequência canônica `${topic_id}-sec-NN`, sem lacunas ou duplicações.
+- `sections[].title`: capitalização editorial; caixa alta somente para siglas conhecidas.
+- Títulos de seção não podem se repetir, mesmo com diferença apenas de caixa ou acentuação.
+- Seções precisam conter Markdown ou pelo menos um recurso didático.
+- O erro ortográfico conhecido `DOUTINA` é recusado; use `doutrina`.
 - `callouts[].type`: `"warning"`, `"info"` ou `"tip"`.
 - `mnemonics`: `key`, `meaning`, `description`.
 - `flashcards`: `question`, `answer`.
 - `mermaid_mindmap`: string opcional.
+
+Para atualizar um tópico que já possui mais seções do que o novo JSON, use primeiro a pré-visualização administrativa. A rota HTTP faz upsert e não exclui seções ausentes:
+
+```powershell
+npm run content -- import C:\caminho\material_processado.json --replace --confirm topic-id
+```
+
+Revise a lista de seções antigas que será exibida. Somente depois execute a escrita:
+
+```powershell
+npm run content -- import C:\caminho\material_processado.json --apply --replace --confirm topic-id
+```
+
+> A exclusão de seções antigas também remove, por `ON DELETE CASCADE`, o progresso e as notas vinculados àquelas seções. Por isso, `--replace` exige confirmação literal.
 
 Consulte `guia_envio_materiais.md` para o fluxo completo de criação, validação e envio.
 

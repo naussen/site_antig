@@ -142,7 +142,7 @@ export default async function DashboardSettingsPage() {
               type="submit"
               disabled={!preferencesAvailable}
               className="rounded-xl px-5 py-3 text-sm font-bold transition-transform enabled:hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50"
-              style={{ background: "var(--accent)", color: "var(--bg-card)" }}
+              style={{ background: "var(--action)", color: "var(--action-foreground)" }}
             >
               Salvar preferências
             </button>

@@ -251,7 +251,7 @@ export function NoteCard({ note, userId }: NoteCardProps) {
               onClick={handleSave}
               disabled={isSaving || !normalizedDraft}
               className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
-              style={{ background: "var(--accent)", color: "white" }}
+                style={{ background: "var(--action)", color: "var(--action-foreground)" }}
             >
               {isSaving ? (
                 <Loader2 size={13} className="animate-spin" aria-hidden="true" />
@@ -422,7 +422,7 @@ export function NoteCard({ note, userId }: NoteCardProps) {
                 onClick={handleSave}
                 disabled={isSaving || !normalizedDraft}
                 className="inline-flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-semibold transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
-                style={{ background: "var(--accent)", color: "white" }}
+              style={{ background: "var(--action)", color: "var(--action-foreground)" }}
               >
                 {isSaving ? (
                   <Loader2 size={15} className="animate-spin" aria-hidden="true" />
