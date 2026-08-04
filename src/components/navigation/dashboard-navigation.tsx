@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
   BookOpen,
+  FilePenLine,
   GraduationCap,
   Loader2,
   LogOut,
@@ -53,6 +54,7 @@ function getSidebarServerSnapshot() {
 const navigationItems = [
   { href: "/dashboard", label: "Início", icon: BookOpen, exact: true },
   { href: "/dashboard/notas", label: "Notas", icon: StickyNote },
+  { href: "/dashboard/editor", label: "Editor JSON", icon: FilePenLine },
   {
     href: "/dashboard/configuracoes",
     label: "Matérias",

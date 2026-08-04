@@ -1,6 +1,10 @@
 import type { ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import {
+  normalizeMarkdownMathNotation,
+  remarkSafeBreaks,
+} from "@/lib/markdown-display";
 
 interface MarkdownViewerProps {
   content: string;
@@ -24,10 +28,12 @@ function getPlainText(children: ReactNode): string | null {
  * Aplica os estilos definidos em globals.css via classe .markdown-content.
  */
 export function MarkdownViewer({ content }: MarkdownViewerProps) {
+  const displayContent = normalizeMarkdownMathNotation(content);
+
   return (
     <div className="markdown-content animate-fade-in-up">
       <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
+        remarkPlugins={[remarkGfm, remarkSafeBreaks]}
         components={{
           p: ({ children }) => {
             const text = getPlainText(children)?.trim();
@@ -58,7 +64,7 @@ export function MarkdownViewer({ content }: MarkdownViewerProps) {
           ),
         }}
       >
-        {content}
+        {displayContent}
       </ReactMarkdown>
     </div>
   );
