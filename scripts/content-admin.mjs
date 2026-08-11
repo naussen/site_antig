@@ -196,9 +196,29 @@ export function assertBatchMode(dryRun, apply) {
   }
 }
 
+export function getBatchSortOrder(fileName, fallbackOrder) {
+  const prefix = /^(\d+)/.exec(fileName)?.[1];
+  return prefix ? Number.parseInt(prefix, 10) : fallbackOrder;
+}
+
+export function buildTopicRow(payload, sortOrder) {
+  const row = {
+    topic_id: payload.topic_id,
+    discipline: payload.discipline,
+    title: payload.topic_title,
+  };
+
+  if (Number.isInteger(sortOrder)) {
+    row.sort_order = sortOrder;
+  }
+
+  return row;
+}
+
 export function validateBatchEntries(entries) {
   const topicFiles = new Map();
   const sectionFiles = new Map();
+  const orderFiles = new Map();
   const conflicts = [];
 
   for (const entry of entries) {
@@ -209,6 +229,19 @@ export function validateBatchEntries(entries) {
       );
     } else {
       topicFiles.set(entry.payload.topic_id, entry.filePath);
+    }
+
+    if (Number.isInteger(entry.sortOrder)) {
+      const orderKey = `${entry.payload.discipline}\u0000${entry.sortOrder}`;
+      const previousOrderFile = orderFiles.get(orderKey);
+      if (previousOrderFile) {
+        conflicts.push(
+          `ordem ${entry.sortOrder} da disciplina ${entry.payload.discipline} ` +
+            `aparece em ${previousOrderFile} e ${entry.filePath}`
+        );
+      } else {
+        orderFiles.set(orderKey, entry.filePath);
+      }
     }
 
     for (const section of entry.payload.sections) {
@@ -384,11 +417,12 @@ async function readBatchDirectory(directoryPath) {
 
   const entries = [];
   const errors = [];
-  for (const fileName of jsonFiles) {
+  for (const [index, fileName] of jsonFiles.entries()) {
     const filePath = join(directoryPath, fileName);
     try {
       entries.push({
         filePath,
+        sortOrder: getBatchSortOrder(fileName, index + 1),
         payload: validateImportPayload(await readJsonFile(filePath)),
       });
     } catch (error) {
@@ -447,14 +481,15 @@ async function findBatchSectionOwnershipConflicts(supabase, entries) {
   return conflicts;
 }
 
-async function upsertImportPayload(supabase, payload, context = "importação") {
+async function upsertImportPayload(
+  supabase,
+  payload,
+  context = "importação",
+  topicSortOrder
+) {
   unwrap(
     await supabase.from("topics").upsert(
-      {
-        topic_id: payload.topic_id,
-        discipline: payload.discipline,
-        title: payload.topic_title,
-      },
+      buildTopicRow(payload, topicSortOrder),
       { onConflict: "topic_id" }
     ),
     `Falha ao salvar módulo (${context})`
@@ -556,8 +591,8 @@ async function importBatch(supabase, directoryPath, values) {
     throw new Error(`Importação em lote bloqueada por conflito de IDs: ${details}`);
   }
 
-  const summary = entries.map((entry, index) => ({
-    ordem: index + 1,
+  const summary = entries.map((entry) => ({
+    ordem: entry.sortOrder,
     arquivo: entry.filePath,
     topic_id: entry.payload.topic_id,
     modulo: entry.payload.topic_title,
@@ -579,7 +614,12 @@ async function importBatch(supabase, directoryPath, values) {
   console.log("Iniciando importação efetiva após preflight integral...");
   for (const [index, entry] of entries.entries()) {
     console.log(`[${index + 1}/${entries.length}] ${entry.filePath}`);
-    await upsertImportPayload(supabase, entry.payload, entry.filePath);
+    await upsertImportPayload(
+      supabase,
+      entry.payload,
+      entry.filePath,
+      entry.sortOrder
+    );
   }
   console.log(
     `Importação em lote concluída: ${entries.length} módulo(s), ${sectionCount} seção(ões).`

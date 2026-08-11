@@ -16,6 +16,7 @@ import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import type { TopicRow } from "@/types/database";
 import { formatSupabaseError, isMissingTableError } from "@/lib/supabase/errors";
+import { compareTopicsByOrigin } from "@/lib/topic-order";
 
 type DashboardTopic = TopicRow & {
   sections: { section_id: string }[];
@@ -26,6 +27,17 @@ type TopicProgress = {
   totalCount: number;
   percent: number;
 };
+
+function compareTopics(a: DashboardTopic, b: DashboardTopic) {
+  const disciplineA = a.discipline || "Geral";
+  const disciplineB = b.discipline || "Geral";
+
+  if (disciplineA === disciplineB) {
+    return compareTopicsByOrigin(disciplineA, a, b);
+  }
+
+  return a.title.localeCompare(b.title, "pt-BR");
+}
 
 export default async function DashboardPage() {
   const supabase = await createClient();
@@ -45,14 +57,14 @@ export default async function DashboardPage() {
   try {
     const { data, error } = await supabase
       .from("topics")
-      .select("topic_id, discipline, title, created_at, sections(section_id)")
+      .select("topic_id, discipline, title, sort_order, created_at, sections(section_id)")
       .order("created_at", { ascending: false });
 
     if (error) {
       console.error("Erro ao buscar tópicos:", error);
       loadErrors.push("Não foi possível carregar a biblioteca de tópicos.");
     } else if (data) {
-      topics = data;
+      topics = [...data].sort(compareTopics);
     }
 
     const hasSections = topics.some((topic) => topic.sections.length > 0);

@@ -6,14 +6,25 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 # AGENTS.md — site_antig
 
+## Regras do ecossistema
+
+Este repositório faz parte de um pipeline de conteúdo que envolve PYGEM, LEIAUT, SITE_ANTIG e TESOURA. As mudanças em um ponto do fluxo podem impactar os demais, então o agente deve:
+
+- preservar compatibilidade entre os formatos de entrada e saída do pipeline;
+- manter contratos de dados estáveis, especialmente no fluxo que vai de Markdown/JSON para a importação do site;
+- evitar alterações que quebram a leitura, a interpretação ou a estrutura de conteúdo jurídico;
+- preferir mudanças locais e reversíveis, com validação explícita antes de concluir;
+- quando tocar em importação, exportação, estrutura de conteúdo, Mermaid, flashcards ou metadados, verificar impacto nos demais projetos do ecossistema.
+
 ## Papel do agente
 
 Atue como engenheiro de software sênior, arquiteto e revisor técnico extremamente criterioso, minucioso e conservador.
+O usuário do agente é leigo em programação, SEMPRE que houver uma prática melhor vc deve SUGERIR.
 
 Antes de alterar arquivos:
 
 1. leia o contexto relevante;
-2. explique o plano;
+2. explique o plano de forma muito sucinta;
 3. identifique riscos;
 4. limite o escopo;
 5. só então implemente.
@@ -30,7 +41,7 @@ Para cada tarefa de implementação, siga este fluxo:
 
 Trabalhe dentro de `C:\site_antig` quando estiver neste projeto.
 
-Não crie, altere ou apague arquivos fora deste diretório. Não modifique arquivos sensíveis como `.env.local`, credenciais, tokens, chaves, arquivos de configuração pessoal do usuário ou conteúdo interno de `.git`.
+Não modifique arquivos sensíveis como `.env.local`, credenciais, tokens, chaves, arquivos de configuração pessoal do usuário ou conteúdo interno de `.git`.
 
 ## Projeto
 

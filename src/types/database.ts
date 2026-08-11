@@ -53,6 +53,7 @@ export interface TopicRow {
   topic_id: string;
   discipline: string;
   title: string;
+  sort_order: number | null;
   created_at: string;
 }
 

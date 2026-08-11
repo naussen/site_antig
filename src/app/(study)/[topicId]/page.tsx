@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import type { SectionRow, TopicRow } from "@/types/database";
+import { compareTopicsByOrigin } from "@/lib/topic-order";
 import { StudyPageClient } from "./study-page-client";
 
 interface TopicPageProps {
@@ -56,25 +57,28 @@ export default async function TopicPage({ params }: TopicPageProps) {
 
     const { data: disciplineTopics } = await supabase
       .from("topics")
-      .select("topic_id,title,created_at")
+      .select("topic_id,title,sort_order,created_at")
       .eq("discipline", topicData.discipline)
       .order("created_at", { ascending: true })
       .order("topic_id", { ascending: true });
 
     if (disciplineTopics) {
-      const currentTopicIndex = disciplineTopics.findIndex(
+      const orderedTopics = [...disciplineTopics].sort((a, b) =>
+        compareTopicsByOrigin(topicData.discipline, a, b)
+      );
+      const currentTopicIndex = orderedTopics.findIndex(
         (disciplineTopic) => disciplineTopic.topic_id === topicId
       );
 
       if (currentTopicIndex > 0) {
-        previousTopic = disciplineTopics[currentTopicIndex - 1];
+        previousTopic = orderedTopics[currentTopicIndex - 1];
       }
 
       if (
         currentTopicIndex >= 0 &&
-        currentTopicIndex < disciplineTopics.length - 1
+        currentTopicIndex < orderedTopics.length - 1
       ) {
-        nextTopic = disciplineTopics[currentTopicIndex + 1];
+        nextTopic = orderedTopics[currentTopicIndex + 1];
       }
     }
   } catch {
