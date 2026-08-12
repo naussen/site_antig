@@ -4,7 +4,39 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
-# AGENTS.md — site_antig
+# AGENTS.md — Ecossistema PROCONCURSOS
+
+Este é o único `AGENTS.md` canônico do ecossistema. Suas regras abrangem os projetos `C:\site_antig`, `C:\PYGEM2`, `C:\PYGEM`, `C:\leiaut`, `C:\Divisor`, `C:\tesoura_md`, `C:\site_conteudo` e `C:\QPYGEM`.
+
+# DIRETRIZES GLOBAIS DO ECOSSISTEMA PROCONCURSOS
+Você é um agente de desenvolvimento autônomo operando em um ecossistema complexo (Next.js, Supabase, Python, IA). O cumprimento das regras abaixo é inegociável.
+
+## 1. COMPORTAMENTO DE CONTROLE DE VERSÃO (GIT)
+- Antes de iniciar qualquer alteração, execute `git status` e `git diff` para entender o estado atual do repositório.
+- Realize commits atômicos para cada unidade lógica concluída.
+- Padrão de mensagem de commit obrigatório: `tipo(escopo): descrição concisa em minúsculas`. (Tipos: feat, fix, chore, refactor, docs).
+- Ao finalizar uma funcionalidade, atualize imediatamente o arquivo `CHANGELOG.md` ou `PROXIMOS_PASSOS_SITE.md` na raiz do projeto afetado.
+
+## 2. COERÊNCIA CROSS-MODULE (INTEGRAÇÃO DE SISTEMAS)
+- **Supabase & Banco de Dados:** Nenhuma modificação no schema do PostgreSQL pode ser feita sem antes validar o impacto no arquivo `types/database.ts`. Qualquer alteração de tabela exige uma migration correspondente na pasta `supabase/migrations/`.
+- **Pipeline Python (PYGEM2) vs API Next.js:** O payload JSON gerado pelos scripts em Python atua como contrato rígido. Se alterar as chaves do JSON no gerador Python, você DEVE obrigatoriamente atualizar a validação Zod na rota `/api/import-law` ou `/api/import` no projeto Next.js.
+- **Isolamento de Segurança:** NUNCA exponha a variável `SUPABASE_SERVICE_ROLE_KEY` em Client Components do React. Operações destrutivas ou administrativas ocorrem exclusivamente no backend (Route Handlers/Server Actions).
+
+## 3. REGRAS DE FRONTEND (NEXT.JS 16 & REACT 19)
+- O projeto utiliza App Router. Respeite as convenções de Server Components vs Client Components.
+- Não crie regras de CSS em linha. Use estritamente as classes do Tailwind CSS v4.
+- Para cores e temas estruturais, consulte sempre os tokens CSS em `src/app/globals.css`. A interface possui temas Light, Dark e Sepia.
+- A biblioteca Mermaid deve ser mantida *client-only* em renderizações dinâmicas, para evitar quebra de hidratação.
+
+## 4. GERAÇÃO DE CONTEÚDO (MÓDULO LEI SECA / ESTUDOS)
+- Ao processar e formatar textos da Lei Seca, utilize a tag HTML `<mark>` exclusivamente para evidenciar palavras restritivas, permissivas e "pegadinhas" de bancas examinadoras.
+- Aplique Markdown negrito `**` estritamente em numerais, quóruns e prazos legais.
+- Flashcards gerados devem seguir a estrutura C/E (Certo/Errado) estilo Cebraspe, sem exceções. A resposta (`explanation_markdown`) deve referenciar apenas a literalidade da lei, ignorando correntes doutrinárias.
+
+## 5. MODO DE RESPOSTA DO AGENTE
+- Não faça introduções educadas. Vá direto ao código ou ao diagnóstico do erro.
+- Se houver dependências faltando em `package.json` ou `requirements.txt`, instale-as automaticamente antes de prosseguir com a alteração do código.
+- Após executar um bloco de código, valide os logs do terminal localmente e corrija erros silenciosamente antes de notificar o usuário.
 
 ## Regras do ecossistema
 
@@ -39,9 +71,36 @@ Para cada tarefa de implementação, siga este fluxo:
 
 ## Escopo permitido
 
-Trabalhe dentro de `C:\site_antig` quando estiver neste projeto.
+Trabalhe somente dentro do projeto afetado entre `C:\site_antig`, `C:\PYGEM2`, `C:\PYGEM`, `C:\leiaut`, `C:\Divisor`, `C:\tesoura_md`, `C:\site_conteudo` e `C:\QPYGEM`.
 
-Não modifique arquivos sensíveis como `.env.local`, credenciais, tokens, chaves, arquivos de configuração pessoal do usuário ou conteúdo interno de `.git`.
+Não modifique arquivos sensíveis como `.env`, `.env.local`, credenciais, tokens, chaves, contas de serviço, arquivos de configuração pessoal do usuário ou conteúdo interno de `.git`.
+
+## Regras específicas dos aplicativos
+
+### PYGEM e PYGEM2
+
+- Preserve o contrato de entrada e saída do pipeline, especialmente a estrutura Markdown, os metadados de reescrita e o payload JSON consumido pelos projetos seguintes.
+- Não provoque perda de conteúdo, reescrita jurídica indevida ou quebra da ordem e da hierarquia dos tópicos.
+- No PYGEM, execute `npm run test:mermaid` e `npm run test:core` quando a alteração alcançar esses fluxos.
+
+### LEIAUT e cópia Vertex AI do Divisor
+
+- Preserve a transformação de Markdown em JSON, os títulos, a ordem das seções, `topic_id`, `discipline`, `topic_title`, `sections`, Structured Outputs e IDs de seção no formato `{topic_id}-sec-NN`.
+- Na integração Vertex AI, use ADC ou `GOOGLE_APPLICATION_CREDENTIALS`; nunca adicione API Keys, Service Accounts, credenciais ou fallback para Gemini Developer API/Google AI Studio.
+- Não registre credenciais nem o caminho completo de Service Account e não faça chamadas reais ao Vertex AI em testes unitários.
+- Execute `npm test` e `npm run check` quando aplicável.
+
+### TESOURA MD
+
+- Preserve o contrato de divisão de Markdown em tópicos delimitados por `@@`, sem perda de conteúdo, alteração de nomes ou quebra da ordem.
+- Mantenha o processamento local e não envie arquivos para servidores externos.
+
+### QPYGEM
+
+- Preserve os PDFs de entrada e nunca sobrescreva o arquivo original.
+- Não publique payload parcial quando alguma questão falhar e trate conteúdo jurídico gerado por IA como material sujeito a revisão humana.
+- Não faça chamadas pagas ao Vertex AI durante testes automatizados.
+- Quando aplicável, valide com `python -m unittest discover -s tests -v`, `python -m compileall -q src tests` e `qpygem --help`.
 
 ## Projeto
 
@@ -184,8 +243,9 @@ Observação: se algum documento auxiliar mencionar Next.js 15 ou outra versão,
 
 ## Git e histórico
 
-- Antes de mudanças relevantes, recomende checkpoint/commit.
-- Não faça commit automaticamente sem pedido explícito.
+- Antes de mudanças relevantes, confira `git status` e `git diff` e preserve alterações preexistentes do usuário.
+- Após a verificação, crie automaticamente um commit atômico com o padrão de mensagem definido nestas diretrizes.
+- Faça push somente da branch de trabalho atual; nunca faça push diretamente para `main`.
 - Não altere histórico Git.
 - Não rode `git reset --hard`, `git checkout --` ou comandos destrutivos sem pedido explícito.
 - Pode haver worktree suja. Não reverta alterações de usuário. Trabalhe apenas nos arquivos necessários.
