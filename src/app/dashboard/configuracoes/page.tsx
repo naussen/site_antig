@@ -141,7 +141,7 @@ export default async function DashboardSettingsPage() {
             <button
               type="submit"
               disabled={!preferencesAvailable}
-              className="rounded-xl px-5 py-3 text-sm font-bold transition-transform enabled:hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50"
+              className="cursor-pointer rounded-xl px-5 py-3 text-sm font-bold transition-transform enabled:hover:-translate-y-0.5 enabled:active:translate-y-0 enabled:active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
               style={{ background: "var(--action)", color: "var(--action-foreground)" }}
             >
               Salvar preferências
