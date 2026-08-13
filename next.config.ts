@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
+import { SITE_BASE_PATH } from "./src/lib/site-paths.mjs";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  basePath: SITE_BASE_PATH,
 };
 
 export default nextConfig;

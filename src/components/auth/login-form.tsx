@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import { Loader2, Mail } from "lucide-react";
 
 type SuccessMode = "magic-link" | "sign-up" | null;
@@ -20,7 +21,10 @@ export function LoginForm() {
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: {
-          redirectTo: `${window.location.origin}/auth/callback`,
+          redirectTo: new URL(
+            withSiteBasePath("/auth/callback"),
+            window.location.origin
+          ).toString(),
         },
       });
       if (error) throw error;
@@ -48,14 +52,17 @@ export function LoginForm() {
           email,
           password,
           options: {
-            emailRedirectTo: `${window.location.origin}/auth/callback`,
+            emailRedirectTo: new URL(
+              withSiteBasePath("/auth/callback"),
+              window.location.origin
+            ).toString(),
           },
         });
 
         if (error) throw error;
 
         if (data.session) {
-          window.location.href = "/dashboard";
+          window.location.href = withSiteBasePath("/dashboard");
         } else {
           setSuccessMode("sign-up");
         }
@@ -66,12 +73,15 @@ export function LoginForm() {
         });
 
         if (error) throw error;
-        window.location.href = "/dashboard";
+        window.location.href = withSiteBasePath("/dashboard");
       } else {
         const { error } = await supabase.auth.signInWithOtp({
           email,
           options: {
-            emailRedirectTo: `${window.location.origin}/auth/callback`,
+            emailRedirectTo: new URL(
+              withSiteBasePath("/auth/callback"),
+              window.location.origin
+            ).toString(),
           },
         });
         if (error) throw error;
