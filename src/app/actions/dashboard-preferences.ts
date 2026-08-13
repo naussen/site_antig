@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { isMissingTableError } from "@/lib/supabase/errors";
+import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
 export async function saveDashboardDisciplines(formData: FormData) {
   const supabase = await createClient();
@@ -12,7 +13,7 @@ export async function saveDashboardDisciplines(formData: FormData) {
   } = await supabase.auth.getUser();
 
   if (!user) {
-    redirect("/login");
+    redirect(withSiteBasePath("/login"));
   }
 
   const { data: topics, error: topicsError } = await supabase
@@ -61,5 +62,5 @@ export async function saveDashboardDisciplines(formData: FormData) {
 
   revalidatePath("/dashboard");
   revalidatePath("/dashboard/configuracoes");
-  redirect("/dashboard");
+  redirect(withSiteBasePath("/dashboard"));
 }
