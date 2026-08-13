@@ -144,12 +144,40 @@ export function LandingPageContent() {
 
       {/* ── Hero ── */}
       <header className="relative flex flex-col items-center justify-center overflow-hidden px-6 pt-20 pb-24 md:pt-28 md:pb-32 text-center">
-        {/* Radial glow */}
+        {/* Radial glow — amplificado de 60% → 80% */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              "radial-gradient(ellipse 80% 60% at 50% -10%, color-mix(in srgb, var(--accent-soft) 60%, transparent), transparent 70%)",
+              "radial-gradient(ellipse 90% 80% at 50% -10%, color-mix(in srgb, var(--accent-soft) 80%, transparent), transparent 70%)",
+          }}
+        />
+        {/* Blob lateral esquerdo */}
+        <div
+          className="absolute pointer-events-none"
+          style={{
+            width: "420px",
+            height: "420px",
+            top: "-80px",
+            left: "-120px",
+            background: "var(--accent)",
+            opacity: 0.07,
+            borderRadius: "50%",
+            filter: "blur(100px)",
+          }}
+        />
+        {/* Blob lateral direito */}
+        <div
+          className="absolute pointer-events-none"
+          style={{
+            width: "360px",
+            height: "360px",
+            top: "40px",
+            right: "-100px",
+            background: "var(--action)",
+            opacity: 0.06,
+            borderRadius: "50%",
+            filter: "blur(100px)",
           }}
         />
         {/* Decorative grid */}
@@ -161,6 +189,38 @@ export function LandingPageContent() {
             backgroundSize: "40px 40px",
           }}
         />
+        {/* Ícone flutuante — livro (esquerda) */}
+        <div
+          className="absolute pointer-events-none animate-float hidden lg:block"
+          style={{
+            left: "8%",
+            top: "22%",
+            opacity: 0.055,
+            color: "var(--accent)",
+          }}
+          aria-hidden="true"
+        >
+          <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </div>
+        {/* Ícone flutuante — cérebro (direita) */}
+        <div
+          className="absolute pointer-events-none animate-float-delayed hidden lg:block"
+          style={{
+            right: "7%",
+            top: "18%",
+            opacity: 0.055,
+            color: "var(--accent)",
+          }}
+          aria-hidden="true"
+        >
+          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
+            <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
+          </svg>
+        </div>
 
         <div className="relative z-10 max-w-4xl mx-auto">
           {/* Eyebrow pill */}
@@ -192,8 +252,8 @@ export function LandingPageContent() {
             >
               Retenha mais.
             </span>
-            <br className="hidden md:block" />
-            Seja aprovado.
+            {" "}
+            <span className="block md:inline">Seja aprovado.</span>
           </h1>
 
           <p
@@ -223,9 +283,9 @@ export function LandingPageContent() {
               Começar a estudar agora
               <ArrowRight size={19} />
             </Link>
-            <Link
+            <a
               id="hero-cta-secondary"
-              href="/login"
+              href="#features"
               className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-4 rounded-2xl border transition-all hover:border-[var(--accent)] hover:text-[var(--accent)]"
               style={{
                 borderColor: "var(--border)",
@@ -233,7 +293,7 @@ export function LandingPageContent() {
               }}
             >
               Ver demonstração
-            </Link>
+            </a>
           </div>
 
           {/* Social proof mini-stats */}
@@ -517,6 +577,7 @@ export function LandingPageContent() {
 
       {/* ── Features ── */}
       <section
+        id="features"
         className="max-w-6xl mx-auto px-6 py-20 w-full"
         aria-labelledby="features-title"
       >
