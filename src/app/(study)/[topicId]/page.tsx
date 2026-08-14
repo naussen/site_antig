@@ -29,6 +29,13 @@ export default async function TopicPage({ params }: TopicPageProps) {
     redirect("/login");
   }
 
+  if (user.app_metadata?.role === "admin") {
+    const { data } = await supabase.auth.mfa.getAuthenticatorAssuranceLevel();
+    if (data?.currentLevel !== "aal2") {
+      redirect("/admin");
+    }
+  }
+
   const userId = user.id;
 
   try {

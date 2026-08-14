@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createClient } from "@supabase/supabase-js";
-import { isServiceRoleRequest } from "@/lib/api-admin-auth.mjs";
+import { isAdminApiRequest } from "@/lib/api-admin-auth.mjs";
 
 // =============================================================================
 // Validação Zod do payload de importação
@@ -177,7 +177,7 @@ const TopicImportSchema = z.object({
 
 export async function POST(request: Request) {
   try {
-    if (!isServiceRoleRequest(request)) {
+    if (!isAdminApiRequest(request)) {
       return NextResponse.json({ error: "Não autorizado" }, { status: 401 });
     }
 

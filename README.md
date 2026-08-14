@@ -103,6 +103,7 @@ Variáveis esperadas:
 NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
 SUPABASE_SERVICE_ROLE_KEY=
+CONTENT_ADMIN_TOKEN=
 ```
 
 Regras de segurança:
@@ -110,6 +111,8 @@ Regras de segurança:
 - `NEXT_PUBLIC_*` pode ser usado no cliente.
 - `SUPABASE_SERVICE_ROLE_KEY` nunca deve ir para Client Components.
 - Service role deve ficar restrita a Route Handlers, Server Actions administrativas ou scripts controlados.
+- `CONTENT_ADMIN_TOKEN` autentica somente os endpoints HTTP administrativos e deve ter pelo menos 32 bytes aleatórios.
+- Nunca reutilize a Service Role como `CONTENT_ADMIN_TOKEN`.
 - O cadastro de usuários não usa service role; ele respeita a confirmação de e-mail configurada no Supabase.
 
 ## Rodando localmente
@@ -201,7 +204,7 @@ Consulte `guia_envio_materiais.md` para o fluxo completo de criação, validaç�
 As rotas destrutivas exigem header:
 
 ```http
-Authorization: Bearer <SUPABASE_SERVICE_ROLE_KEY>
+Authorization: Bearer <CONTENT_ADMIN_TOKEN>
 ```
 
 Endpoints:
@@ -211,7 +214,9 @@ DELETE /api/topics/[topicId]
 DELETE /api/sections/[sectionId]
 ```
 
-Essas rotas usam service role no servidor e não devem ser expostas no cliente.
+Essas rotas validam um token administrativo independente. Depois da validação,
+o servidor usa a service role internamente; nenhuma das duas credenciais deve ser
+exposta no cliente.
 
 ## Regras arquiteturais críticas
 

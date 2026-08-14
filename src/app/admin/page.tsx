@@ -1,12 +1,27 @@
 import Link from "next/link";
 import { ShieldCheck } from "lucide-react";
+import { redirect } from "next/navigation";
 import { AdminLoginForm } from "@/components/auth/admin-login-form";
+import { createClient } from "@/lib/supabase/server";
 
 export const metadata = {
   title: "Acesso administrativo | PRO Resumos",
 };
 
-export default function AdminLoginPage() {
+export default async function AdminLoginPage() {
+  const supabase = await createClient();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  const hasAdminSession = user?.app_metadata?.role === "admin";
+
+  if (hasAdminSession) {
+    const { data } = await supabase.auth.mfa.getAuthenticatorAssuranceLevel();
+    if (data?.currentLevel === "aal2") {
+      redirect("/dashboard");
+    }
+  }
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-[var(--bg-primary)] p-6">
       <div className="w-full max-w-sm">
@@ -26,7 +41,7 @@ export default function AdminLoginPage() {
           </p>
         </div>
 
-        <AdminLoginForm />
+        <AdminLoginForm hasAdminSession={hasAdminSession} />
       </div>
     </main>
   );

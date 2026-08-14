@@ -2,6 +2,11 @@
 
 ## 2026-08-14
 
+- Endurecidos os grants do Data API, o `search_path` do trigger e os padrões de senha/MFA.
+- Separado o token HTTP administrativo da credencial Supabase Service Role.
+- Adicionado cadastro e desafio TOTP obrigatório para contas administrativas.
+- Reconciliado o histórico remoto das migrations `001` a `007` após auditoria estrutural.
+- Registrado que a proteção contra senhas vazadas permanece pendente por exigir plano pago na Supabase.
 - Adicionada área protegida de gerenciamento da assinatura, acessível pelo nome/e-mail no rodapé do menu lateral.
 - Ampliada discretamente a largura do menu lateral no desktop.
 - Reposicionado o botão de recolher/expandir para uma faixa própria entre o cabeçalho e os itens do menu.

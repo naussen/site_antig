@@ -6,6 +6,23 @@ import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import { Loader2, Mail } from "lucide-react";
 
 type SuccessMode = "magic-link" | "sign-up" | null;
+const MIN_PASSWORD_LENGTH = 12;
+
+function getPasswordValidationMessage(password: string) {
+  if (password.length < MIN_PASSWORD_LENGTH) {
+    return `A senha deve ter pelo menos ${MIN_PASSWORD_LENGTH} caracteres.`;
+  }
+
+  if (
+    !/[a-z]/.test(password) ||
+    !/[A-Z]/.test(password) ||
+    !/\d/.test(password)
+  ) {
+    return "Use letra minúscula, letra maiúscula e número.";
+  }
+
+  return null;
+}
 
 export function LoginForm() {
   const [email, setEmail] = useState("");
@@ -44,8 +61,9 @@ export function LoginForm() {
       setLoading(true);
       
       if (isSignUp) {
-        if (password.length < 6) {
-          throw new Error("A senha deve ter pelo menos 6 caracteres.");
+        const passwordValidationMessage = getPasswordValidationMessage(password);
+        if (passwordValidationMessage) {
+          throw new Error(passwordValidationMessage);
         }
 
         const { data, error } = await supabase.auth.signUp({
@@ -163,7 +181,7 @@ export function LoginForm() {
           id="password"
           type="password"
           required={isSignUp}
-          minLength={isSignUp ? 6 : undefined}
+          minLength={isSignUp ? MIN_PASSWORD_LENGTH : undefined}
           placeholder="Sua senha secreta"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -175,8 +193,8 @@ export function LoginForm() {
           }}
         />
         <p className="text-xs mt-1.5" style={{ color: "var(--text-muted)" }}>
-          {isSignUp 
-            ? "Crie uma senha de pelo menos 6 caracteres." 
+          {isSignUp
+            ? "Use 12+ caracteres com maiúscula, minúscula e número."
             : "Deixe em branco para usar o Link Mágico (sem senha)."}
         </p>
       </div>

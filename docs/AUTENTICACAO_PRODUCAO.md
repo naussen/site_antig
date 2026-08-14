@@ -21,16 +21,41 @@ Se a conta não existir, o comando gera uma senha temporária forte e a mostra u
 única vez. Se já existir, preserva a senha atual, confirma o e-mail e adiciona
 `app_metadata.role = "admin"`.
 
-O papel controla a nova tela de entrada. Atualmente, ele não substitui a
-`SUPABASE_SERVICE_ROLE_KEY`: importações e exclusões administrativas continuam
-restritas aos scripts e endpoints de servidor.
+O papel controla a tela de entrada e exige MFA/TOTP antes de liberar sessões
+administrativas. Os endpoints HTTP de importação e exclusão exigem um
+`CONTENT_ADMIN_TOKEN` independente. A `SUPABASE_SERVICE_ROLE_KEY` permanece
+somente dentro do servidor para acessar o Supabase após essa validação.
 
-## Assinatura futura
+Gere o token administrativo com um gerador criptograficamente seguro, configure-o
+somente no ambiente do servidor e nunca reutilize a Service Role. O token deve ter
+pelo menos 32 bytes aleatórios.
 
-Autenticação e assinatura devem permanecer separadas. O Google/Supabase confirma
-a identidade; uma tabela própria deve registrar plano, estado, início e término
-da assinatura. O servidor deve verificar essa tabela antes de entregar páginas e
-dados do dashboard. Nunca trate um botão oculto no cliente como autorização.
+## MFA da conta administrativa
+
+O projeto exige AAL2 para contas com `app_metadata.role = "admin"`. Depois do
+login em `/resumos/admin`, escaneie o QR code com um aplicativo autenticador e
+confirme o código TOTP de seis dígitos. Enquanto o segundo fator não for validado,
+Dashboard e páginas de estudo redirecionam a conta administrativa para `/admin`.
+
+No Supabase hospedado, mantenha TOTP habilitado em **Authentication > Multi-Factor**.
+
+## Segurança de senha
+
+Novos cadastros por senha exigem pelo menos 12 caracteres, com letras minúsculas,
+maiúsculas e números. A troca de senha também exige reautenticação recente.
+
+A ativação de **Leaked Password Protection** foi tentada no projeto hospedado, mas
+a Supabase recusou a configuração com HTTP 402 porque o recurso exige plano pago.
+Até o upgrade, o Security Advisor continuará exibindo esse alerta.
+
+## Assinatura paga
+
+Autenticação e assinatura permanecem separadas. Todo usuário cadastrado pode
+acessar o acervo somente enquanto a assinatura paga estiver ativa. O projeto ainda
+não possui provedor, webhook nem tabela de assinatura; portanto esse bloqueio não
+está implementado. A futura integração deve registrar plano, estado, início e
+término e verificar o entitlement no servidor e no RLS. Nunca trate um botão
+oculto no cliente como autorização.
 
 ## URLs do Supabase Auth
 

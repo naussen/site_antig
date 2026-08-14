@@ -15,6 +15,13 @@ export default async function DashboardLayout({
     redirect("/login");
   }
 
+  if (user.app_metadata?.role === "admin") {
+    const { data } = await supabase.auth.mfa.getAuthenticatorAssuranceLevel();
+    if (data?.currentLevel !== "aal2") {
+      redirect("/admin");
+    }
+  }
+
   return (
     <div className="min-h-screen lg:flex" style={{ background: "var(--dashboard-bg)" }}>
       <DashboardNavigation
