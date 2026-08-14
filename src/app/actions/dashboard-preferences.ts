@@ -5,7 +5,14 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { isMissingTableError } from "@/lib/supabase/errors";
 
-export async function saveDashboardDisciplines(formData: FormData) {
+export type SaveDashboardPreferencesState = {
+  status: "idle" | "success";
+};
+
+export async function saveDashboardDisciplines(
+  _previousState: SaveDashboardPreferencesState,
+  formData: FormData,
+): Promise<SaveDashboardPreferencesState> {
   const supabase = await createClient();
   const {
     data: { user },
@@ -61,5 +68,6 @@ export async function saveDashboardDisciplines(formData: FormData) {
 
   revalidatePath("/dashboard");
   revalidatePath("/dashboard/configuracoes");
-  redirect("/dashboard");
+
+  return { status: "success" };
 }

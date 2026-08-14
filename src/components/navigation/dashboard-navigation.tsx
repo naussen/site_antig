@@ -98,9 +98,9 @@ export function DashboardNavigation({
     }
   };
 
-  const navigationContent = (
+  const renderNavigationContent = (isCollapsed: boolean) => (
     <>
-      <div className={`shrink-0 flex items-center border-b py-5 ${collapsed ? "justify-center px-3" : "gap-3 px-5"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
+      <div className={`shrink-0 flex items-center border-b py-5 ${isCollapsed ? "justify-center px-3" : "gap-3 px-5"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
         <span
           className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-white"
           style={{
@@ -110,7 +110,7 @@ export function DashboardNavigation({
         >
           <Sparkles size={20} />
         </span>
-        <div className={`min-w-0 ${collapsed ? "hidden" : ""}`}>
+        <div className={`min-w-0 ${isCollapsed ? "hidden" : ""}`}>
           <strong className="block truncate text-sm" style={{ color: "var(--dashboard-sidebar-text)" }}>
             PRO Resumos
           </strong>
@@ -121,7 +121,7 @@ export function DashboardNavigation({
       </div>
 
       <nav
-        className="min-h-0 flex-1 space-y-1 overflow-y-auto overscroll-contain p-3"
+        className={`min-h-0 flex-1 space-y-1 overscroll-contain p-3 ${isCollapsed ? "overflow-visible" : "overflow-y-auto"}`}
         aria-label="Navegação principal"
       >
         {navigationItems.map(({ href, label, icon: Icon, exact }) => {
@@ -132,20 +132,37 @@ export function DashboardNavigation({
               href={href}
               onClick={() => setMobileOpen(false)}
               aria-current={active ? "page" : undefined}
-              className={`flex items-center rounded-xl border py-3 text-sm font-semibold transition-colors ${collapsed ? "justify-center px-2" : "gap-3 px-3"}`}
+              aria-label={isCollapsed ? label : undefined}
+              title={isCollapsed ? label : undefined}
+              className={`group relative flex h-11 items-center rounded-xl border text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] ${isCollapsed ? "justify-center px-2" : "gap-3 px-3"}`}
               style={{
                 background: active ? "var(--dashboard-sidebar-active)" : "transparent",
                 borderColor: active ? "var(--dashboard-sidebar-border)" : "transparent",
                 color: active ? "var(--accent)" : "var(--dashboard-sidebar-muted)",
               }}
             >
-              <Icon size={19} />
-              <span className={collapsed ? "sr-only" : undefined}>{label}</span>
+              {isCollapsed && active && (
+                <span className="absolute left-0 h-6 w-1 rounded-r-full bg-[var(--accent)]" aria-hidden="true" />
+              )}
+              <Icon size={19} aria-hidden="true" />
+              <span className={isCollapsed ? "sr-only" : undefined}>{label}</span>
+              {isCollapsed && (
+                <span
+                  role="tooltip"
+                  className="pointer-events-none invisible absolute left-full z-50 ml-3 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold opacity-0 shadow-lg transition-opacity group-hover:visible group-hover:opacity-100 group-focus-visible:visible group-focus-visible:opacity-100"
+                  style={{
+                    background: "var(--dashboard-sidebar-text)",
+                    color: "var(--dashboard-sidebar)",
+                  }}
+                >
+                  {label}
+                </span>
+              )}
             </Link>
           );
         })}
 
-        {studySections.length > 0 && !collapsed && (
+        {studySections.length > 0 && !isCollapsed && (
           <div className="mt-5 border-t pt-4" style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
             <p className="mb-2 px-3 text-[10px] font-bold uppercase tracking-[0.16em]" style={{ color: "var(--dashboard-sidebar-muted)" }}>
               Tópicos
@@ -191,40 +208,77 @@ export function DashboardNavigation({
         )}
       </nav>
 
-      <div className="shrink-0 space-y-4 border-t p-4" style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
+      <div className={`shrink-0 border-t ${isCollapsed ? "space-y-3 p-3" : "space-y-4 p-4"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
         <button
           type="button"
           onClick={toggleCollapsed}
-          className="flex w-full items-center justify-center gap-2 rounded-xl border px-3 py-2 text-xs font-semibold transition-colors hover:bg-white/5"
+          className="absolute -right-3 top-5 z-20 hidden h-8 w-8 cursor-pointer place-items-center rounded-full border shadow-md transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] lg:grid"
           style={{ borderColor: "var(--dashboard-sidebar-border)", color: "var(--dashboard-sidebar-muted)" }}
-          aria-label={collapsed ? "Expandir menu" : "Recolher menu"}
-          title={collapsed ? "Expandir menu" : "Recolher menu"}
+          aria-label={isCollapsed ? "Expandir menu" : "Recolher menu"}
+          aria-expanded={!isCollapsed}
+          aria-controls="dashboard-desktop-navigation"
+          title={isCollapsed ? "Expandir menu" : "Recolher menu"}
         >
-          {collapsed ? <PanelLeftOpen size={17} /> : <PanelLeftClose size={17} />}
-          <span className={collapsed ? "sr-only" : undefined}>{collapsed ? "Expandir" : "Recolher menu"}</span>
+          {isCollapsed ? <PanelLeftOpen size={16} /> : <PanelLeftClose size={16} />}
+          <span className="sr-only">{isCollapsed ? "Expandir" : "Recolher menu"}</span>
         </button>
 
-        <div className={collapsed ? "hidden" : ""}>
-          <span className="mb-2 block text-[11px] font-bold uppercase tracking-wider" style={{ color: "var(--dashboard-sidebar-muted)" }}>
+        <div className={isCollapsed ? "flex justify-center" : ""}>
+          <span className={isCollapsed ? "sr-only" : "mb-2 block text-[11px] font-bold uppercase tracking-wider"} style={{ color: "var(--dashboard-sidebar-muted)" }}>
             Aparência
           </span>
-          <ThemeSwitcher />
+          <ThemeSwitcher compact={isCollapsed} />
         </div>
 
         {userEmail && (
-          <div className="border-t pt-4" style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
-            <span className="mb-2 block truncate text-xs" title={userEmail} style={{ color: "var(--dashboard-sidebar-muted)" }}>
-              {userEmail}
+          <div className={`border-t ${isCollapsed ? "flex flex-col items-center pt-3" : "pt-4"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
+            <span
+              className={isCollapsed ? "group relative mb-2 grid h-10 w-10 place-items-center rounded-full text-sm font-bold" : "mb-2 block truncate text-xs"}
+              title={userEmail}
+              tabIndex={isCollapsed ? 0 : undefined}
+              aria-label={isCollapsed ? `Conta: ${userEmail}` : undefined}
+              style={{
+                color: "var(--dashboard-sidebar-muted)",
+                background: isCollapsed ? "var(--dashboard-sidebar-active)" : "transparent",
+              }}
+            >
+              {isCollapsed ? userEmail.charAt(0).toUpperCase() : userEmail}
+              {isCollapsed && (
+                <span
+                  role="tooltip"
+                  className="pointer-events-none invisible absolute left-full z-50 ml-3 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold opacity-0 shadow-lg transition-opacity group-hover:visible group-hover:opacity-100 group-focus-visible:visible group-focus-visible:opacity-100"
+                  style={{
+                    background: "var(--dashboard-sidebar-text)",
+                    color: "var(--dashboard-sidebar)",
+                  }}
+                >
+                  {userEmail}
+                </span>
+              )}
             </span>
             <button
               type="button"
               onClick={handleLogout}
               disabled={loggingOut}
-              className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-semibold transition-colors hover:bg-red-500/10 hover:text-red-500 disabled:cursor-wait disabled:opacity-60"
+              className={`group relative flex cursor-pointer items-center rounded-xl text-sm font-semibold transition-colors hover:bg-red-500/10 hover:text-red-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 disabled:cursor-wait disabled:opacity-60 ${isCollapsed ? "h-10 w-10 justify-center" : "w-full gap-3 px-3 py-2.5"}`}
               style={{ color: "var(--dashboard-sidebar-muted)" }}
+              aria-label={isCollapsed ? "Sair da conta" : undefined}
+              title={isCollapsed ? "Sair da conta" : undefined}
             >
               {loggingOut ? <Loader2 size={18} className="animate-spin" /> : <LogOut size={18} />}
-              Sair da conta
+              <span className={isCollapsed ? "sr-only" : undefined}>Sair da conta</span>
+              {isCollapsed && (
+                <span
+                  role="tooltip"
+                  className="pointer-events-none invisible absolute left-full z-50 ml-3 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold opacity-0 shadow-lg transition-opacity group-hover:visible group-hover:opacity-100 group-focus-visible:visible group-focus-visible:opacity-100"
+                  style={{
+                    background: "var(--dashboard-sidebar-text)",
+                    color: "var(--dashboard-sidebar)",
+                  }}
+                >
+                  Sair da conta
+                </span>
+              )}
             </button>
           </div>
         )}
@@ -235,10 +289,11 @@ export function DashboardNavigation({
   return (
     <>
       <aside
-        className={`sticky top-0 hidden h-screen shrink-0 flex-col border-r transition-[width] duration-200 lg:flex ${collapsed ? "w-[4.5rem]" : "w-60"}`}
+        id="dashboard-desktop-navigation"
+        className={`sticky top-0 hidden h-screen shrink-0 flex-col overflow-visible border-r transition-[width] duration-200 lg:flex ${collapsed ? "w-[4.5rem]" : "w-60"}`}
         style={{ background: "var(--dashboard-sidebar)", borderColor: "var(--dashboard-sidebar-border)" }}
       >
-        {navigationContent}
+        {renderNavigationContent(collapsed)}
       </aside>
 
       <header
@@ -289,7 +344,7 @@ export function DashboardNavigation({
         >
           <X size={21} />
         </button>
-        {navigationContent}
+        {renderNavigationContent(false)}
       </aside>
     </>
   );

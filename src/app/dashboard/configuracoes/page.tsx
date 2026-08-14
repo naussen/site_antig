@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { AlertTriangle, ArrowLeft, Check, Settings2, SlidersHorizontal } from "lucide-react";
 import { redirect } from "next/navigation";
-import { saveDashboardDisciplines } from "@/app/actions/dashboard-preferences";
+import { PreferencesForm } from "./preferences-form";
+import { SavePreferencesButton } from "./save-preferences-button";
 import { createClient } from "@/lib/supabase/server";
 import { formatSupabaseError, isMissingTableError } from "@/lib/supabase/errors";
 
@@ -75,7 +76,7 @@ export default async function DashboardSettingsPage() {
           </p>
         </header>
 
-        <form action={saveDashboardDisciplines} className="mt-6 rounded-3xl border p-5 sm:p-7" style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}>
+        <PreferencesForm>
           {!preferencesAvailable && (
             <div
               className="mb-5 flex items-start gap-3 rounded-2xl border p-4 text-sm leading-6"
@@ -138,16 +139,11 @@ export default async function DashboardSettingsPage() {
             <Link href="/dashboard" className="rounded-xl border px-5 py-3 text-center text-sm font-bold" style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}>
               Cancelar
             </Link>
-            <button
-              type="submit"
-              disabled={!preferencesAvailable}
-              className="cursor-pointer rounded-xl px-5 py-3 text-sm font-bold transition-transform enabled:hover:-translate-y-0.5 enabled:active:translate-y-0 enabled:active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50"
-              style={{ background: "var(--action)", color: "var(--action-foreground)" }}
-            >
+            <SavePreferencesButton disabled={!preferencesAvailable}>
               Salvar preferências
-            </button>
+            </SavePreferencesButton>
           </div>
-        </form>
+        </PreferencesForm>
       </div>
     </main>
   );
