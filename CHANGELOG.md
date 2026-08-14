@@ -7,3 +7,6 @@
 - Adicionada rota dedicada e protegida por papel para login administrativo.
 - Adicionado bootstrap local e seguro para conta administrativa confirmada.
 - Documentadas as configurações de autenticação e a separação para assinatura.
+## Correções recentes
+
+- Corrigido o posicionamento do botão de recolher/expandir o menu desktop, mantendo-o dentro da área visual do menu.

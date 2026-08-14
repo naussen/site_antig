@@ -212,7 +212,7 @@ export function DashboardNavigation({
         <button
           type="button"
           onClick={toggleCollapsed}
-          className="absolute -right-3 top-5 z-20 hidden h-8 w-8 cursor-pointer place-items-center rounded-full border shadow-md transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] lg:grid"
+          className="absolute right-3 top-5 z-20 hidden h-8 w-8 cursor-pointer place-items-center rounded-full border shadow-md transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] lg:grid"
           style={{ borderColor: "var(--dashboard-sidebar-border)", color: "var(--dashboard-sidebar-muted)" }}
           aria-label={isCollapsed ? "Expandir menu" : "Recolher menu"}
           aria-expanded={!isCollapsed}
@@ -290,7 +290,7 @@ export function DashboardNavigation({
     <>
       <aside
         id="dashboard-desktop-navigation"
-        className={`sticky top-0 hidden h-screen shrink-0 flex-col overflow-visible border-r transition-[width] duration-200 lg:flex ${collapsed ? "w-[4.5rem]" : "w-60"}`}
+        className={`relative sticky top-0 hidden h-screen shrink-0 flex-col overflow-visible border-r transition-[width] duration-200 lg:flex ${collapsed ? "w-[4.5rem]" : "w-60"}`}
         style={{ background: "var(--dashboard-sidebar)", borderColor: "var(--dashboard-sidebar-border)" }}
       >
         {renderNavigationContent(collapsed)}
