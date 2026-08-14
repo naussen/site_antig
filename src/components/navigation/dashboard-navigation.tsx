@@ -303,7 +303,7 @@ export function DashboardNavigation({
     <>
       <aside
         id="dashboard-desktop-navigation"
-        className={`relative sticky top-0 hidden h-screen shrink-0 flex-col overflow-visible border-r transition-[width] duration-200 lg:flex ${collapsed ? "w-[4.5rem]" : "w-60"}`}
+        className={`relative sticky top-0 hidden h-screen shrink-0 flex-col overflow-visible border-r transition-[width] duration-200 lg:flex ${collapsed ? "w-[4.5rem]" : "w-64"}`}
         style={{ background: "var(--dashboard-sidebar)", borderColor: "var(--dashboard-sidebar-border)" }}
       >
         {renderNavigationContent(collapsed)}

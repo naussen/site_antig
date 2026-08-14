@@ -3,6 +3,7 @@
 ## 2026-08-14
 
 - Adicionada área protegida de gerenciamento da assinatura, acessível pelo nome/e-mail no rodapé do menu lateral.
+- Ampliada discretamente a largura do menu lateral no desktop.
 
 ## 2026-08-13
 
