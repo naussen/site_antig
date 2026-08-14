@@ -17,7 +17,16 @@ export default async function DashboardLayout({
 
   return (
     <div className="min-h-screen lg:flex" style={{ background: "var(--dashboard-bg)" }}>
-      <DashboardNavigation userEmail={user.email ?? null} />
+      <DashboardNavigation
+        userEmail={user.email ?? null}
+        userName={
+          typeof user.user_metadata?.full_name === "string"
+            ? user.user_metadata.full_name
+            : typeof user.user_metadata?.name === "string"
+              ? user.user_metadata.name
+              : null
+        }
+      />
 
       <div className="min-w-0 flex-1">
         {children}

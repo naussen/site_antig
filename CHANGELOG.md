@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-08-14
+
+- Adicionada área protegida de gerenciamento da assinatura, acessível pelo nome/e-mail no rodapé do menu lateral.
+
 ## 2026-08-13
 
 - Corrigidos no PYGEM os títulos dos metadados `@@` da série de Auditoria sem alterar os nomes dos arquivos.

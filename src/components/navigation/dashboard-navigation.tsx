@@ -24,6 +24,7 @@ import type { SectionRow } from "@/types/database";
 
 interface DashboardNavigationProps {
   userEmail: string | null;
+  userName?: string | null;
   studySections?: SectionRow[];
   progressMap?: Record<string, boolean>;
   activeSectionId?: string | null;
@@ -62,6 +63,7 @@ const navigationItems = [
 
 export function DashboardNavigation({
   userEmail,
+  userName = null,
   studySections = [],
   progressMap = {},
   activeSectionId = null,
@@ -85,6 +87,7 @@ export function DashboardNavigation({
 
   const isActive = (href: string, exact?: boolean) =>
     exact ? pathname === href : pathname.startsWith(href);
+  const accountName = userName?.trim() || userEmail;
 
   const handleLogout = async () => {
     try {
@@ -232,17 +235,27 @@ export function DashboardNavigation({
 
         {userEmail && (
           <div className={`border-t ${isCollapsed ? "flex flex-col items-center pt-3" : "pt-4"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
-            <span
-              className={isCollapsed ? "group relative mb-2 grid h-10 w-10 place-items-center rounded-full text-sm font-bold" : "mb-2 block truncate text-xs"}
-              title={userEmail}
-              tabIndex={isCollapsed ? 0 : undefined}
-              aria-label={isCollapsed ? `Conta: ${userEmail}` : undefined}
+            <Link
+              href="/dashboard/assinatura"
+              onClick={() => setMobileOpen(false)}
+              className={isCollapsed ? "group relative mb-2 grid h-10 w-10 place-items-center rounded-full text-sm font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" : "mb-2 block truncate rounded-lg px-1 py-1 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"}
+              title={isCollapsed ? `Gerenciar assinatura (${accountName})` : "Gerenciar assinatura"}
+              aria-label={isCollapsed ? `Gerenciar assinatura de ${accountName}` : undefined}
               style={{
                 color: "var(--dashboard-sidebar-muted)",
                 background: isCollapsed ? "var(--dashboard-sidebar-active)" : "transparent",
               }}
             >
-              {isCollapsed ? userEmail.charAt(0).toUpperCase() : userEmail}
+              {isCollapsed ? accountName?.charAt(0).toUpperCase() : (
+                <>
+                  <strong className="block truncate text-xs" style={{ color: "var(--dashboard-sidebar-text)" }}>
+                    {accountName}
+                  </strong>
+                  <span className="block truncate text-[11px]" style={{ color: "var(--dashboard-sidebar-muted)" }}>
+                    Gerenciar assinatura
+                  </span>
+                </>
+              )}
               {isCollapsed && (
                 <span
                   role="tooltip"
@@ -252,10 +265,10 @@ export function DashboardNavigation({
                     color: "var(--dashboard-sidebar)",
                   }}
                 >
-                  {userEmail}
+                  Gerenciar assinatura
                 </span>
               )}
-            </span>
+            </Link>
             <button
               type="button"
               onClick={handleLogout}
