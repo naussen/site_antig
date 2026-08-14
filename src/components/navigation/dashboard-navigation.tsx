@@ -212,7 +212,7 @@ export function DashboardNavigation({
         <button
           type="button"
           onClick={toggleCollapsed}
-          className="absolute right-3 top-5 z-20 hidden h-8 w-8 cursor-pointer place-items-center rounded-full border shadow-md transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] lg:grid"
+          className={`absolute right-3 z-20 hidden h-8 w-8 cursor-pointer place-items-center rounded-full border shadow-md transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] lg:grid ${isCollapsed ? "top-[5.5rem]" : "top-5"}`}
           style={{ borderColor: "var(--dashboard-sidebar-border)", color: "var(--dashboard-sidebar-muted)" }}
           aria-label={isCollapsed ? "Expandir menu" : "Recolher menu"}
           aria-expanded={!isCollapsed}
