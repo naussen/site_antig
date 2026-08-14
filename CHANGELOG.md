@@ -4,6 +4,7 @@
 
 - Adicionada área protegida de gerenciamento da assinatura, acessível pelo nome/e-mail no rodapé do menu lateral.
 - Ampliada discretamente a largura do menu lateral no desktop.
+- Reposicionado o botão de recolher/expandir para uma faixa própria entre o cabeçalho e os itens do menu.
 
 ## 2026-08-13
 

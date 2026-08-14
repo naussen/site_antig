@@ -123,6 +123,22 @@ export function DashboardNavigation({
         </div>
       </div>
 
+      <div className="hidden shrink-0 justify-end px-3 pt-2 lg:flex">
+        <button
+          type="button"
+          onClick={toggleCollapsed}
+          className="grid h-8 w-8 cursor-pointer place-items-center rounded-full border shadow-md transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+          style={{ borderColor: "var(--dashboard-sidebar-border)", color: "var(--dashboard-sidebar-muted)" }}
+          aria-label={isCollapsed ? "Expandir menu" : "Recolher menu"}
+          aria-expanded={!isCollapsed}
+          aria-controls="dashboard-desktop-navigation"
+          title={isCollapsed ? "Expandir menu" : "Recolher menu"}
+        >
+          {isCollapsed ? <PanelLeftOpen size={16} /> : <PanelLeftClose size={16} />}
+          <span className="sr-only">{isCollapsed ? "Expandir" : "Recolher menu"}</span>
+        </button>
+      </div>
+
       <nav
         className={`min-h-0 flex-1 space-y-1 overscroll-contain p-3 ${isCollapsed ? "overflow-visible" : "overflow-y-auto"}`}
         aria-label="Navegação principal"
@@ -212,20 +228,6 @@ export function DashboardNavigation({
       </nav>
 
       <div className={`shrink-0 border-t ${isCollapsed ? "space-y-3 p-3" : "space-y-4 p-4"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
-        <button
-          type="button"
-          onClick={toggleCollapsed}
-          className={`absolute right-3 z-20 hidden h-8 w-8 cursor-pointer place-items-center rounded-full border shadow-md transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] lg:grid ${isCollapsed ? "top-[5.5rem]" : "top-5"}`}
-          style={{ borderColor: "var(--dashboard-sidebar-border)", color: "var(--dashboard-sidebar-muted)" }}
-          aria-label={isCollapsed ? "Expandir menu" : "Recolher menu"}
-          aria-expanded={!isCollapsed}
-          aria-controls="dashboard-desktop-navigation"
-          title={isCollapsed ? "Expandir menu" : "Recolher menu"}
-        >
-          {isCollapsed ? <PanelLeftOpen size={16} /> : <PanelLeftClose size={16} />}
-          <span className="sr-only">{isCollapsed ? "Expandir" : "Recolher menu"}</span>
-        </button>
-
         <div className={isCollapsed ? "flex justify-center" : ""}>
           <span className={isCollapsed ? "sr-only" : "mb-2 block text-[11px] font-bold uppercase tracking-wider"} style={{ color: "var(--dashboard-sidebar-muted)" }}>
             Aparência
