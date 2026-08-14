@@ -455,6 +455,19 @@ async function findSectionOwnershipConflicts(supabase, payload) {
   return conflicts;
 }
 
+async function findTopicOwnershipConflict(supabase, payload) {
+  const topic = unwrap(
+    await supabase
+      .from("topics")
+      .select("topic_id,discipline,title")
+      .eq("topic_id", payload.topic_id)
+      .maybeSingle(),
+    "Falha ao verificar o ID do módulo"
+  );
+  if (!topic || topic.discipline === payload.discipline) return null;
+  return topic;
+}
+
 async function findBatchSectionOwnershipConflicts(supabase, entries) {
   const expectedOwners = new Map();
   for (const entry of entries) {
@@ -474,6 +487,29 @@ async function findBatchSectionOwnershipConflicts(supabase, entries) {
     conflicts.push(
       ...existing.filter(
         (section) => section.topic_id !== expectedOwners.get(section.section_id)
+      )
+    );
+  }
+
+  return conflicts;
+}
+
+async function findBatchTopicOwnershipConflicts(supabase, entries) {
+  const expectedDisciplines = new Map(
+    entries.map((entry) => [entry.payload.topic_id, entry.payload.discipline])
+  );
+  const topicIds = [...expectedDisciplines.keys()];
+  const conflicts = [];
+
+  for (let index = 0; index < topicIds.length; index += 200) {
+    const batch = topicIds.slice(index, index + 200);
+    const existing = unwrap(
+      await supabase.from("topics").select("topic_id,discipline,title").in("topic_id", batch),
+      "Falha ao verificar IDs dos módulos do lote"
+    );
+    conflicts.push(
+      ...existing.filter(
+        (topic) => topic.discipline !== expectedDisciplines.get(topic.topic_id)
       )
     );
   }
@@ -515,6 +551,13 @@ async function upsertImportPayload(
 
 async function importContent(supabase, filePath, values) {
   const payload = validateImportPayload(await readJsonFile(filePath));
+  const topicConflict = await findTopicOwnershipConflict(supabase, payload);
+  if (topicConflict) {
+    throw new Error(
+      `Importação bloqueada: topic_id ${payload.topic_id} já pertence à disciplina ` +
+      `"${topicConflict.discipline}" (arquivo informa "${payload.discipline}").`
+    );
+  }
   const conflicts = await findSectionOwnershipConflicts(supabase, payload);
 
   if (conflicts.length > 0) {
@@ -579,8 +622,18 @@ async function importBatch(supabase, directoryPath, values) {
     )
   );
   const conflicts = await findBatchSectionOwnershipConflicts(supabase, entries);
+  const topicConflicts = await findBatchTopicOwnershipConflicts(supabase, entries);
+  const expectedDisciplines = new Map(
+    entries.map((entry) => [entry.payload.topic_id, entry.payload.discipline])
+  );
 
-  if (conflicts.length > 0) {
+  if (topicConflicts.length > 0 || conflicts.length > 0) {
+    const topicDetails = topicConflicts
+      .map(
+        (item) =>
+          `topic_id ${item.topic_id} pertence à disciplina "${item.discipline}", ` +
+          `mas o lote atribui "${expectedDisciplines.get(item.topic_id)}"`
+      );
     const details = conflicts
       .map(
         (item) =>
@@ -588,7 +641,9 @@ async function importBatch(supabase, directoryPath, values) {
           `${expectedOwners.get(item.section_id)}`
       )
       .join("; ");
-    throw new Error(`Importação em lote bloqueada por conflito de IDs: ${details}`);
+    throw new Error(
+      `Importação em lote bloqueada por conflito de IDs: ${[...topicDetails, details].filter(Boolean).join("; ")}`
+    );
   }
 
   const summary = entries.map((entry) => ({
@@ -670,6 +725,19 @@ async function renameTopic(supabase, topicId, newTitle, values) {
     "Falha ao renomear módulo"
   );
   console.log("Módulo renomeado com sucesso. O topic_id e a URL foram preservados.");
+}
+
+async function setTopicDiscipline(supabase, topicId, newDiscipline, values) {
+  const topic = await getTopic(supabase, topicId);
+  console.log(`Disciplina atual: ${topic.discipline}`);
+  console.log(`Nova disciplina: ${newDiscipline}`);
+  if (!values.apply) return console.log("Pré-visualização. Use --apply para confirmar.");
+
+  unwrap(
+    await supabase.from("topics").update({ discipline: newDiscipline }).eq("topic_id", topicId),
+    "Falha ao alterar disciplina do módulo"
+  );
+  console.log("Disciplina do módulo atualizada. O topic_id e a URL foram preservados.");
 }
 
 async function renameSection(supabase, sectionId, newTitle, values) {
@@ -765,6 +833,7 @@ Uso:
   npm run content -- import-batch <pasta> (--dry-run | --apply)
   npm run content -- export <topic-id> <saida.json> [--force]
   npm run content -- rename-topic <topic-id> "Novo título" [--apply]
+  npm run content -- set-discipline <topic-id> "Nova disciplina" [--apply]
   npm run content -- rename-section <section-id> "Novo título" [--apply]
   npm run content -- rename-discipline "Nome atual" "Novo nome" [--apply]
   npm run content -- delete-topic <topic-id> [--apply --confirm <topic-id>]
@@ -821,6 +890,13 @@ export async function main(argv = process.argv.slice(2)) {
         supabase,
         requireText(args[0], "topic-id"),
         requireText(args[1], "novo título"),
+        values
+      );
+    case "set-discipline":
+      return setTopicDiscipline(
+        supabase,
+        requireText(args[0], "topic-id"),
+        requireText(args[1], "nova disciplina"),
         values
       );
     case "rename-section":
