@@ -1,5 +1,5 @@
 import { LoginForm } from "@/components/auth/login-form";
-import { Sparkles } from "lucide-react";
+import { ProLogo } from "@/components/brand/pro-logo";
 import Link from "next/link";
 
 export default function LoginPage() {
@@ -12,13 +12,9 @@ export default function LoginPage() {
         <div className="text-center mb-8">
           <Link
             href="/"
-            className="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-4"
-            style={{
-              background: "var(--accent-soft)",
-              color: "var(--accent)",
-            }}
+            className="inline-flex items-center justify-center mb-4"
           >
-            <Sparkles size={24} />
+            <ProLogo size={48} variant="icon" />
           </Link>
           <h1
             className="text-2xl font-bold mb-2"

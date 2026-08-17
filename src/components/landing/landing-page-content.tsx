@@ -13,6 +13,7 @@ import {
   Shield,
   Clock,
 } from "lucide-react";
+import { ProLogo } from "@/components/brand/pro-logo";
 
 const features = [
   {
@@ -106,15 +107,7 @@ export function LandingPageContent() {
           className="flex items-center gap-2.5 font-extrabold text-xl tracking-tight"
           style={{ color: "var(--text-primary)" }}
         >
-          <div
-            className="w-9 h-9 rounded-xl flex items-center justify-center"
-            style={{
-              background:
-                "linear-gradient(135deg, var(--mnemonic-gradient-from), var(--mnemonic-gradient-to))",
-            }}
-          >
-            <Sparkles size={17} className="text-white" />
-          </div>
+          <ProLogo size={36} variant="icon" />
           PRO Resumos
         </div>
 
@@ -363,12 +356,7 @@ export function LandingPageContent() {
               className="flex items-center gap-2 mb-4 text-sm font-bold"
               style={{ color: "var(--dashboard-sidebar-text)" }}
             >
-              <div
-                className="w-7 h-7 rounded-lg flex items-center justify-center"
-                style={{ background: "var(--accent)" }}
-              >
-                <Sparkles size={13} className="text-white" />
-              </div>
+              <ProLogo size={28} variant="icon" />
               PRO Resumos
             </div>
             {["Início", "Notas", "Matérias"].map((item, i) => (
@@ -880,15 +868,11 @@ export function LandingPageContent() {
           className="flex items-center justify-center gap-2 mb-2 font-bold text-sm"
           style={{ color: "var(--text-primary)" }}
         >
-          <div
-            className="w-6 h-6 rounded-lg flex items-center justify-center"
-            style={{ background: "var(--accent)" }}
-          >
-            <Sparkles size={12} className="text-white" />
-          </div>
+          <ProLogo size={24} variant="icon" />
           PRO Resumos
         </div>
         <p>Plataforma de estudos para concursos públicos.</p>
+        <p className="mt-1" style={{ color: "var(--text-muted)" }}>Um módulo do ecossistema PRO Concursos.</p>
       </footer>
     </main>
   );

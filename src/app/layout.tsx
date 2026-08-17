@@ -10,7 +10,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Plataforma de Estudos Jurídicos",
+  title: {
+    default: "PRO Resumos — Plataforma de Estudos para Concursos",
+    template: "%s | PRO Resumos",
+  },
   description:
     "Plataforma interativa para estudo de concursos com resumos estruturados, flashcards, mnemônicos e mapas mentais.",
   keywords: [
@@ -19,7 +22,12 @@ export const metadata: Metadata = {
     "estudo",
     "flashcards",
     "resumo jurídico",
+    "PRO Resumos",
+    "PRO Concursos",
   ],
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

@@ -14,10 +14,10 @@ import {
   CheckSquare,
   Square,
   ChevronRight,
-  Sparkles,
   StickyNote,
   X,
 } from "lucide-react";
+import { ProLogo } from "@/components/brand/pro-logo";
 import { createClient } from "@/lib/supabase/client";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import type { SectionRow } from "@/types/database";
@@ -104,15 +104,7 @@ export function DashboardNavigation({
   const renderNavigationContent = (isCollapsed: boolean) => (
     <>
       <div className={`shrink-0 flex items-center border-b py-5 ${isCollapsed ? "justify-center px-3" : "gap-3 px-5"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
-        <span
-          className="grid h-10 w-10 shrink-0 place-items-center rounded-xl text-white"
-          style={{
-            background:
-              "linear-gradient(135deg, var(--mnemonic-gradient-from), var(--mnemonic-gradient-to))",
-          }}
-        >
-          <Sparkles size={20} />
-        </span>
+        <ProLogo size={isCollapsed ? 36 : 40} variant="icon" />
         <div className={`min-w-0 ${isCollapsed ? "hidden" : ""}`}>
           <strong className="block truncate text-sm" style={{ color: "var(--dashboard-sidebar-text)" }}>
             PRO Resumos
@@ -316,7 +308,7 @@ export function DashboardNavigation({
         style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
       >
         <Link href="/dashboard" className="flex items-center gap-2 font-bold" style={{ color: "var(--text-primary)" }}>
-          <Sparkles size={19} style={{ color: "var(--accent)" }} />
+          <ProLogo size={28} variant="icon" />
           PRO Resumos
         </Link>
         <button
