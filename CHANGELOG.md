@@ -2,6 +2,7 @@
 
 ## 2026-08-18
 
+- Adicionado controle acessível para expandir ou recolher os resumos de cada disciplina no Dashboard.
 - Endurecida a renderização Mermaid contra XSS persistente com validação compartilhada, modo estrito e sanitização explícita do SVG.
 - Adicionada exclusão defensiva de arquivos `.env*` nos bundles de Functions da Netlify e documentada a exigência de deploy por checkout limpo.
 - Configuradas na Netlify as chaves modernas publishable/secret do Supabase, com a credencial administrativa marcada como segredo.

@@ -5,6 +5,7 @@ import {
   BookOpen,
   CalendarDays,
   CheckCircle2,
+  ChevronDown,
   CirclePlay,
   GraduationCap,
   Layers3,
@@ -360,8 +361,13 @@ export default async function DashboardPage() {
 
             <div className="flex flex-col gap-12">
             {disciplines.map((discipline) => (
-              <section key={discipline} aria-labelledby={`discipline-${discipline}`}>
-                <div className="mb-5 flex items-center gap-4">
+              <details
+                key={discipline}
+                open
+                className="group"
+                aria-labelledby={`discipline-${discipline}`}
+              >
+                <summary className="mb-5 flex cursor-pointer list-none items-center gap-4 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)] [&::-webkit-details-marker]:hidden">
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl" style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
                     <BookOpen size={19} />
                   </span>
@@ -374,7 +380,18 @@ export default async function DashboardPage() {
                     </p>
                   </div>
                   <span className="hidden h-px flex-1 sm:block" style={{ background: "var(--border)" }} />
-                </div>
+                  <span
+                    className="inline-flex shrink-0 items-center gap-1.5 text-xs font-bold text-[var(--accent)]"
+                    aria-hidden="true"
+                  >
+                    <span className="group-open:hidden">Expandir</span>
+                    <span className="hidden group-open:inline">Recolher</span>
+                    <ChevronDown
+                      size={18}
+                      className="transition-transform group-open:rotate-180"
+                    />
+                  </span>
+                </summary>
 
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
                   {groupedTopics[discipline].map((topic) => {
@@ -462,7 +479,7 @@ export default async function DashboardPage() {
                     );
                   })}
                 </div>
-              </section>
+              </details>
             ))}
             </div>
           </div>
