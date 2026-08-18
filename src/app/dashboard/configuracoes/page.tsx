@@ -1,20 +1,12 @@
 import Link from "next/link";
 import { AlertTriangle, ArrowLeft, Check, Settings2, SlidersHorizontal } from "lucide-react";
-import { redirect } from "next/navigation";
 import { PreferencesForm } from "./preferences-form";
 import { SavePreferencesButton } from "./save-preferences-button";
-import { createClient } from "@/lib/supabase/server";
 import { formatSupabaseError, isMissingTableError } from "@/lib/supabase/errors";
+import { requireContentAccess } from "@/lib/content-access";
 
 export default async function DashboardSettingsPage() {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect("/login");
-  }
+  const { supabase, user } = await requireContentAccess();
 
   const [
     { data: topics, error: topicsError },

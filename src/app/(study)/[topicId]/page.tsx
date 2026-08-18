@@ -1,7 +1,7 @@
-import { notFound, redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { notFound } from "next/navigation";
 import type { SectionRow, TopicRow } from "@/types/database";
 import { compareTopicsByOrigin } from "@/lib/topic-order";
+import { requireContentAccess } from "@/lib/content-access";
 import { StudyPageClient } from "./study-page-client";
 
 interface TopicPageProps {
@@ -22,19 +22,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
   let previousTopic: AdjacentTopic | null = null;
   let nextTopic: AdjacentTopic | null = null;
 
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect("/login");
-  }
-
-  if (user.app_metadata?.role === "admin") {
-    const { data } = await supabase.auth.mfa.getAuthenticatorAssuranceLevel();
-    if (data?.currentLevel !== "aal2") {
-      redirect("/admin");
-    }
-  }
+  const { supabase, user } = await requireContentAccess();
 
   const userId = user.id;
 

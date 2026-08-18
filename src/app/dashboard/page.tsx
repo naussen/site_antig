@@ -12,11 +12,10 @@ import {
   Settings2,
   Sparkles,
 } from "lucide-react";
-import { createClient } from "@/lib/supabase/server";
-import { redirect } from "next/navigation";
 import type { TopicRow } from "@/types/database";
 import { formatSupabaseError, isMissingTableError } from "@/lib/supabase/errors";
 import { compareTopicsByOrigin } from "@/lib/topic-order";
+import { requireContentAccess } from "@/lib/content-access";
 
 type DashboardTopic = TopicRow & {
   sections: { section_id: string }[];
@@ -40,13 +39,7 @@ function compareTopics(a: DashboardTopic, b: DashboardTopic) {
 }
 
 export default async function DashboardPage() {
-  const supabase = await createClient();
-  // getUser valida o token contra o servidor — mais seguro que getSession (local-only)
-  const { data: { user } } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect("/login");
-  }
+  const { supabase, user } = await requireContentAccess();
 
   let topics: DashboardTopic[] = [];
   let completedSectionIds = new Set<string>();

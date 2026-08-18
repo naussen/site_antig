@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-08-17
+
+- Adicionada fonte de verdade server-side para direitos de acesso ao acervo.
+- Restringida a leitura de tópicos e seções a assinaturas ativas ou administradores com MFA AAL2.
+- Centralizada a autorização do acervo em uma DAL server-only, incluindo a Server Action de preferências.
+- Corrigida a tela de assinatura para não declarar plano gratuito ativo sem confirmação do backend.
+
 ## 2026-08-14
 
 - Endurecidos os grants do Data API, o `search_path` do trigger e os padrões de senha/MFA.

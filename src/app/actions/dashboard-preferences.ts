@@ -1,9 +1,8 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
 import { isMissingTableError } from "@/lib/supabase/errors";
+import { requireContentAccess } from "@/lib/content-access";
 
 export type SaveDashboardPreferencesState = {
   status: "idle" | "success";
@@ -13,14 +12,7 @@ export async function saveDashboardDisciplines(
   _previousState: SaveDashboardPreferencesState,
   formData: FormData,
 ): Promise<SaveDashboardPreferencesState> {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect("/login");
-  }
+  const { supabase, user } = await requireContentAccess();
 
   const { data: topics, error: topicsError } = await supabase
     .from("topics")

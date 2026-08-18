@@ -45,7 +45,8 @@ export interface TopicImport {
 
 // =============================================================================
 // GRUPO B — Conteúdo editorial global (compartilhado entre todos os usuários)
-// Leitura aberta para autenticados. Escrita apenas via service role (admin).
+// Leitura restrita a assinatura ativa ou admin com AAL2.
+// Escrita apenas via service role (admin).
 // Sem user_id, sem isolamento pessoal.
 // =============================================================================
 
@@ -98,6 +99,17 @@ export interface UserNote {
 export interface UserDashboardPreferences {
   user_id: string;
   visible_disciplines: string[] | null;
+  updated_at: string;
+}
+
+/** Direito de acesso mantido exclusivamente pelo backend de pagamentos. */
+export interface UserEntitlement {
+  user_id: string;
+  provider: string;
+  provider_subscription_id: string | null;
+  status: 'active' | 'trialing' | 'pending' | 'past_due' | 'canceled' | 'expired';
+  access_until: string | null;
+  created_at: string;
   updated_at: string;
 }
 
