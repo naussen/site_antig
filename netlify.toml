@@ -2,5 +2,10 @@
   command = "npm run build -- --webpack"
   publish = ".next"
 
+[functions]
+  # O runtime Next.js também adiciona .env* ao bundle; por isso, deploys devem
+  # partir de checkout Git limpo, sem arquivos de ambiente locais.
+  included_files = ["!.env", "!.env.*", "!**/.env", "!**/.env.*"]
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
