@@ -4,6 +4,10 @@ import { pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
 import { createClient } from "@supabase/supabase-js";
 import { z } from "zod";
+import {
+  getMermaidSecurityIssue,
+  MAX_MERMAID_SOURCE_LENGTH,
+} from "../src/lib/mermaid/security.mjs";
 
 const PAGE_SIZE = 1_000;
 
@@ -23,6 +27,16 @@ const FlashcardSchema = z.object({
   question: z.string().min(1),
   answer: z.string().min(1),
 });
+
+const MermaidSourceSchema = z
+  .string()
+  .max(MAX_MERMAID_SOURCE_LENGTH)
+  .superRefine((source, context) => {
+    const issue = getMermaidSecurityIssue(source);
+    if (issue) {
+      context.addIssue({ code: "custom", message: issue });
+    }
+  });
 
 const KNOWN_ACRONYMS = new Set([
   "AFO", "CIDE", "CLT", "CPC", "CPP", "CTN", "CVM", "DRE", "FRF",
@@ -75,7 +89,7 @@ const SectionImportSchema = z.object({
   callouts: z.array(CalloutSchema).default([]),
   mnemonics: z.array(MnemonicSchema).default([]),
   flashcards: z.array(FlashcardSchema).default([]),
-  mermaid_mindmap: z.string().optional().default(""),
+  mermaid_mindmap: MermaidSourceSchema.optional().default(""),
 });
 
 const TopicImportSchema = z.object({

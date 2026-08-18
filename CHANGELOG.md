@@ -2,6 +2,7 @@
 
 ## 2026-08-18
 
+- Endurecida a renderização Mermaid contra XSS persistente com validação compartilhada, modo estrito e sanitização explícita do SVG.
 - Adicionada exclusão defensiva de arquivos `.env*` nos bundles de Functions da Netlify e documentada a exigência de deploy por checkout limpo.
 - Configuradas na Netlify as chaves modernas publishable/secret do Supabase, com a credencial administrativa marcada como segredo.
 - Consolidada em `TODO.md` a fila futura de segurança, pagamentos, webhooks, operação e privacidade.

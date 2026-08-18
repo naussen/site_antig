@@ -45,6 +45,32 @@ test("aplica valores opcionais compatíveis com a API", () => {
   assert.equal(parsed.sections[0].mermaid_mindmap, "");
 });
 
+test("aceita Mermaid estático e preserva quebra visual permitida", () => {
+  const payload = validPayload();
+  payload.sections[0].mermaid_mindmap = [
+    "flowchart TD",
+    '  A["Regra<br/>principal"] --> B[Exceção]',
+  ].join("\n");
+
+  assert.doesNotThrow(() => validateImportPayload(payload));
+});
+
+test("rejeita interações, protocolos executáveis e HTML em Mermaid", () => {
+  const maliciousSources = [
+    'flowchart TD\n  A[Material]\n  click A "javascript:alert(document.domain)"',
+    'flowchart TD; A[Material]; click A "https://example.com"',
+    '%%{init: {"securityLevel": "loose"}}%%\nflowchart TD\n  A --> B',
+    '---\nconfig:\n  htmlLabels: true\n---\nflowchart TD\n  A --> B',
+    'flowchart TD\n  A["<img src=x onerror=alert(1)>"] --> B',
+  ];
+
+  for (const source of maliciousSources) {
+    const payload = validPayload();
+    payload.sections[0].mermaid_mindmap = source;
+    assert.throws(() => validateImportPayload(payload), /Mermaid|permitid|Protocolos|Tags HTML/);
+  }
+});
+
 test("rejeita section_id duplicado no mesmo arquivo", () => {
   const payload = validPayload();
   payload.sections.push({ ...payload.sections[0] });
