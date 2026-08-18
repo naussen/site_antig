@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-18
+
+- Consolidada em `TODO.md` a fila futura de segurança, pagamentos, webhooks, operação e privacidade.
+- Reconciliadas as pendências com os hardenings já concluídos para evitar regressões e retrabalho.
+
 ## 2026-08-17
 
 - Adicionada fonte de verdade server-side para direitos de acesso ao acervo.
