@@ -45,6 +45,17 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [ ] Impedir em revisão de código qualquer nova policy de `topics` ou `sections` baseada apenas em `TO authenticated USING (true)`.
 - [ ] Manter toda Server Action e Route Handler com autorização própria próxima ao acesso aos dados; não depender apenas de layout, botão oculto ou estado React.
 
+### Proteção contra IDOR e enumeração
+
+- [ ] Adicionar testes automáticos com dois usuários comprovando que alterar o ID de nota, progresso, preferência ou entitlement nunca permite ler, atualizar ou excluir registros de terceiros.
+- [ ] Exigir em toda futura rota de objeto pessoal a identidade obtida da sessão no servidor e filtrar simultaneamente por `id` e `user_id = user.id`, mantendo o RLS como segunda barreira.
+- [ ] Retornar `404` tanto para objeto inexistente quanto para objeto pertencente a outro usuário, evitando revelar a existência do registro.
+- [ ] Manter UUIDs aleatórios para objetos pessoais e impedir a introdução de IDs numéricos sequenciais expostos em URLs ou APIs.
+- [ ] Implementar rate limit distribuído ou na borda da hospedagem para `POST /api/import` e para os `DELETE` administrativos de tópicos e seções; responder `429` com `Retry-After` e não usar memória local do processo serverless.
+- [ ] Registrar auditoria das operações administrativas com ator ou integração, operação, objeto, data, origem e resultado, sem armazenar Bearer Token, JWT, cookie ou payload sensível.
+- [ ] Separar credenciais por finalidade: painel humano com sessão Supabase, role administrativa e MFA `aal2`; `CONTENT_ADMIN_TOKEN` restrito a automação server-to-server, com token distinto por integração quando aplicável.
+- [ ] Se futuramente for necessário impedir coleta automatizada do acervo global, reavaliar o acesso direto pelo Data API e servir o conteúdo por backend com rate limit; tratar isso como requisito antiabuso, não como IDOR.
+
 ### Administração e segredos
 
 - [ ] Definir periodicidade e procedimento seguro de rotação do `CONTENT_ADMIN_TOKEN`.

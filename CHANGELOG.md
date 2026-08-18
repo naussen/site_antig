@@ -4,6 +4,7 @@
 
 - Consolidada em `TODO.md` a fila futura de segurança, pagamentos, webhooks, operação e privacidade.
 - Reconciliadas as pendências com os hardenings já concluídos para evitar regressões e retrabalho.
+- Registradas as recomendações futuras contra IDOR, enumeração e abuso das APIs administrativas.
 
 ## 2026-08-17
 
