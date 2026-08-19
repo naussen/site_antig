@@ -160,7 +160,15 @@ SELECT set_config(
   true
 );
 SET LOCAL ROLE authenticated;
-SELECT is((SELECT count(*) FROM public.law_versions), 2::bigint, 'revisor AAL2 vê drafts');
+SELECT is(
+  (SELECT count(*) FROM public.law_versions
+   WHERE id IN (
+     '50000000-0000-0000-0000-000000000005',
+     '60000000-0000-0000-0000-000000000006'
+   )),
+  2::bigint,
+  'revisor AAL2 vê os drafts da fixture'
+);
 SELECT is((SELECT count(*) FROM public.user_law_progress), 0::bigint, 'usuário B não lê progresso do usuário A');
 UPDATE public.user_law_progress SET reading_status = 'reading';
 RESET ROLE;
