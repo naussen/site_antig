@@ -21,17 +21,28 @@ LEFT JOIN pg_policies p ON p.tablename = t.tablename AND p.schemaname = t.schema
 WHERE t.schemaname = 'public'
   AND t.tablename IN (
     'topics', 'sections',
-    'user_notes', 'user_progress', 'user_dashboard_preferences'
+    'user_notes', 'user_progress', 'user_dashboard_preferences',
+    'user_entitlements',
+    'laws', 'law_versions', 'legal_fragments',
+    'topic_legal_fragment_relations', 'law_flashcards',
+    'user_law_progress', 'user_law_flashcard_answers',
+    'legis_editorial_audit'
   )
 GROUP BY t.tablename, t.rowsecurity
 ORDER BY t.tablename;
 
 -- Resultado esperado:
--- topics                    | true  | 1 | topics_select_authenticated
--- sections                  | true  | 1 | sections_select_authenticated
+-- topics                    | true  | 1 | topics_select_entitled
+-- sections                  | true  | 1 | sections_select_entitled
 -- user_notes                | true  | 4 | notes_delete_own, notes_insert_own, notes_select_own, notes_update_own
 -- user_progress             | true  | 4 | progress_delete_own, progress_insert_own, progress_select_own, progress_update_own
 -- user_dashboard_preferences| true  | 4 | dashboard_preferences_delete_own, ...insert_own, ...select_own, ...update_own
+-- user_entitlements         | true  | 1 | entitlements_select_own
+-- laws/law_versions/legal_fragments/topic_legal_fragment_relations/law_flashcards
+--                           | true  | 1 | política de SELECT permitido
+-- user_law_progress         | true  | 4 | políticas *_own
+-- user_law_flashcard_answers| true  | 1 | user_law_answers_select_own
+-- legis_editorial_audit     | true  | 0 | sem acesso pelo Data API
 
 
 -- -----------------------------------------------------------------------------
@@ -48,14 +59,17 @@ SELECT
   with_check AS check_clause
 FROM pg_policies
 WHERE schemaname = 'public'
-  AND tablename IN ('user_notes', 'user_progress', 'user_dashboard_preferences')
+  AND tablename IN (
+    'user_notes', 'user_progress', 'user_dashboard_preferences',
+    'user_entitlements', 'user_law_progress', 'user_law_flashcard_answers'
+  )
 ORDER BY tablename, cmd;
 
 
 -- -----------------------------------------------------------------------------
 -- SEÇÃO 3: Verificar FKs de user_id para auth.users
 -- Confirma que as foreign keys da migration 006 foram aplicadas corretamente.
--- Resultado esperado: 3 linhas (uma por tabela pessoal).
+-- Resultado esperado: inclui tabelas pessoais e atores editoriais do Legis.
 -- -----------------------------------------------------------------------------
 
 SELECT
@@ -81,6 +95,7 @@ ORDER BY tc.table_name;
 
 -- Resultado esperado:
 -- user_dashboard_preferences | user_id | auth | users | id | CASCADE
+-- user_entitlements          | user_id | auth | users | id | CASCADE
 -- user_notes                 | user_id | auth | users | id | CASCADE
 -- user_progress              | user_id | auth | users | id | CASCADE
 
@@ -124,6 +139,24 @@ UNION ALL
 
 SELECT 'user_dashboard_preferences' AS tabela, user_id
 FROM user_dashboard_preferences
+WHERE user_id NOT IN (SELECT id FROM auth.users)
+
+UNION ALL
+
+SELECT 'user_entitlements' AS tabela, user_id
+FROM user_entitlements
+WHERE user_id NOT IN (SELECT id FROM auth.users)
+
+UNION ALL
+
+SELECT 'user_law_progress' AS tabela, user_id
+FROM user_law_progress
+WHERE user_id NOT IN (SELECT id FROM auth.users)
+
+UNION ALL
+
+SELECT 'user_law_flashcard_answers' AS tabela, user_id
+FROM user_law_flashcard_answers
 WHERE user_id NOT IN (SELECT id FROM auth.users);
 
 
@@ -139,8 +172,98 @@ SELECT
   COUNT(DISTINCT cmd) AS total_operacoes
 FROM pg_policies
 WHERE schemaname = 'public'
-  AND tablename IN ('user_notes', 'user_progress', 'user_dashboard_preferences')
+  AND tablename IN (
+    'user_notes', 'user_progress', 'user_dashboard_preferences',
+    'user_law_progress'
+  )
 GROUP BY tablename
 ORDER BY tablename;
 
 -- Resultado esperado: todas com total_operacoes = 4 (DELETE, INSERT, SELECT, UPDATE)
+
+
+-- -----------------------------------------------------------------------------
+-- SEÇÃO 7: Confirmar bloqueio do acervo por entitlement
+-- Resultado esperado: topics/sections usam somente as políticas *_select_entitled.
+-- -----------------------------------------------------------------------------
+
+SELECT
+  tablename,
+  policyname,
+  roles,
+  qual AS using_clause
+FROM pg_policies
+WHERE schemaname = 'public'
+  AND tablename IN ('topics', 'sections')
+ORDER BY tablename, policyname;
+
+
+-- -----------------------------------------------------------------------------
+-- SEÇÃO 8: Confirmar privilégios da tabela de entitlements
+-- Resultado esperado para authenticated: somente SELECT.
+-- -----------------------------------------------------------------------------
+
+SELECT
+  grantee,
+  privilege_type
+FROM information_schema.role_table_grants
+WHERE table_schema = 'public'
+  AND table_name = 'user_entitlements'
+  AND grantee IN ('anon', 'authenticated')
+ORDER BY grantee, privilege_type;
+
+
+-- -----------------------------------------------------------------------------
+-- SEÇÃO 9: Menor privilégio das tabelas PRO Legis
+-- -----------------------------------------------------------------------------
+
+SELECT
+  table_name,
+  grantee,
+  STRING_AGG(privilege_type, ', ' ORDER BY privilege_type) AS privilegios
+FROM information_schema.role_table_grants
+WHERE table_schema = 'public'
+  AND table_name IN (
+    'laws', 'law_versions', 'legal_fragments',
+    'topic_legal_fragment_relations', 'law_flashcards',
+    'user_law_progress', 'user_law_flashcard_answers',
+    'legis_editorial_audit'
+  )
+  AND grantee IN ('anon', 'authenticated')
+GROUP BY table_name, grantee
+ORDER BY table_name, grantee;
+
+
+-- -----------------------------------------------------------------------------
+-- SEÇÃO 10: Funções estreitas e ausência de execução anônima
+-- -----------------------------------------------------------------------------
+
+SELECT
+  routine_name,
+  grantee,
+  privilege_type
+FROM information_schema.routine_privileges
+WHERE routine_schema IN ('public', 'private')
+  AND routine_name IN (
+    'has_legis_permission', 'can_read_legis_drafts',
+    'review_law_version', 'publish_law_version', 'answer_law_flashcard'
+  )
+  AND grantee IN ('PUBLIC', 'anon', 'authenticated')
+ORDER BY routine_name, grantee;
+
+
+-- -----------------------------------------------------------------------------
+-- SEÇÃO 11: Constraints estruturais do workflow
+-- -----------------------------------------------------------------------------
+
+SELECT
+  conrelid::regclass AS tabela,
+  conname,
+  pg_get_constraintdef(oid) AS definicao
+FROM pg_constraint
+WHERE conrelid IN (
+    'public.laws'::regclass,
+    'public.law_versions'::regclass,
+    'public.legal_fragments'::regclass
+  )
+ORDER BY conrelid::regclass::text, conname;

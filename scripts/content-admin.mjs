@@ -4,6 +4,10 @@ import { pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
 import { createClient } from "@supabase/supabase-js";
 import { z } from "zod";
+import {
+  getMermaidSecurityIssue,
+  MAX_MERMAID_SOURCE_LENGTH,
+} from "../src/lib/mermaid/security.mjs";
 
 const PAGE_SIZE = 1_000;
 
@@ -23,6 +27,16 @@ const FlashcardSchema = z.object({
   question: z.string().min(1),
   answer: z.string().min(1),
 });
+
+const MermaidSourceSchema = z
+  .string()
+  .max(MAX_MERMAID_SOURCE_LENGTH)
+  .superRefine((source, context) => {
+    const issue = getMermaidSecurityIssue(source);
+    if (issue) {
+      context.addIssue({ code: "custom", message: issue });
+    }
+  });
 
 const KNOWN_ACRONYMS = new Set([
   "AFO", "CIDE", "CLT", "CPC", "CPP", "CTN", "CVM", "DRE", "FRF",
@@ -75,7 +89,7 @@ const SectionImportSchema = z.object({
   callouts: z.array(CalloutSchema).default([]),
   mnemonics: z.array(MnemonicSchema).default([]),
   flashcards: z.array(FlashcardSchema).default([]),
-  mermaid_mindmap: z.string().optional().default(""),
+  mermaid_mindmap: MermaidSourceSchema.optional().default(""),
 });
 
 const TopicImportSchema = z.object({
@@ -196,9 +210,29 @@ export function assertBatchMode(dryRun, apply) {
   }
 }
 
+export function getBatchSortOrder(fileName, fallbackOrder) {
+  const prefix = /^(\d+)/.exec(fileName)?.[1];
+  return prefix ? Number.parseInt(prefix, 10) : fallbackOrder;
+}
+
+export function buildTopicRow(payload, sortOrder) {
+  const row = {
+    topic_id: payload.topic_id,
+    discipline: payload.discipline,
+    title: payload.topic_title,
+  };
+
+  if (Number.isInteger(sortOrder)) {
+    row.sort_order = sortOrder;
+  }
+
+  return row;
+}
+
 export function validateBatchEntries(entries) {
   const topicFiles = new Map();
   const sectionFiles = new Map();
+  const orderFiles = new Map();
   const conflicts = [];
 
   for (const entry of entries) {
@@ -209,6 +243,19 @@ export function validateBatchEntries(entries) {
       );
     } else {
       topicFiles.set(entry.payload.topic_id, entry.filePath);
+    }
+
+    if (Number.isInteger(entry.sortOrder)) {
+      const orderKey = `${entry.payload.discipline}\u0000${entry.sortOrder}`;
+      const previousOrderFile = orderFiles.get(orderKey);
+      if (previousOrderFile) {
+        conflicts.push(
+          `ordem ${entry.sortOrder} da disciplina ${entry.payload.discipline} ` +
+            `aparece em ${previousOrderFile} e ${entry.filePath}`
+        );
+      } else {
+        orderFiles.set(orderKey, entry.filePath);
+      }
     }
 
     for (const section of entry.payload.sections) {
@@ -384,11 +431,12 @@ async function readBatchDirectory(directoryPath) {
 
   const entries = [];
   const errors = [];
-  for (const fileName of jsonFiles) {
+  for (const [index, fileName] of jsonFiles.entries()) {
     const filePath = join(directoryPath, fileName);
     try {
       entries.push({
         filePath,
+        sortOrder: getBatchSortOrder(fileName, index + 1),
         payload: validateImportPayload(await readJsonFile(filePath)),
       });
     } catch (error) {
@@ -421,6 +469,19 @@ async function findSectionOwnershipConflicts(supabase, payload) {
   return conflicts;
 }
 
+async function findTopicOwnershipConflict(supabase, payload) {
+  const topic = unwrap(
+    await supabase
+      .from("topics")
+      .select("topic_id,discipline,title")
+      .eq("topic_id", payload.topic_id)
+      .maybeSingle(),
+    "Falha ao verificar o ID do módulo"
+  );
+  if (!topic || topic.discipline === payload.discipline) return null;
+  return topic;
+}
+
 async function findBatchSectionOwnershipConflicts(supabase, entries) {
   const expectedOwners = new Map();
   for (const entry of entries) {
@@ -447,14 +508,38 @@ async function findBatchSectionOwnershipConflicts(supabase, entries) {
   return conflicts;
 }
 
-async function upsertImportPayload(supabase, payload, context = "importação") {
+async function findBatchTopicOwnershipConflicts(supabase, entries) {
+  const expectedDisciplines = new Map(
+    entries.map((entry) => [entry.payload.topic_id, entry.payload.discipline])
+  );
+  const topicIds = [...expectedDisciplines.keys()];
+  const conflicts = [];
+
+  for (let index = 0; index < topicIds.length; index += 200) {
+    const batch = topicIds.slice(index, index + 200);
+    const existing = unwrap(
+      await supabase.from("topics").select("topic_id,discipline,title").in("topic_id", batch),
+      "Falha ao verificar IDs dos módulos do lote"
+    );
+    conflicts.push(
+      ...existing.filter(
+        (topic) => topic.discipline !== expectedDisciplines.get(topic.topic_id)
+      )
+    );
+  }
+
+  return conflicts;
+}
+
+async function upsertImportPayload(
+  supabase,
+  payload,
+  context = "importação",
+  topicSortOrder
+) {
   unwrap(
     await supabase.from("topics").upsert(
-      {
-        topic_id: payload.topic_id,
-        discipline: payload.discipline,
-        title: payload.topic_title,
-      },
+      buildTopicRow(payload, topicSortOrder),
       { onConflict: "topic_id" }
     ),
     `Falha ao salvar módulo (${context})`
@@ -480,6 +565,13 @@ async function upsertImportPayload(supabase, payload, context = "importação") 
 
 async function importContent(supabase, filePath, values) {
   const payload = validateImportPayload(await readJsonFile(filePath));
+  const topicConflict = await findTopicOwnershipConflict(supabase, payload);
+  if (topicConflict) {
+    throw new Error(
+      `Importação bloqueada: topic_id ${payload.topic_id} já pertence à disciplina ` +
+      `"${topicConflict.discipline}" (arquivo informa "${payload.discipline}").`
+    );
+  }
   const conflicts = await findSectionOwnershipConflicts(supabase, payload);
 
   if (conflicts.length > 0) {
@@ -544,8 +636,18 @@ async function importBatch(supabase, directoryPath, values) {
     )
   );
   const conflicts = await findBatchSectionOwnershipConflicts(supabase, entries);
+  const topicConflicts = await findBatchTopicOwnershipConflicts(supabase, entries);
+  const expectedDisciplines = new Map(
+    entries.map((entry) => [entry.payload.topic_id, entry.payload.discipline])
+  );
 
-  if (conflicts.length > 0) {
+  if (topicConflicts.length > 0 || conflicts.length > 0) {
+    const topicDetails = topicConflicts
+      .map(
+        (item) =>
+          `topic_id ${item.topic_id} pertence à disciplina "${item.discipline}", ` +
+          `mas o lote atribui "${expectedDisciplines.get(item.topic_id)}"`
+      );
     const details = conflicts
       .map(
         (item) =>
@@ -553,11 +655,13 @@ async function importBatch(supabase, directoryPath, values) {
           `${expectedOwners.get(item.section_id)}`
       )
       .join("; ");
-    throw new Error(`Importação em lote bloqueada por conflito de IDs: ${details}`);
+    throw new Error(
+      `Importação em lote bloqueada por conflito de IDs: ${[...topicDetails, details].filter(Boolean).join("; ")}`
+    );
   }
 
-  const summary = entries.map((entry, index) => ({
-    ordem: index + 1,
+  const summary = entries.map((entry) => ({
+    ordem: entry.sortOrder,
     arquivo: entry.filePath,
     topic_id: entry.payload.topic_id,
     modulo: entry.payload.topic_title,
@@ -579,7 +683,12 @@ async function importBatch(supabase, directoryPath, values) {
   console.log("Iniciando importação efetiva após preflight integral...");
   for (const [index, entry] of entries.entries()) {
     console.log(`[${index + 1}/${entries.length}] ${entry.filePath}`);
-    await upsertImportPayload(supabase, entry.payload, entry.filePath);
+    await upsertImportPayload(
+      supabase,
+      entry.payload,
+      entry.filePath,
+      entry.sortOrder
+    );
   }
   console.log(
     `Importação em lote concluída: ${entries.length} módulo(s), ${sectionCount} seção(ões).`
@@ -630,6 +739,19 @@ async function renameTopic(supabase, topicId, newTitle, values) {
     "Falha ao renomear módulo"
   );
   console.log("Módulo renomeado com sucesso. O topic_id e a URL foram preservados.");
+}
+
+async function setTopicDiscipline(supabase, topicId, newDiscipline, values) {
+  const topic = await getTopic(supabase, topicId);
+  console.log(`Disciplina atual: ${topic.discipline}`);
+  console.log(`Nova disciplina: ${newDiscipline}`);
+  if (!values.apply) return console.log("Pré-visualização. Use --apply para confirmar.");
+
+  unwrap(
+    await supabase.from("topics").update({ discipline: newDiscipline }).eq("topic_id", topicId),
+    "Falha ao alterar disciplina do módulo"
+  );
+  console.log("Disciplina do módulo atualizada. O topic_id e a URL foram preservados.");
 }
 
 async function renameSection(supabase, sectionId, newTitle, values) {
@@ -725,6 +847,7 @@ Uso:
   npm run content -- import-batch <pasta> (--dry-run | --apply)
   npm run content -- export <topic-id> <saida.json> [--force]
   npm run content -- rename-topic <topic-id> "Novo título" [--apply]
+  npm run content -- set-discipline <topic-id> "Nova disciplina" [--apply]
   npm run content -- rename-section <section-id> "Novo título" [--apply]
   npm run content -- rename-discipline "Nome atual" "Novo nome" [--apply]
   npm run content -- delete-topic <topic-id> [--apply --confirm <topic-id>]
@@ -781,6 +904,13 @@ export async function main(argv = process.argv.slice(2)) {
         supabase,
         requireText(args[0], "topic-id"),
         requireText(args[1], "novo título"),
+        values
+      );
+    case "set-discipline":
+      return setTopicDiscipline(
+        supabase,
+        requireText(args[0], "topic-id"),
+        requireText(args[1], "nova disciplina"),
         values
       );
     case "rename-section":

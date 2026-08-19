@@ -1,19 +1,18 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
 import { isMissingTableError } from "@/lib/supabase/errors";
+import { requireContentAccess } from "@/lib/content-access";
 
-export async function saveDashboardDisciplines(formData: FormData) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+export type SaveDashboardPreferencesState = {
+  status: "idle" | "success";
+};
 
-  if (!user) {
-    redirect("/login");
-  }
+export async function saveDashboardDisciplines(
+  _previousState: SaveDashboardPreferencesState,
+  formData: FormData,
+): Promise<SaveDashboardPreferencesState> {
+  const { supabase, user } = await requireContentAccess();
 
   const { data: topics, error: topicsError } = await supabase
     .from("topics")
@@ -61,5 +60,6 @@ export async function saveDashboardDisciplines(formData: FormData) {
 
   revalidatePath("/dashboard");
   revalidatePath("/dashboard/configuracoes");
-  redirect("/dashboard");
+
+  return { status: "success" };
 }

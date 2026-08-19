@@ -1,6 +1,11 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createClient } from "@supabase/supabase-js";
+import { isAdminApiRequest } from "@/lib/api-admin-auth.mjs";
+import {
+  getMermaidSecurityIssue,
+  MAX_MERMAID_SOURCE_LENGTH,
+} from "@/lib/mermaid/security.mjs";
 
 // =============================================================================
 // Validação Zod do payload de importação
@@ -22,6 +27,16 @@ const FlashcardSchema = z.object({
   question: z.string().min(1),
   answer: z.string().min(1),
 });
+
+const MermaidSourceSchema = z
+  .string()
+  .max(MAX_MERMAID_SOURCE_LENGTH)
+  .superRefine((source, context) => {
+    const issue = getMermaidSecurityIssue(source);
+    if (issue) {
+      context.addIssue({ code: "custom", message: issue });
+    }
+  });
 
 const KNOWN_ACRONYMS = new Set([
   "AFO", "CIDE", "CLT", "CPC", "CPP", "CTN", "CVM", "DRE", "FRF",
@@ -80,7 +95,7 @@ const SectionImportSchema = z.object({
   callouts: z.array(CalloutSchema).default([]),
   mnemonics: z.array(MnemonicSchema).default([]),
   flashcards: z.array(FlashcardSchema).default([]),
-  mermaid_mindmap: z.string().optional().default(""),
+  mermaid_mindmap: MermaidSourceSchema.optional().default(""),
 });
 
 const TopicImportSchema = z.object({
@@ -176,6 +191,10 @@ const TopicImportSchema = z.object({
 
 export async function POST(request: Request) {
   try {
+    if (!isAdminApiRequest(request)) {
+      return NextResponse.json({ error: "Não autorizado" }, { status: 401 });
+    }
+
     const body = await request.json();
     const parsed = TopicImportSchema.safeParse(body);
 

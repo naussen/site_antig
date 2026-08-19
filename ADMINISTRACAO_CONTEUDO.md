@@ -4,7 +4,7 @@ O site possui uma CLI administrativa para importar, consultar, renomear, exporta
 
 ## Pré-requisitos
 
-- Execute os comandos na raiz de `C:\site_antig`.
+- Execute os comandos na raiz de `C:\PRO\site`.
 - Mantenha `NEXT_PUBLIC_SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY` no `.env.local` ou no ambiente do processo.
 - Não versione nem compartilhe `.env.local` ou chaves de serviço.
 - Faça um backup com `export` antes de uma alteração destrutiva.

@@ -3,6 +3,8 @@ import assert from "node:assert/strict";
 import {
   assertBatchMode,
   assertConfirmation,
+  buildTopicRow,
+  getBatchSortOrder,
   requireText,
   validateBatchEntries,
   validateImportPayload,
@@ -41,6 +43,32 @@ test("aplica valores opcionais compatíveis com a API", () => {
   const parsed = validateImportPayload(payload);
   assert.equal(parsed.discipline, "Geral");
   assert.equal(parsed.sections[0].mermaid_mindmap, "");
+});
+
+test("aceita Mermaid estático e preserva quebra visual permitida", () => {
+  const payload = validPayload();
+  payload.sections[0].mermaid_mindmap = [
+    "flowchart TD",
+    '  A["Regra<br/>principal"] --> B[Exceção]',
+  ].join("\n");
+
+  assert.doesNotThrow(() => validateImportPayload(payload));
+});
+
+test("rejeita interações, protocolos executáveis e HTML em Mermaid", () => {
+  const maliciousSources = [
+    'flowchart TD\n  A[Material]\n  click A "javascript:alert(document.domain)"',
+    'flowchart TD; A[Material]; click A "https://example.com"',
+    '%%{init: {"securityLevel": "loose"}}%%\nflowchart TD\n  A --> B',
+    '---\nconfig:\n  htmlLabels: true\n---\nflowchart TD\n  A --> B',
+    'flowchart TD\n  A["<img src=x onerror=alert(1)>"] --> B',
+  ];
+
+  for (const source of maliciousSources) {
+    const payload = validPayload();
+    payload.sections[0].mermaid_mindmap = source;
+    assert.throws(() => validateImportPayload(payload), /Mermaid|permitid|Protocolos|Tags HTML/);
+  }
 });
 
 test("rejeita section_id duplicado no mesmo arquivo", () => {
@@ -120,6 +148,22 @@ test("lote exige exatamente um entre dry-run e apply", () => {
   assert.throws(() => assertBatchMode(true, true), /exatamente um modo/);
 });
 
+test("lote preserva o prefixo numérico do arquivo, inclusive com lacunas", () => {
+  assert.equal(getBatchSortOrder("008_modulo.json", 8), 8);
+  assert.equal(getBatchSortOrder("010_modulo.json", 9), 10);
+  assert.equal(getBatchSortOrder("modulo-sem-prefixo.json", 3), 3);
+});
+
+test("monta tópico com ordem apenas quando fornecida pelo lote", () => {
+  assert.deepEqual(buildTopicRow(validPayload(), 10), {
+    topic_id: "direito-constitucional",
+    discipline: "Direito Constitucional",
+    title: "Direito Constitucional",
+    sort_order: 10,
+  });
+  assert.equal("sort_order" in buildTopicRow(validPayload()), false);
+});
+
 test("lote rejeita topic_id repetido entre arquivos", () => {
   const payload = validPayload();
   assert.throws(
@@ -144,5 +188,21 @@ test("lote rejeita section_id repetido entre módulos", () => {
         { filePath: "02.json", payload: second },
       ]),
     /section_id .* aparece em 01\.json .* e 02\.json/
+  );
+});
+
+test("lote rejeita ordem repetida dentro da mesma disciplina", () => {
+  const first = validPayload();
+  const second = validPayload();
+  second.topic_id = "outro-modulo";
+  second.sections[0].section_id = "outro-modulo-sec-01";
+
+  assert.throws(
+    () =>
+      validateBatchEntries([
+        { filePath: "001_a.json", sortOrder: 1, payload: first },
+        { filePath: "001_b.json", sortOrder: 1, payload: second },
+      ]),
+    /ordem 1 .* aparece em 001_a\.json e 001_b\.json/
   );
 });

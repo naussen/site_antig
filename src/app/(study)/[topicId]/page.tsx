@@ -1,6 +1,7 @@
-import { notFound, redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { notFound } from "next/navigation";
 import type { SectionRow, TopicRow } from "@/types/database";
+import { compareTopicsByOrigin } from "@/lib/topic-order";
+import { requireContentAccess } from "@/lib/content-access";
 import { StudyPageClient } from "./study-page-client";
 
 interface TopicPageProps {
@@ -21,12 +22,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
   let previousTopic: AdjacentTopic | null = null;
   let nextTopic: AdjacentTopic | null = null;
 
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect("/login");
-  }
+  const { supabase, user } = await requireContentAccess();
 
   const userId = user.id;
 
@@ -56,25 +52,28 @@ export default async function TopicPage({ params }: TopicPageProps) {
 
     const { data: disciplineTopics } = await supabase
       .from("topics")
-      .select("topic_id,title,created_at")
+      .select("topic_id,title,sort_order,created_at")
       .eq("discipline", topicData.discipline)
       .order("created_at", { ascending: true })
       .order("topic_id", { ascending: true });
 
     if (disciplineTopics) {
-      const currentTopicIndex = disciplineTopics.findIndex(
+      const orderedTopics = [...disciplineTopics].sort((a, b) =>
+        compareTopicsByOrigin(topicData.discipline, a, b)
+      );
+      const currentTopicIndex = orderedTopics.findIndex(
         (disciplineTopic) => disciplineTopic.topic_id === topicId
       );
 
       if (currentTopicIndex > 0) {
-        previousTopic = disciplineTopics[currentTopicIndex - 1];
+        previousTopic = orderedTopics[currentTopicIndex - 1];
       }
 
       if (
         currentTopicIndex >= 0 &&
-        currentTopicIndex < disciplineTopics.length - 1
+        currentTopicIndex < orderedTopics.length - 1
       ) {
-        nextTopic = disciplineTopics[currentTopicIndex + 1];
+        nextTopic = orderedTopics[currentTopicIndex + 1];
       }
     }
   } catch {

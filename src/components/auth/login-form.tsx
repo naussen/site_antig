@@ -2,11 +2,30 @@
 
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import { withSiteBasePath } from "@/lib/site-paths.mjs";
+import { resolveReturnUrl } from "@/lib/return-paths.mjs";
 import { Loader2, Mail } from "lucide-react";
 
 type SuccessMode = "magic-link" | "sign-up" | null;
+const MIN_PASSWORD_LENGTH = 12;
 
-export function LoginForm() {
+function getPasswordValidationMessage(password: string) {
+  if (password.length < MIN_PASSWORD_LENGTH) {
+    return `A senha deve ter pelo menos ${MIN_PASSWORD_LENGTH} caracteres.`;
+  }
+
+  if (
+    !/[a-z]/.test(password) ||
+    !/[A-Z]/.test(password) ||
+    !/\d/.test(password)
+  ) {
+    return "Use letra minúscula, letra maiúscula e número.";
+  }
+
+  return null;
+}
+
+export function LoginForm({ returnTo }: { returnTo: string }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -14,14 +33,22 @@ export function LoginForm() {
   const [isSignUp, setIsSignUp] = useState(false);
   const supabase = createClient();
 
+  const callbackUrl = () => {
+    const callback = new URL(withSiteBasePath("/auth/callback"), window.location.origin);
+    callback.searchParams.set("next", returnTo);
+    return callback.toString();
+  };
+
+  const completeLogin = () => {
+    window.location.assign(resolveReturnUrl(returnTo, window.location.href).toString());
+  };
+
   const handleGoogleLogin = async () => {
     try {
       setLoading(true);
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
-        options: {
-          redirectTo: `${window.location.origin}/auth/callback`,
-        },
+        options: { redirectTo: callbackUrl() },
       });
       if (error) throw error;
     } catch (error) {
@@ -40,22 +67,21 @@ export function LoginForm() {
       setLoading(true);
       
       if (isSignUp) {
-        if (password.length < 6) {
-          throw new Error("A senha deve ter pelo menos 6 caracteres.");
+        const passwordValidationMessage = getPasswordValidationMessage(password);
+        if (passwordValidationMessage) {
+          throw new Error(passwordValidationMessage);
         }
 
         const { data, error } = await supabase.auth.signUp({
           email,
           password,
-          options: {
-            emailRedirectTo: `${window.location.origin}/auth/callback`,
-          },
+          options: { emailRedirectTo: callbackUrl() },
         });
 
         if (error) throw error;
 
         if (data.session) {
-          window.location.href = "/dashboard";
+          completeLogin();
         } else {
           setSuccessMode("sign-up");
         }
@@ -66,13 +92,11 @@ export function LoginForm() {
         });
 
         if (error) throw error;
-        window.location.href = "/dashboard";
+        completeLogin();
       } else {
         const { error } = await supabase.auth.signInWithOtp({
           email,
-          options: {
-            emailRedirectTo: `${window.location.origin}/auth/callback`,
-          },
+          options: { emailRedirectTo: callbackUrl() },
         });
         if (error) throw error;
         setSuccessMode("magic-link");
@@ -153,7 +177,7 @@ export function LoginForm() {
           id="password"
           type="password"
           required={isSignUp}
-          minLength={isSignUp ? 6 : undefined}
+          minLength={isSignUp ? MIN_PASSWORD_LENGTH : undefined}
           placeholder="Sua senha secreta"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
@@ -165,8 +189,8 @@ export function LoginForm() {
           }}
         />
         <p className="text-xs mt-1.5" style={{ color: "var(--text-muted)" }}>
-          {isSignUp 
-            ? "Crie uma senha de pelo menos 6 caracteres." 
+          {isSignUp
+            ? "Use 12+ caracteres com maiúscula, minúscula e número."
             : "Deixe em branco para usar o Link Mágico (sem senha)."}
         </p>
       </div>

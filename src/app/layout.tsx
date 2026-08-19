@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,7 +11,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Plataforma de Estudos Jurídicos",
+  title: {
+    default: "PRO Resumos — Plataforma de Estudos para Concursos",
+    template: "%s | PRO Resumos",
+  },
   description:
     "Plataforma interativa para estudo de concursos com resumos estruturados, flashcards, mnemônicos e mapas mentais.",
   keywords: [
@@ -19,7 +23,12 @@ export const metadata: Metadata = {
     "estudo",
     "flashcards",
     "resumo jurídico",
+    "PRO Resumos",
+    "PRO Concursos",
   ],
+  icons: {
+    icon: withSiteBasePath("/brand/pro-resumos-favicon.png"),
+  },
 };
 
 export default function RootLayout({

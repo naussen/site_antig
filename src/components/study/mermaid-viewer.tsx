@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
+import DOMPurify from "dompurify";
 import { Expand, RotateCcw, X, ZoomIn, ZoomOut } from "lucide-react";
 import { useTheme } from "@/components/theme-provider";
 import { normalizeMermaidChart } from "@/lib/mermaid/normalize-mermaid-chart";
@@ -127,10 +128,10 @@ function MermaidViewerClient({ chart }: MermaidViewerClientProps) {
           startOnLoad: false,
           theme: theme === "dark" ? "dark" : "default",
           fontFamily: "Inter, system-ui, sans-serif",
-          securityLevel: "loose",
+          securityLevel: "strict",
+          htmlLabels: false,
           flowchart: {
             curve: variant === 0 ? "basis" : variant === 1 ? "natural" : "stepAfter",
-            htmlLabels: true,
           },
         });
 
@@ -138,7 +139,13 @@ function MermaidViewerClient({ chart }: MermaidViewerClientProps) {
         const { svg } = await mermaid.render(uniqueId, displayChart);
 
         if (currentRenderId === renderIdRef.current && containerRef.current) {
-          containerRef.current.innerHTML = svg;
+          const safeSvg = DOMPurify.sanitize(svg, {
+            USE_PROFILES: { svg: true, svgFilters: true },
+            FORBID_TAGS: ["a", "embed", "foreignObject", "iframe", "object", "script"],
+            FORBID_ATTR: ["href", "xlink:href"],
+            RETURN_DOM_FRAGMENT: true,
+          });
+          containerRef.current.replaceChildren(safeSvg);
 
           const svgElement = containerRef.current.querySelector("svg");
           if (svgElement) {

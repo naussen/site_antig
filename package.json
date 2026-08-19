@@ -1,5 +1,5 @@
 {
-  "name": "site_antig",
+  "name": "site",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,16 +8,19 @@
     "start": "next start",
     "lint": "eslint",
     "content": "node --env-file-if-exists=.env.local scripts/content-admin.mjs",
-    "test:content": "node --test tests/content-admin.test.mjs"
+    "test:content": "node --test tests/content-admin.test.mjs",
+    "test:api-auth": "node --test tests/api-admin-auth.test.mjs",
+    "test:site-paths": "node --test tests/site-paths.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",
     "@supabase/supabase-js": "^2.110.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dompurify": "^3.4.13",
     "lucide-react": "^1.23.0",
-    "mermaid": "^11.16.0",
-    "next": "16.2.10",
+    "mermaid": "11.16.1",
+    "next": "16.3.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-markdown": "^10.1.0",
@@ -26,12 +29,13 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "5.15.13",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.10",
+    "eslint-config-next": "16.3.0",
     "supabase": "^2.109.1",
     "tailwindcss": "^4",
     "typescript": "^5"

@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
+import { isAdminApiRequest } from "@/lib/api-admin-auth.mjs";
 
 export async function DELETE(
   request: Request,
@@ -8,13 +9,7 @@ export async function DELETE(
   try {
     const { sectionId } = await params;
 
-    // Autenticação obrigatória (apenas service role/admin)
-    const authHeader = request.headers.get("authorization");
-    if (
-      !authHeader ||
-      !authHeader.startsWith("Bearer ") ||
-      authHeader.substring(7) !== process.env.SUPABASE_SERVICE_ROLE_KEY
-    ) {
+    if (!isAdminApiRequest(request)) {
       return NextResponse.json({ error: "Não autorizado" }, { status: 401 });
     }
 
