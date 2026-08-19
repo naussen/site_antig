@@ -3,7 +3,7 @@ BEGIN;
 CREATE EXTENSION IF NOT EXISTS pgtap WITH SCHEMA extensions;
 SET LOCAL search_path = public, extensions;
 
-SELECT plan(14);
+SELECT plan(16);
 
 INSERT INTO auth.users (
   instance_id, id, aud, role, email, encrypted_password,
@@ -136,6 +136,14 @@ INSERT INTO public.user_law_progress (
   '70000000-0000-0000-0000-000000000007', 'read', now()
 );
 SELECT is((SELECT count(*) FROM public.user_law_progress), 1::bigint, 'usuário A lê o próprio progresso');
+INSERT INTO public.user_legal_notes (user_id, legal_fragment_id, content)
+VALUES ('10000000-0000-0000-0000-000000000001', '70000000-0000-0000-0000-000000000007', 'Nota privada da fixture');
+SELECT is((SELECT count(*) FROM public.user_legal_notes), 1::bigint, 'usuário A lê a própria anotação legal');
+SELECT throws_ok(
+  $$INSERT INTO public.user_legal_notes (user_id, legal_fragment_id, content)
+    VALUES ('20000000-0000-0000-0000-000000000002', '70000000-0000-0000-0000-000000000007', 'Tentativa indevida')$$,
+  '42501', NULL, 'usuário A não grava anotação em nome do usuário B'
+);
 SELECT is(
   (public.answer_law_flashcard_v2('90000000-0000-0000-0000-000000000009', true) ->> 'is_correct')::boolean,
   true,

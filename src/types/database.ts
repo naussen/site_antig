@@ -225,6 +225,15 @@ export interface UserLawFlashcardAnswerRow {
   answered_at: string;
 }
 
+export interface UserLegalNoteRow {
+  id: string;
+  user_id: string;
+  legal_fragment_id: string;
+  content: string;
+  created_at: string;
+  updated_at: string;
+}
+
 // =============================================================================
 // Tipos compostos para renderização no frontend
 // =============================================================================
