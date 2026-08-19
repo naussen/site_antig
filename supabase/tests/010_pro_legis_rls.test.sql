@@ -85,7 +85,12 @@ SET status = 'published',
 WHERE id = '50000000-0000-0000-0000-000000000005';
 
 SET LOCAL ROLE anon;
-SELECT is((SELECT count(*) FROM public.laws), 0::bigint, 'anon não lê leis');
+SELECT throws_ok(
+  'SELECT count(*) FROM public.laws',
+  '42501',
+  NULL,
+  'anon não recebe privilégio de leitura das leis'
+);
 RESET ROLE;
 
 SELECT set_config(
