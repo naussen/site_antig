@@ -2,6 +2,7 @@
 
 ## 2026-08-18
 
+- Corrigido o retorno seguro do login e callback entre `/resumos` e `/legis`, preservando query de fragmento e rejeitando destinos externos.
 - Adicionado link de navegação do Dashboard para o PRO Legis, com recarga completa entre zonas no mesmo domínio.
 - Adicionada a migration segura e versionada do PRO Legis, com workflow editorial AAL2, RLS, progresso e respostas C/E calculadas no servidor.
 - Atualizados os tipos compartilhados e o roteiro de validação RLS para cobrir o novo acervo e o isolamento entre usuários.
