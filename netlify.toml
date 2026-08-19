@@ -9,3 +9,18 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+# Prévia da zona Legis na branch feat/pro-legis-mvp.
+# Promover esta regra para produção somente após validar domínio, cookies,
+# OAuth, RSC, APIs e regressão completa do /resumos.
+[[redirects]]
+  from = "/legis"
+  to = "https://pro-legis-mvp.netlify.app/legis"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/legis/*"
+  to = "https://pro-legis-mvp.netlify.app/legis/:splat"
+  status = 200
+  force = true
