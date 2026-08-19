@@ -183,6 +183,21 @@
   --editorial-rule: #5C4B28;
 }
 
+/* Mantém o wordmark legível nos temas e nas superfícies escuras fixas. */
+.pro-logo__dark {
+  display: none;
+}
+
+[data-theme="dark"] .pro-logo__light,
+.pro-logo--on-dark .pro-logo__light {
+  display: none;
+}
+
+[data-theme="dark"] .pro-logo__dark,
+.pro-logo--on-dark .pro-logo__dark {
+  display: block;
+}
+
 /* =============================================================================
    Tailwind v4 theme bridge
    ============================================================================= */

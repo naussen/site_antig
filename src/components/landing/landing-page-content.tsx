@@ -103,13 +103,7 @@ export function LandingPageContent() {
           borderBottom: "1px solid var(--border)",
         }}
       >
-        <div
-          className="flex items-center gap-2.5 font-extrabold text-xl tracking-tight"
-          style={{ color: "var(--text-primary)" }}
-        >
-          <ProLogo size={36} variant="icon" />
-          PRO Resumos
-        </div>
+        <ProLogo size={34} variant="full" />
 
         <div className="flex items-center gap-3">
           <Link
@@ -356,8 +350,7 @@ export function LandingPageContent() {
               className="flex items-center gap-2 mb-4 text-sm font-bold"
               style={{ color: "var(--dashboard-sidebar-text)" }}
             >
-              <ProLogo size={28} variant="icon" />
-              PRO Resumos
+              <ProLogo size={26} variant="full" tone="dark" />
             </div>
             {["Início", "Notas", "Matérias"].map((item, i) => (
               <div
@@ -868,8 +861,7 @@ export function LandingPageContent() {
           className="flex items-center justify-center gap-2 mb-2 font-bold text-sm"
           style={{ color: "var(--text-primary)" }}
         >
-          <ProLogo size={24} variant="icon" />
-          PRO Resumos
+          <ProLogo size={26} variant="full" />
         </div>
         <p>Plataforma de estudos para concursos públicos.</p>
         <p className="mt-1" style={{ color: "var(--text-muted)" }}>Um módulo do ecossistema PRO Concursos.</p>

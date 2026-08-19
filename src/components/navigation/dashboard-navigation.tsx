@@ -104,15 +104,11 @@ export function DashboardNavigation({
   const renderNavigationContent = (isCollapsed: boolean) => (
     <>
       <div className={`shrink-0 flex items-center border-b py-5 ${isCollapsed ? "justify-center px-3" : "gap-3 px-5"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
-        <ProLogo size={isCollapsed ? 36 : 40} variant="icon" />
-        <div className={`min-w-0 ${isCollapsed ? "hidden" : ""}`}>
-          <strong className="block truncate text-sm" style={{ color: "var(--dashboard-sidebar-text)" }}>
-            PRO Resumos
-          </strong>
-          <span className="block truncate text-xs" style={{ color: "var(--dashboard-sidebar-muted)" }}>
-            Sua biblioteca
-          </span>
-        </div>
+        <ProLogo
+          size={isCollapsed ? 38 : 40}
+          variant={isCollapsed ? "icon" : "full"}
+          tone="dark"
+        />
       </div>
 
       <div className="hidden shrink-0 justify-end px-3 pt-2 lg:flex">
@@ -308,8 +304,7 @@ export function DashboardNavigation({
         style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
       >
         <Link href="/dashboard" className="flex items-center gap-2 font-bold" style={{ color: "var(--text-primary)" }}>
-          <ProLogo size={28} variant="icon" />
-          PRO Resumos
+          <ProLogo size={32} variant="full" />
         </Link>
         <button
           type="button"

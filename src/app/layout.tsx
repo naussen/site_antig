@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import "./globals.css";
 
 const inter = Inter({
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     "PRO Concursos",
   ],
   icons: {
-    icon: "/icon.svg",
+    icon: withSiteBasePath("/brand/pro-resumos-favicon.png"),
   },
 };
 

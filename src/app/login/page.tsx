@@ -14,7 +14,7 @@ export default function LoginPage() {
             href="/"
             className="inline-flex items-center justify-center mb-4"
           >
-            <ProLogo size={48} variant="icon" />
+            <ProLogo size={44} variant="full" />
           </Link>
           <h1
             className="text-2xl font-bold mb-2"

@@ -2,6 +2,7 @@
 
 ## 2026-08-18
 
+- Substituída a identidade visual do PRO Resumos por uma marca responsiva, com variantes horizontal, compacta e de alto contraste.
 - Adicionado controle acessível para expandir ou recolher os resumos de cada disciplina no Dashboard.
 - Endurecida a renderização Mermaid contra XSS persistente com validação compartilhada, modo estrito e sanitização explícita do SVG.
 - Adicionada exclusão defensiva de arquivos `.env*` nos bundles de Functions da Netlify e documentada a exigência de deploy por checkout limpo.
