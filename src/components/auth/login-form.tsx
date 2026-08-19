@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
+import { resolveReturnUrl } from "@/lib/return-paths.mjs";
 import { Loader2, Mail } from "lucide-react";
 
 type SuccessMode = "magic-link" | "sign-up" | null;
@@ -24,7 +25,7 @@ function getPasswordValidationMessage(password: string) {
   return null;
 }
 
-export function LoginForm() {
+export function LoginForm({ returnTo }: { returnTo: string }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -32,17 +33,22 @@ export function LoginForm() {
   const [isSignUp, setIsSignUp] = useState(false);
   const supabase = createClient();
 
+  const callbackUrl = () => {
+    const callback = new URL(withSiteBasePath("/auth/callback"), window.location.origin);
+    callback.searchParams.set("next", returnTo);
+    return callback.toString();
+  };
+
+  const completeLogin = () => {
+    window.location.assign(resolveReturnUrl(returnTo, window.location.href).toString());
+  };
+
   const handleGoogleLogin = async () => {
     try {
       setLoading(true);
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
-        options: {
-          redirectTo: new URL(
-            withSiteBasePath("/auth/callback"),
-            window.location.origin
-          ).toString(),
-        },
+        options: { redirectTo: callbackUrl() },
       });
       if (error) throw error;
     } catch (error) {
@@ -69,18 +75,13 @@ export function LoginForm() {
         const { data, error } = await supabase.auth.signUp({
           email,
           password,
-          options: {
-            emailRedirectTo: new URL(
-              withSiteBasePath("/auth/callback"),
-              window.location.origin
-            ).toString(),
-          },
+          options: { emailRedirectTo: callbackUrl() },
         });
 
         if (error) throw error;
 
         if (data.session) {
-          window.location.href = withSiteBasePath("/dashboard");
+          completeLogin();
         } else {
           setSuccessMode("sign-up");
         }
@@ -91,16 +92,11 @@ export function LoginForm() {
         });
 
         if (error) throw error;
-        window.location.href = withSiteBasePath("/dashboard");
+        completeLogin();
       } else {
         const { error } = await supabase.auth.signInWithOtp({
           email,
-          options: {
-            emailRedirectTo: new URL(
-              withSiteBasePath("/auth/callback"),
-              window.location.origin
-            ).toString(),
-          },
+          options: { emailRedirectTo: callbackUrl() },
         });
         if (error) throw error;
         setSuccessMode("magic-link");
