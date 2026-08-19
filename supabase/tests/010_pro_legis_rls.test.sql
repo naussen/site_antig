@@ -65,18 +65,25 @@ WHERE id = '30000000-0000-0000-0000-000000000003';
 
 INSERT INTO public.law_flashcards (
   id, legal_fragment_id, statement_markdown, correct_answer,
-  explanation_markdown, status
+  explanation_markdown, content_hash, status
 ) VALUES (
   '90000000-0000-0000-0000-000000000009',
   '70000000-0000-0000-0000-000000000007',
-  'O texto está publicado.', true, 'Literalidade do Art. 1º.', 'published'
+  'O texto está publicado.', true, 'Literalidade do Art. 1º.',
+  'sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee', 'draft'
 );
+
+UPDATE public.law_flashcards SET status = 'reviewed'
+WHERE id = '90000000-0000-0000-0000-000000000009';
 
 UPDATE public.law_versions
 SET status = 'reviewed',
     reviewed_by = '10000000-0000-0000-0000-000000000001',
     reviewed_at = now()
 WHERE id = '50000000-0000-0000-0000-000000000005';
+
+UPDATE public.law_flashcards SET status = 'published'
+WHERE id = '90000000-0000-0000-0000-000000000009';
 
 UPDATE public.law_versions
 SET status = 'published',

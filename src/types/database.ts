@@ -200,6 +200,7 @@ export interface LawFlashcardRow {
   statement_markdown: string;
   correct_answer: boolean;
   explanation_markdown: string;
+  content_hash: string;
   status: LawVersionStatus;
   created_at: string;
   updated_at: string;
