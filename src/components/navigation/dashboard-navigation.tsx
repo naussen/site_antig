@@ -1,5 +1,6 @@
 "use client";
 
+/* eslint-disable @next/next/no-html-link-for-pages -- navegação entre zonas exige recarga completa */
 import { useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -15,6 +16,7 @@ import {
   Square,
   ChevronRight,
   StickyNote,
+  Scale,
   X,
 } from "lucide-react";
 import { ProLogo } from "@/components/brand/pro-logo";
@@ -168,6 +170,23 @@ export function DashboardNavigation({
             </Link>
           );
         })}
+
+        <a
+          href="/legis"
+          onClick={() => setMobileOpen(false)}
+          aria-label={isCollapsed ? "PRO Legis" : undefined}
+          title={isCollapsed ? "PRO Legis" : undefined}
+          className={`group relative flex h-11 items-center rounded-xl border border-transparent text-sm font-semibold transition-colors hover:bg-[var(--dashboard-sidebar-active)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] ${isCollapsed ? "justify-center px-2" : "gap-3 px-3"}`}
+          style={{ color: "var(--dashboard-sidebar-muted)" }}
+        >
+          <Scale size={19} aria-hidden="true" />
+          <span className={isCollapsed ? "sr-only" : undefined}>PRO Legis</span>
+          {isCollapsed && (
+            <span role="tooltip" className="pointer-events-none invisible absolute left-full z-50 ml-3 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold opacity-0 shadow-lg transition-opacity group-hover:visible group-hover:opacity-100 group-focus-visible:visible group-focus-visible:opacity-100" style={{ background: "var(--dashboard-sidebar-text)", color: "var(--dashboard-sidebar)" }}>
+              PRO Legis
+            </span>
+          )}
+        </a>
 
         {studySections.length > 0 && !isCollapsed && (
           <div className="mt-5 border-t pt-4" style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
