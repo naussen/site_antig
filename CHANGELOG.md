@@ -2,6 +2,8 @@
 
 ## 2026-08-18
 
+- Adicionada a migration segura e versionada do PRO Legis, com workflow editorial AAL2, RLS, progresso e respostas C/E calculadas no servidor.
+- Atualizados os tipos compartilhados e o roteiro de validação RLS para cobrir o novo acervo e o isolamento entre usuários.
 - Substituída a identidade visual do PRO Resumos por uma marca responsiva, com variantes horizontal, compacta e de alto contraste.
 - Adicionado controle acessível para expandir ou recolher os resumos de cada disciplina no Dashboard.
 - Endurecida a renderização Mermaid contra XSS persistente com validação compartilhada, modo estrito e sanitização explícita do SVG.

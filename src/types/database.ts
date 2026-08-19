@@ -114,6 +114,117 @@ export interface UserEntitlement {
 }
 
 // =============================================================================
+// PRO Legis — acervo versionado e dados pessoais do primeiro corte
+// =============================================================================
+
+export type LawStatus = 'draft' | 'published' | 'archived';
+export type LawVersionStatus = 'draft' | 'reviewed' | 'published' | 'rejected';
+export type LegalFragmentType =
+  | 'book'
+  | 'title'
+  | 'chapter'
+  | 'section'
+  | 'subsection'
+  | 'article'
+  | 'caput'
+  | 'paragraph'
+  | 'inciso'
+  | 'alinea'
+  | 'item';
+export type LawReadingStatus = 'not_started' | 'reading' | 'read';
+
+export interface LawRow {
+  id: string;
+  slug: string;
+  acronym: string | null;
+  name: string;
+  law_type: string;
+  jurisdiction: string;
+  official_source_url: string;
+  current_version_id: string | null;
+  status: LawStatus;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface LawVersionRow {
+  id: string;
+  law_id: string;
+  version_label: string;
+  effective_from: string | null;
+  effective_until: string | null;
+  source_url: string;
+  raw_source_hash: string;
+  canonicalization: string;
+  canonical_content_hash: string;
+  checked_at: string;
+  coverage: Record<string, unknown>;
+  status: LawVersionStatus;
+  created_by: string | null;
+  reviewed_by: string | null;
+  reviewed_at: string | null;
+  published_by: string | null;
+  published_at: string | null;
+  rejection_reason: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface LegalFragmentRow {
+  id: string;
+  law_version_id: string;
+  stable_key: string;
+  parent_id: string | null;
+  fragment_type: LegalFragmentType;
+  reference: string;
+  order_index: number;
+  official_text: string | null;
+  normalized_text: string | null;
+  created_at: string;
+}
+
+export interface TopicLegalFragmentRelationRow {
+  topic_id: string;
+  section_id: string | null;
+  legal_fragment_id: string;
+  relation_type: 'primary' | 'related' | 'reference';
+  relevance: number | null;
+  editorial_note: string | null;
+  created_at: string;
+}
+
+export interface LawFlashcardRow {
+  id: string;
+  legal_fragment_id: string;
+  card_type: 'true_false';
+  statement_markdown: string;
+  correct_answer: boolean;
+  explanation_markdown: string;
+  status: LawVersionStatus;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface UserLawProgressRow {
+  user_id: string;
+  legal_fragment_id: string;
+  reading_status: LawReadingStatus;
+  first_opened_at: string | null;
+  last_opened_at: string | null;
+  read_at: string | null;
+  updated_at: string;
+}
+
+export interface UserLawFlashcardAnswerRow {
+  id: string;
+  user_id: string;
+  law_flashcard_id: string;
+  selected_answer: boolean;
+  is_correct: boolean;
+  answered_at: string;
+}
+
+// =============================================================================
 // Tipos compostos para renderização no frontend
 // =============================================================================
 
