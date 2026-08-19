@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — gateway Legis
+
+- confirmado que o apex `proconcursos.com.br` é servido pela Netlify e que o 404 de `/legis` ocorre porque as regras ainda estão somente no deploy da branch de preview;
+- documentado o procedimento de promoção das regras para produção.
+
 ## 2026-08-18
 
 - Corrigido o retorno seguro do login e callback entre `/resumos` e `/legis`, preservando query de fragmento e rejeitando destinos externos.
