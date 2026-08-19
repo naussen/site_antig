@@ -3,7 +3,7 @@ BEGIN;
 CREATE EXTENSION IF NOT EXISTS pgtap WITH SCHEMA extensions;
 SET LOCAL search_path = public, extensions;
 
-SELECT plan(12);
+SELECT plan(14);
 
 INSERT INTO auth.users (
   instance_id, id, aud, role, email, encrypted_password,
@@ -118,6 +118,16 @@ SET LOCAL ROLE authenticated;
 SELECT is((SELECT count(*) FROM public.laws), 1::bigint, 'assinante lê lei publicada');
 SELECT is((SELECT count(*) FROM public.law_versions), 1::bigint, 'assinante não lê versão draft');
 SELECT is((SELECT count(*) FROM public.legal_fragments), 1::bigint, 'assinante lê somente fragmento publicado');
+SELECT is(
+  has_column_privilege('authenticated', 'public.law_flashcards', 'statement_markdown', 'SELECT'),
+  true,
+  'assinante lê o enunciado do flashcard'
+);
+SELECT is(
+  has_column_privilege('authenticated', 'public.law_flashcards', 'correct_answer', 'SELECT'),
+  false,
+  'assinante não recebe o gabarito por SELECT direto'
+);
 
 INSERT INTO public.user_law_progress (
   user_id, legal_fragment_id, reading_status, read_at
@@ -127,7 +137,7 @@ INSERT INTO public.user_law_progress (
 );
 SELECT is((SELECT count(*) FROM public.user_law_progress), 1::bigint, 'usuário A lê o próprio progresso');
 SELECT is(
-  public.answer_law_flashcard('90000000-0000-0000-0000-000000000009', true),
+  (public.answer_law_flashcard_v2('90000000-0000-0000-0000-000000000009', true) ->> 'is_correct')::boolean,
   true,
   'RPC calcula a resposta correta no servidor'
 );
