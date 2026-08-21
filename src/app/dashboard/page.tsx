@@ -39,7 +39,15 @@ function compareTopics(a: DashboardTopic, b: DashboardTopic) {
   return a.title.localeCompare(b.title, "pt-BR");
 }
 
-export default async function DashboardPage() {
+export default async function DashboardPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ disciplina?: string | string[] }>;
+}) {
+  const query = await searchParams;
+  const requestedDiscipline = typeof query.disciplina === "string"
+    ? query.disciplina.trim().slice(0, 100)
+    : null;
   const { supabase, user } = await requireContentAccess();
 
   let topics: DashboardTopic[] = [];
@@ -122,12 +130,17 @@ export default async function DashboardPage() {
     return acc;
   }, {} as Record<string, TopicProgress>);
 
-  const displayedTopics = preferredDisciplines
-    ? topics.filter((topic) => preferredDisciplines.includes(topic.discipline || "Geral"))
-    : topics;
   const allDisciplines = Array.from(
     new Set(topics.map((topic) => topic.discipline || "Geral"))
   );
+  const activeDisciplineFilter = requestedDiscipline && allDisciplines.includes(requestedDiscipline)
+    ? requestedDiscipline
+    : null;
+  const displayedTopics = activeDisciplineFilter
+    ? topics.filter((topic) => (topic.discipline || "Geral") === activeDisciplineFilter)
+    : preferredDisciplines
+      ? topics.filter((topic) => preferredDisciplines.includes(topic.discipline || "Geral"))
+      : topics;
   const hiddenDisciplineCount = preferredDisciplines
     ? allDisciplines.filter((discipline) => !preferredDisciplines.includes(discipline)).length
     : 0;
@@ -353,6 +366,16 @@ export default async function DashboardPage() {
                 <h2 id="library-title" className="mt-2 text-2xl font-extrabold" style={{ color: "var(--text-primary)" }}>
                   Resumos por disciplina
                 </h2>
+                {activeDisciplineFilter && (
+                  <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
+                    <span className="rounded-full px-3 py-1.5 font-bold" style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
+                      {activeDisciplineFilter}
+                    </span>
+                    <Link href="/dashboard" className="font-semibold text-[var(--text-secondary)] hover:text-[var(--accent)]">
+                      Ver todas as disciplinas
+                    </Link>
+                  </div>
+                )}
               </div>
               <p className="text-sm" style={{ color: "var(--text-muted)" }}>
                 {displayedTopics.length} {displayedTopics.length === 1 ? "resumo disponível" : "resumos disponíveis"}

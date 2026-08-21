@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — integração entre Legis e Resumos
+
+- adicionado filtro temporário por disciplina no Dashboard via query string, sem alterar as preferências salvas do usuário;
+- preparado o destino direto do PRO Legis para os resumos de Direito Constitucional.
+
 ## Não publicado — landing do ecossistema PRO Concursos
 
 - promovida a landing pública de `/resumos/landing` para o domínio principal por reescrita na borda, preservando o aplicativo em `/resumos`;
