@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — anotações do PRO Legis
+
+- removida a unicidade por usuário/dispositivo para permitir múltiplas anotações pessoais;
+- imposto no banco o limite transacional de dez anotações por usuário e dispositivo, preservando as políticas RLS existentes.
+
 ## Não publicado — correção da leitura e carregamento
 
 - remove o sumário antigo e redundante da área de conteúdo, mantendo o progresso somente como checkbox no menu esquerdo;
