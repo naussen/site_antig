@@ -2,7 +2,7 @@
 
 ## Não publicado — landing do ecossistema PRO Concursos
 
-- promovida a landing pública de `/resumos/landing` para o domínio principal por reescrita interna, preservando o aplicativo em `/resumos`;
+- promovida a landing pública de `/resumos/landing` para o domínio principal por reescrita na borda, preservando o aplicativo em `/resumos`;
 - adotada a nova marca PRO Concursos na página pública;
 - adicionadas prévias visuais dos módulos Resumos e Legis, flashcards, anotações, marca-texto e temas Light, Dark e Sepia;
 - comunicada a assinatura mensal única e a expansão futura do ecossistema.
