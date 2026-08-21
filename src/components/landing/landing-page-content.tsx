@@ -46,14 +46,26 @@ function WindowFrame({ label, children }: { label: string; children: React.React
   );
 }
 
-function SectionHeading({ eyebrow, title, description }: { eyebrow: string; title: string; description: string }) {
+function SectionHeading({
+  eyebrow,
+  title,
+  description,
+  tone = "dark",
+}: {
+  eyebrow: string;
+  title: string;
+  description: string;
+  tone?: "dark" | "light";
+}) {
+  const isLight = tone === "light";
+
   return (
     <div className="mx-auto mb-12 max-w-3xl text-center">
-      <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/35 bg-[#a78bfa]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#c4b5fd]">
+      <span className={`mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] ${isLight ? "border-[#6c5ce7]/25 bg-[#6c5ce7]/10 text-[#6c5ce7]" : "border-[#a78bfa]/35 bg-[#a78bfa]/10 text-[#c4b5fd]"}`}>
         <Sparkles size={13} aria-hidden="true" /> {eyebrow}
       </span>
-      <h2 className="text-balance text-3xl font-extrabold tracking-tight text-white md:text-5xl">{title}</h2>
-      <p className="mx-auto mt-5 max-w-2xl text-pretty text-base leading-7 text-[#b4b1c3] md:text-lg">{description}</p>
+      <h2 className={`text-balance text-3xl font-extrabold tracking-tight md:text-5xl ${isLight ? "text-[#1a1a2e]" : "text-white"}`}>{title}</h2>
+      <p className={`mx-auto mt-5 max-w-2xl text-pretty text-base leading-7 md:text-lg ${isLight ? "text-[#64647a]" : "text-[#b4b1c3]"}`}>{description}</p>
     </div>
   );
 }
@@ -216,11 +228,11 @@ export function LandingPageContent() {
         </div>
       </section>
 
-      <section id="modulos" className="border-y border-white/10 bg-[#20202c] px-5 py-24 sm:px-8">
-        <SectionHeading eyebrow="Módulos" title="Do resumo à lei seca, sem trocar de plataforma." description="Dois ambientes complementares para compreender a matéria, consultar a literalidade e praticar com segurança." />
+      <section id="modulos" className="border-y border-[#e5e5ef] bg-white px-5 py-24 sm:px-8">
+        <SectionHeading eyebrow="Módulos" title="Do resumo à lei seca, sem trocar de plataforma." description="Dois ambientes complementares para compreender a matéria, consultar a literalidade e praticar com segurança." tone="light" />
         <div className="mx-auto max-w-6xl space-y-14">
-          <article className="grid items-center gap-8 lg:grid-cols-[0.78fr_1.4fr]"><div><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#a78bfa] shadow-lg shadow-[#7c3aed]/25"><Layers3 size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#c4b5fd]">PRO Resumos</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight">Conteúdo organizado para você entender e reter.</h3><p className="mt-4 leading-7 text-[#b4b1c3]">Resumos jurídicos divididos em seções, com pontos de prova, mnemônicos, mapas mentais e progresso de leitura.</p></div><ResumosPreview /></article>
-          <article className="grid items-center gap-8 lg:grid-cols-[1.4fr_0.78fr]"><div className="lg:order-2"><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#f9a826] to-[#c27b08] text-[#121212] shadow-lg shadow-[#f9a826]/20"><Gavel size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f9a826]">PRO Legis</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight">A legislação vigente em uma leitura confiável.</h3><p className="mt-4 leading-7 text-[#b4b1c3]">Texto oficial versionado, progresso por dispositivo legal e prática C/E conectada à literalidade da lei.</p></div><LegisPreview /></article>
+          <article className="grid items-center gap-8 lg:grid-cols-[0.78fr_1.4fr]"><div><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#a78bfa] text-white shadow-lg shadow-[#7c3aed]/25"><Layers3 size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#6c5ce7]">PRO Resumos</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight text-[#1a1a2e]">Conteúdo organizado para você entender e reter.</h3><p className="mt-4 leading-7 text-[#64647a]">Resumos jurídicos divididos em seções, com pontos de prova, mnemônicos, mapas mentais e progresso de leitura.</p></div><ResumosPreview /></article>
+          <article className="grid items-center gap-8 lg:grid-cols-[1.4fr_0.78fr]"><div className="lg:order-2"><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#f9a826] to-[#c27b08] text-[#121212] shadow-lg shadow-[#f9a826]/20"><Gavel size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#b56f00]">PRO Legis</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight text-[#1a1a2e]">A legislação vigente em uma leitura confiável.</h3><p className="mt-4 leading-7 text-[#64647a]">Texto oficial versionado, progresso por dispositivo legal e prática C/E conectada à literalidade da lei.</p></div><LegisPreview /></article>
         </div>
       </section>
 
