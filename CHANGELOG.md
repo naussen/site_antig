@@ -4,6 +4,7 @@
 
 - removida a unicidade por usuário/dispositivo para permitir múltiplas anotações pessoais;
 - imposto no banco o limite transacional de dez anotações por usuário e dispositivo, preservando as políticas RLS existentes.
+- reconciliada no repositório a migration remota `015` de realces jurídicos e aplicada a migration `016` no Supabase compartilhado.
 
 ## Não publicado — correção da leitura e carregamento
 
