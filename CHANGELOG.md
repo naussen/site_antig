@@ -6,6 +6,7 @@
 - adotada a nova marca PRO Concursos na página pública;
 - adicionadas prévias visuais dos módulos Resumos e Legis, flashcards, anotações, marca-texto e temas Light, Dark e Sepia;
 - comunicada a assinatura mensal única e a expansão futura do ecossistema.
+- adicionada uma faixa clara na apresentação dos módulos para equilibrar a paleta escura e melhorar o descanso visual.
 
 ## Não publicado — correção da leitura e carregamento
 
