@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — revisão de segurança e lançamento
+
+- documentado o diagnóstico de segurança do PRO Resumos e PRO Legis, com evidências, riscos priorizados e critérios de lançamento;
+- definido o plano de pagamentos e entitlements para Mercado Pago e PayPal, incluindo webhooks, idempotência e reconciliação;
+- definido o plano de bloqueio de acesso sem assinatura, preservando administração e workflow editorial com MFA AAL2.
+
 ## Não publicado — integração entre Legis e Resumos
 
 - adicionado filtro temporário por disciplina no Dashboard via query string, sem alterar as preferências salvas do usuário;
