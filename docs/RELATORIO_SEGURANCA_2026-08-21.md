@@ -52,6 +52,7 @@ Classificação final: **GO para homologação; NO-GO para cobrança em produç�
 | Leitura canônica do Legis usa cliente administrativo em cache | Após o gate e uma consulta RLS, `law-reader-data.ts` usa chave privilegiada para índice/artigo. Um erro futuro no encadeamento ampliaria o impacto. | Preferir uma RPC `SECURITY DEFINER` estreita que aceite somente versão publicada/autorizada, ou documentar e testar formalmente a pré-condição antes de cada leitura privilegiada. |
 | Ausência de política operacional completa | Não há evidência de alertas, SLO, runbook de incidente, restauração testada e rotação periódica de segredos. | Definir responsáveis, retenção de logs, rotação, backup/PITR, restauração e resposta a comprometimento/entitlement incorreto. |
 | Decisão de acesso a dados pessoais após expiração precisa ser explícita | O Legis documenta portabilidade de dados pessoais após expiração; o pedido atual sugere bloquear toda a área. | Manter uma área mínima de conta/exportação/exclusão ou documentar juridicamente outra decisão. Nunca depender apenas de esconder navegação. |
+| Documentação de autenticação contradiz o código | `docs/AUTENTICACAO_PRODUCAO.md` afirma que não existe tabela de assinatura, mas a migration `009`, a DAL e a tela de assinatura já usam `user_entitlements`. | Atualizar o documento antes da operação para evitar configuração ou diagnóstico incorretos. |
 
 ## Verificações executadas
 
