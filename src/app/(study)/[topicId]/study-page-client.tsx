@@ -7,8 +7,8 @@ import {
   ArrowLeft,
   ArrowRight,
   Brain,
+  Highlighter,
   Layers3,
-  ListTree,
   Map as MapIcon,
   StickyNote,
   X,
@@ -16,7 +16,6 @@ import {
 import type { SectionRow, TopicRow } from "@/types/database";
 import { useSectionProgress } from "@/hooks/use-section-progress";
 import { DashboardNavigation } from "@/components/navigation/dashboard-navigation";
-import { SidebarNav } from "@/components/study/sidebar-nav";
 import { MarkdownViewer } from "@/components/study/markdown-viewer";
 import { CalloutList } from "@/components/study/callout-block";
 import { MnemonicList } from "@/components/study/mnemonic-card";
@@ -63,7 +62,7 @@ export function StudyPageClient({
     sections[0]?.section_id ?? null
   );
   const [notesOpen, setNotesOpen] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [highlighterOpen, setHighlighterOpen] = useState(false);
 
   const sectionIds = useMemo(
     () => sections.map((s) => s.section_id),
@@ -98,12 +97,13 @@ export function StudyPageClient({
   );
 
   const openNotes = () => {
+    setHighlighterOpen(false);
     setNotesOpen(true);
   };
 
-  const openSidebar = () => {
+  const toggleHighlighter = () => {
     setNotesOpen(false);
-    setSidebarOpen(true);
+    setHighlighterOpen((open) => !open);
   };
 
   return (
@@ -117,50 +117,6 @@ export function StudyPageClient({
           aria-hidden="true"
         />
       )}
-
-      <button
-        type="button"
-        className="hidden fixed left-0 top-1/2 z-30 flex -translate-y-1/2 flex-col items-center gap-2 rounded-r-2xl border border-l-0 px-2 py-4 text-xs font-bold shadow-lg transition-transform hover:translate-x-0.5"
-        style={{
-          background: "var(--bg-card)",
-          borderColor: "var(--border)",
-          color: "var(--accent)",
-        }}
-        onClick={openSidebar}
-        aria-label="Abrir sumário e checklist do resumo"
-        aria-expanded={sidebarOpen}
-        aria-controls="study-sidebar"
-      >
-        <ListTree size={22} aria-hidden="true" />
-        <span className="[writing-mode:vertical-rl]">Sumário</span>
-      </button>
-
-      <aside
-        id="study-sidebar"
-        className={`hidden fixed inset-y-0 left-0 z-50 w-[min(88vw,360px)] overflow-y-auto border-r transition-transform duration-300 ${
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-        style={{
-          borderColor: "var(--border)",
-          background: "var(--bg-sidebar)",
-        }}
-        aria-hidden={!sidebarOpen}
-        inert={!sidebarOpen}
-      >
-        <SidebarNav
-          sections={sections}
-          progressMap={progressMap}
-          onToggleProgress={toggleProgress}
-          activeSectionId={activeSectionId}
-          onSectionClick={handleSectionClick}
-          progressPercent={progressPercent}
-          completedCount={completedCount}
-          totalCount={totalCount}
-          progressLoading={progressLoading}
-          progressError={progressError}
-          onClose={() => setSidebarOpen(false)}
-        />
-      </aside>
 
       <DashboardNavigation
         userEmail={userEmail}
@@ -200,18 +156,37 @@ export function StudyPageClient({
               </div>
             </div>
 
-            <button
-              type="button"
-              onClick={openNotes}
-              className="flex shrink-0 items-center gap-2 rounded-xl border px-3 py-2 text-sm font-semibold transition-colors hover:border-[var(--accent)]"
-              style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
-              aria-label="Abrir notas da seção atual"
-              aria-expanded={notesOpen}
-              aria-controls="study-notes"
-            >
-              <StickyNote size={18} />
-              <span className="hidden sm:inline">Notas</span>
-            </button>
+            <div className="flex shrink-0 items-center gap-2">
+              <button
+                type="button"
+                onClick={toggleHighlighter}
+                className={`flex items-center gap-2 rounded-xl border px-3 py-2 text-sm font-semibold transition-colors hover:border-[var(--accent)] ${
+                  highlighterOpen ? "bg-[var(--accent-soft)]" : ""
+                }`}
+                style={{
+                  borderColor: highlighterOpen ? "var(--accent)" : "var(--border)",
+                  color: highlighterOpen ? "var(--accent)" : "var(--text-secondary)",
+                }}
+                aria-label={highlighterOpen ? "Fechar marca-texto" : "Abrir marca-texto"}
+                aria-expanded={highlighterOpen}
+              >
+                <Highlighter size={18} />
+                <span>Realçar</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={openNotes}
+                className="flex items-center gap-2 rounded-xl border px-3 py-2 text-sm font-semibold transition-colors hover:border-[var(--accent)]"
+                style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
+                aria-label="Abrir notas da seção atual"
+                aria-expanded={notesOpen}
+                aria-controls="study-notes"
+              >
+                <StickyNote size={18} />
+                <span className="hidden sm:inline">Notas</span>
+              </button>
+            </div>
           </div>
           <div className="absolute inset-x-0 bottom-0 h-0.5" style={{ background: "var(--progress-bg)" }}>
             <div
@@ -219,6 +194,15 @@ export function StudyPageClient({
               style={{ width: `${progressPercent}%`, background: "var(--progress-bar)" }}
             />
           </div>
+          {progressError && (
+            <p
+              className="mx-auto mt-2 max-w-[1280px] text-xs"
+              style={{ color: "var(--callout-warning-text)" }}
+              role="alert"
+            >
+              {progressError}
+            </p>
+          )}
         </header>
 
         <div className="mx-auto w-full max-w-[1280px] px-5 py-8 pb-20 sm:px-8 lg:px-12 xl:px-16">
@@ -267,7 +251,12 @@ export function StudyPageClient({
           </section>
 
           {/* Renderizar todas as seções */}
-          <TextHighlighter userId={userId} sectionIds={sectionIds}>
+          <TextHighlighter
+            userId={userId}
+            sectionIds={sectionIds}
+            panelOpen={highlighterOpen}
+            onPanelOpenChange={setHighlighterOpen}
+          >
             {sections.map((section, index) => (
               <article
                 key={section.section_id}

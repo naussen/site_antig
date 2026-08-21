@@ -8,7 +8,7 @@ site. Nunca salve Client Secret do Google, senha SMTP ou service role no Git.
 A rota exclusiva de entrada administrativa é:
 
 ```text
-https://proconcursos-resumos.netlify.app/resumos/admin
+https://proconcursos.com.br/resumos/admin
 ```
 
 Para criar uma conta já confirmada, sem depender do envio de e-mail:
@@ -61,8 +61,8 @@ oculto no cliente como autorização.
 
 Em **Supabase > Authentication > URL Configuration**, configure:
 
-- Site URL: `https://proconcursos-resumos.netlify.app/resumos`
-- Redirect URL: `https://proconcursos-resumos.netlify.app/resumos/auth/callback`
+- Site URL: `https://proconcursos.com.br/resumos`
+- Redirect URL: `https://proconcursos.com.br/resumos/auth/callback`
 - Desenvolvimento: `http://localhost:3000/resumos/auth/callback`
 
 Quando o domínio próprio estiver ativo, adicione também o callback correspondente
@@ -71,7 +71,7 @@ sem remover a URL da Netlify antes da validação.
 ## Login com Google
 
 1. No Google Cloud, crie um cliente OAuth do tipo **Web application**.
-2. Adicione `https://proconcursos-resumos.netlify.app` como origem JavaScript.
+2. Adicione `https://proconcursos.com.br` como origem JavaScript.
 3. Em **Supabase > Authentication > Sign In / Providers > Google**, copie a
    callback URL exibida pelo próprio Supabase e cadastre-a no Google como
    **Authorized redirect URI**.

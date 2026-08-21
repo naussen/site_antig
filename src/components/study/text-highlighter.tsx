@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
-import { AlertCircle, Check, Eraser, Highlighter, Loader2, X } from "lucide-react";
+import { AlertCircle, Check, Eraser, Loader2, X } from "lucide-react";
 import {
   TEXT_HIGHLIGHT_COLORS,
   useTextHighlights,
@@ -13,6 +13,8 @@ import { findAnchoredOffsets } from "@/lib/text-highlight-anchors.mjs";
 interface TextHighlighterProps {
   userId: string;
   sectionIds: string[];
+  panelOpen: boolean;
+  onPanelOpenChange: (open: boolean) => void;
   children: ReactNode;
 }
 
@@ -95,11 +97,16 @@ function getSelectionOffsets(root: HTMLElement, range: Range) {
   };
 }
 
-export function TextHighlighter({ userId, sectionIds, children }: TextHighlighterProps) {
+export function TextHighlighter({
+  userId,
+  sectionIds,
+  panelOpen,
+  onPanelOpenChange,
+  children,
+}: TextHighlighterProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const savedStatusTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const [panelOpen, setPanelOpen] = useState(false);
-  const [activeTool, setActiveTool] = useState<HighlightTool>(null);
+  const [activeTool, setActiveTool] = useState<HighlightTool>("yellow");
   const [saveStatus, setSaveStatus] = useState<SaveStatus>("idle");
   const [localError, setLocalError] = useState<string | null>(null);
   const {
@@ -159,7 +166,12 @@ export function TextHighlighter({ userId, sectionIds, children }: TextHighlighte
   }, [highlightsBySection]);
 
   const handleSelection = useCallback(async () => {
-    if (!activeTool || !rootRef.current || saveStatus === "saving") return;
+    if (!panelOpen || !activeTool || !rootRef.current || saveStatus === "saving") return;
+
+    if (typeof CSS === "undefined" || !("highlights" in CSS) || typeof Highlight === "undefined") {
+      setLocalError("Seu navegador não oferece suporte ao marca-texto persistente.");
+      return;
+    }
 
     const selection = window.getSelection();
     if (!selection || selection.isCollapsed || selection.rangeCount !== 1) return;
@@ -225,28 +237,14 @@ export function TextHighlighter({ userId, sectionIds, children }: TextHighlighte
 
     selection.removeAllRanges();
     setTransientSavedStatus(success);
-  }, [activeTool, addHighlight, highlights, removeHighlights, saveStatus, setTransientSavedStatus]);
-
-  const togglePanel = () => {
-    const nextOpen = !panelOpen;
-    const supported = typeof CSS !== "undefined"
-      && "highlights" in CSS
-      && typeof Highlight !== "undefined";
-    setPanelOpen(nextOpen);
-    setActiveTool(nextOpen && supported ? "yellow" : null);
-    setLocalError(
-      nextOpen && !supported
-        ? "Seu navegador não oferece suporte ao marca-texto persistente."
-        : null,
-    );
-  };
+  }, [activeTool, addHighlight, highlights, panelOpen, removeHighlights, saveStatus, setTransientSavedStatus]);
 
   return (
     <div ref={rootRef} onPointerUp={handleSelection}>
       {children}
 
-      <div className="fixed bottom-5 right-5 z-30 flex flex-col items-end gap-2 sm:bottom-7 sm:right-7">
-        {panelOpen && (
+      {panelOpen && (
+        <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2 sm:bottom-7 sm:right-7">
           <section
             className="w-[min(90vw,310px)] rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-4 shadow-xl"
             aria-label="Ferramenta marca-texto"
@@ -260,7 +258,7 @@ export function TextHighlighter({ userId, sectionIds, children }: TextHighlighte
               </div>
               <button
                 type="button"
-                onClick={togglePanel}
+                onClick={() => onPanelOpenChange(false)}
                 className="grid h-8 w-8 shrink-0 place-items-center rounded-lg text-[var(--text-muted)] hover:bg-[var(--accent-soft)]"
                 aria-label="Fechar marca-texto"
               >
@@ -320,23 +318,8 @@ export function TextHighlighter({ userId, sectionIds, children }: TextHighlighte
               )}
             </div>
           </section>
-        )}
-
-        <button
-          type="button"
-          onClick={togglePanel}
-          className={`flex h-12 items-center gap-2 rounded-full border px-4 text-sm font-bold shadow-lg transition-transform hover:-translate-y-0.5 ${
-            panelOpen
-              ? "border-[var(--accent)] bg-[var(--accent)] text-white"
-              : "border-[var(--border)] bg-[var(--bg-card)] text-[var(--text-primary)]"
-          }`}
-          aria-expanded={panelOpen}
-          aria-label={panelOpen ? "Fechar marca-texto" : "Abrir marca-texto"}
-        >
-          <Highlighter size={19} />
-          <span className="hidden sm:inline">Realçar</span>
-        </button>
-      </div>
+        </div>
+      )}
     </div>
   );
 }

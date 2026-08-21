@@ -27,12 +27,26 @@ export default async function TopicPage({ params }: TopicPageProps) {
   const userId = user.id;
 
   try {
+    const [topicResult, sectionsResult] = await Promise.all([
+      supabase
+        .from("topics")
+        .select("topic_id,discipline,title,sort_order,created_at")
+        .eq("topic_id", topicId)
+        .single(),
+      supabase
+        .from("sections")
+        .select(
+          "section_id,topic_id,title,content_markdown,callouts,mnemonics,flashcards,mermaid_mindmap,sort_order,created_at"
+        )
+        .eq("topic_id", topicId)
+        .order("sort_order", { ascending: true }),
+    ]);
 
-    const { data: topicData } = await supabase
-      .from("topics")
-      .select("*")
-      .eq("topic_id", topicId)
-      .single();
+    if (topicResult.error || sectionsResult.error) {
+      throw topicResult.error ?? sectionsResult.error;
+    }
+
+    const topicData = topicResult.data;
 
     if (!topicData) {
       notFound();
@@ -40,14 +54,8 @@ export default async function TopicPage({ params }: TopicPageProps) {
 
     topic = topicData;
 
-    const { data: sectionsData } = await supabase
-      .from("sections")
-      .select("*")
-      .eq("topic_id", topicId)
-      .order("sort_order", { ascending: true });
-
-    if (sectionsData) {
-      sections = sectionsData;
+    if (sectionsResult.data) {
+      sections = sectionsResult.data as SectionRow[];
     }
 
     const { data: disciplineTopics } = await supabase

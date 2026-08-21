@@ -4,7 +4,8 @@
 
 - `proconcursos.com.br` resolve para `54.232.119.62`.
 - O SOA do domínio é administrado pela Netlify (`domains+netlify.netlify.com`).
-- `https://proconcursos.com.br/resumos` e `https://proconcursos-resumos.netlify.app/resumos` respondem pelo mesmo aplicativo Next/Netlify.
+- `https://proconcursos.com.br/resumos` é a URL canônica do aplicativo Next/Netlify.
+- `https://proconcursos-resumos.netlify.app/resumos` pertence a um deploy legado e não deve ser usado em login, favoritos ou documentação.
 - `https://pro-legis-mvp.netlify.app/legis` está publicado e protegido por login.
 - `https://proconcursos.com.br/legis` ainda retorna 404 no contexto de produção.
 
