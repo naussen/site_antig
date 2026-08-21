@@ -10,13 +10,6 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# Serve a landing no domínio principal sem retirar o aplicativo de /resumos.
-[[redirects]]
-  from = "/"
-  to = "/resumos/landing"
-  status = 200
-  force = true
-
 # Prévia da zona Legis na branch feat/pro-legis-mvp.
 # Promover esta regra para produção somente após validar domínio, cookies,
 # OAuth, RSC, APIs e regressão completa do /resumos.
