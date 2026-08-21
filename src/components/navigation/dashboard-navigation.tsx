@@ -12,8 +12,6 @@ import {
   Menu,
   PanelLeftClose,
   PanelLeftOpen,
-  CheckSquare,
-  Square,
   ChevronRight,
   StickyNote,
   Scale,
@@ -204,15 +202,13 @@ export function DashboardNavigation({
                     className="flex items-start gap-2 rounded-lg px-2 py-2"
                     style={{ background: isActive ? "var(--dashboard-sidebar-active)" : "transparent" }}
                   >
-                    <button
-                      type="button"
-                      onClick={() => onToggleProgress?.(section.section_id)}
-                      className="mt-0.5 shrink-0 cursor-pointer"
-                      style={{ color: isCompleted ? "var(--callout-tip-border)" : "var(--dashboard-sidebar-muted)" }}
+                    <input
+                      type="checkbox"
+                      checked={isCompleted}
+                      onChange={() => onToggleProgress?.(section.section_id)}
+                      className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-[var(--accent)]"
                       aria-label={`Marcar "${section.title}" como ${isCompleted ? "não concluída" : "concluída"}`}
-                    >
-                      {isCompleted ? <CheckSquare size={16} /> : <Square size={16} />}
-                    </button>
+                    />
                     <button
                       type="button"
                       onClick={() => onSectionClick?.(section.section_id)}

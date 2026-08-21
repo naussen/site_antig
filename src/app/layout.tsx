@@ -38,6 +38,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${inter.variable} h-full`} suppressHydrationWarning>
+      {/* O otimizador CSS ainda não reconhece ::highlight(); React 19 carrega a folha estática sem CSS inline. */}
+      <link rel="stylesheet" href={withSiteBasePath("/study-highlights.css")} precedence="default" />
       <body className="min-h-full flex flex-col antialiased">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
