@@ -113,6 +113,32 @@ export interface UserEntitlement {
   updated_at: string;
 }
 
+export type TextHighlightColor =
+  | 'yellow'
+  | 'orange'
+  | 'red'
+  | 'pink'
+  | 'purple'
+  | 'blue'
+  | 'cyan'
+  | 'green'
+  | 'lime'
+  | 'gray';
+
+export interface UserTextHighlight {
+  id: string;
+  user_id: string;
+  section_id: string;
+  color: TextHighlightColor;
+  start_offset: number;
+  end_offset: number;
+  selected_text: string;
+  prefix: string;
+  suffix: string;
+  created_at: string;
+  updated_at: string;
+}
+
 // =============================================================================
 // PRO Legis — acervo versionado e dados pessoais do primeiro corte
 // =============================================================================

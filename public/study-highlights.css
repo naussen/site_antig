@@ -1,0 +1,39 @@
+::highlight(study-highlight-yellow) {
+  background-color: color-mix(in srgb, var(--study-highlight-yellow) 48%, transparent);
+}
+
+::highlight(study-highlight-orange) {
+  background-color: color-mix(in srgb, var(--study-highlight-orange) 46%, transparent);
+}
+
+::highlight(study-highlight-red) {
+  background-color: color-mix(in srgb, var(--study-highlight-red) 44%, transparent);
+}
+
+::highlight(study-highlight-pink) {
+  background-color: color-mix(in srgb, var(--study-highlight-pink) 44%, transparent);
+}
+
+::highlight(study-highlight-purple) {
+  background-color: color-mix(in srgb, var(--study-highlight-purple) 44%, transparent);
+}
+
+::highlight(study-highlight-blue) {
+  background-color: color-mix(in srgb, var(--study-highlight-blue) 44%, transparent);
+}
+
+::highlight(study-highlight-cyan) {
+  background-color: color-mix(in srgb, var(--study-highlight-cyan) 42%, transparent);
+}
+
+::highlight(study-highlight-green) {
+  background-color: color-mix(in srgb, var(--study-highlight-green) 42%, transparent);
+}
+
+::highlight(study-highlight-lime) {
+  background-color: color-mix(in srgb, var(--study-highlight-lime) 44%, transparent);
+}
+
+::highlight(study-highlight-gray) {
+  background-color: color-mix(in srgb, var(--study-highlight-gray) 44%, transparent);
+}

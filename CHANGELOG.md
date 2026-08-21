@@ -1,5 +1,12 @@
 # Changelog
 
+## Não publicado — leitura e marca-texto
+
+- removida da área de conteúdo a ação redundante de marcar seção como lida;
+- convertidos os controles de progresso do menu lateral em checkboxes nativos;
+- adicionada ferramenta de marca-texto com dez cores, remoção e salvamento automático;
+- persistidos os realces por usuário e seção, com RLS e reancoragem textual defensiva.
+
 ## Não publicado — gateway Legis
 
 - confirmado que o apex `proconcursos.com.br` é servido pela Netlify e que o 404 de `/legis` ocorre porque as regras ainda estão somente no deploy da branch de preview;

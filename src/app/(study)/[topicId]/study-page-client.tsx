@@ -22,6 +22,7 @@ import { CalloutList } from "@/components/study/callout-block";
 import { MnemonicList } from "@/components/study/mnemonic-card";
 import { FlashcardDeck } from "@/components/study/flashcard-deck";
 import { NotesPanel } from "@/components/study/notes-panel";
+import { TextHighlighter } from "@/components/study/text-highlighter";
 
 // Mermaid: import dinâmico com ssr: false para evitar hydration errors
 const MermaidViewer = dynamic(
@@ -266,13 +267,14 @@ export function StudyPageClient({
           </section>
 
           {/* Renderizar todas as seções */}
-          {sections.map((section, index) => (
-            <article
-              key={section.section_id}
-              id={`section-${section.section_id}`}
-              className="mb-16 scroll-mt-20"
-              aria-labelledby={`section-title-${section.section_id}`}
-            >
+          <TextHighlighter userId={userId} sectionIds={sectionIds}>
+            {sections.map((section, index) => (
+              <article
+                key={section.section_id}
+                id={`section-${section.section_id}`}
+                className="mb-16 scroll-mt-20"
+                aria-labelledby={`section-title-${section.section_id}`}
+              >
               {/* Título da seção */}
               <header className="study-section-heading">
                 <span className="study-section-number" aria-hidden="true">
@@ -321,7 +323,9 @@ export function StudyPageClient({
 
               {/* Markdown content */}
               {section.content_markdown && (
-                <MarkdownViewer content={section.content_markdown} />
+                <div data-highlight-section-id={section.section_id}>
+                  <MarkdownViewer content={section.content_markdown} />
+                </div>
               )}
 
               {/* Callouts */}
@@ -367,8 +371,9 @@ export function StudyPageClient({
                   <span />
                 </div>
               )}
-            </article>
-          ))}
+              </article>
+            ))}
+          </TextHighlighter>
 
           {(previousTopic || nextTopic) && (
             <nav

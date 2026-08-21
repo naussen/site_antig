@@ -1,6 +1,6 @@
 "use client";
 
-import { AlertCircle, CheckSquare, Square, ChevronRight, ChevronsLeft, Loader2 } from "lucide-react";
+import { AlertCircle, ChevronRight, ChevronsLeft, Loader2 } from "lucide-react";
 import type { SectionRow } from "@/types/database";
 
 interface SidebarNavProps {
@@ -111,25 +111,13 @@ export function SidebarNav({
               }}
             >
               {/* Checkbox */}
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onToggleProgress(section.section_id);
-                }}
-                className="mt-0.5 shrink-0 cursor-pointer"
-                style={{
-                  color: isCompleted
-                    ? "var(--callout-tip-border)"
-                    : "var(--text-muted)",
-                }}
+              <input
+                type="checkbox"
+                checked={isCompleted}
+                onChange={() => onToggleProgress(section.section_id)}
+                className="mt-0.5 h-[18px] w-[18px] shrink-0 cursor-pointer accent-[var(--accent)]"
                 aria-label={`Marcar "${section.title}" como ${isCompleted ? "não concluída" : "concluída"}`}
-              >
-                {isCompleted ? (
-                  <CheckSquare size={18} />
-                ) : (
-                  <Square size={18} />
-                )}
-              </button>
+              />
 
               {/* Link para a seção */}
               <button
