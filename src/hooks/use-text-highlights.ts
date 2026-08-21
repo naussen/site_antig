@@ -1,21 +1,11 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { createClient } from "@/lib/supabase/client";
+import { withSiteBasePath } from "@/lib/site-paths.mjs";
+import { TEXT_HIGHLIGHT_COLORS } from "@/lib/text-highlight-colors.mjs";
 import type { TextHighlightColor, UserTextHighlight } from "@/types/database";
 
-export const TEXT_HIGHLIGHT_COLORS: TextHighlightColor[] = [
-  "yellow",
-  "orange",
-  "red",
-  "pink",
-  "purple",
-  "blue",
-  "cyan",
-  "green",
-  "lime",
-  "gray",
-];
+export { TEXT_HIGHLIGHT_COLORS };
 
 export interface NewTextHighlight {
   sectionId: string;
@@ -25,6 +15,14 @@ export interface NewTextHighlight {
   selectedText: string;
   prefix: string;
   suffix: string;
+}
+
+async function requestHighlightApi(path: string, init?: RequestInit) {
+  try {
+    return await fetch(path, init);
+  } catch {
+    return null;
+  }
 }
 
 export function useTextHighlights(userId: string | null, sectionIds: string[]) {
@@ -49,21 +47,16 @@ export function useTextHighlights(userId: string | null, sectionIds: string[]) {
   useEffect(() => {
     if (!userId || sectionIds.length === 0) return;
 
-    const supabase = createClient();
     let cancelled = false;
 
     async function loadHighlights() {
       setState({ contextKey, highlights: [], loading: true, error: null });
-      const { data, error: loadError } = await supabase
-        .from("user_text_highlights")
-        .select("*")
-        .eq("user_id", userId)
-        .in("section_id", sectionIds)
-        .order("created_at", { ascending: true });
+      const query = new URLSearchParams();
+      sectionIds.forEach((sectionId) => query.append("section_id", sectionId));
+      const response = await requestHighlightApi(`${withSiteBasePath("/api/highlights")}?${query}`);
 
       if (cancelled) return;
-      if (loadError) {
-        console.error("Erro ao carregar realces:", loadError);
+      if (!response?.ok) {
         setState({
           contextKey,
           highlights: [],
@@ -72,6 +65,8 @@ export function useTextHighlights(userId: string | null, sectionIds: string[]) {
         });
         return;
       }
+
+      const data = await response.json() as UserTextHighlight[];
 
       setState({
         contextKey,
@@ -112,11 +107,10 @@ export function useTextHighlights(userId: string | null, sectionIds: string[]) {
       error: null,
     } : previous);
 
-    const supabase = createClient();
-    const { data, error: saveError } = await supabase
-      .from("user_text_highlights")
-      .insert({
-        user_id: userId,
+    const response = await requestHighlightApi(withSiteBasePath("/api/highlights"), {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
         section_id: input.sectionId,
         color: input.color,
         start_offset: input.startOffset,
@@ -124,12 +118,10 @@ export function useTextHighlights(userId: string | null, sectionIds: string[]) {
         selected_text: input.selectedText,
         prefix: input.prefix,
         suffix: input.suffix,
-      })
-      .select()
-      .single();
+      }),
+    });
 
-    if (saveError) {
-      console.error("Erro ao salvar realce:", saveError);
+    if (!response?.ok) {
       setState((previous) => previous.contextKey === contextKey ? {
         ...previous,
         highlights: previous.highlights.filter((item) => item.id !== temporaryId),
@@ -137,6 +129,8 @@ export function useTextHighlights(userId: string | null, sectionIds: string[]) {
       } : previous);
       return false;
     }
+
+    const data = await response.json() as UserTextHighlight;
 
     setState((previous) => previous.contextKey === contextKey ? {
       ...previous,
@@ -161,15 +155,13 @@ export function useTextHighlights(userId: string | null, sectionIds: string[]) {
     const persistedIds = highlightIds.filter((id) => !id.startsWith("pending-"));
     if (persistedIds.length === 0) return true;
 
-    const supabase = createClient();
-    const { error: deleteError } = await supabase
-      .from("user_text_highlights")
-      .delete()
-      .eq("user_id", userId)
-      .in("id", persistedIds);
+    const response = await requestHighlightApi(withSiteBasePath("/api/highlights"), {
+      method: "DELETE",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ ids: persistedIds }),
+    });
 
-    if (deleteError) {
-      console.error("Erro ao remover realce:", deleteError);
+    if (!response?.ok) {
       setState((previous) => previous.contextKey === contextKey ? {
         ...previous,
         highlights: [...previous.highlights, ...removed],

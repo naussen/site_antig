@@ -4,6 +4,7 @@
 
 - remove o sumário antigo e redundante da área de conteúdo, mantendo o progresso somente como checkbox no menu esquerdo;
 - move o acesso ao marca-texto para o cabeçalho fixo da leitura, com rótulo sempre visível;
+- confirma o salvamento dos realces por uma API autenticada antes de informar sucesso ao usuário;
 - paraleliza a busca inicial do tópico e das seções e adiciona skeleton imediato durante navegações;
 - corrige a documentação de autenticação para não direcionar usuários ao deploy Netlify legado.
 
