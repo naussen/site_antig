@@ -1,871 +1,245 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
-  BookOpen,
-  Brain,
-  CheckCircle2,
-  GraduationCap,
-  Layers3,
-  Map,
-  Sparkles,
-  TrendingUp,
-  Zap,
   ArrowRight,
-  Shield,
-  Clock,
+  BookOpen,
+  Check,
+  CheckCircle2,
+  FileText,
+  Gavel,
+  Highlighter,
+  Layers3,
+  Moon,
+  NotebookPen,
+  Sparkles,
+  Sun,
+  Sunrise,
 } from "lucide-react";
-import { ProLogo } from "@/components/brand/pro-logo";
+import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
-const features = [
-  {
-    icon: Brain,
-    title: "Mnemônicos Poderosos",
-    desc: "Associações mentais precisas criadas para você nunca mais esquecer listas, artigos e regras no dia da prova.",
-    badge: "Alta retenção",
-  },
-  {
-    icon: BookOpen,
-    title: "Flashcards 3D Interativos",
-    desc: "Repetição espaçada integrada diretamente no resumo. Teste seu conhecimento enquanto estuda.",
-    badge: "Memória ativa",
-  },
-  {
-    icon: Map,
-    title: "Mapas Mentais",
-    desc: "Diagramas Mermaid gerados automaticamente para conectar ideias e visualizar hierarquias de conteúdo.",
-    badge: "Visão sistêmica",
-  },
-  {
-    icon: Layers3,
-    title: "Resumos por Seções",
-    desc: "Conteúdo dividido em seções progressivas. Avance no ritmo certo e acompanhe seu progresso em tempo real.",
-    badge: "Progresso rastreado",
-  },
-  {
-    icon: TrendingUp,
-    title: "Painel de Progresso",
-    desc: "Dashboard completo com estatísticas de leitura, disciplinas concluídas e sugestão do próximo passo.",
-    badge: "Dados inteligentes",
-  },
-  {
-    icon: Shield,
-    title: "Conteúdo Jurídico Curado",
-    desc: "Resumos revisados com linguagem didática, callouts de atenção e alertas de pegadinhas de prova.",
-    badge: "Qualidade editorial",
-  },
-];
+const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo.png");
 
-const disciplines = [
-  "Direito Constitucional",
-  "Direito Administrativo",
-  "Direito Civil",
-  "Direito Penal",
-  "Direito Tributário",
-  "Direito do Trabalho",
-  "Direito Processual Civil",
-  "Direito Processual Penal",
-];
-
-const steps = [
-  {
-    number: "01",
-    title: "Escolha sua disciplina",
-    desc: "Acesse o dashboard e selecione as matérias do seu edital. O sistema organiza tudo por disciplina automaticamente.",
-  },
-  {
-    number: "02",
-    title: "Estude com profundidade",
-    desc: "Leia os resumos estruturados com mnemônicos, mapas mentais e callouts de atenção a cada seção.",
-  },
-  {
-    number: "03",
-    title: "Pratique com flashcards",
-    desc: "Ao final de cada seção, teste seu conhecimento com flashcards 3D integrados ao conteúdo.",
-  },
-  {
-    number: "04",
-    title: "Monitore seu avanço",
-    desc: "Acompanhe o progresso por tópico, receba sugestões de estudo e chegue à prova com mais segurança.",
-  },
-];
-
-/** Renderiza o visual completo da landing page, sem lógica de autenticação. */
-export function LandingPageContent() {
+function BrandLogo({ className = "" }: { className?: string }) {
   return (
-    <main
-      className="min-h-screen flex flex-col"
-      style={{ background: "var(--bg-primary)" }}
-    >
-      {/* ── Navbar ── */}
-      <nav
-        className="w-full sticky top-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 backdrop-blur-sm"
-        style={{
-          background: "color-mix(in srgb, var(--bg-primary) 85%, transparent)",
-          borderBottom: "1px solid var(--border)",
-        }}
-      >
-        <ProLogo size={34} variant="full" />
+    <Image
+      src={LOGO_SRC}
+      alt="PRO Concursos"
+      width={250}
+      height={100}
+      className={`h-auto w-[170px] rounded-xl bg-white/95 px-2 py-1 sm:w-[210px] ${className}`}
+      priority
+    />
+  );
+}
 
-        <div className="flex items-center gap-3">
-          <Link
-            href="/login"
-            className="hidden sm:block text-sm font-semibold px-4 py-2 rounded-xl transition-colors hover:bg-[var(--accent-soft)]"
-            style={{ color: "var(--text-primary)" }}
-          >
-            Entrar
-          </Link>
-          <Link
-            id="nav-cta"
-            href="/login"
-            className="text-sm font-bold px-5 py-2.5 rounded-xl transition-all hover:-translate-y-0.5 hover:shadow-lg"
-            style={{
-              background: "var(--accent)",
-              color: "#fff",
-              boxShadow:
-                "0 4px 14px -2px color-mix(in srgb, var(--accent) 40%, transparent)",
-            }}
-          >
-            Começar grátis
-          </Link>
-        </div>
-      </nav>
+function WindowFrame({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#181820] shadow-2xl shadow-black/25">
+      <div className="flex items-center gap-2 border-b border-white/10 px-5 py-3">
+        <span className="h-2.5 w-2.5 rounded-full bg-[#ff6b6b]" />
+        <span className="h-2.5 w-2.5 rounded-full bg-[#f9a826]" />
+        <span className="h-2.5 w-2.5 rounded-full bg-[#4ade80]" />
+        <span className="ml-2 truncate text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">{label}</span>
+      </div>
+      {children}
+    </div>
+  );
+}
 
-      {/* ── Hero ── */}
-      <header className="relative flex flex-col items-center justify-center overflow-hidden px-6 pt-20 pb-24 md:pt-28 md:pb-32 text-center">
-        {/* Radial glow — amplificado de 60% → 80% */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              "radial-gradient(ellipse 90% 80% at 50% -10%, color-mix(in srgb, var(--accent-soft) 80%, transparent), transparent 70%)",
-          }}
-        />
-        {/* Blob lateral esquerdo */}
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            width: "420px",
-            height: "420px",
-            top: "-80px",
-            left: "-120px",
-            background: "var(--accent)",
-            opacity: 0.07,
-            borderRadius: "50%",
-            filter: "blur(100px)",
-          }}
-        />
-        {/* Blob lateral direito */}
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            width: "360px",
-            height: "360px",
-            top: "40px",
-            right: "-100px",
-            background: "var(--action)",
-            opacity: 0.06,
-            borderRadius: "50%",
-            filter: "blur(100px)",
-          }}
-        />
-        {/* Decorative grid */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px)",
-            backgroundSize: "40px 40px",
-          }}
-        />
-        {/* Ícone flutuante — livro (esquerda) */}
-        <div
-          className="absolute pointer-events-none animate-float hidden lg:block"
-          style={{
-            left: "8%",
-            top: "22%",
-            opacity: 0.055,
-            color: "var(--accent)",
-          }}
-          aria-hidden="true"
-        >
-          <svg width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-          </svg>
-        </div>
-        {/* Ícone flutuante — cérebro (direita) */}
-        <div
-          className="absolute pointer-events-none animate-float-delayed hidden lg:block"
-          style={{
-            right: "7%",
-            top: "18%",
-            opacity: 0.055,
-            color: "var(--accent)",
-          }}
-          aria-hidden="true"
-        >
-          <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/>
-            <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/>
-          </svg>
-        </div>
+function SectionHeading({ eyebrow, title, description }: { eyebrow: string; title: string; description: string }) {
+  return (
+    <div className="mx-auto mb-12 max-w-3xl text-center">
+      <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/35 bg-[#a78bfa]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#c4b5fd]">
+        <Sparkles size={13} aria-hidden="true" /> {eyebrow}
+      </span>
+      <h2 className="text-balance text-3xl font-extrabold tracking-tight text-white md:text-5xl">{title}</h2>
+      <p className="mx-auto mt-5 max-w-2xl text-pretty text-base leading-7 text-[#b4b1c3] md:text-lg">{description}</p>
+    </div>
+  );
+}
 
-        <div className="relative z-10 max-w-4xl mx-auto">
-          {/* Eyebrow pill */}
-          <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-10 text-xs font-bold tracking-[0.18em] uppercase animate-fade-in-up"
-            style={{
-              background: "var(--accent-soft)",
-              color: "var(--accent)",
-              border:
-                "1px solid color-mix(in srgb, var(--accent) 28%, transparent)",
-            }}
-          >
-            <Zap size={13} />
-            Plataforma de Alta Performance
+function ResumosPreview() {
+  return (
+    <WindowFrame label="Módulo Resumos · Direito Constitucional">
+      <div className="grid min-h-[430px] md:grid-cols-[185px_1fr]">
+        <aside className="hidden border-r border-white/10 bg-[#14141b] p-5 md:block">
+          <div className="mb-7 flex items-center gap-2 text-sm font-extrabold text-white">
+            <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-[#7c3aed] to-[#a78bfa]"><BookOpen size={16} /></span>
+            PRO Resumos
           </div>
-
-          <h1
-            className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-7 leading-[1.05] tracking-tight text-balance animate-fade-in-up"
-            style={{ color: "var(--text-primary)", animationDelay: "60ms" }}
-          >
-            Estude menos.{" "}
-            <span
-              style={{
-                background:
-                  "linear-gradient(135deg, var(--mnemonic-gradient-from), var(--mnemonic-gradient-to))",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              Retenha mais.
-            </span>
-            {" "}
-            <span className="block md:inline">Seja aprovado.</span>
-          </h1>
-
-          <p
-            className="text-lg md:text-xl max-w-2xl mx-auto mb-11 leading-relaxed animate-fade-in-up"
-            style={{ color: "var(--text-secondary)", animationDelay: "120ms" }}
-          >
-            Resumos jurídicos estruturados com mnemônicos, flashcards 3D, mapas
-            mentais e progresso rastreado. Tudo que você precisa para concursos
-            públicos em um só lugar.
-          </p>
-
-          <div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up"
-            style={{ animationDelay: "180ms" }}
-          >
-            <Link
-              id="hero-cta-primary"
-              href="/login"
-              className="inline-flex items-center gap-2.5 text-base font-bold px-8 py-4 rounded-2xl transition-all hover:-translate-y-1 hover:shadow-xl"
-              style={{
-                background: "var(--action)",
-                color: "var(--action-foreground)",
-                boxShadow:
-                  "0 10px 30px -8px color-mix(in srgb, var(--action) 55%, transparent)",
-              }}
-            >
-              Começar a estudar agora
-              <ArrowRight size={19} />
-            </Link>
-            <a
-              id="hero-cta-secondary"
-              href="#features"
-              className="inline-flex items-center gap-2 text-sm font-semibold px-6 py-4 rounded-2xl border transition-all hover:border-[var(--accent)] hover:text-[var(--accent)]"
-              style={{
-                borderColor: "var(--border)",
-                color: "var(--text-secondary)",
-              }}
-            >
-              Ver demonstração
-            </a>
-          </div>
-
-          {/* Social proof mini-stats */}
-          <div
-            className="mt-16 inline-flex flex-wrap justify-center gap-x-8 gap-y-4 text-sm animate-fade-in-up"
-            style={{ color: "var(--text-muted)", animationDelay: "240ms" }}
-          >
-            {[
-              { value: "8+", label: "Disciplinas jurídicas" },
-              { value: "Flashcards", label: "3D integrados" },
-              { value: "3 temas", label: "Light · Dark · Sepia" },
-            ].map((stat) => (
-              <span key={stat.label} className="flex items-center gap-2">
-                <CheckCircle2
-                  size={15}
-                  style={{ color: "var(--accent)" }}
-                  aria-hidden="true"
-                />
-                <strong style={{ color: "var(--text-primary)" }}>
-                  {stat.value}
-                </strong>{" "}
-                {stat.label}
-              </span>
-            ))}
-          </div>
-        </div>
-      </header>
-
-      {/* ── Dashboard Preview Banner ── */}
-      <section
-        className="mx-4 md:mx-auto md:max-w-5xl rounded-3xl border overflow-hidden mb-20"
-        style={{
-          background: "var(--dashboard-sidebar)",
-          borderColor: "var(--border)",
-          boxShadow: "var(--shadow-lg)",
-        }}
-        aria-label="Prévia do painel de estudos"
-      >
-        {/* Fake window chrome */}
-        <div
-          className="flex items-center gap-2 px-5 py-3 border-b"
-          style={{
-            borderColor: "var(--dashboard-sidebar-border)",
-            background:
-              "color-mix(in srgb, var(--dashboard-sidebar) 80%, transparent)",
-          }}
-        >
-          <span className="w-3 h-3 rounded-full bg-red-500 opacity-80" />
-          <span className="w-3 h-3 rounded-full bg-yellow-500 opacity-80" />
-          <span className="w-3 h-3 rounded-full bg-green-500 opacity-80" />
-          <span
-            className="ml-4 text-xs font-mono tracking-wider opacity-40"
-            style={{ color: "var(--dashboard-sidebar-text)" }}
-          >
-            pro-resumos.app / dashboard
-          </span>
-        </div>
-
-        {/* Mock dashboard content */}
-        <div className="p-5 md:p-8 grid md:grid-cols-[220px_1fr] gap-6">
-          {/* Sidebar mock */}
-          <aside
-            className="hidden md:flex flex-col gap-3 rounded-2xl p-4"
-            style={{ background: "rgba(255,255,255,0.04)" }}
-          >
-            <div
-              className="flex items-center gap-2 mb-4 text-sm font-bold"
-              style={{ color: "var(--dashboard-sidebar-text)" }}
-            >
-              <ProLogo size={26} variant="full" tone="dark" />
+          <div className="mb-2 rounded-xl bg-[#a78bfa]/15 px-3 py-2.5 text-xs font-semibold text-[#c4b5fd]">Visão geral</div>
+          {["Poder constituinte", "Direitos fundamentais", "Administração pública"].map((item) => (
+            <div key={item} className="mb-2 rounded-xl px-3 py-2.5 text-xs font-semibold text-white/40">{item}</div>
+          ))}
+        </aside>
+        <div className="bg-[#f4f5f7] p-5 sm:p-7">
+          <div className="mb-5 flex items-start justify-between gap-4">
+            <div>
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#6c5ce7]">Direito Constitucional</p>
+              <h3 className="mt-1 text-xl font-extrabold text-[#1a1a2e] sm:text-2xl">Poder Constituinte</h3>
             </div>
-            {["Início", "Notas", "Matérias"].map((item, i) => (
-              <div
-                key={item}
-                className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-semibold"
-                style={{
-                  background:
-                    i === 0 ? "var(--dashboard-sidebar-active)" : "transparent",
-                  color:
-                    i === 0 ? "var(--accent)" : "var(--dashboard-sidebar-muted)",
-                }}
-              >
-                <div
-                  className="w-4 h-4 rounded opacity-70"
-                  style={{ background: "currentColor" }}
-                />
-                {item}
+            <span className="rounded-full bg-[#6c5ce7]/10 px-3 py-1 text-[10px] font-bold text-[#6c5ce7]">68% concluído</span>
+          </div>
+          <div className="rounded-2xl border border-[#e5e5ef] bg-white p-5 shadow-sm">
+            <p className="mb-3 text-xs font-bold text-[#6c5ce7]">1. Conceito e titularidade</p>
+            <div className="space-y-2 text-xs leading-6 text-[#64647a] sm:text-sm">
+              <p>O poder constituinte é a capacidade de criar ou modificar uma Constituição, estruturando juridicamente o Estado.</p>
+              <p>A titularidade pertence ao <strong className="text-[#1a1a2e]">povo</strong>, que a exerce por representantes ou diretamente.</p>
+            </div>
+            <div className="mt-5 rounded-xl border-l-4 border-[#f9a826] bg-[#fff7e7] p-3 text-xs text-[#69480c]"><strong>Ponto de prova:</strong> titularidade e exercício não se confundem.</div>
+            <div className="mt-5 flex items-center justify-between border-t border-[#e5e5ef] pt-4">
+              <span className="text-[10px] text-[#9898aa]">Seção 4 de 9</span>
+              <span className="inline-flex items-center gap-1.5 rounded-lg bg-[#6c5ce7] px-3 py-2 text-[10px] font-bold text-white"><Check size={12} /> Marcar como lida</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </WindowFrame>
+  );
+}
+
+function LegisPreview() {
+  return (
+    <WindowFrame label="Módulo Legis · Constituição Federal">
+      <div className="min-h-[430px] bg-[#f6f0df] p-5 sm:p-7">
+        <div className="mb-5 flex flex-wrap items-start justify-between gap-4 border-b border-[#cbbf9e] pb-5">
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8b6914]">Texto oficial versionado</p>
+            <h3 className="mt-1 font-serif text-xl font-bold text-[#3d3529] sm:text-2xl">Constituição da República Federativa do Brasil</h3>
+          </div>
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-[#8b6914]/30 bg-[#8b6914]/10 px-3 py-1 text-[10px] font-bold text-[#6d510e]"><CheckCircle2 size={12} /> Fonte oficial conferida</span>
+        </div>
+        <div className="grid gap-5 md:grid-cols-[1fr_155px]">
+          <article className="rounded-2xl border border-[#d4c9a8] bg-[#fffaf0] p-5 font-serif text-sm leading-7 text-[#4b4332] shadow-sm">
+            <p className="mb-3 font-bold">Art. 5º</p>
+            <p>Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade.</p>
+            <div className="mt-5 border-t border-[#d4c9a8] pt-4 font-sans text-[10px] text-[#8b7e6a]">Redação vigente · conferida em fonte oficial</div>
+          </article>
+          <aside className="space-y-3">
+            {[["Texto oficial", "Ativo"], ["Prática C/E", "12 itens"], ["Meu progresso", "42%"]].map(([title, value]) => (
+              <div key={title} className="rounded-xl border border-[#d4c9a8] bg-[#f0e8d0] p-3">
+                <p className="text-[9px] font-bold uppercase tracking-wide text-[#8b7e6a]">{title}</p>
+                <p className="mt-1 text-xs font-extrabold text-[#3d3529]">{value}</p>
               </div>
             ))}
           </aside>
+        </div>
+      </div>
+    </WindowFrame>
+  );
+}
 
-          {/* Main mock content */}
-          <div className="flex flex-col gap-5 min-w-0">
-            {/* Header card */}
-            <div
-              className="rounded-2xl border p-5"
-              style={{
-                background: "var(--dashboard-card)",
-                borderColor: "rgba(255,255,255,0.08)",
-              }}
-            >
-              <div
-                className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full mb-3"
-                style={{ background: "var(--accent-soft)", color: "var(--accent)" }}
-              >
-                <Sparkles size={11} />
-                Painel de estudos
-              </div>
-              <div
-                className="text-xl font-extrabold mb-1"
-                style={{ color: "#E8E8F0" }}
-              >
-                Sua biblioteca de estudos
-              </div>
-              <div className="text-xs" style={{ color: "#9898AA" }}>
-                Acompanhe sua evolução por disciplina
-              </div>
-              {/* Stats row */}
-              <div className="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-2">
-                {[
-                  { label: "Resumos", value: "12" },
-                  { label: "Disciplinas", value: "4" },
-                  { label: "Seções", value: "8/48" },
-                  { label: "Progresso", value: "17%" },
-                ].map((s) => (
-                  <div
-                    key={s.label}
-                    className="rounded-xl p-3 text-center"
-                    style={{ background: "rgba(255,255,255,0.05)" }}
-                  >
-                    <strong
-                      className="block text-base font-extrabold"
-                      style={{ color: "#E8E8F0" }}
-                    >
-                      {s.value}
-                    </strong>
-                    <span className="text-[10px]" style={{ color: "#64647A" }}>
-                      {s.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
+function FlashcardPreview() {
+  return (
+    <div className="relative mx-auto flex min-h-52 max-w-sm items-center justify-center">
+      <div className="absolute h-40 w-64 rotate-6 rounded-2xl bg-[#4c3cb6] opacity-45" />
+      <div className="relative flex h-44 w-72 -rotate-2 flex-col justify-between rounded-2xl border border-white/15 bg-gradient-to-br from-[#7c3aed] to-[#5b21b6] p-5 shadow-xl">
+        <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/55">Certo ou errado?</span>
+        <p className="text-center text-sm font-bold leading-6 text-white">O poder constituinte originário é juridicamente ilimitado.</p>
+        <div className="flex justify-center gap-2"><span className="rounded-lg bg-white/10 px-4 py-2 text-[10px] font-bold text-white">Errado</span><span className="rounded-lg bg-[#f9a826] px-4 py-2 text-[10px] font-bold text-[#121212]">Certo</span></div>
+      </div>
+    </div>
+  );
+}
 
-            {/* Sugestão de estudo mock */}
-            <div
-              className="rounded-2xl border p-4 flex items-center gap-4"
-              style={{
-                background: "var(--accent-soft)",
-                borderColor: "rgba(108,92,231,0.2)",
-              }}
-            >
-              <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
-                style={{ background: "var(--action)" }}
-              >
-                <GraduationCap size={20} style={{ color: "#121212" }} />
-              </div>
-              <div className="min-w-0 flex-1">
-                <p
-                  className="text-[10px] font-bold uppercase tracking-widest"
-                  style={{ color: "var(--accent)" }}
-                >
-                  Sugestão de estudo
-                </p>
-                <p
-                  className="text-sm font-bold truncate"
-                  style={{ color: "#E8E8F0" }}
-                >
-                  Princípios da Administração Pública
-                </p>
-                <p className="text-xs" style={{ color: "#9898AA" }}>
-                  Direito Administrativo · 34% concluído
-                </p>
-              </div>
-              <div
-                className="hidden sm:flex items-center gap-1.5 text-xs font-bold px-4 py-2.5 rounded-xl shrink-0"
-                style={{ background: "var(--action)", color: "#121212" }}
-              >
-                Continuar
-                <ArrowRight size={14} />
-              </div>
-            </div>
+function NotesPreview() {
+  return (
+    <div className="mx-auto max-w-sm rounded-2xl border border-[#fdd835]/35 bg-[#fffde7] p-5 shadow-xl">
+      <div className="mb-4 flex items-center justify-between border-b border-[#eadc8a] pb-3"><span className="flex items-center gap-2 text-xs font-extrabold text-[#6b5e1e]"><NotebookPen size={15} /> Minhas anotações</span><span className="text-[9px] font-semibold text-[#928743]">Salvo agora</span></div>
+      <p className="text-xs leading-6 text-[#5d5528]">Revisar a diferença entre poder constituinte derivado reformador e decorrente antes de resolver as questões.</p>
+      <div className="mt-4 flex gap-1.5"><span className="h-2 w-2 rounded-full bg-[#6c5ce7]" /><span className="h-2 w-2 rounded-full bg-[#f9a826]" /><span className="h-2 w-2 rounded-full bg-[#22c55e]" /></div>
+    </div>
+  );
+}
 
-            {/* Topic cards row */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {[
-                {
-                  title: "Poder Constituinte",
-                  discipline: "Dir. Constitucional",
-                  progress: 100,
-                  sections: 8,
-                },
-                {
-                  title: "Atos Administrativos",
-                  discipline: "Dir. Administrativo",
-                  progress: 34,
-                  sections: 12,
-                },
-              ].map((t) => (
-                <div
-                  key={t.title}
-                  className="rounded-2xl border p-4"
-                  style={{
-                    background: "var(--dashboard-card)",
-                    borderColor: "rgba(255,255,255,0.08)",
-                    position: "relative",
-                    overflow: "hidden",
-                  }}
-                >
-                  {/* Progress top bar */}
-                  <div
-                    className="absolute inset-x-0 top-0 h-1"
-                    style={{ background: "rgba(255,255,255,0.08)" }}
-                  >
-                    <div
-                      className="h-full"
-                      style={{
-                        width: `${t.progress}%`,
-                        background: "var(--progress-bar)",
-                      }}
-                    />
-                  </div>
-                  <div className="flex items-center justify-between mb-3 mt-1">
-                    <div
-                      className="w-8 h-8 rounded-lg flex items-center justify-center"
-                      style={{
-                        background: "var(--accent-soft)",
-                        color: "var(--accent)",
-                      }}
-                    >
-                      {t.progress === 100 ? (
-                        <CheckCircle2 size={16} />
-                      ) : (
-                        <BookOpen size={16} />
-                      )}
-                    </div>
-                    <span
-                      className="text-[10px] font-bold px-2 py-1 rounded-full"
-                      style={{
-                        background: "var(--accent-soft)",
-                        color: "var(--accent)",
-                      }}
-                    >
-                      {t.progress === 100 ? "Concluído" : `${t.progress}%`}
-                    </span>
-                  </div>
-                  <p
-                    className="text-sm font-bold leading-snug"
-                    style={{ color: "#E8E8F0" }}
-                  >
-                    {t.title}
-                  </p>
-                  <p className="text-[10px] mt-1" style={{ color: "#64647A" }}>
-                    {t.discipline} · {t.sections} seções
-                  </p>
-                  <div
-                    className="mt-3 h-1.5 rounded-full overflow-hidden"
-                    style={{ background: "rgba(255,255,255,0.08)" }}
-                  >
-                    <div
-                      className="h-full rounded-full"
-                      style={{
-                        width: `${t.progress}%`,
-                        background: "var(--progress-bar)",
-                      }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+function HighlightPreview() {
+  return (
+    <div className="mx-auto max-w-sm rounded-2xl border border-white/10 bg-white p-5 text-[#36364b] shadow-xl">
+      <div className="mb-5 flex items-center gap-2 rounded-xl bg-[#f4f5f7] p-2"><Highlighter size={14} className="text-[#6c5ce7]" /><span className="h-5 w-5 rounded-md bg-[#facc15]" /><span className="h-5 w-5 rounded-md bg-[#fb923c]" /><span className="h-5 w-5 rounded-md bg-[#f472b6]" /><span className="h-5 w-5 rounded-md bg-[#60a5fa]" /><span className="h-5 w-5 rounded-md bg-[#4ade80]" /></div>
+      <p className="text-sm leading-7">A administração pública obedecerá aos princípios de legalidade, impessoalidade, <span className="mx-1 rounded bg-[#fde047]/70 px-1">moralidade, publicidade e eficiência</span>.</p>
+      <p className="mt-4 text-[10px] font-semibold text-[#9898aa]">Realces salvos automaticamente</p>
+    </div>
+  );
+}
+
+function ThemePreview() {
+  const themes = [
+    { name: "Light", icon: Sun, bg: "bg-[#f4f5f7]", card: "bg-white", text: "text-[#1a1a2e]", muted: "bg-[#e5e5ef]" },
+    { name: "Dark", icon: Moon, bg: "bg-[#0f0f14]", card: "bg-[#22222e]", text: "text-[#e8e8f0]", muted: "bg-[#3d3d4d]" },
+    { name: "Sepia", icon: Sunrise, bg: "bg-[#f4ecd8]", card: "bg-[#f0e8d0]", text: "text-[#3d3529]", muted: "bg-[#d4c9a8]" },
+  ];
+  return (
+    <div className="grid grid-cols-3 gap-2">
+      {themes.map(({ name, icon: Icon, bg, card, text, muted }) => (
+        <div key={name} className={`rounded-xl p-2.5 ${bg}`}>
+          <div className={`rounded-lg p-3 shadow-sm ${card}`}><Icon size={14} className={text} /><div className={`mt-3 h-2 w-4/5 rounded bg-current opacity-80 ${text}`} /><div className={`mt-2 h-1.5 w-full rounded ${muted}`} /><div className={`mt-1 h-1.5 w-3/5 rounded ${muted}`} /></div>
+          <p className={`mt-2 text-center text-[9px] font-bold ${text}`}>{name}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+const toolPreviews = [
+  { title: "Flashcards que desafiam sua memória", description: "Prática C/E integrada ao conteúdo para revisar sem interromper o ritmo.", preview: <FlashcardPreview /> },
+  { title: "Anotações no contexto certo", description: "Registre observações durante a leitura e encontre tudo em um painel central.", preview: <NotesPreview /> },
+  { title: "Realce o que realmente importa", description: "Dez cores, salvamento automático e seus trechos marcados sempre disponíveis.", preview: <HighlightPreview /> },
+  { title: "Conforto visual em qualquer horário", description: "Alterne entre Light, Dark e Sepia de acordo com seu ambiente de estudo.", preview: <ThemePreview /> },
+];
+
+export function LandingPageContent() {
+  return (
+    <main className="min-h-screen overflow-hidden bg-[#181820] text-white">
+      <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#181820]/90 px-5 py-3 backdrop-blur-xl sm:px-8 lg:px-12">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
+          <Link href="https://proconcursos.com.br/" aria-label="PRO Concursos — página inicial"><BrandLogo /></Link>
+          <div className="flex items-center gap-2 sm:gap-3"><Link href="/login" className="hidden rounded-xl px-4 py-2.5 text-sm font-semibold text-white/75 transition hover:bg-white/5 hover:text-white sm:block">Entrar</Link><Link href="/login" className="rounded-xl bg-[#f9a826] px-4 py-2.5 text-xs font-extrabold text-[#121212] shadow-lg shadow-[#f9a826]/15 transition hover:-translate-y-0.5 hover:bg-[#ffc15c] sm:px-5 sm:text-sm">Começar agora</Link></div>
+        </div>
+      </nav>
+
+      <header className="relative px-6 pb-20 pt-20 text-center md:pb-28 md:pt-28">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_0%,rgba(108,92,231,0.32),transparent_70%)]" />
+        <div className="pointer-events-none absolute -left-32 top-32 h-80 w-80 rounded-full bg-[#7c3aed]/15 blur-3xl" /><div className="pointer-events-none absolute -right-32 top-16 h-80 w-80 rounded-full bg-[#f9a826]/10 blur-3xl" />
+        <div className="relative mx-auto max-w-5xl">
+          <span className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/35 bg-[#a78bfa]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#c4b5fd]"><Sparkles size={13} /> Um ecossistema completo para concursos</span>
+          <h1 className="text-balance text-5xl font-black leading-[1.02] tracking-[-0.04em] text-white md:text-7xl lg:text-8xl">Sua aprovação começa <span className="bg-gradient-to-r from-[#a78bfa] to-[#f9a826] bg-clip-text text-transparent">agora.</span></h1>
+          <p className="mx-auto mt-7 max-w-2xl text-pretty text-lg leading-8 text-[#b4b1c3] md:text-xl">Resumos inteligentes, legislação oficial, flashcards, anotações e ferramentas de leitura em uma experiência feita para você avançar todos os dias.</p>
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"><Link href="/login" className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#f9a826] px-8 py-4 text-base font-extrabold text-[#121212] shadow-2xl shadow-[#f9a826]/20 transition hover:-translate-y-1 hover:bg-[#ffc15c] sm:w-auto">Criar minha conta gratuita <ArrowRight size={19} /></Link><a href="#modulos" className="inline-flex w-full items-center justify-center rounded-2xl border border-white/15 px-8 py-4 text-sm font-bold text-white/80 transition hover:border-[#a78bfa]/60 hover:bg-white/5 hover:text-white sm:w-auto">Conhecer a plataforma</a></div>
+          <p className="mt-5 text-xs text-white/40">Sem cartão de crédito. Acesso imediato via e-mail.</p>
+        </div>
+      </header>
+
+      <section className="px-5 pb-24 sm:px-8" aria-label="Assinatura única">
+        <div className="mx-auto grid max-w-5xl gap-5 rounded-3xl border border-[#a78bfa]/25 bg-[#262638] p-6 shadow-2xl shadow-black/20 sm:p-8 md:grid-cols-[1fr_auto] md:items-center">
+          <div><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f9a826]">Uma assinatura. Todo o ecossistema.</p><h2 className="mt-2 text-2xl font-extrabold text-white md:text-3xl">PRO Resumos + PRO Legis e os próximos módulos.</h2><p className="mt-3 max-w-2xl text-sm leading-6 text-[#b4b1c3]">Tudo por uma só assinatura mensal. Novas ferramentas e módulos serão incorporados futuramente à plataforma.</p></div>
+          <div className="flex gap-2 md:flex-col"><span className="rounded-full bg-[#a78bfa]/15 px-4 py-2 text-center text-xs font-bold text-[#c4b5fd]">Resumos</span><span className="rounded-full bg-[#a78bfa]/15 px-4 py-2 text-center text-xs font-bold text-[#c4b5fd]">Legis</span><span className="rounded-full border border-dashed border-white/25 px-4 py-2 text-center text-xs font-bold text-white/45">Mais em breve</span></div>
         </div>
       </section>
 
-      {/* ── Features ── */}
-      <section
-        id="features"
-        className="max-w-6xl mx-auto px-6 py-20 w-full"
-        aria-labelledby="features-title"
-      >
-        <div className="text-center mb-14">
-          <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 text-xs font-bold tracking-[0.18em] uppercase"
-            style={{
-              background: "var(--accent-soft)",
-              color: "var(--accent)",
-              border:
-                "1px solid color-mix(in srgb, var(--accent) 22%, transparent)",
-            }}
-          >
-            <Zap size={12} />
-            Recursos
-          </div>
-          <h2
-            id="features-title"
-            className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-balance"
-            style={{ color: "var(--text-primary)" }}
-          >
-            Tudo que você precisa para passar.
-          </h2>
-          <p
-            className="max-w-xl mx-auto text-base leading-relaxed"
-            style={{ color: "var(--text-secondary)" }}
-          >
-            Cada recurso foi pensado para maximizar sua retenção e minimizar o
-            tempo de revisão antes da prova.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {features.map(({ icon: Icon, title, desc, badge }) => (
-            <article
-              key={title}
-              className="group p-7 rounded-3xl border transition-all hover:-translate-y-1.5 hover:shadow-lg"
-              style={{
-                background: "var(--bg-card)",
-                borderColor: "var(--border)",
-                boxShadow: "var(--shadow)",
-              }}
-            >
-              <div className="flex items-start justify-between mb-5 gap-3">
-                <div
-                  className="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0"
-                  style={{
-                    background:
-                      "linear-gradient(135deg, var(--mnemonic-gradient-from), var(--mnemonic-gradient-to))",
-                  }}
-                >
-                  <Icon size={22} className="text-white" aria-hidden="true" />
-                </div>
-                <span
-                  className="text-[11px] font-bold px-2.5 py-1 rounded-full whitespace-nowrap"
-                  style={{
-                    background: "var(--accent-soft)",
-                    color: "var(--accent)",
-                  }}
-                >
-                  {badge}
-                </span>
-              </div>
-              <h3
-                className="text-lg font-bold mb-2 group-hover:text-[var(--accent)] transition-colors"
-                style={{ color: "var(--text-primary)" }}
-              >
-                {title}
-              </h3>
-              <p
-                className="text-sm leading-relaxed"
-                style={{ color: "var(--text-secondary)" }}
-              >
-                {desc}
-              </p>
-            </article>
-          ))}
+      <section id="modulos" className="border-y border-white/10 bg-[#20202c] px-5 py-24 sm:px-8">
+        <SectionHeading eyebrow="Módulos" title="Do resumo à lei seca, sem trocar de plataforma." description="Dois ambientes complementares para compreender a matéria, consultar a literalidade e praticar com segurança." />
+        <div className="mx-auto max-w-6xl space-y-14">
+          <article className="grid items-center gap-8 lg:grid-cols-[0.78fr_1.4fr]"><div><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#a78bfa] shadow-lg shadow-[#7c3aed]/25"><Layers3 size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#c4b5fd]">PRO Resumos</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight">Conteúdo organizado para você entender e reter.</h3><p className="mt-4 leading-7 text-[#b4b1c3]">Resumos jurídicos divididos em seções, com pontos de prova, mnemônicos, mapas mentais e progresso de leitura.</p></div><ResumosPreview /></article>
+          <article className="grid items-center gap-8 lg:grid-cols-[1.4fr_0.78fr]"><div className="lg:order-2"><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#f9a826] to-[#c27b08] text-[#121212] shadow-lg shadow-[#f9a826]/20"><Gavel size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f9a826]">PRO Legis</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight">A legislação vigente em uma leitura confiável.</h3><p className="mt-4 leading-7 text-[#b4b1c3]">Texto oficial versionado, progresso por dispositivo legal e prática C/E conectada à literalidade da lei.</p></div><LegisPreview /></article>
         </div>
       </section>
 
-      {/* ── How it works ── */}
-      <section
-        className="w-full py-20"
-        style={{ background: "var(--bg-secondary)" }}
-        aria-labelledby="how-it-works-title"
-      >
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <div
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 text-xs font-bold tracking-[0.18em] uppercase"
-              style={{
-                background: "var(--accent-soft)",
-                color: "var(--accent)",
-                border:
-                  "1px solid color-mix(in srgb, var(--accent) 22%, transparent)",
-              }}
-            >
-              <Clock size={12} />
-              Como funciona
-            </div>
-            <h2
-              id="how-it-works-title"
-              className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-balance"
-              style={{ color: "var(--text-primary)" }}
-            >
-              Do primeiro acesso à aprovação.
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {steps.map((step, i) => (
-              <div
-                key={step.number}
-                className="flex gap-5 p-6 rounded-2xl border"
-                style={{
-                  background: "var(--bg-card)",
-                  borderColor: "var(--border)",
-                  boxShadow: "var(--shadow)",
-                }}
-              >
-                <div
-                  className="flex-shrink-0 w-12 h-12 rounded-2xl grid place-items-center font-mono text-sm font-extrabold"
-                  style={{
-                    background:
-                      i === 0
-                        ? "var(--accent)"
-                        : "color-mix(in srgb, var(--accent) 76%, var(--editorial-band))",
-                    color: "#fff",
-                  }}
-                >
-                  {step.number}
-                </div>
-                <div>
-                  <h3
-                    className="font-bold text-base mb-1.5"
-                    style={{ color: "var(--text-primary)" }}
-                  >
-                    {step.title}
-                  </h3>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: "var(--text-secondary)" }}
-                  >
-                    {step.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+      <section className="px-5 py-24 sm:px-8" id="ferramentas">
+        <SectionHeading eyebrow="Ferramentas de estudo" title="Veja como cada recurso trabalha a seu favor." description="Uma experiência integrada para ler, testar a memória, registrar ideias e estudar com conforto por mais tempo." />
+        <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2">
+          {toolPreviews.map(({ title, description, preview }) => <article key={title} className="overflow-hidden rounded-3xl border border-white/10 bg-[#262638]"><div className="min-h-[270px] bg-[radial-gradient(circle_at_50%_45%,rgba(167,139,250,0.14),transparent_65%)] p-6 sm:p-8">{preview}</div><div className="border-t border-white/10 p-6 sm:p-7"><h3 className="text-xl font-extrabold text-white">{title}</h3><p className="mt-2 text-sm leading-6 text-[#b4b1c3]">{description}</p></div></article>)}
         </div>
       </section>
 
-      {/* ── Disciplines ── */}
-      <section
-        className="max-w-5xl mx-auto px-6 py-20 w-full"
-        aria-labelledby="disciplines-title"
-      >
-        <div className="text-center mb-12">
-          <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 text-xs font-bold tracking-[0.18em] uppercase"
-            style={{
-              background: "var(--accent-soft)",
-              color: "var(--accent)",
-              border:
-                "1px solid color-mix(in srgb, var(--accent) 22%, transparent)",
-            }}
-          >
-            <GraduationCap size={12} />
-            Conteúdo
-          </div>
-          <h2
-            id="disciplines-title"
-            className="text-3xl md:text-4xl font-extrabold tracking-tight mb-4 text-balance"
-            style={{ color: "var(--text-primary)" }}
-          >
-            Disciplinas disponíveis
-          </h2>
-          <p
-            className="max-w-xl mx-auto text-base"
-            style={{ color: "var(--text-secondary)" }}
-          >
-            Resumos estruturados para os principais ramos do direito cobrados em
-            concursos federais, estaduais e municipais.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-3">
-          {disciplines.map((disc) => (
-            <span
-              key={disc}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold border"
-              style={{
-                background: "var(--bg-card)",
-                borderColor: "var(--border)",
-                color: "var(--text-primary)",
-                boxShadow: "var(--shadow)",
-              }}
-            >
-              <BookOpen
-                size={14}
-                style={{ color: "var(--accent)" }}
-                aria-hidden="true"
-              />
-              {disc}
-            </span>
-          ))}
-        </div>
+      <section className="px-5 pb-24 sm:px-8" aria-labelledby="future-title">
+        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-[#a78bfa]/25 bg-gradient-to-br from-[#302d4e] to-[#262638] p-8 text-center sm:p-12"><div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#a78bfa]/15 blur-3xl" /><FileText className="relative mx-auto text-[#f9a826]" size={34} /><h2 id="future-title" className="relative mt-5 text-3xl font-extrabold text-white md:text-4xl">O ecossistema continuará crescendo.</h2><p className="relative mx-auto mt-4 max-w-2xl leading-7 text-[#b4b1c3]">Além de Resumos e Legis, novos módulos para outras etapas da preparação serão lançados futuramente — integrados à mesma conta e à mesma assinatura mensal.</p></div>
       </section>
 
-      {/* ── CTA Final ── */}
-      <section
-        className="px-6 pb-24 flex justify-center"
-        aria-labelledby="cta-title"
-      >
-        <div
-          className="w-full max-w-4xl rounded-3xl border overflow-hidden relative"
-          style={{
-            background: "var(--editorial-band)",
-            borderColor: "var(--editorial-rule)",
-          }}
-        >
-          {/* Background glow */}
-          <div
-            className="absolute inset-0 pointer-events-none"
-            style={{
-              background:
-                "radial-gradient(ellipse 70% 80% at 50% 120%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 70%)",
-            }}
-          />
-
-          <div className="relative z-10 px-8 py-16 md:px-16 text-center">
-            <div
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 text-xs font-bold tracking-[0.18em] uppercase"
-              style={{
-                background: "rgba(108, 92, 231, 0.2)",
-                color: "#A78BFA",
-                border: "1px solid rgba(108, 92, 231, 0.35)",
-              }}
-            >
-              <Sparkles size={12} />
-              Comece hoje
-            </div>
-
-            <h2
-              id="cta-title"
-              className="text-4xl md:text-5xl font-extrabold tracking-tight mb-5 text-balance leading-tight"
-              style={{ color: "var(--editorial-band-text)" }}
-            >
-              Sua aprovação começa{" "}
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #A78BFA, #F9A826)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                }}
-              >
-                agora.
-              </span>
-            </h2>
-
-            <p
-              className="max-w-lg mx-auto text-base leading-relaxed mb-10"
-              style={{ color: "var(--dashboard-sidebar-muted)" }}
-            >
-              Acesse gratuitamente e comece a estudar com a plataforma mais
-              inteligente para concursos públicos.
-            </p>
-
-            <Link
-              id="cta-final"
-              href="/login"
-              className="inline-flex items-center gap-2.5 text-base font-bold px-10 py-4 rounded-2xl transition-all hover:-translate-y-1 hover:shadow-2xl"
-              style={{
-                background: "var(--action)",
-                color: "var(--action-foreground)",
-                boxShadow:
-                  "0 10px 35px -8px color-mix(in srgb, var(--action) 60%, transparent)",
-              }}
-            >
-              Criar minha conta gratuita
-              <ArrowRight size={19} />
-            </Link>
-
-            <p
-              className="mt-5 text-xs"
-              style={{ color: "var(--dashboard-sidebar-muted)" }}
-            >
-              Sem cartão de crédito. Acesso imediato via e-mail.
-            </p>
-          </div>
-        </div>
+      <section className="px-5 pb-24 sm:px-8" aria-labelledby="cta-title">
+        <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-[#343449] bg-[#262638] px-8 py-16 text-center md:px-16"><div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_80%_at_50%_120%,rgba(108,92,231,0.25),transparent_70%)]" /><div className="relative"><span className="inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/35 bg-[#a78bfa]/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#c4b5fd]"><Sparkles size={12} /> Comece hoje</span><h2 id="cta-title" className="mt-7 text-balance text-4xl font-extrabold tracking-tight text-white md:text-5xl">Sua aprovação começa <span className="bg-gradient-to-r from-[#a78bfa] to-[#f9a826] bg-clip-text text-transparent">agora.</span></h2><p className="mx-auto mt-5 max-w-lg leading-7 text-[#b4b1c3]">Acesse gratuitamente e comece a estudar com uma plataforma criada para concursos públicos.</p><Link href="/login" className="mt-9 inline-flex items-center gap-2 rounded-2xl bg-[#f9a826] px-9 py-4 text-base font-extrabold text-[#121212] shadow-2xl shadow-[#f9a826]/20 transition hover:-translate-y-1 hover:bg-[#ffc15c]">Criar minha conta gratuita <ArrowRight size={19} /></Link><p className="mt-5 text-xs text-white/40">Sem cartão de crédito. Acesso imediato via e-mail.</p></div></div>
       </section>
 
-      {/* ── Footer ── */}
-      <footer
-        className="w-full border-t px-6 py-8 text-center text-xs"
-        style={{ borderColor: "var(--border)", color: "var(--text-muted)" }}
-      >
-        <div
-          className="flex items-center justify-center gap-2 mb-2 font-bold text-sm"
-          style={{ color: "var(--text-primary)" }}
-        >
-          <ProLogo size={26} variant="full" />
-        </div>
-        <p>Plataforma de estudos para concursos públicos.</p>
-        <p className="mt-1" style={{ color: "var(--text-muted)" }}>Um módulo do ecossistema PRO Concursos.</p>
-      </footer>
+      <footer className="border-t border-white/10 px-6 py-10"><div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 sm:flex-row"><BrandLogo className="opacity-90" /><p className="text-center text-xs text-white/40 sm:text-right">Um ecossistema de estudos para concursos públicos.</p></div></footer>
     </main>
   );
 }
