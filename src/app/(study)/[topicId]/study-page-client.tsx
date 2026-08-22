@@ -120,6 +120,7 @@ export function StudyPageClient({
 
       <DashboardNavigation
         userEmail={userEmail}
+        mobileOverlay
         studySections={sections}
         progressMap={progressMap}
         activeSectionId={activeSectionId}
