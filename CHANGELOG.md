@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — navegação mobile da leitura
+
+- corrigido o módulo de Resumos para ocupar toda a largura disponível em telas pequenas;
+- convertido o acesso à navegação da página de estudo em uma aba sobreposta, retrátil e ancorada à esquerda, sem reservar espaço do conteúdo.
+
 ## Não publicado — revisão de segurança e lançamento
 
 - documentado o diagnóstico de segurança do PRO Resumos e PRO Legis, com evidências, riscos priorizados e critérios de lançamento;
