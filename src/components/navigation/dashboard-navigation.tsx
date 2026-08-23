@@ -25,6 +25,7 @@ import type { SectionRow } from "@/types/database";
 interface DashboardNavigationProps {
   userEmail: string | null;
   userName?: string | null;
+  mobileOverlay?: boolean;
   studySections?: SectionRow[];
   progressMap?: Record<string, boolean>;
   activeSectionId?: string | null;
@@ -64,6 +65,7 @@ const navigationItems = [
 export function DashboardNavigation({
   userEmail,
   userName = null,
+  mobileOverlay = false,
   studySections = [],
   progressMap = {},
   activeSectionId = null,
@@ -314,25 +316,43 @@ export function DashboardNavigation({
         {renderNavigationContent(collapsed)}
       </aside>
 
-      <header
-        className="sticky top-0 z-30 flex items-center justify-between border-b px-4 py-3 lg:hidden"
-        style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
-      >
-        <Link href="/dashboard" className="flex items-center gap-2 font-bold" style={{ color: "var(--text-primary)" }}>
-          <ProLogo size={32} variant="full" />
-        </Link>
+      {mobileOverlay ? (
         <button
           type="button"
           onClick={() => setMobileOpen(true)}
-          className="grid h-11 w-11 place-items-center rounded-xl border"
-          style={{ borderColor: "var(--border)", color: "var(--text-primary)" }}
+          className="fixed left-0 top-1/2 z-30 grid h-12 w-10 -translate-y-1/2 place-items-center rounded-r-xl border border-l-0 shadow-lg lg:hidden"
+          style={{
+            background: "var(--dashboard-sidebar)",
+            borderColor: "var(--dashboard-sidebar-border)",
+            color: "var(--dashboard-sidebar-text)",
+          }}
           aria-label="Abrir navegação"
           aria-expanded={mobileOpen}
           aria-controls="dashboard-mobile-navigation"
         >
-          <Menu size={22} />
+          <PanelLeftOpen size={21} aria-hidden="true" />
         </button>
-      </header>
+      ) : (
+        <header
+          className="sticky top-0 z-30 flex items-center justify-between border-b px-4 py-3 lg:hidden"
+          style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
+        >
+          <Link href="/dashboard" className="flex items-center gap-2 font-bold" style={{ color: "var(--text-primary)" }}>
+            <ProLogo size={32} variant="full" />
+          </Link>
+          <button
+            type="button"
+            onClick={() => setMobileOpen(true)}
+            className="grid h-11 w-11 place-items-center rounded-xl border"
+            style={{ borderColor: "var(--border)", color: "var(--text-primary)" }}
+            aria-label="Abrir navegação"
+            aria-expanded={mobileOpen}
+            aria-controls="dashboard-mobile-navigation"
+          >
+            <Menu size={22} aria-hidden="true" />
+          </button>
+        </header>
+      )}
 
       {mobileOpen && (
         <button
@@ -345,8 +365,10 @@ export function DashboardNavigation({
 
       <aside
         id="dashboard-mobile-navigation"
-        className={`fixed inset-y-0 right-0 z-50 flex w-[min(86vw,320px)] flex-col border-l transition-transform duration-300 lg:hidden ${
-          mobileOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed inset-y-0 z-50 flex w-[min(86vw,320px)] flex-col transition-transform duration-300 lg:hidden ${
+          mobileOverlay ? "left-0 border-r" : "right-0 border-l"
+        } ${
+          mobileOpen ? "translate-x-0" : mobileOverlay ? "-translate-x-full" : "translate-x-full"
         }`}
         style={{ background: "var(--dashboard-sidebar)", borderColor: "var(--dashboard-sidebar-border)" }}
         aria-hidden={!mobileOpen}

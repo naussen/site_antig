@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — navegação mobile da leitura
+
+- corrigido o módulo de Resumos para ocupar toda a largura disponível em telas pequenas;
+- convertido o acesso à navegação da página de estudo em uma aba sobreposta, retrátil e ancorada à esquerda, sem reservar espaço do conteúdo.
+- reforçado o layout da leitura como coluna no mobile e linha somente no desktop, impedindo qualquer navegação futura de comprimir horizontalmente o conteúdo.
+
 ## Não publicado — integração entre Legis e Resumos
 
 - adicionado filtro temporário por disciplina no Dashboard via query string, sem alterar as preferências salvas do usuário;
