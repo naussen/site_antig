@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — dados pessoais do PRO Legis
+
+- adicionada a tabela canônica de realces jurídicos com RLS por usuário e validações de offsets, cores e contexto;
+- adicionada função autenticada que retorna notas e realces do artigo em uma única ida ao banco;
+- criado índice composto para acelerar a leitura dos realces por usuário, fragmento e intervalo.
+
 ## Não publicado — navegação mobile da leitura
 
 - corrigido o módulo de Resumos para ocupar toda a largura disponível em telas pequenas;
