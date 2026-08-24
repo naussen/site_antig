@@ -2,7 +2,7 @@
 
 ## Não publicado — identidade visual do Dashboard
 
-- adotados nos títulos de disciplina e cards de módulo o estilo e a paleta atuais do PRO Legis: base neutra, bordas superiores por categoria, ícones em fundos suaves e estados semânticos nos temas Light, Dark e Sepia.
+- adotados no cabeçalho do módulo Resumos, nos títulos de disciplina e nos cards o estilo e a paleta atuais do PRO Legis: hero azul-escuro, base neutra, bordas superiores por categoria, ícones em fundos suaves e estados semânticos nos temas Light, Dark e Sepia.
 
 ## Não publicado — dados pessoais do PRO Legis
 

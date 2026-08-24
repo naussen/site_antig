@@ -217,57 +217,34 @@ export default async function DashboardPage({
       style={{ background: "var(--bg-primary)" }}
     >
       <div className="mx-auto max-w-7xl">
-        <header
-          className="relative overflow-hidden rounded-[28px] border px-5 py-7 sm:px-8 sm:py-9 lg:px-10"
-          style={{ borderColor: "var(--border)", background: "var(--bg-card)" }}
-        >
-          <div
-            className="pointer-events-none absolute inset-0 opacity-80"
-            style={{
-              background:
-                "radial-gradient(circle at 85% 10%, var(--accent-soft), transparent 34%), linear-gradient(135deg, var(--bg-card), var(--bg-secondary))",
-            }}
-          />
+        <header className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[linear-gradient(135deg,var(--catalog-hero-start),var(--catalog-hero-end))] px-5 py-7 text-white shadow-[var(--shadow-lg)] sm:px-8 sm:py-9 lg:px-10">
+          <div className="pointer-events-none absolute -right-16 -top-24 h-72 w-72 rounded-full bg-[var(--catalog-hero-glow)] blur-3xl" aria-hidden="true" />
           <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
             <div className="max-w-2xl">
-              <div
-                className="mb-5 inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-bold uppercase tracking-[0.16em]"
-                style={{
-                  borderColor: "var(--border)",
-                  background: "var(--accent-soft)",
-                  color: "var(--accent)",
-                }}
-              >
+              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-black uppercase tracking-[0.16em] text-white/90">
                 <Sparkles size={14} />
                 Painel de estudos
               </div>
-              <h1
-                className="text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl"
-                style={{ color: "var(--text-primary)" }}
-              >
+              <h1 className="text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl">
                 Sua biblioteca de estudos
               </h1>
-              <p
-                className="mt-4 max-w-xl text-sm leading-6 sm:text-base"
-                style={{ color: "var(--text-secondary)" }}
-              >
+              <p className="mt-4 max-w-xl text-sm leading-6 text-white/75 sm:text-base">
                 Acompanhe sua evolução, encontre seus resumos por disciplina e continue avançando uma seção de cada vez.
               </p>
               <Link
                 href="/dashboard/configuracoes"
-                className="mt-6 inline-flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-bold transition-colors hover:border-[var(--accent)]"
-                style={{ borderColor: "var(--border)", color: "var(--text-primary)", background: "var(--bg-card)" }}
+                className="mt-6 inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:border-white/30 hover:bg-white/15"
               >
-                <Settings2 size={17} style={{ color: "var(--accent)" }} />
+                <Settings2 size={17} className="text-[var(--catalog-gold-light)]" />
                 Configurar matérias
                 {hiddenDisciplineCount > 0 && (
-                  <span className="rounded-full px-2 py-0.5 text-[11px]" style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
+                  <span className="rounded-full bg-white/15 px-2 py-0.5 text-[11px] text-white">
                     {hiddenDisciplineCount} {hiddenDisciplineCount === 1 ? "oculta" : "ocultas"}
                   </span>
                 )}
               </Link>
               {!preferencesAvailable && (
-                <p className="mt-3 max-w-xl text-xs leading-5" style={{ color: "var(--text-muted)" }}>
+                <p className="mt-3 max-w-xl text-xs leading-5 text-white/65">
                   A configuração de matérias aguarda a aplicação da migration 005 no Supabase. Enquanto isso, todas as matérias permanecem visíveis.
                 </p>
               )}
@@ -285,17 +262,13 @@ export default async function DashboardPage({
                   return (
                     <div
                       key={stat.label}
-                      className="rounded-2xl border p-3 sm:p-4"
-                      style={{
-                        background: "color-mix(in srgb, var(--bg-card) 86%, transparent)",
-                        borderColor: "var(--border)",
-                      }}
+                      className="rounded-2xl border border-white/15 bg-white/10 p-3 backdrop-blur-sm sm:p-4"
                     >
-                      <Icon size={17} className="mb-3" style={{ color: "var(--accent)" }} />
-                      <strong className="block text-lg sm:text-xl" style={{ color: "var(--text-primary)" }}>
+                      <Icon size={17} className="mb-3 text-[var(--catalog-gold-light)]" />
+                      <strong className="block text-lg text-white sm:text-xl">
                         {stat.value}
                       </strong>
-                      <span className="mt-1 block text-[11px] leading-tight" style={{ color: "var(--text-muted)" }}>
+                      <span className="mt-1 block text-[11px] leading-tight text-white/65">
                         {stat.label}
                       </span>
                     </div>

@@ -27,8 +27,12 @@
   --action-hover: #D98A08;
   --action-foreground: #121212;
   --catalog-gold: #F59E0B;
+  --catalog-gold-light: #FBBF24;
   --catalog-gold-soft: #FEF3C7;
   --catalog-gold-text: #92400E;
+  --catalog-hero-start: #0F172A;
+  --catalog-hero-end: #334155;
+  --catalog-hero-glow: rgba(245, 158, 11, 0.22);
   --catalog-blue: #3B82F6;
   --catalog-blue-soft: #DBEAFE;
   --catalog-blue-text: #1D4ED8;
@@ -113,8 +117,12 @@
   --action-hover: #FFC15C;
   --action-foreground: #121212;
   --catalog-gold: #D97706;
+  --catalog-gold-light: #FBBF24;
   --catalog-gold-soft: rgba(245, 158, 11, 0.16);
   --catalog-gold-text: #FBBF24;
+  --catalog-hero-start: #0B1220;
+  --catalog-hero-end: #253449;
+  --catalog-hero-glow: rgba(245, 158, 11, 0.18);
   --catalog-blue: #3B82F6;
   --catalog-blue-soft: rgba(59, 130, 246, 0.16);
   --catalog-blue-text: #93C5FD;
@@ -185,8 +193,12 @@
   --action-hover: #9A6F08;
   --action-foreground: #FFFFFF;
   --catalog-gold: #C47B17;
+  --catalog-gold-light: #F1B84B;
   --catalog-gold-soft: rgba(196, 123, 23, 0.16);
   --catalog-gold-text: #7C480C;
+  --catalog-hero-start: #3F3528;
+  --catalog-hero-end: #6B5B45;
+  --catalog-hero-glow: rgba(217, 119, 6, 0.2);
   --catalog-blue: #55789B;
   --catalog-blue-soft: rgba(85, 120, 155, 0.14);
   --catalog-blue-text: #385B7D;
