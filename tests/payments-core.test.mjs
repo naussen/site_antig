@@ -6,6 +6,8 @@ import {
   isAllowedCheckoutUrl,
   mapMercadoPagoStatus,
   mapPayPalStatus,
+  resolveMercadoPagoStatus,
+  resolvePayPalStatus,
   verifyMercadoPagoSignature,
 } from "../src/lib/payments/core.mjs";
 
@@ -16,6 +18,15 @@ test("mapeia estados dos provedores sem conceder acesso a estado desconhecido", 
   assert.equal(mapPayPalStatus("ACTIVE"), "active");
   assert.equal(mapPayPalStatus("SUSPENDED"), "past_due");
   assert.equal(mapPayPalStatus("UNKNOWN"), "pending");
+});
+
+test("reconciliação exige cobrança confirmada e preserva estados terminais", () => {
+  assert.equal(resolveMercadoPagoStatus("authorized"), "pending");
+  assert.equal(resolveMercadoPagoStatus("authorized", { paymentStatus: "approved" }), "active");
+  assert.equal(resolveMercadoPagoStatus("authorized", { paymentStatus: "rejected", summarized: "pending" }), "pending");
+  assert.equal(resolveMercadoPagoStatus("cancelled", { paymentStatus: "approved" }), "canceled");
+  assert.equal(resolvePayPalStatus("ACTIVE", 1), "past_due");
+  assert.equal(resolvePayPalStatus("CANCELLED", 1), "canceled");
 });
 
 test("limita temporalmente um acesso ativo mesmo sem próxima cobrança", () => {

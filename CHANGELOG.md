@@ -6,6 +6,7 @@
 - implementados webhooks com verificação de origem, reconsulta ao provedor, validação do plano e atualização server-side dos entitlements;
 - adicionadas idempotência persistente, proteção contra eventos fora de ordem e validade defensiva do acesso;
 - documentada a configuração segura de credenciais, planos, eventos e testes em sandbox.
+- adicionada reconciliação diária autenticada para corrigir webhooks perdidos antes do vencimento defensivo do acesso.
 
 ## Não publicado — identidade visual do Dashboard
 

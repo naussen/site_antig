@@ -202,8 +202,25 @@ export async function getPayPalSubscription(subscriptionId: string) {
   });
   return providerJson<{
     id: string; plan_id?: string; status: string; custom_id?: string; status_update_time?: string;
-    create_time?: string; billing_info?: { next_billing_time?: string };
+    create_time?: string; billing_info?: { next_billing_time?: string; failed_payments_count?: number };
   }>(response, "PayPal");
+}
+
+export async function getLatestMercadoPagoInvoice(subscriptionId: string) {
+  const { accessToken } = getMercadoPagoConfig();
+  const url = new URL(`${MERCADO_PAGO_API}/authorized_payments/search`);
+  url.searchParams.set("preapproval_id", subscriptionId);
+  url.searchParams.set("limit", "20");
+  const response = await fetch(url, {
+    headers: { Authorization: `Bearer ${accessToken}` }, cache: "no-store", signal: AbortSignal.timeout(10_000),
+  });
+  const data = await providerJson<{ results?: Array<{
+    preapproval_id?: string; currency_id?: string; transaction_amount?: string | number;
+    summarized?: string; last_modified?: string; payment?: { status?: string };
+  }> }>(response, "Mercado Pago");
+  return (data.results ?? []).sort((a, b) =>
+    new Date(b.last_modified ?? 0).getTime() - new Date(a.last_modified ?? 0).getTime()
+  )[0] ?? null;
 }
 
 export function isExpectedPayPalSubscription(subscription: { plan_id?: string }) {

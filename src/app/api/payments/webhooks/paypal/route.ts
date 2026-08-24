@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { NextResponse } from "next/server";
 import { applyEntitlement, beginWebhookEvent, finishWebhookEvent } from "@/lib/payments/entitlements";
-import { calculateAccessUntil, mapPayPalStatus } from "@/lib/payments/core.mjs";
+import { calculateAccessUntil, resolvePayPalStatus } from "@/lib/payments/core.mjs";
 import { getPayPalSubscription, isExpectedPayPalSubscription, verifyPayPalWebhook } from "@/lib/payments/providers";
 
 const eventSchema = z.object({
@@ -45,10 +45,7 @@ export async function POST(request: Request) {
     const subscription = await getPayPalSubscription(subscriptionId);
     const userId = uuidSchema.parse(subscription.custom_id);
     if (!isExpectedPayPalSubscription(subscription)) throw new Error("unexpected_plan");
-    let status = mapPayPalStatus(subscription.status);
-    if (["PAYMENT.SALE.REFUNDED", "PAYMENT.SALE.REVERSED", "BILLING.SUBSCRIPTION.PAYMENT.FAILED"].includes(parsed.data.event_type)) {
-      status = "past_due";
-    }
+    const status = resolvePayPalStatus(subscription.status, subscription.billing_info?.failed_payments_count, parsed.data.event_type);
     const providerUpdatedAt = subscription.status_update_time && new Date(subscription.status_update_time) > new Date(parsed.data.create_time)
       ? subscription.status_update_time
       : parsed.data.create_time;

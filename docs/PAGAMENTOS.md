@@ -13,6 +13,7 @@ Configure na hospedagem, nunca com prefixo `NEXT_PUBLIC_`:
 ```env
 PAYMENTS_APP_URL=https://proconcursos.com.br/resumos
 PAYMENTS_MONTHLY_PRICE_BRL=29.90
+PAYMENTS_RECONCILIATION_TOKEN=
 
 MERCADO_PAGO_ACCESS_TOKEN=
 MERCADO_PAGO_WEBHOOK_SECRET=
@@ -62,3 +63,7 @@ npm run build -- --webpack
 Nos sandboxes, teste: checkout cancelado, aprovação, renovação, evento duplicado, suspensão, falha de cobrança, cancelamento, expiração, reembolso e reversão. Confirme em `payment_webhook_events` que não há payloads ou dados de cartão e, em `user_entitlements`, que o UUID, provedor, assinatura, estado e validade estão corretos.
 
 Antes de produção, configure monitoramento de respostas 5xx nos webhooks e uma reconciliação periódica independente. A validade defensiva expira depois do próximo ciclo mais três dias (ou 38 dias sem data de próxima cobrança), mas não substitui reconciliação.
+
+## 6. Reconciliação automática
+
+A função Netlify `reconcile-payments` executa diariamente às 06:00 UTC. Ela chama a rota autenticada `/api/payments/reconcile`, reconsulta assinaturas próximas do vencimento ou sem validade definida e registra somente métricas agregadas. `PAYMENTS_RECONCILIATION_TOKEN` deve ter pelo menos 32 bytes aleatórios e existir no escopo de Functions.

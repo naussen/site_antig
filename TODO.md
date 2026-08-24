@@ -17,7 +17,7 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [x] Atualizar `user_entitlements` somente no backend com `service_role`, vinculando o pagamento ao UUID confirmado do Supabase Auth.
 - [x] Tratar estados de renovação, atraso, cancelamento, expiração, estorno/reversão do PayPal e eventos recebidos fora de ordem.
 - [ ] Completar a política comercial e técnica de reembolso/chargeback do Mercado Pago antes de habilitar esses eventos em produção.
-- [ ] Implementar reconciliação periódica entre o banco e as APIs dos provedores para corrigir webhooks perdidos.
+- [x] Implementar reconciliação periódica entre o banco e as APIs dos provedores para corrigir webhooks perdidos.
 - [ ] Registrar auditoria sem tokens, dados de cartão, payloads completos ou informações pessoais desnecessárias.
 - [ ] Configurar alertas para falhas reiteradas de webhook, divergências de reconciliação e concessões/revogações anormais.
 - [ ] Testar nos sandboxes: pagamento aprovado, recusado, pendente, duplicado, cancelado, expirado e estornado.

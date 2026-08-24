@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { NextResponse } from "next/server";
 import { applyEntitlement, beginWebhookEvent, finishWebhookEvent } from "@/lib/payments/entitlements";
-import { calculateAccessUntil, mapMercadoPagoStatus, verifyMercadoPagoSignature } from "@/lib/payments/core.mjs";
+import { calculateAccessUntil, resolveMercadoPagoStatus, verifyMercadoPagoSignature } from "@/lib/payments/core.mjs";
 import {
   getMercadoPagoConfig,
   getMercadoPagoSubscription,
@@ -63,15 +63,10 @@ export async function POST(request: Request) {
     const subscription = await getMercadoPagoSubscription(subscriptionId);
     const userId = uuidSchema.parse(subscription.external_reference);
     if (!isExpectedMercadoPagoSubscription(subscription)) throw new Error("unexpected_plan");
-    let status = mapMercadoPagoStatus(subscription.status);
-    if (invoice && !["canceled", "expired"].includes(status)) {
-      status = invoice.payment?.status === "approved"
-        ? (status === "active" ? "active" : status)
-        : invoice.summarized === "pending" ? "pending" : "past_due";
-    } else if (status === "active") {
-      // A autorização da assinatura antecede a confirmação da primeira parcela.
-      status = "pending";
-    }
+    const status = resolveMercadoPagoStatus(subscription.status, invoice ? {
+      paymentStatus: invoice.payment?.status,
+      summarized: invoice.summarized,
+    } : null);
     const providerUpdatedAt = subscription.last_modified && new Date(subscription.last_modified) > new Date(eventCreatedAt)
       ? subscription.last_modified
       : eventCreatedAt;

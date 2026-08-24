@@ -25,6 +25,25 @@ export function mapPayPalStatus(status) {
   })[status] ?? "pending";
 }
 
+export function resolveMercadoPagoStatus(subscriptionStatus, invoice = null) {
+  const status = mapMercadoPagoStatus(subscriptionStatus);
+  if (status === "canceled" || status === "expired") return status;
+  if (!invoice) return status === "active" ? "pending" : status;
+  if (invoice.paymentStatus === "approved") return status === "active" ? "active" : status;
+  return invoice.summarized === "pending" ? "pending" : "past_due";
+}
+
+export function resolvePayPalStatus(subscriptionStatus, failedPaymentsCount = 0, eventType = "") {
+  const status = mapPayPalStatus(subscriptionStatus);
+  if (status === "canceled" || status === "expired") return status;
+  if (failedPaymentsCount > 0 || [
+    "PAYMENT.SALE.REFUNDED",
+    "PAYMENT.SALE.REVERSED",
+    "BILLING.SUBSCRIPTION.PAYMENT.FAILED",
+  ].includes(eventType)) return "past_due";
+  return status;
+}
+
 export function calculateAccessUntil(status, nextBillingTime, eventTime) {
   if (status !== "active" && status !== "trialing") return null;
 
