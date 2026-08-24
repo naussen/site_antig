@@ -391,15 +391,14 @@ export default async function DashboardPage({
                 aria-labelledby={`discipline-${discipline}`}
               >
                 <summary className="mb-5 flex cursor-pointer list-none items-center gap-4 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)] [&::-webkit-details-marker]:hidden">
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[image:var(--discipline-icon-background)] text-[var(--discipline-icon-foreground)] shadow-sm">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[var(--discipline-icon-background)] text-[var(--discipline-icon-foreground)] shadow-sm">
                     <BookOpen size={19} />
                   </span>
                   <div className="min-w-0 flex-1">
                     <h3 id={`discipline-${discipline}`} className="truncate text-lg font-extrabold text-[var(--discipline-title)] sm:text-xl">
                       {discipline}
                     </h3>
-                    <span className="mt-1 block h-0.5 w-10 rounded-full bg-[var(--discipline-accent)]" aria-hidden="true" />
-                    <p className="mt-1.5 text-xs" style={{ color: "var(--text-muted)" }}>
+                    <p className="mt-0.5 text-xs" style={{ color: "var(--text-muted)" }}>
                       {groupedTopics[discipline].length} {groupedTopics[discipline].length === 1 ? "resumo" : "resumos"}
                     </p>
                   </div>
@@ -429,10 +428,9 @@ export default async function DashboardPage({
                       <Link
                         key={topic.topic_id}
                         href={`/${topic.topic_id}`}
-                        className="group relative flex min-h-[250px] flex-col overflow-hidden rounded-2xl border p-5 transition-all hover:-translate-y-1 hover:shadow-lg sm:p-6"
+                        className="group relative flex min-h-[250px] flex-col overflow-hidden rounded-2xl border border-[var(--border)] p-5 transition-all hover:-translate-y-1 hover:border-[var(--module-card-accent)] hover:shadow-lg sm:p-6"
                         style={{
                           background: "var(--bg-card)",
-                          borderColor: "var(--border)",
                           boxShadow: "var(--shadow)",
                         }}
                       >
@@ -441,7 +439,7 @@ export default async function DashboardPage({
                         </span>
 
                         <div className="mb-5 flex items-center justify-between gap-3">
-                          <span className="grid h-10 w-10 place-items-center rounded-xl bg-[image:var(--discipline-icon-background)] text-[var(--discipline-icon-foreground)] shadow-sm">
+                          <span className="grid h-10 w-10 place-items-center rounded-xl bg-[var(--module-icon-background)] text-[var(--module-icon-foreground)]">
                             {progress.percent === 100 ? <CheckCircle2 size={20} /> : <BookOpen size={20} />}
                           </span>
                           <span className="rounded-full px-2.5 py-1 text-xs font-bold" style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
@@ -449,12 +447,11 @@ export default async function DashboardPage({
                           </span>
                         </div>
                         <h3
-                          className="text-lg font-bold leading-snug text-[var(--discipline-title)] transition-colors group-hover:text-[var(--accent-hover)]"
+                          className="text-lg font-bold leading-snug text-[var(--module-title)] transition-colors group-hover:text-[var(--module-card-accent)]"
                         >
                           {topic.title}
                         </h3>
-                        <span className="mt-2 block h-0.5 w-8 rounded-full bg-[var(--discipline-accent)]" aria-hidden="true" />
-                        <div className="mt-2.5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs" style={{ color: "var(--text-muted)" }}>
+                        <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs" style={{ color: "var(--text-muted)" }}>
                           <span className="inline-flex items-center gap-1.5">
                             <Layers3 size={14} />
                             {progress.totalCount} {progress.totalCount === 1 ? "seção" : "seções"}
