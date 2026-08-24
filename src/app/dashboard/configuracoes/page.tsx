@@ -53,19 +53,22 @@ export default async function DashboardSettingsPage() {
           Voltar ao Dashboard
         </Link>
 
-        <header className="rounded-3xl border p-6 sm:p-8" style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}>
-          <span className="grid h-12 w-12 place-items-center rounded-2xl" style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
-            <Settings2 size={24} />
-          </span>
-          <p className="mt-6 text-xs font-bold uppercase tracking-[0.16em]" style={{ color: "var(--accent)" }}>
-            Configuração da biblioteca
-          </p>
-          <h1 className="mt-2 text-3xl font-extrabold tracking-tight" style={{ color: "var(--text-primary)" }}>
-            Matérias no Dashboard
-          </h1>
-          <p className="mt-3 max-w-2xl text-sm leading-6" style={{ color: "var(--text-secondary)" }}>
-            Escolha as disciplinas que deseja encontrar ao entrar. A seleção fica salva na sua conta e pode ser alterada a qualquer momento.
-          </p>
+        <header className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[linear-gradient(135deg,var(--catalog-hero-start),var(--catalog-hero-end))] p-6 text-white shadow-[var(--shadow-lg)] sm:p-8">
+          <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full bg-[var(--catalog-hero-glow)] blur-3xl" aria-hidden="true" />
+          <div className="relative">
+            <span className="grid h-12 w-12 place-items-center rounded-2xl border border-white/15 bg-white/10 text-[var(--catalog-gold-light)]">
+              <Settings2 size={24} />
+            </span>
+            <p className="mt-6 text-xs font-black uppercase tracking-[0.16em] text-white/75">
+              Configuração da biblioteca
+            </p>
+            <h1 className="mt-2 text-3xl font-black tracking-tight text-white">
+              Matérias no Dashboard
+            </h1>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-white/75">
+              Escolha as disciplinas que deseja encontrar ao entrar. A seleção fica salva na sua conta e pode ser alterada a qualquer momento.
+            </p>
+          </div>
         </header>
 
         <PreferencesForm>
