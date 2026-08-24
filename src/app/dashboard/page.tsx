@@ -441,7 +441,7 @@ export default async function DashboardPage({
                         </span>
 
                         <div className="mb-5 flex items-center justify-between gap-3">
-                          <span className="grid h-10 w-10 place-items-center rounded-xl" style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
+                          <span className="grid h-10 w-10 place-items-center rounded-xl bg-[image:var(--discipline-icon-background)] text-[var(--discipline-icon-foreground)] shadow-sm">
                             {progress.percent === 100 ? <CheckCircle2 size={20} /> : <BookOpen size={20} />}
                           </span>
                           <span className="rounded-full px-2.5 py-1 text-xs font-bold" style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
@@ -449,12 +449,12 @@ export default async function DashboardPage({
                           </span>
                         </div>
                         <h3
-                          className="text-lg font-bold leading-snug transition-colors group-hover:text-[var(--accent)]"
-                          style={{ color: "var(--text-primary)" }}
+                          className="text-lg font-bold leading-snug text-[var(--discipline-title)] transition-colors group-hover:text-[var(--accent-hover)]"
                         >
                           {topic.title}
                         </h3>
-                        <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs" style={{ color: "var(--text-muted)" }}>
+                        <span className="mt-2 block h-0.5 w-8 rounded-full bg-[var(--discipline-accent)]" aria-hidden="true" />
+                        <div className="mt-2.5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs" style={{ color: "var(--text-muted)" }}>
                           <span className="inline-flex items-center gap-1.5">
                             <Layers3 size={14} />
                             {progress.totalCount} {progress.totalCount === 1 ? "seção" : "seções"}

@@ -2,7 +2,7 @@
 
 ## Não publicado — identidade visual do Dashboard
 
-- alinhados os títulos das disciplinas à paleta roxa, branca e laranja da nova marca PRO Resumos, com contraste adaptado aos temas Light, Dark e Sepia.
+- alinhados os títulos das disciplinas e dos módulos à paleta roxa, branca e laranja da nova marca PRO Resumos, com contraste adaptado aos temas Light, Dark e Sepia.
 
 ## Não publicado — dados pessoais do PRO Legis
 
