@@ -28,6 +28,40 @@ type TopicProgress = {
   percent: number;
 };
 
+const DISCIPLINE_PRESENTATIONS = [
+  {
+    cardClass: "border-t-[3px] border-t-[var(--catalog-gold)]",
+    iconClass: "bg-[var(--catalog-gold-soft)] text-[var(--catalog-gold-text)]",
+  },
+  {
+    cardClass: "border-t-[3px] border-t-[var(--catalog-blue)]",
+    iconClass: "bg-[var(--catalog-blue-soft)] text-[var(--catalog-blue-text)]",
+  },
+  {
+    cardClass: "border-t-[3px] border-t-[var(--catalog-green)]",
+    iconClass: "bg-[var(--catalog-green-soft)] text-[var(--catalog-green-text)]",
+  },
+  {
+    cardClass: "border-t-[3px] border-t-[var(--catalog-rose)]",
+    iconClass: "bg-[var(--catalog-rose-soft)] text-[var(--catalog-rose-text)]",
+  },
+] as const;
+
+function getDisciplinePresentation(discipline: string) {
+  const hash = Array.from(discipline).reduce(
+    (value, character) => ((value * 31) + (character.codePointAt(0) ?? 0)) >>> 0,
+    0,
+  );
+
+  return DISCIPLINE_PRESENTATIONS[hash % DISCIPLINE_PRESENTATIONS.length];
+}
+
+function getProgressBadgeClass(percent: number) {
+  if (percent === 100) return "bg-[var(--status-success-bg)] text-[var(--status-success-text)]";
+  if (percent > 0) return "bg-[var(--catalog-blue-soft)] text-[var(--catalog-blue-text)]";
+  return "bg-[var(--accent-soft)] text-[var(--text-secondary)]";
+}
+
 function compareTopics(a: DashboardTopic, b: DashboardTopic) {
   const disciplineA = a.discipline || "Geral";
   const disciplineB = b.discipline || "Geral";
@@ -383,38 +417,41 @@ export default async function DashboardPage({
             </div>
 
             <div className="flex flex-col gap-12">
-            {disciplines.map((discipline) => (
-              <details
-                key={discipline}
-                open
-                className="group"
-                aria-labelledby={`discipline-${discipline}`}
-              >
-                <summary className="mb-5 flex cursor-pointer list-none items-center gap-4 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)] [&::-webkit-details-marker]:hidden">
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[var(--discipline-icon-background)] text-[var(--discipline-icon-foreground)] shadow-sm">
-                    <BookOpen size={19} />
-                  </span>
-                  <div className="min-w-0 flex-1">
-                    <h3 id={`discipline-${discipline}`} className="truncate text-lg font-extrabold text-[var(--discipline-title)] sm:text-xl">
-                      {discipline}
-                    </h3>
-                    <p className="mt-0.5 text-xs" style={{ color: "var(--text-muted)" }}>
-                      {groupedTopics[discipline].length} {groupedTopics[discipline].length === 1 ? "resumo" : "resumos"}
-                    </p>
-                  </div>
-                  <span className="hidden h-px flex-1 sm:block" style={{ background: "var(--border)" }} />
-                  <span
-                    className="inline-flex shrink-0 items-center gap-1.5 text-xs font-bold text-[var(--accent)]"
-                    aria-hidden="true"
+              {disciplines.map((discipline) => {
+                const presentation = getDisciplinePresentation(discipline);
+
+                return (
+                  <details
+                    key={discipline}
+                    open
+                    className="group"
+                    aria-labelledby={`discipline-${discipline}`}
                   >
-                    <span className="group-open:hidden">Expandir</span>
-                    <span className="hidden group-open:inline">Recolher</span>
-                    <ChevronDown
-                      size={18}
-                      className="transition-transform group-open:rotate-180"
-                    />
-                  </span>
-                </summary>
+                    <summary className="mb-5 flex cursor-pointer list-none items-center gap-4 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)] [&::-webkit-details-marker]:hidden">
+                      <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-xl ${presentation.iconClass}`}>
+                        <BookOpen size={19} />
+                      </span>
+                      <div className="min-w-0 flex-1">
+                        <h3 id={`discipline-${discipline}`} className="truncate text-lg font-black text-[var(--text-primary)] sm:text-xl">
+                          {discipline}
+                        </h3>
+                        <p className="mt-0.5 text-xs text-[var(--text-muted)]">
+                          {groupedTopics[discipline].length} {groupedTopics[discipline].length === 1 ? "resumo" : "resumos"}
+                        </p>
+                      </div>
+                      <span className="hidden h-px flex-1 bg-[var(--border)] sm:block" />
+                      <span
+                        className="inline-flex shrink-0 items-center gap-1.5 text-xs font-bold text-[var(--accent)]"
+                        aria-hidden="true"
+                      >
+                        <span className="group-open:hidden">Expandir</span>
+                        <span className="hidden group-open:inline">Recolher</span>
+                        <ChevronDown
+                          size={18}
+                          className="transition-transform group-open:rotate-180"
+                        />
+                      </span>
+                    </summary>
 
                 <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
                   {groupedTopics[discipline].map((topic) => {
@@ -428,27 +465,17 @@ export default async function DashboardPage({
                       <Link
                         key={topic.topic_id}
                         href={`/${topic.topic_id}`}
-                        className="group relative flex min-h-[250px] flex-col overflow-hidden rounded-2xl border border-[var(--border)] p-5 transition-all hover:-translate-y-1 hover:border-[var(--module-card-accent)] hover:shadow-lg sm:p-6"
-                        style={{
-                          background: "var(--bg-card)",
-                          boxShadow: "var(--shadow)",
-                        }}
+                        className={`group relative flex min-h-[250px] flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-5 shadow-[var(--shadow)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[var(--shadow-lg)] sm:p-6 ${presentation.cardClass}`}
                       >
-                        <span className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--progress-bg)" }}>
-                          <span className="block h-full" style={{ width: `${progress.percent}%`, background: "var(--progress-bar)" }} />
-                        </span>
-
                         <div className="mb-5 flex items-center justify-between gap-3">
-                          <span className="grid h-10 w-10 place-items-center rounded-xl bg-[var(--module-icon-background)] text-[var(--module-icon-foreground)]">
+                          <span className={`grid h-10 w-10 place-items-center rounded-xl ${presentation.iconClass}`}>
                             {progress.percent === 100 ? <CheckCircle2 size={20} /> : <BookOpen size={20} />}
                           </span>
-                          <span className="rounded-full px-2.5 py-1 text-xs font-bold" style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
+                          <span className={`rounded-full px-2.5 py-1 text-[11px] font-black uppercase tracking-wide ${getProgressBadgeClass(progress.percent)}`}>
                             {progress.percent === 100 ? "Concluído" : progress.percent > 0 ? `${progress.percent}%` : "Novo"}
                           </span>
                         </div>
-                        <h3
-                          className="text-lg font-bold leading-snug text-[var(--module-title)] transition-colors group-hover:text-[var(--module-card-accent)]"
-                        >
+                        <h3 className="text-xl font-black leading-tight text-[var(--text-primary)]">
                           {topic.title}
                         </h3>
                         <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs" style={{ color: "var(--text-muted)" }}>
@@ -500,8 +527,9 @@ export default async function DashboardPage({
                     );
                   })}
                 </div>
-              </details>
-            ))}
+                  </details>
+                );
+              })}
             </div>
           </div>
         )}
