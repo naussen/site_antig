@@ -6,16 +6,17 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 
 ### Pagamentos e entitlements
 
-- [ ] Definir o lançamento inicial com Mercado Pago como provedor principal no Brasil e decidir se o PayPal entra no lançamento ou em uma segunda etapa.
+- [x] Disponibilizar Mercado Pago e PayPal como opções de lançamento, mantendo uma assinatura mensal única.
 - [ ] Avaliar Stripe ou Pagar.me apenas se houver necessidade comercial não atendida; evitar três integrações simultâneas no primeiro lançamento.
-- [ ] Implementar checkout exclusivamente pelos SDKs ou páginas hospedadas dos provedores, sem receber ou armazenar dados de cartão no PRO Resumos.
-- [ ] Criar Route Handlers server-side separados para os webhooks do Mercado Pago e do PayPal.
-- [ ] Validar a assinatura criptográfica de cada webhook usando o corpo bruto da requisição e a documentação vigente do provedor.
-- [ ] Consultar o evento ou pagamento na API oficial do provedor antes de conceder acesso; nunca confiar em `status`, preço, plano ou `user_id` enviados pelo navegador.
-- [ ] Criar persistência idempotente de eventos por `provider + event_id`, impedindo processamento duplicado e replay.
-- [ ] Mapear os estados dos provedores para `active`, `trialing`, `pending`, `past_due`, `canceled` e `expired` em `public.user_entitlements`.
-- [ ] Atualizar `user_entitlements` somente no backend com `service_role`, vinculando o pagamento ao UUID confirmado do Supabase Auth.
-- [ ] Tratar renovação, atraso, cancelamento, expiração, estorno, chargeback e eventos recebidos fora de ordem.
+- [x] Implementar checkout exclusivamente por páginas hospedadas dos provedores, sem receber ou armazenar dados de cartão no PRO Resumos.
+- [x] Criar Route Handlers server-side separados para os webhooks do Mercado Pago e do PayPal.
+- [x] Validar criptograficamente a origem de cada webhook conforme a documentação vigente do provedor.
+- [x] Consultar a assinatura na API oficial antes de conceder acesso; nunca confiar em `status`, preço, plano ou `user_id` enviados pelo navegador.
+- [x] Criar persistência idempotente de eventos por `provider + event_id`, impedindo processamento duplicado e replay.
+- [x] Mapear os estados dos provedores para `active`, `trialing`, `pending`, `past_due`, `canceled` e `expired` em `public.user_entitlements`.
+- [x] Atualizar `user_entitlements` somente no backend com `service_role`, vinculando o pagamento ao UUID confirmado do Supabase Auth.
+- [x] Tratar estados de renovação, atraso, cancelamento, expiração, estorno/reversão do PayPal e eventos recebidos fora de ordem.
+- [ ] Completar a política comercial e técnica de reembolso/chargeback do Mercado Pago antes de habilitar esses eventos em produção.
 - [ ] Implementar reconciliação periódica entre o banco e as APIs dos provedores para corrigir webhooks perdidos.
 - [ ] Registrar auditoria sem tokens, dados de cartão, payloads completos ou informações pessoais desnecessárias.
 - [ ] Configurar alertas para falhas reiteradas de webhook, divergências de reconciliação e concessões/revogações anormais.

@@ -1,5 +1,12 @@
 # Changelog
 
+## Não publicado — pagamentos recorrentes
+
+- adicionados checkouts hospedados do Mercado Pago e PayPal para a assinatura mensal única do ecossistema;
+- implementados webhooks com verificação de origem, reconsulta ao provedor, validação do plano e atualização server-side dos entitlements;
+- adicionadas idempotência persistente, proteção contra eventos fora de ordem e validade defensiva do acesso;
+- documentada a configuração segura de credenciais, planos, eventos e testes em sandbox.
+
 ## Não publicado — identidade visual do Dashboard
 
 - adotados nos cabeçalhos do módulo Resumos e da configuração da biblioteca, nos títulos de disciplina e nos cards o estilo e a paleta atuais do PRO Legis: hero azul-escuro, base neutra, bordas superiores por categoria, ícones em fundos suaves e estados semânticos nos temas Light, Dark e Sepia.

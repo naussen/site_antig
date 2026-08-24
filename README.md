@@ -104,6 +104,15 @@ NEXT_PUBLIC_SUPABASE_URL=
 NEXT_PUBLIC_SUPABASE_ANON_KEY=
 SUPABASE_SERVICE_ROLE_KEY=
 CONTENT_ADMIN_TOKEN=
+PAYMENTS_APP_URL=
+PAYMENTS_MONTHLY_PRICE_BRL=
+MERCADO_PAGO_ACCESS_TOKEN=
+MERCADO_PAGO_WEBHOOK_SECRET=
+PAYPAL_ENVIRONMENT=sandbox
+PAYPAL_CLIENT_ID=
+PAYPAL_CLIENT_SECRET=
+PAYPAL_PLAN_ID=
+PAYPAL_WEBHOOK_ID=
 ```
 
 Regras de segurança:
@@ -113,6 +122,7 @@ Regras de segurança:
 - Service role deve ficar restrita a Route Handlers, Server Actions administrativas ou scripts controlados.
 - `CONTENT_ADMIN_TOKEN` autentica somente os endpoints HTTP administrativos e deve ter pelo menos 32 bytes aleatórios.
 - Nunca reutilize a Service Role como `CONTENT_ADMIN_TOKEN`.
+- Credenciais de pagamento são exclusivamente server-side. Consulte `docs/PAGAMENTOS.md` para configurar os sandboxes, planos e webhooks.
 - O cadastro de usuários não usa service role; ele respeita a confirmação de e-mail configurada no Supabase.
 
 ## Rodando localmente

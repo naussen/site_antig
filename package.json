@@ -11,7 +11,8 @@
     "test:content": "node --test tests/content-admin.test.mjs",
     "test:api-auth": "node --test tests/api-admin-auth.test.mjs",
     "test:site-paths": "node --test tests/site-paths.test.mjs",
-    "test:highlights": "node --test tests/text-highlights.test.mjs tests/same-origin.test.mjs"
+    "test:highlights": "node --test tests/text-highlights.test.mjs tests/same-origin.test.mjs",
+    "test:payments": "node --test tests/payments-core.test.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.0",

@@ -109,6 +109,7 @@ export interface UserEntitlement {
   provider_subscription_id: string | null;
   status: 'active' | 'trialing' | 'pending' | 'past_due' | 'canceled' | 'expired';
   access_until: string | null;
+  provider_updated_at: string | null;
   created_at: string;
   updated_at: string;
 }
