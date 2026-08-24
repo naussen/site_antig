@@ -3,6 +3,7 @@
 ## Não publicado — dados pessoais do PRO Legis
 
 - adicionada a tabela canônica de realces jurídicos com RLS por usuário e validações de offsets, cores e contexto;
+- reconciliado o histórico canônico das migrations remotas `015` e `016` antes da otimização;
 - adicionada função autenticada que retorna notas e realces do artigo em uma única ida ao banco;
 - criado índice composto para acelerar a leitura dos realces por usuário, fragmento e intervalo.
 
