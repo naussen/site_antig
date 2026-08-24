@@ -391,14 +391,15 @@ export default async function DashboardPage({
                 aria-labelledby={`discipline-${discipline}`}
               >
                 <summary className="mb-5 flex cursor-pointer list-none items-center gap-4 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)] [&::-webkit-details-marker]:hidden">
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl" style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[image:var(--discipline-icon-background)] text-[var(--discipline-icon-foreground)] shadow-sm">
                     <BookOpen size={19} />
                   </span>
                   <div className="min-w-0 flex-1">
-                    <h3 id={`discipline-${discipline}`} className="truncate text-lg font-extrabold sm:text-xl" style={{ color: "var(--text-primary)" }}>
+                    <h3 id={`discipline-${discipline}`} className="truncate text-lg font-extrabold text-[var(--discipline-title)] sm:text-xl">
                       {discipline}
                     </h3>
-                    <p className="mt-0.5 text-xs" style={{ color: "var(--text-muted)" }}>
+                    <span className="mt-1 block h-0.5 w-10 rounded-full bg-[var(--discipline-accent)]" aria-hidden="true" />
+                    <p className="mt-1.5 text-xs" style={{ color: "var(--text-muted)" }}>
                       {groupedTopics[discipline].length} {groupedTopics[discipline].length === 1 ? "resumo" : "resumos"}
                     </p>
                   </div>

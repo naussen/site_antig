@@ -1,5 +1,9 @@
 # Changelog
 
+## Não publicado — identidade visual do Dashboard
+
+- alinhados os títulos das disciplinas à paleta roxa, branca e laranja da nova marca PRO Resumos, com contraste adaptado aos temas Light, Dark e Sepia.
+
 ## Não publicado — dados pessoais do PRO Legis
 
 - adicionada a tabela canônica de realces jurídicos com RLS por usuário e validações de offsets, cores e contexto;

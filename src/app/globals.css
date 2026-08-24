@@ -26,6 +26,10 @@
   --action: #F9A826;
   --action-hover: #D98A08;
   --action-foreground: #121212;
+  --discipline-title: #5B21B6;
+  --discipline-accent: #F9A826;
+  --discipline-icon-foreground: #FFFFFF;
+  --discipline-icon-background: linear-gradient(135deg, #6C21E8 0%, #8B5CF6 58%, #F9A826 100%);
   --callout-warning-bg: rgba(249, 115, 22, 0.08);
   --callout-warning-border: #F97316;
   --callout-warning-text: #C2410C;
@@ -98,6 +102,10 @@
   --action: #F9A826;
   --action-hover: #FFC15C;
   --action-foreground: #121212;
+  --discipline-title: #F7F7FB;
+  --discipline-accent: #F9A826;
+  --discipline-icon-foreground: #FFFFFF;
+  --discipline-icon-background: linear-gradient(135deg, #7C3AED 0%, #A78BFA 58%, #F9A826 100%);
   --callout-warning-bg: rgba(251, 146, 60, 0.1);
   --callout-warning-border: #FB923C;
   --callout-warning-text: #FDBA74;
@@ -156,6 +164,10 @@
   --action: #B8860B;
   --action-hover: #9A6F08;
   --action-foreground: #FFFFFF;
+  --discipline-title: #6D28D9;
+  --discipline-accent: #B86B0B;
+  --discipline-icon-foreground: #FFFFFF;
+  --discipline-icon-background: linear-gradient(135deg, #6D28D9 0%, #8B5CF6 58%, #B86B0B 100%);
   --callout-warning-bg: rgba(194, 65, 12, 0.08);
   --callout-warning-border: #C2410C;
   --callout-warning-text: #9A3412;
