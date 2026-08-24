@@ -12,7 +12,7 @@ Configure na hospedagem, nunca com prefixo `NEXT_PUBLIC_`:
 
 ```env
 PAYMENTS_APP_URL=https://proconcursos.com.br/resumos
-PAYMENTS_MONTHLY_PRICE_BRL=29.90
+PAYMENTS_MONTHLY_PRICE_BRL=9.90
 PAYMENTS_RECONCILIATION_TOKEN=
 
 MERCADO_PAGO_ACCESS_TOKEN=
@@ -27,6 +27,8 @@ PAYPAL_WEBHOOK_ID=
 
 `PAYMENTS_APP_URL` deve ser a URL pública base que realmente entrega o app, incluindo o prefixo `/resumos`. O valor não deve conter query ou fragmento; uma barra final é normalizada.
 
+O preço especial de lançamento é **R$ 9,90 por mês**, sem período gratuito configurado. Sandbox e produção devem usar exatamente o mesmo preço, embora possuam credenciais, planos e webhooks distintos.
+
 ## 3. Mercado Pago
 
 1. Crie uma aplicação em **Suas integrações** e obtenha o Access Token de teste.
@@ -35,6 +37,8 @@ PAYPAL_WEBHOOK_ID=
 4. Habilite os tópicos `subscription_preapproval` e `subscription_authorized_payment`.
 5. Defina o preço mensal compartilhado em `PAYMENTS_MONTHLY_PRICE_BRL` com ponto decimal.
 6. Valide no ambiente de teste antes de substituir pelo Access Token de produção.
+
+Não misture o Access Token de teste com a assinatura secreta de produção. Ao entrar em produção, substitua o conjunto completo de credenciais e valide novamente a URL de webhook.
 
 O plano do Mercado Pago é criado por assinatura com recorrência mensal em BRL. O backend confere moeda, valor e pagamento aprovado novamente antes de conceder acesso; a mera autorização da assinatura não libera o acervo.
 
@@ -46,6 +50,8 @@ O plano do Mercado Pago é criado por assinatura com recorrência mensal em BRL.
 4. Assine os eventos `BILLING.SUBSCRIPTION.CREATED`, `ACTIVATED`, `UPDATED`, `EXPIRED`, `CANCELLED`, `SUSPENDED`, `BILLING.SUBSCRIPTION.PAYMENT.FAILED`, `PAYMENT.SALE.COMPLETED`, `REFUNDED` e `REVERSED`.
 5. Copie o ID do webhook para `PAYPAL_WEBHOOK_ID`.
 6. Mantenha `PAYPAL_ENVIRONMENT=sandbox` nos testes; altere para `live` somente junto com credenciais, plano e webhook de produção.
+
+O produto, o plano e o webhook precisam ser recriados no ambiente Live. IDs gerados no Sandbox não funcionam em produção.
 
 O plano é conferido por ID. Um evento de outro plano do mesmo aplicativo não libera acesso.
 

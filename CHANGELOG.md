@@ -2,6 +2,7 @@
 
 ## Não publicado — pagamentos recorrentes
 
+- definido em R$ 9,90 por mês o preço especial de lançamento da assinatura única;
 - adicionados checkouts hospedados do Mercado Pago e PayPal para a assinatura mensal única do ecossistema;
 - implementados webhooks com verificação de origem, reconsulta ao provedor, validação do plano e atualização server-side dos entitlements;
 - adicionadas idempotência persistente, proteção contra eventos fora de ordem e validade defensiva do acesso;
