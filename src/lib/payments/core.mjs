@@ -2,6 +2,24 @@ import { createHmac, timingSafeEqual } from "node:crypto";
 
 const ACTIVE_ACCESS_FALLBACK_DAYS = 35;
 const BILLING_GRACE_DAYS = 3;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const MERCADO_PAGO_TEST_EMAIL_PATTERN = /^[^\s@]+@testuser\.com$/i;
+
+export function resolveMercadoPagoPayerEmail({ environment, userEmail, testPayerEmail }) {
+  if (environment === "test") {
+    const email = testPayerEmail?.trim();
+    if (!email || !MERCADO_PAGO_TEST_EMAIL_PATTERN.test(email)) {
+      throw new Error("MERCADO_PAGO_TEST_PAYER_EMAIL deve usar o domínio testuser.com.");
+    }
+    return email;
+  }
+  if (environment !== "production") {
+    throw new Error("MERCADO_PAGO_ENVIRONMENT deve ser test ou production.");
+  }
+  const email = userEmail.trim();
+  if (!EMAIL_PATTERN.test(email)) throw new Error("A conta precisa ter um e-mail válido para assinar.");
+  return email;
+}
 
 export function buildMercadoPagoSubscriptionPayload({ userId, email, appUrl, amount }) {
   return {

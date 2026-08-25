@@ -1,6 +1,10 @@
 import "server-only";
 import { createHash } from "node:crypto";
-import { buildMercadoPagoSubscriptionPayload, isAllowedCheckoutUrl } from "./core.mjs";
+import {
+  buildMercadoPagoSubscriptionPayload,
+  isAllowedCheckoutUrl,
+  resolveMercadoPagoPayerEmail,
+} from "./core.mjs";
 
 const MERCADO_PAGO_API = "https://api.mercadopago.com";
 
@@ -34,6 +38,8 @@ export function getMercadoPagoConfig() {
   return {
     accessToken: requiredEnv("MERCADO_PAGO_ACCESS_TOKEN"),
     webhookSecret: requiredEnv("MERCADO_PAGO_WEBHOOK_SECRET"),
+    environment: requiredEnv("MERCADO_PAGO_ENVIRONMENT"),
+    testPayerEmail: process.env.MERCADO_PAGO_TEST_PAYER_EMAIL,
     amount,
   };
 }
@@ -92,6 +98,11 @@ async function providerJson<T>(response: Response, provider: string): Promise<T>
 export async function createMercadoPagoSubscription(userId: string, email: string) {
   const config = getMercadoPagoConfig();
   const appUrl = getPaymentsAppUrl();
+  const payerEmail = resolveMercadoPagoPayerEmail({
+    environment: config.environment,
+    userEmail: email,
+    testPayerEmail: config.testPayerEmail,
+  });
   const response = await fetch(`${MERCADO_PAGO_API}/preapproval`, {
     method: "POST",
     headers: {
@@ -99,7 +110,7 @@ export async function createMercadoPagoSubscription(userId: string, email: strin
       "Content-Type": "application/json",
       "X-Idempotency-Key": checkoutIdempotencyKey(userId, "mercado_pago"),
     },
-    body: JSON.stringify(buildMercadoPagoSubscriptionPayload({ userId, email, appUrl, amount: config.amount })),
+    body: JSON.stringify(buildMercadoPagoSubscriptionPayload({ userId, email: payerEmail, appUrl, amount: config.amount })),
     cache: "no-store",
     signal: AbortSignal.timeout(10_000),
   });

@@ -7,10 +7,28 @@ import {
   isAllowedCheckoutUrl,
   mapMercadoPagoStatus,
   mapPayPalStatus,
+  resolveMercadoPagoPayerEmail,
   resolveMercadoPagoStatus,
   resolvePayPalStatus,
   verifyMercadoPagoSignature,
 } from "../src/lib/payments/core.mjs";
+
+test("isola o e-mail fictício no Sandbox e preserva o e-mail real em produção", () => {
+  assert.equal(resolveMercadoPagoPayerEmail({
+    environment: "test",
+    userEmail: "assinante@exemplo.com",
+    testPayerEmail: "test@testuser.com",
+  }), "test@testuser.com");
+  assert.equal(resolveMercadoPagoPayerEmail({
+    environment: "production",
+    userEmail: "assinante@exemplo.com",
+  }), "assinante@exemplo.com");
+  assert.throws(() => resolveMercadoPagoPayerEmail({
+    environment: "test",
+    userEmail: "assinante@exemplo.com",
+    testPayerEmail: "assinante@exemplo.com",
+  }), /testuser\.com/);
+});
 
 test("cria assinatura mensal automática sem campos de Checkout Pro", () => {
   const payload = buildMercadoPagoSubscriptionPayload({

@@ -1,5 +1,10 @@
 export type EntitlementStatus = "active" | "trialing" | "pending" | "past_due" | "canceled" | "expired";
 
+export function resolveMercadoPagoPayerEmail(input: {
+  environment: string;
+  userEmail: string;
+  testPayerEmail?: string;
+}): string;
 export function buildMercadoPagoSubscriptionPayload(input: { userId: string; email: string; appUrl: string; amount: number }): {
   reason: string;
   external_reference: string;

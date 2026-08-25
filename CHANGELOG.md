@@ -7,6 +7,7 @@
 - explicitada na interface a renovação mensal automática após a primeira autorização;
 - alinhado o payload de `/preapproval` ao contrato atual de assinaturas e adicionados diagnósticos seguros por categoria de erro;
 - ajustado o webhook do Mercado Pago para confirmar o recebimento com HTTP 200.
+- isolado o e-mail fictício exigido pelo Sandbox, impedindo seu uso quando o ambiente mudar para produção.
 
 ## Não publicado — pagamentos recorrentes
 

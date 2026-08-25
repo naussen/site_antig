@@ -43,6 +43,10 @@ export default async function SubscriptionPage({
   const mercadoPagoEnabled = Boolean(
     process.env.MERCADO_PAGO_ACCESS_TOKEN &&
     process.env.MERCADO_PAGO_WEBHOOK_SECRET &&
+    (process.env.MERCADO_PAGO_ENVIRONMENT === "production" || (
+      process.env.MERCADO_PAGO_ENVIRONMENT === "test" &&
+      process.env.MERCADO_PAGO_TEST_PAYER_EMAIL
+    )) &&
     process.env.PAYMENTS_MONTHLY_PRICE_BRL &&
     process.env.PAYMENTS_APP_URL
   );

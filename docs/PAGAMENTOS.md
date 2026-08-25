@@ -17,6 +17,8 @@ PAYMENTS_RECONCILIATION_TOKEN=
 
 MERCADO_PAGO_ACCESS_TOKEN=
 MERCADO_PAGO_WEBHOOK_SECRET=
+MERCADO_PAGO_ENVIRONMENT=test
+MERCADO_PAGO_TEST_PAYER_EMAIL=test@testuser.com
 
 PAYPAL_ENVIRONMENT=sandbox
 PAYPAL_CLIENT_ID=
@@ -39,6 +41,8 @@ O preço especial de lançamento é **R$ 9,90 por mês**, sem período gratuito 
 6. Valide no ambiente de teste antes de substituir pelo Access Token de produção.
 
 Não misture o Access Token de teste com a assinatura secreta de produção. Ao entrar em produção, substitua o conjunto completo de credenciais e valide novamente a URL de webhook.
+
+No Sandbox, mantenha `MERCADO_PAGO_ENVIRONMENT=test` e use em `MERCADO_PAGO_TEST_PAYER_EMAIL` somente um e-mail fictício no domínio `testuser.com`. Em produção, altere `MERCADO_PAGO_ENVIRONMENT=production`; nesse modo, o backend ignora a variável fictícia e envia o e-mail real da conta PRO.
 
 O plano do Mercado Pago é criado por assinatura sem plano associado, com recorrência mensal automática em BRL. O endpoint `/preapproval` recebe `external_reference`, e-mail do usuário, retorno HTTPS e `auto_recurring`; a URL do webhook permanece configurada na aplicação do Mercado Pago, fora desse payload. O backend confere moeda, valor e pagamento aprovado novamente antes de conceder acesso; a mera autorização da assinatura não libera o acervo.
 
