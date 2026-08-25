@@ -9,6 +9,7 @@
 - ajustado o webhook do Mercado Pago para confirmar o recebimento com HTTP 200.
 - isolado o e-mail fictício exigido pelo Sandbox, impedindo seu uso quando o ambiente mudar para produção.
 - adicionada classificação limitada do detalhe recusado pelo provedor, sem registrar payloads, e-mails ou mensagens integrais.
+- removido da criação de assinatura o header de idempotência não documentado pelo endpoint `/preapproval` do Mercado Pago.
 
 ## Não publicado — pagamentos recorrentes
 

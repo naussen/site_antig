@@ -116,7 +116,6 @@ export async function createMercadoPagoSubscription(userId: string, email: strin
     headers: {
       Authorization: `Bearer ${config.accessToken}`,
       "Content-Type": "application/json",
-      "X-Idempotency-Key": checkoutIdempotencyKey(userId, "mercado_pago"),
     },
     body: JSON.stringify(buildMercadoPagoSubscriptionPayload({ userId, email: payerEmail, appUrl, amount: config.amount })),
     cache: "no-store",
