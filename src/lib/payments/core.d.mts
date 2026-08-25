@@ -1,5 +1,13 @@
 export type EntitlementStatus = "active" | "trialing" | "pending" | "past_due" | "canceled" | "expired";
 
+export function buildMercadoPagoSubscriptionPayload(input: { userId: string; email: string; appUrl: string; amount: number }): {
+  reason: string;
+  external_reference: string;
+  payer_email: string;
+  back_url: string;
+  status: "pending";
+  auto_recurring: { frequency: 1; frequency_type: "months"; transaction_amount: number; currency_id: "BRL" };
+};
 export function mapMercadoPagoStatus(status: string): EntitlementStatus;
 export function mapPayPalStatus(status: string): EntitlementStatus;
 export function resolveMercadoPagoStatus(subscriptionStatus: string, invoice?: { paymentStatus?: string; summarized?: string } | null): EntitlementStatus;

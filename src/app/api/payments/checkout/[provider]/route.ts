@@ -1,7 +1,12 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { isSameOriginRequest } from "@/lib/same-origin.mjs";
-import { createMercadoPagoSubscription, createPayPalSubscription, getPaymentsAppUrl } from "@/lib/payments/providers";
+import {
+  createMercadoPagoSubscription,
+  createPayPalSubscription,
+  getPaymentsAppUrl,
+  PaymentProviderError,
+} from "@/lib/payments/providers";
 
 const providers = new Set(["mercado-pago", "paypal"]);
 
@@ -9,6 +14,20 @@ function subscriptionPage(params: Record<string, string>) {
   const url = new URL(`${getPaymentsAppUrl()}/dashboard/assinatura`);
   Object.entries(params).forEach(([key, value]) => url.searchParams.set(key, value));
   return url;
+}
+
+function checkoutFailure(provider: string, error: unknown) {
+  const prefix = provider === "mercado-pago" ? "mp" : "paypal";
+  if (!(error instanceof PaymentProviderError)) {
+    return { checkout: `${prefix}-indisponivel`, category: "network", status: null, providerCode: null };
+  }
+  if (error.status === 401 || error.status === 403) {
+    return { checkout: `${prefix}-credenciais`, category: "credentials", status: error.status, providerCode: error.providerCode };
+  }
+  if (error.status === 400 || error.status === 422) {
+    return { checkout: `${prefix}-dados`, category: "request", status: error.status, providerCode: error.providerCode };
+  }
+  return { checkout: `${prefix}-indisponivel`, category: "provider", status: error.status, providerCode: error.providerCode };
 }
 
 export async function POST(request: Request, context: { params: Promise<{ provider: string }> }) {
@@ -37,7 +56,14 @@ export async function POST(request: Request, context: { params: Promise<{ provid
       ? await createMercadoPagoSubscription(user.id, user.email ?? "")
       : await createPayPalSubscription(user.id);
     return NextResponse.redirect(checkoutUrl, 303);
-  } catch {
-    return NextResponse.redirect(subscriptionPage({ checkout: "erro" }), 303);
+  } catch (error) {
+    const failure = checkoutFailure(provider, error);
+    console.error("Falha ao iniciar checkout.", {
+      provider,
+      category: failure.category,
+      status: failure.status,
+      providerCode: failure.providerCode,
+    });
+    return NextResponse.redirect(subscriptionPage({ checkout: failure.checkout }), 303);
   }
 }

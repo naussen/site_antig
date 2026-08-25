@@ -1,6 +1,6 @@
 import "server-only";
 import { createHash } from "node:crypto";
-import { isAllowedCheckoutUrl } from "./core.mjs";
+import { buildMercadoPagoSubscriptionPayload, isAllowedCheckoutUrl } from "./core.mjs";
 
 const MERCADO_PAGO_API = "https://api.mercadopago.com";
 
@@ -49,11 +49,44 @@ function getPayPalConfig() {
   };
 }
 
-async function providerJson<T>(response: Response, provider: string): Promise<T> {
-  if (!response.ok) {
-    throw new Error(`${provider} respondeu com HTTP ${response.status}.`);
+export class PaymentProviderError extends Error {
+  constructor(
+    provider: string,
+    readonly status: number,
+    readonly providerCode: string | null,
+  ) {
+    super(`${provider} respondeu com HTTP ${status}.`);
+    this.name = "PaymentProviderError";
   }
-  return response.json() as Promise<T>;
+}
+
+function normalizedProviderCode(value: unknown) {
+  const code = typeof value === "number" ? String(value) : value;
+  return typeof code === "string" && /^[a-z0-9_.-]{1,100}$/i.test(code) ? code : null;
+}
+
+async function providerJson<T>(response: Response, provider: string): Promise<T> {
+  const body = await response.text();
+  let data: unknown = null;
+  try {
+    data = body ? JSON.parse(body) : null;
+  } catch {
+    data = null;
+  }
+
+  if (!response.ok) {
+    const record = data && typeof data === "object" ? data as Record<string, unknown> : null;
+    const cause = Array.isArray(record?.cause) && record.cause[0] && typeof record.cause[0] === "object"
+      ? record.cause[0] as Record<string, unknown>
+      : null;
+    throw new PaymentProviderError(
+      provider,
+      response.status,
+      normalizedProviderCode(cause?.code) ?? normalizedProviderCode(record?.error),
+    );
+  }
+
+  return data as T;
 }
 
 export async function createMercadoPagoSubscription(userId: string, email: string) {
@@ -66,15 +99,7 @@ export async function createMercadoPagoSubscription(userId: string, email: strin
       "Content-Type": "application/json",
       "X-Idempotency-Key": checkoutIdempotencyKey(userId, "mercado_pago"),
     },
-    body: JSON.stringify({
-      reason: "PRO Concursos — assinatura mensal",
-      external_reference: userId,
-      payer_email: email,
-      back_url: `${appUrl}/dashboard/assinatura?checkout=retorno`,
-      notification_url: `${appUrl}/api/payments/webhooks/mercado-pago`,
-      status: "pending",
-      auto_recurring: { frequency: 1, frequency_type: "months", transaction_amount: config.amount, currency_id: "BRL" },
-    }),
+    body: JSON.stringify(buildMercadoPagoSubscriptionPayload({ userId, email, appUrl, amount: config.amount })),
     cache: "no-store",
     signal: AbortSignal.timeout(10_000),
   });

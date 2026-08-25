@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { ArrowLeft, Check, CreditCard, ShieldCheck, WalletCards } from "lucide-react";
+import { ArrowLeft, Check, CreditCard, RefreshCw, ShieldCheck, Sparkles, WalletCards } from "lucide-react";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import type { UserEntitlement } from "@/types/database";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
+import { PaymentSubmitButton } from "./payment-submit-button";
 
 export default async function SubscriptionPage({
   searchParams,
@@ -61,6 +62,12 @@ export default async function SubscriptionPage({
     retorno: "Recebemos seu retorno do provedor. O acesso será liberado após a confirmação segura do pagamento.",
     cancelado: "O checkout foi cancelado e nenhuma assinatura foi ativada.",
     erro: "Não foi possível iniciar o checkout. Tente novamente ou contate o suporte.",
+    "mp-dados": "O Mercado Pago recusou os dados desta tentativa. No ambiente de testes, utilize uma conta compradora e um cartão de teste.",
+    "mp-credenciais": "O Mercado Pago recusou a credencial configurada. A equipe técnica precisa conferir o Access Token deste ambiente.",
+    "mp-indisponivel": "O Mercado Pago está temporariamente indisponível. Aguarde alguns instantes e tente novamente.",
+    "paypal-dados": "O PayPal recusou os dados desta tentativa de assinatura.",
+    "paypal-credenciais": "O PayPal recusou as credenciais configuradas para este ambiente.",
+    "paypal-indisponivel": "O PayPal está temporariamente indisponível. Aguarde alguns instantes e tente novamente.",
     "ja-ativo": "Esta conta já possui uma assinatura ativa.",
   } as Record<string, string>)[checkout ?? ""];
   const planName = isAdmin
@@ -79,6 +86,109 @@ export default async function SubscriptionPage({
     (typeof user.user_metadata?.name === "string" && user.user_metadata.name.trim()) ||
     user.email ||
     "Sua conta";
+
+  if (!hasContentAccess && !isAdmin) {
+    const benefits = [
+      ["Resumos jurídicos estruturados", "Conteúdo organizado para revisar com clareza e ganhar tempo."],
+      ["Flashcards, mnemônicos e mapas", "Ferramentas ativas para fixar os pontos mais cobrados."],
+      ["Notas e marca-texto pessoais", "Registre seus comentários e destaque o que precisa revisar."],
+      ["Progresso sincronizado", "Continue seus estudos do ponto em que parou em qualquer dispositivo."],
+    ];
+
+    return (
+      <main className="min-h-screen bg-[var(--bg-primary)] px-4 py-6 sm:px-6 md:px-10 md:py-10">
+        <div className="mx-auto max-w-5xl">
+          <header className="relative overflow-hidden rounded-3xl border border-[var(--accent)] bg-gradient-to-br from-[var(--accent-soft)] via-[var(--bg-card)] to-[var(--bg-card)] p-6 shadow-xl sm:p-10">
+            <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[var(--accent-soft)] blur-3xl" />
+            <div className="relative grid items-center gap-8 md:grid-cols-[1fr_19rem]">
+              <div>
+                <p className="inline-flex items-center gap-2 rounded-full bg-[var(--accent)] px-4 py-2 text-xs font-extrabold uppercase tracking-[0.14em] text-white">
+                  <Sparkles size={15} aria-hidden="true" /> Oferta especial de lançamento
+                </p>
+                <h1 className="mt-6 max-w-2xl text-3xl font-black leading-tight tracking-tight text-[var(--text-primary)] sm:text-4xl md:text-5xl">
+                  Prepare-se melhor com todo o ecossistema PRO Concursos
+                </h1>
+                <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--text-secondary)] sm:text-lg">
+                  Uma assinatura mensal para estudar com conteúdo organizado, revisão ativa e ferramentas que acompanham sua evolução.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-x-6 gap-y-3 text-sm font-semibold text-[var(--text-secondary)]">
+                  <span className="inline-flex items-center gap-2"><Check size={18} className="text-[var(--accent)]" /> Acesso liberado após a confirmação</span>
+                  <span className="inline-flex items-center gap-2"><ShieldCheck size={18} className="text-[var(--accent)]" /> Pagamento processado pelo provedor</span>
+                </div>
+              </div>
+
+              <div className="rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] p-6 shadow-lg sm:p-7">
+                <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-[var(--accent)]">Plano mensal</p>
+                <div className="mt-3 flex items-end gap-2 text-[var(--text-primary)]">
+                  <strong className="text-5xl font-black tracking-tight">{formattedMonthlyPrice ?? "R$ 9,90"}</strong>
+                  <span className="pb-1 text-sm font-semibold text-[var(--text-secondary)]">/mês</span>
+                </div>
+                <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">
+                  Renovação automática mensal. Você autoriza o pagamento apenas uma vez.
+                </p>
+                {checkoutMessage && (
+                  <p className="mt-5 rounded-2xl border border-[var(--callout-warning-border)] bg-[var(--callout-warning-bg)] p-4 text-sm leading-6 text-[var(--callout-warning-text)]" role="alert">
+                    {checkoutMessage}
+                  </p>
+                )}
+                <div className="mt-6 space-y-3">
+                  {mercadoPagoEnabled && (
+                    <form action={withSiteBasePath("/api/payments/checkout/mercado-pago")} method="post">
+                      <PaymentSubmitButton provider="mercado-pago" prominent />
+                    </form>
+                  )}
+                  {payPalEnabled && (
+                    <form action={withSiteBasePath("/api/payments/checkout/paypal")} method="post">
+                      <PaymentSubmitButton provider="paypal" />
+                    </form>
+                  )}
+                  {!mercadoPagoEnabled && !payPalEnabled && (
+                    <p className="rounded-2xl border border-[var(--border)] bg-[var(--accent-soft)] p-4 text-sm leading-6 text-[var(--text-secondary)]" role="status">
+                      Os provedores de pagamento ainda não foram habilitados neste ambiente.
+                    </p>
+                  )}
+                </div>
+                <p className="mt-4 text-center text-xs leading-5 text-[var(--text-muted)]">
+                  A assinatura será vinculada à conta {accountName}.
+                </p>
+              </div>
+            </div>
+          </header>
+
+          <section className="mt-6 grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
+            <article className="rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] p-6 sm:p-8">
+              <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-[var(--accent)]">Vantagens da assinatura</p>
+              <h2 className="mt-2 text-2xl font-extrabold text-[var(--text-primary)]">Mais recursos para estudar com constância</h2>
+              <ol className="mt-7 grid gap-5 sm:grid-cols-2">
+                {benefits.map(([title, description], index) => (
+                  <li key={title} className="flex gap-3">
+                    <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[var(--accent-soft)] text-sm font-black text-[var(--accent)]">
+                      {index + 1}
+                    </span>
+                    <div>
+                      <h3 className="font-bold text-[var(--text-primary)]">{title}</h3>
+                      <p className="mt-1 text-sm leading-6 text-[var(--text-secondary)]">{description}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </article>
+
+            <aside className="rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] p-6 sm:p-8">
+              <RefreshCw size={28} className="text-[var(--accent)]" aria-hidden="true" />
+              <h2 className="mt-4 text-xl font-extrabold text-[var(--text-primary)]">Renovação realmente automática</h2>
+              <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">
+                Depois da primeira autorização, o Mercado Pago agenda a cobrança de {formattedMonthlyPrice ?? "R$ 9,90"} todos os meses no meio de pagamento escolhido.
+              </p>
+              <p className="mt-4 rounded-2xl bg-[var(--accent-soft)] p-4 text-xs leading-5 text-[var(--text-secondary)]">
+                Você não precisará voltar ao site para fazer um novo pagamento a cada mês.
+              </p>
+            </aside>
+          </section>
+        </div>
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen px-4 py-6 sm:px-6 md:px-10 md:py-10" style={{ background: "var(--bg-primary)" }}>

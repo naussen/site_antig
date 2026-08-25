@@ -3,6 +3,22 @@ import { createHmac, timingSafeEqual } from "node:crypto";
 const ACTIVE_ACCESS_FALLBACK_DAYS = 35;
 const BILLING_GRACE_DAYS = 3;
 
+export function buildMercadoPagoSubscriptionPayload({ userId, email, appUrl, amount }) {
+  return {
+    reason: "PRO Concursos — assinatura mensal",
+    external_reference: userId,
+    payer_email: email,
+    back_url: `${appUrl}/dashboard/assinatura?checkout=retorno`,
+    status: "pending",
+    auto_recurring: {
+      frequency: 1,
+      frequency_type: "months",
+      transaction_amount: amount,
+      currency_id: "BRL",
+    },
+  };
+}
+
 export function mapMercadoPagoStatus(status) {
   return ({
     pending: "pending",

@@ -43,7 +43,7 @@ export async function POST(request: Request) {
   if (!validSignature) return NextResponse.json({ error: "Assinatura inválida." }, { status: 401 });
 
   if (!["subscription_preapproval", "subscription_authorized_payment"].includes(parsed.data.type)) {
-    return new NextResponse(null, { status: 204 });
+    return new NextResponse(null, { status: 200 });
   }
 
   const eventId = String(parsed.data.id ?? request.headers.get("x-request-id") ?? `${parsed.data.type}:${resourceId}`);
@@ -52,7 +52,7 @@ export async function POST(request: Request) {
     provider: "mercado_pago", eventId, eventType: parsed.data.action ?? parsed.data.type,
     resourceId, eventCreatedAt,
   });
-  if (claim.duplicate) return new NextResponse(null, { status: 204 });
+  if (claim.duplicate) return new NextResponse(null, { status: 200 });
 
   try {
     const invoice = parsed.data.type === "subscription_authorized_payment"
@@ -76,7 +76,7 @@ export async function POST(request: Request) {
       eventCreatedAt: providerUpdatedAt,
     });
     await finishWebhookEvent("mercado_pago", eventId);
-    return new NextResponse(null, { status: 204 });
+    return new NextResponse(null, { status: 200 });
   } catch {
     await finishWebhookEvent("mercado_pago", eventId, "processing_failed");
     return NextResponse.json({ error: "Falha temporária." }, { status: 500 });

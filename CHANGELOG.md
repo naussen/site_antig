@@ -1,5 +1,13 @@
 # Changelog
 
+## Não publicado — oferta e confiabilidade da assinatura
+
+- separada a oferta para contas sem assinatura da página de gerenciamento já usada por assinantes;
+- ampliado o botão do Mercado Pago, com cursor, estado de carregamento, preço de lançamento e vantagens enumeradas;
+- explicitada na interface a renovação mensal automática após a primeira autorização;
+- alinhado o payload de `/preapproval` ao contrato atual de assinaturas e adicionados diagnósticos seguros por categoria de erro;
+- ajustado o webhook do Mercado Pago para confirmar o recebimento com HTTP 200.
+
 ## Não publicado — pagamentos recorrentes
 
 - definido em R$ 9,90 por mês o preço especial de lançamento da assinatura única;

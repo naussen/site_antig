@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { createHmac } from "node:crypto";
 import {
+  buildMercadoPagoSubscriptionPayload,
   calculateAccessUntil,
   isAllowedCheckoutUrl,
   mapMercadoPagoStatus,
@@ -10,6 +11,21 @@ import {
   resolvePayPalStatus,
   verifyMercadoPagoSignature,
 } from "../src/lib/payments/core.mjs";
+
+test("cria assinatura mensal automática sem campos de Checkout Pro", () => {
+  const payload = buildMercadoPagoSubscriptionPayload({
+    userId: "b8ca932b-5e14-4c48-8717-79e5557d6d4f",
+    email: "assinante@example.com",
+    appUrl: "https://proconcursos.com.br/resumos",
+    amount: 9.9,
+  });
+
+  assert.equal(payload.external_reference, "b8ca932b-5e14-4c48-8717-79e5557d6d4f");
+  assert.equal(payload.auto_recurring.frequency, 1);
+  assert.equal(payload.auto_recurring.frequency_type, "months");
+  assert.equal(payload.auto_recurring.transaction_amount, 9.9);
+  assert.equal("notification_url" in payload, false);
+});
 
 test("mapeia estados dos provedores sem conceder acesso a estado desconhecido", () => {
   assert.equal(mapMercadoPagoStatus("authorized"), "active");
