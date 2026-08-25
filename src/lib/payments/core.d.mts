@@ -1,5 +1,6 @@
 export type EntitlementStatus = "active" | "trialing" | "pending" | "past_due" | "canceled" | "expired";
 
+export function classifyProviderErrorDetail(values: unknown[]): string | null;
 export function resolveMercadoPagoPayerEmail(input: {
   environment: string;
   userEmail: string;

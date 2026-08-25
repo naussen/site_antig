@@ -19,15 +19,15 @@ function subscriptionPage(params: Record<string, string>) {
 function checkoutFailure(provider: string, error: unknown) {
   const prefix = provider === "mercado-pago" ? "mp" : "paypal";
   if (!(error instanceof PaymentProviderError)) {
-    return { checkout: `${prefix}-indisponivel`, category: "network", status: null, providerCode: null };
+    return { checkout: `${prefix}-indisponivel`, category: "network", status: null, providerCode: null, providerDetail: null };
   }
   if (error.status === 401 || error.status === 403) {
-    return { checkout: `${prefix}-credenciais`, category: "credentials", status: error.status, providerCode: error.providerCode };
+    return { checkout: `${prefix}-credenciais`, category: "credentials", status: error.status, providerCode: error.providerCode, providerDetail: error.providerDetail };
   }
   if (error.status === 400 || error.status === 422) {
-    return { checkout: `${prefix}-dados`, category: "request", status: error.status, providerCode: error.providerCode };
+    return { checkout: `${prefix}-dados`, category: "request", status: error.status, providerCode: error.providerCode, providerDetail: error.providerDetail };
   }
-  return { checkout: `${prefix}-indisponivel`, category: "provider", status: error.status, providerCode: error.providerCode };
+  return { checkout: `${prefix}-indisponivel`, category: "provider", status: error.status, providerCode: error.providerCode, providerDetail: error.providerDetail };
 }
 
 export async function POST(request: Request, context: { params: Promise<{ provider: string }> }) {
@@ -63,6 +63,7 @@ export async function POST(request: Request, context: { params: Promise<{ provid
       category: failure.category,
       status: failure.status,
       providerCode: failure.providerCode,
+      providerDetail: failure.providerDetail,
     });
     return NextResponse.redirect(subscriptionPage({ checkout: failure.checkout }), 303);
   }

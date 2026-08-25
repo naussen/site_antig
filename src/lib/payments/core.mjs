@@ -5,6 +5,28 @@ const BILLING_GRACE_DAYS = 3;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MERCADO_PAGO_TEST_EMAIL_PATTERN = /^[^\s@]+@testuser\.com$/i;
 
+const PROVIDER_ERROR_DETAIL_PATTERNS = [
+  [/(invalid users involved|payer.{0,40}collector|collector.{0,40}payer)/i, "payer-collector-environment"],
+  [/(invalid test user email|invalid_email_for_sandbox)/i, "test-payer-email"],
+  [/payer_email/i, "payer-email"],
+  [/back_url/i, "back-url"],
+  [/external_reference/i, "external-reference"],
+  [/auto_recurring/i, "auto-recurring"],
+  [/transaction_amount/i, "transaction-amount"],
+  [/currency_id/i, "currency"],
+  [/frequency_type/i, "frequency-type"],
+  [/\bfrequency\b/i, "frequency"],
+  [/idempotency/i, "idempotency"],
+  [/(unsupported propert|required propert|minimum propert|property_type)/i, "request-properties"],
+  [/\bstatus\b/i, "status"],
+  [/\breason\b/i, "reason"],
+];
+
+export function classifyProviderErrorDetail(values) {
+  const text = values.filter((value) => typeof value === "string").join(" ");
+  return PROVIDER_ERROR_DETAIL_PATTERNS.find(([pattern]) => pattern.test(text))?.[1] ?? null;
+}
+
 export function resolveMercadoPagoPayerEmail({ environment, userEmail, testPayerEmail }) {
   if (environment === "test") {
     const email = testPayerEmail?.trim();

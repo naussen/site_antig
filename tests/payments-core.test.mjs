@@ -4,6 +4,7 @@ import { createHmac } from "node:crypto";
 import {
   buildMercadoPagoSubscriptionPayload,
   calculateAccessUntil,
+  classifyProviderErrorDetail,
   isAllowedCheckoutUrl,
   mapMercadoPagoStatus,
   mapPayPalStatus,
@@ -12,6 +13,18 @@ import {
   resolvePayPalStatus,
   verifyMercadoPagoSignature,
 } from "../src/lib/payments/core.mjs";
+
+test("classifica erro do provedor sem preservar a mensagem nem dados privados", () => {
+  assert.equal(classifyProviderErrorDetail([
+    "Invalid users involved: payer comprador@testuser.com and collector 123456",
+  ]), "payer-collector-environment");
+  assert.equal(classifyProviderErrorDetail([
+    "Invalid value for payer_email comprador@testuser.com",
+  ]), "payer-email");
+  assert.equal(classifyProviderErrorDetail([
+    "Mensagem desconhecida com dado privado@example.com",
+  ]), null);
+});
 
 test("isola o e-mail fictício no Sandbox e preserva o e-mail real em produção", () => {
   assert.equal(resolveMercadoPagoPayerEmail({

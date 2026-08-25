@@ -2,6 +2,7 @@ import "server-only";
 import { createHash } from "node:crypto";
 import {
   buildMercadoPagoSubscriptionPayload,
+  classifyProviderErrorDetail,
   isAllowedCheckoutUrl,
   resolveMercadoPagoPayerEmail,
 } from "./core.mjs";
@@ -60,6 +61,7 @@ export class PaymentProviderError extends Error {
     provider: string,
     readonly status: number,
     readonly providerCode: string | null,
+    readonly providerDetail: string | null,
   ) {
     super(`${provider} respondeu com HTTP ${status}.`);
     this.name = "PaymentProviderError";
@@ -89,6 +91,12 @@ async function providerJson<T>(response: Response, provider: string): Promise<T>
       provider,
       response.status,
       normalizedProviderCode(cause?.code) ?? normalizedProviderCode(record?.error),
+      classifyProviderErrorDetail([
+        record?.error,
+        record?.message,
+        cause?.code,
+        cause?.description,
+      ]),
     );
   }
 

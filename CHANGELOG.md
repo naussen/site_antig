@@ -8,6 +8,7 @@
 - alinhado o payload de `/preapproval` ao contrato atual de assinaturas e adicionados diagnósticos seguros por categoria de erro;
 - ajustado o webhook do Mercado Pago para confirmar o recebimento com HTTP 200.
 - isolado o e-mail fictício exigido pelo Sandbox, impedindo seu uso quando o ambiente mudar para produção.
+- adicionada classificação limitada do detalhe recusado pelo provedor, sem registrar payloads, e-mails ou mensagens integrais.
 
 ## Não publicado — pagamentos recorrentes
 
