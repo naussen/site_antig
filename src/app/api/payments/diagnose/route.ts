@@ -5,7 +5,6 @@ import {
   getPaymentsAppUrl,
 } from "@/lib/payments/providers";
 import {
-  buildMercadoPagoSubscriptionPayload,
   resolveMercadoPagoPayerEmail,
 } from "@/lib/payments/core.mjs";
 
@@ -27,7 +26,7 @@ export async function GET() {
     steps.environment = config.environment;
     steps.amount = config.amount;
     steps.testPayerEmail = config.testPayerEmail ?? "(not set)";
-    steps.accessTokenPrefix = config.accessToken.slice(0, 12) + "...";
+    steps.accessTokenPrefix = config.accessToken.slice(0, 20) + "...";
 
     const appUrl = getPaymentsAppUrl();
     steps.appUrl = appUrl;
@@ -39,15 +38,41 @@ export async function GET() {
     });
     steps.resolvedPayerEmail = payerEmail;
 
-    const payload = buildMercadoPagoSubscriptionPayload({
-      userId: user.id,
-      email: payerEmail,
-      appUrl,
-      amount: config.amount,
+    // Step 1: Verify token — who does this token belong to?
+    const meResponse = await fetch("https://api.mercadopago.com/users/me", {
+      headers: { Authorization: `Bearer ${config.accessToken}` },
+      signal: AbortSignal.timeout(10_000),
     });
-    steps.payload = payload;
+    const meBody = await meResponse.text();
+    try {
+      const meData = JSON.parse(meBody);
+      steps.tokenOwner = {
+        status: meResponse.status,
+        id: meData.id,
+        email: meData.email,
+        nickname: meData.nickname,
+        site_id: meData.site_id,
+      };
+    } catch {
+      steps.tokenOwner = { status: meResponse.status, raw: meBody.slice(0, 500) };
+    }
 
-    const response = await fetch("https://api.mercadopago.com/preapproval", {
+    // Step 2: Try preapproval WITHOUT status field
+    const payload = {
+      reason: "PRO Concursos - assinatura mensal",
+      external_reference: user.id,
+      payer_email: payerEmail,
+      back_url: `${appUrl}/dashboard/assinatura`,
+      auto_recurring: {
+        frequency: 1,
+        frequency_type: "months",
+        transaction_amount: config.amount,
+        currency_id: "BRL",
+      },
+    };
+    steps.payloadSent = { ...payload, payer_email: payerEmail.slice(0, 15) + "..." };
+
+    const preapprovalResponse = await fetch("https://api.mercadopago.com/preapproval", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${config.accessToken}`,
@@ -57,14 +82,18 @@ export async function GET() {
       signal: AbortSignal.timeout(10_000),
     });
 
-    const body = await response.text();
-    steps.httpStatus = response.status;
+    const preapprovalBody = await preapprovalResponse.text();
     try {
-      steps.responseBody = JSON.parse(body);
+      steps.preapprovalResult = {
+        status: preapprovalResponse.status,
+        body: JSON.parse(preapprovalBody),
+      };
     } catch {
-      steps.responseBody = body.slice(0, 2000);
+      steps.preapprovalResult = {
+        status: preapprovalResponse.status,
+        raw: preapprovalBody.slice(0, 2000),
+      };
     }
-    steps.success = response.ok;
   } catch (err) {
     steps.error = err instanceof Error ? err.message : String(err);
   }
