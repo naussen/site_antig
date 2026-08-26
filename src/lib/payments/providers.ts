@@ -83,6 +83,8 @@ async function providerJson<T>(response: Response, provider: string): Promise<T>
   }
 
   if (!response.ok) {
+    // Diagnostic log — remove after resolving integration issue
+    console.error(`[${provider}] HTTP ${response.status} response:`, body.slice(0, 2000));
     const record = data && typeof data === "object" ? data as Record<string, unknown> : null;
     const cause = Array.isArray(record?.cause) && record.cause[0] && typeof record.cause[0] === "object"
       ? record.cause[0] as Record<string, unknown>
@@ -111,13 +113,16 @@ export async function createMercadoPagoSubscription(userId: string, email: strin
     userEmail: email,
     testPayerEmail: config.testPayerEmail,
   });
+  const payload = buildMercadoPagoSubscriptionPayload({ userId, email: payerEmail, appUrl, amount: config.amount });
+  // Diagnostic log — remove after resolving integration issue
+  console.error("[Mercado Pago] Checkout payload:", JSON.stringify({ ...payload, payer_email: payload.payer_email?.slice(0, 10) + "..." }));
   const response = await fetch(`${MERCADO_PAGO_API}/preapproval`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${config.accessToken}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(buildMercadoPagoSubscriptionPayload({ userId, email: payerEmail, appUrl, amount: config.amount })),
+    body: JSON.stringify(payload),
     cache: "no-store",
     signal: AbortSignal.timeout(10_000),
   });
