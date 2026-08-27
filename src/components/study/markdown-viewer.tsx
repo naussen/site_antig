@@ -6,6 +6,26 @@ interface MarkdownViewerProps {
   content: string;
 }
 
+type MarkdownNode = {
+  type?: string;
+  value?: string;
+  children?: MarkdownNode[];
+};
+
+function convertSafeBreakTags(): (tree: MarkdownNode) => void {
+  return (tree) => {
+    const visit = (node: MarkdownNode) => {
+      if (node.type === "html" && /^<br\s*\/?>$/i.test(node.value?.trim() ?? "")) {
+        node.type = "break";
+        delete node.value;
+      }
+      node.children?.forEach(visit);
+    };
+
+    visit(tree);
+  };
+}
+
 function getPlainText(children: ReactNode): string | null {
   if (typeof children === "string") return children;
 
@@ -27,7 +47,7 @@ export function MarkdownViewer({ content }: MarkdownViewerProps) {
   return (
     <div className="markdown-content animate-fade-in-up">
       <ReactMarkdown
-        remarkPlugins={[remarkGfm]}
+        remarkPlugins={[remarkGfm, convertSafeBreakTags]}
         components={{
           p: ({ children }) => {
             const text = getPlainText(children)?.trim();
