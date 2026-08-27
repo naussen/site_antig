@@ -124,7 +124,7 @@ export default async function SubscriptionPage({
               <div className="rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] p-6 shadow-lg sm:p-7">
                 <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-[var(--accent)]">Plano mensal</p>
                 <div className="mt-3 flex items-end gap-2 text-[var(--text-primary)]">
-                  <strong className="text-5xl font-black tracking-tight">{formattedMonthlyPrice ?? "R$ 9,90"}</strong>
+                  <strong className="text-5xl font-black tracking-tight">{formattedMonthlyPrice ?? "R$ 0,10"}</strong>
                   <span className="pb-1 text-sm font-semibold text-[var(--text-secondary)]">/mês</span>
                 </div>
                 <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">
@@ -182,7 +182,7 @@ export default async function SubscriptionPage({
               <RefreshCw size={28} className="text-[var(--accent)]" aria-hidden="true" />
               <h2 className="mt-4 text-xl font-extrabold text-[var(--text-primary)]">Renovação realmente automática</h2>
               <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">
-                Depois da primeira autorização, o Mercado Pago agenda a cobrança de {formattedMonthlyPrice ?? "R$ 9,90"} todos os meses no meio de pagamento escolhido.
+                Depois da primeira autorização, o Mercado Pago agenda a cobrança de {formattedMonthlyPrice ?? "R$ 0,10"} todos os meses no meio de pagamento escolhido.
               </p>
               <p className="mt-4 rounded-2xl bg-[var(--accent-soft)] p-4 text-xs leading-5 text-[var(--text-secondary)]">
                 Você não precisará voltar ao site para fazer um novo pagamento a cada mês.

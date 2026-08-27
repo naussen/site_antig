@@ -4,14 +4,14 @@ import { isSameOriginRequest } from "@/lib/same-origin.mjs";
 import {
   createMercadoPagoSubscription,
   createPayPalSubscription,
-  getPaymentsAppUrl,
+  getPaymentsInternalUrl,
   PaymentProviderError,
 } from "@/lib/payments/providers";
 
 const providers = new Set(["mercado-pago", "paypal"]);
 
 function subscriptionPage(params: Record<string, string>) {
-  const url = new URL(`${getPaymentsAppUrl()}/dashboard/assinatura`);
+  const url = new URL(getPaymentsInternalUrl("/dashboard/assinatura"));
   Object.entries(params).forEach(([key, value]) => url.searchParams.set(key, value));
   return url;
 }
@@ -37,7 +37,7 @@ export async function POST(request: Request, context: { params: Promise<{ provid
 
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
-  if (!user) return NextResponse.redirect(new URL(`${getPaymentsAppUrl()}/login`), 303);
+  if (!user) return NextResponse.redirect(new URL(getPaymentsInternalUrl("/login")), 303);
 
   const { data: entitlement, error } = await supabase
     .from("user_entitlements")

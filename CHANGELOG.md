@@ -1,5 +1,12 @@
 # Changelog
 
+## Não publicado — configuração de produção do Mercado Pago
+
+- configurada a base pública de pagamentos como `https://proconcursos.com.br`, sem expor o módulo `/resumos` na URL comercial;
+- mantidas as rotas internas do aplicativo somente nos retornos técnicos, login e reconciliação;
+- definido provisoriamente o valor da assinatura em R$ 0,10 por mês;
+- removida a rota de diagnóstico que realizava chamadas reais ao Mercado Pago.
+
 ## Não publicado — oferta e confiabilidade da assinatura
 
 - separada a oferta para contas sem assinatura da página de gerenciamento já usada por assinantes;

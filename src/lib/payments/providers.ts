@@ -6,6 +6,7 @@ import {
   isAllowedCheckoutUrl,
   resolveMercadoPagoPayerEmail,
 } from "./core.mjs";
+import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
 const MERCADO_PAGO_API = "https://api.mercadopago.com";
 
@@ -29,8 +30,17 @@ export function getPaymentsAppUrl() {
     throw new Error("PAYMENTS_APP_URL deve usar HTTPS fora do ambiente local.");
   }
   if (url.search || url.hash) throw new Error("PAYMENTS_APP_URL não pode conter query ou fragmento.");
-  const pathname = url.pathname === "/" ? "" : url.pathname.replace(/\/$/, "");
-  return `${url.origin}${pathname}`;
+  if (url.pathname !== "/") {
+    throw new Error("PAYMENTS_APP_URL deve ser a raiz publica do dominio, sem /resumos ou outro modulo.");
+  }
+  return url.origin;
+}
+
+export function getPaymentsInternalUrl(path: string) {
+  if (!path.startsWith("/") || path.startsWith("//")) {
+    throw new TypeError("A rota interna de pagamentos deve comecar com uma barra.");
+  }
+  return new URL(withSiteBasePath(path), `${getPaymentsAppUrl()}/`).toString();
 }
 
 export function getMercadoPagoConfig() {
@@ -107,7 +117,7 @@ async function providerJson<T>(response: Response, provider: string): Promise<T>
 
 export async function createMercadoPagoSubscription(userId: string, email: string) {
   const config = getMercadoPagoConfig();
-  const appUrl = getPaymentsAppUrl();
+  const appUrl = getPaymentsInternalUrl("/");
   const payerEmail = resolveMercadoPagoPayerEmail({
     environment: config.environment,
     userEmail: email,
@@ -150,7 +160,7 @@ async function getPayPalAccessToken() {
 
 export async function createPayPalSubscription(userId: string) {
   const { config, accessToken } = await getPayPalAccessToken();
-  const appUrl = getPaymentsAppUrl();
+  const appUrl = getPaymentsInternalUrl("/");
   const response = await fetch(`${config.apiBase}/v1/billing/subscriptions`, {
     method: "POST",
     headers: {

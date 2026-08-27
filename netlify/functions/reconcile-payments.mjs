@@ -3,7 +3,7 @@ async function reconcilePayments() {
   const token = process.env.PAYMENTS_RECONCILIATION_TOKEN;
   if (!appUrl || !token) throw new Error("Reconciliação de pagamentos sem configuração.");
 
-  const response = await fetch(`${appUrl}/api/payments/reconcile`, {
+  const response = await fetch(`${appUrl}/resumos/api/payments/reconcile`, {
     method: "POST",
     headers: { Authorization: `Bearer ${token}` },
     signal: AbortSignal.timeout(25_000),
