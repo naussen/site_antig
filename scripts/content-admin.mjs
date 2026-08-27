@@ -117,6 +117,10 @@ const TopicImportSchema = z.object({
     });
   }
 
+  if (/\[arquivo:\s*\d+\]|_reescrito\b|^\s*(?:@@@?|unidade|m[oó]dulo)\b/i.test(topic.topic_title)) {
+    context.addIssue({ code: "custom", path: ["topic_title"], message: "Título contém metadado técnico ou marcador de corte proibido." });
+  }
+
   topic.sections.forEach((section, index) => {
     const expectedSectionId = `${topic.topic_id}-sec-${String(index + 1).padStart(2, "0")}`;
     if (section.section_id !== expectedSectionId) {
@@ -152,6 +156,13 @@ const TopicImportSchema = z.object({
         path: ["sections", index, "title"],
         message: "Use capitalização editorial; preserve maiúsculas somente em siglas.",
       });
+    }
+
+    if (/\[arquivo:\s*\d+\]|_reescrito\b|^\s*(?:@@@?|unidade|m[oó]dulo)\b/i.test(section.title)) {
+      context.addIssue({ code: "custom", path: ["sections", index, "title"], message: "Título de seção contém metadado técnico ou marcador de corte proibido." });
+    }
+    if (/<br\s*\/?\s*>/i.test(section.content_markdown)) {
+      context.addIssue({ code: "custom", path: ["sections", index, "content_markdown"], message: "Conteúdo Markdown não pode conter tags <br>." });
     }
 
     if (/\bDOUTINA\b/i.test(JSON.stringify(section))) {

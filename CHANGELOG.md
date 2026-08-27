@@ -1,5 +1,9 @@
 # Changelog
 
+## Não publicado — validação de títulos e Markdown importados
+
+- bloqueia metadados técnicos, delimitadores de corte e tags `<br>` no conteúdo importado.
+
 ## Não publicado — fórmulas quantitativas
 
 - adicionado suporte seguro a KaTeX no renderizador de Markdown, incluindo estilos responsivos para fórmulas em bloco.
