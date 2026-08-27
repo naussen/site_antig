@@ -402,7 +402,7 @@ body {
   border-right: 1px solid
     color-mix(in srgb, var(--editorial-band-text) 22%, transparent);
   background: color-mix(in srgb, var(--accent) 76%, var(--editorial-band));
-  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-family: var(--font-inter), sans-serif;
   font-size: clamp(1.15rem, 2vw, 1.5rem);
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -877,8 +877,13 @@ body {
   font-size: 0.92rem;
   line-height: 1.7;
   text-align: center;
-  white-space: pre-wrap;
   scrollbar-gutter: stable;
+}
+
+.markdown-content .katex-display {
+  width: max-content;
+  min-width: 100%;
+  margin: 0;
 }
 
 .markdown-content :where(p, li) > strong:first-child {

@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 interface MarkdownViewerProps {
   content: string;
@@ -47,7 +49,8 @@ export function MarkdownViewer({ content }: MarkdownViewerProps) {
   return (
     <div className="markdown-content animate-fade-in-up">
       <ReactMarkdown
-        remarkPlugins={[remarkGfm, convertSafeBreakTags]}
+        remarkPlugins={[remarkGfm, remarkMath, convertSafeBreakTags]}
+        rehypePlugins={[[rehypeKatex, { strict: "ignore", trust: false }]]}
         components={{
           p: ({ children }) => {
             const text = getPlainText(children)?.trim();

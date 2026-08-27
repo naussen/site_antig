@@ -1,5 +1,9 @@
 # Changelog
 
+## Não publicado — fórmulas quantitativas
+
+- adicionado suporte seguro a KaTeX no renderizador de Markdown, incluindo estilos responsivos para fórmulas em bloco.
+
 ## Não publicado — configuração de produção do Mercado Pago
 
 - configurada a base pública de pagamentos como `https://proconcursos.com.br`, sem expor o módulo `/resumos` na URL comercial;
