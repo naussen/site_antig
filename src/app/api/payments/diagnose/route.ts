@@ -4,9 +4,6 @@ import {
   getMercadoPagoConfig,
   getPaymentsAppUrl,
 } from "@/lib/payments/providers";
-import {
-  resolveMercadoPagoPayerEmail,
-} from "@/lib/payments/core.mjs";
 
 /**
  * TEMPORARY diagnostic route — DELETE after resolving integration.
@@ -24,44 +21,51 @@ export async function GET() {
   try {
     const config = getMercadoPagoConfig();
     steps.environment = config.environment;
-    steps.amount = config.amount;
-    steps.testPayerEmail = config.testPayerEmail ?? "(not set)";
     steps.accessTokenPrefix = config.accessToken.slice(0, 20) + "...";
+    steps.currentTestPayerEmail = config.testPayerEmail ?? "(not set)";
 
     const appUrl = getPaymentsAppUrl();
-    steps.appUrl = appUrl;
 
-    const payerEmail = resolveMercadoPagoPayerEmail({
-      environment: config.environment,
-      userEmail: user.email ?? "",
-      testPayerEmail: config.testPayerEmail,
-    });
-    steps.resolvedPayerEmail = payerEmail;
-
-    // Step 1: Verify token — who does this token belong to?
+    // Step 1: Identify token owner (Seller Test User)
     const meResponse = await fetch("https://api.mercadopago.com/users/me", {
       headers: { Authorization: `Bearer ${config.accessToken}` },
       signal: AbortSignal.timeout(10_000),
     });
-    const meBody = await meResponse.text();
+    const meData = await meResponse.json();
+    steps.sellerTestUser = {
+      id: meData.id,
+      email: meData.email,
+      nickname: meData.nickname,
+    };
+
+    // Step 2: List test users to find the Buyer
+    const testUsersResponse = await fetch("https://api.mercadopago.com/users/test", {
+      headers: { Authorization: `Bearer ${config.accessToken}` },
+      signal: AbortSignal.timeout(10_000),
+    });
+    const testUsersBody = await testUsersResponse.text();
     try {
-      const meData = JSON.parse(meBody);
-      steps.tokenOwner = {
-        status: meResponse.status,
-        id: meData.id,
-        email: meData.email,
-        nickname: meData.nickname,
-        site_id: meData.site_id,
-      };
+      steps.testUsersLookup = { status: testUsersResponse.status, body: JSON.parse(testUsersBody) };
     } catch {
-      steps.tokenOwner = { status: meResponse.status, raw: meBody.slice(0, 500) };
+      steps.testUsersLookup = { status: testUsersResponse.status, raw: testUsersBody.slice(0, 1000) };
     }
 
-    // Step 2: Try preapproval WITHOUT status field
-    const payload = {
+    // Step 3: Try preapproval with the SELLER's own email format to confirm format works
+    // (This should fail with "payer = collector" but confirms the email format)
+    const sellerEmail = meData.email as string;
+    // Derive buyer email by replacing seller's number with buyer's pattern
+    // For now, show what we know
+    steps.emailFormatNote = {
+      correctFormat: "test_user_XXXX@testuser.com (lowercase with underscore)",
+      wrongFormat: "TESTUSER_XXXX@testuser.com (this is the NICKNAME, not email)",
+      sellerEmail: sellerEmail,
+    };
+
+    // Step 4: Try preapproval with seller email (expect payer=collector error, but validates format)
+    const testPayload = {
       reason: "PRO Concursos - assinatura mensal",
       external_reference: user.id,
-      payer_email: payerEmail,
+      payer_email: sellerEmail,
       back_url: `${appUrl}/dashboard/assinatura`,
       auto_recurring: {
         frequency: 1,
@@ -70,30 +74,23 @@ export async function GET() {
         currency_id: "BRL",
       },
     };
-    steps.payloadSent = { ...payload, payer_email: payerEmail.slice(0, 15) + "..." };
 
-    const preapprovalResponse = await fetch("https://api.mercadopago.com/preapproval", {
+    const testResponse = await fetch("https://api.mercadopago.com/preapproval", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${config.accessToken}`,
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(payload),
+      body: JSON.stringify(testPayload),
       signal: AbortSignal.timeout(10_000),
     });
-
-    const preapprovalBody = await preapprovalResponse.text();
+    const testBody = await testResponse.text();
     try {
-      steps.preapprovalResult = {
-        status: preapprovalResponse.status,
-        body: JSON.parse(preapprovalBody),
-      };
+      steps.withSellerEmail = { status: testResponse.status, body: JSON.parse(testBody) };
     } catch {
-      steps.preapprovalResult = {
-        status: preapprovalResponse.status,
-        raw: preapprovalBody.slice(0, 2000),
-      };
+      steps.withSellerEmail = { status: testResponse.status, raw: testBody.slice(0, 1000) };
     }
+
   } catch (err) {
     steps.error = err instanceof Error ? err.message : String(err);
   }
