@@ -91,15 +91,15 @@
   --editorial-band-text: #FFFFFF;
   --editorial-subtle: #F0F0F6;
   --editorial-rule: #343449;
-  --mindmap-canvas: color-mix(in srgb, var(--accent-soft) 42%, var(--bg-card));
-  --mindmap-toolbar: color-mix(in srgb, var(--editorial-subtle) 76%, var(--bg-card));
-  --mindmap-root: var(--accent);
-  --mindmap-root-text: var(--editorial-band-text);
-  --mindmap-node-one: color-mix(in srgb, var(--accent-soft) 78%, var(--bg-card));
-  --mindmap-node-two: color-mix(in srgb, var(--editorial-subtle) 74%, var(--bg-card));
-  --mindmap-node-three: color-mix(in srgb, var(--accent-soft) 48%, var(--bg-card));
-  --mindmap-stroke: color-mix(in srgb, var(--accent) 52%, var(--border));
-  --mindmap-edge: color-mix(in srgb, var(--accent) 64%, var(--border-strong));
+  --mindmap-canvas: #F6F9FF;
+  --mindmap-toolbar: #EDF3FC;
+  --mindmap-root: #001A4D;
+  --mindmap-root-text: #FFFFFF;
+  --mindmap-node-one: #E6F0FF;
+  --mindmap-node-two: #FFF9E6;
+  --mindmap-node-three: #FFFFFF;
+  --mindmap-stroke: #2E5E9B;
+  --mindmap-edge: #315A92;
 }
 
 /* Variações discretas mantêm mapas Mermaid reconhecíveis sem uniformizar todos. */
@@ -178,6 +178,15 @@
   --editorial-band-text: #F7F7FB;
   --editorial-subtle: #292937;
   --editorial-rule: #77778C;
+  --mindmap-canvas: #0C1625;
+  --mindmap-toolbar: #14243B;
+  --mindmap-root: #1A4E8A;
+  --mindmap-root-text: #F7FAFF;
+  --mindmap-node-one: #193252;
+  --mindmap-node-two: #332B1B;
+  --mindmap-node-three: #202B3B;
+  --mindmap-stroke: #7BADE8;
+  --mindmap-edge: #71A4E0;
 }
 
 [data-theme="sepia"] {
@@ -254,6 +263,15 @@
   --editorial-band-text: #FFF9E8;
   --editorial-subtle: #E8DFC5;
   --editorial-rule: #5C4B28;
+  --mindmap-canvas: #F5EFDF;
+  --mindmap-toolbar: #E9E0CB;
+  --mindmap-root: #3E4F61;
+  --mindmap-root-text: #FFF9E8;
+  --mindmap-node-one: #DCE8E7;
+  --mindmap-node-two: #F6E7BE;
+  --mindmap-node-three: #F8F1E3;
+  --mindmap-stroke: #657A82;
+  --mindmap-edge: #6C7184;
 }
 
 /* Mantém o wordmark legível nos temas e nas superfícies escuras fixas. */

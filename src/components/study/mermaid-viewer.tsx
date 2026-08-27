@@ -49,6 +49,51 @@ function parseSvgSize(svgElement: SVGSVGElement) {
   };
 }
 
+function getMermaidThemeVariables(theme: string) {
+  if (theme === "dark") {
+    return {
+      primaryColor: "#193252",
+      primaryTextColor: "#F7FAFF",
+      primaryBorderColor: "#7BADE8",
+      lineColor: "#71A4E0",
+      secondaryColor: "#332B1B",
+      tertiaryColor: "#202B3B",
+      mainBkg: "#193252",
+      nodeBorder: "#7BADE8",
+      clusterBkg: "#14243B",
+      clusterBorder: "#7BADE8",
+    };
+  }
+
+  if (theme === "sepia") {
+    return {
+      primaryColor: "#DCE8E7",
+      primaryTextColor: "#3D3529",
+      primaryBorderColor: "#657A82",
+      lineColor: "#6C7184",
+      secondaryColor: "#F6E7BE",
+      tertiaryColor: "#F8F1E3",
+      mainBkg: "#DCE8E7",
+      nodeBorder: "#657A82",
+      clusterBkg: "#E9E0CB",
+      clusterBorder: "#657A82",
+    };
+  }
+
+  return {
+    primaryColor: "#E6F0FF",
+    primaryTextColor: "#001A4D",
+    primaryBorderColor: "#2E5E9B",
+    lineColor: "#315A92",
+    secondaryColor: "#FFF9E6",
+    tertiaryColor: "#FFFFFF",
+    mainBkg: "#E6F0FF",
+    nodeBorder: "#2E5E9B",
+    clusterBkg: "#EDF3FC",
+    clusterBorder: "#2E5E9B",
+  };
+}
+
 function applyCoherentPalette(svgElement: SVGSVGElement) {
   const palette = {
     root: "var(--mindmap-root)",
@@ -68,15 +113,25 @@ function applyCoherentPalette(svgElement: SVGSVGElement) {
     node.querySelectorAll<SVGElement>("rect, polygon, circle, ellipse, path").forEach((shape) => {
       shape.style.fill = fill;
       shape.style.stroke = palette.stroke;
+      shape.style.strokeWidth = index === 0 ? "2.5px" : "1.75px";
+      shape.style.strokeLinejoin = "round";
     });
     node.querySelectorAll<SVGElement>("text, tspan, foreignObject, div").forEach((label) => {
       label.style.color = index === 0 ? palette.rootText : palette.text;
       label.style.fill = index === 0 ? palette.rootText : palette.text;
+      label.style.fontWeight = index === 0 ? "800" : "650";
     });
   });
 
   svgElement.querySelectorAll<SVGElement>(".edgePath path, .flowchart-link, .edge-pattern-solid").forEach((edge) => {
     edge.style.stroke = palette.edge;
+    edge.style.strokeWidth = "1.8px";
+    edge.style.strokeLinecap = "round";
+  });
+
+  svgElement.querySelectorAll<SVGElement>("marker path").forEach((arrow) => {
+    arrow.style.fill = palette.edge;
+    arrow.style.stroke = palette.edge;
   });
 }
 
@@ -115,7 +170,8 @@ function MermaidViewerClient({ chart }: MermaidViewerClientProps) {
 
         mermaid.initialize({
           startOnLoad: false,
-          theme: theme === "dark" ? "dark" : "default",
+          theme: "base",
+          themeVariables: getMermaidThemeVariables(theme),
           fontFamily: "Inter, system-ui, sans-serif",
           securityLevel: "strict",
           htmlLabels: false,

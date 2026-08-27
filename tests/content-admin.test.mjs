@@ -61,6 +61,7 @@ test("rejeita interações, protocolos executáveis e HTML em Mermaid", () => {
     'flowchart TD; A[Material]; click A "https://example.com"',
     '%%{init: {"securityLevel": "loose"}}%%\nflowchart TD\n  A --> B',
     '---\nconfig:\n  htmlLabels: true\n---\nflowchart TD\n  A --> B',
+    'flowchart TD\n  A[Raiz] --> B[Ramo]\n  classDef destaque fill:#001a4d,color:#ffffff',
     'flowchart TD\n  A["<img src=x onerror=alert(1)>"] --> B',
   ];
 

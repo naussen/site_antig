@@ -1,5 +1,9 @@
 # Changelog
 
+## Não publicado — paleta global Mermaid
+
+- aplicada a todos os diagramas Mermaid a paleta azul-marinho, azul-claro e dourado suave, com equivalentes contrastados nos temas Dark e Sepia; setas, bordas e tipografia passaram a seguir a mesma hierarquia visual.
+
 ## Não publicado — flashcards de estudo
 
 - renovado o deck de flashcards com superfícies de pergunta e gabarito mais claras, progresso visual, controles temáticos e feedback C/E integrado à paleta do site.
