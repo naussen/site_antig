@@ -783,13 +783,15 @@ body {
 }
 
 .markdown-table-scroll {
+  position: relative;
+  isolation: isolate;
   width: 100%;
   margin: 1.75em 0;
   overflow-x: auto;
   border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius);
   background: var(--bg-card);
-  box-shadow: var(--shadow);
+  box-shadow: 0 12px 30px -24px color-mix(in srgb, var(--text-primary) 58%, transparent), var(--shadow);
   scrollbar-gutter: stable;
 }
 
@@ -803,28 +805,44 @@ body {
   min-width: 36rem;
   border-collapse: separate;
   border-spacing: 0;
+  background: var(--bg-card);
 }
 
 .markdown-content th {
-  background: var(--editorial-band);
+  background: linear-gradient(
+    120deg,
+    var(--editorial-band),
+    color-mix(in srgb, var(--editorial-band) 72%, var(--accent))
+  );
   color: var(--editorial-band-text);
-  font-size: 0.76rem;
-  font-weight: 750;
-  letter-spacing: 0.045em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.075em;
   text-align: left;
-  padding: 0.85rem 1rem;
-  border-bottom: 2px solid var(--accent);
+  text-transform: uppercase;
+  padding: 0.9rem 1rem;
+  border-bottom: 3px solid var(--accent);
 }
 
 .markdown-content td {
-  padding: 0.85rem 1rem;
+  padding: 0.9rem 1rem;
   border-bottom: 1px solid var(--border);
   line-height: 1.55;
   vertical-align: top;
+  transition: background-color 160ms ease, color 160ms ease;
 }
 
-.markdown-content tr:nth-child(even) td {
-  background: var(--editorial-subtle);
+.markdown-content :where(th, td) + :where(th, td) {
+  border-left: 1px solid color-mix(in srgb, var(--border) 78%, transparent);
+}
+
+.markdown-content tbody tr:nth-child(even) td {
+  background: color-mix(in srgb, var(--editorial-subtle) 82%, var(--bg-card));
+}
+
+.markdown-content tbody tr:hover td {
+  background: color-mix(in srgb, var(--accent-soft) 72%, var(--bg-card));
+  color: var(--text-primary);
 }
 
 .markdown-content tbody tr:last-child td {
@@ -997,7 +1015,11 @@ body {
   }
 
   .markdown-content tr:nth-child(even) td:first-child {
-    background: var(--editorial-subtle);
+    background: color-mix(in srgb, var(--editorial-subtle) 82%, var(--bg-card));
+  }
+
+  .markdown-content tbody tr:hover td:first-child {
+    background: color-mix(in srgb, var(--accent-soft) 72%, var(--bg-card));
   }
 }
 

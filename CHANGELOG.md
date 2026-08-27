@@ -1,5 +1,9 @@
 # Changelog
 
+## Não publicado — tabelas de estudo
+
+- modernizado o acabamento das tabelas Markdown, com cabeçalho em gradiente aderente aos temas, divisões mais legíveis e destaque discreto da linha em foco.
+
 ## Não publicado — validação de títulos e Markdown importados
 
 - bloqueia metadados técnicos, delimitadores de corte e tags `<br>` no conteúdo importado.
