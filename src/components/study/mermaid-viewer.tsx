@@ -49,30 +49,19 @@ function parseSvgSize(svgElement: SVGSVGElement) {
   };
 }
 
-function applyCoherentPalette(svgElement: SVGSVGElement, theme: string) {
-  const palette = theme === "dark"
-    ? {
-        root: "#7562E8",
-        node: ["#302A4A", "#3A3357", "#29253D"],
-        stroke: "#B8ACFF",
-        text: "#F5F3FF",
-        edge: "#9B8BEA",
-      }
-    : theme === "sepia"
-      ? {
-          root: "#765C22",
-          node: ["#E9DDBA", "#F1E8CF", "#DDD0A8"],
-          stroke: "#9A7B2F",
-          text: "#3D3529",
-          edge: "#9A7B2F",
-        }
-      : {
-          root: "#4F46C5",
-          node: ["#EEEAFE", "#F5F2FF", "#E5E1FA"],
-          stroke: "#887CE2",
-          text: "#24213D",
-          edge: "#8174D8",
-        };
+function applyCoherentPalette(svgElement: SVGSVGElement) {
+  const palette = {
+    root: "var(--mindmap-root)",
+    rootText: "var(--mindmap-root-text)",
+    node: [
+      "var(--mindmap-node-one)",
+      "var(--mindmap-node-two)",
+      "var(--mindmap-node-three)",
+    ],
+    stroke: "var(--mindmap-stroke)",
+    text: "var(--text-primary)",
+    edge: "var(--mindmap-edge)",
+  };
 
   svgElement.querySelectorAll<SVGGElement>(".node").forEach((node, index) => {
     const fill = index === 0 ? palette.root : palette.node[(index - 1) % palette.node.length];
@@ -81,8 +70,8 @@ function applyCoherentPalette(svgElement: SVGSVGElement, theme: string) {
       shape.style.stroke = palette.stroke;
     });
     node.querySelectorAll<SVGElement>("text, tspan, foreignObject, div").forEach((label) => {
-      label.style.color = index === 0 ? "#FFFFFF" : palette.text;
-      label.style.fill = index === 0 ? "#FFFFFF" : palette.text;
+      label.style.color = index === 0 ? palette.rootText : palette.text;
+      label.style.fill = index === 0 ? palette.rootText : palette.text;
     });
   });
 
@@ -149,10 +138,7 @@ function MermaidViewerClient({ chart }: MermaidViewerClientProps) {
 
           const svgElement = containerRef.current.querySelector("svg");
           if (svgElement) {
-            applyCoherentPalette(svgElement, theme);
-            svgElement.style.display = "block";
-            svgElement.style.maxWidth = "none";
-            svgElement.style.height = "auto";
+            applyCoherentPalette(svgElement);
             setBaseSize(parseSvgSize(svgElement));
           }
 
@@ -236,14 +222,7 @@ function MermaidViewerClient({ chart }: MermaidViewerClientProps) {
 
   if (error) {
     return (
-      <div
-        className="flex items-center justify-center rounded-xl p-6 text-sm"
-        style={{
-          background: "var(--callout-warning-bg)",
-          color: "var(--callout-warning-text)",
-          border: "1px solid var(--callout-warning-border)",
-        }}
-      >
+      <div className="mermaid-viewer-error">
         {error}
       </div>
     );
@@ -251,36 +230,23 @@ function MermaidViewerClient({ chart }: MermaidViewerClientProps) {
 
   const viewer = (
     <div
-      className={`mermaid-variant-${variant} animate-fade-in-up overflow-hidden rounded-xl ${
-        isOverlayOpen ? "flex h-full flex-col" : ""
+      className={`mermaid-viewer mermaid-variant-${variant} animate-fade-in-up ${
+        isOverlayOpen ? "mermaid-viewer--overlay" : ""
       }`}
-      style={{
-        background: "var(--bg-card)",
-        border: "1px solid var(--border)",
-      }}
     >
       {rendered && (
-        <div
-          className="flex items-center justify-between gap-3 border-b px-3 py-2"
-          style={{ borderColor: "var(--border)" }}
-        >
-          <span
-            className="text-xs font-semibold uppercase tracking-wider"
-            style={{ color: "var(--text-muted)" }}
-          >
-            Zoom {Math.round(zoom * 100)}%
-          </span>
+        <div className="mermaid-viewer__toolbar">
+          <div className="mermaid-viewer__meta">
+            <span className="mermaid-viewer__label">Mapa navegável</span>
+            <span className="mermaid-viewer__zoom">Zoom {Math.round(zoom * 100)}%</span>
+          </div>
 
-          <div className="flex items-center gap-1.5">
+          <div className="mermaid-viewer__controls">
             <button
               type="button"
               onClick={zoomOut}
               disabled={zoom <= MIN_ZOOM}
-              className="rounded-lg border p-1.5 transition-colors hover:bg-black/5 disabled:cursor-not-allowed disabled:opacity-40 dark:hover:bg-white/5"
-              style={{
-                borderColor: "var(--border)",
-                color: "var(--text-secondary)",
-              }}
+              className="mermaid-viewer__control"
               aria-label="Diminuir zoom do mapa mental"
               title="Diminuir zoom"
             >
@@ -290,11 +256,7 @@ function MermaidViewerClient({ chart }: MermaidViewerClientProps) {
             <button
               type="button"
               onClick={resetZoom}
-              className="rounded-lg border p-1.5 transition-colors hover:bg-black/5 dark:hover:bg-white/5"
-              style={{
-                borderColor: "var(--border)",
-                color: "var(--text-secondary)",
-              }}
+              className="mermaid-viewer__control"
               aria-label="Restaurar zoom do mapa mental"
               title="Restaurar zoom"
             >
@@ -305,11 +267,7 @@ function MermaidViewerClient({ chart }: MermaidViewerClientProps) {
               type="button"
               onClick={zoomIn}
               disabled={zoom >= MAX_ZOOM}
-              className="rounded-lg border p-1.5 transition-colors hover:bg-black/5 disabled:cursor-not-allowed disabled:opacity-40 dark:hover:bg-white/5"
-              style={{
-                borderColor: "var(--border)",
-                color: "var(--text-secondary)",
-              }}
+              className="mermaid-viewer__control"
               aria-label="Aumentar zoom do mapa mental"
               title="Aumentar zoom"
             >
@@ -319,11 +277,7 @@ function MermaidViewerClient({ chart }: MermaidViewerClientProps) {
             <button
               type="button"
               onClick={toggleOverlay}
-              className="rounded-lg border p-1.5 transition-colors hover:bg-black/5 dark:hover:bg-white/5"
-              style={{
-                borderColor: "var(--border)",
-                color: "var(--text-secondary)",
-              }}
+              className="mermaid-viewer__control"
               aria-label={isOverlayOpen ? "Fechar mapa mental sobreposto" : "Abrir mapa mental sobreposto"}
               title={isOverlayOpen ? "Fechar visualização ampliada" : "Abrir visualização ampliada"}
             >
@@ -335,10 +289,9 @@ function MermaidViewerClient({ chart }: MermaidViewerClientProps) {
 
       <div
         ref={scrollRef}
-        className={`${isOverlayOpen ? "min-h-0 flex-1" : "max-h-[70vh]"} overflow-auto p-4`}
-        style={{ background: "var(--bg-card)" }}
+        className="mermaid-viewer__viewport"
       >
-        <div ref={containerRef} className="flex min-w-max justify-center" />
+        <div ref={containerRef} className="mermaid-viewer__diagram" />
       </div>
     </div>
   );
@@ -347,7 +300,7 @@ function MermaidViewerClient({ chart }: MermaidViewerClientProps) {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[100] bg-black/70 p-3 backdrop-blur-sm sm:p-6"
+      className="mermaid-viewer-overlay"
       role="dialog"
       aria-modal="true"
       aria-label="Mapa mental em visualização ampliada"

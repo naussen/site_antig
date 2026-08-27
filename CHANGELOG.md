@@ -1,5 +1,9 @@
 # Changelog
 
+## Não publicado — mapas mentais
+
+- redesenhado o painel Mermaid com paleta orientada pelos tokens do tema, canvas com grade sutil, controles refinados e acabamento consistente no modo ampliado.
+
 ## Não publicado — tabelas de estudo
 
 - modernizado o acabamento das tabelas Markdown, com cabeçalho em gradiente aderente aos temas, divisões mais legíveis e destaque discreto da linha em foco.
