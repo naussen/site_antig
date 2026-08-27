@@ -1,5 +1,9 @@
 # Changelog
 
+## Não publicado — flashcards de estudo
+
+- renovado o deck de flashcards com superfícies de pergunta e gabarito mais claras, progresso visual, controles temáticos e feedback C/E integrado à paleta do site.
+
 ## Não publicado — mapas mentais
 
 - redesenhado o painel Mermaid com paleta orientada pelos tokens do tema, canvas com grade sutil, controles refinados e acabamento consistente no modo ampliado.

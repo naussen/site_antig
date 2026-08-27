@@ -24,14 +24,14 @@ function getCorrectBinaryAnswer(answer: string): BinaryAnswer | null {
   return match[1].toLocaleLowerCase("pt-BR") as BinaryAnswer;
 }
 
-function getAdaptiveCardHeight(question: string, answer: string) {
+function getAdaptiveCardHeightClass(question: string, answer: string) {
   const longestContent = Math.max(question.length, answer.length);
 
-  if (longestContent > 700) return 460;
-  if (longestContent > 480) return 410;
-  if (longestContent > 300) return 360;
-  if (longestContent > 170) return 320;
-  return 270;
+  if (longestContent > 700) return "flashcard-perspective--extended";
+  if (longestContent > 480) return "flashcard-perspective--large";
+  if (longestContent > 300) return "flashcard-perspective--medium";
+  if (longestContent > 170) return "flashcard-perspective--regular";
+  return "flashcard-perspective--compact";
 }
 
 /**
@@ -56,9 +56,9 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
   const isBinaryCard = correctAnswer !== null;
   const hasAnswered = userAnswer !== null;
   const answeredCorrectly = hasAnswered && userAnswer === correctAnswer;
-  const adaptiveHeight = current
-    ? getAdaptiveCardHeight(displayQuestion, current.answer)
-    : 270;
+  const adaptiveHeightClass = current
+    ? getAdaptiveCardHeightClass(displayQuestion, current.answer)
+    : "flashcard-perspective--compact";
 
   const flip = useCallback(() => {
     if (isBinaryCard && !hasAnswered) return;
@@ -98,7 +98,7 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
   if (total === 0) return null;
 
   return (
-    <section className="study-resource-block animate-fade-in-up">
+    <section className="study-resource-block flashcard-deck animate-fade-in-up">
       <div className="study-resource-heading">
         <h3>
           <Layers3 size={17} aria-hidden="true" />
@@ -111,17 +111,27 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
         </span>
       </div>
 
-      <div className="study-resource-body space-y-4">
+      <div className="study-resource-body flashcard-deck__body">
+        <div className="flashcard-deck__progress">
+          <progress
+            value={currentIndex + 1}
+            max={total}
+            aria-label={`Progresso: flashcard ${currentIndex + 1} de ${total}`}
+          />
+          <span>Revisão {currentIndex + 1} de {total}</span>
+        </div>
+
         {/* Card com flip 3D */}
         <div
-          className={`flashcard-perspective w-full ${
+          className={`flashcard-perspective ${adaptiveHeightClass} ${
+            isBinaryCard && !hasAnswered ? "flashcard-perspective--locked" : ""
+          } ${
             hasAnswered
               ? answeredCorrectly
                 ? "flashcard-result-correct"
                 : "flashcard-result-incorrect"
               : ""
           }`}
-          style={{ height: `clamp(270px, ${adaptiveHeight}px, 460px)` }}
           role="button"
           tabIndex={0}
           onClick={flip}
@@ -147,53 +157,32 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
           <div className={`flashcard-inner ${isFlipped ? "flipped" : ""}`}>
             {/* Frente: Pergunta */}
             <div
-              className="flashcard-face"
-              style={{
-                background: "var(--bg-card)",
-                border: `2px solid ${
-                  hasAnswered
-                    ? answeredCorrectly
-                      ? "var(--quiz-correct-border)"
-                      : "var(--quiz-incorrect-border)"
-                    : "var(--accent)"
-                }`,
-                boxShadow: "var(--shadow-lg)",
-                cursor: isBinaryCard && !hasAnswered ? "default" : "pointer",
-              }}
+              className={`flashcard-face flashcard-face--question ${
+                hasAnswered
+                  ? answeredCorrectly
+                    ? "flashcard-face--correct"
+                    : "flashcard-face--incorrect"
+                  : ""
+              }`}
             >
               <div className="flex h-full w-full flex-col">
-                <div
-                  className="flex items-center justify-between gap-3 border-b px-5 py-3"
-                  style={{
-                    background: "var(--accent-soft)",
-                    borderColor: "var(--accent)",
-                  }}
-                >
-                  <span
-                    className="text-sm font-extrabold uppercase tracking-[0.16em]"
-                    style={{ color: "var(--accent)" }}
-                  >
+                <div className="flashcard-face__header flashcard-face__header--question">
+                  <span className="flashcard-face__title">
                     {isBinaryCard ? "Certo ou errado?" : isLawCard ? "Letra da lei" : "Pergunta"}
                   </span>
-                  <span
-                    className="text-xs font-semibold"
-                    style={{ color: "var(--text-muted)" }}
-                  >
+                  <span className="flashcard-face__hint">
                     {isBinaryCard && !hasAnswered
                       ? "Escolha uma resposta"
                       : "Toque para ver o gabarito"}
                   </span>
                 </div>
                 <div className="flashcard-content-scroll flex min-h-0 flex-1 flex-col justify-center overflow-y-auto px-6 py-5 sm:px-8">
-                  <p
-                    className="w-full whitespace-pre-line text-left text-base font-semibold leading-7 sm:text-lg"
-                    style={{ color: "var(--text-primary)" }}
-                  >
+                  <p className="flashcard-question">
                     {displayQuestion}
                   </p>
 
                   {isBinaryCard && (
-                    <div className="mt-6 grid w-full grid-cols-2 gap-3" role="group" aria-label="Responder ao flashcard">
+                    <div className="flashcard-answer-options" role="group" aria-label="Responder ao flashcard">
                       {(["certo", "errado"] as const).map((answer) => {
                         const selected = userAnswer === answer;
                         return (
@@ -205,24 +194,13 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
                               answerCard(answer);
                             }}
                             disabled={hasAnswered}
-                            className="flex min-h-12 items-center justify-center gap-2 rounded-xl border px-4 py-3 text-sm font-extrabold uppercase tracking-wider transition-all enabled:hover:-translate-y-0.5 disabled:cursor-default"
-                            style={{
-                              background: selected
+                            className={`flashcard-choice ${
+                              selected
                                 ? answeredCorrectly
-                                  ? "var(--quiz-correct-bg)"
-                                  : "var(--quiz-incorrect-bg)"
-                                : "var(--bg-secondary)",
-                              borderColor: selected
-                                ? answeredCorrectly
-                                  ? "var(--quiz-correct-border)"
-                                  : "var(--quiz-incorrect-border)"
-                                : "var(--border-strong)",
-                              color: selected
-                                ? answeredCorrectly
-                                  ? "var(--quiz-correct-text)"
-                                  : "var(--quiz-incorrect-text)"
-                                : "var(--text-primary)",
-                            }}
+                                  ? "flashcard-choice--correct"
+                                  : "flashcard-choice--incorrect"
+                                : ""
+                            }`}
                             aria-pressed={selected}
                           >
                             {answer === "certo" ? <CheckCircle2 size={18} /> : <XCircle size={18} />}
@@ -235,15 +213,11 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
 
                   {hasAnswered && (
                     <div
-                      className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-bold"
-                      style={{
-                        background: answeredCorrectly
-                          ? "var(--quiz-correct-bg)"
-                          : "var(--quiz-incorrect-bg)",
-                        color: answeredCorrectly
-                          ? "var(--quiz-correct-text)"
-                          : "var(--quiz-incorrect-text)",
-                      }}
+                      className={`flashcard-answer-result ${
+                        answeredCorrectly
+                          ? "flashcard-answer-result--correct"
+                          : "flashcard-answer-result--incorrect"
+                      }`}
                       role="status"
                     >
                       {answeredCorrectly ? <CheckCircle2 size={19} /> : <XCircle size={19} />}
@@ -258,49 +232,22 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
 
             {/* Verso: Resposta */}
             <div
-              className="flashcard-face flashcard-back"
-              style={{
-                background: "var(--bg-card)",
-                border: `2px solid ${
-                  hasAnswered && !answeredCorrectly
-                    ? "var(--quiz-incorrect-border)"
-                    : "var(--quiz-correct-border)"
-                }`,
-                boxShadow: "var(--shadow-lg)",
-                cursor: "pointer",
-              }}
+              className={`flashcard-face flashcard-face--answer flashcard-back ${
+                hasAnswered && !answeredCorrectly ? "flashcard-face--incorrect" : "flashcard-face--correct"
+              }`}
             >
               <div className="flex h-full w-full flex-col">
                 <div
-                  className="border-b px-5 py-3"
-                  style={{
-                    background:
-                      hasAnswered && !answeredCorrectly
-                        ? "var(--quiz-incorrect-bg)"
-                        : "var(--quiz-correct-bg)",
-                    borderColor:
-                      hasAnswered && !answeredCorrectly
-                        ? "var(--quiz-incorrect-border)"
-                        : "var(--quiz-correct-border)",
-                  }}
+                  className={`flashcard-face__header flashcard-face__header--answer ${
+                    hasAnswered && !answeredCorrectly ? "flashcard-face__header--incorrect" : ""
+                  }`}
                 >
-                  <span
-                    className="text-xs font-bold uppercase tracking-widest"
-                    style={{
-                      color:
-                        hasAnswered && !answeredCorrectly
-                          ? "var(--quiz-incorrect-text)"
-                          : "var(--quiz-correct-text)",
-                    }}
-                  >
+                  <span className="flashcard-face__title">
                     Gabarito e justificativa
                   </span>
                 </div>
                 <div className="flashcard-content-scroll flex min-h-0 flex-1 items-center overflow-y-auto px-6 py-5 sm:px-8">
-                  <p
-                    className="w-full whitespace-pre-line text-left text-base font-medium leading-7"
-                    style={{ color: "var(--text-primary)" }}
-                  >
+                  <p className="flashcard-answer">
                     {current.answer}
                   </p>
                 </div>
@@ -310,57 +257,41 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
         </div>
 
         {/* Controles */}
-        <div className="flex items-center justify-center gap-2">
+        <div className="flashcard-deck__controls">
           <button
+            type="button"
             onClick={prev}
-            className="p-2 rounded-lg cursor-pointer"
-            style={{
-              background: "var(--bg-card)",
-              border: "1px solid var(--border)",
-              color: "var(--text-secondary)",
-            }}
+            className="flashcard-deck__control"
             aria-label="Card anterior"
           >
             <ChevronLeft size={18} />
           </button>
 
           <button
+            type="button"
             onClick={() => {
               setIsFlipped(false);
               setUserAnswer(null);
             }}
-            className="p-2 rounded-lg cursor-pointer"
-            style={{
-              background: "var(--bg-card)",
-              border: "1px solid var(--border)",
-              color: "var(--text-secondary)",
-            }}
+            className="flashcard-deck__control"
             aria-label="Resetar card"
           >
             <RotateCcw size={18} />
           </button>
 
           <button
+            type="button"
             onClick={randomCard}
-            className="p-2 rounded-lg cursor-pointer"
-            style={{
-              background: "var(--bg-card)",
-              border: "1px solid var(--border)",
-              color: "var(--text-secondary)",
-            }}
+            className="flashcard-deck__control"
             aria-label="Card aleatório"
           >
             <Shuffle size={18} />
           </button>
 
           <button
+            type="button"
             onClick={next}
-            className="p-2 rounded-lg cursor-pointer"
-            style={{
-              background: "var(--bg-card)",
-              border: "1px solid var(--border)",
-              color: "var(--text-secondary)",
-            }}
+            className="flashcard-deck__control"
             aria-label="Próximo card"
           >
             <ChevronRight size={18} />
