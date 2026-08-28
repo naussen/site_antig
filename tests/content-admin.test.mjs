@@ -35,6 +35,33 @@ test("aceita o mesmo contrato básico da API de importação", () => {
   assert.equal(parsed.sections.length, 1);
 });
 
+test("rejeita topic_id com palavras fragmentadas por hífens", () => {
+  const payload = validPayload();
+  payload.topic_id = "d-ef-in-i-co-es-e-ti-p-o-s-d-e-g-a-sto-s";
+  payload.topic_title = "Definições e Tipos de Gastos";
+  payload.sections[0].section_id = `${payload.topic_id}-sec-01`;
+
+  assert.throws(() => validateImportPayload(payload), /fragmenta palavras do título/);
+});
+
+test("preserva topic_id legado coerente mesmo quando difere do título", () => {
+  const payload = validPayload();
+  payload.topic_id = "abrangencia-arts-1-e-2";
+  payload.topic_title = "Acesso à Informação";
+  payload.sections[0].section_id = `${payload.topic_id}-sec-01`;
+
+  assert.doesNotThrow(() => validateImportPayload(payload));
+});
+
+test("não infere fragmentação a partir de título legado com mojibake", () => {
+  const payload = validPayload();
+  payload.topic_id = "conceitos-basicos-da-contabilidade";
+  payload.topic_title = "Conceitos bÃƒÂ¡sicos da contabilidade";
+  payload.sections[0].section_id = `${payload.topic_id}-sec-01`;
+
+  assert.doesNotThrow(() => validateImportPayload(payload));
+});
+
 test("aplica valores opcionais compatíveis com a API", () => {
   const payload = validPayload();
   delete payload.discipline;

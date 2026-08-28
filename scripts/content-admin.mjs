@@ -8,6 +8,10 @@ import {
   getMermaidSecurityIssue,
   MAX_MERMAID_SOURCE_LENGTH,
 } from "../src/lib/mermaid/security.mjs";
+import {
+  getTopicIdIssue,
+  slugifyTopicId,
+} from "../src/lib/content/topic-id.mjs";
 
 const PAGE_SIZE = 1_000;
 
@@ -108,6 +112,15 @@ const TopicImportSchema = z.object({
     mermaid_mindmap: section.mermaid_mindmap,
   })).join("\n");
   const contextualAcronyms = collectContextualAcronyms(contentContext);
+  const topicIdIssue = getTopicIdIssue(topic.topic_id, topic.topic_title);
+
+  if (topicIdIssue) {
+    context.addIssue({
+      code: "custom",
+      path: ["topic_id"],
+      message: topicIdIssue,
+    });
+  }
 
   if (isPredominantlyUppercaseTitle(topic.topic_title, contextualAcronyms)) {
     context.addIssue({
@@ -383,6 +396,38 @@ async function listContent(supabase, values) {
 
   if (values.json) console.log(JSON.stringify(output, null, 2));
   else if (output.length === 0) console.log("Nenhum módulo encontrado.");
+  else console.table(output);
+}
+
+async function auditTopicIds(supabase, values) {
+  const topics = await fetchAll(() =>
+    supabase
+      .from("topics")
+      .select("topic_id,title,discipline")
+      .order("discipline")
+      .order("title")
+  );
+  const existingIds = new Set(topics.map((topic) => topic.topic_id));
+  const output = topics.flatMap((topic) => {
+    const issue = getTopicIdIssue(topic.topic_id, topic.title);
+    if (!issue) return [];
+
+    const canonicalId = slugifyTopicId(topic.title);
+    const suggestedId = existingIds.has(canonicalId)
+      ? `${slugifyTopicId(topic.discipline)}-${canonicalId}`
+      : canonicalId;
+
+    return [{
+      disciplina: topic.discipline,
+      modulo: topic.title,
+      topic_id_atual: topic.topic_id,
+      topic_id_sugerido: suggestedId,
+      motivo: issue,
+    }];
+  });
+
+  if (values.json) console.log(JSON.stringify(output, null, 2));
+  else if (output.length === 0) console.log("Nenhum topic_id suspeito encontrado.");
   else console.table(output);
 }
 
@@ -853,6 +898,7 @@ Administração de conteúdo PRO Resumos
 
 Uso:
   npm run content -- list [--discipline "Nome"] [--json]
+  npm run content -- audit-topic-ids [--json]
   npm run content -- inspect <topic-id> [--json]
   npm run content -- import <arquivo.json> [--apply] [--replace --confirm <topic-id>]
   npm run content -- import-batch <pasta> (--dry-run | --apply)
@@ -897,6 +943,8 @@ export async function main(argv = process.argv.slice(2)) {
   switch (command) {
     case "list":
       return listContent(supabase, values);
+    case "audit-topic-ids":
+      return auditTopicIds(supabase, values);
     case "inspect":
       return inspectContent(supabase, requireText(args[0], "topic-id"), values);
     case "import":

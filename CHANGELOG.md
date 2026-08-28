@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — URLs canônicas dos resumos
+
+- normalizados 30 `topic_id` fragmentados e os 89 `section_id` vinculados, preservando progresso, notas, realces e relações editoriais;
+- mantidos redirecionamentos permanentes dos URLs antigos para os novos endereços canônicos;
+- adicionada auditoria administrativa e validação compartilhada entre API e CLI para impedir novas palavras fragmentadas por hífens.
+
 ## Não publicado — altura adaptativa dos flashcards
 
 - substituídas as cinco alturas estimadas pela quantidade de caracteres por dimensionamento baseado no conteúdo real da frente e do verso;

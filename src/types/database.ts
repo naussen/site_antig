@@ -58,6 +58,12 @@ export interface TopicRow {
   created_at: string;
 }
 
+export interface TopicIdRedirectRow {
+  old_topic_id: string;
+  new_topic_id: string;
+  created_at: string;
+}
+
 export interface SectionRow {
   section_id: string;
   topic_id: string;

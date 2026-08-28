@@ -6,6 +6,7 @@ import {
   getMermaidSecurityIssue,
   MAX_MERMAID_SOURCE_LENGTH,
 } from "@/lib/mermaid/security.mjs";
+import { getTopicIdIssue } from "@/lib/content/topic-id.mjs";
 
 // =============================================================================
 // Validação Zod do payload de importação
@@ -114,6 +115,15 @@ const TopicImportSchema = z.object({
     mermaid_mindmap: section.mermaid_mindmap,
   })).join("\n");
   const contextualAcronyms = collectContextualAcronyms(contentContext);
+  const topicIdIssue = getTopicIdIssue(topic.topic_id, topic.topic_title);
+
+  if (topicIdIssue) {
+    context.addIssue({
+      code: "custom",
+      path: ["topic_id"],
+      message: topicIdIssue,
+    });
+  }
 
   if (isPredominantlyUppercaseTitle(topic.topic_title, contextualAcronyms)) {
     context.addIssue({

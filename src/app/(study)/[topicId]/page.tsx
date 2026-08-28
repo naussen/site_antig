@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import type { SectionRow, TopicRow } from "@/types/database";
 import { compareTopicsByOrigin } from "@/lib/topic-order";
 import { requireContentAccess } from "@/lib/content-access";
@@ -21,6 +21,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
   let sections: SectionRow[] = [];
   let previousTopic: AdjacentTopic | null = null;
   let nextTopic: AdjacentTopic | null = null;
+  let redirectTopicId: string | null = null;
 
   const { supabase, user } = await requireContentAccess();
 
@@ -32,7 +33,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
         .from("topics")
         .select("topic_id,discipline,title,sort_order,created_at")
         .eq("topic_id", topicId)
-        .single(),
+        .maybeSingle(),
       supabase
         .from("sections")
         .select(
@@ -49,43 +50,54 @@ export default async function TopicPage({ params }: TopicPageProps) {
     const topicData = topicResult.data;
 
     if (!topicData) {
-      notFound();
-    }
+      const { data: redirectData, error: redirectError } = await supabase
+        .from("topic_id_redirects")
+        .select("new_topic_id")
+        .eq("old_topic_id", topicId)
+        .maybeSingle();
 
-    topic = topicData;
+      if (redirectError) throw redirectError;
+      redirectTopicId = redirectData?.new_topic_id ?? null;
+    } else {
+      topic = topicData;
 
-    if (sectionsResult.data) {
-      sections = sectionsResult.data as SectionRow[];
-    }
-
-    const { data: disciplineTopics } = await supabase
-      .from("topics")
-      .select("topic_id,title,sort_order,created_at")
-      .eq("discipline", topicData.discipline)
-      .order("created_at", { ascending: true })
-      .order("topic_id", { ascending: true });
-
-    if (disciplineTopics) {
-      const orderedTopics = [...disciplineTopics].sort((a, b) =>
-        compareTopicsByOrigin(topicData.discipline, a, b)
-      );
-      const currentTopicIndex = orderedTopics.findIndex(
-        (disciplineTopic) => disciplineTopic.topic_id === topicId
-      );
-
-      if (currentTopicIndex > 0) {
-        previousTopic = orderedTopics[currentTopicIndex - 1];
+      if (sectionsResult.data) {
+        sections = sectionsResult.data as SectionRow[];
       }
 
-      if (
-        currentTopicIndex >= 0 &&
-        currentTopicIndex < orderedTopics.length - 1
-      ) {
-        nextTopic = orderedTopics[currentTopicIndex + 1];
+      const { data: disciplineTopics } = await supabase
+        .from("topics")
+        .select("topic_id,title,sort_order,created_at")
+        .eq("discipline", topicData.discipline)
+        .order("created_at", { ascending: true })
+        .order("topic_id", { ascending: true });
+
+      if (disciplineTopics) {
+        const orderedTopics = [...disciplineTopics].sort((a, b) =>
+          compareTopicsByOrigin(topicData.discipline, a, b)
+        );
+        const currentTopicIndex = orderedTopics.findIndex(
+          (disciplineTopic) => disciplineTopic.topic_id === topicId
+        );
+
+        if (currentTopicIndex > 0) {
+          previousTopic = orderedTopics[currentTopicIndex - 1];
+        }
+
+        if (
+          currentTopicIndex >= 0 &&
+          currentTopicIndex < orderedTopics.length - 1
+        ) {
+          nextTopic = orderedTopics[currentTopicIndex + 1];
+        }
       }
     }
   } catch {
     notFound();
+  }
+
+  if (redirectTopicId) {
+    permanentRedirect(`/${redirectTopicId}`);
   }
 
   if (!topic) {
