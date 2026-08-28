@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — republicação de Contabilidade Geral e Avançada
+
+- substituídos os materiais da disciplina por 32 tópicos e 142 seções revisados, com tabelas, fórmulas KaTeX, diagramas Mermaid e flashcards validados;
+- preservados 26 `topic_id` existentes e removidas somente as oito versões antigas sem correspondência no novo conjunto;
+- movido o tópico “Relatório de auditoria (NBC TA 700, 701, 705 e 706)” de Contabilidade para Auditoria, sem alterar Contabilidade de Custos.
+
 ## Não publicado — URLs canônicas dos resumos
 
 - normalizados 30 `topic_id` fragmentados e os 89 `section_id` vinculados, preservando progresso, notas, realces e relações editoriais;
