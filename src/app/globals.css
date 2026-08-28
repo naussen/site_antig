@@ -42,6 +42,18 @@
   --catalog-rose: #F43F5E;
   --catalog-rose-soft: #FFE4E6;
   --catalog-rose-text: #BE123C;
+  --catalog-violet: #7C3AED;
+  --catalog-cyan: #0891B2;
+  --catalog-orange: #EA580C;
+  --catalog-teal: #0D9488;
+  --catalog-indigo: #4F46E5;
+  --catalog-lime: #65A30D;
+  --catalog-pink: #DB2777;
+  --catalog-slate: #64748B;
+  --catalog-red: #DC2626;
+  --catalog-sky: #0284C7;
+  --catalog-emerald: #059669;
+  --catalog-purple: #9333EA;
   --status-success-bg: #DCFCE7;
   --status-success-text: #166534;
   --callout-warning-bg: rgba(249, 115, 22, 0.08);
@@ -141,6 +153,18 @@
   --catalog-rose: #F43F5E;
   --catalog-rose-soft: rgba(244, 63, 94, 0.15);
   --catalog-rose-text: #FDA4AF;
+  --catalog-violet: #8B5CF6;
+  --catalog-cyan: #06B6D4;
+  --catalog-orange: #F97316;
+  --catalog-teal: #14B8A6;
+  --catalog-indigo: #6366F1;
+  --catalog-lime: #84CC16;
+  --catalog-pink: #EC4899;
+  --catalog-slate: #94A3B8;
+  --catalog-red: #EF4444;
+  --catalog-sky: #0EA5E9;
+  --catalog-emerald: #10B981;
+  --catalog-purple: #A855F7;
   --status-success-bg: rgba(22, 163, 74, 0.18);
   --status-success-text: #BBF7D0;
   --callout-warning-bg: rgba(251, 146, 60, 0.1);
@@ -226,6 +250,18 @@
   --catalog-rose: #A75B5B;
   --catalog-rose-soft: rgba(167, 91, 91, 0.14);
   --catalog-rose-text: #783E3E;
+  --catalog-violet: #7B6794;
+  --catalog-cyan: #4F8890;
+  --catalog-orange: #B66A32;
+  --catalog-teal: #4E8077;
+  --catalog-indigo: #626D9B;
+  --catalog-lime: #718445;
+  --catalog-pink: #9A607B;
+  --catalog-slate: #77756F;
+  --catalog-red: #A6544D;
+  --catalog-sky: #56809A;
+  --catalog-emerald: #4F8063;
+  --catalog-purple: #80618E;
   --status-success-bg: #DCE9CF;
   --status-success-text: #31511E;
   --callout-warning-bg: rgba(194, 65, 12, 0.08);
@@ -272,6 +308,38 @@
   --mindmap-node-three: #F8F1E3;
   --mindmap-stroke: #657A82;
   --mindmap-edge: #6C7184;
+}
+
+/* Paleta estável das disciplinas do Dashboard, adaptada pelos tokens de cada tema. */
+.discipline-tone-gold { --discipline-accent: var(--catalog-gold); }
+.discipline-tone-blue { --discipline-accent: var(--catalog-blue); }
+.discipline-tone-green { --discipline-accent: var(--catalog-green); }
+.discipline-tone-rose { --discipline-accent: var(--catalog-rose); }
+.discipline-tone-violet { --discipline-accent: var(--catalog-violet); }
+.discipline-tone-cyan { --discipline-accent: var(--catalog-cyan); }
+.discipline-tone-orange { --discipline-accent: var(--catalog-orange); }
+.discipline-tone-teal { --discipline-accent: var(--catalog-teal); }
+.discipline-tone-indigo { --discipline-accent: var(--catalog-indigo); }
+.discipline-tone-lime { --discipline-accent: var(--catalog-lime); }
+.discipline-tone-pink { --discipline-accent: var(--catalog-pink); }
+.discipline-tone-slate { --discipline-accent: var(--catalog-slate); }
+.discipline-tone-red { --discipline-accent: var(--catalog-red); }
+.discipline-tone-sky { --discipline-accent: var(--catalog-sky); }
+.discipline-tone-emerald { --discipline-accent: var(--catalog-emerald); }
+.discipline-tone-purple { --discipline-accent: var(--catalog-purple); }
+
+.discipline-icon {
+  background: color-mix(in srgb, var(--discipline-accent) 16%, var(--bg-card));
+  color: color-mix(in srgb, var(--discipline-accent) 72%, var(--text-primary));
+}
+
+.discipline-card {
+  border-top-color: var(--discipline-accent);
+  border-top-width: 3px;
+}
+
+.discipline-card:hover {
+  border-top-color: var(--discipline-accent);
 }
 
 /* Mantém o wordmark legível nos temas e nas superfícies escuras fixas. */

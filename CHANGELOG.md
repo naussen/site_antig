@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — identificação visual das disciplinas
+
+- ampliada para 16 tons a paleta das disciplinas do Dashboard, com variações compatíveis com os temas Light, Dark e Sepia;
+- adicionados ícones semânticos ao lado dos nomes das disciplinas, com fallback visual para novas matérias.
+
 ## Não publicado — paleta global Mermaid
 
 - aplicada a todos os diagramas Mermaid a paleta azul-marinho, azul-claro e dourado suave, com equivalentes contrastados nos temas Dark e Sepia; setas, bordas e tipografia passaram a seguir a mesma hierarquia visual.

@@ -3,16 +3,32 @@ import {
   AlertTriangle,
   ArrowUpRight,
   BookOpen,
+  BrainCircuit,
+  BriefcaseBusiness,
+  Building2,
+  Calculator,
   CalendarDays,
   CheckCircle2,
   ChevronDown,
   CirclePlay,
+  FileText,
+  Gavel,
   GraduationCap,
+  HeartHandshake,
+  Landmark,
+  Languages,
   Layers3,
+  Leaf,
   Library,
+  MonitorCog,
+  Scale,
   Settings2,
+  ShieldCheck,
+  ShoppingBag,
   Sparkles,
+  Users,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import type { TopicRow } from "@/types/database";
 import { formatSupabaseError, isMissingTableError } from "@/lib/supabase/errors";
 import { compareTopicsByOrigin } from "@/lib/topic-order";
@@ -28,32 +44,65 @@ type TopicProgress = {
   percent: number;
 };
 
-const DISCIPLINE_PRESENTATIONS = [
-  {
-    cardClass: "border-t-[3px] border-t-[var(--catalog-gold)]",
-    iconClass: "bg-[var(--catalog-gold-soft)] text-[var(--catalog-gold-text)]",
-  },
-  {
-    cardClass: "border-t-[3px] border-t-[var(--catalog-blue)]",
-    iconClass: "bg-[var(--catalog-blue-soft)] text-[var(--catalog-blue-text)]",
-  },
-  {
-    cardClass: "border-t-[3px] border-t-[var(--catalog-green)]",
-    iconClass: "bg-[var(--catalog-green-soft)] text-[var(--catalog-green-text)]",
-  },
-  {
-    cardClass: "border-t-[3px] border-t-[var(--catalog-rose)]",
-    iconClass: "bg-[var(--catalog-rose-soft)] text-[var(--catalog-rose-text)]",
-  },
+const DISCIPLINE_TONE_CLASSES = [
+  "discipline-tone-gold",
+  "discipline-tone-blue",
+  "discipline-tone-green",
+  "discipline-tone-rose",
+  "discipline-tone-violet",
+  "discipline-tone-cyan",
+  "discipline-tone-orange",
+  "discipline-tone-teal",
+  "discipline-tone-indigo",
+  "discipline-tone-lime",
+  "discipline-tone-pink",
+  "discipline-tone-slate",
+  "discipline-tone-red",
+  "discipline-tone-sky",
+  "discipline-tone-emerald",
+  "discipline-tone-purple",
 ] as const;
 
-function getDisciplinePresentation(discipline: string) {
-  const hash = Array.from(discipline).reduce(
-    (value, character) => ((value * 31) + (character.codePointAt(0) ?? 0)) >>> 0,
-    0,
-  );
+const DISCIPLINE_ICON_MATCHERS: ReadonlyArray<{
+  pattern: RegExp;
+  icon: LucideIcon;
+}> = [
+  { pattern: /processo|processual/, icon: FileText },
+  { pattern: /constitucional/, icon: Landmark },
+  { pattern: /administrativ/, icon: Building2 },
+  { pattern: /penal|criminal/, icon: Gavel },
+  { pattern: /civil/, icon: Scale },
+  { pattern: /tribut|contabil|financeir/, icon: Calculator },
+  { pattern: /trabalho|trabalhist/, icon: BriefcaseBusiness },
+  { pattern: /previdenci|seguridade/, icon: HeartHandshake },
+  { pattern: /consumidor/, icon: ShoppingBag },
+  { pattern: /ambiental/, icon: Leaf },
+  { pattern: /humanos|sociolog|filosof/, icon: Users },
+  { pattern: /portugues|redacao|lingua/, icon: Languages },
+  { pattern: /informatica|tecnologia/, icon: MonitorCog },
+  { pattern: /logica|matematica|estatistica/, icon: BrainCircuit },
+  { pattern: /empresarial|comercial/, icon: BriefcaseBusiness },
+  { pattern: /eleitoral|internacional/, icon: ShieldCheck },
+];
 
-  return DISCIPLINE_PRESENTATIONS[hash % DISCIPLINE_PRESENTATIONS.length];
+function normalizeDisciplineName(discipline: string) {
+  return discipline
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase("pt-BR");
+}
+
+function getDisciplineIcon(discipline: string) {
+  const normalizedDiscipline = normalizeDisciplineName(discipline);
+
+  return DISCIPLINE_ICON_MATCHERS.find(({ pattern }) =>
+    pattern.test(normalizedDiscipline)
+  )?.icon ?? Library;
+}
+
+function getDisciplineToneClass(index: number) {
+  const safeIndex = Math.max(index, 0);
+  return DISCIPLINE_TONE_CLASSES[safeIndex % DISCIPLINE_TONE_CLASSES.length];
 }
 
 function getProgressBadgeClass(percent: number) {
@@ -166,7 +215,7 @@ export default async function DashboardPage({
 
   const allDisciplines = Array.from(
     new Set(topics.map((topic) => topic.discipline || "Geral"))
-  );
+  ).sort((a, b) => a.localeCompare(b, "pt-BR"));
   const activeDisciplineFilter = requestedDiscipline && allDisciplines.includes(requestedDiscipline)
     ? requestedDiscipline
     : null;
@@ -186,7 +235,9 @@ export default async function DashboardPage({
     return acc;
   }, {} as Record<string, DashboardTopic[]>);
 
-  const disciplines = Object.keys(groupedTopics).sort();
+  const disciplines = Object.keys(groupedTopics).sort((a, b) =>
+    a.localeCompare(b, "pt-BR")
+  );
   const displayedProgress = displayedTopics.map((topic) => progressByTopic[topic.topic_id]);
   const totalSections = displayedProgress.reduce(
     (total, progress) => total + progress.totalCount,
@@ -391,18 +442,21 @@ export default async function DashboardPage({
 
             <div className="flex flex-col gap-12">
               {disciplines.map((discipline) => {
-                const presentation = getDisciplinePresentation(discipline);
+                const DisciplineIcon = getDisciplineIcon(discipline);
+                const toneClass = getDisciplineToneClass(
+                  allDisciplines.indexOf(discipline)
+                );
 
                 return (
                   <details
                     key={discipline}
                     open
-                    className="group"
+                    className={`group ${toneClass}`}
                     aria-labelledby={`discipline-${discipline}`}
                   >
                     <summary className="mb-5 flex cursor-pointer list-none items-center gap-4 rounded-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--accent)] [&::-webkit-details-marker]:hidden">
-                      <span className={`grid h-10 w-10 shrink-0 place-items-center rounded-xl ${presentation.iconClass}`}>
-                        <BookOpen size={19} />
+                      <span className="discipline-icon grid h-10 w-10 shrink-0 place-items-center rounded-xl" aria-hidden="true">
+                        <DisciplineIcon size={19} strokeWidth={2.2} />
                       </span>
                       <div className="min-w-0 flex-1">
                         <h3 id={`discipline-${discipline}`} className="truncate text-lg font-black text-[var(--text-primary)] sm:text-xl">
@@ -438,11 +492,11 @@ export default async function DashboardPage({
                       <Link
                         key={topic.topic_id}
                         href={`/${topic.topic_id}`}
-                        className={`group relative flex min-h-[250px] flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-5 shadow-[var(--shadow)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[var(--shadow-lg)] sm:p-6 ${presentation.cardClass}`}
+                        className="discipline-card group relative flex min-h-[250px] flex-col overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-5 shadow-[var(--shadow)] transition hover:-translate-y-0.5 hover:border-[var(--border-strong)] hover:shadow-[var(--shadow-lg)] sm:p-6"
                       >
                         <div className="mb-5 flex items-center justify-between gap-3">
-                          <span className={`grid h-10 w-10 place-items-center rounded-xl ${presentation.iconClass}`}>
-                            {progress.percent === 100 ? <CheckCircle2 size={20} /> : <BookOpen size={20} />}
+                          <span className="discipline-icon grid h-10 w-10 place-items-center rounded-xl" aria-hidden="true">
+                            {progress.percent === 100 ? <CheckCircle2 size={20} /> : <DisciplineIcon size={20} />}
                           </span>
                           <span className={`rounded-full px-2.5 py-1 text-[11px] font-black uppercase tracking-wide ${getProgressBadgeClass(progress.percent)}`}>
                             {progress.percent === 100 ? "Concluído" : progress.percent > 0 ? `${progress.percent}%` : "Novo"}
