@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — altura adaptativa dos flashcards
+
+- substituídas as cinco alturas estimadas pela quantidade de caracteres por dimensionamento baseado no conteúdo real da frente e do verso;
+- removida a rolagem interna dos cartões, preservando o efeito 3D e um tamanho mínimo compacto em telas menores.
+
 ## Não publicado — identificação visual das disciplinas
 
 - ampliada para 16 tons a paleta das disciplinas do Dashboard, com variações compatíveis com os temas Light, Dark e Sepia;

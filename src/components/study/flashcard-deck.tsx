@@ -24,16 +24,6 @@ function getCorrectBinaryAnswer(answer: string): BinaryAnswer | null {
   return match[1].toLocaleLowerCase("pt-BR") as BinaryAnswer;
 }
 
-function getAdaptiveCardHeightClass(question: string, answer: string) {
-  const longestContent = Math.max(question.length, answer.length);
-
-  if (longestContent > 700) return "flashcard-perspective--extended";
-  if (longestContent > 480) return "flashcard-perspective--large";
-  if (longestContent > 300) return "flashcard-perspective--medium";
-  if (longestContent > 170) return "flashcard-perspective--regular";
-  return "flashcard-perspective--compact";
-}
-
 /**
  * Deck interativo de flashcards com efeito 3D flip (CSS perspective + rotateY).
  * Cards binários exigem resposta antes de liberar o gabarito.
@@ -56,9 +46,6 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
   const isBinaryCard = correctAnswer !== null;
   const hasAnswered = userAnswer !== null;
   const answeredCorrectly = hasAnswered && userAnswer === correctAnswer;
-  const adaptiveHeightClass = current
-    ? getAdaptiveCardHeightClass(displayQuestion, current.answer)
-    : "flashcard-perspective--compact";
 
   const flip = useCallback(() => {
     if (isBinaryCard && !hasAnswered) return;
@@ -123,7 +110,7 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
 
         {/* Card com flip 3D */}
         <div
-          className={`flashcard-perspective ${adaptiveHeightClass} ${
+          className={`flashcard-perspective ${
             isBinaryCard && !hasAnswered ? "flashcard-perspective--locked" : ""
           } ${
             hasAnswered
@@ -176,7 +163,7 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
                       : "Toque para ver o gabarito"}
                   </span>
                 </div>
-                <div className="flashcard-content-scroll flex min-h-0 flex-1 flex-col justify-center overflow-y-auto px-6 py-5 sm:px-8">
+                <div className="flex flex-1 flex-col justify-center px-6 py-5 sm:px-8">
                   <p className="flashcard-question">
                     {displayQuestion}
                   </p>
@@ -246,7 +233,7 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
                     Gabarito e justificativa
                   </span>
                 </div>
-                <div className="flashcard-content-scroll flex min-h-0 flex-1 items-center overflow-y-auto px-6 py-5 sm:px-8">
+                <div className="flex flex-1 items-center px-6 py-5 sm:px-8">
                   <p className="flashcard-answer">
                     {current.answer}
                   </p>

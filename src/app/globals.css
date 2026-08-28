@@ -794,15 +794,10 @@ body {
 
 .flashcard-perspective {
   width: 100%;
+  min-height: 200px;
   perspective: 1200px;
   cursor: pointer;
 }
-
-.flashcard-perspective--compact { height: 270px; }
-.flashcard-perspective--regular { height: 320px; }
-.flashcard-perspective--medium { height: 360px; }
-.flashcard-perspective--large { height: 410px; }
-.flashcard-perspective--extended { height: 460px; }
 
 .flashcard-perspective--locked {
   cursor: default;
@@ -814,9 +809,9 @@ body {
 }
 
 .flashcard-inner {
-  position: relative;
+  display: grid;
   width: 100%;
-  height: 100%;
+  min-height: inherit;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
 }
@@ -826,8 +821,7 @@ body {
 }
 
 .flashcard-face {
-  position: absolute;
-  inset: 0;
+  grid-area: 1 / 1;
   backface-visibility: hidden;
   display: flex;
   align-items: stretch;
@@ -876,10 +870,6 @@ body {
 
 .flashcard-back {
   transform: rotateY(180deg);
-}
-
-.flashcard-content-scroll {
-  scrollbar-gutter: stable;
 }
 
 .flashcard-deck__body {
