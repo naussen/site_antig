@@ -35,10 +35,9 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
 
   const total = flashcards.length;
   const current = flashcards[currentIndex];
-  const isLawCard = current?.question.trim().startsWith("[LETRA DA LEI]");
   const displayQuestion = current?.question
     .replace(
-      /^\[(?:CERTO\/ERRADO|LETRA DA LEI|CEBRASPE[^\]]*|CESPE[^\]]*|FGV[^\]]*|FCC[^\]]*)\]\s*/i,
+      /^\[CERTO\/ERRADO\]\s*/i,
       "",
     )
     .trim();
@@ -155,7 +154,7 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
               <div className="flex h-full w-full flex-col">
                 <div className="flashcard-face__header flashcard-face__header--question">
                   <span className="flashcard-face__title">
-                    {isBinaryCard ? "Certo ou errado?" : isLawCard ? "Letra da lei" : "Pergunta"}
+                    {isBinaryCard ? "Certo ou errado?" : "Pergunta"}
                   </span>
                   <span className="flashcard-face__hint">
                     {isBinaryCard && !hasAnswered
@@ -166,6 +165,9 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
                 <div className="flex flex-1 flex-col justify-center px-6 py-5 sm:px-8">
                   <p className="flashcard-question">
                     {displayQuestion}
+                  </p>
+                  <p className="mt-3 text-xs text-[var(--text-secondary)]">
+                    Fonte: {current.source.board} — {current.source.exam} ({current.source.year}), questão {current.source.question_id}.
                   </p>
 
                   {isBinaryCard && (

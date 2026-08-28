@@ -7,6 +7,7 @@ import {
   MAX_MERMAID_SOURCE_LENGTH,
 } from "@/lib/mermaid/security.mjs";
 import { getTopicIdIssue } from "@/lib/content/topic-id.mjs";
+import { FLASHCARD_BOARDS, getFlashcardSourceIssue } from "@/lib/content/flashcard.mjs";
 
 // =============================================================================
 // Validação Zod do payload de importação
@@ -27,6 +28,16 @@ const MnemonicSchema = z.object({
 const FlashcardSchema = z.object({
   question: z.string().min(1),
   answer: z.string().min(1),
+  source: z.object({
+    board: z.enum([...FLASHCARD_BOARDS] as ["CESPE", "CEBRASPE", "FCC", "FGV"]),
+    year: z.number().int().min(2000).max(new Date().getFullYear()),
+    exam: z.string().min(1),
+    question_id: z.string().min(1),
+    status: z.literal("valid"),
+  }),
+}).superRefine((flashcard, context) => {
+  const issue = getFlashcardSourceIssue(flashcard);
+  if (issue) context.addIssue({ code: "custom", message: issue });
 });
 
 const MermaidSourceSchema = z

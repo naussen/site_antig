@@ -36,6 +36,29 @@ test("aceita o mesmo contrato básico da API de importação", () => {
   assert.equal(parsed.sections.length, 1);
 });
 
+test("rejeita flashcard sem questão rastreável e aceita C/E com fonte válida", () => {
+  const invalid = validPayload();
+  invalid.sections[0].flashcards = [{
+    question: "[CERTO/ERRADO] Uma análise estatística define o conteúdo da disciplina.",
+    answer: "Gabarito: ERRADO. Justificativa: Não é questão de concurso.",
+  }];
+  assert.throws(() => validateImportPayload(invalid), /source|fonte/i);
+
+  const valid = validPayload();
+  valid.sections[0].flashcards = [{
+    question: "[CERTO/ERRADO] A assertiva foi adaptada ao modelo C/E sem alterar o ponto cobrado.",
+    answer: "Gabarito: CERTO. Justificativa: A adaptação preserva o conteúdo da questão.",
+    source: {
+      board: "CEBRASPE",
+      year: 2025,
+      exam: "Concurso de teste",
+      question_id: "Q-17",
+      status: "valid",
+    },
+  }];
+  assert.doesNotThrow(() => validateImportPayload(valid));
+});
+
 test("rejeita topic_id com palavras fragmentadas por hífens", () => {
   const payload = validPayload();
   payload.topic_id = "d-ef-in-i-co-es-e-ti-p-o-s-d-e-g-a-sto-s";

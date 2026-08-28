@@ -1,4 +1,4 @@
-import { readFile, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
@@ -12,6 +12,7 @@ import {
   getTopicIdIssue,
   slugifyTopicId,
 } from "../src/lib/content/topic-id.mjs";
+import { FLASHCARD_BOARDS, getFlashcardSourceIssue } from "../src/lib/content/flashcard.mjs";
 
 const PAGE_SIZE = 1_000;
 
@@ -30,6 +31,16 @@ const MnemonicSchema = z.object({
 const FlashcardSchema = z.object({
   question: z.string().min(1),
   answer: z.string().min(1),
+  source: z.object({
+    board: z.enum([...FLASHCARD_BOARDS]),
+    year: z.number().int().min(2000).max(new Date().getFullYear()),
+    exam: z.string().min(1),
+    question_id: z.string().min(1),
+    status: z.literal("valid"),
+  }),
+}).superRefine((flashcard, context) => {
+  const issue = getFlashcardSourceIssue(flashcard);
+  if (issue) context.addIssue({ code: "custom", message: issue });
 });
 
 const MermaidSourceSchema = z
@@ -429,6 +440,49 @@ async function auditTopicIds(supabase, values) {
   if (values.json) console.log(JSON.stringify(output, null, 2));
   else if (output.length === 0) console.log("Nenhum topic_id suspeito encontrado.");
   else console.table(output);
+}
+
+async function auditFlashcards(supabase, values) {
+  const sections = await fetchAll(() => supabase
+    .from("sections")
+    .select("section_id,topic_id,title,flashcards")
+    .order("topic_id")
+    .order("sort_order"));
+  const affected = sections.flatMap((section) => {
+    const flashcards = Array.isArray(section.flashcards) ? section.flashcards : [];
+    const invalid = flashcards
+      .map((flashcard, index) => ({ index: index + 1, motivo: getFlashcardSourceIssue(flashcard) }))
+      .filter((item) => item.motivo);
+    return invalid.length ? [{
+      topic_id: section.topic_id,
+      section_id: section.section_id,
+      secao: section.title,
+      flashcards_removidos: invalid.length,
+      motivos: [...new Set(invalid.map((item) => item.motivo))].join("; "),
+    }] : [];
+  });
+  const total = affected.reduce((sum, item) => sum + item.flashcards_removidos, 0);
+  if (values.json) console.log(JSON.stringify({ secoes_afetadas: affected.length, flashcards_invalidos: total, itens: affected }, null, 2));
+  else {
+    console.log(`${total} flashcard(s) sem origem válida em ${affected.length} seção(ões).`);
+    if (affected.length && !values.apply) console.table(affected);
+  }
+  if (!values.apply || affected.length === 0) return;
+  assertConfirmation("flashcards", values.confirm);
+  const backupDirectory = join(process.cwd(), "backups");
+  await mkdir(backupDirectory, { recursive: true });
+  const backupPath = join(backupDirectory, `flashcards-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
+  await writeFile(backupPath, `${JSON.stringify(sections.filter((section) => (
+    Array.isArray(section.flashcards) && section.flashcards.some((flashcard) => getFlashcardSourceIssue(flashcard))
+  )), null, 2)}\n`, { encoding: "utf8", flag: "wx" });
+  console.log(`Backup dos flashcards exportado para: ${backupPath}`);
+  for (const section of sections) {
+    const flashcards = Array.isArray(section.flashcards) ? section.flashcards : [];
+    const retained = flashcards.filter((flashcard) => !getFlashcardSourceIssue(flashcard));
+    if (retained.length === flashcards.length) continue;
+    unwrap(await supabase.from("sections").update({ flashcards: retained }).eq("section_id", section.section_id), "Falha ao corrigir flashcards");
+  }
+  console.log(`${total} flashcard(s) inválido(s) removido(s); conteúdo de estudo preservado.`);
 }
 
 async function inspectContent(supabase, topicId, values) {
@@ -899,6 +953,7 @@ Administração de conteúdo PRO Resumos
 Uso:
   npm run content -- list [--discipline "Nome"] [--json]
   npm run content -- audit-topic-ids [--json]
+  npm run content -- audit-flashcards [--apply --confirm flashcards] [--json]
   npm run content -- inspect <topic-id> [--json]
   npm run content -- import <arquivo.json> [--apply] [--replace --confirm <topic-id>]
   npm run content -- import-batch <pasta> (--dry-run | --apply)
@@ -945,6 +1000,8 @@ export async function main(argv = process.argv.slice(2)) {
       return listContent(supabase, values);
     case "audit-topic-ids":
       return auditTopicIds(supabase, values);
+    case "audit-flashcards":
+      return auditFlashcards(supabase, values);
     case "inspect":
       return inspectContent(supabase, requireText(args[0], "topic-id"), values);
     case "import":

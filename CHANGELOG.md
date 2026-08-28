@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — origem verificável dos flashcards
+
+- bloqueada a importação de flashcards sem questão C/E rastreável das bancas CESPE/CEBRASPE, FCC ou FGV, com ano, concurso/cargo, identificador e confirmação de não anulação;
+- incluída auditoria administrativa para remover somente cartões sem origem comprovável, preservando os conteúdos de estudo.
+
 ## Não publicado — landing e rodapés institucionais
 
 - removidos da landing os blocos redundantes sobre assinatura, módulos futuros e o segundo CTA, reduzindo a extensão da página no celular;

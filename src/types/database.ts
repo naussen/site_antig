@@ -20,6 +20,13 @@ export interface Mnemonic {
 export interface Flashcard {
   question: string;
   answer: string;
+  source: {
+    board: 'CESPE' | 'CEBRASPE' | 'FCC' | 'FGV';
+    year: number;
+    exam: string;
+    question_id: string;
+    status: 'valid';
+  };
 }
 
 // =============================================================================
