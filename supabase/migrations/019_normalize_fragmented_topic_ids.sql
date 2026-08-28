@@ -112,33 +112,82 @@ BEGIN
   ) THEN
     RAISE EXCEPTION 'Há section_id fora do prefixo canônico esperado';
   END IF;
-END;
-$$;
 
--- As FKs são adiadas somente durante a troca atômica das chaves.
-DO $$
-DECLARE
-  foreign_key RECORD;
-BEGIN
-  FOR foreign_key IN
-    SELECT constraint_row.conrelid::regclass AS table_name, constraint_row.conname
+  IF (SELECT count(*) FROM section_id_corrections) <> 89 THEN
+    RAISE EXCEPTION 'A correção deve alcançar exatamente 89 section_id';
+  END IF;
+
+  IF EXISTS (
+    SELECT 1
     FROM pg_constraint AS constraint_row
     WHERE constraint_row.contype = 'f'
       AND constraint_row.confrelid IN (
         'public.topics'::regclass,
         'public.sections'::regclass
       )
-  LOOP
-    EXECUTE format(
-      'ALTER TABLE %s ALTER CONSTRAINT %I DEFERRABLE INITIALLY DEFERRED',
-      foreign_key.table_name,
-      foreign_key.conname
-    );
-  END LOOP;
+      AND constraint_row.conrelid NOT IN (
+        'public.sections'::regclass,
+        'public.user_progress'::regclass,
+        'public.user_notes'::regclass,
+        'public.user_text_highlights'::regclass,
+        'public.topic_legal_fragment_relations'::regclass
+      )
+  ) THEN
+    RAISE EXCEPTION 'Há uma FK não mapeada apontando para topics ou sections';
+  END IF;
+
+  IF EXISTS (
+    SELECT 1
+    FROM public.topic_legal_fragment_relations AS relation
+    JOIN public.topic_id_redirects AS redirect
+      ON redirect.old_topic_id = relation.topic_id
+    LEFT JOIN section_id_corrections AS correction
+      ON correction.old_section_id = relation.section_id
+    WHERE relation.section_id IS NOT NULL
+      AND correction.old_section_id IS NULL
+  ) THEN
+    RAISE EXCEPTION 'Há relação editorial com section_id fora do mapa';
+  END IF;
 END;
 $$;
 
-SET CONSTRAINTS ALL DEFERRED;
+INSERT INTO public.topics (topic_id, title, created_at, discipline, sort_order)
+SELECT
+  redirect.new_topic_id,
+  topic.title,
+  topic.created_at,
+  topic.discipline,
+  topic.sort_order
+FROM public.topics AS topic
+JOIN public.topic_id_redirects AS redirect
+  ON redirect.old_topic_id = topic.topic_id;
+
+INSERT INTO public.sections (
+  section_id,
+  topic_id,
+  title,
+  content_markdown,
+  callouts,
+  mnemonics,
+  flashcards,
+  mermaid_mindmap,
+  sort_order,
+  created_at
+)
+SELECT
+  correction.new_section_id,
+  correction.new_topic_id,
+  section.title,
+  section.content_markdown,
+  section.callouts,
+  section.mnemonics,
+  section.flashcards,
+  section.mermaid_mindmap,
+  section.sort_order,
+  section.created_at
+FROM public.sections AS section
+JOIN section_id_corrections AS correction
+  ON correction.old_section_id = section.section_id;
 
 -- A troca técnica do identificador não representa edição do dado do usuário.
 ALTER TABLE public.user_progress DISABLE TRIGGER trigger_user_progress_updated_at;
@@ -161,54 +210,27 @@ FROM section_id_corrections AS correction
 WHERE highlight.section_id = correction.old_section_id;
 
 UPDATE public.topic_legal_fragment_relations AS relation
-SET section_id = correction.new_section_id
-FROM section_id_corrections AS correction
-WHERE relation.section_id = correction.old_section_id;
+SET
+  topic_id = redirect.new_topic_id,
+  section_id = correction.new_section_id
+FROM public.topic_id_redirects AS redirect, section_id_corrections AS correction
+WHERE relation.topic_id = redirect.old_topic_id
+  AND relation.section_id = correction.old_section_id
+  AND correction.old_topic_id = redirect.old_topic_id;
 
 UPDATE public.topic_legal_fragment_relations AS relation
 SET topic_id = redirect.new_topic_id
 FROM public.topic_id_redirects AS redirect
-WHERE relation.topic_id = redirect.old_topic_id;
-
-UPDATE public.sections AS section
-SET
-  section_id = correction.new_section_id,
-  topic_id = correction.new_topic_id
-FROM section_id_corrections AS correction
-WHERE section.section_id = correction.old_section_id;
-
-UPDATE public.topics AS topic
-SET topic_id = redirect.new_topic_id
-FROM public.topic_id_redirects AS redirect
-WHERE topic.topic_id = redirect.old_topic_id;
+WHERE relation.topic_id = redirect.old_topic_id
+  AND relation.section_id IS NULL;
 
 ALTER TABLE public.user_progress ENABLE TRIGGER trigger_user_progress_updated_at;
 ALTER TABLE public.user_notes ENABLE TRIGGER trigger_user_notes_updated_at;
 ALTER TABLE public.user_text_highlights ENABLE TRIGGER trigger_user_text_highlights_updated_at;
 
-SET CONSTRAINTS ALL IMMEDIATE;
-
-DO $$
-DECLARE
-  foreign_key RECORD;
-BEGIN
-  FOR foreign_key IN
-    SELECT constraint_row.conrelid::regclass AS table_name, constraint_row.conname
-    FROM pg_constraint AS constraint_row
-    WHERE constraint_row.contype = 'f'
-      AND constraint_row.confrelid IN (
-        'public.topics'::regclass,
-        'public.sections'::regclass
-      )
-  LOOP
-    EXECUTE format(
-      'ALTER TABLE %s ALTER CONSTRAINT %I NOT DEFERRABLE',
-      foreign_key.table_name,
-      foreign_key.conname
-    );
-  END LOOP;
-END;
-$$;
+DELETE FROM public.topics AS topic
+USING public.topic_id_redirects AS redirect
+WHERE topic.topic_id = redirect.old_topic_id;
 
 ALTER TABLE public.topic_id_redirects
   ADD CONSTRAINT topic_id_redirects_new_topic_id_fkey
