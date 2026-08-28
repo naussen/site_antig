@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — landing e rodapés institucionais
+
+- removidos da landing os blocos redundantes sobre assinatura, módulos futuros e o segundo CTA, reduzindo a extensão da página no celular;
+- ampliado o rodapé público com identificação da marca e links funcionais para Termos, Privacidade, Suporte e Contato;
+- adicionado ao dashboard um rodapé com acesso direto à assinatura e às orientações de cancelamento por provedor.
+
 ## Não publicado — comunicação comercial da landing
 
 - removidas as referências a conta e acesso gratuitos, alinhando os CTAs ao modelo pago por assinatura mensal;

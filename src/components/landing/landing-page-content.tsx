@@ -5,7 +5,6 @@ import {
   BookOpen,
   Check,
   CheckCircle2,
-  FileText,
   Gavel,
   Highlighter,
   Layers3,
@@ -209,7 +208,7 @@ export function LandingPageContent() {
         </div>
       </nav>
 
-      <header className="relative px-6 pb-20 pt-20 text-center md:pb-28 md:pt-28">
+      <header className="relative px-6 pb-16 pt-16 text-center sm:pb-20 sm:pt-20 md:pb-24 md:pt-24">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_0%,rgba(108,92,231,0.32),transparent_70%)]" />
         <div className="pointer-events-none absolute -left-32 top-32 h-80 w-80 rounded-full bg-[#7c3aed]/15 blur-3xl" /><div className="pointer-events-none absolute -right-32 top-16 h-80 w-80 rounded-full bg-[#f9a826]/10 blur-3xl" />
         <div className="relative mx-auto max-w-5xl">
@@ -221,14 +220,7 @@ export function LandingPageContent() {
         </div>
       </header>
 
-      <section className="px-5 pb-24 sm:px-8" aria-label="Assinatura única">
-        <div className="mx-auto grid max-w-5xl gap-5 rounded-3xl border border-[#a78bfa]/25 bg-[#262638] p-6 shadow-2xl shadow-black/20 sm:p-8 md:grid-cols-[1fr_auto] md:items-center">
-          <div><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#f9a826]">Oferta especial de lançamento</p><h2 className="mt-2 text-2xl font-extrabold text-white md:text-3xl">Uma assinatura mensal para todo o ecossistema.</h2><p className="mt-3 max-w-2xl text-sm leading-6 text-[#b4b1c3]">Assine e acesse o PRO Resumos e o PRO Legis com a condição especial de lançamento. Novos módulos serão incorporados futuramente à mesma assinatura.</p></div>
-          <div className="flex gap-2 md:flex-col"><span className="rounded-full bg-[#a78bfa]/15 px-4 py-2 text-center text-xs font-bold text-[#c4b5fd]">Resumos</span><span className="rounded-full bg-[#a78bfa]/15 px-4 py-2 text-center text-xs font-bold text-[#c4b5fd]">Legis</span><span className="rounded-full border border-dashed border-white/25 px-4 py-2 text-center text-xs font-bold text-white/45">Mais em breve</span></div>
-        </div>
-      </section>
-
-      <section id="modulos" className="border-y border-[#e5e5ef] bg-white px-5 py-24 sm:px-8">
+      <section id="modulos" className="border-y border-[#e5e5ef] bg-white px-5 py-16 sm:px-8 sm:py-24">
         <SectionHeading eyebrow="Módulos" title="Do resumo à lei seca, sem trocar de plataforma." description="Dois ambientes complementares para compreender a matéria, consultar a literalidade e praticar com segurança." tone="light" />
         <div className="mx-auto max-w-6xl space-y-14">
           <article className="grid items-center gap-8 lg:grid-cols-[0.78fr_1.4fr]"><div><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#a78bfa] text-white shadow-lg shadow-[#7c3aed]/25"><Layers3 size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#6c5ce7]">PRO Resumos</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight text-[#1a1a2e]">Conteúdo organizado para você entender e reter.</h3><p className="mt-4 leading-7 text-[#64647a]">Resumos jurídicos divididos em seções, com pontos de prova, mnemônicos, mapas mentais e progresso de leitura.</p></div><ResumosPreview /></article>
@@ -236,22 +228,39 @@ export function LandingPageContent() {
         </div>
       </section>
 
-      <section className="px-5 py-24 sm:px-8" id="ferramentas">
+      <section className="px-5 py-16 sm:px-8 sm:py-24" id="ferramentas">
         <SectionHeading eyebrow="Ferramentas de estudo" title="Veja como cada recurso trabalha a seu favor." description="Uma experiência integrada para ler, testar a memória, registrar ideias e estudar com conforto por mais tempo." />
         <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2">
           {toolPreviews.map(({ title, description, preview }) => <article key={title} className="overflow-hidden rounded-3xl border border-white/10 bg-[#262638]"><div className="min-h-[270px] bg-[radial-gradient(circle_at_50%_45%,rgba(167,139,250,0.14),transparent_65%)] p-6 sm:p-8">{preview}</div><div className="border-t border-white/10 p-6 sm:p-7"><h3 className="text-xl font-extrabold text-white">{title}</h3><p className="mt-2 text-sm leading-6 text-[#b4b1c3]">{description}</p></div></article>)}
         </div>
       </section>
 
-      <section className="px-5 pb-24 sm:px-8" aria-labelledby="future-title">
-        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-[#a78bfa]/25 bg-gradient-to-br from-[#302d4e] to-[#262638] p-8 text-center sm:p-12"><div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#a78bfa]/15 blur-3xl" /><FileText className="relative mx-auto text-[#f9a826]" size={34} /><h2 id="future-title" className="relative mt-5 text-3xl font-extrabold text-white md:text-4xl">O ecossistema continuará crescendo.</h2><p className="relative mx-auto mt-4 max-w-2xl leading-7 text-[#b4b1c3]">Além de Resumos e Legis, novos módulos para outras etapas da preparação serão lançados futuramente — integrados à mesma conta e à mesma assinatura mensal.</p></div>
-      </section>
-
-      <section className="px-5 pb-24 sm:px-8" aria-labelledby="cta-title">
-        <div className="relative mx-auto max-w-4xl overflow-hidden rounded-3xl border border-[#343449] bg-[#262638] px-8 py-16 text-center md:px-16"><div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_80%_at_50%_120%,rgba(108,92,231,0.25),transparent_70%)]" /><div className="relative"><span className="inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/35 bg-[#a78bfa]/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#c4b5fd]"><Sparkles size={12} /> Oferta de lançamento</span><h2 id="cta-title" className="mt-7 text-balance text-4xl font-extrabold tracking-tight text-white md:text-5xl">Resumos e legislação para estudar <span className="bg-gradient-to-r from-[#a78bfa] to-[#f9a826] bg-clip-text text-transparent">com método.</span></h2><p className="mx-auto mt-5 max-w-lg leading-7 text-[#b4b1c3]">Assine o plano mensal e acesse uma plataforma integrada para sua preparação em concursos públicos.</p><Link href="/login" className="mt-9 inline-flex items-center gap-2 rounded-2xl bg-[#f9a826] px-9 py-4 text-base font-extrabold text-[#121212] shadow-2xl shadow-[#f9a826]/20 transition hover:-translate-y-1 hover:bg-[#ffc15c]">Assinar com oferta de lançamento <ArrowRight size={19} /></Link><p className="mt-5 text-xs text-white/60">Acesso pago por assinatura mensal.</p></div></div>
-      </section>
-
-      <footer className="border-t border-white/10 px-6 py-10"><div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 sm:flex-row"><BrandLogo className="opacity-90" /><p className="text-center text-xs text-white/40 sm:text-right">Um ecossistema de estudos para concursos públicos.</p></div></footer>
+      <footer className="border-t border-white/10 px-5 py-10 sm:px-8">
+        <div className="mx-auto grid max-w-6xl gap-9 md:grid-cols-[1.35fr_1fr_1fr]">
+          <div>
+            <BrandLogo className="opacity-90" />
+            <p className="mt-4 max-w-sm text-sm leading-6 text-white/65">PRO Concursos é uma plataforma digital de estudos para concursos públicos, disponível em proconcursos.com.br.</p>
+          </div>
+          <nav aria-label="Links institucionais">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#f9a826]">Institucional</p>
+            <div className="mt-4 flex flex-col gap-3 text-sm text-white/75">
+              <Link href="/termos" className="w-fit transition-colors hover:text-white">Termos de uso</Link>
+              <Link href="/privacidade" className="w-fit transition-colors hover:text-white">Privacidade</Link>
+            </div>
+          </nav>
+          <nav aria-label="Links de atendimento">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#f9a826]">Atendimento</p>
+            <div className="mt-4 flex flex-col gap-3 text-sm text-white/75">
+              <Link href="/suporte" className="w-fit transition-colors hover:text-white">Suporte</Link>
+              <Link href="/contato" className="w-fit transition-colors hover:text-white">Contato</Link>
+            </div>
+          </nav>
+        </div>
+        <div className="mx-auto mt-9 flex max-w-6xl flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/55 sm:flex-row sm:items-center sm:justify-between">
+          <p>© 2026 PRO Concursos. Todos os direitos reservados.</p>
+          <p>Plataforma online · proconcursos.com.br</p>
+        </div>
+      </footer>
     </main>
   );
 }

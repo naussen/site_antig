@@ -308,6 +308,38 @@ export default async function SubscriptionPage({
             )}
           </aside>
         </section>
+
+        <section id="cancelamento" className="mt-6 scroll-mt-6 rounded-3xl border p-6 sm:p-8" style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}>
+          <p className="text-xs font-bold uppercase tracking-[0.14em]" style={{ color: "var(--accent)" }}>
+            Cancelamento
+          </p>
+          <h2 className="mt-2 text-xl font-extrabold" style={{ color: "var(--text-primary)" }}>
+            Interromper a renovação da assinatura
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm leading-6" style={{ color: "var(--text-secondary)" }}>
+            O cancelamento impede novas cobranças recorrentes. A confirmação e a data final de acesso dependem do provedor usado na contratação e devem ser conferidas antes de concluir o procedimento.
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            {entitlement?.provider === "paypal" && (
+              <a href="https://www.paypal.com/br/cshelp/article/o-que-%C3%A9-um-pagamento-autom%C3%A1tico-e-como-o-atualizo-ou-cancelo-help240" target="_blank" rel="noopener noreferrer" className="rounded-xl bg-[var(--accent)] px-4 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90">
+                Ver cancelamento no PayPal
+              </a>
+            )}
+            {entitlement?.provider === "mercado_pago" && (
+              <a href="https://www.mercadopago.com.br/ajuda" target="_blank" rel="noopener noreferrer" className="rounded-xl bg-[var(--accent)] px-4 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90">
+                Abrir ajuda do Mercado Pago
+              </a>
+            )}
+            <Link href="/contato" className="rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-3 text-sm font-bold text-[var(--text-primary)] transition-colors hover:bg-[var(--accent-soft)]">
+              Consultar canais de contato
+            </Link>
+          </div>
+          {!entitlement && (
+            <p className="mt-4 text-xs leading-5" style={{ color: "var(--text-muted)" }}>
+              Esta conta não possui uma assinatura identificada para cancelamento.
+            </p>
+          )}
+        </section>
       </div>
     </main>
   );
