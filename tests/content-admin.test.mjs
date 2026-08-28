@@ -9,6 +9,7 @@ import {
   validateBatchEntries,
   validateImportPayload,
 } from "../scripts/content-admin.mjs";
+import { TOPIC_ID_REDIRECTS } from "../src/lib/content/topic-id.mjs";
 
 function validPayload() {
   return {
@@ -60,6 +61,19 @@ test("não infere fragmentação a partir de título legado com mojibake", () =>
   payload.sections[0].section_id = `${payload.topic_id}-sec-01`;
 
   assert.doesNotThrow(() => validateImportPayload(payload));
+});
+
+test("mantém os 30 redirects de topic_id únicos e inclui o caso reportado", () => {
+  assert.equal(TOPIC_ID_REDIRECTS.length, 30);
+  assert.equal(new Set(TOPIC_ID_REDIRECTS.map((item) => item.oldTopicId)).size, 30);
+  assert.equal(new Set(TOPIC_ID_REDIRECTS.map((item) => item.newTopicId)).size, 30);
+  assert.deepEqual(
+    TOPIC_ID_REDIRECTS.find((item) => item.oldTopicId.startsWith("d-ef-in-i")),
+    {
+      oldTopicId: "d-ef-in-i-co-es-e-ti-p-o-s-d-e-g-a-sto-s",
+      newTopicId: "definicoes-e-tipos-de-gastos",
+    }
+  );
 });
 
 test("aplica valores opcionais compatíveis com a API", () => {
