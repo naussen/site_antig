@@ -5,7 +5,7 @@ import { LandingPageContent } from "@/components/landing/landing-page-content";
 export const metadata = {
   title: "PRO Resumos — Plataforma de Estudos para Concursos Públicos",
   description:
-    "Mnemônicos, flashcards 3D, mapas mentais e resumos jurídicos estruturados. A plataforma mais completa para sua aprovação em concursos públicos.",
+    "Resumos jurídicos estruturados, legislação oficial, flashcards e ferramentas de estudo em uma única assinatura mensal.",
   keywords: [
     "concurso público",
     "direito",

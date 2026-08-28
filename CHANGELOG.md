@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — comunicação comercial da landing
+
+- removidas as referências a conta e acesso gratuitos, alinhando os CTAs ao modelo pago por assinatura mensal;
+- destacada a oferta especial de lançamento sem fixar preço fora do fluxo de checkout;
+- reposicionado no primeiro bloco o diferencial de resumos jurídicos estruturados e legislação oficial no mesmo ambiente.
+
 ## Não publicado — republicação de Contabilidade Geral e Avançada
 
 - substituídos os materiais da disciplina por 32 tópicos e 142 seções revisados, com tabelas, fórmulas KaTeX, diagramas Mermaid e flashcards validados;
