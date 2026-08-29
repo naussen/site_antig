@@ -1,5 +1,9 @@
 # Changelog
 
+## Não publicado — catálogo de disciplinas
+
+- substituído o ícone de Português por uma caneta, reforçando a associação com leitura e redação.
+
 ## Não publicado — substituição dos flashcards de Auditoria
 
 - adicionado importador administrativo dos anexos CSV, com classificação explícita por seção de Auditoria;
