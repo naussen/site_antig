@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — substituição dos flashcards de Português
+
+- adicionado importador administrativo dos CSVs fornecidos, sem dependência externa;
+- padronizadas perguntas e assertivas no formato Certo/Errado e classificadas nas seções correspondentes;
+- incluídos backup integral e rollback automático antes da substituição dos flashcards da disciplina.
+
 ## Não publicado — restauração de flashcards e reparo Mermaid
 
 - restaurados flashcards C/E removidos indevidamente, mantendo fora cartões estatísticos e cartões de letra da lei;

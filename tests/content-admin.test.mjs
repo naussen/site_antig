@@ -12,6 +12,12 @@ import {
 import { TOPIC_ID_REDIRECTS } from "../src/lib/content/topic-id.mjs";
 import { getFlashcardContentIssue } from "../src/lib/content/flashcard.mjs";
 import { repairMermaidTransportNoise } from "../src/lib/mermaid/repair-transport-noise.mjs";
+import {
+  buildPortugueseFlashcards,
+  classifyPortugueseFlashcard,
+  normalizeAttachedFlashcard,
+  parseTwoColumnCsv,
+} from "../src/lib/content/portuguese-flashcard-import.mjs";
 
 function validPayload() {
   return {
@@ -81,6 +87,47 @@ test("repara somente o ruído Mermaid repetido observado no log", () => {
   const corrupted = [...valid].map((character) => `${marker}${character}`).join("");
   assert.equal(repairMermaidTransportNoise(corrupted), valid);
   assert.equal(repairMermaidTransportNoise("flowchart TB\n  A --> B"), "flowchart TB\n  A --> B");
+});
+
+test("lê CSV de duas colunas com vírgulas e aspas escapadas", () => {
+  assert.deepEqual(parseTwoColumnCsv('"Questão, com vírgula","Resposta com ""aspas"""\n'), [{
+    question: "Questão, com vírgula",
+    answer: 'Resposta com "aspas"',
+  }]);
+});
+
+test("converte pergunta e assertiva anexadas para o padrão C/E", () => {
+  assert.deepEqual(normalizeAttachedFlashcard({
+    question: "Qual é a regra?",
+    answer: "A regra correta.",
+  }), {
+    question: "[CERTO/ERRADO] A resposta correta para “Qual é a regra?” é “A regra correta.”.",
+    answer: "Gabarito: CERTO. Justificativa: A regra correta.",
+  });
+  assert.deepEqual(normalizeAttachedFlashcard({
+    question: "Julgue a assertiva: Usa-se hífen neste caso.",
+    answer: "Gabarito: ERRADO. Comentário: O hífen não é empregado.",
+  }), {
+    question: "[CERTO/ERRADO] Usa-se hífen neste caso.",
+    answer: "Gabarito: ERRADO. Justificativa: O hífen não é empregado.",
+  });
+});
+
+test("classifica flashcards de Português em seções temáticas", () => {
+  assert.equal(classifyPortugueseFlashcard({ question: "O prefixo exige hífen.", answer: "Certo." }), "fonetica-sec-04");
+  assert.equal(classifyPortugueseFlashcard({ question: "O verbo intervir deriva de vir.", answer: "Certo." }), "morfologia-sec-05");
+  assert.equal(classifyPortugueseFlashcard({ question: "A crase é facultativa antes de possessivo.", answer: "Certo." }), "sintaxe-sec-07");
+  assert.equal(classifyPortugueseFlashcard({ question: "Em Redação Oficial, deve haver impessoalidade.", answer: "Certo." }), "redacao-oficial-sec-02");
+  assert.equal(classifyPortugueseFlashcard({ question: "Qual é a forma da terceira pessoa do plural do verbo deter?", answer: "Detiveram." }), "morfologia-sec-05");
+  assert.equal(classifyPortugueseFlashcard({ question: "Como se forma o plural de salário-família?", answer: "Salários-família." }), "morfologia-sec-03");
+  assert.equal(classifyPortugueseFlashcard({ question: "O uso da vírgula é obrigatório e altera o sentido se for omitida.", answer: "Certo." }), "sintaxe-sec-01");
+  assert.equal(classifyPortugueseFlashcard({ question: "Em Sabe-se que haverá prova, o vocábulo que é pronome relativo.", answer: "Errado." }), "sintaxe-sec-11");
+  assert.equal(classifyPortugueseFlashcard({ question: "Por que as proparoxítonas são acentuadas?", answer: "Regra geral." }), "fonetica-sec-02");
+  assert.equal(classifyPortugueseFlashcard({ question: "O uso do por que ocorre em frases interrogativas.", answer: "Certo." }), "outros-topicos-sec-03");
+  assert.equal(buildPortugueseFlashcards([{
+    fileName: "anexo.csv",
+    content: '"O pronome relativo cujo indica posse.","Gabarito: CERTO. Cujo relaciona dois substantivos."\n',
+  }]).length, 1);
 });
 
 test("rejeita topic_id com palavras fragmentadas por hífens", () => {

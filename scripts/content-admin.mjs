@@ -18,6 +18,7 @@ import {
   getFlashcardSourceIssue,
 } from "../src/lib/content/flashcard.mjs";
 import { repairMermaidTransportNoise } from "../src/lib/mermaid/repair-transport-noise.mjs";
+import { buildPortugueseFlashcards } from "../src/lib/content/portuguese-flashcard-import.mjs";
 
 const PAGE_SIZE = 1_000;
 
@@ -574,6 +575,96 @@ async function auditMermaidArtifacts(supabase, values) {
   console.log(`${affected.length} diagrama(s) reparado(s).`);
 }
 
+async function replacePortugueseFlashcards(supabase, filePaths, values) {
+  if (filePaths.length === 0) throw new Error("Informe pelo menos um arquivo CSV.");
+  const sources = await Promise.all(filePaths.map(async (filePath) => ({
+    fileName: filePath.replaceAll("\\", "/").split("/").pop(),
+    content: await readFile(filePath, "utf8"),
+  })));
+  const imported = buildPortugueseFlashcards(sources);
+  const invalidCards = imported
+    .map((item) => ({ origin: item.origin, issue: getFlashcardContentIssue(item.flashcard) }))
+    .filter((item) => item.issue);
+  if (invalidCards.length) {
+    throw new Error(`Flashcards incompatíveis: ${invalidCards.map((item) => `${item.origin} (${item.issue})`).join("; ")}`);
+  }
+  const topics = await fetchAll(() => supabase
+    .from("topics")
+    .select("topic_id")
+    .eq("discipline", "Português"));
+  const topicIds = topics.map((topic) => topic.topic_id);
+  if (topicIds.length === 0) throw new Error("Nenhum tópico da disciplina Português foi encontrado.");
+
+  const sections = await fetchAll(() => supabase
+    .from("sections")
+    .select("section_id,topic_id,title,flashcards")
+    .in("topic_id", topicIds)
+    .order("topic_id")
+    .order("sort_order"));
+  const sectionsById = new Map(sections.map((section) => [section.section_id, section]));
+  const missingSectionIds = [...new Set(imported.map((item) => item.sectionId))]
+    .filter((sectionId) => !sectionsById.has(sectionId));
+  if (missingSectionIds.length) {
+    throw new Error(`Seções de destino inexistentes: ${missingSectionIds.join(", ")}`);
+  }
+
+  const cardsBySection = new Map();
+  for (const item of imported) {
+    const cards = cardsBySection.get(item.sectionId) ?? [];
+    cards.push(item.flashcard);
+    cardsBySection.set(item.sectionId, cards);
+  }
+  const currentTotal = sections.reduce(
+    (total, section) => total + (Array.isArray(section.flashcards) ? section.flashcards.length : 0),
+    0,
+  );
+  const summary = sections
+    .map((section) => ({
+      section_id: section.section_id,
+      title: section.title,
+      flashcards: cardsBySection.get(section.section_id)?.length ?? 0,
+    }))
+    .filter((section) => section.flashcards > 0);
+  console.log(`${currentTotal} flashcard(s) atuais de Português serão removidos.`);
+  console.log(`${imported.length} flashcard(s) dos anexos serão inseridos em ${summary.length} seção(ões).`);
+  console.table(summary);
+  if (!values.apply) return console.log("Pré-visualização. Use --apply --confirm portugues para substituir.");
+
+  assertConfirmation("portugues", values.confirm);
+  const backupDirectory = join(process.cwd(), "backups");
+  await mkdir(backupDirectory, { recursive: true });
+  const backupPath = join(backupDirectory, `flashcards-portugues-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
+  await writeFile(backupPath, `${JSON.stringify(sections, null, 2)}\n`, { encoding: "utf8", flag: "wx" });
+
+  try {
+    for (const section of sections) {
+      unwrap(
+        await supabase
+          .from("sections")
+          .update({ flashcards: cardsBySection.get(section.section_id) ?? [] })
+          .eq("section_id", section.section_id),
+        "Falha ao substituir flashcards de Português",
+      );
+    }
+  } catch (error) {
+    const rollbackErrors = [];
+    for (const section of sections) {
+      const result = await supabase
+        .from("sections")
+        .update({ flashcards: Array.isArray(section.flashcards) ? section.flashcards : [] })
+        .eq("section_id", section.section_id);
+      if (result.error) rollbackErrors.push(`${section.section_id}: ${result.error.message}`);
+    }
+    const rollbackStatus = rollbackErrors.length
+      ? `Rollback incompleto: ${rollbackErrors.join("; ")}`
+      : "Rollback concluído.";
+    throw new Error(`${error instanceof Error ? error.message : String(error)} ${rollbackStatus}`);
+  }
+
+  console.log(`Backup salvo em: ${backupPath}`);
+  console.log(`${imported.length} flashcard(s) de Português inserido(s) com sucesso.`);
+}
+
 async function inspectContent(supabase, topicId, values) {
   const topic = await getTopic(supabase, topicId);
   const sections = await getSections(supabase, topicId);
@@ -1045,6 +1136,7 @@ Uso:
   npm run content -- audit-flashcards [--apply --confirm flashcards] [--json]
   npm run content -- restore-flashcards <backup.json> [--apply --confirm flashcards]
   npm run content -- audit-mermaid-artifacts [--apply --confirm mermaid]
+  npm run content -- replace-portuguese-flashcards <arquivo.csv...> [--apply --confirm portugues]
   npm run content -- inspect <topic-id> [--json]
   npm run content -- import <arquivo.json> [--apply] [--replace --confirm <topic-id>]
   npm run content -- import-batch <pasta> (--dry-run | --apply)
@@ -1097,6 +1189,8 @@ export async function main(argv = process.argv.slice(2)) {
       return restoreFlashcards(supabase, requireText(args[0], "backup.json"), values);
     case "audit-mermaid-artifacts":
       return auditMermaidArtifacts(supabase, values);
+    case "replace-portuguese-flashcards":
+      return replacePortugueseFlashcards(supabase, args, values);
     case "inspect":
       return inspectContent(supabase, requireText(args[0], "topic-id"), values);
     case "import":
