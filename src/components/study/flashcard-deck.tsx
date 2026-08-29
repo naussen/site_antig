@@ -166,9 +166,11 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
                   <p className="flashcard-question">
                     {displayQuestion}
                   </p>
-                  <p className="mt-3 text-xs text-[var(--text-secondary)]">
-                    Fonte: {current.source.board} — {current.source.exam} ({current.source.year}), questão {current.source.question_id}.
-                  </p>
+                  {current.source && (
+                    <p className="mt-3 text-xs text-[var(--text-secondary)]">
+                      Fonte: {current.source.board} — {current.source.exam} ({current.source.year}), questão {current.source.question_id}.
+                    </p>
+                  )}
 
                   {isBinaryCard && (
                     <div className="flashcard-answer-options" role="group" aria-label="Responder ao flashcard">

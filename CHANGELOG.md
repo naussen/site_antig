@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — restauração de flashcards e reparo Mermaid
+
+- restaurados flashcards C/E removidos indevidamente, mantendo fora cartões estatísticos e cartões de letra da lei;
+- detectado e reparado o ruído repetido de transporte que impedia o Mermaid de reconhecer o tipo do diagrama;
+- mantido fallback seguro no cliente e backup administrativo antes de corrigir diagramas publicados.
+
 ## Não publicado — origem verificável dos flashcards
 
 - bloqueada a importação de flashcards sem questão C/E rastreável das bancas CESPE/CEBRASPE, FCC ou FGV, com ano, concurso/cargo, identificador e confirmação de não anulação;

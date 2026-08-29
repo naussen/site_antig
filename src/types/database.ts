@@ -20,7 +20,7 @@ export interface Mnemonic {
 export interface Flashcard {
   question: string;
   answer: string;
-  source: {
+  source?: {
     board: 'CESPE' | 'CEBRASPE' | 'FCC' | 'FGV';
     year: number;
     exam: string;

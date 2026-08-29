@@ -12,7 +12,12 @@ import {
   getTopicIdIssue,
   slugifyTopicId,
 } from "../src/lib/content/topic-id.mjs";
-import { FLASHCARD_BOARDS, getFlashcardSourceIssue } from "../src/lib/content/flashcard.mjs";
+import {
+  FLASHCARD_BOARDS,
+  getFlashcardContentIssue,
+  getFlashcardSourceIssue,
+} from "../src/lib/content/flashcard.mjs";
+import { repairMermaidTransportNoise } from "../src/lib/mermaid/repair-transport-noise.mjs";
 
 const PAGE_SIZE = 1_000;
 
@@ -451,7 +456,7 @@ async function auditFlashcards(supabase, values) {
   const affected = sections.flatMap((section) => {
     const flashcards = Array.isArray(section.flashcards) ? section.flashcards : [];
     const invalid = flashcards
-      .map((flashcard, index) => ({ index: index + 1, motivo: getFlashcardSourceIssue(flashcard) }))
+      .map((flashcard, index) => ({ index: index + 1, motivo: getFlashcardContentIssue(flashcard) }))
       .filter((item) => item.motivo);
     return invalid.length ? [{
       topic_id: section.topic_id,
@@ -473,16 +478,100 @@ async function auditFlashcards(supabase, values) {
   await mkdir(backupDirectory, { recursive: true });
   const backupPath = join(backupDirectory, `flashcards-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
   await writeFile(backupPath, `${JSON.stringify(sections.filter((section) => (
-    Array.isArray(section.flashcards) && section.flashcards.some((flashcard) => getFlashcardSourceIssue(flashcard))
+    Array.isArray(section.flashcards) && section.flashcards.some((flashcard) => getFlashcardContentIssue(flashcard))
   )), null, 2)}\n`, { encoding: "utf8", flag: "wx" });
   console.log(`Backup dos flashcards exportado para: ${backupPath}`);
   for (const section of sections) {
     const flashcards = Array.isArray(section.flashcards) ? section.flashcards : [];
-    const retained = flashcards.filter((flashcard) => !getFlashcardSourceIssue(flashcard));
+    const retained = flashcards.filter((flashcard) => !getFlashcardContentIssue(flashcard));
     if (retained.length === flashcards.length) continue;
     unwrap(await supabase.from("sections").update({ flashcards: retained }).eq("section_id", section.section_id), "Falha ao corrigir flashcards");
   }
   console.log(`${total} flashcard(s) inválido(s) removido(s); conteúdo de estudo preservado.`);
+}
+
+async function restoreFlashcards(supabase, backupPath, values) {
+  const backup = await readJsonFile(backupPath);
+  if (!Array.isArray(backup)) throw new Error("Backup de flashcards inválido: esperado um array de seções.");
+
+  const currentSections = await fetchAll(() => supabase
+    .from("sections")
+    .select("section_id,topic_id,flashcards"));
+  const currentById = new Map(currentSections.map((section) => [section.section_id, section]));
+  const missingIds = backup
+    .map((section) => section?.section_id)
+    .filter((sectionId) => typeof sectionId !== "string" || !currentById.has(sectionId));
+  if (missingIds.length) throw new Error(`Backup contém ${missingIds.length} seção(ões) inexistente(s) no banco.`);
+
+  let rejected = 0;
+  const rows = backup.map((section) => {
+    const legacyCards = Array.isArray(section.flashcards) ? section.flashcards : [];
+    const retainedLegacy = legacyCards.filter((flashcard) => {
+      const issue = getFlashcardContentIssue(flashcard);
+      if (issue) rejected += 1;
+      return !issue;
+    });
+    const current = currentById.get(section.section_id);
+    const currentCards = Array.isArray(current.flashcards) ? current.flashcards : [];
+    const merged = [...retainedLegacy, ...currentCards].filter((flashcard, index, cards) => (
+      cards.findIndex((candidate) => candidate.question === flashcard.question) === index
+    ));
+    return { section_id: section.section_id, topic_id: current.topic_id, flashcards: merged };
+  });
+  const restored = rows.reduce((total, row) => total + row.flashcards.length, 0);
+  console.log(`${restored} flashcard(s) C/E serão restaurados; ${rejected} item(ns) incompatível(is) serão descartados.`);
+  if (!values.apply) return console.log("Pré-visualização. Use --apply --confirm flashcards para restaurar.");
+
+  assertConfirmation("flashcards", values.confirm);
+  for (let index = 0; index < rows.length; index += 25) {
+    const results = await Promise.all(rows.slice(index, index + 25).map((row) => (
+      supabase
+        .from("sections")
+        .update({ flashcards: row.flashcards })
+        .eq("section_id", row.section_id)
+    )));
+    results.forEach((result) => unwrap(result, "Falha ao restaurar flashcards"));
+  }
+  console.log(`${restored} flashcard(s) restaurado(s) com sucesso.`);
+}
+
+async function auditMermaidArtifacts(supabase, values) {
+  const sections = await fetchAll(() => supabase
+    .from("sections")
+    .select("section_id,topic_id,title,mermaid_mindmap")
+    .order("topic_id")
+    .order("sort_order"));
+  const affected = sections.flatMap((section) => {
+    const source = typeof section.mermaid_mindmap === "string" ? section.mermaid_mindmap : "";
+    const repaired = repairMermaidTransportNoise(source);
+    if (repaired === source || getMermaidSecurityIssue(repaired)) return [];
+    return [{ ...section, repaired }];
+  });
+  console.log(`${affected.length} diagrama(s) com ruído repetido de transporte.`);
+  if (!values.apply || affected.length === 0) return;
+
+  assertConfirmation("mermaid", values.confirm);
+  const backupDirectory = join(process.cwd(), "backups");
+  await mkdir(backupDirectory, { recursive: true });
+  const backupPath = join(backupDirectory, `mermaid-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
+  const originalSections = affected.map((section) => ({
+    section_id: section.section_id,
+    topic_id: section.topic_id,
+    title: section.title,
+    mermaid_mindmap: section.mermaid_mindmap,
+  }));
+  await writeFile(backupPath, `${JSON.stringify(originalSections, null, 2)}\n`, {
+    encoding: "utf8",
+    flag: "wx",
+  });
+  for (const section of affected) {
+    unwrap(
+      await supabase.from("sections").update({ mermaid_mindmap: section.repaired }).eq("section_id", section.section_id),
+      "Falha ao reparar Mermaid"
+    );
+  }
+  console.log(`Backup salvo em: ${backupPath}`);
+  console.log(`${affected.length} diagrama(s) reparado(s).`);
 }
 
 async function inspectContent(supabase, topicId, values) {
@@ -954,6 +1043,8 @@ Uso:
   npm run content -- list [--discipline "Nome"] [--json]
   npm run content -- audit-topic-ids [--json]
   npm run content -- audit-flashcards [--apply --confirm flashcards] [--json]
+  npm run content -- restore-flashcards <backup.json> [--apply --confirm flashcards]
+  npm run content -- audit-mermaid-artifacts [--apply --confirm mermaid]
   npm run content -- inspect <topic-id> [--json]
   npm run content -- import <arquivo.json> [--apply] [--replace --confirm <topic-id>]
   npm run content -- import-batch <pasta> (--dry-run | --apply)
@@ -1002,6 +1093,10 @@ export async function main(argv = process.argv.slice(2)) {
       return auditTopicIds(supabase, values);
     case "audit-flashcards":
       return auditFlashcards(supabase, values);
+    case "restore-flashcards":
+      return restoreFlashcards(supabase, requireText(args[0], "backup.json"), values);
+    case "audit-mermaid-artifacts":
+      return auditMermaidArtifacts(supabase, values);
     case "inspect":
       return inspectContent(supabase, requireText(args[0], "topic-id"), values);
     case "import":

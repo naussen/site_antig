@@ -10,6 +10,8 @@ import {
   validateImportPayload,
 } from "../scripts/content-admin.mjs";
 import { TOPIC_ID_REDIRECTS } from "../src/lib/content/topic-id.mjs";
+import { getFlashcardContentIssue } from "../src/lib/content/flashcard.mjs";
+import { repairMermaidTransportNoise } from "../src/lib/mermaid/repair-transport-noise.mjs";
 
 function validPayload() {
   return {
@@ -57,6 +59,28 @@ test("rejeita flashcard sem questão rastreável e aceita C/E com fonte válida"
     },
   }];
   assert.doesNotThrow(() => validateImportPayload(valid));
+});
+
+test("identifica análise estatística sem excluir flashcard C/E de conteúdo", () => {
+  assert.match(
+    getFlashcardContentIssue({
+      question: "[CERTO/ERRADO] A análise estatística das bancas indica 20% de cobrança.",
+      answer: "Gabarito: ERRADO. Justificativa: O percentual não reforça o tópico.",
+    }),
+    /análise estatística/i,
+  );
+  assert.equal(getFlashcardContentIssue({
+    question: "[CERTO/ERRADO] O sujeito pode estar oculto.",
+    answer: "Gabarito: CERTO. Justificativa: A desinência verbal pode identificá-lo.",
+  }), null);
+});
+
+test("repara somente o ruído Mermaid repetido observado no log", () => {
+  const marker = "-->--->--->>-->";
+  const valid = "flowchart TB\n  A[Início] --> B[Fim]";
+  const corrupted = [...valid].map((character) => `${marker}${character}`).join("");
+  assert.equal(repairMermaidTransportNoise(corrupted), valid);
+  assert.equal(repairMermaidTransportNoise("flowchart TB\n  A --> B"), "flowchart TB\n  A --> B");
 });
 
 test("rejeita topic_id com palavras fragmentadas por hífens", () => {

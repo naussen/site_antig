@@ -16,3 +16,21 @@ export function getFlashcardSourceIssue(flashcard) {
 export function isValidFlashcard(flashcard) {
   return getFlashcardSourceIssue(flashcard) === null;
 }
+
+const PROHIBITED_STUDY_ANALYSIS_PATTERNS = [
+  /an[aá]lise\s+estat[ií]stica/iu,
+  /percentual\s+de\s+cobran[cç]a/iu,
+  /distribui[cç][aã]o\s+de\s+quest[oõ]es/iu,
+  /(?:mais|menos)\s+cobrad[ao]s?\s+(?:em|pelas?)\s+(?:provas?|bancas?)/iu,
+];
+
+export function getFlashcardContentIssue(flashcard) {
+  const content = `${flashcard?.question ?? ""} ${flashcard?.answer ?? ""}`;
+  if (!/^\[CERTO\/ERRADO\]\s+\S/iu.test(String(flashcard?.question ?? ""))) {
+    return "flashcard não está no modelo Certo/Errado";
+  }
+  if (PROHIBITED_STUDY_ANALYSIS_PATTERNS.some((pattern) => pattern.test(content))) {
+    return "análise estatística ou frequência de cobrança não é reforço do tópico";
+  }
+  return null;
+}

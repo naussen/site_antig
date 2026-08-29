@@ -1,6 +1,8 @@
+import { repairMermaidTransportNoise } from "./repair-transport-noise.mjs";
+
 /** Corrige somente artefatos comuns de transporte, sem reescrever a estrutura. */
 export function normalizeMermaidChart(chart: string) {
-  const withoutFence = chart
+  const withoutFence = repairMermaidTransportNoise(chart)
     .trim()
     .replace(/^```(?:mermaid)?\s*\r?\n/i, "")
     .replace(/\r?\n```\s*$/i, "");
