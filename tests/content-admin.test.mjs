@@ -19,6 +19,7 @@ import {
   parseTwoColumnCsv,
 } from "../src/lib/content/portuguese-flashcard-import.mjs";
 import { buildAccountingFlashcards, classifyAccountingFlashcard } from "../src/lib/content/accounting-flashcard-import.mjs";
+import { buildAuditFlashcards, classifyAuditFlashcard } from "../src/lib/content/audit-flashcard-import.mjs";
 
 function validPayload() {
   return {
@@ -144,6 +145,17 @@ test("classifica flashcards de Contabilidade nas seções temáticas", () => {
   assert.equal(classifyAccountingFlashcard({ question: "O método de equivalência patrimonial reconhece dividendos.", answer: "Certo." }), "cpc-18-investimento-em-coligada-controlada-e-empreendimento-controlado-em-conjunto-ecc-sec-02");
   assert.equal(classifyAccountingFlashcard({ question: "A DVA demonstra o valor adicionado.", answer: "Certo." }), "cpc-26-demonstracoes-contabeis-sec-11");
   assert.equal(buildAccountingFlashcards([{ fileName: "anexo.csv", content: '"O CPC 16 trata de estoques.","Gabarito: CERTO. Justificativa: O CPC 16 disciplina os estoques."\n' }]).length, 1);
+});
+
+test("classifica flashcards de Auditoria nas seções temáticas", () => {
+  assert.equal(classifyAuditFlashcard({ question: "A ameaça de autorrevisão compromete a independência.", answer: "Certo." }), "independencia-sec-01");
+  assert.equal(classifyAuditFlashcard({ question: "A estratégia global orienta o planejamento da auditoria.", answer: "Certo." }), "auditoria-planejamento-da-auditoria-nbc-ta-300-sec-01");
+  assert.equal(classifyAuditFlashcard({ question: "A estratificação divide a população em subpopulações homogêneas.", answer: "Certo." }), "amostragem-sec-03");
+  assert.equal(classifyAuditFlashcard({ question: "O parágrafo de ênfase não modifica a opinião do auditor.", answer: "Certo." }), "relatorio-de-auditoria-nbc-ta-700-701-705-e-706-sec-05");
+  assert.equal(buildAuditFlashcards([{
+    fileName: "anexo.csv",
+    content: '"A circularização negativa exige resposta apenas em caso de discordância.","Gabarito: CERTO. Justificativa: A resposta é solicitada quando há divergência."\n',
+  }]).length, 1);
 });
 
 test("rejeita topic_id com palavras fragmentadas por hífens", () => {

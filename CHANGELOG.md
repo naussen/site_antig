@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — substituição dos flashcards de Auditoria
+
+- adicionado importador administrativo dos anexos CSV, com classificação explícita por seção de Auditoria;
+- a substituição preserva backup integral e rollback automático, removendo somente os flashcards da disciplina antes de inserir os novos cards.
+
 ## Não publicado — substituição dos flashcards de Contabilidade Geral e Avançada
 
 - substituídos 223 flashcards anteriores por 120 cards C/E distribuídos em 40 seções temáticas;
