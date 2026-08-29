@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — substituição dos flashcards de Contabilidade Geral e Avançada
+
+- substituídos 223 flashcards anteriores por 120 cards C/E distribuídos em 40 seções temáticas;
+- incluídos backup prévio, rollback automático e classificador explícito para a importação segura dos CSVs.
+
 ## Não publicado — substituição dos flashcards de Português
 
 - adicionado importador administrativo dos CSVs fornecidos, sem dependência externa;

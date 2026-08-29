@@ -88,7 +88,7 @@ export function parseTwoColumnCsv(source) {
 
 export function normalizeAttachedFlashcard(row) {
   const binaryAnswer = row.answer.match(
-    /^Gabarito:\s*(CERTO|ERRADO)\.\s*(?:(?:Comentário|Justificativa):\s*)?(.*)$/isu,
+    /^Gabarito:\s*(CERTO|ERRADO)\.\s*(?:(?:Comentário(?:\s+do\s+Professor)?|Justificativa):\s*)?(.*)$/isu,
   );
 
   if (!binaryAnswer) {

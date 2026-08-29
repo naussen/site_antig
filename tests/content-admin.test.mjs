@@ -18,6 +18,7 @@ import {
   normalizeAttachedFlashcard,
   parseTwoColumnCsv,
 } from "../src/lib/content/portuguese-flashcard-import.mjs";
+import { buildAccountingFlashcards, classifyAccountingFlashcard } from "../src/lib/content/accounting-flashcard-import.mjs";
 
 function validPayload() {
   return {
@@ -111,6 +112,13 @@ test("converte pergunta e assertiva anexadas para o padrão C/E", () => {
     question: "[CERTO/ERRADO] Usa-se hífen neste caso.",
     answer: "Gabarito: ERRADO. Justificativa: O hífen não é empregado.",
   });
+  assert.deepEqual(normalizeAttachedFlashcard({
+    question: "Julgue a assertiva: A prudência apoia a neutralidade.",
+    answer: "Gabarito: CERTO. Comentário do Professor: A cautela não autoriza viés deliberado.",
+  }), {
+    question: "[CERTO/ERRADO] A prudência apoia a neutralidade.",
+    answer: "Gabarito: CERTO. Justificativa: A cautela não autoriza viés deliberado.",
+  });
 });
 
 test("classifica flashcards de Português em seções temáticas", () => {
@@ -128,6 +136,14 @@ test("classifica flashcards de Português em seções temáticas", () => {
     fileName: "anexo.csv",
     content: '"O pronome relativo cujo indica posse.","Gabarito: CERTO. Cujo relaciona dois substantivos."\n',
   }]).length, 1);
+});
+
+test("classifica flashcards de Contabilidade nas seções temáticas", () => {
+  assert.equal(classifyAccountingFlashcard({ question: "O CPC 00 exige neutralidade.", answer: "Certo." }), "cpc-00-estrutura-conceitual-sec-02");
+  assert.equal(classifyAccountingFlashcard({ question: "O valor recuperável do CPC 01 considera valor em uso.", answer: "Certo." }), "cpc-01-teste-de-recuperabilidade-sec-01");
+  assert.equal(classifyAccountingFlashcard({ question: "O método de equivalência patrimonial reconhece dividendos.", answer: "Certo." }), "cpc-18-investimento-em-coligada-controlada-e-empreendimento-controlado-em-conjunto-ecc-sec-02");
+  assert.equal(classifyAccountingFlashcard({ question: "A DVA demonstra o valor adicionado.", answer: "Certo." }), "cpc-26-demonstracoes-contabeis-sec-11");
+  assert.equal(buildAccountingFlashcards([{ fileName: "anexo.csv", content: '"O CPC 16 trata de estoques.","Gabarito: CERTO. Justificativa: O CPC 16 disciplina os estoques."\n' }]).length, 1);
 });
 
 test("rejeita topic_id com palavras fragmentadas por hífens", () => {
