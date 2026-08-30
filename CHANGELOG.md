@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — legibilidade e reparo de flashcards anexados
+
+- ampliada a tipografia do conteúdo de estudo, dos flashcards e dos rótulos essenciais sem alterar a hierarquia responsiva;
+- corrigido o reconhecimento de gabaritos C/E sem ponto antes de `Comentário do Professor`, impedindo que resposta e justificativa sejam expostas no enunciado;
+- adicionada reparação determinística e reversível dos cartões anteriormente afetados.
+
 ## Não publicado — aproximação visual entre Resumos e Legis
 
 - neutralizadas as superfícies, tipografia, bordas, sombras e ações estruturais do PRO Resumos nos temas Light, Dark e Sepia;

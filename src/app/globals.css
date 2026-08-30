@@ -437,7 +437,7 @@ body {
   gap: 1rem;
   margin-bottom: clamp(1.75rem, 4vw, 3rem);
   color: var(--text-muted);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   line-height: 1.4;
@@ -451,7 +451,7 @@ body {
 .study-module-eyebrow {
   margin-bottom: 0.65rem;
   color: var(--accent);
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -477,7 +477,7 @@ body {
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 0.55rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 650;
 }
 
@@ -517,7 +517,7 @@ body {
     var(--editorial-band-text) 68%,
     transparent
   );
-  font-size: 0.66rem;
+  font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -551,7 +551,7 @@ body {
     var(--editorial-band-text) 78%,
     transparent
   );
-  font-size: 0.64rem;
+  font-size: 0.7rem;
   font-weight: 750;
   letter-spacing: 0.035em;
   line-height: 1.2;
@@ -583,7 +583,7 @@ body {
   align-items: center;
   gap: 0.55rem;
   color: var(--text-primary);
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -595,7 +595,7 @@ body {
 
 .study-resource-heading > span {
   color: var(--text-muted);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 750;
   letter-spacing: 0.06em;
   white-space: nowrap;
@@ -910,7 +910,7 @@ body {
 .flashcard-deck__progress span {
   flex-shrink: 0;
   color: var(--text-muted);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.055em;
   text-transform: uppercase;
@@ -943,7 +943,7 @@ body {
 
 .flashcard-face__title {
   color: var(--accent);
-  font-size: 0.73rem;
+  font-size: 0.82rem;
   font-weight: 850;
   letter-spacing: 0.125em;
   line-height: 1.2;
@@ -960,7 +960,7 @@ body {
 
 .flashcard-face__hint {
   color: var(--text-muted);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 650;
   text-align: right;
 }
@@ -974,13 +974,13 @@ body {
 }
 
 .flashcard-question {
-  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
   font-weight: 700;
   line-height: 1.75;
 }
 
 .flashcard-answer {
-  font-size: 1rem;
+  font-size: 1.0625rem;
   font-weight: 500;
   line-height: 1.75;
 }
@@ -1005,7 +1005,7 @@ body {
   background: color-mix(in srgb, var(--bg-secondary) 86%, var(--bg-card));
   color: var(--text-primary);
   cursor: pointer;
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   font-weight: 850;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -1153,6 +1153,10 @@ body {
 /* =============================================================================
    Markdown Content Styles
    ============================================================================= */
+
+.markdown-content {
+  font-size: clamp(1.05rem, 0.3vw + 1rem, 1.125rem);
+}
 
 .markdown-content h1,
 .markdown-content h2,
@@ -1482,7 +1486,7 @@ body {
   }
 
   .study-section-resources span {
-    font-size: 0.6rem;
+    font-size: 0.68rem;
   }
 
   .study-resource-heading {
