@@ -109,7 +109,6 @@ export function DashboardNavigation({
         <ProLogo
           size={isCollapsed ? 38 : 40}
           variant={isCollapsed ? "icon" : "full"}
-          tone="dark"
         />
       </div>
 

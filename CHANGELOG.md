@@ -3,6 +3,7 @@
 ## Não publicado — aproximação visual entre Resumos e Legis
 
 - neutralizadas as superfícies, tipografia, bordas, sombras e ações estruturais do PRO Resumos nos temas Light, Dark e Sepia;
+- integrado o menu lateral às superfícies neutras de cada tema, com logo adaptativa e estados de navegação de maior contraste;
 - preservadas as cores semânticas de disciplinas, alertas, marca-texto, mnemônicos, flashcards e respostas de fixação.
 
 ## Não publicado — catálogo de disciplinas

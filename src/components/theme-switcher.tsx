@@ -23,7 +23,7 @@ export function ThemeSwitcher({ compact = false }: { compact?: boolean }) {
       <button
         type="button"
         onClick={() => setTheme(next.value)}
-        className="group relative grid h-10 w-10 cursor-pointer place-items-center rounded-xl border transition-colors hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+        className="group relative grid h-10 w-10 cursor-pointer place-items-center rounded-xl border transition-colors hover:bg-[var(--dashboard-sidebar-active)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
         style={{
           borderColor: "var(--dashboard-sidebar-border)",
           color: "var(--dashboard-sidebar-muted)",
