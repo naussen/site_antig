@@ -88,7 +88,7 @@ export function parseTwoColumnCsv(source) {
 
 export function normalizeAttachedFlashcard(row) {
   const binaryAnswer = row.answer.match(
-    /^Gabarito:\s*(CERTO|ERRADO)\.\s*(?:(?:Comentário(?:\s+do\s+Professor)?|Justificativa):\s*)?(.*)$/isu,
+    /^Gabarito:\s*(CERTO|ERRADO)\b\s*[.:–—-]?\s*(?:(?:Comentário(?:\s+do\s+Professor)?|Justificativa)\s*:\s*)?(.*)$/isu,
   );
 
   if (!binaryAnswer) {
@@ -100,11 +100,47 @@ export function normalizeAttachedFlashcard(row) {
 
   const statement = row.question
     .replace(/^\[CERTO\/ERRADO\]\s*/iu, "")
+    .replace(/^Bloco\s+\d+\s*:\s*/iu, "")
     .replace(/^(?:Afirmação:|Julgue a assertiva:)\s*/iu, "")
     .trim();
   return {
     question: `[CERTO/ERRADO] ${statement}`,
     answer: `Gabarito: ${binaryAnswer[1].toLocaleUpperCase("pt-BR")}. Justificativa: ${binaryAnswer[2].trim()}`,
+  };
+}
+
+export function repairMalformedAttachedFlashcard(flashcard) {
+  const question = String(flashcard?.question ?? "");
+  const answer = String(flashcard?.answer ?? "");
+  const questionPrefix = "[CERTO/ERRADO] A resposta correta para “";
+  const answerPrefix = "Gabarito: CERTO. Justificativa: ";
+
+  if (!question.startsWith(questionPrefix) || !answer.startsWith(answerPrefix)) {
+    return null;
+  }
+
+  const originalAnswer = answer.slice(answerPrefix.length);
+  if (!/^Gabarito:\s*(?:CERTO|ERRADO)\b/iu.test(originalAnswer)) {
+    return null;
+  }
+
+  const questionSuffix = `” é “${originalAnswer}”.`;
+  if (!question.endsWith(questionSuffix)) {
+    return null;
+  }
+
+  const originalQuestion = question.slice(
+    questionPrefix.length,
+    question.length - questionSuffix.length,
+  );
+  const repaired = normalizeAttachedFlashcard({
+    question: originalQuestion,
+    answer: originalAnswer,
+  });
+
+  return {
+    ...flashcard,
+    ...repaired,
   };
 }
 

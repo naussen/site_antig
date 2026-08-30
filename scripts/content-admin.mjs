@@ -18,7 +18,10 @@ import {
   getFlashcardSourceIssue,
 } from "../src/lib/content/flashcard.mjs";
 import { repairMermaidTransportNoise } from "../src/lib/mermaid/repair-transport-noise.mjs";
-import { buildPortugueseFlashcards } from "../src/lib/content/portuguese-flashcard-import.mjs";
+import {
+  buildPortugueseFlashcards,
+  repairMalformedAttachedFlashcard,
+} from "../src/lib/content/portuguese-flashcard-import.mjs";
 import { buildAccountingFlashcards } from "../src/lib/content/accounting-flashcard-import.mjs";
 import { buildAuditFlashcards } from "../src/lib/content/audit-flashcard-import.mjs";
 
@@ -491,6 +494,95 @@ async function auditFlashcards(supabase, values) {
     unwrap(await supabase.from("sections").update({ flashcards: retained }).eq("section_id", section.section_id), "Falha ao corrigir flashcards");
   }
   console.log(`${total} flashcard(s) inválido(s) removido(s); conteúdo de estudo preservado.`);
+}
+
+async function repairMalformedAttachedFlashcards(supabase, values) {
+  const sections = await fetchAll(() => supabase
+    .from("sections")
+    .select("section_id,topic_id,title,flashcards")
+    .order("topic_id")
+    .order("sort_order"));
+  const affected = sections.flatMap((section) => {
+    let repairedCount = 0;
+    const flashcards = (Array.isArray(section.flashcards) ? section.flashcards : []).map((flashcard) => {
+      const repaired = repairMalformedAttachedFlashcard(flashcard);
+      if (!repaired) return flashcard;
+      repairedCount += 1;
+      return repaired;
+    });
+
+    return repairedCount > 0 ? [{
+      ...section,
+      repairedCount,
+      repairedFlashcards: flashcards,
+    }] : [];
+  });
+  const total = affected.reduce((sum, section) => sum + section.repairedCount, 0);
+  const summary = affected.map((section) => ({
+    topic_id: section.topic_id,
+    section_id: section.section_id,
+    secao: section.title,
+    flashcards_reparaveis: section.repairedCount,
+  }));
+
+  if (values.json) {
+    console.log(JSON.stringify({
+      secoes_afetadas: affected.length,
+      flashcards_reparaveis: total,
+      itens: summary,
+    }, null, 2));
+  } else {
+    console.log(`${total} flashcard(s) reparável(is) em ${affected.length} seção(ões).`);
+    if (affected.length && !values.apply) console.table(summary);
+  }
+
+  if (!values.apply || affected.length === 0) return;
+  assertConfirmation("flashcards", values.confirm);
+
+  const backupSections = affected.map((section) => ({
+    section_id: section.section_id,
+    topic_id: section.topic_id,
+    title: section.title,
+    flashcards: section.flashcards,
+  }));
+  const backupDirectory = join(process.cwd(), "backups");
+  await mkdir(backupDirectory, { recursive: true });
+  const backupPath = join(backupDirectory, `flashcards-malformados-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
+  await writeFile(backupPath, `${JSON.stringify(backupSections, null, 2)}\n`, {
+    encoding: "utf8",
+    flag: "wx",
+  });
+
+  try {
+    for (const section of affected) {
+      unwrap(
+        await supabase
+          .from("sections")
+          .update({ flashcards: section.repairedFlashcards })
+          .eq("section_id", section.section_id),
+        "Falha ao reparar flashcards anexados",
+      );
+    }
+  } catch (error) {
+    const rollbackErrors = [];
+    for (const section of backupSections) {
+      const result = await supabase
+        .from("sections")
+        .update({ flashcards: Array.isArray(section.flashcards) ? section.flashcards : [] })
+        .eq("section_id", section.section_id);
+      if (result.error) rollbackErrors.push(`${section.section_id}: ${result.error.message}`);
+    }
+    throw new Error(
+      `${error instanceof Error ? error.message : String(error)} ${
+        rollbackErrors.length
+          ? `Rollback incompleto: ${rollbackErrors.join("; ")}`
+          : "Rollback concluído."
+      }`,
+    );
+  }
+
+  console.log(`Backup salvo em: ${backupPath}`);
+  console.log(`${total} flashcard(s) reparado(s) com sucesso.`);
 }
 
 async function restoreFlashcards(supabase, backupPath, values) {
@@ -1216,6 +1308,7 @@ Uso:
   npm run content -- list [--discipline "Nome"] [--json]
   npm run content -- audit-topic-ids [--json]
   npm run content -- audit-flashcards [--apply --confirm flashcards] [--json]
+  npm run content -- repair-malformed-flashcards [--apply --confirm flashcards] [--json]
   npm run content -- restore-flashcards <backup.json> [--apply --confirm flashcards]
   npm run content -- audit-mermaid-artifacts [--apply --confirm mermaid]
   npm run content -- replace-portuguese-flashcards <arquivo.csv...> [--apply --confirm portugues]
@@ -1269,6 +1362,8 @@ export async function main(argv = process.argv.slice(2)) {
       return auditTopicIds(supabase, values);
     case "audit-flashcards":
       return auditFlashcards(supabase, values);
+    case "repair-malformed-flashcards":
+      return repairMalformedAttachedFlashcards(supabase, values);
     case "restore-flashcards":
       return restoreFlashcards(supabase, requireText(args[0], "backup.json"), values);
     case "audit-mermaid-artifacts":

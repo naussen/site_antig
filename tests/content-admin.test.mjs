@@ -17,6 +17,7 @@ import {
   classifyPortugueseFlashcard,
   normalizeAttachedFlashcard,
   parseTwoColumnCsv,
+  repairMalformedAttachedFlashcard,
 } from "../src/lib/content/portuguese-flashcard-import.mjs";
 import { buildAccountingFlashcards, classifyAccountingFlashcard } from "../src/lib/content/accounting-flashcard-import.mjs";
 import { buildAuditFlashcards, classifyAuditFlashcard } from "../src/lib/content/audit-flashcard-import.mjs";
@@ -81,6 +82,10 @@ test("identifica análise estatística sem excluir flashcard C/E de conteúdo", 
     question: "[CERTO/ERRADO] O sujeito pode estar oculto.",
     answer: "Gabarito: CERTO. Justificativa: A desinência verbal pode identificá-lo.",
   }), null);
+  assert.match(getFlashcardContentIssue({
+    question: "[CERTO/ERRADO] A resposta correta para “Assertiva” é “Gabarito: ERRADO”.",
+    answer: "Gabarito: CERTO. Justificativa: Gabarito exposto indevidamente.",
+  }), /expõe o gabarito/i);
 });
 
 test("repara somente o ruído Mermaid repetido observado no log", () => {
@@ -119,6 +124,26 @@ test("converte pergunta e assertiva anexadas para o padrão C/E", () => {
   }), {
     question: "[CERTO/ERRADO] A prudência apoia a neutralidade.",
     answer: "Gabarito: CERTO. Justificativa: A cautela não autoriza viés deliberado.",
+  });
+  assert.deepEqual(normalizeAttachedFlashcard({
+    question: "Bloco 5: O desfecho real diferente da estimativa configura, por si só, distorção.",
+    answer: "Gabarito: ERRADO\nComentário do Professor: A diferença não indica necessariamente uma distorção.",
+  }), {
+    question: "[CERTO/ERRADO] O desfecho real diferente da estimativa configura, por si só, distorção.",
+    answer: "Gabarito: ERRADO. Justificativa: A diferença não indica necessariamente uma distorção.",
+  });
+});
+
+test("repara flashcard anexado que expôs gabarito no enunciado", () => {
+  const originalQuestion = "Bloco 5: O desfecho real diferente da estimativa configura, por si só, distorção.";
+  const originalAnswer = "Gabarito: ERRADO\nComentário do Professor: A diferença não indica necessariamente uma distorção.";
+
+  assert.deepEqual(repairMalformedAttachedFlashcard({
+    question: `[CERTO/ERRADO] A resposta correta para “${originalQuestion}” é “${originalAnswer}”.`,
+    answer: `Gabarito: CERTO. Justificativa: ${originalAnswer}`,
+  }), {
+    question: "[CERTO/ERRADO] O desfecho real diferente da estimativa configura, por si só, distorção.",
+    answer: "Gabarito: ERRADO. Justificativa: A diferença não indica necessariamente uma distorção.",
   });
 });
 

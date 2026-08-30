@@ -29,6 +29,9 @@ export function getFlashcardContentIssue(flashcard) {
   if (!/^\[CERTO\/ERRADO\]\s+\S/iu.test(String(flashcard?.question ?? ""))) {
     return "flashcard não está no modelo Certo/Errado";
   }
+  if (/A resposta correta para[\s\S]*Gabarito:\s*(?:CERTO|ERRADO)/iu.test(String(flashcard?.question ?? ""))) {
+    return "enunciado expõe o gabarito e a justificativa";
+  }
   if (PROHIBITED_STUDY_ANALYSIS_PATTERNS.some((pattern) => pattern.test(content))) {
     return "análise estatística ou frequência de cobrança não é reforço do tópico";
   }
