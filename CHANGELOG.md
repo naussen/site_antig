@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-08-31 — reparo de ordinais repetidos em Mermaid
+
+- identifica e reduz prefixos ordinais repetidos apenas em nós `etapa_N` gerados pelo LEIAUT;
+- preserva sequências numéricas fora de linhas do tempo e amplia a auditoria administrativa dos diagramas publicados.
+
 ## Não publicado — legibilidade e reparo de flashcards anexados
 
 - ampliada a tipografia do conteúdo de estudo, dos flashcards e dos rótulos essenciais sem alterar a hierarquia responsiva;

@@ -96,6 +96,26 @@ test("repara somente o ruído Mermaid repetido observado no log", () => {
   assert.equal(repairMermaidTransportNoise("flowchart TB\n  A --> B"), "flowchart TB\n  A --> B");
 });
 
+test("reduz ordinais repetidos somente no nó correspondente da linha do tempo", () => {
+  const corrupted = [
+    "flowchart TB",
+    '  inicio["PES - Dimensões"]',
+    '  etapa_1["01 · 01 · 01<br/>· 01 · Projeto de Governo"]',
+    '  etapa_2["02 · 02<br/>· 02 · Governabilidade"]',
+    '  inicio --> etapa_1',
+    '  etapa_1 --> etapa_2',
+  ].join("\n");
+  const repaired = repairMermaidTransportNoise(corrupted);
+
+  assert.match(repaired, /etapa_1\["01 · Projeto de Governo"\]/u);
+  assert.match(repaired, /etapa_2\["02 · Governabilidade"\]/u);
+  assert.doesNotMatch(repaired, /01 · 01|02 · 02/u);
+  assert.equal(
+    repairMermaidTransportNoise('flowchart TB\n  regra["01 · 01 · prazo legal"]'),
+    'flowchart TB\n  regra["01 · 01 · prazo legal"]',
+  );
+});
+
 test("lê CSV de duas colunas com vírgulas e aspas escapadas", () => {
   assert.deepEqual(parseTwoColumnCsv('"Questão, com vírgula","Resposta com ""aspas"""\n'), [{
     question: "Questão, com vírgula",

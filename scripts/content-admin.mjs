@@ -642,7 +642,7 @@ async function auditMermaidArtifacts(supabase, values) {
     if (repaired === source || getMermaidSecurityIssue(repaired)) return [];
     return [{ ...section, repaired }];
   });
-  console.log(`${affected.length} diagrama(s) com ruído repetido de transporte.`);
+  console.log(`${affected.length} diagrama(s) com artefatos repetidos de normalização ou transporte.`);
   if (!values.apply || affected.length === 0) return;
 
   assertConfirmation("mermaid", values.confirm);
