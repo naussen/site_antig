@@ -8,6 +8,7 @@ import {
 } from "@/lib/mermaid/security.mjs";
 import { getTopicIdIssue } from "@/lib/content/topic-id.mjs";
 import { FLASHCARD_BOARDS, getFlashcardSourceIssue } from "@/lib/content/flashcard.mjs";
+import { parseQuantitativeChart } from "@/lib/quantitative-chart";
 
 // =============================================================================
 // Validação Zod do payload de importação
@@ -49,6 +50,13 @@ const MermaidSourceSchema = z
       context.addIssue({ code: "custom", message: issue });
     }
   });
+
+function hasInvalidQuantitativeChart(markdown: string) {
+  for (const block of markdown.matchAll(/```quant-chart\s*\n([\s\S]*?)```/g)) {
+    if (!parseQuantitativeChart(block[1])) return true;
+  }
+  return false;
+}
 
 const KNOWN_ACRONYMS = new Set([
   "AFO", "CIDE", "CLT", "CPC", "CPP", "CTN", "CVM", "DRE", "FRF",
@@ -187,6 +195,10 @@ const TopicImportSchema = z.object({
         path: ["sections", index],
         message: "Erro ortográfico encontrado: use 'doutrina', não 'doutina'.",
       });
+    }
+
+    if (hasInvalidQuantitativeChart(section.content_markdown)) {
+      context.addIssue({ code: "custom", path: ["sections", index, "content_markdown"], message: "Gráfico quantitativo inválido." });
     }
 
     const hasUsefulContent = Boolean(

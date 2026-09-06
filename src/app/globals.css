@@ -1404,6 +1404,12 @@ body {
   scrollbar-gutter: stable;
 }
 
+.quantitative-chart { width: min(100%, 46rem); margin: 1.5rem auto; padding: 1rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-card); box-shadow: var(--shadow); }
+.quantitative-chart figcaption { display: grid; gap: 0.25rem; margin-bottom: 0.75rem; color: var(--text-secondary); font-size: 0.875rem; }
+.quantitative-chart figcaption strong { color: var(--text-primary); }
+.quantitative-chart__canvas { width: 100%; height: 18rem; }
+.quantitative-chart-error { color: var(--callout-warning-text); }
+
 .markdown-content pre code {
   padding: 0;
   background: transparent;

@@ -3,6 +3,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import { QuantitativeChartViewer } from "@/components/study/quantitative-chart";
 
 interface MarkdownViewerProps {
   content: string;
@@ -79,6 +80,9 @@ export function MarkdownViewer({ content }: MarkdownViewerProps) {
               <table>{children}</table>
             </div>
           ),
+          code: ({ className, children }) => className === "language-quant-chart"
+            ? <QuantitativeChartViewer source={String(children).trim()} />
+            : <code className={className}>{children}</code>,
         }}
       >
         {content}
