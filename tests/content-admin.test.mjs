@@ -21,6 +21,7 @@ import {
 } from "../src/lib/content/portuguese-flashcard-import.mjs";
 import { buildAccountingFlashcards, classifyAccountingFlashcard } from "../src/lib/content/accounting-flashcard-import.mjs";
 import { buildAuditFlashcards, classifyAuditFlashcard } from "../src/lib/content/audit-flashcard-import.mjs";
+import { buildPublicAdministrationFlashcards, classifyPublicAdministrationFlashcard } from "../src/lib/content/public-administration-flashcard-import.mjs";
 
 function validPayload() {
   return {
@@ -201,6 +202,18 @@ test("classifica flashcards de Auditoria nas seções temáticas", () => {
     fileName: "anexo.csv",
     content: '"A circularização negativa exige resposta apenas em caso de discordância.","Gabarito: CERTO. Justificativa: A resposta é solicitada quando há divergência."\n',
   }]).length, 1);
+});
+
+test("classifica flashcards de Administração Pública nas seções temáticas", () => {
+  assert.equal(classifyPublicAdministrationFlashcard({ question: "O modelo patrimonialista não separa o patrimônio público do privado.", answer: "Certo." }), "modelos-teoricos-e-evolucao-da-adm-publica-no-brasil-sec-02");
+  assert.equal(classifyPublicAdministrationFlashcard({ question: "O Decreto-Lei 200 instituiu a descentralização administrativa.", answer: "Certo." }), "modelos-teoricos-e-evolucao-da-adm-publica-no-brasil-sec-03");
+  assert.equal(classifyPublicAdministrationFlashcard({ question: "A governabilidade depende de apoio político.", answer: "Certo." }), "governabilidade-e-governanca-sec-01");
+  assert.equal(classifyPublicAdministrationFlashcard({ question: "A accountability horizontal é exercida por órgãos de controle.", answer: "Certo." }), "transparencia-e-accountability-sec-10");
+  assert.equal(classifyPublicAdministrationFlashcard({ question: "O Comprasnet é uma relação G2B no governo eletrônico.", answer: "Certo." }), "governo-eletronico-sec-01");
+  assert.equal(classifyPublicAdministrationFlashcard({ question: "A LC 131 exige transparência da execução orçamentária.", answer: "Certo." }), "transparencia-e-accountability-sec-09");
+  assert.equal(classifyPublicAdministrationFlashcard({ question: "O incrementalismo prevê mudanças graduais.", answer: "Certo." }), "politicas-publicas-sec-02");
+  assert.equal(classifyPublicAdministrationFlashcard({ question: "A estrutura matricial combina estruturas funcional e por projetos.", answer: "Certo." }), "processo-de-organizacao-sec-01");
+  assert.equal(buildPublicAdministrationFlashcards([{ fileName: "anexo.csv", content: '"A governabilidade depende de apoio político.","Gabarito: CERTO. Justificativa: Há apoio político."\\n' }]).length, 1);
 });
 
 test("rejeita topic_id com palavras fragmentadas por hífens", () => {

@@ -24,6 +24,7 @@ import {
 } from "../src/lib/content/portuguese-flashcard-import.mjs";
 import { buildAccountingFlashcards } from "../src/lib/content/accounting-flashcard-import.mjs";
 import { buildAuditFlashcards } from "../src/lib/content/audit-flashcard-import.mjs";
+import { buildPublicAdministrationFlashcards } from "../src/lib/content/public-administration-flashcard-import.mjs";
 
 const PAGE_SIZE = 1_000;
 
@@ -839,6 +840,48 @@ async function replaceAuditFlashcards(supabase, filePaths, values) {
   console.log(`${imported.length} flashcard(s) de Auditoria inserido(s) com sucesso.`);
 }
 
+async function replacePublicAdministrationFlashcards(supabase, filePaths, values) {
+  if (filePaths.length === 0) throw new Error("Informe pelo menos um arquivo CSV.");
+  const sources = await Promise.all(filePaths.map(async (filePath) => ({
+    fileName: filePath.replaceAll("\\", "/").split("/").pop(),
+    content: await readFile(filePath, "utf8"),
+  })));
+  const imported = buildPublicAdministrationFlashcards(sources);
+  const invalidCards = imported.filter((item) => getFlashcardContentIssue(item.flashcard));
+  if (invalidCards.length) throw new Error(`Flashcards incompatíveis: ${invalidCards.map((item) => item.origin).join(", ")}`);
+
+  const topics = await fetchAll(() => supabase.from("topics").select("topic_id").eq("discipline", "Administração Pública"));
+  const topicIds = topics.map((topic) => topic.topic_id);
+  if (topicIds.length === 0) throw new Error("Nenhum tópico da disciplina Administração Pública foi encontrado.");
+  const sections = await fetchAll(() => supabase.from("sections").select("section_id,topic_id,title,flashcards").in("topic_id", topicIds).order("topic_id").order("sort_order"));
+  const sectionsById = new Map(sections.map((section) => [section.section_id, section]));
+  const missing = [...new Set(imported.map((item) => item.sectionId))].filter((sectionId) => !sectionsById.has(sectionId));
+  if (missing.length) throw new Error(`Seções de destino inexistentes: ${missing.join(", ")}`);
+
+  const cardsBySection = new Map();
+  for (const item of imported) cardsBySection.set(item.sectionId, [...(cardsBySection.get(item.sectionId) ?? []), item.flashcard]);
+  const currentTotal = sections.reduce((total, section) => total + (Array.isArray(section.flashcards) ? section.flashcards.length : 0), 0);
+  console.log(`${currentTotal} flashcard(s) atuais de Administração Pública serão removidos.`);
+  console.log(`${imported.length} flashcard(s) dos anexos serão inseridos em ${cardsBySection.size} seção(ões).`);
+  console.table([...cardsBySection].map(([sectionId, cards]) => ({ section_id: sectionId, titulo: sectionsById.get(sectionId).title, flashcards: cards.length })));
+  if (!values.apply) return console.log("Pré-visualização. Use --apply --confirm administracao-publica para substituir.");
+
+  assertConfirmation("administracao-publica", values.confirm);
+  const backupDirectory = join(process.cwd(), "backups");
+  await mkdir(backupDirectory, { recursive: true });
+  const backupPath = join(backupDirectory, `flashcards-administracao-publica-${new Date().toISOString().replace(/[:.]/g, "-")}.json`);
+  await writeFile(backupPath, `${JSON.stringify(sections, null, 2)}\n`, { encoding: "utf8", flag: "wx" });
+  try {
+    for (const section of sections) unwrap(await supabase.from("sections").update({ flashcards: cardsBySection.get(section.section_id) ?? [] }).eq("section_id", section.section_id), "Falha ao substituir flashcards de Administração Pública");
+  } catch (error) {
+    const rollbackErrors = [];
+    for (const section of sections) { const result = await supabase.from("sections").update({ flashcards: Array.isArray(section.flashcards) ? section.flashcards : [] }).eq("section_id", section.section_id); if (result.error) rollbackErrors.push(`${section.section_id}: ${result.error.message}`); }
+    throw new Error(`${error instanceof Error ? error.message : String(error)} ${rollbackErrors.length ? `Rollback incompleto: ${rollbackErrors.join("; ")}` : "Rollback concluído."}`);
+  }
+  console.log(`Backup salvo em: ${backupPath}`);
+  console.log(`${imported.length} flashcard(s) de Administração Pública inserido(s) com sucesso.`);
+}
+
 async function inspectContent(supabase, topicId, values) {
   const topic = await getTopic(supabase, topicId);
   const sections = await getSections(supabase, topicId);
@@ -1314,6 +1357,7 @@ Uso:
   npm run content -- replace-portuguese-flashcards <arquivo.csv...> [--apply --confirm portugues]
   npm run content -- replace-accounting-flashcards <arquivo.csv...> [--apply --confirm contabilidade]
   npm run content -- replace-audit-flashcards <arquivo.csv...> [--apply --confirm auditoria]
+  npm run content -- replace-public-administration-flashcards <arquivo.csv...> [--apply --confirm administracao-publica]
   npm run content -- inspect <topic-id> [--json]
   npm run content -- import <arquivo.json> [--apply] [--replace --confirm <topic-id>]
   npm run content -- import-batch <pasta> (--dry-run | --apply)
@@ -1374,6 +1418,8 @@ export async function main(argv = process.argv.slice(2)) {
       return replaceAccountingFlashcards(supabase, args, values);
     case "replace-audit-flashcards":
       return replaceAuditFlashcards(supabase, args, values);
+    case "replace-public-administration-flashcards":
+      return replacePublicAdministrationFlashcards(supabase, args, values);
     case "inspect":
       return inspectContent(supabase, requireText(args[0], "topic-id"), values);
     case "import":

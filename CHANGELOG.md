@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — substituição dos flashcards de Administração Pública
+
+- adicionados 120 flashcards C/E dos anexos, distribuídos em 23 seções temáticas existentes;
+- incluído importador administrativo com prévia, backup integral e rollback automático para substituições futuras da disciplina.
+
 ## Não publicado — navegação lateral modernizada
 
 - refinados os estados ativo, hover, foco e clique do menu com profundidade, brilho sutil e microinterações;
