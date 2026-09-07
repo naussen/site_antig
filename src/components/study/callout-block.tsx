@@ -41,23 +41,18 @@ export function CalloutBlock({ callout }: CalloutBlockProps) {
     <div
       className={`flex overflow-hidden animate-fade-in-up ${
         isProminent
-          ? "my-8 gap-5 rounded-xl px-5 py-6 sm:px-7 sm:py-7"
+          ? "my-6 gap-3 rounded-xl px-4 py-4 sm:px-5"
           : "my-5 gap-4 rounded-r-xl px-4 py-4 sm:px-5"
       }`}
       style={{
         background: `var(${config.bgVar})`,
         border: `1px solid var(${config.borderVar})`,
-        borderLeftWidth: isProminent ? "8px" : "5px",
-        boxShadow: isProminent
-          ? "0 12px 28px color-mix(in srgb, var(--callout-highlight-border) 18%, transparent)"
-          : undefined,
+        borderLeftWidth: isProminent ? "4px" : "5px",
       }}
       role="alert"
     >
       <span
-        className={`grid shrink-0 place-items-center rounded-xl ${
-          isProminent ? "h-12 w-12" : "h-9 w-9"
-        }`}
+        className="grid h-9 w-9 shrink-0 place-items-center rounded-xl"
         style={{
           background: isProminent
             ? "color-mix(in srgb, var(--bg-card) 88%, transparent)"
@@ -69,21 +64,17 @@ export function CalloutBlock({ callout }: CalloutBlockProps) {
         }}
         aria-hidden="true"
       >
-        <Icon size={isProminent ? 25 : 19} strokeWidth={isProminent ? 2.4 : 2} />
+        <Icon size={19} strokeWidth={2} />
       </span>
       <div className="flex-1 min-w-0">
         <p
-          className={`font-extrabold uppercase ${
-            isProminent
-              ? "mb-2 text-sm tracking-[0.15em] sm:text-base"
-              : "mb-1 text-xs tracking-[0.12em]"
-          }`}
+          className="mb-1 text-xs font-extrabold uppercase tracking-[0.12em]"
           style={{ color: `var(${config.textVar})` }}
         >
           {callout.title}
         </p>
         <div
-          className={isProminent ? "text-base font-medium leading-7 sm:text-[1.05rem]" : "text-sm leading-relaxed"}
+          className="text-sm leading-relaxed"
           style={{ color: `var(${config.textVar})`, opacity: isProminent ? 1 : 0.9 }}
         >
           <ReactMarkdown

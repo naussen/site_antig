@@ -206,7 +206,7 @@ export function StudyPageClient({
           )}
         </header>
 
-        <div className="mx-auto w-full max-w-[1280px] px-5 py-8 pb-20 sm:px-8 lg:px-12 xl:px-16">
+        <div className="mx-auto w-full max-w-[1120px] px-4 py-8 pb-20 sm:px-8 lg:px-12">
           {/* Título do tópico */}
           <section
             className="study-module-hero mb-12"
@@ -262,7 +262,7 @@ export function StudyPageClient({
               <article
                 key={section.section_id}
                 id={`section-${section.section_id}`}
-                className="mb-16 scroll-mt-20"
+                className="study-section-card mb-6 scroll-mt-20 sm:mb-8"
                 aria-labelledby={`section-title-${section.section_id}`}
               >
               {/* Título da seção */}

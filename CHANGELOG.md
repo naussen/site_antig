@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — layout alinhado à prévia da landing
+
+- alinhados o Dashboard e a navegação lateral à identidade escura, clara e roxa apresentada na prévia comercial;
+- reorganizado o leitor de resumos em cartões responsivos, com cabeçalhos, progresso e pontos de prova mais compactos;
+- aproximados os flashcards C/E da frente roxa e da ordem de ações exibidas na landing, preservando feedback, acessibilidade e os três temas.
+
 ## Não publicado — legibilidade e reparo de flashcards anexados
 
 - ampliada a tipografia do conteúdo de estudo, dos flashcards e dos rótulos essenciais sem alterar a hierarquia responsiva;

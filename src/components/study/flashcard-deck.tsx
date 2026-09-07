@@ -167,14 +167,14 @@ export function FlashcardDeck({ flashcards }: FlashcardDeckProps) {
                     {displayQuestion}
                   </p>
                   {current.source && (
-                    <p className="mt-3 text-xs text-[var(--text-secondary)]">
+                    <p className="flashcard-source mt-3 text-xs text-[var(--text-secondary)]">
                       Fonte: {current.source.board} — {current.source.exam} ({current.source.year}), questão {current.source.question_id}.
                     </p>
                   )}
 
                   {isBinaryCard && (
                     <div className="flashcard-answer-options" role="group" aria-label="Responder ao flashcard">
-                      {(["certo", "errado"] as const).map((answer) => {
+                      {(["errado", "certo"] as const).map((answer) => {
                         const selected = userAnswer === answer;
                         return (
                           <button
