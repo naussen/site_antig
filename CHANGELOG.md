@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — layout alinhado à prévia da landing
+
+- alinhados o Dashboard e a navegação lateral à identidade escura, clara e roxa apresentada na prévia comercial;
+- reorganizado o leitor de resumos em cartões responsivos, com cabeçalhos, progresso e pontos de prova mais compactos;
+- aproximados os flashcards C/E da frente roxa e da ordem de ações exibidas na landing, preservando feedback, acessibilidade e os três temas.
+
 ## 2026-08-31 — reparo de ordinais repetidos em Mermaid
 
 - identifica e reduz prefixos ordinais repetidos apenas em nós `etapa_N` gerados pelo LEIAUT;
