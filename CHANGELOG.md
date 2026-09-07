@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — transparência do logo institucional
+
+- removido o fundo quadriculado incorporado ao logo PRO Concursos e preservada a arte original em PNG com canal alfa;
+- atualizado o uso da marca na landing e nas páginas institucionais, sem a caixa branca compensatória.
+
 ## Não publicado — layout alinhado à prévia da landing
 
 - alinhados o Dashboard e a navegação lateral à identidade escura, clara e roxa apresentada na prévia comercial;

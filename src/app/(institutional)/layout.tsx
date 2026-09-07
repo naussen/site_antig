@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
-const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo.png");
+const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo-transparent.png");
 
 export default function InstitutionalLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
@@ -10,7 +10,7 @@ export default function InstitutionalLayout({ children }: Readonly<{ children: R
       <header className="border-b border-[var(--border)] bg-[var(--bg-card)] px-5 py-4 sm:px-8">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-4">
           <Link href="/landing" aria-label="Voltar à página inicial do PRO Concursos">
-            <Image src={LOGO_SRC} alt="PRO Concursos" width={170} height={68} className="h-auto w-[145px] rounded-xl bg-white px-2 py-1 sm:w-[170px]" />
+            <Image src={LOGO_SRC} alt="PRO Concursos" width={170} height={68} className="h-auto w-[145px] sm:w-[170px]" />
           </Link>
           <Link href="/login" className="rounded-xl bg-[var(--action)] px-4 py-2.5 text-sm font-bold text-[var(--action-foreground)] transition-opacity hover:opacity-90">Entrar</Link>
         </div>

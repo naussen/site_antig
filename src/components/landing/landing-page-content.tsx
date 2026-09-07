@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
-const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo.png");
+const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo-transparent.png");
 
 function BrandLogo({ className = "" }: { className?: string }) {
   return (
@@ -25,7 +25,7 @@ function BrandLogo({ className = "" }: { className?: string }) {
       alt="PRO Concursos"
       width={250}
       height={100}
-      className={`h-auto w-[170px] rounded-xl bg-white/95 px-2 py-1 sm:w-[210px] ${className}`}
+      className={`h-auto w-[170px] sm:w-[210px] ${className}`}
       priority
     />
   );
