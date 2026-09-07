@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — navegação lateral modernizada
+
+- refinados os estados ativo, hover, foco e clique do menu com profundidade, brilho sutil e microinterações;
+- modernizados os controles de aparência, conta e recolhimento sem alterar rotas ou comportamento responsivo.
+
 ## Não publicado — transparência do logo institucional
 
 - removido o fundo quadriculado incorporado ao logo PRO Concursos e preservada a arte original em PNG com canal alfa;
