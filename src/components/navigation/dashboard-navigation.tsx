@@ -105,12 +105,11 @@ export function DashboardNavigation({
 
   const renderNavigationContent = (isCollapsed: boolean) => (
     <>
-      <div className={`relative flex shrink-0 items-center overflow-hidden border-b py-5 before:pointer-events-none before:absolute before:-right-10 before:-top-12 before:h-28 before:w-28 before:rounded-full before:bg-[var(--dashboard-sidebar-active)] before:blur-2xl ${isCollapsed ? "justify-center px-3" : "gap-3 px-5"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
+      <div className={`flex shrink-0 items-center border-b py-5 ${isCollapsed ? "justify-center px-3" : "gap-3 px-5"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
         <ProLogo
           size={isCollapsed ? 38 : 40}
           variant={isCollapsed ? "icon" : "full"}
           tone="dark"
-          className="relative z-10 transition-transform duration-300 hover:scale-[1.02]"
         />
       </div>
 
@@ -118,13 +117,13 @@ export function DashboardNavigation({
         <button
           type="button"
           onClick={toggleCollapsed}
-          className="group grid h-9 w-9 cursor-pointer place-items-center rounded-xl border border-[var(--dashboard-sidebar-border)] bg-white/[0.02] text-[var(--dashboard-sidebar-muted)] shadow-md transition-[transform,background-color,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-[var(--accent)] hover:bg-[var(--dashboard-sidebar-active)] hover:shadow-[0_8px_24px_-12px_var(--accent)] active:translate-y-0 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+          className="group grid h-9 w-9 cursor-pointer place-items-center rounded-xl border border-[var(--dashboard-sidebar-border)] bg-transparent text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color,color] duration-150 ease-out hover:border-[var(--accent)] hover:bg-[var(--dashboard-sidebar-active)] hover:text-[var(--dashboard-sidebar-text)] active:scale-[0.96] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
           aria-label={isCollapsed ? "Expandir menu" : "Recolher menu"}
           aria-expanded={!isCollapsed}
           aria-controls="dashboard-desktop-navigation"
           title={isCollapsed ? "Expandir menu" : "Recolher menu"}
         >
-          {isCollapsed ? <PanelLeftOpen size={16} className="transition-transform duration-200 group-hover:translate-x-0.5" /> : <PanelLeftClose size={16} className="transition-transform duration-200 group-hover:-translate-x-0.5" />}
+          {isCollapsed ? <PanelLeftOpen size={16} /> : <PanelLeftClose size={16} />}
           <span className="sr-only">{isCollapsed ? "Expandir" : "Recolher menu"}</span>
         </button>
       </div>
@@ -138,57 +137,54 @@ export function DashboardNavigation({
             Navegação
           </p>
         )}
-        <div className="space-y-1.5">
-        {navigationItems.map(({ href, label, icon: Icon, exact }) => {
-          const active = isActive(href, exact);
-          return (
-            <Link
-              key={href}
-              href={href}
-              onClick={() => setMobileOpen(false)}
-              aria-current={active ? "page" : undefined}
-              aria-label={isCollapsed ? label : undefined}
-              title={isCollapsed ? label : undefined}
-              className={`group relative isolate flex h-12 items-center overflow-hidden rounded-2xl border text-sm font-semibold transition-[transform,background-color,border-color,color,box-shadow] duration-200 before:pointer-events-none before:absolute before:inset-0 before:-translate-x-[115%] before:bg-[linear-gradient(110deg,transparent,rgba(255,255,255,0.08),transparent)] before:transition-transform before:duration-500 hover:-translate-y-0.5 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] hover:text-[var(--dashboard-sidebar-text)] hover:shadow-[0_12px_28px_-18px_var(--accent)] hover:before:translate-x-[115%] active:translate-y-0 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] ${active ? "border-[var(--dashboard-sidebar-border)] bg-[var(--dashboard-sidebar-active)] text-[var(--accent)] shadow-[0_12px_30px_-18px_var(--accent)]" : "border-transparent text-[var(--dashboard-sidebar-muted)]"} ${isCollapsed ? "justify-center px-2" : "gap-3 px-2.5"}`}
-            >
-              {isCollapsed && active && (
-                <span className="absolute left-0 h-6 w-1 rounded-r-full bg-[var(--accent)]" aria-hidden="true" />
-              )}
-              <span className={`relative z-10 grid h-8 w-8 shrink-0 place-items-center rounded-xl border transition-[transform,background-color,border-color] duration-200 group-hover:scale-105 ${active ? "border-[var(--accent)]/30 bg-[var(--accent)] text-white" : "border-white/10 bg-white/[0.035] group-hover:border-[var(--accent)]/35"}`}>
-                <Icon size={17} strokeWidth={active ? 2.35 : 2} aria-hidden="true" />
-              </span>
-              <span className={isCollapsed ? "sr-only" : "relative z-10 flex-1"}>{label}</span>
-              {!isCollapsed && (
-                <ChevronRight size={15} aria-hidden="true" className={`relative z-10 transition-[transform,opacity] duration-200 ${active ? "translate-x-0 opacity-100" : "-translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-70"}`} />
-              )}
-              {isCollapsed && (
-                <span
-                  role="tooltip"
-                  className="pointer-events-none invisible absolute left-full z-50 ml-3 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold opacity-0 shadow-lg transition-opacity group-hover:visible group-hover:opacity-100 group-focus-visible:visible group-focus-visible:opacity-100"
-                  style={{
-                    background: "var(--dashboard-sidebar-text)",
-                    color: "var(--dashboard-sidebar)",
-                  }}
-                >
-                  {label}
+        <div className="space-y-1">
+          {navigationItems.map(({ href, label, icon: Icon, exact }) => {
+            const active = isActive(href, exact);
+            return (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setMobileOpen(false)}
+                aria-current={active ? "page" : undefined}
+                aria-label={isCollapsed ? label : undefined}
+                title={isCollapsed ? label : undefined}
+                className={`group relative flex h-11 items-center rounded-xl border text-sm font-semibold transition-[transform,background-color,border-color,color,box-shadow] duration-150 ease-out hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] hover:text-[var(--dashboard-sidebar-text)] active:scale-[0.985] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] ${active ? "border-[var(--dashboard-sidebar-border)] bg-[var(--dashboard-sidebar-active)] text-[var(--accent)] shadow-[inset_3px_0_0_var(--accent)]" : "border-transparent text-[var(--dashboard-sidebar-muted)]"} ${isCollapsed ? "justify-center px-2" : "gap-3 px-2.5"}`}
+              >
+                <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-lg border transition-[background-color,border-color,color] duration-150 motion-reduce:transition-none ${active ? "border-[var(--accent)]/35 bg-[var(--dashboard-sidebar-active)] text-[var(--accent)]" : "border-[var(--dashboard-sidebar-border)] bg-white/[0.025] group-hover:border-[var(--accent)]/35 group-hover:text-[var(--accent)]"}`}>
+                  <Icon size={17} strokeWidth={active ? 2.35 : 2} aria-hidden="true" />
                 </span>
-              )}
-            </Link>
-          );
-        })}
+                <span className={isCollapsed ? "sr-only" : "flex-1"}>{label}</span>
+                {!isCollapsed && (
+                  <ChevronRight size={15} aria-hidden="true" className={`transition-[transform,opacity] duration-150 motion-reduce:transition-none ${active ? "opacity-80" : "-translate-x-0.5 opacity-0 group-hover:translate-x-0 group-hover:opacity-60"}`} />
+                )}
+                {isCollapsed && (
+                  <span
+                    role="tooltip"
+                    className="pointer-events-none invisible absolute left-full z-50 ml-3 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold opacity-0 shadow-lg transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-focus-visible:visible group-focus-visible:opacity-100"
+                    style={{
+                      background: "var(--dashboard-sidebar-text)",
+                      color: "var(--dashboard-sidebar)",
+                    }}
+                  >
+                    {label}
+                  </span>
+                )}
+              </Link>
+            );
+          })}
 
         <a
           href="/legis"
           onClick={() => setMobileOpen(false)}
           aria-label={isCollapsed ? "PRO Legis" : undefined}
           title={isCollapsed ? "PRO Legis" : undefined}
-          className={`group relative isolate mt-1.5 flex h-12 items-center overflow-hidden rounded-2xl border border-transparent text-sm font-semibold text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color,color,box-shadow] duration-200 before:pointer-events-none before:absolute before:inset-0 before:-translate-x-[115%] before:bg-[linear-gradient(110deg,transparent,rgba(255,255,255,0.08),transparent)] before:transition-transform before:duration-500 hover:-translate-y-0.5 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] hover:text-[var(--dashboard-sidebar-text)] hover:shadow-[0_12px_28px_-18px_var(--accent)] hover:before:translate-x-[115%] active:translate-y-0 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] ${isCollapsed ? "justify-center px-2" : "gap-3 px-2.5"}`}
+          className={`group relative mt-1 flex h-11 items-center rounded-xl border border-transparent text-sm font-semibold text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color,color] duration-150 ease-out hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] hover:text-[var(--dashboard-sidebar-text)] active:scale-[0.985] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] ${isCollapsed ? "justify-center px-2" : "gap-3 px-2.5"}`}
         >
-          <span className="relative z-10 grid h-8 w-8 shrink-0 place-items-center rounded-xl border border-white/10 bg-white/[0.035] transition-[transform,background-color,border-color] duration-200 group-hover:scale-105 group-hover:border-[var(--action)]/45 group-hover:bg-[var(--action)]/10 group-hover:text-[var(--action)]">
+          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-[var(--dashboard-sidebar-border)] bg-white/[0.025] transition-[background-color,border-color,color] duration-150 group-hover:border-[var(--action)]/40 group-hover:bg-[var(--action)]/10 group-hover:text-[var(--action)] motion-reduce:transition-none">
             <Scale size={17} aria-hidden="true" />
           </span>
-          <span className={isCollapsed ? "sr-only" : "relative z-10 flex-1"}>PRO Legis</span>
-          {!isCollapsed && <ChevronRight size={15} aria-hidden="true" className="relative z-10 -translate-x-1 opacity-0 transition-[transform,opacity] duration-200 group-hover:translate-x-0 group-hover:opacity-70" />}
+          <span className={isCollapsed ? "sr-only" : "flex-1"}>PRO Legis</span>
+          {!isCollapsed && <ChevronRight size={15} aria-hidden="true" className="-translate-x-0.5 opacity-0 transition-[transform,opacity] duration-150 group-hover:translate-x-0 group-hover:opacity-60 motion-reduce:transition-none" />}
           {isCollapsed && (
             <span role="tooltip" className="pointer-events-none invisible absolute left-full z-50 ml-3 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold opacity-0 shadow-lg transition-opacity group-hover:visible group-hover:opacity-100 group-focus-visible:visible group-focus-visible:opacity-100" style={{ background: "var(--dashboard-sidebar-text)", color: "var(--dashboard-sidebar)" }}>
               PRO Legis
@@ -210,7 +206,7 @@ export function DashboardNavigation({
                 return (
                   <div
                     key={section.section_id}
-                    className={`group/section flex items-start gap-2 rounded-xl border px-2 py-2 transition-[transform,background-color,border-color] duration-200 hover:translate-x-0.5 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] ${isActive ? "border-[var(--dashboard-sidebar-border)] bg-[var(--dashboard-sidebar-active)]" : "border-transparent"}`}
+                    className={`group/section flex items-start gap-2 rounded-lg border px-2 py-2 transition-[background-color,border-color] duration-150 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] motion-reduce:transition-none ${isActive ? "border-[var(--dashboard-sidebar-border)] bg-[var(--dashboard-sidebar-active)]" : "border-transparent"}`}
                   >
                     <input
                       type="checkbox"
@@ -222,12 +218,7 @@ export function DashboardNavigation({
                     <button
                       type="button"
                       onClick={() => onSectionClick?.(section.section_id)}
-                      className="min-w-0 flex-1 cursor-pointer text-left text-xs leading-snug transition-colors group-hover/section:text-[var(--dashboard-sidebar-text)]"
-                      style={{
-                        color: isActive ? "var(--accent)" : "var(--dashboard-sidebar-muted)",
-                        textDecoration: isCompleted ? "line-through" : "none",
-                        fontWeight: isActive ? 700 : 400,
-                      }}
+                      className={`min-w-0 flex-1 cursor-pointer text-left text-xs leading-snug transition-colors duration-150 motion-reduce:transition-none ${isActive ? "font-bold text-[var(--accent)]" : "font-normal text-[var(--dashboard-sidebar-muted)] group-hover/section:text-[var(--dashboard-sidebar-text)]"} ${isCompleted ? "line-through" : ""}`}
                     >
                       {section.title}
                     </button>
@@ -253,13 +244,9 @@ export function DashboardNavigation({
             <Link
               href="/dashboard/assinatura"
               onClick={() => setMobileOpen(false)}
-              className={isCollapsed ? "group relative mb-2 grid h-10 w-10 place-items-center rounded-xl border border-[var(--dashboard-sidebar-border)] text-sm font-bold transition-[transform,border-color,box-shadow] duration-200 hover:-translate-y-0.5 hover:border-[var(--accent)] hover:shadow-[0_8px_24px_-14px_var(--accent)] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" : "group mb-2 block truncate rounded-xl border border-transparent px-2.5 py-2 text-left transition-[transform,background-color,border-color] duration-200 hover:-translate-y-0.5 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"}
+              className={isCollapsed ? "group relative mb-2 grid h-10 w-10 place-items-center rounded-xl border border-[var(--dashboard-sidebar-border)] bg-[var(--dashboard-sidebar-active)] text-sm font-bold text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color,color] duration-150 hover:border-[var(--accent)] hover:text-[var(--dashboard-sidebar-text)] active:scale-[0.96] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" : "group mb-2 block truncate rounded-xl border border-transparent px-2.5 py-2 text-left text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color] duration-150 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] active:scale-[0.985] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"}
               title={isCollapsed ? `Gerenciar assinatura (${accountName})` : "Gerenciar assinatura"}
               aria-label={isCollapsed ? `Gerenciar assinatura de ${accountName}` : undefined}
-              style={{
-                color: "var(--dashboard-sidebar-muted)",
-                background: isCollapsed ? "var(--dashboard-sidebar-active)" : "transparent",
-              }}
             >
               {isCollapsed ? accountName?.charAt(0).toUpperCase() : (
                 <>
@@ -288,7 +275,7 @@ export function DashboardNavigation({
               type="button"
               onClick={handleLogout}
               disabled={loggingOut}
-              className={`group relative flex cursor-pointer items-center rounded-xl border border-transparent text-sm font-semibold text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color,color] duration-200 hover:-translate-y-0.5 hover:border-red-500/20 hover:bg-red-500/10 hover:text-red-400 active:translate-y-0 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 disabled:cursor-wait disabled:opacity-60 ${isCollapsed ? "h-10 w-10 justify-center" : "w-full gap-3 px-3 py-2.5"}`}
+              className={`group relative flex cursor-pointer items-center rounded-xl border border-transparent text-sm font-semibold text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color,color] duration-150 hover:border-red-500/20 hover:bg-red-500/10 hover:text-red-400 active:scale-[0.985] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 disabled:cursor-wait disabled:opacity-60 ${isCollapsed ? "h-10 w-10 justify-center" : "w-full gap-3 px-3 py-2.5"}`}
               aria-label={isCollapsed ? "Sair da conta" : undefined}
               title={isCollapsed ? "Sair da conta" : undefined}
             >
@@ -317,7 +304,7 @@ export function DashboardNavigation({
     <>
       <aside
         id="dashboard-desktop-navigation"
-        className={`relative sticky top-0 hidden h-screen shrink-0 flex-col overflow-visible border-r shadow-[8px_0_32px_-28px_rgba(0,0,0,0.8)] transition-[width] duration-300 ease-out lg:flex ${collapsed ? "w-[4.5rem]" : "w-64"}`}
+        className={`relative sticky top-0 hidden h-screen shrink-0 flex-col overflow-visible border-r shadow-[6px_0_24px_-22px_rgba(0,0,0,0.75)] transition-[width] duration-200 ease-out motion-reduce:transition-none lg:flex ${collapsed ? "w-[4.5rem]" : "w-64"}`}
         style={{ background: "var(--dashboard-sidebar)", borderColor: "var(--dashboard-sidebar-border)" }}
       >
         {renderNavigationContent(collapsed)}
@@ -327,7 +314,7 @@ export function DashboardNavigation({
         <button
           type="button"
           onClick={() => setMobileOpen(true)}
-          className="fixed left-0 top-1/2 z-30 grid h-12 w-10 -translate-y-1/2 place-items-center rounded-r-xl border border-l-0 shadow-lg lg:hidden"
+          className="fixed left-0 top-1/2 z-30 grid h-12 w-10 -translate-y-1/2 touch-manipulation place-items-center rounded-r-xl border border-l-0 shadow-lg transition-[width,background-color,color] duration-150 hover:w-11 hover:text-[var(--accent)] active:w-10 motion-reduce:transition-none lg:hidden"
           style={{
             background: "var(--dashboard-sidebar)",
             borderColor: "var(--dashboard-sidebar-border)",
@@ -350,8 +337,7 @@ export function DashboardNavigation({
           <button
             type="button"
             onClick={() => setMobileOpen(true)}
-            className="grid h-11 w-11 place-items-center rounded-xl border transition-[transform,background-color,border-color] duration-200 hover:-translate-y-0.5 hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] active:translate-y-0 active:scale-95"
-            style={{ borderColor: "var(--border)", color: "var(--text-primary)" }}
+            className="grid h-11 w-11 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-primary)] transition-[transform,background-color,border-color] duration-150 hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] active:scale-[0.96] motion-reduce:transition-none"
             aria-label="Abrir navegação"
             aria-expanded={mobileOpen}
             aria-controls="dashboard-mobile-navigation"
@@ -372,7 +358,7 @@ export function DashboardNavigation({
 
       <aside
         id="dashboard-mobile-navigation"
-        className={`fixed inset-y-0 z-50 flex w-[min(86vw,320px)] flex-col transition-transform duration-300 lg:hidden ${
+        className={`fixed inset-y-0 z-50 flex w-[min(86vw,320px)] flex-col transition-transform duration-200 ease-out motion-reduce:transition-none lg:hidden ${
           mobileOverlay ? "left-0 border-r" : "right-0 border-l"
         } ${
           mobileOpen ? "translate-x-0" : mobileOverlay ? "-translate-x-full" : "translate-x-full"
@@ -384,7 +370,7 @@ export function DashboardNavigation({
         <button
           type="button"
           onClick={() => setMobileOpen(false)}
-          className="absolute right-3 top-3 z-10 grid h-10 w-10 place-items-center rounded-xl border border-transparent transition-[transform,background-color,border-color] duration-200 hover:rotate-3 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] active:scale-95"
+          className="absolute right-3 top-3 z-10 grid h-10 w-10 place-items-center rounded-xl border border-transparent transition-[transform,background-color,border-color] duration-150 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] active:scale-[0.96] motion-reduce:transition-none"
           style={{ color: "var(--dashboard-sidebar-muted)" }}
           aria-label="Fechar navegação"
         >

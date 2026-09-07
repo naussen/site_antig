@@ -5,10 +5,11 @@
 - adicionados 120 flashcards C/E dos anexos, distribuídos em 23 seções temáticas existentes;
 - incluído importador administrativo com prévia, backup integral e rollback automático para substituições futuras da disciplina.
 
-## Não publicado — navegação lateral modernizada
+## Não publicado — navegação lateral profissional e responsiva
 
-- refinados os estados ativo, hover, foco e clique do menu com profundidade, brilho sutil e microinterações;
-- modernizados os controles de aparência, conta e recolhimento sem alterar rotas ou comportamento responsivo.
+- unificados os estados ativo, hover, foco e clique com transições curtas e previsíveis em desktop e touch;
+- removidos efeitos excessivos que causavam saltos visuais e corte dos tooltips no menu recolhido;
+- refinados os controles de aparência, conta e recolhimento sem alterar rotas ou comportamento responsivo.
 
 ## Não publicado — transparência do logo institucional
 
