@@ -22,6 +22,7 @@ import {
 import { buildAccountingFlashcards, classifyAccountingFlashcard } from "../src/lib/content/accounting-flashcard-import.mjs";
 import { buildAuditFlashcards, classifyAuditFlashcard } from "../src/lib/content/audit-flashcard-import.mjs";
 import { buildPublicAdministrationFlashcards, classifyPublicAdministrationFlashcard } from "../src/lib/content/public-administration-flashcard-import.mjs";
+import { buildGeneralAdministrationFlashcards, classifyGeneralAdministrationFlashcard } from "../src/lib/content/general-administration-flashcard-import.mjs";
 
 function validPayload() {
   return {
@@ -214,6 +215,18 @@ test("classifica flashcards de Administração Pública nas seções temáticas"
   assert.equal(classifyPublicAdministrationFlashcard({ question: "O incrementalismo prevê mudanças graduais.", answer: "Certo." }), "politicas-publicas-sec-02");
   assert.equal(classifyPublicAdministrationFlashcard({ question: "A estrutura matricial combina estruturas funcional e por projetos.", answer: "Certo." }), "processo-de-organizacao-sec-01");
   assert.equal(buildPublicAdministrationFlashcards([{ fileName: "anexo.csv", content: '"A governabilidade depende de apoio político.","Gabarito: CERTO. Justificativa: Há apoio político."\\n' }]).length, 1);
+});
+
+test("classifica flashcards de Administração Geral nas seções temáticas", () => {
+  assert.equal(classifyGeneralAdministrationFlashcard({ question: "A Teoria Científica de Taylor adota o Homo Economicus.", answer: "Certo." }), "teorias-da-administracao-e-das-organizacoes-sec-02");
+  assert.equal(classifyGeneralAdministrationFlashcard({ question: "A Teoria Burocrática de Weber valoriza a formalização.", answer: "Certo." }), "teorias-da-administracao-e-das-organizacoes-sec-02");
+  assert.equal(classifyGeneralAdministrationFlashcard({ question: "A Matriz SWOT avalia ambientes interno e externo.", answer: "Certo." }), "planejamento-sec-05");
+  assert.equal(classifyGeneralAdministrationFlashcard({ question: "A estrutura matricial rompe a unidade de comando.", answer: "Certo." }), "organizacao-sec-02");
+  assert.equal(classifyGeneralAdministrationFlashcard({ question: "A teoria de Herzberg distingue fatores higiênicos e motivacionais.", answer: "Certo." }), "direcao-sec-03");
+  assert.equal(classifyGeneralAdministrationFlashcard({ question: "O feedback reduz ruídos no processo de comunicação.", answer: "Certo." }), "comunicacao-sec-01");
+  assert.equal(classifyGeneralAdministrationFlashcard({ question: "O Fast Tracking busca reduzir o prazo do projeto.", answer: "Certo." }), "gestao-de-projetos-sec-05");
+  assert.equal(classifyGeneralAdministrationFlashcard({ question: "O Diagrama de Ishikawa identifica causas de problemas.", answer: "Certo." }), "gestao-da-qualidade-sec-04");
+  assert.equal(buildGeneralAdministrationFlashcards([{ fileName: "anexo.csv", content: '"A Matriz GUT prioriza problemas.","Gabarito: CERTO. Justificativa: Usa gravidade, urgência e tendência."\\n' }]).length, 1);
 });
 
 test("rejeita topic_id com palavras fragmentadas por hífens", () => {
