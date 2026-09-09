@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — contraste da marca e acesso mobile na landing
+
+- aplicada uma superfície clara à marca PRO Concursos para preservar a legibilidade sobre o fundo escuro;
+- mantido o botão Entrar visível no cabeçalho mobile, com espaçamento responsivo para telas a partir de 320 px.
+
 ## Não publicado — substituição dos flashcards de Administração Geral
 
 - adicionados 120 flashcards C/E dos anexos, distribuídos em 34 seções temáticas existentes;

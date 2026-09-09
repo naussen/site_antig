@@ -25,7 +25,7 @@ function BrandLogo({ className = "" }: { className?: string }) {
       alt="PRO Concursos"
       width={250}
       height={100}
-      className={`h-auto w-[170px] sm:w-[210px] ${className}`}
+      className={`h-auto w-[112px] rounded-xl bg-white/95 p-1.5 shadow-sm ring-1 ring-white/15 min-[360px]:w-[124px] sm:w-[210px] sm:p-2 ${className}`}
       priority
     />
   );
@@ -201,10 +201,10 @@ const toolPreviews = [
 export function LandingPageContent() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#181820] text-white">
-      <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#181820]/90 px-5 py-3 backdrop-blur-xl sm:px-8 lg:px-12">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4">
+      <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#181820]/90 px-3 py-3 backdrop-blur-xl sm:px-8 lg:px-12">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 sm:gap-4">
           <Link href="https://proconcursos.com.br/" aria-label="PRO Concursos — página inicial"><BrandLogo /></Link>
-          <div className="flex items-center gap-2 sm:gap-3"><Link href="/login" className="hidden rounded-xl px-4 py-2.5 text-sm font-semibold text-white/75 transition hover:bg-white/5 hover:text-white sm:block">Entrar</Link><Link href="/login" className="rounded-xl bg-[#f9a826] px-4 py-2.5 text-xs font-extrabold text-[#121212] shadow-lg shadow-[#f9a826]/15 transition hover:-translate-y-0.5 hover:bg-[#ffc15c] sm:px-5 sm:text-sm">Assinar agora</Link></div>
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-3"><Link href="/login" className="rounded-xl px-2 py-2.5 text-xs font-semibold text-white/80 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-4 sm:text-sm">Entrar</Link><Link href="/login" className="rounded-xl bg-[#f9a826] px-3 py-2.5 text-xs font-extrabold text-[#121212] shadow-lg shadow-[#f9a826]/15 transition hover:-translate-y-0.5 hover:bg-[#ffc15c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-5 sm:text-sm">Assinar agora</Link></div>
         </div>
       </nav>
 
