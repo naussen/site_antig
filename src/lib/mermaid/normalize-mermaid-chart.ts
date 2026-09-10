@@ -1,4 +1,5 @@
 import { repairMermaidTransportNoise } from "./repair-transport-noise.mjs";
+import { stripMermaidTransitionLabels } from "./strip-transition-labels.mjs";
 
 /** Corrige somente artefatos comuns de transporte, sem reescrever a estrutura. */
 export function normalizeMermaidChart(chart: string) {
@@ -12,7 +13,7 @@ export function normalizeMermaidChart(chart: string) {
     "]\n",
   );
 
-  return separatedStatements
+  return stripMermaidTransitionLabels(separatedStatements)
     .split(/\r?\n/)
     .map((line) => {
       const quotedUnsafeNodeLabels = line.replace(

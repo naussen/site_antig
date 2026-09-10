@@ -1,5 +1,9 @@
 # Changelog
 
+## Não publicado — rótulos dos mapas mentais
+
+- removidos da exibição dos mapas mentais os rótulos redundantes “inicia em” e “prossegue para”, sem alterar o conteúdo armazenado.
+
 ## Não publicado — página inicial personalizada
 
 - adicionada preferência por usuário para abrir o PRO Resumos, o PRO Legis ou uma disciplina específica após o login;
