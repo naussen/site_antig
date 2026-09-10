@@ -1,14 +1,15 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { isMissingTableError } from "@/lib/supabase/errors";
+import { isMissingColumnError, isMissingTableError } from "@/lib/supabase/errors";
 import { requireContentAccess } from "@/lib/content-access";
+import { parseStartPageSelection } from "@/lib/user-start-page.mjs";
 
 export type SaveDashboardPreferencesState = {
   status: "idle" | "success";
 };
 
-export async function saveDashboardDisciplines(
+export async function saveDashboardPreferences(
   _previousState: SaveDashboardPreferencesState,
   formData: FormData,
 ): Promise<SaveDashboardPreferencesState> {
@@ -39,19 +40,29 @@ export async function saveDashboardDisciplines(
   const showAll =
     selectedDisciplines.length === 0 ||
     selectedDisciplines.length === availableDisciplines.length;
+  const { startModule, startDiscipline } = parseStartPageSelection(
+    formData.get("startPage"),
+    availableDisciplines,
+  );
 
   const { error } = await supabase.from("user_dashboard_preferences").upsert(
     {
       user_id: user.id,
       visible_disciplines: showAll ? null : selectedDisciplines,
+      start_module: startModule,
+      start_discipline: startDiscipline,
     },
     { onConflict: "user_id" }
   );
 
   if (error) {
-    if (isMissingTableError(error, "user_dashboard_preferences")) {
+    if (
+      isMissingTableError(error, "user_dashboard_preferences")
+      || isMissingColumnError(error, "start_module")
+      || isMissingColumnError(error, "start_discipline")
+    ) {
       throw new Error(
-        "A configuração de matérias ainda não está disponível. Aplique a migration 005 no Supabase."
+        "As configurações ainda não estão disponíveis. Aplique as migrations pendentes no Supabase."
       );
     }
 

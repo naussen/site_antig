@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState, useEffect } from "react";
-import { saveDashboardDisciplines } from "@/app/actions/dashboard-preferences";
+import { saveDashboardPreferences } from "@/app/actions/dashboard-preferences";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
 const INITIAL_STATE = { status: "idle" } as const;
@@ -12,7 +12,7 @@ type PreferencesFormProps = {
 
 export function PreferencesForm({ children }: PreferencesFormProps) {
   const [state, formAction] = useActionState(
-    saveDashboardDisciplines,
+    saveDashboardPreferences,
     INITIAL_STATE,
   );
 

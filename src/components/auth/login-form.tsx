@@ -4,6 +4,7 @@ import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import { resolveReturnUrl } from "@/lib/return-paths.mjs";
+import { resolveUserStartPath } from "@/lib/user-start-page.mjs";
 import { Loader2, Mail } from "lucide-react";
 
 type SuccessMode = "magic-link" | "sign-up" | null;
@@ -25,7 +26,7 @@ function getPasswordValidationMessage(password: string) {
   return null;
 }
 
-export function LoginForm({ returnTo }: { returnTo: string }) {
+export function LoginForm({ returnTo }: { returnTo: string | null }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -35,12 +36,25 @@ export function LoginForm({ returnTo }: { returnTo: string }) {
 
   const callbackUrl = () => {
     const callback = new URL(withSiteBasePath("/auth/callback"), window.location.origin);
-    callback.searchParams.set("next", returnTo);
+    if (returnTo) callback.searchParams.set("next", returnTo);
     return callback.toString();
   };
 
-  const completeLogin = () => {
-    window.location.assign(resolveReturnUrl(returnTo, window.location.href).toString());
+  const completeLogin = async (userId: string | undefined) => {
+    let destination = returnTo;
+
+    if (!destination && userId) {
+      const { data } = await supabase
+        .from("user_dashboard_preferences")
+        .select("start_module, start_discipline")
+        .eq("user_id", userId)
+        .maybeSingle();
+      destination = resolveUserStartPath(data);
+    }
+
+    window.location.assign(
+      resolveReturnUrl(destination ?? resolveUserStartPath(null), window.location.href).toString()
+    );
   };
 
   const handleGoogleLogin = async () => {
@@ -81,18 +95,18 @@ export function LoginForm({ returnTo }: { returnTo: string }) {
         if (error) throw error;
 
         if (data.session) {
-          completeLogin();
+          await completeLogin(data.user?.id);
         } else {
           setSuccessMode("sign-up");
         }
       } else if (password) {
-        const { error } = await supabase.auth.signInWithPassword({
+        const { data, error } = await supabase.auth.signInWithPassword({
           email,
           password,
         });
 
         if (error) throw error;
-        completeLogin();
+        await completeLogin(data.user.id);
       } else {
         const { error } = await supabase.auth.signInWithOtp({
           email,

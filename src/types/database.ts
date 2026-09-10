@@ -112,6 +112,8 @@ export interface UserNote {
 export interface UserDashboardPreferences {
   user_id: string;
   visible_disciplines: string[] | null;
+  start_module: 'resumos' | 'legis';
+  start_discipline: string | null;
   updated_at: string;
 }
 

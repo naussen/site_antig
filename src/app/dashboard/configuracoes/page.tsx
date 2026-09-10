@@ -1,9 +1,14 @@
 import Link from "next/link";
-import { AlertTriangle, ArrowLeft, Check, Settings2, SlidersHorizontal } from "lucide-react";
+import { AlertTriangle, ArrowLeft, BookOpen, Check, Scale, Settings2, SlidersHorizontal } from "lucide-react";
 import { PreferencesForm } from "./preferences-form";
 import { SavePreferencesButton } from "./save-preferences-button";
-import { formatSupabaseError, isMissingTableError } from "@/lib/supabase/errors";
+import { formatSupabaseError, isMissingColumnError, isMissingTableError } from "@/lib/supabase/errors";
 import { requireContentAccess } from "@/lib/content-access";
+import {
+  START_PAGE_DISCIPLINE_PREFIX,
+  START_PAGE_LEGIS,
+  START_PAGE_RESUMOS,
+} from "@/lib/user-start-page.mjs";
 
 export default async function DashboardSettingsPage() {
   const { supabase, user } = await requireContentAccess();
@@ -15,7 +20,7 @@ export default async function DashboardSettingsPage() {
     supabase.from("topics").select("discipline"),
     supabase
       .from("user_dashboard_preferences")
-      .select("visible_disciplines")
+      .select("visible_disciplines, start_module, start_discipline")
       .eq("user_id", user.id)
       .maybeSingle(),
   ]);
@@ -27,7 +32,9 @@ export default async function DashboardSettingsPage() {
   const preferencesAvailable = !isMissingTableError(
     preferencesError,
     "user_dashboard_preferences"
-  );
+  )
+    && !isMissingColumnError(preferencesError, "start_module")
+    && !isMissingColumnError(preferencesError, "start_discipline");
 
   if (preferencesError && preferencesAvailable) {
     throw new Error(
@@ -40,6 +47,11 @@ export default async function DashboardSettingsPage() {
   ).sort((a, b) => a.localeCompare(b, "pt-BR"));
   const selectedDisciplines = preferences?.visible_disciplines as string[] | null | undefined;
   const showAll = !selectedDisciplines || selectedDisciplines.length === 0;
+  const selectedStartPage = preferences?.start_module === START_PAGE_LEGIS
+    ? START_PAGE_LEGIS
+    : preferences?.start_discipline
+      ? `${START_PAGE_DISCIPLINE_PREFIX}${preferences.start_discipline}`
+      : START_PAGE_RESUMOS;
 
   return (
     <main className="min-h-screen px-4 py-6 sm:px-6 md:px-10 md:py-10" style={{ background: "var(--bg-primary)" }}>
@@ -60,13 +72,13 @@ export default async function DashboardSettingsPage() {
               <Settings2 size={24} />
             </span>
             <p className="mt-6 text-xs font-black uppercase tracking-[0.16em] text-white/75">
-              Configuração da biblioteca
+              Configurações do usuário
             </p>
             <h1 className="mt-2 text-3xl font-black tracking-tight text-white">
-              Matérias no Dashboard
+              Preferências de estudo
             </h1>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-white/75">
-              Escolha as disciplinas que deseja encontrar ao entrar. A seleção fica salva na sua conta e pode ser alterada a qualquer momento.
+              Defina sua página inicial e as disciplinas exibidas no PRO Resumos. As escolhas ficam salvas na sua conta.
             </p>
           </div>
         </header>
@@ -80,11 +92,49 @@ export default async function DashboardSettingsPage() {
             >
               <AlertTriangle className="mt-0.5 shrink-0" size={19} style={{ color: "var(--accent)" }} />
               <p>
-                A seleção ainda não pode ser salva neste ambiente. Aplique a migration
-                <strong style={{ color: "var(--text-primary)" }}> 005_create_user_dashboard_preferences.sql</strong> no Supabase e recarregue esta página.
+                As preferências ainda não podem ser salvas neste ambiente. Aplique as migrations
+                <strong style={{ color: "var(--text-primary)" }}> 005 e 020</strong> no Supabase e recarregue esta página.
               </p>
             </div>
           )}
+          <fieldset className="mb-7 border-b border-[var(--border)] pb-7">
+            <legend className="mb-2 font-bold text-[var(--text-primary)]">
+              Página inicial após o login
+            </legend>
+            <p className="mb-4 text-xs leading-5 text-[var(--text-muted)]">
+              Links diretos continuam abrindo o destino solicitado, independentemente desta escolha.
+            </p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {[
+                { value: START_PAGE_RESUMOS, label: "PRO Resumos", detail: "Visão geral das matérias", icon: BookOpen },
+                { value: START_PAGE_LEGIS, label: "PRO Legis", detail: "Consulta à legislação", icon: Scale },
+                ...disciplines.map((discipline) => ({
+                  value: `${START_PAGE_DISCIPLINE_PREFIX}${discipline}`,
+                  label: discipline,
+                  detail: "Disciplina no PRO Resumos",
+                  icon: BookOpen,
+                })),
+              ].map(({ value, label, detail, icon: Icon }) => (
+                <label
+                  key={value}
+                  className="flex cursor-pointer items-center gap-3 rounded-2xl border border-[var(--border)] bg-[var(--bg-secondary)] p-4 transition-colors hover:border-[var(--accent)]"
+                >
+                  <input
+                    type="radio"
+                    name="startPage"
+                    value={value}
+                    defaultChecked={selectedStartPage === value}
+                    className="h-4 w-4 shrink-0 accent-[var(--accent)]"
+                  />
+                  <Icon size={18} className="shrink-0 text-[var(--accent)]" aria-hidden="true" />
+                  <span className="min-w-0">
+                    <strong className="block truncate text-sm text-[var(--text-primary)]">{label}</strong>
+                    <span className="block text-xs text-[var(--text-muted)]">{detail}</span>
+                  </span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
           <div className="mb-5 flex items-start gap-3 border-b pb-5" style={{ borderColor: "var(--border)" }}>
             <SlidersHorizontal size={20} className="mt-0.5 shrink-0" style={{ color: "var(--accent)" }} />
             <div>

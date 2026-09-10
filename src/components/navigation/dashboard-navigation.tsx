@@ -6,7 +6,6 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
   BookOpen,
-  GraduationCap,
   Loader2,
   LogOut,
   Menu,
@@ -15,6 +14,7 @@ import {
   ChevronRight,
   StickyNote,
   Scale,
+  Settings2,
   X,
 } from "lucide-react";
 import { ProLogo } from "@/components/brand/pro-logo";
@@ -57,8 +57,8 @@ const navigationItems = [
   { href: "/dashboard/notas", label: "Notas", icon: StickyNote },
   {
     href: "/dashboard/configuracoes",
-    label: "Matérias",
-    icon: GraduationCap,
+    label: "Configurações",
+    icon: Settings2,
   },
 ];
 

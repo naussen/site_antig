@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — página inicial personalizada
+
+- adicionada preferência por usuário para abrir o PRO Resumos, o PRO Legis ou uma disciplina específica após o login;
+- preservados destinos explícitos de links de autenticação e validada a preferência antes do redirecionamento;
+
 ## Não publicado — contraste da marca e acesso mobile na landing
 
 - aplicada uma superfície clara à marca PRO Concursos para preservar a legibilidade sobre o fundo escuro;
