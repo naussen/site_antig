@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — plano de conversão e identidade dos módulos
+
+- versionado o plano priorizado de melhorias de UI/UX, design e conversão, com checklist e progresso por frente;
+- padronizada a navegação dos logos nos cabeçalhos do PRO Resumos e registrado o bloqueio do ativo corporativo opaco.
+
 ## Não publicado — rótulos dos mapas mentais
 
 - removidos da exibição dos mapas mentais os rótulos redundantes “inicia em” e “prossegue para”, sem alterar o conteúdo armazenado.

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
 interface ProLogoProps {
@@ -62,5 +63,27 @@ export function ProLogo({
         draggable={false}
       />
     </span>
+  );
+}
+
+type ProLogoLinkProps = ProLogoProps & {
+  href?: string;
+  label?: string;
+};
+
+/** Identidade navegável e consistente do módulo PRO Resumos. */
+export function ProLogoLink({
+  href = "/dashboard",
+  label = "Ir para o início do PRO Resumos",
+  ...logoProps
+}: ProLogoLinkProps) {
+  return (
+    <Link
+      href={href}
+      aria-label={label}
+      className="inline-flex rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+    >
+      <ProLogo {...logoProps} />
+    </Link>
   );
 }

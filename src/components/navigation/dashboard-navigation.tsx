@@ -17,7 +17,7 @@ import {
   Settings2,
   X,
 } from "lucide-react";
-import { ProLogo } from "@/components/brand/pro-logo";
+import { ProLogoLink } from "@/components/brand/pro-logo";
 import { createClient } from "@/lib/supabase/client";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import type { SectionRow } from "@/types/database";
@@ -106,7 +106,7 @@ export function DashboardNavigation({
   const renderNavigationContent = (isCollapsed: boolean) => (
     <>
       <div className={`flex shrink-0 items-center border-b py-5 ${isCollapsed ? "justify-center px-3" : "gap-3 px-5"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
-        <ProLogo
+        <ProLogoLink
           size={isCollapsed ? 38 : 40}
           variant={isCollapsed ? "icon" : "full"}
           tone="dark"
@@ -331,9 +331,7 @@ export function DashboardNavigation({
           className="sticky top-0 z-30 flex items-center justify-between border-b px-4 py-3 lg:hidden"
           style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
         >
-          <Link href="/dashboard" className="flex items-center gap-2 font-bold" style={{ color: "var(--text-primary)" }}>
-            <ProLogo size={32} variant="full" />
-          </Link>
+          <ProLogoLink size={32} variant="full" />
           <button
             type="button"
             onClick={() => setMobileOpen(true)}

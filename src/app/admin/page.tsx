@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { ShieldCheck } from "lucide-react";
 import { redirect } from "next/navigation";
 import { AdminLoginForm } from "@/components/auth/admin-login-form";
+import { ProLogoLink } from "@/components/brand/pro-logo";
 import { createClient } from "@/lib/supabase/server";
 
 export const metadata = {
@@ -26,13 +25,13 @@ export default async function AdminLoginPage() {
     <main className="flex min-h-screen flex-col items-center justify-center bg-[var(--bg-primary)] p-6">
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
-          <Link
+          <ProLogoLink
             href="/"
-            aria-label="Voltar para o início"
-            className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--accent-soft)] text-[var(--accent)]"
-          >
-            <ShieldCheck size={24} />
-          </Link>
+            label="Voltar para a página inicial"
+            size={44}
+            variant="full"
+            className="mb-4"
+          />
           <h1 className="mb-2 text-2xl font-bold text-[var(--text-primary)]">
             Acesso administrativo
           </h1>

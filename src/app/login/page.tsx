@@ -1,6 +1,5 @@
 import { LoginForm } from "@/components/auth/login-form";
-import { ProLogo } from "@/components/brand/pro-logo";
-import Link from "next/link";
+import { ProLogoLink } from "@/components/brand/pro-logo";
 import { isAllowedReturnPath } from "@/lib/return-paths.mjs";
 
 export default async function LoginPage({ searchParams }: { searchParams: Promise<{ next?: string | string[] }> }) {
@@ -17,12 +16,13 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
     >
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <Link
+          <ProLogoLink
             href="/"
-            className="inline-flex items-center justify-center mb-4"
-          >
-            <ProLogo size={44} variant="full" />
-          </Link>
+            label="Voltar para a página inicial"
+            size={44}
+            variant="full"
+            className="mb-4"
+          />
           <h1
             className="text-2xl font-bold mb-2"
             style={{ color: "var(--text-primary)" }}
