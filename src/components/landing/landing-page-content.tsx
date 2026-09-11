@@ -33,15 +33,119 @@ function BrandLogo({ className = "" }: { className?: string }) {
 
 function WindowFrame({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#181820] shadow-2xl shadow-black/25">
-      <div className="flex items-center gap-2 border-b border-white/10 px-5 py-3">
+    <div className="min-w-0 overflow-hidden rounded-3xl border border-white/10 bg-[#181820] shadow-2xl shadow-black/25">
+      <div className="flex min-w-0 items-center gap-2 border-b border-white/10 px-5 py-3">
         <span className="h-2.5 w-2.5 rounded-full bg-[#ff6b6b]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#f9a826]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#4ade80]" />
-        <span className="ml-2 truncate text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">{label}</span>
+        <span className="ml-2 min-w-0 truncate text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">{label}</span>
       </div>
       {children}
     </div>
+  );
+}
+
+function HeroProductPreview() {
+  return (
+    <figure
+      className="relative mx-auto min-w-0 w-full max-w-[680px] lg:mx-0"
+      aria-label="Prévia do ambiente de estudos do PRO Concursos"
+    >
+      <div
+        className="pointer-events-none absolute inset-x-10 -inset-y-8 rounded-full bg-[#7c3aed]/25 blur-3xl"
+        aria-hidden="true"
+      />
+      <div className="relative lg:rotate-[1deg]">
+        <WindowFrame label="PRO Resumos · ambiente de estudos">
+          <div className="grid min-h-[360px] grid-cols-[76px_minmax(0,1fr)] bg-[#f4f5f7] sm:grid-cols-[150px_minmax(0,1fr)]">
+            <aside className="border-r border-white/10 bg-[#14141b] px-2 py-4 sm:p-4">
+              <div className="mb-5 flex items-center justify-center gap-2 text-xs font-extrabold text-white sm:justify-start">
+                <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-gradient-to-br from-[#7c3aed] to-[#a78bfa]">
+                  <BookOpen size={15} aria-hidden="true" />
+                </span>
+                <span className="hidden sm:inline">PRO Resumos</span>
+              </div>
+              <div className="rounded-lg bg-[#a78bfa]/15 px-2 py-2 text-[9px] font-bold text-[#c4b5fd] sm:text-[10px]">
+                Constitucional
+              </div>
+              {[
+                "Administrativo",
+                "Tributário",
+                "Português",
+              ].map((discipline) => (
+                <div
+                  key={discipline}
+                  className="mt-2 hidden rounded-lg px-2 py-2 text-[10px] font-semibold text-white/40 sm:block"
+                >
+                  {discipline}
+                </div>
+              ))}
+            </aside>
+
+            <div className="min-w-0 p-3 sm:p-5">
+              <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
+                <div>
+                  <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-[#6c5ce7]">
+                    Direito Constitucional
+                  </p>
+                  <h2 className="mt-1 text-base font-extrabold text-[#1a1a2e] sm:text-xl">
+                    Poder Constituinte
+                  </h2>
+                </div>
+                <span className="rounded-full bg-[#6c5ce7]/10 px-2.5 py-1 text-[9px] font-bold text-[#6c5ce7]">
+                  68% concluído
+                </span>
+              </div>
+
+              <div className="rounded-xl border border-[#e5e5ef] bg-white p-3 shadow-sm sm:p-4">
+                <div className="flex items-center justify-between gap-3">
+                  <p className="text-[10px] font-bold text-[#6c5ce7]">
+                    Conceito e titularidade
+                  </p>
+                  <CheckCircle2 size={15} className="text-[#22c55e]" aria-hidden="true" />
+                </div>
+                <div className="mt-3 space-y-2" aria-hidden="true">
+                  <span className="block h-2 w-full rounded-full bg-[#e8e8f0]" />
+                  <span className="block h-2 w-11/12 rounded-full bg-[#e8e8f0]" />
+                  <span className="block h-2 w-4/5 rounded-full bg-[#e8e8f0]" />
+                </div>
+                <div className="mt-4 rounded-lg border-l-4 border-[#f9a826] bg-[#fff7e7] p-2.5 text-[9px] leading-4 text-[#69480c] sm:text-[10px]">
+                  <strong>Ponto de prova:</strong> titularidade e exercício não se confundem.
+                </div>
+              </div>
+
+              <div className="mt-3 grid grid-cols-2 gap-2">
+                <div className="rounded-xl border border-[#e5e5ef] bg-white p-3">
+                  <p className="text-[9px] font-bold uppercase tracking-wide text-[#9898aa]">Progresso</p>
+                  <p className="mt-1 text-sm font-black text-[#1a1a2e]">6 de 9</p>
+                </div>
+                <div className="rounded-xl border border-[#e5e5ef] bg-white p-3">
+                  <p className="text-[9px] font-bold uppercase tracking-wide text-[#9898aa]">Anotações</p>
+                  <p className="mt-1 text-sm font-black text-[#1a1a2e]">Salvas</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </WindowFrame>
+
+        <div className="absolute -bottom-6 -right-2 hidden w-48 -rotate-3 rounded-2xl border border-white/15 bg-gradient-to-br from-[#7c3aed] to-[#5b21b6] p-4 shadow-2xl sm:block lg:-right-5">
+          <p className="text-[9px] font-bold uppercase tracking-[0.16em] text-white/60">Flashcard C/E</p>
+          <p className="mt-3 text-xs font-bold leading-5 text-white">Titularidade e exercício são conceitos equivalentes.</p>
+          <div className="mt-3 flex gap-2 text-[9px] font-bold">
+            <span className="rounded-md bg-[#f9a826] px-2.5 py-1.5 text-[#121212]">Errado</span>
+            <span className="rounded-md bg-white/10 px-2.5 py-1.5 text-white">Certo</span>
+          </div>
+        </div>
+
+        <div className="absolute -left-3 -top-4 hidden items-center gap-2 rounded-xl border border-[#cbbf9e] bg-[#fffaf0] px-3 py-2 text-[10px] font-bold text-[#6d510e] shadow-xl sm:flex lg:-left-6">
+          <Gavel size={14} aria-hidden="true" />
+          PRO Legis integrado
+        </div>
+      </div>
+      <figcaption className="sr-only">
+        Exemplo ilustrativo do resumo, progresso, anotações, flashcards e integração com legislação.
+      </figcaption>
+    </figure>
   );
 }
 
@@ -208,15 +312,23 @@ export function LandingPageContent() {
         </div>
       </nav>
 
-      <header className="relative px-6 pb-16 pt-16 text-center sm:pb-20 sm:pt-20 md:pb-24 md:pt-24">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_50%_0%,rgba(108,92,231,0.32),transparent_70%)]" />
+      <header className="relative px-5 pb-20 pt-12 sm:px-8 sm:pb-24 sm:pt-16 lg:px-12 lg:py-20">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_35%_0%,rgba(108,92,231,0.32),transparent_70%)]" />
         <div className="pointer-events-none absolute -left-32 top-32 h-80 w-80 rounded-full bg-[#7c3aed]/15 blur-3xl" /><div className="pointer-events-none absolute -right-32 top-16 h-80 w-80 rounded-full bg-[#f9a826]/10 blur-3xl" />
-        <div className="relative mx-auto max-w-5xl">
-          <span className="mb-8 inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/35 bg-[#a78bfa]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#c4b5fd]"><Sparkles size={13} /> Oferta especial de lançamento</span>
-          <h1 className="text-balance text-4xl font-black leading-[1.02] tracking-[-0.04em] text-white sm:text-5xl md:text-6xl lg:text-7xl">Resumos jurídicos e legislação oficial <span className="bg-gradient-to-r from-[#a78bfa] to-[#f9a826] bg-clip-text text-transparent">no mesmo ambiente.</span></h1>
-          <p className="mx-auto mt-7 max-w-2xl text-pretty text-lg leading-8 text-[#b4b1c3] md:text-xl">Estude com conteúdo estruturado, texto legal versionado, flashcards, anotações e ferramentas de leitura em uma única assinatura mensal.</p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"><Link href="/login" className="inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-[#f9a826] px-8 py-4 text-base font-extrabold text-[#121212] shadow-2xl shadow-[#f9a826]/20 transition hover:-translate-y-1 hover:bg-[#ffc15c] sm:w-auto">Assinar com oferta de lançamento <ArrowRight size={19} /></Link><a href="#modulos" className="inline-flex w-full items-center justify-center rounded-2xl border border-white/15 px-8 py-4 text-sm font-bold text-white/80 transition hover:border-[#a78bfa]/60 hover:bg-white/5 hover:text-white sm:w-auto">Conhecer a plataforma</a></div>
-          <p className="mt-5 text-xs text-white/60">Acesso ao conteúdo mediante assinatura mensal.</p>
+        <div className="relative mx-auto grid min-w-0 max-w-7xl items-center gap-14 lg:grid-cols-[minmax(0,0.88fr)_minmax(520px,1.12fr)] lg:gap-10 xl:gap-16">
+          <div className="min-w-0 text-center lg:text-left">
+            <span className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/35 bg-[#a78bfa]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#c4b5fd]"><Sparkles size={13} /> Oferta especial de lançamento</span>
+            <h1 className="text-balance text-4xl font-black leading-[1.02] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">Resumos jurídicos e legislação oficial <span className="bg-gradient-to-r from-[#a78bfa] to-[#f9a826] bg-clip-text text-transparent">no mesmo ambiente.</span></h1>
+            <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-7 text-[#b4b1c3] sm:text-lg sm:leading-8 lg:mx-0">Estude com conteúdo estruturado, texto legal versionado, flashcards, anotações e ferramentas de leitura em uma única assinatura mensal.</p>
+            <ul className="mx-auto mt-6 grid max-w-xl gap-2 text-left text-sm text-white/80 sm:grid-cols-3 lg:mx-0 lg:grid-cols-1 xl:grid-cols-3" aria-label="Principais benefícios">
+              {["Conteúdo organizado", "Lei seca integrada", "Progresso salvo"].map((benefit) => (
+                <li key={benefit} className="flex items-center gap-2"><CheckCircle2 size={16} className="shrink-0 text-[#f9a826]" aria-hidden="true" />{benefit}</li>
+              ))}
+            </ul>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"><Link href="/login" className="inline-flex w-full min-w-0 items-center justify-center gap-2 rounded-2xl bg-[#f9a826] px-5 py-4 text-center text-sm font-extrabold text-[#121212] shadow-2xl shadow-[#f9a826]/20 transition hover:-translate-y-1 hover:bg-[#ffc15c] sm:w-auto sm:px-7 sm:text-base">Assinar com oferta de lançamento <ArrowRight size={19} className="shrink-0" /></Link><a href="#modulos" className="inline-flex w-full min-w-0 items-center justify-center rounded-2xl border border-white/15 px-5 py-4 text-center text-sm font-bold text-white/80 transition hover:border-[#a78bfa]/60 hover:bg-white/5 hover:text-white sm:w-auto sm:px-7">Conhecer a plataforma</a></div>
+            <p className="mt-5 text-xs text-white/60">Acesso ao conteúdo mediante assinatura mensal.</p>
+          </div>
+          <HeroProductPreview />
         </div>
       </header>
 

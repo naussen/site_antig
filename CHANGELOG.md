@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — produto visível na primeira dobra
+
+- reorganizado o hero da landing em duas colunas no desktop, preservando leitura e empilhamento no mobile;
+- adicionada prévia responsiva de resumos, progresso, anotações, flashcards e integração com o PRO Legis sem recurso externo;
+- incluídos benefícios objetivos próximos aos CTAs e atualizado o progresso do plano de conversão.
+
 ## Não publicado — plano de conversão e identidade dos módulos
 
 - versionado o plano priorizado de melhorias de UI/UX, design e conversão, com checklist e progresso por frente;

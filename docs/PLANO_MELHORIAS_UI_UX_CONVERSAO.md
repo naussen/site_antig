@@ -16,13 +16,13 @@ Atualizado em: 10 de setembro de 2026.
 |---|---|---:|
 | Ativos e identidade visual | Em andamento | 60% |
 | Cabeçalhos dos módulos | Em validação visual | 90% |
-| Hero e mockup do produto | Não iniciado | 0% |
+| Hero e mockup do produto | Concluído; captura real opcional | 95% |
 | CTAs, microcopy e navegação | Não iniciado | 0% |
 | Preço e prova social | Não iniciado | 0% |
 | Instrumentação de conversão | Não iniciado | 0% |
 | Acabamento visual e validação | Não iniciado | 0% |
 
-Progresso global estimado: **17%**.
+Progresso global estimado: **31%**.
 
 ## 1. Ativos e identidade visual — em andamento
 
@@ -70,14 +70,15 @@ Enquanto isso, os módulos utilizam seus próprios logos transparentes e válido
 - [x] build de produção com webpack nos dois módulos.
 - [x] 68 testes automatizados do PRO Legis.
 
-## 3. Hero orientado à conversão — não iniciado
+## 3. Hero orientado à conversão — concluído com pendência opcional
 
-- [ ] Transformar a primeira dobra em duas colunas no desktop.
-- [ ] Posicionar proposta e CTAs à esquerda e mockup real à direita.
-- [ ] No mobile, posicionar o mockup abaixo dos CTAs sem overflow.
-- [ ] Reaproveitar os previews existentes de Resumos, Legis e flashcards.
+- [x] Transformar a primeira dobra em duas colunas no desktop.
+- [x] Posicionar proposta e CTAs à esquerda e mockup do produto à direita.
+- [x] No mobile, posicionar o mockup abaixo dos CTAs sem overflow estrutural.
+- [x] Reaproveitar a linguagem visual dos previews existentes de Resumos, Legis e flashcards.
 - [ ] Usar captura real anonimizada da plataforma quando disponível.
-- [ ] Manter dimensões estáveis e orçamento de LCP/CLS.
+- [x] Manter dimensões estáveis sem imagem externa ou JavaScript adicional.
+- [x] Executar revisão visual em 320 px, tablet e desktop largo, sem overflow horizontal.
 
 ## 4. CTAs, microcopy e navegação — não iniciado
 
