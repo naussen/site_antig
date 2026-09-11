@@ -305,9 +305,13 @@ const toolPreviews = [
 export function LandingPageContent() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#181820] text-white">
-      <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#181820]/90 px-3 py-3 backdrop-blur-xl sm:px-8 lg:px-12">
+      <nav aria-label="Navegação principal" className="sticky top-0 z-50 border-b border-white/10 bg-[#181820]/90 px-3 py-3 backdrop-blur-xl sm:px-8 lg:px-12">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 sm:gap-4">
           <Link href="https://proconcursos.com.br/" aria-label="PRO Concursos — página inicial"><BrandLogo /></Link>
+          <div className="hidden items-center gap-1 lg:flex">
+            <a href="#modulos" className="rounded-lg px-3 py-2 text-sm font-semibold text-white/70 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826]">Módulos</a>
+            <a href="#ferramentas" className="rounded-lg px-3 py-2 text-sm font-semibold text-white/70 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826]">Funcionalidades</a>
+          </div>
           <div className="flex shrink-0 items-center gap-1.5 sm:gap-3"><Link href="/login" className="rounded-xl px-2 py-2.5 text-xs font-semibold text-white/80 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-4 sm:text-sm">Entrar</Link><Link href="/login" className="rounded-xl bg-[#f9a826] px-3 py-2.5 text-xs font-extrabold text-[#121212] shadow-lg shadow-[#f9a826]/15 transition hover:-translate-y-0.5 hover:bg-[#ffc15c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-5 sm:text-sm">Assinar agora</Link></div>
         </div>
       </nav>
@@ -325,14 +329,14 @@ export function LandingPageContent() {
                 <li key={benefit} className="flex items-center gap-2"><CheckCircle2 size={16} className="shrink-0 text-[#f9a826]" aria-hidden="true" />{benefit}</li>
               ))}
             </ul>
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"><Link href="/login" className="inline-flex w-full min-w-0 items-center justify-center gap-2 rounded-2xl bg-[#f9a826] px-5 py-4 text-center text-sm font-extrabold text-[#121212] shadow-2xl shadow-[#f9a826]/20 transition hover:-translate-y-1 hover:bg-[#ffc15c] sm:w-auto sm:px-7 sm:text-base">Assinar com oferta de lançamento <ArrowRight size={19} className="shrink-0" /></Link><a href="#modulos" className="inline-flex w-full min-w-0 items-center justify-center rounded-2xl border border-white/15 px-5 py-4 text-center text-sm font-bold text-white/80 transition hover:border-[#a78bfa]/60 hover:bg-white/5 hover:text-white sm:w-auto sm:px-7">Conhecer a plataforma</a></div>
-            <p className="mt-5 text-xs text-white/60">Acesso ao conteúdo mediante assinatura mensal.</p>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"><Link href="/login" className="inline-flex w-full min-w-0 items-center justify-center gap-2 rounded-2xl bg-[#f9a826] px-5 py-4 text-center text-sm font-extrabold text-[#121212] shadow-2xl shadow-[#f9a826]/20 transition hover:-translate-y-1 hover:bg-[#ffc15c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:w-auto sm:px-7 sm:text-base">Assinar com oferta de lançamento <ArrowRight size={19} className="shrink-0" /></Link><a href="#modulos" className="inline-flex w-full min-w-0 items-center justify-center rounded-2xl border border-white/30 bg-white/[0.06] px-5 py-4 text-center text-sm font-bold text-white transition hover:border-[#a78bfa]/70 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:w-auto sm:px-7">Conhecer a plataforma</a></div>
+            <p className="mt-5 text-xs leading-5 text-white/65">Conheça os recursos antes de decidir. PRO Resumos e PRO Legis no mesmo acesso.</p>
           </div>
           <HeroProductPreview />
         </div>
       </header>
 
-      <section id="modulos" className="border-y border-[#e5e5ef] bg-white px-5 py-16 sm:px-8 sm:py-24">
+      <section id="modulos" className="scroll-mt-36 border-y border-[#e5e5ef] bg-white px-5 py-16 sm:px-8 sm:py-24">
         <SectionHeading eyebrow="Módulos" title="Do resumo à lei seca, sem trocar de plataforma." description="Dois ambientes complementares para compreender a matéria, consultar a literalidade e praticar com segurança." tone="light" />
         <div className="mx-auto max-w-6xl space-y-14">
           <article className="grid items-center gap-8 lg:grid-cols-[0.78fr_1.4fr]"><div><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#a78bfa] text-white shadow-lg shadow-[#7c3aed]/25"><Layers3 size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#6c5ce7]">PRO Resumos</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight text-[#1a1a2e]">Conteúdo organizado para você entender e reter.</h3><p className="mt-4 leading-7 text-[#64647a]">Resumos jurídicos divididos em seções, com pontos de prova, mnemônicos, mapas mentais e progresso de leitura.</p></div><ResumosPreview /></article>
@@ -340,7 +344,7 @@ export function LandingPageContent() {
         </div>
       </section>
 
-      <section className="px-5 py-16 sm:px-8 sm:py-24" id="ferramentas">
+      <section className="scroll-mt-36 px-5 py-16 sm:px-8 sm:py-24" id="ferramentas">
         <SectionHeading eyebrow="Ferramentas de estudo" title="Veja como cada recurso trabalha a seu favor." description="Uma experiência integrada para ler, testar a memória, registrar ideias e estudar com conforto por mais tempo." />
         <div className="mx-auto grid max-w-6xl gap-5 md:grid-cols-2">
           {toolPreviews.map(({ title, description, preview }) => <article key={title} className="overflow-hidden rounded-3xl border border-white/10 bg-[#262638]"><div className="min-h-[270px] bg-[radial-gradient(circle_at_50%_45%,rgba(167,139,250,0.14),transparent_65%)] p-6 sm:p-8">{preview}</div><div className="border-t border-white/10 p-6 sm:p-7"><h3 className="text-xl font-extrabold text-white">{title}</h3><p className="mt-2 text-sm leading-6 text-[#b4b1c3]">{description}</p></div></article>)}

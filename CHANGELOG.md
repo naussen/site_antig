@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — navegação e CTAs da landing
+
+- adicionados links no cabeçalho desktop para módulos e funcionalidades, com destinos compensados para o header fixo;
+- reforçado o contraste e o foco visível do CTA secundário;
+- substituído o apoio genérico por microcopy factual, sem prometer garantia ou cancelamento ainda não validados.
+
 ## Não publicado — produto visível na primeira dobra
 
 - reorganizado o hero da landing em duas colunas no desktop, preservando leitura e empilhamento no mobile;

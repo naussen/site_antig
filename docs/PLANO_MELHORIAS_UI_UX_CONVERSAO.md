@@ -17,12 +17,12 @@ Atualizado em: 10 de setembro de 2026.
 | Ativos e identidade visual | Em andamento | 60% |
 | Cabeçalhos dos módulos | Em validação visual | 90% |
 | Hero e mockup do produto | Concluído; captura real opcional | 95% |
-| CTAs, microcopy e navegação | Não iniciado | 0% |
+| CTAs, microcopy e navegação | Em andamento | 60% |
 | Preço e prova social | Não iniciado | 0% |
 | Instrumentação de conversão | Não iniciado | 0% |
 | Acabamento visual e validação | Não iniciado | 0% |
 
-Progresso global estimado: **31%**.
+Progresso global estimado: **40%**.
 
 ## 1. Ativos e identidade visual — em andamento
 
@@ -80,13 +80,15 @@ Enquanto isso, os módulos utilizam seus próprios logos transparentes e válido
 - [x] Manter dimensões estáveis sem imagem externa ou JavaScript adicional.
 - [x] Executar revisão visual em 320 px, tablet e desktop largo, sem overflow horizontal.
 
-## 4. CTAs, microcopy e navegação — não iniciado
+## 4. CTAs, microcopy e navegação — em andamento
 
-- [ ] Aumentar o contraste base do botão “Conhecer a plataforma”.
-- [ ] Substituir o texto de apoio por redução de objeções comprovável.
+- [x] Aumentar o contraste base do botão “Conhecer a plataforma”.
+- [x] Substituir o texto de apoio por mensagem factual que permite conhecer os recursos antes da decisão.
 - [ ] Validar comercialmente cancelamento e eventual garantia antes de publicar.
-- [ ] Adicionar âncoras para Módulos, Funcionalidades, Depoimentos e Planos.
-- [ ] Criar menu mobile acessível e `scroll-margin-top` para o header fixo.
+- [x] Adicionar ao cabeçalho as âncoras existentes para Módulos e Funcionalidades.
+- [ ] Adicionar Depoimentos e Planos somente após criar seções com conteúdo verificável.
+- [ ] Criar menu mobile acessível.
+- [x] Aplicar `scroll-margin-top` aos destinos atuais do header fixo.
 
 ## 5. Preço e prova social — não iniciado
 
