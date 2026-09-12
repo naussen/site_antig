@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — limite do corpo da importação
+
+- protegida `POST /api/import` com autenticação antes da leitura e limite de 1 MiB;
+- exigido `Content-Type: application/json` e validados tanto `Content-Length` quanto os bytes efetivamente recebidos;
+- preservado o contrato Zod existente e adicionadas respostas `413`, `415` e `400` para falhas de transporte e JSON.
+
 ## Não publicado — minimização de logs de pagamentos
 
 - removidos logs temporários com corpo bruto de respostas dos provedores;

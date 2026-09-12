@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { createClient } from "@supabase/supabase-js";
 import { isAdminApiRequest } from "@/lib/api-admin-auth.mjs";
+import { readJsonBodyLimited, RequestBodyError } from "@/lib/request-body.mjs";
 import {
   getMermaidSecurityIssue,
   MAX_MERMAID_SOURCE_LENGTH,
@@ -13,6 +14,8 @@ import { parseQuantitativeChart } from "@/lib/quantitative-chart";
 // =============================================================================
 // Validação Zod do payload de importação
 // =============================================================================
+
+const MAX_IMPORT_BODY_BYTES = 1024 * 1024;
 
 const CalloutSchema = z.object({
   type: z.enum(["warning", "info", "tip"]),
@@ -228,7 +231,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Não autorizado" }, { status: 401 });
     }
 
-    const body = await request.json();
+    const body = await readJsonBodyLimited(request, MAX_IMPORT_BODY_BYTES);
     const parsed = TopicImportSchema.safeParse(body);
 
     if (!parsed.success) {
@@ -295,6 +298,9 @@ export async function POST(request: Request) {
       { status: 201 }
     );
   } catch (err) {
+    if (err instanceof RequestBodyError) {
+      return NextResponse.json({ error: err.message }, { status: err.status });
+    }
     const message = err instanceof Error ? err.message : "Erro desconhecido";
     return NextResponse.json(
       { error: "Erro interno do servidor", details: message },

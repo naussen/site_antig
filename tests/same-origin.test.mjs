@@ -43,5 +43,30 @@ test("limita e valida o JSON antes de processar um realce", async () => {
     headers: { "content-type": "application/json", "content-length": "2048" },
     body: "{}",
   });
-  await assert.rejects(() => readJsonBodyLimited(oversized, 1_024), RequestBodyError);
+  await assert.rejects(
+    () => readJsonBodyLimited(oversized, 1_024),
+    (error) => error instanceof RequestBodyError && error.status === 413
+  );
+});
+
+test("rejeita tipo de conteúdo inadequado e stream acima do limite", async () => {
+  const wrongContentType = new Request("https://proconcursos.com.br/resumos/api/import", {
+    method: "POST",
+    headers: { "content-type": "text/plain" },
+    body: "{}",
+  });
+  await assert.rejects(
+    () => readJsonBodyLimited(wrongContentType, 1_024),
+    (error) => error instanceof RequestBodyError && error.status === 415
+  );
+
+  const oversizedStream = new Request("https://proconcursos.com.br/resumos/api/import", {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: "x".repeat(1_025),
+  });
+  await assert.rejects(
+    () => readJsonBodyLimited(oversizedStream, 1_024),
+    (error) => error instanceof RequestBodyError && error.status === 413
+  );
 });
