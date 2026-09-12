@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — atualização de segurança do Next.js
+
+- atualizado `next` e `eslint-config-next` de `16.3.0` para `16.3.4`;
+- atualizadas as dependências transitivas vulneráveis `sharp` para `0.35.4` e `baseline-browser-mapping` para `2.11.22`;
+- eliminado o achado SEG-01: `npm audit --omit=dev` passou de três vulnerabilidades de produção para zero, e a auditoria completa também terminou sem vulnerabilidades.
+
 ## Não publicado — navegação e CTAs da landing
 
 - adicionados links no cabeçalho desktop para módulos e funcionalidades, com destinos compensados para o header fixo;
