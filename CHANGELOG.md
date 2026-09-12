@@ -1,5 +1,13 @@
 # Changelog
 
+## Não publicado — imagens privadas e limites das notas
+
+- substituído o armazenamento Base64 por upload autenticado em bucket privado, com URL interna acessível somente pelo proprietário;
+- validados bytes, MIME, dimensões, quantidade de quadros e tamanho antes da recodificação WebP sem metadados;
+- limitados corpo do upload, saída processada, quantidade de imagens por nota, total de notas/imagens por usuário e caracteres da nota;
+- adicionada limpeza compensatória quando o salvamento falha e limpeza dos anexos quando notas ou referências são excluídas;
+- preservadas autenticação, MFA administrativo, entitlement e RLS sem uso de Service Role no fluxo de imagens.
+
 ## Não publicado — mensagens funcionais das preferências
 
 - removidas da interface as referências a migrations, tabelas, colunas e Supabase;

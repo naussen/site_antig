@@ -117,6 +117,13 @@ export interface UserDashboardPreferences {
   updated_at: string;
 }
 
+export interface UserNoteImage {
+  id: string;
+  user_id: string;
+  storage_path: string;
+  created_at: string;
+}
+
 /** Direito de acesso mantido exclusivamente pelo backend de pagamentos. */
 export interface UserEntitlement {
   user_id: string;

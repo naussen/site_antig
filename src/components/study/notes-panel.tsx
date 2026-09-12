@@ -13,6 +13,19 @@ import {
 } from "lucide-react";
 import { useNotes } from "@/hooks/use-notes";
 import { MarkdownViewer } from "@/components/study/markdown-viewer";
+import {
+  ALLOWED_NOTE_IMAGE_TYPES,
+  MAX_NOTE_IMAGE_BYTES,
+  MAX_NOTE_IMAGES_PER_NOTE,
+  MAX_NOTE_LENGTH,
+  extractStoredNoteImageIds,
+  pendingNoteImageSource,
+} from "@/lib/note-images.mjs";
+import {
+  deleteNoteImage,
+  deleteStoredNoteImages,
+  uploadNoteImage,
+} from "@/lib/note-images-client";
 
 interface NotesPanelProps {
   userId: string | null;
@@ -23,6 +36,12 @@ interface NotesPanelProps {
   /** Map de sectionId → título da seção para exibir labels nas notas */
   sectionTitleMap: Record<string, string>;
   onClose?: () => void;
+}
+
+interface PendingNoteImage {
+  id: string;
+  file: File;
+  source: string;
 }
 
 export function NotesPanel({
@@ -41,28 +60,49 @@ export function NotesPanel({
   const [draft, setDraft] = useState("");
   const [isSaving, setIsSaving] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
+  const [pendingImages, setPendingImages] = useState<PendingNoteImage[]>([]);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const handleSave = async () => {
     if (!draft.trim()) return;
     setIsSaving(true);
     setErrorMsg("");
+    const imagesToUpload = pendingImages.filter((image) => draft.includes(image.source));
+    const uploadedImageIds: string[] = [];
     try {
-      await saveNote(draft);
+      let persistedContent = draft;
+      for (const image of imagesToUpload) {
+        const uploaded = await uploadNoteImage(image.file);
+        uploadedImageIds.push(uploaded.id);
+        persistedContent = persistedContent.replaceAll(image.source, uploaded.url);
+      }
+      if (persistedContent.trim().length > MAX_NOTE_LENGTH) {
+        throw new Error(`A nota deve ter no máximo ${MAX_NOTE_LENGTH.toLocaleString("pt-BR")} caracteres.`);
+      }
+      const savedNote = await saveNote(persistedContent);
+      if (!savedNote) throw new Error("Não foi possível salvar a nota.");
       setDraft("");
-    } catch {
-      setErrorMsg("Erro ao salvar nota");
+      setPendingImages([]);
+    } catch (error) {
+      await Promise.allSettled(uploadedImageIds.map(deleteNoteImage));
+      setErrorMsg(error instanceof Error ? error.message : "Erro ao salvar nota");
     } finally {
       setIsSaving(false);
     }
   };
 
-  const handleDelete = async (noteId: string) => {
+  const handleDelete = async (noteId: string, content: string) => {
     setErrorMsg("");
     try {
       await deleteNote(noteId);
     } catch {
       setErrorMsg("Não foi possível excluir a nota.");
+      return;
+    }
+    try {
+      await deleteStoredNoteImages(content);
+    } catch {
+      setErrorMsg("A nota foi excluída, mas uma imagem ficou pendente de limpeza.");
     }
   };
 
@@ -72,15 +112,32 @@ export function NotesPanel({
       if (items[i].type.indexOf("image") !== -1) {
         const file = items[i].getAsFile();
         if (file) {
-          const reader = new FileReader();
-          reader.onload = (event) => {
-            const base64 = event.target?.result as string;
-            const imageMarkdown = `\n![Print](${base64})\n`;
-            setDraft((prev) => prev + imageMarkdown);
-          };
-          reader.readAsDataURL(file);
+          e.preventDefault();
+          if (!ALLOWED_NOTE_IMAGE_TYPES.has(file.type)) {
+            setErrorMsg("Use uma imagem PNG, JPEG ou WebP.");
+            return;
+          }
+          if (file.size > MAX_NOTE_IMAGE_BYTES) {
+            setErrorMsg("A imagem deve ter no máximo 5 MiB.");
+            return;
+          }
+          if (pendingImages.length + extractStoredNoteImageIds(draft).length >= MAX_NOTE_IMAGES_PER_NOTE) {
+            setErrorMsg(`Cada nota pode conter até ${MAX_NOTE_IMAGES_PER_NOTE} imagens.`);
+            return;
+          }
+
+          const id = crypto.randomUUID();
+          const source = pendingNoteImageSource(id);
+          const imageMarkdown = `\n![Print](${source})\n`;
+          if (draft.length + imageMarkdown.length > MAX_NOTE_LENGTH) {
+            setErrorMsg(`A nota deve ter no máximo ${MAX_NOTE_LENGTH.toLocaleString("pt-BR")} caracteres.`);
+            return;
+          }
+          setPendingImages((current) => [...current, { id, file, source }]);
+          setDraft((current) => current + imageMarkdown);
+          setErrorMsg("");
         }
-        e.preventDefault();
+        return;
       }
     }
   };
@@ -157,6 +214,7 @@ export function NotesPanel({
             onChange={(e) => setDraft(e.target.value)}
             onPaste={handlePaste}
             placeholder="Escreva sua anotação aqui... (Ctrl+V para colar imagens)"
+            maxLength={MAX_NOTE_LENGTH}
             className="w-full flex-1 resize-none bg-transparent outline-none text-sm leading-relaxed overflow-y-auto"
             style={{
               color: "var(--text-primary)",
@@ -170,7 +228,7 @@ export function NotesPanel({
             style={{ color: "var(--text-muted)" }}
           >
             <ImageIcon size={10} />
-            <span>Ctrl+V print</span>
+            <span>Ctrl+V print · máx. 5 MiB</span>
           </div>
         </div>
 
@@ -288,7 +346,7 @@ export function NotesPanel({
 interface NoteCardProps {
   note: { id?: string; section_id: string; content: string; updated_at: string };
   sectionLabel?: string;
-  onDelete: (id: string) => Promise<void>;
+  onDelete: (id: string, content: string) => Promise<void>;
 }
 
 function NoteCard({ note, sectionLabel, onDelete }: NoteCardProps) {
@@ -320,7 +378,7 @@ function NoteCard({ note, sectionLabel, onDelete }: NoteCardProps) {
           </span>
         </div>
         <button
-          onClick={() => note.id && onDelete(note.id)}
+          onClick={() => note.id && onDelete(note.id, note.content)}
           className="p-1 rounded opacity-0 group-hover/note:opacity-100 transition-opacity hover:bg-red-500/10 hover:text-red-500 cursor-pointer shrink-0"
           title="Excluir anotação"
         >

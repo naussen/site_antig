@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import { MAX_NOTE_LENGTH } from "@/lib/note-images.mjs";
 import { UserNote } from "@/types/database";
 
 interface UseNotesReturn {
@@ -94,7 +95,11 @@ export function useNotes(
   }, [fetchNotes]);
 
   const saveNote = async (content: string): Promise<UserNote | null> => {
-    if (!userId || !targetSectionId || !content.trim()) return null;
+    const normalizedContent = content.trim();
+    if (!userId || !targetSectionId || !normalizedContent) return null;
+    if (normalizedContent.length > MAX_NOTE_LENGTH) {
+      throw new Error(`A nota deve ter no máximo ${MAX_NOTE_LENGTH.toLocaleString("pt-BR")} caracteres.`);
+    }
     const supabase = createClient();
 
     const { data, error } = await supabase
@@ -102,7 +107,7 @@ export function useNotes(
       .insert({
         user_id: userId,
         section_id: targetSectionId,
-        content: content.trim(),
+        content: normalizedContent,
         updated_at: new Date().toISOString(),
       })
       .select()

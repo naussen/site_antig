@@ -14,6 +14,8 @@ import {
 import { useEffect, useState } from "react";
 import { MarkdownViewer } from "@/components/study/markdown-viewer";
 import { createClient } from "@/lib/supabase/client";
+import { MAX_NOTE_LENGTH, extractStoredNoteImageIds } from "@/lib/note-images.mjs";
+import { deleteNoteImage, deleteStoredNoteImages } from "@/lib/note-images-client";
 
 interface NoteCardProps {
   note: {
@@ -75,6 +77,10 @@ export function NoteCard({ note, userId }: NoteCardProps) {
       setErrorMessage("A nota não pode ficar vazia. Use Excluir para removê-la.");
       return;
     }
+    if (normalizedDraft.length > MAX_NOTE_LENGTH) {
+      setErrorMessage(`A nota deve ter no máximo ${MAX_NOTE_LENGTH.toLocaleString("pt-BR")} caracteres.`);
+      return;
+    }
 
     if (normalizedDraft === content) {
       cancelEditing();
@@ -107,6 +113,12 @@ export function NoteCard({ note, userId }: NoteCardProps) {
       setEditorMode(null);
     }
     setIsSaving(false);
+    const retainedImageIds = new Set(extractStoredNoteImageIds(data.content));
+    const removedImageIds = extractStoredNoteImageIds(content)
+      .filter((imageId) => !retainedImageIds.has(imageId));
+    if (removedImageIds.length > 0) {
+      void Promise.allSettled(removedImageIds.map(deleteNoteImage));
+    }
     router.refresh();
   };
 
@@ -132,6 +144,7 @@ export function NoteCard({ note, userId }: NoteCardProps) {
     }
 
     setIsDeleted(true);
+    void deleteStoredNoteImages(content).catch(() => undefined);
     router.refresh();
   };
 
@@ -228,6 +241,7 @@ export function NoteCard({ note, userId }: NoteCardProps) {
             onChange={(event) => setDraft(event.target.value)}
             disabled={isSaving}
             rows={7}
+            maxLength={MAX_NOTE_LENGTH}
             className="w-full resize-y rounded-lg border p-3 text-sm leading-relaxed outline-none focus:ring-2 disabled:cursor-wait disabled:opacity-70"
             style={{
               background: "var(--notes-bg)",
@@ -387,6 +401,7 @@ export function NoteCard({ note, userId }: NoteCardProps) {
               onChange={(event) => setDraft(event.target.value)}
               disabled={isSaving}
               autoFocus
+              maxLength={MAX_NOTE_LENGTH}
               className="min-h-72 flex-1 resize-y rounded-xl border p-4 text-sm leading-relaxed outline-none focus:ring-2 disabled:cursor-wait disabled:opacity-70 sm:min-h-96 sm:text-base"
               style={{
                 background: "var(--notes-bg)",

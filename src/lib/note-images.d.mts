@@ -1,0 +1,13 @@
+export const NOTE_IMAGE_BUCKET: "note-images";
+export const MAX_NOTE_IMAGE_BYTES: number;
+export const MAX_NOTE_IMAGE_OUTPUT_BYTES: number;
+export const MAX_NOTE_IMAGE_DIMENSION: number;
+export const MAX_NOTE_IMAGES_PER_NOTE: number;
+export const MAX_NOTE_LENGTH: number;
+export const ALLOWED_NOTE_IMAGE_TYPES: ReadonlySet<string>;
+export function isValidNoteImageId(value: unknown): boolean;
+export function detectNoteImageType(bytes: Uint8Array): string | null;
+export function noteImageStoragePath(userId: string, imageId: string): string;
+export function noteImageUrl(imageId: string): string;
+export function pendingNoteImageSource(imageId: string): string;
+export function extractStoredNoteImageIds(content: unknown): string[];
