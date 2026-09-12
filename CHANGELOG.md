@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — cabeçalhos defensivos do PRO Resumos
+
+- alinhados os cabeçalhos de segurança do `/resumos` ao baseline do PRO Legis;
+- adicionadas políticas contra framing, MIME sniffing, referrer excessivo e acesso a câmera, geolocalização e microfone;
+- adicionada CSP estrutural compatível com os recursos atuais e removida a divulgação de `X-Powered-By`.
+
 ## Não publicado — preferências do Dashboard em produção
 
 - aplicada no Supabase remoto a migration `020_add_user_start_page_preference.sql`, única migration pendente;
