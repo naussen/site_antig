@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — minimização de logs de pagamentos
+
+- removidos logs temporários com corpo bruto de respostas dos provedores;
+- removido o log do payload de checkout que continha UUID e trecho do e-mail do pagador;
+- preservado somente o diagnóstico estruturado e allowlisted da rota de checkout.
+
 ## Não publicado — cabeçalhos defensivos do PRO Resumos
 
 - alinhados os cabeçalhos de segurança do `/resumos` ao baseline do PRO Legis;
