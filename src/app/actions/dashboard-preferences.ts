@@ -1,7 +1,11 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import { isMissingColumnError, isMissingTableError } from "@/lib/supabase/errors";
+import {
+  getSafeSupabaseErrorCode,
+  isMissingColumnError,
+  isMissingTableError,
+} from "@/lib/supabase/errors";
 import { requireContentAccess } from "@/lib/content-access";
 import { parseStartPageSelection } from "@/lib/user-start-page.mjs";
 
@@ -56,14 +60,20 @@ export async function saveDashboardPreferences(
   );
 
   if (error) {
-    if (
+    const preferencesSchemaUnavailable =
       isMissingTableError(error, "user_dashboard_preferences")
       || isMissingColumnError(error, "start_module")
-      || isMissingColumnError(error, "start_discipline")
-    ) {
-      throw new Error(
-        "As configurações ainda não estão disponíveis. Aplique as migrations pendentes no Supabase."
-      );
+      || isMissingColumnError(error, "start_discipline");
+
+    console.error("Falha ao salvar preferências do Dashboard.", {
+      code: getSafeSupabaseErrorCode(error),
+      category: preferencesSchemaUnavailable
+        ? "schema_unavailable"
+        : "query_failed",
+    });
+
+    if (preferencesSchemaUnavailable) {
+      throw new Error("As preferências estão temporariamente indisponíveis.");
     }
 
     throw new Error("Não foi possível salvar as preferências do Dashboard.");

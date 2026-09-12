@@ -29,7 +29,11 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { TopicRow } from "@/types/database";
-import { formatSupabaseError, isMissingTableError } from "@/lib/supabase/errors";
+import {
+  formatSupabaseError,
+  getSafeSupabaseErrorCode,
+  isMissingTableError,
+} from "@/lib/supabase/errors";
 import { compareTopicsByOrigin } from "@/lib/topic-order";
 import { requireContentAccess } from "@/lib/content-access";
 
@@ -181,10 +185,15 @@ export default async function DashboardPage({
     if (preferencesError) {
       if (isMissingTableError(preferencesError, "user_dashboard_preferences")) {
         preferencesAvailable = false;
+        console.error("Preferências do Dashboard indisponíveis.", {
+          code: getSafeSupabaseErrorCode(preferencesError),
+          category: "schema_unavailable",
+        });
       } else {
-        console.error(
-          `Erro ao buscar preferências do Dashboard: ${formatSupabaseError(preferencesError)}`
-        );
+        console.error("Erro ao buscar preferências do Dashboard.", {
+          code: getSafeSupabaseErrorCode(preferencesError),
+          category: "query_failed",
+        });
         loadErrors.push("Não foi possível carregar suas preferências do Dashboard.");
       }
     } else if (preferences?.visible_disciplines) {
@@ -293,7 +302,7 @@ export default async function DashboardPage({
               </Link>
               {!preferencesAvailable && (
                 <p className="mt-3 max-w-xl text-xs leading-5 text-[var(--text-muted)]">
-                  A configuração de matérias aguarda a aplicação da migration 005 no Supabase. Enquanto isso, todas as matérias permanecem visíveis.
+                  A configuração de matérias está temporariamente indisponível. Enquanto isso, todas as matérias permanecem visíveis.
                 </p>
               )}
             </div>

@@ -2,7 +2,11 @@ import Link from "next/link";
 import { AlertTriangle, ArrowLeft, BookOpen, Check, Scale, Settings2, SlidersHorizontal } from "lucide-react";
 import { PreferencesForm } from "./preferences-form";
 import { SavePreferencesButton } from "./save-preferences-button";
-import { formatSupabaseError, isMissingColumnError, isMissingTableError } from "@/lib/supabase/errors";
+import {
+  getSafeSupabaseErrorCode,
+  isMissingColumnError,
+  isMissingTableError,
+} from "@/lib/supabase/errors";
 import { requireContentAccess } from "@/lib/content-access";
 import {
   START_PAGE_DISCIPLINE_PREFIX,
@@ -29,17 +33,25 @@ export default async function DashboardSettingsPage() {
     throw new Error("Não foi possível carregar as disciplinas disponíveis.");
   }
 
-  const preferencesAvailable = !isMissingTableError(
+  const preferencesSchemaUnavailable = isMissingTableError(
     preferencesError,
     "user_dashboard_preferences"
   )
-    && !isMissingColumnError(preferencesError, "start_module")
-    && !isMissingColumnError(preferencesError, "start_discipline");
+    || isMissingColumnError(preferencesError, "start_module")
+    || isMissingColumnError(preferencesError, "start_discipline");
+  const preferencesAvailable = !preferencesSchemaUnavailable;
+
+  if (preferencesError) {
+    console.error("Falha ao carregar preferências do Dashboard.", {
+      code: getSafeSupabaseErrorCode(preferencesError),
+      category: preferencesSchemaUnavailable
+        ? "schema_unavailable"
+        : "query_failed",
+    });
+  }
 
   if (preferencesError && preferencesAvailable) {
-    throw new Error(
-      `Não foi possível carregar as preferências do Dashboard: ${formatSupabaseError(preferencesError)}`
-    );
+    throw new Error("Não foi possível carregar as preferências do Dashboard.");
   }
 
   const disciplines = Array.from(
@@ -92,8 +104,7 @@ export default async function DashboardSettingsPage() {
             >
               <AlertTriangle className="mt-0.5 shrink-0" size={19} style={{ color: "var(--accent)" }} />
               <p>
-                As preferências ainda não podem ser salvas neste ambiente. Aplique as migrations
-                <strong style={{ color: "var(--text-primary)" }}> 005 e 020</strong> no Supabase e recarregue esta página.
+                As preferências estão temporariamente indisponíveis. Tente novamente mais tarde.
               </p>
             </div>
           )}

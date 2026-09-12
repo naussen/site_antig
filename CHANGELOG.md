@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — mensagens funcionais das preferências
+
+- removidas da interface as referências a migrations, tabelas, colunas e Supabase;
+- substituídos detalhes internos por mensagens funcionais temporárias;
+- mantido diagnóstico server-side somente com código validado e categoria operacional.
+
 ## Não publicado — nome acessível da navegação móvel
 
 - sincronizados `aria-label` e `title` dos acionadores móveis com o estado aberto ou fechado;

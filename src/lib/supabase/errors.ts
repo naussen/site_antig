@@ -40,3 +40,10 @@ export function isMissingColumnError(
 export function formatSupabaseError(error: SupabaseErrorLike): string {
   return [error.code, error.message].filter(Boolean).join(": ") || "erro desconhecido";
 }
+
+export function getSafeSupabaseErrorCode(
+  error: SupabaseErrorLike | null
+): string {
+  const code = error?.code?.trim();
+  return code && /^[a-z0-9_]{1,24}$/i.test(code) ? code : "UNKNOWN";
+}
