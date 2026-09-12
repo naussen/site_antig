@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — nome acessível da navegação móvel
+
+- sincronizados `aria-label` e `title` dos acionadores móveis com o estado aberto ou fechado;
+- mantidos `aria-expanded` e `aria-controls`, com acionamento alternável nos dois layouts da navegação.
+
 ## Não publicado — redirecionamento HTTP das páginas de estudo
 
 - antecipado no proxy o redirecionamento de visitantes anônimos para o login, antes da renderização do tópico;

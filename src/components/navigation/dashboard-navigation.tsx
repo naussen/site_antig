@@ -90,6 +90,13 @@ export function DashboardNavigation({
   const isActive = (href: string, exact?: boolean) =>
     exact ? pathname === href : pathname.startsWith(href);
   const accountName = userName?.trim() || userEmail;
+  const mobileNavigationLabel = mobileOpen
+    ? "Fechar navegação"
+    : "Abrir navegação";
+
+  const toggleMobileNavigation = () => {
+    setMobileOpen((current) => !current);
+  };
 
   const handleLogout = async () => {
     try {
@@ -313,16 +320,17 @@ export function DashboardNavigation({
       {mobileOverlay ? (
         <button
           type="button"
-          onClick={() => setMobileOpen(true)}
+          onClick={toggleMobileNavigation}
           className="fixed left-0 top-1/2 z-30 grid h-12 w-10 -translate-y-1/2 touch-manipulation place-items-center rounded-r-xl border border-l-0 shadow-lg transition-[width,background-color,color] duration-150 hover:w-11 hover:text-[var(--accent)] active:w-10 motion-reduce:transition-none lg:hidden"
           style={{
             background: "var(--dashboard-sidebar)",
             borderColor: "var(--dashboard-sidebar-border)",
             color: "var(--dashboard-sidebar-text)",
           }}
-          aria-label="Abrir navegação"
+          aria-label={mobileNavigationLabel}
           aria-expanded={mobileOpen}
           aria-controls="dashboard-mobile-navigation"
+          title={mobileNavigationLabel}
         >
           <PanelLeftOpen size={21} aria-hidden="true" />
         </button>
@@ -334,11 +342,12 @@ export function DashboardNavigation({
           <ProLogoLink size={32} variant="full" />
           <button
             type="button"
-            onClick={() => setMobileOpen(true)}
+            onClick={toggleMobileNavigation}
             className="grid h-11 w-11 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-primary)] transition-[transform,background-color,border-color] duration-150 hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] active:scale-[0.96] motion-reduce:transition-none"
-            aria-label="Abrir navegação"
+            aria-label={mobileNavigationLabel}
             aria-expanded={mobileOpen}
             aria-controls="dashboard-mobile-navigation"
+            title={mobileNavigationLabel}
           >
             <Menu size={22} aria-hidden="true" />
           </button>
