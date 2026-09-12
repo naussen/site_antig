@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — redirecionamento HTTP das páginas de estudo
+
+- antecipado no proxy o redirecionamento de visitantes anônimos para o login, antes da renderização do tópico;
+- preservados no redirecionamento os cookies renovados pelo Supabase;
+- mantidas no Server Component as verificações completas de MFA e assinatura.
+
 ## Não publicado — limite do corpo da importação
 
 - protegida `POST /api/import` com autenticação antes da leitura e limite de 1 MiB;
