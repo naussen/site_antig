@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — preferências do Dashboard em produção
+
+- aplicada no Supabase remoto a migration `020_add_user_start_page_preference.sql`, única migration pendente;
+- disponibilizadas as colunas `start_module` e `start_discipline` usadas pela tela de configurações;
+- validado em sessão autenticada o salvamento e a persistência das preferências existentes, preservando o isolamento por usuário.
+
 ## Não publicado — atualização de segurança do Next.js
 
 - atualizado `next` e `eslint-config-next` de `16.3.0` para `16.3.4`;
