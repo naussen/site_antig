@@ -132,11 +132,11 @@ export function StudyPageClient({
         onSectionClick={handleSectionClick}
       />
 
-      <main className="min-h-0 min-w-0 w-full flex-1 overflow-y-auto">
+      <main className="study-content-scrollbar min-h-0 min-w-0 w-full flex-1 overflow-y-auto">
         <header
           className="study-topbar sticky top-0 z-20 border-b px-4 py-3 backdrop-blur-xl sm:px-6 lg:px-8"
         >
-          <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-3">
+          <div className="study-topbar-inner mx-auto flex items-center justify-between gap-3">
             <div className="flex min-w-0 items-center gap-3">
               <Link
                 href="/dashboard"
@@ -207,7 +207,7 @@ export function StudyPageClient({
           )}
         </header>
 
-        <div className="mx-auto w-full max-w-[1120px] px-4 py-8 pb-20 sm:px-8 lg:px-12">
+        <div className="study-content-shell mx-auto px-4 py-8 pb-20 sm:px-8 lg:px-12">
           {/* Título do tópico */}
           <section
             className="study-module-hero mb-12"

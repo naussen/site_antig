@@ -495,6 +495,41 @@
   background: linear-gradient(150deg, color-mix(in srgb, var(--accent) 3.5%, var(--bg-card)), var(--bg-card) 28%);
 }
 
+.study-content-shell,
+.study-topbar-inner {
+  width: min(100%, clamp(70rem, 78vw, 100rem));
+}
+
+.study-content-scrollbar {
+  scrollbar-color: #7C3AED color-mix(in srgb, var(--bg-secondary) 78%, transparent);
+  scrollbar-width: auto;
+}
+
+.study-content-scrollbar::-webkit-scrollbar {
+  width: 12px;
+}
+
+.study-content-scrollbar::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--bg-secondary) 88%, #080D17);
+  border-left: 1px solid var(--border);
+}
+
+.study-content-scrollbar::-webkit-scrollbar-thumb {
+  border: 2px solid color-mix(in srgb, var(--bg-secondary) 88%, #080D17);
+  border-radius: 999px;
+  background: linear-gradient(180deg, #A78BFA 0%, #7C3AED 52%, #4C3CB6 100%);
+}
+
+.study-content-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #C4B5FD 0%, #8B5CF6 50%, #5B21B6 100%);
+}
+
+@media (max-width: 640px) {
+  .study-content-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+}
+
 /* Paleta estável das disciplinas do Dashboard, adaptada pelos tokens de cada tema. */
 .discipline-tone-gold { --discipline-accent: var(--catalog-gold); }
 .discipline-tone-blue { --discipline-accent: var(--catalog-blue); }

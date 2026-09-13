@@ -4,6 +4,8 @@
 
 - aproximado o dashboard e a leitura dos Resumos da identidade visual da landing page, com superfícies preto-azuladas, azul-marinho, violeta e dourado;
 - aplicado hero escuro no catálogo e nos módulos, barra de estudo escura, cartões com profundidade discreta e cores próprias por disciplina;
+- ampliada a área de leitura de forma proporcional ao dispositivo, até 1.600 px em monitores largos, preservando a ocupação integral em telas pequenas;
+- aumentada a barra de rolagem do conteúdo para 12 px no desktop e 10 px no mobile, com degradê violeta no Chrome/Edge e fallback compatível no Firefox;
 - preservados os temas Light, Dark e Sepia, as cores semânticas, o conteúdo, o comportamento e a responsividade existentes.
 
 ## Não publicado — identidade estável e versionamento dos resumos
