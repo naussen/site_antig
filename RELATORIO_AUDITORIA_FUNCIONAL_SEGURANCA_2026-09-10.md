@@ -3,9 +3,11 @@
 **Produto:** PRO Concursos — PRO Resumos e PRO Legis
 **Ambiente auditado:** `https://proconcursos.com.br`
 **Data:** 10 de setembro de 2026
+**Última atualização do progresso:** 12 de setembro de 2026
 **Checkout local:** `C:\PRO\site`
 **Branch:** `feat/administracao-geral-flashcards`
 **Commit de referência:** `c28ae10`
+**Commit mais recente publicado:** `e719912`
 
 ## 1. Resumo executivo
 
@@ -42,14 +44,33 @@ Esta análise foi conservadora e não incluiu exploração ofensiva, força brut
 
 | ID | Severidade | Área | Achado | Estado |
 |---|---|---|---|---|
-| SEG-01 | Crítica | Dependências | Next.js `16.3.0` afetado por advisories críticos | Confirmado no checkout |
-| FUN-01 | Alta | Configurações | Preferências não podem ser salvas em produção | Reproduzido ao vivo |
-| SEG-02 | Média | Cabeçalhos | PRO Resumos sem CSP e outras políticas defensivas | Confirmado ao vivo |
-| SEG-03 | Média | Privacidade | Logs de pagamentos podem registrar PII e respostas do provedor | Confirmado no código |
-| SEG-04 | Média | Disponibilidade | Importação administrativa sem limite explícito de corpo | Confirmado no código |
-| FUN-02 | Baixa | HTTP | Página protegida usa soft redirect com status inicial 200 | Confirmado; sem conteúdo exposto |
-| A11Y-01 | Baixa | Acessibilidade | Rótulo do botão móvel não acompanha o estado expandido | Reproduzido ao vivo |
-| UX-01 | Baixa | Experiência | Mensagem de erro expõe detalhes internos de migrations | Reproduzido ao vivo |
+| SEG-01 | Crítica | Dependências | Next.js `16.3.0` afetado por advisories críticos | Corrigido e publicado (`7b0fe24`) |
+| FUN-01 | Alta | Configurações | Preferências não podem ser salvas em produção | Corrigido e publicado (`1df3902`) |
+| SEG-02 | Média | Cabeçalhos | PRO Resumos sem CSP e outras políticas defensivas | Corrigido e publicado (`07befdc`) |
+| SEG-03 | Média | Privacidade | Logs de pagamentos podem registrar PII e respostas do provedor | Corrigido e publicado (`80c68dd`) |
+| SEG-04 | Média | Disponibilidade | Importação administrativa sem limite explícito de corpo | Corrigido e publicado (`dda5a45`) |
+| FUN-02 | Baixa | HTTP | Página protegida usa soft redirect com status inicial 200 | Corrigido e publicado (`d95949c`) |
+| A11Y-01 | Baixa | Acessibilidade | Rótulo do botão móvel não acompanha o estado expandido | Corrigido e publicado (`3ff7630`) |
+| UX-01 | Baixa | Experiência | Mensagem de erro expõe detalhes internos de migrations | Corrigido e publicado (`9fc4d52`) |
+| SEG-05 | Média | Notas | Imagens Base64 e limites insuficientes no fluxo de notas | Corrigido e publicado (`a24f081`) |
+| SEG-06 | Média | Webhooks | Limite aplicado somente após a leitura integral do corpo | Corrigido e publicado (`fccf745`) |
+| FUN-03 | Média | Conteúdo | Mermaid cercado no Markdown exibido como código bruto | Corrigido e publicado (`e719912`) |
+
+### Progresso das correções
+
+Até 12 de setembro de 2026, os onze itens priorizados acima foram corrigidos, validados e publicados em `main`. O deploy de produção mais recente foi confirmado no Netlify com estado `ready`, ID `6aa5ecce22ac980008a14c59` e `commit_ref` `e719912483b8ffaee3419fdfb6b23c91f1c189d4`.
+
+No encerramento do FUN-03, o smoke autenticado em `https://proconcursos.com.br/resumos/estatistica` confirmou:
+
+- o bloco cercado `mermaid` da primeira seção convertido em SVG navegável, sem código bruto visível;
+- o mapa estruturado da última seção preservado;
+- ausência de overflow horizontal da página em 390 × 844 (`scrollWidth = clientWidth = 390`);
+- renderização funcional nos temas Light, Dark e Sepia;
+- fallback textual recolhido e console sem erros ou avisos;
+- `npm run lint`, `npx tsc --noEmit`, build Webpack, testes de conteúdo, autenticação e regressão Mermaid aprovados;
+- `npm audit --omit=dev` sem vulnerabilidades de produção.
+
+Risco remanescente específico do FUN-03: diagramas cercados ainda entram no contrato como Markdown genérico. A validação compartilhada bloqueia conteúdo inseguro antes da renderização, mas a normalização futura para `mermaid_mindmap` permitiria rejeição antecipada também na ingestão.
 
 ## 4. Achados detalhados
 
@@ -234,33 +255,35 @@ Os testes locais foram executados sobre uma árvore Git que já continha modific
 
 ### Etapa 1 — Correções urgentes
 
-1. Atualizar Next.js para versão corrigida.
-2. Repetir auditoria, testes, build e smoke test publicado.
-3. Auditar o estado remoto do Supabase e aplicar a migration `020`, se confirmada como pendente.
+- [x] Atualizar Next.js para versão corrigida.
+- [x] Repetir auditoria, testes, build e smoke test publicado.
+- [x] Auditar o estado remoto do Supabase e aplicar a migration `020`, confirmada como pendente.
 
 ### Etapa 2 — Hardening
 
-1. Remover logs sensíveis de pagamentos.
-2. Limitar o corpo da API de importação.
-3. Aplicar cabeçalhos defensivos ao PRO Resumos.
-4. Padronizar respostas de erro administrativas sem detalhes internos.
+- [x] Remover logs sensíveis de pagamentos.
+- [x] Limitar o corpo da API de importação.
+- [x] Aplicar cabeçalhos defensivos ao PRO Resumos.
+- [x] Padronizar respostas de erro administrativas sem detalhes internos.
 
 ### Etapa 3 — Regressão funcional e segurança prática
 
-1. Testar preferências de ponta a ponta após a migration.
-2. Testar notas, progresso e realces com duas contas distintas.
-3. Executar checkout em sandbox e verificar logs sanitizados.
-4. Validar CSP em Light, Dark e Sepia, Mermaid, KaTeX, OAuth e Netlify.
-5. Confirmar redirects, cache, Functions e endpoints no deploy final.
+- [x] Testar preferências de ponta a ponta após a migration.
+- [ ] Testar notas, progresso e realces com duas contas distintas.
+- [ ] Executar checkout em sandbox e verificar logs sanitizados.
+- [x] Validar CSP em Light, Dark e Sepia, Mermaid, KaTeX, OAuth e Netlify.
+- [x] Confirmar redirects, cache, Functions e endpoints no deploy final.
 
 ## 9. Critério de encerramento
 
-A auditoria deve ser considerada tratada quando:
+A auditoria deve ser considerada tratada quando todos os critérios abaixo estiverem concluídos:
 
-- `npm audit --omit=dev` não apresentar vulnerabilidade crítica ou alta aplicável;
-- preferências forem salvas e recuperadas após novo login;
-- PRO Resumos entregar o baseline de cabeçalhos aprovado;
-- logs de pagamento não incluírem PII, payloads ou corpos brutos;
-- importações excessivas retornarem `413` sem consumo descontrolado;
-- testes com dois usuários demonstrarem isolamento de dados;
-- a versão publicada e o commit remoto forem confirmados após o deploy.
+- [x] `npm audit --omit=dev` não apresentar vulnerabilidade crítica ou alta aplicável;
+- [x] preferências serem salvas e recuperadas após novo login;
+- [x] PRO Resumos entregar o baseline de cabeçalhos aprovado;
+- [x] logs de pagamento não incluírem PII, payloads ou corpos brutos;
+- [x] importações excessivas retornarem `413` sem consumo descontrolado;
+- [ ] testes com dois usuários demonstrarem isolamento de dados;
+- [x] a versão publicada e o commit remoto serem confirmados após o deploy.
+
+**Estado geral:** 11 achados corrigidos e publicados; encerramento integral ainda depende do teste negativo com duas contas e do checkout em sandbox previsto na Etapa 3.
