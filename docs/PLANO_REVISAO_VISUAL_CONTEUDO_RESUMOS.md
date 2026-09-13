@@ -103,7 +103,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [ ] | Legislação Penal Especial | [ ] | [ ] | — |
 | [ ] | Macroeconomia | [ ] | [ ] | — |
 | [ ] | Microeconomia | [ ] | [ ] | — |
-| [ ] | Português | [ ] | [ ] | — |
+| [x] | Português | [x] | N/A — nenhum erro visual ou funcional | 6 resumos e 37 seções revisados; 12 mapas Mermaid válidos; 8 tabelas responsivas; 2 pendências editoriais em Sintaxe. |
 | [ ] | Raciocínio Lógico, Matemática, Estatística e Matemática Financeira | [ ] | [ ] | — |
 
 ## 6. Registro da disciplina ativa
@@ -125,3 +125,28 @@ Ao iniciar uma disciplina, adicionar abaixo uma subseção no formato:
 ```
 
 O relatório final da disciplina deve informar arquivos alterados, correções realizadas, testes executados, commits, SHA remoto, deploy publicado, smoke em produção, observações editoriais pendentes e riscos remanescentes.
+
+### Português — 12 de setembro de 2026
+
+**Comando de início do usuário:** `processar disciplina PORTUGUÊS`
+
+**Quantidade de resumos:** 6
+
+**Quantidade de seções:** 37
+
+**Estado:** concluída com observações editoriais
+
+| Resumo | URL | Seções | Visual/conteúdo | Gráficos | Mermaid | Mapas mentais | Observação e ação | Evidência final |
+|---|---|---:|---|---|---|---|---|---|
+| Considerações Iniciais | `https://proconcursos.com.br/resumos/consideracoes-iniciais` | 1 | [x] | N/A | [x] | [x] | Sem falha visual ou funcional. | Desktop e 390 × 844; sem overflow; mapa renderizado. |
+| Fonética | `https://proconcursos.com.br/resumos/fonetica` | 4 | [x] | N/A | [x] | [x] | Sem falha visual ou funcional. | Todas as seções percorridas; console sem erro. |
+| Morfologia | `https://proconcursos.com.br/resumos/morfologia` | 10 | [x] | N/A | [x] | [x] | Sem falha visual ou funcional. | Todas as seções percorridas; tabelas com contenção responsiva. |
+| Outros Tópicos | `https://proconcursos.com.br/resumos/outros-topicos` | 3 | [x] | N/A | [x] | [x] | Sem falha visual ou funcional; anotada para revisão editorial a afirmação absoluta de que o texto narrativo “necessita ser datado”. | Três mapas renderizados; zoom, restauração e overlay funcionais; temas Light, Dark e Sepia validados. |
+| Sintaxe | `https://proconcursos.com.br/resumos/sintaxe` | 11 | [x] | N/A | [x] | [x] | Atenção editorial: seção 04 contém “A decision implicará demissão”; seção 08 contém “Education a distância é uma tendência”. Conteúdo não alterado sem fonte editorial. | Quatro mapas renderizados; tabela densa com rolagem horizontal interna no mobile; sem overflow global. |
+| Redação Oficial | `https://proconcursos.com.br/resumos/redacao-oficial` | 8 | [x] | N/A | [x] | [x] | Sem falha visual ou funcional. | Todas as seções percorridas; mapas e conteúdo legíveis no mobile. |
+
+**Consolidação:** os 6 resumos e as 37 seções foram percorridos integralmente em produção, desconsiderando flashcards. Não há gráficos quantitativos na disciplina. Foram encontrados 12 mapas Mermaid e 8 tabelas; todos carregaram sem código bruto, erro persistente, corte global ou falha de console. A revisão estrutural também não encontrou texto ausente, seção vazia ou imagem quebrada visível.
+
+**Correções visuais/funcionais:** N/A — nenhum erro visual ou funcional reproduzido; não houve alteração de código nem deploy de aplicação nesta execução.
+
+**Pendências editoriais:** corrigir, após validação da fonte do conteúdo, os estrangeirismos acidentais “decision” e “Education” nas seções 04 e 08 de Sintaxe; revisar tecnicamente a formulação absoluta sobre datação do texto narrativo em Tipologia Textual.

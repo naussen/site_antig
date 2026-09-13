@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — revisão visual e de conteúdo de Português
+
+- percorridos em produção os 6 resumos e as 37 seções da disciplina, sem incluir flashcards;
+- validados 12 mapas Mermaid, 8 tabelas responsivas, temas Light, Dark e Sepia, viewport móvel de 390 × 844 e desktop;
+- não encontrada regressão visual ou funcional; registradas no plano duas falhas textuais objetivas e uma afirmação que exige revisão editorial com fonte.
+
 ## Não publicado — plano de revisão visual e de conteúdo
 
 - inventariadas as 30 disciplinas disponíveis no PRO Resumos em um checklist operacional;
