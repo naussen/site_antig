@@ -251,6 +251,59 @@ export function validateImportPayload(payload) {
   return parsed.data;
 }
 
+export function validateImportPayloadPreservingFlashcards(payload) {
+  if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
+    return validateImportPayload(payload);
+  }
+
+  const candidate = {
+    ...payload,
+    sections: Array.isArray(payload.sections)
+      ? payload.sections.map((section) => {
+          if (!section || typeof section !== "object" || Array.isArray(section)) {
+            return section;
+          }
+          const { flashcards: _ignored, ...contentFields } = section;
+          return { ...contentFields, flashcards: [] };
+        })
+      : payload.sections,
+  };
+
+  return validateImportPayload(candidate);
+}
+
+export function assertPreservedFlashcardIdentities(existingSections, payload) {
+  const activeSections = existingSections.filter((section) => !section.archived_at);
+  if (activeSections.length !== payload.sections.length) {
+    throw new Error(
+      "--preserve-flashcards exige correspondência exata com todas as seções ativas do módulo."
+    );
+  }
+
+  const existingBySectionId = new Map(
+    existingSections.map((section) => [section.section_id, section])
+  );
+  for (const section of payload.sections) {
+    const existing = existingBySectionId.get(section.section_id);
+    if (!existing || existing.archived_at) {
+      throw new Error(
+        `--preserve-flashcards não permite criar ou restaurar a seção ${section.section_id}.`
+      );
+    }
+    if (
+      existing.topic_id !== payload.topic_id
+      || !section.content_unit_id
+      || section.content_unit_id !== existing.content_unit_id
+      || !section.stable_key
+      || section.stable_key !== existing.stable_key
+    ) {
+      throw new Error(
+        `--preserve-flashcards exige identidade permanente exata em ${section.section_id}.`
+      );
+    }
+  }
+}
+
 export function requireText(value, label) {
   const normalized = value?.trim();
   if (!normalized) {
@@ -974,7 +1027,7 @@ async function readJsonFile(filePath) {
   }
 }
 
-async function readBatchDirectory(directoryPath) {
+async function readBatchDirectory(directoryPath, { preserveFlashcards = false } = {}) {
   let directoryEntries;
   try {
     directoryEntries = await readdir(directoryPath, { withFileTypes: true });
@@ -1002,7 +1055,9 @@ async function readBatchDirectory(directoryPath) {
       entries.push({
         filePath,
         sortOrder: getBatchSortOrder(fileName, index + 1),
-        payload: validateImportPayload(await readJsonFile(filePath)),
+        payload: preserveFlashcards
+          ? validateImportPayloadPreservingFlashcards(await readJsonFile(filePath))
+          : validateImportPayload(await readJsonFile(filePath)),
       });
     } catch (error) {
       errors.push(`${filePath}: ${error instanceof Error ? error.message : String(error)}`);
@@ -1159,6 +1214,48 @@ async function upsertImportPayload(
   }
 }
 
+async function updateImportPayloadPreservingFlashcards(
+  supabase,
+  payload,
+  context = "importação",
+  topicSortOrder
+) {
+  unwrap(
+    await supabase.from("topics").upsert(
+      buildTopicRow(payload, topicSortOrder),
+      { onConflict: "topic_id" }
+    ),
+    `Falha ao salvar módulo (${context})`
+  );
+
+  for (const [sortOrder, section] of payload.sections.entries()) {
+    const patch = {
+      title: section.title,
+      content_markdown: section.content_markdown || null,
+      callouts: section.callouts,
+      mnemonics: section.mnemonics,
+      mermaid_mindmap: section.mermaid_mindmap || null,
+      sort_order: sortOrder,
+      archived_at: null,
+      archived_reason: null,
+    };
+    const updated = unwrap(
+      await supabase
+        .from("sections")
+        .update(patch)
+        .eq("topic_id", payload.topic_id)
+        .eq("content_unit_id", section.content_unit_id)
+        .select("section_id,content_unit_id"),
+      `Falha ao atualizar conteúdo preservando flashcards (${context})`
+    );
+    if (updated.length !== 1 || updated[0].section_id !== section.section_id) {
+      throw new Error(
+        `Atualização ambígua bloqueada ao preservar flashcards em ${section.section_id}.`
+      );
+    }
+  }
+}
+
 async function fetchPersonalImpact(supabase, impact) {
   const ids = [...new Set([
     ...impact.removed.map((section) => section.content_unit_id),
@@ -1183,7 +1280,13 @@ async function fetchPersonalImpact(supabase, impact) {
 }
 
 async function importContent(supabase, filePath, values) {
-  const payload = validateImportPayload(await readJsonFile(filePath));
+  if (values.preserveFlashcards && values.replace) {
+    throw new Error("--preserve-flashcards não pode ser combinado com --replace.");
+  }
+  const rawPayload = await readJsonFile(filePath);
+  const payload = values.preserveFlashcards
+    ? validateImportPayloadPreservingFlashcards(rawPayload)
+    : validateImportPayload(rawPayload);
   const manifest = values.manifest
     ? ChangeManifestSchema.parse(await readJsonFile(values.manifest))
     : payload.change_manifest;
@@ -1208,6 +1311,9 @@ async function importContent(supabase, filePath, values) {
     payload.topic_id,
     { includeArchived: true }
   );
+  if (values.preserveFlashcards) {
+    assertPreservedFlashcardIdentities(existingSections, payload);
+  }
   const impact = buildContentImpact(existingSections, payload.sections, {
     replace: values.replace,
   });
@@ -1274,7 +1380,12 @@ async function importContent(supabase, filePath, values) {
     return;
   }
 
-  await upsertImportPayload(supabase, payload, filePath);
+  if (values.preserveFlashcards) {
+    await updateImportPayloadPreservingFlashcards(supabase, payload, filePath);
+    console.log("Flashcards preservados no banco; valores presentes no arquivo foram ignorados.");
+  } else {
+    await upsertImportPayload(supabase, payload, filePath);
+  }
   console.log("Importação concluída com sucesso.");
 }
 
@@ -1285,7 +1396,9 @@ async function importBatch(supabase, directoryPath, values) {
   }
 
   console.log(`Preflight da pasta: ${directoryPath}`);
-  const entries = await readBatchDirectory(directoryPath);
+  const entries = await readBatchDirectory(directoryPath, {
+    preserveFlashcards: values.preserveFlashcards,
+  });
   const expectedOwners = new Map(
     entries.flatMap((entry) =>
       entry.payload.sections.map((section) => [section.section_id, entry.payload.topic_id])
@@ -1316,6 +1429,17 @@ async function importBatch(supabase, directoryPath, values) {
     );
   }
 
+  if (values.preserveFlashcards) {
+    for (const entry of entries) {
+      const existingSections = await getSectionsIfTopicExists(
+        supabase,
+        entry.payload.topic_id,
+        { includeArchived: true }
+      );
+      assertPreservedFlashcardIdentities(existingSections, entry.payload);
+    }
+  }
+
   const summary = entries.map((entry) => ({
     ordem: entry.sortOrder,
     arquivo: entry.filePath,
@@ -1339,12 +1463,24 @@ async function importBatch(supabase, directoryPath, values) {
   console.log("Iniciando importação efetiva após preflight integral...");
   for (const [index, entry] of entries.entries()) {
     console.log(`[${index + 1}/${entries.length}] ${entry.filePath}`);
-    await upsertImportPayload(
-      supabase,
-      entry.payload,
-      entry.filePath,
-      entry.sortOrder
-    );
+    if (values.preserveFlashcards) {
+      await updateImportPayloadPreservingFlashcards(
+        supabase,
+        entry.payload,
+        entry.filePath,
+        entry.sortOrder
+      );
+    } else {
+      await upsertImportPayload(
+        supabase,
+        entry.payload,
+        entry.filePath,
+        entry.sortOrder
+      );
+    }
+  }
+  if (values.preserveFlashcards) {
+    console.log("Flashcards preservados no banco; valores presentes nos arquivos foram ignorados.");
   }
   console.log(
     `Importação em lote concluída: ${entries.length} módulo(s), ${sectionCount} seção(ões).`
@@ -1517,8 +1653,8 @@ Uso:
   npm run content -- replace-public-administration-flashcards <arquivo.csv...> [--apply --confirm administracao-publica]
   npm run content -- replace-general-administration-flashcards <arquivo.csv...> [--apply --confirm administracao-geral]
   npm run content -- inspect <topic-id> [--json]
-  npm run content -- import <arquivo.json> [--apply] [--replace --manifest <manifesto.json> --confirm <topic-id>]
-  npm run content -- import-batch <pasta> (--dry-run | --apply)
+  npm run content -- import <arquivo.json> [--apply] [--preserve-flashcards] [--replace --manifest <manifesto.json> --confirm <topic-id>]
+  npm run content -- import-batch <pasta> (--dry-run | --apply) [--preserve-flashcards]
   npm run content -- export <topic-id> <saida.json> [--force]
   npm run content -- rename-topic <topic-id> "Novo título" [--apply]
   npm run content -- set-discipline <topic-id> "Nova disciplina" [--apply]
@@ -1548,6 +1684,7 @@ export async function main(argv = process.argv.slice(2)) {
       force: { type: "boolean", default: false },
       json: { type: "boolean", default: false },
       manifest: { type: "string" },
+      "preserve-flashcards": { type: "boolean", default: false },
       reason: { type: "string" },
       replace: { type: "boolean", default: false },
       help: { type: "boolean", short: "h", default: false },
@@ -1558,6 +1695,7 @@ export async function main(argv = process.argv.slice(2)) {
   if (!command || command === "help" || values.help) return printHelp();
 
   values.dryRun = values["dry-run"];
+  values.preserveFlashcards = values["preserve-flashcards"];
 
   const supabase = getAdminClient();
   switch (command) {

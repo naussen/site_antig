@@ -45,6 +45,13 @@ npm run content -- import .\meu-conteudo.json --apply
 
 O modo padrão faz **upsert**: cria ou atualiza o módulo e as seções presentes no arquivo, preservando seções antigas que não estejam no JSON. A CLI bloqueia a importação se um `section_id` já pertencer a outro módulo.
 
+Para uma revisão exclusivamente editorial de módulos já publicados, use `--preserve-flashcards`. Esse modo ignora os flashcards presentes no arquivo, exige correspondência exata de `section_id`, `content_unit_id` e `stable_key` com todas as seções ativas do módulo e atualiza somente os campos de conteúdo e recursos didáticos. Ele não cria, restaura, remove nem remapeia seções e não pode ser combinado com `--replace`:
+
+```powershell
+npm run content -- import .\meu-conteudo.json --preserve-flashcards
+npm run content -- import .\meu-conteudo.json --preserve-flashcards --apply
+```
+
 Para sincronizar exatamente com o arquivo e excluir seções antigas ausentes, use `--replace`. Como essa opção pode apagar notas e progresso ligados às seções removidas, ela exige confirmação literal:
 
 ```powershell
@@ -72,6 +79,13 @@ npm.cmd run content -- import-batch `
 ```
 
 Os modos são mutuamente exclusivos: o comando exige exatamente um entre `--dry-run` e `--apply`. O modo `--apply` repete todo o preflight na mesma execução e só então inicia as escritas. Se houver falha de rede durante a etapa efetiva, consulte o último arquivo informado no progresso e repita o comando; os upserts são idempotentes.
+
+Em lotes editoriais com flashcards legados que devem permanecer intocados, acrescente `--preserve-flashcards` tanto ao preflight quanto à aplicação. Todo o inventário permanente é verificado antes da primeira escrita:
+
+```powershell
+npm.cmd run content -- import-batch C:\caminho\dos\jsons --dry-run --preserve-flashcards
+npm.cmd run content -- import-batch C:\caminho\dos\jsons --apply --preserve-flashcards
+```
 
 ## Exportar backup
 

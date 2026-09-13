@@ -230,6 +230,13 @@
 - substituídos 223 flashcards anteriores por 120 cards C/E distribuídos em 40 seções temáticas;
 - incluídos backup prévio, rollback automático e classificador explícito para a importação segura dos CSVs.
 
+## Não publicado — revisão visual e de conteúdo de Contabilidade Geral e Avançada
+
+- revisados e republicados 32 resumos e 142 seções, com correções objetivas em 76 seções e preservação das identidades permanentes;
+- corrigida a renderização de moedas e fórmulas KaTeX; validados em produção 24 mapas Mermaid, 40 tabelas responsivas e ausência de overflow global;
+- adicionada à CLI a opção editorial `--preserve-flashcards`, que exige inventário e identidades exatos e atualiza o conteúdo sem escrever na coluna de flashcards;
+- confirmada por reexportação a preservação exata dos 120 flashcards publicados, mantidos fora da revisão.
+
 ## Não publicado — substituição dos flashcards de Português
 
 - adicionado importador administrativo dos CSVs fornecidos, sem dependência externa;

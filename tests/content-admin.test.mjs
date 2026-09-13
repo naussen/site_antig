@@ -4,11 +4,13 @@ import "./content-import-governance.test.mjs";
 import {
   assertBatchMode,
   assertConfirmation,
+  assertPreservedFlashcardIdentities,
   buildTopicRow,
   getBatchSortOrder,
   requireText,
   validateBatchEntries,
   validateImportPayload,
+  validateImportPayloadPreservingFlashcards,
 } from "../scripts/content-admin.mjs";
 import { TOPIC_ID_REDIRECTS } from "../src/lib/content/topic-id.mjs";
 import { getFlashcardContentIssue } from "../src/lib/content/flashcard.mjs";
@@ -216,6 +218,53 @@ test("classifica flashcards de Administração Pública nas seções temáticas"
   assert.equal(classifyPublicAdministrationFlashcard({ question: "O incrementalismo prevê mudanças graduais.", answer: "Certo." }), "politicas-publicas-sec-02");
   assert.equal(classifyPublicAdministrationFlashcard({ question: "A estrutura matricial combina estruturas funcional e por projetos.", answer: "Certo." }), "processo-de-organizacao-sec-01");
   assert.equal(buildPublicAdministrationFlashcards([{ fileName: "anexo.csv", content: '"A governabilidade depende de apoio político.","Gabarito: CERTO. Justificativa: Há apoio político."\\n' }]).length, 1);
+});
+
+test("preserva flashcards legados sem afrouxar o validador padrão", () => {
+  const payload = validPayload();
+  payload.sections[0].flashcards = [{ question: "Legado", answer: "Resposta" }];
+  const snapshot = structuredClone(payload);
+
+  assert.throws(() => validateImportPayload(payload), /source|fonte/i);
+  const parsed = validateImportPayloadPreservingFlashcards(payload);
+  assert.deepEqual(parsed.sections[0].flashcards, []);
+  assert.deepEqual(payload, snapshot);
+});
+
+test("modo de preservação não aceita seção sustentada apenas por flashcard", () => {
+  const payload = validPayload();
+  payload.sections[0].content_markdown = "";
+  payload.sections[0].flashcards = [{ question: "Legado", answer: "Resposta" }];
+  assert.throws(
+    () => validateImportPayloadPreservingFlashcards(payload),
+    /não possui conteúdo nem recurso didático/i
+  );
+});
+
+test("modo de preservação exige inventário e identidade permanente exatos", () => {
+  const payload = validPayload();
+  payload.sections[0].content_unit_id = "11111111-1111-4111-8111-111111111111";
+  payload.sections[0].stable_key = "introducao";
+  const existing = [{
+    section_id: payload.sections[0].section_id,
+    content_unit_id: payload.sections[0].content_unit_id,
+    stable_key: payload.sections[0].stable_key,
+    topic_id: payload.topic_id,
+    archived_at: null,
+  }];
+
+  assert.doesNotThrow(() => assertPreservedFlashcardIdentities(existing, payload));
+  assert.throws(
+    () => assertPreservedFlashcardIdentities(existing, {
+      ...payload,
+      sections: [{ ...payload.sections[0], stable_key: "outra-chave" }],
+    }),
+    /identidade permanente exata/i
+  );
+  assert.throws(
+    () => assertPreservedFlashcardIdentities([], payload),
+    /correspondência exata/i
+  );
 });
 
 test("classifica flashcards de Administração Geral nas seções temáticas", () => {

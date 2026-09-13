@@ -82,7 +82,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [ ] | Análise de Balanços | [ ] | [ ] | — |
 | [ ] | Auditoria | [ ] | [ ] | — |
 | [ ] | Contabilidade de Custos | [ ] | [ ] | — |
-| [ ] | Contabilidade Geral e Avançada | [ ] | [ ] | — |
+| [x] | Contabilidade Geral e Avançada | [ ] | [x] | 32 resumos e 142 seções revisados; 76 seções corrigidas; 24 mapas e 40 tabelas validados; persistência e smoke autenticado confirmados. |
 | [ ] | Direito Administrativo | [ ] | [ ] | — |
 | [ ] | Direito Civil | [ ] | [ ] | — |
 | [x] | Direito Constitucional | [ ] | [x] | 15 resumos e 105 seções revisados; 64 correções jurídicas aplicadas em 30 seções; persistência integral confirmada no Supabase. |
@@ -252,3 +252,32 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Revisão integral de conteúdo reaberta:** o smoke revelou erro textual e repetição real em Sociedades, motivo pelo qual os três módulos foram novamente conferidos contra fontes legais oficiais. Em Direito de Empresa, foram corrigidas regras sobre registro, empresário incapaz, trespasse, escrituração, nome empresarial e desconsideração. Em Sociedades, foram removidas as repetições e atualizadas regras de sociedade simples, limitada, cooperativa e anônima, inclusive os quóruns da Lei 14.451/2022. Em Títulos de Crédito, foram corrigidos sujeitos cambiais, endosso, aval, apresentação, protesto, execução de cheque e duplicata e incluída a duplicata escritural.
 
 **Nova persistência:** os três payloads passaram por 41 testes de conteúdo e pelo preflight administrativo. A importação atualizou as 29 seções sem criar ou remover unidades; `section_id`, `content_unit_id` e `stable_key` foram preservados. A reexportação posterior apresentou correspondência semântica exata com os três JSONs revisados. O backup anterior à alteração permanece exportável em `C:\PRO\agente\backups\Direito Empresarial\2026-09-13-revisao-conteudo`.
+
+### Contabilidade Geral e Avançada — 13 de setembro de 2026
+
+**Comando de início do usuário:** `disciplina: Contabilidade Geral e Avançada — revisão funcional, visual e correção do conteúdo`
+
+**Quantidade de resumos:** 32
+
+**Quantidade de seções:** 142
+
+**Estado:** concluída
+
+| Faixa de resumos | Resumos | Seções | Visual/conteúdo | Gráficos | Mermaid/mapas mentais | Observação e ação | Evidência final |
+|---|---:|---:|---|---|---|---|---|
+| 001–008 | 8 | 34 | [x] | N/A | [x] | Corrigidos fundamentos, folha, duplicatas, AVP e operações com mercadorias. | Rotas autenticadas, tabelas responsivas, KaTeX e mapas validados. |
+| 009–016 | 8 | 36 | [x] | N/A | [x] | Atualizados ativos, CPC 27, CPC 04, impairment, estoques, arrendamentos, PIV e CPC 31. | Rotas autenticadas, tabelas responsivas, KaTeX e mapas validados. |
+| 017–024 | 8 | 33 | [x] | N/A | [x] | Atualizados CPC 48, provisões, CPC 08, reservas, dividendos e encoding. | Rotas autenticadas, tabelas responsivas, KaTeX e mapas validados. |
+| 025–032 | 8 | 39 | [x] | N/A | [x] | Atualizados reservas, demonstrações, câmbio, subvenções, MEP, combinações, consolidação e CPC 23. | Rotas autenticadas, tabelas responsivas, KaTeX e mapas validados. |
+
+**Consolidação visual e funcional:** os 32 resumos e as 142 seções foram abertos em produção com sessão autenticada. As 40 tabelas permaneceram em contêineres responsivos; os 24 mapas Mermaid carregaram como SVG, sem código bruto, estado preso ou erro; não houve redirecionamento para login nem overflow horizontal global. Não há gráfico quantitativo requerido pelos planos desta disciplina.
+
+**Correções visuais:** escapadas 191 ocorrências textuais de `R$` que eram interpretadas como delimitadores matemáticos; reparadas fórmulas de estoques; normalizadas abreviações monetárias para `BRL`, `USD` e `EUR` somente dentro de KaTeX; removido o bloco vazio “Insubistência X Superveniência”. O smoke corretivo confirmou zero `.katex-error` nos módulos afetados.
+
+**Revisão de conteúdo:** 76 seções receberam correções objetivas, com foco na vigência e terminologia dos CPCs, Lei 6.404/76, legislação trabalhista e tributária correlata. Os módulos 002, 003, 018 e 024 não exigiram correção textual substantiva. As fontes primárias usadas incluem pronunciamentos oficiais do CPC, legislação compilada do Planalto e atos do CFC.
+
+**Persistência:** o preflight administrativo aprovou os 32 módulos antes da primeira escrita. A importação atualizou somente conteúdo e recursos didáticos das 142 unidades existentes, com igualdade exata de `section_id`, `content_unit_id` e `stable_key`. A reexportação confirmou correspondência integral com os payloads revisados. Os 120 flashcards publicados permaneceram idênticos ao backup prévio e não foram analisados.
+
+**Backups:** `C:\PRO\agente\contabilidade_geral_e_avançada\backups\2026-09-13-pre-revisao` e `C:\PRO\agente\contabilidade_geral_e_avançada\backups\2026-09-13-pos-revisao`.
+
+**Pendências editoriais:** nenhuma dentre os erros encontrados nesta revisão. O `topic_id` legado `cpc-27-intangivel` foi mantido para preservar a URL, embora o título exibido tenha sido corrigido para CPC 04 (R1). Flashcards permanecem fora do escopo.
