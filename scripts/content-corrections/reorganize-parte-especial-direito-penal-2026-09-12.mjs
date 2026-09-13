@@ -69,6 +69,7 @@ splitAtHeadings(s1.content_markdown, [
   { heading: "### Homicídio Simples", title: "Homicídio" },
   { heading: "### Feminicídio (Art. 121-A)", title: "Feminicídio" },
   { heading: "### Vicaricídio (Art. 121-B)", title: "Vicaricídio" },
+  { heading: "### Homicídio Culposo", title: "Homicídio" },
 ]);
 const homicide = assembled.get("Homicídio");
 homicide.callouts.push(...s1.callouts);
@@ -95,12 +96,16 @@ splitAtHeadings(byNumber.get(5).content_markdown, [
 add("Injúria", byNumber.get(6).content_markdown);
 
 const s7 = byNumber.get(7).content_markdown;
+const domicileIntroStart = s7.indexOf("### Crimes Contra a Inviolabilidade do Domicílio");
 const violationStart = s7.indexOf("# Violação de Domicílio (Art. 150)");
+const secretsIntroStart = s7.indexOf("# Crimes Contra a Inviolabilidade dos Segredos");
 const invasionStart = s7.indexOf("### Invasão de Dispositivo Informático (Art. 154-A)");
 const tableStart = s7.indexOf("| Crime | Conduta | Pena |");
-if ([violationStart, invasionStart, tableStart].some((index) => index < 0)) throw new Error("Estrutura inesperada na seção 07");
-add("Injúria", s7.slice(0, violationStart));
-add("Violação de Domicílio", s7.slice(violationStart + "# Violação de Domicílio (Art. 150)".length, invasionStart));
+if ([domicileIntroStart, violationStart, secretsIntroStart, invasionStart, tableStart].some((index) => index < 0)) throw new Error("Estrutura inesperada na seção 07");
+add("Injúria", s7.slice(0, domicileIntroStart));
+add("Violação de Domicílio", s7.slice(domicileIntroStart, violationStart));
+add("Violação de Domicílio", s7.slice(violationStart + "# Violação de Domicílio (Art. 150)".length, secretsIntroStart));
+add("Invasão de Dispositivo Informático", s7.slice(secretsIntroStart, invasionStart));
 add("Invasão de Dispositivo Informático", s7.slice(invasionStart + "### Invasão de Dispositivo Informático (Art. 154-A)".length, tableStart));
 const tableRows = s7.slice(tableStart).split(/\r?\n/).filter((line) => line.startsWith("| **"));
 for (const row of tableRows) {
@@ -128,7 +133,13 @@ splitAtHeadings(byNumber.get(11).content_markdown, [
   { heading: "### Apropriação Indébita Previdenciária", title: "Apropriação Indébita Previdenciária" },
 ]);
 
-splitAtHeadings(byNumber.get(12).content_markdown, [
+const s12 = byNumber.get(12).content_markdown;
+const propertyRulesStart = s12.indexOf("### Disposições gerais – Crimes contra o patrimônio");
+const receptationStart = s12.indexOf("### Art. 180 - Receptação");
+if (propertyRulesStart < 0 || receptationStart < 0) throw new Error("Estrutura inesperada na seção 12");
+add("Apropriação Indébita Previdenciária", s12.slice(0, propertyRulesStart));
+add("Receptação", s12.slice(propertyRulesStart, receptationStart));
+splitAtHeadings(s12.slice(receptationStart), [
   { heading: "### Art. 180 - Receptação", title: "Receptação" },
   { heading: "#### Crimes contra a liberdade sexual", title: "Estupro" },
   { heading: "#### Assédio sexual", title: "Assédio Sexual" },
