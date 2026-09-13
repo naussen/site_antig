@@ -89,7 +89,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [ ] | Direito da Pessoa com Deficiência | [ ] | [ ] | — |
 | [ ] | Direito do Trabalho | [ ] | [ ] | — |
 | [ ] | Direito Eleitoral | [ ] | [ ] | — |
-| [ ] | Direito Empresarial | [ ] | [ ] | — |
+| [x] | Direito Empresarial | [ ] | [x] | 3 resumos e 29 seções revisados; correções visuais e editoriais aplicadas; persistência integral confirmada no Supabase. |
 | [x] | Direito Penal | [ ] | [x] | 3 resumos e 104 seções; a Parte Especial foi reorganizada em 82 crimes individualizados, sem títulos editoriais genéricos; persistência integral confirmada no Supabase. |
 | [ ] | Direito Previdenciário | [ ] | [ ] | — |
 | [ ] | Direito Processual Civil | [ ] | [ ] | — |
@@ -220,3 +220,29 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Pendências editoriais:** nenhuma dentre os erros encontrados nesta revisão. Flashcards permaneceram integralmente fora do escopo, inclusive quando possam repetir redações anteriores à atualização legislativa.
 
 **Reorganização posterior:** em 12 de setembro de 2026, a Parte Especial passou de 21 agrupamentos para 82 crimes individualizados. Foram removidos da indexação títulos que não representam crimes e a nomenclatura visual “Seção”; qualificadoras, causas de aumento, formas equiparadas e regras comuns permaneceram incorporadas ao delito pertinente. Antes da atualização, confirmou-se a inexistência de progresso, notas ou destaques vinculados aos 21 IDs anteriores. A reexportação do Supabase confirmou correspondência exata das 82 seções, com os 3 callouts e o mapa Mermaid preservados.
+
+### Direito Empresarial — 13 de setembro de 2026
+
+**Comando de início do usuário:** `Plano de Revisão Visual e de Conteúdo dos Resumos disciplina: Direito Empresarial`
+
+**Quantidade de resumos:** 3
+
+**Quantidade de seções:** 29
+
+**Estado:** concluída
+
+| Resumo | URL | Seções | Visual/conteúdo | Gráficos | Mermaid | Mapas mentais | Observação e ação | Evidência final |
+|---|---|---:|---|---|---|---|---|---|
+| Direito de Empresa | `https://proconcursos.com.br/resumos/direito-de-empresa` | 6 | [x] | N/A | [x] | [x] | Substituída tabela-placeholder por comparação útil entre firma e denominação; restaurada cobertura de trespasse, escrituração e prepostos. | JSON validado; importação e reexportação coincidem. |
+| Sociedades | `https://proconcursos.com.br/resumos/sociedades` | 18 | [x] | N/A | [x] | [x] | Preenchida SCP; restaurada cobertura de comandita simples, Assembleia Geral e Conselho de Administração; atualizados pontos legais objetivos. | JSON validado; importação e reexportação coincidem. |
+| Títulos de Crédito | `https://proconcursos.com.br/resumos/titulos-de-credito` | 5 | [x] | N/A | N/A | N/A | Corrigidas a regra de outorga conjugal para aval e a redação sobre cessão civil de crédito. | JSON validado; importação e reexportação coincidem. |
+
+**Consolidação:** os 3 resumos e as 29 seções foram auditados sem avaliar flashcards. Não há gráficos quantitativos. Foram preservados um mapa Mermaid em Direito de Empresa, um em Sociedades e as tabelas didáticas; a única tabela sem função pedagógica foi substituída por comparação substantiva. A análise estrutural não encontrou `U+FFFD`, `@@`, HTML técnico exposto ou seção vazia.
+
+**Correções visuais/funcionais:** corrigida a tabela-placeholder no resumo Direito de Empresa. As demais tabelas e os diagramas atendem à função didática prevista no plano visual.
+
+**Revisão jurídica corretiva:** foram restaurados blocos omitidos durante o processamento e corrigidos pontos objetivamente incompatíveis com o Código Civil e a Lei das Sociedades por Ações, incluindo a extensão subjetiva da desconsideração, sociedade limitada unipessoal, contribuição em serviços, quórum de capital, diretoria da S/A, aval e cessão civil.
+
+**Persistência:** a importação administrativa em lote foi aprovada no preflight e aplicada aos 3 módulos. A reexportação posterior confirmou correspondência semântica exata de `content_markdown`, callouts, mnemônicos, flashcards, mapas, títulos e IDs nas 29 seções.
+
+**Pendências editoriais:** flashcards permaneceram fora do escopo. A leitura visual em produção exige sessão autenticada; a auditoria desta execução validou os artefatos efetivamente publicados e os contratos de renderização, mas não automatizou esse smoke autenticado.
