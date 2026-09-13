@@ -313,6 +313,188 @@
   --mindmap-edge: #6C7184;
 }
 
+/* Identidade do PRO Resumos: superfícies estruturais da landing, sem perder os
+   três modos de leitura nem as cores semânticas do conteúdo. */
+.pro-resumos-shell {
+  --bg-primary: #EEF3F9;
+  --bg-secondary: #F5F8FC;
+  --bg-card: #FFFFFF;
+  --dashboard-bg: #EEF3F9;
+  --dashboard-card: #FFFFFF;
+  --dashboard-sidebar: #080D17;
+  --dashboard-sidebar-muted: #A9B6C8;
+  --dashboard-sidebar-border: #23324A;
+  --dashboard-sidebar-active: rgba(96, 165, 250, 0.14);
+  --text-primary: #0B1526;
+  --text-secondary: #3E5068;
+  --text-muted: #687A91;
+  --accent: #285D9F;
+  --accent-hover: #1D477C;
+  --accent-soft: rgba(40, 93, 159, 0.11);
+  --border: #D9E2ED;
+  --border-strong: #BAC9DA;
+  --progress-bar: linear-gradient(90deg, #285D9F, #6C5CE7);
+  --progress-bg: #DCE5F0;
+  --editorial-band: #0A1729;
+  --editorial-subtle: #F1F5FA;
+  --editorial-rule: #315A92;
+  --shadow: 0 1px 3px rgba(8, 18, 34, 0.07), 0 10px 28px -24px rgba(15, 42, 73, 0.5);
+  --shadow-lg: 0 24px 56px -34px rgba(8, 18, 34, 0.5);
+}
+
+[data-theme="dark"] .pro-resumos-shell {
+  --bg-primary: #070B12;
+  --bg-secondary: #0D1420;
+  --bg-card: #111B29;
+  --dashboard-bg: #070B12;
+  --dashboard-card: #111B29;
+  --dashboard-sidebar: #05080E;
+  --dashboard-sidebar-muted: #A9B6C8;
+  --dashboard-sidebar-border: #22324A;
+  --dashboard-sidebar-active: rgba(96, 165, 250, 0.16);
+  --text-primary: #F4F7FB;
+  --text-secondary: #C1CCDA;
+  --text-muted: #91A0B3;
+  --accent: #77A7E5;
+  --accent-hover: #A8C7EF;
+  --accent-soft: rgba(119, 167, 229, 0.14);
+  --border: #243247;
+  --border-strong: #3B4D65;
+  --progress-bar: linear-gradient(90deg, #60A5FA, #A78BFA);
+  --progress-bg: #243247;
+  --editorial-band: #080E18;
+  --editorial-subtle: #172334;
+  --editorial-rule: #5F87B8;
+}
+
+[data-theme="sepia"] .pro-resumos-shell {
+  --dashboard-sidebar: #101724;
+  --dashboard-sidebar-muted: #C4C9D0;
+  --dashboard-sidebar-border: #344257;
+  --dashboard-sidebar-active: rgba(241, 184, 75, 0.13);
+  --accent: #315A83;
+  --accent-hover: #244462;
+  --accent-soft: rgba(49, 90, 131, 0.12);
+  --progress-bar: linear-gradient(90deg, #315A83, #8B6914);
+  --editorial-band: #142131;
+  --editorial-rule: #526C83;
+}
+
+.dashboard-library {
+  background:
+    radial-gradient(circle at 92% 2%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 25rem),
+    var(--dashboard-bg);
+}
+
+.dashboard-library-hero,
+.pro-resumos-shell .study-module-hero {
+  --text-primary: #FFFFFF;
+  --text-secondary: #CFD8E6;
+  --text-muted: #A9B6C8;
+  --border: rgba(255, 255, 255, 0.14);
+  --border-strong: rgba(255, 255, 255, 0.24);
+  --accent: #AFCBFF;
+  --accent-hover: #D5E4FF;
+  --accent-soft: rgba(167, 139, 250, 0.16);
+  --progress-bg: rgba(255, 255, 255, 0.15);
+  --progress-bar: linear-gradient(90deg, #60A5FA, #A78BFA, #F9A826);
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at 84% 10%, rgba(108, 92, 231, 0.34), transparent 34%),
+    radial-gradient(circle at 8% 100%, rgba(40, 93, 159, 0.34), transparent 40%),
+    linear-gradient(135deg, #070B12 0%, #0B1A30 55%, #102A4B 100%);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 26px 60px -36px rgba(3, 8, 18, 0.9);
+}
+
+.dashboard-library-hero {
+  position: relative;
+}
+
+.dashboard-library-hero::after {
+  position: absolute;
+  width: 11rem;
+  height: 11rem;
+  right: -4rem;
+  bottom: -6rem;
+  border: 1px solid rgba(249, 168, 38, 0.22);
+  border-radius: 999px;
+  content: "";
+  pointer-events: none;
+}
+
+.dashboard-library-stat {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.065);
+  backdrop-filter: blur(8px);
+}
+
+.dashboard-library-stat svg {
+  color: #F9A826;
+}
+
+.dashboard-library-action {
+  border-color: rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.07);
+  color: #FFFFFF;
+}
+
+.dashboard-library-action:hover {
+  border-color: rgba(249, 168, 38, 0.72);
+  background: rgba(255, 255, 255, 0.11);
+  color: #FFFFFF;
+}
+
+.dashboard-library-action svg,
+.dashboard-library-action span {
+  color: #F9A826;
+}
+
+.dashboard-study-suggestion {
+  border-color: color-mix(in srgb, var(--accent) 28%, var(--border));
+  background: linear-gradient(120deg, color-mix(in srgb, var(--accent-soft) 78%, var(--bg-card)), var(--bg-card));
+  box-shadow: var(--shadow);
+}
+
+.discipline-icon {
+  background: color-mix(in srgb, var(--discipline-accent, var(--accent)) 12%, var(--bg-card));
+  color: var(--discipline-accent, var(--accent));
+}
+
+.discipline-card {
+  border-top-color: var(--discipline-accent, var(--accent));
+  border-top-width: 3px;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--discipline-accent, var(--accent)) 5%, var(--bg-card)), var(--bg-card) 42%);
+}
+
+.discipline-card:hover {
+  border-color: color-mix(in srgb, var(--discipline-accent, var(--accent)) 52%, var(--border));
+  border-top-color: var(--discipline-accent, var(--accent));
+}
+
+.pro-resumos-shell .study-topbar {
+  --text-primary: #FFFFFF;
+  --text-secondary: #CFD8E6;
+  --text-muted: #9FAEC2;
+  --border: rgba(255, 255, 255, 0.16);
+  --accent: #AFCBFF;
+  --accent-soft: rgba(167, 139, 250, 0.16);
+  background: color-mix(in srgb, #07101D 92%, transparent);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 30px -24px rgba(0, 0, 0, 0.95);
+}
+
+.pro-resumos-shell .study-module-hero {
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.5rem;
+}
+
+.pro-resumos-shell .study-section-card {
+  border-top: 3px solid color-mix(in srgb, var(--accent) 76%, #6C5CE7);
+  background: linear-gradient(150deg, color-mix(in srgb, var(--accent) 3.5%, var(--bg-card)), var(--bg-card) 28%);
+}
+
 /* Paleta estável das disciplinas do Dashboard, adaptada pelos tokens de cada tema. */
 .discipline-tone-gold { --discipline-accent: var(--catalog-gold); }
 .discipline-tone-blue { --discipline-accent: var(--catalog-blue); }
@@ -330,20 +512,6 @@
 .discipline-tone-sky { --discipline-accent: var(--catalog-sky); }
 .discipline-tone-emerald { --discipline-accent: var(--catalog-emerald); }
 .discipline-tone-purple { --discipline-accent: var(--catalog-purple); }
-
-.discipline-icon {
-  background: var(--accent-soft);
-  color: var(--accent);
-}
-
-.discipline-card {
-  border-top-color: var(--accent);
-  border-top-width: 3px;
-}
-
-.discipline-card:hover {
-  border-top-color: var(--accent);
-}
 
 /* Mantém o wordmark legível nos temas e nas superfícies escuras fixas. */
 .pro-logo__dark {

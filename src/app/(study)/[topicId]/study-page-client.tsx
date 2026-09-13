@@ -134,11 +134,7 @@ export function StudyPageClient({
 
       <main className="min-h-0 min-w-0 w-full flex-1 overflow-y-auto">
         <header
-          className="sticky top-0 z-20 border-b px-4 py-3 backdrop-blur-xl sm:px-6 lg:px-8"
-          style={{
-            background: "color-mix(in srgb, var(--bg-primary) 88%, transparent)",
-            borderColor: "var(--border)",
-          }}
+          className="study-topbar sticky top-0 z-20 border-b px-4 py-3 backdrop-blur-xl sm:px-6 lg:px-8"
         >
           <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-3">
             <div className="flex min-w-0 items-center gap-3">

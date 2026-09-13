@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — identidade visual dos Resumos
+
+- aproximado o dashboard e a leitura dos Resumos da identidade visual da landing page, com superfícies preto-azuladas, azul-marinho, violeta e dourado;
+- aplicado hero escuro no catálogo e nos módulos, barra de estudo escura, cartões com profundidade discreta e cores próprias por disciplina;
+- preservados os temas Light, Dark e Sepia, as cores semânticas, o conteúdo, o comportamento e a responsividade existentes.
+
 ## Não publicado — identidade estável e versionamento dos resumos
 
 - adicionados UUID permanente e chave semântica única por tópico para as 2.286 unidades de conteúdo existentes;

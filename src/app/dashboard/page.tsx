@@ -274,11 +274,10 @@ export default async function DashboardPage({
 
   return (
     <main
-      className="min-h-screen px-4 py-6 sm:px-6 md:px-10 md:py-10 lg:px-12"
-      style={{ background: "var(--bg-primary)" }}
+      className="dashboard-library min-h-screen px-4 py-6 sm:px-6 md:px-10 md:py-10 lg:px-12"
     >
       <div className="mx-auto max-w-7xl">
-        <header className="overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] px-5 py-7 shadow-[var(--shadow)] sm:px-8 sm:py-9 lg:px-10">
+        <header className="dashboard-library-hero overflow-hidden rounded-3xl border px-5 py-7 sm:px-8 sm:py-9 lg:px-10">
           <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
             <div className="max-w-2xl">
               <p className="mb-3 text-xs font-black uppercase tracking-[0.16em] text-[var(--accent)]">
@@ -292,7 +291,7 @@ export default async function DashboardPage({
               </p>
               <Link
                 href="/dashboard/configuracoes"
-                className="mt-6 inline-flex items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] px-4 py-2.5 text-sm font-bold text-[var(--text-secondary)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                className="dashboard-library-action mt-6 inline-flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-bold transition-colors"
               >
                 <Settings2 size={17} className="text-[var(--accent)]" />
                 Configurar matérias
@@ -321,7 +320,7 @@ export default async function DashboardPage({
                   return (
                     <div
                       key={stat.label}
-                      className="rounded-2xl border border-[var(--border)] bg-[var(--bg-secondary)] p-3 sm:p-4"
+                      className="dashboard-library-stat rounded-2xl border p-3 sm:p-4"
                     >
                       <Icon size={17} className="mb-3 text-[var(--accent)]" />
                       <strong className="block text-lg text-[var(--text-primary)] sm:text-xl">
@@ -363,8 +362,7 @@ export default async function DashboardPage({
 
         {suggestedTopic && suggestedProgress && (
           <section
-            className="mt-6 flex flex-col justify-between gap-5 rounded-2xl border p-5 sm:flex-row sm:items-center sm:p-6"
-            style={{ background: "var(--accent-soft)", borderColor: "var(--border)" }}
+            className="dashboard-study-suggestion mt-6 flex flex-col justify-between gap-5 rounded-2xl border p-5 sm:flex-row sm:items-center sm:p-6"
             aria-labelledby="suggested-study-title"
           >
             <div className="flex min-w-0 items-start gap-4">
