@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { applyEntitlement, beginWebhookEvent, finishWebhookEvent } from "@/lib/payments/entitlements";
 import { calculateAccessUntil, resolvePayPalStatus } from "@/lib/payments/core.mjs";
 import { getPayPalSubscription, isExpectedPayPalSubscription, verifyPayPalWebhook } from "@/lib/payments/providers";
+import { readWebhookJson, RequestBodyError } from "@/lib/payments/webhook-request.mjs";
 
 const eventSchema = z.object({
   id: z.string().min(1).max(100),
@@ -18,10 +19,15 @@ const supportedEvents = new Set([
 ]);
 
 export async function POST(request: Request) {
-  const rawBody = await request.text();
-  if (rawBody.length > 262_144) return NextResponse.json({ error: "Payload excessivo." }, { status: 413 });
   let unknownBody: unknown;
-  try { unknownBody = JSON.parse(rawBody); } catch { return NextResponse.json({ error: "JSON inválido." }, { status: 400 }); }
+  try {
+    unknownBody = await readWebhookJson(request);
+  } catch (error) {
+    if (error instanceof RequestBodyError) {
+      return NextResponse.json({ error: error.message }, { status: error.status });
+    }
+    return NextResponse.json({ error: "Não foi possível ler o evento." }, { status: 400 });
+  }
   const parsed = eventSchema.safeParse(unknownBody);
   if (!parsed.success) return NextResponse.json({ error: "Evento inválido." }, { status: 400 });
   if (!await verifyPayPalWebhook(request.headers, unknownBody)) {

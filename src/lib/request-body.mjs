@@ -42,7 +42,11 @@ export async function readBodyLimited(request, maximumBytes) {
 
 /** @param {Request} request */
 export async function readJsonBodyLimited(request, maximumBytes) {
-  if (!request.headers.get("content-type")?.toLowerCase().startsWith("application/json")) {
+  const mediaType = request.headers.get("content-type")
+    ?.split(";", 1)[0]
+    .trim()
+    .toLowerCase();
+  if (mediaType !== "application/json") {
     throw new RequestBodyError("Content-Type deve ser application/json.", 415);
   }
   let bytes;

@@ -9,6 +9,7 @@ import {
   isExpectedMercadoPagoInvoice,
   isExpectedMercadoPagoSubscription,
 } from "@/lib/payments/providers";
+import { readWebhookJson, RequestBodyError } from "@/lib/payments/webhook-request.mjs";
 
 const eventSchema = z.object({
   id: z.union([z.string(), z.number()]).optional(),
@@ -20,11 +21,15 @@ const eventSchema = z.object({
 const uuidSchema = z.string().uuid();
 
 export async function POST(request: Request) {
-  const rawBody = await request.text();
-  if (rawBody.length > 262_144) return NextResponse.json({ error: "Payload excessivo." }, { status: 413 });
-
   let unknownBody: unknown;
-  try { unknownBody = JSON.parse(rawBody); } catch { return NextResponse.json({ error: "JSON inválido." }, { status: 400 }); }
+  try {
+    unknownBody = await readWebhookJson(request);
+  } catch (error) {
+    if (error instanceof RequestBodyError) {
+      return NextResponse.json({ error: error.message }, { status: error.status });
+    }
+    return NextResponse.json({ error: "Não foi possível ler o evento." }, { status: 400 });
+  }
   const parsed = eventSchema.safeParse(unknownBody);
   if (!parsed.success) return NextResponse.json({ error: "Evento inválido." }, { status: 400 });
 

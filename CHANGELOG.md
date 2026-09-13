@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — limite efetivo dos webhooks
+
+- substituída a leitura integral dos webhooks de Mercado Pago e PayPal por leitura JSON limitada a 256 KiB durante o streaming;
+- rejeitados `Content-Length` excessivo, bytes efetivos acima do limite, MIME incorreto e UTF-8 inválido antes da validação do evento;
+- preservadas validação estrutural, assinatura, idempotência e atualização de entitlement dos provedores.
+
 ## Não publicado — imagens privadas e limites das notas
 
 - substituído o armazenamento Base64 por upload autenticado em bucket privado, com URL interna acessível somente pelo proprietário;
