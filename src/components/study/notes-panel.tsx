@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import {
   StickyNote,
   Loader2,
@@ -11,7 +11,7 @@ import {
   Image as ImageIcon,
   ChevronsRight,
 } from "lucide-react";
-import { useNotes } from "@/hooks/use-notes";
+import { useNotes, type NoteSectionReference, type PersonalNote } from "@/hooks/use-notes";
 import { MarkdownViewer } from "@/components/study/markdown-viewer";
 import {
   ALLOWED_NOTE_IMAGE_TYPES,
@@ -30,9 +30,10 @@ import {
 interface NotesPanelProps {
   userId: string | null;
   sectionId: string;
+  contentUnitId: string;
   sectionTitle: string;
-  /** Todos os sectionIds do tópico para carregar todas as notas */
-  allSectionIds: string[];
+  /** Identidades permanentes e aliases legados das seções do tópico. */
+  sections: NoteSectionReference[];
   /** Map de sectionId → título da seção para exibir labels nas notas */
   sectionTitleMap: Record<string, string>;
   onClose?: () => void;
@@ -47,16 +48,24 @@ interface PendingNoteImage {
 export function NotesPanel({
   userId,
   sectionId,
+  contentUnitId,
   sectionTitle,
-  allSectionIds,
+  sections,
   sectionTitleMap,
   onClose,
 }: NotesPanelProps) {
   const { notes, loading, error: loadError, saveNote, deleteNote, refetch } = useNotes(
     userId,
-    allSectionIds,
+    sections,
     sectionId
   );
+  const sectionIdByContentUnit = useMemo(
+    () => new Map(sections.map((section) => [section.contentUnitId, section.sectionId])),
+    [sections]
+  );
+  const resolveSectionId = useCallback((note: PersonalNote) => note.content_unit_id
+    ? sectionIdByContentUnit.get(note.content_unit_id) ?? note.section_id
+    : note.section_id, [sectionIdByContentUnit]);
   const [draft, setDraft] = useState("");
   const [isSaving, setIsSaving] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
@@ -144,12 +153,16 @@ export function NotesPanel({
 
   // Separar notas da seção ativa vs. restante do tópico
   const activeNotes = useMemo(
-    () => notes.filter((n) => n.section_id === sectionId),
-    [notes, sectionId]
+    () => notes.filter((note) => (
+      note.content_unit_id === contentUnitId || resolveSectionId(note) === sectionId
+    )),
+    [contentUnitId, notes, resolveSectionId, sectionId]
   );
   const otherNotes = useMemo(
-    () => notes.filter((n) => n.section_id !== sectionId),
-    [notes, sectionId]
+    () => notes.filter((note) => (
+      note.content_unit_id !== contentUnitId && resolveSectionId(note) !== sectionId
+    )),
+    [contentUnitId, notes, resolveSectionId, sectionId]
   );
 
   return (
@@ -327,7 +340,7 @@ export function NotesPanel({
                 <NoteCard
                   key={note.id || `${note.section_id}-${note.updated_at}-${index}`}
                   note={note}
-                  sectionLabel={sectionTitleMap[note.section_id]}
+                  sectionLabel={sectionTitleMap[resolveSectionId(note)]}
                   onDelete={handleDelete}
                 />
               ))}

@@ -7,8 +7,21 @@ import type { TextHighlightColor, UserTextHighlight } from "@/types/database";
 
 export { TEXT_HIGHLIGHT_COLORS };
 
+export interface HighlightSectionReference {
+  sectionId: string;
+  contentUnitId: string;
+}
+
+export type PersonalTextHighlight = UserTextHighlight & {
+  content_unit_id?: string;
+  content_revision_id?: string | null;
+  migration_status?: "active" | "migrated" | "orphaned" | "needs_review";
+  anchor_context?: Record<string, unknown>;
+};
+
 export interface NewTextHighlight {
   sectionId: string;
+  contentUnitId: string;
   color: TextHighlightColor;
   startOffset: number;
   endOffset: number;
@@ -25,14 +38,23 @@ async function requestHighlightApi(path: string, init?: RequestInit) {
   }
 }
 
-export function useTextHighlights(userId: string | null, sectionIds: string[]) {
+export function useTextHighlights(userId: string | null, sections: HighlightSectionReference[]) {
+  const sectionIds = useMemo(() => sections.map((section) => section.sectionId), [sections]);
+  const contentUnitIds = useMemo(
+    () => sections.map((section) => section.contentUnitId),
+    [sections],
+  );
+  const sectionByContentUnitId = useMemo(
+    () => new Map(sections.map((section) => [section.contentUnitId, section.sectionId])),
+    [sections],
+  );
   const contextKey = useMemo(
     () => userId && sectionIds.length > 0 ? JSON.stringify([userId, sectionIds]) : "",
     [sectionIds, userId],
   );
   const [state, setState] = useState<{
     contextKey: string;
-    highlights: UserTextHighlight[];
+    highlights: PersonalTextHighlight[];
     loading: boolean;
     error: string | null;
   }>({ contextKey: "", highlights: [], loading: false, error: null });
@@ -53,6 +75,7 @@ export function useTextHighlights(userId: string | null, sectionIds: string[]) {
       setState({ contextKey, highlights: [], loading: true, error: null });
       const query = new URLSearchParams();
       sectionIds.forEach((sectionId) => query.append("section_id", sectionId));
+      contentUnitIds.forEach((contentUnitId) => query.append("content_unit_id", contentUnitId));
       const response = await requestHighlightApi(`${withSiteBasePath("/api/highlights")}?${query}`);
 
       if (cancelled) return;
@@ -66,11 +89,11 @@ export function useTextHighlights(userId: string | null, sectionIds: string[]) {
         return;
       }
 
-      const data = await response.json() as UserTextHighlight[];
+      const data = await response.json() as PersonalTextHighlight[];
 
       setState({
         contextKey,
-        highlights: (data ?? []) as UserTextHighlight[],
+        highlights: data ?? [],
         loading: false,
         error: null,
       });
@@ -80,17 +103,28 @@ export function useTextHighlights(userId: string | null, sectionIds: string[]) {
     return () => {
       cancelled = true;
     };
-  }, [contextKey, sectionIds, userId]);
+  }, [contentUnitIds, contextKey, sectionIds, userId]);
 
   const addHighlight = useCallback(async (input: NewTextHighlight) => {
     if (!userId || !contextKey) return false;
 
     const now = new Date().toISOString();
     const temporaryId = `pending-${crypto.randomUUID()}`;
-    const optimisticHighlight: UserTextHighlight = {
+    const optimisticHighlight: PersonalTextHighlight = {
       id: temporaryId,
       user_id: userId,
       section_id: input.sectionId,
+      content_unit_id: input.contentUnitId,
+      content_revision_id: null,
+      migration_status: "active",
+      anchor_context: {
+        selected_text: input.selectedText,
+        prefix: input.prefix,
+        suffix: input.suffix,
+        start_offset: input.startOffset,
+        end_offset: input.endOffset,
+        anchor_version: 1,
+      },
       color: input.color,
       start_offset: input.startOffset,
       end_offset: input.endOffset,
@@ -112,6 +146,7 @@ export function useTextHighlights(userId: string | null, sectionIds: string[]) {
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
         section_id: input.sectionId,
+        content_unit_id: input.contentUnitId,
         color: input.color,
         start_offset: input.startOffset,
         end_offset: input.endOffset,
@@ -130,12 +165,12 @@ export function useTextHighlights(userId: string | null, sectionIds: string[]) {
       return false;
     }
 
-    const data = await response.json() as UserTextHighlight;
+    const data = await response.json() as PersonalTextHighlight;
 
     setState((previous) => previous.contextKey === contextKey ? {
       ...previous,
       highlights: previous.highlights.map((item) => (
-        item.id === temporaryId ? data as UserTextHighlight : item
+        item.id === temporaryId ? data : item
       )),
       error: null,
     } : previous);
@@ -173,16 +208,28 @@ export function useTextHighlights(userId: string | null, sectionIds: string[]) {
   }, [contextKey, highlights, userId]);
 
   const highlightsBySection = useMemo(() => {
-    const grouped: Record<string, UserTextHighlight[]> = {};
+    const grouped: Record<string, PersonalTextHighlight[]> = {};
     highlights.forEach((highlight) => {
-      grouped[highlight.section_id] = [...(grouped[highlight.section_id] ?? []), highlight];
+      if (highlight.migration_status && !["active", "migrated"].includes(highlight.migration_status)) return;
+      const sectionId = highlight.content_unit_id
+        ? sectionByContentUnitId.get(highlight.content_unit_id) ?? highlight.section_id
+        : highlight.section_id;
+      grouped[sectionId] = [...(grouped[sectionId] ?? []), highlight];
     });
     return grouped;
-  }, [highlights]);
+  }, [highlights, sectionByContentUnitId]);
+
+  const highlightsNeedingReview = useMemo(
+    () => highlights.filter((highlight) => (
+      highlight.migration_status === "orphaned" || highlight.migration_status === "needs_review"
+    )),
+    [highlights],
+  );
 
   return {
     highlights,
     highlightsBySection,
+    highlightsNeedingReview,
     loading,
     error,
     addHighlight,

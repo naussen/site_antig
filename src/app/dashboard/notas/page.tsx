@@ -12,42 +12,86 @@ export default async function NotesPage() {
     redirect("/login");
   }
 
-  // Fetch all notes for the user, including section and topic data
-  const { data: notesData, error: notesError } = await supabase
+  // A identidade permanente evita perder o vínculo quando section_id ou ordem mudam.
+  const identityNotesResult = await supabase
     .from("user_notes")
-    .select(`
-      id,
-      content,
-      updated_at,
-      sections (
-        section_id,
-        title,
-        sort_order,
-        topics (
-          topic_id,
-          title,
-          discipline
-        )
-      )
-    `)
+    .select("id,content,updated_at,content_unit_id,section_id")
     .eq("user_id", user.id)
     .neq("content", "");
 
-  type NotesQueryRow = {
+  type NoteRow = {
     id: string | null;
     content: string;
     updated_at: string;
-    sections: {
-      section_id: string;
-      title: string;
-      sort_order: number;
-      topics: {
-        topic_id: string;
-        title: string;
-        discipline: string | null;
-      } | null;
-    } | null;
+    content_unit_id?: string;
+    section_id: string;
   };
+
+  let notesData = identityNotesResult.data as NoteRow[] | null;
+  let notesError = identityNotesResult.error;
+  if (notesError && (notesError.code === "42703" || notesError.code === "PGRST204")) {
+    const legacyNotesResult = await supabase
+      .from("user_notes")
+      .select("id,content,updated_at,section_id")
+      .eq("user_id", user.id)
+      .neq("content", "");
+    notesData = legacyNotesResult.data as NoteRow[] | null;
+    notesError = legacyNotesResult.error;
+  }
+
+  type SectionDetails = {
+    section_id: string;
+    content_unit_id?: string;
+    title: string;
+    sort_order: number;
+    topic_id: string;
+    archived_at?: string | null;
+  };
+
+  const contentUnitIds = [...new Set((notesData ?? [])
+    .map((note) => note.content_unit_id)
+    .filter((id): id is string => Boolean(id)))];
+  const legacySectionIds = [...new Set((notesData ?? []).map((note) => note.section_id))];
+  let sectionsData: SectionDetails[] = [];
+  let sectionLoadError: unknown = null;
+
+  if (!notesError && contentUnitIds.length > 0) {
+    const sectionsResult = await supabase
+      .from("sections")
+      .select("section_id,content_unit_id,title,sort_order,topic_id,archived_at")
+      .in("content_unit_id", contentUnitIds);
+    sectionsData = sectionsResult.data as SectionDetails[] ?? [];
+    sectionLoadError = sectionsResult.error;
+  }
+
+  const resolvedLegacySectionIds = new Set(sectionsData.map((section) => section.section_id));
+  const missingLegacySectionIds = legacySectionIds.filter((id) => !resolvedLegacySectionIds.has(id));
+  if (!notesError && missingLegacySectionIds.length > 0) {
+    const legacySectionsResult = await supabase
+      .from("sections")
+      .select("section_id,title,sort_order,topic_id")
+      .in("section_id", missingLegacySectionIds);
+    if (legacySectionsResult.error) {
+      sectionLoadError = legacySectionsResult.error;
+    } else {
+      sectionsData = [...sectionsData, ...(legacySectionsResult.data as SectionDetails[] ?? [])];
+    }
+  }
+
+  const topicIds = [...new Set(sectionsData.map((section) => section.topic_id))];
+  const topicsResult = topicIds.length > 0
+    ? await supabase
+      .from("topics")
+      .select("topic_id,title,discipline")
+      .in("topic_id", topicIds)
+    : { data: [], error: null };
+
+  const sectionsByContentUnitId = new Map(sectionsData
+    .filter((section) => section.content_unit_id)
+    .map((section) => [section.content_unit_id as string, section]));
+  const sectionsByLegacyId = new Map(sectionsData.map((section) => [section.section_id, section]));
+  const topicsById = new Map((topicsResult.data ?? []).map((topic) => [topic.topic_id, topic]));
+  const personalDataError = notesError ?? sectionLoadError ?? topicsResult.error;
 
   // Transformar e agrupar os dados
   type EnrichedNote = {
@@ -65,23 +109,28 @@ export default async function NotesPage() {
   const validNotes: EnrichedNote[] = [];
 
   if (notesData) {
-    (notesData as unknown as NotesQueryRow[]).forEach((note) => {
+    notesData.forEach((note) => {
       // Ignora notas vazias ou compostas apenas por espaços
       if (!note.content || note.content.trim() === "") return;
       // Ações de edição/exclusão exigem o UUID introduzido na migration 004.
       if (!note.id) return;
-      if (!note.sections || !note.sections.topics) return;
+      const section = note.content_unit_id
+        ? sectionsByContentUnitId.get(note.content_unit_id) ?? sectionsByLegacyId.get(note.section_id)
+        : sectionsByLegacyId.get(note.section_id);
+      if (!section) return;
+      const topic = topicsById.get(section.topic_id);
+      if (!topic) return;
 
       validNotes.push({
         id: note.id,
         content: note.content,
         updated_at: note.updated_at,
-        section_id: note.sections.section_id,
-        section_title: note.sections.title,
-        section_order: note.sections.sort_order,
-        topic_id: note.sections.topics.topic_id,
-        topic_title: note.sections.topics.title,
-        discipline: note.sections.topics.discipline || "Geral",
+        section_id: section.section_id,
+        section_title: section.archived_at ? `${section.title} (conteúdo arquivado)` : section.title,
+        section_order: section.sort_order,
+        topic_id: topic.topic_id,
+        topic_title: topic.title,
+        discipline: topic.discipline || "Geral",
       });
     });
   }
@@ -111,7 +160,7 @@ export default async function NotesPage() {
         {/* Header global já renderizado pelo layout.tsx */}
 
       <section className="max-w-5xl mx-auto">
-        {notesError ? (
+        {personalDataError ? (
           <div
             role="alert"
             className="flex flex-col items-center rounded-3xl px-6 py-16 text-center"

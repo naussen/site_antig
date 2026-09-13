@@ -21,7 +21,8 @@ export async function saveDashboardPreferences(
 
   const { data: topics, error: topicsError } = await supabase
     .from("topics")
-    .select("discipline");
+    .select("discipline")
+    .is("archived_at", null);
 
   if (topicsError) {
     throw new Error("Não foi possível validar as disciplinas disponíveis.");

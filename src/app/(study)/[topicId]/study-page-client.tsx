@@ -39,7 +39,7 @@ const MermaidViewer = dynamic(
 
 interface StudyPageClientProps {
   topic: TopicRow;
-  sections: SectionRow[];
+  sections: Array<SectionRow & { content_unit_id: string }>;
   userId: string;
   userEmail: string | null;
   previousTopic: Pick<TopicRow, "topic_id" | "title"> | null;
@@ -65,8 +65,11 @@ export function StudyPageClient({
   const [highlighterOpen, setHighlighterOpen] = useState(false);
   const usesCrimeLabels = topic.topic_id === "parte-especial-do-codigo-penal";
 
-  const sectionIds = useMemo(
-    () => sections.map((s) => s.section_id),
+  const sectionReferences = useMemo(
+    () => sections.map((section) => ({
+      sectionId: section.section_id,
+      contentUnitId: section.content_unit_id,
+    })),
     [sections]
   );
 
@@ -83,7 +86,7 @@ export function StudyPageClient({
     progressPercent,
     loading: progressLoading,
     error: progressError,
-  } = useSectionProgress(userId, sectionIds);
+  } = useSectionProgress(userId, sectionReferences);
 
   const handleSectionClick = useCallback((sectionId: string) => {
     setActiveSectionId(sectionId);
@@ -265,7 +268,7 @@ export function StudyPageClient({
           {/* Renderizar todas as seções */}
           <TextHighlighter
             userId={userId}
-            sectionIds={sectionIds}
+            sections={sectionReferences}
             panelOpen={highlighterOpen}
             onPanelOpenChange={setHighlighterOpen}
           >
@@ -334,7 +337,10 @@ export function StudyPageClient({
 
               {/* Markdown content */}
               {section.content_markdown && (
-                <div data-highlight-section-id={section.section_id}>
+                <div
+                  data-highlight-section-id={section.section_id}
+                  data-highlight-content-unit-id={section.content_unit_id}
+                >
                   <MarkdownViewer content={section.content_markdown} />
                 </div>
               )}
@@ -483,8 +489,9 @@ export function StudyPageClient({
             key={activeSection.section_id}
             userId={userId}
             sectionId={activeSection.section_id}
+            contentUnitId={activeSection.content_unit_id}
             sectionTitle={activeSection.title}
-            allSectionIds={sectionIds}
+            sections={sectionReferences}
             sectionTitleMap={sectionTitleMap}
             onClose={() => setNotesOpen(false)}
           />

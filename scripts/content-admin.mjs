@@ -26,6 +26,16 @@ import { buildAccountingFlashcards } from "../src/lib/content/accounting-flashca
 import { buildAuditFlashcards } from "../src/lib/content/audit-flashcard-import.mjs";
 import { buildPublicAdministrationFlashcards } from "../src/lib/content/public-administration-flashcard-import.mjs";
 import { buildGeneralAdministrationFlashcards } from "../src/lib/content/general-administration-flashcard-import.mjs";
+import {
+  ChangeManifestSchema,
+  ContentIdentityFieldsSchema,
+  assertDestructiveImportAllowed,
+  buildChangeManifestRecord,
+  buildContentImpact,
+  getManifestIssues,
+  summarizeContentImpact,
+  validateSectionIdentities,
+} from "../src/lib/content/import-governance.mjs";
 
 const PAGE_SIZE = 1_000;
 
@@ -111,6 +121,7 @@ function isPredominantlyUppercaseTitle(value, contextualAcronyms) {
 }
 
 const SectionImportSchema = z.object({
+  ...ContentIdentityFieldsSchema.shape,
   section_id: z.string().min(1),
   title: z.string().min(1),
   content_markdown: z.string().default(""),
@@ -124,6 +135,7 @@ const TopicImportSchema = z.object({
   topic_id: z.string().min(1),
   discipline: z.string().default("Geral"),
   topic_title: z.string().min(1),
+  change_manifest: ChangeManifestSchema.optional(),
   sections: z.array(SectionImportSchema).min(1, "Pelo menos uma seção é obrigatória"),
 }).superRefine((topic, context) => {
   const seenSectionIds = new Set();
@@ -137,6 +149,7 @@ const TopicImportSchema = z.object({
   })).join("\n");
   const contextualAcronyms = collectContextualAcronyms(contentContext);
   const topicIdIssue = getTopicIdIssue(topic.topic_id, topic.topic_title);
+  validateSectionIdentities(topic.sections, context);
 
   if (topicIdIssue) {
     context.addIssue({
@@ -160,7 +173,7 @@ const TopicImportSchema = z.object({
 
   topic.sections.forEach((section, index) => {
     const expectedSectionId = `${topic.topic_id}-sec-${String(index + 1).padStart(2, "0")}`;
-    if (section.section_id !== expectedSectionId) {
+    if (!section.content_unit_id && section.section_id !== expectedSectionId) {
       context.addIssue({
         code: "custom",
         path: ["sections", index, "section_id"],
@@ -381,16 +394,18 @@ async function getTopic(supabase, topicId) {
   return data;
 }
 
-async function getSections(supabase, topicId) {
-  return fetchAll(() =>
-    supabase
+async function getSections(supabase, topicId, { includeArchived = false } = {}) {
+  return fetchAll(() => {
+    let query = supabase
       .from("sections")
       .select(
-        "section_id,topic_id,title,content_markdown,callouts,mnemonics,flashcards,mermaid_mindmap,sort_order,created_at"
+        "section_id,content_unit_id,stable_key,topic_id,title,content_markdown,callouts,mnemonics,flashcards,mermaid_mindmap,sort_order,created_at,archived_at"
       )
       .eq("topic_id", topicId)
-      .order("sort_order", { ascending: true })
-  );
+      .order("sort_order", { ascending: true });
+    if (!includeArchived) query = query.is("archived_at", null);
+    return query;
+  });
 }
 
 async function listContent(supabase, values) {
@@ -1003,6 +1018,9 @@ async function readBatchDirectory(directoryPath) {
 
 async function findSectionOwnershipConflicts(supabase, payload) {
   const sectionIds = payload.sections.map((section) => section.section_id);
+  const contentUnitIds = payload.sections
+    .map((section) => section.content_unit_id)
+    .filter(Boolean);
   const conflicts = [];
 
   for (let index = 0; index < sectionIds.length; index += 200) {
@@ -1010,6 +1028,20 @@ async function findSectionOwnershipConflicts(supabase, payload) {
     const existing = unwrap(
       await supabase.from("sections").select("section_id,topic_id").in("section_id", batch),
       "Falha ao verificar IDs das seções"
+    );
+    conflicts.push(
+      ...existing.filter((section) => section.topic_id !== payload.topic_id)
+    );
+  }
+
+  for (let index = 0; index < contentUnitIds.length; index += 200) {
+    const batch = contentUnitIds.slice(index, index + 200);
+    const existing = unwrap(
+      await supabase
+        .from("sections")
+        .select("section_id,content_unit_id,topic_id")
+        .in("content_unit_id", batch),
+      "Falha ao verificar UUIDs das unidades"
     );
     conflicts.push(
       ...existing.filter((section) => section.topic_id !== payload.topic_id)
@@ -1097,6 +1129,8 @@ async function upsertImportPayload(
 
   const sectionRows = payload.sections.map((section, sortOrder) => ({
     section_id: section.section_id,
+    ...(section.content_unit_id ? { content_unit_id: section.content_unit_id } : {}),
+    ...(section.stable_key ? { stable_key: section.stable_key } : {}),
     topic_id: payload.topic_id,
     title: section.title,
     content_markdown: section.content_markdown || null,
@@ -1105,16 +1139,54 @@ async function upsertImportPayload(
     flashcards: section.flashcards,
     mermaid_mindmap: section.mermaid_mindmap || null,
     sort_order: sortOrder,
+    archived_at: null,
+    archived_reason: null,
   }));
 
-  unwrap(
-    await supabase.from("sections").upsert(sectionRows, { onConflict: "section_id" }),
-    `Falha ao salvar seções (${context})`
-  );
+  const modernRows = sectionRows.filter((section) => section.content_unit_id);
+  const legacyRows = sectionRows.filter((section) => !section.content_unit_id);
+  if (modernRows.length > 0) {
+    unwrap(
+      await supabase.from("sections").upsert(modernRows, { onConflict: "content_unit_id" }),
+      `Falha ao salvar unidades versionadas (${context})`
+    );
+  }
+  if (legacyRows.length > 0) {
+    unwrap(
+      await supabase.from("sections").upsert(legacyRows, { onConflict: "section_id" }),
+      `Falha ao salvar seções legadas (${context})`
+    );
+  }
+}
+
+async function fetchPersonalImpact(supabase, impact) {
+  const ids = [...new Set([
+    ...impact.removed.map((section) => section.content_unit_id),
+    ...impact.remapped.map(({ existing }) => existing.content_unit_id),
+  ].filter(Boolean))];
+  if (ids.length === 0) return { progress: 0, notes: 0, highlights: 0 };
+
+  const countRows = async (table) => {
+    const result = await supabase
+      .from(table)
+      .select("content_unit_id", { count: "exact", head: true })
+      .in("content_unit_id", ids);
+    unwrap(result, `Falha ao medir impacto em ${table}`);
+    return result.count ?? 0;
+  };
+  const [progress, notes, highlights] = await Promise.all([
+    countRows("user_progress"),
+    countRows("user_notes"),
+    countRows("user_text_highlights"),
+  ]);
+  return { progress, notes, highlights };
 }
 
 async function importContent(supabase, filePath, values) {
   const payload = validateImportPayload(await readJsonFile(filePath));
+  const manifest = values.manifest
+    ? ChangeManifestSchema.parse(await readJsonFile(values.manifest))
+    : payload.change_manifest;
   const topicConflict = await findTopicOwnershipConflict(supabase, payload);
   if (topicConflict) {
     throw new Error(
@@ -1131,19 +1203,38 @@ async function importContent(supabase, filePath, values) {
     throw new Error(`Importação bloqueada por conflito de IDs: ${details}`);
   }
 
-  const existingSections = await getSectionsIfTopicExists(supabase, payload.topic_id);
-  const incomingIds = new Set(payload.sections.map((section) => section.section_id));
-  const staleSections = existingSections.filter((section) => !incomingIds.has(section.section_id));
+  const existingSections = await getSectionsIfTopicExists(
+    supabase,
+    payload.topic_id,
+    { includeArchived: true }
+  );
+  const impact = buildContentImpact(existingSections, payload.sections, {
+    replace: values.replace,
+  });
+  const personalImpact = await fetchPersonalImpact(supabase, impact);
+  const impactSummary = summarizeContentImpact(impact, personalImpact);
 
   console.log(`Arquivo: ${filePath}`);
   console.log(`Módulo: ${payload.topic_title} (${payload.topic_id})`);
   console.log(`Disciplina: ${payload.discipline}`);
   console.log(`Seções recebidas: ${payload.sections.length}`);
-  console.log(`Seções atuais ausentes no arquivo: ${staleSections.length}`);
+  console.log(`Seções ativas ausentes no arquivo: ${impact.removed.length}`);
+  console.log("Relatório de impacto:");
+  console.log(JSON.stringify(impactSummary, null, 2));
 
-  if (values.replace && staleSections.length > 0) {
-    console.log("Seções que serão excluídas com --replace:");
-    console.table(staleSections.map(({ section_id, title }) => ({ section_id, title })));
+  if (values.replace && impact.removed.length > 0) {
+    console.log("Seções que serão arquivadas com --replace:");
+    console.table(impact.removed.map(({ section_id, stable_key, title }) => ({
+      section_id,
+      stable_key,
+      title,
+    })));
+  }
+  if (impact.destructive && manifest) {
+    const manifestIssues = getManifestIssues(manifest, payload.topic_id, impact);
+    if (manifestIssues.length > 0) {
+      throw new Error(`Manifesto de mudança inválido:\n- ${manifestIssues.join("\n- ")}`);
+    }
   }
 
   if (!values.apply) {
@@ -1153,22 +1244,37 @@ async function importContent(supabase, filePath, values) {
 
   // Valida toda a autorização destrutiva antes da primeira escrita para evitar
   // que uma confirmação ausente resulte em uma importação parcialmente aplicada.
-  if (values.replace && staleSections.length > 0) {
+  if (values.replace && impact.removed.length > 0) {
     assertConfirmation(payload.topic_id, values.confirm);
+  }
+  assertDestructiveImportAllowed({
+    impact,
+    manifest,
+    topicId: payload.topic_id,
+    replace: values.replace,
+  });
+
+  if (impact.destructive) {
+    const manifestRecord = buildChangeManifestRecord(manifest);
+    const changeManifestId = unwrap(
+      await supabase.rpc("apply_content_import", {
+        p_payload: {
+          topic_id: payload.topic_id,
+          discipline: payload.discipline,
+          topic_title: payload.topic_title,
+          sections: payload.sections,
+        },
+        p_manifest: manifestRecord.manifest,
+        p_manifest_hash: manifestRecord.manifest_hash,
+        p_operation: manifestRecord.operation,
+      }),
+      "Falha ao aplicar importação destrutiva de forma atômica"
+    );
+    console.log(`Importação concluída com sucesso. Manifesto: ${changeManifestId}.`);
+    return;
   }
 
   await upsertImportPayload(supabase, payload, filePath);
-
-  if (values.replace && staleSections.length > 0) {
-    unwrap(
-      await supabase
-        .from("sections")
-        .delete()
-        .in("section_id", staleSections.map((section) => section.section_id)),
-      "Falha ao excluir seções ausentes"
-    );
-  }
-
   console.log("Importação concluída com sucesso.");
 }
 
@@ -1245,12 +1351,12 @@ async function importBatch(supabase, directoryPath, values) {
   );
 }
 
-async function getSectionsIfTopicExists(supabase, topicId) {
+async function getSectionsIfTopicExists(supabase, topicId, options) {
   const topic = unwrap(
     await supabase.from("topics").select("topic_id").eq("topic_id", topicId).maybeSingle(),
     "Falha ao consultar módulo existente"
   );
-  return topic ? getSections(supabase, topicId) : [];
+  return topic ? getSections(supabase, topicId, options) : [];
 }
 
 async function exportContent(supabase, topicId, outputPath, values) {
@@ -1262,6 +1368,8 @@ async function exportContent(supabase, topicId, outputPath, values) {
     topic_title: topic.title,
     sections: sections.map((section) => ({
       section_id: section.section_id,
+      content_unit_id: section.content_unit_id,
+      stable_key: section.stable_key,
       title: section.title,
       content_markdown: section.content_markdown ?? "",
       callouts: section.callouts ?? [],
@@ -1350,17 +1458,20 @@ async function renameDiscipline(supabase, oldName, newName, values) {
 async function deleteTopic(supabase, topicId, values) {
   const topic = await getTopic(supabase, topicId);
   const sections = await getSections(supabase, topicId);
-  console.log(`Excluir módulo: ${topic.title} (${topic.topic_id})`);
+  console.log(`Arquivar módulo: ${topic.title} (${topic.topic_id})`);
   console.log(`Seções afetadas: ${sections.length}`);
-  console.log("Notas e progresso vinculados às seções também serão excluídos pelo banco.");
+  console.log("Dados pessoais permanecerão vinculados às unidades arquivadas.");
   if (!values.apply) return console.log("Pré-visualização. Use --apply --confirm <topic_id>.");
 
   assertConfirmation(topicId, values.confirm);
   unwrap(
-    await supabase.from("topics").delete().eq("topic_id", topicId),
-    "Falha ao excluir módulo"
+    await supabase.rpc("archive_content_topic", {
+      p_topic_id: topicId,
+      p_reason: values.reason ?? "Arquivamento editorial pelo content-admin",
+    }),
+    "Falha ao arquivar módulo"
   );
-  console.log("Módulo excluído com sucesso.");
+  console.log("Módulo arquivado com sucesso.");
 }
 
 async function deleteSection(supabase, sectionId, values) {
@@ -1374,16 +1485,19 @@ async function deleteSection(supabase, sectionId, values) {
   );
   if (!section) throw new Error(`Seção não encontrada: ${sectionId}`);
 
-  console.log(`Excluir seção: ${section.title} (${section.section_id})`);
-  console.log("Notas e progresso vinculados a esta seção também serão excluídos pelo banco.");
+  console.log(`Arquivar seção: ${section.title} (${section.section_id})`);
+  console.log("Dados pessoais permanecerão vinculados à unidade arquivada.");
   if (!values.apply) return console.log("Pré-visualização. Use --apply --confirm <section_id>.");
 
   assertConfirmation(sectionId, values.confirm);
   unwrap(
-    await supabase.from("sections").delete().eq("section_id", sectionId),
-    "Falha ao excluir seção"
+    await supabase.rpc("archive_content_section", {
+      p_section_id: sectionId,
+      p_reason: values.reason ?? "Arquivamento editorial pelo content-admin",
+    }),
+    "Falha ao arquivar seção"
   );
-  console.log("Seção excluída com sucesso.");
+  console.log("Seção arquivada com sucesso.");
 }
 
 function printHelp() {
@@ -1403,19 +1517,20 @@ Uso:
   npm run content -- replace-public-administration-flashcards <arquivo.csv...> [--apply --confirm administracao-publica]
   npm run content -- replace-general-administration-flashcards <arquivo.csv...> [--apply --confirm administracao-geral]
   npm run content -- inspect <topic-id> [--json]
-  npm run content -- import <arquivo.json> [--apply] [--replace --confirm <topic-id>]
+  npm run content -- import <arquivo.json> [--apply] [--replace --manifest <manifesto.json> --confirm <topic-id>]
   npm run content -- import-batch <pasta> (--dry-run | --apply)
   npm run content -- export <topic-id> <saida.json> [--force]
   npm run content -- rename-topic <topic-id> "Novo título" [--apply]
   npm run content -- set-discipline <topic-id> "Nova disciplina" [--apply]
   npm run content -- rename-section <section-id> "Novo título" [--apply]
   npm run content -- rename-discipline "Nome atual" "Novo nome" [--apply]
-  npm run content -- delete-topic <topic-id> [--apply --confirm <topic-id>]
-  npm run content -- delete-section <section-id> [--apply --confirm <section-id>]
+  npm run content -- delete-topic <topic-id> [--apply --confirm <topic-id>] [--reason "Motivo"]
+  npm run content -- delete-section <section-id> [--apply --confirm <section-id>] [--reason "Motivo"]
 
 Regras de segurança:
   - Escritas são apenas pré-visualizadas sem --apply.
-  - Exclusões e importação com --replace exigem confirmação literal.
+  - Substituições destrutivas exigem confirmação literal e manifesto completo.
+  - Seções ausentes são arquivadas; esta ferramenta não faz hard delete no replace.
   - IDs técnicos não são renomeados por esta ferramenta.
 `);
 }
@@ -1432,6 +1547,8 @@ export async function main(argv = process.argv.slice(2)) {
       discipline: { type: "string" },
       force: { type: "boolean", default: false },
       json: { type: "boolean", default: false },
+      manifest: { type: "string" },
+      reason: { type: "string" },
       replace: { type: "boolean", default: false },
       help: { type: "boolean", short: "h", default: false },
     },

@@ -21,7 +21,7 @@ export default async function DashboardSettingsPage() {
     { data: topics, error: topicsError },
     { data: preferences, error: preferencesError },
   ] = await Promise.all([
-    supabase.from("topics").select("discipline"),
+    supabase.from("topics").select("discipline").is("archived_at", null),
     supabase
       .from("user_dashboard_preferences")
       .select("visible_disciplines, start_module, start_discipline")

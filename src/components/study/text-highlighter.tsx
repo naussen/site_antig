@@ -5,6 +5,7 @@ import { AlertCircle, Check, Eraser, Loader2, X } from "lucide-react";
 import {
   TEXT_HIGHLIGHT_COLORS,
   useTextHighlights,
+  type HighlightSectionReference,
   type NewTextHighlight,
 } from "@/hooks/use-text-highlights";
 import type { TextHighlightColor } from "@/types/database";
@@ -12,7 +13,7 @@ import { findAnchoredOffsets } from "@/lib/text-highlight-anchors.mjs";
 
 interface TextHighlighterProps {
   userId: string;
-  sectionIds: string[];
+  sections: HighlightSectionReference[];
   panelOpen: boolean;
   onPanelOpenChange: (open: boolean) => void;
   children: ReactNode;
@@ -99,7 +100,7 @@ function getSelectionOffsets(root: HTMLElement, range: Range) {
 
 export function TextHighlighter({
   userId,
-  sectionIds,
+  sections,
   panelOpen,
   onPanelOpenChange,
   children,
@@ -112,11 +113,12 @@ export function TextHighlighter({
   const {
     highlights,
     highlightsBySection,
+    highlightsNeedingReview,
     loading,
     error,
     addHighlight,
     removeHighlights,
-  } = useTextHighlights(userId, sectionIds);
+  } = useTextHighlights(userId, sections);
 
   const setTransientSavedStatus = useCallback((success: boolean) => {
     if (savedStatusTimerRef.current) clearTimeout(savedStatusTimerRef.current);
@@ -188,7 +190,8 @@ export function TextHighlighter({
 
     const sectionContainer = markdownRoot.closest<HTMLElement>("[data-highlight-section-id]");
     const sectionId = sectionContainer?.dataset.highlightSectionId;
-    if (!sectionId) return;
+    const contentUnitId = sectionContainer?.dataset.highlightContentUnitId;
+    if (!sectionId || !contentUnitId) return;
 
     const { start, end } = getSelectionOffsets(markdownRoot, range);
     const rootText = markdownRoot.textContent ?? "";
@@ -206,7 +209,10 @@ export function TextHighlighter({
     if (activeTool === "eraser") {
       const ids = highlights
         .filter((highlight) => {
-          if (highlight.section_id !== sectionId) return false;
+          if (
+            highlight.content_unit_id !== contentUnitId
+            && highlight.section_id !== sectionId
+          ) return false;
           const anchoredOffsets = findAnchoredOffsets(rootText, highlight);
           return Boolean(
             anchoredOffsets
@@ -225,6 +231,7 @@ export function TextHighlighter({
     } else {
       const input: NewTextHighlight = {
         sectionId,
+        contentUnitId,
         color: activeTool,
         startOffset: start,
         endOffset: end,
@@ -255,6 +262,14 @@ export function TextHighlighter({
                 <p className="mt-0.5 text-xs leading-relaxed text-[var(--text-muted)]">
                   Escolha uma cor e selecione o texto. O salvamento é automático.
                 </p>
+                {highlightsNeedingReview.length > 0 && (
+                  <p className="mt-2 flex items-center gap-1 text-xs text-[var(--callout-warning-text)]">
+                    <AlertCircle size={13} aria-hidden="true" />
+                    {highlightsNeedingReview.length} {highlightsNeedingReview.length === 1
+                      ? "realce aguarda revisão após uma atualização do conteúdo."
+                      : "realces aguardam revisão após uma atualização do conteúdo."}
+                  </p>
+                )}
               </div>
               <button
                 type="button"

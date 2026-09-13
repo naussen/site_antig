@@ -9,6 +9,7 @@ interface TopicPageProps {
 }
 
 type AdjacentTopic = Pick<TopicRow, "topic_id" | "title">;
+type StudySection = SectionRow & { content_unit_id: string };
 
 /**
  * Server Component: busca o tópico e suas seções do Supabase.
@@ -18,7 +19,7 @@ export default async function TopicPage({ params }: TopicPageProps) {
   const { topicId } = await params;
 
   let topic: TopicRow | null = null;
-  let sections: SectionRow[] = [];
+  let sections: StudySection[] = [];
   let previousTopic: AdjacentTopic | null = null;
   let nextTopic: AdjacentTopic | null = null;
   let redirectTopicId: string | null = null;
@@ -31,15 +32,17 @@ export default async function TopicPage({ params }: TopicPageProps) {
     const [topicResult, sectionsResult] = await Promise.all([
       supabase
         .from("topics")
-        .select("topic_id,discipline,title,sort_order,created_at")
+        .select("topic_id,discipline,title,sort_order,created_at,archived_at,archived_by,archived_reason")
         .eq("topic_id", topicId)
+        .is("archived_at", null)
         .maybeSingle(),
       supabase
         .from("sections")
         .select(
-          "section_id,topic_id,title,content_markdown,callouts,mnemonics,flashcards,mermaid_mindmap,sort_order,created_at"
+          "section_id,content_unit_id,topic_id,title,content_markdown,callouts,mnemonics,flashcards,mermaid_mindmap,sort_order,created_at"
         )
         .eq("topic_id", topicId)
+        .is("archived_at", null)
         .order("sort_order", { ascending: true }),
     ]);
 
@@ -62,13 +65,14 @@ export default async function TopicPage({ params }: TopicPageProps) {
       topic = topicData;
 
       if (sectionsResult.data) {
-        sections = sectionsResult.data as SectionRow[];
+        sections = sectionsResult.data as StudySection[];
       }
 
       const { data: disciplineTopics } = await supabase
         .from("topics")
         .select("topic_id,title,sort_order,created_at")
         .eq("discipline", topicData.discipline)
+        .is("archived_at", null)
         .order("created_at", { ascending: true })
         .order("topic_id", { ascending: true });
 

@@ -38,7 +38,7 @@ import { compareTopicsByOrigin } from "@/lib/topic-order";
 import { requireContentAccess } from "@/lib/content-access";
 
 type DashboardTopic = TopicRow & {
-  sections: { section_id: string }[];
+  sections: { section_id: string; content_unit_id: string }[];
 };
 
 type TopicProgress = {
@@ -137,7 +137,7 @@ export default async function DashboardPage({
   const { supabase, user } = await requireContentAccess();
 
   let topics: DashboardTopic[] = [];
-  let completedSectionIds = new Set<string>();
+  let completedContentUnitIds = new Set<string>();
   let preferredDisciplines: string[] | null = null;
   let preferencesAvailable = true;
   const loadErrors: string[] = [];
@@ -145,7 +145,9 @@ export default async function DashboardPage({
   try {
     const { data, error } = await supabase
       .from("topics")
-      .select("topic_id, discipline, title, sort_order, created_at, sections(section_id)")
+      .select("topic_id, discipline, title, sort_order, created_at, archived_at, archived_by, archived_reason, sections(section_id, content_unit_id, archived_at)")
+      .is("archived_at", null)
+      .is("sections.archived_at", null)
       .order("created_at", { ascending: false });
 
     if (error) {
@@ -160,7 +162,7 @@ export default async function DashboardPage({
     if (hasSections) {
       const { data: progressData, error: progressError } = await supabase
         .from("user_progress")
-        .select("section_id")
+        .select("content_unit_id")
         .eq("user_id", user.id)
         .eq("completed", true);
 
@@ -170,8 +172,8 @@ export default async function DashboardPage({
         );
         loadErrors.push("Não foi possível carregar seu progresso.");
       } else if (progressData) {
-        completedSectionIds = new Set(
-          progressData.map((progress) => progress.section_id)
+        completedContentUnitIds = new Set(
+          progressData.map((progress) => progress.content_unit_id)
         );
       }
     }
@@ -207,7 +209,7 @@ export default async function DashboardPage({
   const progressByTopic = topics.reduce((acc, topic) => {
     const totalCount = topic.sections.length;
     const completedCount = topic.sections.filter((section) =>
-      completedSectionIds.has(section.section_id)
+      completedContentUnitIds.has(section.content_unit_id)
     ).length;
     const percent =
       totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;

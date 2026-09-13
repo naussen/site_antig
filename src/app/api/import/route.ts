@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
-import { createClient } from "@supabase/supabase-js";
+import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import { isAdminApiRequest } from "@/lib/api-admin-auth.mjs";
 import { readJsonBodyLimited, RequestBodyError } from "@/lib/request-body.mjs";
 import {
@@ -10,6 +10,17 @@ import {
 import { getTopicIdIssue } from "@/lib/content/topic-id.mjs";
 import { FLASHCARD_BOARDS, getFlashcardSourceIssue } from "@/lib/content/flashcard.mjs";
 import { parseQuantitativeChart } from "@/lib/quantitative-chart";
+import {
+  ChangeManifestSchema,
+  ContentGovernanceError,
+  ContentIdentityFieldsSchema,
+  assertDestructiveImportAllowed,
+  buildChangeManifestRecord,
+  buildContentImpact,
+  getManifestIssues,
+  summarizeContentImpact,
+  validateSectionIdentities,
+} from "@/lib/content/import-governance.mjs";
 
 // =============================================================================
 // Validação Zod do payload de importação
@@ -112,6 +123,7 @@ function isPredominantlyUppercaseTitle(
 }
 
 const SectionImportSchema = z.object({
+  ...ContentIdentityFieldsSchema.shape,
   section_id: z.string().min(1),
   title: z.string().min(1),
   content_markdown: z.string().default(""),
@@ -125,6 +137,9 @@ const TopicImportSchema = z.object({
   topic_id: z.string().min(1),
   discipline: z.string().default("Geral"),
   topic_title: z.string().min(1),
+  replace: z.boolean().optional().default(false),
+  change_manifest: ChangeManifestSchema.optional(),
+  dry_run: z.boolean().optional().default(false),
   sections: z.array(SectionImportSchema).min(1, "Pelo menos uma seção é obrigatória"),
 }).superRefine((topic, context) => {
   const seenSectionIds = new Set<string>();
@@ -138,6 +153,7 @@ const TopicImportSchema = z.object({
   })).join("\n");
   const contextualAcronyms = collectContextualAcronyms(contentContext);
   const topicIdIssue = getTopicIdIssue(topic.topic_id, topic.topic_title);
+  validateSectionIdentities(topic.sections, context);
 
   if (topicIdIssue) {
     context.addIssue({
@@ -157,7 +173,7 @@ const TopicImportSchema = z.object({
 
   topic.sections.forEach((section, index) => {
     const expectedSectionId = `${topic.topic_id}-sec-${String(index + 1).padStart(2, "0")}`;
-    if (section.section_id !== expectedSectionId) {
+    if (!section.content_unit_id && section.section_id !== expectedSectionId) {
       context.addIssue({
         code: "custom",
         path: ["sections", index, "section_id"],
@@ -225,6 +241,50 @@ const TopicImportSchema = z.object({
 // POST /api/import — Importa JSON estruturado para o Supabase
 // =============================================================================
 
+async function countPersonalRecords(
+  supabase: SupabaseClient,
+  contentUnitIds: string[]
+) {
+  if (contentUnitIds.length === 0) {
+    return { progress: 0, notes: 0, highlights: 0 };
+  }
+  const count = async (table: string) => {
+    const result = await supabase
+      .from(table)
+      .select("content_unit_id", { count: "exact", head: true })
+      .in("content_unit_id", contentUnitIds);
+    if (result.error) throw new Error(`Falha ao medir impacto em ${table}.`);
+    return result.count ?? 0;
+  };
+  const [progress, notes, highlights] = await Promise.all([
+    count("user_progress"),
+    count("user_notes"),
+    count("user_text_highlights"),
+  ]);
+  return { progress, notes, highlights };
+}
+
+function buildSectionRows(
+  topicId: string,
+  sections: z.infer<typeof SectionImportSchema>[]
+) {
+  return sections.map((section, index) => ({
+    section_id: section.section_id,
+    ...(section.content_unit_id ? { content_unit_id: section.content_unit_id } : {}),
+    ...(section.stable_key ? { stable_key: section.stable_key } : {}),
+    topic_id: topicId,
+    title: section.title,
+    content_markdown: section.content_markdown || null,
+    callouts: section.callouts,
+    mnemonics: section.mnemonics,
+    flashcards: section.flashcards,
+    mermaid_mindmap: section.mermaid_mindmap || null,
+    sort_order: index,
+    archived_at: null,
+    archived_reason: null,
+  }));
+}
+
 export async function POST(request: Request) {
   try {
     if (!isAdminApiRequest(request)) {
@@ -244,7 +304,15 @@ export async function POST(request: Request) {
       );
     }
 
-    const { topic_id, discipline, topic_title, sections } = parsed.data;
+    const {
+      topic_id,
+      discipline,
+      topic_title,
+      sections,
+      replace,
+      change_manifest: changeManifest,
+      dry_run: dryRun,
+    } = parsed.data;
     
     // Usa o Service Role Key para ignorar o RLS e inserir os dados
     const supabase = createClient(
@@ -252,41 +320,110 @@ export async function POST(request: Request) {
       process.env.SUPABASE_SERVICE_ROLE_KEY!
     );
 
-    // Upsert do tópico
-    const { error: topicError } = await supabase.from("topics").upsert(
-      { topic_id, discipline, title: topic_title },
-      { onConflict: "topic_id" }
-    );
-
-    if (topicError) {
-      return NextResponse.json(
-        { error: "Erro ao salvar tópico", details: topicError.message },
-        { status: 500 }
+    const existingTopic = await supabase
+      .from("topics")
+      .select("discipline")
+      .eq("topic_id", topic_id)
+      .maybeSingle();
+    if (existingTopic.error) throw new Error("Erro ao validar o tópico atual.");
+    if (existingTopic.data && existingTopic.data.discipline !== discipline) {
+      throw new ContentGovernanceError(
+        "Importação bloqueada: topic_id pertence a outra disciplina."
       );
     }
 
-    // Upsert das seções (com sort_order baseado na posição do array)
-    const sectionRows = sections.map((section, index) => ({
-      section_id: section.section_id,
-      topic_id,
-      title: section.title,
-      content_markdown: section.content_markdown || null,
-      callouts: section.callouts,
-      mnemonics: section.mnemonics,
-      flashcards: section.flashcards,
-      mermaid_mindmap: section.mermaid_mindmap || null,
-      sort_order: index,
-    }));
-
-    const { error: sectionsError } = await supabase
+    const contentUnitIds = sections
+      .map((section) => section.content_unit_id)
+      .filter((id): id is string => Boolean(id));
+    if (contentUnitIds.length > 0) {
+      const ownership = await supabase
+        .from("sections")
+        .select("content_unit_id,topic_id")
+        .in("content_unit_id", contentUnitIds);
+      if (ownership.error) throw new Error("Erro ao validar as unidades de conteúdo.");
+      if (ownership.data.some((section) => section.topic_id !== topic_id)) {
+        throw new ContentGovernanceError(
+          "Importação bloqueada: content_unit_id pertence a outro tópico."
+        );
+      }
+    }
+    const sectionOwnership = await supabase
       .from("sections")
-      .upsert(sectionRows, { onConflict: "section_id" });
-
-    if (sectionsError) {
-      return NextResponse.json(
-        { error: "Erro ao salvar seções", details: sectionsError.message },
-        { status: 500 }
+      .select("section_id,topic_id")
+      .in("section_id", sections.map((section) => section.section_id));
+    if (sectionOwnership.error) throw new Error("Erro ao validar IDs legados das seções.");
+    if (sectionOwnership.data.some((section) => section.topic_id !== topic_id)) {
+      throw new ContentGovernanceError(
+        "Importação bloqueada: section_id pertence a outro tópico."
       );
+    }
+
+    const current = await supabase
+      .from("sections")
+      .select("section_id,content_unit_id,stable_key,title,content_markdown,callouts,mnemonics,flashcards,mermaid_mindmap,sort_order,archived_at")
+      .eq("topic_id", topic_id);
+    if (current.error) throw new Error("Erro ao analisar o conteúdo atual.");
+
+    const impact = buildContentImpact(current.data ?? [], sections, { replace });
+    const affectedUnitIds = [...new Set([
+      ...impact.removed.map((section: { content_unit_id?: string }) => section.content_unit_id),
+      ...impact.remapped.map(
+        ({ existing }: { existing: { content_unit_id?: string } }) => existing.content_unit_id
+      ),
+    ].filter((id): id is string => Boolean(id)))];
+    const personalImpact = await countPersonalRecords(supabase, affectedUnitIds);
+    const impactReport = summarizeContentImpact(impact, personalImpact);
+
+    if (impact.destructive && changeManifest) {
+      const issues = getManifestIssues(changeManifest, topic_id, impact);
+      if (issues.length > 0) {
+        throw new ContentGovernanceError(
+          `Manifesto de mudança inválido: ${issues.join(" ")}`
+        );
+      }
+    }
+    if (dryRun) {
+      return NextResponse.json({ topic_id, impact: impactReport }, { status: 200 });
+    }
+
+    assertDestructiveImportAllowed({
+      impact,
+      manifest: changeManifest,
+      topicId: topic_id,
+      replace,
+    });
+
+    const sectionRows = buildSectionRows(topic_id, sections);
+    if (impact.destructive) {
+      const manifestRecord = buildChangeManifestRecord(changeManifest);
+      const result = await supabase.rpc("apply_content_import", {
+        p_payload: { topic_id, discipline, topic_title, sections },
+        p_manifest: manifestRecord.manifest,
+        p_manifest_hash: manifestRecord.manifest_hash,
+        p_operation: manifestRecord.operation,
+      });
+      if (result.error) throw new Error("Erro ao aplicar importação destrutiva de forma atômica.");
+    } else {
+      const { error: topicError } = await supabase.from("topics").upsert(
+        { topic_id, discipline, title: topic_title },
+        { onConflict: "topic_id" }
+      );
+      if (topicError) throw new Error("Erro ao salvar tópico.");
+
+      const modernRows = sectionRows.filter((section) => section.content_unit_id);
+      const legacyRows = sectionRows.filter((section) => !section.content_unit_id);
+      if (modernRows.length > 0) {
+        const result = await supabase
+          .from("sections")
+          .upsert(modernRows, { onConflict: "content_unit_id" });
+        if (result.error) throw new Error("Erro ao salvar unidades versionadas.");
+      }
+      if (legacyRows.length > 0) {
+        const result = await supabase
+          .from("sections")
+          .upsert(legacyRows, { onConflict: "section_id" });
+        if (result.error) throw new Error("Erro ao salvar seções legadas.");
+      }
     }
 
     return NextResponse.json(
@@ -294,6 +431,7 @@ export async function POST(request: Request) {
         message: "Importação concluída com sucesso",
         topic_id,
         sections_count: sections.length,
+        impact: impactReport,
       },
       { status: 201 }
     );
@@ -301,9 +439,14 @@ export async function POST(request: Request) {
     if (err instanceof RequestBodyError) {
       return NextResponse.json({ error: err.message }, { status: err.status });
     }
-    const message = err instanceof Error ? err.message : "Erro desconhecido";
+    if (err instanceof ContentGovernanceError) {
+      return NextResponse.json({ error: err.message }, { status: 409 });
+    }
+    console.error("Falha interna na importação de conteúdo.", {
+      category: err instanceof Error ? err.name : "unknown",
+    });
     return NextResponse.json(
-      { error: "Erro interno do servidor", details: message },
+      { error: "Erro interno do servidor" },
       { status: 500 }
     );
   }

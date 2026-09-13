@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import "./content-import-governance.test.mjs";
 import {
   assertBatchMode,
   assertConfirmation,
@@ -277,6 +278,38 @@ test("aplica valores opcionais compatíveis com a API", () => {
   const parsed = validateImportPayload(payload);
   assert.equal(parsed.discipline, "Geral");
   assert.equal(parsed.sections[0].mermaid_mindmap, "");
+});
+
+test("aceita identidade permanente e deixa ordenação independente do section_id", () => {
+  const payload = validPayload();
+  payload.sections[0].section_id = "direito-constitucional-introducao-legado";
+  payload.sections[0].content_unit_id = "00000000-0000-4000-8000-000000000001";
+  payload.sections[0].stable_key = "introducao";
+
+  assert.doesNotThrow(() => validateImportPayload(payload));
+});
+
+test("rejeita identidade parcial ou duplicada sem quebrar payload legado", () => {
+  const partial = validPayload();
+  partial.sections[0].content_unit_id = "00000000-0000-4000-8000-000000000001";
+  assert.throws(() => validateImportPayload(partial), /devem ser informados juntos/);
+
+  const duplicated = validPayload();
+  duplicated.sections = [
+    {
+      ...duplicated.sections[0],
+      content_unit_id: "00000000-0000-4000-8000-000000000001",
+      stable_key: "introducao",
+    },
+    {
+      ...duplicated.sections[0],
+      section_id: "direito-constitucional-sec-02",
+      title: "Aplicação",
+      content_unit_id: "00000000-0000-4000-8000-000000000001",
+      stable_key: "aplicacao",
+    },
+  ];
+  assert.throws(() => validateImportPayload(duplicated), /content_unit_id duplicado/);
 });
 
 test("aceita Mermaid estático e preserva quebra visual permitida", () => {

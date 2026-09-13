@@ -5,11 +5,24 @@ import { createClient } from "@/lib/supabase/client";
 import { MAX_NOTE_LENGTH } from "@/lib/note-images.mjs";
 import { UserNote } from "@/types/database";
 
+export interface NoteSectionReference {
+  sectionId: string;
+  contentUnitId: string;
+}
+
+export type PersonalNote = UserNote & { content_unit_id?: string };
+
+function isIdentitySchemaUnavailable(error: unknown) {
+  if (!error || typeof error !== "object") return false;
+  const code = "code" in error ? String(error.code) : "";
+  return code === "42703" || code === "PGRST204";
+}
+
 interface UseNotesReturn {
-  notes: UserNote[];
+  notes: PersonalNote[];
   loading: boolean;
   error: string | null;
-  saveNote: (content: string) => Promise<UserNote | null>;
+  saveNote: (content: string) => Promise<PersonalNote | null>;
   deleteNote: (id: string) => Promise<void>;
   refetch: () => Promise<void>;
 }
@@ -21,12 +34,13 @@ interface UseNotesReturn {
  */
 export function useNotes(
   userId: string | null,
-  sectionId: string | string[],
+  sections: NoteSectionReference[],
   activeSectionId?: string
 ): UseNotesReturn {
-  const sectionIds = useMemo(
-    () => (Array.isArray(sectionId) ? sectionId : [sectionId]),
-    [sectionId]
+  const sectionIds = useMemo(() => sections.map((section) => section.sectionId), [sections]);
+  const contentUnitIds = useMemo(
+    () => sections.map((section) => section.contentUnitId),
+    [sections]
   );
   const contextKey =
     userId && sectionIds.length > 0
@@ -35,7 +49,7 @@ export function useNotes(
   const requestIdRef = useRef(0);
   const [notesState, setNotesState] = useState<{
     contextKey: string;
-    notes: UserNote[];
+    notes: PersonalNote[];
   }>({ contextKey: "", notes: [] });
   const [loadState, setLoadState] = useState<{
     contextKey: string;
@@ -50,8 +64,10 @@ export function useNotes(
   const error = loadState.contextKey === contextKey ? loadState.error : null;
 
   // sectionId ativo para inserts (sempre string única)
-  const targetSectionId =
-    activeSectionId ?? (Array.isArray(sectionId) ? sectionId[0] : sectionId);
+  const targetSectionId = activeSectionId ?? sectionIds[0];
+  const targetContentUnitId = sections.find(
+    (section) => section.sectionId === targetSectionId
+  )?.contentUnitId;
 
   const fetchNotes = useCallback(async () => {
     const requestId = ++requestIdRef.current;
@@ -62,12 +78,24 @@ export function useNotes(
 
     setLoadState({ contextKey, loading: true, error: null });
     const supabase = createClient();
-    const { data, error } = await supabase
+    let { data, error } = await supabase
       .from("user_notes")
       .select("*")
       .eq("user_id", userId)
-      .in("section_id", sectionIds)
+      .in("content_unit_id", contentUnitIds)
       .order("updated_at", { ascending: false });
+
+    // Compatibilidade com bancos em que a migration de identidade ainda não foi aplicada.
+    if (error && isIdentitySchemaUnavailable(error)) {
+      const legacyResult = await supabase
+        .from("user_notes")
+        .select("*")
+        .eq("user_id", userId)
+        .in("section_id", sectionIds)
+        .order("updated_at", { ascending: false });
+      data = legacyResult.data;
+      error = legacyResult.error;
+    }
 
     if (requestId !== requestIdRef.current) {
       return;
@@ -84,9 +112,9 @@ export function useNotes(
       return;
     }
 
-    setNotesState({ contextKey, notes: (data ?? []) as UserNote[] });
+    setNotesState({ contextKey, notes: (data ?? []) as PersonalNote[] });
     setLoadState({ contextKey, loading: false, error: null });
-  }, [contextKey, sectionIds, userId]);
+  }, [contentUnitIds, contextKey, sectionIds, userId]);
 
   useEffect(() => {
     // O efeito sincroniza o estado local com as notas persistidas no Supabase.
@@ -94,31 +122,47 @@ export function useNotes(
     fetchNotes();
   }, [fetchNotes]);
 
-  const saveNote = async (content: string): Promise<UserNote | null> => {
+  const saveNote = async (content: string): Promise<PersonalNote | null> => {
     const normalizedContent = content.trim();
-    if (!userId || !targetSectionId || !normalizedContent) return null;
+    if (!userId || !targetSectionId || !targetContentUnitId || !normalizedContent) return null;
     if (normalizedContent.length > MAX_NOTE_LENGTH) {
       throw new Error(`A nota deve ter no máximo ${MAX_NOTE_LENGTH.toLocaleString("pt-BR")} caracteres.`);
     }
     const supabase = createClient();
 
-    const { data, error } = await supabase
+    let { data, error } = await supabase
       .from("user_notes")
       .insert({
         user_id: userId,
         section_id: targetSectionId,
+        content_unit_id: targetContentUnitId,
         content: normalizedContent,
         updated_at: new Date().toISOString(),
       })
       .select()
       .single();
 
+    if (error && isIdentitySchemaUnavailable(error)) {
+      const legacyResult = await supabase
+        .from("user_notes")
+        .insert({
+          user_id: userId,
+          section_id: targetSectionId,
+          content: normalizedContent,
+          updated_at: new Date().toISOString(),
+        })
+        .select()
+        .single();
+      data = legacyResult.data;
+      error = legacyResult.error;
+    }
+
     if (error) {
       console.error("Erro ao salvar nota:", error);
       throw error;
     }
 
-    const newNote = data as UserNote;
+    const newNote = data as PersonalNote;
     setNotesState((previous) =>
       previous.contextKey === contextKey
         ? { contextKey, notes: [newNote, ...previous.notes] }

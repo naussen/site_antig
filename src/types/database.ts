@@ -35,6 +35,10 @@ export interface Flashcard {
 
 export interface SectionImport {
   section_id: string;
+  /** UUID permanente; ausente somente em payloads legados durante a transição. */
+  content_unit_id?: string;
+  /** Chave semântica permanente e única dentro do tópico. */
+  stable_key?: string;
   title: string;
   content_markdown: string;
   callouts: Callout[];
@@ -63,6 +67,9 @@ export interface TopicRow {
   title: string;
   sort_order: number | null;
   created_at: string;
+  archived_at: string | null;
+  archived_by: string | null;
+  archived_reason: string | null;
 }
 
 export interface TopicIdRedirectRow {
@@ -73,6 +80,8 @@ export interface TopicIdRedirectRow {
 
 export interface SectionRow {
   section_id: string;
+  content_unit_id: string;
+  stable_key: string;
   topic_id: string;
   title: string;
   content_markdown: string | null;
@@ -81,6 +90,46 @@ export interface SectionRow {
   flashcards: Flashcard[];
   mermaid_mindmap: string | null;
   sort_order: number;
+  current_revision_id: string | null;
+  created_at: string;
+  archived_at: string | null;
+  archived_by: string | null;
+  archived_reason: string | null;
+}
+
+export type ContentChangeOperation =
+  | 'replace'
+  | 'split'
+  | 'merge'
+  | 'archive'
+  | 'restore';
+
+export interface ContentChangeManifestRow {
+  id: string;
+  topic_id: string;
+  import_run_id: string | null;
+  operation: ContentChangeOperation;
+  manifest: Record<string, unknown>;
+  manifest_hash: string;
+  created_by: string | null;
+  created_at: string;
+}
+
+export interface ContentUnitRevisionRow {
+  id: string;
+  content_unit_id: string;
+  revision_number: number;
+  stable_key: string;
+  title: string;
+  content_markdown: string | null;
+  callouts: Callout[];
+  mnemonics: Mnemonic[];
+  flashcards: Flashcard[];
+  mermaid_mindmap: string | null;
+  sort_order: number;
+  content_hash: string;
+  change_manifest_id: string | null;
+  created_by: string | null;
   created_at: string;
 }
 
@@ -93,6 +142,7 @@ export interface SectionRow {
 export interface UserProgress {
   user_id: string;
   section_id: string;
+  content_unit_id: string;
   completed: boolean;
   updated_at: string;
 }
@@ -102,6 +152,7 @@ export interface UserNote {
   id?: string;
   user_id: string;
   section_id: string;
+  content_unit_id: string;
   content: string;
   updated_at: string;
 }
@@ -148,10 +199,20 @@ export type TextHighlightColor =
   | 'lime'
   | 'gray';
 
+export type TextHighlightMigrationStatus =
+  | 'active'
+  | 'migrated'
+  | 'orphaned'
+  | 'needs_review';
+
 export interface UserTextHighlight {
   id: string;
   user_id: string;
   section_id: string;
+  content_unit_id: string;
+  content_revision_id: string | null;
+  migration_status: TextHighlightMigrationStatus;
+  anchor_context: Record<string, unknown>;
   color: TextHighlightColor;
   start_offset: number;
   end_offset: number;

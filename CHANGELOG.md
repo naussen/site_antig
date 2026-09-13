@@ -1,5 +1,16 @@
 # Changelog
 
+## Não publicado — identidade estável e versionamento dos resumos
+
+- adicionados UUID permanente e chave semântica única por tópico para as 2.286 unidades de conteúdo existentes;
+- migradas notas, progresso e destaques para referência canônica por UUID, mantendo `section_id` apenas como alias transitório;
+- substituída a exclusão editorial por arquivamento lógico de tópicos e seções, com data, motivo e preservação dos dados pessoais;
+- criado histórico imutável de revisões e backfill de uma revisão inicial por unidade de conteúdo;
+- adicionados estados de migração dos destaques (`active`, `migrated`, `needs_review` e `orphaned`) e preservado o contexto original da âncora;
+- importações destrutivas agora exigem manifesto validado, estratégia para dados pessoais, relatório prévio de impacto e aplicação atômica;
+- bloqueados hard delete editorial, alteração de revisões e manifesto com hash divergente no próprio banco;
+- migration 022 aplicada no Supabase remoto, com 2.286 identidades e revisões confirmadas e nenhum UUID, `stable_key` ou ponteiro de revisão nulo.
+
 ## Não publicado — organização dos crimes da Parte Especial
 
 - reorganizado o resumo `parte-especial-do-codigo-penal` de 21 agrupamentos editoriais para 82 crimes individualizados;
