@@ -1,5 +1,14 @@
 # Changelog
 
+## Não publicado — organização dos crimes da Parte Especial
+
+- reorganizado o resumo `parte-especial-do-codigo-penal` de 21 agrupamentos editoriais para 82 crimes individualizados;
+- mantidas qualificadoras, causas de aumento, formas equiparadas e disposições comuns dentro do crime correspondente;
+- removidos da indexação títulos genéricos como “Seção”, “Tipos”, “Disposições comuns”, “Aumento de pena” e nomes de categorias;
+- ocultados o ordinal e a nomenclatura “Seção” somente nesse resumo, mantendo inalterada a apresentação dos demais módulos;
+- preservados o conteúdo, os 3 callouts e o mapa Mermaid; não havia flashcards, notas, destaques ou progresso vinculados às seções reorganizadas;
+- confirmada por reexportação a persistência exata das 82 seções no Supabase.
+
 ## Não publicado — revisão visual e correção jurídica de Direito Penal
 
 - percorridos em produção os 3 resumos e as 43 seções da disciplina, sem avaliar ou alterar flashcards;

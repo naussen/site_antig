@@ -267,11 +267,21 @@ export function StudyPageClient({
               >
               {/* Título da seção */}
               <header className="study-section-heading">
-                <span className="study-section-number" aria-hidden="true">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <div>
-                  <p>Seção {String(index + 1).padStart(2, "0")}</p>
+                {topic.topic_id !== "parte-especial-do-codigo-penal" && (
+                  <span className="study-section-number" aria-hidden="true">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                )}
+                <div
+                  className={
+                    topic.topic_id === "parte-especial-do-codigo-penal"
+                      ? "col-span-2"
+                      : undefined
+                  }
+                >
+                  {topic.topic_id !== "parte-especial-do-codigo-penal" && (
+                    <p>Seção {String(index + 1).padStart(2, "0")}</p>
+                  )}
                   <h2 id={`section-title-${section.section_id}`}>
                     {section.title}
                   </h2>
