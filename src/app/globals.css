@@ -501,7 +501,7 @@
 }
 
 .study-content-scrollbar {
-  scrollbar-color: #7C3AED color-mix(in srgb, var(--bg-secondary) 78%, transparent);
+  scrollbar-color: #285D9F color-mix(in srgb, var(--bg-secondary) 78%, transparent);
   scrollbar-width: auto;
 }
 
@@ -517,11 +517,11 @@
 .study-content-scrollbar::-webkit-scrollbar-thumb {
   border: 2px solid color-mix(in srgb, var(--bg-secondary) 88%, #080D17);
   border-radius: 999px;
-  background: linear-gradient(180deg, #A78BFA 0%, #7C3AED 52%, #4C3CB6 100%);
+  background: linear-gradient(180deg, #07182E 0%, #174A7E 42%, #F9A826 100%);
 }
 
 .study-content-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #C4B5FD 0%, #8B5CF6 50%, #5B21B6 100%);
+  background: linear-gradient(180deg, #0B2442 0%, #2869A7 40%, #FFB83E 100%);
 }
 
 @media (max-width: 640px) {
