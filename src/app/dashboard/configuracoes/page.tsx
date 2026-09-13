@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { AlertTriangle, ArrowLeft, BookOpen, Check, Scale, Settings2, SlidersHorizontal } from "lucide-react";
+import { AlertTriangle, ArrowLeft, BookOpen, Check, NotebookPen, Scale, Settings2, SlidersHorizontal } from "lucide-react";
 import { PreferencesForm } from "./preferences-form";
 import { SavePreferencesButton } from "./save-preferences-button";
 import {
@@ -8,11 +8,7 @@ import {
   isMissingTableError,
 } from "@/lib/supabase/errors";
 import { requireContentAccess } from "@/lib/content-access";
-import {
-  START_PAGE_DISCIPLINE_PREFIX,
-  START_PAGE_LEGIS,
-  START_PAGE_RESUMOS,
-} from "@/lib/user-start-page.mjs";
+import { START_PAGE_LEGIS, START_PAGE_NOTES, START_PAGE_RESUMOS, START_PAGE_SETTINGS } from "@/lib/user-start-page.mjs";
 
 export default async function DashboardSettingsPage() {
   const { supabase, user } = await requireContentAccess();
@@ -59,11 +55,15 @@ export default async function DashboardSettingsPage() {
   ).sort((a, b) => a.localeCompare(b, "pt-BR"));
   const selectedDisciplines = preferences?.visible_disciplines as string[] | null | undefined;
   const showAll = !selectedDisciplines || selectedDisciplines.length === 0;
-  const selectedStartPage = preferences?.start_module === START_PAGE_LEGIS
-    ? START_PAGE_LEGIS
-    : preferences?.start_discipline
-      ? `${START_PAGE_DISCIPLINE_PREFIX}${preferences.start_discipline}`
-      : START_PAGE_RESUMOS;
+  const savedStartPage = preferences?.start_module;
+  const selectedStartPage = [
+    START_PAGE_RESUMOS,
+    START_PAGE_LEGIS,
+    START_PAGE_NOTES,
+    START_PAGE_SETTINGS,
+  ].includes(savedStartPage ?? "")
+    ? savedStartPage
+    : START_PAGE_RESUMOS;
 
   return (
     <main className="min-h-screen px-4 py-6 sm:px-6 md:px-10 md:py-10" style={{ background: "var(--bg-primary)" }}>
@@ -119,12 +119,8 @@ export default async function DashboardSettingsPage() {
               {[
                 { value: START_PAGE_RESUMOS, label: "PRO Resumos", detail: "Visão geral das matérias", icon: BookOpen },
                 { value: START_PAGE_LEGIS, label: "PRO Legis", detail: "Consulta à legislação", icon: Scale },
-                ...disciplines.map((discipline) => ({
-                  value: `${START_PAGE_DISCIPLINE_PREFIX}${discipline}`,
-                  label: discipline,
-                  detail: "Disciplina no PRO Resumos",
-                  icon: BookOpen,
-                })),
+                { value: START_PAGE_NOTES, label: "Notas", detail: "Suas anotações de estudo", icon: NotebookPen },
+                { value: START_PAGE_SETTINGS, label: "Configurações", detail: "Preferências da conta", icon: Settings2 },
               ].map(({ value, label, detail, icon: Icon }) => (
                 <label
                   key={value}

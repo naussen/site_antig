@@ -47,7 +47,6 @@ export async function saveDashboardPreferences(
     selectedDisciplines.length === availableDisciplines.length;
   const { startModule, startDiscipline } = parseStartPageSelection(
     formData.get("startPage"),
-    availableDisciplines,
   );
 
   const { error } = await supabase.from("user_dashboard_preferences").upsert(

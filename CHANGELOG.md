@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — página inicial após login
+
+- limitada a escolha de página inicial a PRO Resumos, PRO Legis, Notas e Configurações;
+- removidas disciplinas como destino de login, preservando-as apenas no filtro de disciplinas visíveis;
+- adicionados destinos seguros para Notas e Configurações e compatibilidade para preferências antigas por disciplina, que agora abrem o PRO Resumos.
+
 ## Não publicado — revisão jurídica de Direito Empresarial
 
 - reaberta e concluída a revisão integral dos 3 resumos e das 29 seções após o smoke autenticado revelar repetição em Sociedades;

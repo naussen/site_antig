@@ -5,22 +5,29 @@ import {
   resolveUserStartPath,
 } from "../src/lib/user-start-page.mjs";
 
-test("resolve módulo e disciplina inicial por allowlist", () => {
+test("resolve somente as páginas iniciais permitidas", () => {
   assert.equal(resolveUserStartPath({ start_module: "legis" }), "/legis");
-  assert.equal(
-    resolveUserStartPath({ start_module: "resumos", start_discipline: "Direito Constitucional" }),
-    "/resumos/dashboard?disciplina=Direito%20Constitucional",
-  );
+  assert.equal(resolveUserStartPath({ start_module: "notas" }), "/dashboard/notas");
+  assert.equal(resolveUserStartPath({ start_module: "configuracoes" }), "/dashboard/configuracoes");
+  assert.equal(resolveUserStartPath({ start_module: "resumos", start_discipline: "Direito Constitucional" }), "/resumos/dashboard");
+  assert.equal(resolveUserStartPath({ start_module: "toString" }), "/resumos/dashboard");
   assert.equal(resolveUserStartPath({ start_module: "externo" }), "/resumos/dashboard");
 });
 
-test("aceita somente disciplina disponível ao salvar", () => {
-  const available = ["Direito Constitucional", "Português"];
-  assert.deepEqual(parseStartPageSelection("disciplina:Português", available), {
-    startModule: "resumos",
-    startDiscipline: "Português",
+test("aceita somente destinos de página inicial ao salvar", () => {
+  assert.deepEqual(parseStartPageSelection("notas"), {
+    startModule: "notas",
+    startDiscipline: null,
   });
-  assert.deepEqual(parseStartPageSelection("disciplina:Inexistente", available), {
+  assert.deepEqual(parseStartPageSelection("configuracoes"), {
+    startModule: "configuracoes",
+    startDiscipline: null,
+  });
+  assert.deepEqual(parseStartPageSelection("disciplina:Português"), {
+    startModule: "resumos",
+    startDiscipline: null,
+  });
+  assert.deepEqual(parseStartPageSelection("toString"), {
     startModule: "resumos",
     startDiscipline: null,
   });
