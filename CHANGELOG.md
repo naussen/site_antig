@@ -1,5 +1,14 @@
 # Changelog
 
+## Não publicado — revisão jurídica de Direito Empresarial
+
+- reaberta e concluída a revisão integral dos 3 resumos e das 29 seções após o smoke autenticado revelar repetição em Sociedades;
+- corrigidos conceitos e regras de empresário, incapaz, escrituração, trespasse, nome empresarial e desconsideração da personalidade jurídica;
+- eliminadas duplicações e atualizadas regras de sociedades simples, limitada, cooperativa e anônima, inclusive quóruns alterados pela Lei 14.451/2022;
+- corrigidos sujeitos, responsabilidade, apresentação, protesto e execução de títulos de crédito, cheque e duplicata, com inclusão da duplicata escritural;
+- preservados os 29 `section_id`, UUIDs, `stable_key`, flashcards, mnemônicos e mapas Mermaid;
+- importação aprovada no preflight e reexportação confirmou correspondência semântica exata dos três módulos publicados.
+
 ## Não publicado — identidade visual dos Resumos
 
 - aproximado o dashboard e a leitura dos Resumos da identidade visual da landing page, com superfícies preto-azuladas, azul-marinho, violeta e dourado;

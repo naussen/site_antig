@@ -89,7 +89,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [ ] | Direito da Pessoa com Deficiência | [ ] | [ ] | — |
 | [ ] | Direito do Trabalho | [ ] | [ ] | — |
 | [ ] | Direito Eleitoral | [ ] | [ ] | — |
-| [x] | Direito Empresarial | [ ] | [x] | 3 resumos e 29 seções revisados; correções visuais e editoriais aplicadas; persistência integral confirmada no Supabase. |
+| [x] | Direito Empresarial | [ ] | [x] | 3 resumos e 29 seções revisados; revisão jurídica integral reaberta após o smoke, correções publicadas e persistência exata confirmada por reexportação. |
 | [x] | Direito Penal | [ ] | [x] | 3 resumos e 104 seções; a Parte Especial foi reorganizada em 82 crimes individualizados, sem títulos editoriais genéricos; persistência integral confirmada no Supabase. |
 | [ ] | Direito Previdenciário | [ ] | [ ] | — |
 | [ ] | Direito Processual Civil | [ ] | [ ] | — |
@@ -248,3 +248,7 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Pendências editoriais:** flashcards permaneceram fora do escopo.
 
 **Smoke autenticado em produção:** repetido com sucesso em 13 de setembro de 2026 nos três módulos. As 29 seções, os dois mapas Mermaid, as tabelas responsivas, a navegação lateral, o cabeçalho, os cartões e a navegação entre módulos carregaram sem erro visual ou funcional observável. Durante a sessão autenticada, nenhuma das três rotas redirecionou para o login.
+
+**Revisão integral de conteúdo reaberta:** o smoke revelou erro textual e repetição real em Sociedades, motivo pelo qual os três módulos foram novamente conferidos contra fontes legais oficiais. Em Direito de Empresa, foram corrigidas regras sobre registro, empresário incapaz, trespasse, escrituração, nome empresarial e desconsideração. Em Sociedades, foram removidas as repetições e atualizadas regras de sociedade simples, limitada, cooperativa e anônima, inclusive os quóruns da Lei 14.451/2022. Em Títulos de Crédito, foram corrigidos sujeitos cambiais, endosso, aval, apresentação, protesto, execução de cheque e duplicata e incluída a duplicata escritural.
+
+**Nova persistência:** os três payloads passaram por 41 testes de conteúdo e pelo preflight administrativo. A importação atualizou as 29 seções sem criar ou remover unidades; `section_id`, `content_unit_id` e `stable_key` foram preservados. A reexportação posterior apresentou correspondência semântica exata com os três JSONs revisados. O backup anterior à alteração permanece exportável em `C:\PRO\agente\backups\Direito Empresarial\2026-09-13-revisao-conteudo`.
