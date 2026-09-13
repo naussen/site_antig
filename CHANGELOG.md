@@ -1,5 +1,14 @@
 # Changelog
 
+## Não publicado — revisão visual e correção jurídica de Direito Constitucional
+
+- percorridos em produção os 15 resumos e as 105 seções da disciplina, sem avaliar ou alterar flashcards;
+- validados 9 mapas Mermaid, 8 tabelas, temas Light, Dark e Sepia, desktop e viewport móvel de 390 × 844, sem regressão visual ou funcional;
+- aplicadas 64 correções controladas em 30 seções, com base no texto constitucional vigente e em fontes oficiais do STF;
+- atualizados nacionalidade, guardas municipais, servidores, Poderes, controle de constitucionalidade, intervenção, seguridade, processo legislativo, direitos políticos e foro por prerrogativa;
+- adicionada rotina reexecutável com prévia, proteção contra concorrência, confirmação explícita e verificação das 105 seções;
+- limitadas as escritas no Supabase a `content_markdown` e `callouts`, preservando flashcards, IDs, títulos, ordem, mnemônicos e Mermaid.
+
 ## Não publicado — correção editorial de Português
 
 - revisadas novamente as 37 seções dos seis módulos de Português, com flashcards explicitamente fora do escopo;

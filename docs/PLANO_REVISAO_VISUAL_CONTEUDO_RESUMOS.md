@@ -85,7 +85,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [ ] | Contabilidade Geral e Avançada | [ ] | [ ] | — |
 | [ ] | Direito Administrativo | [ ] | [ ] | — |
 | [ ] | Direito Civil | [ ] | [ ] | — |
-| [ ] | Direito Constitucional | [ ] | [ ] | — |
+| [x] | Direito Constitucional | [ ] | [x] | 15 resumos e 105 seções revisados; 64 correções jurídicas aplicadas em 30 seções; persistência integral confirmada no Supabase. |
 | [ ] | Direito da Pessoa com Deficiência | [ ] | [ ] | — |
 | [ ] | Direito do Trabalho | [ ] | [ ] | — |
 | [ ] | Direito Eleitoral | [ ] | [ ] | — |
@@ -154,3 +154,41 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Persistência:** a atualização parcial gravou exclusivamente `content_markdown` e `callouts`. Flashcards, mapas Mermaid, mnemônicos, títulos, IDs e ordem das seções foram preservados. A exportação posterior foi comparada com o resultado esperado nas 37 seções e não apresentou divergência.
 
 **Pendências editoriais:** nenhuma dentre os erros encontrados nesta revisão. O contrato legado dos flashcards sem o campo `source` permanece fora do escopo deste plano e não foi modificado.
+
+### Direito Constitucional — 12 de setembro de 2026
+
+**Comando de início do usuário:** `disciplina: Direito Constitucional — Após revisão funcional e visual, realizar revisão de correção do conteúdo.`
+
+**Quantidade de resumos:** 15
+
+**Quantidade de seções:** 105
+
+**Estado:** concluída
+
+| Resumo | URL | Seções | Visual/conteúdo | Gráficos | Mermaid | Mapas mentais | Observação e ação | Evidência final |
+|---|---|---:|---|---|---|---|---|---|
+| Aspectos introdutórios do Direito Constitucional | `https://proconcursos.com.br/resumos/aspectos-introdutorios-do-direito-constitucional` | 20 | [x] | N/A | [x] | [x] | Corrigidas as concepções de Lassalle, a recepção e a terminologia do controle constitucional. | 20 seções presentes; 2 mapas renderizados; sem overflow. |
+| Da Administração Pública | `https://proconcursos.com.br/resumos/administracao-publica` | 3 | [x] | N/A | N/A | N/A | Corrigidos subsídio, Súmula Vinculante, teto federal, acumulação e mandato eletivo. | 3 seções presentes; tabela com rolagem interna no mobile. |
+| Da defesa do Estado e das instituições democráticas | `https://proconcursos.com.br/resumos/defesa-do-estado-e-das-instituicoes-democraticas` | 10 | [x] | N/A | N/A | N/A | Corrigidas convocação do Congresso e posição/atribuições constitucionais das guardas municipais. | 10 seções presentes; tabela responsiva; sem imagem quebrada. |
+| Da fiscalização contábil, financeira e orçamentária | `https://proconcursos.com.br/resumos/fiscalizacao-contabil-financeira-orcamentaria` | 5 | [x] | N/A | [x] | [x] | Corrigido o requisito etário dos Ministros do TCU. | 5 seções presentes; 1 mapa renderizado; sem overflow. |
+| Da intervenção | `https://proconcursos.com.br/resumos/intervencao` | 2 | [x] | N/A | N/A | N/A | Corrigidos os legitimados e os procedimentos de solicitação, requisição e representação. | 2 seções presentes; smoke autenticado aprovado. |
+| Da ordem social | `https://proconcursos.com.br/resumos/ordem-social` | 17 | [x] | N/A | [x] | [x] | Corrigidos custeio da seguridade, pensão por morte, aposentadoria compulsória e critério assistencial. | 17 seções presentes; 1 mapa e 2 tabelas responsivos. |
+| Da organização do Estado | `https://proconcursos.com.br/resumos/organizacao-do-estado` | 4 | [x] | N/A | [x] | [x] | Corrigida a competência municipal em educação. | 4 seções presentes; 3 mapas renderizados; zoom e overlay aprovados. |
+| Das funções essenciais à Justiça | `https://proconcursos.com.br/resumos/funcoes-essenciais-a-justica` | 1 | [x] | N/A | N/A | N/A | Retirado o CNMP da estrutura orgânica do MP e corrigidas as competências atribuídas ao Conselho. | Seção integralmente revisada; smoke autenticado aprovado. |
+| Do controle de constitucionalidade | `https://proconcursos.com.br/resumos/controle-de-constitucionalidade` | 9 | [x] | N/A | [x] | [x] | Corrigidos pressupostos, momentos, controle preventivo, competências, reserva de plenário e art. 52, X. | 9 seções presentes; 2 mapas e tabela responsivos. |
+| Do Poder Executivo | `https://proconcursos.com.br/resumos/poder-executivo` | 4 | [x] | N/A | N/A | N/A | Corrigidas tomada de contas, imunidades, requisitos de Ministro e eleição municipal. | 4 seções presentes; sem overflow. |
+| Do Poder Judiciário | `https://proconcursos.com.br/resumos/poder-judiciario` | 4 | [x] | N/A | N/A | N/A | Corrigidos requisitos/listas do STJ, indicação do CNJ, Súmula 649 e tabela de foro. | 4 seções presentes; 2 tabelas com rolagem interna no mobile. |
+| Do Poder Legislativo | `https://proconcursos.com.br/resumos/poder-legislativo` | 6 | [x] | N/A | N/A | N/A | Atualizada a jurisprudência de foro de 2025 e corrigida a situação dos corréus sem prerrogativa. | 6 seções presentes; smoke autenticado aprovado. |
+| Do processo legislativo | `https://proconcursos.com.br/resumos/processo-legislativo` | 11 | [x] | N/A | N/A | N/A | Corrigidos o prazo constitucional da MP e a vedação orçamentária das leis delegadas. | 11 seções presentes; sem overflow. |
+| Dos direitos e garantias fundamentais | `https://proconcursos.com.br/resumos/direitos-e-garantias-fundamentais` | 6 | [x] | N/A | N/A | N/A | Atualizados nacionalidade, alistamento, inelegibilidade reflexa e cláusula de desempenho partidária. | 6 seções presentes; tabelas responsivas; conteúdo novo visível em produção. |
+| Dos princípios fundamentais | `https://proconcursos.com.br/resumos/principios-fundamentais` | 3 | [x] | N/A | N/A | N/A | Corrigidos o procedimento de plebiscito/referendo e os conceitos de povo e população. | 3 seções presentes; smoke autenticado aprovado. |
+
+**Consolidação:** os 15 resumos e as 105 seções foram percorridos integralmente em produção, sem avaliar flashcards. Não há gráficos quantitativos na disciplina. Foram identificados 9 mapas Mermaid e 8 tabelas no conteúdo; não houve código Mermaid bruto, erro persistente, seção vazia, imagem visível quebrada, overflow global ou mensagem no console.
+
+**Correções visuais/funcionais:** N/A — nenhum erro visual ou funcional foi reproduzido. As tabelas mantêm rolagem horizontal interna no viewport de 390 × 844. Zoom, restauração e overlay dos mapas responderam sem provocar overflow. Os temas Light, Dark e Sepia foram conferidos e o tema Light foi restaurado.
+
+**Revisão jurídica corretiva:** foram aplicadas 64 substituições controladas em 30 seções, confrontadas com a Constituição compilada, a EC 131/2023, a EC 97/2017 e jurisprudência oficial do STF. Os ajustes abrangeram nacionalidade, segurança pública municipal, servidores, organização dos Poderes, controle de constitucionalidade, intervenção, seguridade social, processo legislativo, direitos políticos e foro por prerrogativa.
+
+**Persistência:** a atualização parcial gravou exclusivamente `content_markdown` e `callouts`. Flashcards, mapas Mermaid, mnemônicos, títulos, IDs e ordem das seções foram preservados. A leitura posterior confirmou correspondência exata das 105 seções com os payloads esperados.
+
+**Pendências editoriais:** nenhuma dentre os erros encontrados nesta revisão. Flashcards permaneceram integralmente fora do escopo, inclusive quando continham texto relacionado a trechos corrigidos.
