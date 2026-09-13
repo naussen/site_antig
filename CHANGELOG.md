@@ -1,5 +1,14 @@
 # Changelog
 
+## Não publicado — revisão visual e correção jurídica de Direito Penal
+
+- percorridos em produção os 3 resumos e as 43 seções da disciplina, sem avaliar ou alterar flashcards;
+- validados 3 mapas Mermaid, 6 tabelas, desktop e viewport móvel de 390 × 844, sem regressão visual ou funcional da aplicação;
+- aplicadas 18 correções controladas em 9 seções, incluindo feminicídio, vicaricídio, lesão corporal, art. 122, extorsão, falsidades e comunicação falsa de crime;
+- corrigidos separadores indevidos e uma célula vazia em tabela de conteúdo;
+- adicionada rotina reexecutável com prévia, confirmação explícita, proteção contra concorrência e verificação das 43 seções;
+- limitadas as escritas no Supabase a `content_markdown` e `callouts`, preservando flashcards, IDs, títulos, ordem, mnemônicos e Mermaid.
+
 ## Não publicado — revisão visual e correção jurídica de Direito Constitucional
 
 - percorridos em produção os 15 resumos e as 105 seções da disciplina, sem avaliar ou alterar flashcards;

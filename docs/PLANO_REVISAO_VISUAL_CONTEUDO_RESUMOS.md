@@ -90,7 +90,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [ ] | Direito do Trabalho | [ ] | [ ] | — |
 | [ ] | Direito Eleitoral | [ ] | [ ] | — |
 | [ ] | Direito Empresarial | [ ] | [ ] | — |
-| [ ] | Direito Penal | [ ] | [ ] | — |
+| [x] | Direito Penal | [ ] | [x] | 3 resumos e 43 seções revisados; 18 correções jurídicas/editoriais aplicadas em 9 seções; persistência integral confirmada no Supabase. |
 | [ ] | Direito Previdenciário | [ ] | [ ] | — |
 | [ ] | Direito Processual Civil | [ ] | [ ] | — |
 | [ ] | Direito Processual do Trabalho | [ ] | [ ] | — |
@@ -192,3 +192,29 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Persistência:** a atualização parcial gravou exclusivamente `content_markdown` e `callouts`. Flashcards, mapas Mermaid, mnemônicos, títulos, IDs e ordem das seções foram preservados. A leitura posterior confirmou correspondência exata das 105 seções com os payloads esperados.
 
 **Pendências editoriais:** nenhuma dentre os erros encontrados nesta revisão. Flashcards permaneceram integralmente fora do escopo, inclusive quando continham texto relacionado a trechos corrigidos.
+
+### Direito Penal — 12 de setembro de 2026
+
+**Comando de início do usuário:** `Direito Penal`
+
+**Quantidade de resumos:** 3
+
+**Quantidade de seções:** 43
+
+**Estado:** concluída
+
+| Resumo | URL | Seções | Visual/conteúdo | Gráficos | Mermaid | Mapas mentais | Observação e ação | Evidência final |
+|---|---|---:|---|---|---|---|---|---|
+| Da Lei Penal | `https://proconcursos.com.br/resumos/da-lei-penal` | 4 | [x] | N/A | [x] | [x] | Conteúdo confrontado com a Parte Geral do Código Penal; nenhuma incorreção objetiva remanescente identificada. | 4 seções presentes; 1 mapa renderizado; 2 tabelas responsivas; sem overflow. |
+| Do Crime | `https://proconcursos.com.br/resumos/do-crime` | 18 | [x] | N/A | [x] | [x] | Corrigida a fonte normativa do critério legal de infração penal. | 18 seções presentes; 1 mapa renderizado; 2 tabelas responsivas; sem conteúdo bruto. |
+| Parte Especial do Código Penal | `https://proconcursos.com.br/resumos/parte-especial-do-codigo-penal` | 21 | [x] | N/A | [x] | [x] | Atualizados feminicídio, vicaricídio, lesão corporal, art. 122 e dispositivos dos arts. 158, 311 e 311-A; corrigidas tabela e comunicação falsa à PM. | 21 seções presentes; 1 mapa renderizado; 2 tabelas responsivas; zoom e overlay aprovados. |
+
+**Consolidação:** os 3 resumos e as 43 seções foram percorridos integralmente em produção, sem avaliar flashcards. Foram identificados 3 mapas Mermaid e 6 tabelas; não houve código Mermaid bruto, erro persistente, seção vazia, imagem visível quebrada ou overflow global em desktop e no viewport de 390 × 844.
+
+**Correções visuais/funcionais:** corrigidos no próprio conteúdo uma célula vazia e separadores textuais indevidos em tabela. A estrutura da aplicação não exigiu alteração. O zoom, a restauração e o overlay do mapa mental funcionaram, e o viewport padrão foi restaurado ao final.
+
+**Revisão jurídica corretiva:** foram aplicadas 18 substituições controladas em 9 seções. A revisão usou o Código Penal compilado oficial e alcançou apenas afirmações objetivamente desatualizadas, incorretas ou truncadas, sem uniformizar controvérsias doutrinárias.
+
+**Persistência:** a atualização parcial gravou exclusivamente `content_markdown` e `callouts`, com conferência otimista antes da primeira escrita. Flashcards, mapas Mermaid, mnemônicos, títulos, IDs e ordem das seções foram preservados. A leitura posterior confirmou correspondência exata das 43 seções com os payloads esperados.
+
+**Pendências editoriais:** nenhuma dentre os erros encontrados nesta revisão. Flashcards permaneceram integralmente fora do escopo, inclusive quando possam repetir redações anteriores à atualização legislativa.
