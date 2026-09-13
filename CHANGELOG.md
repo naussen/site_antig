@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — plano de revisão visual e de conteúdo
+
+- inventariadas as 30 disciplinas disponíveis no PRO Resumos em um checklist operacional;
+- definida a revisão integral de todos os resumos, seções, gráficos, Mermaid e mapas mentais, com flashcards fora do escopo;
+- limitada a execução a uma disciplina por comando, com correção automática dos erros visuais e funcionais encontrados na disciplina autorizada.
+
 ## Não publicado — Mermaid em conteúdo Markdown
 
 - blocos cercados com a linguagem `mermaid` agora usam o visualizador client-only já adotado pelos mapas estruturados;
