@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — Mermaid em conteúdo Markdown
+
+- blocos cercados com a linguagem `mermaid` agora usam o visualizador client-only já adotado pelos mapas estruturados;
+- aplicada antes da renderização a mesma validação de segurança usada pela API de importação;
+- mantido o código-fonte do diagrama em fallback recolhido e acessível, sem habilitar HTML bruto no Markdown.
+
 ## Não publicado — limite efetivo dos webhooks
 
 - substituída a leitura integral dos webhooks de Mercado Pago e PayPal por leitura JSON limitada a 256 KiB durante o streaming;

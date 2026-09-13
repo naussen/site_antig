@@ -1,8 +1,9 @@
-import type { ReactNode } from "react";
+import { Children, isValidElement, type ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import { MarkdownMermaid } from "@/components/study/markdown-mermaid";
 import { QuantitativeChartViewer } from "@/components/study/quantitative-chart";
 
 interface MarkdownViewerProps {
@@ -40,6 +41,25 @@ function getPlainText(children: ReactNode): string | null {
   }
 
   return null;
+}
+
+function getFencedCodeBlock(children: ReactNode): {
+  className?: string;
+  source: string;
+} | null {
+  const elements = Children.toArray(children);
+
+  if (elements.length !== 1 || !isValidElement<{ className?: string; children?: ReactNode }>(elements[0])) {
+    return null;
+  }
+
+  const source = getPlainText(elements[0].props.children);
+  if (source === null) return null;
+
+  return {
+    className: elements[0].props.className,
+    source: source.trim(),
+  };
 }
 
 /**
@@ -80,6 +100,15 @@ export function MarkdownViewer({ content }: MarkdownViewerProps) {
               <table>{children}</table>
             </div>
           ),
+          pre: ({ children }) => {
+            const codeBlock = getFencedCodeBlock(children);
+
+            if (codeBlock?.className === "language-mermaid") {
+              return <MarkdownMermaid source={codeBlock.source} />;
+            }
+
+            return <pre>{children}</pre>;
+          },
           code: ({ className, children }) => className === "language-quant-chart"
             ? <QuantitativeChartViewer source={String(children).trim()} />
             : <code className={className}>{children}</code>,
