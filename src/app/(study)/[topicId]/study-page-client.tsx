@@ -63,6 +63,7 @@ export function StudyPageClient({
   );
   const [notesOpen, setNotesOpen] = useState(false);
   const [highlighterOpen, setHighlighterOpen] = useState(false);
+  const usesCrimeLabels = topic.topic_id === "parte-especial-do-codigo-penal";
 
   const sectionIds = useMemo(
     () => sections.map((s) => s.section_id),
@@ -152,7 +153,8 @@ export function StudyPageClient({
                   {topic.title}
                 </p>
                 <p className="text-xs" style={{ color: "var(--text-muted)" }}>
-                  {completedCount}/{totalCount} seções · {progressPercent}%
+                  {completedCount}/{totalCount} {usesCrimeLabels ? "crimes" : "seções"} ·{" "}
+                  {progressPercent}%
                 </p>
               </div>
             </div>
@@ -180,7 +182,7 @@ export function StudyPageClient({
                 onClick={openNotes}
                 className="flex items-center gap-2 rounded-xl border px-3 py-2 text-sm font-semibold transition-colors hover:border-[var(--accent)]"
                 style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
-                aria-label="Abrir notas da seção atual"
+                aria-label={`Abrir notas ${usesCrimeLabels ? "do crime" : "da seção"} atual`}
                 aria-expanded={notesOpen}
                 aria-controls="study-notes"
               >
@@ -215,7 +217,14 @@ export function StudyPageClient({
             <div className="study-module-kicker">
               <span>{topic.discipline}</span>
               <span>
-                {sections.length} {sections.length === 1 ? "seção" : "seções"}
+                {sections.length}{" "}
+                {usesCrimeLabels
+                  ? sections.length === 1
+                    ? "crime"
+                    : "crimes"
+                  : sections.length === 1
+                    ? "seção"
+                    : "seções"}
               </span>
             </div>
 
@@ -229,7 +238,9 @@ export function StudyPageClient({
                 <span style={{ color: "var(--text-secondary)" }}>
                   {progressLoading
                     ? "Carregando progresso..."
-                    : `${completedCount} de ${totalCount} seções concluídas`}
+                    : `${completedCount} de ${totalCount} ${
+                        usesCrimeLabels ? "crimes concluídos" : "seções concluídas"
+                      }`}
                 </span>
                 <strong style={{ color: "var(--accent)" }}>
                   {progressPercent}%
@@ -290,7 +301,7 @@ export function StudyPageClient({
                     (section.flashcards && section.flashcards.length > 0)) && (
                     <div
                       className="study-section-resources"
-                      aria-label="Recursos disponíveis nesta seção"
+                      aria-label={`Recursos disponíveis ${usesCrimeLabels ? "neste crime" : "nesta seção"}`}
                     >
                       {section.mermaid_mindmap && (
                         <span>
