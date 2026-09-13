@@ -245,4 +245,6 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 
 **Persistência:** a importação administrativa em lote foi aprovada no preflight e aplicada aos 3 módulos. A reexportação posterior confirmou correspondência semântica exata de `content_markdown`, callouts, mnemônicos, flashcards, mapas, títulos e IDs nas 29 seções.
 
-**Pendências editoriais:** flashcards permaneceram fora do escopo. A leitura visual em produção exige sessão autenticada; a auditoria desta execução validou os artefatos efetivamente publicados e os contratos de renderização, mas não automatizou esse smoke autenticado.
+**Pendências editoriais:** flashcards permaneceram fora do escopo.
+
+**Smoke autenticado em produção:** repetido com sucesso em 13 de setembro de 2026 nos três módulos. As 29 seções, os dois mapas Mermaid, as tabelas responsivas, a navegação lateral, o cabeçalho, os cartões e a navegação entre módulos carregaram sem erro visual ou funcional observável. Durante a sessão autenticada, nenhuma das três rotas redirecionou para o login.
