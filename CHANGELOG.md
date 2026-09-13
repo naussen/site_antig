@@ -1,5 +1,12 @@
 # Changelog
 
+## Não publicado — correção editorial de Português
+
+- revisadas novamente as 37 seções dos seis módulos de Português, com flashcards explicitamente fora do escopo;
+- aplicadas 72 correções controladas em 20 seções, abrangendo ortografia, morfologia, sintaxe, tipologia textual e redação oficial;
+- adicionada rotina reexecutável com prévia, proteção contra concorrência, confirmação explícita e verificação de persistência;
+- limitadas as escritas no Supabase a `content_markdown` e `callouts`, preservando IDs, títulos, ordem, mnemônicos, mapas e flashcards.
+
 ## Não publicado — revisão visual e de conteúdo de Português
 
 - percorridos em produção os 6 resumos e as 37 seções da disciplina, sem incluir flashcards;
