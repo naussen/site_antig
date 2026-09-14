@@ -230,7 +230,7 @@ export function StudyPageClient({
             <p className="study-module-eyebrow">Módulo de estudo</p>
             <h1
               id="study-module-title"
-              className="study-module-title max-w-full [font-size:clamp(1.65rem,9vw,2.75rem)] md:[font-size:clamp(2rem,4vw,3.25rem)]"
+              className="study-module-title max-w-full [font-size:clamp(1.5rem,7.5vw,2.2rem)] sm:[font-size:clamp(2rem,4vw,3.25rem)]"
             >
               {topic.title}
             </h1>
