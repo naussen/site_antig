@@ -34,6 +34,7 @@ export function ProLogo({
           alt="PRO Resumos"
           width={Math.round(size * ICON_LOGO_RATIO)}
           height={size}
+          className="h-auto max-w-full"
           draggable={false}
         />
       </span>
@@ -51,7 +52,7 @@ export function ProLogo({
         alt="PRO Resumos"
         width={width}
         height={size}
-        className="pro-logo__light"
+        className="pro-logo__light h-auto max-w-full"
         draggable={false}
       />
       <Image
@@ -59,7 +60,7 @@ export function ProLogo({
         alt="PRO Resumos"
         width={width}
         height={size}
-        className="pro-logo__dark"
+        className="pro-logo__dark h-auto max-w-full"
         draggable={false}
       />
     </span>
@@ -81,7 +82,7 @@ export function ProLogoLink({
     <Link
       href={href}
       aria-label={label}
-      className="inline-flex rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+      className="inline-flex max-w-full rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
     >
       <ProLogo {...logoProps} />
     </Link>

@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-09-14 — Logos transparentes na landing e no dashboard
+
+- Remove o cartão branco aplicado ao logo da landing e usa uma variante horizontal com transparência real e wordmark claro para a superfície escura.
+- Ajusta escala, respiro e limites responsivos dos logos do PRO Resumos na navegação desktop, recolhida e mobile.
+- Mantém variantes transparentes próprias para contraste nos modos claro, escuro e sépia, sem fundos incorporados aos assets.
+
 ## Não publicado — página inicial após login
 
 - limitada a escolha de página inicial a PRO Resumos, PRO Legis, Notas e Configurações;

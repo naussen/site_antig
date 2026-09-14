@@ -16,17 +16,17 @@ import {
 } from "lucide-react";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
-const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo-transparent.png");
+const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo-dark.png");
 
 function BrandLogo({ className = "" }: { className?: string }) {
   return (
     <Image
       src={LOGO_SRC}
       alt="PRO Concursos"
-      width={250}
-      height={100}
-      className={`h-auto w-[112px] rounded-xl bg-white/95 p-1.5 shadow-sm ring-1 ring-white/15 min-[360px]:w-[124px] sm:w-[210px] sm:p-2 ${className}`}
-      priority
+      width={1200}
+      height={350}
+      className={`h-auto w-[132px] drop-shadow-[0_8px_24px_rgba(0,0,0,0.22)] min-[360px]:w-[146px] sm:w-[190px] ${className}`}
+      preload
     />
   );
 }

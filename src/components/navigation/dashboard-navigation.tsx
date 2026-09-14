@@ -112,9 +112,9 @@ export function DashboardNavigation({
 
   const renderNavigationContent = (isCollapsed: boolean) => (
     <>
-      <div className={`flex shrink-0 items-center border-b py-5 ${isCollapsed ? "justify-center px-3" : "gap-3 px-5"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
+      <div className={`flex min-h-20 shrink-0 items-center border-b py-4 ${isCollapsed ? "justify-center px-3" : "gap-3 px-4"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
         <ProLogoLink
-          size={isCollapsed ? 38 : 40}
+          size={isCollapsed ? 40 : 42}
           variant={isCollapsed ? "icon" : "full"}
           tone="dark"
         />
@@ -339,7 +339,7 @@ export function DashboardNavigation({
           className="sticky top-0 z-30 flex items-center justify-between border-b px-4 py-3 lg:hidden"
           style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
         >
-          <ProLogoLink size={32} variant="full" />
+          <ProLogoLink size={34} variant="full" />
           <button
             type="button"
             onClick={toggleMobileNavigation}
