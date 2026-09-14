@@ -77,7 +77,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 |---|---|---|---|---|
 | [ ] | Administração de Recursos Materiais | [ ] | [ ] | — |
 | [ ] | Administração Financeira e Orçamentária | [ ] | [ ] | — |
-| [ ] | Administração Geral | [ ] | [ ] | — |
+| [x] | Administração Geral | [ ] | [x] | 11 resumos e 54 seções revisados; 26 seções corrigidas; 22 mapas, 6 tabelas e 3 fórmulas validados; persistência integral confirmada. |
 | [ ] | Administração Pública | [ ] | [ ] | — |
 | [ ] | Análise de Balanços | [ ] | [ ] | — |
 | [x] | Auditoria | [ ] | [x] | 24 resumos e 76 seções revisados; 33 seções corrigidas; 2 tabelas e 12 mapas validados; persistência integral confirmada. |
@@ -309,3 +309,31 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Backups:** `C:\PRO\agente\auditoria\backups\2026-09-13-pre-revisao` e `C:\PRO\agente\auditoria\backups\2026-09-13-pos-revisao`.
 
 **Pendências editoriais:** nenhuma dentre as incorreções comprovadas nesta revisão. Simplificações pedagógicas não contraditórias foram preservadas; flashcards permanecem fora do escopo.
+
+### Administração Geral — 13 de setembro de 2026
+
+**Comando de início do usuário:** `disciplina: Administração Geral — revisão funcional, visual e correção do conteúdo`
+
+**Quantidade de resumos:** 11
+
+**Quantidade de seções:** 54
+
+**Estado:** concluída
+
+| Grupo | Resumos | Seções | Visual/conteúdo | Gráficos | Mermaid/mapas mentais | Observação e ação | Evidência final |
+|---|---:|---:|---|---|---|---|---|
+| Processo administrativo, planejamento e organização | 4 | 16 | [x] | N/A | [x] | Corrigidos PODC, delegação, planejamento, cenários, BSC, PES, estruturas e amplitude de controle. | Persistência confirmada por reexportação. |
+| Direção, comunicação e controle | 3 | 15 | [x] | N/A | [x] | Corrigidos motivação, liderança, comunicação, desempenho e conceitos de controle. | Persistência confirmada por reexportação. |
+| Qualidade, projetos, desempenho e processos | 4 | 23 | [x] | N/A | [x] | Atualizados ISO 9001, PMBOK, qualidade, avaliação e modelagem de processos. | Persistência confirmada por reexportação. |
+
+**Consolidação visual e funcional:** as 11 rotas e 54 seções foram percorridas autenticadas em desktop de 2560 px e mobile de 390 × 844. As 6 tabelas mantiveram rolagem horizontal interna; 22 mapas Mermaid e 3 fórmulas KaTeX renderizaram sem código bruto, erro ou carregamento preso. Não houve imagem quebrada, aviso de console ou overflow global. O zoom Mermaid foi testado e funcionou.
+
+**Correção visual:** o título muito longo de Processo Organizacional deixou de quebrar uma letra isolada no mobile. O tamanho responsivo foi reduzido apenas em telas estreitas, preservando a escala original a partir do breakpoint médio.
+
+**Revisão de conteúdo:** 26 seções em 10 módulos receberam correções objetivas. Foram atualizados ou refinados conceitos de Maslow, AMO, comunicação, planejamento, Godet, BSC, PES, delegação, ISO 9000/9001, PMBOK, qualidade, avaliação de desempenho, cadeia de valor, IDEF0 e teorias administrativas.
+
+**Persistência:** a publicação foi aplicada individualmente para preservar a ordenação. A reexportação confirmou correspondência integral dos 11 payloads revisados, das 54 identidades permanentes, dos 22 mapas e dos 120 flashcards publicados. Flashcards não foram analisados.
+
+**Backups:** `C:\PRO\agente\administracao_geral\backups\2026-09-13-pre-revisao` e `C:\PRO\agente\administracao_geral\backups\2026-09-13-pos-revisao`.
+
+**Pendências editoriais:** nenhuma dentre os erros encontrados. Simplificações didáticas compatíveis com as referências foram preservadas e flashcards permanecem fora do escopo.

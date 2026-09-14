@@ -256,6 +256,13 @@
 - padronizadas perguntas e assertivas no formato Certo/Errado e classificadas nas seções correspondentes;
 - incluídos backup integral e rollback automático antes da substituição dos flashcards da disciplina.
 
+## Não publicado — revisão visual e de conteúdo de Administração Geral
+
+- revisados e republicados 11 resumos e 54 seções, com correções conceituais em 26 seções e preservação das identidades, ordenação e recursos didáticos;
+- atualizados conceitos de teorias administrativas, planejamento, direção, qualidade, projetos, desempenho e gestão por processos;
+- ajustada a escala responsiva do título principal para impedir quebra isolada de letra em módulos com nomes extensos;
+- confirmada por reexportação a preservação exata dos 120 flashcards publicados, mantidos fora da revisão.
+
 ## Não publicado — restauração de flashcards e reparo Mermaid
 
 - restaurados flashcards C/E removidos indevidamente, mantendo fora cartões estatísticos e cartões de letra da lei;
