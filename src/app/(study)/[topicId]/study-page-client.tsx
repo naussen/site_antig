@@ -228,7 +228,10 @@ export function StudyPageClient({
             </div>
 
             <p className="study-module-eyebrow">Módulo de estudo</p>
-            <h1 id="study-module-title" className="study-module-title">
+            <h1
+              id="study-module-title"
+              className="study-module-title max-w-full break-words [overflow-wrap:anywhere]"
+            >
               {topic.title}
             </h1>
 

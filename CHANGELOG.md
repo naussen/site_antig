@@ -231,6 +231,13 @@
 - adicionado importador administrativo dos anexos CSV, com classificação explícita por seção de Auditoria;
 - a substituição preserva backup integral e rollback automático, removendo somente os flashcards da disciplina antes de inserir os novos cards.
 
+## Não publicado — revisão visual e de conteúdo de Auditoria
+
+- revisados e republicados 24 resumos e 76 seções, com correções técnicas em 33 seções e preservação das identidades permanentes, ordenação e recursos didáticos;
+- atualizadas referências e afirmações conforme NBC TA, NBC TI, NBC PA e Resolução CVM nº 23/2021 vigentes;
+- corrigida no mobile a quebra de URLs longas em Markdown e a contenção do título principal do módulo;
+- confirmada por reexportação a preservação exata dos 159 flashcards publicados, mantidos fora da revisão.
+
 ## Não publicado — substituição dos flashcards de Contabilidade Geral e Avançada
 
 - substituídos 223 flashcards anteriores por 120 cards C/E distribuídos em 40 seções temáticas;

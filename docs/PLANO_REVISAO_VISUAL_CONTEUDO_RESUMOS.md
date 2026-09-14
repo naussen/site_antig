@@ -80,7 +80,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [ ] | Administração Geral | [ ] | [ ] | — |
 | [ ] | Administração Pública | [ ] | [ ] | — |
 | [ ] | Análise de Balanços | [ ] | [ ] | — |
-| [ ] | Auditoria | [ ] | [ ] | — |
+| [x] | Auditoria | [ ] | [x] | 24 resumos e 76 seções revisados; 33 seções corrigidas; 2 tabelas e 12 mapas validados; persistência integral confirmada. |
 | [ ] | Contabilidade de Custos | [ ] | [ ] | — |
 | [x] | Contabilidade Geral e Avançada | [ ] | [x] | 32 resumos e 142 seções revisados; 76 seções corrigidas; 24 mapas e 40 tabelas validados; persistência e smoke autenticado confirmados. |
 | [ ] | Direito Administrativo | [ ] | [ ] | — |
@@ -281,3 +281,31 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Backups:** `C:\PRO\agente\contabilidade_geral_e_avançada\backups\2026-09-13-pre-revisao` e `C:\PRO\agente\contabilidade_geral_e_avançada\backups\2026-09-13-pos-revisao`.
 
 **Pendências editoriais:** nenhuma dentre os erros encontrados nesta revisão. O `topic_id` legado `cpc-27-intangivel` foi mantido para preservar a URL, embora o título exibido tenha sido corrigido para CPC 04 (R1). Flashcards permanecem fora do escopo.
+
+### Auditoria — 13 de setembro de 2026
+
+**Comando de início do usuário:** `disciplina: Auditoria — revisão funcional, visual e correção do conteúdo`
+
+**Quantidade de resumos:** 24
+
+**Quantidade de seções:** 76
+
+**Estado:** concluída
+
+| Faixa da revisão | Resumos | Seções | Visual/conteúdo | Gráficos | Mermaid/mapas mentais | Observação e ação | Evidência final |
+|---|---:|---:|---|---|---|---|---|
+| Normas gerais, auditoria interna e planejamento | 8 | 26 | [x] | N/A | [x] | Corrigidas definições, responsabilidades, documentação, planejamento e controles. | Persistência confirmada por reexportação. |
+| Evidência, riscos, materialidade e estimativas | 8 | 23 | [x] | N/A | [x] | Atualizados critérios das NBC TA 240, 320, 500, 530, 540 e 560. | Persistência confirmada por reexportação. |
+| Relatórios, qualidade e trabalho de terceiros | 8 | 27 | [x] | N/A | [x] | Atualizados NBC TA 220, 505, 600, 610, 620, 700, 705 e 706. | Persistência confirmada por reexportação. |
+
+**Consolidação visual e funcional:** as 24 rotas e 76 seções foram percorridas autenticadas em desktop de 2560 px e mobile de 390 × 844. As duas tabelas mantiveram rolagem horizontal interna. Os mapas Mermaid renderizaram sem código bruto ou estado preso; não houve imagem quebrada, erro de console ou overflow global. Não há gráficos quantitativos na disciplina.
+
+**Correções visuais:** links longos em Markdown agora podem quebrar em qualquer ponto no mobile, sem ultrapassar o card. O título principal do módulo recebeu contenção responsiva e quebra segura para impedir o corte de palavras longas. Valores monetários textuais deixaram de ser interpretados como delimitadores matemáticos.
+
+**Revisão de conteúdo:** 33 seções em 20 módulos receberam correções técnicas baseadas no catálogo vigente do CFC, nas NBC TA/NBC TI/NBC PA e na Resolução CVM nº 23/2021. Foram corrigidos conceitos de amostragem, documentação, fraude, evidência, materialidade, independência, planejamento, qualidade, relatórios, utilização de especialistas e outros auditores.
+
+**Persistência:** a atualização foi aplicada individualmente para não alterar a ordenação dos módulos. A reexportação confirmou correspondência integral dos 24 payloads revisados, preservação dos 76 pares `content_unit_id`/`stable_key`, ordem dos módulos, 12 mapas e 159 flashcards publicados. Flashcards não foram analisados.
+
+**Backups:** `C:\PRO\agente\auditoria\backups\2026-09-13-pre-revisao` e `C:\PRO\agente\auditoria\backups\2026-09-13-pos-revisao`.
+
+**Pendências editoriais:** nenhuma dentre as incorreções comprovadas nesta revisão. Simplificações pedagógicas não contraditórias foram preservadas; flashcards permanecem fora do escopo.

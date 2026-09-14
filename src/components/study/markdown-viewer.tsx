@@ -68,7 +68,7 @@ function getFencedCodeBlock(children: ReactNode): {
  */
 export function MarkdownViewer({ content }: MarkdownViewerProps) {
   return (
-    <div className="markdown-content animate-fade-in-up">
+    <div className="markdown-content animate-fade-in-up [&_a]:break-words [&_a]:[overflow-wrap:anywhere]">
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath, convertSafeBreakTags]}
         rehypePlugins={[[rehypeKatex, { strict: "ignore", trust: false }]]}
