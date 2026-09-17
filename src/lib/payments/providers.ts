@@ -127,6 +127,7 @@ export async function createMercadoPagoSubscription(userId: string, email: strin
     headers: {
       Authorization: `Bearer ${config.accessToken}`,
       "Content-Type": "application/json",
+      "X-Idempotency-Key": checkoutIdempotencyKey(userId, "mercado_pago"),
     },
     body: JSON.stringify(payload),
     cache: "no-store",
@@ -198,6 +199,22 @@ export async function getMercadoPagoSubscription(subscriptionId: string) {
   }>(response, "Mercado Pago");
 }
 
+export async function cancelMercadoPagoSubscription(subscriptionId: string) {
+  const config = getMercadoPagoConfig();
+  const response = await fetch(`${MERCADO_PAGO_API}/preapproval/${encodeURIComponent(subscriptionId)}`, {
+    method: "PUT",
+    headers: {
+      Authorization: `Bearer ${config.accessToken}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ status: "canceled" }),
+    cache: "no-store",
+    signal: AbortSignal.timeout(10_000),
+  });
+  await providerJson(response, "Mercado Pago");
+  return getMercadoPagoSubscription(subscriptionId);
+}
+
 export function isExpectedMercadoPagoSubscription(subscription: {
   auto_recurring?: { transaction_amount?: number; currency_id?: string };
 }) {
@@ -212,14 +229,48 @@ export async function getMercadoPagoInvoice(invoiceId: string) {
     headers: { Authorization: `Bearer ${accessToken}` }, cache: "no-store", signal: AbortSignal.timeout(10_000),
   });
   const data = await providerJson<{
+    id?: string | number;
     preapproval_id?: string;
     currency_id?: string;
     transaction_amount?: string | number;
     summarized?: string;
-    payment?: { status?: string };
+    last_modified?: string;
+    payment?: { id?: string | number; status?: string; status_detail?: string };
   }>(response, "Mercado Pago");
   if (!data.preapproval_id) throw new Error("Fatura do Mercado Pago sem assinatura associada.");
   return { ...data, preapproval_id: data.preapproval_id };
+}
+
+export async function getMercadoPagoPayment(paymentId: string) {
+  const { accessToken } = getMercadoPagoConfig();
+  const response = await fetch(`${MERCADO_PAGO_API}/v1/payments/${encodeURIComponent(paymentId)}`, {
+    headers: { Authorization: `Bearer ${accessToken}` }, cache: "no-store", signal: AbortSignal.timeout(10_000),
+  });
+  return providerJson<{
+    id: string | number;
+    status?: string;
+    status_detail?: string;
+    external_reference?: string;
+    transaction_amount?: number;
+    currency_id?: string;
+    date_created?: string;
+    date_last_updated?: string;
+  }>(response, "Mercado Pago");
+}
+
+export async function getMercadoPagoChargeback(chargebackId: string) {
+  const { accessToken } = getMercadoPagoConfig();
+  const response = await fetch(`${MERCADO_PAGO_API}/v1/chargebacks/${encodeURIComponent(chargebackId)}`, {
+    headers: { Authorization: `Bearer ${accessToken}` }, cache: "no-store", signal: AbortSignal.timeout(10_000),
+  });
+  return providerJson<{
+    id: string | number;
+    payments?: string | number | Array<string | number>;
+    currency?: string;
+    amount?: string | number;
+    date_created?: string;
+    date_last_updated?: string;
+  }>(response, "Mercado Pago");
 }
 
 export function isExpectedMercadoPagoInvoice(invoice: { currency_id?: string; transaction_amount?: string | number }) {
@@ -260,6 +311,19 @@ export async function getPayPalSubscription(subscriptionId: string) {
   }>(response, "PayPal");
 }
 
+export async function cancelPayPalSubscription(subscriptionId: string) {
+  const { config, accessToken } = await getPayPalAccessToken();
+  const response = await fetch(`${config.apiBase}/v1/billing/subscriptions/${encodeURIComponent(subscriptionId)}/cancel`, {
+    method: "POST",
+    headers: { Authorization: `Bearer ${accessToken}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ reason: "Cancelamento solicitado pelo assinante." }),
+    cache: "no-store",
+    signal: AbortSignal.timeout(10_000),
+  });
+  await providerJson(response, "PayPal");
+  return getPayPalSubscription(subscriptionId);
+}
+
 export async function getLatestMercadoPagoInvoice(subscriptionId: string) {
   const { accessToken } = getMercadoPagoConfig();
   const url = new URL(`${MERCADO_PAGO_API}/authorized_payments/search`);
@@ -269,8 +333,9 @@ export async function getLatestMercadoPagoInvoice(subscriptionId: string) {
     headers: { Authorization: `Bearer ${accessToken}` }, cache: "no-store", signal: AbortSignal.timeout(10_000),
   });
   const data = await providerJson<{ results?: Array<{
-    preapproval_id?: string; currency_id?: string; transaction_amount?: string | number;
-    summarized?: string; last_modified?: string; payment?: { status?: string };
+    id?: string | number; preapproval_id?: string; currency_id?: string; transaction_amount?: string | number;
+    summarized?: string; last_modified?: string;
+    payment?: { id?: string | number; status?: string; status_detail?: string };
   }> }>(response, "Mercado Pago");
   return (data.results ?? []).sort((a, b) =>
     new Date(b.last_modified ?? 0).getTime() - new Date(a.last_modified ?? 0).getTime()

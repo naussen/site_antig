@@ -42,6 +42,7 @@ export default async function DashboardLayout({
           <div className="mx-auto flex max-w-7xl flex-col gap-3 text-xs text-[var(--text-muted)] sm:flex-row sm:items-center sm:justify-between">
             <p>© 2026 PRO Concursos</p>
             <nav className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Conta e assinatura">
+              <Link href="/dashboard/conta" className="font-semibold text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]">Conta</Link>
               <Link href="/dashboard/assinatura" className="font-semibold text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]">Assinatura</Link>
               <Link href="/dashboard/assinatura#cancelamento" className="font-semibold text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]">Cancelamento</Link>
             </nav>

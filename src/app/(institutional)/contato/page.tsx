@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PrivacyRequestForm } from "@/components/privacy/privacy-request-form";
 
 export const metadata = {
   title: "Contato",
@@ -21,6 +22,11 @@ export default function ContactPage() {
           <h2 className="text-xl font-extrabold">Dúvidas sobre o serviço</h2>
           <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">Consulte a central de suporte, os Termos de uso e as informações de Privacidade antes de contratar.</p>
           <div className="mt-5 flex flex-wrap gap-4 text-sm font-bold text-[var(--accent)]"><Link href="/suporte">Suporte</Link><Link href="/termos">Termos</Link><Link href="/privacidade">Privacidade</Link></div>
+        </section>
+        <section id="lgpd" className="scroll-mt-6 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-6 shadow-[var(--shadow)]">
+          <h2 className="text-xl font-extrabold">Privacidade e LGPD</h2>
+          <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">Use este canal para exercer direitos de acesso, correção, exclusão, portabilidade ou obter informações sobre o tratamento de dados. O envio gera um protocolo; poderemos confirmar sua identidade antes de atender ao pedido.</p>
+          <PrivacyRequestForm />
         </section>
       </div>
     </main>

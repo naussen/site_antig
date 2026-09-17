@@ -1,6 +1,11 @@
 import { z } from "zod";
 import { NextResponse } from "next/server";
-import { applyEntitlement, beginWebhookEvent, finishWebhookEvent } from "@/lib/payments/entitlements";
+import {
+  applyEntitlement,
+  beginWebhookEvent,
+  blockPaymentAccess,
+  finishWebhookEvent,
+} from "@/lib/payments/entitlements";
 import { calculateAccessUntil, resolvePayPalStatus } from "@/lib/payments/core.mjs";
 import { getPayPalSubscription, isExpectedPayPalSubscription, verifyPayPalWebhook } from "@/lib/payments/providers";
 import { readWebhookJson, RequestBodyError } from "@/lib/payments/webhook-request.mjs";
@@ -55,6 +60,17 @@ export async function POST(request: Request) {
     const providerUpdatedAt = subscription.status_update_time && new Date(subscription.status_update_time) > new Date(parsed.data.create_time)
       ? subscription.status_update_time
       : parsed.data.create_time;
+    if (parsed.data.event_type === "PAYMENT.SALE.REFUNDED" || parsed.data.event_type === "PAYMENT.SALE.REVERSED") {
+      const financialResourceId = typeof resource.id === "string" ? resource.id : parsed.data.id;
+      await blockPaymentAccess({
+        userId,
+        provider: "paypal",
+        subscriptionId: subscription.id,
+        resourceId: financialResourceId,
+        reason: parsed.data.event_type === "PAYMENT.SALE.REFUNDED" ? "refund" : "reversal",
+        providerUpdatedAt,
+      });
+    }
     await applyEntitlement({
       userId, provider: "paypal", subscriptionId: subscription.id, status,
       accessUntil: calculateAccessUntil(status, subscription.billing_info?.next_billing_time, providerUpdatedAt),

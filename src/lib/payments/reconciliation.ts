@@ -1,6 +1,6 @@
 import "server-only";
 import { createAdminClient } from "@/lib/supabase/admin";
-import { applyEntitlement } from "./entitlements";
+import { applyEntitlement, recordProviderTransaction } from "./entitlements";
 import { calculateAccessUntil, resolveMercadoPagoStatus, resolvePayPalStatus } from "./core.mjs";
 import {
   getLatestMercadoPagoInvoice,
@@ -28,9 +28,25 @@ async function reconcileRow(row: ReconciliationRow, checkedAt: string) {
     if (subscription.id !== row.provider_subscription_id || !isExpectedMercadoPagoSubscription(subscription)) {
       throw new Error("unexpected_mercado_pago_subscription");
     }
+    if (subscription.external_reference !== row.user_id) {
+      throw new Error("unexpected_mercado_pago_user");
+    }
     if (invoice && (
       invoice.preapproval_id !== row.provider_subscription_id || !isExpectedMercadoPagoInvoice(invoice)
     )) throw new Error("unexpected_mercado_pago_invoice");
+
+    if (invoice?.payment?.id !== undefined) {
+      await recordProviderTransaction({
+        provider: "mercado_pago",
+        transactionId: String(invoice.payment.id),
+        subscriptionId: subscription.id,
+        userId: row.user_id,
+        status: invoice.payment.status ?? "unknown",
+        amount: Number.isFinite(Number(invoice.transaction_amount)) ? Number(invoice.transaction_amount) : null,
+        currency: invoice.currency_id ?? null,
+        providerUpdatedAt: checkedAt,
+      });
+    }
 
     const status = resolveMercadoPagoStatus(subscription.status, invoice ? {
       paymentStatus: invoice.payment?.status,
@@ -50,6 +66,7 @@ async function reconcileRow(row: ReconciliationRow, checkedAt: string) {
   if (subscription.id !== row.provider_subscription_id || !isExpectedPayPalSubscription(subscription)) {
     throw new Error("unexpected_paypal_subscription");
   }
+  if (subscription.custom_id !== row.user_id) throw new Error("unexpected_paypal_user");
   const status = resolvePayPalStatus(subscription.status, subscription.billing_info?.failed_payments_count);
   return applyEntitlement({
     userId: row.user_id,

@@ -1,5 +1,17 @@
 # Changelog
 
+## Não publicado — pagamentos, conta e canal LGPD
+
+- cancelamento de assinatura agora ocorre no backend, com validação da sessão, da origem e do estado confirmado pelo Mercado Pago ou PayPal, preservando apenas o período já pago;
+- webhooks do Mercado Pago deixam de usar ID e data do corpo para idempotência ou ordenação, e pagamentos passam a ser vinculados explicitamente à assinatura antes de estorno ou chargeback revogar acesso;
+- estornos, reversões e chargebacks dos dois provedores agora criam bloqueio financeiro persistente, impedindo reativação por webhook ou reconciliação posterior até revisão operacional explícita;
+- bloqueado o replay de evento ativo antigo sobre estado financeiro mais novo no banco;
+- criada área de Conta separada das preferências de estudo, com identidade, recuperação de senha, assinatura e solicitações de privacidade;
+- criado canal LGPD público e autenticado, com protocolo, validação server-side, limite diário e RLS;
+- adicionadas as migrations 024 e 025 e teste pgTAP negativo com dois usuários para notas, progresso, preferências, entitlements e solicitações LGPD.
+- migrations 024 e 025 aplicadas no Supabase remoto e 18 verificações RLS com dois usuários reais temporários passaram em produção, incluindo o bloqueio contra replay financeiro, com remoção das fixtures ao final;
+- auditoria da configuração confirmou senha mínima de 12 caracteres, requisitos de maiúscula/minúscula/número, reautenticação e TOTP; plano Free, proteção HIBP e backups permanecem como bloqueadores operacionais.
+
 ## 2026-09-14 — Logos transparentes na landing e no dashboard
 
 - Remove o cartão branco aplicado ao logo da landing e usa uma variante horizontal com transparência real e wordmark claro para a superfície escura.

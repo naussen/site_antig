@@ -187,6 +187,45 @@ export interface UserEntitlement {
   updated_at: string;
 }
 
+export interface PaymentProviderTransaction {
+  provider: 'mercado_pago' | 'paypal';
+  transaction_id: string;
+  provider_subscription_id: string;
+  user_id: string;
+  status: string;
+  amount: number | null;
+  currency: string | null;
+  provider_updated_at: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface PaymentAccessBlock {
+  id: string;
+  user_id: string;
+  provider: 'mercado_pago' | 'paypal';
+  provider_subscription_id: string;
+  resource_id: string;
+  reason: 'refund' | 'chargeback' | 'reversal';
+  provider_updated_at: string;
+  active: boolean;
+  created_at: string;
+  resolved_at: string | null;
+  resolved_by: string | null;
+  resolution_note: string | null;
+}
+
+export interface PrivacyRequest {
+  id: string;
+  user_id: string | null;
+  contact_email: string;
+  request_type: 'access' | 'correction' | 'deletion' | 'portability' | 'information' | 'other';
+  message: string;
+  status: 'received' | 'in_review' | 'completed' | 'rejected';
+  created_at: string;
+  updated_at: string;
+}
+
 export type TextHighlightColor =
   | 'yellow'
   | 'orange'

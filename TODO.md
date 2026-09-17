@@ -16,7 +16,7 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [x] Mapear os estados dos provedores para `active`, `trialing`, `pending`, `past_due`, `canceled` e `expired` em `public.user_entitlements`.
 - [x] Atualizar `user_entitlements` somente no backend com `service_role`, vinculando o pagamento ao UUID confirmado do Supabase Auth.
 - [x] Tratar estados de renovação, atraso, cancelamento, expiração, estorno/reversão do PayPal e eventos recebidos fora de ordem.
-- [ ] Completar a política comercial e técnica de reembolso/chargeback do Mercado Pago antes de habilitar esses eventos em produção.
+- [x] Implementar bloqueio persistente por reembolso, reversão ou chargeback nos dois provedores, com vínculo verificado entre pagamento, assinatura e usuário e proteção contra reativação posterior; a política comercial de contestação continua operacional.
 - [x] Implementar reconciliação periódica entre o banco e as APIs dos provedores para corrigir webhooks perdidos.
 - [ ] Registrar auditoria sem tokens, dados de cartão, payloads completos ou informações pessoais desnecessárias.
 - [ ] Configurar alertas para falhas reiteradas de webhook, divergências de reconciliação e concessões/revogações anormais.
@@ -24,10 +24,10 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 
 ### Plano e segurança do Supabase
 
-- [ ] Antes de aceitar pagamentos, revisar o plano do Supabase e realizar o upgrade necessário.
-- [ ] Ativar a proteção contra senhas vazadas assim que o plano contratado disponibilizar o recurso.
-- [ ] Confirmar no ambiente de produção a política mínima de senha e manter MFA obrigatório para contas administrativas.
-- [ ] Definir backup, retenção e recuperação compatíveis com usuários pagantes; avaliar PITR conforme o plano contratado.
+- [ ] Antes de aceitar pagamentos, realizar o upgrade do Supabase; em 16/09/2026 a Management API confirmou que a organização ainda está no plano Free.
+- [ ] Ativar a proteção contra senhas vazadas após o upgrade; em 16/09/2026 `password_hibp_enabled` foi confirmado como desativado.
+- [x] Confirmar no ambiente de produção senha mínima de 12 caracteres com minúscula, maiúscula e número, reautenticação para troca de senha e TOTP habilitado.
+- [ ] Definir backup e retenção compatíveis com usuários pagantes; em 16/09/2026 não havia backup disponível nem PITR habilitado.
 
 ### Hospedagem e publicação
 
@@ -41,7 +41,7 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 
 ### Autorização e testes
 
-- [ ] Criar testes de integração RLS negativos com dois usuários distintos, garantindo que nenhum deles leia ou altere notas, progresso, preferências ou entitlement do outro.
+- [x] Criar teste pgTAP negativo com dois usuários distintos, cobrindo leitura e alteração de notas, progresso, preferências, entitlement e solicitações LGPD do outro.
 - [ ] Automatizar testes de leitura do acervo para `anon`, autenticado sem assinatura, assinatura ativa, assinatura expirada, admin AAL1 e admin AAL2.
 - [ ] Executar `supabase/scripts/fase3_validacao_rls.sql` após toda mudança futura de schema, grants ou policies.
 - [ ] Impedir em revisão de código qualquer nova policy de `topics` ou `sections` baseada apenas em `TO authenticated USING (true)`.

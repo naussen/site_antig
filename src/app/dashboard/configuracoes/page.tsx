@@ -84,7 +84,7 @@ export default async function DashboardSettingsPage() {
               <Settings2 size={24} />
             </span>
             <p className="mt-6 text-xs font-black uppercase tracking-[0.16em] text-white/75">
-              Configurações do usuário
+              Preferências
             </p>
             <h1 className="mt-2 text-3xl font-black tracking-tight text-white">
               Preferências de estudo
@@ -120,7 +120,7 @@ export default async function DashboardSettingsPage() {
                 { value: START_PAGE_RESUMOS, label: "PRO Resumos", detail: "Visão geral das matérias", icon: BookOpen },
                 { value: START_PAGE_LEGIS, label: "PRO Legis", detail: "Consulta à legislação", icon: Scale },
                 { value: START_PAGE_NOTES, label: "Notas", detail: "Suas anotações de estudo", icon: NotebookPen },
-                { value: START_PAGE_SETTINGS, label: "Configurações", detail: "Preferências da conta", icon: Settings2 },
+                { value: START_PAGE_SETTINGS, label: "Preferências", detail: "Preferências de estudo", icon: Settings2 },
               ].map(({ value, label, detail, icon: Icon }) => (
                 <label
                   key={value}

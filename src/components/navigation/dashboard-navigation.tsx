@@ -15,6 +15,7 @@ import {
   StickyNote,
   Scale,
   Settings2,
+  UserRound,
   X,
 } from "lucide-react";
 import { ProLogoLink } from "@/components/brand/pro-logo";
@@ -57,9 +58,10 @@ const navigationItems = [
   { href: "/dashboard/notas", label: "Notas", icon: StickyNote },
   {
     href: "/dashboard/configuracoes",
-    label: "Configurações",
+    label: "Preferências",
     icon: Settings2,
   },
+  { href: "/dashboard/conta", label: "Conta", icon: UserRound },
 ];
 
 export function DashboardNavigation({
@@ -102,9 +104,12 @@ export function DashboardNavigation({
     try {
       setLoggingOut(true);
       const supabase = createClient();
-      await supabase.auth.signOut();
+      const { error } = await supabase.auth.signOut();
+      if (error) throw error;
       router.push("/login");
       router.refresh();
+    } catch {
+      window.alert("Não foi possível encerrar a sessão. Tente novamente.");
     } finally {
       setLoggingOut(false);
     }
@@ -249,11 +254,11 @@ export function DashboardNavigation({
         {userEmail && (
           <div className={`border-t ${isCollapsed ? "flex flex-col items-center pt-3" : "pt-4"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
             <Link
-              href="/dashboard/assinatura"
+              href="/dashboard/conta"
               onClick={() => setMobileOpen(false)}
               className={isCollapsed ? "group relative mb-2 grid h-10 w-10 place-items-center rounded-xl border border-[var(--dashboard-sidebar-border)] bg-[var(--dashboard-sidebar-active)] text-sm font-bold text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color,color] duration-150 hover:border-[var(--accent)] hover:text-[var(--dashboard-sidebar-text)] active:scale-[0.96] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" : "group mb-2 block truncate rounded-xl border border-transparent px-2.5 py-2 text-left text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color] duration-150 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] active:scale-[0.985] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"}
-              title={isCollapsed ? `Gerenciar assinatura (${accountName})` : "Gerenciar assinatura"}
-              aria-label={isCollapsed ? `Gerenciar assinatura de ${accountName}` : undefined}
+              title={isCollapsed ? `Abrir conta (${accountName})` : "Abrir conta"}
+              aria-label={isCollapsed ? `Abrir conta de ${accountName}` : undefined}
             >
               {isCollapsed ? accountName?.charAt(0).toUpperCase() : (
                 <>
@@ -261,7 +266,7 @@ export function DashboardNavigation({
                     {accountName}
                   </strong>
                   <span className="block truncate text-[11px]" style={{ color: "var(--dashboard-sidebar-muted)" }}>
-                    Gerenciar assinatura
+                    Conta e assinatura
                   </span>
                 </>
               )}
@@ -274,7 +279,7 @@ export function DashboardNavigation({
                     color: "var(--dashboard-sidebar)",
                   }}
                 >
-                  Gerenciar assinatura
+                  Abrir conta
                 </span>
               )}
             </Link>

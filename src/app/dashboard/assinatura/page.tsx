@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import type { UserEntitlement } from "@/types/database";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import { PaymentSubmitButton } from "./payment-submit-button";
+import { CancelSubscriptionButton } from "./cancel-subscription-button";
 
 export default async function SubscriptionPage({
   searchParams,
@@ -25,7 +26,7 @@ export default async function SubscriptionPage({
     supabase.rpc("has_active_content_access"),
     supabase
       .from("user_entitlements")
-      .select("provider, status, access_until")
+      .select("provider, provider_subscription_id, status, access_until")
       .eq("user_id", user.id)
       .maybeSingle(),
   ]);
@@ -37,7 +38,7 @@ export default async function SubscriptionPage({
   const hasContentAccess = accessResult.data === true;
   const entitlement = entitlementResult.data as Pick<
     UserEntitlement,
-    "provider" | "status" | "access_until"
+    "provider" | "provider_subscription_id" | "status" | "access_until"
   > | null;
   const isAdmin = user.app_metadata?.role === "admin";
   const mercadoPagoEnabled = Boolean(
@@ -73,9 +74,15 @@ export default async function SubscriptionPage({
     "paypal-credenciais": "O PayPal recusou as credenciais configuradas para este ambiente.",
     "paypal-indisponivel": "O PayPal está temporariamente indisponível. Aguarde alguns instantes e tente novamente.",
     "ja-ativo": "Esta conta já possui uma assinatura ativa.",
+    "cancelamento-concluido": "A renovação foi cancelada. O acesso já pago permanece disponível até a data indicada abaixo.",
+    "cancelamento-confirmacao": "Marque a confirmação antes de cancelar a renovação.",
+    "cancelamento-indisponivel": "Não foi encontrada uma assinatura cancelável nesta conta.",
+    "cancelamento-erro": "O provedor não confirmou o cancelamento. Nenhum estado local foi alterado; tente novamente ou abra uma solicitação de suporte.",
   } as Record<string, string>)[checkout ?? ""];
   const planName = isAdmin
     ? "Acesso administrativo"
+    : entitlement?.status === "canceled" && hasContentAccess
+      ? "Renovação cancelada"
     : hasContentAccess && entitlement?.status === "trialing"
       ? "Período de teste"
       : hasContentAccess
@@ -84,6 +91,14 @@ export default async function SubscriptionPage({
   const providerName = entitlement?.provider
     ? entitlement.provider.replaceAll("_", " ")
     : null;
+  const formattedAccessUntil = entitlement?.access_until
+    ? new Intl.DateTimeFormat("pt-BR", { dateStyle: "long", timeZone: "America/Sao_Paulo" }).format(new Date(entitlement.access_until))
+    : null;
+  const canCancel = Boolean(
+    entitlement?.provider_subscription_id
+    && ["mercado_pago", "paypal"].includes(entitlement.provider)
+    && !["canceled", "expired"].includes(entitlement.status),
+  );
 
   const accountName =
     (typeof user.user_metadata?.full_name === "string" && user.user_metadata.full_name.trim()) ||
@@ -317,23 +332,27 @@ export default async function SubscriptionPage({
             Interromper a renovação da assinatura
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-6" style={{ color: "var(--text-secondary)" }}>
-            O cancelamento impede novas cobranças recorrentes. A confirmação e a data final de acesso dependem do provedor usado na contratação e devem ser conferidas antes de concluir o procedimento.
+            O cancelamento é enviado diretamente ao provedor e impede novas cobranças. O acesso já pago permanece até {formattedAccessUntil ?? "o fim do período confirmado"}; estorno ou chargeback revoga o acesso.
           </p>
+          {canCancel && (
+            <form action={withSiteBasePath("/api/payments/cancel")} method="post" className="mt-5 rounded-2xl border border-red-500/25 bg-red-500/5 p-4">
+              <label className="flex items-start gap-3 text-sm leading-6 text-[var(--text-secondary)]">
+                <input type="checkbox" name="confirmation" value="cancelar-renovacao" required className="mt-1 h-4 w-4 shrink-0 accent-red-600" />
+                Confirmo que desejo interromper a renovação automática desta assinatura.
+              </label>
+              <div className="mt-4"><CancelSubscriptionButton /></div>
+            </form>
+          )}
           <div className="mt-5 flex flex-wrap gap-3">
-            {entitlement?.provider === "paypal" && (
-              <a href="https://www.paypal.com/br/cshelp/article/o-que-%C3%A9-um-pagamento-autom%C3%A1tico-e-como-o-atualizo-ou-cancelo-help240" target="_blank" rel="noopener noreferrer" className="rounded-xl bg-[var(--accent)] px-4 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90">
-                Ver cancelamento no PayPal
-              </a>
-            )}
-            {entitlement?.provider === "mercado_pago" && (
-              <a href="https://www.mercadopago.com.br/ajuda" target="_blank" rel="noopener noreferrer" className="rounded-xl bg-[var(--accent)] px-4 py-3 text-sm font-bold text-white transition-opacity hover:opacity-90">
-                Abrir ajuda do Mercado Pago
-              </a>
-            )}
             <Link href="/contato" className="rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-3 text-sm font-bold text-[var(--text-primary)] transition-colors hover:bg-[var(--accent-soft)]">
-              Consultar canais de contato
+              Solicitar suporte ou exercer direitos LGPD
             </Link>
           </div>
+          {entitlement?.status === "canceled" && (
+            <p className="mt-4 text-sm font-semibold text-[var(--text-primary)]" role="status">
+              Renovação cancelada{formattedAccessUntil ? `; acesso disponível até ${formattedAccessUntil}.` : "."}
+            </p>
+          )}
           {!entitlement && (
             <p className="mt-4 text-xs leading-5" style={{ color: "var(--text-muted)" }}>
               Esta conta não possui uma assinatura identificada para cancelamento.
