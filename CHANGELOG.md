@@ -1,5 +1,13 @@
 # Changelog
 
+## Não publicado — revisão de Administração Pública
+
+- revisados funcional, visual e semanticamente os 12 resumos e as 40 seções de Administração Pública;
+- corrigidos conceitos de evolução administrativa, governança, governo digital, transparência, LAI, LRF, políticas públicas, gestão de pessoas, planejamento e estruturas organizacionais;
+- restauradas estruturas comparativas em tabelas e fluxos Mermaid, com validação autenticada em desktop, mobile e nos temas Light, Dark e Sepia;
+- importados os 12 módulos com preservação explícita dos 120 flashcards e confirmação de persistência por reexportação;
+- registrada como ressalva editorial a sobreposição dos módulos 007 a 012 com Administração Geral, sem reclassificação automática.
+
 ## Não publicado — pagamentos, conta e canal LGPD
 
 - cancelamento de assinatura agora ocorre no backend, com validação da sessão, da origem e do estado confirmado pelo Mercado Pago ou PayPal, preservando apenas o período já pago;

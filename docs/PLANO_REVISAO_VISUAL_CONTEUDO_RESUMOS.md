@@ -78,7 +78,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [x] | Administração de Recursos Materiais | [ ] | [ ] | 9 resumos e 33 seções revisados; correções editoriais e normativas importadas; persistência exata confirmada. O smoke autenticado em produção permanece sem automação disponível nesta execução: as rotas públicas retornam 307 para `/resumos/login`. |
 | [x] | Administração Financeira e Orçamentária | [ ] | [x] | 6 resumos e 48 seções revisados; 38 seções corrigidas; 24 mapas, 13 tabelas e 11 fórmulas validados; persistência integral e smoke autenticado confirmados. |
 | [x] | Administração Geral | [ ] | [x] | 11 resumos e 54 seções revisados; 26 seções corrigidas; 22 mapas, 6 tabelas e 3 fórmulas validados; persistência integral confirmada. |
-| [ ] | Administração Pública | [ ] | [ ] | — |
+| [x] | Administração Pública | [x] | [x] | 12 resumos e 40 seções revisados; 11 payloads corrigidos; 24 mapas, 14 tabelas e 2 fórmulas KaTeX validados; 120 flashcards preservados; persistência integral confirmada. |
 | [ ] | Análise de Balanços | [ ] | [ ] | — |
 | [x] | Auditoria | [ ] | [x] | 24 resumos e 76 seções revisados; 33 seções corrigidas; 2 tabelas e 12 mapas validados; persistência integral confirmada. |
 | [ ] | Contabilidade de Custos | [ ] | [ ] | — |
@@ -363,6 +363,34 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Ressalva operacional:** o smoke autenticado em produção foi novamente tentado, mas as rotas canônicas continuam respondendo `307 Temporary Redirect` para `/resumos/login`, e esta execução não dispõe de controle de navegador autenticado nem de endpoint CDP. Por isso, a coluna **Correção validada** permanece desmarcada: não há evidência honesta de inspeção nos temas Light, Dark e Sepia nem no viewport móvel em produção.
 
 **Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards permaneceram fora do escopo, conforme o protocolo.
+
+### Administração Pública — 19 de setembro de 2026
+
+**Comando de início do usuário:** `disciplina: Administração Pública — revisão funcional, visual e correção do conteúdo`
+
+**Quantidade de resumos:** 12
+
+**Quantidade de seções:** 40
+
+**Estado:** concluída
+
+| Grupo | Resumos | Seções | Visual/conteúdo | Gráficos | Mermaid/mapas mentais | Observação e ação | Evidência final |
+|---|---:|---:|---|---|---|---|---|
+| Administração pública, governança e governo eletrônico | 4 | 12 | [x] | N/A | [x] | Corrigidos DASP, diferenças público/privado, governança e referências atuais de governo digital. | Seções, mapas e tabelas do grupo validados em produção. |
+| Transparência, accountability e políticas públicas | 2 | 15 | [x] | N/A | [x] | Atualizadas LAI, LRF, recursos, sanções, revisão do sigilo e ciclo de políticas públicas. | Seções, mapas e tabelas do grupo validados em produção. |
+| Funções administrativas, pessoas e estruturas | 6 | 13 | [x] | N/A | [x] | Restauradas comparações e corrigidas simplificações sobre PODC, avaliação, motivação, planejamento e estruturas. | Seções, mapas, tabelas e fórmulas do grupo validados em produção. |
+
+**Consolidação visual e funcional:** as 12 rotas e as 40 seções foram percorridas com sessão autenticada em desktop de 1440 × 900 e mobile de 390 × 844. Os 24 mapas Mermaid exibiram SVG e controles; zoom e visualização sobreposta foram exercitados. As 14 tabelas permaneceram em contêineres responsivos, e as 2 expressões KaTeX renderizaram sem código bruto. Não houve imagem quebrada, erro de renderização, erro de console ou overflow horizontal global. Os temas Light, Dark e Sepia foram inspecionados, e Light e o viewport normal foram restaurados ao final.
+
+**Revisão de conteúdo:** 11 dos 12 payloads receberam correções editoriais ou normativas. Foram corrigidos a cronologia do DASP, generalizações sobre gestão pública e privada, conceitos de governança, referências históricas e atuais de governo digital, regras da LAI e da LRF, ciclo e avaliação de políticas públicas, PODC, vieses de avaliação, Maslow, Herzberg, McGregor, horizontes de planejamento, indicadores e estruturas organizacionais. Comparações achatadas foram recompostas em tabelas e fluxos relevantes foram representados em Mermaid.
+
+**Persistência:** o preflight aprovou os 12 módulos e as 40 seções antes da escrita. A importação em lote preservou explicitamente os flashcards. A reexportação final confirmou os 12 tópicos, as 40 identidades permanentes, a ordem, os 24 mapas, as 14 tabelas, as 2 seções com KaTeX e os 120 flashcards publicados.
+
+**Backups:** `C:\PRO\agente\administracao_publica\backups\2026-09-19-pre-revisao` e `C:\PRO\agente\administracao_publica\backups\2026-09-19-pos-revisao`.
+
+**Ressalva taxonômica:** o próprio PDF passa a tratar conteúdos típicos de Administração Geral a partir do módulo 007, embora esses módulos estejam publicados em Administração Pública. A revisão preservou a classificação atual para não alterar navegação, IDs ou escopo sem decisão editorial explícita.
+
+**Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas. A possível reclassificação dos módulos 007 a 012 é uma decisão taxonômica separada. Flashcards foram preservados, mas não revisados, conforme o protocolo.
 
 ### Administração Financeira e Orçamentária — 19 de setembro de 2026
 
