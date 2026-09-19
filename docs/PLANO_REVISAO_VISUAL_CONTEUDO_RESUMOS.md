@@ -76,7 +76,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | Revisão concluída | Disciplina | Atenção | Correção validada | Observações / evidências |
 |---|---|---|---|---|
 | [x] | Administração de Recursos Materiais | [ ] | [ ] | 9 resumos e 33 seções revisados; correções editoriais e normativas importadas; persistência exata confirmada. O smoke autenticado em produção permanece sem automação disponível nesta execução: as rotas públicas retornam 307 para `/resumos/login`. |
-| [ ] | Administração Financeira e Orçamentária | [ ] | [ ] | — |
+| [x] | Administração Financeira e Orçamentária | [ ] | [x] | 6 resumos e 48 seções revisados; 33 seções corrigidas; 24 mapas, 13 tabelas e 11 fórmulas renderizadas validados; persistência integral confirmada. |
 | [x] | Administração Geral | [ ] | [x] | 11 resumos e 54 seções revisados; 26 seções corrigidas; 22 mapas, 6 tabelas e 3 fórmulas validados; persistência integral confirmada. |
 | [ ] | Administração Pública | [ ] | [ ] | — |
 | [ ] | Análise de Balanços | [ ] | [ ] | — |
@@ -363,3 +363,36 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Ressalva operacional:** o smoke autenticado em produção foi novamente tentado, mas as rotas canônicas continuam respondendo `307 Temporary Redirect` para `/resumos/login`, e esta execução não dispõe de controle de navegador autenticado nem de endpoint CDP. Por isso, a coluna **Correção validada** permanece desmarcada: não há evidência honesta de inspeção nos temas Light, Dark e Sepia nem no viewport móvel em produção.
 
 **Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards permaneceram fora do escopo, conforme o protocolo.
+
+### Administração Financeira e Orçamentária — 19 de setembro de 2026
+
+**Comando de início do usuário:** `Plano de Revisão Visual e de Conteúdo dos Resumos disciplina: Administração Financeira e Orçamentária`
+
+**Quantidade de resumos:** 6
+
+**Quantidade de seções:** 48
+
+**Estado:** concluída
+
+| Resumo | URL | Seções | Visual/conteúdo | Gráficos | Mermaid/mapas mentais | Observação e ação | Evidência final |
+|---|---|---:|---|---|---|---|---|
+| Tipos de Orçamento | `https://proconcursos.com.br/resumos/tipos-de-orcamento` | 5 | [x] | N/A | [x] | Corrigida a semântica do mapa autorizativo × impositivo e qualificada a participação social no planejamento federal. | 5 seções, 3 mapas e 2 tabelas renderizados sem erro. |
+| Orçamento Público – Constituição Federal e Lei 4.320 | `https://proconcursos.com.br/resumos/orcamento-publico-constituicao-federal-e-lei-4-320` | 18 | [x] | N/A | [x] | Atualizados PPA, LDO, LOA, créditos adicionais, execução, DRU/DRE/DRM e calamidade; removido HTML bruto de tabela. | 18 seções, 10 mapas, 4 tabelas e 7 fórmulas renderizados sem erro. |
+| Receita Pública | `https://proconcursos.com.br/resumos/receita-publica` | 9 | [x] | N/A | [x] | Atualizadas classificações do MTO 2026, dívida ativa, fonte/destinação e regimes orçamentário e patrimonial. | 9 seções, 3 mapas, 3 tabelas e 2 fórmulas renderizados sem erro. |
+| Receita Pública na LRF | `https://proconcursos.com.br/resumos/receita-publica-na-lrf` | 3 | [x] | N/A | [x] | Renúncia de receita atualizada conforme LRF e CTN vigentes; incluído fluxo decisório seguro. | 3 seções e 2 mapas renderizados sem erro. |
+| Despesa Pública | `https://proconcursos.com.br/resumos/despesa-publica` | 6 | [x] | N/A | [x] | Corrigidas tabela de natureza, empenho, RAP, DEA, suprimento de fundos e regime contábil; diagramas ajustados. | 6 seções, 5 mapas, 2 tabelas e 2 fórmulas renderizados sem erro. |
+| Despesa Pública na LRF | `https://proconcursos.com.br/resumos/despesa-publica-na-lrf` | 7 | [x] | N/A | [x] | Atualizadas DTP, art. 21, controle de pessoal, bases de saúde e educação; removida medida declarada inconstitucional. | 7 seções, 1 mapa e 2 tabelas renderizados sem erro. |
+
+**Consolidação visual e funcional:** as seis rotas e as 48 seções foram percorridas em produção com sessão autenticada. As 13 tabelas mantiveram contenção e rolagem horizontal; os 24 mapas Mermaid carregaram como diagramas, sem código bruto, erro ou estado preso. Zoom, restauração e overlay responderam corretamente. Desktop e viewport de 390 × 844 não apresentaram overflow global, imagem quebrada ou erro de console. Os temas Light, Dark e Sepia foram validados, e o tema Light e o viewport padrão foram restaurados.
+
+**Correções visuais e estruturais:** reparados dois diagramas com sintaxe inválida, seis diagramas que representavam alternativas como sequências, uma tabela com colunas desalinhadas e uma tabela com HTML bruto incompatível com o renderizador seguro. O mapa adicional de renúncia de receita elevou o inventário de 23 para 24 diagramas. Títulos e siglas foram normalizados sem alterar a hierarquia das seções.
+
+**Revisão de conteúdo:** 33 seções receberam alteração em pelo menos um campo editorial. As correções foram confrontadas com a Constituição compilada, Lei 4.320/1964, LRF vigente, CTN, MCASP 11 e MTO 2026. Foram atualizados instrumentos orçamentários, créditos adicionais, desvinculações, classificações de receita e despesa, dívida ativa, regimes contábeis, RAP, DEA, suprimento de fundos, despesa com pessoal, saúde e educação.
+
+**Persistência:** o preflight aprovou os seis payloads e as 48 seções. A aplicação individual preservou a ordenação dos módulos e atualizou somente unidades existentes, sem criação, arquivamento, remapeamento ou impacto em progresso, notas e destaques. A reexportação confirmou correspondência integral de títulos, conteúdo, callouts, mnemônicos, mapas e das 48 identidades permanentes. Os 100 flashcards publicados permaneceram idênticos ao backup anterior e não foram avaliados.
+
+**Backups:** `C:\PRO\agente\afo_revisao\backups\2026-09-19-pre-revisao` e `C:\PRO\agente\afo_revisao\backups\2026-09-19-pos-revisao`.
+
+**Ressalva documental:** não foi localizado PDF inequívoco da disciplina. A auditoria visual usou a publicação em produção e o guia `C:\PRO\agente\afo.visual.md`; a revisão textual partiu do Markdown de origem e de fontes oficiais vigentes. Assim, não se declara fidelidade visual a um PDF ausente.
+
+**Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards permanecem fora do escopo.
