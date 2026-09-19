@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — deploy da configuração Mercado Pago
+
+- excluída da detecção de segredos da Netlify somente a variável não sensível `MERCADO_PAGO_ENVIRONMENT`, cujo valor público `production` aparece legitimamente no bundle;
+- mantida ativa a varredura para Access Token, assinatura do webhook e demais credenciais reais.
+
 ## Não publicado — identificação do fornecedor e condições de lançamento
 
 - registrados nas páginas institucionais o fornecedor pessoa física, endereço, e-mail, responsável pelo atendimento e prazo de resposta de até 24 horas;

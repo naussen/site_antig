@@ -2,6 +2,11 @@
   command = "npm run build -- --webpack"
   publish = ".next"
 
+[build.environment]
+  # "production" e um identificador publico de ambiente, nao uma credencial.
+  # O valor aparece legitimamente no bundle para habilitar o checkout.
+  SECRETS_SCAN_OMIT_KEYS = "MERCADO_PAGO_ENVIRONMENT"
+
 [functions]
   # O runtime Next.js também adiciona .env* ao bundle; por isso, deploys devem
   # partir de checkout Git limpo, sem arquivos de ambiente locais.
