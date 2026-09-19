@@ -83,7 +83,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [x] | Auditoria | [ ] | [x] | 24 resumos e 76 seções revisados; 33 seções corrigidas; 2 tabelas e 12 mapas validados; persistência integral confirmada. |
 | [ ] | Contabilidade de Custos | [ ] | [ ] | — |
 | [x] | Contabilidade Geral e Avançada | [ ] | [x] | 32 resumos e 142 seções revisados; 76 seções corrigidas; 24 mapas e 40 tabelas validados; persistência e smoke autenticado confirmados. |
-| [ ] | Direito Administrativo | [ ] | [ ] | — |
+| [x] | Direito Administrativo | [ ] | [x] | 19 resumos e 184 seções revisados; 58 seções corrigidas; 20 mapas e 18 tabelas validados; persistência integral e smoke autenticado confirmados. |
 | [ ] | Direito Civil | [ ] | [ ] | — |
 | [x] | Direito Constitucional | [ ] | [x] | 15 resumos e 105 seções revisados; 64 correções jurídicas aplicadas em 30 seções; persistência integral confirmada no Supabase. |
 | [ ] | Direito da Pessoa com Deficiência | [ ] | [ ] | — |
@@ -363,6 +363,38 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Ressalva operacional:** o smoke autenticado em produção foi novamente tentado, mas as rotas canônicas continuam respondendo `307 Temporary Redirect` para `/resumos/login`, e esta execução não dispõe de controle de navegador autenticado nem de endpoint CDP. Por isso, a coluna **Correção validada** permanece desmarcada: não há evidência honesta de inspeção nos temas Light, Dark e Sepia nem no viewport móvel em produção.
 
 **Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards permaneceram fora do escopo, conforme o protocolo.
+
+### Direito Administrativo — 19 de setembro de 2026
+
+**Comando de início do usuário:** `Plano de Revisão Visual e de Conteúdo dos Resumos disciplina: Direito Administrativo, caso ainda não tenha sido revisada. Após revisão funcional e visual, realizar revisão de correção do conteúdo.`
+
+**Quantidade de resumos:** 19
+
+**Quantidade de seções:** 184
+
+**Estado:** concluída
+
+| Grupo | Resumos | Seções | Visual/conteúdo | Gráficos | Mermaid/mapas mentais | Observação e ação | Evidência final |
+|---|---:|---:|---|---|---|---|---|
+| Fundamentos, Administração Pública, poderes, atos e organização | 5 | 24 | [x] | N/A | [x] | Corrigidos jurisdição una, princípios, nepotismo, poderes, atos, decadência, entidades e terceiro setor. | Conteúdo, identidades e recursos persistidos e reexportados. |
+| Serviços públicos, responsabilidade civil, controle e processo administrativo | 4 | 50 | [x] | N/A | [x] | Atualizados delegação, PPP, responsabilidade, prescrição, controle, recursos, revisão e o fluxo Mermaid inválido. | Diagrama corrigido sem fallback ou erro de console em desktop e mobile. |
+| Bens, intervenção, LAI e agentes públicos | 4 | 40 | [x] | N/A | [x] | Corrigidos regime dos bens, desapropriação, custos da LAI e efeitos atuais do regime jurídico único. | Preflight e persistência integral aprovados. |
+| Lei 8.112 e módulos históricos das Leis 8.666 e 10.520 | 4 | 35 | [x] | N/A | [x] | Corrigidos prazos e efeitos funcionais; o caráter histórico das leis revogadas foi explicitado sem alterar IDs. | Conteúdo vigente e contexto histórico conferidos. |
+| Lei 14.133 e improbidade administrativa | 2 | 35 | [x] | N/A | [x] | Corrigidos critérios, sanções, prescrição e efeitos das ADIs 7.156/7.236; valores monetários deixaram de acionar KaTeX. | Texto monetário legível e sem KaTeX indevido nos três temas. |
+
+**Consolidação visual e funcional:** as 19 rotas e 184 seções foram percorridas com sessão autenticada em desktop de 2560 × 1295 e mobile de 390 × 844. As 18 tabelas mantiveram rolagem horizontal interna, e os 20 mapas Mermaid foram conferidos; zoom, restauração e overlay funcionaram. Não houve imagem quebrada nem overflow horizontal global. Os temas Light, Dark e Sepia foram validados, e o tema Light e o viewport normal foram restaurados ao final.
+
+**Correções visuais/funcionais:** o diagrama da seção “Fases do processo administrativo” foi reescrito com sintaxe Mermaid válida e conteúdo juridicamente corrigido. Os valores monetários da seção “Habilitação” passaram a escapar o caractere `$`, eliminando a interpretação indevida como KaTeX. O smoke corretivo confirmou SVG visível, ausência de fallback, ausência de “Syntax error in text”, zero erro novo no console e zero overflow global em desktop e mobile.
+
+**Revisão de conteúdo:** 58 seções receberam correções objetivas, com confronto do PDF de origem, legislação compilada e jurisprudência oficial. Foram atualizados, entre outros pontos, processo administrativo, organização, serviços públicos, responsabilidade civil, controle, bens, intervenção, LAI, agentes, Lei 8.112, licitações, contratos e improbidade. Os módulos das Leis 8.666/1993 e 10.520/2002 foram preservados como históricos e claramente sinalizados.
+
+**Persistência:** o preflight aprovou os 19 módulos e as 184 seções antes da escrita. A importação em lote preservou explicitamente os flashcards. A reexportação final coincidiu semanticamente com os 19 payloads revisados e confirmou as 184 identidades permanentes, a ordem e os 729 flashcards publicados. Flashcards não foram avaliados.
+
+**Verificações:** 44 testes do contrato de conteúdo aprovados; TypeScript sem erros; lint dos scripts sem erros ou avisos; build Next.js 16.3.4 com webpack aprovado; auditoria de dependências sem vulnerabilidades; busca de sinks de XSS sem ocorrência nos arquivos novos. Checkpoint técnico: `56f7d77`.
+
+**Backups:** `C:\PRO\agente\direito_administrativo_revisao\backups\2026-09-19-pre-revisao` e `C:\PRO\agente\direito_administrativo_revisao\backups\2026-09-19-pos-revisao`.
+
+**Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards foram preservados, mas não revisados, conforme o protocolo.
 
 ### Análise de Balanços — 19 de setembro de 2026
 
