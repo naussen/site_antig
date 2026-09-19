@@ -76,7 +76,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | Revisão concluída | Disciplina | Atenção | Correção validada | Observações / evidências |
 |---|---|---|---|---|
 | [x] | Administração de Recursos Materiais | [ ] | [ ] | 9 resumos e 33 seções revisados; correções editoriais e normativas importadas; persistência exata confirmada. O smoke autenticado em produção permanece sem automação disponível nesta execução: as rotas públicas retornam 307 para `/resumos/login`. |
-| [ ] | Administração Financeira e Orçamentária | [ ] | [ ] | — |
+| [x] | Administração Financeira e Orçamentária | [ ] | [x] | 6 resumos e 48 seções revisados; 38 seções corrigidas; 24 mapas, 13 tabelas e 11 fórmulas validados; persistência integral e smoke autenticado confirmados. |
 | [x] | Administração Geral | [ ] | [x] | 11 resumos e 54 seções revisados; 26 seções corrigidas; 22 mapas, 6 tabelas e 3 fórmulas validados; persistência integral confirmada. |
 | [ ] | Administração Pública | [ ] | [ ] | — |
 | [ ] | Análise de Balanços | [ ] | [ ] | — |
@@ -361,5 +361,36 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Persistência:** o preflight aprovou os 9 módulos e 33 seções antes da escrita. A importação em lote foi concluída e a reexportação posterior coincidiu semanticamente com os nove artefatos revisados em `topic_id`, título, disciplina, ordem e conteúdo integral das seções.
 
 **Ressalva operacional:** o smoke autenticado em produção foi novamente tentado, mas as rotas canônicas continuam respondendo `307 Temporary Redirect` para `/resumos/login`, e esta execução não dispõe de controle de navegador autenticado nem de endpoint CDP. Por isso, a coluna **Correção validada** permanece desmarcada: não há evidência honesta de inspeção nos temas Light, Dark e Sepia nem no viewport móvel em produção.
+
+**Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards permaneceram fora do escopo, conforme o protocolo.
+
+### Administração Financeira e Orçamentária — 19 de setembro de 2026
+
+**Comando de início do usuário:** `Plano de Revisão Visual e de Conteúdo dos Resumos disciplina: Administração Financeira e Orçamentária — Após revisão funcional e visual, realizar revisão de correção do conteúdo.`
+
+**Quantidade de resumos:** 6
+
+**Quantidade de seções:** 48
+
+**Estado:** concluída
+
+| Resumo | URL | Seções | Visual/conteúdo | Gráficos | Mermaid/mapas mentais | Observação e ação | Evidência final |
+|---|---|---:|---|---|---|---|---|
+| Tipos de Orçamento | `https://proconcursos.com.br/resumos/tipos-de-orcamento` | 5 | [x] | N/A | [x] | Corrigidos eficiência, cronologia do PART e a dinâmica autorizativa/impositiva. | 3 mapas, 2 tabelas e 5 seções validados em produção. |
+| Orçamento Público – Constituição Federal e Lei 4.320 | `https://proconcursos.com.br/resumos/orcamento-publico-constituicao-federal-e-lei-4-320` | 18 | [x] | N/A | [x] | Atualizados princípios, PPA/LDO/LOA, CMO, controle, precatórios, não afetação, créditos e regime extraordinário. | 10 mapas, 4 tabelas e 7 fórmulas validados em produção. |
+| Receita Pública | `https://proconcursos.com.br/resumos/receita-publica` | 9 | [x] | N/A | [x] | Corrigidas classificações, doações, dívida ativa, prescrição, estágios e a fórmula KaTeX corrompida. | 3 mapas, 3 tabelas e 2 fórmulas validados em produção. |
+| Receita Pública na LRF | `https://proconcursos.com.br/resumos/receita-publica-na-lrf` | 3 | [x] | N/A | [x] | Removido exemplo controvertido do IGF e atualizados renúncia, diferimento e avaliação do art. 14-A. | 2 mapas e 3 seções validados em produção. |
+| Despesa Pública | `https://proconcursos.com.br/resumos/despesa-publica` | 6 | [x] | N/A | [x] | Separados enfoques orçamentário e patrimonial; corrigidas classificações, RAP, DEA e suprimento de fundos. | 5 mapas, 2 tabelas e 2 fórmulas validados em produção. |
+| Despesa Pública na LRF | `https://proconcursos.com.br/resumos/despesa-publica-na-lrf` | 7 | [x] | N/A | [x] | Atualizados DOCC, deduções, limites, revisão geral anual, nulidades e recondução da despesa com pessoal. | 1 mapa, 2 tabelas e 7 seções validados em produção. |
+
+**Consolidação visual e funcional:** as 6 rotas e as 48 seções foram percorridas com sessão autenticada em desktop de 2560 × 1351 e em mobile de 390 × 844, nos temas Light, Dark e Sepia. Os 24 mapas Mermaid exibiram SVG e controles; zoom, restauração e overlay foram exercitados no componente compartilhado. As 13 tabelas permaneceram em contêineres responsivos e as 11 expressões KaTeX foram renderizadas sem código bruto. Não houve imagem quebrada, estado preso, erro de console ou overflow horizontal global. O tema Light e o viewport normal foram restaurados ao final.
+
+**Correções visuais/funcionais:** reparados dois diagramas com aspas inválidas, seis relações Mermaid que tratavam alternativas como sequência, uma tabela inconsistente, HTML bruto incompatível com o renderizador seguro e uma fórmula de Dívida Ativa com caracteres TAB no lugar de comandos `\text`. O smoke corretivo confirmou a fórmula semântica em KaTeX e os novos diagramas em produção.
+
+**Revisão de conteúdo:** 38 das 48 seções receberam ajustes editoriais ou normativos em relação ao backup inicial. A conferência usou Constituição compilada, Lei 4.320/1964, LRF vigente, CTN, Resolução 1/2006-CN, MCASP 11, MTO 2026, julgados oficiais do STJ e manuais do TCU. Foram corrigidos, entre outros pontos, universalidade, PPA/LDO/LOA, competências da CMO, não afetação e IBS, dívida ativa, renúncia do art. 14-A, RAP, DEA, suprimento de fundos, limites e controle da despesa com pessoal.
+
+**Persistência:** o preflight administrativo aprovou os 6 módulos e as 48 seções antes da escrita. A importação em lote usou preservação explícita dos flashcards e atualizou as unidades existentes. A reexportação final coincidiu integralmente com os seis payloads revisados; os 48 `section_id`, `content_unit_id` e `stable_key`, a ordem e os 100 flashcards publicados permaneceram idênticos ao backup inicial. Flashcards não foram avaliados.
+
+**Backups:** `C:\PRO\agente\afo_revisao\backups\2026-09-19-pre-revisao` e `C:\PRO\agente\afo_revisao\backups\2026-09-19-final`.
 
 **Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards permaneceram fora do escopo, conforme o protocolo.
