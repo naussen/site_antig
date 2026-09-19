@@ -14,6 +14,10 @@ export default function ContactPage() {
       <p className="mt-4 max-w-2xl leading-7 text-[var(--text-secondary)]">Os caminhos de atendimento são organizados pelo tipo de solicitação para evitar exposição de dados pessoais e de cobrança.</p>
       <div className="mt-10 space-y-5">
         <section className="rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-6 shadow-[var(--shadow)]">
+          <h2 className="text-xl font-extrabold">Atendimento por e-mail</h2>
+          <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">Envie sua solicitação para <a href="mailto:nvpezat@gmail.com" className="font-bold text-[var(--accent)] underline underline-offset-4">nvpezat@gmail.com</a>. O prazo de resposta é de até 24 horas. O proprietário é o responsável pelo suporte e pelas solicitações relacionadas à LGPD.</p>
+        </section>
+        <section className="rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-6 shadow-[var(--shadow)]">
           <h2 className="text-xl font-extrabold">Já possui conta?</h2>
           <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">Entre na plataforma para consultar acesso, assinatura, cobrança e orientações de cancelamento vinculadas à sua conta.</p>
           <Link href="/dashboard/assinatura" className="mt-5 inline-flex rounded-xl bg-[var(--action)] px-4 py-3 text-sm font-bold text-[var(--action-foreground)]">Acessar conta e assinatura</Link>

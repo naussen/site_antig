@@ -17,6 +17,7 @@ export default function SupportPage() {
       <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--accent)]">Atendimento</p>
       <h1 className="mt-3 text-4xl font-black tracking-tight">Suporte</h1>
       <p className="mt-4 max-w-2xl leading-7 text-[var(--text-secondary)]">Acesse diretamente a área relacionada à sua dúvida. Assuntos de conta e cobrança exigem login para proteger os dados do assinante.</p>
+      <p className="mt-3 max-w-2xl text-sm leading-6 text-[var(--text-secondary)]">Se não encontrar a resposta, escreva para <a href="mailto:nvpezat@gmail.com" className="font-bold text-[var(--accent)] underline underline-offset-4">nvpezat@gmail.com</a>. O prazo de resposta é de até 24 horas.</p>
       <div className="mt-10 grid gap-5 md:grid-cols-3">
         {supportItems.map(([title, description, href, label]) => (
           <article key={title} className="flex flex-col rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-6 shadow-[var(--shadow)]">

@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — identificação do fornecedor e condições de lançamento
+
+- registrados nas páginas institucionais o fornecedor pessoa física, endereço, e-mail, responsável pelo atendimento e prazo de resposta de até 24 horas;
+- definido em R$ 9,90 por mês o preço de lançamento e informado o direito de arrependimento em até 7 dias para contratações pela internet;
+- sincronizados a documentação de pagamentos e os fallbacks visuais da assinatura com o preço definitivo de lançamento.
+
 ## Não publicado — revisão visual e de conteúdo de Análise de Balanços
 
 - revisados funcional, visual e semanticamente os 4 resumos e as 4 seções de Análise de Balanços;

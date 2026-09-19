@@ -8,7 +8,7 @@ Use estas variáveis server-side na hospedagem (Netlify):
 
 ```env
 PAYMENTS_APP_URL=https://proconcursos.com.br
-PAYMENTS_MONTHLY_PRICE_BRL=0.10
+PAYMENTS_MONTHLY_PRICE_BRL=9.90
 PAYMENTS_RECONCILIATION_TOKEN=gere-um-token-aleatorio-com-pelo-menos-32-bytes
 
 MERCADO_PAGO_ACCESS_TOKEN=SEU_ACCESS_TOKEN_DE_PRODUCAO
@@ -19,7 +19,7 @@ MERCADO_PAGO_TEST_PAYER_EMAIL=
 
 `PAYMENTS_APP_URL` deve ser exatamente `https://proconcursos.com.br`, sem `/resumos`, `/dashboard`, query ou fragmento. Essa é a URL pública/comercial do pagamento. O código acrescenta internamente `/resumos` apenas nas rotas técnicas do aplicativo.
 
-O valor provisório é **R$ 0,10 por mês**, sem período gratuito.
+O preço de lançamento definido é **R$ 9,90 por mês**, sem período gratuito.
 
 ## Passo a passo no Mercado Pago
 
@@ -29,7 +29,7 @@ O valor provisório é **R$ 0,10 por mês**, sem período gratuito.
 4. Cadastre esta URL de produção: `https://proconcursos.com.br/resumos/api/payments/webhooks/mercado-pago`.
 5. Habilite os eventos `subscription_preapproval` e `subscription_authorized_payment`.
 6. Configure `MERCADO_PAGO_ENVIRONMENT=production` e deixe `MERCADO_PAGO_TEST_PAYER_EMAIL` vazio.
-7. Configure `PAYMENTS_MONTHLY_PRICE_BRL=0.10` na hospedagem.
+7. Configure `PAYMENTS_MONTHLY_PRICE_BRL=9.90` na hospedagem.
 
 A API utilizada é a de assinaturas (`POST /preapproval`), com recorrência mensal em BRL. A URL de retorno técnica leva o usuário ao aplicativo; ela não muda a URL comercial principal do produto.
 
@@ -40,7 +40,7 @@ A API utilizada é a de assinaturas (`POST /preapproval`), com recorrência mens
 3. Publique a branch de produção.
 4. Verifique que `https://proconcursos.com.br` e o webhook respondem em HTTPS.
 5. Sem executar cobrança, confirme que o webhook sem assinatura retorna `401`.
-6. Quando aceitar o lançamento financeiro, faça uma única assinatura real de R$ 0,10 e confirme o webhook, `user_entitlements` e o acesso da conta.
+6. Quando aceitar o lançamento financeiro, faça uma única assinatura real de R$ 9,90 e confirme o webhook, `user_entitlements` e o acesso da conta.
 
 O teste real foi abortado nesta entrega. Não misture Access Token/segredo de teste com os de produção e não reutilize assinaturas criadas em outro ambiente.
 
