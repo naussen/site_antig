@@ -75,7 +75,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 
 | Revisão concluída | Disciplina | Atenção | Correção validada | Observações / evidências |
 |---|---|---|---|---|
-| [ ] | Administração de Recursos Materiais | [ ] | [ ] | — |
+| [x] | Administração de Recursos Materiais | [ ] | [ ] | 9 resumos e 33 seções revisados; correções editoriais e normativas importadas; persistência exata confirmada. O smoke autenticado em produção permanece sem automação disponível nesta execução: as rotas públicas retornam 307 para `/resumos/login`. |
 | [ ] | Administração Financeira e Orçamentária | [ ] | [ ] | — |
 | [x] | Administração Geral | [ ] | [x] | 11 resumos e 54 seções revisados; 26 seções corrigidas; 22 mapas, 6 tabelas e 3 fórmulas validados; persistência integral confirmada. |
 | [ ] | Administração Pública | [ ] | [ ] | — |
@@ -337,3 +337,29 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Backups:** `C:\PRO\agente\administracao_geral\backups\2026-09-13-pre-revisao` e `C:\PRO\agente\administracao_geral\backups\2026-09-13-pos-revisao`.
 
 **Pendências editoriais:** nenhuma dentre os erros encontrados. Simplificações didáticas compatíveis com as referências foram preservadas e flashcards permanecem fora do escopo.
+
+### Administração de Recursos Materiais — 19 de setembro de 2026
+
+**Comando de início do usuário:** `disciplina: Administração de Recursos Materiais — revisão funcional, visual e correção do conteúdo`
+
+**Quantidade de resumos:** 9
+
+**Quantidade de seções:** 33
+
+**Estado:** concluída, com ressalva de smoke autenticado em produção
+
+| Grupo | Resumos | Seções | Visual/conteúdo | Gráficos | Mermaid/mapas mentais | Observação e ação | Evidência final |
+|---|---:|---:|---|---|---|---|---|
+| Fundamentos, classificação e estoques | 3 | 13 | [x] | [x] | [x] | Restauradas comparações, tabela do LEC e conceitos omitidos; corrigidos classificação contábil, tendência, segurança e fórmula corrompida. | JSON válido, preflight aprovado e persistência exata por reexportação. |
+| Almoxarifado, recebimento e armazenagem | 3 | 9 | [x] | N/A | [x] | Atualizado o recebimento para a Lei 14.133/2021; corrigido o exemplo de layout e restauradas estruturas comparativas. | Conteúdo importado; Mermaid sem artefatos; build aprovado. |
+| Distribuição, patrimônio e compras | 3 | 11 | [x] | N/A | [x] | Restauradas tabelas comparativas; atualizadas classificação temporal, inventário e alienação conforme a legislação vigente. | Conteúdo importado e reexportado sem divergência semântica. |
+
+**Revisão visual e funcional:** as 17 páginas do PDF de origem foram confrontadas integralmente com os nove payloads. Estruturas comparativas que haviam sido achatadas em listas foram recompostas em tabelas Markdown; diagramas existentes foram preservados e o mapa de recebimento foi atualizado. O validador não encontrou artefatos Mermaid, os 44 testes de conteúdo passaram e o build de produção concluiu sem erro. O lint concluiu sem erros, com um aviso preexistente em `scripts/content-admin.mjs`.
+
+**Revisão de conteúdo:** foram corrigidas omissões comprovadas contra a fonte, um estrangeirismo acidental, o conceito de consumo com tendência, o tratamento do estoque de segurança, o exemplo incorreto de layout por processo e a estrutura do inventário rotativo. A disciplina foi atualizada para o art. 140 e o art. 76 da Lei 14.133/2021 e para a redação correta dos arts. 2º e 3º da Portaria STN 448/2002. A IN SEDAP 205/1988 foi conferida em publicação oficial.
+
+**Persistência:** o preflight aprovou os 9 módulos e 33 seções antes da escrita. A importação em lote foi concluída e a reexportação posterior coincidiu semanticamente com os nove artefatos revisados em `topic_id`, título, disciplina, ordem e conteúdo integral das seções.
+
+**Ressalva operacional:** o smoke autenticado em produção foi novamente tentado, mas as rotas canônicas continuam respondendo `307 Temporary Redirect` para `/resumos/login`, e esta execução não dispõe de controle de navegador autenticado nem de endpoint CDP. Por isso, a coluna **Correção validada** permanece desmarcada: não há evidência honesta de inspeção nos temas Light, Dark e Sepia nem no viewport móvel em produção.
+
+**Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards permaneceram fora do escopo, conforme o protocolo.
