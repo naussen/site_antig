@@ -1,5 +1,13 @@
 # Changelog
 
+## Não publicado — revisão visual e de conteúdo de Análise de Balanços
+
+- revisados funcional, visual e semanticamente os 4 resumos e as 4 seções de Análise de Balanços;
+- corrigidos e recompostos conceitos, fórmulas e tabelas de análise vertical, análise horizontal, liquidez, solvência, retorno, payback e alavancagem financeira;
+- validados com sessão autenticada 5 tabelas e 22 blocos matemáticos em desktop, mobile e nos temas Light, Dark e Sepia;
+- importados os 4 módulos e confirmadas por reexportação as identidades, a ordem e a correspondência semântica integral;
+- registrado que a disciplina não possui flashcards, gráficos ou mapas Mermaid.
+
 ## Não publicado — revisão de Administração Pública
 
 - revisados funcional, visual e semanticamente os 12 resumos e as 40 seções de Administração Pública;

@@ -79,7 +79,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [x] | Administração Financeira e Orçamentária | [ ] | [x] | 6 resumos e 48 seções revisados; 38 seções corrigidas; 24 mapas, 13 tabelas e 11 fórmulas validados; persistência integral e smoke autenticado confirmados. |
 | [x] | Administração Geral | [ ] | [x] | 11 resumos e 54 seções revisados; 26 seções corrigidas; 22 mapas, 6 tabelas e 3 fórmulas validados; persistência integral confirmada. |
 | [x] | Administração Pública | [x] | [x] | 12 resumos e 40 seções revisados; 11 payloads corrigidos; 24 mapas, 14 tabelas e 2 fórmulas KaTeX validados; 120 flashcards preservados; persistência integral confirmada. |
-| [ ] | Análise de Balanços | [ ] | [ ] | — |
+| [x] | Análise de Balanços | [ ] | [x] | 4 resumos e 4 seções revisados; 3 módulos corrigidos; 5 tabelas e 22 blocos matemáticos validados; persistência integral confirmada. |
 | [x] | Auditoria | [ ] | [x] | 24 resumos e 76 seções revisados; 33 seções corrigidas; 2 tabelas e 12 mapas validados; persistência integral confirmada. |
 | [ ] | Contabilidade de Custos | [ ] | [ ] | — |
 | [x] | Contabilidade Geral e Avançada | [ ] | [x] | 32 resumos e 142 seções revisados; 76 seções corrigidas; 24 mapas e 40 tabelas validados; persistência e smoke autenticado confirmados. |
@@ -363,6 +363,35 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Ressalva operacional:** o smoke autenticado em produção foi novamente tentado, mas as rotas canônicas continuam respondendo `307 Temporary Redirect` para `/resumos/login`, e esta execução não dispõe de controle de navegador autenticado nem de endpoint CDP. Por isso, a coluna **Correção validada** permanece desmarcada: não há evidência honesta de inspeção nos temas Light, Dark e Sepia nem no viewport móvel em produção.
 
 **Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards permaneceram fora do escopo, conforme o protocolo.
+
+### Análise de Balanços — 19 de setembro de 2026
+
+**Comando de início do usuário:** `disciplina: Análise de Balanços — revisão funcional, visual e correção do conteúdo`
+
+**Quantidade de resumos:** 4
+
+**Quantidade de seções:** 4
+
+**Estado:** concluída
+
+| Resumo | URL | Seções | Visual/conteúdo | Gráficos | Mermaid/mapas mentais | Observação e ação | Evidência final |
+|---|---|---:|---|---|---|---|---|
+| Análise das Demonstrações Contábeis | `/resumos/analise-das-demonstracoes-contabeis` | 1 | [x] | N/A | N/A | Conteúdo confrontado com a fonte, sem incorreção material. | Rota, seção e identidade persistente validadas. |
+| Análise Vertical (Análise de Estrutura) | `/resumos/analise-vertical-analise-de-estrutura` | 1 | [x] | N/A | N/A | Restaurada a hierarquia do demonstrativo e explicitados fórmula e valor-base. | Tabela e fórmula KaTeX validadas em desktop e mobile. |
+| Análise Horizontal (Análise de Tendência ou de Evolução) | `/resumos/analise-horizontal-analise-de-tendencia-ou-de-evolucao` | 1 | [x] | N/A | N/A | Restaurados percentuais do período-base, hierarquia e distinção entre bases fixa e encadeada. | Tabela e duas fórmulas KaTeX validadas nos três temas. |
+| Análise por Quocientes | `/resumos/analise-por-quocientes` | 1 | [x] | N/A | N/A | Corrigidos liquidez, solvência, margem operacional, ROA/ROI, payback e GAF; restaurada a equivalência com `ANC − RLP`. | Três tabelas e 19 fórmulas KaTeX validadas em desktop e mobile. |
+
+**Consolidação visual e funcional:** as 4 rotas foram percorridas com sessão autenticada em desktop de 1440 × 900 e mobile de 390 × 844, nos temas Light, Dark e Sepia. As 5 tabelas permaneceram em contêineres com rolagem horizontal própria no mobile e os 22 blocos matemáticos foram renderizados em KaTeX sem código bruto. Não houve imagem quebrada, erro de renderização, erro de console ou overflow horizontal global. O tema Light e o viewport normal foram restaurados ao final.
+
+**Inventário visual da fonte:** as 4 páginas do PDF contêm uma estrutura hierárquica de análise vertical, uma tabela de análise horizontal, três tabelas de quocientes e dois destaques textuais. A fonte não contém gráfico nem diagrama Mermaid; por isso, esses recursos não foram inventados.
+
+**Revisão de conteúdo:** três dos quatro módulos receberam correções. Foram recompostas estruturas achatadas, restaurados dados omitidos do período-base e corrigidos os conceitos e fórmulas de liquidez, solvência, margem operacional, retorno, payback e grau de alavancagem financeira. Quando disponíveis, ativos e patrimônio líquido médios passaram a ser preferidos nos indicadores de retorno.
+
+**Persistência:** o preflight aprovou os 4 módulos e as 4 seções antes da escrita. A importação em lote preservou explicitamente os flashcards; nenhum flashcard existia na disciplina. A reexportação final coincidiu semanticamente com os quatro payloads revisados e confirmou as quatro identidades permanentes, a ordem e o conteúdo integral das seções.
+
+**Backups:** `C:\PRO\agente\analise_balancos\backups\2026-09-19-pre-revisao` e `C:\PRO\agente\analise_balancos\backups\2026-09-19-pos-revisao`.
+
+**Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Não havia flashcards a revisar.
 
 ### Administração Pública — 19 de setembro de 2026
 
