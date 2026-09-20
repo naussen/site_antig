@@ -324,7 +324,7 @@ export function LandingPageContent() {
         <div className="relative mx-auto grid min-w-0 max-w-7xl items-center gap-14 lg:grid-cols-[minmax(0,0.88fr)_minmax(520px,1.12fr)] lg:gap-10 xl:gap-16">
           <div className="min-w-0 text-center lg:text-left">
             <span className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/35 bg-[#a78bfa]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#c4b5fd]"><Sparkles size={13} /> Oferta especial de lançamento</span>
-            <h1 className="text-balance text-4xl font-black leading-[1.02] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">Resumos jurídicos e legislação oficial <span className="bg-gradient-to-r from-[#a78bfa] to-[#f9a826] bg-clip-text text-transparent">no mesmo ambiente.</span></h1>
+            <h1 className="text-balance text-4xl font-black leading-[1.02] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">Resumos para concursos e legislação oficial <span className="bg-gradient-to-r from-[#a78bfa] to-[#f9a826] bg-clip-text text-transparent">no mesmo ambiente.</span></h1>
             <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-7 text-[#b4b1c3] sm:text-lg sm:leading-8 lg:mx-0">Estude com conteúdo estruturado, texto legal versionado, flashcards, anotações e ferramentas de leitura em uma única assinatura mensal.</p>
             <ul className="mx-auto mt-6 grid max-w-xl gap-2 text-left text-sm text-white/80 sm:grid-cols-3 lg:mx-0 lg:grid-cols-1 xl:grid-cols-3" aria-label="Principais benefícios">
               {["Conteúdo organizado", "Lei seca integrada", "Progresso salvo"].map((benefit) => (
