@@ -95,7 +95,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [ ] | Direito Processual Civil | [ ] | [ ] | — |
 | [ ] | Direito Processual do Trabalho | [ ] | [ ] | — |
 | [ ] | Direito Processual Penal | [ ] | [ ] | — |
-| [ ] | Direito Tributário | [ ] | [ ] | — |
+| [x] | Direito Tributário | [ ] | [x] | 21 resumos e 306 seções revisados; 41 correções jurídicas e saneamento visual/editorial aplicados; 106 mapas e 32 seções com tabelas validados; módulo legado duplicado arquivado; persistência integral e smoke autenticado confirmados. |
 | [ ] | Ética no Serviço Público | [ ] | [ ] | — |
 | [ ] | Finanças Públicas | [ ] | [ ] | — |
 | [ ] | Geral | [ ] | [ ] | — |
@@ -400,6 +400,39 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Verificações:** 48 testes de conteúdo, lint, build Next.js 16 com webpack, auditoria de dependências sem vulnerabilidades, validação LEIAUT e segurança Mermaid aprovados. O código administrativo foi publicado na `main` no commit `41b6a5f`; o registro final desta revisão foi publicado em commit subsequente.
 
 **Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards foram preservados, mas não revisados, conforme o protocolo.
+
+### Direito Tributário — 20 de setembro de 2026
+
+**Comando de início do usuário:** `Plano de Revisão Visual e de Conteúdo dos Resumos disciplina: Direito Tributário, caso ainda não tenha sido revisada. Após revisão funcional e visual, realizar revisão de correção do conteúdo.`
+
+**Quantidade de resumos ativos:** 21
+
+**Quantidade de seções ativas:** 306
+
+**Estado:** concluída
+
+| Grupo | Resumos | Seções | Visual/conteúdo | Gráficos | Mermaid/mapas mentais | Observação e ação | Evidência final |
+|---|---:|---:|---|---|---|---|---|
+| Fundamentos, espécies, competência e legislação tributária | 4 | 50 | [x] | N/A | [x] | Normalizados títulos, seções editoriais vazias, HTML residual e recursos de estudo; conceitos confrontados com Constituição e CTN vigentes. | Identidades, ordem e recursos persistidos e reexportados. |
+| Obrigação, responsabilidade, crédito, suspensão, extinção e garantias | 7 | 101 | [x] | N/A | [x] | Corrigidos lançamento, denúncia espontânea, prescrição, parcelamento, repetição do indébito, privilégios e administração do IBS. | 101 seções carregadas sem erro, código bruto ou overflow global. |
+| Impostos da União, Estados e Municípios | 7 | 105 | [x] | N/A | [x] | Atualizados IPVA, ITCMD, ICMS, IPI, ITR, IR, ITBI, IPTU e ISS; valores monetários escapados para não acionar KaTeX. | Conteúdo atualizado e moeda legível em produção nos três temas. |
+| Limitações, princípios, imunidades e contribuições | 3 | 50 | [x] | N/A | [x] | Atualizados reforma tributária, anterioridades, imunidades, CIDE e COSIP, com remoção de diretivas Mermaid incompatíveis. | Mapas renderizados como SVG seguro, sem fallback ou artefato técnico. |
+
+**Consolidação visual e funcional:** as 21 rotas e as 306 seções foram percorridas com sessão autenticada em desktop de 1249 px de largura e mobile de 390 × 844. As 32 seções com tabelas permaneceram contidas e os 106 mapas Mermaid publicados não exibiram código bruto ou erro de renderização. Não houve marcador técnico, página ausente ou overflow horizontal global. Os temas Light, Dark e Sepia foram validados, e o tema Light e o viewport normal foram restaurados ao final.
+
+**Revisão de conteúdo:** 41 correções jurídicas objetivas foram aplicadas com confronto da Constituição e do CTN compilados, da EC 132/2023, das Leis Complementares 214/2025, 227/2026 e 236/2026 e de precedentes oficiais pertinentes. Foram atualizados, entre outros pontos, a transição CBS/IBS, administração do IBS, IPVA sobre veículos aquáticos e aéreos, ITCMD, COSIP, anterioridades, ICMS monofásico, IPTU e jurisprudência tributária.
+
+**Correções visuais/editoriais:** 76 seções receberam ao menos uma alteração estrutural, editorial ou jurídica. Foram corrigidos 16 títulos, seções sem corpo editorial, sete ocorrências de HTML residual, diretivas Mermaid incompatíveis, um mapa duplicado exposto em Markdown e valores `R$` interpretados indevidamente como matemática. O corpus final contém 106 seções com Mermaid e 32 seções com tabelas, sem criação de gráficos inexistentes na fonte.
+
+**Controle por Vertex AI:** o PDF e o Markdown de origem foram divididos em 13 tópicos canônicos. O PYGEM executou 53 requisições pelo Vertex AI com ADC e o LEIAUT produziu 13 JSONs de controle, 72 seções e 37 mapas. Esse resultado foi usado como conferência semântica e visual, sem substituir os 21 IDs publicados nem expor ou modificar o `.env` do PYGEM.
+
+**Saneamento do acervo:** o tópico legado `impostos-de-competencia-da-uniao` reunia 306 seções que duplicavam os 21 módulos ativos; ele foi arquivado de forma recuperável após backup. A biblioteca autenticada passou a apresentar somente 21 resumos e 306 seções ativas.
+
+**Persistência:** o preflight aprovou os 21 módulos e as 306 seções antes da escrita. A importação em lote preservou explicitamente os flashcards. A reexportação final coincidiu integralmente com os payloads revisados em títulos, conteúdo, callouts, mnemônicos, Mermaid e identidades permanentes, confirmando também os 828 flashcards legados.
+
+**Verificações:** 48 testes do contrato de conteúdo, lint, build Next.js 16.3.4 com webpack, auditoria de dependências sem vulnerabilidades, validação de segurança Mermaid e `git diff --check` aprovados. O smoke autenticado confirmou as 21 rotas em desktop, mobile e nos três temas.
+
+**Pendência editorial:** os 828 flashcards foram preservados, mas não revisados, conforme o protocolo. Há ao menos um cartão legado de IPVA com a regra anterior à EC 132/2023; a revisão específica dos flashcards deve ser tratada em lote separado para evitar alteração silenciosa de material de memorização.
 
 ### Direito Administrativo — 19 de setembro de 2026
 

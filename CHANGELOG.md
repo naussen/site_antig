@@ -1,5 +1,15 @@
 # Changelog
 
+## Não publicado — revisão de Direito Tributário
+
+- revisados funcional, visual e juridicamente os 21 resumos e as 306 seções ativas de Direito Tributário;
+- aplicadas 41 correções jurídicas e ajustes editoriais em 76 seções, incluindo reforma tributária, IPVA, ITCMD, ICMS, IPTU, COSIP, anterioridades e administração do IBS;
+- saneados títulos, seções vazias, HTML residual, Mermaid incompatível e valores monetários que acionavam KaTeX indevidamente;
+- arquivado de forma recuperável o módulo legado de 306 seções que duplicava os 21 módulos ativos;
+- importados e reexportados os 21 módulos com preservação das identidades permanentes e dos 828 flashcards;
+- validados 106 mapas, 32 seções com tabelas, as 21 rotas, os três temas e o viewport mobile de 390 × 844;
+- registrado que os flashcards foram preservados, mas permanecem fora desta revisão de conteúdo.
+
 ## Não publicado — CTA de assinatura e transparência de segurança
 
 - corrigido o CTA `ASSINAR` do cabeçalho e o CTA principal da landing para preservar o destino da assinatura durante o login;
