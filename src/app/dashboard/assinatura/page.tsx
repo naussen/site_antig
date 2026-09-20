@@ -287,7 +287,10 @@ export default async function SubscriptionPage({
               Cobrança segura
             </h2>
             <p className="mt-3 text-sm leading-6" style={{ color: "var(--text-secondary)" }}>
-              Nenhum dado de cartão é armazenado pelo PRO Resumos. A liberação deve ocorrer somente após confirmação segura do provedor de pagamentos.
+              O checkout acontece no ambiente do Mercado Pago ou PayPal. O PRO Concursos não recebe nem armazena o número completo do cartão ou o código de segurança.
+            </p>
+            <p className="mt-3 text-xs leading-5" style={{ color: "var(--text-muted)" }}>
+              O acesso só é liberado depois de validar a assinatura do webhook e consultar novamente o pagamento na API oficial do provedor. Isso impede que uma confirmação enviada apenas pelo navegador conceda acesso.
             </p>
             {checkoutMessage && (
               <p className="mt-5 rounded-2xl border p-4 text-xs leading-5" style={{ background: "var(--accent-soft)", borderColor: "var(--border)", color: "var(--text-secondary)" }} role="status">
@@ -298,7 +301,7 @@ export default async function SubscriptionPage({
               <div className="mt-5 space-y-3">
                 <p className="text-xs leading-5" style={{ color: "var(--text-muted)" }}>
                   {formattedMonthlyPrice ? `${formattedMonthlyPrice}/mês. ` : "Assinatura mensal recorrente. "}
-                  A cobrança e os dados de pagamento ficam no ambiente seguro do provedor escolhido.
+                  A cobrança e os dados completos do cartão ficam no ambiente seguro do provedor escolhido; o PRO Concursos mantém somente a identificação da assinatura e seu estado de acesso.
                 </p>
                 {mercadoPagoEnabled && (
                   <form action={withSiteBasePath("/api/payments/checkout/mercado-pago")} method="post">

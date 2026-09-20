@@ -5,7 +5,7 @@ import { createClient } from "@/lib/supabase/client";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import { resolveReturnUrl } from "@/lib/return-paths.mjs";
 import { resolveUserStartPath } from "@/lib/user-start-page.mjs";
-import { Loader2, Mail } from "lucide-react";
+import { Loader2, Mail, ShieldCheck } from "lucide-react";
 
 type SuccessMode = "magic-link" | "sign-up" | null;
 const MIN_PASSWORD_LENGTH = 12;
@@ -273,6 +273,13 @@ export function LoginForm({ returnTo }: { returnTo: string | null }) {
         </svg>
         <span>{loading ? "Aguarde..." : "Entrar com Google"}</span>
       </button>
+
+      <div className="flex items-start gap-3 rounded-xl border p-3" style={{ background: "var(--accent-soft)", borderColor: "var(--border)" }}>
+        <ShieldCheck className="mt-0.5 shrink-0" size={18} aria-hidden="true" style={{ color: "var(--accent)" }} />
+        <p className="text-xs leading-5" style={{ color: "var(--text-secondary)" }}>
+          <strong style={{ color: "var(--text-primary)" }}>Login protegido pelo Google.</strong> A autenticação acontece no ambiente do Google: o PRO Concursos não recebe nem armazena sua senha Google. Recebemos apenas os dados básicos autorizados para criar sua conta e manter a sessão segura.
+        </p>
+      </div>
     </form>
   );
 }

@@ -10,6 +10,7 @@ import {
   Layers3,
   Moon,
   NotebookPen,
+  ShieldCheck,
   Sparkles,
   Sun,
   Sunrise,
@@ -17,6 +18,7 @@ import {
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
 const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo-dark.png");
+const SUBSCRIBE_HREF = "/login?next=/resumos/dashboard/assinatura";
 
 function BrandLogo({ className = "" }: { className?: string }) {
   return (
@@ -312,7 +314,7 @@ export function LandingPageContent() {
             <a href="#modulos" className="rounded-lg px-3 py-2 text-sm font-semibold text-white/70 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826]">Módulos</a>
             <a href="#ferramentas" className="rounded-lg px-3 py-2 text-sm font-semibold text-white/70 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826]">Funcionalidades</a>
           </div>
-          <div className="flex shrink-0 items-center gap-1.5 sm:gap-3"><Link href="/login" className="rounded-xl px-2 py-2.5 text-xs font-semibold text-white/80 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-4 sm:text-sm">Entrar</Link><Link href="/login" className="rounded-xl bg-[#f9a826] px-3 py-2.5 text-xs font-extrabold text-[#121212] shadow-lg shadow-[#f9a826]/15 transition hover:-translate-y-0.5 hover:bg-[#ffc15c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-5 sm:text-sm">Assinar agora</Link></div>
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-3"><Link href="/login" className="rounded-xl px-2 py-2.5 text-xs font-semibold text-white/80 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-4 sm:text-sm">Entrar</Link><Link href={SUBSCRIBE_HREF} className="rounded-xl bg-[#f9a826] px-3 py-2.5 text-xs font-extrabold uppercase tracking-wide text-[#121212] shadow-lg shadow-[#f9a826]/15 transition hover:-translate-y-0.5 hover:bg-[#ffc15c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-5 sm:text-sm">Assinar</Link></div>
         </div>
       </nav>
 
@@ -329,8 +331,11 @@ export function LandingPageContent() {
                 <li key={benefit} className="flex items-center gap-2"><CheckCircle2 size={16} className="shrink-0 text-[#f9a826]" aria-hidden="true" />{benefit}</li>
               ))}
             </ul>
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"><Link href="/login" className="inline-flex w-full min-w-0 items-center justify-center gap-2 rounded-2xl bg-[#f9a826] px-5 py-4 text-center text-sm font-extrabold text-[#121212] shadow-2xl shadow-[#f9a826]/20 transition hover:-translate-y-1 hover:bg-[#ffc15c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:w-auto sm:px-7 sm:text-base">Assinar com oferta de lançamento <ArrowRight size={19} className="shrink-0" /></Link><a href="#modulos" className="inline-flex w-full min-w-0 items-center justify-center rounded-2xl border border-white/30 bg-white/[0.06] px-5 py-4 text-center text-sm font-bold text-white transition hover:border-[#a78bfa]/70 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:w-auto sm:px-7">Conhecer a plataforma</a></div>
-            <p className="mt-5 text-xs leading-5 text-white/65">Conheça os recursos antes de decidir. PRO Resumos e PRO Legis no mesmo acesso.</p>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"><Link href={SUBSCRIBE_HREF} className="inline-flex w-full min-w-0 items-center justify-center gap-2 rounded-2xl bg-[#f9a826] px-5 py-4 text-center text-sm font-extrabold text-[#121212] shadow-2xl shadow-[#f9a826]/20 transition hover:-translate-y-1 hover:bg-[#ffc15c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:w-auto sm:px-7 sm:text-base">Assinar com oferta de lançamento <ArrowRight size={19} className="shrink-0" /></Link><a href="#modulos" className="inline-flex w-full min-w-0 items-center justify-center rounded-2xl border border-white/30 bg-white/[0.06] px-5 py-4 text-center text-sm font-bold text-white transition hover:border-[#a78bfa]/70 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:w-auto sm:px-7">Conhecer a plataforma</a></div>
+            <div className="mx-auto mt-5 flex max-w-xl items-start gap-3 rounded-2xl border border-emerald-300/20 bg-emerald-300/[0.07] p-4 text-left lg:mx-0">
+              <ShieldCheck size={20} className="mt-0.5 shrink-0 text-emerald-300" aria-hidden="true" />
+              <p className="text-xs leading-5 text-white/75"><strong className="text-white">Acesso e pagamento seguros.</strong> Ao escolher Google, sua senha permanece no Google. No pagamento, os dados completos do cartão são informados diretamente ao Mercado Pago e não passam pelo PRO Concursos.</p>
+            </div>
           </div>
           <HeroProductPreview />
         </div>

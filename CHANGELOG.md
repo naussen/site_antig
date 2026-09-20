@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — CTA de assinatura e transparência de segurança
+
+- corrigido o CTA `ASSINAR` do cabeçalho e o CTA principal da landing para preservar o destino da assinatura durante o login;
+- explicado no login que a senha Google não é recebida pelo PRO Concursos e que somente dados básicos autorizados são usados para criar a conta;
+- detalhado na landing e na assinatura que os dados completos do cartão permanecem no provedor e que o acesso depende de webhook assinado e reconsulta à API oficial.
+
 ## Não publicado — redirecionamento seguro para checkout hospedado
 
 - permitidos na diretiva CSP `form-action` somente os hosts de checkout já validados no backend para Mercado Pago e PayPal;
