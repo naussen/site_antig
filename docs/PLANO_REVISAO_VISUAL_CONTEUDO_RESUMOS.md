@@ -84,7 +84,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [ ] | Contabilidade de Custos | [ ] | [ ] | — |
 | [x] | Contabilidade Geral e Avançada | [ ] | [x] | 32 resumos e 142 seções revisados; 76 seções corrigidas; 24 mapas e 40 tabelas validados; persistência e smoke autenticado confirmados. |
 | [x] | Direito Administrativo | [ ] | [x] | 19 resumos e 184 seções revisados; 58 seções corrigidas; 20 mapas e 18 tabelas validados; persistência integral e smoke autenticado confirmados. |
-| [ ] | Direito Civil | [ ] | [ ] | — |
+| [x] | Direito Civil | [ ] | [x] | 12 resumos e 130 seções revisados; 67 correções jurídicas; 25 seções de fonte restauradas; 26 mapas e 17 tabelas validados; persistência integral e smoke autenticado confirmados. |
 | [x] | Direito Constitucional | [ ] | [x] | 15 resumos e 105 seções revisados; 64 correções jurídicas aplicadas em 30 seções; persistência integral confirmada no Supabase. |
 | [ ] | Direito da Pessoa com Deficiência | [ ] | [ ] | — |
 | [ ] | Direito do Trabalho | [ ] | [ ] | — |
@@ -363,6 +363,43 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Ressalva operacional:** o smoke autenticado em produção foi novamente tentado, mas as rotas canônicas continuam respondendo `307 Temporary Redirect` para `/resumos/login`, e esta execução não dispõe de controle de navegador autenticado nem de endpoint CDP. Por isso, a coluna **Correção validada** permanece desmarcada: não há evidência honesta de inspeção nos temas Light, Dark e Sepia nem no viewport móvel em produção.
 
 **Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards permaneceram fora do escopo, conforme o protocolo.
+
+### Direito Civil — 19 de setembro de 2026
+
+**Comando de início do usuário:** `Plano de Revisão Visual e de Conteúdo dos Resumos disciplina: Direito Civil, caso ainda não tenha sido revisada. Após revisão funcional e visual, realizar revisão de correção do conteúdo.`
+
+**Quantidade de resumos:** 12
+
+**Quantidade de seções:** 130
+
+**Estado:** concluída
+
+| Resumo | URL | Seções | Visual/conteúdo | Gráficos | Mermaid/mapas mentais | Observação e ação | Evidência final |
+|---|---|---:|---|---|---|---|---|
+| Dos Bens | `https://proconcursos.com.br/resumos/classificacao-doutrinaria` | 2 | [x] | N/A | N/A | Corrigidas classificações de bens, aeronaves, embarcações, outorga conjugal e mar territorial. | Tabela, conteúdo e responsividade validados em produção. |
+| Dos Fatos Jurídicos | `https://proconcursos.com.br/resumos/classificacao-geral-dos-fatos-juridicos` | 23 | [x] | N/A | [x] | Corrigidos defeitos, forma, atos ilícitos, prescrição, decadência e prazos; restaurados três blocos da fonte. | 23 seções, tabelas e mapas validados em produção. |
+| Das Pessoas Jurídicas | `https://proconcursos.com.br/resumos/comeco-da-personalidade-juridica` | 16 | [x] | N/A | [x] | Corrigidos associações, fundações, administradores e desconsideração da personalidade jurídica. | 16 seções e mapas validados em produção. |
+| Da Responsabilidade Civil | `https://proconcursos.com.br/resumos/da-responsabilidade-civil` | 1 | [x] | N/A | [x] | Qualificado o estado de necessidade e recompostos os esquemas de elementos e responsabilidade objetiva. | Conteúdo e dois mapas validados em produção. |
+| Direito das Sucessões | `https://proconcursos.com.br/resumos/da-sucessao-em-geral` | 11 | [x] | N/A | [x] | Restauradas nove seções da fonte e corrigidos indignidade, representação, capacidade testamentária e disposições nulas. | 11 seções e mapas validados em produção. |
+| Direito de Família | `https://proconcursos.com.br/resumos/do-direito-pessoal` | 13 | [x] | N/A | [x] | Corrigidos guarda, parentesco, regimes de bens, Tema 1.236/STF, união estável e curatela. | 13 seções e mapas validados em produção. |
+| Das Várias Espécies de Contratos | `https://proconcursos.com.br/resumos/especies-de-contratos` | 8 | [x] | N/A | [x] | Restauradas compra e venda e cláusulas especiais; corrigidos doação, empréstimo, preço e preferência. | 8 seções e mapas validados em produção. |
+| Direito das Coisas | `https://proconcursos.com.br/resumos/esquema-geral` | 11 | [x] | N/A | [x] | Restaurados conceitos e posse; corrigidos usucapião, benfeitorias, direitos reais, concessões e art. 243 da CF. | 11 seções, 5 tabelas e mapas validados em produção. |
+| Direito das Obrigações | `https://proconcursos.com.br/resumos/modalidades-das-obrigacoes` | 11 | [x] | N/A | [x] | Restaurados transmissão, adimplemento, novação, compensação, confusão e remissão; corrigidos mora e cláusula penal. | 11 seções, tabelas e mapas validados em produção. |
+| Das Pessoas Naturais | `https://proconcursos.com.br/resumos/pessoa` | 8 | [x] | N/A | N/A | Restaurados domicílio e disposição do corpo; corrigidos nome, capacidade, emancipação e alimentos. | 8 seções validadas em produção. |
+| Dos Contratos em Geral | `https://proconcursos.com.br/resumos/principios-contratuais` | 10 | [x] | N/A | [x] | Corrigidos vícios redibitórios e categorias de extinção; restauradas comparações e mapas. | 10 seções, tabelas e mapas validados em produção. |
+| LINDB | `https://proconcursos.com.br/resumos/vigencia-das-leis` | 16 | [x] | N/A | [x] | Corrigidos competência internacional, homologação e reenvio; restaurados quadros e fluxo do compromisso. | 16 seções e mapas validados em produção. |
+
+**Consolidação visual e funcional:** as 12 rotas e as 130 seções foram percorridas com sessão autenticada em desktop de 1249 × 1269 e mobile de 390 × 844. Os 26 mapas Mermaid renderizaram como SVG, sem código bruto ou erro de segurança; zoom, restauração e overlay foram exercitados. As 17 tabelas permaneceram contidas no mobile. Não houve seção vazia, marcador técnico exposto, erro de console ou overflow horizontal global. Os temas Light, Dark e Sepia foram inspecionados, e Light e o viewport normal foram restaurados ao final.
+
+**Revisão de conteúdo:** 67 correções jurídicas objetivas foram aplicadas com confronto do Código Civil e demais fontes oficiais vigentes. A revisão alcançou LINDB, pessoas naturais e jurídicas, bens, fatos jurídicos, obrigações, contratos, responsabilidade civil, coisas, família e sucessões. Também foram recompostas 21 estruturas visuais achatadas ou inválidas e removidos marcadores técnicos e Mermaid exposto como código.
+
+**Restauração de integridade:** a comparação com o PDF e o Markdown de origem revelou blocos ausentes nos módulos publicados. O pipeline PYGEM/Vertex e LEIAUT foi executado sobre 12 recortes canônicos; 25 seções ausentes foram incorporadas de forma incremental, sem substituir ou remapear as 105 seções existentes. As novas seções abrangem domicílio, disposição do corpo, fundamentos dos fatos jurídicos, transmissão e extinção das obrigações, compra e venda, posse e o núcleo de sucessões.
+
+**Persistência:** o preflight aprovou os 12 módulos e as 130 seções antes da escrita. A importação preservou as 105 identidades existentes e os 298 flashcards legados, adicionou 25 identidades permanentes novas sem flashcards e não removeu seção alguma. A reexportação final coincidiu semanticamente com os 12 payloads revisados em títulos, disciplina, ordem, conteúdo, callouts, mnemônicos, Mermaid e flashcards.
+
+**Verificações:** 48 testes de conteúdo, lint, build Next.js 16 com webpack, auditoria de dependências sem vulnerabilidades, validação LEIAUT e segurança Mermaid aprovados. O código administrativo foi publicado na `main` no commit `41b6a5f`; o registro final desta revisão foi publicado em commit subsequente.
+
+**Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards foram preservados, mas não revisados, conforme o protocolo.
 
 ### Direito Administrativo — 19 de setembro de 2026
 
