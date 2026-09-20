@@ -45,7 +45,7 @@ npm run content -- import .\meu-conteudo.json --apply
 
 O modo padrão faz **upsert**: cria ou atualiza o módulo e as seções presentes no arquivo, preservando seções antigas que não estejam no JSON. A CLI bloqueia a importação se um `section_id` já pertencer a outro módulo.
 
-Para uma revisão exclusivamente editorial de módulos já publicados, use `--preserve-flashcards`. Esse modo ignora os flashcards presentes no arquivo, exige correspondência exata de `section_id`, `content_unit_id` e `stable_key` com todas as seções ativas do módulo e atualiza somente os campos de conteúdo e recursos didáticos. Ele não cria, restaura, remove nem remapeia seções e não pode ser combinado com `--replace`:
+Para uma revisão editorial de módulos já publicados, use `--preserve-flashcards`. Esse modo ignora os flashcards das seções existentes, exige correspondência exata de `section_id`, `content_unit_id` e `stable_key` para todas as seções ativas e atualiza somente seus campos editoriais. Seções novas são aceitas apenas com identidade permanente inédita e `flashcards` vazio. O modo não restaura, remove nem remapeia seções e não pode ser combinado com `--replace`:
 
 ```powershell
 npm run content -- import .\meu-conteudo.json --preserve-flashcards

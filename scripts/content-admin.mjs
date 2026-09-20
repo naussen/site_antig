@@ -263,42 +263,97 @@ export function validateImportPayloadPreservingFlashcards(payload) {
           if (!section || typeof section !== "object" || Array.isArray(section)) {
             return section;
           }
-          const { flashcards: _ignored, ...contentFields } = section;
+          const contentFields = { ...section };
+          delete contentFields.flashcards;
           return { ...contentFields, flashcards: [] };
         })
       : payload.sections,
   };
 
-  return validateImportPayload(candidate);
+  const parsed = validateImportPayload(candidate);
+  ignoredFlashcardsByPayload.set(
+    parsed,
+    new Set(
+      payload.sections
+        .filter((section) => Array.isArray(section?.flashcards) && section.flashcards.length > 0)
+        .map((section) => section.section_id)
+    )
+  );
+  return parsed;
 }
+
+const ignoredFlashcardsByPayload = new WeakMap();
+const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+const STABLE_KEY_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 export function assertPreservedFlashcardIdentities(existingSections, payload) {
   const activeSections = existingSections.filter((section) => !section.archived_at);
-  if (activeSections.length !== payload.sections.length) {
+  if (activeSections.length > payload.sections.length) {
     throw new Error(
-      "--preserve-flashcards exige correspondência exata com todas as seções ativas do módulo."
+      "--preserve-flashcards exige que todas as seções ativas existentes continuem presentes."
     );
   }
 
   const existingBySectionId = new Map(
     existingSections.map((section) => [section.section_id, section])
   );
+  const existingByContentUnitId = new Map(
+    existingSections.map((section) => [section.content_unit_id, section])
+  );
+  const existingByStableKey = new Map(
+    existingSections.map((section) => [section.stable_key, section])
+  );
+  const payloadBySectionId = new Map();
   for (const section of payload.sections) {
-    const existing = existingBySectionId.get(section.section_id);
-    if (!existing || existing.archived_at) {
+    if (payloadBySectionId.has(section.section_id)) {
+      throw new Error(`--preserve-flashcards não permite section_id duplicado: ${section.section_id}.`);
+    }
+    payloadBySectionId.set(section.section_id, section);
+  }
+
+  for (const existing of activeSections) {
+    const incoming = payloadBySectionId.get(existing.section_id);
+    if (!incoming) {
       throw new Error(
-        `--preserve-flashcards não permite criar ou restaurar a seção ${section.section_id}.`
+        `--preserve-flashcards exige que a seção ativa ${existing.section_id} continue presente.`
       );
     }
     if (
       existing.topic_id !== payload.topic_id
-      || !section.content_unit_id
-      || section.content_unit_id !== existing.content_unit_id
-      || !section.stable_key
-      || section.stable_key !== existing.stable_key
+      || incoming.content_unit_id !== existing.content_unit_id
+      || incoming.stable_key !== existing.stable_key
     ) {
       throw new Error(
-        `--preserve-flashcards exige identidade permanente exata em ${section.section_id}.`
+        `--preserve-flashcards exige identidade permanente exata em ${existing.section_id}.`
+      );
+    }
+  }
+
+  const ignoredFlashcardSections = ignoredFlashcardsByPayload.get(payload) ?? new Set();
+  for (const section of payload.sections) {
+    const existing = existingBySectionId.get(section.section_id);
+    if (existing?.archived_at) {
+      throw new Error(
+        `--preserve-flashcards não permite restaurar a seção arquivada ${section.section_id}.`
+      );
+    }
+    if (existing) continue;
+
+    if (!UUID_PATTERN.test(section.content_unit_id ?? "") || !STABLE_KEY_PATTERN.test(section.stable_key ?? "")) {
+      throw new Error(
+        `--preserve-flashcards exige identidade permanente válida na nova seção ${section.section_id}.`
+      );
+    }
+    const unitOwner = existingByContentUnitId.get(section.content_unit_id);
+    const keyOwner = existingByStableKey.get(section.stable_key);
+    if (unitOwner || keyOwner) {
+      throw new Error(
+        `--preserve-flashcards não permite reutilizar identidade permanente na nova seção ${section.section_id}.`
+      );
+    }
+    if ((section.flashcards?.length ?? 0) > 0 || ignoredFlashcardSections.has(section.section_id)) {
+      throw new Error(
+        `--preserve-flashcards exige flashcards vazio na nova seção ${section.section_id}.`
       );
     }
   }
@@ -1248,6 +1303,25 @@ async function updateImportPayloadPreservingFlashcards(
         .select("section_id,content_unit_id"),
       `Falha ao atualizar conteúdo preservando flashcards (${context})`
     );
+    if (updated.length === 0) {
+      const inserted = unwrap(
+        await supabase.from("sections").insert({
+          section_id: section.section_id,
+          content_unit_id: section.content_unit_id,
+          stable_key: section.stable_key,
+          topic_id: payload.topic_id,
+          ...patch,
+          flashcards: [],
+        }).select("section_id,content_unit_id"),
+        `Falha ao criar seção sem flashcards (${context})`
+      );
+      if (inserted.length !== 1 || inserted[0].section_id !== section.section_id) {
+        throw new Error(
+          `Criação ambígua bloqueada ao preservar flashcards em ${section.section_id}.`
+        );
+      }
+      continue;
+    }
     if (updated.length !== 1 || updated[0].section_id !== section.section_id) {
       throw new Error(
         `Atualização ambígua bloqueada ao preservar flashcards em ${section.section_id}.`

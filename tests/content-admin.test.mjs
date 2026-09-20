@@ -241,7 +241,7 @@ test("modo de preservação não aceita seção sustentada apenas por flashcard"
   );
 });
 
-test("modo de preservação exige inventário e identidade permanente exatos", () => {
+function preservedIdentityFixture() {
   const payload = validPayload();
   payload.sections[0].content_unit_id = "11111111-1111-4111-8111-111111111111";
   payload.sections[0].stable_key = "introducao";
@@ -253,17 +253,73 @@ test("modo de preservação exige inventário e identidade permanente exatos", (
     archived_at: null,
   }];
 
+  return { payload, existing };
+}
+
+test("modo de preservação permite adicionar seção nova sem flashcards", () => {
+  const { payload, existing } = preservedIdentityFixture();
+  payload.sections.push({
+    ...payload.sections[0],
+    section_id: "direito-constitucional-sec-02",
+    content_unit_id: "22222222-2222-4222-8222-222222222222",
+    stable_key: "controle-de-constitucionalidade",
+    title: "Controle de Constitucionalidade",
+    flashcards: [],
+  });
+
   assert.doesNotThrow(() => assertPreservedFlashcardIdentities(existing, payload));
+});
+
+test("modo de preservação rejeita flashcard em seção nova", () => {
+  const { payload, existing } = preservedIdentityFixture();
+  payload.sections.push({
+    ...payload.sections[0],
+    section_id: "direito-constitucional-sec-02",
+    content_unit_id: "22222222-2222-4222-8222-222222222222",
+    stable_key: "controle-de-constitucionalidade",
+    title: "Controle de Constitucionalidade",
+    flashcards: [{ question: "Nova", answer: "Resposta" }],
+  });
+  const parsed = validateImportPayloadPreservingFlashcards(payload);
+
   assert.throws(
-    () => assertPreservedFlashcardIdentities(existing, {
-      ...payload,
-      sections: [{ ...payload.sections[0], stable_key: "outra-chave" }],
-    }),
+    () => assertPreservedFlashcardIdentities(existing, parsed),
+    /flashcards vazio na nova seção/i
+  );
+});
+
+test("modo de preservação rejeita ausência de seção ativa existente", () => {
+  const { payload, existing } = preservedIdentityFixture();
+  assert.throws(
+    () => assertPreservedFlashcardIdentities([
+      ...existing,
+      {
+        section_id: "direito-constitucional-sec-02",
+        content_unit_id: "22222222-2222-4222-8222-222222222222",
+        stable_key: "controle-de-constitucionalidade",
+        topic_id: payload.topic_id,
+        archived_at: null,
+      },
+    ], payload),
+    /todas as seções ativas existentes continuem presentes|continue presente/i
+  );
+});
+
+test("modo de preservação rejeita identidade alterada em seção existente", () => {
+  const { payload, existing } = preservedIdentityFixture();
+  payload.sections[0].stable_key = "outra-chave";
+  assert.throws(
+    () => assertPreservedFlashcardIdentities(existing, payload),
     /identidade permanente exata/i
   );
+});
+
+test("modo de preservação rejeita restauração de seção arquivada", () => {
+  const { payload, existing } = preservedIdentityFixture();
+  existing[0].archived_at = "2026-09-20T00:00:00.000Z";
   assert.throws(
-    () => assertPreservedFlashcardIdentities([], payload),
-    /correspondência exata/i
+    () => assertPreservedFlashcardIdentities(existing, payload),
+    /restaurar a seção arquivada/i
   );
 });
 
