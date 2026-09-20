@@ -92,7 +92,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [x] | Direito Empresarial | [ ] | [x] | 3 resumos e 29 seções revisados; revisão jurídica integral reaberta após o smoke, correções publicadas e persistência exata confirmada por reexportação. |
 | [x] | Direito Penal | [ ] | [x] | 3 resumos e 104 seções; a Parte Especial foi reorganizada em 82 crimes individualizados, sem títulos editoriais genéricos; persistência integral confirmada no Supabase. |
 | [ ] | Direito Previdenciário | [ ] | [ ] | — |
-| [ ] | Direito Processual Civil | [ ] | [ ] | — |
+| [x] | Direito Processual Civil | [ ] | [x] | 17 resumos e 91 seções revisados; 15 seções corrigidas em 8 módulos; 35 mapas Mermaid e 14 tabelas validados; persistência integral e smoke autenticado confirmados. |
 | [ ] | Direito Processual do Trabalho | [ ] | [ ] | — |
 | [ ] | Direito Processual Penal | [ ] | [ ] | — |
 | [x] | Direito Tributário | [ ] | [x] | 21 resumos e 306 seções revisados; 41 correções jurídicas e saneamento visual/editorial aplicados; 106 mapas e 32 seções com tabelas validados; módulo legado duplicado arquivado; persistência integral e smoke autenticado confirmados. |
@@ -363,6 +363,38 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Ressalva operacional:** o smoke autenticado em produção foi novamente tentado, mas as rotas canônicas continuam respondendo `307 Temporary Redirect` para `/resumos/login`, e esta execução não dispõe de controle de navegador autenticado nem de endpoint CDP. Por isso, a coluna **Correção validada** permanece desmarcada: não há evidência honesta de inspeção nos temas Light, Dark e Sepia nem no viewport móvel em produção.
 
 **Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards permaneceram fora do escopo, conforme o protocolo.
+
+### Direito Processual Civil — 20 de setembro de 2026
+
+**Comando de início do usuário:** `Plano de Revisão Visual e de Conteúdo dos Resumos disciplina: Direito Processual Civil, caso ainda não tenha sido revisada. Após revisão funcional e visual, realizar revisão de correção do conteúdo.`
+
+**Quantidade de resumos:** 17
+
+**Quantidade de seções:** 91
+
+**Estado:** concluída
+
+| Grupo | Resumos | Seções | Visual/conteúdo | Gráficos | Mermaid/mapas mentais | Observação e ação | Evidência final |
+|---|---:|---:|---|---|---|---|---|
+| Fundamentos, jurisdição, sujeitos e atos processuais | 6 | 28 | [x] | N/A | [x] | Atualizados foro de eleição, honorários, chamamento, impedimento/suspeição, negócio processual, suspensão de prazos e nulidades; corrigidos erros linguísticos. | Conteúdo, tabelas, mapas e identidades persistidos e reexportados. |
+| Tutelas, procedimento comum e cumprimento de sentença | 4 | 31 | [x] | N/A | [x] | Corrigidas a opção de foro no cumprimento e a disciplina da impugnação; os demais módulos foram confrontados sem alteração indevida. | Rotas e seções validadas em produção nos três temas e no mobile. |
+| Execução, impugnações e recursos | 3 | 11 | [x] | N/A | [x] | Corrigidos os termos iniciais dos embargos por carta, a taxatividade mitigada do agravo e regras dos embargos de declaração. | Mermaid renderizado, sem fallback ou overflow global. |
+| Juizados Especiais | 3 | 19 | [x] | N/A | [x] | Leis 9.099/1995, 10.259/2001 e 12.153/2009 conferidas; nenhuma correção objetiva prioritária foi necessária. | 19 seções e recursos didáticos validados em produção. |
+| Tabela auxiliar de prazos | 1 | 2 | [x] | N/A | [x] | Removidos resíduos OCR; corrigidos contexto do art. 668, fatos geradores dos arts. 903, 916 e 921 e rótulos do mapa. | Tabelas responsivas e dois mapas sem erro nos três temas. |
+
+**Consolidação visual e funcional:** as 17 rotas e as 91 seções foram percorridas com sessão autenticada em desktop e no viewport móvel de 390 × 844. Os 35 mapas Mermaid renderizaram sem fallback; as 14 tabelas permaneceram em contêineres próprios e não houve overflow horizontal global. Os temas Light, Dark e Sepia foram validados, e o tema Light e o viewport normal foram restaurados ao final. As imagens de logo não carregadas pertenciam a variantes ocultas; a variante visível permaneceu íntegra.
+
+**Inventário visual da fonte:** o PDF inequívoco possui 81 páginas e 17 tópicos úteis, na mesma ordem dos módulos publicados. Foram preservadas as funções pedagógicas de tabelas, fluxos, mapas, chamadas e distinções semânticas. A fonte não contém operação matemática substantiva além de percentuais acumulados e representações temporais de prazos.
+
+**Revisão de conteúdo:** 15 seções de 8 módulos receberam correções objetivas, com confronto do CPC compilado e do Tema 988/STJ. Foram atualizados foro de eleição após a Lei 14.879/2024, chamamento ao processo, impedimento e suspeição, recesso processual, nulidades, opção de foro e impugnação no cumprimento de sentença, embargos à execução por carta, agravo de instrumento, embargos de declaração e prazos da tabela auxiliar. Resíduos OCR e erros linguísticos localizados também foram removidos.
+
+**Persistência:** o preflight aprovou os 17 módulos e as 91 seções antes da escrita. A importação em lote usou preservação explícita de flashcards; não havia flashcards na disciplina. A reexportação final coincidiu semanticamente com os 17 payloads revisados e confirmou IDs, títulos, disciplina, ordem e conteúdo integral das seções.
+
+**Verificações:** 44 testes do contrato de conteúdo aprovados; 17/17 payloads válidos; 91 IDs de seção sequenciais; UTF-8 íntegro; zero delimitador técnico ou HTML indevido; smoke autenticado concluído em produção nos três temas e no mobile.
+
+**Backups:** `C:\PRO\agente\direito_processual_civil_revisao\backups\2026-09-20-pre-revisao` e `C:\PRO\agente\direito_processual_civil_revisao\backups\2026-09-20-pos-revisao`.
+
+**Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards permaneceram fora do escopo e não existiam na disciplina.
 
 ### Direito Civil — 19 de setembro de 2026
 
