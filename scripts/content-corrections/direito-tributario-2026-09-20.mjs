@@ -54,6 +54,7 @@ function removeRawMermaidFence(markdown) {
 function normalizeMarkdown(markdown) {
   return removeRawMermaidFence(markdown)
     .replace(/<br\s*\/?\s*>/gi, "; ")
+    .replace(/R\$(?=\s*\d)/g, "R\\$")
     .replace(/[ \t]+\n/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
