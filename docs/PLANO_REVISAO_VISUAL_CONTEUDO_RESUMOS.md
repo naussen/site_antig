@@ -97,7 +97,7 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [ ] | Direito Processual Penal | [ ] | [ ] | — |
 | [x] | Direito Tributário | [ ] | [x] | 21 resumos e 306 seções revisados; 41 correções jurídicas e saneamento visual/editorial aplicados; 106 mapas e 32 seções com tabelas validados; módulo legado duplicado arquivado; persistência integral e smoke autenticado confirmados. |
 | [ ] | Ética no Serviço Público | [ ] | [ ] | — |
-| [ ] | Finanças Públicas | [ ] | [ ] | — |
+| [x] | Finanças Públicas | [ ] | [x] | 1 resumo e 7 seções revisados; erros econômicos, fiscais, matemáticos e de Markdown corrigidos; 4 gráficos, 4 mapas Mermaid e 5 tabelas validados; persistência integral e smoke autenticado confirmados. |
 | [ ] | Geral | [ ] | [ ] | — |
 | [ ] | Legislação Aduaneira | [ ] | [ ] | — |
 | [ ] | Legislação Penal Especial | [ ] | [ ] | — |
@@ -363,6 +363,32 @@ O relatório final da disciplina deve informar arquivos alterados, correções r
 **Ressalva operacional:** o smoke autenticado em produção foi novamente tentado, mas as rotas canônicas continuam respondendo `307 Temporary Redirect` para `/resumos/login`, e esta execução não dispõe de controle de navegador autenticado nem de endpoint CDP. Por isso, a coluna **Correção validada** permanece desmarcada: não há evidência honesta de inspeção nos temas Light, Dark e Sepia nem no viewport móvel em produção.
 
 **Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas nesta revisão. Flashcards permaneceram fora do escopo, conforme o protocolo.
+
+### Finanças Públicas — 20 de setembro de 2026
+
+**Comando de início do usuário:** `Plano de Revisão Visual e de Conteúdo dos Resumos disciplina: Finanças Públicas — Após revisão funcional e visual, realizar revisão de correção do conteúdo.`
+
+**Quantidade de resumos:** 1
+
+**Quantidade de seções:** 7
+
+**Estado:** concluída
+
+| Resumo | URL | Seções | Visual/conteúdo | Gráficos | Mermaid/mapas mentais | Observação e ação | Evidência final |
+|---|---|---:|---|---|---|---|---|
+| Finanças Públicas | `https://proconcursos.com.br/resumos/financas-publicas` | 7 | [x] | [x] | [x] | Corrigidos bens públicos, Teorema de Coase, patente, regra de Ramsey, incidência tributária, exemplo progressivo, emissão monetária, resultado fiscal e abrangência das estatísticas abaixo da linha; recompostos gráficos removidos e o fluxo circular. | 7 seções, 4 gráficos, 4 mapas e 5 tabelas validados em produção; payload reexportado idêntico ao importado. |
+
+**Consolidação visual e funcional:** o resumo e as 7 seções foram percorridos com sessão autenticada em desktop e em mobile de 390 × 844. Os 4 mapas Mermaid exibiram SVG; zoom, restauração e visualização sobreposta foram exercitados. Os 4 gráficos quantitativos carregaram sem fallback, as 5 tabelas permaneceram em contêineres responsivos e as expressões KaTeX renderizaram sem Markdown bruto. Não houve erro de console nem overflow horizontal global. Os temas Light, Dark e Sepia foram inspecionados; o tema Light e o viewport normal foram restaurados ao final.
+
+**Inventário visual da fonte:** as páginas físicas 42 a 51 do PDF apresentam um fluxo circular, cinco gráficos, tabelas comparativas, chamadas coloridas e operações matemáticas. O fluxo circular foi recomposto em Mermaid. Os gráficos de incidência, elasticidade, Laffer e estabilização foram representados por quatro gráficos declarativos; a estabilização usa duas visualizações conceituais adjacentes, sem escala empírica. O bloco de exercícios TEC da página 51 permaneceu excluído.
+
+**Revisão de conteúdo:** foram corrigidas a fórmula da regra de Ramsey, a arrecadação do imposto *ad valorem* por dentro, a tabela de preços e ônus tributários, as faixas do exemplo de renda de R$ 4.000, a classificação dos bens públicos, o prazo de patente de invenção, a descrição constitucional da emissão monetária, a abrangência do resultado abaixo da linha e afirmações absolutas em callouts. Também foram removidos cabeçalhos residuais e referências órfãs a imagens.
+
+**Persistência:** antes da escrita, foi exportado backup integral do módulo publicado. O preflight aprovou 1 módulo e 7 seções com as identidades atuais. A importação em lote preservou explicitamente os flashcards; não havia flashcards na disciplina. A reexportação final foi byte a byte idêntica ao payload revisado (SHA-256 `FC6FC9094024FFE08E466A526B7AAF9EC14B246432E706E157F363F256FEDD08`).
+
+**Backups:** `C:\PRO\2026-09-20\c-pro-site-docs-plano-revisao-2\work\financas-publicas-review\backup` e `C:\PRO\2026-09-20\c-pro-site-docs-plano-revisao-2\work\financas-publicas-review\pos-importacao`.
+
+**Pendências editoriais:** nenhuma dentre as incorreções objetivamente comprovadas. Flashcards permaneceram fora do escopo, conforme o protocolo.
 
 ### Direito Processual Civil — 20 de setembro de 2026
 
