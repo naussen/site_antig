@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — redirecionamento seguro para checkout hospedado
+
+- permitidos na diretiva CSP `form-action` somente os hosts de checkout já validados no backend para Mercado Pago e PayPal;
+- preservadas as restrições `base-uri`, `object-src` e `frame-ancestors`, sem curingas ou liberação genérica de formulários externos.
+
 ## Não publicado — deploy da configuração Mercado Pago
 
 - excluída da detecção de segredos da Netlify somente a variável não sensível `MERCADO_PAGO_ENVIRONMENT`, cujo valor público `production` aparece legitimamente no bundle;

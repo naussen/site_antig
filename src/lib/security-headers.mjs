@@ -1,7 +1,7 @@
 export const SECURITY_HEADERS = [
   {
     key: "Content-Security-Policy",
-    value: "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'",
+    value: "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://www.mercadopago.com.br https://www.mercadopago.com https://sandbox.mercadopago.com.br https://www.paypal.com https://www.sandbox.paypal.com",
   },
   {
     key: "Permissions-Policy",

@@ -25,7 +25,7 @@ test("aplica CSP estrutural sem restringir recursos da aplicação", () => {
 
   assert.equal(
     contentSecurityPolicy,
-    "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'"
+    "base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self' https://www.mercadopago.com.br https://www.mercadopago.com https://sandbox.mercadopago.com.br https://www.paypal.com https://www.sandbox.paypal.com"
   );
   assert.doesNotMatch(contentSecurityPolicy, /(?:script|style|connect|img)-src/);
 });
