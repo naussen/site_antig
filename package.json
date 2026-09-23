@@ -13,9 +13,11 @@
     "test:site-paths": "node --test tests/site-paths.test.mjs",
     "test:highlights": "node --test tests/text-highlights.test.mjs tests/same-origin.test.mjs",
     "test:payments": "node --test tests/payments-core.test.mjs tests/payment-hardening.test.mjs",
+    "test:planner": "node --test tests/study-planner.test.mjs",
     "test:rls-two-users": "node --env-file-if-exists=.env.local scripts/test-rls-two-users.mjs"
   },
   "dependencies": {
+    "@dnd-kit/core": "^6.3.1",
     "@supabase/ssr": "^0.12.0",
     "@supabase/supabase-js": "^2.110.0",
     "class-variance-authority": "^0.7.1",

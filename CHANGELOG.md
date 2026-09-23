@@ -1,5 +1,14 @@
 # Changelog
 
+## Não publicado — Planner semanal de estudos
+
+- criada a rota autenticada `/dashboard/planner` e o link “Planner” na navegação da área do aluno;
+- adicionados planos pessoais de uma a quatro semanas, faixa diária e intervalos configuráveis;
+- implementados criação, edição, exclusão e movimentação por arrastar de blocos de disciplinas, com formulário acessível como alternativa;
+- adicionada a migration 026 com RLS, limites de integridade, prevenção transacional de sobreposição e isolamento por usuário;
+- adicionada a dependência `@dnd-kit/core` para interação por mouse, toque e teclado;
+- migration 026 aplicada no Supabase remoto e isolamento validado com dois usuários temporários, removidos ao final do teste.
+
 ## Não publicado — consolidação das revisões disciplinares
 
 - auditadas todas as branches locais, remotas e worktrees de revisão acessíveis;

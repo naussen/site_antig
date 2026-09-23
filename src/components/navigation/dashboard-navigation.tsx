@@ -6,6 +6,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
   BookOpen,
+  CalendarDays,
   Loader2,
   LogOut,
   Menu,
@@ -55,6 +56,7 @@ function getSidebarServerSnapshot() {
 
 const navigationItems = [
   { href: "/dashboard", label: "Início", icon: BookOpen, exact: true },
+  { href: "/dashboard/planner", label: "Planner", icon: CalendarDays },
   { href: "/dashboard/notas", label: "Notas", icon: StickyNote },
   {
     href: "/dashboard/configuracoes",

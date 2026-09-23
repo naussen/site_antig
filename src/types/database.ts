@@ -168,6 +168,34 @@ export interface UserDashboardPreferences {
   updated_at: string;
 }
 
+export interface StudyPlanRow {
+  id: string;
+  user_id: string;
+  title: string;
+  start_date: string;
+  weeks_count: number;
+  day_start_minute: number;
+  day_end_minute: number;
+  slot_minutes: 15 | 30 | 60;
+  timezone: 'America/Sao_Paulo';
+  is_active: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface StudyPlanItemRow {
+  id: string;
+  plan_id: string;
+  user_id: string;
+  discipline: string;
+  study_date: string;
+  start_minute: number;
+  end_minute: number;
+  note: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
 export interface UserNoteImage {
   id: string;
   user_id: string;

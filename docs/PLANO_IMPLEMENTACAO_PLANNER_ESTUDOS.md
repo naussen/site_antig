@@ -2,6 +2,19 @@
 
 Atualizado em: 22 de setembro de 2026.
 
+## Progresso da implementação
+
+| Fase | Estado | Evidência |
+|---|---|---|
+| 0 — contrato e protótipo | Concluída | contrato, UX desktop/mobile e validações definidos |
+| 1 — banco e RLS | Concluída | migration 026 aplicada; teste remoto com dois usuários aprovado |
+| 2 — CRUD acessível | Concluída | rota, menu, Server Actions, formulários e estados implementados |
+| 3 — drag-and-drop | Em andamento | criação e movimentação por drag prontas; redimensionamento por gesto pendente |
+| 4 — múltiplas semanas | Em andamento | navegação de 1–4 semanas pronta; copiar semana pendente |
+| 5 — acabamento | Em validação | lint, tipos, testes, audit e build aprovados; smoke visual pós-deploy pendente |
+
+Pendências deliberadamente mantidas para o próximo incremento: redimensionamento direto pela borda do bloco, copiar semana e desfazer exclusão. O ajuste de início/fim já funciona pelo diálogo acessível.
+
 ## 1. Objetivo
 
 Criar na área autenticada do aluno um planner de estudos com horizonte configurável de **1 a 4 semanas**, no qual o usuário possa:

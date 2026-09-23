@@ -64,6 +64,17 @@ try {
   if (sectionError || !section) throw new Error("Nenhuma seção ativa disponível para a fixture RLS.");
   const userA = await createTestUser("a");
   const userB = await createTestUser("b");
+  const plannerStartDate = "2026-09-21";
+
+  const [planA, planB] = await Promise.all([
+    mustInsert("study_plans", { user_id: userA.id, title: "Planner A", start_date: plannerStartDate, weeks_count: 2 }),
+    mustInsert("study_plans", { user_id: userB.id, title: "Planner B", start_date: plannerStartDate, weeks_count: 2 }),
+  ]);
+
+  await Promise.all([
+    mustInsert("study_plan_items", { plan_id: planA.id, user_id: userA.id, discipline: "A", study_date: plannerStartDate, start_minute: 360, end_minute: 420 }),
+    mustInsert("study_plan_items", { plan_id: planB.id, user_id: userB.id, discipline: "B", study_date: plannerStartDate, start_minute: 360, end_minute: 420 }),
+  ]);
 
   const fixtures = await Promise.all([
     mustInsert("user_notes", { user_id: userA.id, section_id: section.section_id, content_unit_id: section.content_unit_id, content: "fixture-a" }),
@@ -85,6 +96,8 @@ try {
     await assertOwnRows(user.client, "user_dashboard_preferences", user.id);
     await assertOwnRows(user.client, "user_entitlements", user.id);
     await assertOwnRows(user.client, "privacy_requests", user.id);
+    await assertOwnRows(user.client, "study_plans", user.id);
+    await assertOwnRows(user.client, "study_plan_items", user.id);
   }
 
   const { data: accessBeforeBlock, error: accessBeforeBlockError } = await userA.client.rpc("has_active_content_access");
@@ -132,6 +145,26 @@ try {
   });
   assert.equal(forgedInsertError?.code, "42501", "usuário A não deve gravar progresso em nome de B");
 
+  const { error: forgedPlannerInsertError } = await userA.client.from("study_plan_items").insert({
+    plan_id: planB.id,
+    user_id: userB.id,
+    discipline: "A",
+    study_date: plannerStartDate,
+    start_minute: 420,
+    end_minute: 480,
+  });
+  assert.ok(forgedPlannerInsertError, "usuário A não deve criar horário no planner de B");
+
+  const { error: overlappingItemError } = await userA.client.from("study_plan_items").insert({
+    plan_id: planA.id,
+    user_id: userA.id,
+    discipline: "A",
+    study_date: plannerStartDate,
+    start_minute: 390,
+    end_minute: 450,
+  });
+  assert.equal(overlappingItemError?.code, "23P01", "horários sobrepostos devem ser rejeitados pelo banco");
+
   const { error: entitlementUpdateError } = await userA.client
     .from("user_entitlements").update({ status: "active" }).eq("user_id", userA.id);
   assert.ok(entitlementUpdateError, "browser não deve alterar entitlement nem do próprio usuário");
@@ -160,4 +193,4 @@ try {
   }
 }
 
-if (assertionsPassed) console.log("RLS de dois usuários: 18 verificações aprovadas em produção; fixtures removidas.");
+if (assertionsPassed) console.log("RLS de dois usuários: planner e dados pessoais isolados; fixtures removidas.");
