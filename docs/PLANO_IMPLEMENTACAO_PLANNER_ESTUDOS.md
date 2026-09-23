@@ -11,9 +11,9 @@ Atualizado em: 22 de setembro de 2026.
 | 2 — CRUD acessível | Concluída | rota, menu, Server Actions, formulários e estados implementados |
 | 3 — drag-and-drop | Em andamento | criação e movimentação por drag prontas; redimensionamento por gesto pendente |
 | 4 — múltiplas semanas | Em andamento | navegação de 1–4 semanas pronta; copiar semana pendente |
-| 5 — acabamento | Em validação | lint, tipos, testes, audit e build aprovados; smoke visual pós-deploy pendente |
+| 5 — acabamento | Em validação | lint, tipos, testes, audit e build aprovados; estado inicial validado em produção nos três temas e em 390 px |
 
-Pendências deliberadamente mantidas para o próximo incremento: redimensionamento direto pela borda do bloco, copiar semana e desfazer exclusão. O ajuste de início/fim já funciona pelo diálogo acessível.
+Pendências deliberadamente mantidas para o próximo incremento: redimensionamento direto pela borda do bloco, copiar semana e desfazer exclusão. O ajuste de início/fim já funciona pelo diálogo acessível. A grade preenchida ainda requer smoke visual em conta de teste dedicada, para não criar dados artificiais na conta real usada na validação de produção.
 
 ## 1. Objetivo
 
