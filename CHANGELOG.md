@@ -11,6 +11,13 @@
 - adicionados redimensionamento direto da duração por gesto ou teclado, cópia segura para a semana seguinte e restauração do último bloco excluído;
 - a cópia semanal recusa semanas de destino já preenchidas e nunca sobrescreve horários silenciosamente.
 
+## Não publicado — remoção da disciplina Geral
+
+- arquivados de forma recuperável os três módulos e as 26 seções classificados como `Geral`, após backup exportável;
+- confirmado que o conteúdo removido era agregado ou redundante em relação à disciplina `Auditoria`;
+- preservados sem alteração os 24 módulos e as 76 seções ativas de `Auditoria`;
+- removida `Geral` do inventário do plano de revisão.
+
 ## Não publicado — consolidação das revisões disciplinares
 
 - auditadas todas as branches locais, remotas e worktrees de revisão acessíveis;

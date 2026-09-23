@@ -98,7 +98,6 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [x] | Direito Tributário | [ ] | [x] | 21 resumos e 306 seções revisados; 41 correções jurídicas e saneamento visual/editorial aplicados; 106 mapas e 32 seções com tabelas validados; módulo legado duplicado arquivado; persistência integral e smoke autenticado confirmados. |
 | [ ] | Ética no Serviço Público | [ ] | [ ] | — |
 | [x] | Finanças Públicas | [ ] | [x] | 1 resumo e 7 seções revisados; erros econômicos, fiscais, matemáticos e de Markdown corrigidos; 4 gráficos, 4 mapas Mermaid e 5 tabelas validados; persistência integral e smoke autenticado confirmados. |
-| [ ] | Geral | [ ] | [ ] | — |
 | [ ] | Legislação Aduaneira | [ ] | [ ] | — |
 | [ ] | Legislação Penal Especial | [ ] | [ ] | — |
 | [ ] | Macroeconomia | [ ] | [ ] | — |
@@ -113,6 +112,8 @@ Auditoria realizada sobre todas as branches locais, remotas e worktrees acessív
 Nenhuma branch contém revisão disciplinar concluída adicional que esteja ausente da `main`. O commit `9a8ae01`, mantido na branch histórica `docs/revisao-afo-20260919`, não deve ser integrado: ele registra uma versão anterior da revisão de AFO e foi substituído pelo commit mais completo `cd00e2b`, já presente na `main`.
 
 O conteúdo publicado das disciplinas permanece persistido no Supabase; o Git conserva os scripts de correção, alterações de aplicação, registros do plano e evidências versionáveis de cada revisão. Branches e worktrees disciplinares antigas são snapshots históricos e não devem ser usadas como fonte do estado canônico.
+
+**Saneamento posterior:** a entrada `Geral` foi removida do inventário ativo em 22 de setembro de 2026. Seus três módulos e 26 seções eram conteúdo de Auditoria agregado ou redundante; foram arquivados de forma recuperável após backup exportável. Os 24 módulos e 76 seções da disciplina `Auditoria` permaneceram ativos e inalterados.
 
 ## 6. Registro da disciplina ativa
 
