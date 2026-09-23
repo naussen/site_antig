@@ -106,6 +106,14 @@ Se uma correção em componente compartilhado puder afetar outros resumos, execu
 | [x] | Português | [ ] | [x] | 6 resumos e 37 seções revisados; 72 correções editoriais aplicadas em 20 seções; persistência integral confirmada no Supabase. |
 | [ ] | Raciocínio Lógico, Matemática, Estatística e Matemática Financeira | [ ] | [ ] | — |
 
+### Consolidação das revisões na `main` — 22 de setembro de 2026
+
+Auditoria realizada sobre todas as branches locais, remotas e worktrees acessíveis. As 16 disciplinas marcadas como concluídas neste plano possuem seus commits canônicos de revisão, correção ou registro em `origin/main`: Administração de Recursos Materiais; Administração Financeira e Orçamentária; Administração Geral; Administração Pública; Análise de Balanços; Auditoria; Contabilidade Geral e Avançada; Direito Administrativo; Direito Civil; Direito Constitucional; Direito Empresarial; Direito Penal; Direito Processual Civil; Direito Tributário; Finanças Públicas; e Português.
+
+Nenhuma branch contém revisão disciplinar concluída adicional que esteja ausente da `main`. O commit `9a8ae01`, mantido na branch histórica `docs/revisao-afo-20260919`, não deve ser integrado: ele registra uma versão anterior da revisão de AFO e foi substituído pelo commit mais completo `cd00e2b`, já presente na `main`.
+
+O conteúdo publicado das disciplinas permanece persistido no Supabase; o Git conserva os scripts de correção, alterações de aplicação, registros do plano e evidências versionáveis de cada revisão. Branches e worktrees disciplinares antigas são snapshots históricos e não devem ser usadas como fonte do estado canônico.
+
 ## 6. Registro da disciplina ativa
 
 Ao iniciar uma disciplina, adicionar abaixo uma subseção no formato:

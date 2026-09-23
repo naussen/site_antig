@@ -1,5 +1,12 @@
 # Changelog
 
+## Não publicado — consolidação das revisões disciplinares
+
+- auditadas todas as branches locais, remotas e worktrees de revisão acessíveis;
+- confirmadas na `main` as 16 disciplinas marcadas como concluídas no plano de revisão;
+- confirmado que nenhuma revisão disciplinar concluída permanece exclusiva de branch;
+- mantido fora da integração o registro histórico `9a8ae01`, por ter sido substituído pela revisão de AFO mais completa `cd00e2b` já presente na `main`.
+
 ## Não publicado — revisão de Direito Tributário
 
 - revisados funcional, visual e juridicamente os 21 resumos e as 306 seções ativas de Direito Tributário;
