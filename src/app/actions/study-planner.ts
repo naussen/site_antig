@@ -4,6 +4,8 @@ import { revalidatePath } from "next/cache";
 import { requireContentAccess } from "@/lib/content-access";
 import {
   createPlanSchema,
+  copyWeekSchema,
+  addDays,
   itemIdSchema,
   planItemSchema,
   updatePlanSchema,
@@ -150,4 +152,70 @@ export async function deleteStudyPlanItem(input: unknown): Promise<PlannerAction
   }
 
   return success("Estudo removido.");
+}
+
+export async function copyStudyPlanWeek(input: unknown): Promise<PlannerActionResult> {
+  const parsed = copyWeekSchema.safeParse(input);
+  if (!parsed.success) return failure("Semana de origem inválida.");
+
+  const { supabase, user } = await requireContentAccess();
+  const { data: plan, error: planError } = await supabase
+    .from("study_plans")
+    .select("id, start_date, weeks_count")
+    .eq("id", parsed.data.planId)
+    .eq("user_id", user.id)
+    .maybeSingle();
+
+  if (planError || !plan) return failure("Plano de estudos não encontrado.");
+  if (parsed.data.sourceWeekIndex + 1 >= plan.weeks_count) {
+    return failure("Não há uma semana seguinte dentro deste plano.");
+  }
+
+  const sourceStart = addDays(plan.start_date, parsed.data.sourceWeekIndex * 7);
+  const sourceEnd = addDays(sourceStart, 7);
+  const targetStart = sourceEnd;
+  const targetEnd = addDays(targetStart, 7);
+  const [{ data: sourceItems, error: sourceError }, { data: targetItems, error: targetError }] =
+    await Promise.all([
+      supabase
+        .from("study_plan_items")
+        .select("discipline, study_date, start_minute, end_minute, note")
+        .eq("plan_id", plan.id)
+        .eq("user_id", user.id)
+        .gte("study_date", sourceStart)
+        .lt("study_date", sourceEnd),
+      supabase
+        .from("study_plan_items")
+        .select("id")
+        .eq("plan_id", plan.id)
+        .eq("user_id", user.id)
+        .gte("study_date", targetStart)
+        .lt("study_date", targetEnd)
+        .limit(1),
+    ]);
+
+  if (sourceError || targetError) return failure("Não foi possível conferir as semanas.");
+  if (!sourceItems?.length) return failure("A semana atual ainda não possui estudos para copiar.");
+  if (targetItems?.length) {
+    return failure("A semana seguinte já possui estudos. Nada foi sobrescrito.");
+  }
+
+  const { error } = await supabase.from("study_plan_items").insert(
+    sourceItems.map((item) => ({
+      plan_id: plan.id,
+      user_id: user.id,
+      discipline: item.discipline,
+      study_date: addDays(item.study_date, 7),
+      start_minute: item.start_minute,
+      end_minute: item.end_minute,
+      note: item.note,
+    })),
+  );
+
+  if (error) {
+    console.error("Falha ao copiar semana do planner.", { code: error.code });
+    return failure(plannerErrorMessage(error));
+  }
+
+  return success("Semana copiada sem sobrescrever horários existentes.");
 }

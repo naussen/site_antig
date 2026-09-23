@@ -8,6 +8,8 @@
 - adicionada a migration 026 com RLS, limites de integridade, prevenção transacional de sobreposição e isolamento por usuário;
 - adicionada a dependência `@dnd-kit/core` para interação por mouse, toque e teclado;
 - migration 026 aplicada no Supabase remoto e isolamento validado com dois usuários temporários, removidos ao final do teste.
+- adicionados redimensionamento direto da duração por gesto ou teclado, cópia segura para a semana seguinte e restauração do último bloco excluído;
+- a cópia semanal recusa semanas de destino já preenchidas e nunca sobrescreve horários silenciosamente.
 
 ## Não publicado — consolidação das revisões disciplinares
 

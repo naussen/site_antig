@@ -17,17 +17,20 @@ import {
   ChevronLeft,
   ChevronRight,
   Clock3,
+  Copy,
   GripVertical,
   Pencil,
   Plus,
+  RotateCcw,
   Settings2,
   Trash2,
   X,
 } from "lucide-react";
-import { useMemo, useState, useTransition } from "react";
+import { useMemo, useRef, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import {
   createStudyPlan,
+  copyStudyPlanWeek,
   deleteStudyPlanItem,
   saveStudyPlanItem,
   updateStudyPlan,
@@ -77,11 +80,21 @@ function DraggableDiscipline({ discipline, onAdd }: { discipline: string; onAdd:
   );
 }
 
-function DraggableStudyBlock({ item, onEdit }: { item: PlannerItem; onEdit: () => void }) {
+function DraggableStudyBlock({ item, slotMinutes, dayEndMinute, onEdit, onResize }: { item: PlannerItem; slotMinutes: number; dayEndMinute: number; onEdit: () => void; onResize: (endMinute: number) => void }) {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: `item:${item.id}`,
     data: { kind: "item", item },
   });
+  const resizeStartY = useRef<number | null>(null);
+
+  const resizeBySlots = (slots: number) => {
+    const nextEnd = Math.max(
+      item.startMinute + slotMinutes,
+      Math.min(dayEndMinute, item.endMinute + slots * slotMinutes),
+    );
+    if (nextEnd !== item.endMinute) onResize(nextEnd);
+  };
+
   return (
     <div ref={setNodeRef} className={`group rounded-xl border border-[var(--accent)]/30 bg-[var(--accent-soft)] p-2 text-left shadow-sm ${isDragging ? "opacity-50" : ""}`}>
       <div className="flex items-start gap-1">
@@ -94,6 +107,28 @@ function DraggableStudyBlock({ item, onEdit }: { item: PlannerItem; onEdit: () =
         </button>
         <Pencil size={13} className="mt-1 shrink-0 text-[var(--text-muted)] opacity-0 group-hover:opacity-100" aria-hidden="true" />
       </div>
+      <button
+        type="button"
+        className="mt-1 flex h-4 w-full touch-none cursor-ns-resize items-end justify-center border-t border-[var(--accent)]/20 text-[var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+        aria-label={`Ajustar duração de ${item.discipline}. Use as setas para cima ou para baixo.`}
+        onPointerDown={(event) => {
+          resizeStartY.current = event.clientY;
+          event.currentTarget.setPointerCapture(event.pointerId);
+        }}
+        onPointerUp={(event) => {
+          if (resizeStartY.current === null) return;
+          const slots = Math.round((event.clientY - resizeStartY.current) / 28);
+          resizeStartY.current = null;
+          if (slots !== 0) resizeBySlots(slots);
+        }}
+        onPointerCancel={() => { resizeStartY.current = null; }}
+        onKeyDown={(event) => {
+          if (event.key === "ArrowDown") { event.preventDefault(); resizeBySlots(1); }
+          if (event.key === "ArrowUp") { event.preventDefault(); resizeBySlots(-1); }
+        }}
+      >
+        <span className="mb-0.5 block h-0.5 w-8 rounded-full bg-current" aria-hidden="true" />
+      </button>
     </div>
   );
 }
@@ -119,6 +154,7 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [draft, setDraft] = useState<ItemDraft | null>(null);
   const [activeDragLabel, setActiveDragLabel] = useState<string | null>(null);
+  const [lastDeleted, setLastDeleted] = useState<PlannerItem | null>(null);
   const sensors = useSensors(
     useSensor(MouseSensor, { activationConstraint: { distance: 8 } }),
     useSensor(TouchSensor, { activationConstraint: { delay: 180, tolerance: 8 } }),
@@ -200,7 +236,16 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
       <h3 className="sticky top-0 z-10 border-b border-[var(--border)] bg-[var(--bg-card)] px-2 py-3 text-center text-xs font-bold capitalize text-[var(--text-primary)]">{weekDayFormatter.format(parseLocalDate(date))}</h3>
       {slots.map((minute) => (
         <DroppableSlot key={`${date}:${minute}`} date={date} minute={minute} onAdd={() => openNewItem(disciplines[0] ?? "", date, minute)}>
-          {(itemsByDateAndTime.get(`${date}:${minute}`) ?? []).map((item) => <DraggableStudyBlock key={item.id} item={item} onEdit={() => setDraft({ id: item.id, discipline: item.discipline, studyDate: item.studyDate, startMinute: item.startMinute, endMinute: item.endMinute, note: item.note ?? "" })} />)}
+          {(itemsByDateAndTime.get(`${date}:${minute}`) ?? []).map((item) => (
+            <DraggableStudyBlock
+              key={item.id}
+              item={item}
+              slotMinutes={initialPlan.slotMinutes}
+              dayEndMinute={initialPlan.dayEndMinute}
+              onEdit={() => setDraft({ id: item.id, discipline: item.discipline, studyDate: item.studyDate, startMinute: item.startMinute, endMinute: item.endMinute, note: item.note ?? "" })}
+              onResize={(endMinute) => runAction(() => saveStudyPlanItem({ id: item.id, planId: initialPlan.id, discipline: item.discipline, studyDate: item.studyDate, startMinute: item.startMinute, endMinute, note: item.note ?? "" }))}
+            />
+          ))}
         </DroppableSlot>
       ))}
     </section>
@@ -208,6 +253,7 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
 
   return (
     <DndContext
+      id="study-planner-dnd"
       sensors={sensors}
       onDragStart={({ active }) => {
         const data = active.data.current;
@@ -232,6 +278,9 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
             <div className="flex flex-wrap items-center gap-2">
               <button type="button" onClick={() => setWeekIndex((value) => Math.max(0, value - 1))} disabled={safeWeekIndex === 0} className="grid h-10 w-10 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-primary)] disabled:opacity-40" aria-label="Semana anterior"><ChevronLeft size={18} /></button>
               <button type="button" onClick={() => setWeekIndex((value) => Math.min(initialPlan.weeksCount - 1, value + 1))} disabled={safeWeekIndex === initialPlan.weeksCount - 1} className="grid h-10 w-10 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-primary)] disabled:opacity-40" aria-label="Próxima semana"><ChevronRight size={18} /></button>
+              {safeWeekIndex < initialPlan.weeksCount - 1 && (
+                <button type="button" onClick={() => runAction(() => copyStudyPlanWeek({ planId: initialPlan.id, sourceWeekIndex: safeWeekIndex }), () => setWeekIndex(safeWeekIndex + 1))} disabled={pending} className="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--border)] px-3 text-sm font-bold text-[var(--text-secondary)] hover:border-[var(--accent)] disabled:opacity-50"><Copy size={17} /> Copiar semana</button>
+              )}
               <button type="button" onClick={() => setSettingsOpen((value) => !value)} className="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--border)] px-3 text-sm font-bold text-[var(--text-secondary)] hover:border-[var(--accent)]"><Settings2 size={17} /> Ajustar</button>
             </div>
           </div>
@@ -241,11 +290,16 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
           <div className="border-b border-[var(--border)] p-3 md:hidden"><label className="text-xs font-bold text-[var(--text-secondary)]">Dia exibido<select value={mobileDay} onChange={(event) => setMobileDay(Number(event.target.value))} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-2 text-sm text-[var(--text-primary)]">{weekDates.map((date, index) => <option key={date} value={index}>{longDateFormatter.format(parseLocalDate(date))}</option>)}</select></label></div>
           <div className="hidden overflow-x-auto md:block"><div className="grid min-w-[980px] grid-cols-7">{weekDates.map(renderDay)}</div></div>
           <div className="md:hidden">{renderDay(weekDates[mobileDay])}</div>
-          <p className="border-t border-[var(--border)] p-4 text-sm text-[var(--text-secondary)]" aria-live="polite">{pending ? "Salvando…" : message}</p>
+          <div className="flex flex-col gap-2 border-t border-[var(--border)] p-4 text-sm text-[var(--text-secondary)] sm:flex-row sm:items-center sm:justify-between" aria-live="polite">
+            <p>{pending ? "Salvando…" : message}</p>
+            {lastDeleted && (
+              <button type="button" disabled={pending} onClick={() => runAction(() => saveStudyPlanItem({ planId: initialPlan.id, discipline: lastDeleted.discipline, studyDate: lastDeleted.studyDate, startMinute: lastDeleted.startMinute, endMinute: lastDeleted.endMinute, note: lastDeleted.note ?? "" }), () => setLastDeleted(null))} className="inline-flex items-center gap-2 self-start rounded-xl border border-[var(--border)] px-3 py-2 font-bold text-[var(--accent)] disabled:opacity-50"><RotateCcw size={16} /> Desfazer exclusão</button>
+            )}
+          </div>
         </section>
       </div>
 
-      {draft && <ItemDialog draft={draft} disciplines={disciplines} plan={initialPlan} pending={pending} onClose={() => setDraft(null)} onSave={(value) => runAction(() => saveStudyPlanItem({ ...value, planId: initialPlan.id }), () => setDraft(null))} onDelete={draft.id ? () => runAction(() => deleteStudyPlanItem(draft.id!), () => setDraft(null)) : undefined} />}
+      {draft && <ItemDialog draft={draft} disciplines={disciplines} plan={initialPlan} pending={pending} onClose={() => setDraft(null)} onSave={(value) => runAction(() => saveStudyPlanItem({ ...value, planId: initialPlan.id }), () => setDraft(null))} onDelete={draft.id ? () => runAction(() => deleteStudyPlanItem(draft.id!), () => { setLastDeleted({ id: draft.id!, discipline: draft.discipline, studyDate: draft.studyDate, startMinute: draft.startMinute, endMinute: draft.endMinute, note: draft.note || null }); setDraft(null); }) : undefined} />}
       <DragOverlay>
         {activeDragLabel ? <div className="max-w-64 rounded-xl border border-[var(--accent)] bg-[var(--bg-card)] px-4 py-3 text-sm font-bold text-[var(--text-primary)] shadow-2xl">{activeDragLabel}</div> : null}
       </DragOverlay>

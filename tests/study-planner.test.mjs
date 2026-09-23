@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   addDays,
+  copyWeekSchema,
   createPlanSchema,
   formatDateKey,
   getMonday,
@@ -56,4 +57,11 @@ test("rejeita bloco com fim anterior ao início", () => {
     endMinute: 570,
     note: "",
   }).success, false);
+});
+
+test("limita a cópia às semanas que podem possuir uma semana seguinte", () => {
+  const planId = "0d46ff39-e1c8-4d4f-a0b0-e09f4ca06dcc";
+  assert.equal(copyWeekSchema.safeParse({ planId, sourceWeekIndex: 0 }).success, true);
+  assert.equal(copyWeekSchema.safeParse({ planId, sourceWeekIndex: 2 }).success, true);
+  assert.equal(copyWeekSchema.safeParse({ planId, sourceWeekIndex: 3 }).success, false);
 });

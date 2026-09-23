@@ -48,6 +48,10 @@ export const planItemSchema = z.object({
 });
 
 export const itemIdSchema = z.string().uuid();
+export const copyWeekSchema = z.object({
+  planId: z.string().uuid(),
+  sourceWeekIndex: z.coerce.number().int().min(0).max(2),
+});
 
 export function parseLocalDate(date: string) {
   const [year, month, day] = date.split("-").map(Number);
