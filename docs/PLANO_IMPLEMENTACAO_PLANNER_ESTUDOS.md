@@ -1,6 +1,13 @@
 # Plano de implementação — Planner semanal de estudos
 
-Atualizado em: 23 de setembro de 2026.
+Atualizado em: 24 de setembro de 2026.
+
+## Simplificação da grade — 24 de setembro de 2026
+
+- grade unificada em intervalos fixos de 15 minutos, sem configuração adicional;
+- blocos com altura proporcional à duração e redimensionamento direto pela alça inferior;
+- duração mínima de 15 minutos e máxima de 90 minutos, validada também no servidor;
+- criação, movimentação e edição preservadas por mouse, toque, teclado e formulário.
 
 ## Progresso da implementação
 

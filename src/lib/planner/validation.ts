@@ -2,6 +2,10 @@ import { z } from "zod";
 
 const datePattern = /^\d{4}-\d{2}-\d{2}$/;
 
+export const PLANNER_SLOT_MINUTES = 15;
+export const PLANNER_MIN_DURATION_MINUTES = 15;
+export const PLANNER_MAX_DURATION_MINUTES = 90;
+
 const planFields = z.object({
   title: z.string().trim().min(1).max(80),
   startDate: z.string().regex(datePattern),
@@ -42,8 +46,12 @@ export const planItemSchema = z.object({
   endMinute: z.coerce.number().int().min(1).max(1440),
   note: z.string().trim().max(300).optional().default(""),
 }).superRefine((value, context) => {
-  if (value.endMinute <= value.startMinute) {
-    context.addIssue({ code: "custom", path: ["endMinute"], message: "O fim deve ser posterior ao início." });
+  const duration = value.endMinute - value.startMinute;
+  if (duration < PLANNER_MIN_DURATION_MINUTES || duration > PLANNER_MAX_DURATION_MINUTES) {
+    context.addIssue({ code: "custom", path: ["endMinute"], message: "A duração deve ficar entre 15 e 90 minutos." });
+  }
+  if (value.startMinute % PLANNER_SLOT_MINUTES !== 0 || value.endMinute % PLANNER_SLOT_MINUTES !== 0) {
+    context.addIssue({ code: "custom", path: ["endMinute"], message: "Os horários devem respeitar intervalos de 15 minutos." });
   }
 });
 

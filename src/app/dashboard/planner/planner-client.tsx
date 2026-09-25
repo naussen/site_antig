@@ -41,6 +41,9 @@ import {
   getMonday,
   minuteToTime,
   parseLocalDate,
+  PLANNER_MAX_DURATION_MINUTES,
+  PLANNER_MIN_DURATION_MINUTES,
+  PLANNER_SLOT_MINUTES,
   timeToMinute,
 } from "@/lib/planner/validation";
 
@@ -61,6 +64,7 @@ type ItemDraft = {
 
 const weekDayFormatter = new Intl.DateTimeFormat("pt-BR", { weekday: "short", day: "2-digit", month: "2-digit" });
 const longDateFormatter = new Intl.DateTimeFormat("pt-BR", { weekday: "long", day: "numeric", month: "long" });
+const SLOT_HEIGHT_PX = 36;
 
 function DraggableDiscipline({ discipline, onAdd }: { discipline: string; onAdd: () => void }) {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
@@ -80,7 +84,7 @@ function DraggableDiscipline({ discipline, onAdd }: { discipline: string; onAdd:
   );
 }
 
-function DraggableStudyBlock({ item, slotMinutes, dayEndMinute, onEdit, onResize }: { item: PlannerItem; slotMinutes: number; dayEndMinute: number; onEdit: () => void; onResize: (endMinute: number) => void }) {
+function DraggableStudyBlock({ item, dayEndMinute, onEdit, onResize }: { item: PlannerItem; dayEndMinute: number; onEdit: () => void; onResize: (endMinute: number) => void }) {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: `item:${item.id}`,
     data: { kind: "item", item },
@@ -89,27 +93,27 @@ function DraggableStudyBlock({ item, slotMinutes, dayEndMinute, onEdit, onResize
 
   const resizeBySlots = (slots: number) => {
     const nextEnd = Math.max(
-      item.startMinute + slotMinutes,
-      Math.min(dayEndMinute, item.endMinute + slots * slotMinutes),
+      item.startMinute + PLANNER_MIN_DURATION_MINUTES,
+      Math.min(item.startMinute + PLANNER_MAX_DURATION_MINUTES, dayEndMinute, item.endMinute + slots * PLANNER_SLOT_MINUTES),
     );
     if (nextEnd !== item.endMinute) onResize(nextEnd);
   };
 
   return (
-    <div ref={setNodeRef} className={`group rounded-xl border border-[var(--accent)]/30 bg-[var(--accent-soft)] p-2 text-left shadow-sm ${isDragging ? "opacity-50" : ""}`}>
+    <div ref={setNodeRef} className={`group flex h-full min-h-0 flex-col overflow-hidden rounded-xl border border-[var(--accent)]/40 bg-[var(--accent-soft)] p-1.5 text-left shadow-sm ${isDragging ? "opacity-50" : ""}`}>
       <div className="flex items-start gap-1">
         <button type="button" className="mt-0.5 cursor-grab touch-none rounded p-1 text-[var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" aria-label={`Mover ${item.discipline}`} {...listeners} {...attributes}>
           <GripVertical size={14} />
         </button>
         <button type="button" onClick={onEdit} className="min-w-0 flex-1 rounded text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]">
           <strong className="block truncate text-xs text-[var(--text-primary)]">{item.discipline}</strong>
-          <span className="mt-0.5 block text-[11px] text-[var(--text-secondary)]">{minuteToTime(item.startMinute)}–{minuteToTime(item.endMinute)}</span>
+          <span className="mt-0.5 block text-[11px] text-[var(--text-secondary)]">{minuteToTime(item.startMinute)}–{minuteToTime(item.endMinute)} · {item.endMinute - item.startMinute} min</span>
         </button>
         <Pencil size={13} className="mt-1 shrink-0 text-[var(--text-muted)] opacity-0 group-hover:opacity-100" aria-hidden="true" />
       </div>
       <button
         type="button"
-        className="mt-1 flex h-4 w-full touch-none cursor-ns-resize items-end justify-center border-t border-[var(--accent)]/20 text-[var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+        className="mt-auto flex h-5 w-full shrink-0 touch-none cursor-ns-resize items-end justify-center border-t border-[var(--accent)]/20 text-[var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
         aria-label={`Ajustar duração de ${item.discipline}. Use as setas para cima ou para baixo.`}
         onPointerDown={(event) => {
           resizeStartY.current = event.clientY;
@@ -117,7 +121,7 @@ function DraggableStudyBlock({ item, slotMinutes, dayEndMinute, onEdit, onResize
         }}
         onPointerUp={(event) => {
           if (resizeStartY.current === null) return;
-          const slots = Math.round((event.clientY - resizeStartY.current) / 28);
+          const slots = Math.round((event.clientY - resizeStartY.current) / SLOT_HEIGHT_PX);
           resizeStartY.current = null;
           if (slots !== 0) resizeBySlots(slots);
         }}
@@ -133,14 +137,13 @@ function DraggableStudyBlock({ item, slotMinutes, dayEndMinute, onEdit, onResize
   );
 }
 
-function DroppableSlot({ date, minute, children, onAdd }: { date: string; minute: number; children: React.ReactNode; onAdd: () => void }) {
+function DroppableSlot({ date, minute, onAdd }: { date: string; minute: number; onAdd: () => void }) {
   const { setNodeRef, isOver } = useDroppable({ id: `slot:${date}:${minute}`, data: { date, minute } });
   return (
-    <div ref={setNodeRef} className={`min-h-16 border-t border-[var(--border)] p-1 transition-colors ${isOver ? "bg-[var(--accent-soft)] ring-2 ring-inset ring-[var(--accent)]" : ""}`}>
-      <button type="button" onClick={onAdd} className="mb-1 w-full rounded px-1 py-1 text-left text-[10px] text-[var(--text-muted)] hover:bg-[var(--accent-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" aria-label={`Adicionar estudo às ${minuteToTime(minute)} em ${date}`}>
-        {minuteToTime(minute)}
+    <div ref={setNodeRef} className={`h-full min-h-0 border-t border-[var(--border)] transition-colors ${isOver ? "bg-[var(--accent-soft)] ring-2 ring-inset ring-[var(--accent)]" : ""}`}>
+      <button type="button" onClick={onAdd} className="h-full w-full rounded px-1 text-left text-[10px] text-[var(--text-muted)] hover:bg-[var(--accent-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" aria-label={`Adicionar estudo às ${minuteToTime(minute)} em ${date}`}>
+        {minute % 60 === 0 ? minuteToTime(minute) : ""}
       </button>
-      <div className="space-y-1">{children}</div>
     </div>
   );
 }
@@ -167,7 +170,7 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
   const slots = useMemo(() => {
     if (!initialPlan) return [];
     const values: number[] = [];
-    for (let minute = initialPlan.dayStartMinute; minute < initialPlan.dayEndMinute; minute += initialPlan.slotMinutes) values.push(minute);
+    for (let minute = initialPlan.dayStartMinute; minute < initialPlan.dayEndMinute; minute += PLANNER_SLOT_MINUTES) values.push(minute);
     return values;
   }, [initialPlan]);
   const itemsByDateAndTime = useMemo(() => {
@@ -206,12 +209,21 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
     const startMinute = Number(minuteText);
     const activeData = active.data.current;
     if (activeData?.kind === "discipline") {
-      openNewItem(String(activeData.discipline), date, startMinute);
+      const endMinute = Math.min(startMinute + 60, initialPlan.dayEndMinute);
+      if (endMinute - startMinute < PLANNER_MIN_DURATION_MINUTES) return;
+      runAction(() => saveStudyPlanItem({
+        planId: initialPlan.id,
+        discipline: String(activeData.discipline),
+        studyDate: date,
+        startMinute,
+        endMinute,
+        note: "",
+      }));
       return;
     }
     if (activeData?.kind === "item") {
       const item = activeData.item as PlannerItem;
-      const duration = item.endMinute - item.startMinute;
+      const duration = Math.min(item.endMinute - item.startMinute, PLANNER_MAX_DURATION_MINUTES);
       const endMinute = Math.min(startMinute + duration, initialPlan.dayEndMinute);
       if (endMinute <= startMinute) return;
       runAction(() => saveStudyPlanItem({ id: item.id, planId: initialPlan.id, discipline: item.discipline, studyDate: date, startMinute, endMinute, note: item.note ?? "" }));
@@ -234,20 +246,29 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
   const renderDay = (date: string) => (
     <section key={date} className="min-w-0 border-l border-[var(--border)] first:border-l-0" aria-label={longDateFormatter.format(parseLocalDate(date))}>
       <h3 className="sticky top-0 z-10 border-b border-[var(--border)] bg-[var(--bg-card)] px-2 py-3 text-center text-xs font-bold capitalize text-[var(--text-primary)]">{weekDayFormatter.format(parseLocalDate(date))}</h3>
-      {slots.map((minute) => (
-        <DroppableSlot key={`${date}:${minute}`} date={date} minute={minute} onAdd={() => openNewItem(disciplines[0] ?? "", date, minute)}>
-          {(itemsByDateAndTime.get(`${date}:${minute}`) ?? []).map((item) => (
+      <div className="grid" style={{ gridTemplateRows: `repeat(${slots.length}, ${SLOT_HEIGHT_PX}px)` }}>
+        {slots.map((minute, index) => (
+          <div key={`${date}:${minute}`} style={{ gridRow: index + 1, gridColumn: 1 }}>
+            <DroppableSlot date={date} minute={minute} onAdd={() => openNewItem(disciplines[0] ?? "", date, minute)} />
+          </div>
+        ))}
+        {slots.flatMap((minute, index) =>
+          (itemsByDateAndTime.get(`${date}:${minute}`) ?? []).map((item) => {
+            const duration = Math.max(PLANNER_MIN_DURATION_MINUTES, Math.min(item.endMinute - item.startMinute, PLANNER_MAX_DURATION_MINUTES));
+            const rowSpan = Math.max(1, Math.round(duration / PLANNER_SLOT_MINUTES));
+            return (
+              <div key={item.id} className="z-[1] m-0.5 min-h-0" style={{ gridRow: `${index + 1} / span ${rowSpan}`, gridColumn: 1 }}>
             <DraggableStudyBlock
-              key={item.id}
               item={item}
-              slotMinutes={initialPlan.slotMinutes}
               dayEndMinute={initialPlan.dayEndMinute}
               onEdit={() => setDraft({ id: item.id, discipline: item.discipline, studyDate: item.studyDate, startMinute: item.startMinute, endMinute: item.endMinute, note: item.note ?? "" })}
               onResize={(endMinute) => runAction(() => saveStudyPlanItem({ id: item.id, planId: initialPlan.id, discipline: item.discipline, studyDate: item.studyDate, startMinute: item.startMinute, endMinute, note: item.note ?? "" }))}
             />
-          ))}
-        </DroppableSlot>
-      ))}
+              </div>
+            );
+          }),
+        )}
+      </div>
     </section>
   );
 
@@ -274,7 +295,7 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
 
         <section className="min-w-0 rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] shadow-[var(--shadow-sm)]">
           <div className="flex flex-col gap-4 border-b border-[var(--border)] p-4 sm:flex-row sm:items-center sm:justify-between">
-            <div><p className="text-xs font-bold uppercase tracking-wider text-[var(--accent)]">Semana {safeWeekIndex + 1} de {initialPlan.weeksCount}</p><h2 className="mt-1 text-xl font-black text-[var(--text-primary)]">{initialPlan.title}</h2><p className="mt-1 text-xs text-[var(--text-muted)]">{minuteToTime(initialPlan.dayStartMinute)}–{minuteToTime(initialPlan.dayEndMinute)} · intervalos de {initialPlan.slotMinutes} min</p></div>
+            <div><p className="text-xs font-bold uppercase tracking-wider text-[var(--accent)]">Semana {safeWeekIndex + 1} de {initialPlan.weeksCount}</p><h2 className="mt-1 text-xl font-black text-[var(--text-primary)]">{initialPlan.title}</h2><p className="mt-1 text-xs text-[var(--text-muted)]">{minuteToTime(initialPlan.dayStartMinute)}–{minuteToTime(initialPlan.dayEndMinute)} · blocos de 15 a 90 min</p></div>
             <div className="flex flex-wrap items-center gap-2">
               <button type="button" onClick={() => setWeekIndex((value) => Math.max(0, value - 1))} disabled={safeWeekIndex === 0} className="grid h-10 w-10 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-primary)] disabled:opacity-40" aria-label="Semana anterior"><ChevronLeft size={18} /></button>
               <button type="button" onClick={() => setWeekIndex((value) => Math.min(initialPlan.weeksCount - 1, value + 1))} disabled={safeWeekIndex === initialPlan.weeksCount - 1} className="grid h-10 w-10 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-primary)] disabled:opacity-40" aria-label="Próxima semana"><ChevronRight size={18} /></button>
@@ -311,16 +332,16 @@ function PlanForm({ plan, pending, onSubmit }: { plan?: PlannerPlan; pending: bo
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    onSubmit({ title: data.get("title"), startDate: data.get("startDate"), weeksCount: data.get("weeksCount"), dayStartMinute: timeToMinute(String(data.get("dayStart"))), dayEndMinute: timeToMinute(String(data.get("dayEnd"))), slotMinutes: data.get("slotMinutes") });
+    onSubmit({ title: data.get("title"), startDate: data.get("startDate"), weeksCount: data.get("weeksCount"), dayStartMinute: timeToMinute(String(data.get("dayStart"))), dayEndMinute: timeToMinute(String(data.get("dayEnd"))), slotMinutes: PLANNER_SLOT_MINUTES });
   };
   return (
     <form onSubmit={handleSubmit} className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       <label className="text-xs font-bold text-[var(--text-secondary)] sm:col-span-2 lg:col-span-1">Nome<input name="title" required maxLength={80} defaultValue={plan?.title ?? "Meu plano de estudos"} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-2.5 text-sm text-[var(--text-primary)]" /></label>
       <label className="text-xs font-bold text-[var(--text-secondary)]">Segunda-feira inicial<input name="startDate" type="date" required defaultValue={plan?.startDate ?? getMonday()} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-2.5 text-sm text-[var(--text-primary)]" /></label>
       <label className="text-xs font-bold text-[var(--text-secondary)]">Semanas<select name="weeksCount" defaultValue={plan?.weeksCount ?? 1} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-2.5 text-sm text-[var(--text-primary)]">{[1, 2, 3, 4].map((value) => <option key={value} value={value}>{value}</option>)}</select></label>
-      <label className="text-xs font-bold text-[var(--text-secondary)]">Início diário<input name="dayStart" type="time" required defaultValue={minuteToTime(plan?.dayStartMinute ?? 360)} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-2.5 text-sm text-[var(--text-primary)]" /></label>
-      <label className="text-xs font-bold text-[var(--text-secondary)]">Fim diário<input name="dayEnd" type="time" required defaultValue={minuteToTime(plan?.dayEndMinute ?? 1380)} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-2.5 text-sm text-[var(--text-primary)]" /></label>
-      <label className="text-xs font-bold text-[var(--text-secondary)]">Intervalo<select name="slotMinutes" defaultValue={plan?.slotMinutes ?? 30} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-2.5 text-sm text-[var(--text-primary)]"><option value="15">15 minutos</option><option value="30">30 minutos</option><option value="60">60 minutos</option></select></label>
+      <label className="text-xs font-bold text-[var(--text-secondary)]">Início diário<input name="dayStart" type="time" step={PLANNER_SLOT_MINUTES * 60} required defaultValue={minuteToTime(plan?.dayStartMinute ?? 360)} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-2.5 text-sm text-[var(--text-primary)]" /></label>
+      <label className="text-xs font-bold text-[var(--text-secondary)]">Fim diário<input name="dayEnd" type="time" step={PLANNER_SLOT_MINUTES * 60} required defaultValue={minuteToTime(plan?.dayEndMinute ?? 1380)} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-2.5 text-sm text-[var(--text-primary)]" /></label>
+      <div className="rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-2.5 text-xs text-[var(--text-secondary)]"><strong className="block text-[var(--text-primary)]">Grade simples</strong>15 minutos por ajuste · máximo de 90 minutos</div>
       <button type="submit" disabled={pending} className="rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-bold text-white disabled:opacity-60 sm:col-span-2 lg:col-span-3">{pending ? "Salvando…" : plan ? "Salvar ajustes" : "Criar planner"}</button>
     </form>
   );
@@ -340,7 +361,8 @@ function ItemDialog({ draft, disciplines, plan, pending, onClose, onSave, onDele
         <form onSubmit={handleSubmit} className="mt-5 space-y-4">
           <label className="block text-xs font-bold text-[var(--text-secondary)]">Disciplina<select name="discipline" required defaultValue={draft.discipline} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-3 text-sm text-[var(--text-primary)]">{disciplines.map((discipline) => <option key={discipline}>{discipline}</option>)}</select></label>
           <label className="block text-xs font-bold text-[var(--text-secondary)]">Data<input name="studyDate" type="date" min={plan.startDate} max={lastDate} required defaultValue={draft.studyDate} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-3 text-sm text-[var(--text-primary)]" /></label>
-          <div className="grid grid-cols-2 gap-3"><label className="text-xs font-bold text-[var(--text-secondary)]">Início<input name="startTime" type="time" min={minuteToTime(plan.dayStartMinute)} max={minuteToTime(plan.dayEndMinute - 1)} step={plan.slotMinutes * 60} required defaultValue={minuteToTime(draft.startMinute)} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-3 text-sm text-[var(--text-primary)]" /></label><label className="text-xs font-bold text-[var(--text-secondary)]">Fim<input name="endTime" type="time" min={minuteToTime(plan.dayStartMinute + 1)} max={minuteToTime(plan.dayEndMinute)} step={plan.slotMinutes * 60} required defaultValue={minuteToTime(draft.endMinute)} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-3 text-sm text-[var(--text-primary)]" /></label></div>
+          <div className="grid grid-cols-2 gap-3"><label className="text-xs font-bold text-[var(--text-secondary)]">Início<input name="startTime" type="time" min={minuteToTime(plan.dayStartMinute)} max={minuteToTime(plan.dayEndMinute - PLANNER_MIN_DURATION_MINUTES)} step={PLANNER_SLOT_MINUTES * 60} required defaultValue={minuteToTime(draft.startMinute)} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-3 text-sm text-[var(--text-primary)]" /></label><label className="text-xs font-bold text-[var(--text-secondary)]">Fim<input name="endTime" type="time" min={minuteToTime(plan.dayStartMinute + PLANNER_MIN_DURATION_MINUTES)} max={minuteToTime(plan.dayEndMinute)} step={PLANNER_SLOT_MINUTES * 60} required defaultValue={minuteToTime(draft.endMinute)} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-3 text-sm text-[var(--text-primary)]" /></label></div>
+          <p className="text-xs text-[var(--text-muted)]">Ajuste em passos de 15 minutos. Cada bloco pode durar de 15 a 90 minutos.</p>
           <label className="block text-xs font-bold text-[var(--text-secondary)]">Observação opcional<textarea name="note" maxLength={300} rows={3} defaultValue={draft.note} className="mt-1 block w-full resize-y rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-3 text-sm text-[var(--text-primary)]" /></label>
           <div className="flex flex-col-reverse gap-3 border-t border-[var(--border)] pt-4 sm:flex-row sm:justify-between">
             {onDelete ? <button type="button" onClick={() => { if (window.confirm("Excluir este horário de estudo?")) onDelete(); }} disabled={pending} className="inline-flex items-center justify-center gap-2 rounded-xl border border-red-500/30 px-4 py-3 text-sm font-bold text-red-500"><Trash2 size={17} /> Excluir</button> : <span />}

@@ -59,6 +59,20 @@ test("rejeita bloco com fim anterior ao início", () => {
   }).success, false);
 });
 
+test("aceita blocos de 15 a 90 minutos em passos de 15", () => {
+  const base = {
+    planId: "0d46ff39-e1c8-4d4f-a0b0-e09f4ca06dcc",
+    discipline: "Direito Constitucional",
+    studyDate: "2026-09-21",
+    startMinute: 600,
+    note: "",
+  };
+  assert.equal(planItemSchema.safeParse({ ...base, endMinute: 615 }).success, true);
+  assert.equal(planItemSchema.safeParse({ ...base, endMinute: 690 }).success, true);
+  assert.equal(planItemSchema.safeParse({ ...base, endMinute: 705 }).success, false);
+  assert.equal(planItemSchema.safeParse({ ...base, endMinute: 610 }).success, false);
+});
+
 test("limita a cópia às semanas que podem possuir uma semana seguinte", () => {
   const planId = "0d46ff39-e1c8-4d4f-a0b0-e09f4ca06dcc";
   assert.equal(copyWeekSchema.safeParse({ planId, sourceWeekIndex: 0 }).success, true);
