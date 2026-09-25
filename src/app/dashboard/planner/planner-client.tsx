@@ -38,6 +38,7 @@ import {
 import type { PlannerItem, PlannerPlan } from "@/lib/planner/types";
 import {
   addDays,
+  clampPlannerEndMinute,
   getMonday,
   minuteToTime,
   parseLocalDate,
@@ -84,23 +85,27 @@ function DraggableDiscipline({ discipline, onAdd }: { discipline: string; onAdd:
   );
 }
 
-function DraggableStudyBlock({ item, dayEndMinute, onEdit, onResize }: { item: PlannerItem; dayEndMinute: number; onEdit: () => void; onResize: (endMinute: number) => void }) {
+function DraggableStudyBlock({ item, dayEndMinute, onEdit, onResizePreview, onResize }: { item: PlannerItem; dayEndMinute: number; onEdit: () => void; onResizePreview: (endMinute: number | null) => void; onResize: (endMinute: number) => void }) {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: `item:${item.id}`,
     data: { kind: "item", item },
   });
   const resizeStartY = useRef<number | null>(null);
 
+  const endMinuteBySlots = (slots: number) => clampPlannerEndMinute({
+    startMinute: item.startMinute,
+    currentEndMinute: item.endMinute,
+    dayEndMinute,
+    slotDelta: slots,
+  });
+
   const resizeBySlots = (slots: number) => {
-    const nextEnd = Math.max(
-      item.startMinute + PLANNER_MIN_DURATION_MINUTES,
-      Math.min(item.startMinute + PLANNER_MAX_DURATION_MINUTES, dayEndMinute, item.endMinute + slots * PLANNER_SLOT_MINUTES),
-    );
+    const nextEnd = endMinuteBySlots(slots);
     if (nextEnd !== item.endMinute) onResize(nextEnd);
   };
 
   return (
-    <div ref={setNodeRef} className={`group flex h-full min-h-0 flex-col overflow-hidden rounded-xl border border-[var(--accent)]/40 bg-[var(--accent-soft)] p-1.5 text-left shadow-sm ${isDragging ? "opacity-50" : ""}`}>
+    <div ref={setNodeRef} className={`group flex h-full min-h-0 w-full max-w-full flex-col overflow-hidden rounded-xl border border-[var(--accent)]/40 bg-[var(--accent-soft)] p-1.5 text-left shadow-sm ${isDragging ? "opacity-50" : ""}`}>
       <div className="flex items-start gap-1">
         <button type="button" className="mt-0.5 cursor-grab touch-none rounded p-1 text-[var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" aria-label={`Mover ${item.discipline}`} {...listeners} {...attributes}>
           <GripVertical size={14} />
@@ -119,13 +124,22 @@ function DraggableStudyBlock({ item, dayEndMinute, onEdit, onResize }: { item: P
           resizeStartY.current = event.clientY;
           event.currentTarget.setPointerCapture(event.pointerId);
         }}
+        onPointerMove={(event) => {
+          if (resizeStartY.current === null) return;
+          const slots = Math.round((event.clientY - resizeStartY.current) / SLOT_HEIGHT_PX);
+          onResizePreview(endMinuteBySlots(slots));
+        }}
         onPointerUp={(event) => {
           if (resizeStartY.current === null) return;
           const slots = Math.round((event.clientY - resizeStartY.current) / SLOT_HEIGHT_PX);
           resizeStartY.current = null;
+          onResizePreview(null);
           if (slots !== 0) resizeBySlots(slots);
         }}
-        onPointerCancel={() => { resizeStartY.current = null; }}
+        onPointerCancel={() => {
+          resizeStartY.current = null;
+          onResizePreview(null);
+        }}
         onKeyDown={(event) => {
           if (event.key === "ArrowDown") { event.preventDefault(); resizeBySlots(1); }
           if (event.key === "ArrowUp") { event.preventDefault(); resizeBySlots(-1); }
@@ -158,6 +172,7 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
   const [draft, setDraft] = useState<ItemDraft | null>(null);
   const [activeDragLabel, setActiveDragLabel] = useState<string | null>(null);
   const [lastDeleted, setLastDeleted] = useState<PlannerItem | null>(null);
+  const [resizePreviewEndById, setResizePreviewEndById] = useState<Record<string, number>>({});
   const sensors = useSensors(
     useSensor(MouseSensor, { activationConstraint: { distance: 8 } }),
     useSensor(TouchSensor, { activationConstraint: { delay: 180, tolerance: 8 } }),
@@ -246,7 +261,7 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
   const renderDay = (date: string) => (
     <section key={date} className="min-w-0 border-l border-[var(--border)] first:border-l-0" aria-label={longDateFormatter.format(parseLocalDate(date))}>
       <h3 className="sticky top-0 z-10 border-b border-[var(--border)] bg-[var(--bg-card)] px-2 py-3 text-center text-xs font-bold capitalize text-[var(--text-primary)]">{weekDayFormatter.format(parseLocalDate(date))}</h3>
-      <div className="grid" style={{ gridTemplateRows: `repeat(${slots.length}, ${SLOT_HEIGHT_PX}px)` }}>
+      <div className="grid min-w-0 overflow-hidden" style={{ gridTemplateColumns: "minmax(0, 1fr)", gridTemplateRows: `repeat(${slots.length}, ${SLOT_HEIGHT_PX}px)` }}>
         {slots.map((minute, index) => (
           <div key={`${date}:${minute}`} style={{ gridRow: index + 1, gridColumn: 1 }}>
             <DroppableSlot date={date} minute={minute} onAdd={() => openNewItem(disciplines[0] ?? "", date, minute)} />
@@ -254,14 +269,23 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
         ))}
         {slots.flatMap((minute, index) =>
           (itemsByDateAndTime.get(`${date}:${minute}`) ?? []).map((item) => {
-            const duration = Math.max(PLANNER_MIN_DURATION_MINUTES, Math.min(item.endMinute - item.startMinute, PLANNER_MAX_DURATION_MINUTES));
+            const displayedEndMinute = resizePreviewEndById[item.id] ?? item.endMinute;
+            const duration = Math.max(PLANNER_MIN_DURATION_MINUTES, Math.min(displayedEndMinute - item.startMinute, PLANNER_MAX_DURATION_MINUTES));
             const rowSpan = Math.max(1, Math.round(duration / PLANNER_SLOT_MINUTES));
             return (
-              <div key={item.id} className="z-[1] m-0.5 min-h-0" style={{ gridRow: `${index + 1} / span ${rowSpan}`, gridColumn: 1 }}>
+              <div key={item.id} className="z-[1] m-0.5 min-h-0 min-w-0 max-w-full overflow-hidden" style={{ gridRow: `${index + 1} / span ${rowSpan}`, gridColumn: "1 / 2" }}>
             <DraggableStudyBlock
               item={item}
               dayEndMinute={initialPlan.dayEndMinute}
               onEdit={() => setDraft({ id: item.id, discipline: item.discipline, studyDate: item.studyDate, startMinute: item.startMinute, endMinute: item.endMinute, note: item.note ?? "" })}
+              onResizePreview={(endMinute) => setResizePreviewEndById((current) => {
+                if (endMinute === null) {
+                  const remaining = { ...current };
+                  delete remaining[item.id];
+                  return remaining;
+                }
+                return { ...current, [item.id]: endMinute };
+              })}
               onResize={(endMinute) => runAction(() => saveStudyPlanItem({ id: item.id, planId: initialPlan.id, discipline: item.discipline, studyDate: item.studyDate, startMinute: item.startMinute, endMinute, note: item.note ?? "" }))}
             />
               </div>

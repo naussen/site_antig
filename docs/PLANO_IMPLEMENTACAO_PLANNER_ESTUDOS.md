@@ -6,6 +6,8 @@ Atualizado em: 24 de setembro de 2026.
 
 - grade unificada em intervalos fixos de 15 minutos, sem configuração adicional;
 - blocos com altura proporcional à duração e redimensionamento direto pela alça inferior;
+- pré-visualização acompanha verticalmente as linhas durante o redimensionamento;
+- largura rigidamente contida na coluna da data, sem expansão horizontal entre dias;
 - duração mínima de 15 minutos e máxima de 90 minutos, validada também no servidor;
 - criação, movimentação e edição preservadas por mouse, toque, teclado e formulário.
 

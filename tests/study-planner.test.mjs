@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {
   addDays,
+  clampPlannerEndMinute,
   copyWeekSchema,
   createPlanSchema,
   formatDateKey,
@@ -71,6 +72,14 @@ test("aceita blocos de 15 a 90 minutos em passos de 15", () => {
   assert.equal(planItemSchema.safeParse({ ...base, endMinute: 690 }).success, true);
   assert.equal(planItemSchema.safeParse({ ...base, endMinute: 705 }).success, false);
   assert.equal(planItemSchema.safeParse({ ...base, endMinute: 610 }).success, false);
+});
+
+test("limita o redimensionamento vertical às linhas de 15 a 90 minutos", () => {
+  const base = { startMinute: 600, currentEndMinute: 660, dayEndMinute: 1380 };
+  assert.equal(clampPlannerEndMinute({ ...base, slotDelta: -10 }), 615);
+  assert.equal(clampPlannerEndMinute({ ...base, slotDelta: 1 }), 675);
+  assert.equal(clampPlannerEndMinute({ ...base, slotDelta: 10 }), 690);
+  assert.equal(clampPlannerEndMinute({ ...base, startMinute: 1350, currentEndMinute: 1380, slotDelta: 4 }), 1380);
 });
 
 test("limita a cópia às semanas que podem possuir uma semana seguinte", () => {

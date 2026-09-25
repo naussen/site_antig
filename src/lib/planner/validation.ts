@@ -6,6 +6,27 @@ export const PLANNER_SLOT_MINUTES = 15;
 export const PLANNER_MIN_DURATION_MINUTES = 15;
 export const PLANNER_MAX_DURATION_MINUTES = 90;
 
+export function clampPlannerEndMinute({
+  startMinute,
+  currentEndMinute,
+  dayEndMinute,
+  slotDelta,
+}: {
+  startMinute: number;
+  currentEndMinute: number;
+  dayEndMinute: number;
+  slotDelta: number;
+}) {
+  return Math.max(
+    startMinute + PLANNER_MIN_DURATION_MINUTES,
+    Math.min(
+      startMinute + PLANNER_MAX_DURATION_MINUTES,
+      dayEndMinute,
+      currentEndMinute + slotDelta * PLANNER_SLOT_MINUTES,
+    ),
+  );
+}
+
 const planFields = z.object({
   title: z.string().trim().min(1).max(80),
   startDate: z.string().regex(datePattern),
