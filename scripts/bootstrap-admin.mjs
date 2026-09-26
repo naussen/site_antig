@@ -1,12 +1,13 @@
-import { randomBytes } from "node:crypto";
 import { createClient } from "@supabase/supabase-js";
+import { hasGoogleIdentity } from "../src/lib/auth/google-only.mjs";
 
 function printUsage() {
   console.log(`Uso:
   node --env-file-if-exists=.env.local scripts/bootstrap-admin.mjs --email administrador@exemplo.com
 
-O comando cria uma conta confirmada com senha temporária ou promove uma conta
-existente. A chave SUPABASE_SERVICE_ROLE_KEY permanece somente no processo local.`);
+O comando promove uma conta que já tenha entrado pelo Google. Ele não cria conta,
+senha ou método alternativo de acesso. A chave SUPABASE_SERVICE_ROLE_KEY permanece
+somente no processo local.`);
 }
 
 function readEmailArgument(args) {
@@ -60,36 +61,29 @@ async function main() {
   });
   const existingUser = await findUserByEmail(supabase, email);
 
-  if (existingUser) {
-    const { error } = await supabase.auth.admin.updateUserById(existingUser.id, {
-      app_metadata: {
-        ...existingUser.app_metadata,
-        role: "admin",
-      },
-      email_confirm: true,
-    });
-
-    if (error) throw error;
-
-    console.log(
-      "Conta existente confirmada e marcada como admin. Use a senha atual para entrar no site."
+  if (!existingUser) {
+    throw new Error(
+      "A conta não existe. Entre uma vez pelo Google no site e execute o comando novamente."
     );
-    return;
   }
 
-  const temporaryPassword = `${randomBytes(24).toString("base64url")}Aa1!`;
-  const { error } = await supabase.auth.admin.createUser({
-    email,
-    password: temporaryPassword,
-    email_confirm: true,
-    app_metadata: { role: "admin" },
+  if (!hasGoogleIdentity(existingUser)) {
+    throw new Error(
+      "A conta existe, mas não possui identidade Google vinculada. Entre pelo Google antes de promovê-la."
+    );
+  }
+
+  const { error } = await supabase.auth.admin.updateUserById(existingUser.id, {
+    app_metadata: {
+      ...existingUser.app_metadata,
+      role: "admin",
+    },
   });
 
   if (error) throw error;
 
-  console.log("Conta administrativa criada e confirmada.");
-  console.log(`Senha temporária (exibida uma única vez): ${temporaryPassword}`);
-  console.log("Guarde-a com segurança e não a salve no repositório.");
+  console.log("Conta Google existente marcada como admin.");
+  console.log("Acesse /admin e conclua a validação TOTP/AAL2.");
 }
 
 main().catch((error) => {

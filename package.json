@@ -10,6 +10,7 @@
     "content": "node --env-file-if-exists=.env.local scripts/content-admin.mjs",
     "test:content": "node --test tests/content-admin.test.mjs",
     "test:api-auth": "node --test tests/api-admin-auth.test.mjs",
+    "test:auth": "node --test tests/auth-errors.test.mjs tests/google-only-auth.test.mjs",
     "test:site-paths": "node --test tests/site-paths.test.mjs",
     "test:highlights": "node --test tests/text-highlights.test.mjs tests/same-origin.test.mjs",
     "test:payments": "node --test tests/payments-core.test.mjs tests/payment-hardening.test.mjs",

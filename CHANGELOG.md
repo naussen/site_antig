@@ -34,6 +34,13 @@
 - importados e reexportados os 21 módulos com preservação das identidades permanentes e dos 828 flashcards;
 - validados 106 mapas, 32 seções com tabelas, as 21 rotas, os três temas e o viewport mobile de 390 × 844;
 - registrado que os flashcards foram preservados, mas permanecem fora desta revisão de conteúdo.
+## Não publicado — autenticação exclusiva pelo Google
+
+- removidos do login público e da área de Conta os fluxos de cadastro, magic link, recuperação e troca de senha;
+- migrado o formulário administrativo para Google OAuth com papel administrativo e TOTP/AAL2 obrigatório;
+- adicionada rejeição defensiva de sessões sem identidade Google no callback, proxy e guardas server-side;
+- alterado o bootstrap administrativo para promover somente conta Google existente, sem criar senha temporária;
+- preparada a configuração local para bloquear novos cadastros por e-mail e documentada a desativação remota após deploy e smoke autenticado.
 
 ## Não publicado — CTA de assinatura e transparência de segurança
 

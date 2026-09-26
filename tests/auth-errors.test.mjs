@@ -3,21 +3,21 @@ import test from "node:test";
 
 import { getAuthErrorMessage } from "../src/lib/auth-errors.mjs";
 
-test("traduz erros comuns de credenciais e confirmação", () => {
+test("traduz erros de OAuth e MFA", () => {
   assert.equal(
-    getAuthErrorMessage({ code: "invalid_credentials" }),
-    "E-mail ou senha inválidos."
+    getAuthErrorMessage({ code: "oauth_provider_not_supported" }),
+    "O provedor Google não está disponível no momento. Tente novamente mais tarde."
   );
   assert.match(
-    getAuthErrorMessage({ code: "email_not_confirmed" }),
-    /ainda não foi confirmado/
+    getAuthErrorMessage({ code: "mfa_challenge_expired" }),
+    /TOTP expirou/
   );
 });
 
 test("traduz mensagens de limite de envio", () => {
   assert.match(
     getAuthErrorMessage({ message: "Email rate limit exceeded" }),
-    /limite temporário/
+    /Muitas tentativas/
   );
 });
 

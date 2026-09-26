@@ -4,10 +4,11 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 import { KeyRound, Loader2, LogIn, ShieldCheck } from "lucide-react";
 import { getAuthErrorMessage } from "@/lib/auth-errors.mjs";
+import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import { createClient } from "@/lib/supabase/client";
 
-type MfaStage = "credentials" | "enroll" | "verify";
+type MfaStage = "identity" | "enroll" | "verify";
 
 type TotpEnrollment = {
   qrCode: string;
@@ -15,17 +16,19 @@ type TotpEnrollment = {
 };
 
 interface AdminLoginFormProps {
+  hasSession?: boolean;
   hasAdminSession?: boolean;
 }
 
-export function AdminLoginForm({ hasAdminSession = false }: AdminLoginFormProps) {
+export function AdminLoginForm({
+  hasSession = false,
+  hasAdminSession = false,
+}: AdminLoginFormProps) {
   const supabase = useMemo(() => createClient(), []);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
   const [totpCode, setTotpCode] = useState("");
   const [factorId, setFactorId] = useState("");
   const [enrollment, setEnrollment] = useState<TotpEnrollment | null>(null);
-  const [stage, setStage] = useState<MfaStage>("credentials");
+  const [stage, setStage] = useState<MfaStage>("identity");
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -42,8 +45,16 @@ export function AdminLoginForm({ hasAdminSession = false }: AdminLoginFormProps)
         data: { user },
         error: userError,
       } = await supabase.auth.getUser();
+      const { data: claimsData, error: claimsError } =
+        await supabase.auth.getClaims();
 
-      if (userError || !user || user.app_metadata?.role !== "admin") {
+      if (
+        userError ||
+        claimsError ||
+        !user ||
+        !hasGoogleSession(user, claimsData?.claims) ||
+        user.app_metadata?.role !== "admin"
+      ) {
         await supabase.auth.signOut();
         throw new Error("Esta conta não possui acesso administrativo.");
       }
@@ -105,28 +116,30 @@ export function AdminLoginForm({ hasAdminSession = false }: AdminLoginFormProps)
     }
   };
 
-  const handleCredentials = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const handleGoogleLogin = async () => {
     setErrorMessage("");
     setLoading(true);
 
     try {
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email: email.trim(),
-        password,
+      if (hasSession) await supabase.auth.signOut();
+
+      const callback = new URL(
+        withSiteBasePath("/auth/callback"),
+        window.location.origin
+      );
+      callback.searchParams.set("next", withSiteBasePath("/admin"));
+
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+          redirectTo: callback.toString(),
+          queryParams: { prompt: "select_account" },
+        },
       });
 
       if (error) throw error;
-
-      if (data.user.app_metadata?.role !== "admin") {
-        await supabase.auth.signOut();
-        throw new Error("Esta conta não possui acesso administrativo.");
-      }
-
-      await prepareMfa();
     } catch (error) {
       setErrorMessage(getAuthErrorMessage(error));
-    } finally {
       setLoading(false);
     }
   };
@@ -171,15 +184,15 @@ export function AdminLoginForm({ hasAdminSession = false }: AdminLoginFormProps)
 
   const handleCancel = async () => {
     await supabase.auth.signOut();
-    setStage("credentials");
+    setStage("identity");
     setEnrollment(null);
     setFactorId("");
     setTotpCode("");
-    setPassword("");
     setErrorMessage("");
+    window.location.replace(withSiteBasePath("/admin"));
   };
 
-  if (stage !== "credentials") {
+  if (stage !== "identity") {
     return (
       <form
         onSubmit={handleTotpVerification}
@@ -270,14 +283,11 @@ export function AdminLoginForm({ hasAdminSession = false }: AdminLoginFormProps)
   }
 
   return (
-    <form
-      onSubmit={handleCredentials}
-      className="flex flex-col gap-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-6 shadow-[var(--shadow)]"
-    >
+    <div className="flex flex-col gap-4 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-6 shadow-[var(--shadow)]">
       {hasAdminSession && (
         <div className="rounded-xl border border-[var(--border)] bg-[var(--accent-soft)] p-4">
           <p className="text-sm leading-5 text-[var(--text-primary)]">
-            Sua senha já foi validada. Continue para cadastrar ou confirmar o segundo fator.
+            Sua identidade Google administrativa foi confirmada. Continue para cadastrar ou validar o segundo fator.
           </p>
           <button
             type="button"
@@ -291,45 +301,10 @@ export function AdminLoginForm({ hasAdminSession = false }: AdminLoginFormProps)
         </div>
       )}
 
-      {!hasAdminSession && (
-        <>
-          <div>
-            <label
-              htmlFor="admin-email"
-              className="mb-1.5 block text-sm font-medium text-[var(--text-primary)]"
-            >
-              E-mail administrativo
-            </label>
-            <input
-              id="admin-email"
-              type="email"
-              autoComplete="email"
-              required
-              value={email}
-              onChange={(event) => setEmail(event.target.value)}
-              className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-2.5 text-[var(--text-primary)] outline-none transition-colors focus:border-[var(--accent)]"
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="admin-password"
-              className="mb-1.5 block text-sm font-medium text-[var(--text-primary)]"
-            >
-              Senha
-            </label>
-            <input
-              id="admin-password"
-              type="password"
-              autoComplete="current-password"
-              required
-              minLength={6}
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-              className="w-full rounded-lg border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-2.5 text-[var(--text-primary)] outline-none transition-colors focus:border-[var(--accent)]"
-            />
-          </div>
-        </>
+      {!hasAdminSession && hasSession && (
+        <p className="rounded-lg border border-[var(--callout-warning-border)] bg-[var(--callout-warning-bg)] px-3 py-2 text-sm text-[var(--text-primary)]">
+          A conta Google atual não possui papel administrativo. Escolha a conta administrativa.
+        </p>
       )}
 
       {errorMessage && (
@@ -343,14 +318,18 @@ export function AdminLoginForm({ hasAdminSession = false }: AdminLoginFormProps)
 
       {!hasAdminSession && (
         <button
-          type="submit"
+          type="button"
+          onClick={handleGoogleLogin}
           disabled={loading}
           className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-4 py-3 font-medium text-white transition-all hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-50"
         >
           {loading ? <Loader2 className="animate-spin" size={20} /> : <LogIn size={20} />}
-          {loading ? "Entrando..." : "Entrar e validar MFA"}
+          {loading ? "Redirecionando..." : "Continuar com Google"}
         </button>
       )}
-    </form>
+      <p className="text-xs leading-5 text-[var(--text-secondary)]">
+        O acesso administrativo exige identidade Google autorizada e TOTP/AAL2. Não existe entrada administrativa por senha local.
+      </p>
+    </div>
   );
 }

@@ -2,6 +2,7 @@ import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { DashboardNavigation } from "@/components/navigation/dashboard-navigation";
+import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
 
 export default async function DashboardLayout({
   children,
@@ -14,6 +15,12 @@ export default async function DashboardLayout({
 
   if (!user) {
     redirect("/login");
+  }
+
+  const { data: claimsData, error: claimsError } = await supabase.auth.getClaims();
+  if (claimsError || !hasGoogleSession(user, claimsData?.claims)) {
+    await supabase.auth.signOut();
+    redirect("/login?error=google_required");
   }
 
   if (user.app_metadata?.role === "admin") {

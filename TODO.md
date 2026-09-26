@@ -4,6 +4,15 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 
 ## P0 — Antes do primeiro usuário pagante
 
+### Autenticação Google-only
+
+- [x] Remover do login público os fluxos de cadastro, entrada, link mágico e recuperação por e-mail/senha; manter somente Google OAuth para usuários regulares.
+- [x] Remover da área de Conta a criação, redefinição e troca de senha e atualizar Suporte e os documentos operacionais que anunciavam senha ou link mágico.
+- [x] Migrar o acesso administrativo para Google OAuth com `app_metadata.role = admin` e MFA TOTP/AAL2; em 26/09/2026 os dois administradores tinham Google e TOTP verificado, e o formulário por senha foi removido do código.
+- [ ] Desabilitar no Supabase o provedor de e-mail/senha somente depois de validar acesso e recuperação administrativa por Google + TOTP, sem criar bypass ou conta fixa alternativa.
+- [ ] Testar que novos usuários conseguem criar sessão somente pelo Google e que tentativas diretas de cadastro ou login por senha permanecem bloqueadas, inclusive fora da interface.
+- [x] Não solicitar escopos Google adicionais aos padrões mínimos de identidade do Supabase; persistir somente os dados básicos necessários ao produto.
+
 ### Pagamentos e entitlements
 
 - [x] Disponibilizar Mercado Pago e PayPal como opções de lançamento, mantendo uma assinatura mensal única.
@@ -63,7 +72,7 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [ ] Definir periodicidade e procedimento seguro de rotação do `CONTENT_ADMIN_TOKEN`.
 - [ ] Adicionar monitoração e limitação de abuso aos endpoints administrativos sem registrar o Bearer Token.
 - [ ] Manter `CONTENT_ADMIN_TOKEN` apenas para automação/CLI. Se surgir painel administrativo no navegador, autorizar suas ações no backend pela sessão Supabase, `app_metadata.role = admin` e MFA `aal2`.
-- [ ] Documentar recuperação da conta administrativa e do TOTP sem criar senha fixa, bypass público ou segredo alternativo no frontend.
+- [x] Documentar recuperação da conta administrativa e do TOTP sem criar senha fixa, bypass público ou segredo alternativo no frontend.
 - [ ] Revisar periodicamente quem possui role administrativa em `app_metadata` e remover acessos não utilizados.
 
 ### Dados pessoais e privacidade
