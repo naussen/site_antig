@@ -1,5 +1,13 @@
 # Changelog
 
+## Não publicado — autenticação exclusiva pelo Google
+
+- removidos do login público e da área de Conta os fluxos de cadastro, magic link, recuperação e troca de senha;
+- migrado o formulário administrativo para Google OAuth com papel administrativo e TOTP/AAL2 obrigatório;
+- adicionada rejeição defensiva de sessões sem identidade Google no callback, proxy e guardas server-side;
+- alterado o bootstrap administrativo para promover somente conta Google existente, sem criar senha temporária;
+- preparada a configuração local para bloquear novos cadastros por e-mail e documentada a desativação remota após deploy e smoke autenticado.
+
 ## Não publicado — CTA de assinatura e transparência de segurança
 
 - corrigido o CTA `ASSINAR` do cabeçalho e o CTA principal da landing para preservar o destino da assinatura durante o login;

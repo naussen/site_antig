@@ -2,9 +2,10 @@ import { LoginForm } from "@/components/auth/login-form";
 import { ProLogoLink } from "@/components/brand/pro-logo";
 import { isAllowedReturnPath } from "@/lib/return-paths.mjs";
 
-export default async function LoginPage({ searchParams }: { searchParams: Promise<{ next?: string | string[] }> }) {
+export default async function LoginPage({ searchParams }: { searchParams: Promise<{ next?: string | string[]; error?: string | string[] }> }) {
   const query = await searchParams;
   const requestedNext = Array.isArray(query.next) ? query.next[0] : query.next;
+  const errorCode = Array.isArray(query.error) ? query.error[0] : query.error;
   const returnTo = typeof requestedNext === "string" && isAllowedReturnPath(requestedNext)
     ? requestedNext
     : null;
@@ -34,7 +35,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
           </p>
         </div>
 
-        <LoginForm returnTo={returnTo} />
+        <LoginForm returnTo={returnTo} errorCode={errorCode ?? null} />
       </div>
     </main>
   );

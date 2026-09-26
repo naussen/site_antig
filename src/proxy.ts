@@ -1,5 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
 import { isStudyPath } from "@/lib/site-paths.mjs";
 
 /**
@@ -43,6 +44,40 @@ export async function proxy(request: NextRequest) {
   const {
     data: { user },
   } = await supabase.auth.getUser();
+  const { data: claimsData, error: claimsError } = user
+    ? await supabase.auth.getClaims()
+    : { data: null, error: null };
+
+  if (user && (claimsError || !hasGoogleSession(user, claimsData?.claims))) {
+    await supabase.auth.signOut();
+
+    const localPath = request.nextUrl.pathname.startsWith("/resumos/")
+      ? request.nextUrl.pathname.slice("/resumos".length)
+      : request.nextUrl.pathname;
+    if (localPath === "/login" || localPath === "/auth/callback") {
+      return responseHolder.value;
+    }
+
+    if (localPath.startsWith("/api/")) {
+      const unauthorizedResponse = NextResponse.json(
+        { error: "Autenticação Google necessária." },
+        { status: 401 }
+      );
+      responseHolder.value.cookies
+        .getAll()
+        .forEach((cookie) => unauthorizedResponse.cookies.set(cookie));
+      return unauthorizedResponse;
+    }
+
+    const loginUrl = request.nextUrl.clone();
+    loginUrl.pathname = "/login";
+    loginUrl.search = "?error=google_required";
+    const redirectResponse = NextResponse.redirect(loginUrl);
+    responseHolder.value.cookies
+      .getAll()
+      .forEach((cookie) => redirectResponse.cookies.set(cookie));
+    return redirectResponse;
+  }
 
   if (!user && isStudyPath(request.nextUrl.pathname)) {
     const loginUrl = request.nextUrl.clone();

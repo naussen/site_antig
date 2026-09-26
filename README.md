@@ -21,11 +21,8 @@ O projeto recebe materiais em JSON, normalmente gerados por um pipeline externo 
 ## Funcionalidades atuais
 
 - Página pública inicial em `/`.
-- Login em `/login` com:
-  - Magic Link por e-mail;
-  - login/cadastro com senha pelo fluxo público do Supabase;
-  - login Google via OAuth;
-  - callback em `/auth/callback`.
+- Login e cadastro em `/login` exclusivamente com Google OAuth, com callback em `/auth/callback`.
+- Acesso administrativo com identidade Google autorizada e TOTP/AAL2 obrigatório.
 - Dashboard protegido em `/dashboard`.
 - Tópicos agrupados por disciplina.
 - Página de estudo dinâmica em `/[topicId]`.

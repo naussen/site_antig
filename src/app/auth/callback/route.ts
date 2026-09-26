@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import { isAllowedReturnPath, resolveReturnUrl } from "@/lib/return-paths.mjs";
 import { resolveUserStartPath } from "@/lib/user-start-page.mjs";
@@ -14,7 +15,15 @@ export async function GET(request: Request) {
   if (code) {
     const supabase = await createClient();
     const { data, error } = await supabase.auth.exchangeCodeForSession(code);
-    if (!error) {
+    const { data: claimsData, error: claimsError } = !error
+      ? await supabase.auth.getClaims()
+      : { data: null, error };
+    if (
+      !error &&
+      !claimsError &&
+      data.user &&
+      hasGoogleSession(data.user, claimsData?.claims)
+    ) {
       let destination = next;
 
       if (!destination && data.user) {
@@ -29,6 +38,14 @@ export async function GET(request: Request) {
       return NextResponse.redirect(
         resolveReturnUrl(destination ?? resolveUserStartPath(null), request.url)
       );
+    }
+
+    if (!error && data.user) {
+      await supabase.auth.signOut();
+      const loginUrl = new URL(withSiteBasePath("/login"), origin);
+      loginUrl.searchParams.set("error", "google_required");
+      if (next) loginUrl.searchParams.set("next", next);
+      return NextResponse.redirect(loginUrl);
     }
   }
 

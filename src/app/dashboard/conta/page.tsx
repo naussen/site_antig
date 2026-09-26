@@ -3,7 +3,6 @@ import { ArrowLeft, CreditCard, LockKeyhole, ShieldCheck, SlidersHorizontal, Use
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { PrivacyRequestForm } from "@/components/privacy/privacy-request-form";
-import { PasswordRecoveryButton } from "./password-recovery-button";
 
 const requestLabels: Record<string, string> = {
   access: "Acesso aos dados",
@@ -27,7 +26,6 @@ export default async function AccountPage() {
     .limit(5);
   if (error) throw new Error("Não foi possível consultar as solicitações de privacidade.");
 
-  const providers = (user.app_metadata?.providers as string[] | undefined) ?? [];
   const createdAt = new Intl.DateTimeFormat("pt-BR", { dateStyle: "long", timeZone: "America/Sao_Paulo" }).format(new Date(user.created_at));
 
   return (
@@ -48,14 +46,14 @@ export default async function AccountPage() {
             <dl className="mt-4 space-y-3 text-sm">
               <div><dt className="font-bold text-[var(--text-muted)]">E-mail</dt><dd className="mt-1 break-all text-[var(--text-primary)]">{user.email}</dd></div>
               <div><dt className="font-bold text-[var(--text-muted)]">Conta criada em</dt><dd className="mt-1 text-[var(--text-primary)]">{createdAt}</dd></div>
-              <div><dt className="font-bold text-[var(--text-muted)]">Métodos de acesso</dt><dd className="mt-1 text-[var(--text-primary)]">{providers.length ? providers.join(", ") : "E-mail"}</dd></div>
+              <div><dt className="font-bold text-[var(--text-muted)]">Método de acesso</dt><dd className="mt-1 text-[var(--text-primary)]">Google</dd></div>
             </dl>
           </article>
           <article className="rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] p-6">
             <LockKeyhole size={24} className="text-[var(--accent)]" />
             <h2 className="mt-4 text-xl font-extrabold text-[var(--text-primary)]">Segurança da conta</h2>
-            <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">A redefinição ocorre por link de uso único enviado ao e-mail confirmado. Contas Google continuam protegidas pelo provedor.</p>
-            {user.email && <div className="mt-5"><PasswordRecoveryButton email={user.email} /></div>}
+            <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">O acesso é protegido pelo Google. Senha, recuperação de acesso e verificações adicionais são administradas diretamente na sua Conta Google.</p>
+            <a href="https://myaccount.google.com/security" target="_blank" rel="noreferrer" className="mt-5 inline-flex min-h-11 items-center rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-3 text-sm font-bold text-[var(--text-primary)] hover:bg-[var(--accent-soft)]">Revisar segurança no Google</a>
           </article>
         </section>
 

@@ -1,6 +1,7 @@
 import { redirect } from "next/navigation";
 import { AdminLoginForm } from "@/components/auth/admin-login-form";
 import { ProLogoLink } from "@/components/brand/pro-logo";
+import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
 import { createClient } from "@/lib/supabase/server";
 
 export const metadata = {
@@ -12,7 +13,12 @@ export default async function AdminLoginPage() {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-  const hasAdminSession = user?.app_metadata?.role === "admin";
+  const { data: claimsData } = user
+    ? await supabase.auth.getClaims()
+    : { data: null };
+  const hasAdminSession =
+    hasGoogleSession(user, claimsData?.claims) &&
+    user?.app_metadata?.role === "admin";
 
   if (hasAdminSession) {
     const { data } = await supabase.auth.mfa.getAuthenticatorAssuranceLevel();
@@ -36,11 +42,11 @@ export default async function AdminLoginPage() {
             Acesso administrativo
           </h1>
           <p className="text-sm text-[var(--text-secondary)]">
-            Use a conta administrativa confirmada para acessar o painel.
+            Entre com a conta Google administrativa e confirme o TOTP.
           </p>
         </div>
 
-        <AdminLoginForm hasAdminSession={hasAdminSession} />
+        <AdminLoginForm hasSession={Boolean(user)} hasAdminSession={hasAdminSession} />
       </div>
     </main>
   );

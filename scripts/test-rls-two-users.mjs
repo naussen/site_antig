@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { randomBytes, randomUUID } from "node:crypto";
+import { randomUUID } from "node:crypto";
 import { createClient } from "@supabase/supabase-js";
 
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -10,7 +10,6 @@ if (!url || !anonKey || !serviceRoleKey) throw new Error("Configuração Supabas
 const options = { auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false } };
 const admin = createClient(url, serviceRoleKey, options);
 const runId = randomUUID();
-const password = `Rls-${randomBytes(24).toString("base64url")}aA1!`;
 const createdUserIds = [];
 const privacyRequestIds = [];
 const paymentBlockIds = [];
@@ -19,14 +18,25 @@ let assertionsPassed = false;
 async function createTestUser(label) {
   const { data, error } = await admin.auth.admin.createUser({
     email: `rls-${label}-${runId}@example.com`,
-    password,
     email_confirm: true,
   });
   if (error || !data.user) throw new Error(`Falha ao criar usuário de teste ${label}.`);
   createdUserIds.push(data.user.id);
 
+  const { data: linkData, error: linkError } =
+    await admin.auth.admin.generateLink({
+      type: "magiclink",
+      email: data.user.email,
+    });
+  if (linkError || !linkData.properties?.hashed_token) {
+    throw new Error(`Falha ao gerar credencial efêmera para usuário de teste ${label}.`);
+  }
+
   const client = createClient(url, anonKey, options);
-  const { error: signInError } = await client.auth.signInWithPassword({ email: data.user.email, password });
+  const { error: signInError } = await client.auth.verifyOtp({
+    type: "magiclink",
+    token_hash: linkData.properties.hashed_token,
+  });
   if (signInError) {
     throw new Error(`Falha ao autenticar usuário de teste ${label}: ${signInError.code ?? "unknown"}/${signInError.status ?? "no-status"}/${signInError.message}.`);
   }

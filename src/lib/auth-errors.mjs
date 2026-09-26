@@ -1,9 +1,10 @@
 const AUTH_ERROR_MESSAGES = {
-  email_not_confirmed:
-    "Seu e-mail ainda não foi confirmado. Verifique também a pasta de spam.",
-  invalid_credentials: "E-mail ou senha inválidos.",
-  over_email_send_rate_limit:
-    "O limite temporário de envio de e-mails foi atingido. Aguarde alguns minutos antes de tentar novamente.",
+  oauth_provider_not_supported:
+    "O provedor Google não está disponível no momento. Tente novamente mais tarde.",
+  bad_oauth_state:
+    "A validação do login expirou. Inicie o acesso pelo Google novamente.",
+  mfa_challenge_expired:
+    "O desafio TOTP expirou. Solicite uma nova validação.",
 };
 
 /**
@@ -28,7 +29,7 @@ export function getAuthErrorMessage(error) {
   }
 
   if (normalizedMessage.includes("rate limit")) {
-    return AUTH_ERROR_MESSAGES.over_email_send_rate_limit;
+    return "Muitas tentativas de autenticação. Aguarde alguns minutos e tente novamente.";
   }
 
   return originalMessage || "Não foi possível concluir a autenticação. Tente novamente.";

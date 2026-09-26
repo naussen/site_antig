@@ -6,7 +6,7 @@ export const metadata = {
 };
 
 const supportItems = [
-  ["Conta e acesso", "Entre com senha, link mágico ou Google para acessar sua conta.", "/login", "Acessar conta"],
+  ["Conta e acesso", "Entre exclusivamente com Google. Recuperação e segurança da identidade são administradas na Conta Google.", "/login", "Acessar conta"],
   ["Assinatura e cobrança", "Consulte plano, provedor, situação do acesso e cobrança recorrente.", "/dashboard/assinatura", "Gerenciar assinatura"],
   ["Cancelamento", "Veja como interromper a renovação conforme o provedor usado na contratação.", "/dashboard/assinatura#cancelamento", "Ver cancelamento"],
 ] as const;
