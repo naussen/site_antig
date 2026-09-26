@@ -1,49 +1,44 @@
 # TODO — Segurança, pagamentos e operação
 
-Este documento consolida somente pendências futuras identificadas nas revisões de segurança. Itens concluídos ficam no final para evitar regressões e retrabalho.
+Atualizado em: 26 de setembro de 2026.
+
+Este documento consolida as pendências futuras identificadas nas revisões de segurança e lançamento. Implementações concluídas ficam no final para evitar regressões e retrabalho. Estados externos de Supabase, Netlify e provedores precisam ser reconfirmados quando a data da evidência estiver indicada.
 
 ## P0 — Antes do primeiro usuário pagante
 
 ### Pagamentos e entitlements
 
-- [x] Disponibilizar Mercado Pago e PayPal como opções de lançamento, mantendo uma assinatura mensal única.
-- [ ] Avaliar Stripe ou Pagar.me apenas se houver necessidade comercial não atendida; evitar três integrações simultâneas no primeiro lançamento.
-- [x] Implementar checkout exclusivamente por páginas hospedadas dos provedores, sem receber ou armazenar dados de cartão no PRO Resumos.
-- [x] Criar Route Handlers server-side separados para os webhooks do Mercado Pago e do PayPal.
-- [x] Validar criptograficamente a origem de cada webhook conforme a documentação vigente do provedor.
-- [x] Consultar a assinatura na API oficial antes de conceder acesso; nunca confiar em `status`, preço, plano ou `user_id` enviados pelo navegador.
-- [x] Criar persistência idempotente de eventos por `provider + event_id`, impedindo processamento duplicado e replay.
-- [x] Mapear os estados dos provedores para `active`, `trialing`, `pending`, `past_due`, `canceled` e `expired` em `public.user_entitlements`.
-- [x] Atualizar `user_entitlements` somente no backend com `service_role`, vinculando o pagamento ao UUID confirmado do Supabase Auth.
-- [x] Tratar estados de renovação, atraso, cancelamento, expiração, estorno/reversão do PayPal e eventos recebidos fora de ordem.
-- [x] Implementar bloqueio persistente por reembolso, reversão ou chargeback nos dois provedores, com vínculo verificado entre pagamento, assinatura e usuário e proteção contra reativação posterior; a política comercial de contestação continua operacional.
-- [x] Implementar reconciliação periódica entre o banco e as APIs dos provedores para corrigir webhooks perdidos.
+- [ ] Impedir novo checkout quando existir assinatura `pending` ou `past_due`: consultar e reconciliar o vínculo atual no provedor antes de permitir outra assinatura, evitando substituir a única linha de `user_entitlements` enquanto a assinatura anterior ainda pode cobrar.
+- [ ] Exigir `PAYPAL_ENVIRONMENT` com valor explícito `sandbox` ou `live`, falhar fechado em valor ausente/inválido e incluí-lo na condição que habilita o PayPal na interface.
+- [ ] Confirmar no ambiente de produção as credenciais, plano, preço e URLs de webhook dos provedores sem registrar ou expor segredos.
+- [ ] Confirmar no histórico da Netlify que a função agendada `reconcile-payments` executa diariamente com sucesso e que `PAYMENTS_RECONCILIATION_TOKEN` está configurado no escopo correto.
 - [ ] Registrar auditoria sem tokens, dados de cartão, payloads completos ou informações pessoais desnecessárias.
 - [ ] Configurar alertas para falhas reiteradas de webhook, divergências de reconciliação e concessões/revogações anormais.
 - [ ] Testar nos sandboxes: pagamento aprovado, recusado, pendente, duplicado, cancelado, expirado e estornado.
+- [ ] Executar canário financeiro real somente depois de todos os gates P0, com confirmação humana imediatamente antes da transação, e validar cobrança, webhook, entitlement, cancelamento e ausência de renovação indevida.
 
 ### Plano e segurança do Supabase
 
-- [ ] Antes de aceitar pagamentos, realizar o upgrade do Supabase; em 16/09/2026 a Management API confirmou que a organização ainda está no plano Free.
-- [ ] Ativar a proteção contra senhas vazadas após o upgrade; em 16/09/2026 `password_hibp_enabled` foi confirmado como desativado.
-- [x] Confirmar no ambiente de produção senha mínima de 12 caracteres com minúscula, maiúscula e número, reautenticação para troca de senha e TOTP habilitado.
-- [ ] Definir backup e retenção compatíveis com usuários pagantes; em 16/09/2026 não havia backup disponível nem PITR habilitado.
+- [ ] Reconfirmar o plano atual da organização e realizar o upgrade necessário antes de aceitar pagamentos; a última confirmação da Management API, em 16/09/2026, indicava plano Free.
+- [ ] Reconfirmar e ativar a proteção contra senhas vazadas; a última confirmação, em 16/09/2026, indicava `password_hibp_enabled = false`.
+- [ ] Definir backup e retenção compatíveis com usuários pagantes; em 26/09/2026 a CLI ainda não listava backup recuperável e indicava PITR desativado.
+- [ ] Executar e documentar pelo menos um teste de restauração antes do canário financeiro; existência de backup sem restauração comprovada não encerra este gate.
+- [ ] Confirmar na Netlify a chave publishable atual do Supabase e remover qualquer chave legada desativada dos ambientes local, preview e produção, sem registrar seus valores.
 
 ### Hospedagem e publicação
 
 - [ ] Confirmar `CONTENT_ADMIN_TOKEN` em todos os escopos necessários da hospedagem, sempre como segredo server-side e nunca com prefixo `NEXT_PUBLIC_`.
 - [ ] Configurar `CONTENT_ADMIN_TOKEN` antes de voltar a usar a rota HTTP administrativa `/api/import`; enquanto ausente, importações devem ocorrer somente por procedimento backend controlado e auditado.
 - [ ] Confirmar que `SUPABASE_SERVICE_ROLE_KEY` existe somente no backend e não é disponibilizada em previews públicos ou bundles client-side.
-- [ ] Validar o deploy da branch publicada e executar smoke tests em `/admin`, `/dashboard`, `/dashboard/assinatura` e em uma página de estudo.
+- [ ] Executar smoke autenticado pós-deploy em `/admin`, `/dashboard`, `/dashboard/conta`, `/dashboard/assinatura`, `/dashboard/planner` e em uma página de estudo, cobrindo desktop, mobile e os temas Light, Dark e Sepia.
 - [ ] Testar em produção uma conta sem entitlement, uma assinatura ativa, uma expirada e o administrador com AAL1/AAL2.
 
 ## P1 — Hardening após a integração inicial
 
 ### Autorização e testes
 
-- [x] Criar teste pgTAP negativo com dois usuários distintos, cobrindo leitura e alteração de notas, progresso, preferências, entitlement e solicitações LGPD do outro.
 - [ ] Automatizar testes de leitura do acervo para `anon`, autenticado sem assinatura, assinatura ativa, assinatura expirada, admin AAL1 e admin AAL2.
-- [ ] Executar `supabase/scripts/fase3_validacao_rls.sql` após toda mudança futura de schema, grants ou policies.
+- [ ] Executar e registrar `supabase/scripts/fase3_validacao_rls.sql` sobre o schema atual, incluindo a migration 026, e repeti-lo após toda futura mudança de schema, grants ou policies.
 - [ ] Impedir em revisão de código qualquer nova policy de `topics` ou `sections` baseada apenas em `TO authenticated USING (true)`.
 - [ ] Manter toda Server Action e Route Handler com autorização própria próxima ao acesso aos dados; não depender apenas de layout, botão oculto ou estado React.
 
@@ -68,6 +63,9 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 
 ### Dados pessoais e privacidade
 
+- [ ] Impor limite de bytes antes de ler o JSON público de `POST /api/privacy-requests`; o limite de caracteres após `request.json()` não protege o processo contra corpo excessivo.
+- [ ] Substituir ou complementar o limite por e-mail do canal LGPD com controle distribuído por origem/sessão e proteção contra abuso que não dependa de memória local do processo serverless.
+- [ ] Criar fila, alerta e procedimento operacional para atender protocolos LGPD, confirmar identidade, registrar decisão e cumprir o prazo informado ao titular.
 - [ ] Reavaliar a decisão de manter notas e imagens em texto puro antes de permitir documentos sensíveis, compartilhamento ou uso corporativo.
 - [ ] Informar claramente ao usuário que notas atuais não possuem criptografia ponta a ponta e não devem conter senhas, cartões ou documentos sigilosos.
 - [ ] Definir política de retenção, exportação e exclusão de notas, imagens e dados de progresso.
@@ -75,6 +73,7 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 
 ## P2 — Operação contínua
 
+- [ ] Avaliar Stripe ou Pagar.me somente se Mercado Pago ou PayPal não atenderem a uma necessidade comercial comprovada; evitar três integrações simultâneas no lançamento.
 - [ ] Revisar trimestralmente grants, policies RLS, funções `SECURITY DEFINER`, `search_path` e objetos novos no schema `public`.
 - [ ] Monitorar dependências e aplicar atualizações de segurança do Next.js, Supabase e bibliotecas após testes de regressão.
 - [ ] Criar resposta a incidentes para vazamento de token, conta administrativa comprometida e concessão incorreta de entitlement.
@@ -89,6 +88,19 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 
 ## Concluído nas revisões anteriores
 
+- [x] Implementar Mercado Pago e PayPal como opções de assinatura mensal em checkout hospedado, sem receber ou armazenar número completo do cartão ou CVV.
+- [x] Criar webhooks server-side com validação criptográfica, reconsulta à API oficial, idempotência por `provider + event_id` e ordenação temporal baseada em estado confiável.
+- [x] Mapear os estados dos provedores e atualizar `user_entitlements` somente no backend, vinculando assinatura e pagamento ao UUID confirmado do Supabase Auth.
+- [x] Implementar cancelamento no provedor preservando apenas o período já pago e bloqueio persistente por reembolso, reversão ou chargeback nos dois provedores.
+- [x] Implementar reconciliação diária no código por função agendada da Netlify; a comprovação operacional das execuções permanece em P0.
+- [x] Corrigir a CSP para permitir somente os hosts de checkout já aceitos pela allowlist do backend.
+- [x] Corrigir os CTAs de assinatura para preservar o destino após o login e informar com precisão que senha Google e dados completos do cartão permanecem nos respectivos provedores.
+- [x] Registrar fornecedor, preço de lançamento de R$ 9,90 por mês, atendimento e direito de arrependimento de sete dias nas páginas institucionais e na documentação comercial.
+- [x] Criar área de Conta separada das preferências de estudo, com segurança da conta, assinatura e canal LGPD público/autenticado com protocolo.
+- [x] Publicar as superfícies de Conta, cancelamento e solicitações LGPD; em 26/09/2026 as rotas públicas responderam conforme esperado para usuário sem sessão ou método não permitido.
+- [x] Confirmar em produção senha mínima de 12 caracteres com minúscula, maiúscula e número, reautenticação para troca de senha e TOTP habilitado em 16/09/2026.
+- [x] Aplicar remotamente as migrations 024 e 025 e executar teste negativo com dois usuários reais, cobrindo dados pessoais, entitlements e bloqueio contra reativação após chargeback.
+- [x] Aplicar remotamente a migration 026 do Planner e estender o teste com dois usuários para impedir leitura, alteração ou associação cruzada de planos e blocos; fixtures temporárias removidas ao final.
 - [x] Restringir grants do Data API por menor privilégio.
 - [x] Separar `CONTENT_ADMIN_TOKEN` da Supabase Service Role.
 - [x] Proteger endpoints administrativos no backend com Bearer Token dedicado.
