@@ -4,7 +4,24 @@ Atualizado em: 26 de setembro de 2026.
 
 Este documento consolida as pendências futuras identificadas nas revisões de segurança e lançamento. Implementações concluídas ficam no final para evitar regressões e retrabalho. Estados externos de Supabase, Netlify e provedores precisam ser reconfirmados quando a data da evidência estiver indicada.
 
+## Decisões vigentes de produto e operação
+
+- Permanecer no plano Free do Supabase durante a validação inicial do produto. O plano pago não é requisito para o primeiro assinante.
+- Reavaliar capacidade, disponibilidade, recuperação e custo ao atingir 40 assinantes pagos ativos e tomar uma decisão formal sobre upgrade ao alcançar 50; risco ou limite técnico pode antecipar essa revisão.
+- Oferecer aos usuários somente login com Google OAuth. O PRO Concursos não recebe nem armazena a senha Google.
+- Manter checkout e dados completos do cartão exclusivamente nas páginas hospedadas do Mercado Pago e do PayPal; o PRO Concursos armazena apenas identificadores e estados necessários à assinatura e ao acesso.
+- Aplicar minimização de dados, sem afirmar ausência de tratamento: Supabase Auth e o aplicativo ainda mantêm UUID, e-mail e os dados pessoais necessários a sessão, entitlement, progresso, notas, planner, suporte e solicitações LGPD.
+
 ## P0 — Antes do primeiro usuário pagante
+
+### Autenticação Google-only
+
+- [ ] Remover do login público os fluxos de cadastro, entrada, link mágico e recuperação por e-mail/senha; manter somente Google OAuth para usuários regulares.
+- [ ] Remover da área de Conta a criação, redefinição e troca de senha e atualizar Suporte, Privacidade e demais textos que ainda anunciam senha ou link mágico.
+- [ ] Migrar o acesso administrativo para Google OAuth com `app_metadata.role = admin` e MFA TOTP/AAL2 antes de desabilitar o login administrativo por senha.
+- [ ] Desabilitar no Supabase o provedor de e-mail/senha somente depois de validar acesso e recuperação administrativa por Google + TOTP, sem criar bypass ou conta fixa alternativa.
+- [ ] Testar que novos usuários conseguem criar sessão somente pelo Google e que tentativas diretas de cadastro ou login por senha permanecem bloqueadas, inclusive fora da interface.
+- [ ] Limitar os escopos Google ao mínimo necessário e persistir somente identificador, e-mail e nome quando efetivamente utilizados pelo produto.
 
 ### Pagamentos e entitlements
 
@@ -19,11 +36,12 @@ Este documento consolida as pendências futuras identificadas nas revisões de s
 
 ### Plano e segurança do Supabase
 
-- [ ] Reconfirmar o plano atual da organização e realizar o upgrade necessário antes de aceitar pagamentos; a última confirmação da Management API, em 16/09/2026, indicava plano Free.
-- [ ] Reconfirmar e ativar a proteção contra senhas vazadas; a última confirmação, em 16/09/2026, indicava `password_hibp_enabled = false`.
-- [ ] Definir backup e retenção compatíveis com usuários pagantes; em 26/09/2026 a CLI ainda não listava backup recuperável e indicava PITR desativado.
+- [ ] Implementar backup lógico automático, diário, criptografado e externo ao Supabase para banco, Auth e histórico de migrations, com retenção definida; em 26/09/2026 o plano Free não possuía backup recuperável nem PITR.
+- [ ] Copiar separadamente os objetos dos buckets do Supabase Storage, pois o backup do banco preserva metadados, mas não recupera os arquivos armazenados.
 - [ ] Executar e documentar pelo menos um teste de restauração antes do canário financeiro; existência de backup sem restauração comprovada não encerra este gate.
+- [ ] Monitorar pausa por baixa atividade, tamanho do banco, Storage, egress e modo somente leitura, com alertas antes dos limites do plano Free afetarem usuários.
 - [ ] Confirmar na Netlify a chave publishable atual do Supabase e remover qualquer chave legada desativada dos ambientes local, preview e produção, sem registrar seus valores.
+- [ ] Aos 40 assinantes pagos ativos, produzir revisão de capacidade, incidentes, tempo de recuperação e custo; aos 50, decidir e registrar se haverá upgrade para Pro ou manutenção dos controles compensatórios do Free.
 
 ### Hospedagem e publicação
 
@@ -63,6 +81,8 @@ Este documento consolida as pendências futuras identificadas nas revisões de s
 
 ### Dados pessoais e privacidade
 
+- [ ] Documentar o inventário mínimo de dados efetivamente tratados: UUID, e-mail, nome quando disponível, sessão, entitlement, transações vinculadas, progresso, notas, imagens, planner e solicitações LGPD.
+- [ ] Revisar telas e documentos para nunca afirmar que o serviço “não armazena dados pessoais”; informar precisamente que senha Google e dados completos do cartão não passam pelo PRO Concursos.
 - [ ] Impor limite de bytes antes de ler o JSON público de `POST /api/privacy-requests`; o limite de caracteres após `request.json()` não protege o processo contra corpo excessivo.
 - [ ] Substituir ou complementar o limite por e-mail do canal LGPD com controle distribuído por origem/sessão e proteção contra abuso que não dependa de memória local do processo serverless.
 - [ ] Criar fila, alerta e procedimento operacional para atender protocolos LGPD, confirmar identidade, registrar decisão e cumprir o prazo informado ao titular.
@@ -73,6 +93,8 @@ Este documento consolida as pendências futuras identificadas nas revisões de s
 
 ## P2 — Operação contínua
 
+- [ ] Se login por senha voltar a ser considerado, exigir antes da reativação um plano/serviço com proteção contra senhas vazadas, rate limiting, recuperação segura e testes específicos; não reabrir silenciosamente o fluxo legado.
+- [ ] Reavaliar o upgrade do Supabase antes de 50 assinantes se backup/restauração, disponibilidade, suporte ou quotas do Free deixarem de atender ao risco real da operação.
 - [ ] Avaliar Stripe ou Pagar.me somente se Mercado Pago ou PayPal não atenderem a uma necessidade comercial comprovada; evitar três integrações simultâneas no lançamento.
 - [ ] Revisar trimestralmente grants, policies RLS, funções `SECURITY DEFINER`, `search_path` e objetos novos no schema `public`.
 - [ ] Monitorar dependências e aplicar atualizações de segurança do Next.js, Supabase e bibliotecas após testes de regressão.
@@ -81,6 +103,9 @@ Este documento consolida as pendências futuras identificadas nas revisões de s
 
 ## Regras que não podem regredir
 
+- O login interativo deve permanecer Google-only, inclusive para administração; contas administrativas também exigem role no `app_metadata` e MFA AAL2.
+- Nunca afirmar que o PRO Concursos não trata dados pessoais; afirmar somente que não recebe a senha Google nem os dados completos do cartão.
+- Nunca receber, registrar ou armazenar número completo do cartão, CVV ou credencial de pagamento; checkout permanece hospedado no provedor.
 - Nunca expor `SUPABASE_SERVICE_ROLE_KEY` ou `CONTENT_ADMIN_TOKEN` em Client Components, `localStorage`, HTML, logs ou variáveis `NEXT_PUBLIC_*`.
 - Nunca conceder assinatura a partir de uma confirmação produzida somente pelo frontend.
 - Nunca usar `user_metadata` como fonte de role ou privilégio.
@@ -98,7 +123,7 @@ Este documento consolida as pendências futuras identificadas nas revisões de s
 - [x] Registrar fornecedor, preço de lançamento de R$ 9,90 por mês, atendimento e direito de arrependimento de sete dias nas páginas institucionais e na documentação comercial.
 - [x] Criar área de Conta separada das preferências de estudo, com segurança da conta, assinatura e canal LGPD público/autenticado com protocolo.
 - [x] Publicar as superfícies de Conta, cancelamento e solicitações LGPD; em 26/09/2026 as rotas públicas responderam conforme esperado para usuário sem sessão ou método não permitido.
-- [x] Confirmar em produção senha mínima de 12 caracteres com minúscula, maiúscula e número, reautenticação para troca de senha e TOTP habilitado em 16/09/2026.
+- [x] Confirmar em produção, em 16/09/2026, senha mínima de 12 caracteres, reautenticação e TOTP; a configuração de senha é transitória até a conclusão da migração Google-only.
 - [x] Aplicar remotamente as migrations 024 e 025 e executar teste negativo com dois usuários reais, cobrindo dados pessoais, entitlements e bloqueio contra reativação após chargeback.
 - [x] Aplicar remotamente a migration 026 do Planner e estender o teste com dois usuários para impedir leitura, alteração ou associação cruzada de planos e blocos; fixtures temporárias removidas ao final.
 - [x] Restringir grants do Data API por menor privilégio.
