@@ -29,7 +29,7 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [x] Implementar reconciliação periódica entre o banco e as APIs dos provedores para corrigir webhooks perdidos.
 - [ ] Registrar auditoria sem tokens, dados de cartão, payloads completos ou informações pessoais desnecessárias.
 - [ ] Configurar alertas para falhas reiteradas de webhook, divergências de reconciliação e concessões/revogações anormais.
-- [ ] Testar nos sandboxes: pagamento aprovado, recusado, pendente, duplicado, cancelado, expirado e estornado. Em 26/09/2026 o preflight bloqueou corretamente a execução: produção e deploy-preview ainda recebem Mercado Pago `production`, e as variáveis PayPal sandbox não estão configuradas.
+- [ ] Testar nos sandboxes: pagamento aprovado, recusado, pendente, duplicado, cancelado, expirado e estornado. Em 26/09/2026 foi publicado o contexto isolado `sandbox-financeiro`, com Mercado Pago `test`, PayPal `sandbox` e URL própria confirmados no runtime. Permanecem ausentes as credenciais dos dois provedores e um Supabase de teste com Service Role própria; o preview continua fechado para checkout até esses dados serem cadastrados.
 
 ### Plano e segurança do Supabase
 
