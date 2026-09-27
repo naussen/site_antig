@@ -38,8 +38,8 @@ test("isola o e-mail fictício no Sandbox e preserva o e-mail real em produção
   assert.equal(resolveMercadoPagoPayerEmail({
     environment: "test",
     userEmail: "assinante@exemplo.com",
-    testPayerEmail: "test@testuser.com",
-  }), "test@testuser.com");
+    testPayerEmail: "sandbox-payer@testuser.com",
+  }), "sandbox-payer@testuser.com");
   assert.equal(resolveMercadoPagoPayerEmail({
     environment: "production",
     userEmail: "assinante@exemplo.com",
