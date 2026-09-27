@@ -82,8 +82,7 @@ function DraggableDiscipline({ discipline }: { discipline: string }) {
   return (
     <button ref={setNodeRef} type="button" className={`flex min-w-0 w-full cursor-grab touch-pan-y items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] p-3 text-left hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] ${isDragging ? "opacity-50" : ""}`} aria-label={`Arrastar ${discipline} para um horário`} {...listeners} {...attributes}>
       <GripVertical size={17} className="shrink-0 text-[var(--accent)]" aria-hidden="true" />
-      <span className="min-w-0 flex-1 truncate text-sm font-semibold text-[var(--text-primary)]">{discipline}</span>
-      <span className="text-[10px] font-bold uppercase tracking-wide text-[var(--text-muted)]">Arraste</span>
+      <span className="min-w-0 flex-1 whitespace-normal break-words text-sm font-semibold leading-5 text-[var(--text-primary)]">{discipline}</span>
     </button>
   );
 }
@@ -315,7 +314,7 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
         handleDragEnd(event);
       }}
     >
-      <div className="mt-6 grid min-w-0 gap-5 xl:grid-cols-[270px_minmax(0,1fr)]">
+      <div className="mt-6 grid min-w-0 gap-5 xl:grid-cols-[320px_minmax(0,1fr)]">
         <aside className="min-w-0 rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] p-4 shadow-[var(--shadow-sm)] xl:sticky xl:top-5 xl:self-start">
           <div><p className="text-xs font-black uppercase tracking-wider text-[var(--accent)]">Disciplinas</p><h2 className="mt-1 font-bold text-[var(--text-primary)]">Arraste para a grade</h2><p className="mt-1 text-xs leading-5 text-[var(--text-muted)]">Solte no horário desejado. O salvamento é automático.</p></div>
           <div className="mt-4 max-h-[55vh] space-y-2 overflow-y-auto pr-1">{disciplines.map((discipline) => <DraggableDiscipline key={discipline} discipline={discipline} />)}</div>

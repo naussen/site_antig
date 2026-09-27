@@ -103,4 +103,7 @@ test("mantém ajustes manuais de horário dentro das configurações", () => {
   assert.match(plannerClient, /settingsOpen && draft/);
   assert.match(plannerClient, /pointerWithin\(args\)/);
   assert.match(plannerClient, /pointerCollisions\.length > 0 \? pointerCollisions : closestCenter\(args\)/);
+  assert.doesNotMatch(plannerClient, /flex-1 truncate text-sm font-semibold/);
+  assert.doesNotMatch(plannerClient, />Arraste<\/span>/);
+  assert.match(plannerClient, /xl:grid-cols-\[320px_minmax\(0,1fr\)\]/);
 });
