@@ -8,20 +8,17 @@ const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 if (!url || !anonKey || !serviceRoleKey) throw new Error("Configuração Supabase ausente para o teste RLS.");
 
 const options = { auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false } };
-const admin = createClient(url, serviceRoleKey, options);
+let admin;
 const runId = randomUUID();
 const createdUserIds = [];
 const privacyRequestIds = [];
 const paymentBlockIds = [];
 let assertionsPassed = false;
 
-async function assertPublicKeyIsUsable() {
-  const response = await fetch(`${url}/auth/v1/settings`, {
-    headers: { apikey: anonKey },
-  });
-  if (!response.ok) {
+function assertPublicKeyIsUsable() {
+  if (!anonKey.startsWith("sb_publishable_")) {
     throw new Error(
-      "A chave pública local foi recusada pelo Supabase; atualize NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY antes de criar fixtures RLS.",
+      "A chave pública local é legada; atualize NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY antes de criar fixtures RLS.",
     );
   }
 }
@@ -79,7 +76,8 @@ async function cleanupStaleTestUsers() {
 }
 
 try {
-  await assertPublicKeyIsUsable();
+  assertPublicKeyIsUsable();
+  admin = createClient(url, serviceRoleKey, options);
   await cleanupStaleTestUsers();
   const { data: section, error: sectionError } = await admin
     .from("sections").select("section_id, content_unit_id").is("archived_at", null).limit(1).single();
