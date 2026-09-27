@@ -1,16 +1,19 @@
 "use client";
 
 import {
+  closestCenter,
   DndContext,
   DragOverlay,
   KeyboardSensor,
   MouseSensor,
+  pointerWithin,
   TouchSensor,
   useDraggable,
   useDroppable,
   useSensor,
   useSensors,
   type DragEndEvent,
+  type CollisionDetection,
 } from "@dnd-kit/core";
 import {
   CalendarPlus,
@@ -65,6 +68,11 @@ type ItemDraft = {
 const weekDayFormatter = new Intl.DateTimeFormat("pt-BR", { weekday: "short", day: "2-digit", month: "2-digit" });
 const longDateFormatter = new Intl.DateTimeFormat("pt-BR", { weekday: "long", day: "numeric", month: "long" });
 const SLOT_HEIGHT_PX = 36;
+
+const plannerCollisionDetection: CollisionDetection = (args) => {
+  const pointerCollisions = pointerWithin(args);
+  return pointerCollisions.length > 0 ? pointerCollisions : closestCenter(args);
+};
 
 function DraggableDiscipline({ discipline }: { discipline: string }) {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
@@ -296,6 +304,7 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
     <DndContext
       id="study-planner-dnd"
       sensors={sensors}
+      collisionDetection={plannerCollisionDetection}
       onDragStart={({ active }) => {
         const data = active.data.current;
         setActiveDragLabel(data?.kind === "discipline" ? String(data.discipline) : (data?.item as PlannerItem | undefined)?.discipline ?? null);

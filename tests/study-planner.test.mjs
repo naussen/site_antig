@@ -101,4 +101,6 @@ test("mantém ajustes manuais de horário dentro das configurações", () => {
   assert.match(plannerClient, /Configurações/);
   assert.match(plannerClient, /Adicionar manualmente/);
   assert.match(plannerClient, /settingsOpen && draft/);
+  assert.match(plannerClient, /pointerWithin\(args\)/);
+  assert.match(plannerClient, /pointerCollisions\.length > 0 \? pointerCollisions : closestCenter\(args\)/);
 });
