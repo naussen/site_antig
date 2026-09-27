@@ -2,7 +2,7 @@
 
 Atualizado em: 27 de setembro de 2026.
 
-Status: **planejamento aprovado para refinamento; nenhuma funcionalidade implementada**.
+Status: **alternativas-base aprovadas; planejamento em refinamento; nenhuma funcionalidade implementada**.
 
 ## 1. Resumo executivo
 
@@ -50,24 +50,31 @@ Esses itens podem ser avaliados depois de medir uso, volume e gargalos reais.
 
 | Alternativa | Vantagens | Desvantagens | Decisão |
 |---|---|---|---|
-| A. Supabase/PostgreSQL integrado | Reutiliza autenticação, RLS, entitlement, deploy e operação atuais; menor custo e menor complexidade | Exige índices, RPCs e políticas bem desenhadas | **Recomendada para o MVP** |
+| A. Supabase/PostgreSQL integrado | Reutiliza autenticação, RLS, entitlement, deploy e operação atuais; menor custo e menor complexidade | Exige índices, RPCs e políticas bem desenhadas | **Aprovada para o MVP** |
 | B. Supabase + agregações persistidas desde o início | Estatísticas muito rápidas em grande volume | Mais triggers, concorrência, reconciliação e custo de manutenção antes de haver escala | Adiar até métricas indicarem necessidade |
 | C. Serviço externo de busca, comentários ou analytics | Recursos sofisticados prontos | Nova dependência, custo, privacidade, sincronização e mais pontos de falha | Não usar no MVP |
 | D. Questões e tentativas em JSONB | Implementação inicial aparentemente curta | Filtros, integridade, RLS, índices e estatísticas ficam piores | Rejeitada |
 
 ### Alternativas de experiência
 
-1. **Lista paginada com uma questão por vez — recomendada:** menor payload, foco no estudo e boa experiência mobile.
+1. **Lista paginada com uma questão por vez — aprovada:** menor payload, foco no estudo e boa experiência mobile.
 2. Lista com 10–20 cartões abertos: navegação rápida, mas aumenta DOM, payload e risco de carregar comentários desnecessários.
 3. Simulado fechado: útil no futuro, porém adiciona sessões, cronômetro, abandono, retomada e regras de correção.
 
 ### Alternativas para comentários de usuários
 
-1. **Discussão pseudônima, textual e carregada sob demanda — recomendada:** protege e-mail/nome real e reduz custo.
+1. **Discussão pseudônima, textual e carregada sob demanda — aprovada:** protege e-mail/nome real e reduz custo.
 2. Nome público configurável: melhora identidade da conversa, mas exige perfil público, validação, denúncia e gestão de privacidade.
 3. Comentários sem identidade estável: mais simples, mas prejudica confiança e moderação.
 
 No MVP, cada usuário deve receber um pseudônimo estável e não reversível na interface, sem expor e-mail, UUID ou metadata de autenticação.
+
+### Decisões confirmadas em 27 de setembro de 2026
+
+- Supabase/PostgreSQL integrado;
+- uma questão por vez, com paginação por cursor;
+- discussão pseudônima, textual e carregada sob demanda;
+- disciplinas e tópicos relacionados vinculados às questões por metadados relacionais com identificadores estáveis.
 
 ## 5. Arquitetura proposta
 
@@ -109,7 +116,6 @@ Os nomes finais devem ser confirmados na migration e refletidos em `src/types/da
 - `external_id TEXT UNIQUE NOT NULL` para importação idempotente;
 - `question_type TEXT` com allowlist inicial `multiple_choice` e `true_false`;
 - `statement_markdown TEXT NOT NULL`;
-- `discipline TEXT NOT NULL`;
 - `subject TEXT NOT NULL`;
 - `exam_board TEXT`;
 - `institution TEXT`;
@@ -122,6 +128,51 @@ Os nomes finais devem ser confirmados na migration e refletidos em `src/types/da
 - `search_document TSVECTOR` gerado a partir de enunciado e metadados.
 
 Questões não devem ser apagadas fisicamente depois de receber tentativas. Arquivamento remove a questão de novas sessões e preserva histórico.
+
+#### `disciplines`
+
+- `id UUID PRIMARY KEY`;
+- `slug TEXT UNIQUE NOT NULL`, estável e independente do nome exibido;
+- `name TEXT UNIQUE NOT NULL`;
+- `status TEXT` com `active` e `archived`;
+- `created_at`, `updated_at`.
+
+Esse catálogo passa a ser a identidade canônica de disciplina para o módulo. A criação é aditiva: o campo legado `topics.discipline` deve ser preservado durante a transição para não quebrar consultas existentes.
+
+#### `topic_discipline_relations`
+
+- `topic_id TEXT NOT NULL REFERENCES topics(topic_id) ON DELETE RESTRICT`;
+- `discipline_id UUID NOT NULL REFERENCES disciplines(id) ON DELETE RESTRICT`;
+- `is_primary BOOLEAN NOT NULL DEFAULT false`;
+- chave primária `(topic_id, discipline_id)`;
+- índice único parcial que permita somente uma disciplina principal por tópico.
+
+O conteúdo atual deve receber backfill a partir de `topics.discipline`, com relatório prévio de nomes divergentes. Nenhuma disciplina desconhecida deve ser criada silenciosamente por erro de digitação.
+
+#### `question_discipline_relations`
+
+- `question_id UUID NOT NULL REFERENCES questions(id) ON DELETE RESTRICT`;
+- `discipline_id UUID NOT NULL REFERENCES disciplines(id) ON DELETE RESTRICT`;
+- `is_primary BOOLEAN NOT NULL DEFAULT false`;
+- `sort_order SMALLINT NOT NULL DEFAULT 0`;
+- chave primária `(question_id, discipline_id)`;
+- índice único parcial que permita somente uma disciplina principal por questão.
+
+Toda questão publicada deve possuir pelo menos uma disciplina e exatamente uma disciplina principal. Uma questão interdisciplinar pode possuir relações secundárias.
+
+#### `question_topic_relations`
+
+- `question_id UUID NOT NULL REFERENCES questions(id) ON DELETE RESTRICT`;
+- `topic_id TEXT NOT NULL REFERENCES topics(topic_id) ON DELETE RESTRICT`;
+- `relation_type TEXT` com `primary`, `related` e `reference`;
+- `relevance SMALLINT` limitado de 1 a 100;
+- `sort_order SMALLINT NOT NULL DEFAULT 0`;
+- chave primária `(question_id, topic_id)`;
+- índice único parcial que permita somente um tópico principal por questão.
+
+Uma questão pode estar vinculada a zero ou mais tópicos, mas o importador deve exigir que todo tópico relacionado compartilhe ao menos uma disciplina vinculada à questão. Questões sem tópico continuam permitidas quando a disciplina existe, pois o acervo pode ainda não possuir resumo correspondente.
+
+Os vínculos são metadados, não cópias do conteúdo. Renomear um tópico ou disciplina não muda a identidade da relação. Se um tópico for arquivado, a relação histórica permanece; ele deixa de ser oferecido como destino ativo e a interface não cria link quebrado.
 
 #### `question_options`
 
@@ -210,7 +261,10 @@ No MVP, comentário de usuário é **texto puro**, com limite de tamanho, sem li
 ### 6.4 Índices mínimos
 
 - GIN em `questions.search_document`;
-- parcial em questões publicadas por `(discipline, subject, exam_year, id)`;
+- parcial em questões publicadas por `(subject, exam_year, id)`;
+- `(discipline_id, question_id)` e `(question_id, discipline_id)` nas relações de disciplina;
+- `(topic_id, question_id)` e `(question_id, topic_id)` nas relações de tópico;
+- `(discipline_id, topic_id)` no vínculo entre tópicos e disciplinas;
 - índices seletivos para `exam_board`, `institution` e `difficulty` somente após validar cardinalidade e planos de consulta;
 - `(user_id, answered_at DESC)` em tentativas;
 - `(user_id, question_id, answered_at DESC)` em tentativas;
@@ -231,6 +285,7 @@ Criar RPC ou função de consulta com:
 - cursor opaco baseado em ordenação estável, nunca offset profundo;
 - exclusão padrão das questões ocultadas pelo usuário;
 - retorno somente dos campos necessários e das alternativas, sem gabarito;
+- retorno dos metadados mínimos de disciplinas e tópicos relacionados, com identificadores estáveis, nomes e estado navegável;
 - contagem total opcional e separada, pois `COUNT(*)` a cada página pode ser caro;
 - opção explícita para incluir ocultadas na tela de gerenciamento.
 
@@ -260,6 +315,8 @@ Uma RPC de leitura deve retornar, no primeiro corte:
 
 As métricas precisam de definições fixas na UI. “Taxa de acerto” nunca deve misturar primeira tentativa, última tentativa e todas as tentativas sem explicar qual está sendo exibida.
 
+Para evitar dupla contagem em questões interdisciplinares, o painel principal agrega pela disciplina marcada como principal. Um relatório interdisciplinar futuro pode considerar todas as relações, mas deve informar que os totais por disciplina podem se sobrepor.
+
 Começar com agregação SQL sobre índices. Adicionar tabela diária de rollup somente se telemetria ou `EXPLAIN` demonstrar lentidão real.
 
 ## 8. Busca e filtros
@@ -268,6 +325,7 @@ Começar com agregação SQL sobre índices. Adicionar tabela diária de rollup 
 
 - texto livre no enunciado e metadados;
 - disciplina;
+- tópico relacionado;
 - assunto;
 - banca;
 - instituição/órgão;
@@ -288,6 +346,7 @@ Começar com agregação SQL sobre índices. Adicionar tabela diária de rollup 
 - busca PostgreSQL em português com `websearch_to_tsquery` ou equivalente seguro;
 - termos nunca concatenados em SQL;
 - lista de facetas limitada e cacheável;
+- filtros por disciplina e tópico usam as tabelas de relação, nunca comparação textual aproximada;
 - não calcular contagens completas de todas as facetas a cada tecla;
 - botão “Limpar filtros” e estado vazio explicativo;
 - preservar filtros ao responder e ao voltar das estatísticas.
@@ -310,6 +369,7 @@ Começar com agregação SQL sobre índices. Adicionar tabela diária de rollup 
 - feedback acessível sem depender apenas de cor;
 - comentário didático após a correção;
 - ações secundárias: comentar, marcar para revisão e não mostrar mais;
+- metadados mostram disciplinas e tópicos relacionados; tópicos ativos oferecem link para o resumo correspondente;
 - próximo item preserva os filtros atuais;
 - skeleton curto somente onde evita salto de layout.
 
@@ -397,10 +457,13 @@ Contrato sugerido:
 
 - schema versionado;
 - `external_id` estável;
+- `discipline_slugs` com exatamente uma relação principal e relações secundárias opcionais;
+- `topic_relations` com `topic_id`, tipo de relação, relevância e ordem;
 - enunciado, alternativas, gabarito, metadados e explicação separados;
 - validação de exatamente uma resposta correta no múltipla escolha;
 - validação de duas opções no Certo/Errado;
 - `dry-run` com contagens de criar, atualizar, arquivar e rejeitar;
+- `dry-run` rejeita disciplina desconhecida, tópico inexistente, mais de uma relação principal ou tópico sem disciplina compatível;
 - upsert idempotente;
 - não publicar lote parcial quando uma questão falhar;
 - questões importadas entram como `draft`;
@@ -414,9 +477,13 @@ No primeiro corte, priorizar importação administrativa por lote JSON validado.
 
 ### Fase 0 — decisões e amostra real
 
+- [x] Confirmar Supabase/PostgreSQL integrado.
+- [x] Confirmar lista paginada com uma questão por vez.
+- [x] Confirmar discussão pseudônima, textual e sob demanda.
 - [ ] Confirmar formatos iniciais: múltipla escolha e Certo/Errado.
 - [ ] Obter lote representativo e revisar qualidade dos metadados.
-- [ ] Confirmar política de comentários e pseudônimo.
+- [ ] Definir catálogo inicial de disciplinas e auditar divergências em `topics.discipline`.
+- [ ] Confirmar detalhes operacionais da política de moderação e pseudônimo.
 - [ ] Fixar definições das métricas.
 - [ ] Ler a documentação local do Next.js 16.3.4 relevante a Server Components, Route Handlers, cache e APIs assíncronas.
 
@@ -424,7 +491,8 @@ Critério de saída: contrato funcional e amostra sem campos ambíguos.
 
 ### Fase 1 — schema, RLS e contratos
 
-- [ ] Criar migration aditiva com tabelas, constraints, índices e comentários.
+- [ ] Criar migration aditiva com catálogo de disciplinas, relações de tópicos/questões, demais tabelas, constraints, índices e comentários.
+- [ ] Executar dry-run e backfill auditável de tópico–disciplina, preservando `topics.discipline`.
 - [ ] Criar políticas de conteúdo, tentativas, preferências, comentários e denúncias.
 - [ ] Criar funções de resposta, listagem e estatísticas com menor privilégio.
 - [ ] Atualizar `src/types/database.ts`.
@@ -519,6 +587,7 @@ src/lib/questions/
   queries.ts
   filters.ts
   aliases.ts
+  metadata.ts
 src/types/database.ts
 supabase/migrations/026_create_questions_module.sql
 tests/questions-*.test.mjs
@@ -538,6 +607,9 @@ Preferir Server Actions a Route Handlers quando a mutação for estritamente int
 - alternativa de outra questão é rejeitada;
 - questão arquivada não entra em nova lista;
 - ocultação afeta somente o dono.
+- relação com disciplina ou tópico inexistente é rejeitada;
+- tópico relacionado e questão compartilham ao menos uma disciplina;
+- somente uma disciplina e um tópico podem ser principais por questão.
 
 ### Regras funcionais
 
@@ -546,6 +618,7 @@ Preferir Server Actions a Route Handlers quando a mutação for estritamente int
 - repetição da mesma questão;
 - caderno de erros;
 - filtros combinados e limpeza;
+- filtros e navegação por disciplina e tópico relacionados;
 - cursor sem repetição nem perda no mesmo conjunto estável;
 - ocultar, restaurar e marcar para revisão;
 - comentário, edição, exclusão lógica, resposta e denúncia;
@@ -618,6 +691,9 @@ Alertas mínimos:
 - [ ] usuário autenticado e com acesso ativo consegue abrir o módulo;
 - [ ] usuário sem acesso é redirecionado pelo fluxo atual;
 - [ ] filtros combinados funcionam e permanecem na URL;
+- [ ] cada questão publicada possui uma disciplina principal vinculada por identificador estável;
+- [ ] questão pode se vincular a vários tópicos e disciplinas sem duplicar conteúdo;
+- [ ] tópico ativo relacionado oferece navegação para o resumo e tópico arquivado não gera link quebrado;
 - [ ] listagem usa cursor e não carrega gabarito;
 - [ ] resposta é corrigida no backend e registrada uma única vez por envio;
 - [ ] comentário didático publicado aparece após responder;
@@ -643,16 +719,19 @@ Alertas mínimos:
 | Estatísticas caras | Médio | Índices, escopo por usuário, medição e rollup somente quando necessário |
 | Busca lenta | Médio | `tsvector`, GIN, cursor e facetas limitadas |
 | Metadados inconsistentes | Médio | Schema versionado, allowlists, amostra real e importação atômica |
+| Divergência entre disciplina textual legada e catálogo canônico | Alto | Dry-run, backfill auditável, relações por UUID e preservação temporária do campo legado |
+| Relação com tópico arquivado ou renomeado | Médio | Identidade por `topic_id`, `ON DELETE RESTRICT` e estado navegável calculado no backend |
 | Questões juridicamente incorretas | Alto | Draft, fonte, revisão humana e arquivamento auditável |
 | Crescimento de tentativas | Médio | Índices por usuário/data, retenção definida e monitoramento de volume |
 | Escopo crescer para simulado/rede social | Médio | Manter os itens fora do MVP e exigir decisão própria por fase |
 
 ## 20. Decisões recomendadas para iniciar sem bloqueio
 
-- arquitetura A: Supabase integrado;
-- uma questão por vez;
+- arquitetura A: Supabase integrado — **aprovada**;
+- uma questão por vez — **aprovada**;
 - múltipla escolha e Certo/Errado;
-- discussão pseudônima em texto puro;
+- discussão pseudônima em texto puro e sob demanda — **aprovada**;
+- vínculos relacionais questão–disciplina e questão–tópico — **aprovados**;
 - um nível de resposta;
 - busca nativa do PostgreSQL;
 - estatísticas sob demanda no MVP;
@@ -664,8 +743,8 @@ Alertas mínimos:
 
 ## 21. Próximos passos
 
-1. Validar este recorte funcional e a política de comentários.
-2. Auditar um lote real de questões para fechar o contrato de importação.
+1. Auditar os valores atuais de `topics.discipline` e propor o catálogo canônico sem alterar dados.
+2. Auditar um lote real de questões para fechar o contrato de importação e os vínculos.
 3. Produzir o desenho SQL detalhado e a matriz RLS antes de qualquer migration.
-4. Implementar a Fase 1 em branch própria, com migration aditiva e testes de dois usuários.
-5. Só iniciar a UI depois de provar que gabarito e dados pessoais não vazam pela Data API.
+4. Implementar a Fase 1 em branch própria, com migration aditiva, backfill auditável e testes de dois usuários.
+5. Só iniciar a UI depois de provar que gabarito, dados pessoais e identificadores internos não vazam pela Data API.
