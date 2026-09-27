@@ -1,5 +1,12 @@
 # Changelog
 
+## Não publicado — fundação segura do módulo Questões
+
+- criada migration aditiva do módulo com catálogo canônico de disciplinas, vínculos com tópicos, questões, alternativas, gabaritos, explicações, tentativas, preferências e estruturas de comentários;
+- isolado o gabarito da Data API e adicionadas RPCs de listagem, resposta idempotente, ocultação/revisão e estatísticas pessoais;
+- adicionados RLS, privilégios mínimos, validação diferida de publicação, tipos TypeScript e suíte pgTAP de 27 verificações entre usuários;
+- adicionados testes estáticos de segurança da migration, sem aplicar alterações ao banco remoto nesta etapa.
+
 ## Não publicado — planejamento do módulo Questões
 
 - definido o projeto do módulo Questões com alternativas arquiteturais, MVP leve no Supabase, comentários didáticos e de usuários, busca, estatísticas pessoais e ocultação reversível;

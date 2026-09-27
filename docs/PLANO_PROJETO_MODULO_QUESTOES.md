@@ -2,7 +2,18 @@
 
 Atualizado em: 27 de setembro de 2026.
 
-Status: **alternativas-base aprovadas; planejamento em refinamento; nenhuma funcionalidade implementada**.
+Status: **Fase 1 iniciada em branch própria; migration e tipos implementados, ainda não aplicados ao banco remoto**.
+
+## Progresso de implementação
+
+| Frente | Estado |
+|---|---|
+| Decisões de arquitetura | Concluída |
+| Migration aditiva e backfill | Implementada; aplicação pendente |
+| RLS e RPCs fundamentais | Implementadas; pgTAP local pendente por ausência de Docker |
+| Tipos TypeScript | Implementados |
+| Testes estáticos de segurança | 6/6 aprovados |
+| UI, importador e comentários operacionais | Não iniciados |
 
 ## 1. Resumo executivo
 
@@ -206,6 +217,7 @@ O comentário didático é conteúdo editorial. IA pode produzir rascunho, mas p
 #### `user_question_attempts`
 
 - `id UUID PRIMARY KEY`;
+- `submission_id UUID NOT NULL`, único por usuário para tornar reenvios idempotentes;
 - `user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE`;
 - `question_id UUID NOT NULL`;
 - `selected_option_id UUID NOT NULL`;
@@ -491,12 +503,12 @@ Critério de saída: contrato funcional e amostra sem campos ambíguos.
 
 ### Fase 1 — schema, RLS e contratos
 
-- [ ] Criar migration aditiva com catálogo de disciplinas, relações de tópicos/questões, demais tabelas, constraints, índices e comentários.
-- [ ] Executar dry-run e backfill auditável de tópico–disciplina, preservando `topics.discipline`.
-- [ ] Criar políticas de conteúdo, tentativas, preferências, comentários e denúncias.
-- [ ] Criar funções de resposta, listagem e estatísticas com menor privilégio.
-- [ ] Atualizar `src/types/database.ts`.
-- [ ] Adicionar testes SQL/RLS com dois usuários.
+- [x] Criar migration aditiva com catálogo de disciplinas, relações de tópicos/questões, demais tabelas, constraints, índices e comentários.
+- [ ] Executar aplicação e validar o backfill auditável de tópico–disciplina, preservando `topics.discipline`.
+- [x] Criar políticas de conteúdo, tentativas, preferências, comentários e denúncias.
+- [x] Criar funções de resposta, listagem, preferências e estatísticas com menor privilégio.
+- [x] Atualizar `src/types/database.ts`.
+- [x] Adicionar testes SQL/RLS com dois usuários; execução local pendente por ausência de Docker/PostgreSQL.
 
 Critério de saída: nenhum usuário lê ou altera dados pessoais de outro; gabarito não é legível diretamente.
 
@@ -589,7 +601,7 @@ src/lib/questions/
   aliases.ts
   metadata.ts
 src/types/database.ts
-supabase/migrations/026_create_questions_module.sql
+supabase/migrations/029_create_questions_module.sql
 tests/questions-*.test.mjs
 scripts/questions-admin.mjs
 ```
