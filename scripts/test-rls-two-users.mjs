@@ -15,6 +15,17 @@ const privacyRequestIds = [];
 const paymentBlockIds = [];
 let assertionsPassed = false;
 
+async function assertPublicKeyIsUsable() {
+  const response = await fetch(`${url}/auth/v1/settings`, {
+    headers: { apikey: anonKey },
+  });
+  if (!response.ok) {
+    throw new Error(
+      "A chave pública local foi recusada pelo Supabase; atualize NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY antes de criar fixtures RLS.",
+    );
+  }
+}
+
 async function createTestUser(label) {
   const { data, error } = await admin.auth.admin.createUser({
     email: `rls-${label}-${runId}@example.com`,
@@ -68,6 +79,7 @@ async function cleanupStaleTestUsers() {
 }
 
 try {
+  await assertPublicKeyIsUsable();
   await cleanupStaleTestUsers();
   const { data: section, error: sectionError } = await admin
     .from("sections").select("section_id, content_unit_id").is("archived_at", null).limit(1).single();
@@ -75,6 +87,8 @@ try {
   const userA = await createTestUser("a");
   const userB = await createTestUser("b");
   const plannerStartDate = "2026-09-21";
+  const highlightIds = { a: randomUUID(), b: randomUUID() };
+  const imageIds = { a: randomUUID(), b: randomUUID() };
 
   const [planA, planB] = await Promise.all([
     mustInsert("study_plans", { user_id: userA.id, title: "Planner A", start_date: plannerStartDate, weeks_count: 2 }),
@@ -93,17 +107,23 @@ try {
     mustInsert("user_progress", { user_id: userB.id, section_id: section.section_id, content_unit_id: section.content_unit_id, completed: false }),
     mustInsert("user_dashboard_preferences", { user_id: userA.id, visible_disciplines: ["A"] }),
     mustInsert("user_dashboard_preferences", { user_id: userB.id, visible_disciplines: ["B"] }),
+    mustInsert("user_text_highlights", { id: highlightIds.a, user_id: userA.id, section_id: section.section_id, content_unit_id: section.content_unit_id, color: "yellow", start_offset: 0, end_offset: 1, selected_text: "A", prefix: "", suffix: "" }),
+    mustInsert("user_text_highlights", { id: highlightIds.b, user_id: userB.id, section_id: section.section_id, content_unit_id: section.content_unit_id, color: "blue", start_offset: 0, end_offset: 1, selected_text: "B", prefix: "", suffix: "" }),
+    mustInsert("user_note_images", { id: imageIds.a, user_id: userA.id, storage_path: `${userA.id}/${imageIds.a}.webp` }),
+    mustInsert("user_note_images", { id: imageIds.b, user_id: userB.id, storage_path: `${userB.id}/${imageIds.b}.webp` }),
     mustInsert("user_entitlements", { user_id: userA.id, provider: "mercado_pago", provider_subscription_id: `rls-${runId}-a`, status: "active" }),
     mustInsert("user_entitlements", { user_id: userB.id, provider: "mercado_pago", provider_subscription_id: `rls-${runId}-b`, status: "pending" }),
     mustInsert("privacy_requests", { user_id: userA.id, contact_email: userA.email, request_type: "access", message: "solicitação RLS do usuário A" }),
     mustInsert("privacy_requests", { user_id: userB.id, contact_email: userB.email, request_type: "deletion", message: "solicitação RLS do usuário B" }),
   ]);
-  privacyRequestIds.push(fixtures[8].id, fixtures[9].id);
+  privacyRequestIds.push(fixtures[12].id, fixtures[13].id);
 
   for (const user of [userA, userB]) {
     await assertOwnRows(user.client, "user_notes", user.id);
     await assertOwnRows(user.client, "user_progress", user.id);
     await assertOwnRows(user.client, "user_dashboard_preferences", user.id);
+    await assertOwnRows(user.client, "user_text_highlights", user.id);
+    await assertOwnRows(user.client, "user_note_images", user.id);
     await assertOwnRows(user.client, "user_entitlements", user.id);
     await assertOwnRows(user.client, "privacy_requests", user.id);
     await assertOwnRows(user.client, "study_plans", user.id);
@@ -146,6 +166,29 @@ try {
     .from("user_notes").update({ content: "tentativa indevida" }).eq("user_id", userB.id).select("id");
   assert.equal(foreignUpdateError, null, "UPDATE filtrado por RLS não deve revelar a existência da nota alheia");
   assert.equal(foreignUpdate?.length, 0, "usuário A não deve alterar nota do usuário B");
+
+  const { data: foreignHighlightUpdate, error: foreignHighlightUpdateError } = await userA.client
+    .from("user_text_highlights")
+    .update({ color: "red" })
+    .eq("id", highlightIds.b)
+    .select("id");
+  assert.equal(foreignHighlightUpdateError, null, "RLS não deve revelar o realce alheio");
+  assert.equal(foreignHighlightUpdate?.length, 0, "usuário A não deve alterar realce de B");
+
+  const { data: foreignImageRead, error: foreignImageReadError } = await userA.client
+    .from("user_note_images")
+    .select("id")
+    .eq("id", imageIds.b);
+  assert.equal(foreignImageReadError, null, "RLS não deve revelar metadados da imagem alheia");
+  assert.equal(foreignImageRead?.length, 0, "usuário A não deve ler metadados de imagem de B");
+
+  const forgedImageId = randomUUID();
+  const { error: forgedImageInsertError } = await userA.client.from("user_note_images").insert({
+    id: forgedImageId,
+    user_id: userA.id,
+    storage_path: `${userA.id}/${forgedImageId}.webp`,
+  });
+  assert.ok(forgedImageInsertError, "browser não deve reservar metadados de imagem diretamente");
 
   const { error: forgedInsertError } = await userA.client.from("user_progress").insert({
     user_id: userB.id,
@@ -203,4 +246,4 @@ try {
   }
 }
 
-if (assertionsPassed) console.log("RLS de dois usuários: planner e dados pessoais isolados; fixtures removidas.");
+if (assertionsPassed) console.log("RLS de dois usuários: notas, realces, imagens e demais dados pessoais isolados; fixtures removidas.");

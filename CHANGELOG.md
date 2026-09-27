@@ -1,5 +1,12 @@
 # Changelog
 
+## Não publicado — robustez das personalizações por usuário
+
+- persistido o tema Light, Dark ou Sépia na conta, com renderização inicial no servidor e sincronização entre abas;
+- protegida a edição de notas contra sobrescrita silenciosa por outra aba ou dispositivo;
+- tornadas idempotentes a exclusão e a reconciliação periódica de imagens órfãs de notas;
+- ampliado o teste RLS de dois usuários para realces e metadados privados de imagens.
+
 ## Não publicado — gerenciamento de realces
 
 - adicionada uma lista dos realces recentes no painel de estudo, com trecho identificável, troca de cor e exclusão direta;

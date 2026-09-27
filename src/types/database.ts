@@ -165,6 +165,7 @@ export interface UserDashboardPreferences {
   visible_disciplines: string[] | null;
   start_module: 'resumos' | 'legis' | 'notas' | 'configuracoes';
   start_discipline: string | null;
+  theme: Theme;
   updated_at: string;
 }
 

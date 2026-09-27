@@ -96,8 +96,17 @@ export function NoteCard({ note, userId }: NoteCardProps) {
       .update({ content: normalizedDraft })
       .eq("id", note.id)
       .eq("user_id", userId)
+      .eq("updated_at", updatedAt)
       .select("content, updated_at")
-      .single();
+      .maybeSingle();
+
+    if (!error && !data) {
+      setErrorMessage(
+        "Esta nota foi alterada em outra aba ou dispositivo. Copie seu rascunho e recarregue a página antes de tentar novamente.",
+      );
+      setIsSaving(false);
+      return;
+    }
 
     if (error || !data) {
       console.error("Erro ao atualizar nota:", error);

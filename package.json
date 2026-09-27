@@ -13,6 +13,7 @@
     "test:auth": "node --test tests/auth-errors.test.mjs tests/google-only-auth.test.mjs",
     "test:site-paths": "node --test tests/site-paths.test.mjs",
     "test:highlights": "node --test tests/text-highlights.test.mjs tests/same-origin.test.mjs",
+    "test:personalization": "node --test tests/personalization-hardening.test.mjs tests/note-images.test.mjs tests/dashboard-preferences-ux.test.mjs",
     "test:payments": "node --test tests/payments-core.test.mjs tests/payment-hardening.test.mjs tests/payment-logging.test.mjs",
     "test:backup": "node --test tests/supabase-backup.test.mjs",
     "backup:supabase": "node --env-file-if-exists=.env.local scripts/backup-supabase.mjs",

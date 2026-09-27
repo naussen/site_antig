@@ -3,6 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { DashboardNavigation } from "@/components/navigation/dashboard-navigation";
 import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
+import { NoteImageReconciler } from "@/components/note-image-reconciler";
 
 export default async function DashboardLayout({
   children,
@@ -32,6 +33,7 @@ export default async function DashboardLayout({
 
   return (
     <div className="pro-resumos-shell min-h-screen lg:flex" style={{ background: "var(--dashboard-bg)" }}>
+      <NoteImageReconciler />
       <DashboardNavigation
         userEmail={user.email ?? null}
         userName={
