@@ -29,6 +29,8 @@ test("não registra respostas brutas nem payloads dos provedores", () => {
 test("auditoria financeira é persistente, mínima e não bloqueia o fluxo principal", () => {
   assert.match(auditSource, /payment_audit_events/);
   assert.match(auditSource, /return false/);
+  assert.match(auditSource, /try\s*\{/);
+  assert.match(auditSource, /catch\s*\{/);
   assert.match(auditSource, /SAFE_REASON_CODE/);
   assert.doesNotMatch(auditSource, /payload|token|email|card|cookie/i);
   assert.match(checkoutSource, /action: "checkout_created"/);
