@@ -3,6 +3,8 @@
 ## Não publicado — planejamento do módulo Questões
 
 - definido o projeto do módulo Questões com alternativas arquiteturais, MVP leve no Supabase, comentários didáticos e de usuários, busca, estatísticas pessoais e ocultação reversível;
+- aprovadas a arquitetura Supabase integrada, a navegação de uma questão por vez e a discussão pseudônima sob demanda;
+- planejados catálogo canônico e relações muitos-para-muitos para vincular questões a disciplinas e tópicos por identificadores estáveis, preservando o campo legado durante a transição;
 - documentados modelo de dados, RLS, proteção do gabarito, moderação, fases, testes, critérios de aceite, metas de desempenho, rollout e rollback;
 - mantida a implementação funcional fora deste checkpoint de planejamento.
 
