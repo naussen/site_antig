@@ -207,6 +207,51 @@ export function useTextHighlights(userId: string | null, sections: HighlightSect
     return true;
   }, [contextKey, highlights, userId]);
 
+  const updateHighlightColor = useCallback(async (
+    highlightId: string,
+    color: TextHighlightColor,
+  ) => {
+    if (!userId || !contextKey || highlightId.startsWith("pending-")) return false;
+
+    const previousHighlight = highlights.find((item) => item.id === highlightId);
+    if (!previousHighlight || previousHighlight.color === color) return Boolean(previousHighlight);
+
+    setState((previous) => previous.contextKey === contextKey ? {
+      ...previous,
+      highlights: previous.highlights.map((item) => (
+        item.id === highlightId ? { ...item, color } : item
+      )),
+      error: null,
+    } : previous);
+
+    const response = await requestHighlightApi(withSiteBasePath("/api/highlights"), {
+      method: "PATCH",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ id: highlightId, color }),
+    });
+
+    if (!response?.ok) {
+      setState((previous) => previous.contextKey === contextKey ? {
+        ...previous,
+        highlights: previous.highlights.map((item) => (
+          item.id === highlightId ? previousHighlight : item
+        )),
+        error: "Não foi possível atualizar o realce.",
+      } : previous);
+      return false;
+    }
+
+    const updated = await response.json() as PersonalTextHighlight;
+    setState((previous) => previous.contextKey === contextKey ? {
+      ...previous,
+      highlights: previous.highlights.map((item) => (
+        item.id === highlightId ? updated : item
+      )),
+      error: null,
+    } : previous);
+    return true;
+  }, [contextKey, highlights, userId]);
+
   const highlightsBySection = useMemo(() => {
     const grouped: Record<string, PersonalTextHighlight[]> = {};
     highlights.forEach((highlight) => {
@@ -234,5 +279,6 @@ export function useTextHighlights(userId: string | null, sections: HighlightSect
     error,
     addHighlight,
     removeHighlights,
+    updateHighlightColor,
   };
 }
