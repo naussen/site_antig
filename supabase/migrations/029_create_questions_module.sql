@@ -616,7 +616,11 @@ BEGIN
   )
   SELECT jsonb_build_object(
     'items', COALESCE(jsonb_agg(items.item ORDER BY items.id), '[]'::jsonb),
-    'next_cursor', CASE WHEN count(*) = p_limit THEN max(items.id)::text ELSE NULL END
+    'next_cursor', CASE
+      WHEN count(*) = p_limit
+        THEN (array_agg(items.id ORDER BY items.id DESC))[1]::text
+      ELSE NULL
+    END
   )
   INTO result
   FROM items;

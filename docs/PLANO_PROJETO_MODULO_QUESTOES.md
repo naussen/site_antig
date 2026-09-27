@@ -2,15 +2,15 @@
 
 Atualizado em: 27 de setembro de 2026.
 
-Status: **Fase 1 iniciada em branch própria; migration e tipos implementados, ainda não aplicados ao banco remoto**.
+Status: **Fase 1 em andamento na branch própria; migration validada em PostgreSQL isolado e ainda não aplicada ao banco remoto**.
 
 ## Progresso de implementação
 
 | Frente | Estado |
 |---|---|
 | Decisões de arquitetura | Concluída |
-| Migration aditiva e backfill | Implementada; aplicação pendente |
-| RLS e RPCs fundamentais | Implementadas; pgTAP local pendente por ausência de Docker |
+| Migration aditiva e backfill | Aplicação limpa validada em PostgreSQL 18.6 isolado; backfill real e remoto pendentes |
+| RLS e RPCs fundamentais | Implementadas; pgTAP local aprovado (27/27) |
 | Tipos TypeScript | Implementados |
 | Testes estáticos de segurança | 6/6 aprovados |
 | UI, importador e comentários operacionais | Não iniciados |
@@ -504,11 +504,12 @@ Critério de saída: contrato funcional e amostra sem campos ambíguos.
 ### Fase 1 — schema, RLS e contratos
 
 - [x] Criar migration aditiva com catálogo de disciplinas, relações de tópicos/questões, demais tabelas, constraints, índices e comentários.
-- [ ] Executar aplicação e validar o backfill auditável de tópico–disciplina, preservando `topics.discipline`.
+- [x] Executar a migration do zero em PostgreSQL isolado.
+- [ ] Validar o backfill auditável contra tópicos reais em homologação, preservando `topics.discipline`.
 - [x] Criar políticas de conteúdo, tentativas, preferências, comentários e denúncias.
 - [x] Criar funções de resposta, listagem, preferências e estatísticas com menor privilégio.
 - [x] Atualizar `src/types/database.ts`.
-- [x] Adicionar testes SQL/RLS com dois usuários; execução local pendente por ausência de Docker/PostgreSQL.
+- [x] Adicionar e executar testes SQL/RLS com dois usuários em PostgreSQL isolado; 27/27 asserções aprovadas.
 
 Critério de saída: nenhum usuário lê ou altera dados pessoais de outro; gabarito não é legível diretamente.
 
@@ -713,7 +714,7 @@ Alertas mínimos:
 - [ ] nenhum nome real, e-mail ou UUID é exposto na discussão;
 - [ ] estatísticas distinguem primeira e última tentativa;
 - [ ] usuário oculta e restaura uma questão;
-- [ ] RLS negativa com dois usuários passa;
+- [x] RLS negativa com dois usuários passa em PostgreSQL isolado;
 - [ ] UI passa em mobile, desktop e nos três temas;
 - [ ] lint, TypeScript, testes e build passam;
 - [ ] busca e estatísticas atendem ao orçamento com volume representativo;
@@ -755,8 +756,8 @@ Alertas mínimos:
 
 ## 21. Próximos passos
 
-1. Auditar os valores atuais de `topics.discipline` e propor o catálogo canônico sem alterar dados.
+1. Revisar o catálogo gerado pelo backfill contra os valores reais de `topics.discipline` antes da aplicação remota.
 2. Auditar um lote real de questões para fechar o contrato de importação e os vínculos.
-3. Produzir o desenho SQL detalhado e a matriz RLS antes de qualquer migration.
-4. Implementar a Fase 1 em branch própria, com migration aditiva, backfill auditável e testes de dois usuários.
-5. Só iniciar a UI depois de provar que gabarito, dados pessoais e identificadores internos não vazam pela Data API.
+3. Aplicar a migration em ambiente Supabase de homologação compatível com PostgreSQL 17 e repetir o pgTAP.
+4. Validar pela Data API que gabarito, dados pessoais e identificadores internos não são expostos.
+5. Iniciar a Fase 2 somente após essas verificações de homologação.
