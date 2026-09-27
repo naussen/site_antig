@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — planejamento do módulo Questões
+
+- definido o projeto do módulo Questões com alternativas arquiteturais, MVP leve no Supabase, comentários didáticos e de usuários, busca, estatísticas pessoais e ocultação reversível;
+- documentados modelo de dados, RLS, proteção do gabarito, moderação, fases, testes, critérios de aceite, metas de desempenho, rollout e rollback;
+- mantida a implementação funcional fora deste checkpoint de planejamento.
+
 ## Não publicado — robustez das personalizações por usuário
 
 - persistido o tema Light, Dark ou Sépia na conta, com renderização inicial no servidor e sincronização entre abas;
