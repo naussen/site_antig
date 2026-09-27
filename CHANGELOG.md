@@ -10,6 +10,7 @@
 - migration 026 aplicada no Supabase remoto e isolamento validado com dois usuários temporários, removidos ao final do teste.
 - adicionados redimensionamento direto da duração por gesto ou teclado, cópia segura para a semana seguinte e restauração do último bloco excluído;
 - a cópia semanal recusa semanas de destino já preenchidas e nunca sobrescreve horários silenciosamente.
+- simplificada a operação principal para arrastar, redimensionar e salvar automaticamente; criação, edição e exclusão manual de horários agora aparecem somente em “Configurações”.
 
 ## Não publicado — remoção da disciplina Geral
 

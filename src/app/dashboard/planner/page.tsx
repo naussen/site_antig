@@ -74,7 +74,7 @@ export default async function PlannerPage() {
             <p className="mt-6 text-xs font-black uppercase tracking-[0.16em] text-white/75">Área do aluno</p>
             <h1 className="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">Planner de estudos</h1>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-white/75 sm:text-base">
-              Organize até quatro semanas, distribua suas disciplinas e ajuste cada horário à sua rotina.
+              Arraste as disciplinas para os horários e pronto: cada alteração é salva automaticamente.
             </p>
           </div>
         </header>
