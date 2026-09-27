@@ -26,6 +26,11 @@ const deleteSchema = z.object({
   ids: z.array(z.uuid()).min(1).max(100),
 }).strict();
 
+const updateSchema = z.object({
+  id: z.uuid(),
+  color: z.enum(TEXT_HIGHLIGHT_COLORS),
+}).strict();
+
 async function getAuthenticatedClient() {
   const supabase = await createClient();
   const { data: { user }, error } = await supabase.auth.getUser();
@@ -188,6 +193,55 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Realce inválido." }, { status: 400 });
     }
     return NextResponse.json({ error: "Não foi possível salvar o realce." }, { status: 500 });
+  }
+}
+
+export async function PATCH(request: Request) {
+  if (!isSameOriginRequest(request)) {
+    return NextResponse.json({ error: "Origem inválida." }, { status: 403 });
+  }
+
+  try {
+    const access = await getAuthenticatedClient();
+    if (!access) return NextResponse.json({ error: "Não autorizado." }, { status: 401 });
+    const payload = updateSchema.parse(await readJsonBodyLimited(request, MAX_BODY_BYTES));
+    const identityUpdateResult = await access.supabase
+      .from("user_text_highlights")
+      .update({ color: payload.color })
+      .eq("user_id", access.user.id)
+      .eq("id", payload.id)
+      .select(highlightColumns)
+      .maybeSingle();
+    let data = identityUpdateResult.data as Record<string, unknown> | null;
+    let updateError: unknown = identityUpdateResult.error;
+
+    if (updateError && isIdentitySchemaUnavailable(updateError)) {
+      const legacyResult = await access.supabase
+        .from("user_text_highlights")
+        .update({ color: payload.color })
+        .eq("user_id", access.user.id)
+        .eq("id", payload.id)
+        .select(legacyHighlightColumns)
+        .maybeSingle();
+      data = legacyResult.data as Record<string, unknown> | null;
+      updateError = legacyResult.error;
+    }
+
+    if (updateError) return NextResponse.json({ error: "Não foi possível atualizar o realce." }, { status: 500 });
+    if (!data) return NextResponse.json({ error: "Realce não encontrado." }, { status: 404 });
+    return NextResponse.json({
+      ...data,
+      migration_status: data.migration_status ?? "active",
+      anchor_context: data.anchor_context ?? {},
+    });
+  } catch (error) {
+    if (error instanceof RequestBodyError) {
+      return NextResponse.json({ error: error.message }, { status: error.status });
+    }
+    if (error instanceof z.ZodError) {
+      return NextResponse.json({ error: "Realce inválido." }, { status: 400 });
+    }
+    return NextResponse.json({ error: "Não foi possível atualizar o realce." }, { status: 500 });
   }
 }
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
-import { AlertCircle, Check, Eraser, Loader2, X } from "lucide-react";
+import { AlertCircle, Check, Eraser, Loader2, Trash2, X } from "lucide-react";
 import {
   TEXT_HIGHLIGHT_COLORS,
   useTextHighlights,
@@ -50,6 +50,15 @@ const COLOR_CLASSES: Record<TextHighlightColor, string> = {
 
 const MAX_HIGHLIGHT_LENGTH = 10000;
 const ANCHOR_CONTEXT_LENGTH = 64;
+const MAX_VISIBLE_HIGHLIGHTS = 20;
+const HIGHLIGHT_EXCERPT_LENGTH = 80;
+
+function getHighlightExcerpt(text: string) {
+  const normalized = text.replace(/\s+/g, " ").trim();
+  return normalized.length > HIGHLIGHT_EXCERPT_LENGTH
+    ? `${normalized.slice(0, HIGHLIGHT_EXCERPT_LENGTH - 1)}…`
+    : normalized;
+}
 
 function createRangeFromOffsets(root: HTMLElement, start: number, end: number) {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
@@ -118,7 +127,13 @@ export function TextHighlighter({
     error,
     addHighlight,
     removeHighlights,
+    updateHighlightColor,
   } = useTextHighlights(userId, sections);
+
+  const visibleHighlights = [...highlights]
+    .filter((highlight) => !highlight.id.startsWith("pending-"))
+    .reverse()
+    .slice(0, MAX_VISIBLE_HIGHLIGHTS);
 
   const setTransientSavedStatus = useCallback((success: boolean) => {
     if (savedStatusTimerRef.current) clearTimeout(savedStatusTimerRef.current);
@@ -246,6 +261,23 @@ export function TextHighlighter({
     setTransientSavedStatus(success);
   }, [activeTool, addHighlight, highlights, panelOpen, removeHighlights, saveStatus, setTransientSavedStatus]);
 
+  const handleColorChange = useCallback(async (
+    highlightId: string,
+    color: TextHighlightColor,
+  ) => {
+    setLocalError(null);
+    setSaveStatus("saving");
+    const success = await updateHighlightColor(highlightId, color);
+    setTransientSavedStatus(success);
+  }, [setTransientSavedStatus, updateHighlightColor]);
+
+  const handleRemoveHighlight = useCallback(async (highlightId: string) => {
+    setLocalError(null);
+    setSaveStatus("saving");
+    const success = await removeHighlights([highlightId]);
+    setTransientSavedStatus(success);
+  }, [removeHighlights, setTransientSavedStatus]);
+
   return (
     <div ref={rootRef} onPointerUp={handleSelection}>
       {children}
@@ -312,6 +344,65 @@ export function TextHighlighter({
               <Eraser size={15} />
               Remover realce do trecho selecionado
             </button>
+
+            {visibleHighlights.length > 0 && (
+              <div className="mt-4 border-t border-[var(--border)] pt-3">
+                <div className="mb-2 flex items-center justify-between gap-2">
+                  <p className="text-xs font-bold text-[var(--text-primary)]">
+                    Seus realces ({highlights.length})
+                  </p>
+                  {highlights.length > MAX_VISIBLE_HIGHLIGHTS && (
+                    <span className="text-[11px] text-[var(--text-muted)]">
+                      {MAX_VISIBLE_HIGHLIGHTS} mais recentes
+                    </span>
+                  )}
+                </div>
+                <ul className="max-h-52 space-y-2 overflow-y-auto pr-1" aria-label="Gerenciar realces">
+                  {visibleHighlights.map((highlight) => (
+                    <li
+                      key={highlight.id}
+                      className="flex items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] p-2"
+                    >
+                      <span
+                        className={`h-8 w-2 shrink-0 rounded-full ${COLOR_CLASSES[highlight.color]}`}
+                        aria-hidden="true"
+                      />
+                      <span className="min-w-0 flex-1 truncate text-xs text-[var(--text-secondary)]" title={getHighlightExcerpt(highlight.selected_text)}>
+                        {getHighlightExcerpt(highlight.selected_text)}
+                      </span>
+                      <label className="sr-only" htmlFor={`highlight-color-${highlight.id}`}>
+                        Cor do realce {getHighlightExcerpt(highlight.selected_text)}
+                      </label>
+                      <select
+                        id={`highlight-color-${highlight.id}`}
+                        value={highlight.color}
+                        onChange={(event) => void handleColorChange(
+                          highlight.id,
+                          event.target.value as TextHighlightColor,
+                        )}
+                        disabled={saveStatus === "saving"}
+                        className="h-8 max-w-24 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-1 text-xs text-[var(--text-primary)] disabled:opacity-60"
+                        aria-label={`Alterar cor do realce: ${getHighlightExcerpt(highlight.selected_text)}`}
+                      >
+                        {TEXT_HIGHLIGHT_COLORS.map((color) => (
+                          <option key={color} value={color}>{COLOR_LABELS[color]}</option>
+                        ))}
+                      </select>
+                      <button
+                        type="button"
+                        onClick={() => void handleRemoveHighlight(highlight.id)}
+                        disabled={saveStatus === "saving"}
+                        className="grid h-8 w-8 shrink-0 place-items-center rounded-lg text-[var(--text-muted)] transition-colors hover:bg-[var(--callout-warning-bg)] hover:text-[var(--callout-warning-text)] disabled:opacity-60"
+                        aria-label={`Excluir realce: ${getHighlightExcerpt(highlight.selected_text)}`}
+                        title="Excluir realce"
+                      >
+                        <Trash2 size={15} />
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="mt-3 min-h-5" aria-live="polite">
               {(loading || saveStatus === "saving") && (

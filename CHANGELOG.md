@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — gerenciamento de realces
+
+- adicionada uma lista dos realces recentes no painel de estudo, com trecho identificável, troca de cor e exclusão direta;
+- preservado o fluxo atual de seleção e salvamento automático, agora com feedback também nas edições;
+- incluída atualização autenticada e isolada por usuário na API de realces.
+
 ## Não publicado — Planner semanal de estudos
 
 - criada a rota autenticada `/dashboard/planner` e o link “Planner” na navegação da área do aluno;
