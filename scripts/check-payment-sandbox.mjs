@@ -7,17 +7,37 @@ function required(name) {
   return value;
 }
 
-function validateSandboxConfiguration() {
-  if (required("MERCADO_PAGO_ENVIRONMENT") !== "test") {
-    throw new Error("Sandbox bloqueado: MERCADO_PAGO_ENVIRONMENT deve ser test; produção nunca é usada neste teste.");
-  }
-  if (required("PAYPAL_ENVIRONMENT") !== "sandbox") {
-    throw new Error("Sandbox bloqueado: PAYPAL_ENVIRONMENT deve ser sandbox; live nunca é usado neste teste.");
+function argumentValue(name, fallback) {
+  const index = process.argv.indexOf(name);
+  return index >= 0 ? process.argv[index + 1] : fallback;
+}
+
+function validateSandboxConfiguration(provider) {
+  if (!['all', 'mercado-pago', 'paypal'].includes(provider)) {
+    throw new Error("Use --provider mercado-pago, paypal ou all.");
   }
 
-  const payerEmail = required("MERCADO_PAGO_TEST_PAYER_EMAIL");
-  if (!/^[^\s@]+@testuser\.com$/iu.test(payerEmail)) {
-    throw new Error("Sandbox bloqueado: MERCADO_PAGO_TEST_PAYER_EMAIL deve ser um usuário de teste do Mercado Pago.");
+  const config = {};
+  if (provider === "all" || provider === "mercado-pago") {
+    if (required("MERCADO_PAGO_ENVIRONMENT") !== "test") {
+      throw new Error("Sandbox bloqueado: MERCADO_PAGO_ENVIRONMENT deve ser test; produção nunca é usada neste teste.");
+    }
+    const payerEmail = required("MERCADO_PAGO_TEST_PAYER_EMAIL");
+    if (!/^[^\s@]+@testuser\.com$/iu.test(payerEmail)) {
+      throw new Error("Sandbox bloqueado: MERCADO_PAGO_TEST_PAYER_EMAIL deve ser um usuário de teste do Mercado Pago.");
+    }
+    config.mercadoPagoToken = required("MERCADO_PAGO_ACCESS_TOKEN");
+    config.mercadoPagoWebhookSecret = required("MERCADO_PAGO_WEBHOOK_SECRET");
+  }
+
+  if (provider === "all" || provider === "paypal") {
+    if (required("PAYPAL_ENVIRONMENT") !== "sandbox") {
+      throw new Error("Sandbox bloqueado: PAYPAL_ENVIRONMENT deve ser sandbox; live nunca é usado neste teste.");
+    }
+    config.payPalClientId = required("PAYPAL_CLIENT_ID");
+    config.payPalClientSecret = required("PAYPAL_CLIENT_SECRET");
+    config.payPalPlanId = required("PAYPAL_PLAN_ID");
+    config.payPalWebhookId = required("PAYPAL_WEBHOOK_ID");
   }
 
   const appUrl = new URL(required("PAYMENTS_APP_URL"));
@@ -25,14 +45,7 @@ function validateSandboxConfiguration() {
     throw new Error("Sandbox bloqueado: PAYMENTS_APP_URL deve ser a raiz HTTPS do ambiente de teste.");
   }
 
-  return {
-    mercadoPagoToken: required("MERCADO_PAGO_ACCESS_TOKEN"),
-    mercadoPagoWebhookSecret: required("MERCADO_PAGO_WEBHOOK_SECRET"),
-    payPalClientId: required("PAYPAL_CLIENT_ID"),
-    payPalClientSecret: required("PAYPAL_CLIENT_SECRET"),
-    payPalPlanId: required("PAYPAL_PLAN_ID"),
-    payPalWebhookId: required("PAYPAL_WEBHOOK_ID"),
-  };
+  return config;
 }
 
 async function providerJson(response, provider) {
@@ -41,30 +54,36 @@ async function providerJson(response, provider) {
 }
 
 async function probeProviders(config) {
-  const mercadoPago = await fetch(`${MP_API}/users/me`, {
-    headers: { Authorization: `Bearer ${config.mercadoPagoToken}` },
-    signal: AbortSignal.timeout(10_000),
-  });
-  await providerJson(mercadoPago, "Mercado Pago");
+  if (config.mercadoPagoToken) {
+    const mercadoPago = await fetch(`${MP_API}/users/me`, {
+      headers: { Authorization: `Bearer ${config.mercadoPagoToken}` },
+      signal: AbortSignal.timeout(10_000),
+    });
+    await providerJson(mercadoPago, "Mercado Pago");
+  }
 
-  const basic = Buffer.from(`${config.payPalClientId}:${config.payPalClientSecret}`).toString("base64");
-  const payPal = await fetch(`${PAYPAL_API}/v1/oauth2/token`, {
-    method: "POST",
-    headers: {
-      Authorization: `Basic ${basic}`,
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-    body: "grant_type=client_credentials",
-    signal: AbortSignal.timeout(10_000),
-  });
-  await providerJson(payPal, "PayPal");
+  if (config.payPalClientId) {
+    const basic = Buffer.from(`${config.payPalClientId}:${config.payPalClientSecret}`).toString("base64");
+    const payPal = await fetch(`${PAYPAL_API}/v1/oauth2/token`, {
+      method: "POST",
+      headers: {
+        Authorization: `Basic ${basic}`,
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: "grant_type=client_credentials",
+      signal: AbortSignal.timeout(10_000),
+    });
+    await providerJson(payPal, "PayPal");
+  }
 }
 
 async function main() {
-  const config = validateSandboxConfiguration();
+  const provider = argumentValue("--provider", "all");
+  const config = validateSandboxConfiguration(provider);
   if (process.argv.includes("--probe")) await probeProviders(config);
   console.log(JSON.stringify({
     sandbox: true,
+    provider,
     configuration: "valid",
     credentials: process.argv.includes("--probe") ? "accepted" : "not-probed",
     secrets_exposed: false,
