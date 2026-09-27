@@ -56,6 +56,7 @@ export default async function SubscriptionPage({
     process.env.PAYPAL_CLIENT_SECRET &&
     process.env.PAYPAL_PLAN_ID &&
     process.env.PAYPAL_WEBHOOK_ID &&
+    (process.env.PAYPAL_ENVIRONMENT === "sandbox" || process.env.PAYPAL_ENVIRONMENT === "live") &&
     process.env.PAYMENTS_MONTHLY_PRICE_BRL &&
     process.env.PAYMENTS_APP_URL
   );

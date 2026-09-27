@@ -5,6 +5,7 @@ import {
   classifyProviderErrorDetail,
   isAllowedCheckoutUrl,
   resolveMercadoPagoPayerEmail,
+  resolvePayPalEnvironment,
 } from "./core.mjs";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
@@ -56,7 +57,7 @@ export function getMercadoPagoConfig() {
 }
 
 function getPayPalConfig() {
-  const environment = process.env.PAYPAL_ENVIRONMENT === "live" ? "live" : "sandbox";
+  const environment = resolvePayPalEnvironment(requiredEnv("PAYPAL_ENVIRONMENT"));
   return {
     clientId: requiredEnv("PAYPAL_CLIENT_ID"),
     clientSecret: requiredEnv("PAYPAL_CLIENT_SECRET"),

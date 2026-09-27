@@ -10,9 +10,17 @@ import {
   mapPayPalStatus,
   resolveMercadoPagoPayerEmail,
   resolveMercadoPagoStatus,
+  resolvePayPalEnvironment,
   resolvePayPalStatus,
   verifyMercadoPagoSignature,
 } from "../src/lib/payments/core.mjs";
+
+test("PayPal exige ambiente explícito e não assume sandbox silenciosamente", () => {
+  assert.equal(resolvePayPalEnvironment("sandbox"), "sandbox");
+  assert.equal(resolvePayPalEnvironment("live"), "live");
+  assert.throws(() => resolvePayPalEnvironment(undefined), /deve ser sandbox ou live/);
+  assert.throws(() => resolvePayPalEnvironment("production"), /deve ser sandbox ou live/);
+});
 
 test("classifica erro do provedor sem preservar a mensagem nem dados privados", () => {
   assert.equal(classifyProviderErrorDetail([

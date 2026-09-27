@@ -43,6 +43,13 @@ export function resolveMercadoPagoPayerEmail({ environment, userEmail, testPayer
   return email;
 }
 
+export function resolvePayPalEnvironment(environment) {
+  if (environment !== "sandbox" && environment !== "live") {
+    throw new Error("PAYPAL_ENVIRONMENT deve ser sandbox ou live.");
+  }
+  return environment;
+}
+
 export function buildMercadoPagoSubscriptionPayload({ userId, email, appUrl, amount }) {
   return {
     reason: "PRO Concursos — assinatura mensal",

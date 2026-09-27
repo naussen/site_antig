@@ -9,8 +9,8 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [x] Remover do login público os fluxos de cadastro, entrada, link mágico e recuperação por e-mail/senha; manter somente Google OAuth para usuários regulares.
 - [x] Remover da área de Conta a criação, redefinição e troca de senha e atualizar Suporte e os documentos operacionais que anunciavam senha ou link mágico.
 - [x] Migrar o acesso administrativo para Google OAuth com `app_metadata.role = admin` e MFA TOTP/AAL2; em 26/09/2026 os dois administradores tinham Google e TOTP verificado, e o formulário por senha foi removido do código.
-- [ ] Desabilitar no Supabase o provedor de e-mail/senha somente depois de validar acesso e recuperação administrativa por Google + TOTP, sem criar bypass ou conta fixa alternativa.
-- [ ] Testar que novos usuários conseguem criar sessão somente pelo Google e que tentativas diretas de cadastro ou login por senha permanecem bloqueadas, inclusive fora da interface.
+- [x] Desabilitar no Supabase de produção o provedor de e-mail/senha após validar Google + TOTP, sem criar bypass ou conta fixa alternativa; confirmado em 26/09/2026.
+- [x] Testar diretamente na API de produção que login por senha, link mágico e cadastro por e-mail são recusados com `email_provider_disabled`, mantendo Google habilitado; confirmado em 26/09/2026.
 - [x] Não solicitar escopos Google adicionais aos padrões mínimos de identidade do Supabase; persistir somente os dados básicos necessários ao produto.
 
 ### Pagamentos e entitlements
@@ -33,10 +33,11 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 
 ### Plano e segurança do Supabase
 
-- [ ] Antes de aceitar pagamentos, realizar o upgrade do Supabase; em 16/09/2026 a Management API confirmou que a organização ainda está no plano Free.
-- [ ] Ativar a proteção contra senhas vazadas após o upgrade; em 16/09/2026 `password_hibp_enabled` foi confirmado como desativado.
+- [ ] Considerar upgrade do Supabase quando o site atingir aproximadamente 50 assinantes; até lá permanecer no plano Free e não depender de recursos pagos para o lançamento.
+- [x] Remover a dependência operacional de proteção contra senhas vazadas: usuários regulares e administradores autenticam somente por Google, e o provedor de e-mail/senha está desabilitado. Reavaliar a proteção se senhas forem reintroduzidas após futuro upgrade.
 - [x] Confirmar no ambiente de produção senha mínima de 12 caracteres com minúscula, maiúscula e número, reautenticação para troca de senha e TOTP habilitado.
-- [ ] Definir backup e retenção compatíveis com usuários pagantes; em 16/09/2026 não havia backup disponível nem PITR habilitado.
+- [x] Implementar backup lógico externo ao Supabase, criptografado, com retenção de 30 dias e ensaio automatizado de descriptografia, hashes e contagens; primeira cópia validada em 26/09/2026.
+- [ ] Copiar os pares de backup/chave para armazenamento fora do computador e executar uma restauração real em PostgreSQL ou projeto Supabase de homologação; a validação atual não substitui PITR nem restauração integral do banco.
 
 ### Hospedagem e publicação
 

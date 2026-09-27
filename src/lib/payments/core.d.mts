@@ -6,6 +6,7 @@ export function resolveMercadoPagoPayerEmail(input: {
   userEmail: string;
   testPayerEmail?: string;
 }): string;
+export function resolvePayPalEnvironment(environment: string | undefined): "sandbox" | "live";
 export function buildMercadoPagoSubscriptionPayload(input: { userId: string; email: string; appUrl: string; amount: number }): {
   reason: string;
   external_reference: string;

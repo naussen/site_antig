@@ -60,3 +60,19 @@ npm run build -- --webpack
 Não use a rota de diagnóstico ou qualquer endpoint que crie uma assinatura para testar produção. O endpoint de diagnóstico foi removido.
 
 Referências oficiais: [criar assinatura](https://www.mercadopago.com.br/developers/pt/reference/online-payments/subscriptions/create-preapproval/post) e [Webhooks de assinaturas](https://www.mercadopago.com.br/developers/pt/docs/subscriptions/additional-content/your-integrations/notifications/webhooks).
+
+## Sandbox obrigatório antes do canário
+
+O verificador falha antes de qualquer chamada externa se detectar Mercado Pago em `production`, PayPal em `live` ou variável ausente:
+
+```powershell
+npm run test:payment-sandbox
+```
+
+Para o ambiente isolado de teste, configure diretamente na hospedagem — nunca no chat, em commit ou em variável `NEXT_PUBLIC_*`:
+
+- `MERCADO_PAGO_ENVIRONMENT=test`, Access Token e segredo de webhook de teste e um `MERCADO_PAGO_TEST_PAYER_EMAIL` terminado em `@testuser.com`;
+- `PAYPAL_ENVIRONMENT=sandbox`, Client ID, Client Secret, Plan ID e Webhook ID do sandbox;
+- `PAYMENTS_APP_URL` apontando para a raiz HTTPS do deploy de teste.
+
+O roteiro financeiro completo precisa comprovar, nos dois provedores quando suportado: aprovado, recusado, pendente, evento duplicado, cancelado, expirado, reembolso/estorno e chargeback/reversão. Para cada caso, conferir o evento idempotente, o estado de `user_entitlements`, eventual `payment_access_blocks` e a concessão ou revogação efetiva de acesso. Só depois disso deve ser feito um canário real de valor mínimo em produção.
