@@ -24,6 +24,7 @@ export const PUBLIC_TABLES = Object.freeze([
   "legal_fragments",
   "legis_editorial_audit",
   "payment_access_blocks",
+  "payment_audit_events",
   "payment_provider_transactions",
   "payment_webhook_events",
   "privacy_requests",

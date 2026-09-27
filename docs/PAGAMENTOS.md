@@ -76,3 +76,7 @@ Para o ambiente isolado de teste, configure diretamente na hospedagem — nunca 
 - `PAYMENTS_APP_URL` apontando para a raiz HTTPS do deploy de teste.
 
 O roteiro financeiro completo precisa comprovar, nos dois provedores quando suportado: aprovado, recusado, pendente, evento duplicado, cancelado, expirado, reembolso/estorno e chargeback/reversão. Para cada caso, conferir o evento idempotente, o estado de `user_entitlements`, eventual `payment_access_blocks` e a concessão ou revogação efetiva de acesso. Só depois disso deve ser feito um canário real de valor mínimo em produção.
+
+## Auditoria financeira
+
+Checkout e cancelamento registram uma trilha mínima em `payment_audit_events`. Ela contém somente ação, resultado, provedor, UUID técnico do usuário, identificação opcional da assinatura, código sanitizado e horário. Payloads dos provedores, tokens, e-mail, cookies e dados de cartão não são armazenados. Webhooks continuam auditados separadamente em `payment_webhook_events` e as transações verificadas em `payment_provider_transactions`.

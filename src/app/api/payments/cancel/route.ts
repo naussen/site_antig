@@ -10,6 +10,7 @@ import {
   isExpectedMercadoPagoSubscription,
   isExpectedPayPalSubscription,
 } from "@/lib/payments/providers";
+import { recordPaymentAudit } from "@/lib/payments/audit";
 
 function subscriptionPage(result: string) {
   const url = new URL(getPaymentsInternalUrl("/dashboard/assinatura"));
@@ -75,8 +76,23 @@ export async function POST(request: Request) {
       accessUntil,
       eventCreatedAt: canceledAt,
     });
+    await recordPaymentAudit({
+      action: "cancellation_confirmed",
+      outcome: "success",
+      provider: entitlement.provider,
+      userId: user.id,
+      subscriptionId: entitlement.provider_subscription_id,
+    });
     return NextResponse.redirect(subscriptionPage("cancelamento-concluido"), 303);
   } catch (error) {
+    await recordPaymentAudit({
+      action: "cancellation_failed",
+      outcome: "failure",
+      provider: entitlement.provider,
+      userId: user.id,
+      subscriptionId: entitlement.provider_subscription_id,
+      reasonCode: "provider_failure",
+    });
     console.error("Falha ao cancelar assinatura.", {
       provider: entitlement.provider,
       category: error instanceof Error ? error.name : "unknown",

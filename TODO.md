@@ -27,7 +27,7 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [x] Tratar estados de renovação, atraso, cancelamento, expiração, estorno/reversão do PayPal e eventos recebidos fora de ordem.
 - [x] Implementar bloqueio persistente por reembolso, reversão ou chargeback nos dois provedores, com vínculo verificado entre pagamento, assinatura e usuário e proteção contra reativação posterior; a política comercial de contestação continua operacional.
 - [x] Implementar reconciliação periódica entre o banco e as APIs dos provedores para corrigir webhooks perdidos.
-- [ ] Registrar auditoria sem tokens, dados de cartão, payloads completos ou informações pessoais desnecessárias.
+- [x] Registrar auditoria persistente e mínima de checkout e cancelamento, complementando eventos de webhook e transações verificadas, sem tokens, dados de cartão, payloads completos, e-mail ou cookies.
 - [ ] Configurar alertas para falhas reiteradas de webhook, divergências de reconciliação e concessões/revogações anormais.
 - [ ] Testar nos sandboxes: pagamento aprovado, recusado, pendente, duplicado, cancelado, expirado e estornado. Em 26/09/2026 foi publicado o contexto isolado `sandbox-financeiro`, com Mercado Pago `test`, PayPal `sandbox` e URL própria confirmados no runtime. Permanecem ausentes as credenciais dos dois provedores e um Supabase de teste com Service Role própria; o preview continua fechado para checkout até esses dados serem cadastrados.
 

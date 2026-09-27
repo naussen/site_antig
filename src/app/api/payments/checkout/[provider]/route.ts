@@ -7,6 +7,7 @@ import {
   getPaymentsInternalUrl,
   PaymentProviderError,
 } from "@/lib/payments/providers";
+import { recordPaymentAudit } from "@/lib/payments/audit";
 
 const providers = new Set(["mercado-pago", "paypal"]);
 
@@ -55,9 +56,22 @@ export async function POST(request: Request, context: { params: Promise<{ provid
     const checkoutUrl = provider === "mercado-pago"
       ? await createMercadoPagoSubscription(user.id, user.email ?? "")
       : await createPayPalSubscription(user.id);
+    await recordPaymentAudit({
+      action: "checkout_created",
+      outcome: "success",
+      provider: provider === "mercado-pago" ? "mercado_pago" : "paypal",
+      userId: user.id,
+    });
     return NextResponse.redirect(checkoutUrl, 303);
   } catch (error) {
     const failure = checkoutFailure(provider, error);
+    await recordPaymentAudit({
+      action: "checkout_failed",
+      outcome: "failure",
+      provider: provider === "mercado-pago" ? "mercado_pago" : "paypal",
+      userId: user.id,
+      reasonCode: failure.category,
+    });
     console.error("Falha ao iniciar checkout.", {
       provider,
       category: failure.category,

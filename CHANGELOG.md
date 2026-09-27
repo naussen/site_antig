@@ -551,6 +551,7 @@
 - Documentadas as configurações de autenticação e a separação para assinatura.
 ## Correções recentes
 
+- Adicionada auditoria financeira persistente e mínima para checkout e cancelamento, sem payloads, credenciais ou dados de cartão.
 - Desabilitado e validado no Supabase de produção o provedor de e-mail/senha, mantendo autenticação Google e TOTP administrativo.
 - Adicionado backup lógico criptografado do Supabase, verificação de restauração por integridade, retenção e instalador da tarefa diária do Windows.
 - Tornada explícita a seleção de ambiente do PayPal e adicionado preflight que impede executar sandbox financeiro com credenciais de produção.

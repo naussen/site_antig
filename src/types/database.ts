@@ -243,6 +243,17 @@ export interface PaymentAccessBlock {
   resolution_note: string | null;
 }
 
+export interface PaymentAuditEvent {
+  id: string;
+  action: 'checkout_created' | 'checkout_failed' | 'cancellation_confirmed' | 'cancellation_failed';
+  outcome: 'success' | 'failure';
+  provider: 'mercado_pago' | 'paypal';
+  user_id: string | null;
+  provider_subscription_id: string | null;
+  reason_code: string | null;
+  created_at: string;
+}
+
 export interface PrivacyRequest {
   id: string;
   user_id: string | null;
