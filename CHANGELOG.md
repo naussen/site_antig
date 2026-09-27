@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — planejamento do módulo Questões
+
+- definido o projeto do módulo Questões com alternativas arquiteturais, MVP leve no Supabase, comentários didáticos e de usuários, busca, estatísticas pessoais e ocultação reversível;
+- documentados modelo de dados, RLS, proteção do gabarito, moderação, fases, testes, critérios de aceite, metas de desempenho, rollout e rollback;
+- mantida a implementação funcional fora deste checkpoint de planejamento.
+
 ## Não publicado — autenticação exclusiva pelo Google
 
 - removidos do login público e da área de Conta os fluxos de cadastro, magic link, recuperação e troca de senha;
