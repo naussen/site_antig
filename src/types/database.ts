@@ -176,10 +176,32 @@ export interface QuestionRow {
   exam_year: number | null;
   difficulty: QuestionDifficulty | null;
   source_reference: string | null;
+  source_content_hash: string | null;
+  source_metadata: Record<string, unknown>;
   status: QuestionStatus;
   published_at: string | null;
   created_at: string;
   updated_at: string;
+}
+
+export interface QuestionImportBatchRow {
+  id: string;
+  batch_key: string;
+  schema_version: 'pro-questions/v1';
+  source_file: string;
+  source_sha256: string;
+  discipline_slug: string;
+  question_count: number;
+  metadata: Record<string, unknown>;
+  imported_at: string;
+}
+
+export interface QuestionImportItemRow {
+  batch_id: string;
+  question_id: string;
+  source_id: string;
+  action: 'inserted' | 'reused';
+  created_at: string;
 }
 
 export interface QuestionDisciplineRelationRow {
