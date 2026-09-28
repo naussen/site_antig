@@ -5,7 +5,8 @@
 - criada migration aditiva do módulo com catálogo canônico de disciplinas, vínculos com tópicos, questões, alternativas, gabaritos, explicações, tentativas, preferências e estruturas de comentários;
 - isolado o gabarito da Data API e adicionadas RPCs de listagem, resposta idempotente, ocultação/revisão e estatísticas pessoais;
 - adicionados RLS, privilégios mínimos, validação diferida de publicação, tipos TypeScript e suíte pgTAP de 27 verificações entre usuários;
-- adicionados testes estáticos de segurança e validação limpa da migration em PostgreSQL 18.6 isolado, com 27/27 verificações pgTAP aprovadas e sem alterações no banco remoto.
+- adicionados testes estáticos de segurança e validação limpa da migration em PostgreSQL 18.6 isolado, com 27/27 verificações pgTAP aprovadas;
+- aplicada a migration 029 em produção após `db push --dry-run` confirmar que era a única pendência; a repetição do pgTAP no PostgreSQL 17 remoto permanece pendente.
 
 ## Não publicado — planejamento do módulo Questões
 

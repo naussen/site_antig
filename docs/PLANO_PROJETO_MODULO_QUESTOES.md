@@ -2,15 +2,15 @@
 
 Atualizado em: 27 de setembro de 2026.
 
-Status: **Fase 1 em andamento na branch própria; migration validada em PostgreSQL isolado e ainda não aplicada ao banco remoto**.
+Status: **Fase 1 em andamento; migration aplicada em produção e repetição remota do pgTAP pendente**.
 
 ## Progresso de implementação
 
 | Frente | Estado |
 |---|---|
 | Decisões de arquitetura | Concluída |
-| Migration aditiva e backfill | Aplicação limpa validada em PostgreSQL 18.6 isolado; backfill real e remoto pendentes |
-| RLS e RPCs fundamentais | Implementadas; pgTAP local aprovado (27/27) |
+| Migration aditiva e backfill | Aplicada em produção; revisão do catálogo gerado pelo backfill pendente |
+| RLS e RPCs fundamentais | Implementadas; pgTAP local aprovado (27/27), repetição remota pendente |
 | Tipos TypeScript | Implementados |
 | Testes estáticos de segurança | 6/6 aprovados |
 | UI, importador e comentários operacionais | Não iniciados |
@@ -565,7 +565,7 @@ Critério de saída: matriz de aceite aprovada sem bloqueador crítico ou alto.
 
 ### Fase 7 — lançamento controlado
 
-- [ ] Aplicar migration antes do código consumidor.
+- [x] Aplicar migration antes do código consumidor.
 - [ ] Publicar lote pequeno revisado.
 - [ ] Fazer smoke autenticado com usuário comum e admin AAL2.
 - [ ] Monitorar erros, latência, denúncias e crescimento por sete dias.
@@ -758,6 +758,6 @@ Alertas mínimos:
 
 1. Revisar o catálogo gerado pelo backfill contra os valores reais de `topics.discipline` antes da aplicação remota.
 2. Auditar um lote real de questões para fechar o contrato de importação e os vínculos.
-3. Aplicar a migration em ambiente Supabase de homologação compatível com PostgreSQL 17 e repetir o pgTAP.
+3. Repetir o pgTAP no PostgreSQL 17 remoto pelo SQL Editor autenticado.
 4. Validar pela Data API que gabarito, dados pessoais e identificadores internos não são expostos.
 5. Iniciar a Fase 2 somente após essas verificações de homologação.
