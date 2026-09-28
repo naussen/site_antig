@@ -756,8 +756,8 @@ Alertas mínimos:
 
 ## 21. Próximos passos
 
-1. Revisar o catálogo gerado pelo backfill contra os valores reais de `topics.discipline` antes da aplicação remota.
+1. Revisar o catálogo gerado pelo backfill contra os valores reais de `topics.discipline`.
 2. Auditar um lote real de questões para fechar o contrato de importação e os vínculos.
 3. Repetir o pgTAP no PostgreSQL 17 remoto pelo SQL Editor autenticado.
 4. Validar pela Data API que gabarito, dados pessoais e identificadores internos não são expostos.
-5. Iniciar a Fase 2 somente após essas verificações de homologação.
+5. Iniciar a Fase 2 somente após essas verificações remotas.
