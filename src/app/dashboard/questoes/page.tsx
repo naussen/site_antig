@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { requireContentAccess } from "@/lib/content-access";
 import type {
+  QuestionFilterDiscipline,
   QuestionListResult,
   QuestionStatsResult,
 } from "@/types/database";
@@ -42,28 +43,21 @@ export default async function QuestionsPage() {
       p_include_hidden: false,
     }),
     supabase.rpc("get_question_stats"),
-    supabase
-      .from("disciplines")
-      .select("slug, name")
-      .eq("status", "active")
-      .order("name"),
+    supabase.rpc("list_question_disciplines"),
   ]);
 
-  if (questionsResponse.error) {
-    throw new Error("Não foi possível carregar as questões.");
-  }
-  if (statsResponse.error) {
-    throw new Error("Não foi possível carregar as estatísticas de questões.");
-  }
-  if (disciplinesResponse.error) {
-    throw new Error("Não foi possível carregar os filtros de disciplinas.");
-  }
+  const initialError = questionsResponse.error
+    ? "Não foi possível carregar as questões. Atualize a página para tentar novamente."
+    : statsResponse.error || disciplinesResponse.error
+      ? "Alguns dados auxiliares não foram carregados. A resolução de questões continua disponível."
+      : null;
 
   return (
     <QuestionsClient
       initialResult={(questionsResponse.data as QuestionListResult | null) ?? EMPTY_RESULT}
       initialStats={(statsResponse.data as QuestionStatsResult | null) ?? EMPTY_STATS}
-      disciplines={disciplinesResponse.data ?? []}
+      disciplines={(disciplinesResponse.data as QuestionFilterDiscipline[] | null) ?? []}
+      initialError={initialError}
     />
   );
 }

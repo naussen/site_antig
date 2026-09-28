@@ -24,7 +24,13 @@ import { withSiteBasePath } from "@/lib/site-paths.mjs";
 const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo-dark.png");
 const SUBSCRIBE_HREF = "/login?next=/resumos/dashboard/assinatura";
 
-function BrandLogo({ className = "" }: { className?: string }) {
+function BrandLogo({
+  className = "",
+  preload = false,
+}: {
+  className?: string;
+  preload?: boolean;
+}) {
   return (
     <Image
       src={LOGO_SRC}
@@ -32,7 +38,7 @@ function BrandLogo({ className = "" }: { className?: string }) {
       width={1200}
       height={350}
       className={`h-auto w-[132px] drop-shadow-[0_8px_24px_rgba(0,0,0,0.22)] min-[360px]:w-[146px] sm:w-[190px] ${className}`}
-      preload
+      preload={preload}
     />
   );
 }
@@ -349,7 +355,7 @@ export function LandingPageContent() {
     <main className="min-h-screen overflow-hidden bg-[#181820] text-white">
       <nav aria-label="Navegação principal" className="sticky top-0 z-50 border-b border-white/10 bg-[#181820]/90 px-3 py-3 backdrop-blur-xl sm:px-8 lg:px-12">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 sm:gap-4">
-          <Link href="https://proconcursos.com.br/" aria-label="PRO Concursos — página inicial"><BrandLogo /></Link>
+          <Link href="https://proconcursos.com.br/" aria-label="PRO Concursos — página inicial"><BrandLogo preload /></Link>
           <div className="hidden items-center gap-1 lg:flex">
             <a href="#modulos" className="rounded-lg px-3 py-2 text-sm font-semibold text-white/70 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826]">Módulos</a>
             <a href="#ferramentas" className="rounded-lg px-3 py-2 text-sm font-semibold text-white/70 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826]">Funcionalidades</a>

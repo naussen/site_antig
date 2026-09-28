@@ -29,6 +29,7 @@ interface QuestionsClientProps {
   initialResult: QuestionListResult;
   initialStats: QuestionStatsResult;
   disciplines: Array<{ slug: string; name: string }>;
+  initialError?: string | null;
 }
 
 interface QuestionPreferenceResult {
@@ -52,6 +53,7 @@ export function QuestionsClient({
   initialResult,
   initialStats,
   disciplines,
+  initialError = null,
 }: QuestionsClientProps) {
   const [question, setQuestion] = useState<QuestionListItem | null>(
     initialResult.items[0] ?? null,
@@ -65,7 +67,7 @@ export function QuestionsClient({
     initialResult.items[0]?.preference?.marked_for_review ?? false,
   );
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(initialError);
 
   const loadQuestion = async ({
     afterId = null,

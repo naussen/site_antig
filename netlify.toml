@@ -15,6 +15,11 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/resumos/brand/pro-resumos-favicon.png"
+  status = 200
+
 # Prévia da zona Legis na branch feat/pro-legis-mvp.
 # Promover esta regra para produção somente após validar domínio, cookies,
 # OAuth, RSC, APIs e regressão completa do /resumos.

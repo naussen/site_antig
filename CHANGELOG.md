@@ -9,6 +9,7 @@
 - aplicada a migration 029 em produção após `db push --dry-run` confirmar que era a única pendência; a repetição do pgTAP no PostgreSQL 17 remoto permanece pendente.
 - integrada a rota protegida `/dashboard/questoes` com uma questão por vez, filtros, resposta corrigida no servidor, comentário didático, estatísticas, revisão e ocultação;
 - adicionados o wordmark leve `PROQuestões`, o acesso na navegação da área do aluno e uma demonstração exclusivamente visual na landing pública.
+- corrigida a renderização server-side da página usando uma RPC de catálogo com menor privilégio, fallback para consultas auxiliares, favicon no domínio raiz e preload apenas acima da dobra.
 
 ## Não publicado — planejamento do módulo Questões
 

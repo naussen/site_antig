@@ -11,6 +11,9 @@ test("rota de questões exige acesso ao conteúdo e carrega uma questão", async
   assert.match(source, /rpc\("list_questions"/);
   assert.match(source, /p_limit:\s*1/);
   assert.match(source, /rpc\("get_question_stats"\)/);
+  assert.match(source, /rpc\("list_question_disciplines"\)/);
+  assert.doesNotMatch(source, /from\("disciplines"\)/);
+  assert.match(source, /initialError=/);
 });
 
 test("interface usa RPCs seguras e não consulta gabarito diretamente", async () => {
@@ -25,10 +28,11 @@ test("interface usa RPCs seguras e não consulta gabarito diretamente", async ()
 });
 
 test("área do aluno e landing expõem PROQuestões", async () => {
-  const [navigation, landing, logo] = await Promise.all([
+  const [navigation, landing, logo, netlify] = await Promise.all([
     read("src/components/navigation/dashboard-navigation.tsx"),
     read("src/components/landing/landing-page-content.tsx"),
     read("src/components/brand/pro-questions-logo.tsx"),
+    read("netlify.toml"),
   ]);
 
   assert.match(navigation, /href:\s*"\/dashboard\/questoes"/);
@@ -36,4 +40,9 @@ test("área do aluno e landing expõem PROQuestões", async () => {
   assert.match(landing, /function QuestionsPreview\(\)/);
   assert.match(landing, /PROQuestões/);
   assert.match(logo, /aria-label="PROQuestões"/);
+  assert.equal((landing.match(/<BrandLogo preload \/>/gu) ?? []).length, 1);
+  assert.match(
+    netlify,
+    /from = "\/favicon\.ico"[\s\S]*to = "\/resumos\/brand\/pro-resumos-favicon\.png"[\s\S]*status = 200/u,
+  );
 });

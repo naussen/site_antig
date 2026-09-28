@@ -7,9 +7,14 @@ const migrationUrl = new URL(
   import.meta.url,
 );
 const databaseTypesUrl = new URL("../src/types/database.ts", import.meta.url);
+const filterMigrationUrl = new URL(
+  "../supabase/migrations/030_add_question_filter_catalog_rpc.sql",
+  import.meta.url,
+);
 
-const [migration, databaseTypes] = await Promise.all([
+const [migration, filterMigration, databaseTypes] = await Promise.all([
   readFile(migrationUrl, "utf8"),
+  readFile(filterMigrationUrl, "utf8"),
   readFile(databaseTypesUrl, "utf8"),
 ]);
 
@@ -40,6 +45,25 @@ test("habilita RLS em todas as tabelas do módulo", () => {
       `RLS ausente em ${table}`,
     );
   }
+});
+
+test("catálogo de filtros preserva menor privilégio", () => {
+  assert.match(
+    filterMigration,
+    /CREATE OR REPLACE FUNCTION public\.list_question_disciplines\(\)[\s\S]*SECURITY DEFINER[\s\S]*SET search_path = ''/u,
+  );
+  assert.match(
+    filterMigration,
+    /private\.has_active_content_access\(\)/u,
+  );
+  assert.match(
+    filterMigration,
+    /GRANT EXECUTE ON FUNCTION public\.list_question_disciplines\(\)[\s\S]*TO authenticated;/u,
+  );
+  assert.doesNotMatch(
+    filterMigration,
+    /GRANT\s+SELECT[\s\S]*public\.disciplines[\s\S]*TO\s+authenticated/iu,
+  );
 });
 
 test("não concede leitura direta do gabarito ou de dados pessoais", () => {

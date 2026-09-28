@@ -440,6 +440,11 @@ export interface QuestionListDiscipline {
   is_primary: boolean;
 }
 
+export interface QuestionFilterDiscipline {
+  slug: string;
+  name: string;
+}
+
 export interface QuestionListTopic {
   topic_id: string;
   title: string;
