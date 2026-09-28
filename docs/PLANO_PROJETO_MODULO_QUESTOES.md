@@ -13,7 +13,7 @@ Status: **Fase 1 em andamento; migration aplicada em produção e repetição re
 | RLS e RPCs fundamentais | Implementadas; pgTAP local aprovado (27/27), repetição remota pendente |
 | Tipos TypeScript | Implementados |
 | Testes estáticos de segurança | 6/6 aprovados |
-| UI, importador e comentários operacionais | Não iniciados |
+| UI, importador e comentários operacionais | Resolução inicial integrada; importador e discussão ainda pendentes |
 
 ## 1. Resumo executivo
 
@@ -524,19 +524,19 @@ Critério de saída: reexecução do mesmo lote é idempotente e falha não publ
 
 ### Fase 3 — resolução e ocultação
 
-- [ ] Criar rota `/dashboard/questoes` protegida por acesso ao conteúdo.
-- [ ] Implementar filtros básicos, cursor e cartão de questão.
-- [ ] Implementar resposta transacional e feedback.
-- [ ] Exibir comentário didático publicado.
+- [x] Criar rota `/dashboard/questoes` protegida por acesso ao conteúdo.
+- [x] Implementar filtros básicos, cursor e cartão de questão.
+- [x] Implementar resposta transacional e feedback.
+- [x] Exibir comentário didático publicado.
 - [ ] Implementar marcar para revisão, ocultar e restaurar.
-- [ ] Adicionar navegação somente quando o fluxo estiver utilizável.
+- [x] Adicionar navegação somente quando o fluxo estiver utilizável.
 
 Critério de saída: usuário responde, recebe correção, avança e pode excluir/restaurar uma questão da própria lista.
 
 ### Fase 4 — estatísticas pessoais
 
-- [ ] Criar visão/RPC de métricas.
-- [ ] Implementar cartões e barras leves.
+- [x] Criar visão/RPC de métricas.
+- [x] Implementar cartões leves de métricas iniciais.
 - [ ] Implementar caderno de erros e recorte de 7/30 dias.
 - [ ] Documentar fórmulas na UI e em testes.
 

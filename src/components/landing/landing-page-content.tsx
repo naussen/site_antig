@@ -2,9 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
+  BarChart3,
   BookOpen,
   Check,
   CheckCircle2,
+  CircleHelp,
+  EyeOff,
   Gavel,
   Highlighter,
   Layers3,
@@ -15,6 +18,7 @@ import {
   Sun,
   Sunrise,
 } from "lucide-react";
+import { ProQuestionsLogo } from "@/components/brand/pro-questions-logo";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
 const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo-dark.png");
@@ -246,6 +250,42 @@ function LegisPreview() {
   );
 }
 
+function QuestionsPreview() {
+  return (
+    <WindowFrame label="PROQuestões · prática direcionada">
+      <div className="min-h-[430px] bg-[#f4f5f7] p-5 sm:p-7">
+        <div className="mb-5 flex flex-wrap items-center justify-between gap-4">
+          <ProQuestionsLogo tone="landing" />
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#6c5ce7]/10 px-3 py-1 text-[10px] font-bold text-[#6c5ce7]">
+            <BarChart3 size={12} /> 78% de acertos
+          </span>
+        </div>
+        <div className="rounded-2xl border border-[#e5e5ef] bg-white p-5 shadow-sm">
+          <div className="mb-4 flex flex-wrap gap-2">
+            <span className="rounded-full bg-[#6c5ce7]/10 px-2.5 py-1 text-[9px] font-bold text-[#6c5ce7]">Direito Constitucional</span>
+            <span className="rounded-full border border-[#e5e5ef] px-2.5 py-1 text-[9px] font-semibold text-[#64647a]">Cebraspe · 2025</span>
+          </div>
+          <p className="text-sm font-bold leading-6 text-[#1a1a2e]">
+            A titularidade do poder constituinte pertence ao povo, ainda que seu exercício ocorra por representantes.
+          </p>
+          <div className="mt-5 grid gap-2 sm:grid-cols-2">
+            <span className="rounded-xl border border-[#22c55e] bg-[#22c55e]/10 px-4 py-3 text-center text-xs font-extrabold text-[#166534]">Certo</span>
+            <span className="rounded-xl border border-[#e5e5ef] bg-[#f8f8fb] px-4 py-3 text-center text-xs font-extrabold text-[#64647a]">Errado</span>
+          </div>
+          <div className="mt-5 rounded-xl border-l-4 border-[#6c5ce7] bg-[#6c5ce7]/[0.07] p-4">
+            <p className="text-[9px] font-black uppercase tracking-[0.14em] text-[#6c5ce7]">Comentário didático</p>
+            <p className="mt-2 text-xs leading-5 text-[#64647a]">Titularidade e exercício são conceitos distintos: o povo é titular, mas pode exercer o poder por representantes.</p>
+          </div>
+        </div>
+        <div className="mt-3 flex flex-wrap items-center justify-between gap-3 text-[10px] font-semibold text-[#64647a]">
+          <span className="inline-flex items-center gap-1.5"><EyeOff size={13} /> Não mostrar mais</span>
+          <span>Uma questão por vez</span>
+        </div>
+      </div>
+    </WindowFrame>
+  );
+}
+
 function FlashcardPreview() {
   return (
     <div className="relative mx-auto flex min-h-52 max-w-sm items-center justify-center">
@@ -324,8 +364,8 @@ export function LandingPageContent() {
         <div className="relative mx-auto grid min-w-0 max-w-7xl items-center gap-14 lg:grid-cols-[minmax(0,0.88fr)_minmax(520px,1.12fr)] lg:gap-10 xl:gap-16">
           <div className="min-w-0 text-center lg:text-left">
             <span className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/35 bg-[#a78bfa]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#c4b5fd]"><Sparkles size={13} /> Oferta especial de lançamento</span>
-            <h1 className="text-balance text-4xl font-black leading-[1.02] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">Resumos para concursos e legislação oficial <span className="bg-gradient-to-r from-[#a78bfa] to-[#f9a826] bg-clip-text text-transparent">no mesmo ambiente.</span></h1>
-            <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-7 text-[#b4b1c3] sm:text-lg sm:leading-8 lg:mx-0">Estude com conteúdo estruturado, texto legal versionado, flashcards, anotações e ferramentas de leitura em uma única assinatura mensal.</p>
+            <h1 className="text-balance text-4xl font-black leading-[1.02] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">Resumos, questões e legislação oficial <span className="bg-gradient-to-r from-[#a78bfa] to-[#f9a826] bg-clip-text text-transparent">no mesmo ambiente.</span></h1>
+            <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-7 text-[#b4b1c3] sm:text-lg sm:leading-8 lg:mx-0">Estude com conteúdo estruturado, questões comentadas, texto legal versionado, anotações e ferramentas de leitura em uma única assinatura mensal.</p>
             <ul className="mx-auto mt-6 grid max-w-xl gap-2 text-left text-sm text-white/80 sm:grid-cols-3 lg:mx-0 lg:grid-cols-1 xl:grid-cols-3" aria-label="Principais benefícios">
               {["Conteúdo organizado", "Lei seca integrada", "Progresso salvo"].map((benefit) => (
                 <li key={benefit} className="flex items-center gap-2"><CheckCircle2 size={16} className="shrink-0 text-[#f9a826]" aria-hidden="true" />{benefit}</li>
@@ -342,10 +382,11 @@ export function LandingPageContent() {
       </header>
 
       <section id="modulos" className="scroll-mt-36 border-y border-[#e5e5ef] bg-white px-5 py-16 sm:px-8 sm:py-24">
-        <SectionHeading eyebrow="Módulos" title="Do resumo à lei seca, sem trocar de plataforma." description="Dois ambientes complementares para compreender a matéria, consultar a literalidade e praticar com segurança." tone="light" />
+        <SectionHeading eyebrow="Módulos" title="Do resumo à prática, sem trocar de plataforma." description="Três ambientes complementares para compreender a matéria, consultar a literalidade e testar seu conhecimento." tone="light" />
         <div className="mx-auto max-w-6xl space-y-14">
           <article className="grid items-center gap-8 lg:grid-cols-[0.78fr_1.4fr]"><div><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#a78bfa] text-white shadow-lg shadow-[#7c3aed]/25"><Layers3 size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#6c5ce7]">PRO Resumos</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight text-[#1a1a2e]">Conteúdo organizado para você entender e reter.</h3><p className="mt-4 leading-7 text-[#64647a]">Resumos jurídicos divididos em seções, com pontos de prova, mnemônicos, mapas mentais e progresso de leitura.</p></div><ResumosPreview /></article>
           <article className="grid items-center gap-8 lg:grid-cols-[1.4fr_0.78fr]"><div className="lg:order-2"><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#f9a826] to-[#c27b08] text-[#121212] shadow-lg shadow-[#f9a826]/20"><Gavel size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#b56f00]">PRO Legis</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight text-[#1a1a2e]">A legislação vigente em uma leitura confiável.</h3><p className="mt-4 leading-7 text-[#64647a]">Texto oficial versionado, progresso por dispositivo legal e prática C/E conectada à literalidade da lei.</p></div><LegisPreview /></article>
+          <article className="grid items-center gap-8 lg:grid-cols-[0.78fr_1.4fr]"><div><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#a78bfa] text-white shadow-lg shadow-[#7c3aed]/25"><CircleHelp size={23} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#6c5ce7]">PROQuestões</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight text-[#1a1a2e]">Prática focada com retorno imediato.</h3><p className="mt-4 leading-7 text-[#64647a]">Resolva uma questão por vez, filtre o acervo, consulte comentários didáticos e acompanhe seu desempenho.</p></div><QuestionsPreview /></article>
         </div>
       </section>
 

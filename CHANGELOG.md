@@ -7,6 +7,8 @@
 - adicionados RLS, privilégios mínimos, validação diferida de publicação, tipos TypeScript e suíte pgTAP de 27 verificações entre usuários;
 - adicionados testes estáticos de segurança e validação limpa da migration em PostgreSQL 18.6 isolado, com 27/27 verificações pgTAP aprovadas;
 - aplicada a migration 029 em produção após `db push --dry-run` confirmar que era a única pendência; a repetição do pgTAP no PostgreSQL 17 remoto permanece pendente.
+- integrada a rota protegida `/dashboard/questoes` com uma questão por vez, filtros, resposta corrigida no servidor, comentário didático, estatísticas, revisão e ocultação;
+- adicionados o wordmark leve `PROQuestões`, o acesso na navegação da área do aluno e uma demonstração exclusivamente visual na landing pública.
 
 ## Não publicado — planejamento do módulo Questões
 
