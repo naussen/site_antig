@@ -12,6 +12,7 @@
 - corrigida a renderização server-side da página usando uma RPC de catálogo com menor privilégio, fallback para consultas auxiliares, favicon no domínio raiz e preload apenas acima da dobra.
 - definido o contrato versionado `pro-questions/v1`, com hashes, procedência, mapeamento explícito de tópicos e importação transacional idempotente;
 - publicada uma amostra auditável de Direito Administrativo exclusivamente a partir do arquivo `ATUALIZADO`, com 12 questões válidas ligadas aos tópicos existentes.
+- arquivada a disciplina legada `Geral` no catálogo canônico e restringidos os filtros de questões a disciplinas com tópicos ativos, preservando `topics.discipline` para compatibilidade.
 
 ## Não publicado — planejamento do módulo Questões
 
