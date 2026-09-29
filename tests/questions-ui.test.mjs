@@ -25,6 +25,9 @@ test("interface usa RPCs seguras e não consulta gabarito diretamente", async ()
   assert.match(source, /"get_question_stats"/);
   assert.doesNotMatch(source, /from\(["']question_answer_keys["']\)/);
   assert.doesNotMatch(source, /dangerouslySetInnerHTML|rehype-raw|innerHTML/);
+  assert.match(source, /pro-questions-shell/);
+  assert.match(source, /question-option-markdown/);
+  assert.match(source, /question\.question_type === "true_false"/);
 });
 
 test("área do aluno e landing expõem PROQuestões", async () => {

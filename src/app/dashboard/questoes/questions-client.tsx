@@ -7,6 +7,7 @@ import {
   Bookmark,
   CheckCircle2,
   ChevronRight,
+  CircleHelp,
   EyeOff,
   Filter,
   Loader2,
@@ -37,9 +38,15 @@ interface QuestionPreferenceResult {
   marked_for_review: boolean;
 }
 
-function QuestionMarkdown({ children }: { children: string }) {
+function QuestionMarkdown({
+  children,
+  compact = false,
+}: {
+  children: string;
+  compact?: boolean;
+}) {
   return (
-    <div className="markdown-content [&_a]:break-words [&_a]:[overflow-wrap:anywhere]">
+    <div className={`markdown-content ${compact ? "question-option-markdown" : "question-statement-markdown"} [&_a]:break-words [&_a]:[overflow-wrap:anywhere]`}>
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{children}</ReactMarkdown>
     </div>
   );
@@ -187,29 +194,32 @@ export function QuestionsClient({
   const latestAccuracy = accuracy(stats.latest_correct, stats.answered_questions);
 
   return (
-    <main className="min-h-screen bg-[var(--bg-primary)] px-4 py-6 sm:px-6 md:px-10 md:py-10">
+    <main className="pro-questions-shell min-h-screen bg-[var(--bg-primary)] px-3 py-4 sm:px-6 sm:py-6 md:px-10 md:py-8">
       <div className="mx-auto max-w-6xl">
-        <header className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[linear-gradient(135deg,var(--catalog-hero-start),var(--catalog-hero-end))] p-6 text-white shadow-[var(--shadow-lg)] sm:p-8">
-          <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full bg-[var(--catalog-hero-glow)] blur-3xl" aria-hidden="true" />
-          <div className="relative flex flex-col justify-between gap-8 lg:flex-row lg:items-end">
+        <header className="questions-hero relative overflow-hidden rounded-[1.6rem] border p-5 text-white shadow-[var(--shadow-lg)] sm:p-6">
+          <CircleHelp className="pointer-events-none absolute -right-8 -top-10 h-44 w-44 text-white/[0.045] sm:h-56 sm:w-56" strokeWidth={0.75} aria-hidden="true" />
+          <div className="relative flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
             <div>
               <ProQuestionsLogo tone="dark" />
-              <h1 className="mt-6 text-3xl font-black tracking-tight text-white sm:text-4xl">
+              <p className="mt-4 text-[10px] font-black uppercase tracking-[0.2em] text-[var(--questions-signal)]">
+                Prática direcionada · correção imediata
+              </p>
+              <h1 className="mt-2 max-w-2xl text-2xl font-black tracking-tight text-white sm:text-3xl">
                 Uma questão por vez. Evolução todos os dias.
               </h1>
-              <p className="mt-3 max-w-2xl text-sm leading-6 text-white/75 sm:text-base">
+              <p className="mt-2 max-w-2xl text-sm leading-5 text-white/70 sm:leading-6">
                 Filtre o acervo, responda com foco e use o comentário didático para revisar o ponto cobrado.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:min-w-[520px]">
+            <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 lg:min-w-[500px]">
               {[
                 ["Respondidas", stats.answered_questions],
                 ["Aproveitamento", `${latestAccuracy}%`],
                 ["Caderno de erros", stats.error_notebook_count],
                 ["Últimos 7 dias", stats.attempts_7d],
               ].map(([label, value]) => (
-                <div key={label} className="rounded-2xl border border-white/15 bg-white/10 p-3 backdrop-blur-sm">
-                  <strong className="block text-xl text-white">{value}</strong>
+                <div key={label} className="questions-stat rounded-xl border p-2.5 backdrop-blur-sm">
+                  <strong className="block text-lg text-white">{value}</strong>
                   <span className="mt-1 block text-[11px] leading-tight text-white/65">{label}</span>
                 </div>
               ))}
@@ -219,7 +229,7 @@ export function QuestionsClient({
 
         <form
           onSubmit={applyFilters}
-          className="mt-6 grid gap-3 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-4 shadow-[var(--shadow)] md:grid-cols-[minmax(0,1fr)_minmax(180px,0.45fr)_auto]"
+          className="mt-4 grid gap-2.5 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-3 shadow-[var(--shadow)] sm:p-4 md:grid-cols-[minmax(0,1fr)_minmax(180px,0.45fr)_auto]"
           aria-label="Filtros de questões"
         >
           <label className="relative block">
@@ -282,9 +292,9 @@ export function QuestionsClient({
             </button>
           </section>
         ) : (
-          <article className="mt-6 overflow-hidden rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] shadow-[var(--shadow-lg)]">
-            <div className="border-b border-[var(--border)] p-5 sm:p-7">
-              <div className="flex flex-wrap items-start justify-between gap-4">
+          <article className="question-card mt-4 overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] shadow-[var(--shadow-lg)] sm:rounded-3xl">
+            <div className="border-b border-[var(--border)] p-4 sm:p-5">
+              <div className="flex flex-wrap items-start justify-between gap-3">
                 <div className="flex flex-wrap gap-2">
                   {question.disciplines.map((item) => (
                     <span key={item.slug} className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--accent)]">
@@ -319,7 +329,7 @@ export function QuestionsClient({
                 </div>
               </div>
 
-              <div className="mt-7 text-base leading-7 text-[var(--text-primary)] sm:text-lg">
+              <div className="mt-5 text-base text-[var(--text-primary)] sm:text-[1.05rem]">
                 <QuestionMarkdown>{question.statement_markdown}</QuestionMarkdown>
               </div>
               {question.topics.length > 0 && (
@@ -333,7 +343,7 @@ export function QuestionsClient({
               )}
             </div>
 
-            <fieldset className="space-y-3 p-5 sm:p-7" disabled={Boolean(answer) || loading}>
+            <fieldset className={`${question.question_type === "true_false" ? "grid gap-2 sm:grid-cols-2" : "space-y-2"} p-3 sm:p-5`} disabled={Boolean(answer) || loading}>
               <legend className="sr-only">Alternativas</legend>
               {question.options.map((option) => {
                 const selected = selectedOptionId === option.id;
@@ -343,7 +353,7 @@ export function QuestionsClient({
                 return (
                   <label
                     key={option.id}
-                    className={`flex cursor-pointer items-start gap-3 rounded-2xl border p-4 transition ${correct ? "border-emerald-500 bg-emerald-500/10" : wrongSelection ? "border-red-500 bg-red-500/10" : selected ? "border-[var(--accent)] bg-[var(--accent-soft)]" : "border-[var(--border)] hover:border-[var(--border-strong)]"}`}
+                    className={`question-option flex min-h-11 cursor-pointer items-start gap-2.5 rounded-xl border px-3 py-2.5 transition sm:px-3.5 ${correct ? "border-emerald-500 bg-emerald-500/10" : wrongSelection ? "border-red-500 bg-red-500/10" : selected ? "border-[var(--accent)] bg-[var(--accent-soft)]" : "border-[var(--border)] hover:border-[var(--border-strong)]"}`}
                   >
                     <input
                       type="radio"
@@ -353,21 +363,21 @@ export function QuestionsClient({
                       onChange={() => setSelectedOptionId(option.id)}
                       className="mt-1 accent-[var(--accent)]"
                     />
-                    <span className="grid h-7 w-7 shrink-0 place-items-center rounded-lg bg-[var(--bg-primary)] text-xs font-black text-[var(--text-primary)]">
+                    <span className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-[var(--bg-primary)] text-[11px] font-black text-[var(--text-primary)]">
                       {option.label}
                     </span>
-                    <div className="min-w-0 flex-1 text-sm leading-6 text-[var(--text-primary)]">
-                      <QuestionMarkdown>{option.body_markdown}</QuestionMarkdown>
+                    <div className="min-w-0 flex-1 text-sm text-[var(--text-primary)]">
+                      <QuestionMarkdown compact>{option.body_markdown}</QuestionMarkdown>
                     </div>
-                    {correct && <CheckCircle2 size={20} className="mt-1 shrink-0 text-emerald-500" />}
-                    {wrongSelection && <XCircle size={20} className="mt-1 shrink-0 text-red-500" />}
+                    {correct && <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-emerald-500" />}
+                    {wrongSelection && <XCircle size={18} className="mt-0.5 shrink-0 text-red-500" />}
                   </label>
                 );
               })}
             </fieldset>
 
             {answer && (
-              <section className="mx-5 mb-5 rounded-2xl border border-[var(--border)] bg-[var(--bg-primary)] p-5 sm:mx-7 sm:mb-7 sm:p-6" aria-labelledby="question-explanation-title">
+              <section className="mx-3 mb-3 rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] p-4 sm:mx-5 sm:mb-5" aria-labelledby="question-explanation-title">
                 <div className="flex items-center gap-2">
                   {answer.is_correct ? <CheckCircle2 className="text-emerald-500" size={21} /> : <XCircle className="text-red-500" size={21} />}
                   <h2 id="question-explanation-title" className="font-black text-[var(--text-primary)]">
@@ -385,7 +395,7 @@ export function QuestionsClient({
               </section>
             )}
 
-            <footer className="flex flex-col gap-3 border-t border-[var(--border)] bg-[var(--bg-primary)] p-5 sm:flex-row sm:items-center sm:justify-between sm:px-7">
+            <footer className="flex flex-col gap-3 border-t border-[var(--border)] bg-[var(--bg-primary)] p-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
               <span className="inline-flex items-center gap-2 text-xs text-[var(--text-muted)]">
                 <BarChart3 size={15} /> Seu resultado é atualizado após cada resposta.
               </span>

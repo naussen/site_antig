@@ -380,6 +380,112 @@
   --editorial-rule: #526C83;
 }
 
+/* Identidade do PROQuestões: violeta para foco e ciano para retorno imediato.
+   O escopo evita alterar os demais módulos e preserva os três temas. */
+.pro-questions-shell {
+  --questions-brand-from: #4C36C7;
+  --questions-brand-to: #795CE7;
+  --questions-signal: #67E8F9;
+  --questions-ink: #15152A;
+  --accent: #6549D8;
+  --accent-hover: #5037BE;
+  --accent-soft: rgba(101, 73, 216, 0.11);
+  background:
+    radial-gradient(circle at 92% 3%, color-mix(in srgb, var(--questions-signal) 11%, transparent), transparent 24rem),
+    var(--bg-primary);
+}
+
+[data-theme="dark"] .pro-questions-shell {
+  --questions-brand-from: #6D52E8;
+  --questions-brand-to: #9B87F5;
+  --questions-signal: #67E8F9;
+  --questions-ink: #111323;
+  --accent: #AB99FF;
+  --accent-hover: #C8BDFF;
+  --accent-soft: rgba(171, 153, 255, 0.14);
+}
+
+[data-theme="sepia"] .pro-questions-shell {
+  --questions-brand-from: #57458F;
+  --questions-brand-to: #7A659F;
+  --questions-signal: #9FD8D1;
+  --questions-ink: #2D2935;
+  --accent: #655487;
+  --accent-hover: #51416F;
+  --accent-soft: rgba(101, 84, 135, 0.12);
+}
+
+.pro-questions-mark {
+  background:
+    radial-gradient(circle at 74% 20%, rgba(255, 255, 255, 0.3), transparent 26%),
+    linear-gradient(145deg, var(--questions-brand-from, #4C36C7), var(--questions-brand-to, #795CE7));
+  box-shadow: 0 10px 24px -12px color-mix(in srgb, var(--questions-brand-from, #4C36C7) 72%, transparent);
+}
+
+.pro-questions-wordmark {
+  color: var(--questions-brand-to, #795CE7);
+}
+
+.questions-hero {
+  border-color: rgba(255, 255, 255, 0.13);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    radial-gradient(circle at 82% 18%, rgba(103, 232, 249, 0.16), transparent 28%),
+    radial-gradient(circle at 10% 100%, rgba(121, 92, 231, 0.32), transparent 36%),
+    linear-gradient(135deg, #121329 0%, #20204A 55%, #18384A 100%);
+  background-size: 28px 28px, 28px 28px, auto, auto, auto;
+}
+
+.questions-stat {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.075);
+}
+
+.question-card {
+  position: relative;
+}
+
+.question-card::before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 3px;
+  content: "";
+  background: linear-gradient(90deg, var(--questions-brand-from), var(--questions-signal), var(--questions-brand-to));
+}
+
+.pro-questions-shell .question-statement-markdown > :last-child,
+.pro-questions-shell .question-option-markdown > :last-child {
+  margin-bottom: 0;
+}
+
+.pro-questions-shell .question-statement-markdown p {
+  line-height: 1.65;
+}
+
+.pro-questions-shell .question-option-markdown {
+  font-size: 0.875rem;
+}
+
+.pro-questions-shell .question-option-markdown p,
+.pro-questions-shell .question-option-markdown li {
+  margin-bottom: 0.3rem;
+  line-height: 1.45;
+}
+
+.pro-questions-shell .question-option-markdown :where(ul, ol) {
+  margin-bottom: 0.45rem;
+  padding-left: 1.25rem;
+}
+
+.question-option:focus-within {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .dashboard-library {
   background:
     radial-gradient(circle at 92% 2%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 25rem),
