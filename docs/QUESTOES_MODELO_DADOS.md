@@ -2,7 +2,7 @@
 
 ## Diagnóstico da fonte revisada
 
-Fonte admitida: somente `*_ATUALIZADO.json`. O arquivo de Direito Administrativo possui 804 questões (679 `VALIDA` e 125 `ADAPTADA`). A auditoria encontrou 21 itens sem gabarito, quatro IDs numéricos duplicados, metadados deslocados em parte do acervo e variações de tópicos. O campo `id_alfanumerico` é único e passa a ser a identidade externa estável.
+Fonte admitida: somente `*_ATUALIZADO.json`. Na versão de 28/09/2026, o arquivo de Direito Administrativo possui 802 questões (607 `VALIDA` e 195 `ADAPTADA`). Para o lote de 100 questões, a auditoria encontrou 438 candidatas importáveis nos tópicos já mapeados, após excluir as 12 publicadas anteriormente, e rejeitou 94 candidatas estruturalmente incompletas. O campo `id_alfanumerico` é a identidade externa estável.
 
 Arquivos `EXCLUIDAS` e relatórios não são fontes de publicação. O relatório é apenas referência de revisão.
 
@@ -23,7 +23,7 @@ O núcleo permanece relacional (`questions`, alternativas, gabarito, explicaçã
 ## Regras de processamento
 
 1. O nome da fonte deve terminar em `_ATUALIZADO.json`.
-2. A amostra aceita somente `status_revisao = VALIDA`.
+2. A publicação aceita somente `status_revisao = VALIDA`.
 3. Ano, banca, enunciado, gabarito e comentário são obrigatórios.
 4. Cada tópico precisa de mapeamento explícito para um `topic_id`; não há aproximação automática.
 5. O lote inteiro é validado antes da escrita e gravado por uma única transação PostgreSQL.
@@ -34,9 +34,11 @@ O núcleo permanece relacional (`questions`, alternativas, gabarito, explicaçã
 
 ```powershell
 npm run questions:admin -- prepare --source <ATUALIZADO.json> --mapping <mapa.json> --output <lote.json> --ids id1,id2
+npm run questions:admin -- prepare --source <ATUALIZADO.json> --mapping <mapa.json> --output <lote.json> --limit 100 --balanced --exclude-file <lote-anterior.json>
 npm run questions:admin -- validate --file <lote.json>
 npm run questions:admin -- import --file <lote.json>
 npm run questions:admin -- import --file <lote.json> --apply --confirm <batch_key>
+npm run questions:admin -- verify --file <lote.json>
 ```
 
-O último comando exige `SUPABASE_SERVICE_ROLE_KEY` apenas no processo administrativo local. A credencial não entra no bundle nem no lote.
+Os comandos `import --apply` e `verify` exigem `SUPABASE_SERVICE_ROLE_KEY` apenas no processo administrativo local. A credencial não entra no bundle nem no lote. A seleção com `--balanced` percorre os tópicos mapeados em rodadas, enquanto `--exclude-file` impede a repetição de IDs de um lote anterior.

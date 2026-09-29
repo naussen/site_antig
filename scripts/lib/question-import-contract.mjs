@@ -204,6 +204,64 @@ export function transformReviewedQuestion(rawQuestion, mapping) {
   });
 }
 
+export function selectImportableQuestions({
+  rawQuestions,
+  mapping,
+  limit,
+  excludedSourceIds = new Set(),
+  balanced = false,
+}) {
+  const candidatesByTopic = new Map();
+  const rejected = [];
+
+  for (const rawQuestion of rawQuestions) {
+    const sourceId = rawQuestion?.id_alfanumerico;
+    if (rawQuestion?.status_revisao !== "VALIDA"
+      || typeof sourceId !== "string"
+      || excludedSourceIds.has(sourceId)
+      || !mapping.topics?.[rawQuestion.topico]) {
+      continue;
+    }
+
+    try {
+      transformReviewedQuestion(rawQuestion, mapping);
+      const bucket = candidatesByTopic.get(rawQuestion.topico) ?? [];
+      bucket.push(rawQuestion);
+      candidatesByTopic.set(rawQuestion.topico, bucket);
+    } catch (error) {
+      rejected.push({
+        source_id: sourceId,
+        reason: error instanceof Error ? error.message : String(error),
+      });
+    }
+  }
+
+  const candidates = [...candidatesByTopic.values()].flat();
+  if (candidates.length < limit) {
+    throw new Error(`Apenas ${candidates.length} questões importáveis após filtros; ${limit} solicitadas.`);
+  }
+
+  if (!balanced) {
+    return { selected: candidates.slice(0, limit), rejected, candidateCount: candidates.length };
+  }
+
+  const queues = [...candidatesByTopic.values()].map((items) => [...items]);
+  const selected = [];
+  while (selected.length < limit) {
+    let selectedInRound = false;
+    for (const queue of queues) {
+      const nextQuestion = queue.shift();
+      if (!nextQuestion) continue;
+      selected.push(nextQuestion);
+      selectedInRound = true;
+      if (selected.length === limit) break;
+    }
+    if (!selectedInRound) break;
+  }
+
+  return { selected, rejected, candidateCount: candidates.length };
+}
+
 export function buildQuestionBatch({ rawText, sourceFile, rawQuestions, mapping, selectedIds }) {
   if (!/_ATUALIZADO\.json$/iu.test(sourceFile) || /[\\/]/u.test(sourceFile)) {
     throw new Error("A fonte deve ser um arquivo JSON cujo nome contenha _ATUALIZADO.");

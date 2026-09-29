@@ -5,6 +5,7 @@ import test from "node:test";
 import {
   buildQuestionBatch,
   questionImportBatchSchema,
+  selectImportableQuestions,
 } from "../scripts/lib/question-import-contract.mjs";
 
 const migration = await readFile(
@@ -77,6 +78,47 @@ test("recusa fonte sem ATUALIZADO e questão não validada", () => {
       selectedIds: [],
     }),
     /somente status VALIDA/u,
+  );
+});
+
+test("seleciona lote limitado, equilibrado e sem itens já publicados", () => {
+  const balancedMapping = {
+    ...mapping,
+    topics: {
+      "I. Organização": "topico-existente",
+      "II. Controle": "outro-topico-existente",
+    },
+  };
+  const questions = [
+    { ...rawQuestion, id: 1, id_alfanumerico: "a1", topico: "I. Organização" },
+    { ...rawQuestion, id: 2, id_alfanumerico: "a2", topico: "I. Organização" },
+    { ...rawQuestion, id: 3, id_alfanumerico: "b1", topico: "II. Controle" },
+    { ...rawQuestion, id: 4, id_alfanumerico: "b2", topico: "II. Controle" },
+    { ...rawQuestion, id: 5, id_alfanumerico: "inv", topico: "II. Controle", gabarito: null },
+  ];
+
+  const selection = selectImportableQuestions({
+    rawQuestions: questions,
+    mapping: balancedMapping,
+    limit: 3,
+    excludedSourceIds: new Set(["a1"]),
+    balanced: true,
+  });
+
+  assert.deepEqual(selection.selected.map(({ id_alfanumerico }) => id_alfanumerico), ["a2", "b1", "b2"]);
+  assert.equal(selection.candidateCount, 3);
+  assert.equal(selection.rejected.length, 1);
+  assert.equal(selection.rejected[0].source_id, "inv");
+});
+
+test("recusa limite maior que o conjunto importável", () => {
+  assert.throws(
+    () => selectImportableQuestions({
+      rawQuestions: [rawQuestion],
+      mapping,
+      limit: 2,
+    }),
+    /Apenas 1 questões importáveis/u,
   );
 });
 

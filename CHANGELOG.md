@@ -16,6 +16,8 @@
 - reforçada a identidade visual violeta/ciano do PROQuestões e compactadas as alternativas com tipografia própria, alvos acessíveis e disposição responsiva para certo/errado.
 - reservado no mobile o espaço do cabeçalho fixo para impedir que ele cubra o wordmark e o topo do hero de Questões.
 - adicionados controles responsivos de questão anterior e próxima, com histórico local, avanço sem resposta e indicação do fim do filtro sem apagar a questão atual.
+- importado e verificado um lote atômico de 100 questões adicionais de Direito Administrativo, distribuídas por 10 tópicos ativos, com 328 alternativas, 100 gabaritos, 100 comentários didáticos e trilha integral de auditoria.
+- aprimorado o importador administrativo com seleção limitada e balanceada, exclusão de lotes anteriores e verificação pós-importação de hashes e relações persistidas.
 
 ## Não publicado — planejamento do módulo Questões
 
