@@ -194,7 +194,7 @@ export function QuestionsClient({
   const latestAccuracy = accuracy(stats.latest_correct, stats.answered_questions);
 
   return (
-    <main className="pro-questions-shell min-h-screen bg-[var(--bg-primary)] px-3 py-4 sm:px-6 sm:py-6 md:px-10 md:py-8">
+    <main className="pro-questions-shell min-h-screen bg-[var(--bg-primary)] px-3 pb-4 pt-20 sm:px-6 sm:pb-6 sm:pt-20 md:px-10 lg:py-8">
       <div className="mx-auto max-w-6xl">
         <header className="questions-hero relative overflow-hidden rounded-[1.6rem] border p-5 text-white shadow-[var(--shadow-lg)] sm:p-6">
           <CircleHelp className="pointer-events-none absolute -right-8 -top-10 h-44 w-44 text-white/[0.045] sm:h-56 sm:w-56" strokeWidth={0.75} aria-hidden="true" />
