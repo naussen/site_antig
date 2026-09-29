@@ -6,6 +6,7 @@ import {
   BarChart3,
   Bookmark,
   CheckCircle2,
+  ChevronLeft,
   ChevronRight,
   CircleHelp,
   EyeOff,
@@ -75,15 +76,29 @@ export function QuestionsClient({
   );
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(initialError);
+  const [questionHistory, setQuestionHistory] = useState<QuestionListItem[]>([]);
+  const [reachedEnd, setReachedEnd] = useState(false);
+
+  const showQuestion = (nextQuestion: QuestionListItem) => {
+    setQuestion(nextQuestion);
+    setSelectedOptionId(null);
+    setAnswer(null);
+    setMarkedForReview(nextQuestion.preference?.marked_for_review ?? false);
+    setReachedEnd(false);
+  };
 
   const loadQuestion = async ({
     afterId = null,
     searchValue = search,
     disciplineValue = discipline,
+    rememberCurrent = false,
+    preserveCurrentOnEmpty = false,
   }: {
     afterId?: string | null;
     searchValue?: string;
     disciplineValue?: string;
+    rememberCurrent?: boolean;
+    preserveCurrentOnEmpty?: boolean;
   } = {}) => {
     setLoading(true);
     setError(null);
@@ -103,12 +118,26 @@ export function QuestionsClient({
 
       const result = data as QuestionListResult;
       const nextQuestion = result.items[0] ?? null;
-      setQuestion(nextQuestion);
-      setSelectedOptionId(null);
-      setAnswer(null);
-      setMarkedForReview(nextQuestion?.preference?.marked_for_review ?? false);
+
+      if (nextQuestion) {
+        if (rememberCurrent && question) {
+          setQuestionHistory((history) => [...history, question]);
+        }
+        showQuestion(nextQuestion);
+      } else if (preserveCurrentOnEmpty) {
+        setReachedEnd(true);
+      } else {
+        setQuestion(null);
+        setSelectedOptionId(null);
+        setAnswer(null);
+        setMarkedForReview(false);
+        setReachedEnd(false);
+      }
+
+      return nextQuestion;
     } catch {
       setError("Não foi possível carregar a questão. Tente novamente.");
+      return undefined;
     } finally {
       setLoading(false);
     }
@@ -175,7 +204,10 @@ export function QuestionsClient({
       setMarkedForReview(preference.marked_for_review);
 
       if (preference.hidden) {
-        await loadQuestion({ afterId: question.id });
+        const nextQuestion = await loadQuestion({ afterId: question.id });
+        if (nextQuestion === null) {
+          await loadQuestion();
+        }
         await refreshStats();
       }
     } catch {
@@ -188,7 +220,28 @@ export function QuestionsClient({
 
   const applyFilters = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setQuestionHistory([]);
+    setReachedEnd(false);
     await loadQuestion();
+  };
+
+  const showPreviousQuestion = () => {
+    const previousQuestion = questionHistory.at(-1);
+    if (!previousQuestion || loading) return;
+
+    setQuestionHistory((history) => history.slice(0, -1));
+    setError(null);
+    showQuestion(previousQuestion);
+  };
+
+  const showNextQuestion = async () => {
+    if (!question || loading || reachedEnd) return;
+
+    await loadQuestion({
+      afterId: question.id,
+      rememberCurrent: true,
+      preserveCurrentOnEmpty: true,
+    });
   };
 
   const latestAccuracy = accuracy(stats.latest_correct, stats.answered_questions);
@@ -284,6 +337,8 @@ export function QuestionsClient({
               onClick={() => {
                 setSearch("");
                 setDiscipline("");
+                setQuestionHistory([]);
+                setReachedEnd(false);
                 void loadQuestion({ searchValue: "", disciplineValue: "" });
               }}
               className="mt-6 inline-flex items-center gap-2 rounded-xl border border-[var(--border)] px-4 py-2.5 text-sm font-bold text-[var(--text-primary)]"
@@ -397,10 +452,20 @@ export function QuestionsClient({
 
             <footer className="flex flex-col gap-3 border-t border-[var(--border)] bg-[var(--bg-primary)] p-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
               <span className="inline-flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                <BarChart3 size={15} /> Seu resultado é atualizado após cada resposta.
+                <BarChart3 size={15} />
+                {reachedEnd ? "Você chegou ao fim das questões deste filtro." : "Seu resultado é atualizado após cada resposta."}
               </span>
-              <div className="flex gap-2">
-                {!answer ? (
+              <div className="flex w-full flex-wrap gap-2 sm:w-auto sm:flex-nowrap">
+                <button
+                  type="button"
+                  disabled={questionHistory.length === 0 || loading}
+                  onClick={showPreviousQuestion}
+                  aria-label="Questão anterior"
+                  className="inline-flex min-h-11 flex-1 items-center justify-center gap-1.5 rounded-xl border border-[var(--border)] px-3 text-sm font-bold text-[var(--text-primary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none"
+                >
+                  <ChevronLeft size={17} /> Anterior
+                </button>
+                {!answer && (
                   <button
                     type="button"
                     disabled={!selectedOptionId || loading}
@@ -410,16 +475,16 @@ export function QuestionsClient({
                     {loading && <Loader2 size={17} className="animate-spin" />}
                     Responder
                   </button>
-                ) : (
-                  <button
-                    type="button"
-                    disabled={loading}
-                    onClick={() => void loadQuestion({ afterId: question.id })}
-                    className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-[var(--accent)] px-5 text-sm font-bold text-white transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-50 sm:flex-none"
-                  >
-                    Próxima questão <ChevronRight size={17} />
-                  </button>
                 )}
+                <button
+                  type="button"
+                  disabled={loading || reachedEnd}
+                  onClick={() => void showNextQuestion()}
+                  aria-label="Próxima questão"
+                  className={`inline-flex min-h-11 flex-1 items-center justify-center gap-1.5 rounded-xl px-3 text-sm font-bold transition disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none ${answer ? "bg-[var(--accent)] text-white hover:-translate-y-0.5" : "border border-[var(--border)] text-[var(--text-primary)] hover:border-[var(--accent)] hover:text-[var(--accent)]"}`}
+                >
+                  Próxima <ChevronRight size={17} />
+                </button>
               </div>
             </footer>
           </article>

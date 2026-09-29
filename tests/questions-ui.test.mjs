@@ -29,6 +29,10 @@ test("interface usa RPCs seguras e não consulta gabarito diretamente", async ()
   assert.match(source, /pt-20[\s\S]*lg:py-8/);
   assert.match(source, /question-option-markdown/);
   assert.match(source, /question\.question_type === "true_false"/);
+  assert.match(source, /aria-label="Questão anterior"/);
+  assert.match(source, /aria-label="Próxima questão"/);
+  assert.match(source, /setQuestionHistory\(\(history\) => \[\.\.\.history, question\]\)/);
+  assert.match(source, /preserveCurrentOnEmpty:\s*true/);
 });
 
 test("área do aluno e landing expõem PROQuestões", async () => {
