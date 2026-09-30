@@ -22,7 +22,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
             label="Voltar para a página inicial"
             size={44}
             variant="full"
-            eager
+            highPriority
             className="mb-4"
           />
           <h1
