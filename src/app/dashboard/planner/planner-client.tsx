@@ -317,7 +317,7 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
       <div className="mt-6 grid min-w-0 gap-5 xl:grid-cols-[320px_minmax(0,1fr)]">
         <aside className="min-w-0 rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] p-4 shadow-[var(--shadow-sm)] xl:sticky xl:top-5 xl:self-start">
           <div><p className="text-xs font-black uppercase tracking-wider text-[var(--accent)]">Disciplinas</p><h2 className="mt-1 font-bold text-[var(--text-primary)]">Arraste para a grade</h2><p className="mt-1 text-xs leading-5 text-[var(--text-muted)]">Solte no horário desejado. O salvamento é automático.</p></div>
-          <div className="mt-4 max-h-[55vh] space-y-2 overflow-y-auto pr-1">{disciplines.map((discipline) => <DraggableDiscipline key={discipline} discipline={discipline} />)}</div>
+          <div className="mt-4 max-h-64 space-y-2 overflow-y-auto pr-1 sm:max-h-80 xl:max-h-[55vh]">{disciplines.map((discipline) => <DraggableDiscipline key={discipline} discipline={discipline} />)}</div>
           {disciplines.length === 0 && <p className="mt-4 rounded-xl border border-dashed border-[var(--border)] p-4 text-sm text-[var(--text-muted)]">Nenhuma disciplina disponível.</p>}
         </aside>
 

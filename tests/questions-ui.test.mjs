@@ -26,7 +26,8 @@ test("interface usa RPCs seguras e não consulta gabarito diretamente", async ()
   assert.doesNotMatch(source, /from\(["']question_answer_keys["']\)/);
   assert.doesNotMatch(source, /dangerouslySetInnerHTML|rehype-raw|innerHTML/);
   assert.match(source, /pro-questions-shell/);
-  assert.match(source, /pt-20[\s\S]*lg:py-8/);
+  assert.match(source, /px-3 py-6[\s\S]*sm:py-8[\s\S]*lg:py-8/);
+  assert.doesNotMatch(source, /pt-20/);
   assert.match(source, /question-option-markdown/);
   assert.match(source, /question\.question_type === "true_false"/);
   assert.match(source, /aria-label="Questão anterior"/);

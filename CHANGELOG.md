@@ -23,6 +23,7 @@
 - priorizado o carregamento da variante visível dos logos acima da dobra no dashboard e nas telas de acesso, sem baixar antecipadamente a variante oculta.
 - uniformizada a identidade dos módulos auxiliares com um hero compartilhado e ampliados os alvos táteis de navegação, temas, Questões e páginas públicas.
 - adicionada regressão visual automatizada da identidade compartilhada em 390 px e 1440 px, cobrindo os temas Light, Dark e Sépia com baselines versionados e execução em CI.
+- removido o espaçamento móvel duplicado no topo do PROQuestões e reduzida a altura inicial da lista de disciplinas do Planner em telas pequenas, aproximando a grade sem sacrificar nomes completos ou rolagem interna.
 
 ## Não publicado — planejamento do módulo Questões
 
