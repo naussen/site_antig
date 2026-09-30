@@ -16,6 +16,7 @@ import { MarkdownViewer } from "@/components/study/markdown-viewer";
 import { createClient } from "@/lib/supabase/client";
 import { MAX_NOTE_LENGTH, extractStoredNoteImageIds } from "@/lib/note-images.mjs";
 import { deleteNoteImage, deleteStoredNoteImages } from "@/lib/note-images-client";
+import { formatBrazilDateTime } from "@/lib/format-date";
 
 interface NoteCardProps {
   note: {
@@ -182,10 +183,7 @@ export function NoteCard({ note, userId }: NoteCardProps) {
           >
             <Calendar size={12} aria-hidden="true" />
             <span>
-              Atualizada em {new Date(updatedAt).toLocaleString("pt-BR", {
-                dateStyle: "short",
-                timeStyle: "short",
-              })}
+              Atualizada em {formatBrazilDateTime(updatedAt)}
             </span>
           </div>
         </div>

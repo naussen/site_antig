@@ -19,6 +19,7 @@
 - importado e verificado um lote atômico de 100 questões adicionais de Direito Administrativo, distribuídas por 10 tópicos ativos, com 328 alternativas, 100 gabaritos, 100 comentários didáticos e trilha integral de auditoria.
 - aprimorado o importador administrativo com seleção limitada e balanceada, exclusão de lotes anteriores e verificação pós-importação de hashes e relações persistidas.
 - alinhada a identidade visual da área de notas aos demais módulos autenticados, com hero responsivo, resumo do acervo e botões principais com alvos táteis acessíveis.
+- estabilizada a formatação de data das notas no fuso de São Paulo para eliminar divergência de hidratação entre servidor e navegador.
 
 ## Não publicado — planejamento do módulo Questões
 

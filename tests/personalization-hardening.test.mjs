@@ -39,6 +39,20 @@ test("área de notas preserva identidade e alvos táteis acessíveis", async () 
   assert.match(card, /focus-visible:outline-\[var\(--accent\)\]/);
 });
 
+test("datas das notas são estáveis entre servidor e navegador", async () => {
+  const [formatter, card, panel] = await Promise.all([
+    read("src/lib/format-date.ts"),
+    read("src/app/dashboard/notas/note-card.tsx"),
+    read("src/components/study/notes-panel.tsx"),
+  ]);
+
+  assert.match(formatter, /timeZone: "America\/Sao_Paulo"/);
+  assert.match(card, /formatBrazilDateTime\(updatedAt\)/);
+  assert.match(panel, /formatBrazilDateTime\(note\.updated_at\)/);
+  assert.doesNotMatch(card, /updatedAt\)\.toLocaleString/);
+  assert.doesNotMatch(panel, /note\.updated_at\)\.toLocaleString/);
+});
+
 test("limpeza de imagens é autenticada, idempotente e reconciliável", async () => {
   const [deleteRoute, reconcileRoute, reconciler] = await Promise.all([
     read("src/app/api/note-images/[imageId]/route.ts"),
