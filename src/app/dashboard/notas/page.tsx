@@ -151,16 +151,40 @@ export default async function NotesPage() {
   });
 
   const disciplines = Object.keys(grouped).sort();
+  const notesSummary = `${validNotes.length} ${validNotes.length === 1 ? "nota salva" : "notas salvas"}`;
 
   return (
     <main
-      className="min-h-screen p-6 md:p-12"
+      className="min-h-screen px-4 py-6 sm:px-6 md:px-10 md:py-10"
       style={{ background: "var(--bg-primary)" }}
     >
-        {/* Header global já renderizado pelo layout.tsx */}
+      {/* Header global já renderizado pelo layout.tsx */}
+      <section className="mx-auto max-w-5xl">
+        <header className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[linear-gradient(135deg,var(--catalog-hero-start),var(--catalog-hero-end))] p-6 text-white shadow-[var(--shadow-lg)] sm:p-8">
+          <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full bg-[var(--catalog-hero-glow)] blur-3xl" aria-hidden="true" />
+          <div className="relative">
+            <span className="grid h-12 w-12 place-items-center rounded-2xl border border-white/15 bg-white/10 text-[var(--catalog-gold-light)]">
+              <StickyNote size={24} aria-hidden="true" />
+            </span>
+            <p className="mt-6 text-xs font-black uppercase tracking-[0.16em] text-white/75">
+              Área do aluno
+            </p>
+            <h1 className="mt-2 text-3xl font-black tracking-tight text-white">
+              Suas notas de estudo
+            </h1>
+            <p className="mt-3 max-w-2xl text-sm leading-6 text-white/75">
+              Revise anotações por disciplina, retome o material de origem e mantenha seus registros organizados.
+            </p>
+            {!personalDataError && (
+              <p className="mt-5 inline-flex min-h-9 items-center rounded-full border border-white/15 bg-white/10 px-4 text-xs font-bold text-white/90">
+                {notesSummary}
+              </p>
+            )}
+          </div>
+        </header>
 
-      <section className="max-w-5xl mx-auto">
-        {personalDataError ? (
+        <div className="mt-8">
+          {personalDataError ? (
           <div
             role="alert"
             className="flex flex-col items-center rounded-3xl px-6 py-16 text-center"
@@ -206,7 +230,7 @@ export default async function NotesPage() {
             </p>
             <Link
               href="/dashboard"
-              className="inline-block mt-6 px-6 py-2 rounded-lg font-medium transition-colors hover:opacity-90"
+              className="mt-6 inline-flex min-h-11 items-center justify-center rounded-xl px-6 py-2 font-semibold transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
               style={{ 
                 background: "var(--action)",
                 color: "var(--action-foreground)",
@@ -257,7 +281,8 @@ export default async function NotesPage() {
               </div>
             ))}
           </div>
-        )}
+          )}
+        </div>
       </section>
     </main>
   );

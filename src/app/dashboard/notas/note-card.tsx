@@ -195,7 +195,7 @@ export function NoteCard({ note, userId }: NoteCardProps) {
             type="button"
             onClick={() => startEditing("expanded")}
             disabled={isBusy || isEditing}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs font-semibold transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-xl border px-3 py-2 text-xs font-semibold transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
             style={{ borderColor: "var(--border)", color: "var(--accent)" }}
             title="Abrir a nota em tamanho maior"
           >
@@ -207,7 +207,7 @@ export function NoteCard({ note, userId }: NoteCardProps) {
             type="button"
             onClick={() => startEditing("inline")}
             disabled={isBusy || isEditing}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs font-semibold transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-xl border px-3 py-2 text-xs font-semibold transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
             style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
           >
             <Pencil size={13} aria-hidden="true" />
@@ -222,7 +222,7 @@ export function NoteCard({ note, userId }: NoteCardProps) {
               setIsConfirmingDelete(true);
             }}
             disabled={isBusy || isConfirmingDelete}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs font-semibold transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-xl border px-3 py-2 text-xs font-semibold transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
             style={{
               background: "var(--callout-warning-bg)",
               borderColor: "var(--callout-warning-border)",

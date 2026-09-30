@@ -26,6 +26,19 @@ test("edição de nota exige a versão carregada", async () => {
   assert.match(source, /alterada em outra aba ou dispositivo/);
 });
 
+test("área de notas preserva identidade e alvos táteis acessíveis", async () => {
+  const [page, card] = await Promise.all([
+    read("src/app/dashboard/notas/page.tsx"),
+    read("src/app/dashboard/notas/note-card.tsx"),
+  ]);
+
+  assert.match(page, /Suas notas de estudo/);
+  assert.match(page, /catalog-hero-start/);
+  assert.match(page, /notesSummary/);
+  assert.match(card, /min-h-11/);
+  assert.match(card, /focus-visible:outline-\[var\(--accent\)\]/);
+});
+
 test("limpeza de imagens é autenticada, idempotente e reconciliável", async () => {
   const [deleteRoute, reconcileRoute, reconciler] = await Promise.all([
     read("src/app/api/note-images/[imageId]/route.ts"),
