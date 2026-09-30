@@ -367,7 +367,7 @@ export function QuestionsClient({
                     type="button"
                     disabled={loading}
                     onClick={() => void updatePreference({ review: !markedForReview })}
-                    className={`grid h-10 w-10 place-items-center rounded-xl border transition ${markedForReview ? "border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)]" : "border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--accent)]"}`}
+                    className={`grid h-11 w-11 place-items-center rounded-xl border transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:h-10 sm:w-10 ${markedForReview ? "border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)]" : "border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--accent)]"}`}
                     aria-label={markedForReview ? "Remover da revisão" : "Marcar para revisão"}
                     title={markedForReview ? "Remover da revisão" : "Marcar para revisão"}
                   >
@@ -377,7 +377,7 @@ export function QuestionsClient({
                     type="button"
                     disabled={loading}
                     onClick={() => void updatePreference({ hidden: true })}
-                    className="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--border)] px-3 text-xs font-bold text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                    className="inline-flex h-11 items-center gap-2 rounded-xl border border-[var(--border)] px-3 text-xs font-bold text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:h-10"
                   >
                     <EyeOff size={17} /> Não mostrar mais
                   </button>

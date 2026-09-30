@@ -59,7 +59,7 @@ export function ThemeSwitcher({ compact = false }: { compact?: boolean }) {
             aria-checked={isActive}
             aria-label={label}
             title={label}
-            className={`relative grid h-9 cursor-pointer place-items-center rounded-lg border transition-[transform,background-color,border-color,color] duration-150 active:scale-[0.96] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] ${isActive ? "border-[var(--accent)]/25 bg-[var(--accent-soft)] text-[var(--accent)]" : "border-transparent bg-transparent text-[var(--text-muted)] hover:border-[var(--border)] hover:bg-[var(--accent-soft)] hover:text-[var(--accent)]"}`}
+            className={`relative grid h-11 cursor-pointer place-items-center rounded-lg border transition-[transform,background-color,border-color,color] duration-150 active:scale-[0.96] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] lg:h-9 ${isActive ? "border-[var(--accent)]/25 bg-[var(--accent-soft)] text-[var(--accent)]" : "border-transparent bg-transparent text-[var(--text-muted)] hover:border-[var(--border)] hover:bg-[var(--accent-soft)] hover:text-[var(--accent)]"}`}
           >
             <Icon size={16} strokeWidth={isActive ? 2.4 : 2} />
           </button>

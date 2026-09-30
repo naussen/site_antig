@@ -3,6 +3,7 @@ import { AlertCircle, BookOpen, StickyNote } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { NoteCard } from "./note-card";
+import { DashboardPageHero } from "@/components/dashboard/dashboard-page-hero";
 
 export default async function NotesPage() {
   const supabase = await createClient();
@@ -160,28 +161,18 @@ export default async function NotesPage() {
     >
       {/* Header global já renderizado pelo layout.tsx */}
       <section className="mx-auto max-w-5xl">
-        <header className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[linear-gradient(135deg,var(--catalog-hero-start),var(--catalog-hero-end))] p-6 text-white shadow-[var(--shadow-lg)] sm:p-8">
-          <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full bg-[var(--catalog-hero-glow)] blur-3xl" aria-hidden="true" />
-          <div className="relative">
-            <span className="grid h-12 w-12 place-items-center rounded-2xl border border-white/15 bg-white/10 text-[var(--catalog-gold-light)]">
-              <StickyNote size={24} aria-hidden="true" />
-            </span>
-            <p className="mt-6 text-xs font-black uppercase tracking-[0.16em] text-white/75">
-              Área do aluno
+        <DashboardPageHero
+          icon={StickyNote}
+          eyebrow="Área do aluno"
+          title="Suas notas de estudo"
+          description="Revise anotações por disciplina, retome o material de origem e mantenha seus registros organizados."
+        >
+          {!personalDataError && (
+            <p className="mt-5 inline-flex min-h-9 items-center rounded-full border border-white/15 bg-white/10 px-4 text-xs font-bold text-white/90">
+              {notesSummary}
             </p>
-            <h1 className="mt-2 text-3xl font-black tracking-tight text-white">
-              Suas notas de estudo
-            </h1>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-white/75">
-              Revise anotações por disciplina, retome o material de origem e mantenha seus registros organizados.
-            </p>
-            {!personalDataError && (
-              <p className="mt-5 inline-flex min-h-9 items-center rounded-full border border-white/15 bg-white/10 px-4 text-xs font-bold text-white/90">
-                {notesSummary}
-              </p>
-            )}
-          </div>
-        </header>
+          )}
+        </DashboardPageHero>
 
         <div className="mt-8">
           {personalDataError ? (

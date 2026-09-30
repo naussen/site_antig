@@ -12,7 +12,7 @@ export default function InstitutionalLayout({ children }: Readonly<{ children: R
           <Link href="/landing" aria-label="Voltar à página inicial do PRO Concursos">
             <Image src={LOGO_SRC} alt="PRO Concursos" width={170} height={68} className="h-auto w-[145px] sm:w-[170px]" />
           </Link>
-          <Link href="/login" className="rounded-xl bg-[var(--action)] px-4 py-2.5 text-sm font-bold text-[var(--action-foreground)] transition-opacity hover:opacity-90">Entrar</Link>
+          <Link href="/login" className="inline-flex min-h-11 items-center rounded-xl bg-[var(--action)] px-4 text-sm font-bold text-[var(--action-foreground)] transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">Entrar</Link>
         </div>
       </header>
       <div className="flex-1">{children}</div>
@@ -20,10 +20,10 @@ export default function InstitutionalLayout({ children }: Readonly<{ children: R
         <div className="mx-auto flex max-w-5xl flex-col gap-4 text-sm text-[var(--text-muted)] sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 PRO Concursos · proconcursos.com.br</p>
           <nav className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Links institucionais">
-            <Link href="/termos" className="hover:text-[var(--accent)]">Termos</Link>
-            <Link href="/privacidade" className="hover:text-[var(--accent)]">Privacidade</Link>
-            <Link href="/suporte" className="hover:text-[var(--accent)]">Suporte</Link>
-            <Link href="/contato" className="hover:text-[var(--accent)]">Contato</Link>
+            <Link href="/termos" className="inline-flex min-h-11 items-center hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">Termos</Link>
+            <Link href="/privacidade" className="inline-flex min-h-11 items-center hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">Privacidade</Link>
+            <Link href="/suporte" className="inline-flex min-h-11 items-center hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">Suporte</Link>
+            <Link href="/contato" className="inline-flex min-h-11 items-center hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">Contato</Link>
           </nav>
         </div>
       </footer>

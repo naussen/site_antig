@@ -360,7 +360,7 @@ export function LandingPageContent() {
             <a href="#modulos" className="rounded-lg px-3 py-2 text-sm font-semibold text-white/70 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826]">Módulos</a>
             <a href="#ferramentas" className="rounded-lg px-3 py-2 text-sm font-semibold text-white/70 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826]">Funcionalidades</a>
           </div>
-          <div className="flex shrink-0 items-center gap-1.5 sm:gap-3"><Link href="/login" className="rounded-xl px-2 py-2.5 text-xs font-semibold text-white/80 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-4 sm:text-sm">Entrar</Link><Link href={SUBSCRIBE_HREF} className="rounded-xl bg-[#f9a826] px-3 py-2.5 text-xs font-extrabold uppercase tracking-wide text-[#121212] shadow-lg shadow-[#f9a826]/15 transition hover:-translate-y-0.5 hover:bg-[#ffc15c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-5 sm:text-sm">Assinar</Link></div>
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-3"><Link href="/login" className="inline-flex min-h-11 items-center rounded-xl px-2 text-xs font-semibold text-white/80 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-4 sm:text-sm">Entrar</Link><Link href={SUBSCRIBE_HREF} className="inline-flex min-h-11 items-center rounded-xl bg-[#f9a826] px-3 text-xs font-extrabold uppercase tracking-wide text-[#121212] shadow-lg shadow-[#f9a826]/15 transition hover:-translate-y-0.5 hover:bg-[#ffc15c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-5 sm:text-sm">Assinar</Link></div>
         </div>
       </nav>
 
@@ -412,15 +412,15 @@ export function LandingPageContent() {
           <nav aria-label="Links institucionais">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#f9a826]">Institucional</p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-white/75">
-              <Link href="/termos" className="w-fit transition-colors hover:text-white">Termos de uso</Link>
-              <Link href="/privacidade" className="w-fit transition-colors hover:text-white">Privacidade</Link>
+              <Link href="/termos" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Termos de uso</Link>
+              <Link href="/privacidade" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Privacidade</Link>
             </div>
           </nav>
           <nav aria-label="Links de atendimento">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#f9a826]">Atendimento</p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-white/75">
-              <Link href="/suporte" className="w-fit transition-colors hover:text-white">Suporte</Link>
-              <Link href="/contato" className="w-fit transition-colors hover:text-white">Contato</Link>
+              <Link href="/suporte" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Suporte</Link>
+              <Link href="/contato" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Contato</Link>
             </div>
           </nav>
         </div>

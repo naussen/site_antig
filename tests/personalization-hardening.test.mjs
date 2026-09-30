@@ -27,16 +27,60 @@ test("edição de nota exige a versão carregada", async () => {
 });
 
 test("área de notas preserva identidade e alvos táteis acessíveis", async () => {
-  const [page, card] = await Promise.all([
+  const [page, card, hero] = await Promise.all([
     read("src/app/dashboard/notas/page.tsx"),
     read("src/app/dashboard/notas/note-card.tsx"),
+    read("src/components/dashboard/dashboard-page-hero.tsx"),
   ]);
 
   assert.match(page, /Suas notas de estudo/);
-  assert.match(page, /catalog-hero-start/);
+  assert.match(page, /DashboardPageHero/);
+  assert.match(hero, /catalog-hero-start/);
   assert.match(page, /notesSummary/);
   assert.match(card, /min-h-11/);
   assert.match(card, /focus-visible:outline-\[var\(--accent\)\]/);
+});
+
+test("módulos auxiliares compartilham identidade sem apagar suas funções", async () => {
+  const [hero, planner, notes, settings, account, subscription] = await Promise.all([
+    read("src/components/dashboard/dashboard-page-hero.tsx"),
+    read("src/app/dashboard/planner/page.tsx"),
+    read("src/app/dashboard/notas/page.tsx"),
+    read("src/app/dashboard/configuracoes/page.tsx"),
+    read("src/app/dashboard/conta/page.tsx"),
+    read("src/app/dashboard/assinatura/page.tsx"),
+  ]);
+
+  assert.match(hero, /catalog-hero-start/);
+  assert.match(hero, /children\?: ReactNode/);
+  for (const source of [planner, notes, settings, account, subscription]) {
+    assert.match(source, /DashboardPageHero/);
+  }
+  assert.match(planner, /PlannerClient/);
+  assert.match(notes, /NoteCard/);
+  assert.match(settings, /PreferencesForm/);
+  assert.match(account, /PrivacyRequestForm/);
+  assert.match(subscription, /CancelSubscriptionButton/);
+});
+
+test("navegação e ações principais mantêm alvo tátil no mobile", async () => {
+  const [backLink, navigation, themes, questions, landing, institutional, support] = await Promise.all([
+    read("src/components/navigation/dashboard-back-link.tsx"),
+    read("src/components/navigation/dashboard-navigation.tsx"),
+    read("src/components/theme-switcher.tsx"),
+    read("src/app/dashboard/questoes/questions-client.tsx"),
+    read("src/components/landing/landing-page-content.tsx"),
+    read("src/app/(institutional)/layout.tsx"),
+    read("src/app/(institutional)/suporte/page.tsx"),
+  ]);
+
+  assert.match(backLink, /min-h-11/);
+  assert.match(navigation, /h-11 w-11/);
+  assert.match(themes, /h-11[\s\S]*lg:h-9/);
+  assert.match(questions, /h-11 w-11[\s\S]*sm:h-10 sm:w-10/);
+  assert.match(landing, /inline-flex min-h-11 items-center/);
+  assert.match(institutional, /inline-flex min-h-11 items-center/);
+  assert.match(support, /inline-flex min-h-11 items-center/);
 });
 
 test("datas das notas são estáveis entre servidor e navegador", async () => {

@@ -261,7 +261,7 @@ export function DashboardNavigation({
             <Link
               href="/dashboard/conta"
               onClick={() => setMobileOpen(false)}
-              className={isCollapsed ? "group relative mb-2 grid h-10 w-10 place-items-center rounded-xl border border-[var(--dashboard-sidebar-border)] bg-[var(--dashboard-sidebar-active)] text-sm font-bold text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color,color] duration-150 hover:border-[var(--accent)] hover:text-[var(--dashboard-sidebar-text)] active:scale-[0.96] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" : "group mb-2 block truncate rounded-xl border border-transparent px-2.5 py-2 text-left text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color] duration-150 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] active:scale-[0.985] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"}
+              className={isCollapsed ? "group relative mb-2 grid h-10 w-10 place-items-center rounded-xl border border-[var(--dashboard-sidebar-border)] bg-[var(--dashboard-sidebar-active)] text-sm font-bold text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color,color] duration-150 hover:border-[var(--accent)] hover:text-[var(--dashboard-sidebar-text)] active:scale-[0.96] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" : "group mb-2 flex min-h-11 flex-col justify-center truncate rounded-xl border border-transparent px-2.5 py-2 text-left text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color] duration-150 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] active:scale-[0.985] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"}
               title={isCollapsed ? `Abrir conta (${accountName})` : "Abrir conta"}
               aria-label={isCollapsed ? `Abrir conta de ${accountName}` : undefined}
             >
@@ -292,7 +292,7 @@ export function DashboardNavigation({
               type="button"
               onClick={handleLogout}
               disabled={loggingOut}
-              className={`group relative flex cursor-pointer items-center rounded-xl border border-transparent text-sm font-semibold text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color,color] duration-150 hover:border-red-500/20 hover:bg-red-500/10 hover:text-red-400 active:scale-[0.985] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 disabled:cursor-wait disabled:opacity-60 ${isCollapsed ? "h-10 w-10 justify-center" : "w-full gap-3 px-3 py-2.5"}`}
+              className={`group relative flex cursor-pointer items-center rounded-xl border border-transparent text-sm font-semibold text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color,color] duration-150 hover:border-red-500/20 hover:bg-red-500/10 hover:text-red-400 active:scale-[0.985] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 disabled:cursor-wait disabled:opacity-60 ${isCollapsed ? "h-10 w-10 justify-center" : "min-h-11 w-full gap-3 px-3 py-2.5"}`}
               aria-label={isCollapsed ? "Sair da conta" : undefined}
               title={isCollapsed ? "Sair da conta" : undefined}
             >
@@ -331,7 +331,7 @@ export function DashboardNavigation({
         <button
           type="button"
           onClick={toggleMobileNavigation}
-          className="fixed left-0 top-1/2 z-30 grid h-12 w-10 -translate-y-1/2 touch-manipulation place-items-center rounded-r-xl border border-l-0 shadow-lg transition-[width,background-color,color] duration-150 hover:w-11 hover:text-[var(--accent)] active:w-10 motion-reduce:transition-none lg:hidden"
+          className="fixed left-0 top-1/2 z-30 grid h-12 w-11 -translate-y-1/2 touch-manipulation place-items-center rounded-r-xl border border-l-0 shadow-lg transition-[width,background-color,color] duration-150 hover:w-12 hover:text-[var(--accent)] active:w-11 motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] lg:hidden"
           style={{
             background: "var(--dashboard-sidebar)",
             borderColor: "var(--dashboard-sidebar-border)",
@@ -387,7 +387,7 @@ export function DashboardNavigation({
         <button
           type="button"
           onClick={() => setMobileOpen(false)}
-          className="absolute right-3 top-3 z-10 grid h-10 w-10 place-items-center rounded-xl border border-transparent transition-[transform,background-color,border-color] duration-150 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] active:scale-[0.96] motion-reduce:transition-none"
+          className="absolute right-3 top-3 z-10 grid h-11 w-11 place-items-center rounded-xl border border-transparent transition-[transform,background-color,border-color] duration-150 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] active:scale-[0.96] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
           style={{ color: "var(--dashboard-sidebar-muted)" }}
           aria-label="Fechar navegação"
         >
