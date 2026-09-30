@@ -22,6 +22,7 @@
 - estabilizada a formatação de data das notas no fuso de São Paulo para eliminar divergência de hidratação entre servidor e navegador.
 - priorizado o carregamento da variante visível dos logos acima da dobra no dashboard e nas telas de acesso, sem baixar antecipadamente a variante oculta.
 - uniformizada a identidade dos módulos auxiliares com um hero compartilhado e ampliados os alvos táteis de navegação, temas, Questões e páginas públicas.
+- adicionada regressão visual automatizada da identidade compartilhada em 390 px e 1440 px, cobrindo os temas Light, Dark e Sépia com baselines versionados e execução em CI.
 
 ## Não publicado — planejamento do módulo Questões
 

@@ -24,6 +24,8 @@
     "test:payment-sandbox": "node --env-file-if-exists=.env.local scripts/check-payment-sandbox.mjs --probe",
     "test:mercado-pago-sandbox": "node --env-file-if-exists=.env.local scripts/check-payment-sandbox.mjs --provider mercado-pago --probe",
     "test:planner": "node --test tests/study-planner.test.mjs",
+    "test:visual": "playwright test",
+    "test:visual:update": "playwright test --update-snapshots",
     "test:rls-two-users": "node --env-file-if-exists=.env.local scripts/test-rls-two-users.mjs"
   },
   "dependencies": {
@@ -50,6 +52,7 @@
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "5.15.13",
+    "@playwright/test": "^1.63.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
