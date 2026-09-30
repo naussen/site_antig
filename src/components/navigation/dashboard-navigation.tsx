@@ -126,6 +126,7 @@ export function DashboardNavigation({
           size={isCollapsed ? 40 : 42}
           variant={isCollapsed ? "icon" : "full"}
           tone="dark"
+          eager
         />
       </div>
 
@@ -348,7 +349,7 @@ export function DashboardNavigation({
           className="sticky top-0 z-30 flex items-center justify-between border-b px-4 py-3 lg:hidden"
           style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
         >
-          <ProLogoLink size={34} variant="full" />
+          <ProLogoLink size={34} variant="full" eager />
           <button
             type="button"
             onClick={toggleMobileNavigation}

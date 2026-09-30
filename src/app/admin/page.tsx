@@ -36,6 +36,7 @@ export default async function AdminLoginPage() {
             label="Voltar para a página inicial"
             size={44}
             variant="full"
+            eager
             className="mb-4"
           />
           <h1 className="mb-2 text-2xl font-bold text-[var(--text-primary)]">

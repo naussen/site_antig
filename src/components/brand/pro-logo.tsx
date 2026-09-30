@@ -11,6 +11,8 @@ interface ProLogoProps {
   variant?: "icon" | "full";
   /** Força o wordmark claro em superfícies que são sempre escuras. */
   tone?: "auto" | "dark";
+  /** Carrega imediatamente quando a marca está acima da dobra. */
+  eager?: boolean;
   className?: string;
 }
 
@@ -24,6 +26,7 @@ export function ProLogo({
   size = 32,
   variant = "icon",
   tone = "auto",
+  eager = false,
   className = "",
 }: ProLogoProps) {
   if (variant === "icon") {
@@ -34,6 +37,7 @@ export function ProLogo({
           alt="PRO Resumos"
           width={Math.round(size * ICON_LOGO_RATIO)}
           height={size}
+          loading={eager ? "eager" : "lazy"}
           className="h-auto max-w-full"
           draggable={false}
         />
@@ -52,6 +56,7 @@ export function ProLogo({
         alt="PRO Resumos"
         width={width}
         height={size}
+        loading={eager ? "eager" : "lazy"}
         className="pro-logo__light h-auto max-w-full"
         draggable={false}
       />
@@ -60,6 +65,7 @@ export function ProLogo({
         alt="PRO Resumos"
         width={width}
         height={size}
+        loading={eager ? "eager" : "lazy"}
         className="pro-logo__dark h-auto max-w-full"
         draggable={false}
       />

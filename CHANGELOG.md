@@ -20,6 +20,7 @@
 - aprimorado o importador administrativo com seleção limitada e balanceada, exclusão de lotes anteriores e verificação pós-importação de hashes e relações persistidas.
 - alinhada a identidade visual da área de notas aos demais módulos autenticados, com hero responsivo, resumo do acervo e botões principais com alvos táteis acessíveis.
 - estabilizada a formatação de data das notas no fuso de São Paulo para eliminar divergência de hidratação entre servidor e navegador.
+- antecipado o carregamento dos logos acima da dobra no dashboard e nas telas de acesso, sem criar preloads duplicados.
 
 ## Não publicado — planejamento do módulo Questões
 

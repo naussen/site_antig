@@ -53,6 +53,19 @@ test("datas das notas são estáveis entre servidor e navegador", async () => {
   assert.doesNotMatch(panel, /note\.updated_at\)\.toLocaleString/);
 });
 
+test("logos acima da dobra não aguardam o carregamento preguiçoso", async () => {
+  const [logo, navigation, login] = await Promise.all([
+    read("src/components/brand/pro-logo.tsx"),
+    read("src/components/navigation/dashboard-navigation.tsx"),
+    read("src/app/login/page.tsx"),
+  ]);
+
+  assert.match(logo, /loading=\{eager \? "eager" : "lazy"\}/);
+  assert.match(navigation, /variant="full" eager/);
+  assert.match(login, /variant="full"[\s\S]*eager/);
+  assert.doesNotMatch(logo, /preload=/);
+});
+
 test("limpeza de imagens é autenticada, idempotente e reconciliável", async () => {
   const [deleteRoute, reconcileRoute, reconciler] = await Promise.all([
     read("src/app/api/note-images/[imageId]/route.ts"),
