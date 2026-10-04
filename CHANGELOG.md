@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — saneamento de marcadores técnicos
+
+- bloqueada na API e no CLI a importação de `content_markdown` com marcadores editoriais `@@@`;
+- convertido o resíduo editorial do módulo Bens Públicos em cabeçalhos Markdown, preservando seções e flashcards.
+
 ## Não publicado — atualização de segurança das dependências
 
 - atualizados Next.js e `eslint-config-next` para 16.3.8 e Sharp para 0.35.5;

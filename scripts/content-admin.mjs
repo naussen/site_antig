@@ -12,6 +12,7 @@ import {
   getTopicIdIssue,
   slugifyTopicId,
 } from "../src/lib/content/topic-id.mjs";
+import { getTechnicalMarkdownMarkerIssue } from "../src/lib/content/technical-markers.mjs";
 import {
   FLASHCARD_BOARDS,
   getFlashcardContentIssue,
@@ -213,6 +214,10 @@ const TopicImportSchema = z.object({
     }
     if (/<br\s*\/?\s*>/i.test(section.content_markdown)) {
       context.addIssue({ code: "custom", path: ["sections", index, "content_markdown"], message: "Conteúdo Markdown não pode conter tags <br>." });
+    }
+    const technicalMarkerIssue = getTechnicalMarkdownMarkerIssue(section.content_markdown);
+    if (technicalMarkerIssue) {
+      context.addIssue({ code: "custom", path: ["sections", index, "content_markdown"], message: technicalMarkerIssue });
     }
 
     if (/\bDOUTINA\b/i.test(JSON.stringify(section))) {

@@ -8,6 +8,7 @@ import {
   MAX_MERMAID_SOURCE_LENGTH,
 } from "@/lib/mermaid/security.mjs";
 import { getTopicIdIssue } from "@/lib/content/topic-id.mjs";
+import { getTechnicalMarkdownMarkerIssue } from "@/lib/content/technical-markers.mjs";
 import { FLASHCARD_BOARDS, getFlashcardSourceIssue } from "@/lib/content/flashcard.mjs";
 import { parseQuantitativeChart } from "@/lib/quantitative-chart";
 import {
@@ -218,6 +219,10 @@ const TopicImportSchema = z.object({
 
     if (hasInvalidQuantitativeChart(section.content_markdown)) {
       context.addIssue({ code: "custom", path: ["sections", index, "content_markdown"], message: "Gráfico quantitativo inválido." });
+    }
+    const technicalMarkerIssue = getTechnicalMarkdownMarkerIssue(section.content_markdown);
+    if (technicalMarkerIssue) {
+      context.addIssue({ code: "custom", path: ["sections", index, "content_markdown"], message: technicalMarkerIssue });
     }
 
     const hasUsefulContent = Boolean(
