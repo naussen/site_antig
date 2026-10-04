@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — atualização de segurança das dependências
+
+- atualizados Next.js e `eslint-config-next` para 16.3.8 e Sharp para 0.35.5;
+- atualizados os transitivos corrigíveis pelo npm, incluindo DOMPurify;
+- mantida sem alteração a cadeia vulnerável exclusiva do ESLint, pois a correção automática disponível exige downgrade incompatível para Next.js 14.
+
 ## Não publicado — reorganização da navegação
 
 - priorizados no topo do menu Início, PRO Questões, PRO Resumos e PRO Legis;
