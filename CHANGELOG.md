@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — identidade própria do PRO Questões
+
+- substituído o wordmark montado por uma marca completa e transparente, com símbolo, versão clara, versão escura e ícone compacto;
+- preservadas legibilidade, proporção e acessibilidade nos temas Claro, Noturno e Sépia, na landing e no módulo de questões.
+
 ## Não publicado — saneamento de marcadores técnicos
 
 - bloqueada na API e no CLI a importação de `content_markdown` com marcadores editoriais `@@@`;

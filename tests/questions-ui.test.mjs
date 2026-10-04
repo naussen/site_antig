@@ -4,6 +4,19 @@ import test from "node:test";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 
+test("assets do PRO Questões preservam transparência real", async () => {
+  const assets = await Promise.all([
+    readFile(new URL("../public/brand/pro-questoes-logo.png", import.meta.url)),
+    readFile(new URL("../public/brand/pro-questoes-logo-dark.png", import.meta.url)),
+    readFile(new URL("../public/brand/pro-questoes-icon.png", import.meta.url)),
+  ]);
+
+  for (const asset of assets) {
+    assert.deepEqual([...asset.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+    assert.equal(asset[25], 6);
+  }
+});
+
 test("rota de questões exige acesso ao conteúdo e carrega uma questão", async () => {
   const source = await read("src/app/dashboard/questoes/page.tsx");
 
@@ -54,7 +67,10 @@ test("área do aluno e landing expõem PROQuestões", async () => {
   assert.match(navigation, /Conta e preferências/);
   assert.match(landing, /function QuestionsPreview\(\)/);
   assert.match(landing, /PROQuestões/);
-  assert.match(logo, /aria-label="PROQuestões"/);
+  assert.match(logo, /aria-label="PRO Questões"/);
+  assert.match(logo, /pro-questoes-logo\.png/);
+  assert.match(logo, /pro-questoes-logo-dark\.png/);
+  assert.match(logo, /pro-questoes-icon\.png/);
   assert.equal((landing.match(/<BrandLogo preload \/>/gu) ?? []).length, 1);
   assert.match(
     netlify,

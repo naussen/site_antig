@@ -415,15 +415,18 @@
   --accent-soft: rgba(101, 84, 135, 0.12);
 }
 
-.pro-questions-mark {
-  background:
-    radial-gradient(circle at 74% 20%, rgba(255, 255, 255, 0.3), transparent 26%),
-    linear-gradient(145deg, var(--questions-brand-from, #4C36C7), var(--questions-brand-to, #795CE7));
-  box-shadow: 0 10px 24px -12px color-mix(in srgb, var(--questions-brand-from, #4C36C7) 72%, transparent);
+.pro-questions-logo__dark {
+  display: none;
 }
 
-.pro-questions-wordmark {
-  color: var(--questions-brand-to, #795CE7);
+.pro-questions-logo--dark .pro-questions-logo__light,
+[data-theme="dark"] .pro-questions-logo--auto .pro-questions-logo__light {
+  display: none;
+}
+
+.pro-questions-logo--dark .pro-questions-logo__dark,
+[data-theme="dark"] .pro-questions-logo--auto .pro-questions-logo__dark {
+  display: block;
 }
 
 .questions-hero {
