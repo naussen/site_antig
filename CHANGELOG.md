@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — reorganização da navegação
+
+- priorizados no topo do menu Início, PRO Questões, PRO Resumos e PRO Legis;
+- mantidos Planner e Notas em um bloco próprio de estudo;
+- movidos Preferências e Conta para o rodapé compartilhado entre desktop e mobile.
+
 ## Não publicado — fundação segura do módulo Questões
 
 - criada migration aditiva do módulo com catálogo canônico de disciplinas, vínculos com tópicos, questões, alternativas, gabaritos, explicações, tentativas, preferências e estruturas de comentários;

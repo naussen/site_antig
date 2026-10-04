@@ -8,6 +8,7 @@ import {
   BookOpen,
   CalendarDays,
   CircleHelp,
+  Home,
   Loader2,
   LogOut,
   Menu,
@@ -17,6 +18,7 @@ import {
   StickyNote,
   Scale,
   Settings2,
+  type LucideIcon,
   UserRound,
   X,
 } from "lucide-react";
@@ -38,6 +40,13 @@ interface DashboardNavigationProps {
 
 const SIDEBAR_COLLAPSED_KEY = "pro-resumos:sidebar-collapsed";
 
+interface NavigationItem {
+  href: string;
+  label: string;
+  icon: LucideIcon;
+  exact?: boolean;
+}
+
 function subscribeSidebarState(callback: () => void) {
   window.addEventListener("storage", callback);
   window.addEventListener("pro-resumos:sidebar-change", callback);
@@ -55,11 +64,18 @@ function getSidebarServerSnapshot() {
   return false;
 }
 
-const navigationItems = [
-  { href: "/dashboard", label: "Início", icon: BookOpen, exact: true },
-  { href: "/dashboard/questoes", label: "Questões", icon: CircleHelp },
+const primaryNavigationItems: NavigationItem[] = [
+  { href: "/landing", label: "Início", icon: Home, exact: true },
+  { href: "/dashboard/questoes", label: "PRO Questões", icon: CircleHelp },
+  { href: "/dashboard", label: "PRO Resumos", icon: BookOpen, exact: true },
+];
+
+const studyNavigationItems: NavigationItem[] = [
   { href: "/dashboard/planner", label: "Planner", icon: CalendarDays },
   { href: "/dashboard/notas", label: "Notas", icon: StickyNote },
+];
+
+const accountNavigationItems: NavigationItem[] = [
   {
     href: "/dashboard/configuracoes",
     label: "Preferências",
@@ -102,6 +118,45 @@ export function DashboardNavigation({
 
   const toggleMobileNavigation = () => {
     setMobileOpen((current) => !current);
+  };
+
+  const renderNavigationItem = (
+    { href, label, icon: Icon, exact }: NavigationItem,
+    isCollapsed: boolean,
+  ) => {
+    const active = isActive(href, exact);
+
+    return (
+      <Link
+        key={href}
+        href={href}
+        onClick={() => setMobileOpen(false)}
+        aria-current={active ? "page" : undefined}
+        aria-label={isCollapsed ? label : undefined}
+        title={isCollapsed ? label : undefined}
+        className={`group relative flex h-11 items-center rounded-xl border text-sm font-semibold transition-[transform,background-color,border-color,color,box-shadow] duration-150 ease-out hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] hover:text-[var(--dashboard-sidebar-text)] active:scale-[0.985] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] ${active ? "border-[var(--dashboard-sidebar-border)] bg-[var(--dashboard-sidebar-active)] text-[var(--accent)] shadow-[inset_3px_0_0_var(--accent)]" : "border-transparent text-[var(--dashboard-sidebar-muted)]"} ${isCollapsed ? "justify-center px-2" : "gap-3 px-2.5"}`}
+      >
+        <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-lg border transition-[background-color,border-color,color] duration-150 motion-reduce:transition-none ${active ? "border-[var(--accent)]/35 bg-[var(--dashboard-sidebar-active)] text-[var(--accent)]" : "border-[var(--dashboard-sidebar-border)] bg-white/[0.025] group-hover:border-[var(--accent)]/35 group-hover:text-[var(--accent)]"}`}>
+          <Icon size={17} strokeWidth={active ? 2.35 : 2} aria-hidden="true" />
+        </span>
+        <span className={isCollapsed ? "sr-only" : "flex-1"}>{label}</span>
+        {!isCollapsed && (
+          <ChevronRight size={15} aria-hidden="true" className={`transition-[transform,opacity] duration-150 motion-reduce:transition-none ${active ? "opacity-80" : "-translate-x-0.5 opacity-0 group-hover:translate-x-0 group-hover:opacity-60"}`} />
+        )}
+        {isCollapsed && (
+          <span
+            role="tooltip"
+            className="pointer-events-none invisible absolute left-full z-50 ml-3 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold opacity-0 shadow-lg transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-focus-visible:visible group-focus-visible:opacity-100"
+            style={{
+              background: "var(--dashboard-sidebar-text)",
+              color: "var(--dashboard-sidebar)",
+            }}
+          >
+            {label}
+          </span>
+        )}
+      </Link>
+    );
   };
 
   const handleLogout = async () => {
@@ -155,40 +210,7 @@ export function DashboardNavigation({
           </p>
         )}
         <div className="space-y-1">
-          {navigationItems.map(({ href, label, icon: Icon, exact }) => {
-            const active = isActive(href, exact);
-            return (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setMobileOpen(false)}
-                aria-current={active ? "page" : undefined}
-                aria-label={isCollapsed ? label : undefined}
-                title={isCollapsed ? label : undefined}
-                className={`group relative flex h-11 items-center rounded-xl border text-sm font-semibold transition-[transform,background-color,border-color,color,box-shadow] duration-150 ease-out hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] hover:text-[var(--dashboard-sidebar-text)] active:scale-[0.985] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] ${active ? "border-[var(--dashboard-sidebar-border)] bg-[var(--dashboard-sidebar-active)] text-[var(--accent)] shadow-[inset_3px_0_0_var(--accent)]" : "border-transparent text-[var(--dashboard-sidebar-muted)]"} ${isCollapsed ? "justify-center px-2" : "gap-3 px-2.5"}`}
-              >
-                <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-lg border transition-[background-color,border-color,color] duration-150 motion-reduce:transition-none ${active ? "border-[var(--accent)]/35 bg-[var(--dashboard-sidebar-active)] text-[var(--accent)]" : "border-[var(--dashboard-sidebar-border)] bg-white/[0.025] group-hover:border-[var(--accent)]/35 group-hover:text-[var(--accent)]"}`}>
-                  <Icon size={17} strokeWidth={active ? 2.35 : 2} aria-hidden="true" />
-                </span>
-                <span className={isCollapsed ? "sr-only" : "flex-1"}>{label}</span>
-                {!isCollapsed && (
-                  <ChevronRight size={15} aria-hidden="true" className={`transition-[transform,opacity] duration-150 motion-reduce:transition-none ${active ? "opacity-80" : "-translate-x-0.5 opacity-0 group-hover:translate-x-0 group-hover:opacity-60"}`} />
-                )}
-                {isCollapsed && (
-                  <span
-                    role="tooltip"
-                    className="pointer-events-none invisible absolute left-full z-50 ml-3 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold opacity-0 shadow-lg transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-focus-visible:visible group-focus-visible:opacity-100"
-                    style={{
-                      background: "var(--dashboard-sidebar-text)",
-                      color: "var(--dashboard-sidebar)",
-                    }}
-                  >
-                    {label}
-                  </span>
-                )}
-              </Link>
-            );
-          })}
+          {primaryNavigationItems.map((item) => renderNavigationItem(item, isCollapsed))}
 
         <a
           href="/legis"
@@ -208,6 +230,15 @@ export function DashboardNavigation({
             </span>
           )}
         </a>
+        </div>
+
+        <div className="mt-4 space-y-1 border-t pt-4" style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
+          {!isCollapsed && (
+            <p className="mb-2 px-3 text-[10px] font-bold uppercase tracking-[0.16em]" style={{ color: "var(--dashboard-sidebar-muted)" }}>
+              Estudo
+            </p>
+          )}
+          {studyNavigationItems.map((item) => renderNavigationItem(item, isCollapsed))}
         </div>
 
         {studySections.length > 0 && !isCollapsed && (
@@ -249,6 +280,15 @@ export function DashboardNavigation({
       </nav>
 
       <div className={`shrink-0 border-t bg-black/[0.06] ${isCollapsed ? "space-y-3 p-3" : "space-y-4 p-4"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
+        <div className="space-y-1">
+          {!isCollapsed && (
+            <p className="mb-2 px-2.5 text-[10px] font-bold uppercase tracking-[0.16em]" style={{ color: "var(--dashboard-sidebar-muted)" }}>
+              Conta e preferências
+            </p>
+          )}
+          {accountNavigationItems.map((item) => renderNavigationItem(item, isCollapsed))}
+        </div>
+
         <div className={isCollapsed ? "flex justify-center" : ""}>
           <span className={isCollapsed ? "sr-only" : "mb-2 block text-[11px] font-bold uppercase tracking-wider"} style={{ color: "var(--dashboard-sidebar-muted)" }}>
             Aparência
@@ -258,12 +298,9 @@ export function DashboardNavigation({
 
         {userEmail && (
           <div className={`border-t ${isCollapsed ? "flex flex-col items-center pt-3" : "pt-4"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
-            <Link
-              href="/dashboard/conta"
-              onClick={() => setMobileOpen(false)}
-              className={isCollapsed ? "group relative mb-2 grid h-10 w-10 place-items-center rounded-xl border border-[var(--dashboard-sidebar-border)] bg-[var(--dashboard-sidebar-active)] text-sm font-bold text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color,color] duration-150 hover:border-[var(--accent)] hover:text-[var(--dashboard-sidebar-text)] active:scale-[0.96] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" : "group mb-2 flex min-h-11 flex-col justify-center truncate rounded-xl border border-transparent px-2.5 py-2 text-left text-[var(--dashboard-sidebar-muted)] transition-[transform,background-color,border-color] duration-150 hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] active:scale-[0.985] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"}
-              title={isCollapsed ? `Abrir conta (${accountName})` : "Abrir conta"}
-              aria-label={isCollapsed ? `Abrir conta de ${accountName}` : undefined}
+            <div
+              className={isCollapsed ? "mb-2 grid h-10 w-10 place-items-center rounded-xl border border-[var(--dashboard-sidebar-border)] bg-[var(--dashboard-sidebar-active)] text-sm font-bold text-[var(--dashboard-sidebar-muted)]" : "mb-2 flex min-h-11 flex-col justify-center truncate px-2.5 py-2 text-left text-[var(--dashboard-sidebar-muted)]"}
+              title={isCollapsed ? accountName ?? undefined : undefined}
             >
               {isCollapsed ? accountName?.charAt(0).toUpperCase() : (
                 <>
@@ -275,19 +312,7 @@ export function DashboardNavigation({
                   </span>
                 </>
               )}
-              {isCollapsed && (
-                <span
-                  role="tooltip"
-                  className="pointer-events-none invisible absolute left-full z-50 ml-3 whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-semibold opacity-0 shadow-lg transition-opacity group-hover:visible group-hover:opacity-100 group-focus-visible:visible group-focus-visible:opacity-100"
-                  style={{
-                    background: "var(--dashboard-sidebar-text)",
-                    color: "var(--dashboard-sidebar)",
-                  }}
-                >
-                  Abrir conta
-                </span>
-              )}
-            </Link>
+            </div>
             <button
               type="button"
               onClick={handleLogout}

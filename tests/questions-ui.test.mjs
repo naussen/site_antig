@@ -45,7 +45,13 @@ test("área do aluno e landing expõem PROQuestões", async () => {
   ]);
 
   assert.match(navigation, /href:\s*"\/dashboard\/questoes"/);
-  assert.match(navigation, /label:\s*"Questões"/);
+  assert.match(navigation, /label:\s*"PRO Questões"/);
+  assert.match(
+    navigation,
+    /const primaryNavigationItems[\s\S]*label: "Início"[\s\S]*label: "PRO Questões"[\s\S]*label: "PRO Resumos"[\s\S]*const studyNavigationItems/,
+  );
+  assert.match(navigation, /href:\s*"\/landing", label:\s*"Início"/);
+  assert.match(navigation, /Conta e preferências/);
   assert.match(landing, /function QuestionsPreview\(\)/);
   assert.match(landing, /PROQuestões/);
   assert.match(logo, /aria-label="PROQuestões"/);
