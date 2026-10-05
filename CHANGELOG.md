@@ -1,5 +1,9 @@
 # Changelog
 
+## Não publicado — ícone de acesso ao PRO Questões
+
+- substituído o ponto de interrogação pela letra `Q` nos menus lateral, recolhido e móvel, preservando acessibilidade e estados visuais.
+
 ## Não publicado — identidade própria do PRO Questões
 
 - substituído o wordmark montado por uma marca completa e transparente, com símbolo, versão clara, versão escura e ícone compacto;

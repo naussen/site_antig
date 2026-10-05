@@ -7,7 +7,6 @@ import { usePathname, useRouter } from "next/navigation";
 import {
   BookOpen,
   CalendarDays,
-  CircleHelp,
   Home,
   Loader2,
   LogOut,
@@ -43,7 +42,7 @@ const SIDEBAR_COLLAPSED_KEY = "pro-resumos:sidebar-collapsed";
 interface NavigationItem {
   href: string;
   label: string;
-  icon: LucideIcon;
+  icon: LucideIcon | "Q";
   exact?: boolean;
 }
 
@@ -66,7 +65,7 @@ function getSidebarServerSnapshot() {
 
 const primaryNavigationItems: NavigationItem[] = [
   { href: "/landing", label: "Início", icon: Home, exact: true },
-  { href: "/dashboard/questoes", label: "PRO Questões", icon: CircleHelp },
+  { href: "/dashboard/questoes", label: "PRO Questões", icon: "Q" },
   { href: "/dashboard", label: "PRO Resumos", icon: BookOpen, exact: true },
 ];
 
@@ -121,10 +120,11 @@ export function DashboardNavigation({
   };
 
   const renderNavigationItem = (
-    { href, label, icon: Icon, exact }: NavigationItem,
+    { href, label, icon, exact }: NavigationItem,
     isCollapsed: boolean,
   ) => {
     const active = isActive(href, exact);
+    const Icon = icon === "Q" ? null : icon;
 
     return (
       <Link
@@ -137,7 +137,11 @@ export function DashboardNavigation({
         className={`group relative flex h-11 items-center rounded-xl border text-sm font-semibold transition-[transform,background-color,border-color,color,box-shadow] duration-150 ease-out hover:border-[var(--dashboard-sidebar-border)] hover:bg-[var(--dashboard-sidebar-active)] hover:text-[var(--dashboard-sidebar-text)] active:scale-[0.985] motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] ${active ? "border-[var(--dashboard-sidebar-border)] bg-[var(--dashboard-sidebar-active)] text-[var(--accent)] shadow-[inset_3px_0_0_var(--accent)]" : "border-transparent text-[var(--dashboard-sidebar-muted)]"} ${isCollapsed ? "justify-center px-2" : "gap-3 px-2.5"}`}
       >
         <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-lg border transition-[background-color,border-color,color] duration-150 motion-reduce:transition-none ${active ? "border-[var(--accent)]/35 bg-[var(--dashboard-sidebar-active)] text-[var(--accent)]" : "border-[var(--dashboard-sidebar-border)] bg-white/[0.025] group-hover:border-[var(--accent)]/35 group-hover:text-[var(--accent)]"}`}>
-          <Icon size={17} strokeWidth={active ? 2.35 : 2} aria-hidden="true" />
+          {Icon ? (
+            <Icon size={17} strokeWidth={active ? 2.35 : 2} aria-hidden="true" />
+          ) : (
+            <span aria-hidden="true" className="text-[17px] font-black leading-none">Q</span>
+          )}
         </span>
         <span className={isCollapsed ? "sr-only" : "flex-1"}>{label}</span>
         {!isCollapsed && (
