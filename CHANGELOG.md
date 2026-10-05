@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — marca correta no cabeçalho do PRO Questões
+
+- o cabeçalho lateral, recolhido e móvel agora identifica a rota de questões e exibe a marca própria do módulo;
+- mantida a marca PRO Resumos nas demais rotas do painel.
+
 ## Não publicado — ícone de acesso ao PRO Questões
 
 - substituído o ponto de interrogação pela letra `Q` nos menus lateral, recolhido e móvel, preservando acessibilidade e estados visuais.

@@ -22,6 +22,7 @@ import {
   X,
 } from "lucide-react";
 import { ProLogoLink } from "@/components/brand/pro-logo";
+import { ProQuestionsLogo } from "@/components/brand/pro-questions-logo";
 import { createClient } from "@/lib/supabase/client";
 import { ThemeSwitcher } from "@/components/theme-switcher";
 import type { SectionRow } from "@/types/database";
@@ -114,6 +115,7 @@ export function DashboardNavigation({
   const mobileNavigationLabel = mobileOpen
     ? "Fechar navegação"
     : "Abrir navegação";
+  const isQuestionsModule = pathname.startsWith("/dashboard/questoes");
 
   const toggleMobileNavigation = () => {
     setMobileOpen((current) => !current);
@@ -178,15 +180,33 @@ export function DashboardNavigation({
     }
   };
 
+  const renderModuleLogo = (isCollapsed: boolean, tone: "auto" | "dark") => {
+    if (isQuestionsModule) {
+      return (
+        <Link
+          href="/dashboard/questoes"
+          aria-label="Ir para o início do PRO Questões"
+          className="inline-flex max-w-full rounded-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]"
+        >
+          <ProQuestionsLogo compact={isCollapsed} tone={tone} />
+        </Link>
+      );
+    }
+
+    return (
+      <ProLogoLink
+        size={isCollapsed ? 40 : tone === "dark" ? 42 : 34}
+        variant={isCollapsed ? "icon" : "full"}
+        tone={tone}
+        highPriority
+      />
+    );
+  };
+
   const renderNavigationContent = (isCollapsed: boolean) => (
     <>
       <div className={`flex min-h-20 shrink-0 items-center border-b py-4 ${isCollapsed ? "justify-center px-3" : "gap-3 px-4"}`} style={{ borderColor: "var(--dashboard-sidebar-border)" }}>
-        <ProLogoLink
-          size={isCollapsed ? 40 : 42}
-          variant={isCollapsed ? "icon" : "full"}
-          tone="dark"
-          highPriority
-        />
+        {renderModuleLogo(isCollapsed, "dark")}
       </div>
 
       <div className="hidden shrink-0 justify-end px-3 pt-2 lg:flex">
@@ -378,7 +398,7 @@ export function DashboardNavigation({
           className="sticky top-0 z-30 flex items-center justify-between border-b px-4 py-3 lg:hidden"
           style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
         >
-          <ProLogoLink size={34} variant="full" highPriority />
+          {renderModuleLogo(false, "auto")}
           <button
             type="button"
             onClick={toggleMobileNavigation}

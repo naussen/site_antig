@@ -61,6 +61,9 @@ test("área do aluno e landing expõem PROQuestões", async () => {
   assert.match(navigation, /label:\s*"PRO Questões"/);
   assert.match(navigation, /label:\s*"PRO Questões", icon:\s*"Q"/);
   assert.doesNotMatch(navigation, /CircleHelp/);
+  assert.match(navigation, /pathname\.startsWith\("\/dashboard\/questoes"\)/);
+  assert.match(navigation, /<ProQuestionsLogo compact=\{isCollapsed\} tone=\{tone\} \/>/);
+  assert.match(navigation, /aria-label="Ir para o início do PRO Questões"/);
   assert.match(
     navigation,
     /const primaryNavigationItems[\s\S]*label: "Início"[\s\S]*label: "PRO Questões"[\s\S]*label: "PRO Resumos"[\s\S]*const studyNavigationItems/,
