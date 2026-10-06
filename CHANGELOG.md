@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — área de questões e comandos do Planner
+
+- ampliada a área útil do PRO Questões em monitores largos, mantendo o limite anterior em telas menores;
+- adicionado em cada bloco do Planner um comando direto para remoção da grade, com confirmação, persistência autenticada e opção de desfazer.
+
 ## Não publicado — marca correta no cabeçalho do PRO Questões
 
 - o cabeçalho lateral, recolhido e móvel agora identifica a rota de questões e exibe a marca própria do módulo;

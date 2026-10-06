@@ -87,7 +87,21 @@ function DraggableDiscipline({ discipline }: { discipline: string }) {
   );
 }
 
-function DraggableStudyBlock({ item, dayEndMinute, onResizePreview, onResize }: { item: PlannerItem; dayEndMinute: number; onResizePreview: (endMinute: number | null) => void; onResize: (endMinute: number) => void }) {
+function DraggableStudyBlock({
+  item,
+  dayEndMinute,
+  pending,
+  onDelete,
+  onResizePreview,
+  onResize,
+}: {
+  item: PlannerItem;
+  dayEndMinute: number;
+  pending: boolean;
+  onDelete: () => void;
+  onResizePreview: (endMinute: number | null) => void;
+  onResize: (endMinute: number) => void;
+}) {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: `item:${item.id}`,
     data: { kind: "item", item },
@@ -116,6 +130,18 @@ function DraggableStudyBlock({ item, dayEndMinute, onResizePreview, onResize }: 
           <strong className="block truncate text-xs text-[var(--text-primary)]">{item.discipline}</strong>
           <span className="mt-0.5 block text-[11px] text-[var(--text-secondary)]">{minuteToTime(item.startMinute)}–{minuteToTime(item.endMinute)} · {item.endMinute - item.startMinute} min</span>
         </div>
+        <button
+          type="button"
+          disabled={pending}
+          onClick={() => {
+            if (window.confirm(`Remover ${item.discipline} deste horário?`)) onDelete();
+          }}
+          className="grid h-7 w-7 shrink-0 place-items-center rounded-md text-[var(--text-muted)] transition hover:bg-red-500/10 hover:text-red-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 disabled:cursor-wait disabled:opacity-50"
+          aria-label={`Remover ${item.discipline} da grade`}
+          title="Remover da grade"
+        >
+          <Trash2 size={14} aria-hidden="true" />
+        </button>
       </div>
       <button
         type="button"
@@ -281,6 +307,11 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
             <DraggableStudyBlock
               item={item}
               dayEndMinute={initialPlan.dayEndMinute}
+              pending={pending}
+              onDelete={() => runAction(
+                () => deleteStudyPlanItem(item.id),
+                () => setLastDeleted(item),
+              )}
               onResizePreview={(endMinute) => setResizePreviewEndById((current) => {
                 if (endMinute === null) {
                   const remaining = { ...current };

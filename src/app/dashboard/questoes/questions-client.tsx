@@ -248,7 +248,7 @@ export function QuestionsClient({
 
   return (
     <main className="pro-questions-shell min-h-screen bg-[var(--bg-primary)] px-3 py-6 sm:px-6 sm:py-8 md:px-10 lg:py-8">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl xl:max-w-[1500px]">
         <header className="questions-hero relative overflow-hidden rounded-[1.6rem] border p-5 text-white shadow-[var(--shadow-lg)] sm:p-6">
           <CircleHelp className="pointer-events-none absolute -right-8 -top-10 h-44 w-44 text-white/[0.045] sm:h-56 sm:w-56" strokeWidth={0.75} aria-hidden="true" />
           <div className="relative flex flex-col justify-between gap-5 lg:flex-row lg:items-end">
