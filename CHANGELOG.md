@@ -79,6 +79,7 @@
 ## Não publicado — gerenciamento de realces
 
 - adicionada uma lista dos realces recentes no painel de estudo, com trecho identificável, troca de cor e exclusão direta;
+- adicionado um botão discreto de exclusão junto ao próprio texto realçado ao passar o mouse, mantendo a lista como alternativa acessível e para telas touch;
 - preservado o fluxo atual de seleção e salvamento automático, agora com feedback também nas edições;
 - incluída atualização autenticada e isolada por usuário na API de realces.
 

@@ -1,6 +1,13 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type PointerEvent as ReactPointerEvent,
+  type ReactNode,
+} from "react";
 import { AlertCircle, Check, Eraser, Loader2, Trash2, X } from "lucide-react";
 import {
   TEXT_HIGHLIGHT_COLORS,
@@ -21,6 +28,21 @@ interface TextHighlighterProps {
 
 type HighlightTool = TextHighlightColor | "eraser" | null;
 type SaveStatus = "idle" | "saving" | "saved" | "error";
+
+interface RenderedHighlightRange {
+  highlightId: string;
+  excerpt: string;
+  markdownRoot: HTMLElement;
+  priority: number;
+  range: Range;
+}
+
+interface ContextualDeleteControl {
+  highlightId: string;
+  excerpt: string;
+  left: number;
+  top: number;
+}
 
 const COLOR_LABELS: Record<TextHighlightColor, string> = {
   yellow: "Amarelo",
@@ -52,6 +74,9 @@ const MAX_HIGHLIGHT_LENGTH = 10000;
 const ANCHOR_CONTEXT_LENGTH = 64;
 const MAX_VISIBLE_HIGHLIGHTS = 20;
 const HIGHLIGHT_EXCERPT_LENGTH = 80;
+const CONTEXTUAL_DELETE_SIZE = 32;
+const CONTEXTUAL_DELETE_GAP = 6;
+const VIEWPORT_EDGE_GAP = 8;
 
 function getHighlightExcerpt(text: string) {
   const normalized = text.replace(/\s+/g, " ").trim();
@@ -116,9 +141,12 @@ export function TextHighlighter({
 }: TextHighlighterProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const savedStatusTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const contextualHideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const renderedHighlightRangesRef = useRef<RenderedHighlightRange[]>([]);
   const [activeTool, setActiveTool] = useState<HighlightTool>("yellow");
   const [saveStatus, setSaveStatus] = useState<SaveStatus>("idle");
   const [localError, setLocalError] = useState<string | null>(null);
+  const [contextualDelete, setContextualDelete] = useState<ContextualDeleteControl | null>(null);
   const {
     highlights,
     highlightsBySection,
@@ -143,6 +171,17 @@ export function TextHighlighter({
 
   useEffect(() => () => {
     if (savedStatusTimerRef.current) clearTimeout(savedStatusTimerRef.current);
+    if (contextualHideTimerRef.current) clearTimeout(contextualHideTimerRef.current);
+  }, []);
+
+  useEffect(() => {
+    const hideContextualDelete = () => setContextualDelete(null);
+    window.addEventListener("resize", hideContextualDelete);
+    window.addEventListener("scroll", hideContextualDelete, true);
+    return () => {
+      window.removeEventListener("resize", hideContextualDelete);
+      window.removeEventListener("scroll", hideContextualDelete, true);
+    };
   }, []);
 
   useEffect(() => {
@@ -154,6 +193,7 @@ export function TextHighlighter({
     const rangesByColor = Object.fromEntries(
       TEXT_HIGHLIGHT_COLORS.map((color) => [color, [] as Range[]]),
     ) as Record<TextHighlightColor, Range[]>;
+    const renderedHighlightRanges: RenderedHighlightRange[] = [];
 
     Object.entries(highlightsBySection).forEach(([sectionId, sectionHighlights]) => {
       const sectionContainer = Array.from(
@@ -167,9 +207,21 @@ export function TextHighlighter({
         const offsets = findAnchoredOffsets(text, highlight);
         if (!offsets) return;
         const range = createRangeFromOffsets(markdownRoot, offsets.start, offsets.end);
-        if (range) rangesByColor[highlight.color].push(range);
+        if (!range) return;
+        rangesByColor[highlight.color].push(range);
+        renderedHighlightRanges.push({
+          highlightId: highlight.id,
+          excerpt: getHighlightExcerpt(highlight.selected_text),
+          markdownRoot,
+          priority: TEXT_HIGHLIGHT_COLORS.indexOf(highlight.color),
+          range,
+        });
       });
     });
+
+    renderedHighlightRangesRef.current = renderedHighlightRanges.sort(
+      (first, second) => second.priority - first.priority,
+    );
 
     TEXT_HIGHLIGHT_COLORS.forEach((color, priority) => {
       const cssHighlight = new Highlight(...rangesByColor[color]);
@@ -178,11 +230,86 @@ export function TextHighlighter({
     });
 
     return () => {
+      renderedHighlightRangesRef.current = [];
       TEXT_HIGHLIGHT_COLORS.forEach((color) => CSS.highlights.delete(`study-highlight-${color}`));
     };
   }, [highlightsBySection]);
 
-  const handleSelection = useCallback(async () => {
+  const clearContextualHideTimer = useCallback(() => {
+    if (!contextualHideTimerRef.current) return;
+    clearTimeout(contextualHideTimerRef.current);
+    contextualHideTimerRef.current = null;
+  }, []);
+
+  const scheduleContextualDeleteHide = useCallback(() => {
+    clearContextualHideTimer();
+    contextualHideTimerRef.current = setTimeout(() => {
+      setContextualDelete(null);
+      contextualHideTimerRef.current = null;
+    }, 120);
+  }, [clearContextualHideTimer]);
+
+  const handleHighlightPointerMove = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
+    if (event.pointerType !== "mouse" || event.buttons !== 0) return;
+    const target = event.target as Element;
+    if (target.closest("[data-highlight-delete-button]")) {
+      clearContextualHideTimer();
+      return;
+    }
+
+    const markdownRoot = target.closest<HTMLElement>(".markdown-content");
+    let hovered: { item: RenderedHighlightRange; rect: DOMRect } | null = null;
+    for (const item of renderedHighlightRangesRef.current) {
+      if (item.markdownRoot !== markdownRoot) continue;
+      const rect = Array.from(item.range.getClientRects()).find((candidateRect) => (
+        event.clientX >= candidateRect.left
+        && event.clientX <= candidateRect.right
+        && event.clientY >= candidateRect.top
+        && event.clientY <= candidateRect.bottom
+      ));
+      if (!rect) continue;
+      hovered = { item, rect };
+      break;
+    }
+
+    if (!hovered) {
+      scheduleContextualDeleteHide();
+      return;
+    }
+
+    clearContextualHideTimer();
+    const hoveredRect = hovered.rect;
+
+    const preferredTop = hoveredRect.top - CONTEXTUAL_DELETE_SIZE - CONTEXTUAL_DELETE_GAP;
+    const top = preferredTop >= VIEWPORT_EDGE_GAP
+      ? preferredTop
+      : Math.min(
+        hoveredRect.bottom + CONTEXTUAL_DELETE_GAP,
+        window.innerHeight - CONTEXTUAL_DELETE_SIZE - VIEWPORT_EDGE_GAP,
+      );
+    const left = Math.min(
+      Math.max(hoveredRect.right - CONTEXTUAL_DELETE_SIZE, VIEWPORT_EDGE_GAP),
+      window.innerWidth - CONTEXTUAL_DELETE_SIZE - VIEWPORT_EDGE_GAP,
+    );
+
+    setContextualDelete((current) => {
+      const next = {
+        highlightId: hovered.item.highlightId,
+        excerpt: hovered.item.excerpt,
+        left: Math.round(left),
+        top: Math.round(top),
+      };
+      return current
+        && current.highlightId === next.highlightId
+        && current.left === next.left
+        && current.top === next.top
+        ? current
+        : next;
+    });
+  }, [clearContextualHideTimer, scheduleContextualDeleteHide]);
+
+  const handleSelection = useCallback(async (event: ReactPointerEvent<HTMLDivElement>) => {
+    if ((event.target as Element).closest("[data-highlight-ui]")) return;
     if (!panelOpen || !activeTool || !rootRef.current || saveStatus === "saving") return;
 
     if (typeof CSS === "undefined" || !("highlights" in CSS) || typeof Highlight === "undefined") {
@@ -275,16 +402,41 @@ export function TextHighlighter({
     setLocalError(null);
     setSaveStatus("saving");
     const success = await removeHighlights([highlightId]);
+    if (success) setContextualDelete(null);
     setTransientSavedStatus(success);
   }, [removeHighlights, setTransientSavedStatus]);
 
   return (
-    <div ref={rootRef} onPointerUp={handleSelection}>
+    <div
+      ref={rootRef}
+      onPointerMove={handleHighlightPointerMove}
+      onPointerLeave={scheduleContextualDeleteHide}
+      onPointerUp={handleSelection}
+    >
       {children}
+
+      {contextualDelete && (
+        <button
+          type="button"
+          data-highlight-ui
+          data-highlight-delete-button
+          onClick={() => void handleRemoveHighlight(contextualDelete.highlightId)}
+          onPointerEnter={clearContextualHideTimer}
+          onPointerLeave={scheduleContextualDeleteHide}
+          disabled={saveStatus === "saving"}
+          className="fixed z-[60] grid h-8 w-8 place-items-center rounded-full border border-[var(--border)] bg-[var(--bg-card)] text-[var(--text-muted)] shadow-md transition-colors hover:border-[var(--callout-warning-text)] hover:bg-[var(--callout-warning-bg)] hover:text-[var(--callout-warning-text)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] disabled:opacity-60"
+          style={{ left: contextualDelete.left, top: contextualDelete.top }}
+          aria-label={`Excluir realce: ${contextualDelete.excerpt}`}
+          title="Excluir realce"
+        >
+          <Trash2 size={14} />
+        </button>
+      )}
 
       {panelOpen && (
         <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2 sm:bottom-7 sm:right-7">
           <section
+            data-highlight-ui
             className="w-[min(90vw,310px)] rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-4 shadow-xl"
             aria-label="Ferramenta marca-texto"
           >
