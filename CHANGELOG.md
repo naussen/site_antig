@@ -80,7 +80,8 @@
 
 - adicionada uma lista dos realces recentes no painel de estudo, com trecho identificável, troca de cor e exclusão direta;
 - adicionado um botão discreto de exclusão junto ao próprio texto realçado ao passar o mouse, mantendo a lista como alternativa acessível e para telas touch;
-- preservado o fluxo atual de seleção e salvamento automático, agora com feedback também nas edições;
+- adicionada confirmação contextual rápida para inserir um realce após selecionar texto, já usando a cor escolhida no marca-texto;
+- preservado o feedback de salvamento automático nas edições de cor e exclusões;
 - incluída atualização autenticada e isolada por usuário na API de realces.
 
 ## Não publicado — Planner semanal de estudos

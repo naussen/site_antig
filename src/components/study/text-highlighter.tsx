@@ -8,7 +8,7 @@ import {
   type PointerEvent as ReactPointerEvent,
   type ReactNode,
 } from "react";
-import { AlertCircle, Check, Eraser, Loader2, Trash2, X } from "lucide-react";
+import { AlertCircle, Check, Eraser, Highlighter, Loader2, Trash2, X } from "lucide-react";
 import {
   TEXT_HIGHLIGHT_COLORS,
   useTextHighlights,
@@ -40,6 +40,12 @@ interface RenderedHighlightRange {
 interface ContextualDeleteControl {
   highlightId: string;
   excerpt: string;
+  left: number;
+  top: number;
+}
+
+interface PendingHighlightControl {
+  input: NewTextHighlight;
   left: number;
   top: number;
 }
@@ -76,6 +82,8 @@ const MAX_VISIBLE_HIGHLIGHTS = 20;
 const HIGHLIGHT_EXCERPT_LENGTH = 80;
 const CONTEXTUAL_DELETE_SIZE = 32;
 const CONTEXTUAL_DELETE_GAP = 6;
+const CONTEXTUAL_INSERT_WIDTH = 148;
+const CONTEXTUAL_INSERT_HEIGHT = 36;
 const VIEWPORT_EDGE_GAP = 8;
 
 function getHighlightExcerpt(text: string) {
@@ -147,6 +155,7 @@ export function TextHighlighter({
   const [saveStatus, setSaveStatus] = useState<SaveStatus>("idle");
   const [localError, setLocalError] = useState<string | null>(null);
   const [contextualDelete, setContextualDelete] = useState<ContextualDeleteControl | null>(null);
+  const [pendingHighlight, setPendingHighlight] = useState<PendingHighlightControl | null>(null);
   const {
     highlights,
     highlightsBySection,
@@ -175,12 +184,20 @@ export function TextHighlighter({
   }, []);
 
   useEffect(() => {
-    const hideContextualDelete = () => setContextualDelete(null);
-    window.addEventListener("resize", hideContextualDelete);
-    window.addEventListener("scroll", hideContextualDelete, true);
+    const hideContextualControls = () => {
+      setContextualDelete(null);
+      setPendingHighlight(null);
+    };
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") hideContextualControls();
+    };
+    window.addEventListener("keydown", handleEscape);
+    window.addEventListener("resize", hideContextualControls);
+    window.addEventListener("scroll", hideContextualControls, true);
     return () => {
-      window.removeEventListener("resize", hideContextualDelete);
-      window.removeEventListener("scroll", hideContextualDelete, true);
+      window.removeEventListener("keydown", handleEscape);
+      window.removeEventListener("resize", hideContextualControls);
+      window.removeEventListener("scroll", hideContextualControls, true);
     };
   }, []);
 
@@ -252,8 +269,12 @@ export function TextHighlighter({
   const handleHighlightPointerMove = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
     if (event.pointerType !== "mouse" || event.buttons !== 0) return;
     const target = event.target as Element;
-    if (target.closest("[data-highlight-delete-button]")) {
+    if (target.closest("[data-highlight-ui]")) {
       clearContextualHideTimer();
+      return;
+    }
+    if (pendingHighlight) {
+      setContextualDelete(null);
       return;
     }
 
@@ -306,11 +327,11 @@ export function TextHighlighter({
         ? current
         : next;
     });
-  }, [clearContextualHideTimer, scheduleContextualDeleteHide]);
+  }, [clearContextualHideTimer, pendingHighlight, scheduleContextualDeleteHide]);
 
   const handleSelection = useCallback(async (event: ReactPointerEvent<HTMLDivElement>) => {
     if ((event.target as Element).closest("[data-highlight-ui]")) return;
-    if (!panelOpen || !activeTool || !rootRef.current || saveStatus === "saving") return;
+    if (!activeTool || !rootRef.current || saveStatus === "saving") return;
 
     if (typeof CSS === "undefined" || !("highlights" in CSS) || typeof Highlight === "undefined") {
       setLocalError("Seu navegador não oferece suporte ao marca-texto persistente.");
@@ -318,7 +339,10 @@ export function TextHighlighter({
     }
 
     const selection = window.getSelection();
-    if (!selection || selection.isCollapsed || selection.rangeCount !== 1) return;
+    if (!selection || selection.isCollapsed || selection.rangeCount !== 1) {
+      setPendingHighlight(null);
+      return;
+    }
     const range = selection.getRangeAt(0);
     const startElement = range.startContainer.nodeType === Node.TEXT_NODE
       ? range.startContainer.parentElement
@@ -346,9 +370,10 @@ export function TextHighlighter({
     }
 
     setLocalError(null);
-    setSaveStatus("saving");
-    let success: boolean;
+    setContextualDelete(null);
     if (activeTool === "eraser") {
+      setPendingHighlight(null);
+      setSaveStatus("saving");
       const ids = highlights
         .filter((highlight) => {
           if (
@@ -369,9 +394,28 @@ export function TextHighlighter({
         selection.removeAllRanges();
         return;
       }
-      success = await removeHighlights(ids);
-    } else {
-      const input: NewTextHighlight = {
+      const success = await removeHighlights(ids);
+      selection.removeAllRanges();
+      setTransientSavedStatus(success);
+      return;
+    }
+
+    const selectionRects = Array.from(range.getClientRects());
+    const selectionRect = selectionRects.at(-1) ?? range.getBoundingClientRect();
+    const preferredTop = selectionRect.bottom + CONTEXTUAL_DELETE_GAP;
+    const top = preferredTop + CONTEXTUAL_INSERT_HEIGHT <= window.innerHeight - VIEWPORT_EDGE_GAP
+      ? preferredTop
+      : Math.max(
+        selectionRect.top - CONTEXTUAL_INSERT_HEIGHT - CONTEXTUAL_DELETE_GAP,
+        VIEWPORT_EDGE_GAP,
+      );
+    const left = Math.min(
+      Math.max(selectionRect.right - CONTEXTUAL_INSERT_WIDTH, VIEWPORT_EDGE_GAP),
+      window.innerWidth - CONTEXTUAL_INSERT_WIDTH - VIEWPORT_EDGE_GAP,
+    );
+
+    setPendingHighlight({
+      input: {
         sectionId,
         contentUnitId,
         color: activeTool,
@@ -380,13 +424,36 @@ export function TextHighlighter({
         selectedText,
         prefix: rootText.slice(Math.max(0, start - ANCHOR_CONTEXT_LENGTH), start),
         suffix: rootText.slice(end, end + ANCHOR_CONTEXT_LENGTH),
-      };
-      success = await addHighlight(input);
-    }
+      },
+      left: Math.round(left),
+      top: Math.round(top),
+    });
+  }, [activeTool, highlights, removeHighlights, saveStatus, setTransientSavedStatus]);
 
-    selection.removeAllRanges();
+  const handleInsertHighlight = useCallback(async () => {
+    if (!pendingHighlight || saveStatus === "saving") return;
+    setLocalError(null);
+    setSaveStatus("saving");
+    const success = await addHighlight(pendingHighlight.input);
+    if (success) {
+      window.getSelection()?.removeAllRanges();
+      setPendingHighlight(null);
+    }
     setTransientSavedStatus(success);
-  }, [activeTool, addHighlight, highlights, panelOpen, removeHighlights, saveStatus, setTransientSavedStatus]);
+  }, [addHighlight, pendingHighlight, saveStatus, setTransientSavedStatus]);
+
+  const handleColorToolSelect = useCallback((color: TextHighlightColor) => {
+    setActiveTool(color);
+    setPendingHighlight((current) => current ? {
+      ...current,
+      input: { ...current.input, color },
+    } : current);
+  }, []);
+
+  const handleEraserSelect = useCallback(() => {
+    setActiveTool("eraser");
+    setPendingHighlight(null);
+  }, []);
 
   const handleColorChange = useCallback(async (
     highlightId: string,
@@ -414,6 +481,31 @@ export function TextHighlighter({
       onPointerUp={handleSelection}
     >
       {children}
+
+      {pendingHighlight && (
+        <button
+          type="button"
+          data-highlight-ui
+          data-highlight-insert-button
+          onClick={() => void handleInsertHighlight()}
+          disabled={saveStatus === "saving"}
+          className="fixed z-[60] flex h-9 w-[148px] items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-3 text-xs font-semibold text-[var(--text-primary)] shadow-lg transition-colors hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] disabled:opacity-60"
+          style={{ left: pendingHighlight.left, top: pendingHighlight.top }}
+          aria-label={`Inserir realce ${COLOR_LABELS[pendingHighlight.input.color]} no texto selecionado`}
+          title={`Inserir realce ${COLOR_LABELS[pendingHighlight.input.color]}`}
+        >
+          {saveStatus === "saving" ? (
+            <Loader2 size={14} className="animate-spin" aria-hidden="true" />
+          ) : (
+            <Highlighter size={14} aria-hidden="true" />
+          )}
+          <span>Inserir realce</span>
+          <span
+            className={`h-2.5 w-2.5 rounded-full border border-black/10 ${COLOR_CLASSES[pendingHighlight.input.color]}`}
+            aria-hidden="true"
+          />
+        </button>
+      )}
 
       {contextualDelete && (
         <button
@@ -444,7 +536,7 @@ export function TextHighlighter({
               <div>
                 <p className="text-sm font-bold text-[var(--text-primary)]">Marca-texto</p>
                 <p className="mt-0.5 text-xs leading-relaxed text-[var(--text-muted)]">
-                  Escolha uma cor e selecione o texto. O salvamento é automático.
+                  Escolha uma cor, selecione o texto e confirme em Inserir realce.
                 </p>
                 {highlightsNeedingReview.length > 0 && (
                   <p className="mt-2 flex items-center gap-1 text-xs text-[var(--callout-warning-text)]">
@@ -470,7 +562,7 @@ export function TextHighlighter({
                 <button
                   key={color}
                   type="button"
-                  onClick={() => setActiveTool(color)}
+                  onClick={() => handleColorToolSelect(color)}
                   className={`grid h-9 place-items-center rounded-lg border-2 transition-transform hover:scale-105 ${COLOR_CLASSES[color]} ${
                     activeTool === color ? "border-[var(--text-primary)]" : "border-transparent"
                   }`}
@@ -485,7 +577,7 @@ export function TextHighlighter({
 
             <button
               type="button"
-              onClick={() => setActiveTool("eraser")}
+              onClick={handleEraserSelect}
               className={`mt-3 flex w-full items-center justify-center gap-2 rounded-xl border px-3 py-2 text-xs font-semibold transition-colors ${
                 activeTool === "eraser"
                   ? "border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)]"

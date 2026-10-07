@@ -63,3 +63,11 @@ test("oferece exclusão contextual ao passar o mouse sobre o realce", () => {
   assert.match(highlighterSource, /event\.pointerType !== "mouse"/);
   assert.match(highlighterSource, /second\.priority - first\.priority/);
 });
+
+test("oferece inserção contextual com a cor previamente selecionada", () => {
+  assert.match(highlighterSource, /data-highlight-insert-button/);
+  assert.match(highlighterSource, /Inserir realce \$\{COLOR_LABELS\[pendingHighlight\.input\.color\]\}/);
+  assert.match(highlighterSource, /addHighlight\(pendingHighlight\.input\)/);
+  assert.match(highlighterSource, /color: activeTool/);
+  assert.doesNotMatch(highlighterSource, /Escolha uma cor e selecione o texto\. O salvamento é automático\./);
+});
