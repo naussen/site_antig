@@ -121,6 +121,17 @@ export function calculateAccessUntil(status, nextBillingTime, eventTime) {
   return new Date(base.getTime() + BILLING_GRACE_DAYS * 86_400_000).toISOString();
 }
 
+const CHECKOUT_BLOCKING_STATUSES = new Set(["active", "trialing", "pending", "past_due"]);
+
+export function shouldBlockNewCheckout(entitlement) {
+  if (!entitlement) return false;
+  if (!CHECKOUT_BLOCKING_STATUSES.has(entitlement.status)) return false;
+  if (entitlement.status === "active" || entitlement.status === "trialing") {
+    return !entitlement.access_until || new Date(entitlement.access_until) > new Date();
+  }
+  return Boolean(entitlement.provider_subscription_id);
+}
+
 export function verifyMercadoPagoSignature({ dataId, requestId, signature, secret }) {
   if (!dataId || !requestId || !signature || !secret) return false;
 

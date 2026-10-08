@@ -361,13 +361,34 @@ export interface PaymentAccessBlock {
 
 export interface PaymentAuditEvent {
   id: string;
-  action: 'checkout_created' | 'checkout_failed' | 'cancellation_confirmed' | 'cancellation_failed';
+  action: 'checkout_created' | 'checkout_failed' | 'checkout_blocked' | 'cancellation_confirmed' | 'cancellation_failed';
   outcome: 'success' | 'failure';
   provider: 'mercado_pago' | 'paypal';
   user_id: string | null;
   provider_subscription_id: string | null;
   reason_code: string | null;
   created_at: string;
+}
+
+export interface PaymentSubscriptionLink {
+  provider: 'mercado_pago' | 'paypal';
+  provider_subscription_id: string;
+  user_id: string;
+  status: UserEntitlement['status'];
+  access_until: string | null;
+  provider_updated_at: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface OpsJobRun {
+  id: string;
+  job_name: string;
+  status: 'running' | 'succeeded' | 'failed';
+  started_at: string;
+  finished_at: string | null;
+  metrics: Record<string, unknown>;
+  error_code: string | null;
 }
 
 export interface PrivacyRequest {

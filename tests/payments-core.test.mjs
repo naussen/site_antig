@@ -12,6 +12,7 @@ import {
   resolveMercadoPagoStatus,
   resolvePayPalEnvironment,
   resolvePayPalStatus,
+  shouldBlockNewCheckout,
   verifyMercadoPagoSignature,
 } from "../src/lib/payments/core.mjs";
 
@@ -20,6 +21,30 @@ test("PayPal exige ambiente explícito e não assume sandbox silenciosamente", (
   assert.equal(resolvePayPalEnvironment("live"), "live");
   assert.throws(() => resolvePayPalEnvironment(undefined), /deve ser sandbox ou live/);
   assert.throws(() => resolvePayPalEnvironment("production"), /deve ser sandbox ou live/);
+});
+
+test("impede nova assinatura enquanto o vínculo anterior está ativo ou sem resolução", () => {
+  assert.equal(shouldBlockNewCheckout(null), false);
+  assert.equal(shouldBlockNewCheckout({
+    status: "pending",
+    access_until: null,
+    provider_subscription_id: "sub-pendente",
+  }), true);
+  assert.equal(shouldBlockNewCheckout({
+    status: "past_due",
+    access_until: null,
+    provider_subscription_id: "sub-inadimplente",
+  }), true);
+  assert.equal(shouldBlockNewCheckout({
+    status: "canceled",
+    access_until: null,
+    provider_subscription_id: "sub-cancelada",
+  }), false);
+  assert.equal(shouldBlockNewCheckout({
+    status: "expired",
+    access_until: null,
+    provider_subscription_id: "sub-expirada",
+  }), false);
 });
 
 test("classifica erro do provedor sem preservar a mensagem nem dados privados", () => {

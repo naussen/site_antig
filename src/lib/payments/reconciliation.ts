@@ -10,6 +10,7 @@ import {
   isExpectedMercadoPagoSubscription,
   isExpectedPayPalSubscription,
 } from "./providers";
+import { finishJobRun, startJobRun } from "@/lib/operations/job-runs";
 
 const RECONCILIATION_LIMIT = 10;
 
@@ -79,27 +80,36 @@ async function reconcileRow(row: ReconciliationRow, checkedAt: string) {
 }
 
 export async function reconcilePayments() {
+  const runId = await startJobRun("payment_reconciliation");
   const supabase = createAdminClient();
-  const cutoff = new Date(Date.now() + 7 * 86_400_000).toISOString();
-  const { data, error } = await supabase
-    .from("user_entitlements")
-    .select("user_id, provider, provider_subscription_id")
-    .in("provider", ["mercado_pago", "paypal"])
-    .in("status", ["active", "trialing", "pending", "past_due"])
-    .or(`access_until.is.null,access_until.lte.${cutoff}`)
-    .not("provider_subscription_id", "is", null)
-    .order("updated_at", { ascending: true })
-    .limit(RECONCILIATION_LIMIT);
-  if (error) throw new Error("Não foi possível listar assinaturas para reconciliação.");
+  try {
+    const cutoff = new Date(Date.now() + 7 * 86_400_000).toISOString();
+    const { data, error } = await supabase
+      .from("user_entitlements")
+      .select("user_id, provider, provider_subscription_id")
+      .in("provider", ["mercado_pago", "paypal"])
+      .in("status", ["active", "trialing", "pending", "past_due"])
+      .or(`access_until.is.null,access_until.lte.${cutoff}`)
+      .not("provider_subscription_id", "is", null)
+      .order("updated_at", { ascending: true })
+      .limit(RECONCILIATION_LIMIT);
+    if (error) throw new Error("Não foi possível listar assinaturas para reconciliação.");
 
-  const rows = (data ?? []) as ReconciliationRow[];
-  const checkedAt = new Date().toISOString();
-  const results = await Promise.allSettled(rows.map((row) => reconcileRow(row, checkedAt)));
-  return {
-    examined: rows.length,
-    updated: results.filter((result) => result.status === "fulfilled" && result.value).length,
-    unchanged: results.filter((result) => result.status === "fulfilled" && !result.value).length,
-    failed: results.filter((result) => result.status === "rejected").length,
-    limitReached: rows.length === RECONCILIATION_LIMIT,
-  };
+    const rows = (data ?? []) as ReconciliationRow[];
+    const checkedAt = new Date().toISOString();
+    const results = await Promise.allSettled(rows.map((row) => reconcileRow(row, checkedAt)));
+    const result = {
+      examined: rows.length,
+      updated: results.filter((item) => item.status === "fulfilled" && item.value).length,
+      unchanged: results.filter((item) => item.status === "fulfilled" && !item.value).length,
+      failed: results.filter((item) => item.status === "rejected").length,
+      limitReached: rows.length === RECONCILIATION_LIMIT,
+    };
+    await finishJobRun(runId, result.failed > 0 ? "failed" : "succeeded", result,
+      result.failed > 0 ? "subscription_reconciliation_failed" : undefined);
+    return result;
+  } catch (error) {
+    await finishJobRun(runId, "failed", {}, "reconciliation_failed");
+    throw error;
+  }
 }
