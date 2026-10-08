@@ -1,5 +1,17 @@
 # Changelog
 
+## Não publicado — endurecimento operacional da Fase 0
+
+- bloqueado novo checkout enquanto houver assinatura `pending`, `past_due`, ativa ou em teste ainda vinculada ao usuário;
+- preservado em tabela própria o histórico de todas as assinaturas dos provedores, sem substituir vínculos antigos;
+- registrada a execução da reconciliação financeira, ampliada sua frequência para seis horas e adicionado alerta genérico de falha;
+- adicionado health check sem cache e sem dados sensíveis para banco e heartbeat financeiro;
+- derivado das migrations o inventário integral do backup, incluindo Questões e tabelas operacionais futuras;
+- adicionadas chave portátil por frase de recuperação e cópia off-site com conferência SHA-256;
+- adicionados gate de release no GitHub e verificação obrigatória antes do build Netlify;
+- corrigida a versão transitiva vulnerável de `source-map-js` sem downgrade ou mudança incompatível;
+- documentados rollout, rollback, restore trimestral e gates externos obrigatórios antes de cobranças reais.
+
 ## Não publicado — área de questões e comandos do Planner
 
 - ampliada a área útil do PRO Questões em monitores largos, mantendo o limite anterior em telas menores;

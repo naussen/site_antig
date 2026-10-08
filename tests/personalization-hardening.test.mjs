@@ -105,7 +105,7 @@ test("logos acima da dobra priorizam somente a variante visível", async () => {
   ]);
 
   assert.match(logo, /fetchPriority=\{highPriority \? "high" : "auto"\}/);
-  assert.match(navigation, /variant="full" highPriority/);
+  assert.match(navigation, /variant=\{isCollapsed \? "icon" : "full"\}[\s\S]*highPriority/);
   assert.match(login, /variant="full"[\s\S]*highPriority/);
   assert.doesNotMatch(logo, /loading="eager"/);
   assert.doesNotMatch(logo, /preload=/);

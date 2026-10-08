@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build -- --webpack"
+  command = "npm run verify:deploy && npm run build -- --webpack"
   publish = ".next"
 
 [build.environment]
