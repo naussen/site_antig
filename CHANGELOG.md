@@ -10,6 +10,7 @@
 - adicionadas chave portátil por frase de recuperação e cópia off-site com conferência SHA-256;
 - adicionados gate de release no GitHub e verificação obrigatória antes do build Netlify;
 - corrigida a versão transitiva vulnerável de `source-map-js` sem downgrade ou mudança incompatível;
+- atualizados os seis baselines visuais para a identidade atual do PRO Questões, eliminando falhas obsoletas em mobile, desktop e nos três temas;
 - documentados rollout, rollback, restore trimestral e gates externos obrigatórios antes de cobranças reais.
 
 ## Não publicado — área de questões e comandos do Planner
