@@ -1,13 +1,17 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { randomBytes } from "node:crypto";
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import {
   createTemporaryDirectory,
   decryptArchive,
+  discoverPublicTables,
   encryptArchive,
+  protectKeyWithPassphrase,
   removeTemporaryDirectory,
+  unprotectKeyWithPassphrase,
 } from "../scripts/supabase-backup-core.mjs";
 
 test("backup criptografado restaura os mesmos bytes e rejeita chave incorreta", async () => {
@@ -29,4 +33,57 @@ test("backup criptografado restaura os mesmos bytes e rejeita chave incorreta", 
     key.fill(0);
     await removeTemporaryDirectory(directory);
   }
+});
+
+test("chave de recuperação portável exige frase forte e recupera a chave original", async () => {
+  const directory = await createTemporaryDirectory("pro-backup-key-test-");
+  const keyPath = join(directory, "backup.key.recovery");
+  const key = randomBytes(32);
+  try {
+    await assert.rejects(protectKeyWithPassphrase(key, "curta", keyPath), /20 caracteres/);
+    await protectKeyWithPassphrase(key, "frase de recuperacao longa para teste", keyPath);
+    assert.deepEqual(
+      await unprotectKeyWithPassphrase(keyPath, "frase de recuperacao longa para teste"),
+      key
+    );
+    await assert.rejects(
+      unprotectKeyWithPassphrase(keyPath, "frase incorreta mas longa para teste"),
+    );
+  } finally {
+    key.fill(0);
+    await removeTemporaryDirectory(directory);
+  }
+});
+
+test("inventário do backup deriva todas as tabelas das migrations", async () => {
+  const directory = await createTemporaryDirectory("pro-backup-schema-test-");
+  try {
+    await mkdir(directory, { recursive: true });
+    await writeFile(join(directory, "001.sql"), [
+      "CREATE TABLE topics (id uuid);",
+      "CREATE TABLE IF NOT EXISTS public.questions (id uuid);",
+      "CREATE VIEW public.ignored AS SELECT 1;",
+    ].join("\n"));
+    assert.deepEqual(await discoverPublicTables(directory), ["questions", "topics"]);
+  } finally {
+    await removeTemporaryDirectory(directory);
+  }
+});
+
+test("inventário real inclui Questões, histórico financeiro e jobs operacionais", async () => {
+  const migrations = fileURLToPath(new URL("../supabase/migrations/", import.meta.url));
+  const tables = await discoverPublicTables(migrations);
+  for (const table of [
+    "topics",
+    "sections",
+    "user_progress",
+    "user_notes",
+    "user_dashboard_preferences",
+    "disciplines",
+    "questions",
+    "question_options",
+    "user_question_attempts",
+    "payment_subscription_links",
+    "ops_job_runs",
+  ]) assert.ok(tables.includes(table), `${table} ausente do inventário`);
 });

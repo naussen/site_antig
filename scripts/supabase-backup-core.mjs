@@ -1,11 +1,11 @@
-import { createCipheriv, createDecipheriv, createHash, randomBytes } from "node:crypto";
+import { createCipheriv, createDecipheriv, createHash, randomBytes, scryptSync } from "node:crypto";
 import { once } from "node:events";
 import {
   createReadStream,
   createWriteStream,
   existsSync,
 } from "node:fs";
-import { mkdtemp, mkdir, open, readFile, rm, stat, writeFile } from "node:fs/promises";
+import { mkdtemp, mkdir, open, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { basename, dirname, join } from "node:path";
 import { spawnSync } from "node:child_process";
@@ -14,37 +14,20 @@ import { pipeline } from "node:stream/promises";
 export const BACKUP_MAGIC = Buffer.from("PROBACKUP1", "ascii");
 export const BACKUP_IV_BYTES = 12;
 export const BACKUP_TAG_BYTES = 16;
+export const RECOVERY_KEY_MAGIC = Buffer.from("PROKEY1", "ascii");
+const RECOVERY_SALT_BYTES = 16;
 
-export const PUBLIC_TABLES = Object.freeze([
-  "content_change_manifests",
-  "content_unit_revisions",
-  "law_flashcards",
-  "law_versions",
-  "laws",
-  "legal_fragments",
-  "legis_editorial_audit",
-  "payment_access_blocks",
-  "payment_audit_events",
-  "payment_provider_transactions",
-  "payment_webhook_events",
-  "privacy_requests",
-  "sections",
-  "study_plan_items",
-  "study_plans",
-  "topic_id_redirects",
-  "topic_legal_fragment_relations",
-  "topics",
-  "user_dashboard_preferences",
-  "user_entitlements",
-  "user_law_flashcard_answers",
-  "user_law_progress",
-  "user_legal_highlights",
-  "user_legal_notes",
-  "user_note_images",
-  "user_notes",
-  "user_progress",
-  "user_text_highlights",
-]);
+export async function discoverPublicTables(migrationsDirectory) {
+  const tables = new Set();
+  const files = (await readdir(migrationsDirectory)).filter((name) => name.endsWith(".sql")).sort();
+  for (const file of files) {
+    const source = await readFile(join(migrationsDirectory, file), "utf8");
+    const pattern = /CREATE\s+TABLE\s+(?:IF\s+NOT\s+EXISTS\s+)?(?:public\.)?([a-z_][a-z0-9_]*)\s*\(/giu;
+    for (const match of source.matchAll(pattern)) tables.add(match[1]);
+  }
+  if (tables.size === 0) throw new Error("Nenhuma tabela public foi encontrada nas migrations.");
+  return [...tables].sort((a, b) => a.localeCompare(b));
+}
 
 function runPowerShell(script, extraEnv) {
   const result = spawnSync(
@@ -85,6 +68,42 @@ export function unprotectKeyWithDpapi(keyPath) {
     { PRO_BACKUP_KEY_PATH: keyPath }
   );
   return Buffer.from(encoded, "base64");
+}
+
+export async function protectKeyWithPassphrase(key, passphrase, keyPath) {
+  if (typeof passphrase !== "string" || passphrase.length < 20) {
+    throw new Error("PRO_BACKUP_RECOVERY_PASSPHRASE deve ter pelo menos 20 caracteres.");
+  }
+  const salt = randomBytes(RECOVERY_SALT_BYTES);
+  const iv = randomBytes(BACKUP_IV_BYTES);
+  const wrappingKey = scryptSync(passphrase, salt, 32);
+  const cipher = createCipheriv("aes-256-gcm", wrappingKey, iv);
+  const encrypted = Buffer.concat([cipher.update(key), cipher.final()]);
+  const payload = Buffer.concat([RECOVERY_KEY_MAGIC, salt, iv, encrypted, cipher.getAuthTag()]);
+  wrappingKey.fill(0);
+  await writeFile(keyPath, payload, { flag: "wx" });
+}
+
+export async function unprotectKeyWithPassphrase(keyPath, passphrase) {
+  const payload = await readFile(keyPath);
+  const headerBytes = RECOVERY_KEY_MAGIC.length + RECOVERY_SALT_BYTES + BACKUP_IV_BYTES;
+  if (payload.length <= headerBytes + BACKUP_TAG_BYTES) throw new Error("Chave de recuperação truncada.");
+  if (!payload.subarray(0, RECOVERY_KEY_MAGIC.length).equals(RECOVERY_KEY_MAGIC)) {
+    throw new Error("Formato de chave de recuperação desconhecido.");
+  }
+  let offset = RECOVERY_KEY_MAGIC.length;
+  const salt = payload.subarray(offset, offset += RECOVERY_SALT_BYTES);
+  const iv = payload.subarray(offset, offset += BACKUP_IV_BYTES);
+  const encrypted = payload.subarray(offset, payload.length - BACKUP_TAG_BYTES);
+  const tag = payload.subarray(payload.length - BACKUP_TAG_BYTES);
+  const wrappingKey = scryptSync(passphrase, salt, 32);
+  try {
+    const decipher = createDecipheriv("aes-256-gcm", wrappingKey, iv);
+    decipher.setAuthTag(tag);
+    return Buffer.concat([decipher.update(encrypted), decipher.final()]);
+  } finally {
+    wrappingKey.fill(0);
+  }
 }
 
 export async function sha256File(path) {

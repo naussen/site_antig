@@ -11,6 +11,7 @@ import {
   runTar,
   sha256File,
   unprotectKeyWithDpapi,
+  unprotectKeyWithPassphrase,
 } from "./supabase-backup-core.mjs";
 
 function argumentValue(name) {
@@ -21,13 +22,24 @@ function argumentValue(name) {
 async function main() {
   const backupArgument = argumentValue("--backup");
   if (!backupArgument) throw new Error("Use --backup <arquivo.probackup>.");
-  const pair = resolveBackupPair(backupArgument, argumentValue("--key"));
+  const recoveryKey = argumentValue("--recovery-key");
+  if (recoveryKey && !process.env.PRO_BACKUP_RECOVERY_PASSPHRASE?.trim()) {
+    throw new Error("PRO_BACKUP_RECOVERY_PASSPHRASE é obrigatória para a chave portátil.");
+  }
+  const pair = recoveryKey
+    ? { backupPath: backupArgument, keyPath: recoveryKey }
+    : resolveBackupPair(backupArgument, argumentValue("--key"));
   const temporaryRoot = await createTemporaryDirectory("pro-resumos-restore-test-");
   const tarPath = join(temporaryRoot, "payload.tar");
   const restoreDirectory = join(temporaryRoot, "restored");
 
   try {
-    const key = unprotectKeyWithDpapi(pair.keyPath);
+    const key = recoveryKey
+      ? await unprotectKeyWithPassphrase(
+          pair.keyPath,
+          process.env.PRO_BACKUP_RECOVERY_PASSPHRASE?.trim() ?? ""
+        )
+      : unprotectKeyWithDpapi(pair.keyPath);
     await decryptArchive(pair.backupPath, tarPath, key);
     key.fill(0);
     await ensureDirectory(restoreDirectory);
