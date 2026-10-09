@@ -16,7 +16,7 @@ O bloqueio não decorre de uma falha funcional reproduzida na interface. Ele dec
 
 1. cadastro Google completo de uma conta nova;
 2. confirmação da matriz de acesso na interface publicada com contas Google sintéticas;
-3. restauração real do backup em ambiente Supabase/PostgreSQL isolado e confirmação do backup nativo do Supabase;
+3. confirmação do backup nativo/PITR do Supabase e do procedimento para segredos/fatores Auth que a API não exporta;
 4. preflight da aplicação no runtime publicado e teste real de entrega dos alertas operacionais;
 5. rastreabilidade do deploy do PRO Legis até um SHA aprovado.
 
@@ -46,17 +46,19 @@ Esses pontos já constam como gates no próprio projeto. Abrir o cadastro antes 
 
 **Critério de aceite:** permissões e bloqueios coincidem com a matriz esperada em `/resumos`, `/legis`, Questões, Planner, Notas, Conta e Assinatura; administrador AAL1 não executa operação protegida e AAL2 executa.
 
-### P0-03 — Recuperação de desastre ainda não foi demonstrada
+### P0-03 — Backup nativo e recuperação integral de Auth ainda não foram confirmados
 
-**Evidência positiva:** o backup lógico mais recente foi validado com sucesso, cobrindo 45 tabelas, 34.364 linhas, Auth, migrations e arquivos; a tarefa diária está ativa; existe chave portátil; a cópia off-site existe e o SHA-256 coincide com a origem.
+**Evidência positiva:** a primeira inspeção revelou que o backup antigo listava 16 usuários, mas omitia suas identidades OAuth. A coleta foi corrigida para consultar o detalhe de cada usuário e um novo backup foi produzido com 45 tabelas, 34.365 linhas, 16 usuários, 18 identidades e 1 bucket. A tarefa diária está ativa; existe chave portátil; a cópia off-site e seus hashes coincidem com a origem.
 
-**Lacuna:** não foi localizada evidência de restore real em PostgreSQL/projeto Supabase isolado nem confirmação atual do backup nativo/PITR do Supabase. O próprio `docs/OPERACAO_LANCAMENTO.md` exige ambos antes de cobranças reais.
+O novo pacote foi restaurado em Supabase local isolado em 27,1 segundos de carga/validação: as contagens coincidiram, 98 chaves estrangeiras ficaram sem órfãos e quatro cenários RLS passaram para assinante, não assinante e administrador AAL1/AAL2. O restaurador possui trava pelo nome e label do projeto local e também recompõe objetos do Storage quando existirem.
+
+**Lacuna:** não foi confirmada no painel a política atual de backup nativo/PITR do Supabase. O backup lógico não recebe pela API hashes de senha, segredos OAuth, fatores TOTP nem sessões ativas; por isso, não recompõe sozinho todo o plano de recuperação de Auth.
 
 **Risco:** um backup íntegro no formato próprio pode ainda falhar na reconstrução operacional completa quando mais necessário.
 
-**Ação obrigatória:** restaurar em ambiente isolado, validar migrations, Auth, Storage, funções, grants, RLS e os fluxos de dois usuários; registrar RPO, RTO e divergências. Confirmar no painel do Supabase a política de backup nativo aplicável ao plano atual.
+**Ação obrigatória:** confirmar no painel do Supabase a política de backup nativo/PITR aplicável ao plano atual e documentar como os segredos OAuth serão reconfigurados e como administradores recuperarão/reinscreverão MFA após desastre. Adotar RPO operacional máximo de 24 horas para o backup lógico e medir o RTO completo, incluindo infraestrutura e reconfiguração Auth; os 27,1 segundos medidos cobrem apenas carga e validação locais com o ambiente já disponível.
 
-**Critério de aceite:** relatório de restore reproduzível, com contagens conferidas e smoke dos módulos; evidência do backup nativo ou aceitação formal e documentada do risco residual.
+**Critério de aceite:** evidência do backup nativo/PITR ou aceitação formal e documentada do risco residual, além de runbook de reconfiguração OAuth/MFA e RTO completo medido.
 
 ### P0-04 — Preflight da aplicação e entrega de alertas ainda não foram comprovados no runtime publicado
 
@@ -187,12 +189,11 @@ Não houve overflow horizontal global nas rotas verificadas. A navegação móve
 
 1. Atualizar a chave pública local para o formato moderno, sem versioná-la.
 2. Criar contas Google sintéticas e repetir na interface a matriz de cadastro/entitlement/AAL já aprovada no banco.
-3. Executar o restore isolado e registrar RPO/RTO.
-4. Confirmar backup nativo do Supabase ou registrar aceitação formal do risco.
-5. Rodar o preflight da aplicação no runtime publicado e testar a entrega dos alertas.
-6. Confirmar e registrar o SHA publicado do PRO Legis.
-7. Repetir o smoke móvel e desktop após qualquer ajuste resultante.
-8. Somente depois executar a configuração e os testes financeiros de Mercado Pago e PayPal já reservados para a etapa final.
+3. Confirmar backup nativo/PITR do Supabase e registrar o runbook OAuth/MFA e o RTO completo.
+4. Rodar o preflight da aplicação no runtime publicado e testar a entrega dos alertas.
+5. Confirmar e registrar o SHA publicado do PRO Legis.
+6. Repetir o smoke móvel e desktop após qualquer ajuste resultante.
+7. Somente depois executar a configuração e os testes financeiros de Mercado Pago e PayPal já reservados para a etapa final.
 
 ## Limitações desta auditoria
 
@@ -200,6 +201,6 @@ Não houve overflow horizontal global nas rotas verificadas. A navegação móve
 - não foi realizada transação financeira;
 - não foi enviado pedido LGPD;
 - não foram cancelados nem excluídos dados reais;
-- não foi executado restore em infraestrutura externa;
+- o restore foi executado apenas no Supabase local isolado, não em projeto remoto de homologação;
 - não foi acessado o painel de billing do Supabase;
 - o conteúdo jurídico não foi submetido a uma revisão material nesta execução.

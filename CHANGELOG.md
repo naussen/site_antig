@@ -4,10 +4,11 @@
 
 - auditados em produção login Google, navegação autenticada, persistência, RLS, integrações entre módulos, cabeçalhos de segurança e responsividade em desktop, tablet e celular;
 - confirmados o deploy da `origin/main`, os gates automatizados, o backup lógico íntegro e sua cópia off-site;
-- registrado o veredito NO-GO até concluir cadastro novo, matriz de entitlements/AAL, restore isolado, backup nativo e alertas operacionais.
+- registrado o veredito NO-GO até concluir cadastro/matriz visual com contas Google, backup nativo e recuperação Auth, preflight/alertas publicados e proveniência do PRO Legis.
 - separados os preflights da aplicação e do host Windows de backup, impedindo que a frase de recuperação seja exigida ou copiada para a hospedagem;
 - adicionado gate verificável para tarefa agendada, backup recente, descriptografia, chave portátil e hashes dos três artefatos off-site.
 - ampliado o teste remoto para cobrir leitura do acervo por visitante, estados pendente, expirado, cancelado e ativo, além do bypass administrativo somente após TOTP/AAL2.
+- corrigida a coleta Auth do backup para preservar identidades OAuth e adicionado restore destrutivo com trava de destino local, reconstrução de banco/Auth/Storage, validação de 98 chaves estrangeiras e smoke RLS.
 
 ## Não publicado — endurecimento operacional da Fase 0
 

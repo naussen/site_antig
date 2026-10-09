@@ -23,6 +23,8 @@ npm run release:preflight:backup
 
 Esse comando valida a tarefa agendada, a idade do backup, a descriptografia por DPAPI, a chave portátil e os hashes da cópia off-site. O preflight da aplicação imprime somente booleanos e nunca deve receber a frase de recuperação do backup. A frase permanece exclusivamente no host de backup, protegida por DPAPI durante o repouso.
 
+O restore deve ser ensaiado somente no Supabase local isolado, com o projeto confirmado explicitamente conforme `docs/BACKUP_SUPABASE.md`. O procedimento é destrutivo para o destino local e nunca aceita um banco remoto.
+
 ## Ordem de uma release
 
 1. Abrir branch curta a partir de `origin/main`.

@@ -46,13 +46,23 @@ async function selectAll(supabase, table) {
 }
 
 async function listAuthUsers(supabase) {
-  const users = [];
+  const listedUsers = [];
   for (let page = 1; ; page += 1) {
     const { data, error } = await supabase.auth.admin.listUsers({ page, perPage: 1000 });
     if (error) throw new Error(`Auth: ${error.code ?? "list_users_failed"}`);
-    users.push(...data.users);
-    if (data.users.length < 1000) return users;
+    listedUsers.push(...data.users);
+    if (data.users.length < 1000) break;
   }
+
+  const users = [];
+  for (const listedUser of listedUsers) {
+    const { data, error } = await supabase.auth.admin.getUserById(listedUser.id);
+    if (error || !data.user) {
+      throw new Error(`Auth: ${error?.code ?? "get_user_failed"}`);
+    }
+    users.push(data.user);
+  }
+  return users;
 }
 
 async function listStorageObjects(supabase, bucketId, prefix = "") {
@@ -212,6 +222,7 @@ async function main() {
       ],
       table_counts: tableCounts,
       auth_user_count: users.length,
+      auth_identity_count: users.reduce((count, user) => count + (user.identities?.length ?? 0), 0),
       storage_bucket_count: (buckets ?? []).length,
       storage_object_count: storageObjects.length,
       migration_count: migrationCount,
