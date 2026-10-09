@@ -105,6 +105,8 @@ test("configuração off-site mantém a frase fora dos argumentos da tarefa", as
   assert.match(configureScript, /Read-Host[^\r\n]+-AsSecureString/u);
   assert.match(configureScript, /ProtectedData\]::Protect/u);
   assert.match(configureScript, /SetAccessRuleProtection\(\$true, \$false\)/u);
+  assert.match(configureScript, /\.SetAccessControl\(\$acl\)/u);
+  assert.doesNotMatch(configureScript, /\bSet-Acl\b/u);
   assert.match(taskRunner, /ProtectedData\]::Unprotect/u);
   assert.match(taskRunner, /Remove-Item Env:PRO_BACKUP_RECOVERY_PASSPHRASE/u);
   assert.match(taskRunner, /\[Array\]::Clear\(\$plainBytes/u);

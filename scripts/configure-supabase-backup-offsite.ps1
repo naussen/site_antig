@@ -52,7 +52,8 @@ try {
     [Security.AccessControl.AccessControlType]::Allow
   )
   $acl.AddAccessRule($rule)
-  Set-Acl -LiteralPath $RecoverySecretFile -AclObject $acl
+  $secretFile = [IO.FileInfo]::new($RecoverySecretFile)
+  $secretFile.SetAccessControl($acl)
 
   $installer = Join-Path $ProjectDirectory "scripts\install-supabase-backup-task.ps1"
   & $installer `
