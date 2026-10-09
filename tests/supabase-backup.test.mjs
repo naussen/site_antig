@@ -103,11 +103,11 @@ test("configuração off-site mantém a frase fora dos argumentos da tarefa", as
   );
 
   assert.match(configureScript, /Read-Host[^\r\n]+-AsSecureString/u);
-  assert.match(configureScript, /ConvertFrom-SecureString/u);
+  assert.match(configureScript, /ProtectedData\]::Protect/u);
   assert.match(configureScript, /SetAccessRuleProtection\(\$true, \$false\)/u);
-  assert.match(taskRunner, /ConvertTo-SecureString \$protectedValue/u);
+  assert.match(taskRunner, /ProtectedData\]::Unprotect/u);
   assert.match(taskRunner, /Remove-Item Env:PRO_BACKUP_RECOVERY_PASSPHRASE/u);
-  assert.match(taskRunner, /ZeroFreeBSTR/u);
+  assert.match(taskRunner, /\[Array\]::Clear\(\$plainBytes/u);
   assert.match(taskInstaller, /run-supabase-backup-task\.ps1/u);
   assert.doesNotMatch(taskInstaller, /PRO_BACKUP_RECOVERY_PASSPHRASE=/u);
 });

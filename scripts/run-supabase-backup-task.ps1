@@ -12,7 +12,6 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-$plainTextPointer = [IntPtr]::Zero
 
 try {
   $node = (Get-Command node.exe -ErrorAction Stop).Source
@@ -26,10 +25,14 @@ try {
     throw "Diretório off-site não encontrado: $OffsiteDirectory"
   }
 
-  $protectedValue = [IO.File]::ReadAllText($RecoverySecretFile).Trim()
-  $securePassphrase = ConvertTo-SecureString $protectedValue
-  $plainTextPointer = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($securePassphrase)
-  $passphrase = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($plainTextPointer)
+  Add-Type -AssemblyName System.Security
+  $protectedBytes = [IO.File]::ReadAllBytes($RecoverySecretFile)
+  $plainBytes = [Security.Cryptography.ProtectedData]::Unprotect(
+    $protectedBytes,
+    $null,
+    [Security.Cryptography.DataProtectionScope]::CurrentUser
+  )
+  $passphrase = [Text.Encoding]::UTF8.GetString($plainBytes)
   if ([string]::IsNullOrWhiteSpace($passphrase) -or $passphrase.Length -lt 20) {
     throw "A frase de recuperação protegida é inválida."
   }
@@ -44,8 +47,10 @@ try {
   Remove-Item Env:PRO_BACKUP_RECOVERY_PASSPHRASE -ErrorAction SilentlyContinue
   Remove-Item Env:PRO_BACKUP_OFFSITE_DIRECTORY -ErrorAction SilentlyContinue
   $passphrase = $null
-  $securePassphrase = $null
-  if ($plainTextPointer -ne [IntPtr]::Zero) {
-    [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($plainTextPointer)
+  if ($null -ne $plainBytes) {
+    [Array]::Clear($plainBytes, 0, $plainBytes.Length)
+  }
+  if ($null -ne $protectedBytes) {
+    [Array]::Clear($protectedBytes, 0, $protectedBytes.Length)
   }
 }

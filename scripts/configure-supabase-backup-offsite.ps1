@@ -34,12 +34,14 @@ try {
 
   $secretDirectory = Split-Path -Parent $RecoverySecretFile
   New-Item -ItemType Directory -Path $secretDirectory -Force | Out-Null
-  $protectedValue = ConvertFrom-SecureString $first
-  [IO.File]::WriteAllText(
-    $RecoverySecretFile,
-    $protectedValue,
-    [Text.UTF8Encoding]::new($false)
+  Add-Type -AssemblyName System.Security
+  $plainBytes = [Text.Encoding]::UTF8.GetBytes($firstText)
+  $protectedBytes = [Security.Cryptography.ProtectedData]::Protect(
+    $plainBytes,
+    $null,
+    [Security.Cryptography.DataProtectionScope]::CurrentUser
   )
+  [IO.File]::WriteAllBytes($RecoverySecretFile, $protectedBytes)
 
   $identity = [Security.Principal.WindowsIdentity]::GetCurrent().Name
   $acl = [Security.AccessControl.FileSecurity]::new()
@@ -68,6 +70,12 @@ try {
   $secondText = $null
   $first = $null
   $second = $null
+  if ($null -ne $plainBytes) {
+    [Array]::Clear($plainBytes, 0, $plainBytes.Length)
+  }
+  if ($null -ne $protectedBytes) {
+    [Array]::Clear($protectedBytes, 0, $protectedBytes.Length)
+  }
   if ($firstPointer -ne [IntPtr]::Zero) {
     [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($firstPointer)
   }
