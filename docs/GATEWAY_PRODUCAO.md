@@ -10,7 +10,8 @@
 - `https://proconcursos.com.br/legis` está publicado e protegido por login.
 - a sessão autenticada é compartilhada com o PRO Resumos;
 - catálogo, leitura por artigo, leitura integral e temas Claro, Noturno e Sépia passaram no smoke desktop, tablet e celular;
-- permanece obrigatório registrar o SHA efetivamente publicado do PRO Legis em cada release.
+- em 09/10/2026, o deploy de produção `6ac71017711cf30008d0910a` correspondia a `main@486d693`, igual a `origin/main`, com o `Release gate` aprovado;
+- permanece obrigatório repetir essa conferência e registrar o SHA efetivamente publicado do PRO Legis em cada release.
 
 ## Gateway ativo
 

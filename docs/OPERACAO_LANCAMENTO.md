@@ -14,6 +14,7 @@ Cobranças reais permanecem bloqueadas operacionalmente até que todos os itens 
 8. alertas de falha de reconciliação e backup testados;
 9. smoke autenticado de `/resumos` e `/legis` em celular e desktop;
 10. release criada a partir de worktrees limpas de `origin/main`.
+11. previews de autores não confiáveis exigem aprovação e toda credencial privada está marcada como segredo no provedor de hospedagem.
 
 No host Windows responsável pelo backup, execute separadamente:
 

@@ -29,6 +29,7 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [x] Implementar reconciliação periódica entre o banco e as APIs dos provedores para corrigir webhooks perdidos.
 - [x] Registrar auditoria persistente e mínima de checkout e cancelamento, complementando eventos de webhook e transações verificadas, sem tokens, dados de cartão, payloads completos, e-mail ou cookies.
 - [ ] Configurar alertas para falhas reiteradas de webhook, divergências de reconciliação e concessões/revogações anormais.
+- [ ] Criar `OPS_ALERT_WEBHOOK_URL` na Netlify, testar recebimento sintético seguro para reconciliação e backup e registrar o responsável operacional.
 - [ ] Testar nos sandboxes: pagamento aprovado, recusado, pendente, duplicado, cancelado, expirado e estornado. Em 26/09/2026 foi publicado o contexto isolado `sandbox-financeiro`, com Mercado Pago `test`, PayPal `sandbox` e URL própria confirmados no runtime. Permanecem ausentes as credenciais dos dois provedores e um Supabase de teste com Service Role própria; o preview continua fechado para checkout até esses dados serem cadastrados.
 
 ### Plano e segurança do Supabase
@@ -45,6 +46,8 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [ ] Confirmar `CONTENT_ADMIN_TOKEN` em todos os escopos necessários da hospedagem, sempre como segredo server-side e nunca com prefixo `NEXT_PUBLIC_`.
 - [ ] Configurar `CONTENT_ADMIN_TOKEN` antes de voltar a usar a rota HTTP administrativa `/api/import`; enquanto ausente, importações devem ocorrer somente por procedimento backend controlado e auditado.
 - [ ] Confirmar que `SUPABASE_SERVICE_ROLE_KEY` existe somente no backend e não é disponibilizada em previews públicos ou bundles client-side.
+- [x] Alterar a política Netlify do Site para exigir aprovação de previews não confiáveis e marcar `CONTENT_ADMIN_TOKEN`/`SUPABASE_SECRET_KEY` do PRO Legis como segredos; confirmado no painel em 09/10/2026.
+- [ ] Rotacionar o `CONTENT_ADMIN_TOKEN` do PRO Legis após a inspeção autorizada que precedeu sua classificação como segredo, atualizar o consumidor legítimo e invalidar o valor anterior.
 - [x] Validar o deploy da branch publicada e executar smoke tests em `/admin`, `/dashboard`, `/dashboard/assinatura` e em uma página de estudo; `origin/main`, Netlify e os gates coincidiram no SHA `fcee3c0` em 09/10/2026.
 - [ ] Testar na interface de produção uma conta Google sem entitlement, uma assinatura ativa, uma expirada e o administrador com AAL1/AAL2; a matriz de banco/RLS foi automatizada e aprovada em 09/10/2026.
 

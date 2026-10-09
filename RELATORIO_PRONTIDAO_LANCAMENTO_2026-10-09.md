@@ -18,7 +18,7 @@ O bloqueio não decorre de uma falha funcional reproduzida na interface. Ele dec
 2. confirmação da matriz de acesso na interface publicada com contas Google sintéticas;
 3. confirmação do backup nativo/PITR do Supabase e do procedimento para segredos/fatores Auth que a API não exporta;
 4. preflight da aplicação no runtime publicado e teste real de entrega dos alertas operacionais;
-5. rastreabilidade do deploy do PRO Legis até um SHA aprovado.
+5. rotação coordenada do `CONTENT_ADMIN_TOKEN` do PRO Legis após sua classificação como segredo.
 
 Esses pontos já constam como gates no próprio projeto. Abrir o cadastro antes de validá-los transfere o teste para os primeiros usuários.
 
@@ -66,7 +66,9 @@ O novo pacote foi restaurado em Supabase local isolado em 27,1 segundos de carga
 
 **Evidência positiva:** os preflights foram separados. O gate da aplicação não recebe mais a frase de recuperação; o gate do host Windows aprovou tarefa agendada, idade do backup, descriptografia, chave portátil e hashes das cópias off-site.
 
-**Lacuna:** o preflight da aplicação ainda não foi executado dentro do runtime publicado com evidência dos indicadores não financeiros. A entrega real de alertas de falha de reconciliação e backup não foi acionada nem observada.
+**Evidência do runtime:** o painel autenticado da Netlify confirmou em produção os nomes de `NEXT_PUBLIC_SUPABASE_URL`, chave pública Supabase, chave administrativa Supabase, `CONTENT_ADMIN_TOKEN`, base de pagamentos e token de reconciliação. `OPS_ALERT_WEBHOOK_URL` não existe no projeto.
+
+**Lacuna:** o preflight da aplicação não pode aprovar enquanto o canal de alerta estiver ausente. A entrega real de alertas de falha de reconciliação e backup não foi acionada nem observada.
 
 **Risco:** falhas podem permanecer silenciosas justamente durante os primeiros cadastros e assinaturas.
 
@@ -74,17 +76,27 @@ O novo pacote foi restaurado em Supabase local isolado em 27,1 segundos de carga
 
 **Critério de aceite:** todos os indicadores não financeiros aplicáveis aprovados no respectivo ambiente, alerta recebido sem segredo ou dado pessoal e runbook com responsável e resposta esperada.
 
-### P0-05 — Deploy do PRO Legis não possui proveniência confirmada nesta auditoria
+### Resolvido durante a auditoria — proveniência do deploy do PRO Legis
 
-**Evidência positiva:** `/legis`, o catálogo, a leitura por artigo, a leitura integral, os três temas e a sessão compartilhada funcionaram em produção.
+**Evidência:** `/legis`, o catálogo, a leitura por artigo, a leitura integral, os três temas e a sessão compartilhada funcionaram em produção. O painel autenticado da Netlify confirmou o deploy de produção `6ac71017711cf30008d0910a`, publicado a partir de `main@486d693`. Esse SHA coincide com `origin/main` do repositório PRO Legis.
 
-**Lacuna:** o gateway do site encaminha `/legis` para `pro-legis-mvp.netlify.app`. Foi confirmado que `origin/main` do repositório PRO Legis está em `486d693`, mas a API pública da Netlify não permitiu confirmar o `commit_ref` do deploy de destino. A documentação do gateway ainda descreve a ativação como pendente, embora ela já esteja publicada.
+O GitHub confirmou o `Release gate` desse commit como aprovado: `npm run verify:deploy`, auditoria de produção em nível alto e build webpack concluíram no job `verify`. A documentação do gateway foi alinhada ao estado publicado.
 
-**Risco:** uma zona que compartilha autenticação e assinatura pode estar funcional, mas não necessariamente corresponder ao código aprovado em `main` ou ao mesmo processo de release.
+**Estado:** critério de proveniência atendido em 09/10/2026. Deve ser repetido em toda release conjunta.
 
-**Ação obrigatória:** registrar no release o SHA efetivamente publicado do PRO Legis, confirmar que o site de origem e o gateway pertencem ao mesmo controle operacional e atualizar a documentação do gateway.
+### P0-05 — Rotação do token administrativo do PRO Legis
 
-**Critério de aceite:** SHA do deploy do PRO Legis igual ao commit aprovado, gate do repositório aprovado e registro conjunto dos SHAs de Site e Legis.
+**Evidência:** `CONTENT_ADMIN_TOKEN` e `SUPABASE_SECRET_KEY` estavam classificados pela Netlify como valores provavelmente sensíveis, mas não marcados como segredo. Ambos foram corrigidos durante a auditoria e agora aparecem como `Secret values`, nos escopos Builds, Functions e Runtime. O valor do token administrativo ficou legível no formulário autorizado de edição antes da nova classificação ser salva.
+
+**Risco:** embora o valor não tenha sido publicado neste relatório, ele deixou de satisfazer o princípio de segredo desconhecido após a inspeção automatizada e pode ter estado acessível pela UI/API/CLI a membros autorizados enquanto não era classificado como segredo.
+
+**Ação obrigatória:** gerar um novo `CONTENT_ADMIN_TOKEN`, atualizar de forma coordenada o PRO Legis e o consumidor administrativo legítimo, publicar novamente e invalidar o valor anterior. Não registrar o token em logs, commits ou mensagens.
+
+**Critério de aceite:** importação administrativa funciona com o novo token; o anterior recebe `401`; a variável permanece marcada como segredo; nenhuma cópia versionada ou em log é encontrada.
+
+### Resolvido durante a auditoria — proteção de previews não confiáveis
+
+O Site permitia `Deploy without restrictions`, configuração que entrega todas as variáveis a previews de autores não confiáveis. A política foi alterada para `Require approval` e a confirmação visual do estado salvo foi obtida. Nenhum valor foi aberto durante essa alteração.
 
 ## Achados relevantes, mas não bloqueadores imediatos
 
@@ -190,8 +202,8 @@ Não houve overflow horizontal global nas rotas verificadas. A navegação móve
 1. Atualizar a chave pública local para o formato moderno, sem versioná-la.
 2. Criar contas Google sintéticas e repetir na interface a matriz de cadastro/entitlement/AAL já aprovada no banco.
 3. Confirmar backup nativo/PITR do Supabase e registrar o runbook OAuth/MFA e o RTO completo.
-4. Rodar o preflight da aplicação no runtime publicado e testar a entrega dos alertas.
-5. Confirmar e registrar o SHA publicado do PRO Legis.
+4. Criar `OPS_ALERT_WEBHOOK_URL`, rodar o preflight da aplicação no runtime publicado e testar a entrega dos alertas.
+5. Rotacionar coordenadamente o `CONTENT_ADMIN_TOKEN` do PRO Legis e confirmar que o valor anterior foi invalidado.
 6. Repetir o smoke móvel e desktop após qualquer ajuste resultante.
 7. Somente depois executar a configuração e os testes financeiros de Mercado Pago e PayPal já reservados para a etapa final.
 
