@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — auditoria de prontidão para lançamento
+
+- auditados em produção login Google, navegação autenticada, persistência, RLS, integrações entre módulos, cabeçalhos de segurança e responsividade em desktop, tablet e celular;
+- confirmados o deploy da `origin/main`, os gates automatizados, o backup lógico íntegro e sua cópia off-site;
+- registrado o veredito NO-GO até concluir cadastro novo, matriz de entitlements/AAL, restore isolado, backup nativo e alertas operacionais.
+
 ## Não publicado — endurecimento operacional da Fase 0
 
 - bloqueado novo checkout enquanto houver assinatura `pending`, `past_due`, ativa ou em teste ainda vinculada ao usuário;
