@@ -37,14 +37,15 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [x] Remover a dependência operacional de proteção contra senhas vazadas: usuários regulares e administradores autenticam somente por Google, e o provedor de e-mail/senha está desabilitado. Reavaliar a proteção se senhas forem reintroduzidas após futuro upgrade.
 - [x] Confirmar no ambiente de produção senha mínima de 12 caracteres com minúscula, maiúscula e número, reautenticação para troca de senha e TOTP habilitado.
 - [x] Implementar backup lógico externo ao Supabase, criptografado, com retenção de 30 dias e ensaio automatizado de descriptografia, hashes e contagens; primeira cópia validada em 26/09/2026.
-- [ ] Copiar os pares de backup/chave para armazenamento fora do computador e executar uma restauração real em PostgreSQL ou projeto Supabase de homologação; a validação atual não substitui PITR nem restauração integral do banco.
+- [x] Copiar o backup, a chave portátil e o resumo para armazenamento fora do computador, com SHA-256 conferido; comprovado em 09/10/2026 pelo preflight do host de backup.
+- [ ] Executar uma restauração real em PostgreSQL ou projeto Supabase de homologação; a validação criptográfica atual não substitui PITR nem restauração integral do banco.
 
 ### Hospedagem e publicação
 
 - [ ] Confirmar `CONTENT_ADMIN_TOKEN` em todos os escopos necessários da hospedagem, sempre como segredo server-side e nunca com prefixo `NEXT_PUBLIC_`.
 - [ ] Configurar `CONTENT_ADMIN_TOKEN` antes de voltar a usar a rota HTTP administrativa `/api/import`; enquanto ausente, importações devem ocorrer somente por procedimento backend controlado e auditado.
 - [ ] Confirmar que `SUPABASE_SERVICE_ROLE_KEY` existe somente no backend e não é disponibilizada em previews públicos ou bundles client-side.
-- [ ] Validar o deploy da branch publicada e executar smoke tests em `/admin`, `/dashboard`, `/dashboard/assinatura` e em uma página de estudo.
+- [x] Validar o deploy da branch publicada e executar smoke tests em `/admin`, `/dashboard`, `/dashboard/assinatura` e em uma página de estudo; `origin/main`, Netlify e os gates coincidiram no SHA `fcee3c0` em 09/10/2026.
 - [ ] Testar em produção uma conta sem entitlement, uma assinatura ativa, uma expirada e o administrador com AAL1/AAL2.
 
 ## P1 — Hardening após a integração inicial

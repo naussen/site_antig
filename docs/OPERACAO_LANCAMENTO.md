@@ -5,7 +5,7 @@
 Cobranças reais permanecem bloqueadas operacionalmente até que todos os itens abaixo tenham evidência:
 
 1. migration `035_launch_operations_hardening.sql` aplicada no Supabase compartilhado;
-2. `npm run release:preflight` com todos os indicadores `true` no ambiente de produção;
+2. `npm run release:preflight:app` com todos os indicadores `true` no ambiente da aplicação publicada;
 3. plano Supabase com backup nativo ativo;
 4. backup lógico completo, chave portátil e cópia off-site;
 5. restore executado em projeto Supabase isolado;
@@ -15,7 +15,13 @@ Cobranças reais permanecem bloqueadas operacionalmente até que todos os itens 
 9. smoke autenticado de `/resumos` e `/legis` em celular e desktop;
 10. release criada a partir de worktrees limpas de `origin/main`.
 
-O preflight imprime apenas booleanos. Ele nunca imprime tokens, chaves ou valores das variáveis.
+No host Windows responsável pelo backup, execute separadamente:
+
+```powershell
+npm run release:preflight:backup
+```
+
+Esse comando valida a tarefa agendada, a idade do backup, a descriptografia por DPAPI, a chave portátil e os hashes da cópia off-site. O preflight da aplicação imprime somente booleanos e nunca deve receber a frase de recuperação do backup. A frase permanece exclusivamente no host de backup, protegida por DPAPI durante o repouso.
 
 ## Ordem de uma release
 

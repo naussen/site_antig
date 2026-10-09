@@ -5,6 +5,8 @@
 - auditados em produção login Google, navegação autenticada, persistência, RLS, integrações entre módulos, cabeçalhos de segurança e responsividade em desktop, tablet e celular;
 - confirmados o deploy da `origin/main`, os gates automatizados, o backup lógico íntegro e sua cópia off-site;
 - registrado o veredito NO-GO até concluir cadastro novo, matriz de entitlements/AAL, restore isolado, backup nativo e alertas operacionais.
+- separados os preflights da aplicação e do host Windows de backup, impedindo que a frase de recuperação seja exigida ou copiada para a hospedagem;
+- adicionado gate verificável para tarefa agendada, backup recente, descriptografia, chave portátil e hashes dos três artefatos off-site.
 
 ## Não publicado — endurecimento operacional da Fase 0
 
