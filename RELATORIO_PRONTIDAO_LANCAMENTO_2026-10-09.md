@@ -12,12 +12,12 @@ Ficaram deliberadamente fora do veredito a configuração e a validação financ
 
 O estado técnico da aplicação é consistente: o deploy publicado corresponde à `origin/main`, os gates automatizados passaram, a sessão autenticada funcionou nas áreas principais, o isolamento RLS remoto passou com dois usuários efêmeros e não houve overflow horizontal nos viewports avaliados.
 
-O bloqueio não decorre de uma falha funcional reproduzida na interface. Ele decorre de quatro evidências obrigatórias ainda ausentes para um lançamento com usuários reais:
+O bloqueio não decorre de uma falha funcional reproduzida na interface. Ele decorre das evidências obrigatórias ainda ausentes para um lançamento com usuários reais:
 
 1. cadastro Google completo de uma conta nova;
-2. matriz remota de acesso para usuário sem entitlement, ativo, pendente/atrasado, expirado/cancelado e administrador em AAL1/AAL2;
+2. confirmação da matriz de acesso na interface publicada com contas Google sintéticas;
 3. restauração real do backup em ambiente Supabase/PostgreSQL isolado e confirmação do backup nativo do Supabase;
-4. preflight separado corretamente por ambiente e teste real de entrega dos alertas operacionais;
+4. preflight da aplicação no runtime publicado e teste real de entrega dos alertas operacionais;
 5. rastreabilidade do deploy do PRO Legis até um SHA aprovado.
 
 Esses pontos já constam como gates no próprio projeto. Abrir o cadastro antes de validá-los transfere o teste para os primeiros usuários.
@@ -36,7 +36,9 @@ Esses pontos já constam como gates no próprio projeto. Abrir o cadastro antes 
 
 ### P0-02 — Matriz de autorização e entitlement incompleta em produção
 
-**Evidência:** foram comprovados o redirecionamento anônimo para login, a sessão administrativa com acesso ativo e o isolamento RLS de dois usuários. Não foram comprovados, na interface publicada, usuário comum sem entitlement, ativo, pendente/atrasado, expirado/cancelado nem administrador em AAL1.
+**Evidência positiva:** o teste remoto automatizado passou para visitante anônimo, usuário pendente, expirado, cancelado com prazo futuro e vencido, ativo, administrador AAL1 e administrador AAL2. A leitura real de `sections` acompanhou a função de acesso, o chargeback revogou o acesso e todas as fixtures efêmeras foram removidas.
+
+**Lacuna:** a mesma matriz ainda não foi percorrida na interface publicada com identidades Google sintéticas. O teste de banco usa sessões efêmeras controladas e comprova RLS/funções, mas não substitui callback OAuth, guardas do Next.js e navegação entre módulos.
 
 **Risco:** um erro de configuração remota pode liberar conteúdo sem pagamento, negar acesso a assinante válido ou permitir operação administrativa sem MFA, mesmo com testes estáticos corretos.
 
@@ -56,15 +58,17 @@ Esses pontos já constam como gates no próprio projeto. Abrir o cadastro antes 
 
 **Critério de aceite:** relatório de restore reproduzível, com contagens conferidas e smoke dos módulos; evidência do backup nativo ou aceitação formal e documentada do risco residual.
 
-### P0-04 — Preflight mistura responsabilidades de ambientes diferentes
+### P0-04 — Preflight da aplicação e entrega de alertas ainda não foram comprovados no runtime publicado
 
 **Evidência positiva:** `/resumos/api/health` retornou `200`, com banco e reconciliação em estado `ok`. A migration operacional está funcional e o job de reconciliação possui heartbeat recente.
 
-**Lacuna:** o preflight local retornou `false` para `content_admin`, `operations_alert` e `portable_backup`; esse resultado local não prova a configuração da Netlify. Além disso, o mesmo script exige credenciais da aplicação publicada e a frase/destino do backup executado no Windows. Colocar a frase de recuperação do backup na Netlify apenas para obter `true` seria incorreto e aumentaria a exposição de um segredo de recuperação. A entrega real de alertas de falha de reconciliação e backup não foi acionada nem observada.
+**Evidência positiva:** os preflights foram separados. O gate da aplicação não recebe mais a frase de recuperação; o gate do host Windows aprovou tarefa agendada, idade do backup, descriptografia, chave portátil e hashes das cópias off-site.
+
+**Lacuna:** o preflight da aplicação ainda não foi executado dentro do runtime publicado com evidência dos indicadores não financeiros. A entrega real de alertas de falha de reconciliação e backup não foi acionada nem observada.
 
 **Risco:** falhas podem permanecer silenciosas justamente durante os primeiros cadastros e assinaturas.
 
-**Ação obrigatória:** separar o preflight em verificações do runtime Netlify e verificações do host de backup; nunca copiar a frase de recuperação para a hospedagem. Executar cada parte no ambiente correto, tratando Mercado Pago/PayPal separadamente conforme o escopo; disparar um alerta sintético seguro de reconciliação e um de backup e confirmar o recebimento.
+**Ação obrigatória:** executar o preflight da aplicação no ambiente publicado, tratando Mercado Pago/PayPal separadamente conforme o escopo; disparar um alerta sintético seguro de reconciliação e um de backup e confirmar o recebimento.
 
 **Critério de aceite:** todos os indicadores não financeiros aplicáveis aprovados no respectivo ambiente, alerta recebido sem segredo ou dado pessoal e runbook com responsável e resposta esperada.
 
@@ -140,7 +144,8 @@ O início do Google OAuth informa ao usuário que ele prosseguirá para o domín
 ### Banco de dados e persistência
 
 - `/resumos/api/health`: banco e reconciliação `ok`;
-- teste remoto com dois usuários efêmeros: aprovado para notas, progresso, preferências, realces, imagens, entitlements, LGPD e Planner;
+- teste remoto com usuários efêmeros: aprovado para notas, progresso, preferências, realces, imagens, entitlements, LGPD, Planner e leitura do acervo em todos os estados de acesso;
+- administrador AAL1 permaneceu bloqueado e a mesma sessão foi liberada somente após TOTP/AAL2;
 - tentativa cruzada de leitura/escrita foi bloqueada por RLS;
 - browser não conseguiu alterar entitlement nem consultar bloqueios financeiros internos;
 - fixtures de teste foram removidas ao final;
@@ -181,10 +186,10 @@ Não houve overflow horizontal global nas rotas verificadas. A navegação móve
 ## Sequência mínima para transformar o veredito em GO
 
 1. Atualizar a chave pública local para o formato moderno, sem versioná-la.
-2. Criar contas Google sintéticas e executar a matriz de cadastro/entitlement/AAL.
+2. Criar contas Google sintéticas e repetir na interface a matriz de cadastro/entitlement/AAL já aprovada no banco.
 3. Executar o restore isolado e registrar RPO/RTO.
 4. Confirmar backup nativo do Supabase ou registrar aceitação formal do risco.
-5. Separar e rodar o preflight nos ambientes corretos e testar a entrega dos alertas.
+5. Rodar o preflight da aplicação no runtime publicado e testar a entrega dos alertas.
 6. Confirmar e registrar o SHA publicado do PRO Legis.
 7. Repetir o smoke móvel e desktop após qualquer ajuste resultante.
 8. Somente depois executar a configuração e os testes financeiros de Mercado Pago e PayPal já reservados para a etapa final.

@@ -7,6 +7,7 @@
 - registrado o veredito NO-GO até concluir cadastro novo, matriz de entitlements/AAL, restore isolado, backup nativo e alertas operacionais.
 - separados os preflights da aplicação e do host Windows de backup, impedindo que a frase de recuperação seja exigida ou copiada para a hospedagem;
 - adicionado gate verificável para tarefa agendada, backup recente, descriptografia, chave portátil e hashes dos três artefatos off-site.
+- ampliado o teste remoto para cobrir leitura do acervo por visitante, estados pendente, expirado, cancelado e ativo, além do bypass administrativo somente após TOTP/AAL2.
 
 ## Não publicado — endurecimento operacional da Fase 0
 

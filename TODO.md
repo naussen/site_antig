@@ -46,14 +46,14 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [ ] Configurar `CONTENT_ADMIN_TOKEN` antes de voltar a usar a rota HTTP administrativa `/api/import`; enquanto ausente, importações devem ocorrer somente por procedimento backend controlado e auditado.
 - [ ] Confirmar que `SUPABASE_SERVICE_ROLE_KEY` existe somente no backend e não é disponibilizada em previews públicos ou bundles client-side.
 - [x] Validar o deploy da branch publicada e executar smoke tests em `/admin`, `/dashboard`, `/dashboard/assinatura` e em uma página de estudo; `origin/main`, Netlify e os gates coincidiram no SHA `fcee3c0` em 09/10/2026.
-- [ ] Testar em produção uma conta sem entitlement, uma assinatura ativa, uma expirada e o administrador com AAL1/AAL2.
+- [ ] Testar na interface de produção uma conta Google sem entitlement, uma assinatura ativa, uma expirada e o administrador com AAL1/AAL2; a matriz de banco/RLS foi automatizada e aprovada em 09/10/2026.
 
 ## P1 — Hardening após a integração inicial
 
 ### Autorização e testes
 
 - [x] Criar teste pgTAP negativo com dois usuários distintos, cobrindo leitura e alteração de notas, progresso, preferências, entitlement e solicitações LGPD do outro.
-- [ ] Automatizar testes de leitura do acervo para `anon`, autenticado sem assinatura, assinatura ativa, assinatura expirada, admin AAL1 e admin AAL2.
+- [x] Automatizar testes remotos de leitura do acervo para `anon`, autenticado sem assinatura, assinatura ativa, assinatura expirada/cancelada, admin AAL1 e admin AAL2; fixtures efêmeras aprovadas e removidas em 09/10/2026.
 - [ ] Executar `supabase/scripts/fase3_validacao_rls.sql` após toda mudança futura de schema, grants ou policies.
 - [ ] Impedir em revisão de código qualquer nova policy de `topics` ou `sections` baseada apenas em `TO authenticated USING (true)`.
 - [ ] Manter toda Server Action e Route Handler com autorização própria próxima ao acesso aos dados; não depender apenas de layout, botão oculto ou estado React.
