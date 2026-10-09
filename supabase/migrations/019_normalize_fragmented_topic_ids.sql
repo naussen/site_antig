@@ -64,17 +64,28 @@ JOIN public.topic_id_redirects AS redirect
   ON redirect.old_topic_id = section.topic_id;
 
 DO $$
+DECLARE
+  legacy_topic_count INTEGER;
+  topic_count INTEGER;
 BEGIN
+  SELECT count(*) INTO legacy_topic_count
+  FROM public.topics AS topic
+  JOIN public.topic_id_redirects AS redirect
+    ON redirect.old_topic_id = topic.topic_id;
+
+  SELECT count(*) INTO topic_count FROM public.topics;
+
   IF (SELECT count(*) FROM public.topic_id_redirects) <> 30 THEN
     RAISE EXCEPTION 'Mapa de correção deve conter exatamente 30 topic_id';
   END IF;
 
-  IF (
-    SELECT count(*)
-    FROM public.topics AS topic
-    JOIN public.topic_id_redirects AS redirect
-      ON redirect.old_topic_id = topic.topic_id
-  ) <> 30 THEN
+  -- Em uma reconstrução do zero, os dados são restaurados somente depois do
+  -- schema. A migração deve criar o mapa sem exigir o corpus legado ausente.
+  IF topic_count = 0 THEN
+    RETURN;
+  END IF;
+
+  IF legacy_topic_count <> 30 THEN
     RAISE EXCEPTION 'Nem todos os 30 topic_id antigos foram encontrados';
   END IF;
 
@@ -232,18 +243,38 @@ DELETE FROM public.topics AS topic
 USING public.topic_id_redirects AS redirect
 WHERE topic.topic_id = redirect.old_topic_id;
 
-ALTER TABLE public.topic_id_redirects
-  ADD CONSTRAINT topic_id_redirects_new_topic_id_fkey
-  FOREIGN KEY (new_topic_id)
-  REFERENCES public.topics(topic_id)
-  ON UPDATE CASCADE
-  ON DELETE CASCADE;
+DO $$
+BEGIN
+  IF EXISTS (SELECT 1 FROM public.topics) THEN
+    ALTER TABLE public.topic_id_redirects
+      ADD CONSTRAINT topic_id_redirects_new_topic_id_fkey
+      FOREIGN KEY (new_topic_id)
+      REFERENCES public.topics(topic_id)
+      ON UPDATE CASCADE
+      ON DELETE CASCADE;
+  ELSE
+    -- NOT VALID permite montar o schema antes da restauração dos tópicos.
+    -- Linhas inseridas depois da migration continuam sujeitas à FK.
+    ALTER TABLE public.topic_id_redirects
+      ADD CONSTRAINT topic_id_redirects_new_topic_id_fkey
+      FOREIGN KEY (new_topic_id)
+      REFERENCES public.topics(topic_id)
+      ON UPDATE CASCADE
+      ON DELETE CASCADE
+      NOT VALID;
+  END IF;
+END;
+$$;
 
 CREATE INDEX idx_topic_id_redirects_new_topic_id
   ON public.topic_id_redirects(new_topic_id);
 
 DO $$
 BEGIN
+  IF NOT EXISTS (SELECT 1 FROM public.topics) THEN
+    RETURN;
+  END IF;
+
   IF EXISTS (
     SELECT 1
     FROM public.topics AS topic

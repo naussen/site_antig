@@ -63,6 +63,7 @@ LANGUAGE plpgsql
 SECURITY DEFINER
 SET search_path = ''
 AS $$
+#variable_conflict use_variable
 DECLARE
   batch_id UUID;
   existing_batch RECORD;
@@ -273,6 +274,8 @@ BEGIN
     INSERT INTO public.question_import_items (batch_id, question_id, source_id, action)
     VALUES (batch_id, question_id, question->>'source_id', question_action);
   END LOOP;
+
+  SET CONSTRAINTS ALL IMMEDIATE;
 
   RETURN jsonb_build_object(
     'batch_id', batch_id,

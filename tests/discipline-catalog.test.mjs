@@ -12,7 +12,8 @@ test("arquiva somente a disciplina Geral pelo slug canônico", () => {
     migration,
     /UPDATE public\.disciplines[\s\S]*SET status = 'archived'[\s\S]*WHERE slug = 'geral'[\s\S]*AND name = 'Geral'[\s\S]*AND status = 'active'/u,
   );
-  assert.match(migration, /IF affected_rows <> 1 THEN/u);
+  assert.match(migration, /SELECT count\(\*\) INTO discipline_count FROM public\.disciplines/u);
+  assert.match(migration, /IF affected_rows <> 1 AND discipline_count <> 0 THEN/u);
   assert.equal((migration.match(/UPDATE public\.disciplines/gu) ?? []).length, 1);
 });
 

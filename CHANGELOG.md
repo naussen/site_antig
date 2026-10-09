@@ -656,6 +656,8 @@
 - Adicionada auditoria financeira persistente e mínima para checkout e cancelamento, sem payloads, credenciais ou dados de cartão.
 - Desabilitado e validado no Supabase de produção o provedor de e-mail/senha, mantendo autenticação Google e TOTP administrativo.
 - Adicionado backup lógico criptografado do Supabase, verificação de restauração por integridade, retenção e instalador da tarefa diária do Windows.
+- Corrigida a reconstrução do banco vazio para que migrations históricas aceitem o restore de dados após a criação do schema e não dependam de formatação textual específica do PostgreSQL, sem afrouxar a validação de bases preenchidas.
+- Restaurados os privilégios CRUD server-side do `service_role` em reconstruções do banco, mantendo `anon` e `authenticated` sujeitos aos grants e às políticas RLS existentes.
 - Tornada explícita a seleção de ambiente do PayPal e adicionado preflight que impede executar sandbox financeiro com credenciais de produção.
 
 - Corrigido o posicionamento do botão de recolher/expandir o menu desktop, mantendo-o dentro da área visual do menu.

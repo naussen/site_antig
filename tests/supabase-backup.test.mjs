@@ -88,6 +88,15 @@ test("inventário real inclui Questões, histórico financeiro e jobs operaciona
   ]) assert.ok(tables.includes(table), `${table} ausente do inventário`);
 });
 
+test("reconstrução preserva CRUD administrativo sem ampliar papéis públicos", async () => {
+  const migration = await readFile(
+    fileURLToPath(new URL("../supabase/migrations/036_restore_service_role_table_privileges.sql", import.meta.url)),
+    "utf8",
+  );
+  assert.match(migration, /GRANT SELECT, INSERT, UPDATE, DELETE[\s\S]*ON ALL TABLES IN SCHEMA public[\s\S]*TO service_role/u);
+  assert.doesNotMatch(migration, /TO\s+(?:PUBLIC|anon|authenticated)/u);
+});
+
 test("configuração off-site mantém a frase fora dos argumentos da tarefa", async () => {
   const configureScript = await readFile(
     fileURLToPath(new URL("../scripts/configure-supabase-backup-offsite.ps1", import.meta.url)),

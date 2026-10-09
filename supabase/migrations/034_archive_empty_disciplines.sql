@@ -4,7 +4,10 @@
 DO $$
 DECLARE
   affected_rows INTEGER;
+  discipline_count INTEGER;
 BEGIN
+  SELECT count(*) INTO discipline_count FROM public.disciplines;
+
   UPDATE public.disciplines
   SET status = 'archived'
   WHERE slug = 'geral'
@@ -12,7 +15,7 @@ BEGIN
     AND status = 'active';
 
   GET DIAGNOSTICS affected_rows = ROW_COUNT;
-  IF affected_rows <> 1 THEN
+  IF affected_rows <> 1 AND discipline_count <> 0 THEN
     RAISE EXCEPTION 'expected one active geral discipline, updated %', affected_rows;
   END IF;
 END;

@@ -9,11 +9,13 @@ BEGIN
   SELECT pg_get_functiondef('public.import_questions_batch(jsonb)'::regprocedure)
   INTO function_definition;
 
-  function_definition := replace(
-    function_definition,
-    final_return,
-    '  SET CONSTRAINTS ALL IMMEDIATE;' || chr(10) || chr(10) || final_return
-  );
+  IF function_definition NOT LIKE '%SET CONSTRAINTS ALL IMMEDIATE;%' THEN
+    function_definition := replace(
+      function_definition,
+      final_return,
+      '  SET CONSTRAINTS ALL IMMEDIATE;' || chr(10) || chr(10) || final_return
+    );
+  END IF;
 
   IF function_definition NOT LIKE '%SET CONSTRAINTS ALL IMMEDIATE;%' THEN
     RAISE EXCEPTION 'could not add immediate constraint validation to import_questions_batch';

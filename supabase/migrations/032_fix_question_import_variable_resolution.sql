@@ -7,11 +7,13 @@ BEGIN
   SELECT pg_get_functiondef('public.import_questions_batch(jsonb)'::regprocedure)
   INTO function_definition;
 
-  function_definition := replace(
-    function_definition,
-    'AS $function$' || chr(10),
-    'AS $function$' || chr(10) || '#variable_conflict use_variable' || chr(10)
-  );
+  IF function_definition NOT LIKE '%#variable_conflict use_variable%' THEN
+    function_definition := replace(
+      function_definition,
+      'AS $function$' || chr(10),
+      'AS $function$' || chr(10) || '#variable_conflict use_variable' || chr(10)
+    );
+  END IF;
 
   IF function_definition NOT LIKE '%#variable_conflict use_variable%' THEN
     RAISE EXCEPTION 'could not patch import_questions_batch variable resolution';
