@@ -8,6 +8,7 @@
 - adicionado health check sem cache e sem dados sensíveis para banco e heartbeat financeiro;
 - derivado das migrations o inventário integral do backup, incluindo Questões e tabelas operacionais futuras;
 - adicionadas chave portátil por frase de recuperação e cópia off-site com conferência SHA-256;
+- adicionada configuração interativa da frase de recuperação, protegida localmente por DPAPI e injetada somente no processo da tarefa agendada;
 - adicionados gate de release no GitHub e verificação obrigatória antes do build Netlify;
 - corrigida a versão transitiva vulnerável de `source-map-js` sem downgrade ou mudança incompatível;
 - atualizados os seis baselines visuais para a identidade atual do PRO Questões, eliminando falhas obsoletas em mobile, desktop e nos três temas;

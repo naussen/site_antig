@@ -87,3 +87,27 @@ test("inventário real inclui Questões, histórico financeiro e jobs operaciona
     "ops_job_runs",
   ]) assert.ok(tables.includes(table), `${table} ausente do inventário`);
 });
+
+test("configuração off-site mantém a frase fora dos argumentos da tarefa", async () => {
+  const configureScript = await readFile(
+    fileURLToPath(new URL("../scripts/configure-supabase-backup-offsite.ps1", import.meta.url)),
+    "utf8",
+  );
+  const taskRunner = await readFile(
+    fileURLToPath(new URL("../scripts/run-supabase-backup-task.ps1", import.meta.url)),
+    "utf8",
+  );
+  const taskInstaller = await readFile(
+    fileURLToPath(new URL("../scripts/install-supabase-backup-task.ps1", import.meta.url)),
+    "utf8",
+  );
+
+  assert.match(configureScript, /Read-Host[^\r\n]+-AsSecureString/u);
+  assert.match(configureScript, /ConvertFrom-SecureString/u);
+  assert.match(configureScript, /SetAccessRuleProtection\(\$true, \$false\)/u);
+  assert.match(taskRunner, /ConvertTo-SecureString \$protectedValue/u);
+  assert.match(taskRunner, /Remove-Item Env:PRO_BACKUP_RECOVERY_PASSPHRASE/u);
+  assert.match(taskRunner, /ZeroFreeBSTR/u);
+  assert.match(taskInstaller, /run-supabase-backup-task\.ps1/u);
+  assert.doesNotMatch(taskInstaller, /PRO_BACKUP_RECOVERY_PASSPHRASE=/u);
+});

@@ -32,6 +32,14 @@ PRO_BACKUP_OFFSITE_DIRECTORY=<unidade externa ou diretório sincronizado>
 
 Quando `PRO_BACKUP_OFFSITE_DIRECTORY` estiver configurado, o backup recusa a cópia se não houver chave portátil. A cópia é feita por arquivo temporário, conferida por SHA-256 e somente então renomeada no destino.
 
+No Windows, prefira o configurador interativo. Ele não imprime a frase, guarda somente uma cópia protegida pelo DPAPI do usuário atual e reinstala a tarefa agendada com o destino off-site:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\configure-supabase-backup-offsite.ps1
+```
+
+A frase ainda deve ser registrada pelo responsável em um gerenciador de senhas ou suporte físico separado. O arquivo DPAPI local não substitui esse registro, pois depende do mesmo usuário e computador.
+
 O comando lê `NEXT_PUBLIC_SUPABASE_URL` e `SUPABASE_SERVICE_ROLE_KEY` de `.env.local`, sem imprimir seus valores. Nunca copie essas credenciais para o repositório.
 
 Para verificar e ensaiar a extração de um backup:
