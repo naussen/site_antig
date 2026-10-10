@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
+import { sanitizeOAuthCallbackUrl } from "@/lib/auth/oauth-callback-url.mjs";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import { isAllowedReturnPath, resolveReturnUrl } from "@/lib/return-paths.mjs";
 import { resolveUserStartPath } from "@/lib/user-start-page.mjs";
@@ -35,9 +36,13 @@ export async function GET(request: Request) {
         destination = resolveUserStartPath(preferences);
       }
 
-      return NextResponse.redirect(
+      const cleanDestination = sanitizeOAuthCallbackUrl(
         resolveReturnUrl(destination ?? resolveUserStartPath(null), request.url)
       );
+      const response = NextResponse.redirect(cleanDestination, 303);
+      response.headers.set("Cache-Control", "private, no-store, max-age=0");
+      response.headers.set("Referrer-Policy", "no-referrer");
+      return response;
     }
 
     if (!error && data.user) {

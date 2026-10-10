@@ -16,8 +16,6 @@ const checks = {
     && required("PAYPAL_PLAN_ID")
     && required("PAYPAL_WEBHOOK_ID"),
   operations_alert: required("OPS_ALERT_WEBHOOK_URL"),
-  portable_backup: required("PRO_BACKUP_RECOVERY_PASSPHRASE")
-    && required("PRO_BACKUP_OFFSITE_DIRECTORY"),
 };
 
 const result = {

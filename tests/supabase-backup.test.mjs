@@ -9,6 +9,7 @@ import {
   decryptArchive,
   discoverPublicTables,
   encryptArchive,
+  safePayloadPath,
   protectKeyWithPassphrase,
   removeTemporaryDirectory,
   unprotectKeyWithPassphrase,
@@ -31,6 +32,17 @@ test("backup criptografado restaura os mesmos bytes e rejeita chave incorreta", 
     await assert.rejects(decryptArchive(encrypted, invalid, randomBytes(32)));
   } finally {
     key.fill(0);
+    await removeTemporaryDirectory(directory);
+  }
+});
+
+test("caminhos do manifesto não escapam do diretório temporário", async () => {
+  const directory = await createTemporaryDirectory("pro-backup-path-test-");
+  try {
+    assert.equal(safePayloadPath(directory, "database/topics.jsonl"), join(directory, "database", "topics.jsonl"));
+    assert.throws(() => safePayloadPath(directory, "../fora.json"), /fora do payload/u);
+    assert.throws(() => safePayloadPath(directory, "database\\fora.json"), /Caminho inválido/u);
+  } finally {
     await removeTemporaryDirectory(directory);
   }
 });
@@ -86,6 +98,31 @@ test("inventário real inclui Questões, histórico financeiro e jobs operaciona
     "payment_subscription_links",
     "ops_job_runs",
   ]) assert.ok(tables.includes(table), `${table} ausente do inventário`);
+});
+
+test("backup detalha cada usuário para preservar identidades OAuth", async () => {
+  const backup = await readFile(
+    fileURLToPath(new URL("../scripts/backup-supabase.mjs", import.meta.url)),
+    "utf8",
+  );
+  assert.match(backup, /auth\.admin\.listUsers/u);
+  assert.match(backup, /auth\.admin\.getUserById\(listedUser\.id\)/u);
+  assert.match(backup, /writeJsonLines\([^;]+auth[^;]+users\.jsonl[^;]+users\)/su);
+});
+
+test("restore destrutivo exige container e projeto Supabase local coincidentes", async () => {
+  const restore = await readFile(
+    fileURLToPath(new URL("../scripts/restore-supabase-backup-local.mjs", import.meta.url)),
+    "utf8",
+  );
+  assert.match(restore, /--confirm-local-project/u);
+  assert.match(restore, /container !== `supabase_db_\$\{project\}`/u);
+  assert.match(restore, /com\.supabase\.cli\.project/u);
+  assert.match(restore, /session_replication_role = replica/u);
+  assert.match(restore, /new Set\(\["127\.0\.0\.1", "localhost", "::1"\]\)/u);
+  assert.match(restore, /client\.storage\.createBucket/u);
+  assert.match(restore, /\.upload\(object\.object_path/u);
+  assert.doesNotMatch(restore, /SUPABASE_SERVICE_ROLE_KEY/u);
 });
 
 test("reconstrução preserva CRUD administrativo sem ampliar papéis públicos", async () => {

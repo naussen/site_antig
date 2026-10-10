@@ -7,7 +7,7 @@ import {
 } from "node:fs";
 import { mkdtemp, mkdir, open, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
-import { basename, dirname, join } from "node:path";
+import { basename, dirname, join, resolve, sep } from "node:path";
 import { spawnSync } from "node:child_process";
 import { pipeline } from "node:stream/promises";
 
@@ -165,6 +165,34 @@ export function runTar(args) {
   if (result.status !== 0) {
     throw new Error(`Falha ao processar arquivo TAR: ${result.stderr.trim() || "erro desconhecido"}`);
   }
+  return result.stdout.trim();
+}
+
+export function assertSafeTarArchive(tarPath) {
+  const entries = runTar(["-tf", tarPath]).split(/\r?\n/u).filter(Boolean);
+  for (const entry of entries) {
+    const normalized = entry.replace(/^\.\/+/, "");
+    if (
+      entry.includes("\\") ||
+      entry.startsWith("/") ||
+      /^[a-zA-Z]:/u.test(entry) ||
+      normalized.split("/").includes("..")
+    ) {
+      throw new Error("O TAR contém caminho inseguro.");
+    }
+  }
+}
+
+export function safePayloadPath(root, relativePath) {
+  if (typeof relativePath !== "string" || relativePath.includes("\\")) {
+    throw new Error("Caminho inválido no manifesto do backup.");
+  }
+  const base = resolve(root);
+  const target = resolve(base, ...relativePath.split("/"));
+  if (target !== base && !target.startsWith(`${base}${sep}`)) {
+    throw new Error("Caminho fora do payload do backup.");
+  }
+  return target;
 }
 
 export async function createTemporaryDirectory(prefix) {

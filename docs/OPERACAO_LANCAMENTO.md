@@ -5,7 +5,7 @@
 Cobranças reais permanecem bloqueadas operacionalmente até que todos os itens abaixo tenham evidência:
 
 1. migration `035_launch_operations_hardening.sql` aplicada no Supabase compartilhado;
-2. `npm run release:preflight` com todos os indicadores `true` no ambiente de produção;
+2. `npm run release:preflight:app` com todos os indicadores `true` no ambiente da aplicação publicada;
 3. plano Supabase com backup nativo ativo;
 4. backup lógico completo, chave portátil e cópia off-site;
 5. restore executado em projeto Supabase isolado;
@@ -14,8 +14,17 @@ Cobranças reais permanecem bloqueadas operacionalmente até que todos os itens 
 8. alertas de falha de reconciliação e backup testados;
 9. smoke autenticado de `/resumos` e `/legis` em celular e desktop;
 10. release criada a partir de worktrees limpas de `origin/main`.
+11. previews de autores não confiáveis exigem aprovação e toda credencial privada está marcada como segredo no provedor de hospedagem.
 
-O preflight imprime apenas booleanos. Ele nunca imprime tokens, chaves ou valores das variáveis.
+No host Windows responsável pelo backup, execute separadamente:
+
+```powershell
+npm run release:preflight:backup
+```
+
+Esse comando valida a tarefa agendada, a idade do backup, a descriptografia por DPAPI, a chave portátil e os hashes da cópia off-site. O preflight da aplicação imprime somente booleanos e nunca deve receber a frase de recuperação do backup. A frase permanece exclusivamente no host de backup, protegida por DPAPI durante o repouso.
+
+O restore deve ser ensaiado somente no Supabase local isolado, com o projeto confirmado explicitamente conforme `docs/BACKUP_SUPABASE.md`. O procedimento é destrutivo para o destino local e nunca aceita um banco remoto.
 
 ## Ordem de uma release
 
@@ -39,6 +48,10 @@ O `netlify.toml` executa lint, TypeScript e todos os testes Node antes do build.
 - Pagamentos: desabilitar novos checkouts, manter webhooks e reconciliar o estado diretamente nos provedores.
 
 ## Restore trimestral
+
+O ensaio deve seguir `docs/RUNBOOK_RECUPERACAO_AUTH_RTO.md`; o RTO começa na
+declaração do incidente e termina apenas após Auth, aplicação, dados, segurança
+e reconciliação estarem aptos para reabertura.
 
 1. Criar projeto Supabase isolado, sem usuários reais ativos.
 2. Restaurar o backup nativo ou dump integral.

@@ -1,5 +1,21 @@
 # Changelog
 
+## Não publicado — auditoria de prontidão para lançamento
+
+- atualizado o progresso após o primeiro cadastro Google sintético completo, mantendo como gates a publicação da higiene OAuth, a matriz visual de acesso, a recuperação remota, os alertas operacionais e a rotação do token administrativo;
+- removidos `code`, `state`, `next` e erros transitórios de OAuth antes de renderizar páginas autenticadas, com redirecionamento `303`, resposta sem cache e política `no-referrer` no callback;
+- auditados em produção login Google, navegação autenticada, persistência, RLS, integrações entre módulos, cabeçalhos de segurança e responsividade em desktop, tablet e celular;
+- confirmados o deploy da `origin/main`, os gates automatizados, o backup lógico íntegro e sua cópia off-site;
+- registrado o veredito NO-GO até concluir cadastro/matriz visual com contas Google, backup nativo e recuperação Auth e preflight/alertas publicados.
+- separados os preflights da aplicação e do host Windows de backup, impedindo que a frase de recuperação seja exigida ou copiada para a hospedagem;
+- adicionado gate verificável para tarefa agendada, backup recente, descriptografia, chave portátil e hashes dos três artefatos off-site.
+- ampliado o teste remoto para cobrir leitura do acervo por visitante, estados pendente, expirado, cancelado e ativo, além do bypass administrativo somente após TOTP/AAL2.
+- corrigida a coleta Auth do backup para preservar identidades OAuth e adicionado restore destrutivo com trava de destino local, reconstrução de banco/Auth/Storage, validação de 98 chaves estrangeiras e smoke RLS.
+- confirmada no painel da Netlify a publicação do PRO Legis em `main@486d693`, igual a `origin/main`, com o gate de release correspondente aprovado no GitHub.
+- corrigida a política Netlify do Site para exigir aprovação de previews não confiáveis e marcadas como segredo as credenciais administrativas do PRO Legis, ficando pendente a rotação coordenada do token administrativo inspecionado.
+- confirmado pela API autenticada do Supabase que o projeto de produção está sem PITR e sem backups nativos disponíveis, mantendo o gate operacional de recuperação como bloqueador do lançamento.
+- documentados os fluxos de recuperação Google OAuth/TOTP sem bypass, os gates de retorno e o roteiro cronometrado para medir RPO/RTO completo em ambiente remoto isolado.
+
 ## Não publicado — endurecimento operacional da Fase 0
 
 - bloqueado novo checkout enquanto houver assinatura `pending`, `past_due`, ativa ou em teste ainda vinculada ao usuário;

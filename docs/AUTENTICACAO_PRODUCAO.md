@@ -85,6 +85,9 @@ pelo PRO Concursos.
 
 ## Recuperação operacional
 
+O procedimento detalhado, os controles de aprovação e a medição de RTO estão em
+`docs/RUNBOOK_RECUPERACAO_AUTH_RTO.md`.
+
 - Perda de acesso Google: recuperar a Conta Google pelos canais do Google.
 - Perda do TOTP com sessão Google válida: usar o procedimento administrativo
   controlado do Supabase para remover o fator comprometido e cadastrar um novo,
