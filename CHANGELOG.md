@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — retorno seguro do Mercado Pago
+
+- substituído o callback com query preexistente por uma rota intermediária que remove os parâmetros adicionados pelo provedor antes de redirecionar para a página de assinatura;
+- evitada a URL malformada com dois caracteres `?`, sem usar dados do navegador para conceder acesso ao conteúdo.
+
 ## Não publicado — planejamento do módulo Questões
 
 - definido o projeto do módulo Questões com alternativas arquiteturais, MVP leve no Supabase, comentários didáticos e de usuários, busca, estatísticas pessoais e ocultação reversível;

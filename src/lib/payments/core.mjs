@@ -48,7 +48,7 @@ export function buildMercadoPagoSubscriptionPayload({ userId, email, appUrl, amo
     reason: "PRO Concursos — assinatura mensal",
     external_reference: userId,
     payer_email: email,
-    back_url: `${appUrl}/dashboard/assinatura?checkout=retorno`,
+    back_url: `${appUrl}/api/payments/return/mercado-pago`,
     status: "pending",
     auto_recurring: {
       frequency: 1,

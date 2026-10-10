@@ -55,6 +55,11 @@ test("cria assinatura mensal automática sem campos de Checkout Pro", () => {
   assert.equal(payload.auto_recurring.frequency, 1);
   assert.equal(payload.auto_recurring.frequency_type, "months");
   assert.equal(payload.auto_recurring.transaction_amount, 9.9);
+  assert.equal(
+    payload.back_url,
+    "https://proconcursos.com.br/resumos/api/payments/return/mercado-pago",
+  );
+  assert.equal(new URL(payload.back_url).search, "");
   assert.equal("notification_url" in payload, false);
 });
 
