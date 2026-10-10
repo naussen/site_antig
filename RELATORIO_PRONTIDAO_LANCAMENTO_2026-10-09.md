@@ -14,7 +14,7 @@ O estado técnico da aplicação é consistente: o deploy publicado corresponde 
 
 O bloqueio não decorre de uma falha funcional reproduzida na interface. Ele decorre das evidências obrigatórias ainda ausentes para um lançamento com usuários reais:
 
-1. cadastro Google completo de uma conta nova;
+1. integração e publicação da higiene do callback OAuth, seguida de novo smoke em janela anônima;
 2. confirmação da matriz de acesso na interface publicada com contas Google sintéticas;
 3. ativação de backup nativo/PITR do Supabase ou aceitação formal do risco, seguida da execução do runbook de recuperação Auth e medição do RTO completo;
 4. preflight da aplicação no runtime publicado e teste real de entrega dos alertas operacionais;
@@ -24,13 +24,15 @@ Esses pontos já constam como gates no próprio projeto. Abrir o cadastro antes 
 
 ## Achados críticos que exigem resolução antes da abertura
 
-### P0-01 — Cadastro novo não foi concluído ponta a ponta
+### P0-01 — Cadastro concluído; higiene pós-callback ainda não publicada
 
-**Evidência:** em sessão sem cookies, `/resumos/login` exibiu exclusivamente “Continuar com Google” e o clique chegou corretamente ao identificador do Google OAuth. O fluxo foi interrompido antes de informar uma conta, portanto não houve criação de usuário, callback, criação de perfil ou primeiro acesso ao produto.
+**Evidência atualizada em 10/10/2026:** uma conta Google sintética dedicada concluiu o OAuth e alcançou a área autenticada de Conta em produção. A página confirmou Google como método de acesso. Senha, QR code e OTP permaneceram sob controle exclusivo do usuário.
 
-**Risco:** o provedor está habilitado, mas isso não prova que um usuário novo conclua o callback, receba o estado inicial correto e encontre uma experiência coerente sem assinatura.
+Durante a validação anterior, a URL final reteve parâmetros transitórios do OAuth. A correção está no commit `35f1ec5`, dentro do PR [#10](https://github.com/naussen/site_antig/pull/10), que está aberto e integrável. Ela ainda não foi incorporada a `main` nem publicada.
 
-**Ação obrigatória:** criar uma conta Google de teste dedicada, concluir o cadastro e validar callback, logout/login, ausência de privilégios administrativos e estado inicial sem entitlement.
+**Risco residual:** sem o deploy e o smoke pós-publicação, parâmetros como `code`, `state` e `next` podem continuar aparecendo no histórico, em capturas de tela ou em referers do navegador. O primeiro acesso também não substitui a validação de logout/login, ausência de privilégios administrativos e estado inicial sem entitlement.
+
+**Ação obrigatória:** revisar e integrar o PR #10, aguardar a publicação e repetir OAuth, logout e login em janela anônima. Confirmar a URL limpa, a ausência de papel administrativo/entitlement e o bloqueio do conteúdo pago.
 
 **Critério de aceite:** conta nova criada sem erro; sessão exclusivamente Google; dashboard/conta acessíveis conforme a regra de produto; conteúdo pago bloqueado; nenhuma role ou entitlement concedido pelo navegador.
 
@@ -203,17 +205,17 @@ Não houve overflow horizontal global nas rotas verificadas. A navegação móve
 
 ## Sequência mínima para transformar o veredito em GO
 
-1. Atualizar a chave pública local para o formato moderno, sem versioná-la.
-2. Criar contas Google sintéticas e repetir na interface a matriz de cadastro/entitlement/AAL já aprovada no banco.
+1. Revisar, integrar e publicar o PR #10; repetir OAuth, logout/login e confirmar a higiene da URL em janela anônima.
+2. Confirmar a conta sintética sem entitlement/admin e repetir na interface a matriz de acesso já aprovada no banco.
 3. Ativar backup nativo/PITR do Supabase ou aceitar formalmente o risco residual, executar o runbook OAuth/MFA em projeto remoto isolado e medir o RTO completo.
 4. Criar `OPS_ALERT_WEBHOOK_URL`, rodar o preflight da aplicação no runtime publicado e testar a entrega dos alertas.
 5. Rotacionar coordenadamente o `CONTENT_ADMIN_TOKEN` do PRO Legis e confirmar que o valor anterior foi invalidado.
-6. Repetir o smoke móvel e desktop após qualquer ajuste resultante.
+6. Atualizar a chave pública local para o formato moderno, sem versioná-la, e repetir o smoke móvel e desktop após os ajustes.
 7. Somente depois executar a configuração e os testes financeiros de Mercado Pago e PayPal já reservados para a etapa final.
 
 ## Limitações desta auditoria
 
-- não foi criado usuário Google novo;
+- uma conta Google sintética foi criada e autenticada, mas o logout/login pós-deploy e a matriz completa de entitlement/AAL ainda não foram executados;
 - não foi realizada transação financeira;
 - não foi enviado pedido LGPD;
 - não foram cancelados nem excluídos dados reais;

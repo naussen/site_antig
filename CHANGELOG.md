@@ -2,6 +2,7 @@
 
 ## Não publicado — auditoria de prontidão para lançamento
 
+- atualizado o progresso após o primeiro cadastro Google sintético completo, mantendo como gates a publicação da higiene OAuth, a matriz visual de acesso, a recuperação remota, os alertas operacionais e a rotação do token administrativo;
 - removidos `code`, `state`, `next` e erros transitórios de OAuth antes de renderizar páginas autenticadas, com redirecionamento `303`, resposta sem cache e política `no-referrer` no callback;
 - auditados em produção login Google, navegação autenticada, persistência, RLS, integrações entre módulos, cabeçalhos de segurança e responsividade em desktop, tablet e celular;
 - confirmados o deploy da `origin/main`, os gates automatizados, o backup lógico íntegro e sua cópia off-site;

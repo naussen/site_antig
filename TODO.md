@@ -2,6 +2,13 @@
 
 Este documento consolida somente pendências futuras identificadas nas revisões de segurança. Itens concluídos ficam no final para evitar regressões e retrabalho.
 
+## Progresso do lançamento — 10/10/2026
+
+- **Veredito:** `NO-GO` enquanto os cinco gates P0 abaixo permanecerem abertos. Mercado Pago e PayPal continuam deliberadamente reservados para a última etapa.
+- **Concluído desde a auditoria:** uma conta Google sintética nova concluiu o OAuth e alcançou a área autenticada de Conta em produção, sem compartilhamento de senha, QR code ou OTP.
+- **Pronto para integração:** o PR [#10](https://github.com/naussen/site_antig/pull/10) está aberto, integrável e contém a correção que remove parâmetros transitórios do OAuth da URL final. O commit ainda não está em `main` nem publicado.
+- **Gates P0 abertos, em ordem:** publicar/testar o PR #10; concluir a matriz visual de acesso; decidir backup nativo/PITR e medir o RTO remoto; configurar/testar alertas; rotacionar o token administrativo do PRO Legis.
+
 ## P0 — Antes do primeiro usuário pagante
 
 ### Autenticação Google-only
@@ -12,6 +19,9 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [x] Desabilitar no Supabase de produção o provedor de e-mail/senha após validar Google + TOTP, sem criar bypass ou conta fixa alternativa; confirmado em 26/09/2026.
 - [x] Testar diretamente na API de produção que login por senha, link mágico e cadastro por e-mail são recusados com `email_provider_disabled`, mantendo Google habilitado; confirmado em 26/09/2026.
 - [x] Não solicitar escopos Google adicionais aos padrões mínimos de identidade do Supabase; persistir somente os dados básicos necessários ao produto.
+- [x] Criar uma conta Google sintética dedicada e concluir o primeiro OAuth até a área autenticada de Conta; comprovado em produção em 10/10/2026, sem compartilhar credenciais ou códigos.
+- [ ] Integrar e publicar o PR #10; depois repetir OAuth, logout e novo login em janela anônima e confirmar que `code`, `state`, `next` e erros transitórios não permanecem na URL final.
+- [ ] Confirmar para a conta sintética ausência de papel administrativo e entitlement, bloqueio do conteúdo pago e navegação coerente entre PRO Resumos e PRO Legis.
 
 ### Pagamentos e entitlements
 
