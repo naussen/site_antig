@@ -1,0 +1,693 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "qpygem-direito-administrativo-amostra-2026-09-28",
+  "source": {
+    "file_name": "01_DIREITO_ADMINISTRATIVO_ATUALIZADO.json",
+    "sha256": "de6944aeb712b2358478a829cb16307821ab950977f6c64efdbcb5f03aa6efee",
+    "metadata": {
+      "generator": "QPYGEM",
+      "reviewed_output": true,
+      "review_report": "01_DIREITO_ADMINISTRATIVO_RELATORIO.md",
+      "source_total_questions": 804,
+      "selection": "explicit_sample"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "qpygem:direito-administrativo:oygab",
+      "source_id": "oygab",
+      "source_content_hash": "5ac69c4636d7e9339e0223d542565269ab7ee645b2ca67b0ba8de46bba2f5097",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando a disciplina legal sobre a\nadministração indireta, julgue os itens a seguir (Certo ou Errado).\nAs causas em que as autarquias federais forem interessadas, na condição de autoras, rés, assistentes ou oponentes, serão processadas e julgadas na justiça federal.",
+      "subject": "I. Organização da Administração Pública",
+      "exam_board": "CESPE",
+      "institution": "STJ",
+      "position_name": "Analista",
+      "exam_year": 2012,
+      "difficulty": null,
+      "source_reference": "QPYGEM revisado — questão 3",
+      "source_metadata": {
+        "original_numeric_id": 3,
+        "review_status": "VALIDA",
+        "review_reason": "A questão permanece em perfeita consonância com o ordenamento constitucional e a legislação vigente.",
+        "state": "Federal / Nacional",
+        "source_topic": "I. Organização da Administração Pública"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "explanation": {
+        "body_markdown": "A assertiva está correta, conforme o Art. 109, I, da CF. Certa.",
+        "source_reference": "01_DIREITO_ADMINISTRATIVO_RELATORIO.md"
+      }
+    },
+    {
+      "external_id": "qpygem:direito-administrativo:07dda",
+      "source_id": "07dda",
+      "source_content_hash": "be7ba58c324deba47ab5a57b57cd205f13827bf0a9077bbadef2a898fd670bf1",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação ao instituto da requisição e\nao regime jurídico dos bens públicos, julgue os itens subsecutivos (Certo ou\nErrado).\nComo modalidade de intervenção estatal que visa à satisfação do interesse público, a requisição incide sobre bens e sobre serviços particulares.",
+      "subject": "II. Bens Públicos",
+      "exam_board": "CESPE",
+      "institution": "STJ",
+      "position_name": "Analista",
+      "exam_year": 2012,
+      "difficulty": null,
+      "source_reference": "QPYGEM revisado — questão 37",
+      "source_metadata": {
+        "original_numeric_id": 37,
+        "review_status": "VALIDA",
+        "review_reason": "A questão permanece em perfeita consonância com o ordenamento constitucional e a legislação vigente.",
+        "state": "Federal / Nacional",
+        "source_topic": "II. Bens Públicos"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-dos-bens-publicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "explanation": {
+        "body_markdown": "Art. 5º, XXV, CF. Além dos bens, a doutrina entende pela viabilidade de requisição de serviços, como a convocação de jurados, para compor o\njúri, bem como dos conscritos para o serviço militar obrigatório (MAZZA,\nManual de direito administrativo, p. 265). Certa.",
+        "source_reference": "01_DIREITO_ADMINISTRATIVO_RELATORIO.md"
+      }
+    },
+    {
+      "external_id": "qpygem:direito-administrativo:q44vd",
+      "source_id": "q44vd",
+      "source_content_hash": "b3644eec06baf731863de7a55f1ea9d04c827bf0c868943c3c6466ff07a1de07",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Assinale a opção correta quanto à\nclassificação, aos requisitos dos atos administrativos e à teoria dos motivos\ndeterminantes.",
+      "subject": "III. Atos Administrativos",
+      "exam_board": "CESPE",
+      "institution": "TRT-1",
+      "position_name": "Juiz",
+      "exam_year": 2010,
+      "difficulty": null,
+      "source_reference": "QPYGEM revisado — questão 41",
+      "source_metadata": {
+        "original_numeric_id": 41,
+        "review_status": "VALIDA",
+        "review_reason": "A questão permanece em perfeita consonância com o ordenamento constitucional e a legislação vigente.",
+        "state": null,
+        "source_topic": "III. Atos Administrativos"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O parecer, como ato administrativo que expressa posicionamento de natureza técnica, é sempre vinculante, de forma que a autoridade decisória não pode agir de maneira distinta da constante do ato opinativo.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "O pressuposto da revogação é o interesse público, razão pela qual ela incide sobre atos válidos e inválidos que a administração pretenda abolir do rol de normas jurídicas, em razão dos inconvenientes e dos malefícios que causem à coletividade.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Em obediência ao princípio da solenidade da forma, entendida esta como o meio pelo qual se exterioriza a vontade da administração, o ato administrativo deve ser escrito e manifestado de maneira expressa, não se admitindo, no direito público, o silêncio como forma de manifestação da vontade da administração.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Se um ato administrativo discricionário for praticado por autoridade que não tenha competência, a autoridade competente não estará obrigada a convalidá-lo se considerar que não estão presentes os aspectos de mérito que sustentam sua apreciação.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Segundo a teoria dos motivos determinantes, a motivação dos atos administrativos é sempre necessária, seja para os atos vinculados, seja para os discricionários, pois constitui garantia de legalidade que tanto diz respeito aos interessados como à própria administração.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "explanation": {
+        "body_markdown": "(A) É ato meramente enunciativo. (B) A anulação incide sobre\natos inválidos. Súmula 473, STF. (C) O silêncio produz efeitos jurídicos, sendo\nadmitido. Art. 22, Lei n. 9.784/99. (D) O vício na competência poderá afastar\na convalidação. (E) Art. 50, Lei n. 9.784/99. Alternativa D.",
+        "source_reference": "01_DIREITO_ADMINISTRATIVO_RELATORIO.md"
+      }
+    },
+    {
+      "external_id": "qpygem:direito-administrativo:y9k97",
+      "source_id": "y9k97",
+      "source_content_hash": "c422af87c7fd1f00514704fa581dedbf7e173c343b029da1939c7acb6b0793d2",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, considerando a Lei de Improbidade Administrativa (Certo ou Errado).\nAs sanções penais, civis e administrativas previstas em lei podem ser aplicadas aos responsáveis pelos atos de improbidade, de forma isolada ou cumulativa, de acordo com a gravidade do fato.",
+      "subject": "IV. Improbidade Administrativa",
+      "exam_board": "CESPE",
+      "institution": "TJ-ES",
+      "position_name": "Analista",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "QPYGEM revisado — questão 59",
+      "source_metadata": {
+        "original_numeric_id": 59,
+        "review_status": "VALIDA",
+        "review_reason": "A questão permanece em perfeita consonância com o ordenamento constitucional e a legislação vigente.",
+        "state": "ES",
+        "source_topic": "IV. Improbidade Administrativa"
+      },
+      "topics": [
+        {
+          "topic_id": "improbidade-administrativa",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "explanation": {
+        "body_markdown": "Art. 12, caput, Lei n. 8.429/92 (Lei de Improbidade). Certa.",
+        "source_reference": "01_DIREITO_ADMINISTRATIVO_RELATORIO.md"
+      }
+    },
+    {
+      "external_id": "qpygem:direito-administrativo:zhrxu",
+      "source_id": "zhrxu",
+      "source_content_hash": "20bceb29c8c3967e39ea1d7a6c1aac04bb50b8b2398df02eb5158e5d93ae868d",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sobre licitação é correto\nafirmar:",
+      "subject": "V. Licitações, Convênios e Contratos",
+      "exam_board": "FCC",
+      "institution": "DPE-PR",
+      "position_name": "Defensor",
+      "exam_year": 2012,
+      "difficulty": null,
+      "source_reference": "QPYGEM revisado — questão 364",
+      "source_metadata": {
+        "original_numeric_id": 364,
+        "review_status": "VALIDA",
+        "review_reason": "A questão permanece em perfeita consonância com o ordenamento constitucional e a legislação vigente.",
+        "state": "PR",
+        "source_topic": "V. Licitações, Convênios e Contratos"
+      },
+      "topics": [
+        {
+          "topic_id": "aplicacao-da-lei-14-133-21",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "A concorrência é a modalidade de licitação possível para a compra e venda de bens móveis e imóveis, independentemente do valor.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "O rol de modalidades de licitações constante da lei é taxativo, não podendo, o ente federado, conceber outras figuras ou combinar regras procedimentais.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "A lei não permite que o edital da licitação contenha qualquer preferência para serviços ou produtos manufaturados de origem nacional.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "É garantida por lei a participação de microempresas e empresas de pequeno porte em processos licitatórios, as quais, pelo princípio da isonomia, concorrem sem qualquer preferência, em igualdade de condições com os demais participantes.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Na modalidade convite, além do edital que rege o certame, deve ser expedida carta-convite aos proponentes cadastrados, respeitada a antecedência mínima de cinco dias, contados da publicação do edital.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "explanation": {
+        "body_markdown": "(A) Errado. Art. 23, I, c, e II, c, Lei de Licitações. (B) Correto. Art. 22, § 8º, da lei. (C) Errado. Art. 3º, § 5º, da norma. (D) Errado. Art. 3º, § 1º,\nII, c/c art. 33, III, da lei. (E) Errado. Art. 22, §§ 3º, 6º e 7º, Lei de Licitações.\nAlternativa B.",
+        "source_reference": "01_DIREITO_ADMINISTRATIVO_RELATORIO.md"
+      }
+    },
+    {
+      "external_id": "qpygem:direito-administrativo:nqfl4",
+      "source_id": "nqfl4",
+      "source_content_hash": "8a155180b90edf18e4b3e2be17a0bab7de072d18eafe7abea31e40d89f9ee5a1",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Acerca da concessão, permissão\ne autorização de serviço público, assinale a opção correta.",
+      "subject": "VI. Serviços Públicos",
+      "exam_board": "CESPE",
+      "institution": "TJ-CE",
+      "position_name": "Juiz",
+      "exam_year": 2012,
+      "difficulty": null,
+      "source_reference": "QPYGEM revisado — questão 102",
+      "source_metadata": {
+        "original_numeric_id": 102,
+        "review_status": "VALIDA",
+        "review_reason": "A questão permanece em perfeita consonância com o ordenamento constitucional e a legislação vigente.",
+        "state": "CE",
+        "source_topic": "VI. Serviços Públicos"
+      },
+      "topics": [
+        {
+          "topic_id": "criterio-de-servico-publico-doutrinario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Diferentemente da concessão, a permissão de serviço público pode ser contratada não apenas com pessoa jurídica e consórcio de empresas, mas também com pessoa física.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Tratando-se de concessão patrocinada, o concessionário percebe apenas dos usuários recursos decorrentes do pagamento de tarifas.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Para as concessões de serviço público simples, assim como para as precedidas da execução de obra pública, deve-se adotar, obrigatoriamente, como modalidade licitatória, a concorrência.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Considera-se concessão de serviço público simples o contrato administrativo pelo qual a administração pública transfere a execução de certa atividade de interesse coletivo a pessoa jurídica ou a consórcio de empresas, sendo a remuneração feita por meio do sistema de tarifas ou taxas.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "A autorização de uso é ato administrativo unilateral, discricionário e precário, ao passo que a autorização de serviço público se configura como contrato administrativo, ainda que revogável unilateralmente pela administração.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "explanation": {
+        "body_markdown": "(A) Art. 2º, IV, Lei n. 8.987/95. (B) Art. 2º, § 1º, Lei n. 11.079/2004. (C) Art. 2º, II e III, Lei das Concessões. (D) Art. 2º, II, Lei das Concessões. (E) É ato administrativo, e não contrato. Alternativa C.",
+        "source_reference": "01_DIREITO_ADMINISTRATIVO_RELATORIO.md"
+      }
+    },
+    {
+      "external_id": "qpygem:direito-administrativo:frpbh",
+      "source_id": "frpbh",
+      "source_content_hash": "ac385b77e8e604efedcef5629ea04dc56e59702e813e2fb28b765b34abe2962c",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No que diz respeito aos servidores públicos, assinale a opção correta à luz da legislação aplicável e da jurisprudência do STJ.",
+      "subject": "VII. Servidores Públicos",
+      "exam_board": "CESPE",
+      "institution": "TJ-ES",
+      "position_name": "Juiz",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "QPYGEM revisado — questão 109",
+      "source_metadata": {
+        "original_numeric_id": 109,
+        "review_status": "VALIDA",
+        "review_reason": "A questão permanece em perfeita consonância com o ordenamento constitucional e a legislação vigente.",
+        "state": "ES",
+        "source_topic": "VII. Servidores Públicos"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O empregado de sociedade de economia mista não pode ser equiparado a funcionário público para fins penais.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "A autoridade administrativa não pode instaurar processo administrativo disciplinar para a apuração de falta cometida por servidor público e, simultaneamente, ajuizar ação de improbidade administrativa que tenha por objeto o mesmo fato.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Na hipótese de aplicação de pena de demissão a servidor público submetido a processo administrativo disciplinar, o controle jurisdicional é amplo, no sentido de verificar se há motivação para o ato demissório.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "A legislação estabelece o direito de o servidor público federal afastar-se de suas atribuições, por prazo indeterminado e sem remuneração, para acompanhar cônjuge ou companheiro que tenha sido deslocado para outro ponto do território nacional, desde que este seja também servidor público.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "O servidor público federal tem direito a licença sem remuneração para desempenho de mandato em associação de classe de âmbito nacional, pelo período correspondente à duração do mandato, vedada prorrogação.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "explanation": {
+        "body_markdown": "(A) Art. 327, § 1º, CP. (B) São responsabilidades autônomas. (C)\nArt. 5º, XXXV, CF. Art. 41, § 1º, CF, e Súmula 473, STF. (D) Art. 84, §§ 1º e\n2º, Lei n. 8.112/90. (E) Art. 92, § 2º, Lei n. 8.112/90. Alternativa C.",
+        "source_reference": "01_DIREITO_ADMINISTRATIVO_RELATORIO.md"
+      }
+    },
+    {
+      "external_id": "qpygem:direito-administrativo:4xtck",
+      "source_id": "4xtck",
+      "source_content_hash": "797a1b0990065e8eb69e9370e54a4aa2f13a733fd75a05d763de1eb224120862",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No que concerne às formas de\nintervenção do Estado na propriedade, assinale a opção correta.",
+      "subject": "VIII. Intervenção do Estado na Propriedade Privada e no Domínio Econômico",
+      "exam_board": "CESPE",
+      "institution": "TRF-1",
+      "position_name": "Juiz",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "QPYGEM revisado — questão 117",
+      "source_metadata": {
+        "original_numeric_id": 117,
+        "review_status": "VALIDA",
+        "review_reason": "A questão permanece em perfeita consonância com o ordenamento constitucional e a legislação vigente.",
+        "state": "Federal / 1ª Região",
+        "source_topic": "VIII. Intervenção do Estado na Propriedade Privada e no Domínio Econômico"
+      },
+      "topics": [
+        {
+          "topic_id": "intervencao-restritiva",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Na desapropriação indireta, a indenização deve abranger as mesmas parcelas que incidem na desapropriação legal, inclusive os juros compensatórios.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Segundo o STJ, se o imóvel sobre o qual tenha sido constituída servidão administrativa não produzia rendas, não são devidos os juros compensatórios sobre a indenização fixada em decorrência da limitação do uso da propriedade, já que estes se destinam a remunerar os possíveis lucros que o proprietário tenha deixado de auferir com a utilização econômica do bem expropriado.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "A transcrição no registro de imóveis constitui ato exigível tanto no tombamento provisório quanto no definitivo.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Quando a servidão administrativa é constituída mediante acordo, o ato declaratório de utilidade pública é dispensável.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Em se tratando de glebas de terra onde se cultivem plantas psicotrópicas, o ato expropriatório, segundo o STF, deve ficar adstrito às áreas de efetivo cultivo, não podendo abranger toda a propriedade.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "explanation": {
+        "body_markdown": "(A) Súmula 345, STF. (B) Incorreto. Ver REsp 154.686/SP e REsp.\n220.983/SP.\n(C)\nA\ntranscrição\ntorna\no\ntombamento\ndefinitivo.\nArt. 10,\nDecreto-lei n. 25/37. (D) A servidão deverá, ainda assim, ser declarada. (E)\nArt. 243, CF. Alternativa A.",
+        "source_reference": "01_DIREITO_ADMINISTRATIVO_RELATORIO.md"
+      }
+    },
+    {
+      "external_id": "qpygem:direito-administrativo:l2osv",
+      "source_id": "l2osv",
+      "source_content_hash": "2ceda6884a17f634365099fd4363d48b680e572926b51111ebefcd489cde0a56",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, relativos à\nresponsabilidade civil da administração pública.\nA teoria do risco administrativo, consagrada em sucessivos documentos constitucionais brasileiros desde a Carta Política de 1946, confere fundamento doutrinário à responsabilidade civil objetiva do poder público pelos danos a que os agentes públicos houverem dado causa, por ação ou por omissão.",
+      "subject": "IX. Responsabilidade Civil do Estado",
+      "exam_board": "CESPE",
+      "institution": "CEF",
+      "position_name": "Advogado",
+      "exam_year": 2006,
+      "difficulty": null,
+      "source_reference": "QPYGEM revisado — questão 130",
+      "source_metadata": {
+        "original_numeric_id": 130,
+        "review_status": "VALIDA",
+        "review_reason": "A questão permanece em perfeita consonância com o ordenamento constitucional e a legislação vigente.",
+        "state": null,
+        "source_topic": "IX. Responsabilidade Civil do Estado"
+      },
+      "topics": [
+        {
+          "topic_id": "civil",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "explanation": {
+        "body_markdown": "Haja vista a teoria do risco administrativo, consolidada no art. 37,\n§ 6º, CF. Correto.",
+        "source_reference": "01_DIREITO_ADMINISTRATIVO_RELATORIO.md"
+      }
+    },
+    {
+      "external_id": "qpygem:direito-administrativo:pfp6m",
+      "source_id": "pfp6m",
+      "source_content_hash": "940cdb98ec8cc53aebc39e704569446dfd913895f8b24cddfb1da5dc790f8685",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No que se refere aos\nprincípios e poderes da administração pública, assinale a opção correta.",
+      "subject": "X. Princípios e Poderes da Administração",
+      "exam_board": "CESPE",
+      "institution": "PGE-PE",
+      "position_name": "Procurador",
+      "exam_year": 2009,
+      "difficulty": null,
+      "source_reference": "QPYGEM revisado — questão 155",
+      "source_metadata": {
+        "original_numeric_id": 155,
+        "review_status": "VALIDA",
+        "review_reason": "A questão permanece em perfeita consonância com o ordenamento constitucional e a legislação vigente.",
+        "state": "PE",
+        "source_topic": "X. Princípios e Poderes da Administração"
+      },
+      "topics": [
+        {
+          "topic_id": "deveres",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "De acordo com o princípio da impessoalidade, é possível reconhecer a validade de atos praticados por funcionário público irregularmente investido no cargo ou função, sob o fundamento de que tais atos configuram atuação do órgão e não do agente público.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "O princípio da hierarquia é aplicável quando o Estado cria pessoas jurídicas públicas administrativas, como forma de descentralizar a prestação de serviços públicos.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "O princípio da boa-fé está previsto expressamente na CF e, em seu aspecto subjetivo, corresponde à conduta leal e honesta do administrado.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "O poder disciplinar, que confere à administração pública a tarefa de apurar a prática de infrações e de aplicar penalidades aos servidores públicos, não tem aplicação no âmbito do Poder Judiciário e do MP, por não haver hierarquia quanto ao exercício das funções institucionais de seus membros e quanto ao aspecto funcional da relação de trabalho.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Na administração pública, a hierarquia constitui elemento essencial, razão pela qual não é possível a distribuição de competências dentro da organização administrativa mediante a exclusão da relação hierárquica quanto a determinadas atividades.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "explanation": {
+        "body_markdown": "(A) Art. 37, § 1º, CF, e art. 1º, § 2º, I, Lei n. 9.784/99. (B) Inexiste subordinação hierárquica na descentralização. (C) Aspecto objetivo, eis\nque prescreve conduta a ser seguida. (D) Aplica-se o Poder por meio dos Conselhos e Corregedorias. (E) Art. 12, Lei n. 9.784/99. Alternativa A.",
+        "source_reference": "01_DIREITO_ADMINISTRATIVO_RELATORIO.md"
+      }
+    },
+    {
+      "external_id": "qpygem:direito-administrativo:okkjx",
+      "source_id": "okkjx",
+      "source_content_hash": "a9218b79ed65b38da4e12012f2e179df717ceb7ebf2dcd7f8c438f1e3ec65037",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Acerca da competência administrativa, da delegação e da ausência de competência, assinale a opção correta.",
+      "subject": "XI. Processo Administrativo",
+      "exam_board": "CESPE",
+      "institution": "TJ-PI",
+      "position_name": "Juiz",
+      "exam_year": 2012,
+      "difficulty": null,
+      "source_reference": "QPYGEM revisado — questão 170",
+      "source_metadata": {
+        "original_numeric_id": 170,
+        "review_status": "VALIDA",
+        "review_reason": "A questão permanece em perfeita consonância com o ordenamento constitucional e a legislação vigente.",
+        "state": "PI",
+        "source_topic": "XI. Processo Administrativo"
+      },
+      "topics": [
+        {
+          "topic_id": "disposicoes-gerais-art-1",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O ato de delegação, assim como sua anulação, deve ser publicado em meio oficial, exceto no caso de revogação decorrente de fato superveniente devidamente comprovado, pertinente e suficiente para justificá-la.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Considera-se agente de fato aquele que pratica ato e executa atividades em situações excepcionais, como as de emergência, em colaboração com o poder público, excluindo-se dessa definição os chamados agentes putativos, que desempenham atividade pública na presunção de agir legitimamente, embora não tenham sido investidos conforme o procedimento legalmente exigido.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Os órgãos administrativos e seus titulares podem delegar parte de sua competência a outros órgãos ou agentes, mesmo que não lhes sejam hierarquicamente subordinados, por conveniência de ordem técnica, social, econômica, jurídica ou territorial e desde que não haja impedimento legal.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Inexistindo competência legal específica, o processo administrativo deve iniciar-se perante a autoridade de grau hierárquico mais elevado.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "A delegação é medida unilateral da autoridade delegante, que detém o poder de revogá-la a qualquer tempo. Entretanto, o ato que a formaliza não pode conter ressalvas ou restrições ao pleno exercício da atribuição delegada.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "explanation": {
+        "body_markdown": "(A) Art. 14, Lei n. 9.784/99. (B) Os agentes putativos são espécies do gênero “agentes de fato”. (C) Art. 12, Lei n. 9.784/99. (D) Art. 17, da\nreferida lei. (E) Art. 14, § 1º, da norma em tela. Alternativa C.",
+        "source_reference": "01_DIREITO_ADMINISTRATIVO_RELATORIO.md"
+      }
+    },
+    {
+      "external_id": "qpygem:direito-administrativo:28jzp",
+      "source_id": "28jzp",
+      "source_content_hash": "c4c63499499d6cbb9027e0484c11338220718f2153c4dd7740f13c1a06104c14",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Assinale a opção correta acerca do controle da administração pública.",
+      "subject": "XII. Controle da Administração",
+      "exam_board": "CESPE",
+      "institution": "MP-AM",
+      "position_name": "Promotor",
+      "exam_year": 2007,
+      "difficulty": null,
+      "source_reference": "QPYGEM revisado — questão 195",
+      "source_metadata": {
+        "original_numeric_id": 195,
+        "review_status": "VALIDA",
+        "review_reason": "A questão permanece em perfeita consonância com o ordenamento constitucional e a legislação vigente.",
+        "state": "AM",
+        "source_topic": "XII. Controle da Administração"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacoes-do-controle",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O controle que os chefes exercem sobre os seus subordinados, na estrutura de um órgão público, é uma modalidade de controle externo.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "A sustação, pelo Congresso Nacional, de atos normativos do Poder Executivo que exorbitem do poder regulamentar configura controle externo.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "O controle popular dos atos da administração pública só se consolida por intermédio da atuação do MP.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Os agentes públicos responsáveis pelo controle interno, ao tomarem conhecimento de qualquer irregularidade ou ilegalidade, devem dar ciência do fato ao TCU, sob pena de responsabilidade subsidiária.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "A necessidade de obtenção de autorização do Senado Federal para que os estados possam contrair empréstimos externos configura controle repressivo da administração pública.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "explanation": {
+        "body_markdown": "(A) Controle interno. (B) Correto. Art. 49, V, CF. (C) Qualquer cidadão, via ação popular. Art. 5º, LXXIII, CF. (D) Art. 74, § 1º, CF. (E) O controle repressivo é feito via Poder Judiciário. Ex.: Súmula 473, STF. Alternativa\nB.",
+        "source_reference": "01_DIREITO_ADMINISTRATIVO_RELATORIO.md"
+      }
+    }
+  ]
+}

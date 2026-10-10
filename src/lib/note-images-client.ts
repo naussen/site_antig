@@ -48,3 +48,13 @@ export async function deleteStoredNoteImages(content: string): Promise<void> {
     throw new Error("Uma ou mais imagens não puderam ser excluídas.");
   }
 }
+
+export async function reconcileNoteImages(): Promise<void> {
+  const response = await fetch(withSiteBasePath("/api/note-images/reconcile"), {
+    method: "POST",
+    credentials: "same-origin",
+  });
+  if (!response.ok) {
+    throw new Error("Não foi possível reconciliar as imagens das notas.");
+  }
+}

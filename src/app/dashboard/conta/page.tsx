@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { ArrowLeft, CreditCard, LockKeyhole, ShieldCheck, SlidersHorizontal, UserRound } from "lucide-react";
+import { CreditCard, LockKeyhole, ShieldCheck, SlidersHorizontal, UserRound } from "lucide-react";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { PrivacyRequestForm } from "@/components/privacy/privacy-request-form";
+import { DashboardPageHero } from "@/components/dashboard/dashboard-page-hero";
+import { DashboardBackLink } from "@/components/navigation/dashboard-back-link";
 
 const requestLabels: Record<string, string> = {
   access: "Acesso aos dados",
@@ -31,13 +33,13 @@ export default async function AccountPage() {
   return (
     <main className="min-h-screen bg-[var(--bg-primary)] px-4 py-6 sm:px-6 md:px-10 md:py-10">
       <div className="mx-auto max-w-4xl">
-        <Link href="/dashboard" className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--accent)]"><ArrowLeft size={17} />Voltar ao Dashboard</Link>
-        <header className="rounded-[2rem] border border-[var(--border)] bg-[var(--bg-card)] p-6 shadow-[var(--shadow)] sm:p-8">
-          <span className="grid h-12 w-12 place-items-center rounded-2xl bg-[var(--accent-soft)] text-[var(--accent)]"><UserRound size={24} /></span>
-          <p className="mt-6 text-xs font-black uppercase tracking-[0.16em] text-[var(--accent)]">Conta</p>
-          <h1 className="mt-2 text-3xl font-black tracking-tight text-[var(--text-primary)]">Dados, segurança e privacidade</h1>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-[var(--text-secondary)]">Esta área trata sua identidade e seus direitos. Preferências de estudo continuam separadas.</p>
-        </header>
+        <DashboardBackLink />
+        <DashboardPageHero
+          icon={UserRound}
+          eyebrow="Conta"
+          title="Dados, segurança e privacidade"
+          description="Esta área trata sua identidade e seus direitos. Preferências de estudo continuam separadas."
+        />
 
         <section className="mt-6 grid gap-6 md:grid-cols-2">
           <article className="rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] p-6">

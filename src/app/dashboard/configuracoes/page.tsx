@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { AlertTriangle, ArrowLeft, BookOpen, Check, NotebookPen, Scale, Settings2, SlidersHorizontal } from "lucide-react";
+import { AlertTriangle, BookOpen, Check, NotebookPen, Scale, Settings2, SlidersHorizontal } from "lucide-react";
+import { DashboardPageHero } from "@/components/dashboard/dashboard-page-hero";
+import { DashboardBackLink } from "@/components/navigation/dashboard-back-link";
 import { PreferencesForm } from "./preferences-form";
 import { SavePreferencesButton } from "./save-preferences-button";
 import {
@@ -68,32 +70,14 @@ export default async function DashboardSettingsPage() {
   return (
     <main className="min-h-screen px-4 py-6 sm:px-6 md:px-10 md:py-10" style={{ background: "var(--bg-primary)" }}>
       <div className="mx-auto max-w-3xl">
-        <Link
-          href="/dashboard"
-          className="mb-6 inline-flex items-center gap-2 text-sm font-semibold transition-colors hover:text-[var(--accent)]"
-          style={{ color: "var(--text-secondary)" }}
-        >
-          <ArrowLeft size={17} />
-          Voltar ao Dashboard
-        </Link>
+        <DashboardBackLink />
 
-        <header className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[linear-gradient(135deg,var(--catalog-hero-start),var(--catalog-hero-end))] p-6 text-white shadow-[var(--shadow-lg)] sm:p-8">
-          <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full bg-[var(--catalog-hero-glow)] blur-3xl" aria-hidden="true" />
-          <div className="relative">
-            <span className="grid h-12 w-12 place-items-center rounded-2xl border border-white/15 bg-white/10 text-[var(--catalog-gold-light)]">
-              <Settings2 size={24} />
-            </span>
-            <p className="mt-6 text-xs font-black uppercase tracking-[0.16em] text-white/75">
-              Preferências
-            </p>
-            <h1 className="mt-2 text-3xl font-black tracking-tight text-white">
-              Preferências de estudo
-            </h1>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-white/75">
-              Defina sua página inicial e as disciplinas exibidas no PRO Resumos. As escolhas ficam salvas na sua conta.
-            </p>
-          </div>
-        </header>
+        <DashboardPageHero
+          icon={Settings2}
+          eyebrow="Preferências"
+          title="Preferências de estudo"
+          description="Defina sua página inicial e as disciplinas exibidas no PRO Resumos. As escolhas ficam salvas na sua conta."
+        />
 
         <PreferencesForm>
           {!preferencesAvailable && (

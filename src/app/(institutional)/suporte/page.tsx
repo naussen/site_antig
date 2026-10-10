@@ -23,7 +23,7 @@ export default function SupportPage() {
           <article key={title} className="flex flex-col rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-6 shadow-[var(--shadow)]">
             <h2 className="text-lg font-extrabold">{title}</h2>
             <p className="mt-3 flex-1 text-sm leading-6 text-[var(--text-secondary)]">{description}</p>
-            <Link href={href} className="mt-6 font-bold text-[var(--accent)]">{label} →</Link>
+            <Link href={href} className="-ml-3 mt-4 inline-flex min-h-11 items-center self-start rounded-xl px-3 font-bold text-[var(--accent)] transition-colors hover:bg-[var(--accent-soft)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">{label} →</Link>
           </article>
         ))}
       </div>

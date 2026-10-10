@@ -1,17 +1,21 @@
 # Gateway de produção do PRO Legis
 
-## Diagnóstico confirmado em 19/08/2026
+## Diagnóstico confirmado em 09/10/2026
 
 - `proconcursos.com.br` resolve para `54.232.119.62`.
 - O SOA do domínio é administrado pela Netlify (`domains+netlify.netlify.com`).
 - `https://proconcursos.com.br/resumos` é a URL canônica do aplicativo Next/Netlify.
 - `https://proconcursos-resumos.netlify.app/resumos` pertence a um deploy legado e não deve ser usado em login, favoritos ou documentação.
-- `https://pro-legis-mvp.netlify.app/legis` está publicado e protegido por login.
-- `https://proconcursos.com.br/legis` ainda retorna 404 no contexto de produção.
+- `https://pro-legis-mvp.netlify.app/legis` é o origin atualmente usado pelo gateway.
+- `https://proconcursos.com.br/legis` está publicado e protegido por login.
+- a sessão autenticada é compartilhada com o PRO Resumos;
+- catálogo, leitura por artigo, leitura integral e temas Claro, Noturno e Sépia passaram no smoke desktop, tablet e celular;
+- em 09/10/2026, o deploy de produção `6ac71017711cf30008d0910a` correspondia a `main@486d693`, igual a `origin/main`, com o `Release gate` aprovado;
+- permanece obrigatório repetir essa conferência e registrar o SHA efetivamente publicado do PRO Legis em cada release.
 
-## Ativação pendente
+## Gateway ativo
 
-Promover para o deploy de produção do site que atende `proconcursos.com.br` as regras já presentes em `netlify.toml` nesta branch:
+O site que atende `proconcursos.com.br` publica as seguintes regras de proxy:
 
 ```toml
 [[redirects]]
@@ -27,4 +31,4 @@ status = 200
 force = true
 ```
 
-Depois do deploy, validar `/legis`, `/legis/_next/*`, `/legis/api/*`, RSC, login/logout cruzado e retorno ao caminho original. A promoção deve ocorrer somente após confirmar que os dois sites Netlify pertencem ao mesmo team e que o origin não está acessível com cookies divergentes.
+Em cada release, validar `/legis`, `/legis/_next/*`, `/legis/api/*`, RSC, login/logout cruzado e retorno ao caminho original. Confirmar também que os dois sites Netlify permanecem sob o mesmo controle operacional e registrar os SHAs publicados do Site e do PRO Legis.

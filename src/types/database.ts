@@ -134,6 +134,121 @@ export interface ContentUnitRevisionRow {
 }
 
 // =============================================================================
+// Módulo Questões — conteúdo editorial e metadados relacionais
+// =============================================================================
+
+export type DisciplineStatus = 'active' | 'archived';
+export type QuestionType = 'multiple_choice' | 'true_false';
+export type QuestionStatus = 'draft' | 'published' | 'archived';
+export type QuestionDifficulty = 'easy' | 'medium' | 'hard';
+export type QuestionTopicRelationType = 'primary' | 'related' | 'reference';
+export type QuestionExplanationStatus =
+  | 'draft'
+  | 'reviewed'
+  | 'published'
+  | 'rejected';
+
+export interface DisciplineRow {
+  id: string;
+  slug: string;
+  name: string;
+  status: DisciplineStatus;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface TopicDisciplineRelationRow {
+  topic_id: string;
+  discipline_id: string;
+  is_primary: boolean;
+  created_at: string;
+}
+
+export interface QuestionRow {
+  id: string;
+  external_id: string;
+  question_type: QuestionType;
+  statement_markdown: string;
+  subject: string;
+  exam_board: string | null;
+  institution: string | null;
+  position_name: string | null;
+  exam_year: number | null;
+  difficulty: QuestionDifficulty | null;
+  source_reference: string | null;
+  source_content_hash: string | null;
+  source_metadata: Record<string, unknown>;
+  status: QuestionStatus;
+  published_at: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface QuestionImportBatchRow {
+  id: string;
+  batch_key: string;
+  schema_version: 'pro-questions/v1';
+  source_file: string;
+  source_sha256: string;
+  discipline_slug: string;
+  question_count: number;
+  metadata: Record<string, unknown>;
+  imported_at: string;
+}
+
+export interface QuestionImportItemRow {
+  batch_id: string;
+  question_id: string;
+  source_id: string;
+  action: 'inserted' | 'reused';
+  created_at: string;
+}
+
+export interface QuestionDisciplineRelationRow {
+  question_id: string;
+  discipline_id: string;
+  is_primary: boolean;
+  sort_order: number;
+  created_at: string;
+}
+
+export interface QuestionTopicRelationRow {
+  question_id: string;
+  topic_id: string;
+  relation_type: QuestionTopicRelationType;
+  relevance: number;
+  sort_order: number;
+  created_at: string;
+}
+
+export interface QuestionOptionRow {
+  id: string;
+  question_id: string;
+  label: string;
+  body_markdown: string;
+  sort_order: number;
+  created_at: string;
+}
+
+export interface QuestionAnswerKeyRow {
+  question_id: string;
+  correct_option_id: string;
+  updated_by: string | null;
+  updated_at: string;
+}
+
+export interface QuestionExplanationRow {
+  question_id: string;
+  body_markdown: string;
+  source_reference: string | null;
+  status: QuestionExplanationStatus;
+  reviewed_by: string | null;
+  reviewed_at: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+// =============================================================================
 // GRUPO A — Dados pessoais do usuário (isolados por login, RLS obrigatório)
 // Toda tabela deste grupo tem user_id NOT NULL e FK para auth.users(id).
 // Toda leitura/escrita deve ser filtrada por session.user.id.
@@ -165,6 +280,7 @@ export interface UserDashboardPreferences {
   visible_disciplines: string[] | null;
   start_module: 'resumos' | 'legis' | 'notas' | 'configuracoes';
   start_discipline: string | null;
+  theme: Theme;
   updated_at: string;
 }
 
@@ -245,13 +361,34 @@ export interface PaymentAccessBlock {
 
 export interface PaymentAuditEvent {
   id: string;
-  action: 'checkout_created' | 'checkout_failed' | 'cancellation_confirmed' | 'cancellation_failed';
+  action: 'checkout_created' | 'checkout_failed' | 'checkout_blocked' | 'cancellation_confirmed' | 'cancellation_failed';
   outcome: 'success' | 'failure';
   provider: 'mercado_pago' | 'paypal';
   user_id: string | null;
   provider_subscription_id: string | null;
   reason_code: string | null;
   created_at: string;
+}
+
+export interface PaymentSubscriptionLink {
+  provider: 'mercado_pago' | 'paypal';
+  provider_subscription_id: string;
+  user_id: string;
+  status: UserEntitlement['status'];
+  access_until: string | null;
+  provider_updated_at: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface OpsJobRun {
+  id: string;
+  job_name: string;
+  status: 'running' | 'succeeded' | 'failed';
+  started_at: string;
+  finished_at: string | null;
+  metrics: Record<string, unknown>;
+  error_code: string | null;
 }
 
 export interface PrivacyRequest {
@@ -263,6 +400,159 @@ export interface PrivacyRequest {
   status: 'received' | 'in_review' | 'completed' | 'rejected';
   created_at: string;
   updated_at: string;
+}
+
+export type QuestionHiddenReason =
+  | 'not_relevant'
+  | 'outdated'
+  | 'repeated'
+  | 'other';
+export type QuestionCommentStatus =
+  | 'published'
+  | 'hidden_by_author'
+  | 'hidden_by_moderator'
+  | 'deleted';
+export type QuestionCommentReportReason =
+  | 'spam'
+  | 'abuse'
+  | 'personal_data'
+  | 'incorrect_content'
+  | 'other';
+export type QuestionCommentReportStatus = 'open' | 'reviewed' | 'dismissed';
+
+export interface UserQuestionAttemptRow {
+  id: string;
+  submission_id: string;
+  user_id: string;
+  question_id: string;
+  selected_option_id: string;
+  is_correct: boolean;
+  duration_ms: number | null;
+  answered_at: string;
+}
+
+export interface UserQuestionPreferenceRow {
+  user_id: string;
+  question_id: string;
+  hidden_at: string | null;
+  hidden_reason: QuestionHiddenReason | null;
+  marked_for_review_at: string | null;
+  updated_at: string;
+}
+
+export interface QuestionCommentAliasRow {
+  user_id: string;
+  alias: string;
+  created_at: string;
+}
+
+export interface QuestionCommentRow {
+  id: string;
+  question_id: string;
+  user_id: string;
+  parent_id: string | null;
+  body: string;
+  status: QuestionCommentStatus;
+  created_at: string;
+  updated_at: string;
+  edited_at: string | null;
+}
+
+export interface QuestionCommentReportRow {
+  id: string;
+  comment_id: string;
+  reporter_user_id: string;
+  reason: QuestionCommentReportReason;
+  details: string | null;
+  status: QuestionCommentReportStatus;
+  created_at: string;
+  reviewed_at: string | null;
+  reviewed_by: string | null;
+}
+
+export interface QuestionListOption {
+  id: string;
+  label: string;
+  body_markdown: string;
+  sort_order: number;
+}
+
+export interface QuestionListDiscipline {
+  slug: string;
+  name: string;
+  is_primary: boolean;
+}
+
+export interface QuestionFilterDiscipline {
+  slug: string;
+  name: string;
+}
+
+export interface QuestionListTopic {
+  topic_id: string;
+  title: string;
+  relation_type: QuestionTopicRelationType;
+  is_navigable: boolean;
+}
+
+export interface QuestionListItem {
+  id: string;
+  external_id: string;
+  question_type: QuestionType;
+  statement_markdown: string;
+  subject: string;
+  exam_board: string | null;
+  institution: string | null;
+  position_name: string | null;
+  exam_year: number | null;
+  difficulty: QuestionDifficulty | null;
+  source_reference: string | null;
+  options: QuestionListOption[];
+  disciplines: QuestionListDiscipline[];
+  topics: QuestionListTopic[];
+  latest_attempt: {
+    is_correct: boolean;
+    answered_at: string;
+  } | null;
+  preference: {
+    hidden: boolean;
+    marked_for_review: boolean;
+  } | null;
+}
+
+export interface QuestionListResult {
+  items: QuestionListItem[];
+  next_cursor: string | null;
+}
+
+export interface QuestionAnswerResult {
+  attempt_id: string;
+  is_correct: boolean;
+  correct_option_id: string;
+  explanation_markdown: string;
+  answered_at: string;
+  replayed: boolean;
+}
+
+export interface QuestionDisciplineStats {
+  slug: string;
+  name: string;
+  answered_questions: number;
+  latest_correct: number;
+}
+
+export interface QuestionStatsResult {
+  total_attempts: number;
+  answered_questions: number;
+  first_correct: number;
+  latest_correct: number;
+  error_notebook_count: number;
+  attempts_7d: number;
+  correct_7d: number;
+  attempts_30d: number;
+  correct_30d: number;
+  hidden_questions: number;
+  by_discipline: QuestionDisciplineStats[];
 }
 
 export type TextHighlightColor =

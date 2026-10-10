@@ -52,6 +52,16 @@ test("aceita o mesmo contrato básico da API de importação", () => {
   assert.equal(parsed.sections.length, 1);
 });
 
+test("rejeita marcador técnico @@@ no corpo do Markdown", () => {
+  const payload = validPayload();
+  payload.sections[0].content_markdown = "Introdução\n\n@@@Subtítulo técnico\n\nConteúdo";
+
+  assert.throws(
+    () => validateImportPayload(payload),
+    /marcador técnico @@@/i,
+  );
+});
+
 test("rejeita flashcard sem questão rastreável e aceita C/E com fonte válida", () => {
   const invalid = validPayload();
   invalid.sections[0].flashcards = [{

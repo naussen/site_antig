@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { resolveInitialTheme } from "@/lib/initial-theme";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import "katex/dist/katex.min.css";
 import "./globals.css";
@@ -32,17 +33,24 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const initialTheme = await resolveInitialTheme();
+
   return (
-    <html lang="pt-BR" className={`${inter.variable} h-full`} suppressHydrationWarning>
+    <html
+      lang="pt-BR"
+      className={`${inter.variable} h-full`}
+      data-theme={initialTheme}
+      suppressHydrationWarning
+    >
       {/* O otimizador CSS ainda não reconhece ::highlight(); React 19 carrega a folha estática sem CSS inline. */}
       <link rel="stylesheet" href={withSiteBasePath("/study-highlights.css")} precedence="default" />
       <body className="min-h-full flex flex-col antialiased">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider initialTheme={initialTheme}>{children}</ThemeProvider>
       </body>
     </html>
   );

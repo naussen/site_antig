@@ -1,16 +1,19 @@
 "use client";
 
 import {
+  closestCenter,
   DndContext,
   DragOverlay,
   KeyboardSensor,
   MouseSensor,
+  pointerWithin,
   TouchSensor,
   useDraggable,
   useDroppable,
   useSensor,
   useSensors,
   type DragEndEvent,
+  type CollisionDetection,
 } from "@dnd-kit/core";
 import {
   CalendarPlus,
@@ -19,7 +22,6 @@ import {
   Clock3,
   Copy,
   GripVertical,
-  Pencil,
   Plus,
   RotateCcw,
   Settings2,
@@ -67,25 +69,39 @@ const weekDayFormatter = new Intl.DateTimeFormat("pt-BR", { weekday: "short", da
 const longDateFormatter = new Intl.DateTimeFormat("pt-BR", { weekday: "long", day: "numeric", month: "long" });
 const SLOT_HEIGHT_PX = 36;
 
-function DraggableDiscipline({ discipline, onAdd }: { discipline: string; onAdd: () => void }) {
+const plannerCollisionDetection: CollisionDetection = (args) => {
+  const pointerCollisions = pointerWithin(args);
+  return pointerCollisions.length > 0 ? pointerCollisions : closestCenter(args);
+};
+
+function DraggableDiscipline({ discipline }: { discipline: string }) {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: `discipline:${discipline}`,
     data: { kind: "discipline", discipline },
   });
   return (
-    <div ref={setNodeRef} className={`flex items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] p-2 ${isDragging ? "opacity-50" : ""}`}>
-      <button type="button" className="cursor-grab touch-none rounded-lg p-2 text-[var(--text-muted)] hover:bg-[var(--accent-soft)] hover:text-[var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" aria-label={`Arrastar ${discipline}`} {...listeners} {...attributes}>
-        <GripVertical size={17} />
-      </button>
-      <span className="min-w-0 flex-1 truncate text-sm font-semibold text-[var(--text-primary)]">{discipline}</span>
-      <button type="button" onClick={onAdd} className="grid h-9 w-9 shrink-0 place-items-center rounded-lg text-[var(--accent)] hover:bg-[var(--accent-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" aria-label={`Adicionar ${discipline}`}>
-        <Plus size={17} />
-      </button>
-    </div>
+    <button ref={setNodeRef} type="button" className={`flex min-w-0 w-full cursor-grab touch-pan-y items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] p-3 text-left hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] ${isDragging ? "opacity-50" : ""}`} aria-label={`Arrastar ${discipline} para um horário`} {...listeners} {...attributes}>
+      <GripVertical size={17} className="shrink-0 text-[var(--accent)]" aria-hidden="true" />
+      <span className="min-w-0 flex-1 whitespace-normal break-words text-sm font-semibold leading-5 text-[var(--text-primary)]">{discipline}</span>
+    </button>
   );
 }
 
-function DraggableStudyBlock({ item, dayEndMinute, onEdit, onResizePreview, onResize }: { item: PlannerItem; dayEndMinute: number; onEdit: () => void; onResizePreview: (endMinute: number | null) => void; onResize: (endMinute: number) => void }) {
+function DraggableStudyBlock({
+  item,
+  dayEndMinute,
+  pending,
+  onDelete,
+  onResizePreview,
+  onResize,
+}: {
+  item: PlannerItem;
+  dayEndMinute: number;
+  pending: boolean;
+  onDelete: () => void;
+  onResizePreview: (endMinute: number | null) => void;
+  onResize: (endMinute: number) => void;
+}) {
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: `item:${item.id}`,
     data: { kind: "item", item },
@@ -110,11 +126,22 @@ function DraggableStudyBlock({ item, dayEndMinute, onEdit, onResizePreview, onRe
         <button type="button" className="mt-0.5 cursor-grab touch-none rounded p-1 text-[var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" aria-label={`Mover ${item.discipline}`} {...listeners} {...attributes}>
           <GripVertical size={14} />
         </button>
-        <button type="button" onClick={onEdit} className="min-w-0 flex-1 rounded text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]">
+        <div className="min-w-0 flex-1 text-left">
           <strong className="block truncate text-xs text-[var(--text-primary)]">{item.discipline}</strong>
           <span className="mt-0.5 block text-[11px] text-[var(--text-secondary)]">{minuteToTime(item.startMinute)}–{minuteToTime(item.endMinute)} · {item.endMinute - item.startMinute} min</span>
+        </div>
+        <button
+          type="button"
+          disabled={pending}
+          onClick={() => {
+            if (window.confirm(`Remover ${item.discipline} deste horário?`)) onDelete();
+          }}
+          className="grid h-7 w-7 shrink-0 place-items-center rounded-md text-[var(--text-muted)] transition hover:bg-red-500/10 hover:text-red-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-500 disabled:cursor-wait disabled:opacity-50"
+          aria-label={`Remover ${item.discipline} da grade`}
+          title="Remover da grade"
+        >
+          <Trash2 size={14} aria-hidden="true" />
         </button>
-        <Pencil size={13} className="mt-1 shrink-0 text-[var(--text-muted)] opacity-0 group-hover:opacity-100" aria-hidden="true" />
       </div>
       <button
         type="button"
@@ -151,13 +178,11 @@ function DraggableStudyBlock({ item, dayEndMinute, onEdit, onResizePreview, onRe
   );
 }
 
-function DroppableSlot({ date, minute, onAdd }: { date: string; minute: number; onAdd: () => void }) {
+function DroppableSlot({ date, minute }: { date: string; minute: number }) {
   const { setNodeRef, isOver } = useDroppable({ id: `slot:${date}:${minute}`, data: { date, minute } });
   return (
-    <div ref={setNodeRef} className={`h-full min-h-0 border-t border-[var(--border)] transition-colors ${isOver ? "bg-[var(--accent-soft)] ring-2 ring-inset ring-[var(--accent)]" : ""}`}>
-      <button type="button" onClick={onAdd} className="h-full w-full rounded px-1 text-left text-[10px] text-[var(--text-muted)] hover:bg-[var(--accent-soft)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]" aria-label={`Adicionar estudo às ${minuteToTime(minute)} em ${date}`}>
-        {minute % 60 === 0 ? minuteToTime(minute) : ""}
-      </button>
+    <div ref={setNodeRef} aria-hidden="true" className={`h-full min-h-0 border-t border-[var(--border)] px-1 text-left text-[10px] text-[var(--text-muted)] transition-colors ${isOver ? "bg-[var(--accent-soft)] ring-2 ring-inset ring-[var(--accent)]" : ""}`}>
+      {minute % 60 === 0 ? minuteToTime(minute) : ""}
     </div>
   );
 }
@@ -196,6 +221,10 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
     }
     return map;
   }, [initialItems]);
+  const currentWeekItems = useMemo(
+    () => initialItems.filter((item) => weekDates.includes(item.studyDate)),
+    [initialItems, weekDates],
+  );
 
   const runAction = (action: () => Promise<{ ok: boolean; message: string }>, afterSuccess?: () => void) => {
     startTransition(async () => {
@@ -212,7 +241,8 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
     });
   };
 
-  const openNewItem = (discipline = disciplines[0] ?? "", studyDate = weekDates[mobileDay], startMinute = initialPlan?.dayStartMinute ?? 360) => {
+  const openNewItem = (studyDate = weekDates[mobileDay], startMinute = initialPlan?.dayStartMinute ?? 360) => {
+    const discipline = disciplines[0] ?? "";
     if (!initialPlan || !discipline) return;
     setDraft({ discipline, studyDate, startMinute, endMinute: Math.min(startMinute + 60, initialPlan.dayEndMinute), note: "" });
   };
@@ -264,7 +294,7 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
       <div className="grid min-w-0 overflow-hidden" style={{ gridTemplateColumns: "minmax(0, 1fr)", gridTemplateRows: `repeat(${slots.length}, ${SLOT_HEIGHT_PX}px)` }}>
         {slots.map((minute, index) => (
           <div key={`${date}:${minute}`} style={{ gridRow: index + 1, gridColumn: 1 }}>
-            <DroppableSlot date={date} minute={minute} onAdd={() => openNewItem(disciplines[0] ?? "", date, minute)} />
+            <DroppableSlot date={date} minute={minute} />
           </div>
         ))}
         {slots.flatMap((minute, index) =>
@@ -277,7 +307,11 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
             <DraggableStudyBlock
               item={item}
               dayEndMinute={initialPlan.dayEndMinute}
-              onEdit={() => setDraft({ id: item.id, discipline: item.discipline, studyDate: item.studyDate, startMinute: item.startMinute, endMinute: item.endMinute, note: item.note ?? "" })}
+              pending={pending}
+              onDelete={() => runAction(
+                () => deleteStudyPlanItem(item.id),
+                () => setLastDeleted(item),
+              )}
               onResizePreview={(endMinute) => setResizePreviewEndById((current) => {
                 if (endMinute === null) {
                   const remaining = { ...current };
@@ -300,6 +334,7 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
     <DndContext
       id="study-planner-dnd"
       sensors={sensors}
+      collisionDetection={plannerCollisionDetection}
       onDragStart={({ active }) => {
         const data = active.data.current;
         setActiveDragLabel(data?.kind === "discipline" ? String(data.discipline) : (data?.item as PlannerItem | undefined)?.discipline ?? null);
@@ -310,10 +345,10 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
         handleDragEnd(event);
       }}
     >
-      <div className="mt-6 grid gap-5 xl:grid-cols-[270px_minmax(0,1fr)]">
-        <aside className="rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] p-4 shadow-[var(--shadow-sm)] xl:sticky xl:top-5 xl:self-start">
-          <div className="flex items-center justify-between gap-3"><div><p className="text-xs font-black uppercase tracking-wider text-[var(--accent)]">Disciplinas</p><h2 className="mt-1 font-bold text-[var(--text-primary)]">Arraste para a grade</h2></div><button type="button" onClick={() => openNewItem()} className="grid h-10 w-10 place-items-center rounded-xl bg-[var(--accent)] text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2" aria-label="Adicionar estudo"><Plus size={18} /></button></div>
-          <div className="mt-4 max-h-[55vh] space-y-2 overflow-y-auto pr-1">{disciplines.map((discipline) => <DraggableDiscipline key={discipline} discipline={discipline} onAdd={() => openNewItem(discipline)} />)}</div>
+      <div className="mt-6 grid min-w-0 gap-5 xl:grid-cols-[320px_minmax(0,1fr)]">
+        <aside className="min-w-0 rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] p-4 shadow-[var(--shadow-sm)] xl:sticky xl:top-5 xl:self-start">
+          <div><p className="text-xs font-black uppercase tracking-wider text-[var(--accent)]">Disciplinas</p><h2 className="mt-1 font-bold text-[var(--text-primary)]">Arraste para a grade</h2><p className="mt-1 text-xs leading-5 text-[var(--text-muted)]">Solte no horário desejado. O salvamento é automático.</p></div>
+          <div className="mt-4 max-h-64 space-y-2 overflow-y-auto pr-1 sm:max-h-80 xl:max-h-[55vh]">{disciplines.map((discipline) => <DraggableDiscipline key={discipline} discipline={discipline} />)}</div>
           {disciplines.length === 0 && <p className="mt-4 rounded-xl border border-dashed border-[var(--border)] p-4 text-sm text-[var(--text-muted)]">Nenhuma disciplina disponível.</p>}
         </aside>
 
@@ -326,17 +361,37 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
               {safeWeekIndex < initialPlan.weeksCount - 1 && (
                 <button type="button" onClick={() => runAction(() => copyStudyPlanWeek({ planId: initialPlan.id, sourceWeekIndex: safeWeekIndex }), () => setWeekIndex(safeWeekIndex + 1))} disabled={pending} className="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--border)] px-3 text-sm font-bold text-[var(--text-secondary)] hover:border-[var(--accent)] disabled:opacity-50"><Copy size={17} /> Copiar semana</button>
               )}
-              <button type="button" onClick={() => setSettingsOpen((value) => !value)} className="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--border)] px-3 text-sm font-bold text-[var(--text-secondary)] hover:border-[var(--accent)]"><Settings2 size={17} /> Ajustar</button>
+              <button type="button" onClick={() => { setSettingsOpen((value) => !value); setDraft(null); }} aria-expanded={settingsOpen} aria-controls="planner-settings" className="inline-flex h-10 items-center gap-2 rounded-xl border border-[var(--border)] px-3 text-sm font-bold text-[var(--text-secondary)] hover:border-[var(--accent)]"><Settings2 size={17} /> Configurações</button>
             </div>
           </div>
 
-          {settingsOpen && <div className="border-b border-[var(--border)] bg-[var(--bg-secondary)] p-4"><PlanForm plan={initialPlan} pending={pending} onSubmit={(value) => runAction(() => updateStudyPlan({ ...value, id: initialPlan.id }), () => setSettingsOpen(false))} /></div>}
+          {settingsOpen && (
+            <div id="planner-settings" className="border-b border-[var(--border)] bg-[var(--bg-secondary)] p-4">
+              <div><p className="text-xs font-black uppercase tracking-wider text-[var(--accent)]">Configurações do planner</p><h3 className="mt-1 font-bold text-[var(--text-primary)]">Período e faixa de horários</h3></div>
+              <PlanForm plan={initialPlan} pending={pending} onSubmit={(value) => runAction(() => updateStudyPlan({ ...value, id: initialPlan.id }))} />
+              <div className="mt-6 border-t border-[var(--border)] pt-5">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <div><h3 className="font-bold text-[var(--text-primary)]">Ajuste manual de horários</h3><p className="mt-1 text-xs leading-5 text-[var(--text-muted)]">Use apenas quando preferir informar disciplina, data e hora sem arrastar.</p></div>
+                  <button type="button" onClick={() => openNewItem()} disabled={pending || disciplines.length === 0} className="inline-flex h-10 shrink-0 items-center justify-center gap-2 rounded-xl bg-[var(--accent)] px-4 text-sm font-bold text-white disabled:opacity-50"><Plus size={17} /> Adicionar manualmente</button>
+                </div>
+                <div className="mt-4 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+                  {currentWeekItems.map((item) => (
+                    <button key={item.id} type="button" onClick={() => setDraft({ id: item.id, discipline: item.discipline, studyDate: item.studyDate, startMinute: item.startMinute, endMinute: item.endMinute, note: item.note ?? "" })} className="rounded-xl border border-[var(--border)] bg-[var(--bg-card)] p-3 text-left hover:border-[var(--accent)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]">
+                      <strong className="block truncate text-sm text-[var(--text-primary)]">{item.discipline}</strong>
+                      <span className="mt-1 block text-xs text-[var(--text-secondary)]">{weekDayFormatter.format(parseLocalDate(item.studyDate))} · {minuteToTime(item.startMinute)}–{minuteToTime(item.endMinute)}</span>
+                    </button>
+                  ))}
+                </div>
+                {currentWeekItems.length === 0 && <p className="mt-4 rounded-xl border border-dashed border-[var(--border)] p-3 text-sm text-[var(--text-muted)]">Nenhum horário nesta semana.</p>}
+              </div>
+            </div>
+          )}
 
           <div className="border-b border-[var(--border)] p-3 md:hidden"><label className="text-xs font-bold text-[var(--text-secondary)]">Dia exibido<select value={mobileDay} onChange={(event) => setMobileDay(Number(event.target.value))} className="mt-1 block w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 py-2 text-sm text-[var(--text-primary)]">{weekDates.map((date, index) => <option key={date} value={index}>{longDateFormatter.format(parseLocalDate(date))}</option>)}</select></label></div>
           <div className="hidden overflow-x-auto md:block"><div className="grid min-w-[980px] grid-cols-7">{weekDates.map(renderDay)}</div></div>
           <div className="md:hidden">{renderDay(weekDates[mobileDay])}</div>
           <div className="flex flex-col gap-2 border-t border-[var(--border)] p-4 text-sm text-[var(--text-secondary)] sm:flex-row sm:items-center sm:justify-between" aria-live="polite">
-            <p>{pending ? "Salvando…" : message}</p>
+            <p>{pending ? "Salvando automaticamente…" : message || "Alterações por arrastar ou redimensionar são salvas automaticamente."}</p>
             {lastDeleted && (
               <button type="button" disabled={pending} onClick={() => runAction(() => saveStudyPlanItem({ planId: initialPlan.id, discipline: lastDeleted.discipline, studyDate: lastDeleted.studyDate, startMinute: lastDeleted.startMinute, endMinute: lastDeleted.endMinute, note: lastDeleted.note ?? "" }), () => setLastDeleted(null))} className="inline-flex items-center gap-2 self-start rounded-xl border border-[var(--border)] px-3 py-2 font-bold text-[var(--accent)] disabled:opacity-50"><RotateCcw size={16} /> Desfazer exclusão</button>
             )}
@@ -344,7 +399,7 @@ export function PlannerClient({ disciplines, initialPlan, initialItems }: Planne
         </section>
       </div>
 
-      {draft && <ItemDialog draft={draft} disciplines={disciplines} plan={initialPlan} pending={pending} onClose={() => setDraft(null)} onSave={(value) => runAction(() => saveStudyPlanItem({ ...value, planId: initialPlan.id }), () => setDraft(null))} onDelete={draft.id ? () => runAction(() => deleteStudyPlanItem(draft.id!), () => { setLastDeleted({ id: draft.id!, discipline: draft.discipline, studyDate: draft.studyDate, startMinute: draft.startMinute, endMinute: draft.endMinute, note: draft.note || null }); setDraft(null); }) : undefined} />}
+      {settingsOpen && draft && <ItemDialog draft={draft} disciplines={disciplines} plan={initialPlan} pending={pending} onClose={() => setDraft(null)} onSave={(value) => runAction(() => saveStudyPlanItem({ ...value, planId: initialPlan.id }), () => setDraft(null))} onDelete={draft.id ? () => runAction(() => deleteStudyPlanItem(draft.id!), () => { setLastDeleted({ id: draft.id!, discipline: draft.discipline, studyDate: draft.studyDate, startMinute: draft.startMinute, endMinute: draft.endMinute, note: draft.note || null }); setDraft(null); }) : undefined} />}
       <DragOverlay>
         {activeDragLabel ? <div className="max-w-64 rounded-xl border border-[var(--accent)] bg-[var(--bg-card)] px-4 py-3 text-sm font-bold text-[var(--text-primary)] shadow-2xl">{activeDragLabel}</div> : null}
       </DragOverlay>

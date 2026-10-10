@@ -1,7 +1,14 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
-import { AlertCircle, Check, Eraser, Loader2, X } from "lucide-react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type PointerEvent as ReactPointerEvent,
+  type ReactNode,
+} from "react";
+import { AlertCircle, Check, Eraser, Highlighter, Loader2, Trash2, X } from "lucide-react";
 import {
   TEXT_HIGHLIGHT_COLORS,
   useTextHighlights,
@@ -21,6 +28,27 @@ interface TextHighlighterProps {
 
 type HighlightTool = TextHighlightColor | "eraser" | null;
 type SaveStatus = "idle" | "saving" | "saved" | "error";
+
+interface RenderedHighlightRange {
+  highlightId: string;
+  excerpt: string;
+  markdownRoot: HTMLElement;
+  priority: number;
+  range: Range;
+}
+
+interface ContextualDeleteControl {
+  highlightId: string;
+  excerpt: string;
+  left: number;
+  top: number;
+}
+
+interface PendingHighlightControl {
+  input: NewTextHighlight;
+  left: number;
+  top: number;
+}
 
 const COLOR_LABELS: Record<TextHighlightColor, string> = {
   yellow: "Amarelo",
@@ -50,6 +78,20 @@ const COLOR_CLASSES: Record<TextHighlightColor, string> = {
 
 const MAX_HIGHLIGHT_LENGTH = 10000;
 const ANCHOR_CONTEXT_LENGTH = 64;
+const MAX_VISIBLE_HIGHLIGHTS = 20;
+const HIGHLIGHT_EXCERPT_LENGTH = 80;
+const CONTEXTUAL_DELETE_SIZE = 32;
+const CONTEXTUAL_DELETE_GAP = 6;
+const CONTEXTUAL_INSERT_WIDTH = 148;
+const CONTEXTUAL_INSERT_HEIGHT = 36;
+const VIEWPORT_EDGE_GAP = 8;
+
+function getHighlightExcerpt(text: string) {
+  const normalized = text.replace(/\s+/g, " ").trim();
+  return normalized.length > HIGHLIGHT_EXCERPT_LENGTH
+    ? `${normalized.slice(0, HIGHLIGHT_EXCERPT_LENGTH - 1)}…`
+    : normalized;
+}
 
 function createRangeFromOffsets(root: HTMLElement, start: number, end: number) {
   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
@@ -107,9 +149,13 @@ export function TextHighlighter({
 }: TextHighlighterProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const savedStatusTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const contextualHideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const renderedHighlightRangesRef = useRef<RenderedHighlightRange[]>([]);
   const [activeTool, setActiveTool] = useState<HighlightTool>("yellow");
   const [saveStatus, setSaveStatus] = useState<SaveStatus>("idle");
   const [localError, setLocalError] = useState<string | null>(null);
+  const [contextualDelete, setContextualDelete] = useState<ContextualDeleteControl | null>(null);
+  const [pendingHighlight, setPendingHighlight] = useState<PendingHighlightControl | null>(null);
   const {
     highlights,
     highlightsBySection,
@@ -118,7 +164,13 @@ export function TextHighlighter({
     error,
     addHighlight,
     removeHighlights,
+    updateHighlightColor,
   } = useTextHighlights(userId, sections);
+
+  const visibleHighlights = [...highlights]
+    .filter((highlight) => !highlight.id.startsWith("pending-"))
+    .reverse()
+    .slice(0, MAX_VISIBLE_HIGHLIGHTS);
 
   const setTransientSavedStatus = useCallback((success: boolean) => {
     if (savedStatusTimerRef.current) clearTimeout(savedStatusTimerRef.current);
@@ -128,6 +180,25 @@ export function TextHighlighter({
 
   useEffect(() => () => {
     if (savedStatusTimerRef.current) clearTimeout(savedStatusTimerRef.current);
+    if (contextualHideTimerRef.current) clearTimeout(contextualHideTimerRef.current);
+  }, []);
+
+  useEffect(() => {
+    const hideContextualControls = () => {
+      setContextualDelete(null);
+      setPendingHighlight(null);
+    };
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") hideContextualControls();
+    };
+    window.addEventListener("keydown", handleEscape);
+    window.addEventListener("resize", hideContextualControls);
+    window.addEventListener("scroll", hideContextualControls, true);
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+      window.removeEventListener("resize", hideContextualControls);
+      window.removeEventListener("scroll", hideContextualControls, true);
+    };
   }, []);
 
   useEffect(() => {
@@ -139,6 +210,7 @@ export function TextHighlighter({
     const rangesByColor = Object.fromEntries(
       TEXT_HIGHLIGHT_COLORS.map((color) => [color, [] as Range[]]),
     ) as Record<TextHighlightColor, Range[]>;
+    const renderedHighlightRanges: RenderedHighlightRange[] = [];
 
     Object.entries(highlightsBySection).forEach(([sectionId, sectionHighlights]) => {
       const sectionContainer = Array.from(
@@ -152,9 +224,21 @@ export function TextHighlighter({
         const offsets = findAnchoredOffsets(text, highlight);
         if (!offsets) return;
         const range = createRangeFromOffsets(markdownRoot, offsets.start, offsets.end);
-        if (range) rangesByColor[highlight.color].push(range);
+        if (!range) return;
+        rangesByColor[highlight.color].push(range);
+        renderedHighlightRanges.push({
+          highlightId: highlight.id,
+          excerpt: getHighlightExcerpt(highlight.selected_text),
+          markdownRoot,
+          priority: TEXT_HIGHLIGHT_COLORS.indexOf(highlight.color),
+          range,
+        });
       });
     });
+
+    renderedHighlightRangesRef.current = renderedHighlightRanges.sort(
+      (first, second) => second.priority - first.priority,
+    );
 
     TEXT_HIGHLIGHT_COLORS.forEach((color, priority) => {
       const cssHighlight = new Highlight(...rangesByColor[color]);
@@ -163,12 +247,91 @@ export function TextHighlighter({
     });
 
     return () => {
+      renderedHighlightRangesRef.current = [];
       TEXT_HIGHLIGHT_COLORS.forEach((color) => CSS.highlights.delete(`study-highlight-${color}`));
     };
   }, [highlightsBySection]);
 
-  const handleSelection = useCallback(async () => {
-    if (!panelOpen || !activeTool || !rootRef.current || saveStatus === "saving") return;
+  const clearContextualHideTimer = useCallback(() => {
+    if (!contextualHideTimerRef.current) return;
+    clearTimeout(contextualHideTimerRef.current);
+    contextualHideTimerRef.current = null;
+  }, []);
+
+  const scheduleContextualDeleteHide = useCallback(() => {
+    clearContextualHideTimer();
+    contextualHideTimerRef.current = setTimeout(() => {
+      setContextualDelete(null);
+      contextualHideTimerRef.current = null;
+    }, 120);
+  }, [clearContextualHideTimer]);
+
+  const handleHighlightPointerMove = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
+    if (event.pointerType !== "mouse" || event.buttons !== 0) return;
+    const target = event.target as Element;
+    if (target.closest("[data-highlight-ui]")) {
+      clearContextualHideTimer();
+      return;
+    }
+    if (pendingHighlight) {
+      setContextualDelete(null);
+      return;
+    }
+
+    const markdownRoot = target.closest<HTMLElement>(".markdown-content");
+    let hovered: { item: RenderedHighlightRange; rect: DOMRect } | null = null;
+    for (const item of renderedHighlightRangesRef.current) {
+      if (item.markdownRoot !== markdownRoot) continue;
+      const rect = Array.from(item.range.getClientRects()).find((candidateRect) => (
+        event.clientX >= candidateRect.left
+        && event.clientX <= candidateRect.right
+        && event.clientY >= candidateRect.top
+        && event.clientY <= candidateRect.bottom
+      ));
+      if (!rect) continue;
+      hovered = { item, rect };
+      break;
+    }
+
+    if (!hovered) {
+      scheduleContextualDeleteHide();
+      return;
+    }
+
+    clearContextualHideTimer();
+    const hoveredRect = hovered.rect;
+
+    const preferredTop = hoveredRect.top - CONTEXTUAL_DELETE_SIZE - CONTEXTUAL_DELETE_GAP;
+    const top = preferredTop >= VIEWPORT_EDGE_GAP
+      ? preferredTop
+      : Math.min(
+        hoveredRect.bottom + CONTEXTUAL_DELETE_GAP,
+        window.innerHeight - CONTEXTUAL_DELETE_SIZE - VIEWPORT_EDGE_GAP,
+      );
+    const left = Math.min(
+      Math.max(hoveredRect.right - CONTEXTUAL_DELETE_SIZE, VIEWPORT_EDGE_GAP),
+      window.innerWidth - CONTEXTUAL_DELETE_SIZE - VIEWPORT_EDGE_GAP,
+    );
+
+    setContextualDelete((current) => {
+      const next = {
+        highlightId: hovered.item.highlightId,
+        excerpt: hovered.item.excerpt,
+        left: Math.round(left),
+        top: Math.round(top),
+      };
+      return current
+        && current.highlightId === next.highlightId
+        && current.left === next.left
+        && current.top === next.top
+        ? current
+        : next;
+    });
+  }, [clearContextualHideTimer, pendingHighlight, scheduleContextualDeleteHide]);
+
+  const handleSelection = useCallback(async (event: ReactPointerEvent<HTMLDivElement>) => {
+    if ((event.target as Element).closest("[data-highlight-ui]")) return;
+    if (!activeTool || !rootRef.current || saveStatus === "saving") return;
 
     if (typeof CSS === "undefined" || !("highlights" in CSS) || typeof Highlight === "undefined") {
       setLocalError("Seu navegador não oferece suporte ao marca-texto persistente.");
@@ -176,7 +339,10 @@ export function TextHighlighter({
     }
 
     const selection = window.getSelection();
-    if (!selection || selection.isCollapsed || selection.rangeCount !== 1) return;
+    if (!selection || selection.isCollapsed || selection.rangeCount !== 1) {
+      setPendingHighlight(null);
+      return;
+    }
     const range = selection.getRangeAt(0);
     const startElement = range.startContainer.nodeType === Node.TEXT_NODE
       ? range.startContainer.parentElement
@@ -204,9 +370,10 @@ export function TextHighlighter({
     }
 
     setLocalError(null);
-    setSaveStatus("saving");
-    let success: boolean;
+    setContextualDelete(null);
     if (activeTool === "eraser") {
+      setPendingHighlight(null);
+      setSaveStatus("saving");
       const ids = highlights
         .filter((highlight) => {
           if (
@@ -227,9 +394,28 @@ export function TextHighlighter({
         selection.removeAllRanges();
         return;
       }
-      success = await removeHighlights(ids);
-    } else {
-      const input: NewTextHighlight = {
+      const success = await removeHighlights(ids);
+      selection.removeAllRanges();
+      setTransientSavedStatus(success);
+      return;
+    }
+
+    const selectionRects = Array.from(range.getClientRects());
+    const selectionRect = selectionRects.at(-1) ?? range.getBoundingClientRect();
+    const preferredTop = selectionRect.bottom + CONTEXTUAL_DELETE_GAP;
+    const top = preferredTop + CONTEXTUAL_INSERT_HEIGHT <= window.innerHeight - VIEWPORT_EDGE_GAP
+      ? preferredTop
+      : Math.max(
+        selectionRect.top - CONTEXTUAL_INSERT_HEIGHT - CONTEXTUAL_DELETE_GAP,
+        VIEWPORT_EDGE_GAP,
+      );
+    const left = Math.min(
+      Math.max(selectionRect.right - CONTEXTUAL_INSERT_WIDTH, VIEWPORT_EDGE_GAP),
+      window.innerWidth - CONTEXTUAL_INSERT_WIDTH - VIEWPORT_EDGE_GAP,
+    );
+
+    setPendingHighlight({
+      input: {
         sectionId,
         contentUnitId,
         color: activeTool,
@@ -238,21 +424,111 @@ export function TextHighlighter({
         selectedText,
         prefix: rootText.slice(Math.max(0, start - ANCHOR_CONTEXT_LENGTH), start),
         suffix: rootText.slice(end, end + ANCHOR_CONTEXT_LENGTH),
-      };
-      success = await addHighlight(input);
-    }
+      },
+      left: Math.round(left),
+      top: Math.round(top),
+    });
+  }, [activeTool, highlights, removeHighlights, saveStatus, setTransientSavedStatus]);
 
-    selection.removeAllRanges();
+  const handleInsertHighlight = useCallback(async () => {
+    if (!pendingHighlight || saveStatus === "saving") return;
+    setLocalError(null);
+    setSaveStatus("saving");
+    const success = await addHighlight(pendingHighlight.input);
+    if (success) {
+      window.getSelection()?.removeAllRanges();
+      setPendingHighlight(null);
+    }
     setTransientSavedStatus(success);
-  }, [activeTool, addHighlight, highlights, panelOpen, removeHighlights, saveStatus, setTransientSavedStatus]);
+  }, [addHighlight, pendingHighlight, saveStatus, setTransientSavedStatus]);
+
+  const handleColorToolSelect = useCallback((color: TextHighlightColor) => {
+    setActiveTool(color);
+    setPendingHighlight((current) => current ? {
+      ...current,
+      input: { ...current.input, color },
+    } : current);
+  }, []);
+
+  const handleEraserSelect = useCallback(() => {
+    setActiveTool("eraser");
+    setPendingHighlight(null);
+  }, []);
+
+  const handleColorChange = useCallback(async (
+    highlightId: string,
+    color: TextHighlightColor,
+  ) => {
+    setLocalError(null);
+    setSaveStatus("saving");
+    const success = await updateHighlightColor(highlightId, color);
+    setTransientSavedStatus(success);
+  }, [setTransientSavedStatus, updateHighlightColor]);
+
+  const handleRemoveHighlight = useCallback(async (highlightId: string) => {
+    setLocalError(null);
+    setSaveStatus("saving");
+    const success = await removeHighlights([highlightId]);
+    if (success) setContextualDelete(null);
+    setTransientSavedStatus(success);
+  }, [removeHighlights, setTransientSavedStatus]);
 
   return (
-    <div ref={rootRef} onPointerUp={handleSelection}>
+    <div
+      ref={rootRef}
+      onPointerMove={handleHighlightPointerMove}
+      onPointerLeave={scheduleContextualDeleteHide}
+      onPointerUp={handleSelection}
+    >
       {children}
+
+      {pendingHighlight && (
+        <button
+          type="button"
+          data-highlight-ui
+          data-highlight-insert-button
+          onClick={() => void handleInsertHighlight()}
+          disabled={saveStatus === "saving"}
+          className="fixed z-[60] flex h-9 w-[148px] items-center justify-center gap-2 rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-3 text-xs font-semibold text-[var(--text-primary)] shadow-lg transition-colors hover:border-[var(--accent)] hover:bg-[var(--accent-soft)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] disabled:opacity-60"
+          style={{ left: pendingHighlight.left, top: pendingHighlight.top }}
+          aria-label={`Inserir realce ${COLOR_LABELS[pendingHighlight.input.color]} no texto selecionado`}
+          title={`Inserir realce ${COLOR_LABELS[pendingHighlight.input.color]}`}
+        >
+          {saveStatus === "saving" ? (
+            <Loader2 size={14} className="animate-spin" aria-hidden="true" />
+          ) : (
+            <Highlighter size={14} aria-hidden="true" />
+          )}
+          <span>Inserir realce</span>
+          <span
+            className={`h-2.5 w-2.5 rounded-full border border-black/10 ${COLOR_CLASSES[pendingHighlight.input.color]}`}
+            aria-hidden="true"
+          />
+        </button>
+      )}
+
+      {contextualDelete && (
+        <button
+          type="button"
+          data-highlight-ui
+          data-highlight-delete-button
+          onClick={() => void handleRemoveHighlight(contextualDelete.highlightId)}
+          onPointerEnter={clearContextualHideTimer}
+          onPointerLeave={scheduleContextualDeleteHide}
+          disabled={saveStatus === "saving"}
+          className="fixed z-[60] grid h-8 w-8 place-items-center rounded-full border border-[var(--border)] bg-[var(--bg-card)] text-[var(--text-muted)] shadow-md transition-colors hover:border-[var(--callout-warning-text)] hover:bg-[var(--callout-warning-bg)] hover:text-[var(--callout-warning-text)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] disabled:opacity-60"
+          style={{ left: contextualDelete.left, top: contextualDelete.top }}
+          aria-label={`Excluir realce: ${contextualDelete.excerpt}`}
+          title="Excluir realce"
+        >
+          <Trash2 size={14} />
+        </button>
+      )}
 
       {panelOpen && (
         <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2 sm:bottom-7 sm:right-7">
           <section
+            data-highlight-ui
             className="w-[min(90vw,310px)] rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-4 shadow-xl"
             aria-label="Ferramenta marca-texto"
           >
@@ -260,7 +536,7 @@ export function TextHighlighter({
               <div>
                 <p className="text-sm font-bold text-[var(--text-primary)]">Marca-texto</p>
                 <p className="mt-0.5 text-xs leading-relaxed text-[var(--text-muted)]">
-                  Escolha uma cor e selecione o texto. O salvamento é automático.
+                  Escolha uma cor, selecione o texto e confirme em Inserir realce.
                 </p>
                 {highlightsNeedingReview.length > 0 && (
                   <p className="mt-2 flex items-center gap-1 text-xs text-[var(--callout-warning-text)]">
@@ -286,7 +562,7 @@ export function TextHighlighter({
                 <button
                   key={color}
                   type="button"
-                  onClick={() => setActiveTool(color)}
+                  onClick={() => handleColorToolSelect(color)}
                   className={`grid h-9 place-items-center rounded-lg border-2 transition-transform hover:scale-105 ${COLOR_CLASSES[color]} ${
                     activeTool === color ? "border-[var(--text-primary)]" : "border-transparent"
                   }`}
@@ -301,7 +577,7 @@ export function TextHighlighter({
 
             <button
               type="button"
-              onClick={() => setActiveTool("eraser")}
+              onClick={handleEraserSelect}
               className={`mt-3 flex w-full items-center justify-center gap-2 rounded-xl border px-3 py-2 text-xs font-semibold transition-colors ${
                 activeTool === "eraser"
                   ? "border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)]"
@@ -312,6 +588,65 @@ export function TextHighlighter({
               <Eraser size={15} />
               Remover realce do trecho selecionado
             </button>
+
+            {visibleHighlights.length > 0 && (
+              <div className="mt-4 border-t border-[var(--border)] pt-3">
+                <div className="mb-2 flex items-center justify-between gap-2">
+                  <p className="text-xs font-bold text-[var(--text-primary)]">
+                    Seus realces ({highlights.length})
+                  </p>
+                  {highlights.length > MAX_VISIBLE_HIGHLIGHTS && (
+                    <span className="text-[11px] text-[var(--text-muted)]">
+                      {MAX_VISIBLE_HIGHLIGHTS} mais recentes
+                    </span>
+                  )}
+                </div>
+                <ul className="max-h-52 space-y-2 overflow-y-auto pr-1" aria-label="Gerenciar realces">
+                  {visibleHighlights.map((highlight) => (
+                    <li
+                      key={highlight.id}
+                      className="flex items-center gap-2 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] p-2"
+                    >
+                      <span
+                        className={`h-8 w-2 shrink-0 rounded-full ${COLOR_CLASSES[highlight.color]}`}
+                        aria-hidden="true"
+                      />
+                      <span className="min-w-0 flex-1 truncate text-xs text-[var(--text-secondary)]" title={getHighlightExcerpt(highlight.selected_text)}>
+                        {getHighlightExcerpt(highlight.selected_text)}
+                      </span>
+                      <label className="sr-only" htmlFor={`highlight-color-${highlight.id}`}>
+                        Cor do realce {getHighlightExcerpt(highlight.selected_text)}
+                      </label>
+                      <select
+                        id={`highlight-color-${highlight.id}`}
+                        value={highlight.color}
+                        onChange={(event) => void handleColorChange(
+                          highlight.id,
+                          event.target.value as TextHighlightColor,
+                        )}
+                        disabled={saveStatus === "saving"}
+                        className="h-8 max-w-24 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-1 text-xs text-[var(--text-primary)] disabled:opacity-60"
+                        aria-label={`Alterar cor do realce: ${getHighlightExcerpt(highlight.selected_text)}`}
+                      >
+                        {TEXT_HIGHLIGHT_COLORS.map((color) => (
+                          <option key={color} value={color}>{COLOR_LABELS[color]}</option>
+                        ))}
+                      </select>
+                      <button
+                        type="button"
+                        onClick={() => void handleRemoveHighlight(highlight.id)}
+                        disabled={saveStatus === "saving"}
+                        className="grid h-8 w-8 shrink-0 place-items-center rounded-lg text-[var(--text-muted)] transition-colors hover:bg-[var(--callout-warning-bg)] hover:text-[var(--callout-warning-text)] disabled:opacity-60"
+                        aria-label={`Excluir realce: ${getHighlightExcerpt(highlight.selected_text)}`}
+                        title="Excluir realce"
+                      >
+                        <Trash2 size={15} />
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             <div className="mt-3 min-h-5" aria-live="polite">
               {(loading || saveStatus === "saving") && (

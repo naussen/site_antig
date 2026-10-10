@@ -4,6 +4,11 @@ import test from "node:test";
 
 import { findAnchoredOffsets } from "../src/lib/text-highlight-anchors.mjs";
 
+const highlighterSource = fs.readFileSync(
+  new URL("../src/components/study/text-highlighter.tsx", import.meta.url),
+  "utf8",
+);
+
 const baseHighlight = {
   start_offset: 6,
   end_offset: 11,
@@ -49,4 +54,20 @@ test("migration isola os realces por usuário com RLS", () => {
   assert.match(migration, /REVOKE ALL PRIVILEGES[\s\S]+FROM anon, authenticated/);
   assert.equal((migration.match(/\(SELECT auth\.uid\(\)\) = user_id/g) ?? []).length, 5);
   assert.doesNotMatch(migration, /GRANT[\s\S]+TO anon/);
+});
+
+test("oferece exclusão contextual ao passar o mouse sobre o realce", () => {
+  assert.match(highlighterSource, /range\.getClientRects\(\)/);
+  assert.match(highlighterSource, /data-highlight-delete-button/);
+  assert.match(highlighterSource, /aria-label=\{`Excluir realce:/);
+  assert.match(highlighterSource, /event\.pointerType !== "mouse"/);
+  assert.match(highlighterSource, /second\.priority - first\.priority/);
+});
+
+test("oferece inserção contextual com a cor previamente selecionada", () => {
+  assert.match(highlighterSource, /data-highlight-insert-button/);
+  assert.match(highlighterSource, /Inserir realce \$\{COLOR_LABELS\[pendingHighlight\.input\.color\]\}/);
+  assert.match(highlighterSource, /addHighlight\(pendingHighlight\.input\)/);
+  assert.match(highlighterSource, /color: activeTool/);
+  assert.doesNotMatch(highlighterSource, /Escolha uma cor e selecione o texto\. O salvamento é automático\./);
 });

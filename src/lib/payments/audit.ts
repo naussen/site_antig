@@ -5,6 +5,7 @@ type PaymentProvider = "mercado_pago" | "paypal";
 type PaymentAuditAction =
   | "checkout_created"
   | "checkout_failed"
+  | "checkout_blocked"
   | "cancellation_confirmed"
   | "cancellation_failed";
 

@@ -52,6 +52,16 @@ test("cancelamento é autenticado, same-origin e revalida o provedor", async () 
   assert.match(source, /cancelPayPalSubscription/);
 });
 
+test("checkout bloqueia pendências e preserva histórico de assinaturas", async () => {
+  const checkout = await read("src/app/api/payments/checkout/[provider]/route.ts");
+  const migration = await read("supabase/migrations/035_launch_operations_hardening.sql");
+  assert.match(checkout, /shouldBlockNewCheckout\(entitlement\)/);
+  assert.match(checkout, /subscription_unresolved/);
+  assert.match(migration, /CREATE TABLE public\.payment_subscription_links/);
+  assert.match(migration, /ON CONFLICT \(provider, provider_subscription_id\)/);
+  assert.match(migration, /'checkout_blocked'/);
+});
+
 test("canal LGPD valida entrada, limita abuso e grava somente no backend", async () => {
   const source = await read("src/app/api/privacy-requests/route.ts");
   assert.match(source, /requestSchema\.safeParse/);

@@ -1,11 +1,13 @@
 import Link from "next/link";
-import { ArrowLeft, Check, CreditCard, RefreshCw, ShieldCheck, Sparkles, WalletCards } from "lucide-react";
+import { Check, CreditCard, RefreshCw, ShieldCheck, Sparkles, WalletCards } from "lucide-react";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import type { UserEntitlement } from "@/types/database";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import { PaymentSubmitButton } from "./payment-submit-button";
 import { CancelSubscriptionButton } from "./cancel-subscription-button";
+import { DashboardPageHero } from "@/components/dashboard/dashboard-page-hero";
+import { DashboardBackLink } from "@/components/navigation/dashboard-back-link";
 
 export default async function SubscriptionPage({
   searchParams,
@@ -214,29 +216,15 @@ export default async function SubscriptionPage({
     <main className="min-h-screen px-4 py-6 sm:px-6 md:px-10 md:py-10" style={{ background: "var(--bg-primary)" }}>
       <div className="mx-auto max-w-4xl">
         {hasContentAccess && (
-          <Link
-            href="/dashboard"
-            className="mb-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--text-secondary)] transition-colors hover:text-[var(--accent)]"
-          >
-            <ArrowLeft size={17} />
-            Voltar ao Dashboard
-          </Link>
+          <DashboardBackLink />
         )}
 
-        <header className="rounded-3xl border p-6 sm:p-8" style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}>
-          <span className="grid h-12 w-12 place-items-center rounded-2xl" style={{ background: "var(--accent-soft)", color: "var(--accent)" }}>
-            <CreditCard size={24} />
-          </span>
-          <p className="mt-6 text-xs font-bold uppercase tracking-[0.16em]" style={{ color: "var(--accent)" }}>
-            Conta e cobrança
-          </p>
-          <h1 className="mt-2 text-3xl font-extrabold tracking-tight" style={{ color: "var(--text-primary)" }}>
-            Gerenciamento da assinatura
-          </h1>
-          <p className="mt-3 max-w-2xl text-sm leading-6" style={{ color: "var(--text-secondary)" }}>
-            Consulte o plano associado à conta de {accountName} e acompanhe os próximos recursos de cobrança.
-          </p>
-        </header>
+        <DashboardPageHero
+          icon={CreditCard}
+          eyebrow="Conta e cobrança"
+          title="Gerenciamento da assinatura"
+          description={`Consulte o plano associado à conta de ${accountName} e acompanhe os próximos recursos de cobrança.`}
+        />
 
         <section className="mt-6 grid gap-6 md:grid-cols-[1.15fr_0.85fr]">
           <article className="rounded-3xl border p-6 sm:p-8" style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}>

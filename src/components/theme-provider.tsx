@@ -7,6 +7,8 @@ import {
   useEffect,
   useState,
 } from "react";
+import { withSiteBasePath } from "@/lib/site-paths.mjs";
+import { parseTheme } from "@/lib/theme-preference";
 import type { Theme } from "@/types/database";
 
 interface ThemeContextValue {
@@ -18,44 +20,43 @@ const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 const STORAGE_KEY = "study-platform-theme";
 
-function getInitialTheme(): Theme {
-  if (typeof window === "undefined") return "light";
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === "dark" || stored === "sepia" || stored === "light") {
-    return stored;
-  }
-  return "light";
-}
-
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setThemeState] = useState<Theme>("light");
-  const [mounted, setMounted] = useState(false);
+export function ThemeProvider({
+  children,
+  initialTheme,
+}: {
+  children: React.ReactNode;
+  initialTheme: Theme;
+}) {
+  const [theme, setThemeState] = useState<Theme>(initialTheme);
 
   useEffect(() => {
-    // O tema salvo só pode ser lido após a hidratação no navegador.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setThemeState(getInitialTheme());
-    setMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
     document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem(STORAGE_KEY, theme);
-  }, [theme, mounted]);
+    try {
+      localStorage.setItem(STORAGE_KEY, theme);
+    } catch {
+      // O tema continua funcional quando o storage do navegador está bloqueado.
+    }
+  }, [theme]);
+
+  useEffect(() => {
+    const handleStorage = (event: StorageEvent) => {
+      if (event.key !== STORAGE_KEY) return;
+      const nextTheme = parseTheme(event.newValue);
+      if (nextTheme) setThemeState(nextTheme);
+    };
+    window.addEventListener("storage", handleStorage);
+    return () => window.removeEventListener("storage", handleStorage);
+  }, []);
 
   const setTheme = useCallback((newTheme: Theme) => {
     setThemeState(newTheme);
+    void fetch(withSiteBasePath("/api/preferences/theme"), {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ theme: newTheme }),
+      credentials: "same-origin",
+    }).catch(() => undefined);
   }, []);
-
-  // Evita flash de tema errado durante SSR
-  if (!mounted) {
-    return (
-      <ThemeContext.Provider value={{ theme: "light", setTheme }}>
-        {children}
-      </ThemeContext.Provider>
-    );
-  }
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

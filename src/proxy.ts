@@ -1,6 +1,7 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
+import { sanitizeOAuthCallbackUrl } from "@/lib/auth/oauth-callback-url.mjs";
 import { isStudyPath } from "@/lib/site-paths.mjs";
 
 /**
@@ -11,6 +12,10 @@ import { isStudyPath } from "@/lib/site-paths.mjs";
  * antes que os cookies sejam propagados no setAll.
  */
 export async function proxy(request: NextRequest) {
+  const localPath = request.nextUrl.pathname.startsWith("/resumos/")
+    ? request.nextUrl.pathname.slice("/resumos".length)
+    : request.nextUrl.pathname;
+
   // Wrapper estável para que setAll sempre enxergue o response atual
   const responseHolder = {
     value: NextResponse.next({ request: { headers: request.headers } }),
@@ -48,12 +53,28 @@ export async function proxy(request: NextRequest) {
     ? await supabase.auth.getClaims()
     : { data: null, error: null };
 
+  if (
+    user &&
+    !claimsError &&
+    hasGoogleSession(user, claimsData?.claims) &&
+    localPath !== "/auth/callback"
+  ) {
+    const cleanUrl = sanitizeOAuthCallbackUrl(request.nextUrl);
+
+    if (cleanUrl.toString() !== request.nextUrl.toString()) {
+      const cleanResponse = NextResponse.redirect(cleanUrl, 303);
+      cleanResponse.headers.set("Cache-Control", "private, no-store, max-age=0");
+      cleanResponse.headers.set("Referrer-Policy", "no-referrer");
+      responseHolder.value.cookies
+        .getAll()
+        .forEach((cookie) => cleanResponse.cookies.set(cookie));
+      return cleanResponse;
+    }
+  }
+
   if (user && (claimsError || !hasGoogleSession(user, claimsData?.claims))) {
     await supabase.auth.signOut();
 
-    const localPath = request.nextUrl.pathname.startsWith("/resumos/")
-      ? request.nextUrl.pathname.slice("/resumos".length)
-      : request.nextUrl.pathname;
     if (localPath === "/login" || localPath === "/auth/callback") {
       return responseHolder.value;
     }

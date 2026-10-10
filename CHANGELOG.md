@@ -1,5 +1,124 @@
 # Changelog
 
+## Não publicado — retorno seguro do Mercado Pago
+
+- substituído o callback com query preexistente por uma rota intermediária que remove os parâmetros adicionados pelo provedor antes de redirecionar para a página de assinatura;
+- evitada a URL malformada com dois caracteres `?`, sem usar dados do navegador para conceder acesso ao conteúdo.
+
+## Não publicado — auditoria de prontidão para lançamento
+
+- atualizado o progresso após o primeiro cadastro Google sintético completo, mantendo como gates a publicação da higiene OAuth, a matriz visual de acesso, a recuperação remota, os alertas operacionais e a rotação do token administrativo;
+- removidos `code`, `state`, `next` e erros transitórios de OAuth antes de renderizar páginas autenticadas, com redirecionamento `303`, resposta sem cache e política `no-referrer` no callback;
+- auditados em produção login Google, navegação autenticada, persistência, RLS, integrações entre módulos, cabeçalhos de segurança e responsividade em desktop, tablet e celular;
+- confirmados o deploy da `origin/main`, os gates automatizados, o backup lógico íntegro e sua cópia off-site;
+- registrado o veredito NO-GO até concluir cadastro/matriz visual com contas Google, backup nativo e recuperação Auth e preflight/alertas publicados.
+- separados os preflights da aplicação e do host Windows de backup, impedindo que a frase de recuperação seja exigida ou copiada para a hospedagem;
+- adicionado gate verificável para tarefa agendada, backup recente, descriptografia, chave portátil e hashes dos três artefatos off-site.
+- ampliado o teste remoto para cobrir leitura do acervo por visitante, estados pendente, expirado, cancelado e ativo, além do bypass administrativo somente após TOTP/AAL2.
+- corrigida a coleta Auth do backup para preservar identidades OAuth e adicionado restore destrutivo com trava de destino local, reconstrução de banco/Auth/Storage, validação de 98 chaves estrangeiras e smoke RLS.
+- confirmada no painel da Netlify a publicação do PRO Legis em `main@486d693`, igual a `origin/main`, com o gate de release correspondente aprovado no GitHub.
+- corrigida a política Netlify do Site para exigir aprovação de previews não confiáveis e marcadas como segredo as credenciais administrativas do PRO Legis, ficando pendente a rotação coordenada do token administrativo inspecionado.
+- confirmado pela API autenticada do Supabase que o projeto de produção está sem PITR e sem backups nativos disponíveis, mantendo o gate operacional de recuperação como bloqueador do lançamento.
+- documentados os fluxos de recuperação Google OAuth/TOTP sem bypass, os gates de retorno e o roteiro cronometrado para medir RPO/RTO completo em ambiente remoto isolado.
+
+## Não publicado — endurecimento operacional da Fase 0
+
+- bloqueado novo checkout enquanto houver assinatura `pending`, `past_due`, ativa ou em teste ainda vinculada ao usuário;
+- preservado em tabela própria o histórico de todas as assinaturas dos provedores, sem substituir vínculos antigos;
+- registrada a execução da reconciliação financeira, ampliada sua frequência para seis horas e adicionado alerta genérico de falha;
+- adicionado health check sem cache e sem dados sensíveis para banco e heartbeat financeiro;
+- derivado das migrations o inventário integral do backup, incluindo Questões e tabelas operacionais futuras;
+- adicionadas chave portátil por frase de recuperação e cópia off-site com conferência SHA-256;
+- adicionada configuração interativa da frase de recuperação, protegida localmente por DPAPI e injetada somente no processo da tarefa agendada;
+- removida a dependência de carregamento do módulo PowerShell Security na persistência e proteção da frase, usando diretamente as APIs do Windows e do .NET;
+- adicionados gate de release no GitHub e verificação obrigatória antes do build Netlify;
+- corrigida a versão transitiva vulnerável de `source-map-js` sem downgrade ou mudança incompatível;
+- atualizados os seis baselines visuais para a identidade atual do PRO Questões, eliminando falhas obsoletas em mobile, desktop e nos três temas;
+- documentados rollout, rollback, restore trimestral e gates externos obrigatórios antes de cobranças reais.
+
+## Não publicado — área de questões e comandos do Planner
+
+- ampliada a área útil do PRO Questões em monitores largos, mantendo o limite anterior em telas menores;
+- adicionado em cada bloco do Planner um comando direto para remoção da grade, com confirmação, persistência autenticada e opção de desfazer.
+
+## Não publicado — marca correta no cabeçalho do PRO Questões
+
+- o cabeçalho lateral, recolhido e móvel agora identifica a rota de questões e exibe a marca própria do módulo;
+- mantida a marca PRO Resumos nas demais rotas do painel.
+
+## Não publicado — ícone de acesso ao PRO Questões
+
+- substituído o ponto de interrogação pela letra `Q` nos menus lateral, recolhido e móvel, preservando acessibilidade e estados visuais.
+
+## Não publicado — identidade própria do PRO Questões
+
+- substituído o wordmark montado por uma marca completa e transparente, com símbolo, versão clara, versão escura e ícone compacto;
+- preservadas legibilidade, proporção e acessibilidade nos temas Claro, Noturno e Sépia, na landing e no módulo de questões.
+
+## Não publicado — saneamento de marcadores técnicos
+
+- bloqueada na API e no CLI a importação de `content_markdown` com marcadores editoriais `@@@`;
+- convertido o resíduo editorial do módulo Bens Públicos em cabeçalhos Markdown, preservando seções e flashcards.
+
+## Não publicado — atualização de segurança das dependências
+
+- atualizados Next.js e `eslint-config-next` para 16.3.8 e Sharp para 0.35.5;
+- atualizados os transitivos corrigíveis pelo npm, incluindo DOMPurify;
+- mantida sem alteração a cadeia vulnerável exclusiva do ESLint, pois a correção automática disponível exige downgrade incompatível para Next.js 14.
+
+## Não publicado — reorganização da navegação
+
+- priorizados no topo do menu Início, PRO Questões, PRO Resumos e PRO Legis;
+- mantidos Planner e Notas em um bloco próprio de estudo;
+- movidos Preferências e Conta para o rodapé compartilhado entre desktop e mobile.
+
+## Não publicado — fundação segura do módulo Questões
+
+- criada migration aditiva do módulo com catálogo canônico de disciplinas, vínculos com tópicos, questões, alternativas, gabaritos, explicações, tentativas, preferências e estruturas de comentários;
+- isolado o gabarito da Data API e adicionadas RPCs de listagem, resposta idempotente, ocultação/revisão e estatísticas pessoais;
+- adicionados RLS, privilégios mínimos, validação diferida de publicação, tipos TypeScript e suíte pgTAP de 27 verificações entre usuários;
+- adicionados testes estáticos de segurança e validação limpa da migration em PostgreSQL 18.6 isolado, com 27/27 verificações pgTAP aprovadas;
+- aplicada a migration 029 em produção após `db push --dry-run` confirmar que era a única pendência; a repetição do pgTAP no PostgreSQL 17 remoto permanece pendente.
+- integrada a rota protegida `/dashboard/questoes` com uma questão por vez, filtros, resposta corrigida no servidor, comentário didático, estatísticas, revisão e ocultação;
+- adicionados o wordmark leve `PROQuestões`, o acesso na navegação da área do aluno e uma demonstração exclusivamente visual na landing pública.
+- corrigida a renderização server-side da página usando uma RPC de catálogo com menor privilégio, fallback para consultas auxiliares, favicon no domínio raiz e preload apenas acima da dobra.
+- definido o contrato versionado `pro-questions/v1`, com hashes, procedência, mapeamento explícito de tópicos e importação transacional idempotente;
+- publicada uma amostra auditável de Direito Administrativo exclusivamente a partir do arquivo `ATUALIZADO`, com 12 questões válidas ligadas aos tópicos existentes.
+- arquivada a disciplina legada `Geral` no catálogo canônico e restringidos os filtros de questões a disciplinas com tópicos ativos, preservando `topics.discipline` para compatibilidade.
+- reforçada a identidade visual violeta/ciano do PROQuestões e compactadas as alternativas com tipografia própria, alvos acessíveis e disposição responsiva para certo/errado.
+- reservado no mobile o espaço do cabeçalho fixo para impedir que ele cubra o wordmark e o topo do hero de Questões.
+- adicionados controles responsivos de questão anterior e próxima, com histórico local, avanço sem resposta e indicação do fim do filtro sem apagar a questão atual.
+- importado e verificado um lote atômico de 100 questões adicionais de Direito Administrativo, distribuídas por 10 tópicos ativos, com 328 alternativas, 100 gabaritos, 100 comentários didáticos e trilha integral de auditoria.
+- aprimorado o importador administrativo com seleção limitada e balanceada, exclusão de lotes anteriores e verificação pós-importação de hashes e relações persistidas.
+- alinhada a identidade visual da área de notas aos demais módulos autenticados, com hero responsivo, resumo do acervo e botões principais com alvos táteis acessíveis.
+- estabilizada a formatação de data das notas no fuso de São Paulo para eliminar divergência de hidratação entre servidor e navegador.
+- priorizado o carregamento da variante visível dos logos acima da dobra no dashboard e nas telas de acesso, sem baixar antecipadamente a variante oculta.
+- uniformizada a identidade dos módulos auxiliares com um hero compartilhado e ampliados os alvos táteis de navegação, temas, Questões e páginas públicas.
+- adicionada regressão visual automatizada da identidade compartilhada em 390 px e 1440 px, cobrindo os temas Light, Dark e Sépia com baselines versionados e execução em CI.
+- removido o espaçamento móvel duplicado no topo do PROQuestões e reduzida a altura inicial da lista de disciplinas do Planner em telas pequenas, aproximando a grade sem sacrificar nomes completos ou rolagem interna.
+## Não publicado — planejamento do módulo Questões
+
+- definido o projeto do módulo Questões com alternativas arquiteturais, MVP leve no Supabase, comentários didáticos e de usuários, busca, estatísticas pessoais e ocultação reversível;
+- aprovadas a arquitetura Supabase integrada, a navegação de uma questão por vez e a discussão pseudônima sob demanda;
+- planejados catálogo canônico e relações muitos-para-muitos para vincular questões a disciplinas e tópicos por identificadores estáveis, preservando o campo legado durante a transição;
+- documentados modelo de dados, RLS, proteção do gabarito, moderação, fases, testes, critérios de aceite, metas de desempenho, rollout e rollback;
+- mantida a implementação funcional fora deste checkpoint de planejamento.
+
+## Não publicado — robustez das personalizações por usuário
+
+- persistido o tema Light, Dark ou Sépia na conta, com renderização inicial no servidor e sincronização entre abas;
+- protegida a edição de notas contra sobrescrita silenciosa por outra aba ou dispositivo;
+- tornadas idempotentes a exclusão e a reconciliação periódica de imagens órfãs de notas;
+- ampliado o teste RLS de dois usuários para realces e metadados privados de imagens.
+
+## Não publicado — gerenciamento de realces
+
+- adicionada uma lista dos realces recentes no painel de estudo, com trecho identificável, troca de cor e exclusão direta;
+- adicionado um botão discreto de exclusão junto ao próprio texto realçado ao passar o mouse, mantendo a lista como alternativa acessível e para telas touch;
+- adicionada confirmação contextual rápida para inserir um realce após selecionar texto, já usando a cor escolhida no marca-texto;
+- preservado o feedback de salvamento automático nas edições de cor e exclusões;
+- incluída atualização autenticada e isolada por usuário na API de realces.
+
 ## Não publicado — Planner semanal de estudos
 
 - criada a rota autenticada `/dashboard/planner` e o link “Planner” na navegação da área do aluno;
@@ -10,6 +129,9 @@
 - migration 026 aplicada no Supabase remoto e isolamento validado com dois usuários temporários, removidos ao final do teste.
 - adicionados redimensionamento direto da duração por gesto ou teclado, cópia segura para a semana seguinte e restauração do último bloco excluído;
 - a cópia semanal recusa semanas de destino já preenchidas e nunca sobrescreve horários silenciosamente.
+- simplificada a operação principal para arrastar, redimensionar e salvar automaticamente; criação, edição e exclusão manual de horários agora aparecem somente em “Configurações”.
+- corrigida a detecção do slot de destino para aceitar também horários intermediários de 15 minutos, como 13:15, 13:30 e 13:45, preservando o arraste por teclado.
+- exibidos por completo os nomes das disciplinas no menu do Planner, com quebra de linha e sem o rótulo redundante de arraste em cada cartão.
 
 ## Não publicado — remoção da disciplina Geral
 
@@ -554,6 +676,8 @@
 - Adicionada auditoria financeira persistente e mínima para checkout e cancelamento, sem payloads, credenciais ou dados de cartão.
 - Desabilitado e validado no Supabase de produção o provedor de e-mail/senha, mantendo autenticação Google e TOTP administrativo.
 - Adicionado backup lógico criptografado do Supabase, verificação de restauração por integridade, retenção e instalador da tarefa diária do Windows.
+- Corrigida a reconstrução do banco vazio para que migrations históricas aceitem o restore de dados após a criação do schema e não dependam de formatação textual específica do PostgreSQL, sem afrouxar a validação de bases preenchidas.
+- Restaurados os privilégios CRUD server-side do `service_role` em reconstruções do banco, mantendo `anon` e `authenticated` sujeitos aos grants e às políticas RLS existentes.
 - Tornada explícita a seleção de ambiente do PayPal e adicionado preflight que impede executar sandbox financeiro com credenciais de produção.
 
 - Corrigido o posicionamento do botão de recolher/expandir o menu desktop, mantendo-o dentro da área visual do menu.

@@ -2,6 +2,7 @@ import { AlertTriangle, CalendarDays } from "lucide-react";
 import { requireContentAccess } from "@/lib/content-access";
 import { isMissingTableError } from "@/lib/supabase/errors";
 import type { PlannerItem, PlannerPlan } from "@/lib/planner/types";
+import { DashboardPageHero } from "@/components/dashboard/dashboard-page-hero";
 import { PlannerClient } from "./planner-client";
 
 export default async function PlannerPage() {
@@ -65,19 +66,12 @@ export default async function PlannerPage() {
   return (
     <main className="min-h-screen bg-[var(--bg-primary)] px-4 py-6 sm:px-6 md:px-10 md:py-10">
       <div className="mx-auto max-w-[1500px]">
-        <header className="relative overflow-hidden rounded-[2rem] border border-white/15 bg-[linear-gradient(135deg,var(--catalog-hero-start),var(--catalog-hero-end))] p-6 text-white shadow-[var(--shadow-lg)] sm:p-8">
-          <div className="pointer-events-none absolute -right-16 -top-24 h-64 w-64 rounded-full bg-[var(--catalog-hero-glow)] blur-3xl" aria-hidden="true" />
-          <div className="relative">
-            <span className="grid h-12 w-12 place-items-center rounded-2xl border border-white/15 bg-white/10 text-[var(--catalog-gold-light)]">
-              <CalendarDays size={24} />
-            </span>
-            <p className="mt-6 text-xs font-black uppercase tracking-[0.16em] text-white/75">Área do aluno</p>
-            <h1 className="mt-2 text-3xl font-black tracking-tight text-white sm:text-4xl">Planner de estudos</h1>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-white/75 sm:text-base">
-              Organize até quatro semanas, distribua suas disciplinas e ajuste cada horário à sua rotina.
-            </p>
-          </div>
-        </header>
+        <DashboardPageHero
+          icon={CalendarDays}
+          eyebrow="Área do aluno"
+          title="Planner de estudos"
+          description="Arraste as disciplinas para os horários e pronto: cada alteração é salva automaticamente."
+        />
 
         {plannerUnavailable ? (
           <div className="mt-6 flex items-start gap-3 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-5 text-sm text-[var(--text-secondary)]" role="alert">

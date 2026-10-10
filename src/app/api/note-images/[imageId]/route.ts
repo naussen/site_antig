@@ -61,6 +61,15 @@ export async function DELETE(request: Request, { params }: NoteImageRouteProps) 
     return NextResponse.json({ error: "Não foi possível excluir a imagem." }, { status: 503 });
   }
 
-  await authorization.supabase.rpc("release_user_note_image", { p_image_id: imageId });
+  const { error: releaseError } = await authorization.supabase.rpc(
+    "release_user_note_image",
+    { p_image_id: imageId },
+  );
+  if (releaseError) {
+    return NextResponse.json(
+      { error: "A imagem foi removida, mas a reserva precisa ser reconciliada." },
+      { status: 503 },
+    );
+  }
   return new NextResponse(null, { status: 204 });
 }

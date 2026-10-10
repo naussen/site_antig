@@ -26,6 +26,7 @@ import {
   deleteStoredNoteImages,
   uploadNoteImage,
 } from "@/lib/note-images-client";
+import { formatBrazilDateTime } from "@/lib/format-date";
 
 interface NotesPanelProps {
   userId: string | null;
@@ -382,12 +383,7 @@ function NoteCard({ note, sectionLabel, onDelete }: NoteCardProps) {
                 {sectionLabel} ·
               </span>
             )}
-            {note.updated_at
-              ? new Date(note.updated_at).toLocaleString("pt-BR", {
-                  dateStyle: "short",
-                  timeStyle: "short",
-                })
-              : ""}
+            {note.updated_at ? formatBrazilDateTime(note.updated_at) : ""}
           </span>
         </div>
         <button

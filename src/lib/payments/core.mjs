@@ -55,7 +55,7 @@ export function buildMercadoPagoSubscriptionPayload({ userId, email, appUrl, amo
     reason: "PRO Concursos — assinatura mensal",
     external_reference: userId,
     payer_email: email,
-    back_url: `${appUrl}/dashboard/assinatura?checkout=retorno`,
+    back_url: `${appUrl}/api/payments/return/mercado-pago`,
     status: "pending",
     auto_recurring: {
       frequency: 1,
@@ -119,6 +119,17 @@ export function calculateAccessUntil(status, nextBillingTime, eventTime) {
     : new Date(eventDate.getTime() + ACTIVE_ACCESS_FALLBACK_DAYS * 86_400_000);
 
   return new Date(base.getTime() + BILLING_GRACE_DAYS * 86_400_000).toISOString();
+}
+
+const CHECKOUT_BLOCKING_STATUSES = new Set(["active", "trialing", "pending", "past_due"]);
+
+export function shouldBlockNewCheckout(entitlement) {
+  if (!entitlement) return false;
+  if (!CHECKOUT_BLOCKING_STATUSES.has(entitlement.status)) return false;
+  if (entitlement.status === "active" || entitlement.status === "trialing") {
+    return !entitlement.access_until || new Date(entitlement.access_until) > new Date();
+  }
+  return Boolean(entitlement.provider_subscription_id);
 }
 
 export function verifyMercadoPagoSignature({ dataId, requestId, signature, secret }) {

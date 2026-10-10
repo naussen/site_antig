@@ -8,6 +8,7 @@ import {
   PaymentProviderError,
 } from "@/lib/payments/providers";
 import { recordPaymentAudit } from "@/lib/payments/audit";
+import { shouldBlockNewCheckout } from "@/lib/payments/core.mjs";
 
 const providers = new Set(["mercado-pago", "paypal"]);
 
@@ -42,14 +43,26 @@ export async function POST(request: Request, context: { params: Promise<{ provid
 
   const { data: entitlement, error } = await supabase
     .from("user_entitlements")
-    .select("status, access_until")
+    .select("status, access_until, provider_subscription_id")
     .eq("user_id", user.id)
     .maybeSingle();
   if (error) return NextResponse.redirect(subscriptionPage({ checkout: "erro" }), 303);
 
-  const accessIsCurrent = !entitlement?.access_until || new Date(entitlement.access_until) > new Date();
-  if (entitlement && ["active", "trialing"].includes(entitlement.status) && accessIsCurrent) {
-    return NextResponse.redirect(subscriptionPage({ checkout: "ja-ativo" }), 303);
+  if (shouldBlockNewCheckout(entitlement)) {
+    await recordPaymentAudit({
+      action: "checkout_blocked",
+      outcome: "failure",
+      provider: provider === "mercado-pago" ? "mercado_pago" : "paypal",
+      userId: user.id,
+      subscriptionId: entitlement?.provider_subscription_id,
+      reasonCode: entitlement?.status === "pending" || entitlement?.status === "past_due"
+        ? "subscription_unresolved"
+        : "subscription_active",
+    });
+    const checkout = entitlement?.status === "pending" || entitlement?.status === "past_due"
+      ? "assinatura-pendente"
+      : "ja-ativo";
+    return NextResponse.redirect(subscriptionPage({ checkout }), 303);
   }
 
   try {

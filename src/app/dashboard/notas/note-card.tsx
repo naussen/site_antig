@@ -16,6 +16,7 @@ import { MarkdownViewer } from "@/components/study/markdown-viewer";
 import { createClient } from "@/lib/supabase/client";
 import { MAX_NOTE_LENGTH, extractStoredNoteImageIds } from "@/lib/note-images.mjs";
 import { deleteNoteImage, deleteStoredNoteImages } from "@/lib/note-images-client";
+import { formatBrazilDateTime } from "@/lib/format-date";
 
 interface NoteCardProps {
   note: {
@@ -96,8 +97,17 @@ export function NoteCard({ note, userId }: NoteCardProps) {
       .update({ content: normalizedDraft })
       .eq("id", note.id)
       .eq("user_id", userId)
+      .eq("updated_at", updatedAt)
       .select("content, updated_at")
-      .single();
+      .maybeSingle();
+
+    if (!error && !data) {
+      setErrorMessage(
+        "Esta nota foi alterada em outra aba ou dispositivo. Copie seu rascunho e recarregue a página antes de tentar novamente.",
+      );
+      setIsSaving(false);
+      return;
+    }
 
     if (error || !data) {
       console.error("Erro ao atualizar nota:", error);
@@ -173,10 +183,7 @@ export function NoteCard({ note, userId }: NoteCardProps) {
           >
             <Calendar size={12} aria-hidden="true" />
             <span>
-              Atualizada em {new Date(updatedAt).toLocaleString("pt-BR", {
-                dateStyle: "short",
-                timeStyle: "short",
-              })}
+              Atualizada em {formatBrazilDateTime(updatedAt)}
             </span>
           </div>
         </div>
@@ -186,7 +193,7 @@ export function NoteCard({ note, userId }: NoteCardProps) {
             type="button"
             onClick={() => startEditing("expanded")}
             disabled={isBusy || isEditing}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs font-semibold transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-xl border px-3 py-2 text-xs font-semibold transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
             style={{ borderColor: "var(--border)", color: "var(--accent)" }}
             title="Abrir a nota em tamanho maior"
           >
@@ -198,7 +205,7 @@ export function NoteCard({ note, userId }: NoteCardProps) {
             type="button"
             onClick={() => startEditing("inline")}
             disabled={isBusy || isEditing}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs font-semibold transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-xl border px-3 py-2 text-xs font-semibold transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
             style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}
           >
             <Pencil size={13} aria-hidden="true" />
@@ -213,7 +220,7 @@ export function NoteCard({ note, userId }: NoteCardProps) {
               setIsConfirmingDelete(true);
             }}
             disabled={isBusy || isConfirmingDelete}
-            className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg border text-xs font-semibold transition-opacity hover:opacity-75 disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
+            className="inline-flex min-h-11 items-center gap-1.5 rounded-xl border px-3 py-2 text-xs font-semibold transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer"
             style={{
               background: "var(--callout-warning-bg)",
               borderColor: "var(--callout-warning-border)",

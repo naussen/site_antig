@@ -2,6 +2,13 @@
 
 Este documento consolida somente pendências futuras identificadas nas revisões de segurança. Itens concluídos ficam no final para evitar regressões e retrabalho.
 
+## Progresso do lançamento — 10/10/2026
+
+- **Veredito:** `NO-GO` enquanto os cinco gates P0 abaixo permanecerem abertos. Mercado Pago e PayPal continuam deliberadamente reservados para a última etapa.
+- **Concluído desde a auditoria:** uma conta Google sintética nova concluiu o OAuth e alcançou a área autenticada de Conta em produção, sem compartilhamento de senha, QR code ou OTP.
+- **Pronto para integração:** o PR [#10](https://github.com/naussen/site_antig/pull/10) está aberto, integrável e contém a correção que remove parâmetros transitórios do OAuth da URL final. O commit ainda não está em `main` nem publicado.
+- **Gates P0 abertos, em ordem:** publicar/testar o PR #10; concluir a matriz visual de acesso; decidir backup nativo/PITR e medir o RTO remoto; configurar/testar alertas; rotacionar o token administrativo do PRO Legis.
+
 ## P0 — Antes do primeiro usuário pagante
 
 ### Autenticação Google-only
@@ -12,6 +19,9 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [x] Desabilitar no Supabase de produção o provedor de e-mail/senha após validar Google + TOTP, sem criar bypass ou conta fixa alternativa; confirmado em 26/09/2026.
 - [x] Testar diretamente na API de produção que login por senha, link mágico e cadastro por e-mail são recusados com `email_provider_disabled`, mantendo Google habilitado; confirmado em 26/09/2026.
 - [x] Não solicitar escopos Google adicionais aos padrões mínimos de identidade do Supabase; persistir somente os dados básicos necessários ao produto.
+- [x] Criar uma conta Google sintética dedicada e concluir o primeiro OAuth até a área autenticada de Conta; comprovado em produção em 10/10/2026, sem compartilhar credenciais ou códigos.
+- [ ] Integrar e publicar o PR #10; depois repetir OAuth, logout e novo login em janela anônima e confirmar que `code`, `state`, `next` e erros transitórios não permanecem na URL final.
+- [ ] Confirmar para a conta sintética ausência de papel administrativo e entitlement, bloqueio do conteúdo pago e navegação coerente entre PRO Resumos e PRO Legis.
 
 ### Pagamentos e entitlements
 
@@ -29,6 +39,7 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [x] Implementar reconciliação periódica entre o banco e as APIs dos provedores para corrigir webhooks perdidos.
 - [x] Registrar auditoria persistente e mínima de checkout e cancelamento, complementando eventos de webhook e transações verificadas, sem tokens, dados de cartão, payloads completos, e-mail ou cookies.
 - [ ] Configurar alertas para falhas reiteradas de webhook, divergências de reconciliação e concessões/revogações anormais.
+- [ ] Criar `OPS_ALERT_WEBHOOK_URL` na Netlify, testar recebimento sintético seguro para reconciliação e backup e registrar o responsável operacional.
 - [ ] Testar nos sandboxes: pagamento aprovado, recusado, pendente, duplicado, cancelado, expirado e estornado. Em 26/09/2026 foi publicado o contexto isolado `sandbox-financeiro`, com Mercado Pago `test`, PayPal `sandbox` e URL própria confirmados no runtime. Permanecem ausentes as credenciais dos dois provedores e um Supabase de teste com Service Role própria; o preview continua fechado para checkout até esses dados serem cadastrados.
 
 ### Plano e segurança do Supabase
@@ -37,22 +48,28 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [x] Remover a dependência operacional de proteção contra senhas vazadas: usuários regulares e administradores autenticam somente por Google, e o provedor de e-mail/senha está desabilitado. Reavaliar a proteção se senhas forem reintroduzidas após futuro upgrade.
 - [x] Confirmar no ambiente de produção senha mínima de 12 caracteres com minúscula, maiúscula e número, reautenticação para troca de senha e TOTP habilitado.
 - [x] Implementar backup lógico externo ao Supabase, criptografado, com retenção de 30 dias e ensaio automatizado de descriptografia, hashes e contagens; primeira cópia validada em 26/09/2026.
-- [ ] Copiar os pares de backup/chave para armazenamento fora do computador e executar uma restauração real em PostgreSQL ou projeto Supabase de homologação; a validação atual não substitui PITR nem restauração integral do banco.
+- [x] Copiar o backup, a chave portátil e o resumo para armazenamento fora do computador, com SHA-256 conferido; comprovado em 09/10/2026 pelo preflight do host de backup.
+- [x] Executar uma restauração real em Supabase local isolado; em 09/10/2026 foram recompostas 45 tabelas/34.365 linhas, 16 usuários, 18 identidades e 1 bucket, com 98 chaves estrangeiras e 4 cenários RLS validados em 27,1 s. O ensaio não substitui PITR/backup nativo.
+- [x] Documentar o runbook de recuperação Google OAuth/TOTP, os controles contra bypass e o roteiro cronometrado para medir RPO/RTO ponta a ponta.
+- [ ] Resolver o gate de backup nativo antes do lançamento: em 09/10/2026 a consulta autenticada ao projeto retornou `pitr_enabled: false` e `backups: []`; ativar backup diário/PITR ou registrar aceitação formal do risco residual e o runbook OAuth/MFA.
+- [ ] Executar o runbook em projeto Supabase remoto isolado e registrar o RTO completo; o restaurador atual aceita somente Supabase local e não comprova reconstrução remota.
 
 ### Hospedagem e publicação
 
 - [ ] Confirmar `CONTENT_ADMIN_TOKEN` em todos os escopos necessários da hospedagem, sempre como segredo server-side e nunca com prefixo `NEXT_PUBLIC_`.
 - [ ] Configurar `CONTENT_ADMIN_TOKEN` antes de voltar a usar a rota HTTP administrativa `/api/import`; enquanto ausente, importações devem ocorrer somente por procedimento backend controlado e auditado.
 - [ ] Confirmar que `SUPABASE_SERVICE_ROLE_KEY` existe somente no backend e não é disponibilizada em previews públicos ou bundles client-side.
-- [ ] Validar o deploy da branch publicada e executar smoke tests em `/admin`, `/dashboard`, `/dashboard/assinatura` e em uma página de estudo.
-- [ ] Testar em produção uma conta sem entitlement, uma assinatura ativa, uma expirada e o administrador com AAL1/AAL2.
+- [x] Alterar a política Netlify do Site para exigir aprovação de previews não confiáveis e marcar `CONTENT_ADMIN_TOKEN`/`SUPABASE_SECRET_KEY` do PRO Legis como segredos; confirmado no painel em 09/10/2026.
+- [ ] Rotacionar o `CONTENT_ADMIN_TOKEN` do PRO Legis após a inspeção autorizada que precedeu sua classificação como segredo, atualizar o consumidor legítimo e invalidar o valor anterior.
+- [x] Validar o deploy da branch publicada e executar smoke tests em `/admin`, `/dashboard`, `/dashboard/assinatura` e em uma página de estudo; `origin/main`, Netlify e os gates coincidiram no SHA `fcee3c0` em 09/10/2026.
+- [ ] Testar na interface de produção uma conta Google sem entitlement, uma assinatura ativa, uma expirada e o administrador com AAL1/AAL2; a matriz de banco/RLS foi automatizada e aprovada em 09/10/2026.
 
 ## P1 — Hardening após a integração inicial
 
 ### Autorização e testes
 
 - [x] Criar teste pgTAP negativo com dois usuários distintos, cobrindo leitura e alteração de notas, progresso, preferências, entitlement e solicitações LGPD do outro.
-- [ ] Automatizar testes de leitura do acervo para `anon`, autenticado sem assinatura, assinatura ativa, assinatura expirada, admin AAL1 e admin AAL2.
+- [x] Automatizar testes remotos de leitura do acervo para `anon`, autenticado sem assinatura, assinatura ativa, assinatura expirada/cancelada, admin AAL1 e admin AAL2; fixtures efêmeras aprovadas e removidas em 09/10/2026.
 - [ ] Executar `supabase/scripts/fase3_validacao_rls.sql` após toda mudança futura de schema, grants ou policies.
 - [ ] Impedir em revisão de código qualquer nova policy de `topics` ou `sections` baseada apenas em `TO authenticated USING (true)`.
 - [ ] Manter toda Server Action e Route Handler com autorização própria próxima ao acesso aos dados; não depender apenas de layout, botão oculto ou estado React.

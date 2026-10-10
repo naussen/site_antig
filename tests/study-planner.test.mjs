@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import {
   addDays,
   clampPlannerEndMinute,
@@ -87,4 +88,26 @@ test("limita a cópia às semanas que podem possuir uma semana seguinte", () => 
   assert.equal(copyWeekSchema.safeParse({ planId, sourceWeekIndex: 0 }).success, true);
   assert.equal(copyWeekSchema.safeParse({ planId, sourceWeekIndex: 2 }).success, true);
   assert.equal(copyWeekSchema.safeParse({ planId, sourceWeekIndex: 3 }).success, false);
+});
+
+test("mantém ajustes manuais de horário dentro das configurações", () => {
+  const plannerClient = readFileSync(
+    new URL("../src/app/dashboard/planner/planner-client.tsx", import.meta.url),
+    "utf8",
+  );
+
+  assert.doesNotMatch(plannerClient, /Adicionar estudo às/);
+  assert.doesNotMatch(plannerClient, /Adicionar \$\{discipline\}/);
+  assert.match(plannerClient, /Configurações/);
+  assert.match(plannerClient, /Adicionar manualmente/);
+  assert.match(plannerClient, /settingsOpen && draft/);
+  assert.match(plannerClient, /pointerWithin\(args\)/);
+  assert.match(plannerClient, /pointerCollisions\.length > 0 \? pointerCollisions : closestCenter\(args\)/);
+  assert.doesNotMatch(plannerClient, /flex-1 truncate text-sm font-semibold/);
+  assert.doesNotMatch(plannerClient, />Arraste<\/span>/);
+  assert.match(plannerClient, /xl:grid-cols-\[320px_minmax\(0,1fr\)\]/);
+  assert.match(plannerClient, /max-h-64[\s\S]*sm:max-h-80[\s\S]*xl:max-h-\[55vh\]/);
+  assert.match(plannerClient, /aria-label=\{`Remover \$\{item\.discipline\} da grade`\}/);
+  assert.match(plannerClient, /deleteStudyPlanItem\(item\.id\)/);
+  assert.match(plannerClient, /setLastDeleted\(item\)/);
 });
