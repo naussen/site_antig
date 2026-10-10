@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — retorno seguro do Mercado Pago
+
+- substituído o callback com query preexistente por uma rota intermediária que remove os parâmetros adicionados pelo provedor antes de redirecionar para a página de assinatura;
+- evitada a URL malformada com dois caracteres `?`, sem usar dados do navegador para conceder acesso ao conteúdo.
+
 ## Não publicado — auditoria de prontidão para lançamento
 
 - atualizado o progresso após o primeiro cadastro Google sintético completo, mantendo como gates a publicação da higiene OAuth, a matriz visual de acesso, a recuperação remota, os alertas operacionais e a rotação do token administrativo;
@@ -91,7 +96,6 @@
 - uniformizada a identidade dos módulos auxiliares com um hero compartilhado e ampliados os alvos táteis de navegação, temas, Questões e páginas públicas.
 - adicionada regressão visual automatizada da identidade compartilhada em 390 px e 1440 px, cobrindo os temas Light, Dark e Sépia com baselines versionados e execução em CI.
 - removido o espaçamento móvel duplicado no topo do PROQuestões e reduzida a altura inicial da lista de disciplinas do Planner em telas pequenas, aproximando a grade sem sacrificar nomes completos ou rolagem interna.
-
 ## Não publicado — planejamento do módulo Questões
 
 - definido o projeto do módulo Questões com alternativas arquiteturais, MVP leve no Supabase, comentários didáticos e de usuários, busca, estatísticas pessoais e ocultação reversível;
