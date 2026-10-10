@@ -49,6 +49,10 @@ O `netlify.toml` executa lint, TypeScript e todos os testes Node antes do build.
 
 ## Restore trimestral
 
+O ensaio deve seguir `docs/RUNBOOK_RECUPERACAO_AUTH_RTO.md`; o RTO começa na
+declaração do incidente e termina apenas após Auth, aplicação, dados, segurança
+e reconciliação estarem aptos para reabertura.
+
 1. Criar projeto Supabase isolado, sem usuários reais ativos.
 2. Restaurar o backup nativo ou dump integral.
 3. Restaurar objetos de Storage a partir da cópia off-site.

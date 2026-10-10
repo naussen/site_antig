@@ -16,7 +16,7 @@ O bloqueio não decorre de uma falha funcional reproduzida na interface. Ele dec
 
 1. cadastro Google completo de uma conta nova;
 2. confirmação da matriz de acesso na interface publicada com contas Google sintéticas;
-3. ativação de backup nativo/PITR do Supabase ou aceitação formal do risco, além do procedimento para segredos/fatores Auth que a API não exporta;
+3. ativação de backup nativo/PITR do Supabase ou aceitação formal do risco, seguida da execução do runbook de recuperação Auth e medição do RTO completo;
 4. preflight da aplicação no runtime publicado e teste real de entrega dos alertas operacionais;
 5. rotação coordenada do `CONTENT_ADMIN_TOKEN` do PRO Legis após sua classificação como segredo.
 
@@ -56,11 +56,13 @@ O novo pacote foi restaurado em Supabase local isolado em 27,1 segundos de carga
 
 **Lacuna:** o backup lógico não recebe pela API hashes de senha, segredos OAuth, fatores TOTP nem sessões ativas; por isso, não recompõe sozinho todo o plano de recuperação de Auth.
 
+**Runbook:** `docs/RUNBOOK_RECUPERACAO_AUTH_RTO.md` documenta recuperação sem bypass do Google OAuth/TOTP, invalidação de sessões, gates de retorno e o cronômetro de RPO/RTO. O procedimento ainda precisa ser executado em projeto remoto isolado; os 27,1 segundos medidos não constituem RTO completo.
+
 **Risco:** um backup íntegro no formato próprio pode ainda falhar na reconstrução operacional completa quando mais necessário.
 
-**Ação obrigatória:** antes da abertura, ativar um plano com backup diário nativo ou PITR, ou registrar aceitação formal do risco residual baseada no backup lógico diário já validado. Documentar como os segredos OAuth serão reconfigurados e como administradores recuperarão/reinscreverão MFA após desastre. Adotar RPO operacional máximo de 24 horas para o backup lógico e medir o RTO completo, incluindo infraestrutura e reconfiguração Auth; os 27,1 segundos medidos cobrem apenas carga e validação locais com o ambiente já disponível.
+**Ação obrigatória:** antes da abertura, ativar um plano com backup diário nativo ou PITR, ou registrar aceitação formal do risco residual baseada no backup lógico diário já validado. Executar o runbook em projeto remoto isolado, incluindo reconfiguração OAuth e recuperação/reinscrição MFA. Adotar RPO operacional máximo de 24 horas para o backup lógico e medir o RTO completo, incluindo infraestrutura e reconfiguração Auth; os 27,1 segundos medidos cobrem apenas carga e validação locais com o ambiente já disponível.
 
-**Critério de aceite:** evidência do backup nativo/PITR ou aceitação formal e documentada do risco residual, além de runbook de reconfiguração OAuth/MFA e RTO completo medido.
+**Critério de aceite:** evidência do backup nativo/PITR ou aceitação formal e documentada do risco residual, além do runbook OAuth/MFA executado com sucesso e RTO completo medido.
 
 ### P0-04 — Preflight da aplicação e entrega de alertas ainda não foram comprovados no runtime publicado
 
@@ -203,7 +205,7 @@ Não houve overflow horizontal global nas rotas verificadas. A navegação móve
 
 1. Atualizar a chave pública local para o formato moderno, sem versioná-la.
 2. Criar contas Google sintéticas e repetir na interface a matriz de cadastro/entitlement/AAL já aprovada no banco.
-3. Ativar backup nativo/PITR do Supabase ou aceitar formalmente o risco residual e registrar o runbook OAuth/MFA e o RTO completo.
+3. Ativar backup nativo/PITR do Supabase ou aceitar formalmente o risco residual, executar o runbook OAuth/MFA em projeto remoto isolado e medir o RTO completo.
 4. Criar `OPS_ALERT_WEBHOOK_URL`, rodar o preflight da aplicação no runtime publicado e testar a entrega dos alertas.
 5. Rotacionar coordenadamente o `CONTENT_ADMIN_TOKEN` do PRO Legis e confirmar que o valor anterior foi invalidado.
 6. Repetir o smoke móvel e desktop após qualquer ajuste resultante.

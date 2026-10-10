@@ -82,4 +82,8 @@ A tarefa roda diariamente às 03:30 e tenta recuperar execuções perdidas quand
 
 Mantenha o `.probackup`, a chave `.key.recovery` e o `.summary.json` em armazenamento externo versionado. Guarde a frase de recuperação em local diferente. A chave DPAPI pode continuar local para restaurações rápidas, mas não deve ser a única forma de recuperação.
 
+Use `docs/RUNBOOK_RECUPERACAO_AUTH_RTO.md` para reconstrução do Google OAuth,
+reinscrição de MFA administrativo, validação de retorno e medição ponta a ponta
+do RPO/RTO. O tempo do comando de restore isolado não equivale ao RTO completo.
+
 Antes de clientes pagantes, habilite backups nativos do Supabase e mantenha o ensaio de restore isolado no checklist de release. O backup lógico não contém segredos OAuth, fatores TOTP, sessões ativas ou hashes de senha e não substitui integralmente o mecanismo nativo.

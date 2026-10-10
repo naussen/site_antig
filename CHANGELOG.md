@@ -12,6 +12,7 @@
 - confirmada no painel da Netlify a publicação do PRO Legis em `main@486d693`, igual a `origin/main`, com o gate de release correspondente aprovado no GitHub.
 - corrigida a política Netlify do Site para exigir aprovação de previews não confiáveis e marcadas como segredo as credenciais administrativas do PRO Legis, ficando pendente a rotação coordenada do token administrativo inspecionado.
 - confirmado pela API autenticada do Supabase que o projeto de produção está sem PITR e sem backups nativos disponíveis, mantendo o gate operacional de recuperação como bloqueador do lançamento.
+- documentados os fluxos de recuperação Google OAuth/TOTP sem bypass, os gates de retorno e o roteiro cronometrado para medir RPO/RTO completo em ambiente remoto isolado.
 
 ## Não publicado — endurecimento operacional da Fase 0
 
