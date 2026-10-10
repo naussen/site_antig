@@ -11,6 +11,7 @@
 - corrigida a coleta Auth do backup para preservar identidades OAuth e adicionado restore destrutivo com trava de destino local, reconstrução de banco/Auth/Storage, validação de 98 chaves estrangeiras e smoke RLS.
 - confirmada no painel da Netlify a publicação do PRO Legis em `main@486d693`, igual a `origin/main`, com o gate de release correspondente aprovado no GitHub.
 - corrigida a política Netlify do Site para exigir aprovação de previews não confiáveis e marcadas como segredo as credenciais administrativas do PRO Legis, ficando pendente a rotação coordenada do token administrativo inspecionado.
+- confirmado pela API autenticada do Supabase que o projeto de produção está sem PITR e sem backups nativos disponíveis, mantendo o gate operacional de recuperação como bloqueador do lançamento.
 
 ## Não publicado — endurecimento operacional da Fase 0
 

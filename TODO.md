@@ -40,6 +40,7 @@ Este documento consolida somente pendências futuras identificadas nas revisões
 - [x] Implementar backup lógico externo ao Supabase, criptografado, com retenção de 30 dias e ensaio automatizado de descriptografia, hashes e contagens; primeira cópia validada em 26/09/2026.
 - [x] Copiar o backup, a chave portátil e o resumo para armazenamento fora do computador, com SHA-256 conferido; comprovado em 09/10/2026 pelo preflight do host de backup.
 - [x] Executar uma restauração real em Supabase local isolado; em 09/10/2026 foram recompostas 45 tabelas/34.365 linhas, 16 usuários, 18 identidades e 1 bucket, com 98 chaves estrangeiras e 4 cenários RLS validados em 27,1 s. O ensaio não substitui PITR/backup nativo.
+- [ ] Resolver o gate de backup nativo antes do lançamento: em 09/10/2026 a consulta autenticada ao projeto retornou `pitr_enabled: false` e `backups: []`; ativar backup diário/PITR ou registrar aceitação formal do risco residual e o runbook OAuth/MFA.
 
 ### Hospedagem e publicação
 

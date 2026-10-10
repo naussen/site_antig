@@ -16,7 +16,7 @@ O bloqueio não decorre de uma falha funcional reproduzida na interface. Ele dec
 
 1. cadastro Google completo de uma conta nova;
 2. confirmação da matriz de acesso na interface publicada com contas Google sintéticas;
-3. confirmação do backup nativo/PITR do Supabase e do procedimento para segredos/fatores Auth que a API não exporta;
+3. ativação de backup nativo/PITR do Supabase ou aceitação formal do risco, além do procedimento para segredos/fatores Auth que a API não exporta;
 4. preflight da aplicação no runtime publicado e teste real de entrega dos alertas operacionais;
 5. rotação coordenada do `CONTENT_ADMIN_TOKEN` do PRO Legis após sua classificação como segredo.
 
@@ -46,17 +46,19 @@ Esses pontos já constam como gates no próprio projeto. Abrir o cadastro antes 
 
 **Critério de aceite:** permissões e bloqueios coincidem com a matriz esperada em `/resumos`, `/legis`, Questões, Planner, Notas, Conta e Assinatura; administrador AAL1 não executa operação protegida e AAL2 executa.
 
-### P0-03 — Backup nativo e recuperação integral de Auth ainda não foram confirmados
+### P0-03 — Produção está sem backup nativo e sem PITR
 
 **Evidência positiva:** a primeira inspeção revelou que o backup antigo listava 16 usuários, mas omitia suas identidades OAuth. A coleta foi corrigida para consultar o detalhe de cada usuário e um novo backup foi produzido com 45 tabelas, 34.365 linhas, 16 usuários, 18 identidades e 1 bucket. A tarefa diária está ativa; existe chave portátil; a cópia off-site e seus hashes coincidem com a origem.
 
 O novo pacote foi restaurado em Supabase local isolado em 27,1 segundos de carga/validação: as contagens coincidiram, 98 chaves estrangeiras ficaram sem órfãos e quatro cenários RLS passaram para assinante, não assinante e administrador AAL1/AAL2. O restaurador possui trava pelo nome e label do projeto local e também recompõe objetos do Storage quando existirem.
 
-**Lacuna:** não foi confirmada no painel a política atual de backup nativo/PITR do Supabase. O backup lógico não recebe pela API hashes de senha, segredos OAuth, fatores TOTP nem sessões ativas; por isso, não recompõe sozinho todo o plano de recuperação de Auth.
+**Evidência remota:** em 09/10/2026, a CLI Supabase 2.109.1 autenticada consultou diretamente o projeto de produção e retornou `pitr_enabled: false` e `backups: []`. Portanto, não há PITR ativo nem backup nativo disponível para restauração. A documentação vigente do Supabase reserva backups diários automáticos aos planos Pro, Team e Enterprise; para o plano Free, recomenda exportações regulares e cópias off-site.
+
+**Lacuna:** o backup lógico não recebe pela API hashes de senha, segredos OAuth, fatores TOTP nem sessões ativas; por isso, não recompõe sozinho todo o plano de recuperação de Auth.
 
 **Risco:** um backup íntegro no formato próprio pode ainda falhar na reconstrução operacional completa quando mais necessário.
 
-**Ação obrigatória:** confirmar no painel do Supabase a política de backup nativo/PITR aplicável ao plano atual e documentar como os segredos OAuth serão reconfigurados e como administradores recuperarão/reinscreverão MFA após desastre. Adotar RPO operacional máximo de 24 horas para o backup lógico e medir o RTO completo, incluindo infraestrutura e reconfiguração Auth; os 27,1 segundos medidos cobrem apenas carga e validação locais com o ambiente já disponível.
+**Ação obrigatória:** antes da abertura, ativar um plano com backup diário nativo ou PITR, ou registrar aceitação formal do risco residual baseada no backup lógico diário já validado. Documentar como os segredos OAuth serão reconfigurados e como administradores recuperarão/reinscreverão MFA após desastre. Adotar RPO operacional máximo de 24 horas para o backup lógico e medir o RTO completo, incluindo infraestrutura e reconfiguração Auth; os 27,1 segundos medidos cobrem apenas carga e validação locais com o ambiente já disponível.
 
 **Critério de aceite:** evidência do backup nativo/PITR ou aceitação formal e documentada do risco residual, além de runbook de reconfiguração OAuth/MFA e RTO completo medido.
 
@@ -201,7 +203,7 @@ Não houve overflow horizontal global nas rotas verificadas. A navegação móve
 
 1. Atualizar a chave pública local para o formato moderno, sem versioná-la.
 2. Criar contas Google sintéticas e repetir na interface a matriz de cadastro/entitlement/AAL já aprovada no banco.
-3. Confirmar backup nativo/PITR do Supabase e registrar o runbook OAuth/MFA e o RTO completo.
+3. Ativar backup nativo/PITR do Supabase ou aceitar formalmente o risco residual e registrar o runbook OAuth/MFA e o RTO completo.
 4. Criar `OPS_ALERT_WEBHOOK_URL`, rodar o preflight da aplicação no runtime publicado e testar a entrega dos alertas.
 5. Rotacionar coordenadamente o `CONTENT_ADMIN_TOKEN` do PRO Legis e confirmar que o valor anterior foi invalidado.
 6. Repetir o smoke móvel e desktop após qualquer ajuste resultante.
