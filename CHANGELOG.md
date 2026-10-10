@@ -2,6 +2,7 @@
 
 ## Não publicado — auditoria de prontidão para lançamento
 
+- removidos `code`, `state`, `next` e erros transitórios de OAuth antes de renderizar páginas autenticadas, com redirecionamento `303`, resposta sem cache e política `no-referrer` no callback;
 - auditados em produção login Google, navegação autenticada, persistência, RLS, integrações entre módulos, cabeçalhos de segurança e responsividade em desktop, tablet e celular;
 - confirmados o deploy da `origin/main`, os gates automatizados, o backup lógico íntegro e sua cópia off-site;
 - registrado o veredito NO-GO até concluir cadastro/matriz visual com contas Google, backup nativo e recuperação Auth e preflight/alertas publicados.

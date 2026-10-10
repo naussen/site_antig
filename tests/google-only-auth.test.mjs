@@ -7,6 +7,7 @@ import {
   hasGoogleSession,
   hasOAuthAuthentication,
 } from "../src/lib/auth/google-only.mjs";
+import { sanitizeOAuthCallbackUrl } from "../src/lib/auth/oauth-callback-url.mjs";
 
 const read = (path) => readFileSync(new URL(path, import.meta.url), "utf8");
 
@@ -48,6 +49,34 @@ test("callback, proxy e guardas rejeitam sessões sem identidade Google", () => 
     "../src/lib/note-image-access.ts",
   ]) {
     assert.match(read(path), /hasGoogleSession/);
+  }
+});
+
+test("remove artefatos OAuth da URL final sem apagar queries comuns", () => {
+  assert.equal(
+    sanitizeOAuthCallbackUrl(
+      "https://proconcursos.com.br/resumos/dashboard/conta?code=temporario&next=%2Fresumos%2Fdashboard%2Fconta&state=oauth&tab=privacidade"
+    ).toString(),
+    "https://proconcursos.com.br/resumos/dashboard/conta?tab=privacidade"
+  );
+  assert.equal(
+    sanitizeOAuthCallbackUrl(
+      "https://proconcursos.com.br/resumos/dashboard/conta?state=estudo&tab=privacidade"
+    ).toString(),
+    "https://proconcursos.com.br/resumos/dashboard/conta?state=estudo&tab=privacidade"
+  );
+});
+
+test("callback e proxy impedem cache e referer dos artefatos OAuth", () => {
+  const callback = read("../src/app/auth/callback/route.ts");
+  const proxy = read("../src/proxy.ts");
+
+  for (const source of [callback, proxy]) {
+    assert.match(source, /sanitizeOAuthCallbackUrl/);
+    assert.match(source, /private, no-store, max-age=0/);
+    assert.match(source, /Referrer-Policy/);
+    assert.match(source, /no-referrer/);
+    assert.match(source, /NextResponse\.redirect\([^;]+303\)/s);
   }
 });
 
