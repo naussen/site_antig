@@ -9,9 +9,13 @@ import {
 } from "@/lib/theme-preference";
 import type { Theme } from "@/types/database";
 
-export async function resolveInitialTheme(): Promise<Theme> {
+export async function resolveCookieTheme(): Promise<Theme> {
   const cookieStore = await cookies();
-  const fallback = parseTheme(cookieStore.get(THEME_COOKIE_NAME)?.value) ?? DEFAULT_THEME;
+  return parseTheme(cookieStore.get(THEME_COOKIE_NAME)?.value) ?? DEFAULT_THEME;
+}
+
+export async function resolveInitialTheme(): Promise<Theme> {
+  const fallback = await resolveCookieTheme();
   const supabase = await createClient();
   const { data: { user }, error: userError } = await supabase.auth.getUser();
 

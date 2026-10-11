@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 import { serializeJsonLd } from "../src/lib/json-ld.mjs";
+import { isPublicPageRequest } from "../src/lib/public-request-paths.mjs";
 import {
   createPublicPageMetadata,
   getPublicUrl,
@@ -122,6 +123,48 @@ test("publica JSON-LD verificável sem sink HTML inseguro", async () => {
   assert.match(structuredData, /serializeJsonLd/u);
   assert.doesNotMatch(structuredData, /dangerouslySetInnerHTML/u);
   assert.match(landing, /<SiteStructuredData \/>/u);
+});
+
+test("ignora Supabase somente em páginas públicas e métodos seguros", async () => {
+  for (const path of [
+    "/landing",
+    "/landing/",
+    "/termos",
+    "/privacidade",
+    "/suporte",
+    "/contato",
+  ]) {
+    assert.equal(isPublicPageRequest("GET", path), true, path);
+    assert.equal(isPublicPageRequest("HEAD", path), true, path);
+    assert.equal(isPublicPageRequest("POST", path), false, path);
+  }
+
+  for (const path of [
+    "/",
+    "/login",
+    "/admin",
+    "/dashboard",
+    "/api/import",
+    "/auth/callback",
+    "/contato-malicioso",
+    "/contato/extra",
+    "/%63ontato",
+  ]) {
+    assert.equal(isPublicPageRequest("GET", path), false, path);
+  }
+
+  const proxy = await read("src/proxy.ts");
+  assert.ok(
+    proxy.indexOf("isPublicPageRequest(request.method, localPath)") <
+      proxy.indexOf("createServerClient("),
+  );
+
+  const rootLayout = await read("src/app/layout.tsx");
+  assert.match(rootLayout, /resolveCookieTheme/u);
+  assert.match(rootLayout, /SESSION_AWARE_REQUEST_HEADER/u);
+  assert.match(rootLayout, /resolveInitialTheme/u);
+  assert.match(proxy, /publicHeaders\.delete\(SESSION_AWARE_REQUEST_HEADER\)/u);
+  assert.match(proxy, /sessionAwareHeaders\.set\(SESSION_AWARE_REQUEST_HEADER, "1"\)/u);
 });
 
 test("proxy não intercepta arquivos públicos de metadata", async () => {

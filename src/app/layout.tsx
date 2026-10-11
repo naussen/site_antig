@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { headers } from "next/headers";
 import { ThemeProvider } from "@/components/theme-provider";
-import { resolveInitialTheme } from "@/lib/initial-theme";
+import { resolveCookieTheme, resolveInitialTheme } from "@/lib/initial-theme";
+import { SESSION_AWARE_REQUEST_HEADER } from "@/lib/public-request-paths.mjs";
 import { SITE_NAME, SITE_ORIGIN } from "@/lib/seo.mjs";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import "katex/dist/katex.min.css";
@@ -44,7 +46,11 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const initialTheme = await resolveInitialTheme();
+  const requestHeaders = await headers();
+  const initialTheme =
+    requestHeaders.get(SESSION_AWARE_REQUEST_HEADER) === "1"
+      ? await resolveInitialTheme()
+      : await resolveCookieTheme();
 
   return (
     <html

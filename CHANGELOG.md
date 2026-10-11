@@ -7,6 +7,7 @@
 - impedida a indexação de login, administração e toda a área autenticada, sem alterar suas proteções de sessão;
 - corrigido o título duplicado da página administrativa e excluídos arquivos públicos de metadata do proxy de autenticação.
 - adicionados Open Graph, Twitter Cards e dados estruturados verificáveis de organização e website às páginas públicas.
+- removida a consulta Supabase do proxy em páginas institucionais e na prévia pública da landing para requisições `GET` e `HEAD`, preservando autenticação em mutações e áreas privadas.
 
 ## Não publicado — retorno seguro do Mercado Pago
 

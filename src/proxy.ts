@@ -2,6 +2,10 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
 import { sanitizeOAuthCallbackUrl } from "@/lib/auth/oauth-callback-url.mjs";
+import {
+  isPublicPageRequest,
+  SESSION_AWARE_REQUEST_HEADER,
+} from "@/lib/public-request-paths.mjs";
 import { isStudyPath } from "@/lib/site-paths.mjs";
 
 /**
@@ -16,9 +20,23 @@ export async function proxy(request: NextRequest) {
     ? request.nextUrl.pathname.slice("/resumos".length)
     : request.nextUrl.pathname;
 
+  // Somente páginas públicas explícitas e métodos sem mutação ignoram a
+  // renovação de sessão. POST continua protegido para não contornar Server Actions.
+  if (isPublicPageRequest(request.method, localPath)) {
+    const publicHeaders = new Headers(request.headers);
+    publicHeaders.delete(SESSION_AWARE_REQUEST_HEADER);
+    return NextResponse.next({ request: { headers: publicHeaders } });
+  }
+
+  const createSessionAwareResponse = () => {
+    const sessionAwareHeaders = new Headers(request.headers);
+    sessionAwareHeaders.set(SESSION_AWARE_REQUEST_HEADER, "1");
+    return NextResponse.next({ request: { headers: sessionAwareHeaders } });
+  };
+
   // Wrapper estável para que setAll sempre enxergue o response atual
   const responseHolder = {
-    value: NextResponse.next({ request: { headers: request.headers } }),
+    value: createSessionAwareResponse(),
   };
 
   const supabase = createServerClient(
@@ -35,7 +53,7 @@ export async function proxy(request: NextRequest) {
             request.cookies.set(name, value)
           );
           // Recria o response com o request já atualizado
-          responseHolder.value = NextResponse.next({ request });
+          responseHolder.value = createSessionAwareResponse();
           // Propaga os cookies com opções (expiração, httpOnly, etc.) na response
           cookiesToSet.forEach(({ name, value, options }) =>
             responseHolder.value.cookies.set(name, value, options)
