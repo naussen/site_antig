@@ -4,6 +4,7 @@
 
 - substituído o callback com query preexistente por uma rota intermediária que remove os parâmetros adicionados pelo provedor antes de redirecionar para a página de assinatura;
 - evitada a URL malformada com dois caracteres `?`, sem usar dados do navegador para conceder acesso ao conteúdo.
+- corrigida a paginação da consulta de pagamentos autorizados para o limite aceito pelo Mercado Pago, permitindo que a reconciliação atualize assinatura, transação e acesso.
 
 ## Não publicado — auditoria de prontidão para lançamento
 
