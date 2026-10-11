@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { getPublicUrl } from "@/lib/seo.mjs";
+import { createPublicPageMetadata } from "@/lib/seo.mjs";
 
-export const metadata = {
+export const metadata = createPublicPageMetadata({
   title: "Termos de uso",
   description: "Termos de uso da plataforma PRO Concursos.",
-  alternates: { canonical: getPublicUrl("/termos") },
-};
+  path: "/termos",
+});
 
 export default function TermsPage() {
   return (

@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { getPublicUrl } from "@/lib/seo.mjs";
+import { createPublicPageMetadata } from "@/lib/seo.mjs";
 
-export const metadata = {
+export const metadata = createPublicPageMetadata({
   title: "Privacidade",
   description: "Informações sobre privacidade e tratamento de dados no PRO Concursos.",
-  alternates: { canonical: getPublicUrl("/privacidade") },
-};
+  path: "/privacidade",
+});
 
 export default function PrivacyPage() {
   return (

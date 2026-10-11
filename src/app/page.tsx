@@ -1,12 +1,19 @@
 ﻿import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { LandingPageContent } from "@/components/landing/landing-page-content";
-import { SITE_HOME_URL } from "@/lib/seo.mjs";
+import { createPublicPageMetadata } from "@/lib/seo.mjs";
+
+const HOME_TITLE = "PRO Concursos — Plataforma de estudos para concursos públicos";
+const HOME_DESCRIPTION =
+  "Resumos jurídicos estruturados, questões comentadas, legislação oficial e ferramentas de estudo em uma única assinatura mensal.";
 
 export const metadata = {
-  title: "PRO Resumos — Plataforma de Estudos para Concursos Públicos",
-  description:
-    "Resumos jurídicos estruturados, questões comentadas, legislação oficial e ferramentas de estudo em uma única assinatura mensal.",
+  ...createPublicPageMetadata({
+    title: HOME_TITLE,
+    description: HOME_DESCRIPTION,
+    path: "/",
+    absoluteTitle: true,
+  }),
   keywords: [
     "concurso público",
     "direito",
@@ -18,7 +25,6 @@ export const metadata = {
     "aprovação",
     "mapas mentais",
   ],
-  alternates: { canonical: SITE_HOME_URL },
 };
 
 export default async function HomePage() {

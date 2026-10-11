@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { getPublicUrl } from "@/lib/seo.mjs";
+import { createPublicPageMetadata } from "@/lib/seo.mjs";
 
-export const metadata = {
+export const metadata = createPublicPageMetadata({
   title: "Suporte",
   description: "Central de suporte do PRO Concursos.",
-  alternates: { canonical: getPublicUrl("/suporte") },
-};
+  path: "/suporte",
+});
 
 const supportItems = [
   ["Conta e acesso", "Entre exclusivamente com Google. Recuperação e segurança da identidade são administradas na Conta Google.", "/login", "Acessar conta"],

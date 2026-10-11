@@ -19,6 +19,7 @@ import {
   Sunrise,
 } from "lucide-react";
 import { ProQuestionsLogo } from "@/components/brand/pro-questions-logo";
+import { SiteStructuredData } from "@/components/seo/site-structured-data";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
 const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo-dark.png");
@@ -353,6 +354,7 @@ const toolPreviews = [
 export function LandingPageContent() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#181820] text-white">
+      <SiteStructuredData />
       <nav aria-label="Navegação principal" className="sticky top-0 z-50 border-b border-white/10 bg-[#181820]/90 px-3 py-3 backdrop-blur-xl sm:px-8 lg:px-12">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 sm:gap-4">
           <Link href="https://proconcursos.com.br/" aria-label="PRO Concursos — página inicial"><BrandLogo preload /></Link>

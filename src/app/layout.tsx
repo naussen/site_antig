@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { resolveInitialTheme } from "@/lib/initial-theme";
-import { SITE_ORIGIN } from "@/lib/seo.mjs";
+import { SITE_NAME, SITE_ORIGIN } from "@/lib/seo.mjs";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import "katex/dist/katex.min.css";
 import "./globals.css";
@@ -15,6 +15,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_ORIGIN),
+  applicationName: SITE_NAME,
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  category: "education",
   title: {
     default: "PRO Resumos — Plataforma de Estudos para Concursos",
     template: "%s | PRO Resumos",

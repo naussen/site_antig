@@ -1,12 +1,13 @@
 import { LandingPageContent } from "@/components/landing/landing-page-content";
-import { SITE_HOME_URL } from "@/lib/seo.mjs";
+import { createPublicPageMetadata } from "@/lib/seo.mjs";
 
-export const metadata = {
-  title: { absolute: "PRO Concursos — Plataforma de estudos para concursos públicos" },
+export const metadata = createPublicPageMetadata({
+  title: "PRO Concursos — Plataforma de estudos para concursos públicos",
   description:
     "Resumos jurídicos estruturados, questões comentadas, legislação oficial e ferramentas de estudo em uma única assinatura mensal.",
-  alternates: { canonical: SITE_HOME_URL },
-};
+  path: "/",
+  absoluteTitle: true,
+});
 
 /**
  * Landing pública do ecossistema PRO Concursos.

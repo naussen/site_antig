@@ -2,11 +2,15 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
 
+import { serializeJsonLd } from "../src/lib/json-ld.mjs";
 import {
+  createPublicPageMetadata,
   getPublicUrl,
   INDEXABLE_PUBLIC_PATHS,
   SITE_HOME_URL,
+  SITE_NAME,
   SITE_ORIGIN,
+  SOCIAL_IMAGE_URL,
 } from "../src/lib/seo.mjs";
 
 const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
@@ -14,6 +18,11 @@ const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 test("gera somente URLs públicas canônicas", () => {
   assert.equal(SITE_ORIGIN, "https://proconcursos.com.br");
   assert.equal(SITE_HOME_URL, "https://proconcursos.com.br/");
+  assert.equal(SITE_NAME, "PRO Concursos");
+  assert.equal(
+    SOCIAL_IMAGE_URL,
+    "https://proconcursos.com.br/resumos/brand/pro-concursos-logo-dark.png",
+  );
   assert.deepEqual(INDEXABLE_PUBLIC_PATHS, [
     "/termos",
     "/privacidade",
@@ -24,6 +33,32 @@ test("gera somente URLs públicas canônicas", () => {
     getPublicUrl("/privacidade"),
     "https://proconcursos.com.br/resumos/privacidade",
   );
+});
+
+test("gera metadata social consistente com o canonical", () => {
+  const metadata = createPublicPageMetadata({
+    title: "Privacidade",
+    description: "Política de privacidade.",
+    path: "/privacidade",
+  });
+
+  assert.equal(
+    metadata.alternates.canonical,
+    "https://proconcursos.com.br/resumos/privacidade",
+  );
+  assert.equal(metadata.openGraph.url, metadata.alternates.canonical);
+  assert.equal(metadata.openGraph.siteName, SITE_NAME);
+  assert.equal(metadata.openGraph.images[0].url, SOCIAL_IMAGE_URL);
+  assert.equal(metadata.twitter.card, "summary_large_image");
+  assert.deepEqual(metadata.twitter.images, [SOCIAL_IMAGE_URL]);
+});
+
+test("serializa JSON-LD sem permitir fechamento de script", () => {
+  const value = { text: "</script>&\u2028\u2029" };
+  const serialized = serializeJsonLd(value);
+
+  assert.doesNotMatch(serialized, /[<>&\u2028\u2029]/u);
+  assert.deepEqual(JSON.parse(serialized), value);
 });
 
 test("publica robots e sitemap na raiz do domínio via Netlify", async () => {
@@ -60,8 +95,10 @@ test("canonicaliza páginas públicas e desindexa áreas operacionais", async ()
     ]);
 
   assert.match(layout, /metadataBase:\s*new URL\(SITE_ORIGIN\)/u);
-  assert.match(home, /alternates:\s*\{ canonical: SITE_HOME_URL \}/u);
-  assert.match(landing, /alternates:\s*\{ canonical: SITE_HOME_URL \}/u);
+  assert.match(home, /createPublicPageMetadata/u);
+  assert.match(home, /path:\s*"\/"/u);
+  assert.match(landing, /createPublicPageMetadata/u);
+  assert.match(landing, /path:\s*"\/"/u);
   assert.match(institutional, /href=\{SITE_HOME_URL\}/u);
 
   for (const source of [login, admin, dashboard]) {
@@ -72,6 +109,19 @@ test("canonicaliza páginas públicas e desindexa áreas operacionais", async ()
 
   assert.match(admin, /title:\s*"Acesso administrativo"/u);
   assert.doesNotMatch(admin, /Acesso administrativo \| PRO Resumos/u);
+});
+
+test("publica JSON-LD verificável sem sink HTML inseguro", async () => {
+  const [structuredData, landing] = await Promise.all([
+    read("src/components/seo/site-structured-data.tsx"),
+    read("src/components/landing/landing-page-content.tsx"),
+  ]);
+
+  assert.match(structuredData, /"@type": "Organization"/u);
+  assert.match(structuredData, /"@type": "WebSite"/u);
+  assert.match(structuredData, /serializeJsonLd/u);
+  assert.doesNotMatch(structuredData, /dangerouslySetInnerHTML/u);
+  assert.match(landing, /<SiteStructuredData \/>/u);
 });
 
 test("proxy não intercepta arquivos públicos de metadata", async () => {

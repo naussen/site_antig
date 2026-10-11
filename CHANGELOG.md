@@ -6,6 +6,7 @@
 - consolidada a landing em `https://proconcursos.com.br/` por canonical e alinhados os canonicals das páginas institucionais;
 - impedida a indexação de login, administração e toda a área autenticada, sem alterar suas proteções de sessão;
 - corrigido o título duplicado da página administrativa e excluídos arquivos públicos de metadata do proxy de autenticação.
+- adicionados Open Graph, Twitter Cards e dados estruturados verificáveis de organização e website às páginas públicas.
 
 ## Não publicado — retorno seguro do Mercado Pago
 
