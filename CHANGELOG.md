@@ -2,7 +2,7 @@
 
 ## Não publicado — fundação técnica de SEO
 
-- adicionados `robots.txt` e sitemap gerados pelo Next.js, com exposição também na raiz do domínio por rewrites do Netlify;
+- adicionados `robots.txt` e sitemap gerados pelo Next.js, com exposição também na raiz do domínio por Edge Functions do Netlify;
 - consolidada a landing em `https://proconcursos.com.br/` por canonical e alinhados os canonicals das páginas institucionais;
 - impedida a indexação de login, administração e toda a área autenticada, sem alterar suas proteções de sessão;
 - corrigido o título duplicado da página administrativa e excluídos arquivos públicos de metadata do proxy de autenticação.

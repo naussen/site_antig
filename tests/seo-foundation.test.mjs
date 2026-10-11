@@ -27,10 +27,11 @@ test("gera somente URLs públicas canônicas", () => {
 });
 
 test("publica robots e sitemap na raiz do domínio via Netlify", async () => {
-  const [robots, sitemap, netlify] = await Promise.all([
+  const [robots, sitemap, robotsRoot, sitemapRoot] = await Promise.all([
     read("src/app/robots.ts"),
     read("src/app/sitemap.ts"),
-    read("netlify.toml"),
+    read("netlify/edge-functions/robots-root.ts"),
+    read("netlify/edge-functions/sitemap-root.ts"),
   ]);
 
   assert.match(robots, /sitemap:\s*`\$\{SITE_HOME_URL\}sitemap\.xml`/u);
@@ -40,14 +41,10 @@ test("publica robots e sitemap na raiz do domínio via Netlify", async () => {
   assert.doesNotMatch(robots, /resumos\/admin/u);
   assert.match(sitemap, /INDEXABLE_PUBLIC_PATHS/u);
   assert.doesNotMatch(sitemap, /login|admin|dashboard|api|auth/u);
-  assert.match(
-    netlify,
-    /from = "\/robots\.txt"[\s\S]*to = "\/resumos\/robots\.txt"[\s\S]*status = 200[\s\S]*force = true/u,
-  );
-  assert.match(
-    netlify,
-    /from = "\/sitemap\.xml"[\s\S]*to = "\/resumos\/sitemap\.xml"[\s\S]*status = 200[\s\S]*force = true/u,
-  );
+  assert.match(robotsRoot, /new URL\("\/resumos\/robots\.txt", request\.url\)/u);
+  assert.match(robotsRoot, /path:\s*"\/robots\.txt"/u);
+  assert.match(sitemapRoot, /new URL\("\/resumos\/sitemap\.xml", request\.url\)/u);
+  assert.match(sitemapRoot, /path:\s*"\/sitemap\.xml"/u);
 });
 
 test("canonicaliza páginas públicas e desindexa áreas operacionais", async () => {

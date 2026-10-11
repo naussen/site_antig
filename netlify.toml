@@ -16,18 +16,6 @@
   package = "@netlify/plugin-nextjs"
 
 [[redirects]]
-  from = "/robots.txt"
-  to = "/resumos/robots.txt"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/sitemap.xml"
-  to = "/resumos/sitemap.xml"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/favicon.ico"
   to = "/resumos/brand/pro-resumos-favicon.png"
   status = 200
