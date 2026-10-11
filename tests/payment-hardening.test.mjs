@@ -62,6 +62,13 @@ test("checkout bloqueia pendências e preserva histórico de assinaturas", async
   assert.match(migration, /'checkout_blocked'/);
 });
 
+test("reconciliação usa paginação aceita na busca de faturas do Mercado Pago", async () => {
+  const source = await read("src/lib/payments/providers.ts");
+  assert.match(source, /authorized_payments\/search/);
+  assert.match(source, /url\.searchParams\.set\("limit", "10"\)/);
+  assert.doesNotMatch(source, /url\.searchParams\.set\("limit", "20"\)/);
+});
+
 test("canal LGPD valida entrada, limita abuso e grava somente no backend", async () => {
   const source = await read("src/app/api/privacy-requests/route.ts");
   assert.match(source, /requestSchema\.safeParse/);

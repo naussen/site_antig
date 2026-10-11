@@ -329,7 +329,7 @@ export async function getLatestMercadoPagoInvoice(subscriptionId: string) {
   const { accessToken } = getMercadoPagoConfig();
   const url = new URL(`${MERCADO_PAGO_API}/authorized_payments/search`);
   url.searchParams.set("preapproval_id", subscriptionId);
-  url.searchParams.set("limit", "20");
+  url.searchParams.set("limit", "10");
   const response = await fetch(url, {
     headers: { Authorization: `Bearer ${accessToken}` }, cache: "no-store", signal: AbortSignal.timeout(10_000),
   });
