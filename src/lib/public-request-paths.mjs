@@ -4,6 +4,10 @@ export const SESSION_AWARE_REQUEST_HEADER = "x-pro-session-aware";
 
 const PUBLIC_PAGE_PATHS = new Set([
   "/landing",
+  "/sobre",
+  "/metodologia-editorial",
+  "/politica-de-ia",
+  "/correcoes",
   "/termos",
   "/privacidade",
   "/suporte",

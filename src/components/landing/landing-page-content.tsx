@@ -414,6 +414,8 @@ export function LandingPageContent() {
           <nav aria-label="Links institucionais">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#f9a826]">Institucional</p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-white/75">
+              <Link href="/sobre" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Sobre</Link>
+              <Link href="/metodologia-editorial" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Metodologia editorial</Link>
               <Link href="/termos" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Termos de uso</Link>
               <Link href="/privacidade" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Privacidade</Link>
             </div>
@@ -421,6 +423,8 @@ export function LandingPageContent() {
           <nav aria-label="Links de atendimento">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#f9a826]">Atendimento</p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-white/75">
+              <Link href="/politica-de-ia" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Política de IA</Link>
+              <Link href="/correcoes" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Correções</Link>
               <Link href="/suporte" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Suporte</Link>
               <Link href="/contato" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Contato</Link>
             </div>

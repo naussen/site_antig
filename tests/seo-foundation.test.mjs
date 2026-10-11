@@ -25,6 +25,10 @@ test("gera somente URLs públicas canônicas", () => {
     "https://proconcursos.com.br/resumos/brand/pro-concursos-logo-dark.png",
   );
   assert.deepEqual(INDEXABLE_PUBLIC_PATHS, [
+    "/sobre",
+    "/metodologia-editorial",
+    "/politica-de-ia",
+    "/correcoes",
     "/termos",
     "/privacidade",
     "/suporte",
@@ -129,6 +133,10 @@ test("ignora Supabase somente em páginas públicas e métodos seguros", async (
   for (const path of [
     "/landing",
     "/landing/",
+    "/sobre",
+    "/metodologia-editorial",
+    "/politica-de-ia",
+    "/correcoes",
     "/termos",
     "/privacidade",
     "/suporte",
@@ -171,4 +179,26 @@ test("proxy não intercepta arquivos públicos de metadata", async () => {
   const proxy = await read("src/proxy.ts");
 
   assert.match(proxy, /ico\|xml\|txt/u);
+});
+
+test("autoridade editorial é transparente e não inventa credenciais", async () => {
+  const [about, methodology, aiPolicy, corrections] = await Promise.all([
+    read("src/app/(institutional)/sobre/page.tsx"),
+    read("src/app/(institutional)/metodologia-editorial/page.tsx"),
+    read("src/app/(institutional)/politica-de-ia/page.tsx"),
+    read("src/app/(institutional)/correcoes/page.tsx"),
+  ]);
+
+  assert.match(about, /Naussen Cosme Velho Pezat/u);
+  assert.match(about, /não representa título acadêmico/u);
+  assert.match(methodology, /comparadas com as fontes selecionadas/u);
+  assert.match(aiPolicy, /não é fonte jurídica/u);
+  assert.match(corrections, /Nenhuma correção editorial foi registrada/u);
+
+  for (const source of [about, methodology, aiPolicy, corrections]) {
+    assert.doesNotMatch(
+      source,
+      /revisado por especialista|produzido por juristas|conteúdo certificado|garantia de aprovação/iu,
+    );
+  }
 });
