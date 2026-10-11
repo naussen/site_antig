@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { getPublicUrl } from "@/lib/seo.mjs";
 
 export const metadata = {
   title: "Suporte",
   description: "Central de suporte do PRO Concursos.",
+  alternates: { canonical: getPublicUrl("/suporte") },
 };
 
 const supportItems = [

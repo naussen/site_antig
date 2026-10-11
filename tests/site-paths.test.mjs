@@ -35,6 +35,8 @@ test("reconhece somente páginas raiz de tópicos como rotas de estudo", () => {
     "/resumos/api/import",
     "/resumos/auth/callback",
     "/resumos/contato",
+    "/resumos/robots.txt",
+    "/resumos/sitemap.xml",
     "/resumos/topico/secao",
     "/resumos/favicon.ico",
   ]) {

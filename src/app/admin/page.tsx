@@ -1,11 +1,18 @@
+import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { AdminLoginForm } from "@/components/auth/admin-login-form";
 import { ProLogoLink } from "@/components/brand/pro-logo";
 import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
 import { createClient } from "@/lib/supabase/server";
+import { SITE_HOME_URL } from "@/lib/seo.mjs";
 
-export const metadata = {
-  title: "Acesso administrativo | PRO Resumos",
+export const metadata: Metadata = {
+  title: "Acesso administrativo",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+  },
 };
 
 export default async function AdminLoginPage() {
@@ -32,7 +39,7 @@ export default async function AdminLoginPage() {
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
           <ProLogoLink
-            href="/"
+            href={SITE_HOME_URL}
             label="Voltar para a página inicial"
             size={44}
             variant="full"

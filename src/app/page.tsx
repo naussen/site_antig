@@ -1,6 +1,7 @@
 ﻿import { createClient } from "@/lib/supabase/server";
 import { redirect } from "next/navigation";
 import { LandingPageContent } from "@/components/landing/landing-page-content";
+import { SITE_HOME_URL } from "@/lib/seo.mjs";
 
 export const metadata = {
   title: "PRO Resumos — Plataforma de Estudos para Concursos Públicos",
@@ -17,6 +18,7 @@ export const metadata = {
     "aprovação",
     "mapas mentais",
   ],
+  alternates: { canonical: SITE_HOME_URL },
 };
 
 export default async function HomePage() {

@@ -1,6 +1,17 @@
+import type { Metadata } from "next";
 import { LoginForm } from "@/components/auth/login-form";
 import { ProLogoLink } from "@/components/brand/pro-logo";
 import { isAllowedReturnPath } from "@/lib/return-paths.mjs";
+import { SITE_HOME_URL } from "@/lib/seo.mjs";
+
+export const metadata: Metadata = {
+  title: "Entrar",
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+  },
+};
 
 export default async function LoginPage({ searchParams }: { searchParams: Promise<{ next?: string | string[]; error?: string | string[] }> }) {
   const query = await searchParams;
@@ -18,7 +29,7 @@ export default async function LoginPage({ searchParams }: { searchParams: Promis
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
           <ProLogoLink
-            href="/"
+            href={SITE_HOME_URL}
             label="Voltar para a página inicial"
             size={44}
             variant="full"

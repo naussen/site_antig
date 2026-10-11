@@ -1,9 +1,18 @@
+import type { Metadata } from "next";
 import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { DashboardNavigation } from "@/components/navigation/dashboard-navigation";
 import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
 import { NoteImageReconciler } from "@/components/note-image-reconciler";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+  },
+};
 
 export default async function DashboardLayout({
   children,

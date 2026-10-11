@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { PrivacyRequestForm } from "@/components/privacy/privacy-request-form";
+import { getPublicUrl } from "@/lib/seo.mjs";
 
 export const metadata = {
   title: "Contato",
   description: "Canais de contato do PRO Concursos.",
+  alternates: { canonical: getPublicUrl("/contato") },
 };
 
 export default function ContactPage() {

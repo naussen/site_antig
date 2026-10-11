@@ -121,6 +121,6 @@ export const config = {
     /*
      * Executa em todos os paths exceto assets estáticos e otimização de imagens.
      */
-    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:css|svg|png|jpg|jpeg|gif|webp|ico|xml|txt)$).*)",
   ],
 };

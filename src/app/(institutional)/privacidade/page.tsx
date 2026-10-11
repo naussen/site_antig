@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { getPublicUrl } from "@/lib/seo.mjs";
 
 export const metadata = {
   title: "Privacidade",
   description: "Informações sobre privacidade e tratamento de dados no PRO Concursos.",
+  alternates: { canonical: getPublicUrl("/privacidade") },
 };
 
 export default function PrivacyPage() {

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SITE_HOME_URL } from "@/lib/seo.mjs";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
 const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo-transparent.png");
@@ -9,7 +10,7 @@ export default function InstitutionalLayout({ children }: Readonly<{ children: R
     <div className="flex min-h-screen flex-col bg-[var(--bg-primary)] text-[var(--text-primary)]">
       <header className="border-b border-[var(--border)] bg-[var(--bg-card)] px-5 py-4 sm:px-8">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-4">
-          <Link href="/landing" aria-label="Voltar à página inicial do PRO Concursos">
+          <Link href={SITE_HOME_URL} aria-label="Voltar à página inicial do PRO Concursos">
             <Image src={LOGO_SRC} alt="PRO Concursos" width={170} height={68} className="h-auto w-[145px] sm:w-[170px]" />
           </Link>
           <Link href="/login" className="inline-flex min-h-11 items-center rounded-xl bg-[var(--action)] px-4 text-sm font-bold text-[var(--action-foreground)] transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">Entrar</Link>
