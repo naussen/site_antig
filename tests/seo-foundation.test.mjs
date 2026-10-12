@@ -29,6 +29,8 @@ test("gera somente URLs públicas canônicas", () => {
     "/metodologia-editorial",
     "/politica-de-ia",
     "/correcoes",
+    "/guias",
+    "/guias/como-estudar-por-resumos",
     "/termos",
     "/privacidade",
     "/suporte",
@@ -137,6 +139,8 @@ test("ignora Supabase somente em páginas públicas e métodos seguros", async (
     "/metodologia-editorial",
     "/politica-de-ia",
     "/correcoes",
+    "/guias",
+    "/guias/como-estudar-por-resumos",
     "/termos",
     "/privacidade",
     "/suporte",
@@ -201,4 +205,20 @@ test("autoridade editorial é transparente e não inventa credenciais", async ()
       /revisado por especialista|produzido por juristas|conteúdo certificado|garantia de aprovação/iu,
     );
   }
+});
+
+test("publica hub e guia com conteúdo, schema e transparência", async () => {
+  const [hub, guide] = await Promise.all([
+    read("src/app/(institutional)/guias/page.tsx"),
+    read("src/app/(institutional)/guias/como-estudar-por-resumos/page.tsx"),
+  ]);
+
+  assert.match(hub, /Guias de estudo para concursos/u);
+  assert.match(hub, /como-estudar-por-resumos/u);
+  assert.match(guide, /"@type": "LearningResource"/u);
+  assert.match(guide, /"@type": "BreadcrumbList"/u);
+  assert.match(guide, /isAccessibleForFree: true/u);
+  assert.match(guide, /serializeJsonLd/u);
+  assert.match(guide, /Conferência editorial e documental/u);
+  assert.doesNotMatch(guide, /dangerouslySetInnerHTML/u);
 });

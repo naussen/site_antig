@@ -39,6 +39,8 @@ test("reconhece somente páginas raiz de tópicos como rotas de estudo", () => {
     "/resumos/metodologia-editorial",
     "/resumos/politica-de-ia",
     "/resumos/correcoes",
+    "/resumos/guias",
+    "/resumos/guias/como-estudar-por-resumos",
     "/resumos/robots.txt",
     "/resumos/sitemap.xml",
     "/resumos/topico/secao",

@@ -7,6 +7,7 @@ const NON_STUDY_ROOT_SEGMENTS = new Set([
   "contato",
   "correcoes",
   "dashboard",
+  "guias",
   "landing",
   "legis",
   "login",

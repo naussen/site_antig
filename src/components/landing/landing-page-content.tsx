@@ -414,6 +414,7 @@ export function LandingPageContent() {
           <nav aria-label="Links institucionais">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#f9a826]">Institucional</p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-white/75">
+              <Link href="/guias" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Guias de estudo</Link>
               <Link href="/sobre" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Sobre</Link>
               <Link href="/metodologia-editorial" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Metodologia editorial</Link>
               <Link href="/termos" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Termos de uso</Link>

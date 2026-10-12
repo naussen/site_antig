@@ -8,6 +8,8 @@ const PUBLIC_PAGE_PATHS = new Set([
   "/metodologia-editorial",
   "/politica-de-ia",
   "/correcoes",
+  "/guias",
+  "/guias/como-estudar-por-resumos",
   "/termos",
   "/privacidade",
   "/suporte",

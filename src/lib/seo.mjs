@@ -9,6 +9,8 @@ export const INDEXABLE_PUBLIC_PATHS = [
   "/metodologia-editorial",
   "/politica-de-ia",
   "/correcoes",
+  "/guias",
+  "/guias/como-estudar-por-resumos",
   "/termos",
   "/privacidade",
   "/suporte",
