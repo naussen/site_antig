@@ -12,6 +12,8 @@
 - criado o hub público de guias e disponibilizado para revisão o primeiro conteúdo aprofundado sobre estudo por resumos, mantido fora do índice até a conferência editorial final.
 - criada imagem social dedicada de 1200 × 630 pixels para Open Graph e Twitter Cards, preservando o logotipo oficial da marca.
 - corrigido o contraste dos textos pequenos nas prévias da landing após auditoria Lighthouse de produção, preservando a identidade visual dos módulos.
+- habilitado cache compartilhado de curta duração apenas nas páginas públicas, com HTML determinístico sem personalização por cookie e variantes RSC preservadas pelo adaptador do Next.js.
+- propagados os cabeçalhos privados fornecidos pelo Supabase quando há renovação de cookies, evitando que respostas com sessão sejam armazenadas por CDN ou proxy reverso.
 
 ## Não publicado — retorno seguro do Mercado Pago
 

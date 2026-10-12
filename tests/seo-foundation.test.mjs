@@ -3,6 +3,10 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 import { serializeJsonLd } from "../src/lib/json-ld.mjs";
+import {
+  applyPublicCachePolicy,
+  PUBLIC_CDN_CACHE_CONTROL,
+} from "../src/lib/public-cache-policy.mjs";
 import { isPublicPageRequest } from "../src/lib/public-request-paths.mjs";
 import {
   BRAND_LOGO_URL,
@@ -193,7 +197,45 @@ test("ignora Supabase somente em páginas públicas e métodos seguros", async (
   assert.match(rootLayout, /SESSION_AWARE_REQUEST_HEADER/u);
   assert.match(rootLayout, /resolveInitialTheme/u);
   assert.match(proxy, /publicHeaders\.delete\(SESSION_AWARE_REQUEST_HEADER\)/u);
+  assert.match(proxy, /publicHeaders\.set\(PUBLIC_PAGE_REQUEST_HEADER, "1"\)/u);
+  assert.match(proxy, /applyPublicCachePolicy\(publicResponse\.headers\)/u);
   assert.match(proxy, /sessionAwareHeaders\.set\(SESSION_AWARE_REQUEST_HEADER, "1"\)/u);
+});
+
+test("aplica cache compartilhado somente pela política pública", () => {
+  const headers = new Headers();
+
+  applyPublicCachePolicy(headers);
+
+  assert.equal(
+    headers.get("Netlify-CDN-Cache-Control"),
+    PUBLIC_CDN_CACHE_CONTROL,
+  );
+  assert.match(PUBLIC_CDN_CACHE_CONTROL, /s-maxage=300/u);
+  assert.match(PUBLIC_CDN_CACHE_CONTROL, /stale-while-revalidate=3600/u);
+});
+
+test("renderiza páginas públicas sem personalização por cookie", async () => {
+  const [layout, publicPaths, proxy] = await Promise.all([
+    read("src/app/layout.tsx"),
+    read("src/lib/public-request-paths.mjs"),
+    read("src/proxy.ts"),
+  ]);
+
+  assert.match(publicPaths, /PUBLIC_PAGE_REQUEST_HEADER/u);
+  assert.match(proxy, /PUBLIC_PAGE_REQUEST_HEADER/u);
+  assert.match(layout, /isPublicPage\s*\? DEFAULT_THEME/u);
+});
+
+test("propaga cabeçalhos privados quando o Supabase renova cookies", async () => {
+  const proxy = await read("src/proxy.ts");
+
+  assert.match(proxy, /setAll\(cookiesToSet, cacheHeaders\)/u);
+  assert.match(proxy, /Object\.entries\(cacheHeaders\)/u);
+  assert.match(proxy, /copySessionResponseMetadata/u);
+  assert.match(proxy, /"cache-control"/u);
+  assert.match(proxy, /"expires"/u);
+  assert.match(proxy, /"pragma"/u);
 });
 
 test("proxy não intercepta arquivos públicos de metadata", async () => {

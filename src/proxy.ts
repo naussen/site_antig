@@ -4,9 +4,31 @@ import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
 import { sanitizeOAuthCallbackUrl } from "@/lib/auth/oauth-callback-url.mjs";
 import {
   isPublicPageRequest,
+  PUBLIC_PAGE_REQUEST_HEADER,
   SESSION_AWARE_REQUEST_HEADER,
 } from "@/lib/public-request-paths.mjs";
+import { applyPublicCachePolicy } from "@/lib/public-cache-policy.mjs";
 import { isStudyPath } from "@/lib/site-paths.mjs";
+
+const SUPABASE_CACHE_HEADER_NAMES = [
+  "cache-control",
+  "expires",
+  "pragma",
+] as const;
+
+function copySessionResponseMetadata(
+  source: NextResponse,
+  target: NextResponse,
+) {
+  source.cookies
+    .getAll()
+    .forEach((cookie) => target.cookies.set(cookie));
+
+  SUPABASE_CACHE_HEADER_NAMES.forEach((headerName) => {
+    const value = source.headers.get(headerName);
+    if (value) target.headers.set(headerName, value);
+  });
+}
 
 /**
  * Proxy: renova o token de sessão do Supabase a cada request.
@@ -25,7 +47,12 @@ export async function proxy(request: NextRequest) {
   if (isPublicPageRequest(request.method, localPath)) {
     const publicHeaders = new Headers(request.headers);
     publicHeaders.delete(SESSION_AWARE_REQUEST_HEADER);
-    return NextResponse.next({ request: { headers: publicHeaders } });
+    publicHeaders.set(PUBLIC_PAGE_REQUEST_HEADER, "1");
+    const publicResponse = NextResponse.next({
+      request: { headers: publicHeaders },
+    });
+    applyPublicCachePolicy(publicResponse.headers);
+    return publicResponse;
   }
 
   const createSessionAwareResponse = () => {
@@ -47,7 +74,7 @@ export async function proxy(request: NextRequest) {
         getAll() {
           return request.cookies.getAll();
         },
-        setAll(cookiesToSet) {
+        setAll(cookiesToSet, cacheHeaders) {
           // Primeiro propaga os cookies no request para o próximo handler
           cookiesToSet.forEach(({ name, value }) =>
             request.cookies.set(name, value)
@@ -57,6 +84,9 @@ export async function proxy(request: NextRequest) {
           // Propaga os cookies com opções (expiração, httpOnly, etc.) na response
           cookiesToSet.forEach(({ name, value, options }) =>
             responseHolder.value.cookies.set(name, value, options)
+          );
+          Object.entries(cacheHeaders).forEach(([key, value]) =>
+            responseHolder.value.headers.set(key, value)
           );
         },
       },
@@ -81,11 +111,9 @@ export async function proxy(request: NextRequest) {
 
     if (cleanUrl.toString() !== request.nextUrl.toString()) {
       const cleanResponse = NextResponse.redirect(cleanUrl, 303);
+      copySessionResponseMetadata(responseHolder.value, cleanResponse);
       cleanResponse.headers.set("Cache-Control", "private, no-store, max-age=0");
       cleanResponse.headers.set("Referrer-Policy", "no-referrer");
-      responseHolder.value.cookies
-        .getAll()
-        .forEach((cookie) => cleanResponse.cookies.set(cookie));
       return cleanResponse;
     }
   }
@@ -102,9 +130,7 @@ export async function proxy(request: NextRequest) {
         { error: "Autenticação Google necessária." },
         { status: 401 }
       );
-      responseHolder.value.cookies
-        .getAll()
-        .forEach((cookie) => unauthorizedResponse.cookies.set(cookie));
+      copySessionResponseMetadata(responseHolder.value, unauthorizedResponse);
       return unauthorizedResponse;
     }
 
@@ -112,9 +138,7 @@ export async function proxy(request: NextRequest) {
     loginUrl.pathname = "/login";
     loginUrl.search = "?error=google_required";
     const redirectResponse = NextResponse.redirect(loginUrl);
-    responseHolder.value.cookies
-      .getAll()
-      .forEach((cookie) => redirectResponse.cookies.set(cookie));
+    copySessionResponseMetadata(responseHolder.value, redirectResponse);
     return redirectResponse;
   }
 
@@ -124,9 +148,7 @@ export async function proxy(request: NextRequest) {
     loginUrl.search = "";
 
     const redirectResponse = NextResponse.redirect(loginUrl);
-    responseHolder.value.cookies
-      .getAll()
-      .forEach((cookie) => redirectResponse.cookies.set(cookie));
+    copySessionResponseMetadata(responseHolder.value, redirectResponse);
 
     return redirectResponse;
   }

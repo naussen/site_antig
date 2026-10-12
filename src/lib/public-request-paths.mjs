@@ -1,6 +1,7 @@
 const SAFE_PUBLIC_METHODS = new Set(["GET", "HEAD"]);
 
 export const SESSION_AWARE_REQUEST_HEADER = "x-pro-session-aware";
+export const PUBLIC_PAGE_REQUEST_HEADER = "x-pro-public-page";
 
 const PUBLIC_PAGE_PATHS = new Set([
   "/landing",
