@@ -214,6 +214,7 @@ test("aplica cache compartilhado somente pela política pública", () => {
   );
   assert.equal(headers.get("Cache-Control"), PUBLIC_BROWSER_CACHE_CONTROL);
   assert.match(PUBLIC_BROWSER_CACHE_CONTROL, /max-age=0/u);
+  assert.match(PUBLIC_BROWSER_CACHE_CONTROL, /s-maxage=300/u);
   assert.match(PUBLIC_BROWSER_CACHE_CONTROL, /must-revalidate/u);
   assert.match(PUBLIC_CDN_CACHE_CONTROL, /s-maxage=300/u);
   assert.match(PUBLIC_CDN_CACHE_CONTROL, /stale-while-revalidate=3600/u);
