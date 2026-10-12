@@ -12,11 +12,18 @@ const GUIDE_TITLE = "Como estudar por resumos sem ficar apenas na leitura";
 const GUIDE_DESCRIPTION =
   "Aprenda a usar resumos como mapa de estudo, praticar recuperação ativa e transformar erros em revisões objetivas.";
 
-export const metadata = createPublicPageMetadata({
-  title: GUIDE_TITLE,
-  description: GUIDE_DESCRIPTION,
-  path: GUIDE_PATH,
-});
+export const metadata = {
+  ...createPublicPageMetadata({
+    title: GUIDE_TITLE,
+    description: GUIDE_DESCRIPTION,
+    path: GUIDE_PATH,
+  }),
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+  },
+};
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -71,7 +78,7 @@ export default function StudyWithSummariesGuidePage() {
           <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--accent)]">Método de estudo</p>
           <h1 className="mt-3 text-4xl font-black tracking-tight">{GUIDE_TITLE}</h1>
           <p className="mt-5 text-lg leading-8 text-[var(--text-secondary)]">Um resumo é mais útil quando orienta o que você precisa recuperar da memória. Se ele vira apenas uma leitura repetida, fica difícil distinguir familiaridade com o texto de domínio real do assunto.</p>
-          <p className="mt-4 text-sm text-[var(--text-muted)]">Publicado e conferido editorialmente em 12 de outubro de 2026.</p>
+          <p className="mt-4 text-sm text-[var(--text-muted)]">Versão preliminar publicada em 12 de outubro de 2026 para conferência editorial final.</p>
         </header>
 
         <div className="mt-10 space-y-10 text-base leading-7 text-[var(--text-secondary)]">
@@ -129,7 +136,7 @@ export default function StudyWithSummariesGuidePage() {
 
         <footer className="mt-10 border-t border-[var(--border)] pt-6 text-sm leading-6 text-[var(--text-muted)]">
           <p><strong className="text-[var(--text-primary)]">Elaboração:</strong> PRO Concursos, com apoio de IA.</p>
-          <p><strong className="text-[var(--text-primary)]">Conferência editorial e documental:</strong> Naussen Cosme Velho Pezat.</p>
+          <p><strong className="text-[var(--text-primary)]">Conferência editorial e documental:</strong> pendente de validação final por Naussen Cosme Velho Pezat.</p>
           <p><strong className="text-[var(--text-primary)]">Última conferência:</strong> 12 de outubro de 2026.</p>
           <p className="mt-3">Conheça a <Link href="/metodologia-editorial" className="font-bold text-[var(--accent)] underline underline-offset-4">metodologia editorial</Link> ou <Link href="/contato" className="font-bold text-[var(--accent)] underline underline-offset-4">relate um erro</Link>.</p>
         </footer>

@@ -9,7 +9,7 @@
 - adicionados Open Graph, Twitter Cards e dados estruturados verificáveis de organização e website às páginas públicas.
 - removida a consulta Supabase do proxy em páginas institucionais e na prévia pública da landing para requisições `GET` e `HEAD`, preservando autenticação em mutações e áreas privadas.
 - publicadas páginas de sobre, metodologia editorial, política de IA e correções com limites explícitos, responsabilidade humana e sem credenciais acadêmicas artificiais.
-- criado o hub público de guias e publicado o primeiro conteúdo aprofundado sobre estudo por resumos, com breadcrumbs, dados estruturados e transparência editorial.
+- criado o hub público de guias e disponibilizado para revisão o primeiro conteúdo aprofundado sobre estudo por resumos, mantido fora do índice até a conferência editorial final.
 
 ## Não publicado — retorno seguro do Mercado Pago
 

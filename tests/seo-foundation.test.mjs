@@ -30,7 +30,6 @@ test("gera somente URLs públicas canônicas", () => {
     "/politica-de-ia",
     "/correcoes",
     "/guias",
-    "/guias/como-estudar-por-resumos",
     "/termos",
     "/privacidade",
     "/suporte",
@@ -219,6 +218,7 @@ test("publica hub e guia com conteúdo, schema e transparência", async () => {
   assert.match(guide, /"@type": "BreadcrumbList"/u);
   assert.match(guide, /isAccessibleForFree: true/u);
   assert.match(guide, /serializeJsonLd/u);
-  assert.match(guide, /Conferência editorial e documental/u);
+  assert.match(guide, /index: false/u);
+  assert.match(guide, /pendente de validação final/u);
   assert.doesNotMatch(guide, /dangerouslySetInnerHTML/u);
 });
