@@ -5,6 +5,7 @@ import test from "node:test";
 import { serializeJsonLd } from "../src/lib/json-ld.mjs";
 import { isPublicPageRequest } from "../src/lib/public-request-paths.mjs";
 import {
+  BRAND_LOGO_URL,
   createPublicPageMetadata,
   getPublicUrl,
   INDEXABLE_PUBLIC_PATHS,
@@ -20,10 +21,8 @@ test("gera somente URLs públicas canônicas", () => {
   assert.equal(SITE_ORIGIN, "https://proconcursos.com.br");
   assert.equal(SITE_HOME_URL, "https://proconcursos.com.br/");
   assert.equal(SITE_NAME, "PRO Concursos");
-  assert.equal(
-    SOCIAL_IMAGE_URL,
-    "https://proconcursos.com.br/resumos/brand/pro-concursos-logo-dark.png",
-  );
+  assert.equal(BRAND_LOGO_URL, "https://proconcursos.com.br/resumos/brand/pro-concursos-logo-dark.png");
+  assert.equal(SOCIAL_IMAGE_URL, "https://proconcursos.com.br/resumos/brand/pro-concursos-social.png");
   assert.deepEqual(INDEXABLE_PUBLIC_PATHS, [
     "/sobre",
     "/metodologia-editorial",
@@ -55,6 +54,8 @@ test("gera metadata social consistente com o canonical", () => {
   assert.equal(metadata.openGraph.url, metadata.alternates.canonical);
   assert.equal(metadata.openGraph.siteName, SITE_NAME);
   assert.equal(metadata.openGraph.images[0].url, SOCIAL_IMAGE_URL);
+  assert.equal(metadata.openGraph.images[0].width, 1200);
+  assert.equal(metadata.openGraph.images[0].height, 630);
   assert.equal(metadata.twitter.card, "summary_large_image");
   assert.deepEqual(metadata.twitter.images, [SOCIAL_IMAGE_URL]);
 });

@@ -10,6 +10,7 @@
 - removida a consulta Supabase do proxy em páginas institucionais e na prévia pública da landing para requisições `GET` e `HEAD`, preservando autenticação em mutações e áreas privadas.
 - publicadas páginas de sobre, metodologia editorial, política de IA e correções com limites explícitos, responsabilidade humana e sem credenciais acadêmicas artificiais.
 - criado o hub público de guias e disponibilizado para revisão o primeiro conteúdo aprofundado sobre estudo por resumos, mantido fora do índice até a conferência editorial final.
+- criada imagem social dedicada de 1200 × 630 pixels para Open Graph e Twitter Cards, preservando o logotipo oficial da marca.
 
 ## Não publicado — retorno seguro do Mercado Pago
 

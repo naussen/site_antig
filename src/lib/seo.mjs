@@ -22,8 +22,11 @@ export function getPublicUrl(path) {
   return new URL(withSiteBasePath(path), SITE_ORIGIN).toString();
 }
 
-export const SOCIAL_IMAGE_URL = getPublicUrl(
+export const BRAND_LOGO_URL = getPublicUrl(
   "/brand/pro-concursos-logo-dark.png",
+);
+export const SOCIAL_IMAGE_URL = getPublicUrl(
+  "/brand/pro-concursos-social.png",
 );
 
 export function createPublicPageMetadata({
@@ -49,8 +52,8 @@ export function createPublicPageMetadata({
         {
           url: SOCIAL_IMAGE_URL,
           width: 1200,
-          height: 350,
-          alt: "PRO Concursos",
+          height: 630,
+          alt: "PRO Concursos — estudo integrado para concursos públicos",
         },
       ],
     },

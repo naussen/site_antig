@@ -1,8 +1,8 @@
 import { serializeJsonLd } from "@/lib/json-ld.mjs";
 import {
+  BRAND_LOGO_URL,
   SITE_HOME_URL,
   SITE_NAME,
-  SOCIAL_IMAGE_URL,
 } from "@/lib/seo.mjs";
 
 const SITE_STRUCTURED_DATA = {
@@ -14,7 +14,7 @@ const SITE_STRUCTURED_DATA = {
       name: SITE_NAME,
       alternateName: "PRO Resumos",
       url: SITE_HOME_URL,
-      logo: SOCIAL_IMAGE_URL,
+      logo: BRAND_LOGO_URL,
       description:
         "Plataforma digital de estudos e revisão para concursos públicos.",
     },
