@@ -51,7 +51,7 @@ function WindowFrame({ label, children }: { label: string; children: React.React
         <span className="h-2.5 w-2.5 rounded-full bg-[#ff6b6b]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#f9a826]" />
         <span className="h-2.5 w-2.5 rounded-full bg-[#4ade80]" />
-        <span className="ml-2 min-w-0 truncate text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">{label}</span>
+        <span className="ml-2 min-w-0 truncate text-[10px] font-semibold uppercase tracking-[0.18em] text-white/60">{label}</span>
       </div>
       {children}
     </div>
@@ -88,7 +88,7 @@ function HeroProductPreview() {
               ].map((discipline) => (
                 <div
                   key={discipline}
-                  className="mt-2 hidden rounded-lg px-2 py-2 text-[10px] font-semibold text-white/40 sm:block"
+                  className="mt-2 hidden rounded-lg px-2 py-2 text-[10px] font-semibold text-white/60 sm:block"
                 >
                   {discipline}
                 </div>
@@ -98,21 +98,21 @@ function HeroProductPreview() {
             <div className="min-w-0 p-3 sm:p-5">
               <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
                 <div>
-                  <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-[#6c5ce7]">
+                  <p className="text-[9px] font-bold uppercase tracking-[0.14em] text-[#5140bd]">
                     Direito Constitucional
                   </p>
                   <h2 className="mt-1 text-base font-extrabold text-[#1a1a2e] sm:text-xl">
                     Poder Constituinte
                   </h2>
                 </div>
-                <span className="rounded-full bg-[#6c5ce7]/10 px-2.5 py-1 text-[9px] font-bold text-[#6c5ce7]">
+                <span className="rounded-full bg-[#6c5ce7]/10 px-2.5 py-1 text-[9px] font-bold text-[#5140bd]">
                   68% concluído
                 </span>
               </div>
 
               <div className="rounded-xl border border-[#e5e5ef] bg-white p-3 shadow-sm sm:p-4">
                 <div className="flex items-center justify-between gap-3">
-                  <p className="text-[10px] font-bold text-[#6c5ce7]">
+                  <p className="text-[10px] font-bold text-[#5140bd]">
                     Conceito e titularidade
                   </p>
                   <CheckCircle2 size={15} className="text-[#22c55e]" aria-hidden="true" />
@@ -129,11 +129,11 @@ function HeroProductPreview() {
 
               <div className="mt-3 grid grid-cols-2 gap-2">
                 <div className="rounded-xl border border-[#e5e5ef] bg-white p-3">
-                  <p className="text-[9px] font-bold uppercase tracking-wide text-[#9898aa]">Progresso</p>
+                  <p className="text-[9px] font-bold uppercase tracking-wide text-[#64647a]">Progresso</p>
                   <p className="mt-1 text-sm font-black text-[#1a1a2e]">6 de 9</p>
                 </div>
                 <div className="rounded-xl border border-[#e5e5ef] bg-white p-3">
-                  <p className="text-[9px] font-bold uppercase tracking-wide text-[#9898aa]">Anotações</p>
+                  <p className="text-[9px] font-bold uppercase tracking-wide text-[#64647a]">Anotações</p>
                   <p className="mt-1 text-sm font-black text-[#1a1a2e]">Salvas</p>
                 </div>
               </div>
@@ -177,7 +177,7 @@ function SectionHeading({
 
   return (
     <div className="mx-auto mb-12 max-w-3xl text-center">
-      <span className={`mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] ${isLight ? "border-[#6c5ce7]/25 bg-[#6c5ce7]/10 text-[#6c5ce7]" : "border-[#a78bfa]/35 bg-[#a78bfa]/10 text-[#c4b5fd]"}`}>
+      <span className={`mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] ${isLight ? "border-[#6c5ce7]/25 bg-[#6c5ce7]/10 text-[#5140bd]" : "border-[#a78bfa]/35 bg-[#a78bfa]/10 text-[#c4b5fd]"}`}>
         <Sparkles size={13} aria-hidden="true" /> {eyebrow}
       </span>
       <h2 className={`text-balance text-3xl font-extrabold tracking-tight md:text-5xl ${isLight ? "text-[#1a1a2e]" : "text-white"}`}>{title}</h2>
@@ -197,26 +197,26 @@ function ResumosPreview() {
           </div>
           <div className="mb-2 rounded-xl bg-[#a78bfa]/15 px-3 py-2.5 text-xs font-semibold text-[#c4b5fd]">Visão geral</div>
           {["Poder constituinte", "Direitos fundamentais", "Administração pública"].map((item) => (
-            <div key={item} className="mb-2 rounded-xl px-3 py-2.5 text-xs font-semibold text-white/40">{item}</div>
+            <div key={item} className="mb-2 rounded-xl px-3 py-2.5 text-xs font-semibold text-white/60">{item}</div>
           ))}
         </aside>
         <div className="bg-[#f4f5f7] p-5 sm:p-7">
           <div className="mb-5 flex items-start justify-between gap-4">
             <div>
-              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#6c5ce7]">Direito Constitucional</p>
+              <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#5140bd]">Direito Constitucional</p>
               <h3 className="mt-1 text-xl font-extrabold text-[#1a1a2e] sm:text-2xl">Poder Constituinte</h3>
             </div>
-            <span className="rounded-full bg-[#6c5ce7]/10 px-3 py-1 text-[10px] font-bold text-[#6c5ce7]">68% concluído</span>
+            <span className="rounded-full bg-[#6c5ce7]/10 px-3 py-1 text-[10px] font-bold text-[#5140bd]">68% concluído</span>
           </div>
           <div className="rounded-2xl border border-[#e5e5ef] bg-white p-5 shadow-sm">
-            <p className="mb-3 text-xs font-bold text-[#6c5ce7]">1. Conceito e titularidade</p>
+            <p className="mb-3 text-xs font-bold text-[#5140bd]">1. Conceito e titularidade</p>
             <div className="space-y-2 text-xs leading-6 text-[#64647a] sm:text-sm">
               <p>O poder constituinte é a capacidade de criar ou modificar uma Constituição, estruturando juridicamente o Estado.</p>
               <p>A titularidade pertence ao <strong className="text-[#1a1a2e]">povo</strong>, que a exerce por representantes ou diretamente.</p>
             </div>
             <div className="mt-5 rounded-xl border-l-4 border-[#f9a826] bg-[#fff7e7] p-3 text-xs text-[#69480c]"><strong>Ponto de prova:</strong> titularidade e exercício não se confundem.</div>
             <div className="mt-5 flex items-center justify-between border-t border-[#e5e5ef] pt-4">
-              <span className="text-[10px] text-[#9898aa]">Seção 4 de 9</span>
+              <span className="text-[10px] text-[#64647a]">Seção 4 de 9</span>
               <span className="inline-flex items-center gap-1.5 rounded-lg bg-[#6c5ce7] px-3 py-2 text-[10px] font-bold text-white"><Check size={12} /> Marcar como lida</span>
             </div>
           </div>
@@ -232,7 +232,7 @@ function LegisPreview() {
       <div className="min-h-[430px] bg-[#f6f0df] p-5 sm:p-7">
         <div className="mb-5 flex flex-wrap items-start justify-between gap-4 border-b border-[#cbbf9e] pb-5">
           <div>
-            <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8b6914]">Texto oficial versionado</p>
+            <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#6f500d]">Texto oficial versionado</p>
             <h3 className="mt-1 font-serif text-xl font-bold text-[#3d3529] sm:text-2xl">Constituição da República Federativa do Brasil</h3>
           </div>
           <span className="inline-flex items-center gap-1.5 rounded-full border border-[#8b6914]/30 bg-[#8b6914]/10 px-3 py-1 text-[10px] font-bold text-[#6d510e]"><CheckCircle2 size={12} /> Fonte oficial conferida</span>
@@ -241,12 +241,12 @@ function LegisPreview() {
           <article className="rounded-2xl border border-[#d4c9a8] bg-[#fffaf0] p-5 font-serif text-sm leading-7 text-[#4b4332] shadow-sm">
             <p className="mb-3 font-bold">Art. 5º</p>
             <p>Todos são iguais perante a lei, sem distinção de qualquer natureza, garantindo-se aos brasileiros e aos estrangeiros residentes no País a inviolabilidade do direito à vida, à liberdade, à igualdade, à segurança e à propriedade.</p>
-            <div className="mt-5 border-t border-[#d4c9a8] pt-4 font-sans text-[10px] text-[#8b7e6a]">Redação vigente · conferida em fonte oficial</div>
+            <div className="mt-5 border-t border-[#d4c9a8] pt-4 font-sans text-[10px] text-[#615443]">Redação vigente · conferida em fonte oficial</div>
           </article>
           <aside className="space-y-3">
             {[["Texto oficial", "Ativo"], ["Prática C/E", "12 itens"], ["Meu progresso", "42%"]].map(([title, value]) => (
               <div key={title} className="rounded-xl border border-[#d4c9a8] bg-[#f0e8d0] p-3">
-                <p className="text-[9px] font-bold uppercase tracking-wide text-[#8b7e6a]">{title}</p>
+                <p className="text-[9px] font-bold uppercase tracking-wide text-[#615443]">{title}</p>
                 <p className="mt-1 text-xs font-extrabold text-[#3d3529]">{value}</p>
               </div>
             ))}
@@ -263,13 +263,13 @@ function QuestionsPreview() {
       <div className="min-h-[430px] bg-[#f4f5f7] p-5 sm:p-7">
         <div className="mb-5 flex flex-wrap items-center justify-between gap-4">
           <ProQuestionsLogo tone="landing" />
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#6c5ce7]/10 px-3 py-1 text-[10px] font-bold text-[#6c5ce7]">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-[#6c5ce7]/10 px-3 py-1 text-[10px] font-bold text-[#5140bd]">
             <BarChart3 size={12} /> 78% de acertos
           </span>
         </div>
         <div className="rounded-2xl border border-[#e5e5ef] bg-white p-5 shadow-sm">
           <div className="mb-4 flex flex-wrap gap-2">
-            <span className="rounded-full bg-[#6c5ce7]/10 px-2.5 py-1 text-[9px] font-bold text-[#6c5ce7]">Direito Constitucional</span>
+            <span className="rounded-full bg-[#6c5ce7]/10 px-2.5 py-1 text-[9px] font-bold text-[#5140bd]">Direito Constitucional</span>
             <span className="rounded-full border border-[#e5e5ef] px-2.5 py-1 text-[9px] font-semibold text-[#64647a]">Cebraspe · 2025</span>
           </div>
           <p className="text-sm font-bold leading-6 text-[#1a1a2e]">
@@ -280,7 +280,7 @@ function QuestionsPreview() {
             <span className="rounded-xl border border-[#e5e5ef] bg-[#f8f8fb] px-4 py-3 text-center text-xs font-extrabold text-[#64647a]">Errado</span>
           </div>
           <div className="mt-5 rounded-xl border-l-4 border-[#6c5ce7] bg-[#6c5ce7]/[0.07] p-4">
-            <p className="text-[9px] font-black uppercase tracking-[0.14em] text-[#6c5ce7]">Comentário didático</p>
+            <p className="text-[9px] font-black uppercase tracking-[0.14em] text-[#5140bd]">Comentário didático</p>
             <p className="mt-2 text-xs leading-5 text-[#64647a]">Titularidade e exercício são conceitos distintos: o povo é titular, mas pode exercer o poder por representantes.</p>
           </div>
         </div>
@@ -309,7 +309,7 @@ function FlashcardPreview() {
 function NotesPreview() {
   return (
     <div className="mx-auto max-w-sm rounded-2xl border border-[#fdd835]/35 bg-[#fffde7] p-5 shadow-xl">
-      <div className="mb-4 flex items-center justify-between border-b border-[#eadc8a] pb-3"><span className="flex items-center gap-2 text-xs font-extrabold text-[#6b5e1e]"><NotebookPen size={15} /> Minhas anotações</span><span className="text-[9px] font-semibold text-[#928743]">Salvo agora</span></div>
+      <div className="mb-4 flex items-center justify-between border-b border-[#eadc8a] pb-3"><span className="flex items-center gap-2 text-xs font-extrabold text-[#6b5e1e]"><NotebookPen size={15} /> Minhas anotações</span><span className="text-[9px] font-semibold text-[#62591d]">Salvo agora</span></div>
       <p className="text-xs leading-6 text-[#5d5528]">Revisar a diferença entre poder constituinte derivado reformador e decorrente antes de resolver as questões.</p>
       <div className="mt-4 flex gap-1.5"><span className="h-2 w-2 rounded-full bg-[#6c5ce7]" /><span className="h-2 w-2 rounded-full bg-[#f9a826]" /><span className="h-2 w-2 rounded-full bg-[#22c55e]" /></div>
     </div>
@@ -319,9 +319,9 @@ function NotesPreview() {
 function HighlightPreview() {
   return (
     <div className="mx-auto max-w-sm rounded-2xl border border-white/10 bg-white p-5 text-[#36364b] shadow-xl">
-      <div className="mb-5 flex items-center gap-2 rounded-xl bg-[#f4f5f7] p-2"><Highlighter size={14} className="text-[#6c5ce7]" /><span className="h-5 w-5 rounded-md bg-[#facc15]" /><span className="h-5 w-5 rounded-md bg-[#fb923c]" /><span className="h-5 w-5 rounded-md bg-[#f472b6]" /><span className="h-5 w-5 rounded-md bg-[#60a5fa]" /><span className="h-5 w-5 rounded-md bg-[#4ade80]" /></div>
+      <div className="mb-5 flex items-center gap-2 rounded-xl bg-[#f4f5f7] p-2"><Highlighter size={14} className="text-[#5140bd]" /><span className="h-5 w-5 rounded-md bg-[#facc15]" /><span className="h-5 w-5 rounded-md bg-[#fb923c]" /><span className="h-5 w-5 rounded-md bg-[#f472b6]" /><span className="h-5 w-5 rounded-md bg-[#60a5fa]" /><span className="h-5 w-5 rounded-md bg-[#4ade80]" /></div>
       <p className="text-sm leading-7">A administração pública obedecerá aos princípios de legalidade, impessoalidade, <span className="mx-1 rounded bg-[#fde047]/70 px-1">moralidade, publicidade e eficiência</span>.</p>
-      <p className="mt-4 text-[10px] font-semibold text-[#9898aa]">Realces salvos automaticamente</p>
+      <p className="mt-4 text-[10px] font-semibold text-[#64647a]">Realces salvos automaticamente</p>
     </div>
   );
 }
@@ -392,9 +392,9 @@ export function LandingPageContent() {
       <section id="modulos" className="scroll-mt-36 border-y border-[#e5e5ef] bg-white px-5 py-16 sm:px-8 sm:py-24">
         <SectionHeading eyebrow="Módulos" title="Do resumo à prática, sem trocar de plataforma." description="Três ambientes complementares para compreender a matéria, consultar a literalidade e testar seu conhecimento." tone="light" />
         <div className="mx-auto max-w-6xl space-y-14">
-          <article className="grid items-center gap-8 lg:grid-cols-[0.78fr_1.4fr]"><div><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#a78bfa] text-white shadow-lg shadow-[#7c3aed]/25"><Layers3 size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#6c5ce7]">PRO Resumos</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight text-[#1a1a2e]">Conteúdo organizado para você entender e reter.</h3><p className="mt-4 leading-7 text-[#64647a]">Resumos jurídicos divididos em seções, com pontos de prova, mnemônicos, mapas mentais e progresso de leitura.</p></div><ResumosPreview /></article>
-          <article className="grid items-center gap-8 lg:grid-cols-[1.4fr_0.78fr]"><div className="lg:order-2"><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#f9a826] to-[#c27b08] text-[#121212] shadow-lg shadow-[#f9a826]/20"><Gavel size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#b56f00]">PRO Legis</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight text-[#1a1a2e]">A legislação vigente em uma leitura confiável.</h3><p className="mt-4 leading-7 text-[#64647a]">Texto oficial versionado, progresso por dispositivo legal e prática C/E conectada à literalidade da lei.</p></div><LegisPreview /></article>
-          <article className="grid items-center gap-8 lg:grid-cols-[0.78fr_1.4fr]"><div><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#a78bfa] text-white shadow-lg shadow-[#7c3aed]/25"><CircleHelp size={23} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#6c5ce7]">PROQuestões</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight text-[#1a1a2e]">Prática focada com retorno imediato.</h3><p className="mt-4 leading-7 text-[#64647a]">Resolva uma questão por vez, filtre o acervo, consulte comentários didáticos e acompanhe seu desempenho.</p></div><QuestionsPreview /></article>
+          <article className="grid items-center gap-8 lg:grid-cols-[0.78fr_1.4fr]"><div><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#a78bfa] text-white shadow-lg shadow-[#7c3aed]/25"><Layers3 size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#5140bd]">PRO Resumos</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight text-[#1a1a2e]">Conteúdo organizado para você entender e reter.</h3><p className="mt-4 leading-7 text-[#64647a]">Resumos jurídicos divididos em seções, com pontos de prova, mnemônicos, mapas mentais e progresso de leitura.</p></div><ResumosPreview /></article>
+          <article className="grid items-center gap-8 lg:grid-cols-[1.4fr_0.78fr]"><div className="lg:order-2"><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#f9a826] to-[#c27b08] text-[#121212] shadow-lg shadow-[#f9a826]/20"><Gavel size={22} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#7a4b00]">PRO Legis</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight text-[#1a1a2e]">A legislação vigente em uma leitura confiável.</h3><p className="mt-4 leading-7 text-[#64647a]">Texto oficial versionado, progresso por dispositivo legal e prática C/E conectada à literalidade da lei.</p></div><LegisPreview /></article>
+          <article className="grid items-center gap-8 lg:grid-cols-[0.78fr_1.4fr]"><div><span className="mb-5 grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-[#7c3aed] to-[#a78bfa] text-white shadow-lg shadow-[#7c3aed]/25"><CircleHelp size={23} /></span><p className="text-xs font-bold uppercase tracking-[0.18em] text-[#5140bd]">PROQuestões</p><h3 className="mt-3 text-3xl font-extrabold tracking-tight text-[#1a1a2e]">Prática focada com retorno imediato.</h3><p className="mt-4 leading-7 text-[#64647a]">Resolva uma questão por vez, filtre o acervo, consulte comentários didáticos e acompanhe seu desempenho.</p></div><QuestionsPreview /></article>
         </div>
       </section>
 

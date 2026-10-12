@@ -11,6 +11,7 @@
 - publicadas páginas de sobre, metodologia editorial, política de IA e correções com limites explícitos, responsabilidade humana e sem credenciais acadêmicas artificiais.
 - criado o hub público de guias e disponibilizado para revisão o primeiro conteúdo aprofundado sobre estudo por resumos, mantido fora do índice até a conferência editorial final.
 - criada imagem social dedicada de 1200 × 630 pixels para Open Graph e Twitter Cards, preservando o logotipo oficial da marca.
+- corrigido o contraste dos textos pequenos nas prévias da landing após auditoria Lighthouse de produção, preservando a identidade visual dos módulos.
 
 ## Não publicado — retorno seguro do Mercado Pago
 

@@ -131,6 +131,23 @@ test("publica JSON-LD verificável sem sink HTML inseguro", async () => {
   assert.match(landing, /<SiteStructuredData \/>/u);
 });
 
+test("mantém contraste mínimo nos textos pequenos da landing", async () => {
+  const landing = await read("src/components/landing/landing-page-content.tsx");
+
+  for (const lowContrastClass of [
+    "text-white/35",
+    "text-white/40",
+    "text-[#6c5ce7]",
+    "text-[#9898aa]",
+    "text-[#b56f00]",
+    "text-[#8b6914]",
+    "text-[#8b7e6a]",
+    "text-[#928743]",
+  ]) {
+    assert.equal(landing.includes(lowContrastClass), false, lowContrastClass);
+  }
+});
+
 test("ignora Supabase somente em páginas públicas e métodos seguros", async () => {
   for (const path of [
     "/landing",
