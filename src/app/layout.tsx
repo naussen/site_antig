@@ -3,13 +3,9 @@ import { Inter } from "next/font/google";
 import { headers } from "next/headers";
 import { ThemeProvider } from "@/components/theme-provider";
 import { resolveCookieTheme, resolveInitialTheme } from "@/lib/initial-theme";
-import {
-  PUBLIC_PAGE_REQUEST_HEADER,
-  SESSION_AWARE_REQUEST_HEADER,
-} from "@/lib/public-request-paths.mjs";
+import { SESSION_AWARE_REQUEST_HEADER } from "@/lib/public-request-paths.mjs";
 import { SITE_NAME, SITE_ORIGIN } from "@/lib/seo.mjs";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
-import { DEFAULT_THEME } from "@/lib/theme-preference";
 import "katex/dist/katex.min.css";
 import "./globals.css";
 
@@ -51,10 +47,8 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const requestHeaders = await headers();
-  const isPublicPage = requestHeaders.get(PUBLIC_PAGE_REQUEST_HEADER) === "1";
-  const initialTheme = isPublicPage
-    ? DEFAULT_THEME
-    : requestHeaders.get(SESSION_AWARE_REQUEST_HEADER) === "1"
+  const initialTheme =
+    requestHeaders.get(SESSION_AWARE_REQUEST_HEADER) === "1"
       ? await resolveInitialTheme()
       : await resolveCookieTheme();
 

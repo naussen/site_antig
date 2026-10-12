@@ -4,10 +4,8 @@ import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
 import { sanitizeOAuthCallbackUrl } from "@/lib/auth/oauth-callback-url.mjs";
 import {
   isPublicPageRequest,
-  PUBLIC_PAGE_REQUEST_HEADER,
   SESSION_AWARE_REQUEST_HEADER,
 } from "@/lib/public-request-paths.mjs";
-import { applyPublicCachePolicy } from "@/lib/public-cache-policy.mjs";
 import { isStudyPath } from "@/lib/site-paths.mjs";
 
 const SUPABASE_CACHE_HEADER_NAMES = [
@@ -47,12 +45,7 @@ export async function proxy(request: NextRequest) {
   if (isPublicPageRequest(request.method, localPath)) {
     const publicHeaders = new Headers(request.headers);
     publicHeaders.delete(SESSION_AWARE_REQUEST_HEADER);
-    publicHeaders.set(PUBLIC_PAGE_REQUEST_HEADER, "1");
-    const publicResponse = NextResponse.next({
-      request: { headers: publicHeaders },
-    });
-    applyPublicCachePolicy(publicResponse.headers);
-    return publicResponse;
+    return NextResponse.next({ request: { headers: publicHeaders } });
   }
 
   const createSessionAwareResponse = () => {
