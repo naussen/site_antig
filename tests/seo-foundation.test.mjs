@@ -209,7 +209,7 @@ test("aplica cache compartilhado somente pela política pública", () => {
   applyPublicCachePolicy(headers);
 
   assert.equal(
-    headers.get("CDN-Cache-Control"),
+    headers.get("Netlify-CDN-Cache-Control"),
     PUBLIC_CDN_CACHE_CONTROL,
   );
   assert.equal(headers.get("Cache-Control"), PUBLIC_BROWSER_CACHE_CONTROL);

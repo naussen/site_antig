@@ -5,5 +5,5 @@ export const PUBLIC_BROWSER_CACHE_CONTROL =
 
 export function applyPublicCachePolicy(headers) {
   headers.set("Cache-Control", PUBLIC_BROWSER_CACHE_CONTROL);
-  headers.set("CDN-Cache-Control", PUBLIC_CDN_CACHE_CONTROL);
+  headers.set("Netlify-CDN-Cache-Control", PUBLIC_CDN_CACHE_CONTROL);
 }
