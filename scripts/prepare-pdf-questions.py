@@ -234,6 +234,23 @@ def source_eligibility_reason(question: dict) -> str | None:
     return None
 
 
+def load_exclusions(path: Path) -> dict[str, dict]:
+    if not path.exists():
+        return {}
+    records = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(records, list):
+        raise ValueError("A lista de exclusões deve ser um array.")
+    exclusions = {}
+    for record in records:
+        if (not isinstance(record, dict)
+                or not all(isinstance(record.get(key), str) and record[key]
+                           for key in ("external_id", "source_file", "reason"))
+                or record["external_id"] in exclusions):
+            raise ValueError("Exclusão inválida ou repetida.")
+        exclusions[record["external_id"]] = record
+    return exclusions
+
+
 def normalize_and_validate_links(markdown: str) -> str:
     markdown = re.sub(r"http://www\.planalto\.gov\.br", "https://www.planalto.gov.br", markdown, flags=re.I)
     for url in re.findall(r"!?\[[^]]*\]\(([^)]+)\)", markdown):
@@ -267,6 +284,8 @@ def main() -> None:
     existing_ids = {item["external_id"] for item in catalog["questions"]}
     prepared = defaultdict(list)
     manifest = []
+    exclusions = load_exclusions(args.output_dir / "excluded.json")
+    seen_exclusions = set()
     media = {}
     source_files = sorted(args.source_dir.glob("*.json"))
     args.output_dir.mkdir(parents=True, exist_ok=True)
@@ -277,6 +296,11 @@ def main() -> None:
             raise ValueError(f"Unexpected source schema: {source_file.name}")
         for question in source["questions"]:
             identifier = question["external_id"]
+            if identifier in exclusions:
+                if exclusions[identifier]["source_file"] != source_file.name:
+                    raise ValueError(f"Fonte divergente para exclusão: {identifier}")
+                seen_exclusions.add(identifier)
+                continue
             statement_key = statement_fingerprint(question)
             reason = None
             discipline_slug = SUBJECT_DISCIPLINES.get(normalized(question["subject"]))
@@ -352,7 +376,14 @@ def main() -> None:
             item["source_content_hash"] = digest(stable_json(item).encode("utf-8"))
             prepared[(source_file.name, discipline_slug)].append(item)
 
+    if seen_exclusions != exclusions.keys():
+        raise ValueError("A lista de exclusões contém IDs ausentes nas fontes.")
+
     batches_dir = args.output_dir / "batches"
+    if (not prepared and batches_dir.exists()
+            and any(batches_dir.glob("pdf-*.json"))
+            and any(item["reason"] == "already_in_site" for item in manifest)):
+        raise ValueError("O catálogo já contém os lotes publicados. Use o snapshot anterior à importação para regenerá-los.")
     batches_dir.mkdir(exist_ok=True)
     sources_dir = args.output_dir / "sources"
     sources_dir.mkdir(exist_ok=True)
@@ -429,13 +460,16 @@ def main() -> None:
     summary = {
         "catalog_captured_at": catalog["captured_at"],
         "source_files": len(source_files),
-        "source_questions": len(manifest),
+        "source_questions": len(manifest) + len(exclusions),
+        "excluded_questions": len(exclusions),
+        "candidate_questions": len(manifest),
         "import_ready": reasons["ready"],
         "batches": len(prepared),
         "copied_sources": len(source_snapshots),
         "copied_images": len(media),
         "image_files": sorted(media),
         "reasons": dict(sorted(reasons.items())),
+        "excluded_reasons": dict(sorted(Counter(item["reason"] for item in exclusions.values()).items())),
     }
     (args.output_dir / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False, indent=2))

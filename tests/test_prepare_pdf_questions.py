@@ -28,6 +28,16 @@ class PreparePdfQuestionsTests(unittest.TestCase):
         }
         self.assertEqual(prepare.source_eligibility_reason(question), "outdated_content")
 
+    def test_exclusions_are_unique_and_bound_to_source(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "excluded.json"
+            path.write_text('[{"external_id":"pdf:prova:001","source_file":"prova.json","reason":"outdated_content"}]', encoding="utf-8")
+            self.assertEqual(prepare.load_exclusions(path)["pdf:prova:001"]["source_file"], "prova.json")
+            path.write_text('[{"external_id":"pdf:prova:001","source_file":"prova.json","reason":"outdated_content"},'
+                            '{"external_id":"pdf:prova:001","source_file":"prova.json","reason":"outdated_content"}]', encoding="utf-8")
+            with self.assertRaises(ValueError):
+                prepare.load_exclusions(path)
+
     def test_shared_context_does_not_classify_unrelated_item(self):
         question = {
             "subject": "Informática",

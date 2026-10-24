@@ -1140,18 +1140,6 @@
     "reason": "topic_not_identified"
   },
   {
-    "external_id": "pdf:agente_administrativo:096",
-    "source_file": "agente_administrativo.json",
-    "source_subject": "Redação Oficial",
-    "answer_status": "definitivo",
-    "discipline_slug": "portugues",
-    "topic_id": null,
-    "classification": "subject_topic_conflict",
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "subject_topic_conflict"
-  },
-  {
     "external_id": "pdf:agente_administrativo:097",
     "source_file": "agente_administrativo.json",
     "source_subject": "Redação Oficial",
@@ -3012,18 +3000,6 @@
     "reason": "discipline_not_in_active_catalog"
   },
   {
-    "external_id": "pdf:analista_administrativo:032",
-    "source_file": "analista_administrativo.json",
-    "source_subject": "Legislação Ambiental",
-    "answer_status": "definitivo",
-    "discipline_slug": null,
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
-  },
-  {
     "external_id": "pdf:analista_administrativo:033",
     "source_file": "analista_administrativo.json",
     "source_subject": "Legislação Ambiental",
@@ -3370,18 +3346,6 @@
     "duplicate_group_size": 1,
     "import_ready": false,
     "reason": "topic_not_identified"
-  },
-  {
-    "external_id": "pdf:analista_administrativo:062",
-    "source_file": "analista_administrativo.json",
-    "source_subject": "Administração",
-    "answer_status": "definitivo",
-    "discipline_slug": "administracao-geral",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
   },
   {
     "external_id": "pdf:analista_administrativo:063",
@@ -4032,18 +3996,6 @@
     "reason": "no_reviewed_explanation"
   },
   {
-    "external_id": "pdf:analista_administrativo:117",
-    "source_file": "analista_administrativo.json",
-    "source_subject": "Matemática Financeira",
-    "answer_status": "definitivo",
-    "discipline_slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
-    "topic_id": null,
-    "classification": "subject_topic_conflict",
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "subject_topic_conflict"
-  },
-  {
     "external_id": "pdf:analista_administrativo:118",
     "source_file": "analista_administrativo.json",
     "source_subject": "Matemática Financeira",
@@ -4126,18 +4078,6 @@
     "duplicate_group_size": 1,
     "import_ready": false,
     "reason": "discipline_not_in_active_catalog"
-  },
-  {
-    "external_id": "pdf:analista_ambiental_conhec_especi:055",
-    "source_file": "analista_ambiental_conhec_especi.json",
-    "source_subject": "A classificar",
-    "answer_status": "definitivo",
-    "discipline_slug": null,
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
   },
   {
     "external_id": "pdf:analista_ambiental_conhec_especi:056",
@@ -4836,18 +4776,6 @@
     "reason": "no_reviewed_explanation"
   },
   {
-    "external_id": "pdf:analista_ambiental_conhec_especi:114",
-    "source_file": "analista_ambiental_conhec_especi.json",
-    "source_subject": "A classificar",
-    "answer_status": "definitivo",
-    "discipline_slug": null,
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
-  },
-  {
     "external_id": "pdf:analista_ambiental_conhec_especi:115",
     "source_file": "analista_ambiental_conhec_especi.json",
     "source_subject": "A classificar",
@@ -4956,18 +4884,6 @@
     "reason": "topic_not_identified"
   },
   {
-    "external_id": "pdf:assistente_administrativo:004",
-    "source_file": "assistente_administrativo.json",
-    "source_subject": "Língua Portuguesa",
-    "answer_status": "definitivo",
-    "discipline_slug": "portugues",
-    "topic_id": "morfologia",
-    "classification": "specific_statement_term",
-    "duplicate_group_size": 2,
-    "import_ready": false,
-    "reason": "duplicate_source_statement"
-  },
-  {
     "external_id": "pdf:assistente_administrativo:005",
     "source_file": "assistente_administrativo.json",
     "source_subject": "Língua Portuguesa",
@@ -4978,42 +4894,6 @@
     "duplicate_group_size": 2,
     "import_ready": false,
     "reason": "topic_not_identified"
-  },
-  {
-    "external_id": "pdf:assistente_administrativo:006",
-    "source_file": "assistente_administrativo.json",
-    "source_subject": "Língua Portuguesa",
-    "answer_status": "definitivo",
-    "discipline_slug": "portugues",
-    "topic_id": "sintaxe",
-    "classification": "specific_statement_term",
-    "duplicate_group_size": 2,
-    "import_ready": false,
-    "reason": "duplicate_source_statement"
-  },
-  {
-    "external_id": "pdf:assistente_administrativo:007",
-    "source_file": "assistente_administrativo.json",
-    "source_subject": "Língua Portuguesa",
-    "answer_status": "definitivo",
-    "discipline_slug": "portugues",
-    "topic_id": "sintaxe",
-    "classification": "specific_statement_term",
-    "duplicate_group_size": 2,
-    "import_ready": false,
-    "reason": "duplicate_source_statement"
-  },
-  {
-    "external_id": "pdf:assistente_administrativo:008",
-    "source_file": "assistente_administrativo.json",
-    "source_subject": "Língua Portuguesa",
-    "answer_status": "definitivo",
-    "discipline_slug": "portugues",
-    "topic_id": null,
-    "classification": "ambiguous_topic",
-    "duplicate_group_size": 2,
-    "import_ready": false,
-    "reason": "ambiguous_topic"
   },
   {
     "external_id": "pdf:assistente_administrativo:009",
@@ -5988,18 +5868,6 @@
     "reason": "discipline_not_in_active_catalog"
   },
   {
-    "external_id": "pdf:cargo30:040",
-    "source_file": "cargo30.json",
-    "source_subject": "Noções de Informática",
-    "answer_status": "definitivo",
-    "discipline_slug": "informatica",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
-  },
-  {
     "external_id": "pdf:cargo30:041",
     "source_file": "cargo30.json",
     "source_subject": "Noções de Informática",
@@ -6036,42 +5904,6 @@
     "reason": "topic_not_identified"
   },
   {
-    "external_id": "pdf:cargo30:044",
-    "source_file": "cargo30.json",
-    "source_subject": "Noções de Informática",
-    "answer_status": "definitivo",
-    "discipline_slug": "informatica",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
-  },
-  {
-    "external_id": "pdf:cargo30:045",
-    "source_file": "cargo30.json",
-    "source_subject": "Noções de Informática",
-    "answer_status": "definitivo",
-    "discipline_slug": "informatica",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
-  },
-  {
-    "external_id": "pdf:cargo30:046",
-    "source_file": "cargo30.json",
-    "source_subject": "Noções de Informática",
-    "answer_status": "definitivo",
-    "discipline_slug": "informatica",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
-  },
-  {
     "external_id": "pdf:cargo30:047",
     "source_file": "cargo30.json",
     "source_subject": "Noções de Informática",
@@ -6082,18 +5914,6 @@
     "duplicate_group_size": 1,
     "import_ready": false,
     "reason": "no_reviewed_explanation"
-  },
-  {
-    "external_id": "pdf:cargo30:048",
-    "source_file": "cargo30.json",
-    "source_subject": "Noções de Informática",
-    "answer_status": "definitivo",
-    "discipline_slug": "informatica",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
   },
   {
     "external_id": "pdf:cargo30:049",
@@ -6178,42 +5998,6 @@
     "duplicate_group_size": 1,
     "import_ready": false,
     "reason": "no_reviewed_explanation"
-  },
-  {
-    "external_id": "pdf:cargo30:056",
-    "source_file": "cargo30.json",
-    "source_subject": "Redação Oficial",
-    "answer_status": "definitivo",
-    "discipline_slug": "portugues",
-    "topic_id": null,
-    "classification": "subject_topic_conflict",
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "subject_topic_conflict"
-  },
-  {
-    "external_id": "pdf:cargo30:057",
-    "source_file": "cargo30.json",
-    "source_subject": "Redação Oficial",
-    "answer_status": "definitivo",
-    "discipline_slug": "portugues",
-    "topic_id": null,
-    "classification": "subject_topic_conflict",
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "subject_topic_conflict"
-  },
-  {
-    "external_id": "pdf:cargo30:058",
-    "source_file": "cargo30.json",
-    "source_subject": "Redação Oficial",
-    "answer_status": "definitivo",
-    "discipline_slug": "portugues",
-    "topic_id": null,
-    "classification": "subject_topic_conflict",
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "subject_topic_conflict"
   },
   {
     "external_id": "pdf:cargo30:059",
@@ -6540,18 +6324,6 @@
     "reason": "discipline_not_in_active_catalog"
   },
   {
-    "external_id": "pdf:cargo30:086",
-    "source_file": "cargo30.json",
-    "source_subject": "Administração Financeira",
-    "answer_status": "definitivo",
-    "discipline_slug": null,
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
-  },
-  {
     "external_id": "pdf:cargo30:087",
     "source_file": "cargo30.json",
     "source_subject": "Administração Financeira",
@@ -6586,18 +6358,6 @@
     "duplicate_group_size": 1,
     "import_ready": false,
     "reason": "discipline_not_in_active_catalog"
-  },
-  {
-    "external_id": "pdf:cargo30:090",
-    "source_file": "cargo30.json",
-    "source_subject": "Administração Financeira",
-    "answer_status": "definitivo",
-    "discipline_slug": null,
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
   },
   {
     "external_id": "pdf:cargo30:091",
@@ -6924,18 +6684,6 @@
     "reason": "topic_not_identified"
   },
   {
-    "external_id": "pdf:cargo30:118",
-    "source_file": "cargo30.json",
-    "source_subject": "Direito Constitucional",
-    "answer_status": "definitivo",
-    "discipline_slug": "direito-constitucional",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
-  },
-  {
     "external_id": "pdf:cargo30:119",
     "source_file": "cargo30.json",
     "source_subject": "Direito Constitucional",
@@ -7152,18 +6900,6 @@
     "reason": "no_reviewed_explanation"
   },
   {
-    "external_id": "pdf:conheci_basicos_superior:017",
-    "source_file": "conheci_basicos_superior.json",
-    "source_subject": "Língua Portuguesa",
-    "answer_status": "definitivo",
-    "discipline_slug": "portugues",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
-  },
-  {
     "external_id": "pdf:conheci_basicos_superior:018",
     "source_file": "conheci_basicos_superior.json",
     "source_subject": "Língua Portuguesa",
@@ -7210,18 +6946,6 @@
     "duplicate_group_size": 1,
     "import_ready": false,
     "reason": "topic_not_identified"
-  },
-  {
-    "external_id": "pdf:conheci_basicos_superior:022",
-    "source_file": "conheci_basicos_superior.json",
-    "source_subject": "Noções de Informática",
-    "answer_status": "definitivo",
-    "discipline_slug": "informatica",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
   },
   {
     "external_id": "pdf:conheci_basicos_superior:023",
@@ -12672,42 +12396,6 @@
     "reason": "topic_not_identified"
   },
   {
-    "external_id": "pdf:prova_i09_tipo_001:017",
-    "source_file": "prova_i09_tipo_001.json",
-    "source_subject": "Noções de Microinformática",
-    "answer_status": "definitivo",
-    "discipline_slug": "informatica",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
-  },
-  {
-    "external_id": "pdf:prova_i09_tipo_001:018",
-    "source_file": "prova_i09_tipo_001.json",
-    "source_subject": "Noções de Microinformática",
-    "answer_status": "definitivo",
-    "discipline_slug": "informatica",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
-  },
-  {
-    "external_id": "pdf:prova_i09_tipo_001:019",
-    "source_file": "prova_i09_tipo_001.json",
-    "source_subject": "Noções de Microinformática",
-    "answer_status": "definitivo",
-    "discipline_slug": "informatica",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
-  },
-  {
     "external_id": "pdf:prova_i09_tipo_001:020",
     "source_file": "prova_i09_tipo_001.json",
     "source_subject": "Noções de Microinformática",
@@ -12742,18 +12430,6 @@
     "duplicate_group_size": 1,
     "import_ready": false,
     "reason": "topic_not_identified"
-  },
-  {
-    "external_id": "pdf:prova_i09_tipo_001:023",
-    "source_file": "prova_i09_tipo_001.json",
-    "source_subject": "Noções de Direito Administrativo",
-    "answer_status": "definitivo",
-    "discipline_slug": "direito-administrativo",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
   },
   {
     "external_id": "pdf:prova_i09_tipo_001:024",
@@ -13174,18 +12850,6 @@
     "duplicate_group_size": 1,
     "import_ready": false,
     "reason": "no_reviewed_explanation"
-  },
-  {
-    "external_id": "pdf:prova_i09_tipo_001:059",
-    "source_file": "prova_i09_tipo_001.json",
-    "source_subject": "Noções de Direito Eleitoral",
-    "answer_status": "definitivo",
-    "discipline_slug": "direito-eleitoral",
-    "topic_id": null,
-    "classification": null,
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "outdated_content"
   },
   {
     "external_id": "pdf:prova_i09_tipo_001:060",
@@ -14280,18 +13944,6 @@
     "reason": "topic_not_identified"
   },
   {
-    "external_id": "pdf:tecnico_do_seguro_social:011",
-    "source_file": "tecnico_do_seguro_social.json",
-    "source_subject": "Português",
-    "answer_status": "definitivo",
-    "discipline_slug": "portugues",
-    "topic_id": null,
-    "classification": "ambiguous_topic",
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "ambiguous_topic"
-  },
-  {
     "external_id": "pdf:tecnico_do_seguro_social:012",
     "source_file": "tecnico_do_seguro_social.json",
     "source_subject": "Português",
@@ -14796,18 +14448,6 @@
     "reason": null
   },
   {
-    "external_id": "pdf:tecnico_do_seguro_social:054",
-    "source_file": "tecnico_do_seguro_social.json",
-    "source_subject": "Direito Previdenciário",
-    "answer_status": "definitivo",
-    "discipline_slug": "direito-previdenciario",
-    "topic_id": null,
-    "classification": "ambiguous_topic",
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "ambiguous_topic"
-  },
-  {
     "external_id": "pdf:tecnico_do_seguro_social:055",
     "source_file": "tecnico_do_seguro_social.json",
     "source_subject": "Direito Previdenciário",
@@ -15214,18 +14854,6 @@
     "duplicate_group_size": 1,
     "import_ready": false,
     "reason": "topic_not_identified"
-  },
-  {
-    "external_id": "pdf:tecnico_do_seguro_social:089",
-    "source_file": "tecnico_do_seguro_social.json",
-    "source_subject": "Direito Previdenciário",
-    "answer_status": "definitivo",
-    "discipline_slug": "direito-previdenciario",
-    "topic_id": null,
-    "classification": "ambiguous_topic",
-    "duplicate_group_size": 1,
-    "import_ready": false,
-    "reason": "ambiguous_topic"
   },
   {
     "external_id": "pdf:tecnico_do_seguro_social:090",
@@ -15658,42 +15286,6 @@
     "duplicate_group_size": 2,
     "import_ready": false,
     "reason": "topic_not_identified"
-  },
-  {
-    "external_id": "pdf:tecnico_em_enfermagem:006",
-    "source_file": "tecnico_em_enfermagem.json",
-    "source_subject": "Língua Portuguesa",
-    "answer_status": "definitivo",
-    "discipline_slug": "portugues",
-    "topic_id": "sintaxe",
-    "classification": "specific_statement_term",
-    "duplicate_group_size": 2,
-    "import_ready": false,
-    "reason": "duplicate_source_statement"
-  },
-  {
-    "external_id": "pdf:tecnico_em_enfermagem:007",
-    "source_file": "tecnico_em_enfermagem.json",
-    "source_subject": "Língua Portuguesa",
-    "answer_status": "definitivo",
-    "discipline_slug": "portugues",
-    "topic_id": "sintaxe",
-    "classification": "specific_statement_term",
-    "duplicate_group_size": 2,
-    "import_ready": false,
-    "reason": "duplicate_source_statement"
-  },
-  {
-    "external_id": "pdf:tecnico_em_enfermagem:008",
-    "source_file": "tecnico_em_enfermagem.json",
-    "source_subject": "Língua Portuguesa",
-    "answer_status": "definitivo",
-    "discipline_slug": "portugues",
-    "topic_id": null,
-    "classification": "ambiguous_topic",
-    "duplicate_group_size": 2,
-    "import_ready": false,
-    "reason": "ambiguous_topic"
   },
   {
     "external_id": "pdf:tecnico_em_enfermagem:009",

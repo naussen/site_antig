@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — exclusões do conjunto pendente de questões
+
+- retirados 34 IDs do manifesto de pendências: 19 com alerta de desatualização, 5 com tópico ambíguo, 5 com conflito entre assunto e tópico e 5 duplicados entre provas;
+- preservadas as fontes originais e registrada lista auditável de exclusões; os 75 itens publicados e seus lotes permanecem intactos.
+
 ## Publicado — questões extraídas de PDF (24/10/2026)
 
 - conciliadas 1.360 questões de 16 provas com o catálogo atual de disciplinas e tópicos do site, sem alterar as 112 questões já publicadas;

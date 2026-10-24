@@ -30,7 +30,7 @@ Há uma divergência material entre a prontidão declarada e a procedência do g
 
 - `scripts/export-question-catalog.mjs` exporta localmente, em modo somente leitura, disciplinas, tópicos, relações e IDs/enunciados existentes para comparação. O snapshot fica fora do Git porque inclui conteúdo editorial do banco.
 - `scripts/prepare-pdf-questions.py` preserva os 16 arquivos originais. Só propõe uma disciplina quando o assunto de origem tem correspondência explícita; só propõe tópico existente e ativo da **mesma** disciplina quando o assunto é específico ou o item final do enunciado contém um sinal inequívoco. O trecho comum da prova é ignorado para não contaminar a classificação.
-- Foram gerados `manifest.json` para as 1.360 questões, 19 lotes `pro-questions/v1` com 75 questões de gabarito marcado como definitivo e tópico classificado, e snapshots rastreáveis de 7 fontes. O assunto do lote usa o título canônico do tópico; o assunto original permanece em `source_metadata.source_subject`.
+- As 16 fontes originais somam 1.360 questões. `excluded.json` registra 34 IDs retirados do trabalho futuro por decisão editorial de 24/10/2026, sem alterar os originais. `manifest.json` contém as 1.326 questões restantes. Foram mantidos 19 lotes `pro-questions/v1` com 75 questões já publicadas e snapshots rastreáveis de 7 fontes. O assunto do lote usa o título canônico do tópico; o assunto original permanece em `source_metadata.source_subject`.
 - Foram incluídos 11 PNGs usados pelas 75 questões, decodificados e regravados sem metadados, em `public/questions/calculations/`. Os comentários preparados usam URLs internas com o `basePath` `/resumos`; quatro links HTTP do Planalto foram convertidos para HTTPS, e os demais links externos passaram pela allowlist oficial.
 - Itens com alerta `DESATUALIZADO` foram retidos porque a interface só mostra o comentário após a resposta.
 
@@ -38,18 +38,14 @@ Há uma divergência material entre a prontidão declarada e a procedência do g
 
 | Situação | Questões |
 | --- | ---: |
-| Lotes tecnicamente prontos para a etapa de importação | 75 |
+| Lotes publicados | 75 |
 | Comentário presente, mas gabarito preliminar ou sem status | 437 |
-| Conteúdo com alerta de desatualização | 19 |
 | Disciplina sem correspondência ativa no catálogo | 180 |
 | Tópico não identificado com segurança | 265 |
-| Mais de um tópico plausível | 5 |
-| Assunto de origem contradiz o tópico específico | 5 |
-| Mesmo item encontrado em outra prova | 5 |
 | Sem explicação revisada | 369 |
-| **Total** | **1.360** |
+| **Total no conjunto ativo** | **1.326** |
 
-As 916 questões comentadas fora dos lotes permanecem no manifesto, com motivo e candidato de disciplina quando houver. Entre elas há matérias sem disciplina correspondente, como Direito Ambiental, legislação de trânsito, SUS e conteúdos bancários. Não foram criadas disciplinas ou tópicos artificiais. As questões existentes no banco também não foram reclassificadas, pois não houve colisão que justificasse alteração.
+Os 34 itens excluídos do conjunto ativo estão discriminados por ID, fonte e motivo em `excluded.json`: 19 com alerta de desatualização, 5 com tópico ambíguo, 5 com conflito entre assunto e tópico e 5 duplicados entre provas. Nenhum estava nos lotes publicados. Permanecem 1.251 questões pendentes, das quais 882 têm comentário. Entre elas há matérias sem disciplina correspondente, como Direito Ambiental, legislação de trânsito, SUS e conteúdos bancários. Não foram criadas disciplinas ou tópicos artificiais. As questões existentes no banco também não foram reclassificadas, pois não houve colisão que justificasse alteração.
 
 ## Repetição e verificações
 
@@ -57,11 +53,11 @@ Executar em um checkout do site com as dependências já instaladas. O exportado
 
 ```powershell
 node --env-file=C:\PRO\site\.env.local scripts\export-question-catalog.mjs --output C:\PRO\questoes\scratch\catalog-local.json
-python -B -X utf8 scripts\prepare-pdf-questions.py --source-dir C:\PRO\questoes\output_pdf_comentarios\arquivos_site --catalog C:\PRO\questoes\scratch\catalog-local.json --images-dir C:\PRO\questoes\output_pdf_comentarios\imagens --output-dir content\questions\pdf-import --public-dir public\questions\calculations
+python -B -X utf8 scripts\prepare-pdf-questions.py --source-dir C:\PRO\questoes\output_pdf_comentarios\arquivos_site --catalog C:\PRO\questoes\scratch\catalog-publicacao-20261024.local.json --images-dir C:\PRO\questoes\output_pdf_comentarios\imagens --output-dir content\questions\pdf-import --public-dir public\questions\calculations
 python -B -m unittest discover -s tests -p test_prepare_pdf_questions.py -v
 ```
 
-O script Python usa Pillow, já utilizado pelo renderizador das imagens do pipeline de questões. Validar todos os arquivos em `content/questions/pdf-import/batches/` com `questionImportBatchSchema` ou `npm run questions:admin -- validate --file <lote>`. Os testes também devem conferir SHA-256 das fontes copiadas, unicidade de IDs e links internos de imagem.
+O script Python usa Pillow, já utilizado pelo renderizador das imagens do pipeline de questões. Para reproduzir os lotes já publicados, use o snapshot anterior à importação indicado acima; o catálogo atual já contém esses IDs e o script impede apagar os lotes quando isso zeraria a preparação. Para novos lotes, gere um novo catálogo e trabalhe em uma saída separada. Validar todos os arquivos em `content/questions/pdf-import/batches/` com `questionImportBatchSchema` ou `npm run questions:admin -- validate --file <lote>`. Os testes também devem conferir SHA-256 das fontes copiadas, unicidade de IDs e links internos de imagem.
 
 Verificações executadas nesta preparação: 19 lotes/75 questões aprovados pelo schema Zod; 75 relações tópico–disciplina conferidas no snapshot; 7 hashes de fontes conferidos; 11 imagens decodificadas e regravadas; testes Python 7/7, `test:questions` 14/14, `test:questions-import` 5/5, `test:content` 49/49 e `test:api-auth` 3/3; lint e build webpack aprovados. Um asset foi servido em `http://localhost:31467/resumos/questions/calculations/` com HTTP 200 e `image/png`.
 
@@ -69,7 +65,7 @@ Publicação de 24/10/2026: o commit `4125f7b` foi confirmado em `origin/main`. 
 
 ## Riscos remanescentes
 
-- Os comentários foram revisados por modelos conforme a fonte. A preparação não equivale a revisão jurídica humana; alertas de desatualização e referências oficiais precisam de conferência antes da publicação. O relatório de origem não separa adequadamente os 437 comentários sem status de gabarito definitivo.
+- Os comentários foram revisados por modelos conforme a fonte. A preparação não equivale a revisão jurídica humana; referências oficiais precisam de conferência. O relatório de origem não separa adequadamente os 437 comentários sem status de gabarito definitivo. Os 19 itens com alerta de desatualização saíram do conjunto ativo, mas permanecem rastreáveis na lista de exclusões e nas fontes originais.
 - O classificador é propositalmente restrito, mas classificação por termos específicos ainda pode errar. O manifesto e os lotes devem passar por revisão editorial por amostragem e, para casos legais sensíveis, por revisão integral.
 - O catálogo foi atualizado imediatamente antes da importação e permaneceu idêntico ao snapshot anterior. Mudanças posteriores exigem novo preflight para os itens retidos.
 - Os assets estão acessíveis em produção e a importação foi verificada no banco. Não foi possível confirmar o SHA efetivo do deploy nem executar smoke autenticado ou teste de dois usuários nesta sessão.
