@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — plano de saneamento das questões de PDF pendentes
+
+- documentadas as quatro frentes para tratar 1.251 questões pendentes, com decisões por ID, conferência de gabarito definitivo, revisão de comentários, conciliação taxonômica e gates de importação;
+- preservados como limites do plano os 34 IDs excluídos, as 75 questões publicadas e os arquivos originais.
+
 ## Não publicado — exclusões do conjunto pendente de questões
 
 - retirados 34 IDs do manifesto de pendências: 19 com alerta de desatualização, 5 com tópico ambíguo, 5 com conflito entre assunto e tópico e 5 duplicados entre provas;
