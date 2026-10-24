@@ -4,7 +4,7 @@
 
 - `origin/main` analisada: `841073e29bfd9aee6fefbe023a350753294011e4`.
 - Produção pública: `/resumos` retornou HTTP 200; `/resumos/dashboard/questoes` redirecionou visitante para `/resumos/login`; `/resumos/api/health` retornou `database=ok` e `payment_reconciliation=ok` em 24/10/2026. Isso não comprova o SHA implantado nem o funcionamento autenticado do módulo.
-- Snapshot administrativo somente leitura do Supabase em `2026-10-24T23:04:40.771Z`: 32 disciplinas (31 ativas), 340 tópicos e 112 questões publicadas. As 112 questões existentes têm IDs externos `qpygem:*`, pertencem a Direito Administrativo e foram preservadas.
+- Snapshot administrativo somente leitura do Supabase em `2026-10-24T23:24:46.255Z`: 32 disciplinas (31 ativas), 340 tópicos e 112 questões publicadas. As 112 questões existentes têm IDs externos `qpygem:*`, pertencem a Direito Administrativo e foram preservadas.
 - A correspondência exata de enunciados com as 112 questões existentes não encontrou colisões. Identidade externa e enunciado devem ser comparados novamente antes de importar, pois o banco pode mudar.
 
 ## Modelo do banco e contrato de importação
@@ -30,25 +30,26 @@ Há uma divergência material entre a prontidão declarada e a procedência do g
 
 - `scripts/export-question-catalog.mjs` exporta localmente, em modo somente leitura, disciplinas, tópicos, relações e IDs/enunciados existentes para comparação. O snapshot fica fora do Git porque inclui conteúdo editorial do banco.
 - `scripts/prepare-pdf-questions.py` preserva os 16 arquivos originais. Só propõe uma disciplina quando o assunto de origem tem correspondência explícita; só propõe tópico existente e ativo da **mesma** disciplina quando o assunto é específico ou o item final do enunciado contém um sinal inequívoco. O trecho comum da prova é ignorado para não contaminar a classificação.
-- Foram gerados `manifest.json` para as 1.360 questões, 20 lotes `pro-questions/v1` com 77 questões de gabarito marcado como definitivo e tópico classificado, e cópias rastreáveis de 7 fontes. O assunto do lote usa o título canônico do tópico; o assunto original permanece em `source_metadata.source_subject`.
-- Foram incluídos 11 PNGs usados pelas 77 questões, decodificados e regravados sem metadados, em `public/questions/calculations/`. Os comentários preparados usam URLs internas com o `basePath` `/resumos`; quatro links HTTP do Planalto foram convertidos para HTTPS, e os demais links externos passaram pela allowlist oficial.
-- Alertas `DESATUALIZADO`, quando presentes nos comentários preparados, permanecem no texto.
+- Foram gerados `manifest.json` para as 1.360 questões, 19 lotes `pro-questions/v1` com 75 questões de gabarito marcado como definitivo e tópico classificado, e snapshots rastreáveis de 7 fontes. O assunto do lote usa o título canônico do tópico; o assunto original permanece em `source_metadata.source_subject`.
+- Foram incluídos 11 PNGs usados pelas 75 questões, decodificados e regravados sem metadados, em `public/questions/calculations/`. Os comentários preparados usam URLs internas com o `basePath` `/resumos`; quatro links HTTP do Planalto foram convertidos para HTTPS, e os demais links externos passaram pela allowlist oficial.
+- Itens com alerta `DESATUALIZADO` foram retidos porque a interface só mostra o comentário após a resposta.
 
 ### Resultado da triagem
 
 | Situação | Questões |
 | --- | ---: |
-| Lotes tecnicamente prontos para a etapa de importação | 77 |
+| Lotes tecnicamente prontos para a etapa de importação | 75 |
 | Comentário presente, mas gabarito preliminar ou sem status | 437 |
-| Disciplina sem correspondência ativa no catálogo | 185 |
-| Tópico não identificado com segurança | 277 |
+| Conteúdo com alerta de desatualização | 19 |
+| Disciplina sem correspondência ativa no catálogo | 180 |
+| Tópico não identificado com segurança | 265 |
 | Mais de um tópico plausível | 5 |
 | Assunto de origem contradiz o tópico específico | 5 |
 | Mesmo item encontrado em outra prova | 5 |
 | Sem explicação revisada | 369 |
 | **Total** | **1.360** |
 
-As 914 questões comentadas fora dos lotes permanecem no manifesto, com motivo e candidato de disciplina quando houver. Entre elas há matérias sem disciplina correspondente, como Direito Ambiental, legislação de trânsito, SUS e conteúdos bancários. Não foram criadas disciplinas ou tópicos artificiais. As questões existentes no banco também não foram reclassificadas, pois não houve colisão que justificasse alteração.
+As 916 questões comentadas fora dos lotes permanecem no manifesto, com motivo e candidato de disciplina quando houver. Entre elas há matérias sem disciplina correspondente, como Direito Ambiental, legislação de trânsito, SUS e conteúdos bancários. Não foram criadas disciplinas ou tópicos artificiais. As questões existentes no banco também não foram reclassificadas, pois não houve colisão que justificasse alteração.
 
 ## Repetição e verificações
 
@@ -62,9 +63,9 @@ python -B -m unittest discover -s tests -p test_prepare_pdf_questions.py -v
 
 O script Python usa Pillow, já utilizado pelo renderizador das imagens do pipeline de questões. Validar todos os arquivos em `content/questions/pdf-import/batches/` com `questionImportBatchSchema` ou `npm run questions:admin -- validate --file <lote>`. Os testes também devem conferir SHA-256 das fontes copiadas, unicidade de IDs e links internos de imagem.
 
-Verificações executadas nesta preparação: 20 lotes/77 questões aprovados pelo schema Zod; 77 relações tópico–disciplina conferidas no snapshot; 7 hashes de fontes conferidos; 11 imagens decodificadas e regravadas; testes Python 6/6, `test:questions` 14/14, `test:questions-import` 5/5, `test:content` 49/49 e `test:api-auth` 3/3; lint e build webpack aprovados. Um asset foi servido em `http://localhost:31467/resumos/questions/calculations/` com HTTP 200 e `image/png`.
+Verificações executadas nesta preparação: 19 lotes/75 questões aprovados pelo schema Zod; 75 relações tópico–disciplina conferidas no snapshot; 7 hashes de fontes conferidos; 11 imagens decodificadas e regravadas; testes Python 7/7, `test:questions` 14/14, `test:questions-import` 5/5, `test:content` 49/49 e `test:api-auth` 3/3; lint e build webpack aprovados. Um asset foi servido em `http://localhost:31467/resumos/questions/calculations/` com HTTP 200 e `image/png`.
 
-Antes de qualquer `--apply`: atualizar o snapshot, repetir a classificação e revisar os 77 itens no aspecto editorial e jurídico. Depois, integrar e publicar os 11 assets de imagem, confirmar o SHA efetivo de produção e fazer smoke autenticado. O `--apply` publica imediatamente o conteúdo; por isso os lotes nesta branch **não foram enviados ao banco**. A revisão das 914 questões comentadas restantes requer confirmação do gabarito quando o status não for definitivo, complementação da taxonomia ou decisão editorial item a item. Não publicar questões com explicação nula pela RPC atual, que exige comentário publicado.
+Antes de qualquer `--apply`: atualizar o snapshot, repetir a classificação e revisar os 75 itens no aspecto editorial e jurídico. Depois, integrar e publicar os 11 assets de imagem, confirmar o SHA efetivo de produção e fazer smoke autenticado. O `--apply` publica imediatamente o conteúdo; por isso os lotes nesta branch **não foram enviados ao banco**. A revisão das 916 questões comentadas restantes requer confirmação do gabarito quando o status não for definitivo, complementação da taxonomia ou decisão editorial item a item. Não publicar questões com explicação nula pela RPC atual, que exige comentário publicado.
 
 ## Riscos remanescentes
 

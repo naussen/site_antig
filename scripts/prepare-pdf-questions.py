@@ -228,6 +228,9 @@ def source_eligibility_reason(question: dict) -> str | None:
         return "no_reviewed_explanation"
     if (question.get("source_metadata") or {}).get("answer_status") != "definitivo":
         return "answer_not_final"
+    review = ((question.get("source_metadata") or {}).get("commentary_review") or {})
+    if review.get("outdated_notice") or "DESATUALIZADO" in question["explanation"].upper():
+        return "outdated_content"
     return None
 
 

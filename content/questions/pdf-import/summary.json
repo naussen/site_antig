@@ -1,9 +1,9 @@
 {
-  "catalog_captured_at": "2026-10-24T23:04:40.771Z",
+  "catalog_captured_at": "2026-10-24T23:24:46.255Z",
   "source_files": 16,
   "source_questions": 1360,
-  "import_ready": 77,
-  "batches": 20,
+  "import_ready": 75,
+  "batches": 19,
   "copied_sources": 7,
   "copied_images": 11,
   "image_files": [
@@ -22,11 +22,12 @@
   "reasons": {
     "ambiguous_topic": 5,
     "answer_not_final": 437,
-    "discipline_not_in_active_catalog": 185,
+    "discipline_not_in_active_catalog": 180,
     "duplicate_source_statement": 5,
     "no_reviewed_explanation": 369,
-    "ready": 77,
+    "outdated_content": 19,
+    "ready": 75,
     "subject_topic_conflict": 5,
-    "topic_not_identified": 277
+    "topic_not_identified": 265
   }
 }

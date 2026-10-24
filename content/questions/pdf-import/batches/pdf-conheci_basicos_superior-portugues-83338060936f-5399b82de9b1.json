@@ -1,9 +1,9 @@
 {
   "schema_version": "pro-questions/v1",
-  "batch_key": "pdf-conheci_basicos_superior-portugues-3986d8e01bfb-b70b3b1a62f5",
+  "batch_key": "pdf-conheci_basicos_superior-portugues-83338060936f-5399b82de9b1",
   "source": {
     "file_name": "conheci_basicos_superior_ATUALIZADO.json",
-    "sha256": "3986d8e01bfb9b85aa8cf63981399347dbbecd398cc022ac595928362e48acb2",
+    "sha256": "83338060936f37f4064cc57d215f68952b0361963ff146a24c4e69e889ea6275",
     "metadata": {
       "generator": "PDF extraction",
       "original_file_name": "conheci_basicos_superior.json",
@@ -11,10 +11,10 @@
       "original_schema_version": "pro-questions/extracted-pdf/v1",
       "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
       "transient_grounding_urls_removed": true,
-      "transformation_sha256": "b70b3b1a62f5421b2ba7de961494a131e42b8a94ddacdd71f740cc54080c20f3",
+      "transformation_sha256": "5399b82de9b1c83da4da126bef622767c64a33c9ddb9dce7fca7052628d33270",
       "classification": "explicit subject and statement terms",
       "review_status": "reviewed_by_model",
-      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+      "catalog_captured_at": "2026-10-24T23:24:46.255Z"
     }
   },
   "discipline": {
@@ -123,57 +123,6 @@
         "source_reference": null
       },
       "source_content_hash": "c17fd3a7d2108df6ed8747c05b4c95f73d9055042538527f87d6de2606e4dbd8"
-    },
-    {
-      "external_id": "pdf:conheci_basicos_superior:017",
-      "source_id": "conheci_basicos_superior:17",
-      "question_type": "true_false",
-      "statement_markdown": "Em resposta aos recorrentes pedidos, tratando de solicitação de materiais para uso interno, informamos que a Sessão de Compras e Materiais disponibiliza formulários para preenchimento das demandas de cada setor, com as respectivas justificativas para compras de material para uso interno.\n\nCordialmente,\n\nMaria Silva\nSupervisora da Sessão de Compras e Materiais\n\nConsiderando esse texto e as normas do Manual de Redação da Presidência da República, julgue os itens subsequentes.\n\nSe o texto acima participasse da composição de um memorando, os despachos deveriam ser dados no próprio documento e, no caso de falta de espaço, em folha de continuação.",
-      "exam_board": "CESPE/UnB",
-      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
-      "position_name": "Nível Superior",
-      "exam_year": 2014,
-      "difficulty": null,
-      "source_reference": "conheci_basicos_superior.pdf, questão 17; conheci_basicos_superior_gabarito.pdf",
-      "options": [
-        {
-          "label": "C",
-          "body_markdown": "Certo",
-          "sort_order": 0
-        },
-        {
-          "label": "E",
-          "body_markdown": "Errado",
-          "sort_order": 1
-        }
-      ],
-      "correct_option_label": "C",
-      "subject": "Redação Oficial",
-      "source_metadata": {
-        "source_file": "conheci_basicos_superior.json",
-        "source_schema_version": "pro-questions/extracted-pdf/v1",
-        "source_subject": "Língua Portuguesa",
-        "source_content_hash": "66ac7ef08e61e6b43721959ef1c271731eb45532b3d3ea3de2e56aa156d3f33c",
-        "original_numeric_id": 17,
-        "answer_status": "definitivo",
-        "commentary_review_status": "revisada_por_modelo",
-        "outdated_notice": "O memorando foi extinto pela 3ª edição do Manual de Redação da Presidência da República (2018), que unificou as comunicações internas e externas sob o gênero 'Ofício'.",
-        "calculation_image_url": null,
-        "classification": "specific_statement_term"
-      },
-      "topics": [
-        {
-          "topic_id": "redacao-oficial",
-          "relation_type": "primary",
-          "relevance": 100,
-          "sort_order": 0
-        }
-      ],
-      "explanation": {
-        "body_markdown": "🔴 **DESATUALIZADO:** Este item baseou-se na **2ª edição do Manual de Redação da Presidência da República (2002)**. Na **3ª edição (2018)**, a modalidade de comunicação por \"memorando\" foi extinta, sendo substituída pelo formato unificado de \"Ofício\".\n\n**Análise sob o contexto histórico (Gabarito Oficial - Certo):**\nDe acordo com a antiga norma (2ª edição, item 2.3.2), o memorando era caracterizado como uma comunicação eminentemente interna, pautada pela rapidez e pela desburocratização. Para evitar a criação de novos processos e o acúmulo desnecessário de papéis, o Manual determinava expressamente que os despachos subsequentes deveriam ser registrados no próprio corpo do documento original e, apenas se faltasse espaço físico, em folha de continuação.",
-        "source_reference": null
-      },
-      "source_content_hash": "ac6920892c06a9b1f4a5037621c2df45407def9d1703d1c88e42e8c42fcd1d0f"
     }
   ]
 }

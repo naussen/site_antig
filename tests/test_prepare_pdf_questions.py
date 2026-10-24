@@ -21,6 +21,13 @@ class PreparePdfQuestionsTests(unittest.TestCase):
         question["source_metadata"]["answer_status"] = "definitivo"
         self.assertIsNone(prepare.source_eligibility_reason(question))
 
+    def test_outdated_item_is_withheld_even_with_final_answer(self):
+        question = {
+            "explanation": "🔴 **DESATUALIZADO:** norma posterior alterou a resposta.",
+            "source_metadata": {"answer_status": "definitivo"},
+        }
+        self.assertEqual(prepare.source_eligibility_reason(question), "outdated_content")
+
     def test_shared_context_does_not_classify_unrelated_item(self):
         question = {
             "subject": "Informática",
