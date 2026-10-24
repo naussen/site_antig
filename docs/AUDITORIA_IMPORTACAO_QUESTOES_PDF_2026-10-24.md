@@ -2,7 +2,7 @@
 
 ## Estado observado
 
-- `origin/main` analisada: `841073e29bfd9aee6fefbe023a350753294011e4`.
+- Base `origin/main` analisada: `841073e29bfd9aee6fefbe023a350753294011e4`. Preparação promovida para `main` no commit `4125f7bd6203ffcdd7d852858ac3f295850b241e`.
 - Produção pública: `/resumos` retornou HTTP 200; `/resumos/dashboard/questoes` redirecionou visitante para `/resumos/login`; `/resumos/api/health` retornou `database=ok` e `payment_reconciliation=ok` em 24/10/2026. Isso não comprova o SHA implantado nem o funcionamento autenticado do módulo.
 - Snapshot administrativo somente leitura do Supabase em `2026-10-24T23:24:46.255Z`: 32 disciplinas (31 ativas), 340 tópicos e 112 questões publicadas. As 112 questões existentes têm IDs externos `qpygem:*`, pertencem a Direito Administrativo e foram preservadas.
 - A correspondência exata de enunciados com as 112 questões existentes não encontrou colisões. Identidade externa e enunciado devem ser comparados novamente antes de importar, pois o banco pode mudar.
@@ -65,12 +65,12 @@ O script Python usa Pillow, já utilizado pelo renderizador das imagens do pipel
 
 Verificações executadas nesta preparação: 19 lotes/75 questões aprovados pelo schema Zod; 75 relações tópico–disciplina conferidas no snapshot; 7 hashes de fontes conferidos; 11 imagens decodificadas e regravadas; testes Python 7/7, `test:questions` 14/14, `test:questions-import` 5/5, `test:content` 49/49 e `test:api-auth` 3/3; lint e build webpack aprovados. Um asset foi servido em `http://localhost:31467/resumos/questions/calculations/` com HTTP 200 e `image/png`.
 
-Antes de qualquer `--apply`: atualizar o snapshot, repetir a classificação e revisar os 75 itens no aspecto editorial e jurídico. Depois, integrar e publicar os 11 assets de imagem, confirmar o SHA efetivo de produção e fazer smoke autenticado. O `--apply` publica imediatamente o conteúdo; por isso os lotes nesta branch **não foram enviados ao banco**. A revisão das 916 questões comentadas restantes requer confirmação do gabarito quando o status não for definitivo, complementação da taxonomia ou decisão editorial item a item. Não publicar questões com explicação nula pela RPC atual, que exige comentário publicado.
+Publicação de 24/10/2026: o commit `4125f7b` foi confirmado em `origin/main`. As 11 imagens responderam HTTP 200 e `image/png` em `https://proconcursos.com.br/resumos/questions/calculations/`. Em seguida, `scripts/questions-admin.mjs import --apply` aplicou os 19 lotes; `verify` aprovou os 19, incluindo 75 questões publicadas, relações de disciplina e tópico, alternativas, gabaritos, explicações publicadas, hashes e itens de importação. A URL dos assets confirma sua disponibilidade, mas não identifica por si só o SHA implantado. Ainda falta smoke autenticado do módulo e revisão jurídica humana das explicações. A revisão das 916 questões comentadas restantes requer confirmação do gabarito quando o status não for definitivo, complementação da taxonomia ou decisão editorial item a item. Não publicar questões com explicação nula pela RPC atual, que exige comentário publicado.
 
 ## Riscos remanescentes
 
 - Os comentários foram revisados por modelos conforme a fonte. A preparação não equivale a revisão jurídica humana; alertas de desatualização e referências oficiais precisam de conferência antes da publicação. O relatório de origem não separa adequadamente os 437 comentários sem status de gabarito definitivo.
 - O classificador é propositalmente restrito, mas classificação por termos específicos ainda pode errar. O manifesto e os lotes devem passar por revisão editorial por amostragem e, para casos legais sensíveis, por revisão integral.
-- O catálogo e as 112 questões existentes podem mudar após o snapshot. Repetir preflight imediatamente antes da importação.
-- Não houve deploy desta branch, smoke autenticado, teste de dois usuários ou `import --apply`. Os caminhos das 11 imagens só existirão em produção após o deploy correspondente.
+- O catálogo foi atualizado imediatamente antes da importação e permaneceu idêntico ao snapshot anterior. Mudanças posteriores exigem novo preflight para os itens retidos.
+- Os assets estão acessíveis em produção e a importação foi verificada no banco. Não foi possível confirmar o SHA efetivo do deploy nem executar smoke autenticado ou teste de dois usuários nesta sessão.
 - `npm audit --omit=dev` apontou oito avisos nas dependências travadas de `origin/main` (dois críticos, um alto e cinco baixos), incluindo Next.js, DOMPurify e Zod. São independentes desta preparação e exigem atualização e teste próprios antes de tratá-los como corrigidos.

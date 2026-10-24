@@ -1,10 +1,11 @@
 # Changelog
 
-## Não publicado — preparação de questões extraídas de PDF
+## Publicado — questões extraídas de PDF (24/10/2026)
 
 - conciliadas 1.360 questões de 16 provas com o catálogo atual de disciplinas e tópicos do site, sem alterar as 112 questões já publicadas;
 - preparados 19 lotes técnicos com 75 questões de gabarito marcado como definitivo e sem alerta de desatualização, fontes com SHA-256 verificável, manifesto de retenções e 11 imagens internas regravadas;
-- documentados o modelo relacional, os bloqueios de taxonomia, a revisão editorial pendente e o preflight necessário antes de qualquer importação no banco.
+- importados e verificados no Supabase os 19 lotes e suas 75 questões publicadas; as 11 imagens responderam HTTP 200 como `image/png` no domínio público;
+- documentados o modelo relacional, os bloqueios de taxonomia e a revisão editorial humana ainda pendente.
 
 ## Não publicado — fundação técnica de SEO
 
