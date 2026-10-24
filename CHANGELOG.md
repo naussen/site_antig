@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — preparação de questões extraídas de PDF
+
+- conciliadas 1.360 questões de 16 provas com o catálogo atual de disciplinas e tópicos do site, sem alterar as 112 questões já publicadas;
+- preparados 20 lotes técnicos com 77 questões de gabarito marcado como definitivo, fontes com SHA-256 verificável, manifesto de retenções e 11 imagens internas regravadas;
+- documentados o modelo relacional, os bloqueios de taxonomia, a revisão editorial pendente e o preflight necessário antes de qualquer importação no banco.
+
 ## Não publicado — fundação técnica de SEO
 
 - adicionados `robots.txt` e sitemap gerados pelo Next.js, com exposição também na raiz do domínio por Edge Functions do Netlify;

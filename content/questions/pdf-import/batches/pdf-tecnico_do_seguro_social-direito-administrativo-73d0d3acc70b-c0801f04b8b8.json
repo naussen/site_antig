@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-tecnico_do_seguro_social-direito-administrativo-73d0d3acc70b-c0801f04b8b8",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "73d0d3acc70b3acdf5a3dd8628e54a2e9357d3788847f08cf4a66c1b2cc014ba",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "4eaf0e6930a8700363f76961716af089a527cb11e4282c667f45b06f21532285",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "c0801f04b8b899feae5d0775126d6475f0967ea7b2d3931fc112c7828061b6de",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:035",
+      "source_id": "tecnico_do_seguro_social:35",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos agentes públicos, do regime jurídico único dos servidores públicos federais, dos poderes administrativos e do ato administrativo, julgue os itens seguintes.\n\nPor meio do poder regulamentar, cabe à administração pública criar mecanismos de complementação das leis, a fim de possibilitar a sua efetiva aplicabilidade.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 35; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Poderes e Deveres da Administração Pública",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "e346e7a3413690431108efd3c7a5a7834a170aad433f5d66ebb2300418809ad0",
+        "original_numeric_id": 35,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "deveres",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto.\n\nO **poder regulamentar** (ou normativo) é a prerrogativa conferida à Administração Pública para a edição de atos normativos de caráter geral e abstrato (como decretos, regulamentos, instruções normativas, portarias, entre outros) com o objetivo de viabilizar a fiel execução das leis.\n\nComo as leis editadas pelo Poder Legislativo costumam trazer normas gerais e abstratas, muitas vezes elas carecem de detalhamento técnico e operacional para que possam ser aplicadas na prática. Cabe, portanto, à Administração Pública, no exercício do poder regulamentar, criar esses mecanismos de complementação e detalhamento, garantindo a efetiva aplicabilidade da norma legal, sem, contudo, inovar originariamente na ordem jurídica, criar direitos ou obrigações não previstos em lei, ou contrariar o texto legal regulamentado.\n\n### Dispositivo legal\n* **Referência:** Constituição Federal de 1988, Art. 84, IV.\n* **URL oficial:** [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "30d52d149c250aba0d636e16312a07470b7d6b8c8c7d10c6228a062b264d332b"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:036",
+      "source_id": "tecnico_do_seguro_social:36",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos agentes públicos, do regime jurídico único dos servidores públicos federais, dos poderes administrativos e do ato administrativo, julgue os itens seguintes.\n\nA condição de acionista de sociedade privada impede a posse em cargo público.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 36; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "8977d960c2ccda4c75382ea4891bd7563f6c8c8898b88bc560c37301d640828b",
+        "original_numeric_id": 36,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. A legislação federal que rege o regime jurídico dos servidores públicos civis da União (Lei nº 8.112/1990) proíbe o servidor de participar da gerência ou administração de sociedade privada, bem como de exercer o comércio de forma direta. No entanto, a própria norma estabelece uma exceção expressa para a participação na qualidade de acionista, cotista ou comanditário. Portanto, a mera condição de acionista de uma sociedade privada não constitui óbice para a posse ou o exercício de cargo público.\n\n### Dispositivo legal\n* **Lei nº 8.112/1990, Art. 117, inciso X**\n* URL oficial: [Planalto](https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "a8cfdbd440b266665eda5cc4b14790b867786444d366342069199b7908f5cdcc"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:039",
+      "source_id": "tecnico_do_seguro_social:39",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos serviços públicos, do controle e responsabilização da administração, da improbidade administrativa e do processo administrativo, julgue os próximos itens.\n\nA voluntariedade do agente é suficiente para caracterizar a conduta ilícita como crime de improbidade administrativa.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 39; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Lei 8.429/92 – Lei de Improbidade Administrativa",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "dda459d560b8b26b5a259146df8ce4dbf3c3990bbeb8be2c8102bd7ec736d3aa",
+        "original_numeric_id": 39,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "improbidade-administrativa",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta por apresentar dois erros conceituais fundamentais:\n\n1. **Natureza jurídica**: A improbidade administrativa não constitui crime. Trata-se de um ilícito de natureza civil-administrativa, cujas sanções estão previstas no art. 37, § 4º, da Constituição Federal e detalhadas na Lei nº 8.429/1992.\n2. **Elemento subjetivo**: Com a reforma promovida pela Lei nº 14.230/2021, a caracterização de qualquer ato de improbidade administrativa passou a exigir a comprovação de dolo específico (vontade livre e consciente de alcançar o resultado ilícito tipificado na lei). O art. 1º, § 2º, da Lei nº 8.429/1992 estabelece expressamente que não basta a mera voluntariedade do agente para configurar a conduta ímproba.\n\n### Dispositivo legal\n* **Lei nº 8.429/1992, Art. 1º, §§ 1º e 2º**\n* URL oficial: [Planalto](https://www.planalto.gov.br/ccivil_03/leis/l8429.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "dfc95bc6d90ff1d11fa85331ad03b7e37b84c73da94e788d8f02619ba8cd1e6d"
+    }
+  ]
+}

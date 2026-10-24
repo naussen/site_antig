@@ -1,0 +1,92 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-prova_i09_tipo_001-direito-constitucional-c342629f0954-1b21dbe9c163",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "c342629f095462ff4e615186279853316fc5c316eb5e6f07a33d672c888948e0",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "8a1d40d330f3a1f0c9c5c49977037cbc600422d057f7b497ba1fcf422d8196bb",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "1b21dbe9c1633822e60eb98ddabbb3a66f68f4b9958ade3cff09780c1ef72a0e",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:038",
+      "source_id": "prova_i09_tipo_001:38",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com a Constituição Federal brasileira, elaborar semestralmente relatório estatístico sobre processos e sentenças prolatadas, por unidade da Federação, nos diferentes órgãos do Poder Judiciário, é competência",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 38; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "dos Tribunais de Justiça locais.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "do Supremo Tribunal Federal.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "do Superior Tribunal de Justiça.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "do Conselho Nacional de Justiça.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "do Presidente da República através do Procurador Geral.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Do Poder Judiciário",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Constitucional",
+        "source_content_hash": "39e931b6131c6bf64265c917b5bd6bbe3af7e082b08d74169df04555342a59b5",
+        "original_numeric_id": 38,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "poder-judiciario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda as competências constitucionais dos órgãos do Poder Judiciário, especificamente no que tange ao controle administrativo e estatístico.\n\nA alternativa correta é a **D**. A competência para elaborar semestralmente relatório estatístico sobre processos e sentenças prolatadas, por unidade da Federação, nos diferentes órgãos do Poder Judiciário, é atribuída expressamente ao Conselho Nacional de Justiça (CNJ). Essa função reflete o papel do CNJ como órgão de controle da atuação administrativa e financeira do Poder Judiciário e do cumprimento dos deveres funcionais dos juízes.\n\n**Análise das alternativas incorretas:**\n* **A, B e C:** Estão incorretas porque os Tribunais de Justiça locais (A), o Supremo Tribunal Federal (B) e o Superior Tribunal de Justiça (C) são órgãos de natureza eminentemente jurisdicional e não possuem essa atribuição constitucional de centralização e elaboração de relatórios estatísticos semestrais de todo o Poder Judiciário nacional.\n* **E:** Está incorreta porque o Presidente da República e o Procurador-Geral da República não possuem competência de controle administrativo ou estatístico sobre a produtividade e os processos do Poder Judiciário, em respeito ao princípio da separação dos poderes.\n\n**Detalhe importante:** O relatório estatístico semestral (Art. 103-B, § 4º, VI) não deve ser confundido com o relatório anual sobre a situação do Poder Judiciário no País (Art. 103-B, § 4º, VII), que também é elaborado pelo CNJ, mas integra a mensagem do Presidente do STF a ser remetida ao Congresso Nacional.\n\n### Dispositivo legal\n* **Artigo 103-B, § 4º, inciso VI da Constituição Federal de 1988**",
+        "source_reference": null
+      },
+      "source_content_hash": "01c10724768047c4c77d6fd3a9ddc49325674f12d270074f4a0c74e7bb9fc142"
+    }
+  ]
+}

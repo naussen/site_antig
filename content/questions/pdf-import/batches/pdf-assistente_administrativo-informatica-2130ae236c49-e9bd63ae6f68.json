@@ -1,0 +1,92 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-assistente_administrativo-informatica-2130ae236c49-e9bd63ae6f68",
+  "source": {
+    "file_name": "assistente_administrativo_ATUALIZADO.json",
+    "sha256": "2130ae236c4906d12cfbe31ba6e7a2374486ec64d340e0e5b81429f89778e0b7",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "assistente_administrativo.json",
+      "original_source_sha256": "076507bac3393262fd875a9487f40c6baf0b9380bc7894d096c4f07a503c5610",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "e9bd63ae6f6816ed0ef87071f79250fffc550f5d729d8b9c8d83d386f89d2b13",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:assistente_administrativo:019",
+      "source_id": "assistente_administrativo:19",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Com o amplo uso da web hoje, usuários mal intencionados tentam constantemente penetrar as camadas de segurança lógicas e físicas, a fim de, sequestrar dados sensíveis e importantes das empresas, desta forma, diversos ataques podem ser realizados. Assinale a alternativa que apresenta o que é um ataque de “phishing”.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "assistente_administrativo.pdf, questão 19; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Um tipo de ataque que visa contornar os firewalls",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Um tipo de ataque que visa monitorar os acessos do usuário e no meio da transferência sequestrar dados, também conhecido como man-in-the-middle",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Um tipo de ataque que envolve enviar e-mails falsos que parecem ser de fontes confiáveis para enganar as pessoas a revelarem informações pessoais",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Um tipo de ataque que envolve transferir arquivos entre dispositivos",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Um tipo de ataque para acelerar a velocidade da internet",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ameaças Virtuais",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "81ba684cb8b455f882c41a3b38d3a3ac0d10555443c159da9630a0f3c3f9d226",
+        "original_numeric_id": 19,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "ameacas-virtuais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O ataque de *phishing* é uma técnica de engenharia social que consiste no envio de mensagens fraudulentas (geralmente e-mails, mas também SMS ou mensagens em redes sociais) que se passam por comunicações legítimas de instituições confiáveis (como bancos, órgãos governamentais ou empresas de tecnologia). O objetivo é induzir a vítima a fornecer dados sensíveis, como senhas, números de cartões de crédito e informações pessoais.\n\nAnálise das alternativas incorretas:\n- **A** está incorreta porque contornar *firewalls* é um objetivo geral de diversas técnicas de invasão de rede, não definindo o *phishing*.\n- **B** está incorreta porque descreve o ataque *Man-in-the-Middle* (MitM), no qual o atacante intercepta e altera secretamente a comunicação entre duas partes.\n- **D** está incorreta porque a transferência de arquivos entre dispositivos é uma operação de rede padrão e legítima, não um ataque cibernético.\n- **E** está incorreta porque acelerar a velocidade da internet é uma otimização técnica de infraestrutura, não um tipo de ataque.\n\n**Detalhe importante:** O *phishing* foca na exploração da vulnerabilidade humana (engano e persuasão) e não necessariamente em falhas técnicas de sistemas ou *softwares*.",
+        "source_reference": null
+      },
+      "source_content_hash": "f77eac1adfc3da7e43614e7a0be10f8cadd3ab8757723927e06bcad64526f0f3"
+    }
+  ]
+}

@@ -1,0 +1,281 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-cargo30-direito-constitucional-47f6caa6ead6-1e5db5469a9f",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "47f6caa6ead632f1fff7cde69950d7725a840e5c5b554a898b6c23af5a873356",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "4cf2583924232a76b401cdfc24313fb757e305aad1b2fdad61bd5c3798ffc63b",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "1e5db5469a9fd418f8d3c8f110ffb1827c4935ac8b46b3355c3de90bf495666e",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:107",
+      "source_id": "cargo30:107",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nAgentes de polícia federal prenderam o brasileiro Rodrigo, em flagrante delito, pela prática do crime inafiançável de tráfico de entorpecentes.\n\nCom referência a essa situação hipotética, julgue os seguintes itens, considerando o que estabelece a Constituição da República.\n\nCaso Rodrigo fosse servidor do Ministério do Planejamento, ele não poderia ter sido preso, pois estaria amparado por disposição constitucional que veda a prisão em flagrante de membro do Poder Judiciário.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 107",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Do Poder Judiciário",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "6c568133071625ee8b2f1ff36e7f17f68b1e02df747c132d4b154b2972dab8fd",
+        "original_numeric_id": 107,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "poder-judiciario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta por apresentar dois erros fundamentais. \n\nPrimeiramente, o Ministério do Planejamento é um órgão integrante do Poder Executivo Federal, e não do Poder Judiciário. Portanto, um servidor desse ministério não ostenta a condição de membro do Poder Judiciário.\n\nEm segundo lugar, mesmo que o indivíduo fosse membro do Poder Judiciário (como um magistrado), a prerrogativa de imunidade à prisão não é absoluta. O artigo 33, inciso II, da Lei Orgânica da Magistratura Nacional (LOMAN) estabelece que os magistrados podem ser presos em flagrante em caso de crime inafiançável. Como o tráfico de entorpecentes é classificado pela Constituição Federal como crime inafiançável (artigo 5º, inciso XLIII), a prisão em flagrante seria plenamente cabível e legal.\n\n### Dispositivo legal\n* **Artigo 5º, incisos XLIII e LXI, da Constituição Federal de 1988**: [Constituição Federal](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)\n* **Artigo 33, inciso II, da Lei Complementar nº 35/1979 (LOMAN)**: [LOMAN](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp35.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "5951dd247bf62b9f0003e575164e354141f160bcffda9b5379d087d709e48662"
+    },
+    {
+      "external_id": "pdf:cargo30:111",
+      "source_id": "cargo30:111",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nOs agentes de polícia federal entraram em greve, reivindicando reajuste salarial. Convencido pela argumentação dos grevistas, um senador da República apresentou projeto de lei que determina a equiparação do salário dos agentes de polícia federal ao salário dos delegados de polícia federal.\n\nJulgue os itens que se seguem, relativos à situação hipotética apresentada acima.\n\nEsse projeto propõe a criação de lei inconstitucional, pois a Constituição da República proíbe a equiparação da remuneração reivindicada.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 111",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Da Administração Pública",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "294afa0d2d6cac0eec36a7829fbda2949e3a02cadef71cb63252a12fed9d3cf7",
+        "original_numeric_id": 111,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "administracao-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. O projeto de lei proposto pelo senador apresenta vício de inconstitucionalidade material e formal.\n\nSob o aspecto material, o artigo 37, inciso XIII, da Constituição Federal de 1988 veda expressamente a vinculação ou equiparação de quaisquer espécies remuneratórias para o efeito de remuneração de pessoal do serviço público. Essa vedação impede que o reajuste ou a remuneração de uma carreira seja atrelada de forma automática à de outra, preservando a autonomia administrativa e orçamentária.\n\nSob o aspecto formal, projetos de lei que disponham sobre aumento de remuneração de cargos, funções ou empregos públicos na administração direta e autárquica da União são de iniciativa privativa do Presidente da República, conforme o artigo 61, § 1º, inciso II, alínea \"a\", da Constituição Federal. Portanto, a iniciativa parlamentar (do senador) também gera inconstitucionalidade formal.\n\n### Dispositivo legal\n* **Artigo 37, inciso XIII, da Constituição Federal de 1988**: [Constituição Federal](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)\n* **Artigo 61, § 1º, inciso II, alínea \"a\", da Constituição Federal de 1988**: [Constituição Federal](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "c0dab2a5996eda189c568d264affcb623b30e7e5d772d6337b6e9678a35f55de"
+    },
+    {
+      "external_id": "pdf:cargo30:113",
+      "source_id": "cargo30:113",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nPara julgar os itens a seguir, considere que Manoel é um agente de polícia federal.\n\nManoel não pode ser remunerado mediante subsídio, pois essa forma de remuneração é reservada aos ocupantes de cargos eletivos e de cargos comissionados.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 113",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Da Administração Pública",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "43c553598d715d4ac92c8ba4184d0f6d32defdc8bfef118ae30808e065b206ce",
+        "original_numeric_id": 113,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "administracao-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta por dois motivos principais. Primeiro, a remuneração por subsídio não é exclusiva de ocupantes de cargos eletivos e comissionados. O art. 39, § 4º, da Constituição Federal estabelece que membros de Poder, detentores de mandato eletivo, Ministros de Estado e Secretários Estaduais e Municipais serão remunerados exclusivamente por subsídio. Além disso, o § 8º do mesmo artigo faculta a aplicação do regime de subsídio para servidores públicos organizados em carreira. Segundo, no caso específico dos servidores policiais integrantes dos órgãos de segurança pública (como a Polícia Federal, na qual Manoel é agente), a Constituição Federal determina obrigatoriamente a remuneração mediante subsídio, conforme o art. 144, § 9º, que remete expressamente ao art. 39, § 4º. Portanto, Manoel não apenas pode, mas deve ser remunerado por subsídio.\n\n### Dispositivo legal\nArtigo 39, §§ 4º e 8º, e Artigo 144, § 9º, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "2914960618942ed7aa86299277ccb6e230a1650be5f7d88e23aaf99ce742da99"
+    },
+    {
+      "external_id": "pdf:cargo30:114",
+      "source_id": "cargo30:114",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nPara julgar os itens a seguir, considere que Manoel é um agente de polícia federal.\n\nA Constituição da República não permite que Manoel receba remuneração com valor superior ao do subsídio pago aos ministros do Supremo Tribunal Federal, mesmo que a parcela que exceda essa quantia seja recebida a título de vantagem pessoal.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 114",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Da Administração Pública",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "ee50242d5bb81a6ca6ba95bf08e5813da0b8165adf49d72c8a7cafff916a9f6e",
+        "original_numeric_id": 114,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "administracao-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. O teto remuneratório geral do serviço público é estabelecido pelo art. 37, inciso XI, da Constituição Federal, tendo como limite máximo o subsídio mensal, em espécie, dos Ministros do Supremo Tribunal Federal (STF). O dispositivo constitucional determina expressamente que esse limite se aplica de forma ampla, abrangendo \"as vantagens pessoais ou de qualquer outra natureza\". Portanto, nenhuma parcela remuneratória, mesmo que recebida a título de vantagem pessoal, pode ser utilizada para justificar a superação do teto constitucional.\n\n### Dispositivo legal\nArtigo 37, inciso XI, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "bf61ce07a91969a9e1a15c0908cf90c042a744b9c5112241c4a094c8acb926f2"
+    },
+    {
+      "external_id": "pdf:cargo30:116",
+      "source_id": "cargo30:116",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nEm cada um dos itens subseqüentes, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada.\n\nHá cerca de um ano, Humberto aposentou-se como agente de polícia federal. Recentemente, ele foi aprovado em concurso público para provimento de cargo de escrivão de polícia federal. Nessa situação, se entrar em exercício no cargo de escrivão, Humberto poderá receber simultaneamente os proventos da sua aposentadoria e a remuneração referente ao novo cargo.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 116",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Da Administração Pública",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "ddd4b08ea56e9f8fed31fc27467d2ad5caa8b76053eda1165d8fed9861948c3b",
+        "original_numeric_id": 116,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "administracao-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta. O art. 37, § 10, da Constituição Federal veda expressamente a percepção simultânea de proventos de aposentadoria decorrentes do regime próprio (art. 40) ou militar (arts. 42 e 142) com a remuneração de cargo, emprego ou função pública. As únicas exceções permitidas a essa vedação são os cargos acumuláveis na atividade (conforme o art. 37, inciso XVI), os cargos eletivos e os cargos em comissão de livre nomeação e exoneração. Como os cargos de agente de polícia federal e de escrivão de polícia federal não são acumuláveis na atividade nos termos do art. 37, inciso XVI, Humberto não poderá receber simultaneamente os proventos de sua aposentadoria como agente e a remuneração do novo cargo de escrivão, devendo optar por uma das fontes de renda caso entre em exercício.\n\n### Dispositivo legal\nArtigo 37, inciso XVI e § 10, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "1bc061787c21e08529a09890fba00b12c60e56d0913280427a1dcb290be3af25"
+    }
+  ]
+}

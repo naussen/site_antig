@@ -1,0 +1,230 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-tecnico_do_seguro_social-portugues-73d0d3acc70b-85fbef6c649b",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "73d0d3acc70b3acdf5a3dd8628e54a2e9357d3788847f08cf4a66c1b2cc014ba",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "4eaf0e6930a8700363f76961716af089a527cb11e4282c667f45b06f21532285",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "85fbef6c649b21d41f1a188e38b5870cf39a109df99104f0d759c69c8dfc983e",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:005",
+      "source_id": "tecnico_do_seguro_social:5",
+      "question_type": "true_false",
+      "statement_markdown": "Texto CB1A1-I\n\nAs pessoas que driblaram o desemprego trabalhando por conta própria desde o início da pandemia estão ganhando 31% menos em comparação com as que optaram por esse tipo de trabalho dois anos antes da covid-19. Entre estas, o rendimento médio mensal era de R$ 2.074, enquanto, entre aquelas, o rendimento é de R$ 1.434. Os dados, publicados no Boletim Emprego em Pauta, são do Departamento Intersindical de Estatística e Estudos Socioeconômicos (DIEESE) e foram obtidos a partir de uma análise comparativa que levou em conta os resultados referentes ao quarto trimestre de 2021 da Pesquisa Nacional por Amostra de Domicílio, realizada pelo Instituto Brasileiro de Geografia e Estatística.\nAo final de 2021, o número de trabalhadores por conta própria havia crescido 6,6%. A maioria não tem nenhuma proteção social, o que confirma a precarização do trabalho até mesmo para quem conseguiu se manter no mercado por conta própria. Três em cada quatro pessoas que trabalham por conta própria deixam de contribuir para a previdência social, ou seja, apenas 12,7% desses trabalhadores conseguem pagar a contribuição previdenciária para o Instituto Nacional do Seguro Social (INSS), para terem alguma segurança no futuro com a aposentadoria e outros benefícios. Entre os mais antigos, o percentual era de 58,3%.\nOs técnicos do DIEESE sugerem as seguintes hipóteses para explicar esse percentual menor de inscrição no cadastro nacional da pessoa jurídica (CNPJ) entre aqueles que começaram a trabalhar mais recentemente por conta própria: a baixa remuneração e a incerteza do negócio, assim como a preocupação com o endividamento que a regularização do trabalho pode gerar.\n\nInternet: <www.cut.org.br> (com adaptações).\n\nJulgue os itens que se seguem, relativos a aspects linguísticos do texto CB1A1-I.\n\nO vocábulo “obtidos” (terceiro período do primeiro parágrafo) e o vocábulo “crescido” (primeiro período do segundo parágrafo) constituem adjetivos nos contextos sintáticos em que se inserem, haja vista a concordância dos referidos termos, respectivamente, com “dados” (terceiro período do primeiro parágrafo) e com “número” (primeiro período do segundo parágrafo).",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 5; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "61aed8b0c803f1249c26125feb026011924c74bd4daaf83c7aa6b263ce1f1fae",
+        "original_numeric_id": 5,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta porque classifica erroneamente a função morfossintática dos vocábulos nos contextos em que ocorrem.\n\n1. **\"obtidos\"**: Integra a locução verbal de voz passiva analítica \"foram obtidos\" (verbo auxiliar *ser* + verbo principal *obter* no particípio). Embora o particípio na voz passiva sofra flexão de gênero e número para concordar com o sujeito (\"Os dados\"), ele mantém sua natureza verbal na estrutura sintática.\n2. **\"crescido\"**: Integra o tempo composto \"havia crescido\" (verbo auxiliar *haver* + verbo principal *crescer* no particípio). Nos tempos compostos da voz ativa, o particípio é completamente invariável (terminado sempre em *-o*), não realizando flexão de concordância com o sujeito (\"o número\").\n\nPortanto, nenhum dos dois termos funciona como adjetivo nos respectivos contextos.",
+        "source_reference": null
+      },
+      "source_content_hash": "69cefc74fab01f4d493353ea581c9752868ac08fb60fa077b4d51bd2bda748e1"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:006",
+      "source_id": "tecnico_do_seguro_social:6",
+      "question_type": "true_false",
+      "statement_markdown": "Texto CB1A1-I\n\nAs pessoas que driblaram o desemprego trabalhando por conta própria desde o início da pandemia estão ganhando 31% menos em comparação com as que optaram por esse tipo de trabalho dois anos antes da covid-19. Entre estas, o rendimento médio mensal era de R$ 2.074, enquanto, entre aquelas, o rendimento é de R$ 1.434. Os dados, publicados no Boletim Emprego em Pauta, são do Departamento Intersindical de Estatística e Estudos Socioeconômicos (DIEESE) e foram obtidos a partir de uma análise comparativa que levou em conta os resultados referentes ao quarto trimestre de 2021 da Pesquisa Nacional por Amostra de Domicílio, realizada pelo Instituto Brasileiro de Geografia e Estatística.\nAo final de 2021, o número de trabalhadores por conta própria havia crescido 6,6%. A maioria não tem nenhuma proteção social, o que confirma a precarização do trabalho até mesmo para quem conseguiu se manter no mercado por conta própria. Três em cada quatro pessoas que trabalham por conta própria deixam de contribuir para a previdência social, ou seja, apenas 12,7% desses trabalhadores conseguem pagar a contribuição previdenciária para o Instituto Nacional do Seguro Social (INSS), para terem alguma segurança no futuro com a aposentadoria e outros benefícios. Entre os mais antigos, o percentual era de 58,3%.\nOs técnicos do DIEESE sugerem as seguintes hipóteses para explicar esse percentual menor de inscrição no cadastro nacional da pessoa jurídica (CNPJ) entre aqueles que começaram a trabalhar mais recentemente por conta própria: a baixa remuneração e a incerteza do negócio, assim como a preocupação com o endividamento que a regularização do trabalho pode gerar.\n\nInternet: <www.cut.org.br> (com adaptações).\n\nJulgue os itens que se seguem, relativos a aspectos linguísticos do texto CB1A1-I.\n\nSeria mantida a correção gramatical do último período do segundo parágrafo caso a forma verbal “era” fosse flexionada no plural — eram —, dada a possibilidade de concordância verbal com a expressão de porcentagem que aparece logo em seguida.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 6; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "6b891f0ccba18dfcdb122edaa1cbdb6ec3b923a689d446762c5235efd4f95006",
+        "original_numeric_id": 6,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alteração da forma verbal \"era\" para \"eram\" prejudica a correção gramatical do período.\n\nNo trecho \"o percentual era de 58,3%\", o sujeito da oração é \"o percentual\", cujo núcleo é um substantivo singular determinado pelo artigo definido \"o\". Nessa estrutura, o verbo de ligação \"ser\" deve obrigatoriamente concordar com o núcleo do sujeito no singular (\"era\").\n\nA concordância com o numeral da expressão de porcentagem (\"58,3%\") não é permitida nesse caso porque a expressão numérica vem precedida da preposição \"de\" (\"de 58,3%\"), funcionando como termo preposicionado, o que impede que o numeral exerça papel de núcleo do sujeito para fins de concordância direta no plural.",
+        "source_reference": null
+      },
+      "source_content_hash": "b09f46e23c69bf730f1eacae35b991615981b7244157f3393737263e05ab73ca"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:009",
+      "source_id": "tecnico_do_seguro_social:9",
+      "question_type": "true_false",
+      "statement_markdown": "Ora, graças a Deus, lá se foi mais um. Um ano, quero dizer. Menos um na conta, mais uma prestação paga. E tem quem fique melancólico. Tem quem deteste ver à porta a cara do mascate em cada primeiro do mês, cobrando o vencido. Quando compram fiado, têm a sensação de que o homem deu de presente, e se esquecem das prestações, que serão, cada uma, uma facada. Nem se lembram dessa outra prestação que se paga a toda hora, tabela Price insaciável comendo juros de vida, todo dia um pouquinho mais; um cabelo que fica branco, mais um milímetro de pele que enruga, uma camada infinitesimal acrescentada à artéria que endurece, um pouco mais de fadiga no coração, que também é carne e se cansa com aquele bater sem folga. E o olho que enxerga menos, e o dente que caria e trata de abrir lugar primeiro para o pivô, depois para a dentadura completa.\nO engraçado é que muito poucos reconhecem isso. Convencem-se de que a morte chega de repente, que não houve desgaste preparatório, e nos apanha em plena flor da juventude, ou em plena frutificação da maturidade; se imaginam uma rosa que foi colhida em plena beleza desabrochada. Mas a rosa, se a não apanha o jardineiro, que será ela no dia seguinte, após o mormaço do sol e a friagem do sereno? A hora da colheita não interessa ― de qualquer modo, o destino dela era murchar, perder as pétalas, secar, sumir-se.\nA gente, porém, não pode pensar muito nessas coisas. Tem que pensar em alegrias, sugestionar-se, sugestionar os outros. Vamos dar festas, vamos aguardar o ano novo com esperanças e risadas e beijos congratulatórios. Desejar uns aos outros saúde, riqueza e venturas. Fazer de conta que não se sabe; sim, como se a gente nem desconfiasse. Tudo que nos espera: dentro do corpo o que vai sangrar, doer, inflamar, envelhecer. As cólicas de fígado, as dores de cabeça, as azias, os reumatismos, as gripes com febre, quem sabe o tifo, o atropelamento. Tudo escondido, esperando. Sem falar nos que vão ficar tuberculosos, nas mulheres que vão fazer cesariana. Os que vão perder o emprego, os que se verão doidos com as dívidas, os que hão de esperar nas filas ― que seremos quase todos. E os que, não morrendo, hão de ver a morte lhes entrando de casa adentro, carregando o filho, pai, amor, amizade. As missas de sétimo dia, as cartas de rompimento, os bilhetes de despedida. E até guerra, quem sabe? Desgostos, desgostos de toda espécie. Qual de nós passa um dia, dois dias, sem um desgosto? Quanto mais um ano!\n\nRachel de Queiroz. Um ano de menos.\nIn: O Cruzeiro, Rio de Janeiro, dez./1951 (com adaptações).\n\nAcerca das ideias e de aspectos linguísticos do texto precedente, julgue os itens que se seguem.\n\nNo quinto período do primeiro parágrafo, o emprego do sinal indicativo de crase no vocábulo “à”, em “à porta”, justifica-se pela combinação de dois fatores: a regência do verbo “ver” e o gênero feminino da palavra “porta”.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 9; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "5a8984dccd2f0e322729c171003b3ad6aefefad37cfc5995b840312c4b021298",
+        "original_numeric_id": 9,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta ao associar o sinal indicativo de crase à regência do verbo \"ver\".\n\n**Análise sintática do trecho:**\n> *\"Tem quem deteste ver à porta a cara do mascate...\"*\n\n1. **Regência do verbo \"ver\":** No contexto, o verbo \"ver\" é transitivo direto (VTD). Quem vê, vê algo. O objeto direto desse verbo é o sintagma nominal **\"a cara do mascate\"**.\n2. **Função de \"à porta\":** O segmento \"à porta\" funciona como um adjunto adverbial de lugar. Trata-se de uma **locução adverbial feminina**.\n3. **Justificativa da crase:** O acento grave em \"à porta\" ocorre de forma fixa devido à natureza da locução adverbial constituída por palavra feminina (preposição *a* + artigo feminino *a*). Não há nenhuma preposição exigida pelo verbo \"ver\".\n\n**Pegadinha comum:**\nA banca tenta confundir o candidato ao sugerir que a regência verbal é responsável pela presença da preposição, quando, na verdade, a crase é motivada unicamente pela estrutura interna da locução adverbial de base feminina.",
+        "source_reference": null
+      },
+      "source_content_hash": "42dcfbb53082ee239610714aa60b0ed8f567e28716fc9832fb602023cc13c220"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:012",
+      "source_id": "tecnico_do_seguro_social:12",
+      "question_type": "true_false",
+      "statement_markdown": "Ora, graças a Deus, lá se foi mais um. Um ano, quero dizer. Menos um na conta, mais uma prestação paga. E tem quem fique melancólico. Tem quem deteste ver à porta a cara do mascate em cada primeiro do mês, cobrando o vencido. Quando compram fiado, têm a sensação de que o homem deu de presente, e se esquecem das prestações, que serão, cada uma, uma facada. Nem se lembram dessa outra prestação que se paga a toda hora, tabela Price insaciável comendo juros de vida, todo dia um pouquinho mais; um cabelo que fica branco, mais um milímetro de pele que enruga, uma camada infinitesimal acrescentada à artéria que endurece, um pouco mais de fadiga no coração, que também é carne e se cansa com aquele bater sem folga. E o olho que enxerga menos, e o dente que caria e trata de abrir lugar primeiro para o pivô, depois para a dentadura completa.\nO engraçado é que muito poucos reconhecem isso. Convencem-se de que a morte chega de repente, que não houve desgaste preparatório, e nos apanha em plena flor da juventude, ou em plena frutificação da maturidade; se imaginam uma rosa que foi colhida em plena beleza desabrochada. Mas a rosa, se a não apanha o jardineiro, que será ela no dia seguinte, após o mormaço do sol e a friagem do sereno? A hora da colheita não interessa ― de qualquer modo, o destino dela era murchar, perder as pétalas, secar, sumir-se.\nA gente, porém, não pode pensar muito nessas coisas. Tem que pensar em alegrias, sugestionar-se, sugestionar os outros. Vamos dar festas, vamos aguardar o ano novo com esperanças e risadas e beijos congratulatórios. Desejar uns aos outros saúde, riqueza e venturas. Fazer de conta que não se sabe; sim, como se a gente nem desconfiasse. Tudo que nos espera: dentro do corpo o que vai sangrar, doer, inflamar, envelhecer. As cólicas de fígado, as dores de cabeça, as azias, os reumatismos, as gripes com febre, quem sabe o tifo, o atropelamento. Tudo escondido, esperando. Sem falar nos que vão ficar tuberculosos, nas mulheres que vão fazer cesariana. Os que vão perder o emprego, os que se verão doidos com as dívidas, os que hão de esperar nas filas ― que seremos quase todos. E os que, não morrendo, hão de ver a morte lhes entrando de casa adentro, carregando o filho, pai, amor, amizade. As missas de sétimo dia, as cartas de rompimento, os bilhetes de despedida. E até guerra, quem sabe? Desgostos, desgostos de toda espécie. Qual de nós passa um dia, dois dias, sem um desgosto? Quanto mais um ano!\n\nRachel de Queiroz. Um ano de menos.\nIn: O Cruzeiro, Rio de Janeiro, dez./1951 (com adaptações).\n\nAcerca das ideias e de aspectos linguísticos do texto precedente, julgue os itens que se seguem.\n\nDa leitura do segundo parágrafo, entende-se que o pronome “ela”, em “dela” (último período), refere-se a “rosa” (penúltimo período).",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 12; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "161b5dec58c7f911e0c746b71dafaed68becd4cd80ccc70fda42b23ec21aaee1",
+        "original_numeric_id": 12,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A associação proposta está correta. No trecho final do segundo parágrafo, a autora constrói uma metáfora comparando a vida humana à existência de uma rosa:\n\n* No penúltimo período: \"Mas a **rosa**, se a não apanha o jardineiro, que será **ela** no dia seguinte...\"\n* No último período: \"A hora da colheita não interessa ― de qualquer modo, o destino **dela** [da rosa] era murchar, perder as pétalas, secar, sumir-se.\"\n\nO pronome pessoal \"ela\", que compõe a contração \"dela\" (de + ela), funciona como elemento de coesão anafórica, retomando o substantivo \"rosa\" para evitar a repetição desnecessária do termo e manter a unidade temática do fechamento do parágrafo.",
+        "source_reference": null
+      },
+      "source_content_hash": "1277f6f10c802073cc35ea966b5fd80b1e47cac1c91b7754ce977d393907c0d3"
+    }
+  ]
+}

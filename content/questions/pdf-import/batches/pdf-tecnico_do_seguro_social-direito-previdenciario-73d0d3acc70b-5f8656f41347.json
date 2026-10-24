@@ -1,0 +1,893 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-tecnico_do_seguro_social-direito-previdenciario-73d0d3acc70b-5f8656f41347",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "73d0d3acc70b3acdf5a3dd8628e54a2e9357d3788847f08cf4a66c1b2cc014ba",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "4eaf0e6930a8700363f76961716af089a527cb11e4282c667f45b06f21532285",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "5f8656f41347f69057b231b3ca3e7847d22f43faac91302272b473c5511e688d",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-previdenciario",
+    "name": "Direito Previdenciário"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:053",
+      "source_id": "tecnico_do_seguro_social:53",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca das fontes de legislação previdenciária, de sua organização e evolução histórica, julgue os itens que se seguem.\n\nOs benefícios e serviços prestados pela seguridade social são exclusivos daqueles que participam do seu custeio.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 53; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Seguridade Social",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "943a0343cdc077b2421d9f8dcba496320083286b52efab0c4930176685d4689c",
+        "original_numeric_id": 53,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "seguridade-social",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA seguridade social, conforme definida no artigo 194 da Constituição Federal de 1988, é um conjunto integrado de ações destinadas a assegurar os direitos relativos à saúde, à previdência e à assistência social. \n\nO erro da afirmativa reside em generalizar a exigência de custeio para todos os benefícios e serviços da seguridade social. No entanto, o caráter contributivo e de filiação obrigatória é exclusivo da **Previdência Social** (artigo 201, *caput*, da CF/88).\n\nAs outras duas vertentes funcionam sob lógica distinta:\n* **Saúde**: é direito de todos e dever do Estado, sendo de acesso universal e igualitário, independentemente de qualquer contribuição (artigo 196 da CF/88).\n* **Assistência Social**: é prestada a quem dela necessitar, também independentemente de contribuição à seguridade social (artigo 203 da CF/88).\n\n### Dispositivo legal\n* **Artigo 194, caput, Artigo 196, Artigo 201, caput, e Artigo 203 da Constituição Federal de 1988**: [Portal da Legislação do Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "6abe53e5cc09bf208d2d31c4242d4e51b8c4e7db7dae2d8a54aeeffa34c40f33"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:057",
+      "source_id": "tecnico_do_seguro_social:57",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à filiação e à inscrição no regime geral de previdência social (RGPS), julgue os itens subsequentes.\n\nO dependente do segurado do regime geral de previdência social (RGPS) pode, nessa condição, efetuar a sua inscrição junto ao INSS no momento em que este tiver de se habilitar ao recebimento do benefício a que faz jus.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 57; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Regime Geral de Previdência Social – RGPS",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "14ea886da7b7d0c3c825fb31c85c8b48c182ac09f9257332dba8a9892a22bad8",
+        "original_numeric_id": 57,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-geral-de-previdencia-social-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A inscrição do dependente do segurado do Regime Geral de Previdência Social (RGPS) não precisa ser realizada de forma prévia ou concomitante à inscrição do próprio segurado. A legislação previdenciária estabelece que incumbe ao dependente promover a sua inscrição no momento em que requerer o benefício a que tiver direito (como a pensão por morte ou o auxílio-reclusão), mediante a apresentação dos documentos necessários para comprovar o seu vínculo familiar e a dependência econômica (quando esta não for presumida).\n\n### Dispositivo legal\n* **Referência:** Lei nº 8.213, de 24 de julho de 1991, Art. 17, § 1º.\n* **URL oficial:** https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "201097174cfec33898a5d4599975bc598239520d3c740d83c665bc30cf939453"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:059",
+      "source_id": "tecnico_do_seguro_social:59",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à filiação e à inscrição no regime geral de previdência social (RGPS), julgue os itens subsequentes.\n\nSuponha que um estudante de quinze anos de idade pretenda se inscrever no regime geral de previdência social (RGPS) na condição de segurado facultativo. Nessa situação, a inscrição não será possível em decorrência da idade do estudante.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 59; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Regime Geral de Previdência Social – RGPS",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "33bb7688a74ac5dc1662400d61bfdf4e6a0d888e03fe9bb762ce3220c568a4bf",
+        "original_numeric_id": 59,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-geral-de-previdencia-social-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A idade mínima para a filiação ao Regime Geral de Previdência Social (RGPS) na condição de segurado facultativo é de 16 anos.\n\nEssa limitação etária, disposta no Regulamento da Previdência Social, está em consonância com a proibição constitucional de qualquer trabalho a menores de 16 anos, salvo na condição de aprendiz a partir dos 14 anos. Como o estudante de 15 anos não exerce atividade remunerada e não se enquadra na condição de aprendiz (que seria segurado obrigatório na categoria de empregado), ele não pode se inscrever como segurado facultativo.\n\n**Detalhe importante:** Embora a redação literal e desatualizada das Leis nº 8.212/1991 (Art. 14) e nº 8.213/1991 (Art. 13) ainda mencione a idade de 14 anos para o segurado facultativo, esses dispositivos não foram formalmente adaptados após a Emenda Constitucional nº 20/1998. Na aplicação prática e para fins de provas de concurso, prevalece a idade mínima de 16 anos fixada pela Constituição Federal e pelo Decreto nº 3.048/1999.\n\n### Dispositivo legal\n* **Referência:** Constituição Federal de 1988, Art. 7º, XXXIII; Decreto nº 3.048, de 6 de maio de 1999, Art. 11, caput.\n* **URL oficial:** https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "fa97c4b1ef41a5f993fed0418cc6f1e3495c2ccab2c15abafa9645a6f76cefc1"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:061",
+      "source_id": "tecnico_do_seguro_social:61",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à aplicação da norma previdenciária, à seguridade social e ao empregador doméstico, julgue os próximos itens.\n\nSuponha que um servidor público de carreira do Poder Judiciário de determinada unidade da Federação tenha sido nomeado para exercer um cargo em comissão junto a uma fundação pública federal, momento em que tenha optado por continuar recebendo remuneração do órgão em que exerça cargo efetivo. Nessa situação hipotética, em decorrência do cargo que passou a exercer na fundação pública, o referido servidor passa a integrar a condição de segurado obrigatório do RGPS.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 61; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Regime Geral de Previdência Social – RGPS",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "b440ca47e3f5af4c0f84bffc5ba7785d84d4095c1f892d0d2e7e8a81b8ad95cf",
+        "original_numeric_id": 61,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-geral-de-previdencia-social-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. O servidor público de carreira (titular de cargo efetivo) que é cedido para exercer cargo em comissão em outro órgão ou entidade, ainda que de outro ente federativo (como uma fundação pública federal), permanece vinculado ao seu Regime Próprio de Previdência Social (RPPS) de origem.\n\nA filiação obrigatória ao RGPS na categoria de ocupante de cargo em comissão aplica-se exclusivamente àqueles que não possuem vínculo efetivo com a administração pública (ocupantes exclusivos de cargo em comissão). Como o servidor em questão possui vínculo efetivo de carreira, a sua nomeação para o cargo em comissão e a opção remuneratória não alteram a sua filiação previdenciária originária.\n\n### Dispositivo legal\n* **Referência:** Lei nº 9.717, de 27 de novembro de 1998, Art. 1º-A; Lei nº 8.213, de 24 de julho de 1991, Art. 11, I, \"g\".\n* **URL oficial:** https://www.planalto.gov.br/ccivil_03/leis/l9717.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "1efe9d73d516b2ddfe453671a9f4eaad526adce6ed78fcc39c60929eadcd519c"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:066",
+      "source_id": "tecnico_do_seguro_social:66",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do financiamento da seguridade social, julgue os itens subsequentes.\n\nA licença-prêmio indenizada integra o salário de contribuição, nos termos da legislação.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 66; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Salário de Contribuição",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "0ab06857ac1f5a3d70094e1d515175113ba0d18de626c10421304c55c7e2f37f",
+        "original_numeric_id": 66,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "salario-de-contribuicao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A licença-prêmio indenizada possui natureza estritamente indenizatória e, por expressa previsão legal, não integra o salário de contribuição. De acordo com o art. 28, § 9º, \"e\", item 8, da Lei nº 8.212/1991, as importâncias recebidas a título de licença-prêmio indenizada estão expressamente excluídas da base de cálculo da contribuição previdenciária.\n\n### Dispositivo legal\n* **Referência:** Artigo 28, § 9º, alínea \"e\", item 8, da Lei nº 8.212/1991.\n* **URL Oficial:** [Lei nº 8.212/1991](https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "7f72faacc621098a36c76a6040a95f6df69edc8938d1f05fb7591c912a14a64d"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:067",
+      "source_id": "tecnico_do_seguro_social:67",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do financiamento da seguridade social, julgue os itens subsequentes.\n\nAs igrejas e os templos de qualquer culto são isentos de contribuições para a seguridade social.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 67; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Financiamento da Seguridade Social",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "6e3337e7eef542e1e2446e62586254b498c75dc9acf0d907ba9be1220c84614d",
+        "original_numeric_id": 67,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "financiamento-da-seguridade-social",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A Constituição Federal de 1988 estabelece, em seu artigo 150, inciso VI, alínea \"b\", a imunidade tributária para os templos de qualquer culto. No entanto, essa imunidade é restrita à espécie tributária dos **impostos** (incidindo sobre o patrimônio, a renda e os serviços relacionados com as finalidades essenciais das entidades).\n\nAs contribuições para a seguridade social constituem outra espécie tributária (contribuições sociais) e não estão abrangidas por essa imunidade dos templos. Para que uma entidade de cunho religioso usufrua de imunidade (frequentemente denominada isenção pela legislação ordinária) em relação às contribuições para a seguridade social, ela deve se qualificar como entidade beneficente de assistência social e cumprir cumulativamente os requisitos previstos em lei complementar, conforme determina o artigo 195, § 7º, da Constituição Federal.\n\n**Pegadinha:** O examinador tenta confundir o candidato ao estender a imunidade de impostos dos templos de qualquer culto para as contribuições da seguridade social, utilizando ainda o termo \"isentos\" de forma genérica.\n\n**Dispositivo legal:**\n* Artigo 150, inciso VI, alínea \"b\" e § 4º, e Artigo 195, § 7º, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "48863086f5a936db7a4d330a1d46ca24489eb2923701d4af2cc4c8fc93c76614"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:070",
+      "source_id": "tecnico_do_seguro_social:70",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do financiamento da seguridade social, julgue os itens subsequentes.\n\nO percentual incidente sobre o resultado dos leilões dos bens apreendidos pelo Departamento da Receita Federal é fonte de receita da seguridade social, segundo a legislação.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 70; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Financiamento da Seguridade Social",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "584a8162d181f6a0db2e168e9e4e88b85c93a02156cbd5bc462ab812fbde7528",
+        "original_numeric_id": 70,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "financiamento-da-seguridade-social",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A Lei Orgânica da Seguridade Social (Lei nº 8.212/1991) prevê, além das contribuições sociais clássicas, outras fontes de receita destinadas ao financiamento da seguridade social.\n\nDentre essas receitas alternativas, o artigo 27, inciso VII, estabelece expressamente que o percentual de 40% (quarenta por cento) do resultado obtido nos leilões de bens apreendidos pelo Departamento da Receita Federal (atualmente Secretaria Especial da Receita Federal do Brasil) é destinado à seguridade social.\n\n**Pegadinha:** As bancas costumam tentar confundir o candidato alterando o percentual de 40% para outros valores (como 50%) ou trocando a destinação dos recursos. O enunciado da questão foi sutil e correto ao afirmar apenas que \"o percentual\" (sem especificar o número) é fonte de receita, o que torna a afirmativa perfeitamente válida.\n\n**Dispositivo legal:**\n* Artigo 27, inciso VII, da Lei nº 8.212/1991.",
+        "source_reference": null
+      },
+      "source_content_hash": "b163ccb273a155c63661c0863c3a8cee0622ce0272060445b6c08b9dd008b6f7"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:073",
+      "source_id": "tecnico_do_seguro_social:73",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca do recolhimento e do reajustamento de benefícios, bem como das competências do INSS e da Secretaria da Receita Federal do Brasil, julgue os itens a seguir.\n\nOs valores do salário de contribuição equivalem à renda mensal dos benefícios previdenciários.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 73; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Salário de Contribuição",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "a6af8736b96693633a8dcf7c151b4006bef0dc69eca731d8d46d75ebf8de45af",
+        "original_numeric_id": 73,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "salario-de-contribuicao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O salário de contribuição e a renda mensal do benefício são conceitos previdenciários distintos. \n\nO **salário de contribuição** constitui a base de cálculo sobre a qual incidem as alíquotas das contribuições previdenciárias dos segurados. Já a **renda mensal do benefício (RMB)** é o valor efetivamente pago ao beneficiário, calculado a partir do **salário de benefício** (que consiste em uma média aritmética dos salários de contribuição do período básico de cálculo), sobre o qual se aplica um percentual (alíquota de benefício) variável conforme a espécie da prestação previdenciária.\n\nLogo, a afirmação de que os valores equivalem-se diretamente está incorreta.\n\n### Dispositivo legal\n* **Lei nº 8.212/1991, art. 28**\n* **Lei nº 8.213/1991, arts. 29 e 33**\n* Disponível em: [Portal do Planalto - Lei nº 8.212/1991](https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm) e [Portal do Planalto - Lei nº 8.213/1991](https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "44ab66314a07ba69b0f9032bee7239ac029fabcf5b316cf2835fde2c4dd97080"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:091",
+      "source_id": "tecnico_do_seguro_social:91",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito ao plano de benefícios da previdência social, julgue os itens a seguir.\n\nO salário de benefício do segurado que contribui em razão de atividades concomitantes é calculated com base na soma dos salários de contribuição das atividades exercidas na data do requerimento ou do óbito, ou no período básico de cálculo.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 91; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Plano de Benefícios do RGPS",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "99d5cca2f5313841f57d50c7226690f16b24bc61e64c3cfa3960880166b1bcfd",
+        "original_numeric_id": 91,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "plano-de-beneficios-do-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Anteriormente, o cálculo para atividades concomitantes envolvia regras complexas de proporcionalidade (atividades principal e secundária). No entanto, com a alteração promovida pela Lei nº 13.846/2019, o art. 32 da Lei nº 8.213/1991 passou a prever expressamente que o salário de benefício do segurado que contribui em razão de atividades concomitantes será calculado com base na soma simples dos salários de contribuição das atividades exercidas no período básico de cálculo, respeitado o limite máximo do salário de contribuição.\n\n### Dispositivo legal\nArtigo 32, caput, da Lei nº 8.213/1991 (com redação dada pela Lei nº 13.846/2019).",
+        "source_reference": null
+      },
+      "source_content_hash": "55fed16d42ff6d138b044732f06842834e584f94b181abd8259e75d26ec5d064"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:104",
+      "source_id": "tecnico_do_seguro_social:104",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos benefícios decorrentes de legislações especiais e do seguro defeso, julgue os próximos itens.\n\nA pensão especial destinada às crianças com síndrome congênita do zika vírus nascidas entre 1.º de janeiro de 2015 e 31 de dezembro de 2019 e beneficiárias do benefício de prestação continuada é mensal, vitalícia e intransferível, tendo o valor de um salário mínimo.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 104; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Lei de Assistência Social (LOAS) – Lei 8.742/93 e Decreto 6.214/07",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "7f0bf96e7d6400cd3f0af4428b19adcf99ebcaa5d6163020d2a1a10429fe8355",
+        "original_numeric_id": 104,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "lei-de-assistencia-social-loas-lei-8-742-93-e-decreto-6-214-07",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A Lei nº 13.985/2020 instituiu a pensão especial destinada a crianças com Síndrome Congênita do Zika Vírus.\n\nOs requisitos e características do benefício são:\n* **Público-alvo**: Crianças com síndrome congênita do Zika Vírus nascidas entre 1º de janeiro de 2015 e 31 de dezembro de 2019.\n* **Condição**: Serem beneficiárias do Benefício de Prestação Continuada (BPC).\n* **Características**: O benefício é mensal, vitalício e intransferível.\n* **Valor**: Equivalente a 1 (um) salário mínimo.\n\nCabe destacar que a concessão da pensão especial acarretará a cessação do BPC, não sendo permitida a acumulação de ambos, conforme o § 1º do art. 1º da referida lei.\n\n### Dispositivo legal\n* **Lei nº 13.985/2020, Art. 1º**:\n  > \"Art. 1º Fica instituída pensão especial destinada a crianças com Síndrome Congênita do Zika Vírus, nascidas entre 1º de janeiro de 2015 e 31 de dezembro de 2019, beneficiárias do Benefício de Prestação Continuada (BPC) de que trata o art. 20 de Lei nº 8.742, de 7 de dezembro de 1993.\n  > § 1º A pensão especial de que trata o caput deste artigo será mensal, vitalícia e intransferível e terá valor igual ao de 1 (um) salário-mínimo.\"",
+        "source_reference": null
+      },
+      "source_content_hash": "7e03463ff7f7c592e8d9bf14cfd57404e136abbd74d45dc86d9f5e5818b2c31b"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:106",
+      "source_id": "tecnico_do_seguro_social:106",
+      "question_type": "true_false",
+      "statement_markdown": "A seguridade social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade, destinado a assegurar o direito relativo à saúde, à previdência e à assistência social. A esse respeito, julgue os itens a seguir.\n\nSão princípios da seguridade social a universalidade da cobertura e do atendimento, a seletividade e distributividade na prestação dos benefícios e serviços e a progressividade na forma de participação no custeio.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 106; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Seguridade Social",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "51979abfec61218ae69f5f6ab4f4af74f41e6abbee2a28f33ecdcd04b94491d5",
+        "original_numeric_id": 106,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "seguridade-social",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A assertiva substitui incorretamente o princípio constitucional da **equidade** pelo termo \"progressividade\".\n\nO parágrafo único do artigo 194 da Constituição Federal de 1988 estabelece os objetivos (princípios) que organizam a seguridade social. Dentre eles, o inciso V prevê a **equidade na forma de participação no custeio**, que significa que quem tem maior capacidade contributiva deve contribuir com mais, garantindo a justiça fiscal e social do sistema.\n\nEmbora a progressividade de alíquotas seja uma técnica de aplicação prática desse princípio (conforme o art. 195, § 9º, da CF/88), o princípio expresso no rol do art. 194 é a equidade.\n\n### Dispositivo legal\n* **Constituição Federal de 1988, Art. 194, parágrafo único**:\n  > \"Parágrafo único. Compete ao Poder Público, nos termos da lei, organizar a seguridade social, com base nos seguintes objetivos:\n  > [...]\n  > V - equidade na forma de participação no custeio;\"",
+        "source_reference": null
+      },
+      "source_content_hash": "f413bd131613fb6ea690506c2ad96ed168d08035b8154d89791f7d133324965d"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:109",
+      "source_id": "tecnico_do_seguro_social:109",
+      "question_type": "true_false",
+      "statement_markdown": "A seguridade social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade, destinado a assegurar o direito relativo à saúde, à previdência e à assistência social. A esse respeito, julgue os itens a seguir.\n\nA assistência social será prestada a quem dela necessitar, independentemente de contribuição, a fim de garantir, entre outros objetivos, a proteção à maternidade, à infância e à pessoa com deficiência.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 109; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Seguridade Social",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "70c3bb76512b00506aab38d4b8c78901339134f27475029664f87fb16f8cada5",
+        "original_numeric_id": 109,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "seguridade-social",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está **correta**.\n\nA assistência social, como parte integrante da Seguridade Social (junto à Saúde e à Previdência Social), rege-se pelo princípio da universalidade da cobertura e do atendimento no que tange à necessidade do cidadão. \n\nDiferentemente da Previdência Social, que possui caráter eminentemente contributivo e filiação obrigatória, a assistência social é prestada a quem dela necessitar, **independentemente de contribuição prévia** à seguridade social.\n\nOs objetivos citados no enunciado estão expressamente previstos no texto constitucional:\n* **Proteção à maternidade e à infância:** disposta no art. 203, inciso I, da Constituição Federal.\n* **Proteção à pessoa com deficiência:** disposta no art. 203, incisos IV e V, da Constituição Federal, que garante a habilitação, reabilitação, integração à vida comunitária e a garantia de um salário-mínimo de benefício mensal (Benefício de Prestação Continuada - BPC) caso comprove não possuir meios de prover a própria manutenção ou de tê-la provida por sua família.\n\n**Dispositivo legal**\n\n[Artigo 203, caput, incisos I, IV e V da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art203)",
+        "source_reference": null
+      },
+      "source_content_hash": "952b869ca08739923a1e20fe7a86ff6444034800ffd6bd5da082a94188c57f0d"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:110",
+      "source_id": "tecnico_do_seguro_social:110",
+      "question_type": "true_false",
+      "statement_markdown": "A seguridade social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade, destinado a assegurar o direito relativo à saúde, à previdência e à assistência social. A esse respeito, julgue os itens a seguir.\n\nA seguridade social será financiada por toda a sociedade, de forma direta e indireta, mediante recursos provenientes da União, dos estados, do Distrito Federal, dos municípios e de contribuições sociais como as incidentes sobre a receita de concursos de prognósticos.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 110; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Financiamento da Seguridade Social",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "287aeec672faee42e3779df374d845bd1967541d1af44a6423d0a91a0224966d",
+        "original_numeric_id": 110,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "financiamento-da-seguridade-social",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está **correta**.\n\nO financiamento da seguridade social é estruturado sob o princípio da solidariedade, estabelecendo que toda a sociedade deve colaborar para o seu custeio, de forma direta e indireta.\n\n* **Forma indireta:** ocorre por meio da destinação de recursos provenientes dos orçamentos fiscais da União, dos Estados, do Distrito Federal e dos Municípios.\n* **Forma direta:** ocorre mediante a cobrança de contribuições sociais incidentes sobre o empregador (folha de salários, receita ou faturamento, e lucro), sobre o trabalhador e demais segurados da previdência social, sobre a importação de bens ou serviços, e sobre a **receita de concursos de prognósticos** (como loterias e sorteios numéricos), conforme expressamente previsto no inciso III do art. 195 da Constituição Federal.\n\n**Dispositivo legal**\n\n[Artigo 195, caput e inciso III, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art195)",
+        "source_reference": null
+      },
+      "source_content_hash": "bb2e21f8fabc8af249526a3e22098e5ce0dce4a5143afda3e8cc3da3fc05663c"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:111",
+      "source_id": "tecnico_do_seguro_social:111",
+      "question_type": "true_false",
+      "statement_markdown": "Quanto ao Regime Geral de Previdência Social (RGPS), seus segurados e respectivos dependentes, julgue os próximos itens.\n\nSão segurados obrigatórios da previdência social o servidor público ocupante de cargo em comissão, sem vínculo efetivo com a União, com autarquias, inclusive em regime especial, e com fundações públicas federais, e a pessoa física que exerce, por conta própria, com finalidade de lucro, atividade econômica de natureza urbana.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 111; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Regime Geral de Previdência Social – RGPS",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "4fad040bbf323bf2ee4810ec9607eac3ac46b0adcd573d8d1e39ba8bb0df9c82",
+        "original_numeric_id": 111,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-geral-de-previdencia-social-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está **correta**.\n\nO enunciado apresenta duas situações distintas de enquadramento como segurado obrigatório do Regime Geral de Previdência Social (RGPS):\n\n1. **Servidor público ocupante de cargo em comissão, sem vínculo efetivo:** nos termos do art. 40, § 13, da Constituição Federal, e do art. 11, inciso I, alínea \"g\", da Lei nº 8.213/1991, o servidor ocupante exclusivamente de cargo em comissão declarado em lei de livre nomeação e exoneração submete-se ao RGPS, enquadrando-se na categoria de **segurado empregado**.\n2. **Pessoa física que exerce, por conta própria, atividade econômica urbana com fins lucrativos:** enquadra-se na categoria de **contribuinte individual**, conforme o art. 11, inciso V, alínea \"h\", da Lei nº 8.213/1991.\n\n*Nota de prova:* O gabarito preliminar desta questão foi divulgado como \"Errado\", porém, após recursos, a banca examinadora alterou justificadamente o gabarito para **Certo**, uma vez que ambas as hipóteses configuram, por força de lei, segurados obrigatórios do RGPS.\n\n**Dispositivo legal**\n\n[Artigo 11, inciso I, alínea 'g', e inciso V, alínea 'h', da Lei nº 8.213/1991; Artigo 40, § 13, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "f6dfc1d9fde6cc6756be4253457573ce135a39524105c4f490ea5afb38dc7fbb"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:112",
+      "source_id": "tecnico_do_seguro_social:112",
+      "question_type": "true_false",
+      "statement_markdown": "Quanto ao Regime Geral de Previdência Social (RGPS), seus segurados e respectivos dependentes, julgue os próximos itens.\n\nÉ vedada a filiação ao RGPS, na qualidade de segurado facultativo, de pessoa participante de regime próprio de previdência social, salvo na hipótese de afastamento sem vencimento e desde que não permitida, nesta condição, contribuição ao respectivo regime próprio.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 112; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Regime Geral de Previdência Social – RGPS",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "9fc8dd18c95eef6341e06340d3171fb19995f8e898834e823e84e026f831a7ba",
+        "original_numeric_id": 112,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-geral-de-previdencia-social-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está **correta**.\n\nA regra geral, de nível constitucional (art. 201, § 5º, da CF/88), veda expressamente que o participante de Regime Próprio de Previdência Social (RPPS) se filie ao Regime Geral de Previdência Social (RGPS) na qualidade de segurado facultativo, evitando a sobreposição de coberturas previdenciárias com recursos subsidiados.\n\nNo entanto, o Regulamento da Previdência Social (Decreto nº 3.048/1999) estabelece uma **exceção** a essa vedação no seu art. 11, § 2º. Caso o servidor público esteja em gozo de licença ou afastamento sem remuneração (vencimento) e a legislação do seu respectivo ente federativo não permita que ele continue contribuindo para o RPPS durante esse período de afastamento, ele poderá filiar-se temporariamente ao RGPS como segurado facultativo para não perder a cobertura previdenciária.\n\n**Dispositivo legal**\n\n[Artigo 11, § 2º, do Decreto nº 3.048/1999; Artigo 201, § 5º, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/decreto/d3048.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "787670863e8af6e5d924c7ae1a978d9316000a1659943c93518f23a94937ea7b"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:116",
+      "source_id": "tecnico_do_seguro_social:116",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito ao benefício de prestação continuada e ao auxílio-inclusão conforme as disposições da Lei Orgânica da Assistência Social (LOAS), julgue os itens subsecutivos.\n\nObservados os demais critérios de elegibilidade definidos na LOAS, terão direito ao benefício de prestação continuada a pessoa com deficiência ou a pessoa idosa com renda familiar mensal per capita igual ou inferior a um quarto do salário mínimo.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 116; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Lei de Assistência Social (LOAS) – Lei 8.742/93 e Decreto 6.214/07",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "4ff2a0369616887dbaf175a989b6a124107b4290fef81e76c517ea8f4a024ea8",
+        "original_numeric_id": 116,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "lei-de-assistencia-social-loas-lei-8-742-93-e-decreto-6-214-07",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmativa está correta pois reproduz o critério objetivo de miserabilidade previsto no art. 20, § 3º, da Lei nº 8.742/1993 (LOAS).\n\nPara a concessão do Benefício de Prestação Continuada (BPC) à pessoa com deficiência ou ao idoso, exige-se que a renda mensal familiar per capita seja igual ou inferior a 1/4 (um quarto) do salário-mínimo, sem prejuízo da análise de outros fatores de vulnerabilidade social admitidos pela jurisprudência e pela própria legislação em vigor.\n\n**Dispositivo legal**\n\n[Artigo 20, § 3º, da Lei nº 8.742/1993](https://www.planalto.gov.br/ccivil_03/leis/l8742.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "143516c08679ecb573627f939b1bdc950020799dffd5cc47833c9f24e0324410"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:117",
+      "source_id": "tecnico_do_seguro_social:117",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito ao benefício de prestação continuada e ao auxílio-inclusão conforme as disposições da Lei Orgânica da Assistência Social (LOAS), julgue os itens subsecutivos.\n\nO pagamento do auxílio-inclusão não será acumulado com o pagamento do benefício de prestação continuada.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 117; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Lei de Assistência Social (LOAS) – Lei 8.742/93 e Decreto 6.214/07",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "bee8335813b140ae38d17b2b7d9ee775145bba8d79ccd67c01e9ec236744533f",
+        "original_numeric_id": 117,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "lei-de-assistencia-social-loas-lei-8-742-93-e-decreto-6-214-07",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O auxílio-inclusão é um benefício destinado a incentivar a inserção de pessoas com deficiência beneficiárias do BPC no mercado de trabalho. \n\nConforme estabelece o art. 26-C, inciso I, da Lei nº 8.742/1993 (introduzido pela Lei nº 14.176/2021), o recebimento do auxílio-inclusão é incompatível com a manutenção do pagamento do BPC, ocorrendo a suspensão deste último. Portanto, a vedação à acumulação de ambos os benefícios está correta.\n\n**Dispositivo legal**\n\n[Artigo 26-C, inciso I, da Lei nº 8.742/1993](https://www.planalto.gov.br/ccivil_03/leis/l8742.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "760246140fb4a16c95b3e9ac8a1711b9625ed02c5edda0fb63b9b2bf8c11c891"
+    }
+  ]
+}

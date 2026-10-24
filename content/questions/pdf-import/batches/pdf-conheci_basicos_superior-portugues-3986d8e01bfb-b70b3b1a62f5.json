@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-conheci_basicos_superior-portugues-3986d8e01bfb-b70b3b1a62f5",
+  "source": {
+    "file_name": "conheci_basicos_superior_ATUALIZADO.json",
+    "sha256": "3986d8e01bfb9b85aa8cf63981399347dbbecd398cc022ac595928362e48acb2",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "conheci_basicos_superior.json",
+      "original_source_sha256": "b206400e7cdbc8349a44515c2afe3ee6461cc3fb9fdceb3ff70127850f57917b",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "b70b3b1a62f5421b2ba7de961494a131e42b8a94ddacdd71f740cc54080c20f3",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:conheci_basicos_superior:004",
+      "source_id": "conheci_basicos_superior:4",
+      "question_type": "true_false",
+      "statement_markdown": "De acordo com uma lista da International Union for the Conservation of Nature, o Brasil é o país com o maior número de espécies de aves ameaçadas de extinção, com um total de 123 espécies sofrendo risco real de desaparecer da natureza em um futuro não tão distante. A Mata Atlântica concentra cerca de 80% de todas as aves ameaçadas no país, fato que resulta de muitos anos de exploração e desmatamentos. Atualmente, restam apenas cerca de 10% da floresta original, não sendo homogênea essa proporção de floresta remanescente ao longo de toda a Mata Atlântica. A situação é mais séria na região Nordeste, especialmente nos estados de Alagoas e Pernambuco, onde a maior parte da floresta original foi substituída por plantações de cana-de-açúcar. É nessa região que ainda podem ser encontrados os últimos exemplares das aves mais raras em todo o país, como o criticamente ameaçado limpa-folha-do-nordeste (Philydor novaesi). Essa pequena ave de dezoito centímetros vive no estrato médio e dossel de florestas bem conservadas e ricas em bromélias, onde procura artrópodes dos quais se alimenta. Atualmente, as duas únicas localidades onde a espécie pode ser encontrada são a Estação Ecológica de Murici, em Alagoas, e a Serra do Urubu, em Pernambuco.\n\nPedro F. Develey et al. O Brasil e suas aves. In: Scientific American Brasil, 2013 (com adaptações).\n\nJulgue os itens seguintes, relativos às ideias e aos aspectos estruturais do texto acima.\n\nA mesma regra de acentuação gráfica se aplica aos vocábulos “homogênea” (l.9), “médio” (l.18) e “bromélias” (l.19).",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 4; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Fonética",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "5d3be9b756d9fdd35e0d750d1ccf1bf446d895c10a79f3674a73178b1454eb47",
+        "original_numeric_id": 4,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "fonetica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta, pois os três vocábulos são acentuados graficamente com base na mesma regra de acentuação.\n\n*   **Análise das palavras:**\n    *   **ho-mo-gê-nea:** paroxítona terminada em ditongo oral crescente (\"ea\").\n    *   **mé-dio:** paroxítona terminada em ditongo oral crescente (\"io\").\n    *   **bro-mé-lias:** paroxítona terminada em ditongo oral crescente (\"ia\"), seguido de \"s\".\n\n*   **Regra Aplicada:** Acentuam-se as palavras paroxítonas terminadas em ditongo oral, crescente ou decrescente, seguidas ou não de \"s\".\n\n*Nota:* Na nomenclatura gramatical, essas palavras também podem ser classificadas como proparoxítonas aparentes (ou acidentais), mas, independentemente da corrente adotada, a mesma regra e classificação se aplicam uniformemente a todas as três.",
+        "source_reference": null
+      },
+      "source_content_hash": "5b37cdef59be1dc87feb33e11667a25e2ad8e132f240c38b1cbfc30ce1791113"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:007",
+      "source_id": "conheci_basicos_superior:7",
+      "question_type": "true_false",
+      "statement_markdown": "Construímos coisas o tempo todo, mas como saberemos quanto tempo vão durar? Se construirmos depósitos para resíduos nucleares, precisaremos ter certeza de que os contêineres vão resistir até que o material dentro deles não mais seja perigoso. E, se não quisermos encher o planeta de lixo, é bom sabermos quanto tempo leva para que plásticos e outros materiais se decomponham. A única forma de termos certeza é submetendo esses materiais a testes de estresse por cerca de 100 mil anos para ver como reagem. Então, poderíamos aprender a construir coisas que realmente duram — ou que se decompõem de uma forma “verde”. Experimentos submeteriam materiais ao desgaste e a ataques químicos, como variações de alcalinidade, e, ainda, alterariam a temperatura ambiente para simular os ciclos de dia e noite e das estações. Com as técnicas de simulação em laboratórios de que dispomos atualmente, por exemplo, não se pode prever como será o desempenho da bateria de um carro elétrico nos próximos quinze anos. As simulações de computador podem, por fim, tornar-se sofisticadas a ponto de substituir experimentos de longo prazo. Enquanto isso, no entanto, precisamos adotar cautela extra ao construirmos coisas que precisam durar.\n\nKristin Persson. Como os materiais se decompõem? In: Scientific American Brasil, s/d, 2013 (com adaptações).\n\nAcerca de aspectos estruturais do texto acima e das ideias nele contidas, julgue os itens a seguir.\n\nEm “se decompõem” (l.11) e “se pode” (l.16), o pronome “se” poderia ser posposto à forma verbal — decompõem-se e pode-se —, sem prejuízo para a correção gramatical do texto.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 7; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "cfa174a36bdac195df30b585d174d26bea3fa23f44ade70803bb8e9c57f0288e",
+        "original_numeric_id": 7,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque, em ambos os casos apresentados, a próclise (pronome antes do verbo) é obrigatória devido à presença de palavras atrativas.\n\n1. Em **\"que se decompõem\"**: o pronome relativo \"que\" atua como palavra atrativa, exigindo a colocação do pronome oblíquo antes do verbo. A forma enclítica \"que decompõem-se\" é incorreta.\n2. Em **\"não se pode\"**: o advérbio de negação \"não\" é um fator clássico de atração pronominal, tornando a próclise obrigatória. A forma enclítica \"não pode-se\" viola a norma-padrão.\n\nPortanto, a posposição do pronome acarretaria prejuízo à correção gramatical do texto.",
+        "source_reference": null
+      },
+      "source_content_hash": "c17fd3a7d2108df6ed8747c05b4c95f73d9055042538527f87d6de2606e4dbd8"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:017",
+      "source_id": "conheci_basicos_superior:17",
+      "question_type": "true_false",
+      "statement_markdown": "Em resposta aos recorrentes pedidos, tratando de solicitação de materiais para uso interno, informamos que a Sessão de Compras e Materiais disponibiliza formulários para preenchimento das demandas de cada setor, com as respectivas justificativas para compras de material para uso interno.\n\nCordialmente,\n\nMaria Silva\nSupervisora da Sessão de Compras e Materiais\n\nConsiderando esse texto e as normas do Manual de Redação da Presidência da República, julgue os itens subsequentes.\n\nSe o texto acima participasse da composição de um memorando, os despachos deveriam ser dados no próprio documento e, no caso de falta de espaço, em folha de continuação.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 17; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "66ac7ef08e61e6b43721959ef1c271731eb45532b3d3ea3de2e56aa156d3f33c",
+        "original_numeric_id": 17,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": "O memorando foi extinto pela 3ª edição do Manual de Redação da Presidência da República (2018), que unificou as comunicações internas e externas sob o gênero 'Ofício'.",
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "🔴 **DESATUALIZADO:** Este item baseou-se na **2ª edição do Manual de Redação da Presidência da República (2002)**. Na **3ª edição (2018)**, a modalidade de comunicação por \"memorando\" foi extinta, sendo substituída pelo formato unificado de \"Ofício\".\n\n**Análise sob o contexto histórico (Gabarito Oficial - Certo):**\nDe acordo com a antiga norma (2ª edição, item 2.3.2), o memorando era caracterizado como uma comunicação eminentemente interna, pautada pela rapidez e pela desburocratização. Para evitar a criação de novos processos e o acúmulo desnecessário de papéis, o Manual determinava expressamente que os despachos subsequentes deveriam ser registrados no próprio corpo do documento original e, apenas se faltasse espaço físico, em folha de continuação.",
+        "source_reference": null
+      },
+      "source_content_hash": "ac6920892c06a9b1f4a5037621c2df45407def9d1703d1c88e42e8c42fcd1d0f"
+    }
+  ]
+}

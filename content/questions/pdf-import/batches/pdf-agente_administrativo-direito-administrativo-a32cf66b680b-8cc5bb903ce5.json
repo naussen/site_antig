@@ -1,0 +1,281 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-agente_administrativo-direito-administrativo-a32cf66b680b-8cc5bb903ce5",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "a32cf66b680b5ade47718cec8534401119366e961d8b4aae50fc11c197a67192",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "5da32b0a57792e090ef9d4c38cee7bda12a08609929c945e59e21312dccdc01a",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "8cc5bb903ce5e799543d3c5ec430cb73c4b49422d3592843ba4dad1d751816a2",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:055",
+      "source_id": "agente_administrativo:55",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da administração pública, julgue os itens a seguir à luz da CF e do entendimento do STF.\n\nO empregado público ocupante de cargo de provimento efetivo torna-se estável após três anos de exercício.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 55; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "35fa6c7c3a702182cefc22ea11b857edd2b2d2a8d47ab966c2bdb4a1e185dd8c",
+        "original_numeric_id": 55,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item apresenta dois erros conceituais e jurídicos fundamentais:\n\n1. **Incompatibilidade de regimes:** O empregado público é regido pela Consolidação das Leis do Trabalho (CLT) e ocupa um *emprego público*, e não um *cargo de provimento efetivo*. Os cargos de provimento efetivo são ocupados por servidores públicos estatutários.\n2. **Inaplicabilidade da estabilidade constitucional:** A estabilidade de três anos prevista no art. 41 da Constituição Federal de 1988 é uma garantia exclusiva dos servidores públicos estatutários nomeados para cargos de provimento efetivo em virtude de concurso público. Os empregados públicos (celetistas), mesmo que admitidos por concurso público (como os de empresas públicas e sociedades de economia mista), não possuem direito à estabilidade do art. 41 da CF.\n\n**Atenção:** Embora o STF tenha fixado a tese no RE 688.267 (Tema 1.022) de que a demissão de empregados públicos de empresas estatais concursados deve ser motivada por ato formal, a própria Suprema Corte ressaltou que esse dever de motivação não se confunde com a estabilidade no emprego do art. 41 da CF.\n\n### Dispositivo legal\n\n* **Art. 41, caput, da Constituição Federal de 1988** (Disponível em: [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "644448141724708e7a705aeec2a9e0ae7d0f5a75445d74adb806f6c31a493080"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:056",
+      "source_id": "agente_administrativo:56",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da administração pública, julgue os itens a seguir à luz da CF e do entendimento do STF.\n\nA administração pública pode fixar prazo de validade de concurso público inferior a dois anos.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 56; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "64add66c618011db6e350cbb97f8bdaa29bc30beb0d560bcb942fc4ab9dd759f",
+        "original_numeric_id": 56,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A Constituição Federal de 1988 estabelece que o prazo de validade do concurso público será de até dois anos, prorrogável uma vez, por igual período. O uso do termo \"até\" indica que dois anos é o limite máximo permitido, conferindo discricionariedade para que a Administração Pública fixe prazos inferiores (como seis meses ou um ano) no edital do certame, conforme a conveniência e oportunidade administrativas.\n\n**Detalhe importante:** A prorrogação do concurso é um ato discricionário da Administração, mas, caso ocorra, deve obrigatoriamente ser por igual período ao fixado inicialmente no edital. Por exemplo, se o edital previu validade de um ano, a prorrogação só poderá ser de mais um ano.\n\n### Dispositivo legal\n\n* **Artigo 37, inciso III, da Constituição Federal de 1988** (Disponível em: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "fb938a6a5cd60924e1d95d0293a8d5a51f306c4eacc565078a7e78b0d74f2899"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:057",
+      "source_id": "agente_administrativo:57",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da administração pública, julgue os itens a seguir à luz da CF e do entendimento do STF.\n\nExige-se prévia edição de lei específica, dispondo acerca da reserva de vagas, para que o edital de concurso público possa reservar percentual de empregos públicos para pessoas com deficiência.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 57; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "86fd311c5020f2384d4cb90d8a83ee5c1c86bf9b21a6dbc737ec19729b6a5de3",
+        "original_numeric_id": 57,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A reserva de vagas para pessoas com deficiência em concursos públicos é uma norma constitucional de eficácia limitada, dependendo de regulamentação legislativa para produzir todos os seus efeitos. O texto constitucional determina expressamente que \"a lei reservará\" o percentual de cargos e empregos públicos e definirá os critérios de admissão. Portanto, o edital do concurso não pode criar ou inovar na ordem jurídica estabelecendo reservas de vagas sem que exista uma lei prévia do respectivo ente federativo que dê respaldo a essa ação, sob pena de violação ao princípio da legalidade.\n\n**Detalhe importante:** O edital é um ato administrativo e, como tal, deve estrita obediência à lei. Ele serve para aplicar as regras legais ao caso concreto do certame, não podendo suprir a ausência de lei específica que discipline a política de cotas no âmbito do ente federativo correspondente.\n\n### Dispositivo legal\n\n* **Artigo 37, inciso VIII, da Constituição Federal de 1988** (Disponível em: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "f8d703312ae08b40e92843a5cb47b4d190f0d011fb3fbc6084ae3be6e64f959c"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:060",
+      "source_id": "agente_administrativo:60",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da administração pública, julgue os itens a seguir à luz da CF e do entendimento do STF.\n\nA proibição de acumulação de empregos e funções públicas não se aplica às sociedades controladas pelo poder público, estando limitada na administração indireta às autarquias, fundações, empresas públicas e sociedades de economia mista.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 60; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "9bad43b77df03af523e9cf9aab02139a4ee9a273bfe88dfb3893358d959543a8",
+        "original_numeric_id": 60,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está errado. A proibição constitucional de acumulação remunerada de cargos, empregos e funções públicas não se restringe apenas às entidades clássicas da administração indireta (autarquias, fundações, empresas públicas e sociedades de economia mista). A Constituição Federal estende expressamente essa vedação às subsidiárias dessas entidades e às sociedades controladas, direta ou indiretamente, pelo poder público.\n\n**Detalhe importante:** A abrangência da vedação visa evitar o acúmulo de remunerações pagas com recursos públicos ou sob controle estatal, protegendo a moralidade e a eficiência administrativa em toda a estrutura corporativa do Estado.\n\n### Dispositivo legal\n\n* **Artigo 37, inciso XVII, da Constituição Federal de 1988** (Disponível em: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "2097e5ed793ff5bde02eb98c625ad680761e155b676ce40946d3967a577048ee"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:062",
+      "source_id": "agente_administrativo:62",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens subsequentes, pertinentes à administração direta e indireta e a atos administrativos.\n\nEm um município, a prefeitura e a câmara municipal integram a administração direta.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 62; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "8ffa71a96501a36b7442e4b13f00011ea8cb3a39c7b3db785349bcb54f3433da",
+        "original_numeric_id": 62,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. No âmbito municipal, a Administração Pública Direta é constituída pelo próprio ente político federativo (o Município) e pelos órgãos que compõem a sua estrutura interna, criados por meio do processo de desconcentração administrativa.\n\nA prefeitura (representando o Poder Executivo municipal) e a câmara municipal (representando o Poder Legislativo municipal) são órgãos públicos desprovidos de personalidade jurídica própria. Eles integram a pessoa jurídica de direito público interno que é o Município. Portanto, fazem parte da Administração Direta municipal.\n\nA Administração Indireta, por outro lado, seria composta por entidades com personalidade jurídica própria criadas ou autorizadas por lei, tais como autarquias, fundações públicas, empresas públicas e sociedades de economia mista.\n\n**Dispositivo legal**\n\n[Artigo 37, caput, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art37)",
+        "source_reference": null
+      },
+      "source_content_hash": "8be7fea0a13c2684fb53cc0da1843baf1b1aee939e2823770b62714d3c8998cf"
+    }
+  ]
+}

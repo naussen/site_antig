@@ -1,0 +1,92 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-prova_i09_tipo_001-informatica-c342629f0954-0cb70b65bf5c",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "c342629f095462ff4e615186279853316fc5c316eb5e6f07a33d672c888948e0",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "8a1d40d330f3a1f0c9c5c49977037cbc600422d057f7b497ba1fcf422d8196bb",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "0cb70b65bf5ce409f1a70de6bd816b37cadc07c6d58728456f7d04bb2e136d21",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:020",
+      "source_id": "prova_i09_tipo_001:20",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Em relação a correio eletrônico, é correto afirmar:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 20; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Endereços de correio eletrônico no padrão nome@xxx.xxx.com.br, estão restritos a destinatários do território brasileiro, apenas.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Exceto o campo assunto, cada campo de cabeçalho do correio eletrônico tem seu tamanho máximo limitado a dez caracteres.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "O web mail é um aplicativo que permite o envio e a recepção de mensagens de correio eletrônico, desde que não exista anexos nessas mensagens.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Todo programa de correio eletrônico disponibiliza funcionalidades que permitem encaminhar uma mensagem recebida a um ou a vários endereços de correio eletrônico.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Todo programa de correio eletrônico possui mecanismos que detectam e bloqueiam mensagens infectadas por vírus de computador.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Microinformática",
+        "source_content_hash": "ebbe9e856aac5f7f7d2ad6866c0b8f1a391a7dd520b079eb18971a47f973ca71",
+        "original_numeric_id": 20,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta aponta uma característica fundamental de qualquer cliente de correio eletrônico (*MUA - Mail User Agent*), que é a capacidade de encaminhar (*forward*) mensagens recebidas para um ou mais destinatários.\n\n*   **A está incorreta** porque o sufixo \".br\" indica apenas que o domínio está registrado sob a autoridade de registro do Brasil, mas mensagens enviadas para esses endereços podem ser acessadas de qualquer lugar do mundo, não havendo restrição geográfica de entrega ou acesso ao território brasileiro.\n*   **B está incorreta** porque os campos de cabeçalho (como \"Para\", \"Cc\", \"Assunto\") não possuem limitação tão restrita quanto dez caracteres.\n*   **C está incorreta** porque o *webmail* é apenas uma interface baseada em navegador para acessar o serviço de e-mail, suportando perfeitamente o envio e recebimento de arquivos anexos.\n*   **E está incorreta** porque a detecção e o bloqueio de vírus não são recursos obrigatórios ou presentes em *todos* os programas de correio eletrônico; muitos clientes simples dependem de antivírus locais ou de filtros aplicados diretamente nos servidores de e-mail (*MTA*).",
+        "source_reference": null
+      },
+      "source_content_hash": "6c72c237a5f7087c72ec44eb1e83c3d3604890409e1b6ec034e5cc7197a306e6"
+    }
+  ]
+}

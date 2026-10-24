@@ -1,0 +1,485 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-analista_administrativo-administracao-publica-8019bd729395-dbfc5d4e4ff6",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "8019bd729395aac2a736d513a35ce802cbccd0df43daacdebf05555ba2785988",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "0fc614916228bfa45383f0df7c8e33baaccace7bb05b812e4da6dc6bb1c76217",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "dbfc5d4e4ff645672d965d09102295dbc4a31f2f5f33bd93bab21502fc3e90dc",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-publica",
+    "name": "Administração Pública"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:076",
+      "source_id": "analista_administrativo:76",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito a políticas públicas, julgue os itens seguintes.\n\nOs objetivos e a decisão quanto aos modelos a serem adotados em uma política pública são definidos na fase de implementação.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 76; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Políticas Públicas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Políticas Públicas",
+        "source_content_hash": "5c6bfe0ddd2b893b449da73007b9564d5d3c75a662d6ff08b7436307182c85c1",
+        "original_numeric_id": 76,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "politicas-publicas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque a definição de objetivos e a escolha dos modelos a serem adotados em uma política pública ocorrem nas fases de formulação e de tomada de decisão (decisão política), e não na fase de implementação. \n\nA implementação corresponde à etapa de execução prática, em que os planos, decisões e diretrizes previamente estabelecidos são colocados em ação por meio de recursos e ações concretas para produzir os resultados pretendidos.",
+        "source_reference": null
+      },
+      "source_content_hash": "df278128c8db885549fb180f0a2ea0a2b569902d878c5b4ac31dba9605785890"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:078",
+      "source_id": "analista_administrativo:78",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito a políticas públicas, julgue os itens seguintes.\n\nA participação social nas políticas públicas do Brasil permite maior visibilidade das demandas sociais, promove avanços quanto à igualdade e equidade nas políticas implementadas e amplia a defesa pelos direitos sociais.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 78; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Políticas Públicas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Políticas Públicas",
+        "source_content_hash": "89ec378c87aa1b920296df893c955876bb42c16a68dcfca7034eed2acb7f8b00",
+        "original_numeric_id": 78,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "politicas-publicas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A participação social, por meio de conselhos, audiências públicas, conferências e outros mecanismos de controle social, atua como um canal democrático que dá visibilidade às demandas de diferentes setores da sociedade civil. \n\nEsse processo contribui para a formulação de políticas mais inclusivas e aderentes à realidade, promovendo a equidade e fortalecendo a defesa e a garantia dos direitos sociais previstos constitucionalmente.",
+        "source_reference": null
+      },
+      "source_content_hash": "0ad5538cd3d438f8a9ecb2f8c7a40d2965ba8e74546aaa9050623d2ab4c6caf3"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:079",
+      "source_id": "analista_administrativo:79",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito a políticas públicas, julgue os itens seguintes.\n\nNo que se refere aos aspectos orçamentários e financeiros, para que uma política pública seja implementada, devem ser respeitados os procedimentos disciplinados nos principais instrumentos orçamentários, quais sejam: plano plurianual, lei de diretrizes orçamentárias e lei orçamentária anual.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 79; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Políticas Públicas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Políticas Públicas",
+        "source_content_hash": "14321a2b60035ec3e55fc176aa333435978349c982940c8f19e2ccad3c40efe2",
+        "original_numeric_id": 79,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "politicas-publicas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A implementação de políticas públicas que demandam a aplicação de recursos financeiros do Estado está estritamente vinculada ao planejamento e à execução orçamentária. No ordenamento jurídico brasileiro, esse processo é regido por três instrumentos fundamentais estabelecidos pela Constituição Federal de 1988:\n\n1. **Plano Plurianual (PPA):** Define as diretrizes, objetivos e metas da administração pública para as despesas de capital e outras delas decorrentes, bem como para as relativas aos programas de duração continuada, com vigência de quatro anos.\n2. **Lei de Diretrizes Orçamentárias (LDO):** Compreende as metas e prioridades da administração pública federal, orienta a elaboração da lei orçamentária anual e dispõe sobre as alterações na legislação tributária.\n3. **Lei Orçamentária Anual (LOA):** Estima as receitas e fixa as despesas para o exercício financeiro, viabilizando a execução concreta das ações governamentais.\n\nPortanto, a conformidade com esses instrumentos é requisito indispensável para a legalidade e a viabilidade financeira de qualquer política pública.\n\n**Dispositivo legal**\n\n[Art. 165 da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "62cfec4db59e8f3ccf029822bad067653ffa0c02bc5c42cb063d0300b10ff0f0"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:102",
+      "source_id": "analista_administrativo:102",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando os diversos aspectos do comportamento organizacional e da gestão de pessoas, julgue os itens a seguir.\n\nNa atualidade, desenvolver tecnologias para a gestão de pessoas é uma das atribuições básicas dos órgãos de recursos humanos.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 102; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "cb3f633abae53b3463114623ef08c550b27e6ebf208064e9196f3e03ab355002",
+        "original_numeric_id": 102,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. O desenvolvimento de tecnologias (como a programação de softwares, criação de sistemas de informação e infraestrutura de rede) é uma atribuição típica da área de Tecnologia da Informação (TI), e não dos órgãos de Recursos Humanos (RH). \n\nA atuação do órgão de gestão de pessoas em relação à tecnologia é de natureza finalística e estratégica: atua como demandante, especificador de requisitos, gestor de processos e usuário das ferramentas tecnológicas para otimizar a gestão do capital humano, mas não no desenvolvimento técnico dessas soluções.",
+        "source_reference": null
+      },
+      "source_content_hash": "9e6f9bb297026c04a65bcda78082599dbedd511aa94b5fae53c1d6af9dc872cf"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:103",
+      "source_id": "analista_administrativo:103",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando os diversos aspectos do comportamento organizacional e da gestão de pessoas, julgue os itens a seguir.\n\nOs principais desafios dos órgãos de recursos humanos envolvem a adoção de inovações tecnológicas, a gestão de mudanças, a gestão dos talentos e a capacidade de resposta ao contexto externo.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 103; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "70bb763db8d6b5bc263a03239d6a6abf8b7737b873e93d03160915993b2d0bae",
+        "original_numeric_id": 103,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A gestão de pessoas contemporânea enfrenta desafios complexos decorrentes da dinâmica do ambiente organizacional e social. Entre os principais desafios destacados pela literatura da área, encontram-se:\n\n* **Adoção de inovações tecnológicas:** Integração de ferramentas digitais e automação nos processos de RH.\n* **Gestão de mudanças:** Apoio à organização e aos colaboradores na transição e adaptação a novos cenários.\n* **Gestão de talentos:** Atração, desenvolvimento e retenção de profissionais qualificados.\n* **Capacidade de resposta ao contexto externo:** Alinhamento das práticas internas às demandas de mercado, legislação e transformações sociais.",
+        "source_reference": null
+      },
+      "source_content_hash": "51f88b80872fd20c2e40739f13f05c7eddf4c710de6133c62274d31f88bbc032"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:104",
+      "source_id": "analista_administrativo:104",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando os diversos aspectos do comportamento organizacional e da gestão de pessoas, julgue os itens a seguir.\n\nUm líder que influencia seus seguidores a buscarem os objetivos organizacionais em detrimento dos próprios interesses é considerado um líder transacional.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 104; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "fe48ba07090a3b3a1282d30fc387399d7b56d53a22a2a7805701a9c4bf4636a4",
+        "original_numeric_id": 104,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. O comportamento descrito — influenciar e inspirar os seguidores a transcenderem seus próprios interesses em prol dos objetivos e da visão da organização — é característico do **líder transformacional**.\n\nPor outro lado, o **líder transacional** baseia sua liderança em relações de troca (transações), guiando ou motivando seus seguidores na direção das metas estabelecidas por meio do esclarecimento das funções, das tarefas exigidas e da oferta de recompensas ou punições conforme o desempenho.",
+        "source_reference": null
+      },
+      "source_content_hash": "8fa58f6b4c4014daf20229bb80ac0abc234325382266110a26e5f71824e7d0e5"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:105",
+      "source_id": "analista_administrativo:105",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando os diversos aspectos do comportamento organizacional e da gestão de pessoas, julgue os itens a seguir.\n\nA resolução alternativa de conflitos no trabalho, seja por meio de soluções informais, seja por mediação ou arbitragem, evita processos onerosos.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 105; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "a53cd000d0464d4b897a94569f57e270aefd8736f91af85591389960905c2488",
+        "original_numeric_id": 105,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A resolução alternativa de conflitos (conhecida pela sigla ADR - *Alternative Dispute Resolution*) engloba métodos como negociação, mediação, conciliação e arbitragem.\n\nEsses métodos visam resolver disputas de forma mais rápida, flexível e menos formal do que a via judicial tradicional. Consequentemente, evitam os custos financeiros elevados (honorários advocatícios, custas processuais, perda de produtividade) e o desgaste emocional associados a processos judiciais longos e onerosos.\n\nPortanto, a afirmação está correta ao apontar que tais mecanismos evitam processos onerosos.",
+        "source_reference": null
+      },
+      "source_content_hash": "c31ca33dc53e325f3a281c0abce5e17f4a4c549834154a83e6b57f571565ccf1"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:107",
+      "source_id": "analista_administrativo:107",
+      "question_type": "true_false",
+      "statement_markdown": "No tocante às políticas e práticas de gestão de pessoas, julgue os itens que se seguem.\n\nSegundo a perspectiva francesa, as competências não devem estar circunscritas a um trabalho prescrito, mas, sim, aos desafios inerentes à atuação profissional.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 107; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "1a2275a941f3ab59fbd041acf060f242816deb525024abbe3a532fc6ad560ac1",
+        "original_numeric_id": 107,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Existem duas grandes correntes teóricas sobre competências no ambiente organizacional:\n\n*   **Corrente Americana (foco na pessoa):** Representada por autores como McClelland e Boyatzis, foca nos atributos individuais (conhecimentos, habilidades e atitudes - CHA) que geram desempenho superior.\n*   **Corrente Francesa (foco no processo/situação):** Representada por autores como Philippe Zarifian e Guy Le Boterf, foca no \"saber agir\" e na mobilização de recursos em situações reais de trabalho. Para essa perspectiva, a competência não se limita ao cumprimento de tarefas prescritas (descrição de cargos estática), mas sim à capacidade de enfrentar imprevistos, resolver problemas e responder aos desafios dinâmicos da atuação profissional.\n\nPortanto, a afirmação está correta ao descrever a essência da perspectiva francesa.",
+        "source_reference": null
+      },
+      "source_content_hash": "153066242cca4d49da41ef7a8375af97306577786e2ad1db79d5c7aba6121927"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:109",
+      "source_id": "analista_administrativo:109",
+      "question_type": "true_false",
+      "statement_markdown": "No tocante às políticas e práticas de gestão de pessoas, julgue os itens que se seguem.\n\nAo avaliar o desempenho de seu subordinado baseando-se nos comportamentos mais recentes dele em vez de observar seu comportamento ao longo do tempo, o gestor comete o erro de tendência central.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 109; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "0aa3c4ca9864c5c7dc34fad61bed67924c7f8ac4c2e517c069e3e486312d695c",
+        "original_numeric_id": 109,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item descreve incorretamente o erro de avaliação cometido pelo gestor:\n\n*   **Efeito de Recência (ou Erro de Recência):** É o viés que ocorre quando o avaliador julga o desempenho do colaborador com base apenas nos acontecimentos mais recentes (positivos ou negativos) próximos ao período da avaliação, desconsiderando o comportamento apresentado ao longo de todo o período avaliado.\n*   **Erro de Tendência Central:** Ocorre quando o avaliador, por receio de prejudicar ou de criar conflitos, evita atribuir notas muito altas ou muito baixas, avaliando todos os colaboradores na média (zona intermediária da escala).\n\nComo o enunciado descreve o efeito de recência, mas o denomina como tendência central, o item está incorreto.",
+        "source_reference": null
+      },
+      "source_content_hash": "dfc43f7915fa54fdc0f881ff622eb7a98ba123028c31b8c4aca94821729a1a1d"
+    }
+  ]
+}

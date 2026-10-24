@@ -1,0 +1,1128 @@
+{
+  "schema_version": "pro-questions/pdf-selected-source/v1",
+  "original_file_name": "analista_administrativo.json",
+  "original_source_sha256": "0fc614916228bfa45383f0df7c8e33baaccace7bb05b812e4da6dc6bb1c76217",
+  "source": {
+    "exam_file": "analista_administrativo.pdf",
+    "exam_sha256": "9c6dbfd97ef18974d6f7ae94ca16563e1b0271fe0c5a37d66a8831698d46d6d2",
+    "answer_file": "analista_administrativo_gabarito.pdf",
+    "answer_sha256": "d5156b03415b7ae9947239c3fa42fb3e97e1afb7524d2eb632b50055d33f7d6c",
+    "rejected_answer_file": null,
+    "exam_metadata": {
+      "banca": "CEBRASPE",
+      "orgao": "IBAMA",
+      "cargo": "Analista Administrativo",
+      "especialidade": null,
+      "ano": 2021,
+      "tipo_caderno": "651CB1_01N129080 / 651001_01N205134",
+      "titulo_literal": "IBAMA – Edital: 2021",
+      "questoes_presentes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110,
+        111,
+        112,
+        113,
+        114,
+        115,
+        116,
+        117,
+        118,
+        119,
+        120
+      ]
+    },
+    "answer_metadata": {
+      "titulo_literal": "CONCURSO PÚBLICO PARA O PROVIMENTO DE VAGAS NOS CARGOS DE ANALISTA ADMINISTRATIVO, ANALISTA AMBIENTAL E TÉCNICO AMBIENTAL",
+      "banca": "Cebraspe",
+      "orgao": "IBAMA",
+      "cargo": "Analista Administrativo",
+      "ano": 2021,
+      "tipo_caderno": null,
+      "status": "definitivo"
+    },
+    "answer_notes": [],
+    "rejected_answer_metadata": null
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:022",
+      "source_id": "analista_administrativo:22",
+      "source_content_hash": "c78d2766f4d31c2377ba28b3822ad49c8a569b639eabf7894f0b1ae3978f5496",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à administração pública e sua organização, julgue os itens a seguir.\n\nO IBAMA é uma fundação pública, serviço autônomo criado por lei, e tem personalidade jurídica, patrimônio e receita próprios para executar atividades típicas da administração pública que requeiram, para seu melhor funcionamento, gestão administrativa e financeira descentralizada.",
+      "subject": "Direito Administrativo",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 22; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 22,
+        "exam_page": 2,
+        "answer_page": 1,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "Com relação à administração pública e sua organização, julgue os itens a seguir.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0012.json",
+          "legal_basis": {
+            "reference": "Decreto-Lei nº 200/1967, art. 5º, I; Lei nº 7.735/1989, art. 2º",
+            "official_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm"
+          },
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "topics": [],
+      "explanation": "A afirmação está incorreta por apresentar dois erros conceituais relativos à organização administrativa e à natureza jurídica do IBAMA:\n\n1. **Natureza Jurídica do IBAMA:** O Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (IBAMA) é uma **autarquia federal**, criada pela Lei nº 7.735/1989, e não uma fundação pública.\n2. **Incompatibilidade de Conceito:** A definição apresentada no enunciado (\"serviço autônomo criado por lei, com personalidade jurídica, patrimônio e receita próprios para executar atividades típicas da administração pública...\") corresponde exatamente à definição legal de **autarquia**, conforme estabelecido no art. 5º, inciso I, do Decreto-Lei nº 200/1967, e não ao conceito de fundação pública.\n\n**Pegadinha comum:** A questão tenta confundir o candidato ao misturar o nome de uma entidade (IBAMA), o conceito legal de outra espécie de entidade (autarquia) e rotulá-la erroneamente como \"fundação pública\".\n\n### Dispositivo legal\n* **Decreto-Lei nº 200/1967, art. 5º, inciso I** ([Planalto](https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm))\n* **Lei nº 7.735/1989, art. 2º** ([Planalto](https://www.planalto.gov.br/ccivil_03/leis/l7735.htm))",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:046",
+      "source_id": "analista_administrativo:46",
+      "source_content_hash": "29bb60e9f374e159c6d86c56267e8490a8cf1cc22b712eb38374aab002404cc4",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando a hipótese de que, no seu exercício profissional, determinado servidor público tenha utilizado, para fins de interesse particular, os serviços de servidor subordinado a ele, julgue os itens seguintes.\n\nA atuação do superior hierárquico, nesse caso, constitui ato de improbidade administrativa que importa lesão ao erário.",
+      "subject": "Direito Administrativo",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 46; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 46,
+        "exam_page": 3,
+        "answer_page": 1,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "Considerando a hipótese de que, no seu exercício profissional, determinado servidor público tenha utilizado, para fins de interesse particular, os serviços de servidor subordinado a ele, julgue os itens seguintes.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0015.json",
+          "legal_basis": {
+            "reference": "Art. 9º, inciso IV, da Lei nº 8.429/1992",
+            "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm"
+          },
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "topics": [],
+      "explanation": "A assertiva está **errada**.\n\nA conduta do superior hierárquico que utiliza os serviços de um servidor subordinado para fins de interesse particular configura ato de improbidade administrativa. Contudo, a capitulação legal correta para essa conduta é o **enriquecimento ilícito**, tipificado no art. 9º, inciso IV, da Lei nº 8.429/1992, e não ato que importa lesão ao erário (art. 10).\n\nO dispositivo legal veda expressamente a utilização, em obra ou serviço particular, do trabalho de servidores públicos, empregados ou terceiros contratados pelas entidades da Administração Pública, caracterizando o proveito patrimonial indevido por parte do agente público.\n\n### Dispositivo legal\n\n* **Lei nº 8.429/1992, Art. 9º, inciso IV:**\n> \"Art. 9º Constitui ato de improbidade administrativa importando em enriquecimento ilícito auferir, mediante a prática de ato doloso, qualquer tipo de vantagem patrimonial indevida em razão do exercício de cargo, de mandato, de função, de emprego ou de atividade nas entidades referidas no art. 1º desta Lei, e notadamente:\n> (...)\n> IV - utilizar, em obra ou serviço particular, qualquer bem móvel, de propriedade ou à disposição de qualquer das entidades referidas no art. 1º desta Lei, bem como o trabalho de servidores, de empregados ou de terceiros contratados por essas entidades;\"",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:048",
+      "source_id": "analista_administrativo:48",
+      "source_content_hash": "a5429a9abfc8e525332a7252c290ed6747ca0104981361bc7a7f149ce8c81cdb",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando a hipótese de que, no seu exercício profissional, determinado servidor público tenha utilizado, para fins de interesse particular, os serviços de servidor subordinado a ele, julgue os itens seguintes.\n\nTal conduta do superior hierárquico configurará ato de improbidade administrativa apenas se tiver sido praticada de forma dolosa.",
+      "subject": "Direito Administrativo",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 48; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 48,
+        "exam_page": 3,
+        "answer_page": 1,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "Considerando a hipótese de que, no seu exercício profissional, determinado servidor público tenha utilizado, para fins de interesse particular, os serviços de servidor subordinado a ele, julgue os itens seguintes.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0015.json",
+          "legal_basis": {
+            "reference": "Art. 1º, §§ 1º e 2º, e Art. 9º, inciso IV, da Lei nº 8.429/1992",
+            "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm"
+          },
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "topics": [],
+      "explanation": "A conduta descrita no enunciado — utilizar, para fins de interesse particular, os serviços de servidor subordinado — amolda-se à conduta tipificada como ato de improbidade administrativa que importa enriquecimento ilícito, prevista no art. 9º, inciso IV, da Lei nº 8.429/1992 (Lei de Improbidade Administrativa - LIA).\n\nCom as alterações substanciais promovidas pela Lei nº 14.230/2021, o sistema de responsabilização por improbidade administrativa passou a exigir, de forma categórica, a presença de dolo para a configuração de qualquer ato de improbidade (seja ele de enriquecimento ilícito, prejuízo ao erário ou atentado contra os princípios da administração pública). O dolo é definido pela legislação como a vontade livre e consciente de alcançar o resultado ilícito tipificado na lei, não bastando a mera voluntariedade ou a conduta culposa (negligência, imprudência ou imperícia).\n\nPortanto, a afirmação de que tal conduta configurará ato de improbidade administrativa apenas se tiver sido praticada de forma dolosa está correta.\n\n### Dispositivo legal\n\n* **Lei nº 8.429/1992**, Art. 1º, §§ 1º e 2º, e Art. 9º, inciso IV (disponível em: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l8429.htm)).",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:076",
+      "source_id": "analista_administrativo:76",
+      "source_content_hash": "5c6bfe0ddd2b893b449da73007b9564d5d3c75a662d6ff08b7436307182c85c1",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito a políticas públicas, julgue os itens seguintes.\n\nOs objetivos e a decisão quanto aos modelos a serem adotados em uma política pública são definidos na fase de implementação.",
+      "subject": "Políticas Públicas",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 76; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 76,
+        "exam_page": 5,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "No que diz respeito a políticas públicas, julgue os itens seguintes.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0018.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "topics": [],
+      "explanation": "O item está incorreto porque a definição de objetivos e a escolha dos modelos a serem adotados em uma política pública ocorrem nas fases de formulação e de tomada de decisão (decisão política), e não na fase de implementação. \n\nA implementação corresponde à etapa de execução prática, em que os planos, decisões e diretrizes previamente estabelecidos são colocados em ação por meio de recursos e ações concretas para produzir os resultados pretendidos.",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:078",
+      "source_id": "analista_administrativo:78",
+      "source_content_hash": "89ec378c87aa1b920296df893c955876bb42c16a68dcfca7034eed2acb7f8b00",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito a políticas públicas, julgue os itens seguintes.\n\nA participação social nas políticas públicas do Brasil permite maior visibilidade das demandas sociais, promove avanços quanto à igualdade e equidade nas políticas implementadas e amplia a defesa pelos direitos sociais.",
+      "subject": "Políticas Públicas",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 78; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 78,
+        "exam_page": 5,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "No que diz respeito a políticas públicas, julgue os itens seguintes.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0018.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "topics": [],
+      "explanation": "O item está correto. A participação social, por meio de conselhos, audiências públicas, conferências e outros mecanismos de controle social, atua como um canal democrático que dá visibilidade às demandas de diferentes setores da sociedade civil. \n\nEsse processo contribui para a formulação de políticas mais inclusivas e aderentes à realidade, promovendo a equidade e fortalecendo a defesa e a garantia dos direitos sociais previstos constitucionalmente.",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:079",
+      "source_id": "analista_administrativo:79",
+      "source_content_hash": "14321a2b60035ec3e55fc176aa333435978349c982940c8f19e2ccad3c40efe2",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito a políticas públicas, julgue os itens seguintes.\n\nNo que se refere aos aspectos orçamentários e financeiros, para que uma política pública seja implementada, devem ser respeitados os procedimentos disciplinados nos principais instrumentos orçamentários, quais sejam: plano plurianual, lei de diretrizes orçamentárias e lei orçamentária anual.",
+      "subject": "Políticas Públicas",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 79; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 79,
+        "exam_page": 5,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "No que diz respeito a políticas públicas, julgue os itens seguintes.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0018.json",
+          "legal_basis": {
+            "reference": "Art. 165 da Constituição Federal de 1988",
+            "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+          },
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "topics": [],
+      "explanation": "A implementação de políticas públicas que demandam a aplicação de recursos financeiros do Estado está estritamente vinculada ao planejamento e à execução orçamentária. No ordenamento jurídico brasileiro, esse processo é regido por três instrumentos fundamentais estabelecidos pela Constituição Federal de 1988:\n\n1. **Plano Plurianual (PPA):** Define as diretrizes, objetivos e metas da administração pública para as despesas de capital e outras delas decorrentes, bem como para as relativas aos programas de duração continuada, com vigência de quatro anos.\n2. **Lei de Diretrizes Orçamentárias (LDO):** Compreende as metas e prioridades da administração pública federal, orienta a elaboração da lei orçamentária anual e dispõe sobre as alterações na legislação tributária.\n3. **Lei Orçamentária Anual (LOA):** Estima as receitas e fixa as despesas para o exercício financeiro, viabilizando a execução concreta das ações governamentais.\n\nPortanto, a conformidade com esses instrumentos é requisito indispensável para a legalidade e a viabilidade financeira de qualquer política pública.\n\n**Dispositivo legal**\n\n[Art. 165 da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:102",
+      "source_id": "analista_administrativo:102",
+      "source_content_hash": "cb3f633abae53b3463114623ef08c550b27e6ebf208064e9196f3e03ab355002",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando os diversos aspectos do comportamento organizacional e da gestão de pessoas, julgue os itens a seguir.\n\nNa atualidade, desenvolver tecnologias para a gestão de pessoas é uma das atribuições básicas dos órgãos de recursos humanos.",
+      "subject": "Gestão de Pessoas",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 102; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 102,
+        "exam_page": 6,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "Considerando os diversos aspectos do comportamento organizacional e da gestão de pessoas, julgue os itens a seguir.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0020.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "topics": [],
+      "explanation": "O item está incorreto. O desenvolvimento de tecnologias (como a programação de softwares, criação de sistemas de informação e infraestrutura de rede) é uma atribuição típica da área de Tecnologia da Informação (TI), e não dos órgãos de Recursos Humanos (RH). \n\nA atuação do órgão de gestão de pessoas em relação à tecnologia é de natureza finalística e estratégica: atua como demandante, especificador de requisitos, gestor de processos e usuário das ferramentas tecnológicas para otimizar a gestão do capital humano, mas não no desenvolvimento técnico dessas soluções.",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:103",
+      "source_id": "analista_administrativo:103",
+      "source_content_hash": "70bb763db8d6b5bc263a03239d6a6abf8b7737b873e93d03160915993b2d0bae",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando os diversos aspectos do comportamento organizacional e da gestão de pessoas, julgue os itens a seguir.\n\nOs principais desafios dos órgãos de recursos humanos envolvem a adoção de inovações tecnológicas, a gestão de mudanças, a gestão dos talentos e a capacidade de resposta ao contexto externo.",
+      "subject": "Gestão de Pessoas",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 103; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 103,
+        "exam_page": 6,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "Considerando os diversos aspectos do comportamento organizacional e da gestão de pessoas, julgue os itens a seguir.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0020.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "topics": [],
+      "explanation": "O item está correto. A gestão de pessoas contemporânea enfrenta desafios complexos decorrentes da dinâmica do ambiente organizacional e social. Entre os principais desafios destacados pela literatura da área, encontram-se:\n\n* **Adoção de inovações tecnológicas:** Integração de ferramentas digitais e automação nos processos de RH.\n* **Gestão de mudanças:** Apoio à organização e aos colaboradores na transição e adaptação a novos cenários.\n* **Gestão de talentos:** Atração, desenvolvimento e retenção de profissionais qualificados.\n* **Capacidade de resposta ao contexto externo:** Alinhamento das práticas internas às demandas de mercado, legislação e transformações sociais.",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:104",
+      "source_id": "analista_administrativo:104",
+      "source_content_hash": "fe48ba07090a3b3a1282d30fc387399d7b56d53a22a2a7805701a9c4bf4636a4",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando os diversos aspectos do comportamento organizacional e da gestão de pessoas, julgue os itens a seguir.\n\nUm líder que influencia seus seguidores a buscarem os objetivos organizacionais em detrimento dos próprios interesses é considerado um líder transacional.",
+      "subject": "Gestão de Pessoas",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 104; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 104,
+        "exam_page": 6,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "Considerando os diversos aspectos do comportamento organizacional e da gestão de pessoas, julgue os itens a seguir.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0020.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "topics": [],
+      "explanation": "O item está incorreto. O comportamento descrito — influenciar e inspirar os seguidores a transcenderem seus próprios interesses em prol dos objetivos e da visão da organização — é característico do **líder transformacional**.\n\nPor outro lado, o **líder transacional** baseia sua liderança em relações de troca (transações), guiando ou motivando seus seguidores na direção das metas estabelecidas por meio do esclarecimento das funções, das tarefas exigidas e da oferta de recompensas ou punições conforme o desempenho.",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:105",
+      "source_id": "analista_administrativo:105",
+      "source_content_hash": "a53cd000d0464d4b897a94569f57e270aefd8736f91af85591389960905c2488",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando os diversos aspectos do comportamento organizacional e da gestão de pessoas, julgue os itens a seguir.\n\nA resolução alternativa de conflitos no trabalho, seja por meio de soluções informais, seja por mediação ou arbitragem, evita processos onerosos.",
+      "subject": "Gestão de Pessoas",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 105; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 105,
+        "exam_page": 6,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "Considerando os diversos aspectos do comportamento organizacional e da gestão de pessoas, julgue os itens a seguir.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0021.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "topics": [],
+      "explanation": "A resolução alternativa de conflitos (conhecida pela sigla ADR - *Alternative Dispute Resolution*) engloba métodos como negociação, mediação, conciliação e arbitragem.\n\nEsses métodos visam resolver disputas de forma mais rápida, flexível e menos formal do que a via judicial tradicional. Consequentemente, evitam os custos financeiros elevados (honorários advocatícios, custas processuais, perda de produtividade) e o desgaste emocional associados a processos judiciais longos e onerosos.\n\nPortanto, a afirmação está correta ao apontar que tais mecanismos evitam processos onerosos.",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:107",
+      "source_id": "analista_administrativo:107",
+      "source_content_hash": "1a2275a941f3ab59fbd041acf060f242816deb525024abbe3a532fc6ad560ac1",
+      "question_type": "true_false",
+      "statement_markdown": "No tocante às políticas e práticas de gestão de pessoas, julgue os itens que se seguem.\n\nSegundo a perspectiva francesa, as competências não devem estar circunscritas a um trabalho prescrito, mas, sim, aos desafios inerentes à atuação profissional.",
+      "subject": "Gestão de Pessoas",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 107; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 107,
+        "exam_page": 6,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "No tocante às políticas e práticas de gestão de pessoas, julgue os itens que se seguem.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0021.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "topics": [],
+      "explanation": "Existem duas grandes correntes teóricas sobre competências no ambiente organizacional:\n\n*   **Corrente Americana (foco na pessoa):** Representada por autores como McClelland e Boyatzis, foca nos atributos individuais (conhecimentos, habilidades e atitudes - CHA) que geram desempenho superior.\n*   **Corrente Francesa (foco no processo/situação):** Representada por autores como Philippe Zarifian e Guy Le Boterf, foca no \"saber agir\" e na mobilização de recursos em situações reais de trabalho. Para essa perspectiva, a competência não se limita ao cumprimento de tarefas prescritas (descrição de cargos estática), mas sim à capacidade de enfrentar imprevistos, resolver problemas e responder aos desafios dinâmicos da atuação profissional.\n\nPortanto, a afirmação está correta ao descrever a essência da perspectiva francesa.",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:109",
+      "source_id": "analista_administrativo:109",
+      "source_content_hash": "0aa3c4ca9864c5c7dc34fad61bed67924c7f8ac4c2e517c069e3e486312d695c",
+      "question_type": "true_false",
+      "statement_markdown": "No tocante às políticas e práticas de gestão de pessoas, julgue os itens que se seguem.\n\nAo avaliar o desempenho de seu subordinado baseando-se nos comportamentos mais recentes dele em vez de observar seu comportamento ao longo do tempo, o gestor comete o erro de tendência central.",
+      "subject": "Gestão de Pessoas",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 109; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 109,
+        "exam_page": 6,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "No tocante às políticas e práticas de gestão de pessoas, julgue os itens que se seguem.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0021.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "topics": [],
+      "explanation": "O item descreve incorretamente o erro de avaliação cometido pelo gestor:\n\n*   **Efeito de Recência (ou Erro de Recência):** É o viés que ocorre quando o avaliador julga o desempenho do colaborador com base apenas nos acontecimentos mais recentes (positivos ou negativos) próximos ao período da avaliação, desconsiderando o comportamento apresentado ao longo de todo o período avaliado.\n*   **Erro de Tendência Central:** Ocorre quando o avaliador, por receio de prejudicar ou de criar conflitos, evita atribuir notas muito altas ou muito baixas, avaliando todos os colaboradores na média (zona intermediária da escala).\n\nComo o enunciado descreve o efeito de recência, mas o denomina como tendência central, o item está incorreto.",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:111",
+      "source_id": "analista_administrativo:111",
+      "source_content_hash": "c388a87b743aa4d32ed1c4fd3e15dae51c1d3699a6361bf5bb064a583b8eb7c4",
+      "question_type": "true_false",
+      "statement_markdown": "Assumindo 2 como valor aproximado de $1,1^7$, julgue os itens a seguir, relacionados aos sistemas de amortização.\n\nPara um empréstimo de R$ 270.000,00 realizado no sistema de amortização misto, com taxa de juros de 10% ao ano e que será pago em 9 parcelas anuais, a quinta prestação é superior a R$ 45.000,00.",
+      "subject": "Matemática Financeira",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 111; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 111,
+        "exam_page": 6,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "Assumindo 2 como valor aproximado de $1,1^7$, julgue os itens a seguir, relacionados aos sistemas de amortização.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0021.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": "output_pdf_comentarios\\imagens\\pdf_analista_administrativo_111.png"
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "topics": [],
+      "explanation": "No Sistema de Amortização Misto (SAM), cada prestação é a média aritmética simples entre a prestação correspondente do Sistema de Amortização Constante (SAC) e do Sistema Francês de Amortização (Price).\n\n**1) Cálculo da 5ª prestação no SAC ($P_{SAC, 5}$):**\n*   A amortização constante ($A$) é dada pela divisão do saldo devedor inicial pelo número de parcelas: $270.000 / 9 = 30.000$.\n*   O saldo devedor após o pagamento da 4ª parcela ($SD_4$) é: $270.000 - (4 \\times 30.000) = 150.000$.\n*   Os juros da 5ª parcela ($J_5$) incidem sobre o saldo devedor do período anterior: $150.000 \\times 10\\% = 15.000$.\n*   A prestação no SAC é a soma da amortização com os juros: $P_{SAC, 5} = 30.000 + 15.000 = 45.000$.\n\n**2) Cálculo da prestação no Sistema Price ($P_{Price}$):**\n*   A fórmula da prestação Price é: $P_{Price} = SD_0 \\times \\frac{i \\times (1+i)^n}{(1+i)^n - 1}$.\n*   Utilizando a aproximação fornecida pelo enunciado, onde $(1,1)^7 \\approx 2$, calculamos $(1,1)^9$:\n    $(1,1)^9 = (1,1)^7 \\times (1,1)^2 \\approx 2 \\times 1,21 = 2,42$.\n*   Substituindo na fórmula: $P_{Price} \\approx 270.000 \\times \\frac{0,10 \\times 2,42}{2,42 - 1} = 270.000 \\times \\frac{0,242}{1,42} \\approx 46.014,08$.\n\n**3) Cálculo da 5ª prestação no SAM ($P_{SAM, 5}$):**\n*   $P_{SAM, 5} = \\frac{P_{SAC, 5} + P_{Price}}{2} = \\frac{45.000 + 46.014,08}{2} = 45.507,04$.\n\nComo a prestação calculada de R$ 45.507,04 é superior a R$ 45.000,00, o item está correto.\n\n![Memória de cálculo](output_pdf_comentarios/imagens/pdf_analista_administrativo_111.png)",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:112",
+      "source_id": "analista_administrativo:112",
+      "source_content_hash": "6368695b40e1ae3b5d63ad1b6807d5c558ef6b9973321b6216f4dfd70055c1de",
+      "question_type": "true_false",
+      "statement_markdown": "Assumindo 2 como valor aproximado de $1,1^7$, julgue os itens a seguir, relacionados aos sistemas de amortização.\n\nPara um empréstimo de R$ 100.000,00 no sistema de amortização francês, com taxa de juros de 10% ao semestre e a ser pago em 7 prestações, com carência de 2 semestres contada a partir do final do primeiro semestre, se houver capitalização dos juros durante o período de carência, a parcela desse empréstimo será inferior a R$ 23.500,00.",
+      "subject": "Matemática Financeira",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 112; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 112,
+        "exam_page": 6,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "Assumindo 2 como valor aproximado de $1,1^7$, julgue os itens a seguir, relacionados aos sistemas de amortização.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0021.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": "output_pdf_comentarios\\imagens\\pdf_analista_administrativo_112.png"
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "topics": [],
+      "explanation": "Para resolver a questão, deve-se primeiro ajustar o saldo devedor devido à carência com capitalização de juros e, em seguida, calcular a prestação no Sistema Price.\n\n**1) Ajuste do Saldo Devedor pela Carência:**\n*   O empréstimo possui carência de 2 semestres com capitalização de juros. Isso significa que os juros acumulam ao saldo devedor inicial ($SD_0 = 100.000$) durante esse período.\n*   $SD_{novo} = 100.000 \\times (1,1)^2 = 100.000 \\times 1,21 = 121.000$.\n\n**2) Cálculo da Prestação no Sistema Price:**\n*   A fórmula da prestação no Sistema Francês é: $P = SD_{novo} \\times \\frac{i \\times (1+i)^n}{(1+i)^n - 1}$.\n*   Dados: $SD_{novo} = 121.000$, $i = 0,10$, $n = 7$.\n*   Utilizando a aproximação fornecida pelo enunciado, onde $(1,1)^7 \\approx 2$:\n    $P \\approx 121.000 \\times \\frac{0,10 \\times 2}{2 - 1} = 121.000 \\times 0,20 = 24.200$.\n\nComo a parcela calculada é de R$ 24.200,00, ela é superior a R$ 23.500,00. Portanto, a afirmação de que seria inferior está incorreta.\n\n![Memória de cálculo](output_pdf_comentarios/imagens/pdf_analista_administrativo_112.png)",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:113",
+      "source_id": "analista_administrativo:113",
+      "source_content_hash": "feb2eb513b324a4d72543c2c178f465770a56d6f019f151dca75da2fffcb5ad3",
+      "question_type": "true_false",
+      "statement_markdown": "Assumindo 2 como valor aproximado de $1,1^7$, julgue os itens a seguir, relacionados aos sistemas de amortização.\n\nNo sistema de amortização constante, os juros de cada parcela decrescem com o tempo e a diferença dos juros entre duas parcelas consecutivos é sempre constante.",
+      "subject": "Matemática Financeira",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 113; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 113,
+        "exam_page": 6,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "Assumindo 2 como valor aproximado de $1,1^7$, julgue os itens a seguir, relacionados aos sistemas de amortização.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0021.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": "output_pdf_comentarios\\imagens\\pdf_analista_administrativo_113.png"
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "topics": [],
+      "explanation": "No Sistema de Amortização Constante (SAC), a amortização ($A$) de cada período é constante e igual ao valor do principal dividido pelo número total de parcelas.\n\nO saldo devedor decresce a cada período exatamente pelo valor amortizado. Como os juros de cada período são calculados aplicando-se a taxa de juros ($i$) sobre o saldo devedor do período anterior, a redução constante do saldo devedor implica uma redução também constante no valor dos juros de cada parcela.\n\nA diferença entre os juros de duas parcelas consecutivas ($J_k$ e $J_{k+1}$) é dada pelo produto da amortização pela taxa de juros ($A \\cdot i$). Como tanto a amortização ($A$) quanto a taxa de juros ($i$) são constantes ao longo de todo o contrato, a diferença entre os juros de parcelas consecutivas é sempre constante, caracterizando uma progressão aritmética decrescente para os juros.\n\n![Memória de cálculo](output_pdf_comentarios/imagens/pdf_analista_administrativo_113.png)",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:114",
+      "source_id": "analista_administrativo:114",
+      "source_content_hash": "f8cc2b2c5d5935f47d91e63023f572f3ab8a6bd2d50d0f432e3aa2c35c4d2689",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de conceitos de matemática financeira, julgue os itens a seguir.\n\nSe a taxa efetiva de um contrato é de 44% ao ano capitalizado semestralmente, então a taxa nominal é de 40% ao ano.",
+      "subject": "Matemática Financeira",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 114; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 114,
+        "exam_page": 6,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "A respeito de conceitos de matemática financeira, julgue os itens a seguir.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0021.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": "output_pdf_comentarios\\imagens\\pdf_analista_administrativo_114.png"
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "topics": [],
+      "explanation": "A taxa nominal é uma taxa de referência em que a unidade de tempo da taxa não coincide com a unidade de tempo da capitalização. Para encontrar a taxa efetiva a partir de uma taxa nominal, deve-se primeiro obter a taxa proporcional ao período de capitalização e, em seguida, capitalizá-la.\n\nNo caso proposto:\n1. A taxa nominal é de $40\\%$ ao ano com capitalização semestral.\n2. Como há dois semestres em um ano, a taxa proporcional semestral é obtida dividindo-se a taxa nominal por 2:\n   $$i_{semestral} = \\frac{40\\%}{2} = 20\\% \\text{ ao semestre}$$\n3. A taxa efetiva anual é obtida capitalizando-se a taxa semestral por dois períodos (semestres):\n   $$1 + i_{efetiva} = (1 + 0,20)^2 = 1,44$$\n   $$i_{efetiva} = 44\\% \\text{ ao ano}$$\n\nPortanto, a afirmação está correta.\n\n![Memória de cálculo](output_pdf_comentarios/imagens/pdf_analista_administrativo_114.png)",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:115",
+      "source_id": "analista_administrativo:115",
+      "source_content_hash": "7f45d3dc26f9562570a22fcfe6c77111e26fb78d1c06a293054a6e1b86d16598",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de conceitos de matemática financeira, julgue os itens a seguir.\n\nSe para o valor de R$ 4.200,00, investido hoje, obtém-se, após três anos, o valor de R$ 5.590,20, então a taxa de juros desse investimento é de 10% ao ano.",
+      "subject": "Matemática Financeira",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 115; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 115,
+        "exam_page": 6,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "A respeito de conceitos de matemática financeira, julgue os itens a seguir.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0022.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": "output_pdf_comentarios\\imagens\\pdf_analista_administrativo_115.png"
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "topics": [],
+      "explanation": "Para verificar a correção da assertiva, aplica-se a fórmula do montante (valor futuro) sob o regime de juros compostos, que é a regra geral em matemática financeira:\n\n$$FV = PV \\times (1 + i)^n$$\n\nSubstituindo os valores fornecidos pelo enunciado:\n- Valor Presente ($PV$) = R$ 4.200,00\n- Taxa de juros ($i$) = 10% ao ano = 0,10\n- Prazo ($n$) = 3 anos\n\n$$FV = 4.200 \\times (1 + 0,10)^3$$\n$$FV = 4.200 \\times (1,10)^3$$\n$$FV = 4.200 \\times 1,331 = 5.590,20$$\n\nComo o valor futuro calculado coincide exatamente com o valor de R$ 5.590,20 apresentado no enunciado, a afirmação está correta.\n\n![Memória de cálculo](output_pdf_comentarios/imagens/pdf_analista_administrativo_115.png)",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:118",
+      "source_id": "analista_administrativo:118",
+      "source_content_hash": "2d512ab9844fbd78065571ffd82c5d56c2c94062302eb7cb28a26475b16aa484",
+      "question_type": "true_false",
+      "statement_markdown": "Em relação a assuntos relacionados ao cálculo financeiro e avaliação econômica de projetos, julgue os próximos itens.\n\nConsidere que, para um investimento de R$ 72.000,00 se esperam retornos anuais de R$ 36.000,00 e R$ 45.000,00, no primeiro e no segundo ano, respectivamente. Nesse caso, se 20% for a taxa de desconto que será aplicada aos fluxos de caixa do investimento, então esse investimento fornecerá rentabilidade superior à taxa de 20% ao ano fixada.",
+      "subject": "Matemática Financeira",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 118; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 118,
+        "exam_page": 6,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "Em relação a assuntos relacionados ao cálculo financeiro e avaliação econômica de projetos, julgue os próximos itens.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0022.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": "output_pdf_comentarios\\imagens\\pdf_analista_administrativo_118.png"
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "topics": [],
+      "explanation": "Para avaliar se a rentabilidade do investimento é superior à taxa de desconto de 20% ao ano, calcula-se o Valor Presente Líquido (VPL) do fluxo de caixa. Se o VPL for positivo, a rentabilidade é superior à taxa de desconto; se for negativo, é inferior.\n\nO fluxo de caixa do projeto é:\n- Período 0 (Investimento): $$-R\\$\\ 72.000,00$$\n- Período 1 (Retorno): $$+R\\$\\ 36.000,00$$\n- Período 2 (Retorno): $$+R\\$\\ 45.000,00$$\n\nTrazendo os fluxos futuros ao valor presente com a taxa de desconto de 20% ($i = 0,20$):\n$$VPL = -72.000 + \\frac{36.000}{(1 + 0,20)^1} + \\frac{45.000}{(1 + 0,20)^2}$$\n$$VPL = -72.000 + \\frac{36.000}{1,20} + \\frac{45.000}{1,44}$$\n$$VPL = -72.000 + 30.000 + 31.250$$\n$$VPL = -10.750,00$$\n\nComo o VPL é negativo ($-R\\$\\ 10.750,00$), a rentabilidade real do investimento é menor do que a taxa de desconto de 20% ao ano. Portanto, a afirmação está errada.\n\n![Memória de cálculo](output_pdf_comentarios/imagens/pdf_analista_administrativo_118.png)",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:119",
+      "source_id": "analista_administrativo:119",
+      "source_content_hash": "bba7991a3685fb001744b080340913d08ed4b2819501c886baeae70ff568e23e",
+      "question_type": "true_false",
+      "statement_markdown": "Em relação a assuntos relacionados ao cálculo financeiro e avaliação econômica de projetos, julgue os próximos itens.\n\nConsidere que, ao final de cada ano e durante 3 anos, uma pessoa deposita R$ 5.000,00 em um banco de investimento que paga juros de 20% ao ano. Nesse caso, ao final do terceiro ano, imediatamente após o terceiro depósito, a pessoa terá R$ 19.550,00 na conta.",
+      "subject": "Matemática Financeira",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 119; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 119,
+        "exam_page": 6,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "Em relação a assuntos relacionados ao cálculo financeiro e avaliação econômica de projetos, julgue os próximos itens.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0022.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": "output_pdf_comentarios\\imagens\\pdf_analista_administrativo_119.png"
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "topics": [],
+      "explanation": "A questão descreve uma série de pagamentos uniformes e periódicos sob o regime de juros compostos, em que os depósitos ocorrem ao final de cada período (série postecipada).\n\nPara encontrar o montante acumulado imediatamente após o terceiro depósito (no final do ano 3), calcula-se o valor futuro de cada depósito individualmente até essa data:\n\n1. **Primeiro depósito** (feito no final do ano 1): rende juros por 2 anos (anos 2 e 3).\n   $$M_1 = 5.000 \\times (1,20)^2 = 5.000 \\times 1,44 = 7.200,00$$\n\n2. **Segundo depósito** (feito no final do ano 2): rende juros por 1 ano (ano 3).\n   $$M_2 = 5.000 \\times (1,20)^1 = 6.000,00$$\n\n3. **Terceiro depósito** (feito no final do ano 3): não rende juros, pois a verificação do saldo ocorre imediatamente após o depósito.\n   $$M_3 = 5.000,00$$\n\nSomando os valores acumulados:\n$$\\text{Valor Futuro (FV)} = 7.200,00 + 6.000,00 + 5.000,00 = 18.200,00$$\n\nAlternativamente, utilizando a fórmula do valor futuro de uma anuidade postecipada:\n$$FV = PMT \\times \\frac{(1 + i)^n - 1}{i}$$\n$$FV = 5.000 \\times \\frac{(1,20)^3 - 1}{0,20}$$\n$$FV = 5.000 \\times \\frac{1,728 - 1}{0,20} = 5.000 \\times 3,64 = 18.200,00$$\n\nComo o valor acumulado é de R$ 18.200,00, a afirmação está incorreta.\n\n![Memória de cálculo](output_pdf_comentarios/imagens/pdf_analista_administrativo_119.png)",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:analista_administrativo:120",
+      "source_id": "analista_administrativo:120",
+      "source_content_hash": "6b9027b05c59391dfa30ba75232030a4ff7167f2e10198ffcaf42289ac5b4e40",
+      "question_type": "true_false",
+      "statement_markdown": "Em relação a assuntos relacionados ao cálculo financeiro e avaliação econômica de projetos, julgue os próximos itens.\n\nUm investimento de R$ 5.000,00 aplicado a uma taxa de juros anual de 30% ao longo de 3 anos pagará anualmente para o investidor um valor inferior a R$ 2.700,00.",
+      "subject": "Matemática Financeira",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 120; analista_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 120,
+        "exam_page": 7,
+        "answer_page": 3,
+        "specialty": null,
+        "exam_booklet": "651CB1_01N129080 / 651001_01N205134",
+        "answer_booklet": null,
+        "answer_status": "definitivo",
+        "shared_instruction": "Em relação a assuntos relacionados ao cálculo financeiro e avaliação econômica de projetos, julgue os próximos itens.",
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0022.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": "output_pdf_comentarios\\imagens\\pdf_analista_administrativo_120.png"
+        }
+      },
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "topics": [],
+      "explanation": "A questão aborda o cálculo de pagamentos periódicos e iguais (anuidades) a partir de um valor presente (PV). Para encontrar o valor pago anualmente ($PMT$) que amortiza ou retorna o investimento de R$ 5.000,00 ($PV$) sob uma taxa de juros ($i$) de 30% ao ano durante um período ($n$) de 3 anos, aplica-se a fórmula do fator de recuperação de capital:\n\n$$PMT = PV \\times \\frac{i(1+i)^n}{(1+i)^n - 1}$$\n\nSubstituindo os valores fornecidos:\n1. O fator de juros acumulado é $(1 + 0,30)^3 = 1,3^3 = 2,197$.\n2. Multiplicando pela taxa: $0,30 \\times 2,197 = 0,6591$.\n3. O denominador é $2,197 - 1 = 1,197$.\n4. Dividindo o numerador pelo denominador: $0,6591 / 1,197 \\approx 0,550626$.\n5. Multiplicando pelo valor presente: $5.000 \\times 0,550626 \\approx 2.753,13$.\n\nComo o valor anual resultante de R$ 2.753,13 é superior a R$ 2.700,00, a afirmação de que o investimento pagará um valor inferior a R$ 2.700,00 está incorreta.\n\n![Memória de cálculo](output_pdf_comentarios/imagens/pdf_analista_administrativo_120.png)",
+      "import_ready": false
+    }
+  ]
+}

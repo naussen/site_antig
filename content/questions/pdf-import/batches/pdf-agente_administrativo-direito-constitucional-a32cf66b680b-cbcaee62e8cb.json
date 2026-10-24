@@ -1,0 +1,77 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-agente_administrativo-direito-constitucional-a32cf66b680b-cbcaee62e8cb",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "a32cf66b680b5ade47718cec8534401119366e961d8b4aae50fc11c197a67192",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "5da32b0a57792e090ef9d4c38cee7bda12a08609929c945e59e21312dccdc01a",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "cbcaee62e8cb76998d8d1f4b8b50c301bdbc31524ef11c054b0f9a541ac805fe",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:051",
+      "source_id": "agente_administrativo:51",
+      "question_type": "true_false",
+      "statement_markdown": "De acordo com a Constituição Federal de 1988 (CF) e o entendimento do STF, julgue os itens que se seguem, a respeito dos direitos e garantias fundamentais.\n\nÉ cabível a impetração de habeas corpus ou mandado de segurança quando houver ofensa à liberdade de locomoção.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 51; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "0dab7bbcacc573bac9893f352ff6d47a74f65a878d66aa97f8a4a0ae6d7dfcbd",
+        "original_numeric_id": 51,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque o mandado de segurança possui caráter subsidiário (residual) e não pode ser utilizado para proteger a liberdade de locomoção, a qual é amparada especificamente pelo *habeas corpus*.\n\nDe acordo com o art. 5º, LXIX, da Constituição Federal, o mandado de segurança é cabível para proteger direito líquido e certo, não amparado por *habeas corpus* ou *habeas data*. Assim, havendo ameaça ou lesão à liberdade de locomoção (direito de ir, vir e ficar), o remédio constitucional adequado e exclusivo é o *habeas corpus* (art. 5º, LXVIII, da CF/88).\n\n**Pegadinha:** A banca tentou confundir ao colocar a conjunção alternativa \"ou\", sugerindo que ambos os remédios seriam cabíveis de forma intercambiável para a mesma situação de ofensa à liberdade de locomoção.\n\n### Dispositivo legal\n\n* **Art. 5º, incisos LXVIII e LXIX, da Constituição Federal de 1988** (Disponível em: [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "f3f6f09b3e3ca1d3812330a02c44ecac41c01a4e4b3b6a440ce50e2d46cccab4"
+    }
+  ]
+}

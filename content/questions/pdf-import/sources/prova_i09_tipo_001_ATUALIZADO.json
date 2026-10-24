@@ -1,0 +1,291 @@
+{
+  "schema_version": "pro-questions/pdf-selected-source/v1",
+  "original_file_name": "prova_i09_tipo_001.json",
+  "original_source_sha256": "8a1d40d330f3a1f0c9c5c49977037cbc600422d057f7b497ba1fcf422d8196bb",
+  "source": {
+    "exam_file": "prova_i09_tipo_001.pdf",
+    "exam_sha256": "516168297229f286751955121a750df7dc0274b77786ccdc3f51cc0013a49cf4",
+    "answer_file": "prova_i09_tipo_001_gabarito.pdf",
+    "answer_sha256": "b19c19b69b040a118eb19e477de198b4d4eeef2f3941486f1509cbe8eb2d4e24",
+    "rejected_answer_file": null,
+    "exam_metadata": {
+      "banca": "Fundação Carlos Chagas",
+      "orgao": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "cargo": "Técnico Judiciário",
+      "especialidade": "Área Administrativa",
+      "ano": 2011,
+      "tipo_caderno": "Caderno de Prova 'I09', Tipo 001",
+      "titulo_literal": "Concurso Público para provimento de cargos de Técnico Judiciário - Área Administrativa",
+      "questoes_presentes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    },
+    "answer_metadata": {
+      "titulo_literal": "Tribunal Regional Eleitoral do Rio Grande do Norte - Analista e Técnico Judiciário",
+      "banca": "FCC",
+      "orgao": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "cargo": "TÉCNICO JUDICIÁRIO - ÁREA ADMINISTRATIVA (Código I09)",
+      "ano": 2011,
+      "tipo_caderno": "Tipo gabarito 1",
+      "status": "definitivo"
+    },
+    "answer_notes": [],
+    "rejected_answer_metadata": null
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:020",
+      "source_id": "prova_i09_tipo_001:20",
+      "source_content_hash": "ebbe9e856aac5f7f7d2ad6866c0b8f1a391a7dd520b079eb18971a47f973ca71",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Em relação a correio eletrônico, é correto afirmar:",
+      "subject": "Noções de Microinformática",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 20; prova_i09_tipo_001_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 20,
+        "exam_page": 6,
+        "answer_page": 2,
+        "specialty": "Área Administrativa",
+        "exam_booklet": "Caderno de Prova 'I09', Tipo 001",
+        "answer_booklet": "Tipo gabarito 1",
+        "answer_status": "definitivo",
+        "shared_instruction": null,
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0040.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Endereços de correio eletrônico no padrão nome@xxx.xxx.com.br, estão restritos a destinatários do território brasileiro, apenas.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Exceto o campo assunto, cada campo de cabeçalho do correio eletrônico tem seu tamanho máximo limitado a dez caracteres.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "O web mail é um aplicativo que permite o envio e a recepção de mensagens de correio eletrônico, desde que não exista anexos nessas mensagens.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Todo programa de correio eletrônico disponibiliza funcionalidades que permitem encaminhar uma mensagem recebida a um ou a vários endereços de correio eletrônico.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Todo programa de correio eletrônico possui mecanismos que detectam e bloqueiam mensagens infectadas por vírus de computador.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "topics": [],
+      "explanation": "A alternativa correta aponta uma característica fundamental de qualquer cliente de correio eletrônico (*MUA - Mail User Agent*), que é a capacidade de encaminhar (*forward*) mensagens recebidas para um ou mais destinatários.\n\n*   **A está incorreta** porque o sufixo \".br\" indica apenas que o domínio está registrado sob a autoridade de registro do Brasil, mas mensagens enviadas para esses endereços podem ser acessadas de qualquer lugar do mundo, não havendo restrição geográfica de entrega ou acesso ao território brasileiro.\n*   **B está incorreta** porque os campos de cabeçalho (como \"Para\", \"Cc\", \"Assunto\") não possuem limitação tão restrita quanto dez caracteres.\n*   **C está incorreta** porque o *webmail* é apenas uma interface baseada em navegador para acessar o serviço de e-mail, suportando perfeitamente o envio e recebimento de arquivos anexos.\n*   **E está incorreta** porque a detecção e o bloqueio de vírus não são recursos obrigatórios ou presentes em *todos* os programas de correio eletrônico; muitos clientes simples dependem de antivírus locais ou de filtros aplicados diretamente nos servidores de e-mail (*MTA*).",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:025",
+      "source_id": "prova_i09_tipo_001:25",
+      "source_content_hash": "f0f4e5b0c9881bf681118d17ee4b08006994e3cbc242146068f95e367e294097",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A responsabilidade do servidor público civil",
+      "subject": "Noções de Direito Administrativo",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 25; prova_i09_tipo_001_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 25,
+        "exam_page": 7,
+        "answer_page": 2,
+        "specialty": "Área Administrativa",
+        "exam_booklet": "Caderno de Prova 'I09', Tipo 001",
+        "answer_booklet": "Tipo gabarito 1",
+        "answer_status": "definitivo",
+        "shared_instruction": null,
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0041.json",
+          "legal_basis": {
+            "reference": "Lei nº 8.112/1990, Art. 122",
+            "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
+          },
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "resulta de ato apenas comissivo, praticado no desempenho de cargo ou função.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "somente será afastada no caso de absolvição criminal que negue a existência do fato.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "de reparar o dano não se estende aos sucessores do servidor público.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "decorre de ato omissivo ou comissivo, doloso ou culposo, que resulte em prejuízo ao erário ou a terceiros.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "implicará na aplicação de sanção administrativa, que não poderá cumular-se com demais sanções de natureza penal ou civil, sob pena de caracterizar bis in idem.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "topics": [],
+      "explanation": "O gabarito correto é a alternativa **D**.\n\nA responsabilidade civil do servidor público civil é disciplinada pelo artigo 122, *caput*, da Lei nº 8.112/1990, o qual prevê expressamente que ela decorre de ato omissivo ou comissivo, doloso ou culposo, que resulte em prejuízo ao erário ou a terceiros.\n\nAnálise das alternativas incorretas:\n- **A** (Incorreta): A responsabilidade civil decorre tanto de ato **comissivo** (ação) quanto de ato **omissivo** (omissão), conforme o artigo 122, *caput*, da Lei nº 8.112/1990.\n- **B** (Incorreta): A responsabilidade administrativa (e não a civil de forma genérica) será afastada no caso de absolvição criminal que negue a existência do fato **ou sua autoria**, nos termos do artigo 126 da Lei nº 8.112/1990.\n- **C** (Incorreta): A obrigação de reparar o dano **estende-se aos sucessores** e contra eles será executada, até o limite do valor da herança recebida, conforme o artigo 122, § 3º, da Lei nº 8.112/1990.\n- **E** (Incorreta): As sanções civis, penais e administrativas **poderão cumular-se**, sendo independentes entre si, não caracterizando *bis in idem*, conforme dispõe o artigo 125 da Lei nº 8.112/1990.\n\n### Dispositivo legal\n- **Lei nº 8.112/1990, Artigo 122**\n- [Texto oficial no Portal do Planalto](http://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm)",
+      "import_ready": false
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:038",
+      "source_id": "prova_i09_tipo_001:38",
+      "source_content_hash": "39e931b6131c6bf64265c917b5bd6bbe3af7e082b08d74169df04555342a59b5",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com a Constituição Federal brasileira, elaborar semestralmente relatório estatístico sobre processos e sentenças prolatadas, por unidade da Federação, nos diferentes órgãos do Poder Judiciário, é competência",
+      "subject": "Noções de Direito Constitucional",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 38; prova_i09_tipo_001_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 38,
+        "exam_page": 9,
+        "answer_page": 2,
+        "specialty": "Área Administrativa",
+        "exam_booklet": "Caderno de Prova 'I09', Tipo 001",
+        "answer_booklet": "Tipo gabarito 1",
+        "answer_status": "definitivo",
+        "shared_instruction": null,
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0042.json",
+          "legal_basis": {
+            "reference": "Artigo 103-B, § 4º, inciso VI da Constituição Federal de 1988",
+            "official_url": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+          },
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "dos Tribunais de Justiça locais.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "do Supremo Tribunal Federal.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "do Superior Tribunal de Justiça.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "do Conselho Nacional de Justiça.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "do Presidente da República através do Procurador Geral.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "topics": [],
+      "explanation": "A questão aborda as competências constitucionais dos órgãos do Poder Judiciário, especificamente no que tange ao controle administrativo e estatístico.\n\nA alternativa correta é a **D**. A competência para elaborar semestralmente relatório estatístico sobre processos e sentenças prolatadas, por unidade da Federação, nos diferentes órgãos do Poder Judiciário, é atribuída expressamente ao Conselho Nacional de Justiça (CNJ). Essa função reflete o papel do CNJ como órgão de controle da atuação administrativa e financeira do Poder Judiciário e do cumprimento dos deveres funcionais dos juízes.\n\n**Análise das alternativas incorretas:**\n* **A, B e C:** Estão incorretas porque os Tribunais de Justiça locais (A), o Supremo Tribunal Federal (B) e o Superior Tribunal de Justiça (C) são órgãos de natureza eminentemente jurisdicional e não possuem essa atribuição constitucional de centralização e elaboração de relatórios estatísticos semestrais de todo o Poder Judiciário nacional.\n* **E:** Está incorreta porque o Presidente da República e o Procurador-Geral da República não possuem competência de controle administrativo ou estatístico sobre a produtividade e os processos do Poder Judiciário, em respeito ao princípio da separação dos poderes.\n\n**Detalhe importante:** O relatório estatístico semestral (Art. 103-B, § 4º, VI) não deve ser confundido com o relatório anual sobre a situação do Poder Judiciário no País (Art. 103-B, § 4º, VII), que também é elaborado pelo CNJ, mas integra a mensagem do Presidente do STF a ser remetida ao Congresso Nacional.\n\n### Dispositivo legal\n* **Artigo 103-B, § 4º, inciso VI da Constituição Federal de 1988**",
+      "import_ready": false
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "schema_version": "pro-questions/pdf-selected-source/v1",
+  "original_file_name": "assistente_administrativo.json",
+  "original_source_sha256": "076507bac3393262fd875a9487f40c6baf0b9380bc7894d096c4f07a503c5610",
+  "source": {
+    "exam_file": "assistente_administrativo.pdf",
+    "exam_sha256": "4ca528ae8fdbe69195bc99bd3a4b7b5861e7114ba920f66e4e873e0a9788d61a",
+    "answer_file": "assistente_administrativo_gabarito.pdf",
+    "answer_sha256": "e887d24d7990fceb1b8a9f5d132cabb69d1a27689d93b7ae26c5b1559abcff8d",
+    "rejected_answer_file": null,
+    "exam_metadata": {
+      "banca": "IBFC",
+      "orgao": "Empresa Brasileira de Serviços Hospitalares",
+      "cargo": "Assistente Administrativo",
+      "especialidade": "Área Administrativa",
+      "ano": 2023,
+      "tipo_caderno": "IBFC_183",
+      "titulo_literal": "EMPRESA BRASILEIRA DE SERVIÇOS HOSPITALARES CONCURSO PÚBLICO – EDITAL Nº 04/2023 - ÁREA ADMINISTRATIVA ASSISTENTE ADMINISTRATIVO",
+      "questoes_presentes": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50
+      ]
+    },
+    "answer_metadata": {
+      "titulo_literal": "GABARITO OFICIAL – NÍVEL MÉDIO",
+      "banca": "IBFC",
+      "orgao": "EBSERH",
+      "cargo": "Assistente Administrativo",
+      "ano": 2023,
+      "tipo_caderno": "IBFC_183",
+      "status": "definitivo"
+    },
+    "answer_notes": [],
+    "rejected_answer_metadata": null
+  },
+  "questions": [
+    {
+      "external_id": "pdf:assistente_administrativo:019",
+      "source_id": "assistente_administrativo:19",
+      "source_content_hash": "81ba684cb8b455f882c41a3b38d3a3ac0d10555443c159da9630a0f3c3f9d226",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Com o amplo uso da web hoje, usuários mal intencionados tentam constantemente penetrar as camadas de segurança lógicas e físicas, a fim de, sequestrar dados sensíveis e importantes das empresas, desta forma, diversos ataques podem ser realizados. Assinale a alternativa que apresenta o que é um ataque de “phishing”.",
+      "subject": "Noções de Informática",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "assistente_administrativo.pdf, questão 19; assistente_administrativo_gabarito.pdf",
+      "source_metadata": {
+        "original_numeric_id": 19,
+        "exam_page": 4,
+        "answer_page": 183,
+        "specialty": "Área Administrativa",
+        "exam_booklet": "IBFC_183",
+        "answer_booklet": "IBFC_183",
+        "answer_status": "definitivo",
+        "shared_instruction": null,
+        "extraction_model": "gemini-3.5-flash via Vertex AI",
+        "commentary_review": {
+          "status": "revisada_por_modelo",
+          "batch": "lotes/0031.json",
+          "legal_basis": null,
+          "outdated_notice": null,
+          "calculation_image": null
+        }
+      },
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Um tipo de ataque que visa contornar os firewalls",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Um tipo de ataque que visa monitorar os acessos do usuário e no meio da transferência sequestrar dados, também conhecido como man-in-the-middle",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Um tipo de ataque que envolve enviar e-mails falsos que parecem ser de fontes confiáveis para enganar as pessoas a revelarem informações pessoais",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Um tipo de ataque que envolve transferir arquivos entre dispositivos",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Um tipo de ataque para acelerar a velocidade da internet",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "topics": [],
+      "explanation": "O ataque de *phishing* é uma técnica de engenharia social que consiste no envio de mensagens fraudulentas (geralmente e-mails, mas também SMS ou mensagens em redes sociais) que se passam por comunicações legítimas de instituições confiáveis (como bancos, órgãos governamentais ou empresas de tecnologia). O objetivo é induzir a vítima a fornecer dados sensíveis, como senhas, números de cartões de crédito e informações pessoais.\n\nAnálise das alternativas incorretas:\n- **A** está incorreta porque contornar *firewalls* é um objetivo geral de diversas técnicas de invasão de rede, não definindo o *phishing*.\n- **B** está incorreta porque descreve o ataque *Man-in-the-Middle* (MitM), no qual o atacante intercepta e altera secretamente a comunicação entre duas partes.\n- **D** está incorreta porque a transferência de arquivos entre dispositivos é uma operação de rede padrão e legítima, não um ataque cibernético.\n- **E** está incorreta porque acelerar a velocidade da internet é uma otimização técnica de infraestrutura, não um tipo de ataque.\n\n**Detalhe importante:** O *phishing* foca na exploração da vulnerabilidade humana (engano e persuasão) e não necessariamente em falhas técnicas de sistemas ou *softwares*.",
+      "import_ready": false
+    }
+  ]
+}

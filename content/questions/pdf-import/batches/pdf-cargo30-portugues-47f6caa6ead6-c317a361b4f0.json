@@ -1,0 +1,230 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-cargo30-portugues-47f6caa6ead6-c317a361b4f0",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "47f6caa6ead632f1fff7cde69950d7725a840e5c5b554a898b6c23af5a873356",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "4cf2583924232a76b401cdfc24313fb757e305aad1b2fdad61bd5c3798ffc63b",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "c317a361b4f0eb38e4a27bfde374d1db38dd3bf889f5dc439246b87a0bd4d28a",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:008",
+      "source_id": "cargo30:8",
+      "question_type": "true_false",
+      "statement_markdown": "Já existe, felizmente, em nosso país, uma consciência nacional — em formação, é certo —, que vai introduzindo o elemento da dignidade humana em nossa legislação e para a qual a escravidão, apesar de hereditária, é uma verdadeira mancha de Caim que o Brasil traz na fronte. Essa consciência, que está temperando a nossa alma e, por fim, há de humanizá-la, resulta da mistura de duas correntes diversas: o arrependimento dos descendentes de senhores e a afinidade de sofrimento dos herdeiros de escravos.\nNão tenho, portanto, medo de não encontrar o acolhimento por parte de um número bastante considerável de compatriotas meus, a saber: os que sentem a dor do escravo como se fora própria, e ainda mais, como parte de uma dor maior — a do Brasil, ultrajado e humilhado; os que têm a altivez de pensar — e a coragem de aceitar as conseqüências desse pensamento — que a pátria, como a mãe, quando não existe para os filhos mais infelizes, não existe para os mais dignos; aqueles para quem a escravidão, degradação sistemática da natureza humana por interesses mercenários e egoístas, se não é infamante para o homem educado e feliz que a inflige, não pode sê-lo para o ente desfigurado e oprimido que a sofre; por fim, os que conhecem as influências sobre o nosso país daquela instituição no passado e, no presente, o seu custo ruinoso, e prevêem os efeitos da sua continuação indefinida.\nPossa ser bem aceita por eles esta lembrança de um correligionário ausente, mandada do exterior, donde se ama ainda mais a pátria do que no próprio país.\nQuanto a mim, julgar-me-ei mais do que recompensado, se as sementes de liberdade, direito e justiça derem uma boa colheita no solo ainda virgem da nova geração. (Londres, 8 de abril de 1883)\n\nJoaquim Nabuco. O abolicionismo. In: Intérpretes do Brasil, vol. I, Rio de Janeiro: Nova Aguilar, 2000, p. 21 (com adaptações).\n\nEm relação ao texto acima e ao tema nele abordado, julgue os itens a seguir.\n\nEm “humanizá-la” (l.6), o pronome, cujo emprego é um recurso de coesão textual, refere-se ao vocábulo “consciência” (l.5).",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 8",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "9ee5e9b5d1c7f6d5d24179638793c822f6b3f5a6bb7bdb6c5041782cc7f28b19",
+        "original_numeric_id": 8,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. O pronome enclítico \"-la\" em \"humanizá-la\" funciona como objeto direto do verbo \"humanizar\" e retoma o substantivo feminino **\"alma\"**, presente na oração imediatamente anterior (\"que está temperando a nossa **alma** e, por fim, há de humanizá-**la**\"). O termo \"consciência\" funciona como o sujeito que realiza a ação de temperar e humanizar a alma, não sendo o referente do pronome em questão.",
+        "source_reference": null
+      },
+      "source_content_hash": "525a7bb54eeba58ea2c64c6e3e21af48322061f6e6c8830dbef2081707d00225"
+    },
+    {
+      "external_id": "pdf:cargo30:018",
+      "source_id": "cargo30:18",
+      "question_type": "true_false",
+      "statement_markdown": "Os atentados terroristas a Nova Iorque e Washington são a evidência de que o atual modelo de globalização afeta os esforços de implantação mundial dos direitos humanos. Graças ao avanço da tecnologia de comunicações — dos meios de transporte à Internet —, o Planeta tornou-se, de fato, uma grande aldeia. Somos todos vizinhos uns dos outros e podemos assistir, em tempo real, ao que se passa no hemisfério oposto ao que habitamos.\n\nFrei Betto. Internet: <www.dhnet.org.br/denunciar> (com adaptações).\n\nCom base no texto acima e considerando as múltiplas implicações do tema que ele focaliza, julgue os itens seguintes.\n\nNa linha 8, o emprego de preposição em “ao que se passa” justifica-se pela regência do verbo “assistir” (l.7).",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 18",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "415ffe2a8ad06af75e4f39dffa676c475288e4484570329734ddc1e79d7f5d27",
+        "original_numeric_id": 18,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O verbo \"assistir\", quando empregado com o sentido de ver, presenciar ou testemunhar, classifica-se como transitivo indireto e rege a preposição \"a\". No trecho \"assistir [...] ao que se passa\", a preposição \"a\" exigida pelo verbo combina-se com o pronome demonstrativo \"o\" (equivalente a *aquilo*), resultando na forma \"ao\".",
+        "source_reference": null
+      },
+      "source_content_hash": "6a67f69961a98dac4fee16db183daf4d403fd65b5b3b3b13083b914dacba36e7"
+    },
+    {
+      "external_id": "pdf:cargo30:022",
+      "source_id": "cargo30:22",
+      "question_type": "true_false",
+      "statement_markdown": "A proximidade não nos tem tornado mais solidários e amigos. À luz da crescente mercantilização das relações humanas, quase tudo é encarado em termos de lucro e benefício. Não importa que guerras fratricidas ameacem a existência de nações africanas. Os países metropolitanos continuarão fabricando e exportando armas — que a África não produz — e permanecerão insensíveis ao genocídio se, no palco das operações, não houver diamantes, petróleo ou qualquer outra riqueza que justifique a intervenção das tropas globocolonizadas, como ocorreu no Iraque e na Iugoslávia.\n\nIdem, ibidem.\n\nTendo o texto acima como referência e considerando o cenário mundial contemporâneo, julgue os itens que se seguem.\n\nPelo contexto, compreende-se que a palavra “palco” (l.8) foi empregada em seu sentido denotativo.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 22",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "5ee064ce5e83eecab82275b7530aa358839542ac93b05c2e15f697995f9dff29",
+        "original_numeric_id": 22,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está errado. No trecho \"no palco das operações\", a palavra \"palco\" foi empregada em sentido **conotativo** (figurado), funcionando como uma metáfora para designar o local, cenário ou região geográfica onde ocorrem os conflitos e as intervenções militares.\n\nO sentido **denotativo** (literal) de \"palco\" refere-se à estrutura física ou tablado de um teatro onde se realizam apresentações artísticas, o que não corresponde ao contexto geopolítico abordado no texto.",
+        "source_reference": null
+      },
+      "source_content_hash": "ac577b0a883eeab95699ca5aecffa6ec2206a444ea167265ca7211132c1f0db3"
+    },
+    {
+      "external_id": "pdf:cargo30:059",
+      "source_id": "cargo30:59",
+      "question_type": "true_false",
+      "statement_markdown": "Com referência à redação de expedientes, julgue a associação entre documento, finalidade e fecho proposta em cada um dos itens seguintes.\n\ndocumento: requerimento\nfinalidade: solicitação, de particular a autoridade, de algo a que o autor julga ter direito\nfecho: Nestes termos, pede deferimento.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 59",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "3b57eb190cf117def3068529a39427db12bc37aa33825cb449d0ca292f00bb9e",
+        "original_numeric_id": 59,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A associação apresentada define perfeitamente o documento, sua finalidade e sua estrutura de encerramento:\n\n* **Documento:** Requerimento é um documento administrativo de caráter petitório;\n* **Finalidade:** É utilizado por pessoa física ou jurídica (particular ou servidor) para postular junto a uma autoridade pública um direito ou benefício amparado pela lei;\n* **Fecho:** A fórmula de encerramento tradicional, consagrada pelo uso e pela praxe administrativa para esse tipo de expediente, é \"Nestes termos, pede deferimento.\" (frequentemente abreviada como \"N. T. P. D.\").",
+        "source_reference": null
+      },
+      "source_content_hash": "0531ae407312d9b4d4c6622e6e1c39fcfeeb188fb145a7a81b0107f2a8a07b9f"
+    }
+  ]
+}

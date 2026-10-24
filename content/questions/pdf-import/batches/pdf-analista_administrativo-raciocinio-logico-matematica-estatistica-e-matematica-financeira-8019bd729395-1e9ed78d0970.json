@@ -1,0 +1,434 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-analista_administrativo-raciocinio-logico-matematica-estatistica-e-matematica-financeira-8019bd729395-1e9ed78d0970",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "8019bd729395aac2a736d513a35ce802cbccd0df43daacdebf05555ba2785988",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "0fc614916228bfa45383f0df7c8e33baaccace7bb05b812e4da6dc6bb1c76217",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "1e9ed78d09703fe339a1871e021ab337400fcde1f47306dcd87d5785505fa554",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:111",
+      "source_id": "analista_administrativo:111",
+      "question_type": "true_false",
+      "statement_markdown": "Assumindo 2 como valor aproximado de $1,1^7$, julgue os itens a seguir, relacionados aos sistemas de amortização.\n\nPara um empréstimo de R$ 270.000,00 realizado no sistema de amortização misto, com taxa de juros de 10% ao ano e que será pago em 9 parcelas anuais, a quinta prestação é superior a R$ 45.000,00.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 111; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Matemática Financeira",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática Financeira",
+        "source_content_hash": "c388a87b743aa4d32ed1c4fd3e15dae51c1d3699a6361bf5bb064a583b8eb7c4",
+        "original_numeric_id": 111,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_analista_administrativo_111.png",
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica-financeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No Sistema de Amortização Misto (SAM), cada prestação é a média aritmética simples entre a prestação correspondente do Sistema de Amortização Constante (SAC) e do Sistema Francês de Amortização (Price).\n\n**1) Cálculo da 5ª prestação no SAC ($P_{SAC, 5}$):**\n*   A amortização constante ($A$) é dada pela divisão do saldo devedor inicial pelo número de parcelas: $270.000 / 9 = 30.000$.\n*   O saldo devedor após o pagamento da 4ª parcela ($SD_4$) é: $270.000 - (4 \\times 30.000) = 150.000$.\n*   Os juros da 5ª parcela ($J_5$) incidem sobre o saldo devedor do período anterior: $150.000 \\times 10\\% = 15.000$.\n*   A prestação no SAC é a soma da amortização com os juros: $P_{SAC, 5} = 30.000 + 15.000 = 45.000$.\n\n**2) Cálculo da prestação no Sistema Price ($P_{Price}$):**\n*   A fórmula da prestação Price é: $P_{Price} = SD_0 \\times \\frac{i \\times (1+i)^n}{(1+i)^n - 1}$.\n*   Utilizando a aproximação fornecida pelo enunciado, onde $(1,1)^7 \\approx 2$, calculamos $(1,1)^9$:\n    $(1,1)^9 = (1,1)^7 \\times (1,1)^2 \\approx 2 \\times 1,21 = 2,42$.\n*   Substituindo na fórmula: $P_{Price} \\approx 270.000 \\times \\frac{0,10 \\times 2,42}{2,42 - 1} = 270.000 \\times \\frac{0,242}{1,42} \\approx 46.014,08$.\n\n**3) Cálculo da 5ª prestação no SAM ($P_{SAM, 5}$):**\n*   $P_{SAM, 5} = \\frac{P_{SAC, 5} + P_{Price}}{2} = \\frac{45.000 + 46.014,08}{2} = 45.507,04$.\n\nComo a prestação calculada de R$ 45.507,04 é superior a R$ 45.000,00, o item está correto.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_analista_administrativo_111.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "6ea335c7b7a0d62216f1f7fdd47a2a8a5b19eb18e325566f8cee535cd586e517"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:112",
+      "source_id": "analista_administrativo:112",
+      "question_type": "true_false",
+      "statement_markdown": "Assumindo 2 como valor aproximado de $1,1^7$, julgue os itens a seguir, relacionados aos sistemas de amortização.\n\nPara um empréstimo de R$ 100.000,00 no sistema de amortização francês, com taxa de juros de 10% ao semestre e a ser pago em 7 prestações, com carência de 2 semestres contada a partir do final do primeiro semestre, se houver capitalização dos juros durante o período de carência, a parcela desse empréstimo será inferior a R$ 23.500,00.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 112; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Matemática Financeira",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática Financeira",
+        "source_content_hash": "6368695b40e1ae3b5d63ad1b6807d5c558ef6b9973321b6216f4dfd70055c1de",
+        "original_numeric_id": 112,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_analista_administrativo_112.png",
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica-financeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para resolver a questão, deve-se primeiro ajustar o saldo devedor devido à carência com capitalização de juros e, em seguida, calcular a prestação no Sistema Price.\n\n**1) Ajuste do Saldo Devedor pela Carência:**\n*   O empréstimo possui carência de 2 semestres com capitalização de juros. Isso significa que os juros acumulam ao saldo devedor inicial ($SD_0 = 100.000$) durante esse período.\n*   $SD_{novo} = 100.000 \\times (1,1)^2 = 100.000 \\times 1,21 = 121.000$.\n\n**2) Cálculo da Prestação no Sistema Price:**\n*   A fórmula da prestação no Sistema Francês é: $P = SD_{novo} \\times \\frac{i \\times (1+i)^n}{(1+i)^n - 1}$.\n*   Dados: $SD_{novo} = 121.000$, $i = 0,10$, $n = 7$.\n*   Utilizando a aproximação fornecida pelo enunciado, onde $(1,1)^7 \\approx 2$:\n    $P \\approx 121.000 \\times \\frac{0,10 \\times 2}{2 - 1} = 121.000 \\times 0,20 = 24.200$.\n\nComo a parcela calculada é de R$ 24.200,00, ela é superior a R$ 23.500,00. Portanto, a afirmação de que seria inferior está incorreta.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_analista_administrativo_112.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "bd0a0ee155c2df00be642c1adafdf3854ac40690a5a57ccb8ec551b97e455442"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:113",
+      "source_id": "analista_administrativo:113",
+      "question_type": "true_false",
+      "statement_markdown": "Assumindo 2 como valor aproximado de $1,1^7$, julgue os itens a seguir, relacionados aos sistemas de amortização.\n\nNo sistema de amortização constante, os juros de cada parcela decrescem com o tempo e a diferença dos juros entre duas parcelas consecutivos é sempre constante.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 113; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Matemática Financeira",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática Financeira",
+        "source_content_hash": "feb2eb513b324a4d72543c2c178f465770a56d6f019f151dca75da2fffcb5ad3",
+        "original_numeric_id": 113,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_analista_administrativo_113.png",
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica-financeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No Sistema de Amortização Constante (SAC), a amortização ($A$) de cada período é constante e igual ao valor do principal dividido pelo número total de parcelas.\n\nO saldo devedor decresce a cada período exatamente pelo valor amortizado. Como os juros de cada período são calculados aplicando-se a taxa de juros ($i$) sobre o saldo devedor do período anterior, a redução constante do saldo devedor implica uma redução também constante no valor dos juros de cada parcela.\n\nA diferença entre os juros de duas parcelas consecutivas ($J_k$ e $J_{k+1}$) é dada pelo produto da amortização pela taxa de juros ($A \\cdot i$). Como tanto a amortização ($A$) quanto a taxa de juros ($i$) são constantes ao longo de todo o contrato, a diferença entre os juros de parcelas consecutivas é sempre constante, caracterizando uma progressão aritmética decrescente para os juros.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_analista_administrativo_113.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "8dc156d826c7cbb155c9951a9884e17be0e2bd4ead8f24e47163f0a2f703fc76"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:114",
+      "source_id": "analista_administrativo:114",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de conceitos de matemática financeira, julgue os itens a seguir.\n\nSe a taxa efetiva de um contrato é de 44% ao ano capitalizado semestralmente, então a taxa nominal é de 40% ao ano.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 114; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Matemática Financeira",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática Financeira",
+        "source_content_hash": "f8cc2b2c5d5935f47d91e63023f572f3ab8a6bd2d50d0f432e3aa2c35c4d2689",
+        "original_numeric_id": 114,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_analista_administrativo_114.png",
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica-financeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A taxa nominal é uma taxa de referência em que a unidade de tempo da taxa não coincide com a unidade de tempo da capitalização. Para encontrar a taxa efetiva a partir de uma taxa nominal, deve-se primeiro obter a taxa proporcional ao período de capitalização e, em seguida, capitalizá-la.\n\nNo caso proposto:\n1. A taxa nominal é de $40\\%$ ao ano com capitalização semestral.\n2. Como há dois semestres em um ano, a taxa proporcional semestral é obtida dividindo-se a taxa nominal por 2:\n   $$i_{semestral} = \\frac{40\\%}{2} = 20\\% \\text{ ao semestre}$$\n3. A taxa efetiva anual é obtida capitalizando-se a taxa semestral por dois períodos (semestres):\n   $$1 + i_{efetiva} = (1 + 0,20)^2 = 1,44$$\n   $$i_{efetiva} = 44\\% \\text{ ao ano}$$\n\nPortanto, a afirmação está correta.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_analista_administrativo_114.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "11f93e7399d30005ff6094119fed1729aec0cba3053fcf8aab11a0388816c0de"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:115",
+      "source_id": "analista_administrativo:115",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de conceitos de matemática financeira, julgue os itens a seguir.\n\nSe para o valor de R$ 4.200,00, investido hoje, obtém-se, após três anos, o valor de R$ 5.590,20, então a taxa de juros desse investimento é de 10% ao ano.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 115; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Matemática Financeira",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática Financeira",
+        "source_content_hash": "7f45d3dc26f9562570a22fcfe6c77111e26fb78d1c06a293054a6e1b86d16598",
+        "original_numeric_id": 115,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_analista_administrativo_115.png",
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica-financeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para verificar a correção da assertiva, aplica-se a fórmula do montante (valor futuro) sob o regime de juros compostos, que é a regra geral em matemática financeira:\n\n$$FV = PV \\times (1 + i)^n$$\n\nSubstituindo os valores fornecidos pelo enunciado:\n- Valor Presente ($PV$) = R$ 4.200,00\n- Taxa de juros ($i$) = 10% ao ano = 0,10\n- Prazo ($n$) = 3 anos\n\n$$FV = 4.200 \\times (1 + 0,10)^3$$\n$$FV = 4.200 \\times (1,10)^3$$\n$$FV = 4.200 \\times 1,331 = 5.590,20$$\n\nComo o valor futuro calculado coincide exatamente com o valor de R$ 5.590,20 apresentado no enunciado, a afirmação está correta.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_analista_administrativo_115.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "614d8da0f0e6f0f6702f2b04a394f0b0cdebb7f5a5b6f2ad8408119df5ad5e9e"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:118",
+      "source_id": "analista_administrativo:118",
+      "question_type": "true_false",
+      "statement_markdown": "Em relação a assuntos relacionados ao cálculo financeiro e avaliação econômica de projetos, julgue os próximos itens.\n\nConsidere que, para um investimento de R$ 72.000,00 se esperam retornos anuais de R$ 36.000,00 e R$ 45.000,00, no primeiro e no segundo ano, respectivamente. Nesse caso, se 20% for a taxa de desconto que será aplicada aos fluxos de caixa do investimento, então esse investimento fornecerá rentabilidade superior à taxa de 20% ao ano fixada.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 118; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Matemática Financeira",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática Financeira",
+        "source_content_hash": "2d512ab9844fbd78065571ffd82c5d56c2c94062302eb7cb28a26475b16aa484",
+        "original_numeric_id": 118,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_analista_administrativo_118.png",
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica-financeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para avaliar se a rentabilidade do investimento é superior à taxa de desconto de 20% ao ano, calcula-se o Valor Presente Líquido (VPL) do fluxo de caixa. Se o VPL for positivo, a rentabilidade é superior à taxa de desconto; se for negativo, é inferior.\n\nO fluxo de caixa do projeto é:\n- Período 0 (Investimento): $$-R\\$\\ 72.000,00$$\n- Período 1 (Retorno): $$+R\\$\\ 36.000,00$$\n- Período 2 (Retorno): $$+R\\$\\ 45.000,00$$\n\nTrazendo os fluxos futuros ao valor presente com a taxa de desconto de 20% ($i = 0,20$):\n$$VPL = -72.000 + \\frac{36.000}{(1 + 0,20)^1} + \\frac{45.000}{(1 + 0,20)^2}$$\n$$VPL = -72.000 + \\frac{36.000}{1,20} + \\frac{45.000}{1,44}$$\n$$VPL = -72.000 + 30.000 + 31.250$$\n$$VPL = -10.750,00$$\n\nComo o VPL é negativo ($-R\\$\\ 10.750,00$), a rentabilidade real do investimento é menor do que a taxa de desconto de 20% ao ano. Portanto, a afirmação está errada.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_analista_administrativo_118.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "a797d524a0c49a95dd8a7758b093215863803ad8460da942430f234c8ab317d2"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:119",
+      "source_id": "analista_administrativo:119",
+      "question_type": "true_false",
+      "statement_markdown": "Em relação a assuntos relacionados ao cálculo financeiro e avaliação econômica de projetos, julgue os próximos itens.\n\nConsidere que, ao final de cada ano e durante 3 anos, uma pessoa deposita R$ 5.000,00 em um banco de investimento que paga juros de 20% ao ano. Nesse caso, ao final do terceiro ano, imediatamente após o terceiro depósito, a pessoa terá R$ 19.550,00 na conta.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 119; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Matemática Financeira",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática Financeira",
+        "source_content_hash": "bba7991a3685fb001744b080340913d08ed4b2819501c886baeae70ff568e23e",
+        "original_numeric_id": 119,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_analista_administrativo_119.png",
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica-financeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão descreve uma série de pagamentos uniformes e periódicos sob o regime de juros compostos, em que os depósitos ocorrem ao final de cada período (série postecipada).\n\nPara encontrar o montante acumulado imediatamente após o terceiro depósito (no final do ano 3), calcula-se o valor futuro de cada depósito individualmente até essa data:\n\n1. **Primeiro depósito** (feito no final do ano 1): rende juros por 2 anos (anos 2 e 3).\n   $$M_1 = 5.000 \\times (1,20)^2 = 5.000 \\times 1,44 = 7.200,00$$\n\n2. **Segundo depósito** (feito no final do ano 2): rende juros por 1 ano (ano 3).\n   $$M_2 = 5.000 \\times (1,20)^1 = 6.000,00$$\n\n3. **Terceiro depósito** (feito no final do ano 3): não rende juros, pois a verificação do saldo ocorre imediatamente após o depósito.\n   $$M_3 = 5.000,00$$\n\nSomando os valores acumulados:\n$$\\text{Valor Futuro (FV)} = 7.200,00 + 6.000,00 + 5.000,00 = 18.200,00$$\n\nAlternativamente, utilizando a fórmula do valor futuro de uma anuidade postecipada:\n$$FV = PMT \\times \\frac{(1 + i)^n - 1}{i}$$\n$$FV = 5.000 \\times \\frac{(1,20)^3 - 1}{0,20}$$\n$$FV = 5.000 \\times \\frac{1,728 - 1}{0,20} = 5.000 \\times 3,64 = 18.200,00$$\n\nComo o valor acumulado é de R$ 18.200,00, a afirmação está incorreta.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_analista_administrativo_119.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "05863d77f1a31ca5fb353cb932d3688e935137f8f11b2026a695ce55cd23f68b"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:120",
+      "source_id": "analista_administrativo:120",
+      "question_type": "true_false",
+      "statement_markdown": "Em relação a assuntos relacionados ao cálculo financeiro e avaliação econômica de projetos, julgue os próximos itens.\n\nUm investimento de R$ 5.000,00 aplicado a uma taxa de juros anual de 30% ao longo de 3 anos pagará anualmente para o investidor um valor inferior a R$ 2.700,00.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 120; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Matemática Financeira",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática Financeira",
+        "source_content_hash": "6b9027b05c59391dfa30ba75232030a4ff7167f2e10198ffcaf42289ac5b4e40",
+        "original_numeric_id": 120,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_analista_administrativo_120.png",
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica-financeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda o cálculo de pagamentos periódicos e iguais (anuidades) a partir de um valor presente (PV). Para encontrar o valor pago anualmente ($PMT$) que amortiza ou retorna o investimento de R$ 5.000,00 ($PV$) sob uma taxa de juros ($i$) de 30% ao ano durante um período ($n$) de 3 anos, aplica-se a fórmula do fator de recuperação de capital:\n\n$$PMT = PV \\times \\frac{i(1+i)^n}{(1+i)^n - 1}$$\n\nSubstituindo os valores fornecidos:\n1. O fator de juros acumulado é $(1 + 0,30)^3 = 1,3^3 = 2,197$.\n2. Multiplicando pela taxa: $0,30 \\times 2,197 = 0,6591$.\n3. O denominador é $2,197 - 1 = 1,197$.\n4. Dividindo o numerador pelo denominador: $0,6591 / 1,197 \\approx 0,550626$.\n5. Multiplicando pelo valor presente: $5.000 \\times 0,550626 \\approx 2.753,13$.\n\nComo o valor anual resultante de R$ 2.753,13 é superior a R$ 2.700,00, a afirmação de que o investimento pagará um valor inferior a R$ 2.700,00 está incorreta.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_analista_administrativo_120.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "03f3ce6dff838f2d9e948fe579a7596ac1d0340d0a30b2d6ab3505ca76bba704"
+    }
+  ]
+}

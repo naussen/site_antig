@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-tecnico_do_seguro_social-raciocinio-logico-matematica-estatistica-e-matematica-financeira-73d0d3acc70b-02ee3ea73a6c",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "73d0d3acc70b3acdf5a3dd8628e54a2e9357d3788847f08cf4a66c1b2cc014ba",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "4eaf0e6930a8700363f76961716af089a527cb11e4282c667f45b06f21532285",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "02ee3ea73a6c36e2f37a354f8d5b3ac45922259b83812f2cc9d806b5ed041954",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:046",
+      "source_id": "tecnico_do_seguro_social:46",
+      "question_type": "true_false",
+      "statement_markdown": "P: “Se me mandou mensagem, meu filho lembrou-se de mim e quer ser lembrado por mim”.\n\nConsiderando a proposição P apresentada, julgue os itens seguintes.\n\nNa proposição P, permitindo-se variar, em certo conjunto de pessoas, o sujeito e o objeto de cada verbo de suas proposições simples constituintes, tem-se uma sentença aberta, que também pode ser expressa por quem mandou mensagem, lembrou-se e quer ser lembrado.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 46; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Raciocínio Lógico",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "32f81c975b613022659357360fa796d1cbde2cdce27d2306851ab8a23a060e8b",
+        "original_numeric_id": 46,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_seguro_social_046.png",
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "raciocinio-logico",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Uma proposição lógica possui um valor lógico bem definido (verdadeiro ou falso). No entanto, ao substituir os termos fixos (como \"me\", \"meu filho\", \"mim\") por elementos variáveis de um conjunto de pessoas, as sentenças passam a depender do valor atribuído a essas variáveis para que se possa determinar sua veracidade. Isso caracteriza uma sentença aberta (ou função proposicional).\n\nA expressão \"quem mandou mensagem, lembrou-se e quer ser lembrado\" traduz essa estrutura de forma genérica, onde o pronome relativo \"quem\" atua como a variável livre (por exemplo, um indivíduo $x$ qualquer do conjunto), estabelecendo a relação condicional implícita: \"se $x$ mandou mensagem, então $x$ lembrou-se e $x$ quer ser lembrado\".\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_seguro_social_046.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "ca88f36e33b9d7aec0f4058cf9c497a09888ddde154e65acfcde0c3e13cbd3e1"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:047",
+      "source_id": "tecnico_do_seguro_social:47",
+      "question_type": "true_false",
+      "statement_markdown": "P: “Se me mandou mensagem, meu filho lembrou-se de mim e quer ser lembrado por mim”.\n\nConsiderando a proposição P apresentada, julgue os itens seguintes.\n\nA tabela-verdade da proposição P possui 16 linhas.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 47; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Raciocínio Lógico",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "db4977fe229ff7c7e90b05dc36200b5f7aa971f2fba1ee291881567b3a146d0d",
+        "original_numeric_id": 47,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_seguro_social_047.png",
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "raciocinio-logico",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O número de linhas de uma tabela-verdade é determinado pela fórmula 2^n, em que n representa a quantidade de proposições lógicas simples distintas que compõem a proposição analisada.\n\nNa proposição P: \"Se me mandou mensagem, meu filho lembrou-se de mim e quer ser lembrado por mim\", identificam-se as seguintes proposições simples:\n1. p: \"me mandou mensagem\"\n2. q: \"meu filho lembrou-se de mim\"\n3. r: \"quer ser lembrado por mim\"\n\nComo há exatamente 3 proposições simples distintas, o cálculo do número de linhas da tabela-verdade é:\n2^3 = 8 linhas\n\nPortanto, a afirmação de que a tabela-verdade possui 16 linhas está incorreta.\n\n**Dica de prova:** Para não errar a contagem, identifique os verbos principais que indicam as ações de cada proposição simples e desconsidere conectivos como \"se... então\" (condicional) e \"e\" (conjunção).\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_seguro_social_047.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "2e6d253f352b924db0592ba3febacee94105cfc3f6bc54665abbab264bf82105"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:048",
+      "source_id": "tecnico_do_seguro_social:48",
+      "question_type": "true_false",
+      "statement_markdown": "P: “Se me mandou mensagem, meu filho lembrou-se de mim e quer ser lembrado por mim”.\n\nConsiderando a proposição P apresentada, julgue os itens seguintes.\n\nA negação da proposição “meu filho lembrou-se de mim e quer ser lembrado por mim” pode ser expressa por meu filho não se lembrou de mim nem quer ser lembrado por mim.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 48; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Raciocínio Lógico",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "29ed2faa86d87648dff8fab15279b0f553869f5a81ff33992129441a88f15e51",
+        "original_numeric_id": 48,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_seguro_social_048.png",
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "raciocinio-logico",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a aplicação da Primeira Lei de De Morgan para negar uma proposição composta conjuntiva (formada pelo conectivo \"e\").\n\nDada a proposição:\n* \"meu filho lembrou-se de mim **e** quer ser lembrado por mim\" (estrutura: A e B)\n\nA regra de negação de uma conjunção determina que se deve negar ambas as proposições simples e substituir o conectivo \"e\" pelo conectivo \"ou\":\n* ~(A e B) é equivalente a ~A ou ~B\n\nAplicando a regra:\n* \"meu filho **não** se lembrou de mim **ou não** quer ser lembrado por mim\"\n\nO item afirma que a negação pode ser expressa por:\n* \"meu filho não se lembrou de mim **nem** quer ser lembrado por mim\"\n\nO termo \"nem\" equivale à conjunção \"e não\" (~A e ~B). Portanto, a proposição apresentada no item mantém a estrutura de uma conjunção, o que invalida a negação lógica correta.\n\n**Dica de prova:** Lembre-se de que a negação do \"E\" resulta em \"OU\", e a negação do \"OU\" resulta em \"E\". Dizer \"nem\" equivale a usar o \"E\", o que constitui um erro clássico em provas de raciocínio lógico.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_seguro_social_048.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "d393ff264d3a3f9f708cc5c01ad806a3c3b02f0c65c761dc7f0ef2e959742fee"
+    }
+  ]
+}

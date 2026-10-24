@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-agente_administrativo-portugues-a32cf66b680b-ec5c060fed2c",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "a32cf66b680b5ade47718cec8534401119366e961d8b4aae50fc11c197a67192",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "5da32b0a57792e090ef9d4c38cee7bda12a08609929c945e59e21312dccdc01a",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ec5c060fed2c2c31274a2314bbbfbc61da978a1c151d774d6f33c8c0e93a0e99",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:003",
+      "source_id": "agente_administrativo:3",
+      "question_type": "true_false",
+      "statement_markdown": "Abre-se uma janela do Centro Operário. Será a aula de Dona Palmira em 1920 ou há reunião para discutir os estatutos? Durante toda a minha infância, eles discutiram os estatutos. Eu não podia entender nada, mas havia pontos terrivelmente sérios. Era “Centro Operário de Proteção Mútua” ou “Centro Operário E de Proteção Mútua”? Pela noite afora, ano após ano, um mulato meio velho e magro, de óculos, o dedo em riste, a voz rascante, atacava com extraordinária ferocidade aquele E. Não conseguiu derrubá-lo; os operários talvez se sentissem fracos, sozinhos, precisavam daquele E que os conjugava com outras camadas sociais. Ficou o E, meu pai foi diretor e, quando morreu, teve auxílio no enterro, tudo sem ser operário, tudo graças àquele E. Sem o E eu talvez não tivesse estudado ali, não me sentaria no comprido banco, onde o último da esquerda era o preto Bernardino, e à direita, o rosto lindo de Lélia, com seus cabelos doces e uma covinha quando sorria. Quando não estavam discutindo os estatutos, ou providenciando um enterro de sócio, com a bandeira do Centro em cima do caixão, os operários E todos que queriam proteção mútua estavam dançando; sons de pistom atravessam meu sono infantil; eu achava estranho e ao mesmo tempo alegre e feliz haver baile na mesma sala onde eu tinha aulas.\n\nRubem Braga. Em Cachoeiro. 200 crônicas escolhidas. Rio de Janeiro: Record, 2003, p.55 (com adaptações).\n\nConsiderando os sentidos e aspectos linguísticos do texto precedente, julgue os itens a seguir.\n\nNa oração “mas havia pontos terrivelmente sérios” (quarto período), a flexão da forma verbal “havia” no singular justifica-se por ser facultativa sua concordância com “pontos terrivelmente sérios”.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 3; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "9008470638649a572f5d47702bbd1c3d9425bd9b48b0e2fa295b8bfa8fcec739",
+        "original_numeric_id": 3,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O verbo \"haver\", quando empregado com o sentido de \"existir\" ou \"ocorrer\", é classificado como impessoal. Por não possuir sujeito, ele deve obrigatoriamente permanecer na terceira pessoa do singular (\"havia\"). O termo \"pontos terrivelmente sérios\" funciona como objeto direto, e não como sujeito. Assim, a concordância no singular não é facultativa, mas sim obrigatória de acordo com as normas da gramática padrão.",
+        "source_reference": null
+      },
+      "source_content_hash": "bebebb9607fbd50c46e7796406e487db3a99663053224c5b443f26015ab8c331"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:100",
+      "source_id": "agente_administrativo:100",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, sobre redação oficial, com base no Manual de Redação da Presidência da República.\n\nNos textos oficiais, os vocativos usualmente empregam em sua estrutura a forma de tratamento Senhor ou Senhora.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 100; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "0afcd9726fa9c76ac41f2087b5068a16f6806abb5abfa1f01de998ae8ec8df60",
+        "original_numeric_id": 100,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **correto**.\n\nSegundo o Manual de Redação da Presidência da República, o vocativo a ser empregado nas comunicações oficiais direcionadas a autoridades é, de forma geral, **\"Senhor\"** ou **\"Senhora\"**, seguido do respectivo cargo (por exemplo: *Senhor Senador*, *Senhora Diretora*, *Senhor Ministro*).\n\nA forma de tratamento **\"Excelentíssimo\"** (ou *Excelentíssimo Senhor*) é reservada estritamente aos Chefes dos três Poderes da República (Presidente da República, Presidente do Congresso Nacional e Presidente do Supremo Tribunal Federal). Para as demais autoridades, o tratamento usual e correto no vocativo é, de fato, \"Senhor\" ou \"Senhora\".\n\n**Dispositivo legal**\n\n[Manual de Redação da Presidência da República, 3ª ed., Capítulo 2, Item 2.1.2 (Vocativo)](https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica)",
+        "source_reference": null
+      },
+      "source_content_hash": "d1fdfcf24c26641cc30c9ece4efc47ee9acb51688636f3b0f87495ccc96bd42d"
+    }
+  ]
+}

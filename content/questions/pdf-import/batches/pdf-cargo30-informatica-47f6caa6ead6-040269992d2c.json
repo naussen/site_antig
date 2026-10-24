@@ -1,0 +1,77 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-cargo30-informatica-47f6caa6ead6-040269992d2c",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "47f6caa6ead632f1fff7cde69950d7725a840e5c5b554a898b6c23af5a873356",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "4cf2583924232a76b401cdfc24313fb757e305aad1b2fdad61bd5c3798ffc63b",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "040269992d2c57ee44ce9efe56779c86f42a73a8ad9472817867ed886646ed73",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:046",
+      "source_id": "cargo30:46",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando a janela do Internet Explorer 6 (IE6) ilustrada acima, julgue os itens seguintes.\n\nVírus de computador pode ser contraído no acesso a páginas web. Para que o IE6 possa rastrear vírus de computador contraído em determinada sessão de uso, é necessário que ele disponha de um software antivírus, o qual é ativado por meio do botão [Procurar].",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 46",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ameaças Virtuais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "7fbfa9e8654072ab7c3c24fd11c8010213d988254fbab5a69a5c4daa355ee20f",
+        "original_numeric_id": 46,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": "O Internet Explorer 6 é um software descontinuado.",
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "ameacas-virtuais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "🔴 **DESATUALIZADO:** O Internet Explorer 6 é um software descontinuado.\n\nO erro da afirmação reside na atribuição de função ao botão `Procurar` (Search) do Internet Explorer 6. Esse botão destina-se a abrir a barra de pesquisa lateral para realizar buscas por conteúdos e páginas na internet por meio de mecanismos de busca. Ele não possui qualquer relação com a ativação, execução ou integração de softwares antivírus para rastreamento de códigos maliciosos no computador.",
+        "source_reference": null
+      },
+      "source_content_hash": "9c69bbbdf9632b56fe401cb08bf5a4d4b0a26b7553f83f08d54047941ee70594"
+    }
+  ]
+}

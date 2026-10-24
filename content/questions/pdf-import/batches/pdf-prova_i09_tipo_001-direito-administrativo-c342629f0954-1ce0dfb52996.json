@@ -1,0 +1,92 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-prova_i09_tipo_001-direito-administrativo-c342629f0954-1ce0dfb52996",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "c342629f095462ff4e615186279853316fc5c316eb5e6f07a33d672c888948e0",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "8a1d40d330f3a1f0c9c5c49977037cbc600422d057f7b497ba1fcf422d8196bb",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "1ce0dfb52996227950d335bdd1af9193a5d9e50f18a87bdb258950837a2a0e59",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:025",
+      "source_id": "prova_i09_tipo_001:25",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A responsabilidade do servidor público civil",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 25; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "resulta de ato apenas comissivo, praticado no desempenho de cargo ou função.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "somente será afastada no caso de absolvição criminal que negue a existência do fato.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "de reparar o dano não se estende aos sucessores do servidor público.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "decorre de ato omissivo ou comissivo, doloso ou culposo, que resulte em prejuízo ao erário ou a terceiros.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "implicará na aplicação de sanção administrativa, que não poderá cumular-se com demais sanções de natureza penal ou civil, sob pena de caracterizar bis in idem.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo",
+        "source_content_hash": "f0f4e5b0c9881bf681118d17ee4b08006994e3cbc242146068f95e367e294097",
+        "original_numeric_id": 25,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito correto é a alternativa **D**.\n\nA responsabilidade civil do servidor público civil é disciplinada pelo artigo 122, *caput*, da Lei nº 8.112/1990, o qual prevê expressamente que ela decorre de ato omissivo ou comissivo, doloso ou culposo, que resulte em prejuízo ao erário ou a terceiros.\n\nAnálise das alternativas incorretas:\n- **A** (Incorreta): A responsabilidade civil decorre tanto de ato **comissivo** (ação) quanto de ato **omissivo** (omissão), conforme o artigo 122, *caput*, da Lei nº 8.112/1990.\n- **B** (Incorreta): A responsabilidade administrativa (e não a civil de forma genérica) será afastada no caso de absolvição criminal que negue a existência do fato **ou sua autoria**, nos termos do artigo 126 da Lei nº 8.112/1990.\n- **C** (Incorreta): A obrigação de reparar o dano **estende-se aos sucessores** e contra eles será executada, até o limite do valor da herança recebida, conforme o artigo 122, § 3º, da Lei nº 8.112/1990.\n- **E** (Incorreta): As sanções civis, penais e administrativas **poderão cumular-se**, sendo independentes entre si, não caracterizando *bis in idem*, conforme dispõe o artigo 125 da Lei nº 8.112/1990.\n\n### Dispositivo legal\n- **Lei nº 8.112/1990, Artigo 122**\n- [Texto oficial no Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "f6ef0157054d0fa5f0bcc73c8f37a1ee34bea3dee0703a26402f9ec181705d85"
+    }
+  ]
+}

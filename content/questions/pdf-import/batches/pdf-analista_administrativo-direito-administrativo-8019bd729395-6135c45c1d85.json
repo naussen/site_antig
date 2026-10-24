@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-analista_administrativo-direito-administrativo-8019bd729395-6135c45c1d85",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "8019bd729395aac2a736d513a35ce802cbccd0df43daacdebf05555ba2785988",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "0fc614916228bfa45383f0df7c8e33baaccace7bb05b812e4da6dc6bb1c76217",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "6135c45c1d8515d53d70cf1153032b93ab5f4d2c04033a407dc3ca9a18b869da",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:022",
+      "source_id": "analista_administrativo:22",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à administração pública e sua organização, julgue os itens a seguir.\n\nO IBAMA é uma fundação pública, serviço autônomo criado por lei, e tem personalidade jurídica, patrimônio e receita próprios para executar atividades típicas da administração pública que requeiram, para seu melhor funcionamento, gestão administrativa e financeira descentralizada.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 22; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "c78d2766f4d31c2377ba28b3822ad49c8a569b639eabf7894f0b1ae3978f5496",
+        "original_numeric_id": 22,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta por apresentar dois erros conceituais relativos à organização administrativa e à natureza jurídica do IBAMA:\n\n1. **Natureza Jurídica do IBAMA:** O Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis (IBAMA) é uma **autarquia federal**, criada pela Lei nº 7.735/1989, e não uma fundação pública.\n2. **Incompatibilidade de Conceito:** A definição apresentada no enunciado (\"serviço autônomo criado por lei, com personalidade jurídica, patrimônio e receita próprios para executar atividades típicas da administração pública...\") corresponde exatamente à definição legal de **autarquia**, conforme estabelecido no art. 5º, inciso I, do Decreto-Lei nº 200/1967, e não ao conceito de fundação pública.\n\n**Pegadinha comum:** A questão tenta confundir o candidato ao misturar o nome de uma entidade (IBAMA), o conceito legal de outra espécie de entidade (autarquia) e rotulá-la erroneamente como \"fundação pública\".\n\n### Dispositivo legal\n* **Decreto-Lei nº 200/1967, art. 5º, inciso I** ([Planalto](https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm))\n* **Lei nº 7.735/1989, art. 2º** ([Planalto](https://www.planalto.gov.br/ccivil_03/leis/l7735.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "560861d1223871e2746f5e14a114447cccf5cbac58aec5f257a140b49021da84"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:046",
+      "source_id": "analista_administrativo:46",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando a hipótese de que, no seu exercício profissional, determinado servidor público tenha utilizado, para fins de interesse particular, os serviços de servidor subordinado a ele, julgue os itens seguintes.\n\nA atuação do superior hierárquico, nesse caso, constitui ato de improbidade administrativa que importa lesão ao erário.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 46; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Lei 8.429/92 – Lei de Improbidade Administrativa",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "29bb60e9f374e159c6d86c56267e8490a8cf1cc22b712eb38374aab002404cc4",
+        "original_numeric_id": 46,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "improbidade-administrativa",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está **errada**.\n\nA conduta do superior hierárquico que utiliza os serviços de um servidor subordinado para fins de interesse particular configura ato de improbidade administrativa. Contudo, a capitulação legal correta para essa conduta é o **enriquecimento ilícito**, tipificado no art. 9º, inciso IV, da Lei nº 8.429/1992, e não ato que importa lesão ao erário (art. 10).\n\nO dispositivo legal veda expressamente a utilização, em obra ou serviço particular, do trabalho de servidores públicos, empregados ou terceiros contratados pelas entidades da Administração Pública, caracterizando o proveito patrimonial indevido por parte do agente público.\n\n### Dispositivo legal\n\n* **Lei nº 8.429/1992, Art. 9º, inciso IV:**\n> \"Art. 9º Constitui ato de improbidade administrativa importando em enriquecimento ilícito auferir, mediante a prática de ato doloso, qualquer tipo de vantagem patrimonial indevida em razão do exercício de cargo, de mandato, de função, de emprego ou de atividade nas entidades referidas no art. 1º desta Lei, e notadamente:\n> (...)\n> IV - utilizar, em obra ou serviço particular, qualquer bem móvel, de propriedade ou à disposição de qualquer das entidades referidas no art. 1º desta Lei, bem como o trabalho de servidores, de empregados ou de terceiros contratados por essas entidades;\"",
+        "source_reference": null
+      },
+      "source_content_hash": "5c512f64ce09ddafbde7dc5d0b261afa7300b7b43b03981864fbbb2b8892f2dc"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:048",
+      "source_id": "analista_administrativo:48",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando a hipótese de que, no seu exercício profissional, determinado servidor público tenha utilizado, para fins de interesse particular, os serviços de servidor subordinado a ele, julgue os itens seguintes.\n\nTal conduta do superior hierárquico configurará ato de improbidade administrativa apenas se tiver sido praticada de forma dolosa.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 48; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Lei 8.429/92 – Lei de Improbidade Administrativa",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "a5429a9abfc8e525332a7252c290ed6747ca0104981361bc7a7f149ce8c81cdb",
+        "original_numeric_id": 48,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "improbidade-administrativa",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A conduta descrita no enunciado — utilizar, para fins de interesse particular, os serviços de servidor subordinado — amolda-se à conduta tipificada como ato de improbidade administrativa que importa enriquecimento ilícito, prevista no art. 9º, inciso IV, da Lei nº 8.429/1992 (Lei de Improbidade Administrativa - LIA).\n\nCom as alterações substanciais promovidas pela Lei nº 14.230/2021, o sistema de responsabilização por improbidade administrativa passou a exigir, de forma categórica, a presença de dolo para a configuração de qualquer ato de improbidade (seja ele de enriquecimento ilícito, prejuízo ao erário ou atentado contra os princípios da administração pública). O dolo é definido pela legislação como a vontade livre e consciente de alcançar o resultado ilícito tipificado na lei, não bastando a mera voluntariedade ou a conduta culposa (negligência, imprudência ou imperícia).\n\nPortanto, a afirmação de que tal conduta configurará ato de improbidade administrativa apenas se tiver sido praticada de forma dolosa está correta.\n\n### Dispositivo legal\n\n* **Lei nº 8.429/1992**, Art. 1º, §§ 1º e 2º, e Art. 9º, inciso IV (disponível em: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l8429.htm)).",
+        "source_reference": null
+      },
+      "source_content_hash": "fe8050030e9d54ffd6b7207c22ec68489a8c0541718d63e10b0f363ee2c188ad"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-tecnico_do_seguro_social-direito-constitucional-73d0d3acc70b-d58311842a07",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "73d0d3acc70b3acdf5a3dd8628e54a2e9357d3788847f08cf4a66c1b2cc014ba",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "4eaf0e6930a8700363f76961716af089a527cb11e4282c667f45b06f21532285",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "d58311842a076a61a8da39ea567e125c29833173b6cf50239f6e9253e3b345d7",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:022",
+      "source_id": "tecnico_do_seguro_social:22",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos direitos e garantias fundamentais, julgue os itens a seguir.\n\nO Poder Judiciário pode determinar a implantação de políticas públicas relacionadas a direitos e garantias fundamentais, sem que isso ofenda o princípio da separação dos poderes.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 22; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Do Poder Judiciário",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "a8839303a671635a3981836263babae3f5f44a590225e1db0c0edc2f777bd4da",
+        "original_numeric_id": 22,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "poder-judiciario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O Supremo Tribunal Federal (STF) possui entendimento pacificado no sentido de que o Poder Judiciário pode, em situações excepcionais de omissão da Administração Pública, determinar a implementação de políticas públicas destinadas a garantir direitos fundamentais constitucionalmente previstos, sem que isso configure ofensa ao princípio da separação dos poderes (artigo 2º da Constituição Federal).\n\nEssa atuação jurisdicional visa assegurar a eficácia de direitos essenciais e a dignidade da pessoa humana, não sendo oponível o argumento da reserva do possível ou da discricionariedade administrativa quando houver omissão estatal injustificada que comprometa o mínimo existencial.\n\n**Dispositivo legal:**\nSTF, RE 592.581 (Tema 220 de Repercussão Geral).",
+        "source_reference": null
+      },
+      "source_content_hash": "df617b76ad20352626eae9243b905135b863b6f333aad48b32343df065201b5f"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:028",
+      "source_id": "tecnico_do_seguro_social:28",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as disposições da Constituição Federal de 1988 (CF) quanto à administração pública, julgue os itens a seguir.\n\nServidor público da administração indireta investido no mandato de vereador poderá acumular as vantagens do emprego com a remuneração do cargo eletivo, se houver compatibilidade de horários.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 28; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Da Administração Pública",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "e30a15454285967b9d8ce9ee0828140a9ed67187ff71b1eba95339a96d005a18",
+        "original_numeric_id": 28,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "administracao-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O servidor público da administração direta, autárquica ou fundacional investido no mandato de vereador pode acumular as vantagens de seu cargo, emprego ou função com a remuneração do cargo eletivo, desde que haja compatibilidade de horários. Embora o caput do artigo 38 mencione expressamente a administração direta, autárquica e fundacional, a jurisprudência do Supremo Tribunal Federal (STF) consolidou o entendimento de que essa regra de acumulação também se estende aos empregados públicos das empresas públicas e sociedades de economia mista (integrantes da administração indireta), conforme decidido na ADI 199/PE.\n\n### Dispositivo legal\n* **Artigo:** Art. 38, III, da Constituição Federal de 1988 e STF, ADI 199/PE.\n* **Link oficial:** [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "ddcdeda1581ebe4605ecfdf7c05919f60b4ff7a8c4e852c0817fa334e0aecd10"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:029",
+      "source_id": "tecnico_do_seguro_social:29",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as disposições da Constituição Federal de 1988 (CF) quanto à administração pública, julgue os itens a seguir.\n\nOs vencimentos dos cargos integrantes dos Poderes Legislativo e Judiciário não poderão exceder os pagos aos cargos do Poder Executivo.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 29; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Da Administração Pública",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "8e443bcd4200b419a589fbdab8558c98b551be37418317b8847a7178741dd176",
+        "original_numeric_id": 29,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "administracao-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto, pois reproduz a regra de limite remuneratório prevista na Constituição Federal de 1988. O texto constitucional estabelece expressamente que os vencimentos dos cargos integrantes do Poder Legislativo e do Poder Judiciário não podem ser superiores (ou seja, não podem exceder) aos valores pagos aos cargos correspondentes do Poder Executivo.\n\n### Dispositivo legal\n* **Artigo:** Art. 37, XII, da Constituição Federal de 1988.\n* **Link oficial:** [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "c5aa1249860504f52bfd5a80ed3bafe5a55347cf1ef5db2199e160b2d43aaf0b"
+    }
+  ]
+}

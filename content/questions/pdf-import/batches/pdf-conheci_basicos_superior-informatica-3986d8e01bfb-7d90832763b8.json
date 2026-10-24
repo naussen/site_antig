@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-conheci_basicos_superior-informatica-3986d8e01bfb-7d90832763b8",
+  "source": {
+    "file_name": "conheci_basicos_superior_ATUALIZADO.json",
+    "sha256": "3986d8e01bfb9b85aa8cf63981399347dbbecd398cc022ac595928362e48acb2",
+    "metadata": {
+      "generator": "PDF extraction",
+      "original_file_name": "conheci_basicos_superior.json",
+      "original_source_sha256": "b206400e7cdbc8349a44515c2afe3ee6461cc3fb9fdceb3ff70127850f57917b",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "7d90832763b8f0ab925c8842f3f7ab36395f0ac772d38bfffb729d9a145a962b",
+      "classification": "explicit subject and statement terms",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:04:40.771Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:conheci_basicos_superior:024",
+      "source_id": "conheci_basicos_superior:24",
+      "question_type": "true_false",
+      "statement_markdown": "No que concerne à rede de computadores e à segurança da informação, julgue os itens que se seguem.\n\nBiometria é uma forma de se identificar o comportamento, garantindo a segurança dos usuários de Internet.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 24; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "324308fb87ac791aa61ae8e949edf5627d1c095da3eb19b5060eca9100c62d2c",
+        "original_numeric_id": 24,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto por apresentar uma definição inadequada e restritiva de biometria.\n\nA **biometria** consiste na identificação e autenticação de indivíduos com base em suas características biológicas únicas. Essas características dividem-se em:\n* **Fisiológicas/Físicas (mais comuns)**: Impressão digital, reconhecimento facial, leitura de íris, retina e geometria da mão.\n* **Comportamentais**: Dinâmica de digitação, assinatura e padrão de voz.\n\nReduzir o conceito de biometria a apenas \"uma forma de se identificar o comportamento\" desconsidera os métodos físicos mais amplamente utilizados. Além disso, a biometria é um mecanismo de autenticação e controle de acesso, não sendo suficiente por si só para \"garantir a segurança dos usuários de Internet\" de forma ampla.",
+        "source_reference": null
+      },
+      "source_content_hash": "8b105032ea246527d0c29528c8b765f09178a855a8a0ddb46698075dff004dbf"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:026",
+      "source_id": "conheci_basicos_superior:26",
+      "question_type": "true_false",
+      "statement_markdown": "No que concerne à rede de computadores e à segurança da informação, julgue os itens que se seguem.\n\nA computação em nuvem é uma forma atual e segura de armazenar dados em servidores remotos que não dependem da Internet para se comunicar.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 26; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Computação na Nuvem (Cloud Computing)",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "4c78c8470d5fa5e353d171043224d9f0d951e5932499ee7892458c6b86ab9243",
+        "original_numeric_id": 26,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term"
+      },
+      "topics": [
+        {
+          "topic_id": "computacao-na-nuvem-cloud-computing",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A computação em nuvem (*cloud computing*) baseia-se no fornecimento de recursos de computação — como armazenamento, processamento, banco de dados e redes — sob demanda e de forma remota. \n\nPara que ocorra a comunicação entre o cliente (usuário) e os servidores remotos onde os dados estão hospedados, é indispensável a utilização de uma rede de comunicação ativa, que na grande maioria dos casos práticos é a internet. Portanto, a afirmação de que esses servidores \"não dependem da Internet para se comunicar\" está incorreta, pois inviabilizaria o acesso remoto característico do modelo de nuvem.",
+        "source_reference": null
+      },
+      "source_content_hash": "f835aa6557ea1c7aa600d53ce4c7b588c6dcd1215621f40b5a05a37de73e00fd"
+    }
+  ]
+}
