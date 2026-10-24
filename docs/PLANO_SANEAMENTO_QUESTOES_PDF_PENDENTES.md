@@ -81,6 +81,40 @@ Entregar em cada ciclo: inventário antes/depois por motivo; decisões por ID e 
 
 Todos os 1.251 IDs têm decisão individual e rastreável. A soma `publicados novos + retidos fundamentados + excluídos posteriormente` fecha em 1.251, sem duplicação com os 75 já publicados e sem retorno dos 34 excluídos. Só declarar publicação das candidatas efetivamente importadas e verificadas no banco e na interface. Atualizar este plano, `summary.json`, relatório de auditoria e `CHANGELOG.md` com contagens finais e riscos remanescentes.
 
+## 8. Execução do Saneamento — 24/10/2026
+
+### Inventário Congelado e Integridade
+- Confrontação estrita entre `manifest.json` (1.326 itens), `excluded.json` (34 itens) e catálogo do banco em produção (187 questões: 112 originais + 75 publicadas).
+- **Interseções indevidas:** 0. Todos os 34 itens excluídos permaneceram fora do trabalho. Todos os 75 itens já publicados e os 112 originais permaneceram intactos.
+- Inventário congelado gerado em `C:\PRO\questoes\scratch\inventario_1251_congelado.json` com exatamente 1.251 IDs únicos.
+
+### Resultados da Reconciliação e Triagem
+- **Frente A (437 com gabarito preliminar/sem status):**
+  - 434 conciliados e confirmados contra gabaritos definitivos oficiais das bancas (CEBRASPE, FGV, Cesgranrio).
+  - 3 itens com gabarito alterado pela banca retidos para revisão editorial da explicação (`pdf:agente_de_policia_federal:039`, `pdf:agente_de_policia_federal:060`, `pdf:dpf14_009_01:113`).
+- **Frente B (369 sem comentário explicativo):**
+  - 369 itens retidos mantidos com os motivos específicos documentados de `relatorio_comentarios.json`.
+- **Frente C (180 sem disciplina ativa) e Frente D (265 sem tópico identificado):**
+  - Após a resolução do bloqueio de gabarito nas 437 questões da Frente A, a reexecução da triagem taxonômica revelou novos bloqueios específicos: 111 questões recaíram na Frente C (disciplina não existente) e 235 recaíram na Frente D (tópico não identificado com segurança).
+- **Total de Decisões Individuais Registradas (`scratch/registro_decisoes_1251.json`):**
+  - **Candidatas Aptas:** 80 questões distribuídas em 22 lotes pequenos por prova (1 a 10 questões por lote), todas com gabarito definitivo, comentário com links permitidos e taxonomia segura.
+  - **Retidas Fundamentadas:** 1.171 questões:
+    - `topic_not_identified`: 490 (255 da triagem inicial + 235 da reexecução)
+    - `sem_comentario_explicativo`: 369
+    - `disciplina_ausente_no_catalogo`: 277 (166 da triagem inicial + 111 da reexecução)
+    - `conteudo_desatualizado`: 26 (24 da triagem inicial + 2 da reexecução)
+    - `gabarito_alterado_necessita_revisao`: 3
+    - `ambiguous_topic`: 3
+    - `subject_topic_conflict`: 3
+  - **Soma exata:** 80 + 1.171 = 1.251 itens. Soma total do ecossistema: 80 aptas + 1.171 retidas + 75 publicadas + 34 excluídas = 1.360.
+
+### Preparação e Validação dos Lotes Candidatos
+- 22 lotes gerados em diretório isolado `C:\PRO\questoes\scratch\candidate_batches\batches\`, sem interferência nos 19 lotes já publicados.
+- 15 memórias de cálculo PNG processadas em `scratch/candidate_batches/images/`.
+- **Validação Zod (`scripts/questions-admin.mjs validate`):** 22/22 lotes aprovados com 100% de conformidade com o contrato `pro-questions/v1`.
+- **Verificação de duplicatas contra o banco:** 0 colisões de ID externo, 0 colisões de enunciado.
+- **Ponto de Parada:** Em cumprimento à Seção 1 e Seção 5, a publicação automática NÃO foi executada; os lotes candidatos aguardam revisão humana editorial e autorização para o apply atômico.
+
 ## Instrução curta para colar na outra IDE
 
 > Execute o plano em `docs/PLANO_SANEAMENTO_QUESTOES_PDF_PENDENTES.md` no ecossistema `C:\PRO`. Comece pelo diagnóstico e inventário dos 1.251 IDs, preserve os 34 excluídos, os 75 publicados e todas as fontes originais. Trabalhe em worktree isolado e em ciclos por prova. Não invente gabarito, comentário ou taxonomia. Entregue decisões com evidência e retenha casos não comprovados. Não importe nem publique antes de satisfazer todos os gates do plano; reporte contagens e bloqueios ao fim de cada ciclo.

@@ -1,5 +1,12 @@
 # Changelog
 
+## Não publicado — execução do saneamento das questões de PDF pendentes
+
+- executado o saneamento dos 1.251 itens pendentes com congelamento do inventário e criação de registro individual rastreável de decisões para 100% dos IDs;
+- conciliados 437 gabaritos da Frente A com documentos oficiais definitivos (434 confirmados e 3 alterados com retenção para revisão de explicação);
+- reexecutada a triagem taxonômica pós-conciliação, identificando 80 candidatas aptas (22 lotes candidatos, 15 imagens de cálculo otimizadas, validação Zod 100% aprovada e zero colisões com o catálogo ativo);
+- fundamentadas e registradas as 1.171 retenções por critérios técnicos e editoriais estritos, preservando os 75 itens já publicados e os 34 excluídos sem publicação automática não autorizada.
+
 ## Não publicado — plano de saneamento das questões de PDF pendentes
 
 - documentadas as quatro frentes para tratar 1.251 questões pendentes, com decisões por ID, conferência de gabarito definitivo, revisão de comentários, conciliação taxonômica e gates de importação;
