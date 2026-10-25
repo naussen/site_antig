@@ -1,6 +1,6 @@
 # Changelog
 
-## Não publicado — busca e filtros do PRO Questões
+## Publicado — busca e filtros do PRO Questões (25/10/2026)
 
 - acrescentados filtros por tópico, banca e ano a partir do acervo publicado, com contagem de resultados e busca por enunciado, assunto, órgão, cargo e referência;
 - corrigida a aplicação dos filtros durante a navegação e protegida a interface contra respostas de busca fora de ordem;
