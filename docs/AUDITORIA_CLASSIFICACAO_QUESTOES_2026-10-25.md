@@ -26,3 +26,5 @@ A migration 039 verifica os 95 estados anteriores, os alvos ativos e o resultado
 ## Validação realizada e pendências
 
 A migration 039 consta no histórico remoto. O banco confirmou 1.301 questões publicadas, 48 arquivadas e 70 itens ainda em Português > Outros Tópicos. Os 47 vínculos e os 48 estados finais foram conferidos dentro da própria migration. No site autenticado, a questão de sequência de letras passou a apontar para Raciocínio Lógico; a conta de teste vê 1.299 itens porque ocultou dois. Antes de republicar qualquer item retido, definir disciplina e tópico ativos com revisão do enunciado e do comentário.
+
+A análise individual posterior dos 48 itens, com assunto proposto e condição de saída da retenção, está em [`REVISAO_48_QUESTOES_RETIDAS_2026-10-25.md`](REVISAO_48_QUESTOES_RETIDAS_2026-10-25.md).

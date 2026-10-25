@@ -1,5 +1,11 @@
 # Changelog
 
+## Revisão editorial — 48 questões retidas (25/10/2026)
+
+- Registrada análise individual dos 48 itens arquivados pela migration 039, com classificação proposta e bloqueio concreto para republicação;
+- identificadas três questões amparadas em decretos revogados, 19 de Enfermagem dependentes de revisão clínica e duas com imagem relativa no comentário;
+- preservados o estado arquivado, os gabaritos, os comentários, as imagens de origem e o histórico no banco até conclusão das verificações editoriais.
+
 ## Publicado — biblioteca sem tópicos vazios (25/10/2026)
 
 - a biblioteca de resumos exibe apenas tópicos com seções ativas; os tópicos criados para classificar questões permanecem ativos no banco.
