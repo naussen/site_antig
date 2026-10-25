@@ -41,11 +41,11 @@
     "@supabase/supabase-js": "^2.110.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "dompurify": "^3.4.13",
+    "dompurify": "^3.4.17",
     "katex": "^0.18.4",
     "lucide-react": "^1.23.0",
     "mermaid": "11.16.1",
-    "next": "16.3.8",
+    "next": "16.4.3",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-markdown": "^10.1.0",
@@ -55,7 +55,10 @@
     "remark-math": "^6.0.0",
     "sharp": "0.35.5",
     "tailwind-merge": "^3.6.0",
-    "zod": "^4.4.3"
+    "zod": "^4.6.7"
+  },
+  "overrides": {
+    "katex": "$katex"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "5.15.13",
@@ -65,7 +68,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.3.8",
+    "eslint-config-next": "16.4.3",
     "supabase": "^2.109.1",
     "tailwindcss": "^4",
     "typescript": "^5"

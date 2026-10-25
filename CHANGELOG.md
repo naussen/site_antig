@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — atualização de dependências de segurança (25/10/2026)
+
+- atualizados Next.js 16.4.3, DOMPurify 3.4.17 e Zod 4.6.7;
+- unificado KaTeX 0.18.10 também nas dependências transitivas de Mermaid e Markdown matemático, sem atualização de versão principal do Mermaid;
+- `npm audit --omit=dev` passou sem vulnerabilidades conhecidas.
+
 ## Aplicado no banco — revisão editorial das questões (25/10/2026)
 
 - auditadas 1.349 questões publicadas e registradas decisões por ID para 47 correções taxonômicas e 48 retenções editoriais sem perda de histórico;
