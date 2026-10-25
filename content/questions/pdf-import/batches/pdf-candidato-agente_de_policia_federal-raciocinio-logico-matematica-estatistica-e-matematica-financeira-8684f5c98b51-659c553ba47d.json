@@ -1,0 +1,503 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-agente_de_policia_federal-raciocinio-logico-matematica-estatistica-e-matematica-financeira-8684f5c98b51-659c553ba47d",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "8684f5c98b5104f7efe1d71e306dea21ce1a8e63e9a46565a984c87d36331352",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "9bf5415c207ff2dee6f1b513f48cc1f4b3e00a224421906182f247e816e0b8ed",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "659c553ba47d44e2f516f87b179a77476d0163c75bf46af03ae8a5ab82480058",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:041",
+      "source_id": "agente_de_policia_federal:41",
+      "question_type": "true_false",
+      "statement_markdown": "Determinado órgão governamental estimou que a probabilidade p de um ex-condenado voltar a ser condenado por algum crime no prazo de 5 anos, contados a partir da data da libertação, seja igual a 0,25. Essa estimativa foi obtida com base em um levantamento por amostragem aleatória simples de 1.875 processos judiciais, aplicando-se o método da máxima verossimilhança a partir da distribuição de Bernoulli.\nSabendo que P(Z < 2) = 0,975, em que Z representa a distribuição normal padrão, julgue os itens que se seguem, em relação a essa situação hipotética.\n\nEm um grupo formado aleatoriamente por 4 ex-condenados libertos no mesmo dia, estima-se que a probabilidade de que apenas um deles volte a ser condenado por algum crime no prazo de 5 anos, contados a partir do dia em que eles foram libertados, seja superior a 0,4.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 41; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Estatística",
+        "source_content_hash": "9303a81327e51e09293d134238e12528901b7a37274075b09110eedb50cd9cd5",
+        "original_numeric_id": 41,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_041.png",
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 41
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. O problema descreve um experimento com características de uma distribuição binomial, onde:\n\n* O número de ensaios independentes é $n = 4$ (os quatro ex-condenados).\n* A probabilidade de sucesso (voltar a ser condenado) é $p = 0,25$.\n* A probabilidade de fracasso (não voltar a ser condenado) é $q = 1 - p = 0,75$.\n\nA probabilidade de que exatamente um deles volte a ser condenado ($k = 1$) é calculada pela fórmula da distribuição binomial:\n\n$$P(X = 1) = \\binom{4}{1} \\cdot (0,25)^1 \\cdot (0,75)^3$$\n\nEfetuando os cálculos, obtém-se a probabilidade de $0,421875$ (ou $42,1875\\%$), valor que é superior ao limite de $0,4$ (ou $40\\%$) indicado na assertiva.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_041.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "4aff953f4844321612d5eb919ac96fa852d927af294cbd642c5d00b241739c60"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:042",
+      "source_id": "agente_de_policia_federal:42",
+      "question_type": "true_false",
+      "statement_markdown": "Determinado órgão governamental estimou que a probabilidade p de um ex-condenado voltar a ser condenado por algum crime no prazo de 5 anos, contados a partir da data da libertação, seja igual a 0,25. Essa estimativa foi obtida com base em um levantamento por amostragem aleatória simples de 1.875 processos judiciais, aplicando-se o método da máxima verossimilhança a partir da distribuição de Bernoulli.\nSabendo que P(Z < 2) = 0,975, em que Z representa a distribuição normal padrão, julgue os itens que se seguem, em relação a essa situação hipotética.\n\nO erro padrão da estimativa da probabilidade p foi igual a 0,01.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 42; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Estatística",
+        "source_content_hash": "bb51e401688a6fd22fdbf77ddab8598aa8d3894d7c410261d8556374ab5322c6",
+        "original_numeric_id": 42,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_042.png",
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 42
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. O erro padrão da estimativa de uma proporção em uma amostragem aleatória simples é determinado pela raiz quadrada do produto da proporção estimada de sucessos e de fracassos, dividido pelo tamanho da amostra.\n\nCom base nos dados fornecidos:\n* Proporção de sucessos ($p$): $0,25$\n* Proporção de fracassos ($1 - p$): $0,75$\n* Tamanho da amostra ($n$): $1.875$\n\nAo aplicar esses valores na fórmula do erro padrão, obtém-se o resultado exato de $0,01$.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_042.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "100db1c6f7f4819b982341b5562dd12d8c0297bcbb7a872cbed81fa3387f5710"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:043",
+      "source_id": "agente_de_policia_federal:43",
+      "question_type": "true_false",
+      "statement_markdown": "Determinado órgão governamental estimou que a probabilidade p de um ex-condenado voltar a ser condenado por algum crime no prazo de 5 anos, contados a partir da data da libertação, seja igual a 0,25. Essa estimativa foi obtida com base em um levantamento por amostragem aleatória simples de 1.875 processos judiciais, aplicando-se o método da máxima verossimilhança a partir da distribuição de Bernoulli.\nSabendo que P(Z < 2) = 0,975, em que Z representa a distribuição normal padrão, julgue os itens que se seguem, em relação a essa situação hipotética.\n\nA estimativa intervalar 0,25 ± 0,05 representa o intervalo de 95% de confiança do parâmetro populacional p.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 43; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Estatística",
+        "source_content_hash": "5c64901204d3b58e92eccf033809036d7a670efd758ebbc5cdb394dc22a0f0e2",
+        "original_numeric_id": 43,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_043.png",
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 43
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O intervalo de confiança para uma proporção populacional $p$ é calculado pela fórmula $\\hat{p} \\pm z \\cdot \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}$.\n\nA partir do enunciado, tem-se:\n* Estimativa pontual da proporção ($\\hat{p}$): $0,25$\n* Tamanho da amostra ($n$): $1.875$\n* Nível de confiança de $95\\%$: dado que $P(Z < 2) = 0,975$, a área na cauda superior é de $0,025$. Por simetria, a cauda inferior também possui $0,025$, totalizando $5\\%$ nas caudas e $95\\%$ de confiança central. Logo, o valor crítico $z$ é igual a $2$.\n\nCalculando o erro padrão da proporção:\n$$\\text{EP} = \\sqrt{\\frac{0,25 \\times 0,75}{1.875}} = \\sqrt{\\frac{0,1875}{1.875}} = \\sqrt{0,0001} = 0,01$$\n\nA margem de erro ($E$) é:\n$$E = z \\times \\text{EP} = 2 \\times 0,01 = 0,02$$\n\nPortanto, o intervalo de confiança de $95\\%$ correto é $0,25 \\pm 0,02$, o que torna a afirmação incorreta ao propor $0,25 \\pm 0,05$.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_043.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "9d401b631c8307055baa570be1d1ac9ad9e15b588682b7497e57250c93620b14"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:044",
+      "source_id": "agente_de_policia_federal:44",
+      "question_type": "true_false",
+      "statement_markdown": "Determinado órgão governamental estimou que a probabilidade p de um ex-condenado voltar a ser condenado por algum crime no prazo de 5 anos, contados a partir da data da libertação, seja igual a 0,25. Essa estimativa foi obtida com base em um levantamento por amostragem aleatória simples de 1.875 processos judiciais, aplicando-se o método da máxima verossimilhança a partir da distribuição de Bernoulli.\nSabendo que P(Z < 2) = 0,975, em que Z representa a distribuição normal padrão, julgue os itens que se seguem, em relação a essa situação hipotética.\n\nSe X seguir uma distribuição binomial com parâmetros n = 1.000 e probabilidade de sucesso p, a estimativa de máxima verossimilhança da média de X será superior a 300.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 44; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Estatística",
+        "source_content_hash": "565d706d5341c17f16307bb59c3c7ec9dbefb70ecb563b329cf3454e1febd00d",
+        "original_numeric_id": 44,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_044.png",
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 44
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A média de uma variável aleatória $X$ que segue uma distribuição binomial com parâmetros $n$ e $p$ é dada por $E[X] = n \\cdot p$.\n\nPelo princípio da invariância dos estimadores de máxima verossimilhança, se $\\hat{p}$ é o estimador de máxima verossimilhança de $p$, então o estimador de máxima verossimilhança de uma função de $p$, como $g(p) = n \\cdot p$, será $g(\\hat{p}) = n \\cdot \\hat{p}$.\n\nSubstituindo os valores fornecidos:\n* $n = 1.000$\n* $\\hat{p} = 0,25$\n\nA estimativa de máxima verossimilhança da média de $X$ é:\n$$\\widehat{E[X]} = 1.000 \\times 0,25 = 250$$\n\nComo o valor obtido ($250$) é inferior a $300$, a afirmação está incorreta.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_044.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "9986732fb6afd871ade5104b50febfe7db5b894ab16afaeda3e66576fbd6b3c0"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:045",
+      "source_id": "agente_de_policia_federal:45",
+      "question_type": "true_false",
+      "statement_markdown": "Um pesquisador estudou a relação entre a taxa de criminalidade (Y) e a taxa de desocupação da população economicamente ativa (X) em determinada região do país. Esse pesquisador aplicou um modelo de regressão linear simples na forma Y = bX + a + ε, em que b representa o coeficiente angular, a é o intercepto do modelo e ε denota o erro aleatório com média zero e variância σ^2. A tabela a seguir representa a análise de variância (ANOVA) proporcionada por esse modelo.\n\n| fonte de variação | graus de liberdade | soma de quadrados |\n|---|---|---|\n| modelo | 1 | 225 |\n| erro | 899 | 175 |\n| total | 900 | 400 |\n\nA respeito dessa situação hipotética, julgue os próximos itens, sabendo que b > 0 e que o desvio padrão amostral da variável X é igual a 2.\n\nA correlação linear de Pearson entre a variável resposta Y e a variável regressora X é igual a 0,75.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 45; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Estatística",
+        "source_content_hash": "bb6b897937554a94738959060d41abf6fd2f5d12e9e2551316a676a5ad5566d9",
+        "original_numeric_id": 45,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_045.png",
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 45
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O coeficiente de determinação ($R^2$) em um modelo de regressão linear simples representa a proporção da variação total da variável resposta $Y$ que é explicada pela variável regressora $X$. Ele é calculado pela razão entre a Soma de Quadrados do Modelo (SQM) e a Soma de Quadrados Total (SQT):\n$$R^2 = \\frac{\\text{SQModelo}}{\\text{SQTotal}} = \\frac{225}{400} = 0,5625$$\n\nNa regressão linear simples, o coeficiente de correlação linear de Pearson ($r$) está diretamente relacionado ao coeficiente de determinação por:\n$$r = \\pm \\sqrt{R^2}$$\n\nO sinal de $r$ é o mesmo do coeficiente angular $b$ da reta de regressão. Como o enunciado explicita que $b > 0$, a correlação é positiva:\n$$r = \\sqrt{0,5625} = 0,75$$\n\nPortanto, a afirmação está correta.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_045.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "e57ea7326ad029fab4fde678b98610e28c5a41d1127bf7e90302a8a98f0e9d99"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:046",
+      "source_id": "agente_de_policia_federal:46",
+      "question_type": "true_false",
+      "statement_markdown": "Um pesquisador estudou a relação entre a taxa de criminalidade (Y) e a taxa de desocupação da população economicamente ativa (X) em determinada região do país. Esse pesquisador aplicou um modelo de regressão linear simples na forma Y = bX + a + ε, em que b representa o coeficiente angular, a é o intercepto do modelo e ε denota o erro aleatório com média zero e variância σ^2. A tabela a seguir representa a análise de variância (ANOVA) proporcionada por esse modelo.\n\n| fonte de variação | graus de liberdade | soma de quadrados |\n|---|---|---|\n| modelo | 1 | 225 |\n| erro | 899 | 175 |\n| total | 900 | 400 |\n\nA respeito dessa situação hipotética, julgue os próximos itens, sabendo que b > 0 e que o desvio padrão amostral da variável X é igual a 2.\n\nA estimativa da variância σ^2 é superior a 0,5.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 46; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Estatística",
+        "source_content_hash": "9829460b615dc6d2e1880bfdfcee72a0574cbb502e52fe326411cb18090921b2",
+        "original_numeric_id": 46,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_046.png",
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 46
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A estimativa não viesada da variância do erro residual ($\\sigma^2$) em um modelo de regressão linear é dada pelo Quadrado Médio do Erro (QME). \n\nO QME é calculado dividindo-se a Soma de Quadrados do Erro (SQE) pelos seus respectivos graus de liberdade (GL):\n$$\\hat{\\sigma}^2 = \\text{QME} = \\frac{\\text{SQErro}}{\\text{GL}_{\\text{erro}}}$$\n\nA partir dos dados da tabela ANOVA fornecida:\n* $\\text{SQErro} = 175$\n* $\\text{GL}_{\\text{erro}} = 899$\n\nRealizando o cálculo:\n$$\\hat{\\sigma}^2 = \\frac{175}{899} \\approx 0,1947$$\n\nComo a estimativa obtida ($\\approx 0,1947$) é inferior a $0,5$, a afirmação está incorreta.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_046.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "418204cc68cb9b28743514c85839743497afa6697495de2752dc409bb4afdc81"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:048",
+      "source_id": "agente_de_policia_federal:48",
+      "question_type": "true_false",
+      "statement_markdown": "O valor diário (em R$ mil) apreendido de contrabando em determinada região do país é uma variável aleatória W que segue distribuição normal com média igual a R$ 10 mil e desvio padrão igual a R$ 4 mil.\nNessa situação hipotética,\n\nse W_1 e W_2 forem duas cópias independentes e identicamente distribuídas como W, então a soma W_1 + W_2 seguirá distribuição normal com média igual a R$ 20 mil e desvio padrão igual a R$ 8 mil.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 48; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Estatística",
+        "source_content_hash": "8507d74a94c2f5a94b9280a265c7868d467974662b7307f298637c3445892bb4",
+        "original_numeric_id": 48,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_048.png",
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 48
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Sejam $W_1$ e $W_2$ duas variáveis aleatórias independentes e identicamente distribuídas, cada uma com distribuição normal de média $\\mu = 10$ e desvio padrão $\\sigma = 4$ (variância $\\sigma^2 = 16$).\n\nA soma de duas variáveis normais independentes também segue uma distribuição normal, cujos parâmetros são calculados da seguinte forma:\n\n1. **Média da soma**:\n   $$E[W_1 + W_2] = E[W_1] + E[W_2] = 10 + 10 = 20$$\n\n2. **Variância da soma**:\n   Como as variáveis são independentes, a covariância entre elas é nula. Assim:\n   $$\\text{Var}(W_1 + W_2) = \\text{Var}(W_1) + \\text{Var}(W_2) = 16 + 16 = 32$$\n\n3. **Desvio padrão da soma**:\n   $$\\text{DP}(W_1 + W_2) = \\sqrt{\\text{Var}(W_1 + W_2)} = \\sqrt{32} \\approx 5,66$$\n\nO erro da afirmação consiste em somar diretamente os desvios padrões ($4 + 4 = 8$), operação que não é válida para variáveis independentes. Portanto, o item está incorreto.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_048.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "31af6c6cd6fc4a2a9f86207dc3a3b6462186e8e32a3834656a71297170ead4d1"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:049",
+      "source_id": "agente_de_policia_federal:49",
+      "question_type": "true_false",
+      "statement_markdown": "O valor diário (em R$ mil) apreendido de contrabando em determinada região do país é uma variável aleatória W que segue distribuição normal com média igual a R$ 10 mil e desvio padrão igual a R$ 4 mil.\nNessa situação hipotética,\n\nP(W > R$ 10 mil) = 0,5.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 49; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Estatística",
+        "source_content_hash": "5756b2f4369d88b11d2d0d793e87626cc3a13da2537a164a4a1f48db694503b0",
+        "original_numeric_id": 49,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_049.png",
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 49
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A variável aleatória $W$ segue uma distribuição normal com média $\\mu = 10$ e desvio padrão $\\sigma = 4$.\n\nUma das propriedades fundamentais da distribuição normal é a sua simetria em torno da média. Isso significa que a mediana da distribuição coincide com a média, dividindo a área sob a curva de densidade de probabilidade em duas partes iguais de $50\\%$ ($0,5$) cada.\n\nMatematicamente, ao padronizar a variável:\n$$P(W > 10) = P\\left(Z > \\frac{10 - 10}{4}\\right) = P(Z > 0)$$\n\nComo a distribuição normal padrão $Z$ é simétrica em torno de zero, tem-se:\n$$P(Z > 0) = 0,5$$\n\nPortanto, a afirmação está correta.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_049.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "a4b0b5aaf696654a6611cdbce84f43492850d42e459d72638c6e41b1cab6b3e3"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:050",
+      "source_id": "agente_de_policia_federal:50",
+      "question_type": "true_false",
+      "statement_markdown": "O valor diário (em R$ mil) apreendido de contrabando em determinada região do país é uma variável aleatória W que segue distribuição normal com média igual a R$ 10 mil e desvio padrão igual a R$ 4 mil.\nNessa situação hipotética,\n\na razão (W - 20) / sqrt(4) segue distribuição normal padrão.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 50; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Estatística",
+        "source_content_hash": "7104dc1dec83a2808ba749fa3c66719df9135601c0a17a5585dc6f2a2773630a",
+        "original_numeric_id": 50,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_050.png",
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 50
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para que uma transformação linear de uma variável aleatória normal $W \\sim N(\\mu, \\sigma^2)$ resulte em uma distribuição normal padrão $Z \\sim N(0, 1)$, deve-se realizar a padronização subtraindo a média populacional ($\\mu$) e dividindo pelo desvio padrão populacional ($\\sigma$):\n$$Z = \\frac{W - \\mu}{\\sigma}$$\n\nNo caso apresentado:\n* Média ($\\mu$) = $10$\n* Desvio padrão ($\\sigma$) = $4$\n\nA padronização correta seria:\n$$Z = \\frac{W - 10}{4}$$\n\nAnalisando a expressão proposta no enunciado, $Y = \\frac{W - 20}{\\sqrt{4}} = \\frac{W - 20}{2}$:\n* **Média de $Y$**: $E[Y] = \\frac{E[W] - 20}{2} = \\frac{10 - 20}{2} = -5$\n* **Variância de $Y$**: $\\text{Var}(Y) = \\frac{\\text{Var}(W)}{2^2} = \\frac{16}{4} = 4$\n\nComo a variável resultante possui média $-5$ e variância $4$, ela não segue a distribuição normal padrão (que requer média $0$ e variância $1$). Portanto, a afirmação está incorreta.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_050.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "c60cd6464cfaafde27ad5da96509f25feeb49ef84b13e98b54f2d3b6f5afb22f"
+    }
+  ]
+}

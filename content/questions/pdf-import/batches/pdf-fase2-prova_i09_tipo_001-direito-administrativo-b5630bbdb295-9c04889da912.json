@@ -1,0 +1,356 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-prova_i09_tipo_001-direito-administrativo-b5630bbdb295-9c04889da912",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "b5630bbdb295671178518a6a56da47afa49d6b19ff3b0347fbe6974f5ac03394",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "8a1d40d330f3a1f0c9c5c49977037cbc600422d057f7b497ba1fcf422d8196bb",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "9c04889da912d2d8b1b20c4a11e40e8b2d8ba9565c31a6d27ae10280012b6740",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:021",
+      "source_id": "prova_i09_tipo_001:21",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Nos termos da Lei nº 8.112/90, ao servidor é proibido",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 21; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "opor resistência justificada ao andamento de processo.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "ausentar-se do serviço durante o expediente, mesmo que tenha autorização do chefe imediato.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "manter sob sua chefia imediata parente de quarto grau civil.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "retirar documento da repartição, ainda que tenha autorização de autoridade competente.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "promover manifestação de apreço no recinto da repartição.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo",
+        "source_content_hash": "fd166511fba0c94606c6668d11759b3b11d7713687a2e3b2a291e0b0f58ef801",
+        "original_numeric_id": 21,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito correto é a alternativa **E**.\n\nA conduta descrita na alternativa E é expressamente proibida ao servidor público federal nos termos do artigo 117, inciso V, da Lei nº 8.112/1990, que veda \"promover manifestação de apreço ou desapreço no recinto da repartição\".\n\nAnálise das alternativas incorretas:\n- **A** (Incorreta): O artigo 117, inciso IV, proíbe opor resistência *injustificada* ao andamento de documento e processo ou execução de serviço. A oposição justificada não é proibida.\n- **B** (Incorreta): O artigo 117, inciso I, proíbe ausentar-se do serviço durante o expediente *sem prévia autorização* do chefe imediato. Havendo autorização, a conduta é permitida.\n- **C** (Incorreta): O artigo 117, inciso VIII, proíbe manter sob chefia imediata, em cargo ou função de confiança, cônjuge, companheiro ou parente *até o segundo grau civil*. A vedação não alcança o quarto grau civil.\n- **D** (Incorreta): O artigo 117, inciso II, proíbe retirar, *sem prévia anuência* da autoridade competente, qualquer documento ou objeto da repartição. Com a devida autorização, a retirada é lícita.\n\n### Dispositivo legal\n- **Lei nº 8.112/1990, Artigo 117, inciso V**\n- [Texto oficial no Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "5a82614b64f166c46e137d14a83925c08a87c455db472a9ba6f32fb2954fefb6"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:022",
+      "source_id": "prova_i09_tipo_001:22",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A investidura do servidor em cargo de atribuições e responsabilidades compatíveis com a limitação que tenha sofrido em sua capacidade física ou mental, verificada em inspeção médica, denomina-se:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 22; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "readaptação.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "recondução.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "reversão.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "reintegração.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "remoção.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo",
+        "source_content_hash": "94b060c10165e2cd42a3e88205f35b810996d3ef0de92d5fdda85caf95bfc9f4",
+        "original_numeric_id": 22,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito correto é a alternativa **A**.\n\nO enunciado descreve exatamente o conceito legal de **readaptação**, previsto no artigo 24, *caput*, da Lei nº 8.112/1990. Trata-se da investidura do servidor em cargo de atribuições e responsabilidades compatíveis com a limitação que tenha sofrido em sua capacidade física ou mental, verificada em inspeção médica.\n\nAnálise das alternativas incorretas:\n- **B** (Incorreta): A recondução é o retorno do servidor estável ao cargo anteriormente ocupado, decorrente de inabilitação em estágio probatório relativo a outro cargo ou de reintegração do anterior ocupante (artigo 29 da Lei nº 8.112/1990).\n- **C** (Incorreta): A reversão é o retorno à atividade de servidor aposentado por invalidez, quando junta médica oficial declarar insubsistentes os motivos da aposentadoria, ou no interesse da administração (artigo 25 da Lei nº 8.112/1990).\n- **D** (Incorreta): A reintegração é a reinvestidura do servidor estável no cargo anteriormente ocupado, ou no cargo resultante de sua transformação, quando invalidada a sua demissão por decisão administrativa ou judicial, com ressarcimento de todas as vantagens (artigo 28 da Lei nº 8.112/1990).\n- **E** (Incorreta): A remoção é o deslocamento do servidor, a pedido ou de ofício, no âmbito do mesmo quadro, com ou sem mudança de sede (artigo 36 da Lei nº 8.112/1990), não se constituindo como forma de provimento decorrente de limitação física ou mental.\n\n### Dispositivo legal\n- **Lei nº 8.112/1990, Artigo 24**\n- [Texto oficial no Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "8cde1fa7225e593f582cbdd58b24eeb326526f4549268c10116a6f02907982e1"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:024",
+      "source_id": "prova_i09_tipo_001:24",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No que concerne ao processo administrativo:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 24; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O recurso será dirigido à autoridade que proferiu a decisão, a qual, se não a reconsiderar no prazo de dez dias, o encaminhará à autoridade superior.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "O processo administrativo, de que resulte sanção, poderá ser revisto a qualquer tempo, apenas por pedido expresso da parte interessada, desde que surjam fatos novos que justifiquem a inadequação da sanção aplicada.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Em regra, a interposição de recurso administrativo depende de caução.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "O recurso administrativo tramitará no máximo por duas instâncias administrativas, salvo disposição legal diversa.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Tem legitimidade para interpor recurso administrativo aquele cujo direito ou interesse for indiretamente afetado pela decisão recorrida.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Processo Administrativo Federal - Lei 9.784/1999",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo",
+        "source_content_hash": "a57d5a7150dc79daedce335dfc88a61431ed64d19a95648117a17dfd77d22a20",
+        "original_numeric_id": 24,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "disposicoes-gerais-art-1",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito correto é a alternativa **E**.\n\nA legitimidade para interpor recurso administrativo é regulada pelo artigo 58 da Lei nº 9.784/1999. O inciso II desse dispositivo confere legitimidade expressa àqueles cujos direitos ou interesses forem indiretamente afetados pela decisão recorrida.\n\nAnálise das alternativas incorretas:\n- **A** (Incorreta): O prazo para a autoridade que proferiu a decisão reconsiderar o ato é de **cinco dias**, e não dez dias, conforme estabelece o artigo 56, § 1º, da Lei nº 9.784/1999.\n- **B** (Incorreta): A revisão de processo administrativo de que resulte sanção pode ocorrer a qualquer tempo, **a pedido ou de ofício**, não se limitando ao pedido expresso da parte interessada, nos termos do artigo 65, *caput*, da Lei nº 9.784/1999.\n- **C** (Incorreta): Em regra, a interposição de recurso administrativo **independe de caução**, salvo exigência legal (artigo 56, § 2º, da Lei nº 9.784/1999). Ademais, o Supremo Tribunal Federal consolidou o entendimento de que a exigência de depósito ou arrolamento prévios de dinheiro ou bens para admissibilidade de recurso administrativo é inconstitucional (Súmula Vinculante nº 21).\n- **D** (Incorreta): O recurso administrativo tramitará no máximo por **três instâncias administrativas**, salvo disposição legal diversa, conforme prevê o artigo 57 da Lei nº 9.784/1999.\n\n### Dispositivo legal\n- **Lei nº 9.784/1999, Artigo 58, inciso II**\n- [Texto oficial no Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l9784.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "5f876de2a764035d33977ea8517976e119aa080d9cfc584974450197445d1c8b"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:029",
+      "source_id": "prova_i09_tipo_001:29",
+      "question_type": "multiple_choice",
+      "statement_markdown": "É possível a acumulação remunerada de",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 29; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas, desde que haja compatibilidade de horário.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "um cargo de professor com outro cargo técnico ou científico, independentemente da comprovação da compatibilidade de horário.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "dois cargos públicos técnicos ou científicos, independentemente da comprovação da compatibilidade de horário.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "dois cargos em comissão, mesmo que um deles não seja exercido em condição interina.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "dois cargos de professor, ainda que não haja compatibilidade de horário.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo",
+        "source_content_hash": "6149be257d11f2c90a943bb432e78c3316501cb76792949b777eb18430b88d49",
+        "original_numeric_id": 29,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A regra geral na Administração Pública é a proibição da acumulação remunerada de cargos, empregos e funções públicas. Contudo, a Constituição Federal de 1988 estabelece exceções taxativas, desde que haja, obrigatoriamente, a **compatibilidade de horários**. Uma dessas exceções é a acumulação de dois cargos ou empregos privativos de profissionais de saúde, com profissões regulamentadas.\n\n**Contraste com as demais alternativas:**\n* **Alternativas B, C e E:** Estão incorretas porque a comprovação da **compatibilidade de horários** é requisito indispensável e obrigatório para *todas* as hipóteses de acumulação permitidas pela Constituição. Não há acumulação lícita \"independentemente\" ou \"ainda que não haja\" compatibilidade de horários. Além disso, a alternativa C cita \"dois cargos públicos técnicos ou científicos\", hipótese que não é permitida (a permissão é de um cargo de professor com outro técnico ou científico).\n* **Alternativa D:** A acumulação de dois cargos em comissão é vedada. O servidor ocupante de cargo em comissão pode apenas ser nomeado para outro cargo em comissão de forma interina, hipótese em que deverá optar pela remuneração de um deles, não havendo acumulação remunerada de ambos.\n\n**Macete de resolução:**\nSempre que uma alternativa de acumulação de cargos contiver expressões como \"independentemente de compatibilidade de horário\" ou \"ainda que não haja compatibilidade\", ela estará incorreta. A compatibilidade de horários é o requisito universal e inafastável para qualquer acumulação lícita.\n\n**Dispositivo legal:**\nConstituição Federal de 1988, art. 37, inciso XVI, alínea \"c\".",
+        "source_reference": null
+      },
+      "source_content_hash": "cd70245a1c8a8acb4e6370aeb08f411d1d3be45f97dd6e7f4cff5cbf89d18b56"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:030",
+      "source_id": "prova_i09_tipo_001:30",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No que diz respeito aos direitos e vantagens dos servidores públicos, previstos na Lei nº 8.112/90:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 30; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Remuneração é o vencimento do cargo efetivo, sem as vantagens pecuniárias permanentes estabelecidas em lei.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "O vencimento do cargo efetivo, acrescido de vantagens de caráter permanente, é redutível.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "As indenizações são incorporadas ao vencimento ou provento.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "As gratificações e os adicionais, em hipótese alguma, incorporam-se a vencimentos ou proventos.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "As vantagens pecuniárias não serão computadas, nem acumuladas, para efeito de concessão de quaisquer outros acréscimos pecuniários ulteriores, sob o mesmo título ou idêntico fundamento.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo",
+        "source_content_hash": "c681b0c515d04baa309cb43e0ee31fc5b0fb54738c047e960902e2291f28fd4b",
+        "original_numeric_id": 30,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta reproduz a vedação ao chamado \"efeito cascata\" ou \"repique\" no cálculo da remuneração dos servidores públicos. Conforme a legislação, as vantagens pecuniárias (como adicionais e gratificações) não podem ser computadas nem acumuladas para fins de concessão de outros acréscimos pecuniários ulteriores sob o mesmo título ou idêntico fundamento, evitando o efeito cumulativo de vantagens sobre vantagens.\n\n**Contraste com as demais alternativas:**\n* **Alternativa A:** Incorreta. A remuneração é o vencimento do cargo efetivo **acrescido** das vantagens pecuniárias permanentes estabelecidas em lei (art. 41 da Lei nº 8.112/1990).\n* **Alternativa B:** Incorreta. O vencimento do cargo efetivo, acrescido das vantagens de caráter permanente, é **irredutível**, em respeito ao princípio constitucional da irredutibilidade de subsídios e vencimentos (art. 41, § 3º da Lei nº 8.112/1990).\n* **Alternativa C:** Incorreta. As indenizações (como diárias e ajuda de custo) **não se incorporam** ao vencimento ou provento para qualquer efeito (art. 49, § 1º da Lei nº 8.112/1990).\n* **Alternativa D:** Incorreta. Ao contrário do que afirma a alternativa, as gratificações e os adicionais **incorporam-se** ao vencimento ou provento nos casos e condições indicados em lei (art. 49, § 2º da Lei nº 8.112/1990).\n\n**Dispositivo legal:**\nLei nº 8.112/1990, arts. 41, 49 e 50; e Constituição Federal de 1988, art. 37, inciso XIV.",
+        "source_reference": null
+      },
+      "source_content_hash": "37c0cb09dd9ca189673f73252c0bc44c4080091201b21b74922b01dd252c1abb"
+    }
+  ]
+}

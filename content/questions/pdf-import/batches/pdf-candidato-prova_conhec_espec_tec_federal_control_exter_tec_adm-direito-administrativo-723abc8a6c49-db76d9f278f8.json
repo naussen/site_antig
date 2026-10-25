@@ -1,0 +1,238 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-prova_conhec_espec_tec_federal_control_exter_tec_adm-direito-administrativo-723abc8a6c49-db76d9f278f8",
+  "source": {
+    "file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "723abc8a6c49e5bacf9c6f647589846657fe97c3042bf9fe1f72a8c107208bea",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "e510beb0fb16eeed76a4bec98e0987a4a54d96f0ac951207a670c138e3097e90",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "db76d9f278f890273805d9dcfeab6dab24ad535fb5c7287d15edbf821cd2b56a",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:051",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:51",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da invalidação, da revogação e da convalidação dos atos administrativos, julgue os itens a seguir.\n\nAgirá de acordo com a lei o servidor público federal que, ao verificar a ilegalidade de ato administrativo em seu ambiente de trabalho, revogue tal ato, para não prejudicar administrados, que sofreriam efeitos danosos em consequência da aplicação desse ato.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 51; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "df7050295f0e40299e460b24401bc871f2ac502c222c264ffd3bea3b19fbe2f4",
+        "original_numeric_id": 51,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "official_item_number": 51
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto devido à confusão conceitual entre os institutos da anulação (invalidação) e da revogação.\n\nDiante de um ato administrativo eivado de ilegalidade, o dever da Administração Pública é de anulá-lo, e não de revogá-lo. A revogação é o desfazimento de um ato administrativo válido e eficaz por razões de conveniência e oportunidade (mérito administrativo), operando efeitos prospectivos (*ex nunc*). Já a anulação decorre do controle de legalidade, aplicando-se a atos inválidos (ilegais) e operando efeitos retroativos (*ex tunc*), conforme preceituam o art. 53 da Lei nº 9.784/1999 e a Súmula nº 473 do STF.\n\n### Dispositivo legal\n- **Referência:** Lei nº 9.784/1999, art. 53; Súmula nº 473 do STF.\n- **URL oficial:** https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "d50e223db5cce4ec399d5c0a194eab7b0ab675eb306ba44ce6028b12ddcaa2ce"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:053",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:53",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da invalidação, da revogação e da convalidação dos atos administrativos, julgue os itens a seguir.\n\nA revogação de atos pela administração pública por motivos de conveniência e oportunidade não possui limitação de natureza material, mas somente de natureza temporal, como, por exemplo, o prazo quinquenal previsto na Lei n.º 9.784/1999, que regula o processo administrativo no âmbito do serviço público federal.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 53; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Serviços Públicos",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "3196e430a4b8d5ad150d164eaf53956616f0b6d66ce0035bfb62f6cfaf6ac4ba",
+        "original_numeric_id": 53,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "official_item_number": 53
+      },
+      "topics": [
+        {
+          "topic_id": "criterio-de-servico-publico-doutrinario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta por dois motivos principais:\n\n1. **Limitações materiais à revogação**: Ao contrário do que afirma o enunciado, a revogação de atos administrativos possui limitações de natureza material (ou substancial). A doutrina aponta que não podem ser objeto de revogação: atos vinculados (pois não há margem de conveniência e oportunidade), atos consumados (que já exauriram seus efeitos), atos que geraram direitos adquiridos (conforme expressamente ressalvado no art. 53 da Lei nº 9.784/1999 e na Súmula nº 473 do STF), meros atos administrativos (como certidões e atestados) e atos que integram um procedimento administrativo já concluído.\n2. **Inexistência de prazo decadencial para revogação**: A revogação não se sujeita a prazo decadencial (limitação temporal). O prazo quinquenal previsto no art. 54 da Lei nº 9.784/1999 aplica-se exclusivamente ao direito de a Administração Pública **anular** (e não revogar) os atos administrativos ilegais de que decorram efeitos favoráveis para os destinatários, salvo comprovada má-fé.\n\n### Dispositivo legal\n* **Dispositivo**: Artigos 53 e 54 da Lei nº 9.784/1999.\n* **Fonte oficial**: [Portal da Legislação - Planalto](https://www.planalto.gov.br/ccivil_03/leis/l9784.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "00618c89d0aeeee6f3a711cd66a3edd5af1d213ccf18e78cea2a06fa2d26d65b"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:055",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:55",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, relativos aos atos administrativos.\n\nAo delegar a prática de determinado ato administrativo, a autoridade delegante transfere a titularidade para sua prática.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 55; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "d3edf9c1ad7dfbf3af7f29950656b9a4c4a1dbc6f63a6d2f8b9edff02f308cd1",
+        "original_numeric_id": 55,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "official_item_number": 55
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A competência administrativa é irrenunciável (art. 11 da Lei nº 9.784/1999). Quando ocorre a delegação, a autoridade delegante transfere apenas o **exercício** temporário de determinada atribuição para o delegado, mantendo-se como a legítima **titular** da competência. \n\nComo a titularidade não é transferida, o ato de delegação é essencialmente precário e revogável a qualquer tempo pela autoridade delegante (art. 14, § 2º, da Lei nº 9.784/1999).\n\n### Dispositivo legal\n* **Dispositivo**: Artigos 11, 12 e 14, § 2º, da Lei nº 9.784/1999.\n* **Fonte oficial**: [Portal da Legislação - Planalto](https://www.planalto.gov.br/ccivil_03/leis/l9784.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "5d3575c2187d56c4e2a06b43a2b84f77970d509b83efa755148dab927c9a8a82"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:057",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:57",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, relativos aos atos administrativos.\n\nDecretos não são considerados atos administrativos.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 57; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "4936bd0e1983d392a8e9c82eee999d3c1ab17f551fb5ae27789e96559fb97a33",
+        "original_numeric_id": 57,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "official_item_number": 57
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. Os decretos são, por excelência, atos administrativos unilaterais da competência exclusiva dos Chefes do Poder Executivo (Presidente da República, Governadores e Prefeitos). \n\nA depender do seu conteúdo, os decretos podem ser classificados como:\n1. **Atos normativos (ou regulamentares)**: quando possuem caráter geral, abstrato e impessoal, destinando-se a prover a fiel execução de uma lei (art. 84, IV, da Constituição Federal);\n2. **Atos individuais (ou concretos)**: quando produzem efeitos específicos e têm destinatários determinados, como ocorre em decretos de desapropriação, de nomeação ou de demissão de servidores públicos.\n\nPortanto, independentemente do conteúdo, o decreto constitui uma das formas de exteriorização do ato administrativo.\n\n### Dispositivo legal\n* **Dispositivo**: Artigo 84, incisos IV e VI, da Constituição Federal de 1988.\n* **Fonte oficial**: [Portal da Legislação - Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "0ad764db1bd80f7f132d4787f0fc60efbe69ba21cada736135a232647e243fb1"
+    }
+  ]
+}

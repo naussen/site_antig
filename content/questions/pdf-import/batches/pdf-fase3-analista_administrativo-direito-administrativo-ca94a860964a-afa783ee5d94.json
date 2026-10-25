@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-analista_administrativo-direito-administrativo-ca94a860964a-afa783ee5d94",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "ca94a860964a7d5a81d28ea03d9d11a3168b6ff21a000154ee155e850ba68dc9",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "7b0e6efd1cd4387fd3b4024c7d594aa5aad8ca3c4f2146f6ddc96ab3d4597e20",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "afa783ee5d946328090576cfd4be2a0ac43c012c88fd65f12dbe5a300cb13771",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:023",
+      "source_id": "analista_administrativo:23",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à administração pública e sua organização, julgue os itens a seguir.\n\nOs serviços econômicos são aqueles que, embora classificados como serviços públicos, rendem ensejo a que o prestador aufira lucros oriundos de sua execução, tendo esse tipo de atividade fisionomia similar à daquelas de caráter tipicamente empresarial.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 23; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Serviços Públicos",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "05314755ce8c585f26e280a84c516db69d393df37c687e800662ea8a57d18f90",
+        "original_numeric_id": 23,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "criterio-de-servico-publico-doutrinario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNa classificação doutrinária do Direito Administrativo (Hely Lopes Meirelles e Maria Sylvia Zanella Di Pietro), os **serviços públicos econômicos** (comerciais ou industriais) são aqueles prestados pelo Estado (diretamente por estatais ou delegados a particulares) que geram remuneração direta por tarifa e atuam no domínio econômico produtivo, sujeitando-se prevalentemente ao regime jurídico de direito privado temperado por normas públicas.",
+        "source_reference": null
+      },
+      "source_content_hash": "427631bd7d3a1629c39b17fc29cee5c6b882727f14bd9fc9811aee1c2b70e44a"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:047",
+      "source_id": "analista_administrativo:47",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando a hipótese de que, no seu exercício profissional, determinado servidor público tenha utilizado, para fins de interesse particular, os serviços de servidor subordinado a ele, julgue os itens seguintes.\n\nTal conduta do superior hierárquico é expressamente vedada pelo Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 47; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "b94a08183e5c85eec3ef59611d58d73a45af058cb17a12ab95a00d9f68cb28a6",
+        "original_numeric_id": 47,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nO Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal (Decreto nº 1.171/1994, Seção I, Inciso XV):\n\nVeda expressamente a qualquer autoridade pública fazer uso do cargo ou função para coagir, pressionar, assediar ou constranger subordinados a praticarem atos contrários à ética, à legalidade ou aos deveres funcionais, configurando falta disciplinar e ética gravíssima.",
+        "source_reference": null
+      },
+      "source_content_hash": "515a8b31427896d22699cd1bd41e15f153fd13a617c0b37bda460a18a204e601"
+    }
+  ]
+}

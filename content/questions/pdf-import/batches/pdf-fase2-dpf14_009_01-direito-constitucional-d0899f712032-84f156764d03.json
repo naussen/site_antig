@@ -1,0 +1,383 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-dpf14_009_01-direito-constitucional-d0899f712032-84f156764d03",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "d0899f712032d803deb1ff38fb2396f1dd37d1ffb65c7f61503d0bd058c669c4",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "9a60cb42fbada4944e3fe1d0564604111314b54b0d72e1bd9ebc2e3a33818aef",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "84f156764d03ffd970e70e05b3762c2204ec0c6e6e0977e05331ddd3518b0a6c",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:043",
+      "source_id": "dpf14_009_01:43",
+      "question_type": "true_false",
+      "statement_markdown": "No que concerne ao conceito de Constituição, julgue o item abaixo.\n\nConstituição, em sua acepção formal, corresponde ao documento solene que disciplina as normas superiores elaboradas por um processo constituinte específico, sendo as normas integrantes da Constituição Federal de 1988 (CF) caracterizadas como formalmente e materialmente constitucionais.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 43; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "494701f1c51512e9f878388e1807f69f019541cb9f5b4ff7f0f0a27e2ff0f8ed",
+        "original_numeric_id": 43,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A Constituição Federal de 1988 (CF/88) é classificada como uma constituição formal. Sob essa ótica, todas as normas inseridas em seu texto solene possuem o mesmo nível hierárquico e são consideradas formalmente constitucionais, independentemente do assunto de que tratam.\n\nNo entanto, do ponto de vista material, apenas são consideradas normas materialmente constitucionais aquelas que versam sobre matérias tipicamente constitucionais, tais como a estrutura do Estado, a organização dos poderes e os direitos e garantias fundamentais.\n\nComo a CF/88 contém normas que não tratam de temas essencialmente constitucionais (como o art. 242, § 2º, que dispõe sobre a manutenção do Colégio Pedro II na órbita federal), conclui-se que nem todas as normas integrantes da CF/88 são materialmente constitucionais. Portanto, a afirmação de que todas as normas da CF/88 são caracterizadas como formalmente e materialmente constitucionais está incorreta.\n\n### Dispositivo legal\n* **Referência:** Artigo 242, § 2º, da Constituição Federal de 1988.\n* **URL oficial:** https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "8d33a586a6e90bccb439744f143bb2d642a7ce409d99257a233e9cb7e2c31585"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:044",
+      "source_id": "dpf14_009_01:44",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca das disposições constitucionais relativas à segurança pública, julgue os itens a seguir.\n\nNa hipótese da ocorrência de crime contra o patrimônio da Empresa Brasileira de Correios e Telégrafos, compete à Polícia Federal apurar a infração penal.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 44; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Da defesa do Estado e das instituições democráticas",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "6596b9750f437b1d413ce13cf02aceea2087f0ba417068b2a23670cdcf8aeacd",
+        "original_numeric_id": 44,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "defesa-do-estado-e-das-instituicoes-democraticas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A Empresa Brasileira de Correios e Telégrafos (ECT) é uma empresa pública federal. Conforme as disposições constitucionais sobre segurança pública, compete à Polícia Federal apurar infrações penais praticadas em detrimento de bens, serviços e interesses da União ou de suas entidades autárquicas e empresas públicas.\n\nPor se tratar de crime contra o patrimônio de uma empresa pública da União, a competência investigativa é expressamente atribuída à Polícia Federal, o que torna a assertiva correta.\n\n### Dispositivo legal\n* **Referência:** Artigo 144, § 1º, inciso I, da Constituição Federal de 1988.\n* **URL oficial:** https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "6a77a5be2db09f90b984ee7fc92065528ef2bac6cba4601bf4da6c064ab561a6"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:045",
+      "source_id": "dpf14_009_01:45",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca das disposições constitucionais relativas à segurança pública, julgue os itens a seguir.\n\nA Força Nacional de Segurança Pública, a Polícia Federal e a Polícia Rodoviária Federal são órgãos destinados ao exercício da segurança pública no Brasil.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 45; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Da defesa do Estado e das instituições democráticas",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "87f18f22ee3bb675f22951568cc54f5f9d8db0bfc268d1023c8ffb7c2734941a",
+        "original_numeric_id": 45,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "defesa-do-estado-e-das-instituicoes-democraticas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O rol de órgãos de segurança pública estabelecido no art. 144, caput, da Constituição Federal de 1988 é considerado taxativo (numerus clausus) pela jurisprudência do Supremo Tribunal Federal (STF). \n\nA Força Nacional de Segurança Pública não consta nesse rol constitucional. Trata-se, na verdade, de um programa de cooperação federativa executado por meio de convênio entre os entes federados, sob a coordenação do Ministério da Justiça e Segurança Pública, regulamentado pela Lei nº 11.473/2007. \n\nPortanto, a afirmação está incorreta ao classificar a Força Nacional de Segurança Pública como um órgão de segurança pública ao lado da Polícia Federal e da Polícia Rodoviária Federal.\n\n### Dispositivo legal\n* **Referência:** Artigo 144 da Constituição Federal de 1988 e Lei nº 11.473/2007.\n* **URL oficial:** https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "4652a411a995f9b04c55b69f5f0128839c0215b06111f84676481d9d15186b9d"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:046",
+      "source_id": "dpf14_009_01:46",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere aos direitos e às garantias fundamentais, julgue os seguintes itens.\n\nO terrorismo, o racismo, a tortura e o tráfico ilícito de entorpecentes são crimes hediondos, inafiançáveis e insuscetíveis de graça e anistia.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 46; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "09e630ffa462d30e71284fafed4114584dc581e996181bd3fd9cfff83371f06f",
+        "original_numeric_id": 46,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A Constituição Federal de 1988 estabelece tratamentos distintos para os crimes mencionados na assertiva:\n\n1. **Racismo:** Conforme o art. 5º, inciso XLII, a prática do racismo constitui crime **inafiançável e imprescritível**, sujeito à pena de reclusão. Ele não é classificado como crime hediondo nem como insuscetível de graça ou anistia.\n2. **Tortura, Tráfico ilícito de entorpecentes, Terrorismo e Crimes Hediondos (3T + H):** Conforme o art. 5º, inciso XLIII, a lei considerará a prática da tortura, o tráfico ilícito de entorpecentes e drogas afins, o terrorismo e os definidos como crimes hediondos como crimes **inafiançáveis e insuscetíveis de graça ou anistia**.\n\nPortanto, a afirmação está incorreta ao incluir o racismo no grupo dos crimes hediondos e insuscetíveis de graça e anistia.\n\n* **Macete de resolução:** \n  * **R**acismo e **A**ção de grupos armados (**RA**) são **I**nafiançáveis e **I**mprescritíveis (**I** & **I**).\n  * **T**ortura, **T**ráfico, **T**errorismo e **H**ediondos (**3T + H**) são **I**nafiançáveis e **I**nsuscetíveis de graça ou anistia (**I** & **I**).\n\n### Dispositivo legal\n* **Referência:** Artigo 5º, incisos XLII e XLIII, da Constituição Federal de 1988.\n* **URL oficial:** https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "d519d0e322333b1ddd283a68936c338f490f30f6f3d935fd688d4910e90101ea"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:047",
+      "source_id": "dpf14_009_01:47",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere aos direitos e às garantias fundamentais, julgue os seguintes itens.\n\nConsidere que uma criança tenha nascido nos Estados Unidos da América (EUA) e seja filha de pai americano e de mãe brasileira, que trabalhava, à época do parto, na embaixada brasileira nos EUA. Nesse caso, a criança somente será considerada brasileira nata se for registrada na repartição brasileira competente nos EUA.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 47; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Da organização do Estado",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "044de6448da8b9a59e3fd149d81fea2f6ac8154d1d32430dc93bb486bf9ece35",
+        "original_numeric_id": 47,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao-do-estado",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A Constituição Federal de 1988, em seu art. 12, inciso I, alínea \"b\", estabelece que são considerados brasileiros natos os nascidos no estrangeiro, de pai brasileiro ou de mãe brasileira, desde que qualquer deles esteja a serviço da República Federativa do Brasil.\n\nNo caso em tela, a mãe da criança é brasileira e estava trabalhando na embaixada brasileira nos EUA, o que caracteriza estar a serviço do país. Portanto, a criança adquire a nacionalidade brasileira de forma originária (brasileira nata) de maneira automática e imediata no momento do nascimento, independentemente de registro em repartição consular ou de qualquer outra condição posterior.\n\nO registro consular ou a opção de nacionalidade após a maioridade são requisitos exigidos apenas para os nascidos no estrangeiro cujos pais brasileiros não estejam a serviço do Brasil (conforme a alínea \"c\" do mesmo dispositivo).\n\n### Dispositivo legal\n* **Referência:** Artigo 12, inciso I, alínea \"b\", da Constituição Federal de 1988.\n* **URL oficial:** https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "a8703b8b0cbf7114ada8fedee9588f891f6ae961c69048791e2bd2bc7be679c1"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:048",
+      "source_id": "dpf14_009_01:48",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da organização político-administrativa brasileira, da administração pública e do Poder Executivo, julgue os itens subsequentes.\n\nDe acordo com a CF, a prática de ato de improbidade administrativa por agente público implica a perda da função pública e a suspensão dos direitos políticos, sem prejuízo da ação penal cabível.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 48; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Da Administração Pública",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "3b06c770e82397fc37ae354d96f47e2225d86c3b03e53b9537c584fb83e6a9e9",
+        "original_numeric_id": 48,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "administracao-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A redação reflete diretamente o disposto na Constituição Federal, que estabelece que os atos de improbidade administrativa importarão a suspensão dos direitos políticos, a perda da função pública, a indisponibilidade dos bens e o ressarcimento ao erário, na forma e gradação previstas em lei, sem prejuízo da ação penal cabível.\n\n**Pegadinha comum:** A banca costuma tentar confundir o candidato substituindo \"suspensão dos direitos políticos\" por \"perda dos direitos políticos\". A Constituição Federal prevê expressamente a *suspensão* dos direitos políticos para casos de improbidade administrativa, e não a perda. Outro ponto de atenção é a expressão \"sem prejuízo da ação penal cabível\", que confirma a independência das instâncias civil, administrativa e penal.\n\n### Dispositivo legal\n* **Art. 37, § 4º, da Constituição Federal de 1988** (https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "0d8d96c47a6a9b67035b25cd300a8ac17b42aab1786a4587adf832854352b428"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:049",
+      "source_id": "dpf14_009_01:49",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da organização político-administrativa brasileira, da administração pública e do Poder Executivo, julgue os itens subsequentes.\n\nA União, os estados, o Distrito Federal (DF) e os municípios compõem a organização político-administrativa da República Federativa do Brasil, cabendo aos municípios promover, no que couber, o adequado ordenamento territorial, mediante, por exemplo, planejamento e controle do parcelamento do solo urbano.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 49; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Da organização do Estado",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "d09ae7ed3b480750987512b682377ac082672465c9b649bd7243af18c56440b7",
+        "original_numeric_id": 49,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao-do-estado",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A primeira parte da assertiva fundamenta-se na definição da composição político-administrativa da República Federativa do Brasil pelos entes federados autônomos: União, Estados, Distrito Federal e Municípios. Os Territórios Federais não são entes federados autônomos, mas integram a União.\n\nA segunda parte da assertiva está em consonância com a competência atribuída aos Municípios para promover, no que couber, o adequado ordenamento territorial, mediante planejamento e controle do uso, do parcelamento e da ocupação do solo urbano. O planejamento e controle do parcelamento do solo urbano é, portanto, exemplo legítimo dessa competência municipal.\n\n### Dispositivo legal\n* **Art. 18, caput, e Art. 30, VIII, da Constituição Federal de 1988** (https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "a9a9a5d9f3d619fc4071f40859ff9c06db9024ddb7aff9b8fc8d3440b4e3c101"
+    }
+  ]
+}

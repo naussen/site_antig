@@ -1,0 +1,332 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-prova_conhec_basicos_tec_federal_control_exter_tec_adm-informatica-d95945dd181f-748f1cab497e",
+  "source": {
+    "file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "d95945dd181f1eb45ac1925bc608c39c59502ec921ff6088fd7fa8ea452ebe47",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "cb0421eefe790fc8619534a2a1f0aa7b54af0ff8abce22779b8e91d6cb714a78",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "748f1cab497ede62242f2080de2704c8adf78ee9c8a8fd471383f9f366ba8237",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:033",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:33",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos sistemas operacionais Linux e Windows, do Microsoft PowerPoint 2013 e de redes de computadores, julgue os itens a seguir.\n\nO modo avião do Windows 8.1 é um recurso que torna as comunicações do tipo sem fio inativas durante um período preestabelecido, com exceção da comunicação bluetooth.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 33; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redes de Computadores",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "244e843b59736ff0d6bfff47db0227d26101732054e28e8fc3d02419f37475fb",
+        "original_numeric_id": 33,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "redes-de-computadores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O enunciado apresenta dois erros conceituais sobre o funcionamento do Modo Avião no Windows 8.1:\n\n1. **Período preestabelecido:** O recurso não desativa as conexões por um tempo predeterminado. Uma vez ativado, o Modo Avião permanece ativo por tempo indeterminado, até que o usuário decida desativá-lo manualmente.\n2. **Exceção do Bluetooth:** Ao ser ativado, o Modo Avião desativa todas as comunicações sem fio do dispositivo, o que inclui Wi-Fi, redes móveis e também o Bluetooth. Não há essa exceção automática para o Bluetooth no momento da ativação do recurso (embora o usuário possa reativar o Bluetooth individualmente após ligar o Modo Avião, a ação inicial desativa todas as conexões sem fio).",
+        "source_reference": null
+      },
+      "source_content_hash": "b694121f67c32641e602439b3c75d3b20d1ba517e7138e03e7f4cda410f83fad"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:034",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:34",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos sistemas operacionais Linux e Windows, do Microsoft PowerPoint 2013 e de redes de computadores, julgue os itens a seguir.\n\nPara que o Modo de Exibição do Apresentador do PowerPoint 2013 seja utilizado, é necessário o uso de, no mínimo, dois monitores: um para que o apresentador tenha a visão do eslaide atual e outro para que ele visualize o próximo eslaide a ser mostrado ao público.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 34; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Hardware",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "2441c8dfadaa21a15e15ecc1034d2e46b9b3de8719b22358c789cc8c0ee0c8eb",
+        "original_numeric_id": 34,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O enunciado contém dois erros principais:\n\n1. **Necessidade de dois monitores:** No PowerPoint 2013, não é obrigatório o uso de dois monitores para utilizar o Modo de Exibição do Apresentador. É possível ativá-lo e testá-lo em um único monitor utilizando o atalho `Alt + F5` ou clicando com o botão direito durante a apresentação e selecionando \"Mostrar Modo de Exibição do Apresentador\".\n2. **Distribuição das telas:** A descrição da exibição está incorreta. Em uma configuração típica com dois monitores, um deles exibe a apresentação em tela cheia para o público (apenas o slide atual), enquanto o outro monitor exibe a interface do apresentador (que reúne o slide atual, o próximo slide, as anotações do orador, o cronômetro e as ferramentas de navegação).",
+        "source_reference": null
+      },
+      "source_content_hash": "c75138bdf4bb65e282576370c2207612090b3d89044ca8ca59dc594bbd37adf7"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:036",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:36",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos sistemas operacionais Linux e Windows, do Microsoft PowerPoint 2013 e de redes de computadores, julgue os itens a seguir.\n\nNo console de uma distribuição qualquer do Linux, como, por exemplo, o Ubuntu, é possível cancelar um comando em execução a partir do uso da combinação das teclas Ctrl e C.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 36; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redes de Computadores",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "28089b5a940d38d0686368d6db22637f3f42ac488a74143f097b0dc3c26846bf",
+        "original_numeric_id": 36,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "redes-de-computadores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No terminal (console) de sistemas operacionais baseados em Linux, como o Ubuntu, a combinação de teclas `Ctrl + C` é o atalho padrão utilizado para interromper e cancelar a execução de um comando ou processo que esteja rodando em primeiro plano (*foreground*). Esse atalho envia o sinal `SIGINT` (sinal de interrupção) ao processo ativo, forçando o seu encerramento e devolvendo o controle do terminal ao usuário.",
+        "source_reference": null
+      },
+      "source_content_hash": "d6d41c0ad11c0bc3b6264b4a68320f0542f27d8f7dbf4a3f6f7bd6833732af79"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:038",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:38",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação ao programa de navegação Mozilla Firefox e ao programa de correio eletrônico Mozilla Thunderbird, julgue os itens subsequentes.\n\nUma facilidade disponibilizada na última versão do navegador Firefox é a criação de atalhos na área de trabalho, em qualquer sistema operacional. Como exemplo, para criar um atalho de um sítio, basta clicar com o botão direito do mouse sobre a barra de endereços e, em seguida, escolher a opção Criar Atalho (Área de Trabalho).",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 38; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "ca254a071d775b37c2c3464a7a6234fdf65a1f1cc9a641a23c4c9a592d0a6aae",
+        "original_numeric_id": 38,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O procedimento descrito no enunciado está incorreto. No navegador Mozilla Firefox, não existe a opção \"Criar Atalho (Área de Trabalho)\" ao clicar com o botão direito do mouse sobre a barra de endereços.\n\nPara criar um atalho de um site na área de trabalho utilizando o Firefox, o procedimento correto e padrão é:\n1. Redimensionar a janela do navegador de modo que seja possível visualizar a área de trabalho.\n2. Clicar e segurar o ícone localizado à esquerda do endereço do site na barra de endereços (geralmente representado por um cadeado).\n3. Arrastar esse ícone até a área de trabalho e soltar o botão do mouse.",
+        "source_reference": null
+      },
+      "source_content_hash": "42c4211ce14a1e32b397ba8223c9e2c2d0d1a91349dee08591394d5a03a3829b"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:040",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:40",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, relativos ao gerenciamento de arquivos e pastas e à segurança da informação.\n\nO vírus do tipo stealth, o mais complexo da atualidade, cuja principal característica é a inteligência, foi criado para agir de forma oculta e infectar arquivos do Word e do Excel. Embora seja capaz de identificar conteúdos importantes nesses tipos de arquivos e, posteriormente, enviá-los ao seu criador, esse vírus não consegue empregar técnicas para evitar sua detecção durante a varredura de programas antivírus.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 40; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ameaças Virtuais",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "e106742ce1a2fd81124c36278022d781c132fc4a7cf58f64f29d96f82251f15f",
+        "original_numeric_id": 40,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "ameacas-virtuais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O enunciado apresenta múltiplos erros conceituais sobre o vírus do tipo *stealth* (furtivo):\n\n1. **Capacidade de evitar detecção:** O erro mais evidente está na afirmação de que esse vírus \"não consegue empregar técnicas para evitar sua detecção\". Na verdade, a principal e definidora característica de um vírus *stealth* é justamente a utilização de técnicas avançadas de camuflagem para ocultar sua presença e as alterações feitas no sistema, enganando os programas antivírus durante as varreduras.\n2. **Infecção de arquivos do Word e do Excel:** Os vírus especializados em infectar arquivos de pacotes de escritório (como Word e Excel) são classificados como **vírus de macro**.\n3. **Envio de dados ao criador:** A capacidade de coletar informações confidenciais e enviá-las a terceiros é uma característica típica de *spywares* (como *keyloggers*) ou cavalos de troia (*trojans*), e não a definição de um vírus *stealth*.",
+        "source_reference": null
+      },
+      "source_content_hash": "b43eb1529d117eddd34a96f5be0d526fc872ddbfa74c411c3452d8b4d7e57480"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:042",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:42",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, relativos ao gerenciamento de arquivos e pastas e à segurança da informação.\n\nNo Windows 8.1, arquivos com o mesmo nome, mas com extensões diferentes, podem ser armazenados na mesma pasta, como, por exemplo, c:\\pessoal\\Cargos_TCU.docx e c:\\pessoal\\Cargos_TCU.xlsx.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 42; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "6ecb35d838a697ae3762b42834c751a3e39695a25139e22dbc5d783602779171",
+        "original_numeric_id": 42,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. No sistema operacional Windows 8.1 (assim como em outras versões do Windows que utilizam sistemas de arquivos como NTFS ou FAT32), a identidade de um arquivo dentro de um diretório é definida pela combinação de seu nome principal e de sua extensão.\n\nDessa forma, os arquivos `Cargos_TCU.docx` (documento do Microsoft Word) e `Cargos_TCU.xlsx` (planilha do Microsoft Excel) possuem extensões diferentes (`.docx` e `.xlsx`), sendo tratados pelo sistema operacional como arquivos distintos. Por essa razão, eles podem coexistir na mesma pasta (`c:\\pessoal\\`) sem que ocorra conflito de nomes ou necessidade de substituição.\n\nO conflito de nomes ocorre apenas quando se tenta salvar, no mesmo diretório, dois arquivos que possuam exatamente o mesmo nome principal e a mesma extensão.",
+        "source_reference": null
+      },
+      "source_content_hash": "b4bc6d4551003e13e85afbecdab768d0198d4381ea8fcdf658cd5afafb2e868d"
+    }
+  ]
+}

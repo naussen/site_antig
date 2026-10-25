@@ -1,0 +1,397 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-dpf14_009_01-administracao-publica-ca744d5096ff-ffd55cd993bc",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "ca744d5096ff5e394ded91af7cac3b914f6eebb00f4d317b5e902839773db969",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "9a60cb42fbada4944e3fe1d0564604111314b54b0d72e1bd9ebc2e3a33818aef",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ffd55cd993bcc433a142e8769084221d9a1b1ced214f4df4436788e944a7f7b9",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-publica",
+    "name": "Administração Pública"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:083",
+      "source_id": "dpf14_009_01:83",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da gestão de pessoas nas organizações, julgue os itens a seguir.\n\nOs bons desempenhos individuais estão diretamente relacionados às habilidades desenvolvidas na realização das tarefas, e não à motivação para o trabalho.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 83; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "64e446617050fb8f87ad3b70068f9e97dcf14f2c14825878db838f82922e4111",
+        "original_numeric_id": 83,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "official_item_number": 83
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta ao excluir a motivação como fator determinante do desempenho individual. Na teoria da administração e gestão de pessoas, o desempenho no trabalho é amplamente compreendido como o resultado da interação entre a capacidade/habilidade do indivíduo (saber fazer) e a sua motivação (querer fazer). A ausência de qualquer um desses pilares compromete o resultado final, de modo que ambos são diretamente relacionados ao bom desempenho.",
+        "source_reference": null
+      },
+      "source_content_hash": "d5b3d11c73b68207ec6e62ec241e30e07c5c726f701e87d8d55b84e0dac49e2e"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:084",
+      "source_id": "dpf14_009_01:84",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da gestão de pessoas nas organizações, julgue os itens a seguir.\n\nO líder que busca criar uma cultura favorável ao sucesso da organização e encontrar caminhos para a realização de metas demonstra comportamento orientado para a macroliderança e a visão de futuro.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 84; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "2518d93e0c0ab5a9e0b4b97c59d847a3321e586357a076682a33d0064cbac7a7",
+        "original_numeric_id": 84,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "official_item_number": 84
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmativa está correta. Na literatura de gestão de pessoas, a liderança pode ser analisada sob duas perspectivas principais:\n\n1. **Microliderança:** Focada no nível operacional e tático, lidando diretamente com o comportamento individual, motivação de colaboradores e dinâmica de pequenos grupos no dia a dia.\n2. **Macroliderança:** Focada no nível estratégico e institucional. O líder atua como um facilitador da cultura organizacional, definindo a visão de futuro, alinhando os valores corporativos e criando condições estruturais para que a organização atinja seus objetivos de longo prazo.\n\nPortanto, o comportamento voltado para a criação de uma cultura favorável e a busca de caminhos estratégicos para a realização de metas globais caracteriza perfeitamente a macroliderança e a visão de futuro.",
+        "source_reference": null
+      },
+      "source_content_hash": "2e33a9a25c8712469966770df1f1992f7fee99804950a35a0f8d3af0230919d1"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:085",
+      "source_id": "dpf14_009_01:85",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da gestão de pessoas nas organizações, julgue os itens a seguir.\n\nOs profissionais de gestão de pessoas devem ser capazes de gerenciar processos de mudanças e atuar em conjunto com as demais áreas da organização, atitudes que favorecem constantes inovações e soluções de problemas.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 85; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "84f9a566b2444b2bd2c4e68ec77aee8217e217fb2b2ebb20d139ca7b67ebe3bd",
+        "original_numeric_id": 85,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "official_item_number": 85
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmativa está correta. A evolução da área de Gestão de Pessoas consolidou o papel do profissional de Recursos Humanos como um parceiro estratégico e agente de mudança (conforme modelos consagrados na literatura, como o de Dave Ulrich). \n\nPara que a organização se mantenha competitiva, os profissionais de gestão de pessoas não devem se limitar a tarefas burocráticas; eles precisam atuar de forma transversal, colaborando com as diversas áreas da organização para facilitar processos de transição, gerenciar resistências a mudanças e fomentar um clima organizacional propício à inovação e à resolução conjunta de problemas.",
+        "source_reference": null
+      },
+      "source_content_hash": "eda4f70dd815e2defa9bd796069cc35af69121e070b674ce3e47743c4d9e85b5"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:086",
+      "source_id": "dpf14_009_01:86",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da gestão de pessoas nas organizações, julgue os itens a seguir.\n\nNa gestão por competências, a implementação de estratégias depende essencialmente de aspectos relativos ao ambiente político, tecnológico, econômico e social em que a organização se insere.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 86; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "daa20641fb8c41b3a86f2251a907fb2cb38668db0b473f3405827bf722445bb2",
+        "original_numeric_id": 86,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "official_item_number": 86
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmativa está errada. \n\nEmbora a formulação da estratégia organizacional como um todo sofra influência direta do ambiente externo (aspectos políticos, tecnológicos, econômicos e sociais), a **gestão por competências** é uma ferramenta de gestão interna. \n\nA implementação da gestão por competências depende, essencialmente, do mapeamento, captação, desenvolvimento e avaliação das competências organizacionais e individuais (expressas pelo conjunto de conhecimentos, habilidades e atitudes - CHA). O foco do modelo está em alinhar o potencial do capital humano interno às metas estratégicas previamente definidas, e não em gerenciar diretamente as variáveis macroambientais externas mencionadas no enunciado.",
+        "source_reference": null
+      },
+      "source_content_hash": "77c97567a15f746349c9b0343f3bdb016b6dde17179af6bd2c01483e83b0364b"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:088",
+      "source_id": "dpf14_009_01:88",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da gestão de pessoas nas organizações, julgue os itens a seguir.\n\nA formulação e a aplicação de critérios objetivos para a auditoria permanente dos procedimentos organizacionais relacionados aos recursos humanos compõem a política de desenvolvimento de pessoas.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 88; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "8398861eabfbf4d300d5976f7b1da8567203f9fa8b51088a0a73b5ae821e35d8",
+        "original_numeric_id": 88,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "official_item_number": 88
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque associa de forma equivocada as atividades de auditoria de recursos humanos à política de desenvolvimento de pessoas. Na literatura clássica de gestão de pessoas, as atividades de formulação e aplicação de critérios objetivos para a auditoria permanente dos procedimentos organizacionais de recursos humanos integram o subsistema de **Monitoramento de Pessoas** (ou Controle de Pessoas). O subsistema de **Desenvolvimento de Pessoas**, por sua vez, é voltado para o treinamento, o desenvolvimento de pessoal, o desenvolvimento organizacional e a educação corporativa. Portanto, a auditoria e o controle de procedimentos não pertencem à política de desenvolvimento, mas sim à de monitoramento.",
+        "source_reference": null
+      },
+      "source_content_hash": "48f90f39a23778a8c6aaa28c5f7ad7d3707a89c7c56304557fdee4ffcbf90042"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:089",
+      "source_id": "dpf14_009_01:89",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação a comportamento organizacional, julgue os itens a seguir.\n\nA maioria dos métodos de avaliação de desempenho fornece informações a respeito do contexto de trabalho, além de medir o comportamento e a produtividade individual.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 89; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "eec1a51b25c9c1f08b91ab88e915ee5f8c2dbd3d8ef4c72eb48a7b9cc023394b",
+        "original_numeric_id": 89,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "official_item_number": 89
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque inverte a realidade dos métodos tradicionais de avaliação de desempenho. A grande maioria dos métodos de avaliação de desempenho gera informações focadas estritamente no comportamento e na produtividade individual dos profissionais da organização. Esses métodos não fornecem informações estruturadas a respeito do contexto de trabalho (como condições ambientais, infraestrutura, processos organizacionais ou fatores externos), limitando-se a mensurar a atuação direta do indivíduo no cargo.",
+        "source_reference": null
+      },
+      "source_content_hash": "9ae5c489f67a7acc7e0d06c7cf114d98eca3c83e1c8bde9ae0d00db4c642a1b0"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:090",
+      "source_id": "dpf14_009_01:90",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação a comportamento organizacional, julgue os itens a seguir.\n\nDemandas de aprendizagem equivalem a necessidades de desempenho resultantes de lacunas relacionadas às capacidades dos profissionais da organização.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 90; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "37978c4f18f740345d468c6181b0e059e2e4477e99bcc835de7d2e0cc2f20517",
+        "original_numeric_id": 90,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "official_item_number": 90
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. No campo de Treinamento, Desenvolvimento e Educação (TD&E), as necessidades de desempenho e as demandas de aprendizagem são equivalentes apenas quando estas últimas decorrem especificamente de lacunas (gaps) nas capacidades (conhecimentos, habilidades e atitudes) dos profissionais. Caso a necessidade de desempenho seja decorrente de outros fatores, como contextos de trabalho inadequados, falta de ferramentas ou baixa motivação, ela não se traduzirá em uma demanda de aprendizagem, uma vez que ações de capacitação não resolveriam o problema.",
+        "source_reference": null
+      },
+      "source_content_hash": "5a243882d2e67ffeb2e73db6e407e6a6de979989aebfac6b2e6f358d220e85cc"
+    }
+  ]
+}

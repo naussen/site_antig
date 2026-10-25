@@ -1,0 +1,79 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-agente_de_policia_federal-direito-administrativo-8684f5c98b51-93157c1ba78b",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "8684f5c98b5104f7efe1d71e306dea21ce1a8e63e9a46565a984c87d36331352",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "9bf5415c207ff2dee6f1b513f48cc1f4b3e00a224421906182f247e816e0b8ed",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "93157c1ba78bc05a09390db689c8dc081605bb2ff2b5dab1032fa08bd1a4db28",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:025",
+      "source_id": "agente_de_policia_federal:25",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da organização da administração pública brasileira, julgue os itens subsequentes.\n\nSob a perspectiva do critério formal adotado pelo Brasil, somente é administração pública aquilo determinado como tal pelo ordenamento jurídico brasileiro, independentemente da atividade exercida. Assim, a administração pública é composta exclusivamente pelos órgãos integrantes da administração direta e pelas entidades da administração indireta.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 25; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "f3e8ff61f8f23908b38ca109fa475b1f18c73edadf9b070cdb0c461c2917ad92",
+        "original_numeric_id": 25,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 25
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto porque descreve com precisão o critério formal (também denominado subjetivo ou orgânico) adotado de forma predominante pelo ordenamento jurídico brasileiro para conceituar a Administração Pública.\n\nSob a perspectiva do critério formal, a Administração Pública é definida estritamente pelo conjunto de sujeitos (órgãos, entidades e agentes) que a lei qualifica como integrantes de sua estrutura, independentemente da natureza da atividade que desempenham. Assim, no Brasil, a Administração Pública em sentido formal compreende exclusivamente os órgãos que integram a Administração Direta e as entidades que compõem a Administração Indireta (autarquias, fundações públicas, empresas públicas e sociedades de economia mista).\n\n**Diferenciação:** O critério formal (subjetivo/orgânico) opõe-se ao critério material (objetivo/funcional), o qual define a administração com base na atividade exercida (como serviço público ou poder de polícia), abrangendo inclusive particulares em colaboração com o Estado.\n\n### Dispositivo legal\n* **Decreto-Lei nº 200/1967, art. 4º**",
+        "source_reference": null
+      },
+      "source_content_hash": "c9ced9ac2b780a5918b59fc7924b699e813042f170b3a8296d57b247774083d6"
+    }
+  ]
+}

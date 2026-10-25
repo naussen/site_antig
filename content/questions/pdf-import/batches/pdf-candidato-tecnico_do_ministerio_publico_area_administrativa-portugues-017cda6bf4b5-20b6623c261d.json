@@ -1,0 +1,94 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-tecnico_do_ministerio_publico_area_administrativa-portugues-017cda6bf4b5-20b6623c261d",
+  "source": {
+    "file_name": "tecnico_do_ministerio_publico_area_administrativa_ATUALIZADO.json",
+    "sha256": "017cda6bf4b50f16ec2a5bc5cc084aa29834c6219ce386314eef0c942623ad47",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "tecnico_do_ministerio_publico_area_administrativa.json",
+      "original_source_sha256": "2976130818df2aae9a14ec1aa61321f02e8f9c02cc280baa4e3c5d73c8a106ba",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "20b6623c261d81100ff3b918bcf910b0ba50b737ba2739c8aa1d757d0ca2564d",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:009",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:9",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A psicóloga Fernanda Furia escreveu uma reportagem sobre Inteligência Digital, que dizia o seguinte:\nNas últimas décadas a nossa vida vem se tornando digital. Estamos a todo momento não somente usando diversas tecnologias como também sendo, sem perceber, profundamente influenciados por elas. Vivemos rodeados de tecnologias digitais acessíveis, intuitivas, disruptivas e extremamente atraentes, o que nos coloca em uma posição ao mesmo tempo de poder e de vulnerabilidade.\nSobre o vocabulário empregado nesse texto, a única indicação de significado equivocada é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 9; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "década = espaço de dez anos;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "diversas tecnologias = tecnologias diferentes;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "acessíveis = disponíveis;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "disruptivas = que mostram quebra, interrupção;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "vulnerabilidade = fraqueza.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "3ea289dc6d71c08533250a49447426add114bfdc920bcd5d645619f4b543fa85",
+        "original_numeric_id": 9,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "official_item_number": 9
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito é a alternativa **B** (indicação de significado equivocada).\n\nA palavra \"diverso\", quando posicionada antes do substantivo (\"diversas tecnologias\"), atua como pronome adjetivo indefinido, assumindo o sentido quantitativo de \"várias\" ou \"muitas\". Para que assumisse o significado qualitativo de \"tecnologias diferentes\" ou \"variadas\", o vocábulo deveria vir posposto ao substantivo (\"tecnologias diversas\"). Portanto, a equivalência proposta está incorreta.\n\nAnálise das demais alternativas (que trazem significados corretos no contexto):\n* **A** está correta porque \"década\" designa estritamente um período de dez anos.\n* **C** está correta porque \"acessíveis\", no contexto de tecnologias ao redor do usuário, refere-se à facilidade de obtenção e uso, ou seja, estarem \"disponíveis\".\n* **D** está correta porque o termo \"disruptivo\" (derivado de disrupção) carrega o sentido de quebra, interrupção ou fratura de um modelo ou padrão estabelecido.\n* **E** está correta porque \"vulnerabilidade\" expressa a condição de fragilidade, fraqueza ou exposição a riscos e danos.",
+        "source_reference": null
+      },
+      "source_content_hash": "c7facfb2e4670ebe58e9b8a5857e720b061231e9465ca71abc199bc44ae7c10f"
+    }
+  ]
+}

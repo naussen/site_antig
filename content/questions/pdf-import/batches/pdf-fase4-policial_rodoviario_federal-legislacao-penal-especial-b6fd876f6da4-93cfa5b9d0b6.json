@@ -1,0 +1,367 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-policial_rodoviario_federal-legislacao-penal-especial-b6fd876f6da4-93cfa5b9d0b6",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "b6fd876f6da47bfc670b5edf47a194cb0192c6a872db7d5acf3f5352d639cba7",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "d0a1c5718064db035e156dbeb8982317019ea8dde6c8349e0a1cc8366d1342df",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "93cfa5b9d0b6f4e20dd06a6d7c76cb5523a7d9fcd675291a1d04ad1491ab49e7",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "legislacao-penal-especial",
+    "name": "Legislação Penal Especial"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:091",
+      "source_id": "policial_rodoviario_federal:91",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da carreira de policial rodoviário federal, julgue os itens subsequentes.\n\nA promoção do policial rodoviário federal para a segunda classe depende de participação em cursos de capacitação cujo conteúdo seja compatível com as atribuições do cargo e que tenha duração de, no mínimo, 150 horas.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 91; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "e2cf24e95b58615cc9ff06d2cbba03b659350996528cc07424453a22d0a70570",
+        "original_numeric_id": 91,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmativa está incorreta. A assertiva inverteu as cargas horárias mínimas exigidas para as promoções na carreira de Policial Rodoviário Federal.\n\nDe acordo com o Anexo do Decreto nº 8.282/2014, os requisitos de capacitação para promoção são:\n1. **Da Terceira Classe para a Segunda Classe:** Cursos de capacitação com conteúdo compatível com as atribuições do cargo e duração total igual ou superior a **120 horas** (e não 150 horas).\n2. **Da Segunda Classe para a Primeira Classe:** Cursos de capacitação com conteúdo compatível com as atribuições do cargo e duração total igual ou superior a **150 horas**.\n3. **Da Primeira Classe para a Classe Especial:** Cursos de capacitação específicos, com conteúdo estritamente relacionado às atividades do órgão e duração total igual ou superior a **360 horas**.\n\n### Dispositivo legal\n* **Decreto nº 8.282/2014, Anexo**\n* **URL Oficial:** [Planalto - Decreto nº 8.282/2014](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2014/decreto/d8282.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "a77e8e5d44f496e4f06c62e7238761414e46882225224ab2ab6693e2e0b742e3"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:110",
+      "source_id": "policial_rodoviario_federal:110",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da identificação criminal, do crime de tortura, do abuso de direito, da prevenção do uso indevido de drogas, da comercialização de armas de fogo e dos crimes hediondos, julgue os itens que se seguem.\n\nCaso três pessoas associadas, com divisão de tarefas, subtraiam substância explosiva, estará configurado crime hediondo.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 110; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "1641855a4b26cef781215d19cb01c97f1ae7ad019a1356b730802380d7f67a06",
+        "original_numeric_id": 110,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A conduta descrita na assertiva refere-se à subtração de substância explosiva, o que configura o crime de furto qualificado pela subtração de explosivos ou de acessórios que possibilitem sua fabricação, montagem ou emprego, tipificado no artigo 155, § 7º, do Código Penal.\n\nDe acordo com a Lei de Crimes Hediondos (Lei nº 8.072/1990), em seu artigo 1º, inciso IX, apenas o crime de furto qualificado pelo **emprego** de explosivo ou de artefato análogo que cause perigo comum (artigo 155, § 4º-A, do Código Penal) é considerado hediondo. A subtração (furto **de** explosivo) não foi incluída no rol de crimes hediondos pela Lei nº 13.964/2019 (Pacote Anticrime).\n\n**Macete de resolução:**\n* Furto **COM** explosivo (emprego de explosivo) = **HEDIONDO** (Art. 155, § 4º-A, CP).\n* Furto **DE** explosivo (subtração de explosivo) = **NÃO É HEDIONDO** (Art. 155, § 7º, CP).\n\n**Dispositivo legal**\n\n[Artigo 1º, inciso IX da Lei nº 8.072/1990 e Artigo 155, §§ 4º-A e 7º do Código Penal (Decreto-Lei nº 2.848/1940)](https://www.planalto.gov.br/ccivil_03/leis/l8072.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "a0b8f1ca56bb507d861553cff2179b89743309b8469a80b837e513eec00670c9"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:111",
+      "source_id": "policial_rodoviario_federal:111",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da identificação criminal, do crime de tortura, do abuso de direito, da prevenção do uso indevido de drogas, da comercialização de armas de fogo e dos crimes hediondos, julgue os itens que se seguem.\n\nQualquer agente público, ainda que não seja servidor e não perceba remuneração, pode ser sujeito ativo do crime de abuso de autoridade.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 111; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "e1d9be50cdf27fb171bdc456cf94330ffc70ea232f2de6148d12135d3ca7dd7c",
+        "original_numeric_id": 111,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O sujeito ativo dos crimes de abuso de autoridade é o agente público, servidor ou não, da administração direta, indireta ou fundacional de qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios.\n\nO conceito legal de agente público adotado pela Lei de Abuso de Autoridade (Lei nº 13.869/2019) é extremamente amplo. Conforme o parágrafo único do artigo 2º da referida lei, considera-se agente público todo aquele que exerce mandato, cargo, emprego ou função pública em órgão ou entidade abrangida pela lei, ainda que de forma transitória ou sem qualquer tipo de remuneração (como ocorre, por exemplo, com jurados e mesários eleitorais).\n\n**Detalhe importante:** A ausência de vínculo estatutário ou contratual permanente e a falta de remuneração não afastam a possibilidade de cometimento do crime de abuso de autoridade, desde que o indivíduo esteja no exercício de função pública.\n\n**Dispositivo legal**\n\n[Artigo 2º, parágrafo único da Lei nº 13.869/2019](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/l13869.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "f0de4d3f6fccb7d80ca2cc1f4afd956637c31a930121bcd00ea9a3653f3638cf"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:112",
+      "source_id": "policial_rodoviario_federal:112",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da identificação criminal, do crime de tortura, do abuso de direito, da prevenção do uso indevido de drogas, da comercialização de armas de fogo e dos crimes hediondos, julgue os itens que se seguem.\n\nMesmo em caso de apresentação do documento de identificação civil, é possível a identificação criminal em caso de constar de registros policiais o uso de outros nomes ou diferentes qualificações.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 112; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "7479b9ab71a24451896616221305d5775c5fbe49d25f2efdaeb53611a4ba834d",
+        "original_numeric_id": 112,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A regra geral estabelecida pela Lei nº 12.037/2009 é de que o civilmente identificado não será submetido a identificação criminal (artigo 1º). Contudo, essa regra comporta exceções taxativas descritas no artigo 3º da mesma lei.\n\nDentre as hipóteses excepcionais que autorizam a identificação criminal (que compreende o processo datiloscópico e fotográfico), mesmo diante da apresentação de documento de identificação civil válido, destaca-se a constante no inciso V do artigo 3º: quando constar de registros policiais o uso de outros nomes ou de diferentes qualificações pelo indiciado. Essa medida visa garantir a correta individualização da pessoa investigada e evitar fraudes de identidade no âmbito da persecução penal.\n\n**Dispositivo legal**\n\n[Artigo 3º, inciso V da Lei nº 12.037/2009](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "5d0b0f5adc75815685b84f794489e4126f65d1190de90c54d02383a94b91f990"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:113",
+      "source_id": "policial_rodoviario_federal:113",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da identificação criminal, do crime de tortura, do abuso de direito, da prevenção do uso indevido de drogas, da comercialização de armas de fogo e dos crimes hediondos, julgue os itens que se seguem.\n\nConduzir arma de fogo, no exercício de atividade comercial, sem autorização, configura comércio ilegal de arma de fogo.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 113; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "74a94b02103e0e16871eabee98679edaf7ac7fa2910a10c132bba522a18890e0",
+        "original_numeric_id": 113,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O crime de comércio ilegal de arma de fogo, tipificado no artigo 17 da Lei nº 10.826/2003 (Estatuto do Desarmamento), é um tipo penal de ação múltipla (ou de conteúdo variado), que apresenta diversos verbos nucleares.\n\nEntre as condutas descritas no caput do artigo 17, consta expressamente o verbo 'conduzir' arma de fogo, acessório ou munição, sem autorização ou em desacordo com determinação legal ou regulamentar, desde que praticado no exercício de atividade comercial ou industrial (inclusive clandestina ou exercida em residência, conforme o § 1º do mesmo dispositivo). Portanto, a conduta descrita amolda-se perfeitamente ao tipo penal em comento, não exigindo necessariamente a efetiva compra ou venda da arma para a consumação do delito.\n\n**Dispositivo legal**\n\n[Artigo 17 da Lei nº 10.826/2003](https://www.planalto.gov.br/ccivil_03/leis/l10826.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "cfb57c6864ff35f2111cf066ba6a8fa5e21b88f7d11f9701418f1bc6c134c490"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:114",
+      "source_id": "policial_rodoviario_federal:114",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da identificação criminal, do crime de tortura, do abuso de direito, da prevenção do uso indevido de drogas, da comercialização de armas de fogo e dos crimes hediondos, julgue os itens que se seguem.\n\nEntre as atividades de prevenção do uso indevido de drogas, está o fortalecimento da autonomia e da responsabilidade individual em relação ao uso indevido dessas substâncias ilícitas.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 114; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "ea325d1c56b9089e8c2fd9c8f0b1a1ca44738f66e04bf89d2f96fd8e9f865760",
+        "original_numeric_id": 114,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nA Lei Antidrogas (Lei Federal nº 11.343/2006), no capítulo que disciplina as atividades de prevenção do uso indevido de drogas (art. 19, inciso II), estabelece expressamente como princípio das ações preventivas o fortalecimento da autonomia e da responsabilidade individual e coletiva em relação ao consumo de substâncias psicoativas.",
+        "source_reference": null
+      },
+      "source_content_hash": "e420a43fa08d60382008b7efeb8c3b4f513f520e23a45c1862c06c779f4b8246"
+    }
+  ]
+}

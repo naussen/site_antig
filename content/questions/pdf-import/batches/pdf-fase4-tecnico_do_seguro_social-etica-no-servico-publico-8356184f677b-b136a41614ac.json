@@ -1,0 +1,190 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_do_seguro_social-etica-no-servico-publico-8356184f677b-b136a41614ac",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "8356184f677b1f67db7c2ca11e127e96c825e8169801c0b8b25dcfb5ffc09cf5",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "de5b10d2a1ac5bee023c723ca65187afb7622a283e7467ef7e8b4dd19094f663",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "b136a41614aca4b00a4e316d91cd3de6450f4e4dd13e4044b416a0deb5075c27",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "etica-no-servico-publico",
+    "name": "Ética no Serviço Público"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:015",
+      "source_id": "tecnico_do_seguro_social:15",
+      "question_type": "true_false",
+      "statement_markdown": "Com base no disposto no Decreto n.º 1.171/1994, que aprova o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, julgue os itens a seguir.\n\nConsidere que Jonas, servidor público federal lotado no atendimento ao público de uma repartição federal de recolhimento de tributos, tenha tratado mal, no exercício de suas atribuições de atendimento, uma contribuinte que buscava informações a respeito de suposto débito tributário. Nessa situação hipotética, a atitude de Jonas causou dano moral à contribuinte.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 15; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Código de Ética Profissional (Decreto nº 1.171/1994)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "9a516cab211483f72252af8651b7fe11813c23ecd2f324897e70b246189c9278",
+        "original_numeric_id": 15,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "legislacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nDe acordo com o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal (Decreto nº 1.171/1994):\n\n* O servidor público deve prestar atendimento ao cidadão pautado pela **presteza, cortesia, urbanidade e respeito**, reconhecendo o público como titular legítimo dos serviços estatais (Seção I, Inciso XIV, alíneas 'b' e 'c');\n* O atendimento eficiente e sem procrastinação mitiga as filas e evita a formação de dano moral ao administrado (Inciso XII).\n\nA conduta descrita de Jonas atende plenamente aos postulados deontológicos exigidos do servidor federal.",
+        "source_reference": null
+      },
+      "source_content_hash": "2ac5ab568d3e1fa717acc0d015c59ca462ebce6526356f8cb66a9d59cc24cd63"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:017",
+      "source_id": "tecnico_do_seguro_social:17",
+      "question_type": "true_false",
+      "statement_markdown": "Com base no disposto no Decreto n.º 1.171/1994, que aprova o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, julgue os itens a seguir.\n\nO servidor público pode, até mesmo injustificadamente, deixar de participar de estudos que se relacionem com a melhoria do exercício de suas funções e que visem à realização do bem comum, pois, apesar de importante, essa ação não constitui dever fundamental dos servidores públicos.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 17; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Código de Ética Profissional (Decreto nº 1.171/1994)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "530825957740f147564f19dac7d19e9216b7bb5908a8c66faffbe3e092479b0f",
+        "original_numeric_id": 17,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "legislacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNos termos do Decreto nº 1.171/1994 (Código de Ética do Servidor Civil Federal, Seção I, Inciso XIV, alínea 'f'), é dever fundamental do servidor:\n\n*\"f) ter consciência de que seu trabalho é regido por princípios éticos que se materializam na adequada prestação dos serviços públicos;\"* e *\"facilitar a fiscalização de todos os atos ou serviços por quem de direito, bem como **participar dos movimentos e estudos que se relacionem com a melhoria do exercício de suas funções, tendo por escopo a realização do bem comum**.\"*\n\nA recusa injustificada em integrar processos de capacitação e aprimoramento funcional configura descumprimento expresso dos deveres éticos da função pública.",
+        "source_reference": null
+      },
+      "source_content_hash": "f196b2ccd88f9e54fda6b04def5eec42a6e4981775dc62b7568da7e5e45cca5d"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:019",
+      "source_id": "tecnico_do_seguro_social:19",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes de acordo com as disposições do Decreto n.º 6.029/2007, que institui o Sistema de Gestão da Ética do Poder Executivo Federal.\n\nDado o teor sensível das informações que transitam na maior parte das entidades do Poder Executivo Federal, as autoridades competentes dessas entidades poderão alegar sigilo para deixar de prestar informação solicitada pelas comissões de ética.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 19; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Código de Ética Profissional (Decreto nº 1.171/1994)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "784af548f146b8997936aa7aad850340427a0bea4012101f55e2935759a675e8",
+        "original_numeric_id": 19,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "legislacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNo direito administrativo e na ética pública brasileira, o princípio cardeal que rege os atos estatais é o da **publicidade**, erigido pelo Art. 37, *caput*, da Constituição Federal e pelo Inciso VII da Seção I do Decreto nº 1.171/1994:\n\n*\"VII - A publicidade de qualquer ato administrativo constitui **requisito de eficácia e moralidade**, ensejando sua omissão comprometimento ético contra o bem comum, imputável a quem a negar.\"*\n\nNo serviço público, a transparência e a publicidade são a **regra geral**. O sigilo constitui estrita exceção, restrito unicamente às hipóteses taxativas de segurança nacional, investigações policiais protegidas ou intimidade/dados pessoais resguardados por lei.",
+        "source_reference": null
+      },
+      "source_content_hash": "192c0d3255075c66066aa1181d1635d8a95edc27af94d823cdb64785b811833d"
+    }
+  ]
+}

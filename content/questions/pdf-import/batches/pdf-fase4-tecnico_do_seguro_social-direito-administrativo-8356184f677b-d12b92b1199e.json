@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_do_seguro_social-direito-administrativo-8356184f677b-d12b92b1199e",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "8356184f677b1f67db7c2ca11e127e96c825e8169801c0b8b25dcfb5ffc09cf5",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "de5b10d2a1ac5bee023c723ca65187afb7622a283e7467ef7e8b4dd19094f663",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "d12b92b1199ed529070f255fa19d99ace16ed04142040be0ea4f368057c56ed4",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:033",
+      "source_id": "tecnico_do_seguro_social:33",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da administração pública, do direito administrativo e da organização administrativa da União, julgue os itens a seguir.\n\nA regulamentação e a fiscalização de atividade econômica de natureza privada pela administração pública caracterizam a intervenção.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 33; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "9148ebbb71c9ba1cdfaec2a6cce03df38fbcfe8fc861db29279fac6bc50ba2a8",
+        "original_numeric_id": 33,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto.\n\nNo âmbito do Direito Administrativo, sob o aspecto material ou objetivo, a Administração Pública desempenha quatro atividades finalísticas fundamentais: fomento, polícia administrativa, serviço público e **intervenção**.\n\nA **intervenção** do Estado no domínio econômico pode ocorrer de duas formas:\n1. **Intervenção Direta:** Quando o próprio Estado atua diretamente na exploração de atividade econômica, o que ocorre de forma excepcional e por meio de empresas estatais (empresas públicas e sociedades de economia mista), nos termos do art. 173 da Constituição Federal.\n2. **Intervenção Indireta (ou por sobreposição):** Quando o Estado atua como agente normativo e regulador da atividade econômica privada, exercendo as funções de **fiscalização**, incentivo e **regulamentação**, conforme expressamente previsto no art. 174 da Constituição Federal.\n\nPortanto, as atividades de regulamentação e fiscalização de atividades econômicas privadas caracterizam perfeitamente a intervenção indireta do Estado na economia.\n\n### Dispositivo legal\n* **Referência:** Constituição Federal de 1988, Art. 174.\n* **URL oficial:** [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "ff292714f840584b74dabbc86c4c1196253bd0479ab1e110111df19584919fcd"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:040",
+      "source_id": "tecnico_do_seguro_social:40",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos serviços públicos, do controle e responsabilização da administração, da improbidade administrativa e do processo administrativo, julgue os próximos itens.\n\nO direito de petição, por meio do qual as pessoas podem formular postulações aos órgãos públicos, é um meio de controle administrativo.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 40; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Processo Administrativo Federal (Lei nº 9.784/1999)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "ca2c8aba31c625e8e34128e5191e87cfe494d598094e2ef4d8e5690c8563c038",
+        "original_numeric_id": 40,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "processo-administrativo-federal-lei-9784",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. O direito de petição, assegurado constitucionalmente a qualquer pessoa física ou jurídica, constitui um canal de comunicação direta com os órgãos públicos para a defesa de direitos ou contra ilegalidades e abusos de poder. No âmbito do controle da Administração Pública, ele é classificado pela doutrina como um meio de controle administrativo por provocação do administrado. Por meio do exercício desse direito, viabiliza-se que a própria Administração tome conhecimento de falhas ou desvios e exerça o seu poder-dever de autotutela, revisando, anulando ou revogando seus próprios atos sem a necessidade de intervenção judicial imediata.\n\n### Dispositivo legal\n* **Constituição Federal de 1988, Art. 5º, inciso XXXIV, alínea \"a\"**\n* URL oficial: [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "85685c610e20d01e554cd8ce7938fbeff4e6c6dc74758891d6dbbed2408e415f"
+    }
+  ]
+}

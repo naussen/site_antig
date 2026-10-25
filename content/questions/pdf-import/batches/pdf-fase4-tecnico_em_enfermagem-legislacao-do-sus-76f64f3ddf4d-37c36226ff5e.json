@@ -1,0 +1,828 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_em_enfermagem-legislacao-do-sus-76f64f3ddf4d-37c36226ff5e",
+  "source": {
+    "file_name": "tecnico_em_enfermagem_ATUALIZADO.json",
+    "sha256": "76f64f3ddf4d3822e329101339345d50044b899f9b8fae52267aeb267323adcc",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_em_enfermagem.json",
+      "original_source_sha256": "d82e5bb88e01f70ff10fe33c96068be4d04a647ee9eeb9d4154c94a2180a057d",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "37c36226ff5efe984c70c195732856a9cdcf02418b6db55df7a2a6bd4acae017",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "legislacao-do-sus",
+    "name": "Legislação do SUS"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:021",
+      "source_id": "tecnico_em_enfermagem:21",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Assinale a alternativa correta consoante as disposições da Resolução 453/2012, do Conselho Nacional da Saúde:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 21; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O Conselho de Saúde é uma instância singular, deliberativa e temporária do Sistema Único de Saúde (SUS) em cada esfera de Governo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Como Subsistema da Seguridade Social, o Conselho de Saúde atua na formulação e proposição de estratégias e no controle da execução das Políticas de Saúde, excluindo seus aspectos econômicos e financeiros",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "A participação de órgãos, entidades e movimentos sociais terá como critério a representatividade, a abrangência e a complementaridade do conjunto da sociedade, no âmbito de atuação do Conselho de Saúde",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "De acordo com as especificidades locais, aplicando o princípio da paridade, não está contemplada a representação de entidades indígenas",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "A participação dos membros eleitos do Poder Legislativo, representação do Poder Judiciário e do Ministério Público, como conselheiros é permitida nos Conselhos de Saúde",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "e2a24cbd9e686b007aad518f6073f3e5e63a6d4d5669be1e0044dcef880959c7",
+        "original_numeric_id": 21,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://conselho.saude.gov.br"
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nConforme a **Terceira Diretriz, item I**, da Resolução CNS nº 453/2012:\n*\"A participação de órgãos, entidades e movimentos sociais terá como critério a representatividade, a abrangência e a complementaridade do conjunto da sociedade, no âmbito de atuação do Conselho de Saúde.\"*\n\nAnálise dos erros das demais alternativas:\n* **A:** O Conselho de Saúde é uma instância colegiada, deliberativa e **permanente** (e não temporária), consoante a Primeira Diretriz.\n* **B:** O Conselho atua na formulação de estratégias e no controle da execução da política de saúde, **inclusive nos seus aspectos econômicos e financeiros** (Primeira Diretriz).\n* **D:** A representação de entidades e populações indígenas **deve ser contemplada** de acordo com as especificidades locais e respeitando o princípio da paridade (Terceira Diretriz, item III).\n* **E:** É **expressamente vedada** a participação de membros eleitos do Poder Legislativo, de representantes do Poder Judiciário e do Ministério Público como conselheiros de saúde (Terceira Diretriz, item VIII).",
+        "source_reference": null
+      },
+      "source_content_hash": "eb53ca7f54a01370b1182ba879060e48f2df864302c9a3344194e25f9b48cbee"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:022",
+      "source_id": "tecnico_em_enfermagem:22",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Com base na Constituição Federal de 1988, analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F).\n( ) A saúde é direito de todos e dever do Estado.\n( ) A assistência à saúde é livre à iniciativa privada.\n( ) É permitida a destinação de recursos públicos para auxílios ou subvenções às instituições privadas com fins lucrativos.\nAssinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 22; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "V - V - V",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "V - V - F",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "V - F - V",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "F - F - V",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "F - F - F",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Princípios e Diretrizes do SUS na Constituição Federal de 1988",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "fb1eb76086e8a351efaeecc8ec651c5a9fb5b9c93f836e40259b3551b906c368",
+        "original_numeric_id": 22,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "evolucao-historica-e-principios-do-sus",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A análise das afirmativas com base na Seção II (Da Saúde) do Capítulo II do Título VIII da Constituição Federal de 1988 revela o seguinte:\n\n- **Primeira afirmativa (V):** \"A saúde é direito de todos e dever do Estado.\" Está correta e reproduz o início do artigo 196 da CF/88, que estabelece a saúde como direito social fundamental garantido mediante políticas sociais e econômicas.\n- **Segunda afirmativa (V):** \"A assistência à saúde é livre à iniciativa privada.\" Está correta, correspondendo exatamente ao *caput* do artigo 199 da CF/88.\n- **Terceira afirmativa (F):** \"É permitida a destinação de recursos públicos para auxílios ou subvenções às instituições privadas com fins lucrativos.\" Está incorreta, pois o § 2º do artigo 199 da CF/88 estabelece expressamente uma vedação: \"É *vedada* a destinação de recursos públicos para auxílios ou subvenções às instituições privadas com fins lucrativos\".\n\nPortanto, a sequência correta é V - V - F.\n\n**Dispositivo legal**\n\n[Constituição da República Federativa do Brasil de 1988, Artigos 196 e 199, § 2º](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "cd4c8b8540c59e3b8aeb40d4555ef531c7a0ecfb4c4b311a07182d5fe4cd9dcb"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:023",
+      "source_id": "tecnico_em_enfermagem:23",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com a definição dada pela Constituição Federal de 1988, analise o texto abaixo.\n\n“A seguridade social compreende um conjunto integrado de ações de iniciativa dos Poderes Públicos e da sociedade, destinadas a assegurar os direitos relativos à ______, à ______ e à ______”.\n\nAssinale a alternativa que preencha correta e respectivamente as lacunas.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 23; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "saúde / educação / ordem econômica",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "previdência / saúde / direitos políticos",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "nacionalidade / segurança pública / alimentação",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "anistia / moradia / trabalho",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "saúde / previdência / assistência social",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Princípios e Diretrizes do SUS na Constituição Federal de 1988",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "6355ca446229000182a929084de3141fd4f6ace33a21f097a6d91e65c437f3d6",
+        "original_numeric_id": 23,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art194"
+      },
+      "topics": [
+        {
+          "topic_id": "evolucao-historica-e-principios-do-sus",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O caput do artigo 194 da Constituição Federal de 1988 define expressamente o conceito de seguridade social, estabelecendo que ela compreende um conjunto integrado de ações destinadas a assegurar os direitos relativos à saúde, à previdência e à assistência social.\n\n**Análise das alternativas:**\n* **Alternativa E (Correta):** Preenche perfeitamente as lacunas com os três pilares da seguridade social (saúde, previdência e assistência social), conhecidos pela sigla PAS.\n* **Alternativas A, B, C e D (Incorretas):** Apresentam direitos que, embora fundamentais ou previstos na Constituição (como educação, moradia, trabalho, segurança pública), não integram o conceito estrito de seguridade social delimitado pelo artigo 194.\n\n**Dica de memorização:** Lembre-se do mnemônico **PAS** (Previdência, Assistência social e Saúde) para identificar os componentes da Seguridade Social.\n\n**Dispositivo legal**\n\n[Artigo 194, caput, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art194)",
+        "source_reference": null
+      },
+      "source_content_hash": "0739462930ced9c12ad90a8220fbfceda5c72c05a058dbc8ed42c298bc983184"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:024",
+      "source_id": "tecnico_em_enfermagem:24",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com a Lei nº 8080/90 (Lei Orgânica da Saúde), analise as afirmativas abaixo.\nI. A saúde é um direito fundamental do ser humano, devendo o Estado prover as condições indispensáveis ao seu pleno exercício.\nII. O dever do Estado de garantir a saúde exclui o das pessoas, da família, das empresas e da sociedade.\nIII. O conjunto de ações e serviços de saúde, prestados por órgãos e instituições privadas federais, estaduais e municipais, apenas da Administração direta e das fundações privadas, constitui o Sistema Único de Saúde (SUS).\nAssinale a alternativa correta.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 24; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Apenas a afirmativa I é verdadeira",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "Apenas as afirmativas I e II são verdadeiras",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "As afirmativas I, II e III são verdadeiras",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Apenas as afirmativas II e III são verdadeiras",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Apenas as afirmativas I e III são verdadeiras",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Lei Orgânica da Saúde (Lei nº 8.080/1990 e Lei nº 8.142/1990)",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "bbd37aad631e539dab444ca1dcbbed886854b4a0a5efc8a5c1b0ea13db64f652",
+        "original_numeric_id": 24,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8080.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "lei-organica-da-saude-lei-8080",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A análise das afirmativas baseia-se nas disposições literais da Lei Orgânica da Saúde (Lei nº 8.080/1990):\n\n* **Afirmativa I (Verdadeira):** Reproduz fielmente o caput do artigo 2º da Lei nº 8.080/1990, que estabelece a saúde como direito fundamental do ser humano e atribui ao Estado o dever de prover as condições indispensáveis ao seu pleno exercício.\n* **Afirmativa II (Falsa):** Contraria o § 2º do artigo 2º da mesma lei, que determina expressamente que o dever do Estado *não exclui* o das pessoas, da família, das empresas e da sociedade.\n* **Afirmativa III (Falsa):** Apresenta múltiplos erros em relação ao artigo 4º da lei. O SUS é constituído por ações e serviços prestados por órgãos e instituições *públicas* (e não privadas), federais, estaduais e municipais, da Administração *direta e indireta* (e não apenas direta) e das fundações *mantidas pelo Poder Público* (e não fundações privadas).\n\nPortanto, apenas a afirmativa I está correta, o que valida a **Alternativa A**.\n\n**Dispositivo legal**\n\n[Lei nº 8.080/1990, Art. 2º, caput e § 2º, e Art. 4º, caput](https://www.planalto.gov.br/ccivil_03/leis/l8080.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "7573cb404f1064b1f89d318c2f1768c69e86c3a718854ce4bcfb15c0d0156d5c"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:025",
+      "source_id": "tecnico_em_enfermagem:25",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Nos termos da Lei nº 8.142/1990, assinale a alternativa incorreta.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 25; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O Sistema Único de Saúde (SUS), contará, em cada esfera de governo, sem prejuízo das funções do Poder Legislativo, com a Conferência de Saúde e o Conselho de Saúde",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "A Conferência de Saúde reunir-se-á a cada quatro anos com a representação dos vários segmentos sociais, para avaliar a situação de saúde e propor as diretrizes para a formulação da política de saúde nos níveis correspondentes",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "O Conselho de Saúde é órgão colegiado composto por representantes do governo, prestadores de serviço, profissionais de saúde e usuários",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "O Conselho Nacional de Secretários de Saúde (Conass) e o Conselho Nacional de Secretários Municipais de Saúde (Conasems) não terão representação no Conselho Nacional de Saúde",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "A representação dos usuários nos Conselhos de Saúde e Conferências será paritária em relação ao conjunto dos demais segmentos",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Lei Orgânica da Saúde (Lei nº 8.080/1990 e Lei nº 8.142/1990)",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "df7f5402bbdb83ee20c0da215d3d5da421ecfc1f6ab5d4148c87038e6fd38ca5",
+        "original_numeric_id": 25,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l8142.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "lei-organica-da-saude-lei-8080",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão solicita a identificação da alternativa **incorreta** com base na Lei nº 8.142/1990, que dispõe sobre a participação da comunidade na gestão do Sistema Único de Saúde (SUS).\n\n* **Alternativa D (Incorreta - Gabarito):** Contraria diretamente o § 3º do artigo 1º da Lei nº 8.142/1990, que estabelece que o Conass e o Conasems **terão** representação no Conselho Nacional de Saúde. A inserção do termo 'não' invalida a proposição.\n* **Alternativa A (Correta):** Está em consonância com o caput do artigo 1º, que prevê a existência da Conferência de Saúde e do Conselho de Saúde em cada esfera de governo.\n* **Alternativa B (Correta):** Reflete o § 1º do artigo 1º, definindo a periodicidade quadrienal e os objetivos da Conferência de Saúde.\n* **Alternativa C (Correta):** Está de acordo com o § 2º do artigo 1º, que define a composição colegiada e de caráter permanente do Conselho de Saúde.\n* **Alternativa E (Correta):** Corresponde ao § 4º do artigo 1º, que garante a representação paritária dos usuários em relação ao conjunto dos demais segmentos (50% de usuários e 50% divididos entre governo, prestadores e profissionais de saúde).\n\n**Dispositivo legal**\n\n[Lei nº 8.142/1990, Artigo 1º, § 3º](https://www.planalto.gov.br/ccivil_03/leis/l8142.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "a41ac92aa6e8a685500dd918d88fe805183189c32972dc3a7fa4139c7a67a25a"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:026",
+      "source_id": "tecnico_em_enfermagem:26",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Conforme a Resolução - RDC nº 63/2011, a qual dispõe sobre os Requisitos de Boas Práticas de Funcionamento para os Serviços de Saúde, assinale a alternativa incorreta.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 26; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O serviço de saúde deve desenvolver ações no sentido de estabelecer uma política de qualidade envolvendo estrutura, processo e resultado na sua gestão dos serviços",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "As Boas Práticas de Funcionamento (BPF) são os componentes da Garantia da Qualidade que asseguram que os serviços são ofertados com padrões de qualidade adequados",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "O serviço de saúde deve ser capaz de ofertar serviços dentro dos padrões de qualidade exigidos, atendendo aos requisitos das legislações e regulamentos vigentes",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "O serviço de saúde deve fornecer todos os recursos necessários, incluindo, dentre outros, quadro de pessoal qualificado, devidamente treinado, dispensando sua identificação",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "As reclamações sobre os serviços oferecidos devem ser examinadas, registradas e as causas dos desvios da qualidade, investigadas e documentadas, devendo ser tomadas medidas com relação aos serviços com desvio da qualidade e adotadas as providências no sentido de prevenir reincidências",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "2220c9615e39e8823a6cea3430e82e8fde7c78a086648120d9247749d8263ba2",
+        "original_numeric_id": 26,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/anvisa/pt-br"
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa incorreta (gabarito da questão) é a **D**.\n\nO Art. 6º da Resolução RDC ANVISA nº 63/2011 determina:\n*\"Art. 6º O serviço de saúde deve desenvolver ações no sentido de estabelecer uma política de qualidade que envolva a melhoria contínua dos processos de atenção à saúde.*  \n*Parágrafo único. A política de qualidade descrita no caput deste artigo **deve ser documentada**, divulgada a todos os profissionais do serviço de saúde e estar disponível para as autoridades sanitárias.\"*\n\nPortanto, afirmar que a política de qualidade *\"não necessita estar documentada\"* contraria diretamente o dispositivo regulamentar da ANVISA.",
+        "source_reference": null
+      },
+      "source_content_hash": "783b1cef14c5ce437c33ecc7082d35a757c5f58c0edec2c65e7f70cc836f649b"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:027",
+      "source_id": "tecnico_em_enfermagem:27",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Considere as seguintes afirmativas sobre os direitos e deveres da pessoa usuária da saúde (Resolução CNS nº 553/2017) e assinale a alternativa correta.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 27; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Toda pessoa tem direito, em tempo hábil, ao acesso a bens e serviços ordenados e organizados para garantia da promoção, prevenção, proteção, tratamento e recuperação da saúde",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "Cada pessoa possui direito de ser acolhida no momento em que chegar ao serviço e conforme sua necessidade de saúde e especificidade, mediante fornecimento de senhas e procedimentos burocráticos, respeitando as prioridades garantidas em Lei",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Os serviços de saúde serão organizados segundo a demanda da população, e limitados por produção ou quantidades de atendimento pré-determinados",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Não haverá regulamentação do tempo de espera em filas de procedimentos",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "As redes de serviço do SUS deverão se organizar e pactuar no território a oferta de plantão de atendimento 24 horas, salvo nos finais de semana",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "17f8f40a5bde8a62b4a74f1ce10f9675d965f666e6e21ae9e5db2c1a7b8958c2",
+        "original_numeric_id": 27,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://conselho.saude.gov.br"
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A**.\n\nA afirmativa I reproduz fidedignamente o teor da **Primeira Diretriz, item I**, do anexo da Resolução CNS nº 553/2017 (Carta dos Direitos e Deveres da Pessoa Usuária da Saúde):\n*\"Toda pessoa tem direito ao acesso a bens e serviços de saúde de forma oportuna para a garantia da integralidade da atenção... assegurada a facilidade de acesso aos serviços de saúde, com prioridade de acolhimento para as pessoas com vulnerabilidade e/ou em sofrimento físico ou psíquico.\"*\n\nAs assertivas seguintes incorrem em erros conceituais ou restringem direitos assegurados pelo anexo normativo da Resolução CNS nº 553/2017.",
+        "source_reference": null
+      },
+      "source_content_hash": "de136cc849dc6676faa7e40a25fa9d49fcd30a84660ed4eb9212c1e0eaf08da1"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:028",
+      "source_id": "tecnico_em_enfermagem:28",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Para efeito do Decreto Presidencial nº 7.508/2011, o qual regulamenta a Lei Orgânica da Saúde (Lei nº. 8080/90), considera-se:\n\nI. _______________- espaço geográfico contínuo constituído por agrupamentos de Municípios limítrofes, delimitado a partir de identidades culturais, econômicas e sociais e de redes de comunicação e infraestrutura de transportes compartilhados, com a finalidade de integrar a organização, o planejamento e a execução de ações e serviços de saúde.\nII. ________________ - serviços de atendimento inicial à saúde do usuário no SUS.\nIII. ________________- conjunto de ações e serviços de saúde articulados em níveis de complexidade crescente, com a finalidade de garantir a integralidade da assistência à saúde.\n\nAssinale a alternativa que preencha corretamente as lacunas:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 28; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Portas de Entrada / Rede de Atenção à Saúde / Região de Saúde",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Região de Saúde / Portas de Entrada / Rede de Atenção à Saúde",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "Comissões Intergestores / Região de Saúde / Portas de Entrada",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Rede de Atenção à Saúde / Portas de Entrada / Região de Saúde",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Região de Saúde, Comissões Intergestores, Rede de Atenção à Saúde.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Lei Orgânica da Saúde (Lei nº 8.080/1990 e Lei nº 8.142/1990)",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "0eb754074cef24b017539d95d35a055f731967e9eb7a38b49a3d11a4677ee3ed",
+        "original_numeric_id": 28,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7508.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "lei-organica-da-saude-lei-8080",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nAs definições apresentadas no enunciado correspondem aos conceitos estabelecidos no **Artigo 2º do Decreto nº 7.508/2011**, que regulamenta a Lei Orgânica da Saúde (Lei nº 8.080/1990):\n\n1. **Região de Saúde** (Lacuna I): *\"espaço geográfico contínuo constituído por agrupamentos de Municípios limítrofes, delimitado a partir de identidades culturais, econômicas e sociais e de redes de comunicação e infraestrutura de transportes compartilhados...\"* (Art. 2º, inciso I);\n2. **Rede de Atenção à Saúde** (Lacuna II): *\"conjunto de ações e serviços de saúde articulados em níveis de complexidade crescente, com a finalidade de garantir a integralidade da assistência à saúde\"* (Art. 2º, inciso VI);\n3. **Portas de Entrada** (Lacuna III): *\"serviços de atendimento inicial à saúde no SUS\"* (Art. 2º, inciso VII).\n\nA sequência correta das lacunas é: *Região de Saúde / Rede de Atenção à Saúde / Portas de Entrada*.",
+        "source_reference": null
+      },
+      "source_content_hash": "9b4469e90f94d5de81b060975e0245f95fd7c17ffe4cfcde65ff131339526bfa"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:029",
+      "source_id": "tecnico_em_enfermagem:29",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Com base na Carta dos Direitos e Deveres da Pessoa Usuária da Saúde (Resolução CNS nº 553/2017), analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F).\nA promoção e a proteção da saúde devem estar relacionadas com as condições sociais, culturais e econômicas das pessoas, incluídos aspectos como:\n( ) tratamento às doenças negligenciadas conforme cada região do País;\n( ) combate apenas a violência física e discriminação;\n( ) acesso à moradia, transporte, lazer, segurança pública e previdência social.\nAssinale a alternativa que apresenta a sequência correta de cima para baixo:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 29; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "V - V - V",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "V - V - F",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "V - F - V",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "F - F - V",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "F - F - F",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Decreto nº 7.508/2011 e Redes de Atenção à Saúde",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "f6a7780f7904cc8ddcf2c55898a0128181df07b6aa5e26f31225836973943d2a",
+        "original_numeric_id": 29,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://conselho.saude.gov.br"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-7508-organizacao-e-planejamento-do-sus",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nDe acordo com a **Terceira Diretriz** da Resolução CNS nº 553/2017, a pessoa usuária da saúde tem direito ao atendimento humanizado, acolhedor, livre de qualquer discriminação ou constrangimento e com respeito à dignidade humana em todas as fases da assistência.\n\nA alternativa C consagra esse preceito fundamental ao assegurar a observância da autonomia, privacidade, confidencialidade dos dados clínicos e o direito a informações claras e acessíveis sobre seu estado de saúde e procedimentos a serem realizados.",
+        "source_reference": null
+      },
+      "source_content_hash": "c70713cb37562a8280f6e8886873b4ef297fec0fd1a7a725996c223b4b3e7c4f"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:030",
+      "source_id": "tecnico_em_enfermagem:30",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Considerando as definições trazidas pela Resolução – RDC nº 36/2013, a qual institui ações para a segurança do paciente em serviços de saúde, assinale a alternativa correta.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 30; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Incidente é o comprometimento da estrutura ou função do corpo e/ou qualquer efeito dele oriundo, incluindo doenças, lesão, sofrimento, morte, incapacidade ou disfunção, podendo, assim, ser físico, social ou psicológico",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Dano é o incidente que resulta em dano à saúde",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Evento adverso é o evento ou circunstância que poderia ter resultado, ou resultou, em dano desnecessário à saúde",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Segurança do paciente é a redução, a um mínimo aceitável, do risco de dano desnecessário associado à atenção à saúde",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Serviço de saúde: estabelecimento destinado ao desenvolvimento de ações relacionadas à promoção, proteção, manutenção e recuperação da saúde, qualquer que seja o seu nível de complexidade, apenas em regime de internação, não incluindo a atenção realizada em consultórios, domicílios e unidades móveis",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "b8abea69116f3398eb7299e7cc61de4b51ac05deec1584f24ef02e91ac958a87",
+        "original_numeric_id": 30,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2013/rdc0036_25_07_2013.html"
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a identificação da definição correta contida no artigo 3º da Resolução RDC nº 36/2013 da ANVISA. \n\n* **Alternativa A (Incorreta):** A definição apresentada (\"comprometimento da estrutura ou função do corpo...\") corresponde ao conceito de **Dano** (inciso III), e não de incidente.\n* **Alternativa B (Incorreta):** A definição apresentada (\"incidente que resulta em dano à saúde\") corresponde ao conceito de **Evento Adverso** (inciso IV), e não de dano.\n* **Alternativa C (Incorreta):** A definição apresentada (\"evento ou circunstância que poderia ter resultado, ou resultou, em dano desnecessário à saúde\") corresponde ao conceito de **Incidente** (inciso VII), e não de evento adverso.\n* **Alternativa D (Correta):** Define perfeitamente o conceito de **Segurança do paciente** como a \"redução, a um mínimo aceitável, do risco de dano desnecessário associado à atenção à saúde\" (inciso X).\n* **Alternativa E (Incorreta):** O conceito de **Serviço de saúde** (inciso XI) abrange a atenção realizada em consultórios, domicílios e unidades móveis, não se limitando apenas ao regime de internação.\n\n**Dispositivo legal**\n\n[Resolução da Diretoria Colegiada - RDC nº 36, de 25 de julho de 2013, Art. 3º](https://bvsms.saude.gov.br/bvs/saudelegis/anvisa/2013/rdc0036_25_07_2013.html)",
+        "source_reference": null
+      },
+      "source_content_hash": "672f2a43da8767f69339da04308288299850c84383201f61ccc04f01f0a518b8"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:052",
+      "source_id": "tecnico_em_enfermagem:52",
+      "question_type": "multiple_choice",
+      "statement_markdown": "São parte dos 5 momentos da lavagem das mãos recomendados pela OMS (Organização Mundial da Saúde) exceto:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 52; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "antes de contato com um paciente",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "antes da realização de procedimentos assépticos",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "após risco de exposição a fluidos corporais",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "durante procedimentos contaminados",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "após contato com as áreas próximas ao paciente",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "388816328e40b02cd2b0012fe9c9f4d1838962d661be4bc5c5d2ca4c9f6aca89",
+        "original_numeric_id": 52,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/anvisa/pt-br"
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A Organização Mundial da Saúde (OMS) preconiza a estratégia dos \"5 Momentos para a Higienização das Mãos\" para orientar os profissionais de saúde sobre quando realizar o procedimento:\n\n1. **Antes de contato com o paciente** (Alternativa A);\n2. **Antes da realização de procedimento limpo/asséptico** (Alternativa B);\n3. **Após risco de exposição a fluidos corporais** (Alternativa C);\n4. **Após contato com o paciente**;\n5. **Após contato com as áreas próximas ao paciente** (Alternativa E).\n\n- **Alternativa D (Incorreta/Exceção):** \"Durante procedimentos contaminados\" não faz parte dos 5 momentos. A higienização deve ocorrer *antes* do início de qualquer procedimento e *após* a exposição a fluidos ou contato com o paciente. Realizar a fricção das mãos *durante* a execução de um procedimento contaminado em andamento é operacionalmente incorreto e inadequado, devendo-se, em vez disso, planejar a técnica asséptica e a troca de luvas/higienização nos momentos de transição de sítios corporais (do contaminado para o limpo no mesmo paciente).\n\n**Dispositivo legal**\n\n[Manual de Referência para a Higienização das Mãos da OMS / ANVISA](https://www.gov.br/anvisa/pt-br)",
+        "source_reference": null
+      },
+      "source_content_hash": "f145d730c35968560a43757dd6dda776465bf1cc58ea7bb04b01f0d193979331"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_conhec_espec_tec_federal_control_exter_tec_adm-direito-administrativo-2d98daf27802-101e882de030",
+  "source": {
+    "file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "2d98daf27802e405fca85477918bdf8251233e40cf39d87c93c75911b4f2d217",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "614ffeecc3c93f4cc8340b9f894f63a12d0a60896d888641786ae1cca7abe548",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "101e882de030cbd76403cc81ae2dbb4ffe1039a162695402a0e03ca752eeee53",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:060",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:60",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de licitações, julgue os itens que se seguem.\n\nÉ inexigível a licitação em caso de guerra ou de grave perturbação da ordem.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 60; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Nova Lei de Licitações – Lei 14.133/21 (Parte 1)",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "ab536430d2b9ae7ee62fc43ab8adda400ba5ee92873cef242dea67df64160392",
+        "original_numeric_id": 60,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "aplicacao-da-lei-14-133-21",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA ocorrência de guerra ou grave perturbação da ordem é hipótese legal de licitação **dispensável** (Art. 24, inciso III, da Lei nº 8.666/1993 e Art. 75, inciso VII, da Lei nº 14.133/2021), e não de inexigibilidade.\n\nA **inexigibilidade de licitação** (Art. 25 da Lei 8.666/93 e Art. 74 da Lei 14.133/21) ocorre exclusivamente quando há **inviabilidade fática ou jurídica de competição** (como na contratação de fornecedor exclusivo, serviços técnicos especializados de natureza predominantemente intelectual com profissionais de notória especialização, ou artista consagrado pela crítica/opinião pública).",
+        "source_reference": null
+      },
+      "source_content_hash": "b667bd8c4cb1de425664b6ba550a4911614d86b9f2f8b9bbe921ad37447864c5"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:062",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:62",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de licitações, julgue os itens que se seguem.\n\nDado o princípio da adjudicação compulsória, a administração não pode, concluída a licitação, atribuir o objeto desse procedimento a outrem que não o vencedor.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 62; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Nova Lei de Licitações – Lei 14.133/21 (Parte 1)",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "c254b818ba04155ae532f1a50987c2650e6fb5189a2e16d3cb62efae4058618b",
+        "original_numeric_id": 62,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "aplicacao-da-lei-14-133-21",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nO **princípio da adjudicação compulsória** assegura ao licitante vencedor que o objeto do certame não seja conferido a outrem que não aquele que legitimamente sagrou-se vencedor após todo o procedimento licitatório.\n\nEmbora a Administração Pública não seja forçada a assinar o contrato compulsoriamente (podendo revogar a licitação por interesse público superveniente ou anulá-la por ilegalidade), caso decida efetivamente celebrar a contratação, é vedado transferir o objeto a terceiro preterindo o vencedor adjudicado.",
+        "source_reference": null
+      },
+      "source_content_hash": "57695c7cc4969a06833fa71ca64ee0ccd95e2d4d8f813ecc53989d6bd1e50e19"
+    }
+  ]
+}

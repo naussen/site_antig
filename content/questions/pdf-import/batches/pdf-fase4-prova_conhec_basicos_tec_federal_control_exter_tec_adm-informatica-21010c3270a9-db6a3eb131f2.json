@@ -1,0 +1,139 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_conhec_basicos_tec_federal_control_exter_tec_adm-informatica-21010c3270a9-db6a3eb131f2",
+  "source": {
+    "file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "21010c3270a94d5246d6af08096f1a65be212e74fd70cd018225e31bd255bee9",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "940eab3df891c952570d89153f116f9db2f9f9a6d1f207e3196c3bd34a4d15cf",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "db6a3eb131f25b5015f33991c1a9ee9df19f50f063642c0565cb9cef7c00f97c",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:037",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:37",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação ao programa de navegação Mozilla Firefox e ao programa de correio eletrônico Mozilla Thunderbird, julgue os itens subsequentes.\n\nNo Mozilla Thunderbird, o recurso Bloquear Usuário, disponível no menu Editar, tem a finalidade de criar um filtro para impedir o recebimento de mensagens indesejadas e também a de realizar o bloco de aquelas pessoas que as enviem e que não façam parte da lista de contatos do usuário.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 37; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos de Internet, Navegadores e Pesquisa Avançada",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "767283ecf70ed21b8148045e80772fb4c72c6c8caf82d3a55bba7d653e33cfcf",
+        "original_numeric_id": 37,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O enunciado está incorreto porque não existe o recurso \"Bloquear Usuário\" no menu \"Editar\" do Mozilla Thunderbird. No Thunderbird, o bloqueio de remetentes ou a filtragem de mensagens indesejadas é realizado por meio de outras ferramentas, tais como:\n\n1. **Filtros de Mensagens:** Criados a partir do menu *Ferramentas -> Filtros de mensagens*, ou clicando com o botão direito sobre o endereço de e-mail do remetente em uma mensagem recebida e selecionando a opção *Criar filtro a partir de...*.\n2. **Filtro de Mensagens Indesejadas (Spam/Junk):** O próprio programa possui um sistema de aprendizado adaptativo que identifica e move mensagens indesejadas para a pasta de Spam.",
+        "source_reference": null
+      },
+      "source_content_hash": "7e67b8952a810e966a5e9519a1e94507591ce5d11ba8370081a2a71c56116e00"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:041",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:41",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, relativos ao gerenciamento de arquivos e pastas e à segurança da informação.\n\nO firewall é capaz de proteger o computador tanto de ataques de crackers quanto de ataques de vírus.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 41; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ameaças Virtuais",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "46e8472dd6c87f5181b5b018df162dfa3559606e3539401ddb34609cbfc212a2",
+        "original_numeric_id": 41,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ameacas-virtuais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O firewall é um dispositivo de segurança de rede que monitora e filtra o tráfego de entrada e saída com base em regras predefinidas.\n\n* **Proteção contra crackers:** O firewall bloqueia tentativas de acesso não autorizado e conexões suspeitas vindas da rede externa, impedindo que invasores (como crackers) explorem vulnerabilidades do sistema para obter controle da máquina.\n* **Proteção contra vírus:** Embora o firewall não atue como um antivírus (não realiza varredura de arquivos locais para detectar ou remover códigos maliciosos), ele é capaz de impedir ataques de vírus de duas formas principais: bloqueando a entrada de malwares que se propagam diretamente por portas de rede (como worms) e impedindo que vírus já instalados realizem conexões de saída não autorizadas para servidores externos (como cavalos de troia que tentam enviar dados roubados ou receber comandos).\n\n**Detalhe importante:** O firewall atua no tráfego de rede (portas e pacotes), enquanto o antivírus atua na análise de arquivos e processos locais. Contudo, ambos protegem o sistema contra vírus e invasores em camadas distintas.",
+        "source_reference": null
+      },
+      "source_content_hash": "61c1eafcfcb721ae19641eae5255dfb12c2eb9bdb0286be111935dbcf323858a"
+    }
+  ]
+}

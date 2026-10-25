@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-agente_de_policia_federal-informatica-c21ce9baaf43-55d8bc79d045",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "c21ce9baaf43b3e320e3e35ed9221e0b193c2fb64e13b2b22d3edc7cffb25ae3",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "c9478e60c7a59e09219858065e6b529ffccd20a4868ecef8715a5afdb7700eb9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "55d8bc79d0453f42caf69f9cdddea8dfe264310a5b84c9101c517be53f0eed22",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:071",
+      "source_id": "agente_de_policia_federal:71",
+      "question_type": "true_false",
+      "statement_markdown": "Os gestores de determinado órgão público decidiram adotar a computação em nuvem como solução para algumas dificuldades de gerenciamento dos recursos de tecnologia da informação. Assim, para cada contexto, análises devem ser realizadas a fim de compatibilizar os recursos de gerenciamento e segurança com os modelos técnicos de contratação.\nConsiderando essas informações, julgue os seguintes itens.\n\nPara o armazenamento de dados de trabalho dos colaboradores desse órgão público, incluindo-se documentos, imagens e planilhas, e para o uso de recursos de rede compartilhados, como impressoras e computadores, seria adequado contratar o modelo de computação em nuvem denominado infraestrutura como um serviço (IaaS).",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 71; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Computação na Nuvem (Cloud Computing)",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "ceb2aa5fdaee66d66c614007c7d6c2952ca3825735f197828edf9f532b387414",
+        "original_numeric_id": 71,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "computacao-na-nuvem-cloud-computing",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNa arquitetura de infraestrutura de armazenamento corporativo para órgãos públicos, a implantação de sistemas **NAS (Network Attached Storage)** ou **SAN (Storage Area Network)** com tecnologia de discos de alta capacidade em arranjos **RAID redundantes** (como RAID 5, RAID 6 ou RAID 10), gerenciados com políticas de cotas, controle de acesso baseado em grupos (RBAC) e rotinas automatizadas de backup e espelhamento em nuvem, constitui a melhor prática para garantir disponibilidade, confidencialidade, integridade e conformidade com as normas do CIS e da ISO/IEC 27001.",
+        "source_reference": null
+      },
+      "source_content_hash": "0c7567d7d28fd31c73e736eaa1da7e1b7492f9e31512aefd6f16e27177fd4b28"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:072",
+      "source_id": "agente_de_policia_federal:72",
+      "question_type": "true_false",
+      "statement_markdown": "Os gestores de determinado órgão público decidiram adotar a computação em nuvem como solução para algumas dificuldades de gerenciamento dos recursos de tecnologia da informação. Assim, para cada contexto, análises devem ser realizadas a fim de compatibilizar os recursos de gerenciamento e segurança com os modelos técnicos de contratação.\nConsiderando essas informações, julgue os seguintes itens.\n\nUm estudo técnico de viabilidade e um projeto de re-hosting em computação em nuvem IaaS é indicado para as aplicações legadas do órgão que tenham sido originalmente desenvolvidas para mainframe.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 72; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Computação na Nuvem (Cloud Computing)",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "a3c5dd27d14af7c5b82df01aeae342414b7bbb7f61874878b231ad59b13a62de",
+        "original_numeric_id": 72,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "computacao-na-nuvem-cloud-computing",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNa estratégia de migração de aplicações legadas para ambientes de computação em nuvem (*cloud computing*), a abordagem de **re-hosting** (conhecida como *Lift-and-Shift*) consiste em migrar os sistemas e bases de dados para a nuvem (IaaS) praticamente sem alterações na sua arquitetura de código original.\n\nA elaboração prévia de um Estudo Técnico Preliminar (ETP) e matriz de viabilidade avaliando custos de rede, latência, interoperabilidade e segurança é etapa técnica indispensável para mitigar riscos operacionais e estimar o retorno sobre o investimento.",
+        "source_reference": null
+      },
+      "source_content_hash": "22955a0a08d9dff31a0332c2e51b9880a3bbc4257fd0d52db606e8496de8cc4c"
+    }
+  ]
+}

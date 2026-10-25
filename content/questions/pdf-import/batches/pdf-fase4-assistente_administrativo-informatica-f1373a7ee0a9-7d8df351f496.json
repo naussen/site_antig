@@ -1,0 +1,98 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-assistente_administrativo-informatica-f1373a7ee0a9-7d8df351f496",
+  "source": {
+    "file_name": "assistente_administrativo_ATUALIZADO.json",
+    "sha256": "f1373a7ee0a9857ac3a9d86f7ca54ddd97760222dd5a046ee20c6ecfbab8577b",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "assistente_administrativo.json",
+      "original_source_sha256": "a57c1a78597d9f629a7137c90f84d7f96492a8d5fd0eb5590acdcfffc87a6bcc",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "7d8df351f4968655a3b8735a8eeec88dcac89a6fb38750e7b49fb0d539674366",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:assistente_administrativo:020",
+      "source_id": "assistente_administrativo:20",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O aplicativo Microsoft Power Point, é largamente utilizado para criar apresentações, desta forma é importante o usuário ter conhecimento também sobre as extensões dos arquivos que são gerados, isto irá garantir quais outros softwares semelhantes possam também executar este arquivo. Assinale a alternativa que apresenta qual a extensão de um arquivo gerado através do Microsoft Power Point.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 20; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": ".mpp",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": ".pres",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": ".ppt",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": ".ppp",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": ".ppm",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Conceitos de Internet, Navegadores e Pesquisa Avançada",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "c83928caf425d6304a8efe50d49c05d4ee7811496dc3d3039ac9ac8d9bf5e57b",
+        "original_numeric_id": 20,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A extensão padrão clássica de arquivos de apresentação gerados pelo Microsoft PowerPoint é `.ppt`. Nas versões a partir do Microsoft Office 2007, o formato padrão passou a ser o `.pptx` (baseado em XML), mas o formato `.ppt` continua sendo amplamente reconhecido e associado ao programa.\n\nAnálise das alternativas incorretas:\n- **A** está incorreta porque `.mpp` é a extensão de arquivos de projeto do Microsoft Project.\n- **B** está incorreta porque `.pres` não é uma extensão padrão utilizada pelo PowerPoint.\n- **D** está incorreta porque `.ppp` é comumente associada a arquivos de publicação do programa PagePlus ou outros formatos proprietários, não ao PowerPoint.\n- **E** está incorreta porque `.ppm` (Portable PixMap) é um formato de arquivo de imagem de mapa de bits.\n\n**Detalhe importante:** A banca costuma colocar alternativas com letras parecidas (como `.ppp` e `.ppm`) para confundir o candidato que tenta adivinhar a extensão por associação de siglas. Lembrar que o formato clássico é `.ppt` evita cair nessa armadilha.",
+        "source_reference": null
+      },
+      "source_content_hash": "33654b79f276bbbcb267cc29433d0d5ebf1d6a004e8e3ada68943fd4c2ab2fde"
+    }
+  ]
+}

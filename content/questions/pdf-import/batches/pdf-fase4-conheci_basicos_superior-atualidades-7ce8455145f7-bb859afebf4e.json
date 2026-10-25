@@ -1,0 +1,410 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-conheci_basicos_superior-atualidades-7ce8455145f7-bb859afebf4e",
+  "source": {
+    "file_name": "conheci_basicos_superior_ATUALIZADO.json",
+    "sha256": "7ce8455145f7b114aa72425ef99a450ecc4281426c54f3c9855b091cd41b14d3",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "conheci_basicos_superior.json",
+      "original_source_sha256": "aaf9eb1efb2a88d71a045bc1e2e61e371649418bec45be98916a5f4b799176a6",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "bb859afebf4e05aa36f225eafb005dfcc586276fd088ad627d0d8e5f3e6dcc97",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "atualidades",
+    "name": "Atualidades"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:conheci_basicos_superior:027",
+      "source_id": "conheci_basicos_superior:27",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à 19.ª Conferência sobre Mudanças Climáticas da ONU (COP 19), que ocorreu em novembro de 2013, julgue os itens a seguir.\n\nDefinir estratégias para que os governos elaborem um novo acordo global que substitua o Protocolo de Kyoto foi um dos objetivos da COP 19.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 27; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Economia, Desenvolvimento Sustentável e Meio Ambiente",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "f7d7a80d2b80406fd64e77afe7d47415c3955dbdf81b3712b7f73578c11cc855",
+        "original_numeric_id": 27,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "meio-ambiente-e-sustentabilidade-global",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Durante a 19.ª Conferência das Partes da Convenção-Quadro das Nações Unidas sobre Mudança do Clima (COP 19), realizada em Varsóvia em novembro de 2013, um dos principais objetivos da agenda de negociações foi avançar nos trabalhos da Plataforma de Durban (ADP).\n\nO propósito central era definir o cronograma e as diretrizes para que os governos elaborassem e apresentassem suas propostas de metas de redução de emissões. Esse processo foi fundamental para estruturar o novo acordo global e juridicamente vinculante que viria a substituir o Protocolo de Kyoto a partir de 2020, culminando posteriormente na assinatura do Acordo de Paris em 2015 (COP 21).",
+        "source_reference": null
+      },
+      "source_content_hash": "31df64bf766c6111c45a6cac8c0266f07e64e11646c6bb77c23f6a1d094c8e7d"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:028",
+      "source_id": "conheci_basicos_superior:28",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à 19.ª Conferência sobre Mudanças Climáticas da ONU (COP 19), que ocorreu em novembro de 2013, julgue os itens a seguir.\n\nDurante a COP 19, o governo da Polônia, país sede da conferência, substituiu o então ministro do meio ambiente, o que causou desconforto ao governo brasileiro em relação às possíveis negociações durante o evento.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 28; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Economia, Desenvolvimento Sustentável e Meio Ambiente",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "3ce8f8a0c06e8c594849fc9daccf0ba5a9181447305295ffd13c3df4fa8416b6",
+        "original_numeric_id": 28,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "meio-ambiente-e-sustentabilidade-global",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nDurante a 19ª Conferência das Partes sobre Mudanças Climáticas da ONU (COP 19), realizada em Varsóvia em novembro de 2013, o governo polonês demitiu e substituiu o então Ministro do Meio Ambiente (Marcin Korolec), que presidia a conferência, em plena fase decisiva das negociações climáticas.\n\nO fato repercutiu muito negativamente entre os países em desenvolvimento, inclusive no seio da delegação brasileira, que expressou preocupação e desconforto com a instabilidade gerada nas discussões sobre metas vinculantes e financiamento climático.",
+        "source_reference": null
+      },
+      "source_content_hash": "85dd4f117dce4c13c7f6fc47b52a39fa804cee06f33808cbe74574b3ab464a6b"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:029",
+      "source_id": "conheci_basicos_superior:29",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à 19.ª Conferência sobre Mudanças Climáticas da ONU (COP 19), que ocorreu em novembro de 2013, julgue os itens a seguir.\n\nA COP 19 contou com a participação e o apoio das organizações não governamentais internacionais, que discutiram pontos importantes com relação à redução de emissões de gases poluentes.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 29; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Economia, Desenvolvimento Sustentável e Meio Ambiente",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "196a6aacebc91718d1ed1a7614291e77182007860f8553b57d711d2bb80dbeb9",
+        "original_numeric_id": 29,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "meio-ambiente-e-sustentabilidade-global",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Embora diversas organizações não governamentais (ONGs) internacionais tenham comparecido inicialmente à COP 19 em Varsóvia (2013), o evento ficou marcado por um protesto histórico de ruptura.\n\nNo penúltimo dia da conferência, dezenas de ONGs de grande relevância global (incluindo Greenpeace, WWF, Oxfam, ActionAid e Amigos da Terra) decidiram abandonar as negociações em massa (*walkout*). O protesto ocorreu em razão da falta de avanços significativos nas metas de redução de emissões, do recuo de alguns países em compromissos previamente assumidos e do descontentamento com a forte influência de indústrias de combustíveis fósseis no patrocínio e condução do evento. \n\nDessa forma, a afirmação de que a conferência contou com o \"apoio\" dessas organizações está incorreta, dado o rompimento público e a retirada das entidades antes do encerramento do encontro.",
+        "source_reference": null
+      },
+      "source_content_hash": "79ae7ddce3dc836afa8bbad73705cd1d23d019015d096ed3559407ca8fc9a270"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:030",
+      "source_id": "conheci_basicos_superior:30",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à 19.ª Conferência sobre Mudanças Climáticas da ONU (COP 19), que ocorreu em novembro de 2013, julgue os itens a seguir.\n\nDurante a COP 19, foi anunciado que a taxa de desmatamento na Amazônia Legal aumentou, contribuindo para que o país perdesse posição nas negociações internacionais sobre o clima.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 30; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Economia, Desenvolvimento Sustentável e Meio Ambiente",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "fe84e1d70a1aec6018ac7346054f5d2a54232e01db1e029518afa91c6b9bd479",
+        "original_numeric_id": 30,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "meio-ambiente-e-sustentabilidade-global",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. Embora os dados do Projeto de Monitoramento do Desmatamento na Amazônia Legal por Satélite (PRODES), divulgados em novembro de 2013 (período da COP 19 em Varsóvia), tenham apontado um aumento de 28% na taxa de desmatamento em relação ao período anterior, o Brasil não perdeu sua posição de destaque ou protagonismo nas negociações climáticas internacionais. Historicamente, a diplomacia brasileira manteve papel de liderança e mediação ativa nas conferências da ONU sobre o clima, inclusive apresentando propostas metodológicas relevantes que subsidiaram debates futuros, como as bases para o Acordo de Paris.",
+        "source_reference": null
+      },
+      "source_content_hash": "877257e99bedaa8850524e27fec32b77f74b58ce9d58026f8238a3a23d7d7005"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:031",
+      "source_id": "conheci_basicos_superior:31",
+      "question_type": "true_false",
+      "statement_markdown": "Desde o fim de 2013, jovens têm organizado encontros pelas redes sociais, principalmente em shoppings da capital paulista e da grande São Paulo. Os eventos ficaram conhecidos como rolezinhos. A primeira iniciativa a ganhar repercussão aconteceu no Shopping Metrô Itaquera, Zona Leste de São Paulo. Algumas lojas fecharam com medo de saques e o centro comercial encerrou o expediente mais cedo.\n\nConheça a história dos rolezinhos em São Paulo. In: O Globo.\n\nTendo o texto acima como referência inicial, julgue os itens que se seguem.\n\nO caso dos rolezinhos suscita questões importantes a respeito da organização da cidade e da ocupação do espaço público.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 31; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sociedade, Educação, Segurança e Cidadania",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "1758b6850a94aba5055da25e243e8b91455ed6c84c6c2d605a6479f1f4f022e6",
+        "original_numeric_id": 31,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sociedade-seguranca-publica-e-cidadania",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O fenômeno dos \"rolezinhos\", ocorridos a partir do final de 2013, transcendeu o aspecto do lazer juvenil e gerou amplos debates sociológicos, urbanísticos e jurídicos. A mobilização evidenciou a segregação socioespacial nas metrópoles brasileiras, a escassez de equipamentos públicos de lazer e cultura nas periferias e a apropriação de shopping centers — que são espaços privados de uso público — como locais de socialização, visibilidade e afirmação identitária de jovens de classes populares.",
+        "source_reference": null
+      },
+      "source_content_hash": "bec71689ace046b6e33c26fa6d1fdaa3f2d2e53f4b23ac0c01bc191cf64dabc7"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:032",
+      "source_id": "conheci_basicos_superior:32",
+      "question_type": "true_false",
+      "statement_markdown": "Desde o fim de 2013, jovens têm organizado encontros pelas redes sociais, principalmente em shoppings da capital paulista e da grande São Paulo. Os eventos ficaram conhecidos como rolezinhos. A primeira iniciativa a ganhar repercussão aconteceu no Shopping Metrô Itaquera, Zona Leste de São Paulo. Algumas lojas fecharam com medo de saques e o centro comercial encerrou o expediente mais cedo.\n\nConheça a história dos rolezinhos em São Paulo. In: O Globo.\n\nTendo o texto acima como referência inicial, julgue os itens que se seguem.\n\nOs juristas que analisaram os rolezinhos foram unânimes em seus pareceres, que relataram a ilegalidade desse tipo de manifestação.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 32; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sociedade, Educação, Segurança e Cidadania",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "f9c4601031612c5e828c4dc6f4ccb0456fe7147a651309f55fb9b7a85d716054",
+        "original_numeric_id": 32,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "sociedade-seguranca-publica-e-cidadania",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. Não houve unanimidade entre os juristas e operadores do Direito sobre a natureza jurídica dos \"rolezinhos\". O debate dividiu opiniões: de um lado, defensores dos direitos fundamentais sustentavam que os encontros configuravam o exercício legítimo da liberdade de locomoção, de reunião e de livre associação, garantidos pela Constituição Federal. De outro lado, juristas e representantes dos centros comerciais defendiam a prevalência do direito de propriedade, da livre iniciativa e da segurança dos frequentadores, justificando a concessão de medidas liminares (como interditos proibitórios) para restringir o acesso dos jovens.\n\n**Dispositivo legal**\n\n[Constituição Federal de 1988, Art. 5º, incisos XV e XVI](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "a46e2550e1988aaef04e31cd3d95ecd35c47c18954a0278dfd2815fbebe60d7a"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:033",
+      "source_id": "conheci_basicos_superior:33",
+      "question_type": "true_false",
+      "statement_markdown": "Desde o fim de 2013, jovens têm organizado encontros pelas redes sociais, principalmente em shoppings da capital paulista e da grande São Paulo. Os eventos ficaram conhecidos como rolezinhos. A primeira iniciativa a ganhar repercussão aconteceu no Shopping Metrô Itaquera, Zona Leste de São Paulo. Algumas lojas fecharam com medo de saques e o centro comercial encerrou o expediente mais cedo.\n\nConheça a história dos rolezinhos em São Paulo. In: O Globo.\n\nTendo o texto acima como referência inicial, julgue os itens que se seguem.\n\nOs organizadores dos rolezinhos alegam que essa prática está relacionada à falta de opção de lazer para grande parte da população brasileira.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 33; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sociedade, Educação, Segurança e Cidadania",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "66ba0c117e3dc7714a75b97effac8bc281a96b864ecf97f655e66abd4b78e84b",
+        "original_numeric_id": 33,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sociedade-seguranca-publica-e-cidadania",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Uma das principais justificativas apresentadas pelos organizadores e participantes dos \"rolezinhos\" em entrevistas e manifestações públicas era a carência crônica de espaços públicos de lazer, cultura e esporte nas periferias das grandes cidades. Diante dessa escassez, os shopping centers, dotados de infraestrutura, segurança e atrativos de consumo, passaram a ser adotados como pontos de encontro e socialização para essa parcela da juventude.",
+        "source_reference": null
+      },
+      "source_content_hash": "42274fe2d261072c6c8661afcd22ff4857734c32364c30cd8fcd825dc9849c7c"
+    }
+  ]
+}

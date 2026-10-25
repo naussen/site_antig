@@ -1,0 +1,775 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_do_ministerio_publico_area_administrativa-direito-constitucional-74df7af44d59-81a02bbacc6f",
+  "source": {
+    "file_name": "tecnico_do_ministerio_publico_area_administrativa_ATUALIZADO.json",
+    "sha256": "74df7af44d59dc5b630984a8e5e7fe40fed758894220a278014b288dd482883c",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_do_ministerio_publico_area_administrativa.json",
+      "original_source_sha256": "4f108d6745e5642f8962285fd7010db5f1562dfc6f07780d46a281f2e454b6aa",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "81a02bbacc6f204c0d8a56b1f63981bb7090ed23982f7f78d25a5bf40cb84e25",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:041",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:41",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O comerciante João compareceu à Promotoria de Investigações Penais e narrou ao Promotor de Justiça estar sendo vítima de concussão realizada por determinado Policial Militar. O cidadão afirmou que o policial é suspeito de integrar a milícia que atua na localidade e lhe estaria exigindo quinhentos reais por semana para oferecer segurança privada e permitir que João continuasse com sua mercearia em funcionamento.\nDe acordo com a Resolução CNMP nº 181/2017, o Promotor de Justiça:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 41; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "deverá necessariamente requisitar ao Delegado de Polícia Civil da área dos fatos instauração de inquérito policial para apuração do suposto crime, eis que tal autoridade policial detém a exclusividade de proceder a investigações penais;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "deverá necessariamente requisitar ao Comandante da Polícia Militar da área dos fatos instauração de inquérito policial militar para apuração do suposto crime, eis que cometido por policial militar no exercício ou em razão da função;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "deverá necessariamente requisitar ao Delegado de Polícia Civil da área dos fatos instauração de inquérito policial para apuração do suposto crime e, caso haja negligência nas investigações, poderá avocar o inquérito policial;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "poderá instaurar diretamente procedimento investigatório criminal, de natureza administrativa, presidido pelo membro do Ministério Público, que é condição de procedibilidade para o ajuizamento de ação penal nesse tipo de crime;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "poderá instaurar internamente procedimento investigatório criminal, que consiste em instrumento sumário e desburocratizado de natureza administrativa e investigatória, presidido pelo membro do Ministério Público.",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Organização do Ministério Público",
+        "source_content_hash": "ee89f70bbcbf178448d60beb0bc5e7eb4da74200fde6252725bf2e005a48597d",
+        "original_numeric_id": 41,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **E**.\n\nConforme a **Resolução CNMP nº 181/2017** (Art. 1º), o **Procedimento Investigatório Criminal (PIC)** é um instrumento sumário, desburocratizado e de natureza administrativa investigatória instaurado e presidido diretamente pelo membro do Ministério Público com atribuição na esfera criminal.\n\nO PIC destina-se a apurar a ocorrência de infrações penais de iniciativa pública, não dependendo de prévia instauração de inquérito policial pelas polícias civil ou militar (competência concorrente de investigação criminal do MP pacificada pelo STF no Tema 184).",
+        "source_reference": null
+      },
+      "source_content_hash": "da5decb607fd0eaaa3511d18d308171a6f002a7cb54499a67bea63b817560e00"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:042",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:42",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Promotoria de Tutela Coletiva recebeu notícia de fato, via ouvidoria do MPRJ, relatando que o vizinho do noticiante, em discussão por vaga de garagem em prédio residencial de alto luxo, lhe ofendeu a integridade moral. Considerando que o fato noticiado evidentemente não configura lesão ou ameaça de lesão aos interesses ou direitos tutelados pelo Ministério Público, a notícia foi imediatamente indeferida.\nÀ luz do que determinam as Resoluções GPGJ nº 2.227/2018 e CNMP nº 23/2007, o Promotor de Justiça deverá determinar que a secretaria do órgão de execução:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 42; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "promova o arquivamento do expediente no âmbito interno da Promotoria, eis que não há previsão normativa de recurso em âmbito interno, devendo o interessado manifestar seu eventual inconformismo perante o Poder Judiciário;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "remeta o procedimento, no prazo de 3 (três) dias, independentemente de recurso do interessado, para reexame obrigatório pelo Conselho Superior do Ministério Público;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "cientifique o noticiante da decisão de indeferimento, preferencialmente por correio eletrônico, cabendo recurso no prazo de 10 (dez) dias, que tem como órgão revisor o Conselho Superior do Ministério Público;",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "notifique o noticiante da decisão de indeferimento, mediante ofício com aviso de recebimento, cabendo recurso no prazo de 3 (três) dias, que tem como revisor o Órgão Especial do Ministério Público;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "intime o noticiante da decisão de indeferimento, mediante entrega pessoal do ofício a ser feita pelo Oficial do Ministério Público, cabendo recurso no prazo de 10 (dez) dias, que tem como revisor o Órgão Especial do Ministério Público.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Organização do Ministério Público",
+        "source_content_hash": "dc8b98643298f65bc01c6e7233e0b261ad245179915fe0a8b8b35356216fe97f",
+        "original_numeric_id": 42,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nNos termos das Resoluções GPGJ nº 2.227/2018 e CNMP nº 23/2007 (Art. 3º):\n\nQuando a Notícia de Fato for indeferida sumariamente por manifesta ausência de elementos que justifiquem a atuação ministerial, o órgão do Ministério Público deve determinar a cientificação do noticiante (preferencialmente por correio eletrônico ou meio idôneo),\ncabendo a interposição de **recurso administrativo no prazo de 10 (dez) dias**, a ser submetido à apreciação do **Conselho Superior do Ministério Público (CSMP)**.",
+        "source_reference": null
+      },
+      "source_content_hash": "3329834667d34e2d12376e538be811b80ad7fd5c20ab5650117a73f6e8aeaf6e"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:043",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:43",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A Lei Estadual nº 5.891/2011 dispõe sobre o quadro permanente dos serviços auxiliares do Ministério Público do Estado do Rio de Janeiro e constitui relevante diploma normativo para garantia da autonomia administrativa da instituição e valorização funcional de seus servidores.\nDe acordo com a citada lei:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 43; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "os servidores do MPRJ terão carteira funcional expedida pelo Governador do Estado, da qual deverá constar, além da denominação da respectiva carreira, a área de atividade, a especialização profissional e, quando for o caso, a designação funcional;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "os servidores do MPRJ terão carteira funcional expedida pelo Procurador-Geral de Justiça, da qual deverá constar a denominação do cargo efetivo ocupado, sem especificação da área de atividade, da especialização profissional e da designação funcional;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "o Técnico do Ministério Público da área de Notificação e Atos Intimatórios possui a designação funcional de Oficial do Ministério Público e as certidões que emitir, no regular exercício de suas funções, são dotadas de fé pública;",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "as carreiras de Auxiliar Especializado do Ministério Público e de Auxiliar do Ministério Público terão seus cargos efetivos que vagarem providos mediante concurso público, a ser realizado no prazo máximo de 5 (cinco) anos após a vacância;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "os servidores do MPRJ terão exercício nos órgãos da própria instituição, ressalvada a autorização para ocupar cargo de provimento em comissão em outros órgãos da Administração Pública, a critério exclusivo do Corregedor-Geral do MPRJ.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Organização do Ministério Público",
+        "source_content_hash": "b20eeede2b6feac7c9f5af847a86a01dcd0cc92404c40494a39ca75396b70fe5",
+        "original_numeric_id": 43,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nDe acordo com a Lei Estadual nº 5.891/2011 do Rio de Janeiro (quadro permanente dos serviços auxiliares do MPRJ):\n\nA progressão funcional e promoção na carreira de servidores do MPRJ consideram o cumprimento do interstício temporal no cargo, a avaliação periódica de desempenho individual e a participação em programas e ações de capacitação e aperfeiçoamento profissional oferecidos ou reconhecidos pelo Ministério Público.",
+        "source_reference": null
+      },
+      "source_content_hash": "747121941595f0441c6c6264439b4a327c8a27e4afaa026553340b3cb414cab6"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:044",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:44",
+      "question_type": "multiple_choice",
+      "statement_markdown": "João, recém nomeado para exercer o cargo efetivo de Técnico do MPRJ, vem participando de cursos, seminários e congressos na instituição, visando a seu aprimoramento profissional e cultural, à melhor execução dos seus serviços e à racionalização do uso de seus recursos materiais.\nDe acordo com a Lei Orgânica do Ministério Público do Estado do Rio de Janeiro (Lei Complementar Estadual nº 106/2003), o órgão auxiliar da Procuradoria-Geral de Justiça destinado a promover tais atividades é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 44; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "o Centro Regional de Apoio Administrativo e Institucional, a quem também compete estimular a integração entre servidores lotados nos órgãos auxiliares e a administração superior do Ministério Público, representada pela Secretaria-Geral;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "o Centro de Estudos e Aperfeiçoamento Funcional, a quem também compete indicar ao Conselho Superior, para designação, os membros do Ministério Público que atuarão como monitores dos Promotores de Justiça em estágio confirmatório, na avaliação do requisito eficiência;",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "a Comissão de Concurso, órgão de natureza transitória, que é presidido pelo Procurador-Geral de Justiça e integrado por três Procuradores de Justiça, e a quem incumbe realizar a seleção de candidatos ao ingresso na carreira de membro ou servidor do Ministério Público;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "o Centro de Apoio Operacional, a quem também compete estimular a integração e o intercâmbio entre órgãos de execução e órgãos auxiliares que atuem na mesma área de atividade e que tenham atribuições comuns, visando ao aprimoramento sistêmico da instituição;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "a Corregedoria-Geral do Ministério Público, que é o órgão orientador, correicional e fiscalizador das atividades funcionais e da conduta dos membros e dos servidores do quadro permanente de serviços auxiliares do Ministério Público.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Organização do Ministério Público",
+        "source_content_hash": "fc148e2128878cad6c84f2b37c2fd4de2951c096f629088afb33c255c5f7186c",
+        "original_numeric_id": 44,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nO Estatuto dos Funcionários Públicos Civis do Estado do Rio de Janeiro (Decreto-Lei Estadual nº 220/1975 e Decreto Estadual nº 2.479/1979):\n\nA licença para tratamento de saúde decorrente de acidente em serviço ou doença profissional é concedida com remuneração integral, sendo o tempo de afastamento computado para todos os efeitos legais como de efetivo exercício no cargo.",
+        "source_reference": null
+      },
+      "source_content_hash": "758bc0dcfa3a24c01ff7461bbb921e5c6132c620d633a510bc10946fe80dbf98"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:045",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:45",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Promotoria de Tutela Coletiva do Meio Ambiente, diante da relevância da matéria, resolveu instaurar procedimento para acompanhar e fiscalizar, de forma continuada, a política pública municipal relativa à coleta seletiva de resíduos sólidos. O procedimento a ser instaurado não terá caráter de investigação cível ou criminal de determinada pessoa ou ente em função de um ilícito específico.\nDe acordo com as disposições da Resolução CNMP nº 174/2017, no caso em tela, o Promotor deverá instaurar:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 45; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "inquérito civil público, para total elucidação dos fatos apurados, que, ao final, será submetido ao Poder Judiciário em forma de ação civil pública ou de promoção de arquivamento;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "procedimento preparatório de inquérito civil público, para coleta de elementos informativos necessários a subsidiar decisão ministerial quanto à conveniência e oportunidade de instauração de novo procedimento investigatório;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "procedimento administrativo, que, uma vez findo, deverá ser arquivado no próprio órgão de execução, com comunicação ao Conselho Superior do Ministério Público, sem necessidade de remessa dos autos para homologação do arquivamento;",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "expediente administrativo, onde deverão ser colhidas todas as provas permitidas pelo ordenamento jurídico, com a juntada das peças em ordem cronológica de apresentação, devidamente numeradas em ordem crescente;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "notícia de fato, para obtenção de esclarecimentos complementares, visando à formação do seu convencimento sobre o cabimento, em tese, da proteção de interesses ou direitos tutelados pelo Ministério Público.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Organização do Ministério Público",
+        "source_content_hash": "b23290541f78b90252127c9a5ee27d6821a3978f29f4c9f5ed04c9d2d67fc4aa",
+        "original_numeric_id": 45,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nEm matéria de tutela coletiva ambiental e direitos difusos, a celebração de **Termo de Ajustamento de Conduta (TAC)** ou a formalização de acordos extrajudiciais pelo Promotor de Justiça de Tutela Coletiva tem eficácia de título executivo extrajudicial (Art. 5º, § 6º, da Lei nº 7.347/1985), submetendo-se ao controle e homologação pelo Conselho Superior do Ministério Público nos casos de arquivamento total ou parcial do inquérito civil.",
+        "source_reference": null
+      },
+      "source_content_hash": "655dbdf188cfcb0404738c1b403c1dcae9e98ec599e524055aea9124df30ad17"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:046",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:46",
+      "question_type": "multiple_choice",
+      "statement_markdown": "João, Técnico do Ministério Público lotado na Secretaria do GAECO (Grupo de Atuação Especial de Combate ao Crime Organizado), cometeu o crime de violação de sigilo funcional, na medida em que revelou fato de que tinha ciência em razão do cargo e que deveria permanecer em segredo. O servidor vazou informações sigilosas para familiares de investigados, contando detalhes sobre o deferimento e cumprimento de medida cautelar de busca e apreensão, fato que frustrou a diligência.\nAssim agindo, de acordo com o Estatuto dos Funcionários Públicos Civis do Poder Executivo do Estado do Rio de Janeiro (Decreto-Lei nº 220/1975) e a Lei Estadual nº 5.891/2011 (que dispõe sobre o quadro permanente dos serviços auxiliares do MPRJ), após regular processo administrativo disciplinar, João está sujeito à penalidade disciplinar da:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 46; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "repreensão, cuja pretensão sancionatória prescreve no prazo de 2 (dois) anos e é competente para aplicá-la o Corregedor-Geral do MP;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "suspensão, cuja pretensão sancionatória prescreve no prazo de 3 (três) anos e é competente para aplicá-la o Procurador-Geral de Justiça;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "suspensão, cuja pretensão sancionatória prescreve no prazo de 2 (dois) anos e é competente para aplicá-la o Governador do Estado;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "demissão, cuja pretensão sancionatória prescreve no prazo de 5 (cinco) anos e é competente para aplicá-la o Governador do Estado;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "demissão, cuja pretensão sancionatória prescreve no mesmo prazo prescricional do crime praticado e é competente para aplicá-la o Procurador-Geral de Justiça.",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Organização do Ministério Público",
+        "source_content_hash": "1223aad722c5c851660b576cf87ebd575364bed74be2098f61792e3ecf361fe4",
+        "original_numeric_id": 46,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão trata do regime disciplinar aplicável aos servidores do MPRJ, combinando regras do Estatuto dos Funcionários Públicos Civis do RJ (Decreto-Lei nº 220/1975) e a autonomia administrativa do Ministério Público.\n\n* **Alternativa A (Incorreta):** A conduta descrita (revelação de segredo que frustra diligência) é de extrema gravidade, ensejando demissão, e não mera repreensão.\n* **Alternativas B e C (Incorretas):** A suspensão não é a penalidade adequada para a gravidade da infração (violação de sigilo funcional com prejuízo à investigação). Além disso, o Governador do Estado não possui competência para punir servidores do Ministério Público, em respeito à autonomia constitucional da instituição.\n* **Alternativa D (Incorreta):** Embora a penalidade seja de demissão, a competência para aplicá-la a servidor do MPRJ é do Procurador-Geral de Justiça, e não do Governador do Estado.\n* **Alternativa E (Correta):** A infração de violação de sigilo funcional configura crime (Art. 325 do Código Penal). Conforme o Art. 57, § 1º, do Decreto-Lei nº 220/1975, quando a falta administrativa também for capitulada como crime, o prazo de prescrição da pretensão punitiva administrativa será o mesmo previsto na lei penal. A autoridade competente para aplicar a demissão no âmbito do MPRJ é o Procurador-Geral de Justiça.\n\n**Dispositivo legal**\n\n[Decreto-Lei nº 220/1975, Art. 57, § 1º](https://www.alerj.rj.gov.br/)",
+        "source_reference": null
+      },
+      "source_content_hash": "9e864999c130193ea8a14237546dbfe501254048896964a4d3e8df403a63f130"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:047",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:47",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Maria, servidora pública ocupante do cargo de Técnico do Ministério Público do Rio de Janeiro, está lotada na secretaria de uma Promotoria de Tutela Coletiva. Diariamente, o órgão de execução recebe solicitações dos interessados de cópias e impressões de documentos, processos e procedimentos relacionados às atividades finalísticas ministeriais.\nEm se tratando de documento não sigiloso, a Resolução GPGJ nº 2.198/2018 que trata da matéria estabelece que:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 47; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "devem ser deferidas as solicitações de cópias de documentos feitas de forma anônima, sem indicação do nome e demais dados cadastrais do solicitante, em razão dos princípios da publicidade e transparência;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "são admitidas solicitações de cópias e impressões formuladas por escrito e presencialmente no órgão de execução, vedado o deferimento de cópias a pedidos feitos por correio eletrônico (e-mail);",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "deve ser efetuado a posteriori o pagamento pelo solicitante das importâncias devidas pelos serviços de cópias prestados, mediante depósito em favor do Fundo Especial do MPRJ, a ser feito no prazo de até 5 (cinco) dias após a obtenção;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "é permitida a utilização de câmeras fotográficas, equipamentos portáteis de digitalização ou dispositivos similares, nas dependências do MPRJ, para a obtenção de cópias digitais de documentos, sem custo ao interessado;",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "são devidos os valores especificados na resolução para os serviços de cópias por todos os solicitantes, inclusive aqueles cuja situação econômica não permita arcar com os custos, nos termos da Lei nº 1.060/50, pelo princípio da isonomia.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Organização do Ministério Público",
+        "source_content_hash": "b72cf34e27ba8f038a4da7c6174b1d635aa1c524fe2a062caea2ab4004026a82",
+        "original_numeric_id": 47,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "D",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nNo âmbito do regime disciplinar do servidor do Ministério Público Fluminense (Decreto-Lei Estadual nº 220/1975 e regulamentos do MPRJ), a prática de falta funcional de gravidade média que comprometa a disciplina da repartição sujeita o agente, assegurado o contraditório e a ampla defesa, à penalidade disciplinar de **suspensão**, que acarreta a perda do vencimento e das vantagens pecuniárias durante os dias correspondentes.",
+        "source_reference": null
+      },
+      "source_content_hash": "376635ede684fe374bb50aa34c69b089da7d36d033aa23e9195ef0a5b896a6e0"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:048",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:48",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Márcio é Técnico do Ministério Público do Rio de Janeiro e está lotado na Secretaria da Central de Inquéritos.\nNo cumprimento de suas funções administrativas, de acordo com o que estabelece a Resolução Conjunta GPGJ/CGMP nº 11/2012 (que regulamenta a rotina e o funcionamento das secretarias das Promotorias de Justiça), Márcio deverá:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 48; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "promover exclusivamente os registros de entrada, saída e movimentação de processos judiciais mediante lançamento no sistema Módulo de Gestão de Processos (MGP) e de procedimentos extrajudiciais em livros próprios;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "lavrar os termos de encerramento e abertura de volumes de procedimentos extrajudiciais, que não poderão ultrapassar 100 (cem) folhas, as quais deverão ser numeradas cronologicamente e rubricadas;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "receber e protocolizar na secretaria os processos e procedimentos de qualquer natureza, bem como abrir vista com a remessa dos autos ao Promotor de Justiça no prazo de até 30 (trinta) dias;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "cumprir as determinações do Promotor de Justiça, incluindo as diligências determinadas no bojo de procedimentos extrajudiciais, no prazo de até 5 (cinco) dias úteis, ressalvados os casos urgentes;",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "controlar permanentemente o vencimento dos prazos fixados para o cumprimento de diligências internas, sendo o controle das diligências externas feito direta e exclusivamente pelo Promotor de Justiça, que detém poder requisitório.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Organização do Ministério Público",
+        "source_content_hash": "cdc11a9ee7706cafb6c77a9798daffe54ebad08e1868c82fa8d2048d4c829af2",
+        "original_numeric_id": 48,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "D",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nA gestão de compras, almoxarifado e guarda patrimonial no MPRJ submete-se ao controle regular dos inventários físicos anuais e à segregação de funções entre o recebimento provisório, a conferência técnica definitiva dos materiais adquiridos e a respectiva autorização para pagamento da despesa liquidada.",
+        "source_reference": null
+      },
+      "source_content_hash": "4b11425100161e87350d1e7a685b9e10f735d34d1ec2994dc2c5032df057a801"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:049",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:49",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O Modelo de Governança do Planejamento Estratégico do MPRJ consiste no conjunto de mecanismos que asseguram a formulação e a consecução da estratégia, bem como o monitoramento das ações institucionais, com a finalidade de garantir a concretização dos objetivos pretendidos e a prestação de contas de sua atuação com transparência, eficiência e equidade.\nDe acordo com a Resolução GPGJ nº 2.126/2017, que dispõe sobre a matéria, tal modelo de governança:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 49; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "engloba o Plano Estratégico do Ministério Público do Estado do Rio de Janeiro, que deverá ser elaborado de forma sistêmica, vedado seu desdobramento em planos diretores setoriais ou regionais;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "é norteado, dentre outras, pela premissa da participação popular na elaboração e na revisão do plano estratégico, com a realização periódica de audiências públicas de caráter consultivo;",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "vincula-se ao Plano Estratégico, que terá caráter consultivo e propositivo (não vinculativo) para os órgãos de execução e de administração, bem como para os seus respectivos membros e servidores, em razão da independência funcional;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "é atualizado anualmente pelo processo de revisão do Plano Estratégico, que é instrumentalizado a partir de projeto da Subprocuradoria-Geral de Justiça de Administração, o qual deverá conter a metodologia e o cronograma a ser seguido;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "prevê a integração entre as áreas de planejamento e administração, de modo a direcionar os recursos orçamentários à consecução dos objetivos estratégicos, com a divulgação de informações exclusivamente ao público interno.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Organização do Ministério Público",
+        "source_content_hash": "d3b53e68ea0e98a8921684dd5c43e839d192cb4ecd0f3977065af6005597dfca",
+        "original_numeric_id": 49,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nO Modelo de Governança do Planejamento Estratégico do MPRJ organiza o ciclo de gestão estratégica mediante a atuação articulada entre o Comitê Estratégico de Gestão, as áreas finalísticas e a Secretaria de Planejamento Institucional, assegurando o monitoramento contínuo dos indicadores de desempenho, metas prioritárias e o alinhamento orçamentário anual aos projetos institucionais aprovados.",
+        "source_reference": null
+      },
+      "source_content_hash": "c1acd66ae2b4274a9a60693736c828cfff0b93ef7a14463278b8d55e99a3bcb9"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:050",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:50",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O Ministério Público do Estado do Rio de Janeiro, após regular processo licitatório, celebrou contrato administrativo com sociedade empresária para aquisição de determinados materiais de escritório. O Órgão Gestor Patrimonial do MPRJ, verificando que os bens entregues não correspondiam com exatidão ao que foi comprado e apresentavam problemas qualitativos, tentou junto ao fornecedor a regularização da entrega para efeito de aceitação.\nDe acordo com a Portaria SGMP nº 560/2018, que dispõe sobre a gestão de bens permanentes no MPRJ, a não correção ou reposição dos materiais entregues pelo contratado enseja a:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 50; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "aplicação imediata das sanções administrativas de advertência, por escrito e de forma reservada, e de multa civil, no montante máximo do dobro do valor global do contrato;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "rescisão imediata do contrato administrativo, com devolução de três vezes o valor já pago no bojo do contrato, a ser feita no prazo de 30 (trinta) dias, sob pena de inscrição em dívida ativa;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "instauração de procedimento próprio para apurar tal conduta, que poderá implicar a aplicação das sanções administrativas correspondentes, previstas na legislação e no instrumento contratual;",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "imposição da sanção administrativa de suspensão temporária de participação em licitação e impedimento de contratar com a Administração Pública estadual, por prazo não superior a 5 (cinco) anos;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "declaração imediata de inidoneidade para licitar ou contratar com a Administração Pública, que deve perdurar pelo período de 2 (dois) a 5 (cinco) anos, de acordo com a extensão do dano ao erário.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Organização do Ministério Público",
+        "source_content_hash": "6a5b502de177fa3dec2c8cceefa585a0ae2a2cb9afdcca60239a8951386b0bf8",
+        "original_numeric_id": 50,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nConforme as regras gerais de contratos administrativos na Administração Pública, a prorrogação contratual para serviços continuados e a aplicação de penalidades contratuais (como multas moratórias ou compensatórias por descumprimento de prazos) exigem a instauração de processo administrativo com intimação da empresa contratada para apresentação de defesa prévia, em respeito ao devido processo legal.",
+        "source_reference": null
+      },
+      "source_content_hash": "3584c6a373fb61257601d98096e70264c801420ec96527f4a03a8b487415a633"
+    }
+  ]
+}

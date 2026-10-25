@@ -1,0 +1,390 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-assistente_administrativo-legislacao-do-sus-f1373a7ee0a9-a92b1e21e97d",
+  "source": {
+    "file_name": "assistente_administrativo_ATUALIZADO.json",
+    "sha256": "f1373a7ee0a9857ac3a9d86f7ca54ddd97760222dd5a046ee20c6ecfbab8577b",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "assistente_administrativo.json",
+      "original_source_sha256": "a57c1a78597d9f629a7137c90f84d7f96492a8d5fd0eb5590acdcfffc87a6bcc",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "a92b1e21e97dddc7bd9934ed28145dc7faef8624ffb65a355d1b5c3945decd89",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "legislacao-do-sus",
+    "name": "Legislação do SUS"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:assistente_administrativo:021",
+      "source_id": "assistente_administrativo:21",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Assinale a alternativa correta consoante as disposições da Resolução 453/2012, do Conselho Nacional da Saúde:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 21; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O Conselho de Saúde é uma instância singular, deliberativa e temporária do Sistema Único de Saúde (SUS) em cada esfera de Governo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Como Subsistema da Seguridade Social, o Conselho de Saúde atua na formulação e proposição de estratégias e no controle da execução das Políticas de Saúde, excluindo seus aspectos econômicos e financeiros",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "A participação de órgãos, entidades e movimentos sociais terá como critério a representatividade, a abrangência e a complementaridade do conjunto da sociedade, no âmbito de atuação do Conselho de Saúde",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "De acordo com as especificidades locais, aplicando o princípio da paridade, não está contemplada a representação de entidades indígenas",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "A participação dos membros eleitos do Poder Legislativo, representação do Poder Judiciário e do Ministério Público, como conselheiros é permitida nos Conselhos de Saúde",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "e2a24cbd9e686b007aad518f6073f3e5e63a6d4d5669be1e0044dcef880959c7",
+        "original_numeric_id": 21,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://conselho.saude.gov.br"
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nA Resolução nº 453/2012 do Conselho Nacional de Saúde (CNS) define as diretrizes para a instituição, reformulação, organização e funcionamento dos Conselhos de Saúde. Nos termos da Primeira Diretriz, o Conselho de Saúde é uma instância colegiada, deliberativa e permanente do Sistema Único de Saúde (SUS) em cada esfera de governo, integrante da estrutura organizacional do Ministério da Saúde, da Secretaria de Saúde dos Estados, do Distrito Federal e dos Municípios.\n\nA representação dos usuários nos Conselhos e Conferências de Saúde é paritária em relação ao conjunto dos demais segmentos (50% de entidades e movimentos representativos de usuários; 25% de entidades representativas dos trabalhadores da saúde; e 25% de representação de governo e prestadores de serviços de saúde privados conveniados ou sem fins lucrativos).\n\n### Dispositivo legal\n[Resolução CNS nº 453/2012, Primeira e Segunda Diretrizes](https://conselho.saude.gov.br/resolucoes/2012/Reso453.pdf)",
+        "source_reference": null
+      },
+      "source_content_hash": "47f85779109a1695a8c92d04a6747d537b3d3fce32ee2b2a8f3c8d38abaa61c6"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:022",
+      "source_id": "assistente_administrativo:22",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Com base na Constituição Federal de 1988, analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F).\n( ) A saúde é direito de todos e dever do Estado.\n( ) A assistência à saúde é livre à iniciativa privada.\n( ) É permitida a destinação de recursos públicos para auxílios ou subvenções às instituições privadas com fins lucrativos.\nAssinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 22; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "V - V - V",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "V - V - F",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "V - F - V",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "F - F - V",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "F - F - F",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Princípios e Diretrizes do SUS na Constituição Federal de 1988",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "fb1eb76086e8a351efaeecc8ec651c5a9fb5b9c93f836e40259b3551b906c368",
+        "original_numeric_id": 22,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "evolucao-historica-e-principios-do-sus",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A análise das afirmativas com base na Constituição Federal de 1988 revela a sequência correta **V - V - F**:\n\n1. **(V) A saúde é direito de todos e dever do Estado.** Esta afirmativa é verdadeira, pois reproduz o início do artigo 196 da Constituição Federal.\n2. **(V) A assistência à saúde é livre à iniciativa privada.** Esta afirmativa é verdadeira, conforme estabelece expressamente o *caput* do artigo 199 da Constituição Federal.\n3. **(F) É permitida a destinação de recursos públicos para auxílios ou subvenções às instituições privadas com fins lucrativos.** Esta afirmativa é falsa, pois o parágrafo 2º do artigo 199 da Constituição Federal estabelece expressamente que tal destinação é vedada, e não permitida.\n\n### Dispositivo legal\n**Constituição Federal de 1988**\n- **Art. 196:** *'A saúde é direito de todos e dever do Estado, garantido mediante políticas sociais e econômicas que visem à redução do risco de doença e de outros agravos e ao acesso universal e igualitário às ações e serviços para sua promoção, proteção e recuperação.'*\n- **Art. 199:** *'A assistência à saúde é livre à iniciativa privada.'*\n- **Art. 199, § 2º:** *'É vedada a destinação de recursos públicos para auxílios ou subvenções às instituições privadas com fins lucrativos.'*",
+        "source_reference": null
+      },
+      "source_content_hash": "3ae728e09cd9398e944a4e8a774dc94841aca3beff05e8ee8ff252c234a137c5"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:023",
+      "source_id": "assistente_administrativo:23",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com a definição dada pela Constituição Federal de 1988, analise o texto abaixo.\n“A seguridade social compreende um conjunto integrado de ações de iniciativa dos Poderes Públicos e da sociedade, destinadas a assegurar os direitos relativos à ______, à ______ e à ______”.\nAssinale a alternativa que preencha correta e respectivamente as lacunas.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 23; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "saúde / educação / ordem econômica",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "previdência / saúde / direitos políticos",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "nacionalidade / segurança pública / alimentação",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "anistia / moradia / trabalho",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "saúde / previdência / assistência social",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Princípios e Diretrizes do SUS na Constituição Federal de 1988",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "78f883839dcdbd17cae4b45b7abf58e5f90fd76d16f0a4d31722ac0eb4bc5426",
+        "original_numeric_id": 23,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "evolucao-historica-e-principios-do-sus",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa **E** preenche corretamente as lacunas do texto constitucional. A Seguridade Social no Brasil é estruturada sobre um tripé de direitos sociais fundamentais: a saúde, a previdência social e a assistência social.\n\nAnálise das alternativas incorretas:\n- **A**, **B**, **C** e **D** estão incorretas porque inserem termos que não fazem parte da definição constitucional de Seguridade Social (como educação, ordem econômica, direitos políticos, nacionalidade, segurança pública, alimentação, anistia, moradia ou trabalho). Embora estes sejam direitos sociais ou princípios constitucionais, eles não compõem o conceito estrito de Seguridade Social definido no artigo 194 da Constituição Federal.\n\n### Dispositivo legal\n**Constituição Federal de 1988**\n- **Art. 194:** *'A seguridade social compreende um conjunto integrado de ações de iniciativa dos Poderes Públicos e da sociedade, destinadas a assegurar os direitos relativos à saúde, à previdência e à assistência social.'*",
+        "source_reference": null
+      },
+      "source_content_hash": "41d4d4c81cb6918935d00ffd662b8c563290bd3c40f90c51cf191bd4732e2236"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:024",
+      "source_id": "assistente_administrativo:24",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com a Lei nº 8080/90 (Lei Orgânica da Saúde), analise as afirmativas abaixo.\nI. A saúde é um direito fundamental do ser humano, devendo o Estado prover as condições indispensáveis ao seu pleno exercício.\nII. O dever do Estado de garantir a saúde exclui o das pessoas, da família, das empresas e da sociedade.\nIII. O conjunto de ações e serviços de saúde, prestados por órgãos e instituições privadas federais, estaduais e municipais, apenas da Administração direta e das fundações privadas, constitui o Sistema Único de Saúde (SUS).\nEstão corretas as afirmativas:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 24; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "I apenas",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "I e II apenas",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "I, II e III",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "II e III apenas",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "I e III apenas",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Lei Orgânica da Saúde (Lei nº 8.080/1990 e Lei nº 8.142/1990)",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "55b63848bc5ee1803e463e4c6f6fff66c93397dd92644c97415902fdf2a5c15a",
+        "original_numeric_id": 24,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8080.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "lei-organica-da-saude-lei-8080",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A análise das afirmativas com base na Lei nº 8.080/1990 revela o seguinte:\n\n* **Afirmativa I (Correta):** Reproduz fielmente o caput do artigo 2º, que estabelece a saúde como um direito fundamental do ser humano e atribui ao Estado o dever de prover as condições indispensáveis ao seu pleno exercício [024].\n* **Afirmativa II (Incorreta):** Contraria o § 2º do artigo 2º, que determina expressamente que o dever do Estado não exclui o das pessoas, da família, das empresas e da sociedade [024].\n* **Afirmativa III (Incorreta):** Apresenta erros conceituais ao afirmar que o SUS é constituído por instituições privadas e apenas pela Administração direta. O caput do artigo 4º define que o SUS é composto por órgãos e instituições *públicas* federais, estaduais e municipais, da Administração direta e *indireta*, bem como por fundações mantidas pelo Poder Público [024].\n\n**Pegadinha:** A banca tentou confundir ao inverter o sentido do § 2º do artigo 2º (trocando \"não exclui\" por \"exclui\") e ao descaracterizar a composição pública e indireta do SUS na afirmativa III.\n\n**Dispositivo legal**\n\n[Lei nº 8.080/1990, art. 2º, caput e § 2º, e art. 4º, caput](https://www.planalto.gov.br/ccivil_03/leis/l8080.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "89e67a6681cbad01fd6a4aa367fd8507434d8127f59acbfb288689860e26f709"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:025",
+      "source_id": "assistente_administrativo:25",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Nos termos da Lei nº 8.142/1990, assinale a alternativa incorreta.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 25; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O Sistema Único de Saúde (SUS), contará, em cada esfera de governo, sem prejuízo das funções do Poder Legislativo, com a Conferência de Saúde e o Conselho de Saúde",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "A Conferência de Saúde reunir-se-á a cada quatro anos com a representação dos vários segmentos sociais, para avaliar a situação de saúde e propor as diretrizes para a formulação da política de saúde nos níveis correspondentes",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "O Conselho de Saúde é órgão colegiado composto por representantes do governo, prestadores de serviço, profissionais de saúde e usuários",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "O Conselho Nacional de Secretários de Saúde (Conass) e o Conselho Nacional de Secretários Municipais de Saúde (Conasems) não terão representação no Conselho Nacional de Saúde",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "A representação dos usuários nos Conselhos de Saúde e Conferências será paritária em relação ao conjunto dos demais segmentos",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Lei Orgânica da Saúde (Lei nº 8.080/1990 e Lei nº 8.142/1990)",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - SUS",
+        "source_content_hash": "df7f5402bbdb83ee20c0da215d3d5da421ecfc1f6ab5d4148c87038e6fd38ca5",
+        "original_numeric_id": 25,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8142.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "lei-organica-da-saude-lei-8080",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão solicita a alternativa incorreta com base na Lei nº 8.142/1990:\n\n* **Alternativa A (Correta):** Está em conformidade com o caput do artigo 1º, que prevê a existência da Conferência de Saúde e do Conselho de Saúde em cada esfera de governo, sem prejuízo das funções do Poder Legislativo [025].\n* **Alternativa B (Correta):** Reproduz o § 1º do artigo 1º, que define a periodicidade quadrienal, a representação de vários segmentos sociais e o objetivo de avaliar a situação de saúde e propor diretrizes para a formulação da política de saúde [025].\n* **Alternativa C (Correta):** Corresponde ao § 2º do artigo 1º, que define o Conselho de Saúde como órgão colegiado composto por representantes do governo, prestadores de serviço, profissionais de saúde e usuários [025].\n* **Alternativa D (Incorreta/Gabarito):** Contraria o § 3º do artigo 1º, que estabelece expressamente que o Conass e o Conasems *terão* representação no Conselho Nacional de Saúde [025].\n* **Alternativa E (Correta):** Está de acordo com o § 4º do artigo 1º, que assegura a representação paritária dos usuários nos Conselhos de Saúde e Conferências em relação ao conjunto dos demais segmentos [025].\n\n**Pegadinha:** A banca inseriu a palavra \"não\" na alternativa D para inverter o sentido do texto legal, tornando a afirmação incorreta.\n\n**Dispositivo legal**\n\n[Lei nº 8.142/1990, art. 1º, caput e §§ 1º, 2º, 3º e 4º](https://www.planalto.gov.br/ccivil_03/leis/l8142.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "a38d9228698743066f3e9a3158b3c5c72b2978bcba5c87cba71ab7fa98615cc3"
+    }
+  ]
+}

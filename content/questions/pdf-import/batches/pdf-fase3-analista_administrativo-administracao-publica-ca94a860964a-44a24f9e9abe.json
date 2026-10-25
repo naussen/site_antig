@@ -1,0 +1,355 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-analista_administrativo-administracao-publica-ca94a860964a-44a24f9e9abe",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "ca94a860964a7d5a81d28ea03d9d11a3168b6ff21a000154ee155e850ba68dc9",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "7b0e6efd1cd4387fd3b4024c7d594aa5aad8ca3c4f2146f6ddc96ab3d4597e20",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "44a24f9e9abefd5c0ea92aa7f3cee3b25431ac33e2bcdea49d78421f7fda4e29",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-publica",
+    "name": "Administração Pública"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:077",
+      "source_id": "analista_administrativo:77",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito a políticas públicas, julgue os itens seguintes.\n\nA avaliação executiva de uma política pública fornece subsídios aos gestores para que possam promover o aprimoramento e redirecionamento de ações, caso necessário.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 77; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Políticas Públicas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Políticas Públicas",
+        "source_content_hash": "c5703c9430045d5b778ccd9f44d1068265fe5156f0973d7e951830dd1db2380a",
+        "original_numeric_id": 77,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politicas-publicas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA **avaliação executiva** (ou monitoramento de implementação) de políticas públicas é concebida como um instrumento célere e pragmático de gestão que acompanha a execução operacional, os custos e o cumprimento de metas intermediárias em tempo real.\n\nEla fornece aos gestores públicos diagnósticos tempestivos e subsídios empíricos indispensáveis para redirecionar ações, corrigir falhas de desenho e otimizar a aplicação de recursos antes do término do programa.",
+        "source_reference": null
+      },
+      "source_content_hash": "af6a4288a7b0ca761ac4591fcce68d8da2cad7aa7456c155df095e824909340f"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:080",
+      "source_id": "analista_administrativo:80",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito a políticas públicas, julgue os itens seguintes.\n\nUm programa para atendimento de uma política pública deve ter um objetivo compreensível, conciso e essencial, e o conjunto de objetivos das ações que compõem o programa deve ser tratado de maneira hierarquizada, em função da essencialidade.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 80; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Políticas Públicas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Políticas Públicas",
+        "source_content_hash": "ab2ed2830f3f760d21c7dc34f06321dd9d77b49eead6a114039f5e85bd03985a",
+        "original_numeric_id": 80,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "politicas-publicas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNa metodologia de planejamento e gestão de políticas públicas (conforme o Plano Plurianual - PPA e os manuais do Ministério do Planejamento e IPEA):\n\nTodo programa de governo deve possuir um objetivo claro e mensurável, a especificação precisa do seu público-alvo (beneficiários diretos), a delimitação das metas operacionais e indicadores objetivos de processo e resultado, garantindo transparência e viabilidade de controle e avaliação.",
+        "source_reference": null
+      },
+      "source_content_hash": "19d33f7fc21fcdcba8f3f16007506f8413841b253c661dc14ec300a07a161792"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:101",
+      "source_id": "analista_administrativo:101",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando os diversos aspectos do comportamento organizacional e da gestão de pessoas, julgue os itens a seguir.\n\nUma forma eficaz de resolver a iniquidade negativa no local de trabalho é criar meios para promoções e progressões na carreira.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 101; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "86e62d342d68c2359282b6ffbcf0a90e7dc9f4e346ba4b094dbbb77cadeffb39",
+        "original_numeric_id": 101,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNa **Teoria da Equidade de J. Stacy Adams**, a iniquidade negativa ocorre quando o colaborador percebe que a sua relação entre contribuições (esforço, competência) e recompensas (salário, reconhecimento) é desfavorável em comparação com a de seus pares.\n\nEssa percepção gera tensão psicológica, desmotivação, queda de produtividade, absenteísmo e rotatividade. Para saná-la eficazmente, a gestão deve agir no restabelecimento da justiça distributiva e procedimental (ajuste de recompensas, reconhecimento e transparência nas promoções), sendo completamente ineficaz e contraproducente intensificar a cobrança ou punição sobre o servidor prejudicado.",
+        "source_reference": null
+      },
+      "source_content_hash": "caaf90ab18da5afa0923970a8e8277e349c13dcbed0c18a8b0eff0177603dfb9"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:106",
+      "source_id": "analista_administrativo:106",
+      "question_type": "true_false",
+      "statement_markdown": "No tocante às políticas e práticas de gestão de pessoas, julgue os itens que se seguem.\n\nEntrevistas situacionais, quando utilizadas em processos de seleção de pessoal, constituem-se de perguntas padronizadas associadas a respostas preestabelecidas.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 106; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "2a6f368b8aeac5edd0be33031e43d517b735797fd03d21d5b4249e06734c9882",
+        "original_numeric_id": 106,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNa seleção de pessoal e avaliação de competências:\n\n* A **entrevista comportamental** foca em fatos e comportamentos reais ocorridos no passado (*\"Conte-me uma ocasião em que você precisou lidar com um conflito...\"*), partindo do pressuposto de que o comportamento pretérito é o melhor preditor do desempenho futuro;\n* Por sua vez, a **entrevista situacional** apoia-se em **cenários hipotéticos e futuros** (*\"O que você faria se um cliente fizesse tal reclamação?\"*).\n\nA assertiva inverteu a definição técnica dos instrumentos seletivos de recursos humanos.",
+        "source_reference": null
+      },
+      "source_content_hash": "812dd2f5cbb86ff9b7d7a3f429f351d063b98282e11b79ca243ef92bf9d6354f"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:108",
+      "source_id": "analista_administrativo:108",
+      "question_type": "true_false",
+      "statement_markdown": "No tocante às políticas e práticas de gestão de pessoas, julgue os itens que se seguem.\n\nA abordagem sistêmica de treinamento é utilizada quando se busca avaliar o impacto que os investimentos em treinamento e desenvolvimento causam no desempenho individual e organizacional.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 108; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "a3e93273cf515ccaddaa20c6dd31ffa7383b55c78e75e9c29b5f6bf90efb2cae",
+        "original_numeric_id": 108,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA **abordagem sistêmica de treinamento e desenvolvimento (T&D)** estrutura as ações educativas corporativas como um ciclo articulado em quatro etapas interdependentes:\n\n1. Diagnóstico das necessidades de treinamento (DNT);\n2. Desenho e planejamento do programa educacional;\n3. Execução e condução da capacitação;\n4. Avaliação integrada dos resultados em múltiplos níveis (reação, aprendizado, comportamento no cargo e impacto nos resultados organizacionais - Modelo de Kirkpatrick).",
+        "source_reference": null
+      },
+      "source_content_hash": "9909f7056befbc7dd4600a5c175a0534cb3ecee0537d197252f2e779681fb01e"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:110",
+      "source_id": "analista_administrativo:110",
+      "question_type": "true_false",
+      "statement_markdown": "No tocante às políticas e práticas de gestão de pessoas, julgue os itens que se seguem.\n\nTrabalho híbrido (presencial e remoto), horários flexíveis e semana condensada são exemplos de tendências da gestão de pessoas no setor público brasileiro.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 110; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "c90a64481ef91ec7fc7f9a3f193250c417c0fdba9f43324b7277bf8fc1ecafd5",
+        "original_numeric_id": 110,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/d11072.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA adoção de modalidades flexíveis de organização do trabalho contemporâneo (trabalho híbrido, teletrabalho e horários flexíveis) **não dispensa nem anula o controle de desempenho e a prestação de contas** pelo colaborador.\n\nNa administração pública (conforme o Programa de Gestão e Desempenho - PGD regulamentado pelo Decreto nº 11.072/2022), a flexibilidade espacial e temporal substitui o mero controle de frequência física por um rigoroso controle baseado em **entregas de metas pactuadas, resultados e planos de trabalho mensuráveis**.",
+        "source_reference": null
+      },
+      "source_content_hash": "42a1955dff4bbd7a3dfcddc51065d7e8cdef361f20961d82b6ab24a46d088cb1"
+    }
+  ]
+}

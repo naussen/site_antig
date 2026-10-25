@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-cargo30-administracao-de-recursos-materiais-14ec26364b73-19562afcbb17",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "14ec26364b73e9d47b2c5581aa9242bbae266f9dece6cf292f0206e67204b603",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "4cf2583924232a76b401cdfc24313fb757e305aad1b2fdad61bd5c3798ffc63b",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "19562afcbb1740b7c0b29f2f9f141553c73ffeb8f985f755a48173831871d2ed",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-de-recursos-materiais",
+    "name": "Administração de Recursos Materiais"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:092",
+      "source_id": "cargo30:92",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, acerca de administração de materiais.\n\nO método de avaliação de estoques que é pouco utilizado em economias inflacionárias e que reflete custos mais próximos da realidade do mercado é chamado de LIFO.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 92",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Estoques",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Materiais",
+        "source_content_hash": "ecf266cba4d7d1c2399e527a1733979f020ce84df91add640774959d25bf05ae",
+        "original_numeric_id": 92,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-estoques",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O método LIFO (*Last In, First Out* ou UEPS - Último a Entrar, Primeiro a Sair) pressupõe que as últimas mercadorias a entrar no estoque são as primeiras a serem vendidas ou consumidas.\n\nEm economias inflacionárias, a aplicação do LIFO resulta em um estoque final avaliado pelos custos mais antigos (primeiras entradas), o que gera uma subavaliação do estoque em relação aos preços correntes de mercado. Portanto, o LIFO não reflete custos próximos da realidade de mercado para o estoque remanescente.\n\nO método que apresenta o estoque final com valores mais próximos da realidade de mercado é o FIFO (*First In, First Out* ou PEPS - Primeiro a Entrar, Primeiro a Sair), pois os itens que permanecem em estoque são os adquiridos mais recentemente, a preços atualizados.\n\n*Detalhe importante:* O LIFO reflete o custo das mercadorias vendidas (CMV) mais próximo da realidade atual de mercado, mas o valor do estoque final fica defasado. O enunciado erra ao generalizar o reflexo de custos mais próximos da realidade de mercado sem distinguir o estoque final do custo de vendas.",
+        "source_reference": null
+      },
+      "source_content_hash": "5fc78ae65a5603db2e0bd4f44bafb32c8ac2447bc40bf2f5e0f76cbe5768cc7e"
+    },
+    {
+      "external_id": "pdf:cargo30:094",
+      "source_id": "cargo30:94",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, acerca de administração de materiais.\n\nUma das vantagens de serem mantidos níveis reduzidos de estoques é a diminuição do refugo, pois as não-conformidades são logo identificadas.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 94",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Estoques",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Materiais",
+        "source_content_hash": "2a05bde39ed3345f21ee8c498b457ef2bb1b99cf0eddd6b11dfe64713d7bf932",
+        "original_numeric_id": 94,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-estoques",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A manutenção de níveis reduzidos de estoque é um dos pilares da filosofia *Just-in-Time* (JIT) e da produção enxuta (*Lean Production*).\n\nQuando os estoques são elevados, as falhas de qualidade e as não-conformidades de peças intermediárias ficam ocultas, pois o processo produtivo continua a ser abastecido pelo estoque excedente (\"pulmão\"). Isso atrasa a detecção dos problemas, gerando grandes lotes de peças defeituosas (refugo).\n\nAo reduzir o estoque ao mínimo necessário, qualquer problema de qualidade interrompe imediatamente o fluxo de produção. Essa visibilidade imediata força a correção rápida da causa raiz da não-conformidade, reduzindo significativamente o desperdício e a geração de refugo.",
+        "source_reference": null
+      },
+      "source_content_hash": "c5c111f8da62fbb757e22885238143bf59140cd0618598fa7949404c2925ea49"
+    }
+  ]
+}

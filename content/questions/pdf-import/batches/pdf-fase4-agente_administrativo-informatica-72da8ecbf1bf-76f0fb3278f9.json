@@ -1,0 +1,410 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-agente_administrativo-informatica-72da8ecbf1bf-76f0fb3278f9",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "72da8ecbf1bf79542f78432b7acf5090277b9b279eb96815d2ab269bda90cd23",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "95f70efef6886dec632debbde86efe1189f22da6fd35c7aba8deaf2afc4b8a3c",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "76f0fb3278f9a138c17b427e8cd9b958e91a6dccdd7a9aa59e7553ecb5d970f2",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:016",
+      "source_id": "agente_administrativo:16",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação ao Word, do pacote Microsoft Office 365, julgue os itens que se seguem.\n\nOs títulos de capítulos e seções de um documento podem ter mesma formatação e acompanhar numeração concatenada, utilizando-se para tanto o recurso Estilos.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 16; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ferramentas de Escritório (Microsoft Office e LibreOffice)",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "6658b8b98e20f8915c73454284786ff7fcc61369bd891d1043a6e56e1993efaa",
+        "original_numeric_id": 16,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No Microsoft Word, o recurso \"Estilos\" (como Título 1, Título 2) é utilizado para padronizar a formatação de elementos do texto, garantindo que títulos de capítulos e seções compartilhem a mesma identidade visual. Adicionalmente, é possível associar esses estilos a uma lista de vários níveis para aplicar e acompanhar uma numeração concatenada e automatizada ao longo do documento.",
+        "source_reference": null
+      },
+      "source_content_hash": "671b8af8c50cda665a55c2dfa3d7e5c86cd92e6f3c88f158a029928de56da972"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:017",
+      "source_id": "agente_administrativo:17",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação ao Word, do pacote Microsoft Office 365, julgue os itens que se seguem.\n\nAo se configurar a página de um documento no formato paisagem, essa página ocupará uma posição vertical ou em pé no documento.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 17; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ferramentas de Escritório (Microsoft Office e LibreOffice)",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "cee7d436dc8d34672c3f67be7561796b838f88acb7ab25ace62cfbd1062c7108",
+        "original_numeric_id": 17,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A configuração de página no formato \"Paisagem\" (Landscape) orienta o papel de maneira horizontal (\"deitada\"). A posição vertical (\"em pé\") corresponde à orientação \"Retrato\" (Portrait). Portanto, a associação feita no enunciado está invertida.",
+        "source_reference": null
+      },
+      "source_content_hash": "bd02eec36fd5a8a6dba92481894bd29106fa782a6f388a4270573ab3f55189d2"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:018",
+      "source_id": "agente_administrativo:18",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação ao Word, do pacote Microsoft Office 365, julgue os itens que se seguem.\n\nPara se incluir números de páginas em um documento, deve-se clicar na aba Inserir e escolher a opção Cabeçalho e Rodapé.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 18; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ferramentas de Escritório (Microsoft Office e LibreOffice)",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "82baebe1e15d284eb36079bde55fc90cf4fd055d977b4502bcb19edf35e90ccd",
+        "original_numeric_id": 18,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Na guia \"Inserir\" do Microsoft Word, \"Cabeçalho e Rodapé\" é o nome do grupo que reúne os comandos, e não uma opção única a ser escolhida. Para incluir a numeração, o usuário deve clicar diretamente na opção específica \"Número de Página\", localizada dentro desse grupo. Embora os números de página fiquem posicionados no cabeçalho ou no rodapé, o caminho direto e a opção nominal correta no menu é \"Número de Página\".",
+        "source_reference": null
+      },
+      "source_content_hash": "4c9d24bfcfbe7ccf5fc4aafa7d0784d854be7f5c5d736e555ea134f6cd8d4cbc"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:019",
+      "source_id": "agente_administrativo:19",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação ao Word, do pacote Microsoft Office 365, julgue os itens que se seguem.\n\nO recurso Negrito permite que uma palavra fique em destaque, com a letra mais grossa, mesmo que ela esteja na cor vermelha.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 19; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ferramentas de Escritório (Microsoft Office e LibreOffice)",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "d7220d714ac71d2e4be2044a6f66ad02b917a44a5bb9f13b6aaae14646579436",
+        "original_numeric_id": 19,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O estilo de formatação \"Negrito\" atua exclusivamente na espessura dos traços dos caracteres, tornando-os mais grossos para fins de destaque. Essa propriedade é independente da cor da fonte configurada no documento, aplicando-se perfeitamente a textos em vermelho, azul, preto ou qualquer outra cor.",
+        "source_reference": null
+      },
+      "source_content_hash": "0daa923befc3180e2d099a9563c26ed4ce33e81600ff9cfa821c9c624244745f"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:020",
+      "source_id": "agente_administrativo:20",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação ao Word, do pacote Microsoft Office 365, julgue os itens que se seguem.\n\nAo se escolher Salvar uma Cópia de um Documento, a versão original também será salva com as alterações feitas no novo arquivo.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 20; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ferramentas de Escritório (Microsoft Office e LibreOffice)",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "48f580b4777d384062b0effdd7517176e3c1f97ab12d78813314dc80e958fbc0",
+        "original_numeric_id": 20,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O recurso \"Salvar uma Cópia\" cria um arquivo independente a partir do estado atual do documento. As alterações realizadas e salvas no novo arquivo duplicado não são replicadas no arquivo original, que permanece inalterado no estado em que estava antes da geração da cópia.",
+        "source_reference": null
+      },
+      "source_content_hash": "2e1974a57c49e3749083d90968e65a75287539e680fc90c04beac9380ff0ed42"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:021",
+      "source_id": "agente_administrativo:21",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação a programas de correio eletrônico, armazenamento de dados na nuvem, firewall e procedimentos de backup, julgue os próximos itens.\n\nAo se enviar um anexo dentro de uma mensagem de e-mail, esse anexo será guardado na caixa de mensagens enviadas, dentro da mensagem original.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 21; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Computação na Nuvem (Cloud Computing)",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "e4e5e5756bce2744c54cb19cc9cfd5ec82a5ea3d0d9328d8f3f25e70c32710f9",
+        "original_numeric_id": 21,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "computacao-na-nuvem-cloud-computing",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Nos principais clientes e serviços de correio eletrônico (como Outlook, Gmail, Thunderbird, etc.), quando uma mensagem contendo um arquivo anexo é enviada, uma cópia integral dessa mensagem — o que inclui o corpo do texto, os cabeçalhos e todos os arquivos anexados — é armazenada na pasta de \"Itens Enviados\" (ou \"Mensagens Enviadas\"). Isso garante que o remetente tenha o registro completo do que foi transmitido ao destinatário.",
+        "source_reference": null
+      },
+      "source_content_hash": "990e7014630597de57d35ef8ed61c89196c3341dbdbecf54457f9446962cafa3"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:024",
+      "source_id": "agente_administrativo:24",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação a programas de correio eletrônico, armazenamento de dados na nuvem, firewall e procedimentos de backup, julgue os próximos itens.\n\nO OneDrive permite que sejam selecionadas pastas específicas de arquivos do computador para serem sincronizadas e utilizadas via Web.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 24; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Computação na Nuvem (Cloud Computing)",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "9b366f3decc3636f40e83f5288b25f8e1c15fc01b0cf239857ff7f83f47e92c3",
+        "original_numeric_id": 24,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "computacao-na-nuvem-cloud-computing",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O aplicativo de sincronização do OneDrive instalado no computador oferece a funcionalidade de escolher quais pastas locais do sistema de arquivos (como Documentos, Imagens, Área de Trabalho ou pastas personalizadas) devem ser sincronizadas com a nuvem. Uma vez sincronizadas, essas pastas e seus respectivos arquivos tornam-se acessíveis e gerenciáveis a partir de qualquer navegador de internet por meio da interface Web do OneDrive.",
+        "source_reference": null
+      },
+      "source_content_hash": "d6b5f05cc20d3eca25a4d8bb2b97e8576fbfdc63c663370b20dca30b4a795c5b"
+    }
+  ]
+}

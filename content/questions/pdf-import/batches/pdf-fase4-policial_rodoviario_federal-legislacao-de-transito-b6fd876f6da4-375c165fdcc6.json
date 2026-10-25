@@ -1,0 +1,709 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-policial_rodoviario_federal-legislacao-de-transito-b6fd876f6da4-375c165fdcc6",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "b6fd876f6da47bfc670b5edf47a194cb0192c6a872db7d5acf3f5352d639cba7",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "d0a1c5718064db035e156dbeb8982317019ea8dde6c8349e0a1cc8366d1342df",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "375c165fdcc63bdddaf53536029a964cd6341666083618631f9e450e70b9f769",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "legislacao-de-transito",
+    "name": "Legislação de Trânsito"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:057",
+      "source_id": "policial_rodoviario_federal:57",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à legislação de trânsito brasileira, julgue os itens a seguir.\n\nVeículos em movimento em via pública que possuam espelhos retrovisores em ambos os lados poderão usar cortinas nas áreas envidraçadas.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 57; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Habilitação, Registro e Licenciamento de Veículos",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação de Trânsito",
+        "source_content_hash": "7ef2d17d2a1854b94f19fd109a53fbbfbd82d9bd2d93129dc53450799012d688",
+        "original_numeric_id": 57,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "habilitacao-e-formacao-de-condutores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O Código de Trânsito Brasileiro (CTB) proíbe, como regra geral, a utilização de cortinas, persianas fechadas ou dispositivos similares nas áreas envidraçadas de veículos em movimento, com o objetivo de preservar a visibilidade do condutor e a segurança viária. No entanto, o próprio texto legal traz uma exceção expressa: essa proibição não se aplica aos veículos que possuam espelhos retrovisores externos em ambos os lados (direito e esquerdo). Havendo retrovisores em ambos os lados, o uso de cortinas passa a ser permitido, tornando a assertiva correta.\n\n**Dispositivo legal**\n\n[Art. 111, II, da Lei nº 9.503/1997 (Código de Trânsito Brasileiro)](https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "55da47d8d25750d9b01b483b3a180b988ea11a164df8df23aeb3b2255c1af216"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:058",
+      "source_id": "policial_rodoviario_federal:58",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à legislação de trânsito brasileira, julgue os itens a seguir.\n\nPara que autoridade ou agente policial possa autorizar a remoção de veículos envolvidos em acidente de trânsito ocorrido em leito de via pública que tenha causado lesão em pessoas e dano aos veículos envolvidos, é necessário que antes tenha sido prestado socorro às vítimas e realizada a perícia no local.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 58; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Habilitação, Registro e Licenciamento de Veículos",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação de Trânsito",
+        "source_content_hash": "b2c6bade96c808ee51d46d9d74bc29061ab6c7fde9501ebd267bd0d2227a0ffa",
+        "original_numeric_id": 58,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "habilitacao-e-formacao-de-condutores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A legislação federal afasta a obrigatoriedade de realização prévia de perícia técnica (exame do local) nos casos de acidentes de trânsito em que os veículos ou as vítimas estejam obstruindo o leito da via pública e prejudicarem a fluidez e a segurança do tráfego. De acordo com a Lei nº 5.970/1973, a autoridade ou o agente policial que primeiro tomar conhecimento do fato pode autorizar a imediata remoção das pessoas feridas e dos veículos envolvidos, independentemente de exame pericial do local, devendo apenas lavrar o boletim de ocorrência detalhado. Portanto, a assertiva erra ao condicionar a remoção à realização prévia da perícia.\n\n**Dispositivo legal**\n\n[Art. 1º da Lei nº 5.970/1973](https://www.planalto.gov.br/ccivil_03/leis/1970-1979/l5970.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "a2f253a9efe88d66f2ff647a8ac64c22bb57d33945d6002ad9af034cdd5fb832"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:060",
+      "source_id": "policial_rodoviario_federal:60",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à legislação de trânsito brasileira, julgue os itens a seguir.\n\nConsidere que, em determinada rodovia federal, tenha havido um acidente, sem vítimas, em que um veículo colidira com outro, do que resultara, para os dois veículos, em avaria e em dano patrimonial. Nessa situação hipotética, o causador do acidente deverá preservar o local, a fim de facilitar os trabalhos da polícia e da perícia, sob pena de responder por grave infração administrativa de trânsito.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 60; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Infrações, Penalidades e Medidas Administrativas",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação de Trânsito",
+        "source_content_hash": "6524af26366f3b79a4bc195da05039678a3aff4a0303a209a0e60a437227ee7b",
+        "original_numeric_id": 60,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "infracoes-de-transito-e-penalidades",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Nos acidentes de trânsito em que ocorrem apenas danos materiais (sem vítimas), a regra estabelecida pelo Código de Trânsito Brasileiro (CTB) é inversa à de acidentes com vítimas: os condutores têm o dever de adotar providências para remover imediatamente os veículos do local, visando garantir a segurança e a fluidez do tráfego. Não há dever de preservar o local para perícia, pois não há crime a ser apurado. Caso o condutor deixe de remover o veículo quando a medida for necessária para a fluidez da via, ele comete uma infração de natureza média (e não grave), conforme o art. 178 do CTB.\n\n**Dispositivo legal**\n\n[Arts. 176, III, e 178 da Lei nº 9.503/1997 (Código de Trânsito Brasileiro)](https://www.planalto.gov.br/ccivil_03/leis/l9503compilado.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "7162f1826ddc2797425657b01e1c9d0e9a4d03dae6b58bdf10e6db089ace9df1"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:063",
+      "source_id": "policial_rodoviario_federal:63",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as resoluções do Conselho Nacional de Trânsito (CONTRAN) e suas alterações, julgue os itens que se seguem.\n\nOs objetivos da campanha educativa de trânsito do ano de 2021 incluem divulgar, mensalmente, temas com orientações específicas, as quais promovam, por exemplo, reflexões sobre como lesões e sequelas psicológicas e sociais decorrentes de acidentes de trânsito impactam a vida das vítimas e de seus familiares.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 63; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Resoluções do CONTRAN",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação de Trânsito",
+        "source_content_hash": "1b60ba28bfcf2c06df07af58f461b2085cbd4abc440370f9917ce6faff86ddd1",
+        "original_numeric_id": 63,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "resolucoes-do-contran",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nA Resolução CONTRAN nº 806/2020 estabeleceu a mensagem, os temas e o cronograma das campanhas educativas de trânsito a serem veiculadas em 2021, prevendo orientações mensais específicas direcionadas à conscientização social, entre as quais se incluem reflexões sobre as sequelas físicas, psicológicas e socioeconômicas impostas às vítimas de acidentes e aos seus familiares.",
+        "source_reference": null
+      },
+      "source_content_hash": "35de08371ce8a9cdb5fcb3a23266e637586fd87e211f03438ae5772d2c5f834e"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:064",
+      "source_id": "policial_rodoviario_federal:64",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as resoluções do Conselho Nacional de Trânsito (CONTRAN) e suas alterações, julgue os itens que se seguem.\n\nPara a medição de velocidade de veículos automotores elétricos, reboques e semirreboques em rodovias, utilizam-se medidores de velocidade do tipo fixo; entre estes, somente o medidor de velocidade do tipo fixo redutor deve obrigatoriamente ser dotado de display.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 64; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Resoluções do CONTRAN",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação de Trânsito",
+        "source_content_hash": "9632b9a3b64654279fc771a367565f3b7f2cdff5f2267816cc68288059c0b137",
+        "original_numeric_id": 64,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "resolucoes-do-contran",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Conforme a Resolução CONTRAN nº 798/2020, os medidores de velocidade do tipo fixo são subdivididos em dois tipos:\n1. **Controlador:** destinado a fiscalizar o limite máximo de velocidade da via ou de seu ponto específico, não havendo obrigatoriedade de display.\n2. **Redutor:** destinado a fiscalizar a redução pontual de velocidade estabelecida em relação à velocidade diretriz da via (conhecido popularmente como lombada eletrônica), o qual deve ser obrigatoriamente dotado de display.\n\n**Pegadinha:** O termo \"somente\" costuma indicar erro em questões de concurso, mas neste caso está correto, pois apenas o medidor do tipo fixo redutor exige o display (painel eletrônico que exibe a velocidade registrada).\n\n### Dispositivo legal\nResolução CONTRAN nº 798/2020, Art. 3º, I, \"b\".",
+        "source_reference": null
+      },
+      "source_content_hash": "366a01da829fb1adf758ac3cc30a13c1309e3aa854c062a0920884e9029df48c"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:069",
+      "source_id": "policial_rodoviario_federal:69",
+      "question_type": "true_false",
+      "statement_markdown": "Ainda com relação às resoluções do CONTRAN e suas alterações, julgue os itens subsequentes.\n\nA circulação de veículos em via pode ocorrer a título precário, sendo vedado o transporte de passageiro que esteja em pé no veículo ou que tenha menos de dezoito anos de idade no caso de transporte de passageiros em veículos de carga ou misto.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 69; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Resoluções do CONTRAN",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação de Trânsito",
+        "source_content_hash": "bdf1fba29af40f78e6b21bb5c18bc8cedd9253134a5eae3020b8e088017c0ed3",
+        "original_numeric_id": 69,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "resolucoes-do-contran",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. Embora a circulação de veículos de carga ou misto transportando passageiros no compartimento de cargas possa ocorrer a título precário e seja vedado o transporte de passageiros em pé, a idade mínima permitida para os passageiros nesse tipo de transporte é de **10 (dez) anos**. Portanto, a vedação se aplica a passageiros com idade inferior a 10 anos, e não dezoito anos, como afirmado no enunciado.\n\n**Pegadinha:** A banca tentou confundir o candidato utilizando a maioridade civil/penal (18 anos) como limite de idade, quando a norma de trânsito estabelece o limite de 10 anos para essa restrição de segurança.\n\n### Dispositivo legal\nResolução CONTRAN nº 508/2014, Art. 5º, I.",
+        "source_reference": null
+      },
+      "source_content_hash": "d1338439a5e8a52760f0bc5af6bc3019262c494319813d4f65fa99131a93b47b"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:076",
+      "source_id": "policial_rodoviario_federal:76",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação a limites de peso e dimensões para a circulação de veículos em vias públicas, excetuadas as condições para a emissão das autorizações especiais de trânsito, julgue os itens subsequentes.\n\nA largura máxima autorizada para a circulação de veículos em via pública, com ou sem carga, é de 2,50 metros.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 76; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Habilitação, Registro e Licenciamento de Veículos",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação de Trânsito",
+        "source_content_hash": "abe7a87d869e5a4393f1d234e730261f42529e015cc33052085d05a880f93059",
+        "original_numeric_id": 76,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "habilitacao-e-formacao-de-condutores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nSegundo as resoluções regulamentares de dimensões veiculares do CONTRAN (Resolução CONTRAN nº 210/2006 e atual Resolução CONTRAN nº 882/2021, art. 3º, II), a largura máxima legalmente autorizada para veículos em via pública, com ou sem carga, é de **2,60 metros** (e não 2,50 metros).",
+        "source_reference": null
+      },
+      "source_content_hash": "bc4d22fea7dc8325eee505ddb8c40226cfa7f9730fbb5481c8034af4cd7ee38c"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:077",
+      "source_id": "policial_rodoviario_federal:77",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à fiscalização do tempo de direção e de descanso do motorista profissional, julgue os itens seguintes.\n\nNa condução de veículo de carga com peso bruto total superior a 4.536 kg, é permitido ao motorista profissional dirigir por até seis horas e meia ininterruptas.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 77; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Habilitação, Registro e Licenciamento de Veículos",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação de Trânsito",
+        "source_content_hash": "862e19f048aa3cec37862eaaab6157ce6eeaed51174bd897b3ff48fb6d103498",
+        "original_numeric_id": 77,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "habilitacao-e-formacao-de-condutores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. De acordo com o art. 67-C do Código de Trânsito Brasileiro (CTB), é vedado ao motorista profissional dirigir por mais de **5 (cinco) horas e meia** ininterruptas na condução de veículo de transporte rodoviário de cargas (com peso bruto total superior a 4.536 kg). Portanto, o limite máximo contínuo permitido é de cinco horas e meia, e não seis horas e meia.\n\n**Pegadinha:** O limite de 6 horas refere-se ao período dentro do qual o motorista de carga deve observar um descanso de 30 minutos (30 minutos dentro de cada 6 horas de condução), mas o tempo máximo de direção *ininterrupta* é de 5 horas e meia.\n\n### Dispositivo legal\nCódigo de Trânsito Brasileiro, Art. 67-C.",
+        "source_reference": null
+      },
+      "source_content_hash": "0f7425c3762183f7c05bfd0cb8b87316665149308b01e4c36c4f357c14c904b0"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:078",
+      "source_id": "policial_rodoviario_federal:78",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à fiscalização do tempo de direção e de descanso do motorista profissional, julgue os itens seguintes.\n\nA fiscalização do tempo de direção e do intervalo de descanso pode ocorrer por meio da verificação do diário de bordo, da papeleta ou da ficha de trabalho externo, fornecidos pelo empregador.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 78; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Código de Trânsito Brasileiro (CTB)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação de Trânsito",
+        "source_content_hash": "189870938b1e77b9423faccbb56e7b5b10fd1c025cba35fa6c7c82d7f24f4c43",
+        "original_numeric_id": 78,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "codigo-de-transito-brasileiro-ctb",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmativa está correta. De acordo com a regulamentação do Conselho Nacional de Trânsito (CONTRAN), a fiscalização do tempo de direção e do intervalo de descanso do motorista profissional pode ser realizada por meio de verificação documental.\n\nAdmite-se a verificação do diário de bordo, da papeleta ou da ficha de trabalho externo, os quais devem ser fornecidos pelo empregador. Essa fiscalização por meio de documentos manuais ou físicos é de caráter supletivo, sendo realizada quando houver impossibilidade de comprovação pelo registrador instantâneo e inalterável de velocidade e tempo (tacógrafo) do próprio veículo.\n\n**Detalhe importante:** O agente de trânsito deve registrar seu nome, matrícula, data, hora e local da fiscalização no próprio documento verificado para fins de controle e autenticidade.\n\n### Dispositivo legal\n* **Resolução CONTRAN nº 525/2015, Art. 2º, inciso II e § 1º**\n* **URL Oficial:** [Portal de Serviços SENATRAN](https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/resolucoes)",
+        "source_reference": null
+      },
+      "source_content_hash": "4294127fa652c76b6f43ab97b3f146d5319497a5673dfd3528822422dc87f255"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:081",
+      "source_id": "policial_rodoviario_federal:81",
+      "question_type": "true_false",
+      "statement_markdown": "No que concerne a campanha educativa de trânsito e fiscalização de peso dos veículos por balança rodoviária, julgue os itens que se seguem.\n\nExcetuados os produtos perigosos e a critério do policial rodoviário federal, desde que observadas as condições de segurança, produtos perecíveis e cargas vivas podem ser dispensados do remanejamento ou transbordo em caso de excesso de peso veicular.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 81; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Habilitação, Registro e Licenciamento de Veículos",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação de Trânsito",
+        "source_content_hash": "44c946fa9e4e6a5e6465bfcacacde6fdaae554fdf20c2b07c754783431416119",
+        "original_numeric_id": 81,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "habilitacao-e-formacao-de-condutores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmativa está incorreta. O erro reside em excepcionar os produtos perigosos da possibilidade de dispensa de remanejamento ou transbordo.\n\nDe acordo com as normas de fiscalização de peso do CONTRAN, os produtos perigosos estão expressamente incluídos no rol de cargas que podem ser dispensadas dessas medidas administrativas. A critério do agente de trânsito, avaliados os riscos e as condições de segurança, a dispensa de remanejamento ou transbordo pode ser aplicada a:\n1. Produtos perigosos;\n2. Produtos perecíveis;\n3. Cargas vivas;\n4. Passageiros.\n\nPortanto, os produtos perigosos não são excluídos, mas sim expressamente contemplados pela possibilidade de dispensa.\n\n### Dispositivo legal\n* **Resolução CONTRAN nº 882/2021, Art. 54, § 1º**\n* **URL Oficial:** [Portal de Serviços SENATRAN](https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/resolucoes)",
+        "source_reference": null
+      },
+      "source_content_hash": "a68ebb58bb4967d725d875b821f01d6c6c11979b090c61066e72d92956025b72"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:082",
+      "source_id": "policial_rodoviario_federal:82",
+      "question_type": "true_false",
+      "statement_markdown": "No que concerne a campanha educativa de trânsito e fiscalização de peso dos veículos por balança rodoviária, julgue os itens que se seguem.\n\nO slogan da campanha educativa de trânsito de 2021, a qual deve ser veiculada, obrigatoriamente, nos meios de comunicação social, em toda peça publicitária de produtos automobilísticos, é: “No trânsito, sua responsabilidade salva vidas”.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 82; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Habilitação, Registro e Licenciamento de Veículos",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação de Trânsito",
+        "source_content_hash": "f4729a42a7461fd6c246b464b0d4e412ccfe7ff3cb4d643c79cc48b0d9d94455",
+        "original_numeric_id": 82,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "habilitacao-e-formacao-de-condutores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nA Resolução CONTRAN nº 806/2020 determinou expressamente que as peças publicitárias de produtos da indústria automobilística veiculassem, durante o ano de 2021, a seguinte frase de advertência: \"No trânsito, sua responsabilidade salva vidas\", em cumprimento às diretrizes do Código de Trânsito Brasileiro (art. 76 e 77-B).",
+        "source_reference": null
+      },
+      "source_content_hash": "a469cecbed4a7b61262146e6fabbd0d2b005d4cd512f97573bfabb74365b8329"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:084",
+      "source_id": "policial_rodoviario_federal:84",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos requisitos mínimos de segurança para o transporte de cargas em veículos, julgue os próximos itens.\n\nQuando não há pontos de amarração adequados ou em número suficiente, pode-se realizar a fixação dos dispositivos de amarração no próprio chassi do veículo.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 84; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Habilitação, Registro e Licenciamento de Veículos",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação de Trânsito",
+        "source_content_hash": "c60c9979cc877f97f836f67670a2dbdf1172ba681f07cff6647bafc69d00b681",
+        "original_numeric_id": 84,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "habilitacao-e-formacao-de-condutores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmativa está correta. A legislação de trânsito estabelece requisitos rígidos para a amarração de cargas, visando à segurança viária.\n\nComo regra geral, os dispositivos de amarração devem ser fixados em pontos adequados e em número suficiente na estrutura metálica da carroceria. Contudo, na inexistência de pontos de amarração adequados ou em quantidade suficiente, a norma autoriza expressamente que a fixação seja feita diretamente no próprio chassi do veículo.\n\n**Pegadinha:** É expressamente proibida a fixação exclusiva dos dispositivos de amarração no piso de madeira ou em pontos constituídos de madeira, devendo-se utilizar o chassi ou as travessas metálicas.\n\n### Dispositivo legal\n* **Resolução CONTRAN nº 945/2022, Art. 4º, § 5º**\n* **URL Oficial:** [Portal de Serviços SENATRAN](https://www.gov.br/transportes/pt-br/assuntos/transito/senatran/resolucoes)",
+        "source_reference": null
+      },
+      "source_content_hash": "e875d9eb5eeec883dd134e24b5230f453668e0f7b2575e022e4dbe6cde89335c"
+    }
+  ]
+}

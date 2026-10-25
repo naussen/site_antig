@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-agente_administrativo-arquivologia-fcfa6b700b0d-2c3a08192e7c",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "fcfa6b700b0d7af66de15ad5ae7dcd0691da76a4b338ccb8eb37ccf7eeb46d06",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "95f70efef6886dec632debbde86efe1189f22da6fd35c7aba8deaf2afc4b8a3c",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "2c3a08192e7c5d183d5f00382e727a9b26707c626e1ec7f112cc386b8af39336",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "arquivologia",
+    "name": "Arquivologia"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:080",
+      "source_id": "agente_administrativo:80",
+      "question_type": "true_false",
+      "statement_markdown": "À luz da legislação que dispõe sobre a política nacional de arquivos e dos preceitos arquivísticos, julgue os próximos itens.\n\nNa gestão de documentos, a atividade de arquivamento se refere à ordenação adequada do documento de acordo com sua classificação e sua temporalidade, com o intuito de garantir sua destinação final adequada.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 80; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gerenciamento da Informação e a Gestão de Documentos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "154fc6ebe9360aa9cff6b78ac226aa1eba18fe78468c430d21cd25897f2d6777",
+        "original_numeric_id": 80,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8159.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "gerenciamento-da-informacao-e-a-gestao-de-documentos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nNa teoria arquivística e na gestão documental (Lei nº 8.159/1991), o arquivamento compreende a etapa operacional de acondicionamento, ordenação física e lógica dos documentos segundo o plano/código de classificação estabelecido, com observância estrita dos prazos de guarda da tabela de temporalidade para que se assegure sua destinação final correta (eliminação autorizada ou recolhimento para guarda permanente).",
+        "source_reference": null
+      },
+      "source_content_hash": "ef035c58fe64be7900af860ff582b90e1568ba618627971e62c64924e187fd6f"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:083",
+      "source_id": "agente_administrativo:83",
+      "question_type": "true_false",
+      "statement_markdown": "Com referência à gestão, classificação e temporalidade de documentos, julgue os itens que se seguem.\n\nNo âmbito do estado do Espírito Santo, o código de classificação e a tabela de temporalidade são instrumentos arquivísticos produzidos e utilizados apenas pelo Arquivo Público Municipal de Cultura Evandro Moreira.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 83; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gerenciamento da Informação e a Gestão de Documentos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "649d4ca80668272ba354b07f3db2531a408cc0edf5bc7d9f4ba4448d9456e066",
+        "original_numeric_id": 83,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8159.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "gerenciamento-da-informacao-e-a-gestao-de-documentos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nO código de classificação e a tabela de temporalidade são instrumentos essenciais de gestão documental de aplicação generalizada e padronizada em todos os órgãos da administração pública. No Estado do Espírito Santo, o Arquivo Público do Estado (APEES) edita e regulamenta os planos e tabelas de temporalidade para a administração pública estadual, não sendo privativos do Arquivo Municipal Evandro Moreira.",
+        "source_reference": null
+      },
+      "source_content_hash": "c3d4dd7c761a2656b3179d5088a508c04c397b81ec2425f30fd78e04ddc136b3"
+    }
+  ]
+}

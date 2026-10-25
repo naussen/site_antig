@@ -1,0 +1,755 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_em_enfermagem-legislacao-aplicada-a-ebserh-76f64f3ddf4d-01126460a929",
+  "source": {
+    "file_name": "tecnico_em_enfermagem_ATUALIZADO.json",
+    "sha256": "76f64f3ddf4d3822e329101339345d50044b899f9b8fae52267aeb267323adcc",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_em_enfermagem.json",
+      "original_source_sha256": "d82e5bb88e01f70ff10fe33c96068be4d04a647ee9eeb9d4154c94a2180a057d",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "01126460a929c2ba0950d30aaadbf4122902ae2adf9d5a74cc31f0cf1061785b",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "legislacao-aplicada-a-ebserh",
+    "name": "Legislação Aplicada à EBSERH"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:031",
+      "source_id": "tecnico_em_enfermagem:31",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A Lei nº 12.550/2011 autoriza o Poder Executivo a criar a empresa pública denominada Empresa Brasileira de Serviços Hospitalares (EBSERH). Acerca das disposições da mencionada lei, assinale a alternativa correta.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 31; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "A EBSERH terá sede e foro em Brasília, Distrito Federal, e poderá manter escritórios, representações e dependências em outras unidades da Federação, mas não poderá manter filiais em outros Estados",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "A EBSERH não está autorizada a criar subsidiárias",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "A EBSERH terá seu capital social integralmente sob a propriedade da União",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "A EBSERH terá por finalidade a prestação de serviços privados e pagos de assistência médico-hospitalar, ambulatorial e de apoio diagnóstico e terapêutico à comunidade",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "As atividades de prestação de serviços de assistência à saúde prestados pela EBSERH não se encontra no âmbito do Sistema Único de Saúde - SUS",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Lei de Criação da EBSERH (Lei nº 12.550/2011)",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - EBSERH",
+        "source_content_hash": "873bcdddc0d7bbf0fd0c79232aec48737a863cd54c12ce8d3a69a9813aa586bd",
+        "original_numeric_id": 31,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12550.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "criacao-da-ebserh-lei-12550",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A análise das alternativas fundamenta-se nas disposições da Lei nº 12.550/2011, que autoriza a criação da EBSERH:\n\n* **Alternativa A (Incorreta):** O artigo 1º, § 1º, estabelece que a EBSERH poderá manter escritórios, representações, dependências e **filiais** em outras unidades da Federação.\n* **Alternativa B (Incorreta):** O artigo 1º, § 2º, autoriza expressamente a EBSERH a criar subsidiárias.\n* **Alternativa C (Correta):** Conforme o artigo 2º, o capital social da EBSERH será integralmente sob a propriedade da União.\n* **Alternativa D (Incorreta):** A finalidade da EBSERH é a prestação de serviços **gratuitos** de assistência médico-hospitalar, ambulatorial e de apoio diagnóstico e terapêutico à comunidade, no âmbito do SUS (artigo 3º, § 1º).\n* **Alternativa E (Incorreta):** As atividades de prestação de serviços de assistência à saúde da EBSERH inserem-se, integral e exclusivamente, no âmbito do Sistema Único de Saúde - SUS (artigo 3º, § 1º).\n\n**Dispositivo legal**\n\n[Lei nº 12.550/2011, Artigos 1º, 2º e 3º](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12550.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "650127dff51d31605a50c5ac0ef8f8d93d0829559d51992b1ca72d00b1d91855"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:032",
+      "source_id": "tecnico_em_enfermagem:32",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com a Lei nº 12.550/2011, assinale a alternativa que apresente incorretamente uma das competências da Empresa Brasileira de Serviços Hospitalares (EBSERH):",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 32; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Prestar às instituições federais de ensino superior e a outras instituições congêneres serviços de apoio ao ensino, à pesquisa e à extensão, ao ensino-aprendizagem e à formação de pessoas no campo da saúde pública, mediante as condições que forem fixadas em seu estatuto social",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Prestar serviços de apoio à geração do conhecimento em pesquisas básicas, clínicas e aplicadas nos hospitais universitários federais e a outras instituições congêneres",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Prestar serviços de apoio ao processo de gestão dos hospitais universitários e federais e a outras instituições congêneres, com implementação de sistema de gestão único com geração de indicadores quantitativos e qualitativos para o estabelecimento de metas",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Prestar serviços e arrecadar, fiscalizar, lançar e normatizar o recolhimento das contribuições sociais",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Exercer outras atividades inerentes às suas finalidades, nos termos do seu estatuto social",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Lei de Criação da EBSERH (Lei nº 12.550/2011)",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - EBSERH",
+        "source_content_hash": "223e283008ec953e2827fea6e90f0bc53925c16d1ed28ad1f6316ba92febe171",
+        "original_numeric_id": 32,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12550.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "criacao-da-ebserh-lei-12550",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão solicita a alternativa que apresenta **incorretamente** uma competência da EBSERH. \n\n* **Alternativa D (Incorreta/Gabarito):** A atividade de \"arrecadar, fiscalizar, lançar e normatizar o recolhimento das contribuições sociais\" é uma competência de natureza tributária e previdenciária, típica de órgãos da administração direta (como a Secretaria da Receita Federal do Brasil), não guardando relação com as finalidades institucionais da EBSERH.\n\nAs demais alternativas reproduzem fielmente as competências previstas no artigo 4º da Lei nº 12.550/2011:\n* **Alternativa A:** Corresponde ao inciso II do art. 4º.\n* **Alternativa B:** Corresponde ao inciso IV do art. 4º.\n* **Alternativa C:** Corresponde ao inciso V do art. 4º.\n* **Alternativa E:** Corresponde ao inciso VI do art. 4º.\n\n**Dispositivo legal**\n\n[Artigo 4º da Lei nº 12.550, de 15 de dezembro de 2011](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12550.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "9ec33f531f7e89a45a11d5ede289417c3d7d2c76c86755f766709c4a20e9e405"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:033",
+      "source_id": "tecnico_em_enfermagem:33",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O Regimento Interno da Empresa Brasileira de Serviços Hospitalares (EBSERH) trata dos Colegiados Internos. Sobre o assunto, assinale a alternativa que apresente a definição de Câmara Técnica:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 33; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "De duração perene ou temporária, atua de forma consultiva no nível operacional, composta por equipe multidisciplinar da Administração Central e dos HUFs da Rede Ebserh, analisando detalhadamente temas de tecnologia da informação e propondo padronizações técnicas e definições de melhores práticas, quanto a sistemas e a infraestrutura de TI",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "De duração perene, atua de forma consultiva no nível tático, composta por profissionais de referência na área de atuação, analisando detalhadamente temas específicos e de grande amplitude, como padronizações técnicas e definições de melhores práticas",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "De duração perene ou temporária, atua de forma consultiva ou executiva no nível tático operacional, analisando detalhadamente temas específicos e de grande amplitude, procurando aprofundar discussões técnicas ou administrativas",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "De duração perene, atua de forma consultiva no nível estratégico, formulando e avaliando políticas e diretrizes de natureza corporativa, planejando e coordenando ações transversais à organização com ampla abrangência, propondo soluções integradas para problemas complexos",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "De duração temporária, atua de forma consultiva ou executiva no nível técnico operacional, na execução de ações ou projetos específicos, com prazo preestabelecido, proposing soluções para problemas determinados ou executando ações transversais que envolvam mais de uma área organizacional",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Regimento Interno e Estatuto Social da EBSERH",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - EBSERH",
+        "source_content_hash": "fb4dda2fbbd1c47d747f44e3a3928dd537b62d31c2f1a006d5818dab4909e15f",
+        "original_numeric_id": 33,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/ebserh/pt-br/acesso-a-informacao/institucional/regimento-interno"
+      },
+      "topics": [
+        {
+          "topic_id": "estatuto-social-da-ebserh",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige o conhecimento das definições dos Colegiados Internos previstas no Regimento Interno da Rede Ebserh. \n\nA **Câmara Técnica** é definida como um colegiado de **duração perene**, que atua de forma **consultiva no nível tático**, sendo composta por profissionais de referência na área de atuação para analisar detalhadamente temas específicos e de grande amplitude (como padronizações técnicas e melhores práticas). Portanto, a **alternativa B** está correta.\n\n**Análise das alternativas incorretas:**\n* **A** está incorreta pois mistura atribuições de comitês específicos de tecnologia da informação e prevê duração perene ou temporária no nível operacional.\n* **C** está incorreta ao prever atuação \"executiva no nível tático operacional\", o que descaracteriza a natureza eminentemente consultiva e tática da Câmara Técnica.\n* **D** descreve a atuação no nível estratégico, que é característica dos **Comitês**, e não das Câmaras Técnicas.\n* **E** descreve a atuação de **Grupos de Trabalho**, que possuem duração temporária e foco na execução de ações ou projetos específicos com prazo preestabelecido.\n\n**Dispositivo legal**\n\n[Regimento Interno da Rede Ebserh, Artigo 14, Inciso I](https://www.gov.br/ebserh/pt-br/acesso-a-informacao/institucional/regimento-interno)",
+        "source_reference": null
+      },
+      "source_content_hash": "c1edc72907ee214e21805cffce4eb5de5d04f3d9d5a421b29eac87630d6fe904"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:034",
+      "source_id": "tecnico_em_enfermagem:34",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Para atendimento do objeto social da empresa, a Administração Central da Rede Ebserh terá Assembleia Geral e os órgãos estatutários listados no Regimento Interno da Empresa Brasileira de Serviços Hospitalares (EBSERH). Sobre o assunto, assinale um órgão estatutário não listado no Regimento Interno:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 34; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Conselho de Administração",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Diretoria Executiva",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Conselho Fiscal",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Conselho de Fomento e Colaboração",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Comitê de Auditoria",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Regimento Interno e Estatuto Social da EBSERH",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - EBSERH",
+        "source_content_hash": "d7a47d86a81342cce8cdaebfe04d3fb884a2fbc4708808762600efb508ac1430",
+        "original_numeric_id": 34,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/ebserh/pt-br/acesso-a-informacao/institucional/regimento-interno"
+      },
+      "topics": [
+        {
+          "topic_id": "estatuto-social-da-ebserh",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão solicita a identificação do órgão que **não** faz parte do rol de órgãos estatutários da Administração Central da Rede Ebserh.\n\nDe acordo com o Regimento Interno, os órgãos estatutários são:\n1. Conselho de Administração (Alternativa A)\n2. Diretoria Executiva (Alternativa B)\n3. Conselho Fiscal (Alternativa C)\n4. Conselho Consultivo\n5. Comitê de Auditoria (Alternativa E)\n6. Comitê de Pessoas, Elegibilidade, Sucessão e Remuneração\n\nO **Conselho de Fomento e Colaboração** (Alternativa D) não possui previsão no Regimento Interno da empresa, tratando-se de uma criação da banca examinadora para servir como distrator.\n\n**Dispositivo legal**\n\n[Regimento Interno da Rede Ebserh, Artigo 3º](https://www.gov.br/ebserh/pt-br/acesso-a-informacao/institucional/regimento-interno)",
+        "source_reference": null
+      },
+      "source_content_hash": "6b4d8764036cd1af18acbeab48b30f4ab10663cfeb958cc1a7242adf08c13703"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:035",
+      "source_id": "tecnico_em_enfermagem:35",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Leia abaixo o artigo 4º do Código de Ética e Conduta da Empresa Brasileira de Serviços Hospitalares (EBSERH):\nArt. 4º. Os princípios éticos, tais como o ______, o ______, a ______ e a consciência dos princípios morais, deverão ser considerados em todas as decisões dos gestores, bem como em todos os relacionamentos empreendidos no âmbito da empresa, com o objetivo de contribuir para a construção e a consolidação da identidade da Ebserh como uma instituição que preza pela preservação da ética em todos os seus atos e instâncias.\n\nAssinale a alternativa que preencha correta e respectivamente as lacunas.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 35; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "confisco / zelo / publicidade",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "afinco / rigor / disposição",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "empenho / interesse / improbidade",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "esforço / desvelo / isonomia",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "decoro / zelo / eficácia",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Código de Ética e Conduta da EBSERH",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - EBSERH",
+        "source_content_hash": "6b56aa9b82ae7b0b7ead856d7a98c8c328b354780f3fd0066ba3812083b065fe",
+        "original_numeric_id": 35,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/ebserh/pt-br/acesso-a-informacao/comissao-de-etica/codigo-de-etica-e-conduta-da-ebserh"
+      },
+      "topics": [
+        {
+          "topic_id": "codigo-de-etica-e-conduta-da-ebserh",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a complementação literal do Artigo 4º do Código de Ética e Conduta da EBSERH.\n\nO texto original do artigo dispõe:\n> \"Art. 4º. Os princípios éticos, tais como o **decoro**, o **zelo**, a **eficácia** e a consciência dos princípios morais, deverão ser considerados em todas as decisões dos gestores...\"\n\nPortanto, os termos que preenchem correta e respectivamente as lacunas são **decoro**, **zelo** e **eficácia**, o que torna a **alternativa E** a correta.\n\nAs demais alternativas trazem palavras alheias ao texto do dispositivo (como \"confisco\", \"afinco\", \"empenho\", \"esforço\", \"improbidade\"), desfigurando a norma ética expressa no código.\n\n**Dispositivo legal**\n\n[Código de Ética e Conduta da EBSERH, Artigo 4º](https://www.gov.br/ebserh/pt-br/acesso-a-informacao/comissao-de-etica/codigo-de-etica-e-conduta-da-ebserh)",
+        "source_reference": null
+      },
+      "source_content_hash": "4615590f0ca8b20f6b6f665181a4be29d145a4806d9924c058a4ef5334ea9d89"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:036",
+      "source_id": "tecnico_em_enfermagem:36",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com o Estatuto Social da Empresa Brasileira de Serviços Hospitalares (EBSERH), analise as afirmativas abaixo e dê valores de Verdadeiro (V) ou Falso (F).\n( ) O prazo de duração da Ebserh é indeterminado.\n( ) No desenvolvimento de suas atividades de ensino, a Ebserh observará as orientações da Política Nacional de Educação, de responsabilidade do Ministério da Educação.\n( ) No desenvolvimento de suas atividades de assistência à saúde, a Ebserh observará as orientações da Política Nacional de Previdência Social, de responsabilidade do Ministério do Desenvolvimento.\nAssinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 36; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "V - V - V",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "V - F - V",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "F - F - V",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "V - V - F",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "F - V - F",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Regimento Interno e Estatuto Social da EBSERH",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - EBSERH",
+        "source_content_hash": "de05c62e06c6496836f17814e84d6121bc0d0c85f48ec978d035604576f0ff9a",
+        "original_numeric_id": 36,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/ebserh/pt-br/acesso-a-informacao/institucional/legislacao-e-normas/rede-ebserh/estatuto-social.pdf/view"
+      },
+      "topics": [
+        {
+          "topic_id": "estatuto-social-da-ebserh",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise detalhada das afirmativas com base no Estatuto Social da EBSERH:\n\n* **Primeira afirmativa (V):** \"O prazo de duração da Ebserh é indeterminado.\" \n  * *Justificativa:* Está em perfeita consonância com o Artigo 3º do Estatuto Social, que define o prazo de duração da empresa como indeterminado.\n\n* **Segunda afirmativa (V):** \"No desenvolvimento de suas atividades de ensino, a Ebserh observará as orientações da Política Nacional de Educação, de responsabilidade do Ministério da Educação.\"\n  * *Justificativa:* Corresponde fielmente ao teor do Artigo 4º, § 2º do Estatuto Social.\n\n* **Terceira afirmativa (F):** \"No desenvolvimento de suas atividades de assistência à saúde, a Ebserh observará as orientações da Política Nacional de Previdência Social, de responsabilidade do Ministério do Desenvolvimento.\"\n  * *Justificativa:* **Incorreta.** O Artigo 4º, § 3º determina que, nas atividades de assistência à saúde, a EBSERH observará as orientações da **Política Nacional de Saúde**, de responsabilidade do **Ministério da Saúde**. A banca realizou uma troca de conceitos e ministérios para confundir o candidato.\n\nA sequência correta é, portanto, **V - V - F** (Alternativa D).\n\n**Dispositivo legal**\n\n[Estatuto Social da EBSERH, Artigo 3º e Artigo 4º, §§ 2º e 3º](https://www.gov.br/ebserh/pt-br/acesso-a-informacao/institucional/legislacao-e-normas/rede-ebserh/estatuto-social.pdf/view)",
+        "source_reference": null
+      },
+      "source_content_hash": "090566ba9b1a5c1c3b2e37ed15f71d3fd9fb9b76f40812b908e565b50c4180e6"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:037",
+      "source_id": "tecnico_em_enfermagem:37",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Acerca das disposições do Regulamento de Pessoal da Empresa Brasileira de Serviços Hospitalares (EBSERH) sobre cargos, cargos em comissão e funções gratificadas, assinale a alternativa incorreta.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 37; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Os cargos em comissão e as funções gratificadas constituem cargos de confiança e caracterizam-se por atividades de direção, assessoramento ou chefia",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Os cargos serão providos por concurso público, em cumprimento ao art. 10 da Lei nº 12.550/2011, na forma como se dispuser o Plano de Cargos, Carreiras e Salários – PCCS, ou legislação superior superveniente",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Os cargos em comissão e as funções gratificadas para as estruturas da sede e das filiais têm a sua classificação, descrição e atribuições apresentadas no Plano de Cargos em Comissão e Funções Gratificadas – PCCFG",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "O cargo em comissão e a função gratificada, demissíveis ad nutum, serão providos por ato do Presidente da Empresa ou seu substituto legal, por meio de portaria publicada no boletim de serviço disponível no sítio eletrônico da EBSERH",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "O cargo em comissão e a função gratificada prescindem, para o seu exercício, de comprovada qualificação profissional, adequada para a área de atuação",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Regimento Interno e Estatuto Social da EBSERH",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - EBSERH",
+        "source_content_hash": "e68c73973bb8876d0619009232f0bcd38999d9f88634daab6a2955c6e1017b5d",
+        "original_numeric_id": 37,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/ebserh/pt-br/acesso-a-informacao/agentes-publicos/regulamento-de-pessoal-ebserh"
+      },
+      "topics": [
+        {
+          "topic_id": "estatuto-social-da-ebserh",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão solicita a alternativa **incorreta** a respeito das regras de pessoal da EBSERH.\n\n* **Análise da alternativa incorreta (Gabarito E):** A assertiva afirma que o cargo em comissão e a função gratificada \"prescindem\" (ou seja, dispensam/não necessitam) de comprovada qualificação profissional. Contudo, o Artigo 6º do Regulamento de Pessoal estabelece justamente o oposto: eles **exigem**, para o seu exercício, comprovada qualificação profissional adequada para a área de atuação.\n\n* **Análise das alternativas corretas (que não devem ser assinaladas):**\n  * **A** está correta, pois reproduz o Artigo 5º, parágrafo único (cargos de confiança voltados à direção, chefia e assessoramento).\n  * **B** está correta, pois reflete a exigência constitucional e legal de concurso público para provimento de cargos permanentes (Artigo 4º).\n  * **C** está correta, pois indica o PCCFG como o instrumento de classificação e descrição dessas funções (Artigo 5º, § 2º).\n  * **D** está correta, pois descreve a livre nomeação e exoneração (*ad nutum*) por ato do Presidente, com publicação em boletim de serviço (Artigo 5º, § 1º).\n\n**Dispositivo legal**\n\n[Regulamento de Pessoal da EBSERH, Artigos 4º, 5º e 6º](https://www.gov.br/ebserh/pt-br/acesso-a-informacao/agentes-publicos/regulamento-de-pessoal-ebserh)",
+        "source_reference": null
+      },
+      "source_content_hash": "91a467df9ad7cda5b26fa12c2ab345fbcb49b935c9e2b525acdb65bd1d54445d"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:038",
+      "source_id": "tecnico_em_enfermagem:38",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A Norma Operacional de Controle Disciplinar dispõe sobre o procedimento apuratório para aplicação da penalidade disciplinar, no âmbito da Empresa Brasileira de Serviços Hospitalares-EBSERH. De acordo com o mencionado diploma normativo, assinale a alternativa que apresenta a correta definição de comissão apuradora.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 38; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Comissão designada pela autoridade instauradora e responsável pela condução do procedimento administrativo durante o período de vigência da portaria",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "Autoridade com competência para instaurar o procedimento disciplinar",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Comissão que se realiza mediante ação ou que se perpetua com o resultado da omissão",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Autoridade com competência para julgar o procedimento disciplinar",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Comissão que realiza a comunicação formal ao empregado para ciência, a partir da qual o agente se torna acusado no PAS",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Regimento Interno e Estatuto Social da EBSERH",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - EBSERH",
+        "source_content_hash": "f0dc9717e79275bd68e580f7dbf6f0bac45ebebbba016f5b99d3ab5bda2ca63c",
+        "original_numeric_id": 38,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/ebserh/pt-br"
+      },
+      "topics": [
+        {
+          "topic_id": "estatuto-social-da-ebserh",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito está correto na alternativa **A**. De acordo com a Norma Operacional de Controle Disciplinar da EBSERH, a comissão apuradora é o colegiado especificamente designado pela autoridade instauradora com a atribuição de conduzir o procedimento administrativo disciplinar durante o prazo de vigência do ato de sua designação (portaria).\n\nAs demais alternativas estão incorretas porque:\n* **B e D** descrevem autoridades singulares (instauradora e julgadora, respectivamente), e não uma comissão colegiada.\n* **C** traz uma definição genérica de conduta comissiva ou omissiva, sem relação com o conceito de comissão apuradora.\n* **E** descreve o ato de citação ou notificação do acusado, e não a definição da comissão em si.\n\n**Dispositivo legal**\n\n[Norma Operacional de Controle Disciplinar da EBSERH, Art. 6º](https://www.gov.br/ebserh/pt-br)",
+        "source_reference": null
+      },
+      "source_content_hash": "dc1ffe22b9340d83906ea18506aa1f84e9ba308b1f3c01f7bb88852510665485"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:039",
+      "source_id": "tecnico_em_enfermagem:39",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sobre o Regulamento de Licitações e Contratos da Empresa Brasileira de Serviços Hospitalares (EBSERH), analise as afirmativas abaixo.\n\nI. As contratações serão precedidas de licitação, ressalvados os casos previstos no regulamento, e destinam-se a assegurar a seleção da proposta mais vantajosa, inclusive no que se refere ao ciclo de vida do objeto, e a evitar operações em que se caracterize sobrepreço ou superfaturamento.\nII. Nos procedimentos de contratação devem ser observados os princípios da impessoalidade, da legalidade, da moralidade, da igualdade, da publicidade, da eficiência, da probidade administrativa, da economicidade, do desenvolvimento nacional sustentável, da vinculação ao instrumento convocatório, da obtenção de competitividade, do julgamento objetivo e do formalismo moderado.\nIII. A contratação da qual decorra impacto negativo sobre bens do patrimônio cultural, histórico, arqueológico e imaterial tombados dependerá de prévia autorização da esfera de governo encarregada da proteção do respectivo patrimônio, devendo o impacto ser compensado por meio de medidas determinadas pela Diretoria Executiva, na forma da legislação aplicável.\n\nAssinale a alternativa correta.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 39; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "As afirmativas I, II e III estão corretas",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "Apenas as afirmativas I e II estão corretas",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Apenas as afirmativas II e III estão corretas",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Apenas as afirmativas I e III estão corretas",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Apenas a afirmativa I está correta",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Regimento Interno e Estatuto Social da EBSERH",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - EBSERH",
+        "source_content_hash": "042022a17efe6bc9156634df5792e1d52cb6afb67e8fe1931d47edc42b510d77",
+        "original_numeric_id": 39,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/ebserh/pt-br/acesso-a-informacao/licitacoes-e-contratos/regulamento-de-licitacoes-e-contratos"
+      },
+      "topics": [
+        {
+          "topic_id": "estatuto-social-da-ebserh",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito está correto na alternativa **A**, pois todas as afirmativas estão em perfeita consonância com o Regulamento de Licitações e Contratos da EBSERH (RLCE):\n\n* **Afirmativa I (Correta):** Reproduz o *caput* do Art. 2º, que estabelece a obrigatoriedade de licitação como regra, visando à seleção da proposta mais vantajosa (considerando o ciclo de vida do objeto) e à prevenção de sobrepreço ou superfaturamento.\n* **Afirmativa II (Correta):** Reflete o *caput* do Art. 3º, listando os princípios aplicáveis às contratações da EBSERH, incluindo o princípio do \"formalismo moderado\", que busca evitar o apego excessivo a formalidades burocráticas em detrimento do interesse público.\n* **Afirmativa III (Correta):** Reproduz o parágrafo único do Art. 2º, que trata da proteção ao patrimônio cultural, histórico, arqueológico e imaterial, exigindo autorização prévia do órgão competente e medidas compensatórias determinadas pela Diretoria Executiva.\n\n**Dispositivo legal**\n\n[Regulamento de Licitações e Contratos da EBSERH, Art. 2º e Art. 3º](https://www.gov.br/ebserh/pt-br/acesso-a-informacao/licitacoes-e-contratos/regulamento-de-licitacoes-e-contratos)",
+        "source_reference": null
+      },
+      "source_content_hash": "cbeaa16ed505f74c0e7724ee9cd2212c359cbd69d37efe3a82df9c18e0f501d4"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:040",
+      "source_id": "tecnico_em_enfermagem:40",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Assinale a alternativa que apresenta correta e respectivamente a ordem das fases das contratações que são tratadas no Regulamento de Licitações e Contratos da Empresa Brasileira de Serviços Hospitalares (EBSERH).",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 40; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Formalização da Demanda; Gestão do Contrato e; Seleção de Fornecedor",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Gestão do Contrato; Planejamento da Contratação; Seleção de Fornecedor e; Formalização da Demanda",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Planejamento da Contratação; Formalização da Demanda; Gestão do Contrato e; Seleção de Fornecedor",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Formalização da Demanda; Planejamento da Contratação; Seleção de Fornecedor e; Gestão do Contrato",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Seleção de Fornecedor; Planejamento da Contratação e; Gestão do Contrato",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Regimento Interno e Estatuto Social da EBSERH",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação - EBSERH",
+        "source_content_hash": "69fe86bf7640c8fb5477b175fc615a893aaed12c8b23916561306d1bee0b0932",
+        "original_numeric_id": 40,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12550.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "estatuto-social-da-ebserh",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nO Art. 12 da Lei nº 12.550/2011, que autorizou a criação da Empresa Brasileira de Serviços Hospitalares (EBSERH), estabelece:\n\n*\"Art. 12. A EBSERH, para fins de implantação, poderá realizar contratação de pessoal por tempo determinado, com base no inciso IX do art. 37 da Constituição Federal.*  \n*§ 1º Considera-se como necessidade temporária de excepcional interesse público a contratação de pessoal técnico e administrativo estritamente necessário à implantação dos serviços hospitalares.*  \n*§ 2º As contratações de que trata o caput deste artigo não poderão ser realizadas após o prazo de **cinco** anos, a contar da data de constituição da EBSERH.*  \n*§ 3º Os contratos temporários de trabalho referidos no caput deste artigo deverão ter duração máxima de até **dois** anos, improrrogáveis.\"*\n\nO preenchimento exato dos prazos legais do artigo é contemplado na alternativa D.",
+        "source_reference": null
+      },
+      "source_content_hash": "eb9f5e21389e170cbab77c28a4538b750c180cb386d0b4a955794b6af416cc74"
+    }
+  ]
+}

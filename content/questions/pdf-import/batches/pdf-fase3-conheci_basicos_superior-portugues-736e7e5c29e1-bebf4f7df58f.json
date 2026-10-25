@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-conheci_basicos_superior-portugues-736e7e5c29e1-bebf4f7df58f",
+  "source": {
+    "file_name": "conheci_basicos_superior_ATUALIZADO.json",
+    "sha256": "736e7e5c29e1a1447a84ce702f5c5c5b4e92f9ccf753af1375d38b45fd50f56f",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "conheci_basicos_superior.json",
+      "original_source_sha256": "aaf9eb1efb2a88d71a045bc1e2e61e371649418bec45be98916a5f4b799176a6",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "bebf4f7df58f24c73b42c5d28b323916f04d231e58b40c141bcfbe7ba7a41297",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:conheci_basicos_superior:016",
+      "source_id": "conheci_basicos_superior:16",
+      "question_type": "true_false",
+      "statement_markdown": "Em resposta aos recorrentes pedidos, tratando de solicitação de materiais para uso interno, informamos que a Sessão de Compras e Materiais disponibiliza formulários para preenchimento das demandas de cada setor, com as respectivas justificativas para compras de material para uso interno.\n\nCordialmente,\n\nMaria Silva\nSupervisora da Sessão de Compras e Materiais\n\nConsiderando esse texto e as normas do Manual de Redação da Presidência da República, julgue os itens subsequentes.\n\nCaso fosse parte de um ofício, ou fosse um memorando, o texto acima deveria apresentar os seguintes elementos pré-textuais: a) tipo e número do expediente, seguido da sigla do órgão que o expede; b) local e data em que foi assinado, por extenso, com alinhamento à direita; c) assunto; e d) destinatário.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 16; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "9392b43ff26232de80c8ff7550ffac988f6bad66a65a6ce10fee89c512e1c81c",
+        "original_numeric_id": 16,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nDe acordo com as normas de diagramação e editoração do Manual de Redação da Presidência da República (MRPR), os expedientes oficiais do Padrão Ofício (que abrangem tanto o ofício quanto o memorando na sistemática tradicional da administração pública) devem obedecer a regras uniformes de apresentação visual:\n\n1. Espaçamento simples (1,0) entre as linhas dentro de cada parágrafo;\n2. Espaçamento duplo (ou espaçamento simples com linha em branco intercalada) para separar um parágrafo do outro.\n\nPortanto, a afirmativa descreve com fidelidade as diretrizes de diagramação do MRPR.",
+        "source_reference": null
+      },
+      "source_content_hash": "1cbf05765330025e2989fa754bd6798b3901829ed0494862dcaa046baead7225"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:019",
+      "source_id": "conheci_basicos_superior:19",
+      "question_type": "true_false",
+      "statement_markdown": "Em resposta aos recorrentes pedidos, tratando de solicitação de materiais para uso interno, informamos que a Sessão de Compras e Materiais disponibiliza formulários para preenchimento das demandas de cada setor, com as respectivas justificativas para compras de material para uso interno.\n\nCordialmente,\n\nMaria Silva\nSupervisora da Sessão de Compras e Materiais\n\nConsiderando esse texto e as normas do Manual de Redação da Presidência da República, julgue os itens subsequentes.\n\nO texto assinado por Maria Silva segue os princípios da redação oficial, quais sejam: impessoalidade, clareza, uniformidade, concisão e uso de linguagem formal.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 19; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "c035413462ed672383ec4cf5c8776bded19dc7c1d0c5dc69c2624664059ab2d4",
+        "original_numeric_id": 19,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nO texto assinado por Maria Silva comete sucessivas violações às normas da redação oficial:\n\n1. **Erro de fecho:** O vocábulo *\"Cordialmente,\"* não é admitido pelo Manual de Redação da Presidência da República (são fórmulas exclusivas regulamentares apenas *\"Respeitosamente,\"* e *\"Atenciosamente,\"*).\n2. **Erro ortográfico crasso:** O substantivo que designa subdivisão ou setor de uma repartição pública é **Seção** (com \"ç\"), e não *\"Sessão\"* (com \"ss\", que designa o tempo de uma reunião ou assembleia).\n3. **Falta de concisão e prolixidade redundante:** Repete desnecessariamente termos idênticos no mesmo período (*\"solicitação de materiais para uso interno... compras de material para uso interno\"*).\n\nPortanto, a correspondência não observa os atributos fundamentais da redação oficial.",
+        "source_reference": null
+      },
+      "source_content_hash": "de1b5ae78dc5a4e8d5a0433b4c13142e3cefc1ad7b6252b3d3014ec33fd7b2d4"
+    }
+  ]
+}

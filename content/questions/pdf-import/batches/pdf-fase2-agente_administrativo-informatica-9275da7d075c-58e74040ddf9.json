@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_administrativo-informatica-9275da7d075c-58e74040ddf9",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "9275da7d075c14f6aecd067cee72adc350eb98cd976b0bad8b9bd014f4eb1edf",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "5da32b0a57792e090ef9d4c38cee7bda12a08609929c945e59e21312dccdc01a",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "58e74040ddf9510211b3fb1b549ddeffd07f3405fdb4febb1395d0a7fba64220",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:022",
+      "source_id": "agente_administrativo:22",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação a programas de correio eletrônico, armazenamento de dados na nuvem, firewall e procedimentos de backup, julgue os próximos itens.\n\nPara se enviar uma mensagem de e-mail a um destinatário, com cópia oculta para outra pessoa, deve-se usar o recurso Bcc.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 22; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "706e4fc098479e644bae583aa19f02edc02369e2faa7b0146787642c9d0f144c",
+        "original_numeric_id": 22,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A sigla **Bcc** significa *Blind Carbon Copy* (Cópia Carbono Oculta, frequentemente traduzida ou representada em português pela sigla **Cco**). Esse recurso é utilizado para enviar uma cópia da mensagem a um ou mais destinatários sem que os demais destinatários (inseridos nos campos \"Para\" ou \"Cc\") saibam que eles receberam a mensagem, preservando a privacidade dos endereços listados no campo oculto.",
+        "source_reference": null
+      },
+      "source_content_hash": "39719ad73817c3fac479428ade2ce14d353fe1382d46b932cabd3777c29a29d8"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:023",
+      "source_id": "agente_administrativo:23",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação a programas de correio eletrônico, armazenamento de dados na nuvem, firewall e procedimentos de backup, julgue os próximos itens.\n\nPara se utilizar o recurso de armazenamento na nuvem do OneDrive, o usuário deve estar conectado a sua conta da Microsoft.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 23; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Computação na Nuvem (Cloud Computing)",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "ccf30a81a4038c1d2afd4451d1a1e6368fe35c3b15ccecfd0d9f02bb72fd2624",
+        "original_numeric_id": 23,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "computacao-na-nuvem-cloud-computing",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O OneDrive é o serviço de armazenamento em nuvem proprietário da Microsoft. Para acessar, sincronizar, salvar ou compartilhar arquivos por meio dessa plataforma, é indispensável que o usuário realize a autenticação utilizando uma conta válida da Microsoft (como contas @outlook.com, @hotmail.com, ou contas corporativas/estudantis vinculadas ao Microsoft 365). Sem essa conexão, o serviço não consegue identificar o espaço de armazenamento associado ao usuário.",
+        "source_reference": null
+      },
+      "source_content_hash": "cfc2117addc66e798e17d9e2f98a9915378ae7401d73d124cf88eaa9e9ef6bdf"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:025",
+      "source_id": "agente_administrativo:25",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação a programas de correio eletrônico, armazenamento de dados na nuvem, firewall e procedimentos de backup, julgue os próximos itens.\n\nUm firewall é uma ferramenta que impede a entrada de arquivos maliciosos, como vírus, em uma rede privada.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 25; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "a7997e0fc960d97886e9470212d0ca388c1084c7ca4749bead0d6acfb7b990f5",
+        "original_numeric_id": 25,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A função principal de um *firewall* é monitorar, filtrar e controlar o tráfego de dados que entra e sai de uma rede ou computador, com base em um conjunto de regras de segurança preestabelecidas (bloqueando ou permitindo portas e protocolos de comunicação). O *firewall* tradicional não analisa o conteúdo interno de arquivos para identificar assinaturas de vírus ou códigos maliciosos; essa tarefa de detecção e eliminação de arquivos maliciosos (como vírus, cavalos de troia e *worms*) é de responsabilidade de softwares antivírus e antimalware.",
+        "source_reference": null
+      },
+      "source_content_hash": "340a5ba6c16c975c7d516d0488d155d84822851d04885619dbe4773c75dbcb81"
+    }
+  ]
+}

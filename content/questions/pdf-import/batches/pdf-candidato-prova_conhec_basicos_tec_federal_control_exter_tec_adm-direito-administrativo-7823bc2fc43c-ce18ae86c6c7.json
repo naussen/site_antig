@@ -1,0 +1,79 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-prova_conhec_basicos_tec_federal_control_exter_tec_adm-direito-administrativo-7823bc2fc43c-ce18ae86c6c7",
+  "source": {
+    "file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "7823bc2fc43c5e136ac60da722e3e299280c7835d6d476966acf08491d0bfcf7",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "cb0421eefe790fc8619534a2a1f0aa7b54af0ff8abce22779b8e91d6cb714a78",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ce18ae86c6c736856fcc2e4a4cef331d0bd52bc22fc08baa66f76fe8cc643cfe",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:030",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:30",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere aos princípios e conceitos da administração pública e aos servidores públicos, julgue os próximos itens.\n\nO prazo de validade de concurso público é de até dois anos, podendo ele ser prorrogado enquanto houver candidatos aprovados no cadastro de reserva.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 30; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "ce190f79adaaa37a269edd706a3b8bcbe77acb585ef5cee2af6d334efdb6db19",
+        "original_numeric_id": 30,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "official_item_number": 30
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. O prazo de validade de um concurso público é de até dois anos, mas a sua prorrogação não é ilimitada nem vinculada à existência de candidatos aprovados em cadastro de reserva. \n\nDe acordo com a Constituição Federal, a prorrogação pode ocorrer **uma única vez, por igual período**. Isso significa que:\n* Se o edital fixar o prazo de validade em 1 ano, a prorrogação máxima permitida será de mais 1 ano.\n* Se o edital fixar o prazo de validade em 2 anos, a prorrogação máxima permitida será de mais 2 anos.\n\n**Pegadinha:** A banca tenta confundir o candidato ao sugerir que a prorrogação pode ocorrer sucessivamente enquanto houver cadastro de reserva, o que violaria o limite constitucional de uma única prorrogação por igual período.\n\n### Dispositivo legal\nArt. 37, inciso III, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "c6716381c5893f16b7c7d4dfdb0e1f268434634e82adb4bb1ded8ae61d538687"
+    }
+  ]
+}

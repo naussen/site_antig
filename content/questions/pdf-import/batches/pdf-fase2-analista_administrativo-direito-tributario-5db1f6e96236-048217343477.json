@@ -1,0 +1,77 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-analista_administrativo-direito-tributario-5db1f6e96236-048217343477",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "5db1f6e962369b1d7913fb92dbdb0da8daeda71ce6c9d495931ad2d14292df2c",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "0fc614916228bfa45383f0df7c8e33baaccace7bb05b812e4da6dc6bb1c76217",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "048217343477fa2cf7096beaab394779c0e944bb56f37656e14d377ae0d70670",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-tributario",
+    "name": "Direito Tributário"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:085",
+      "source_id": "analista_administrativo:85",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando o Sistema Tributário Nacional, julgue o próximo item.\n\nA atividade administrativa de lançamento deve ser balizada pelo juízo de conveniência e oportunidade da autoridade fiscal competente.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 85; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Crédito Tributário e Lançamento",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Tributário",
+        "source_content_hash": "c55a3fe924f45add3782abd450fad37924527d6f49bdd811162e3ff1393486bd",
+        "original_numeric_id": 85,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "direito-tributario-credito-tributario-lancamento",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A atividade administrativa de lançamento tributário é plenamente vinculada e obrigatória, sob pena de responsabilidade funcional, conforme estabelece o art. 142 do Código Tributário Nacional (CTN). Por ser um ato vinculado, a autoridade fiscal não dispõe de margem de discricionariedade, inexistindo juízo de conveniência e oportunidade para a sua realização.\n\n*Nota de atualização:* A Lei Complementar nº 236/2026 renumerou o antigo parágrafo único do art. 142 para § 1º, mantendo inalterada a redação que define o lançamento como atividade vinculada e obrigatória.\n\n**Dispositivo legal:**\nCódigo Tributário Nacional (Lei nº 5.172/1966), Art. 142, § 1º (antigo parágrafo único).",
+        "source_reference": null
+      },
+      "source_content_hash": "1a4c895c833c6e3a065ba6993f5cb6f6cbbef92cd6ba6c1c83d50fcec149733c"
+    }
+  ]
+}

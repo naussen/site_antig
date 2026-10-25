@@ -1,0 +1,424 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-dpf14_009_01-direito-administrativo-fc85fdc9d1f4-7a6908965c0d",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "fc85fdc9d1f45a7a9beaed6c728368f3364cad59fba26e5bca2aa08fbac5e46f",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "7c65334d658e76f507a006465e38351432ef043be4c6cf520c4cf664a9007aba",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "7a6908965c0dd8f8697ab1309d28bd28d32a3c9c1de95733542260e2b834b5b9",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:036",
+      "source_id": "dpf14_009_01:36",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando que o DPF é órgão responsável por exercer as funções de polícia judiciária da União, julgue os itens a seguir.\n\nO DPF, em razão do exercício das atribuições de polícia judiciária, não se submete ao princípio da publicidade, sendo garantido sigilo aos atos praticados pelo órgão.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 36; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Poderes Administrativos",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "e9b40f15bc7afc3a53cf881a7eb6516af5aa9d2611dc9dbcaad28899ebc24905",
+        "original_numeric_id": 36,
+        "original_source_content_hash": "6e8ee0c7df2f0c875e4c80f052d9f3df0c1f1e5a243d12cc9812c76748434f2e",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "deveres",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nO Departamento de Polícia Federal é órgão permanente da Administração Pública Direta Federal e, como tal, está estritamente subordinado aos princípios fundamentais do **Artigo 37, *caput*, da Constituição Federal de 1988**, incluindo expressamente o princípio da **publicidade**.\n\nEmbora os inquéritos policiais e investigações criminais possam tramitar sob sigilo legal necessário à elucidação dos fatos e preservação da intimidade (Art. 20 do Código de Processo Penal), esse sigilo é setorial e restrito às diligências probatórias. Os atos de gestão administrativa do DPF (como licitações, contratações, escalas de pessoal e relatórios orçamentários) são regidos pela ampla transparência pública.",
+        "source_reference": null
+      },
+      "source_content_hash": "5f1f26df14a1927c1a115df898ebde13d8efd2dace1ad49acc908b600e4fe564"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:039",
+      "source_id": "dpf14_009_01:39",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, a respeito do processo de licitação.\n\nEm razão do princípio da eficiência, é possível, mediante licitação, a contratação de empresa que não tenha apresentado toda a documentação de habilitação exigida, desde que a proposta seja a mais vantajosa para a administração.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 39; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Nova Lei de Licitações – Lei 14.133/21 (Parte 1)",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "b541f2871eff4777845627c5523d5161b55e773e02f02e41158ba7153f3ffd00",
+        "original_numeric_id": 39,
+        "original_source_content_hash": "a353a6706c300313838b9ec258340971c9f99a60320ff47cca8160d109ec55fa",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "aplicacao-da-lei-14-133-21",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNo procedimento licitatório, o atendimento cumulativo aos requisitos de habilitação jurídica, fiscal, técnica e econômico-financeira exigidos no edital é condição de validade vinculante e inafastável (princípio da vinculação ao instrumento convocatório e da legalidade estrita).\n\nO proponente que deixar de apresentar qualquer documento essencial de habilitação deve ser compulsoriamente **inabilitado**. A mera vantajosisdade do preço proposto não autoriza o administrador a dispensar os requisitos editalícios sob o pretexto de eficiência, sob pena de afronta frontal ao princípio da isonomia entre os licitantes (Art. 3º e Art. 43 da Lei nº 8.666/1993).",
+        "source_reference": null
+      },
+      "source_content_hash": "55f3800d2d78dd664af26c76d7f568a1c9e2e4c390af24793b2d3db324d9ad88"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:040",
+      "source_id": "dpf14_009_01:40",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, a respeito do processo de licitação.\n\nConsidere que determinado órgão da administração pública pretenda adquirir equipamentos de informática no valor de R$ 5.000,00. Nesse caso, o referido órgão tem a opção discricionária de realizar licitação ou proceder à aquisição direta mediante dispensa de licitação, em razão do baixo valor dos equipamentos.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 40; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Nova Lei de Licitações – Lei 14.133/21 (Parte 1)",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "2fed66e39be74d5892852047eb807c3e6ea40a012bff9c8f24c4e1bd5bc94b87",
+        "original_numeric_id": 40,
+        "original_source_content_hash": "cc053fe549d55280ac4982a88ec3d942aa800acb20a3a943947d7be528c3f844",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "aplicacao-da-lei-14-133-21",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA aquisição de compras e serviços de pequeno valor que se enquadrem nos limites legais de **dispensa de licitação** em razão do valor (Art. 24, inciso II, da Lei nº 8.666/1993 e Art. 75, inciso II, da Lei nº 14.133/2021) configura uma **faculdade discricionária** da Administração Pública.\n\nDiante de uma despesa módica de R$ 5.000,00, a autoridade administrativa competente tem a liberdade de conveniência e oportunidade de optar entre realizar o procedimento licitatório regular ou efetuar a contratação direta mediante processo sumário de dispensa de licitação.",
+        "source_reference": null
+      },
+      "source_content_hash": "8e979e51f9b01ef1a157a86512810c5fb9c7c43daeffde0b8e98813202c0ead4"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:054",
+      "source_id": "dpf14_009_01:54",
+      "question_type": "true_false",
+      "statement_markdown": "No que concerne à organização administrativa, julgue os itens seguintes.\n\nDado o poder hierárquico do Estado, na ocorrência do fenômeno de desconcentração administrativa, os órgãos e agentes públicos decorrentes da subdivisão não perdem o vínculo hierárquico com a pessoa jurídica de origem.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 54; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Poderes Administrativos",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "a536294e711ad923351279c48a18914a51a9a4bcdca07f6a1e8081af1416e9d8",
+        "original_numeric_id": 54,
+        "original_source_content_hash": "b281003fa61150a67245df79f7339ccd1d720bd1e0a6b555472977eaba86e1dc",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "deveres",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A desconcentração administrativa é uma técnica de distribuição interna de competências que ocorre no âmbito de uma única pessoa jurídica. Esse processo resulta na criação de órgãos públicos, os quais, nos termos do art. 1º, § 2º, I, da Lei nº 9.784/1999, são unidades de atuação desprovidas de personalidade jurídica própria. Por se tratar de uma divisão interna de atribuições dentro da mesma estrutura, mantém-se íntegra a relação de subordinação e coordenação decorrente do poder hierárquico. Assim, os órgãos e agentes públicos resultantes da desconcentração permanecem vinculados hierarquicamente à autoridade central da pessoa jurídica de origem.\n\n### Dispositivo legal\n* **Lei nº 9.784/1999, Art. 1º, § 2º, I**: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l9784.htm#art1p2i)",
+        "source_reference": null
+      },
+      "source_content_hash": "e81fbf7e1bcc600dfed413d0c3f1cc1dc164bab1fc6b16f6bdb570df1751b4d6"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:056",
+      "source_id": "dpf14_009_01:56",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de processos licitatórios, julgue os seguintes itens.\n\nNão há previsão legal para o estabelecimento, nos processos licitatórios, de margem de preferência para bens e serviços com tecnologia desenvolvida no Brasil.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 56; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "dc3214b9fa07663e46597cad6893f7c40ae8425219d4d1b235583c1d5b7a81a2",
+        "original_numeric_id": 56,
+        "original_source_content_hash": "8969969e997cc29dd5b12c2b4c9cdcae10d3bffa59b86e93d4e997cfdd3ffb6b",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA legislação brasileira de licitações estabelece expressamente a possibilidade de conferir **margem de preferência** para produtos manufaturados nacionais e serviços nacionais que atendam a normas técnicas brasileiras, bem como para bens e serviços produzidos com **tecnologia desenvolvida no País**.\n\nA previsão legal constava originariamente do Artigo 3º, §§ 5º a 8º, da Lei nº 8.666/1993 (com a redação dada pela Lei nº 12.349/2010), e foi plenamente mantida e ampliada no Artigo 26 da Nova Lei de Licitações (Lei nº 14.133/2021), autorizando margem de preferência adicional de até vinte por cento.",
+        "source_reference": null
+      },
+      "source_content_hash": "23c548ef996df8900d86f1b9b4831a2964e81a5ca295d2fa95aaab606575e5ed"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:057",
+      "source_id": "dpf14_009_01:57",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de processos licitatórios, julgue os seguintes itens.\n\nA transferência, mediante ato administrativo, da execução de determinado serviço público a uma autarquia configura descentralização administrativa por outorga.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 57; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Serviços Públicos e Concessões",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "6fab2c794b1ebe0f800a12d5a3aef3ac5d22fdd42bcc79f94e0e45c726497772",
+        "original_numeric_id": 57,
+        "original_source_content_hash": "f4e53da907f214b54546c06221d7a294b233e492c82bd0a2410263d0d1e79df6",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "criterio-de-servico-publico-doutrinario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNo direito administrativo brasileiro, a transferência da execução de um serviço público a pessoas jurídicas de direito privado (empresas privadas concessionárias ou permissionárias) ocorre por **delegação contratual** (concessão ou permissão), formalizada mediante **contrato administrativo** precedido de licitação, e não por mero ato administrativo unilateral.\n\nA **outorga**, por sua vez, só ocorre por lei em sentido estrito e transfere tanto a titularidade quanto a execução do serviço, sendo privativa de entidades da Administração Pública Indireta de direito público (autarquias e fundações públicas).",
+        "source_reference": null
+      },
+      "source_content_hash": "ac5548737dc00a52b918eefed9e9ce963aaf1ec4b27b5f4786cdd00e9daddf5d"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:059",
+      "source_id": "dpf14_009_01:59",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de processos licitatórios, julgue os seguintes itens.\n\nConsidere que determinada pessoa jurídica de direito privado que administra um porto brasileiro pretenda contratar o único escritório de advocacia especializado em direito portuário no Brasil para promover ações judiciais acerca dessa matéria. Nessa situação, é dispensável a licitação.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 59; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Nova Lei de Licitações – Lei 14.133/21 (Parte 1)",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "ca6da6b788a0c484295460aabad0fd4e176b7a1105b42e8305d7a0a50fbe5775",
+        "original_numeric_id": 59,
+        "original_source_content_hash": "f0831122bb6a20f569e881e67c79a8cd74158b08e4aa8efa6b018be807750a27",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "aplicacao-da-lei-14-133-21",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nUma concessionária privada que explora a administração de um terminal aeroportuário transferido pelo poder público atua por delegação contratual. Trata-se de uma sociedade empresária estritamente **privada**, e não de uma empresa pública.\n\nA **empresa pública** (como a INFRAERO) é entidade integrante da Administração Pública Indireta, dotada de personalidade jurídica de direito privado, mas cujo capital social é **100% público** (Art. 5º, II, do Decreto-Lei nº 200/1967 e Art. 3º da Lei nº 13.303/2016), criada mediante autorização legislativa.",
+        "source_reference": null
+      },
+      "source_content_hash": "c46743a8ab06cd08ef5dbb1f622660a373766d6f56ca11db594501b895309340"
+    }
+  ]
+}

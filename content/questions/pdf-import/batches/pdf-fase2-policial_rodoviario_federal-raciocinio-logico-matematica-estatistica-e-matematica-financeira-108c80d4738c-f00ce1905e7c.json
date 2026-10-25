@@ -1,0 +1,77 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-policial_rodoviario_federal-raciocinio-logico-matematica-estatistica-e-matematica-financeira-108c80d4738c-f00ce1905e7c",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "108c80d4738c4cf75248804f8f7a4e59a8ebc98742dd2b686f8053a30677b861",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "a311442a41cf96895e3ab6bc25877186df1354aab6cde616c4af291da4f66fd9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "f00ce1905e7c97a8d719781b92bbfd95688d085af43ae26261631f2a77ab60e1",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:028",
+      "source_id": "policial_rodoviario_federal:28",
+      "question_type": "true_false",
+      "statement_markdown": "Foi modelado que o espalhamento de uma notícia em uma população — entendido como o percentual de indivíduos dessa população que recebe essa notícia por unidade de tempo — é diretamente proporcional ao percentual de indivíduos da população que já conhecem a notícia multiplicado pelo percentual de indivíduos dessa população que ainda não a conhecem até aquele instante. A constante k de proporcionalidade depende, entre outros fatores, do impacto da notícia na vida dos envolvidos e de propriedades dos meios de comunicação disponíveis.\nTendo como base essas informações e considerando que, para certa notícia, k = 1, julgue os itens seguintes.\n\nSe, em determinado instante, 30% da população já conhece a notícia, então, nesse instante, o seu espalhamento estaria em patamar superior a 20% por unidade de tempo.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 28; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico e Matemática",
+        "source_content_hash": "ee11aafc89b4a5b32af71b0a753a145af2912fe7b231bef2cfb07e690fa34176",
+        "original_numeric_id": 28,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_policial_rodoviario_federal_028.png",
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Utilizando a fórmula do espalhamento $E = k \\cdot p \\cdot (1 - p)$ com $k = 1$:\n\n* $p = 0,3$ (30% que já conhecem a notícia);\n* $1 - p = 0,7$ (70% que ainda desconhecem a notícia).\n\nSubstituindo os valores:\n\n$$E = 1 \\cdot 0,3 \\cdot 0,7 = 0,21 \\text{ (ou seja, 21\\% por unidade de tempo)}$$\n\nComo 21% é superior a 20%, a afirmação é verdadeira.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_policial_rodoviario_federal_028.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "18f38ba9f238b355ba16ec576040b3bf76e94a8f23b060ed116ea208bf5f4e73"
+    }
+  ]
+}

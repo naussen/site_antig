@@ -1,0 +1,98 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-assistente_administrativo-portugues-6b1abddd7349-0e7dbac1829d",
+  "source": {
+    "file_name": "assistente_administrativo_ATUALIZADO.json",
+    "sha256": "6b1abddd7349f6c85325d540987a05fb7b26d94e2843e9f92a3bd7603f00148c",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "assistente_administrativo.json",
+      "original_source_sha256": "a57c1a78597d9f629a7137c90f84d7f96492a8d5fd0eb5590acdcfffc87a6bcc",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "0e7dbac1829db9593fd2c7f618ba2084716c4722787c2c6a6f041e5d972c0d99",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:assistente_administrativo:010",
+      "source_id": "assistente_administrativo:10",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Automóvel: Sociedade Anônima\n(Paulo Mendes Campos)\n\nSe você quiser, compre um carro; é um conforto admirável. Mas não o faça sem conhecimento de causa, a fim de evitar desilusões futuras. Saiba que está praticando um gesto essencialmente econômico; não para a sua economia, mas para a economia coletiva. Isso quer dizer que, do ponto de vista comunitário, o automóvel que você adquire não é um ponto de chegada, uma conquista final em sua vida, mas, pelo contrário, um ponto de partida para os outros. Desde que o compre, o carro passa a interessar aos outros, muito mais que a você mesmo.\nCom o carro, você está ampliando seriamente a economia de milhares de pessoas. É uma espécie de indústria às avessas, na qual você monta um engenho não para obter lucros, mas para distribuir seu dinheiro para toda classe de pessoas: industriais europeus, biliardários do Texas, empresários brasileiros, comerciantes, operários especializados, proletários, vagabundos, etc.\nJá na compra do carro, você contribui para uma infinidade de setores produtivos, que podemos encolher ao máximo nos seguintes itens: a indústria automobilística propriamente dita, localizada no Brasil, mas sem qualquer inibição no que toca à remessa de lucros para o exterior; os vendedores de automóveis; a siderurgia; a petroquímica; as fábricas de pneus e as de artefatos de borracha; as fábricas de plásticos, couros, tintas, etc.; as fábricas de rolamentos e outras autopeças; as fábricas de relógios, rádios, etc.; as indústrias de petróleo [...]\nVocê já pode ir vendo a gravidade do seu gesto: ao comprar um carro, você entrou na órbita de toda essa gente, até ontem, você estava fora do alcance deles; hoje, seu transporte passou a ser, do ponto de vista econômico, simplesmente transcendental. Você é um homem economicamente importante – para os outros. Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você.\nMas não fica só nisso; você estará ainda girando numa constelação menor, miúda mas nada desprezível: a dos recauchutadores, eletricistas, garagistas, lavadores, olheiros, guardas de trânsito, mecânicos de esquina. Você pode ainda querer um motorista ou participar de alguma das várias modalidades de seguros para automóveis. Em outros termos, você continua entrando pelo cano. No fim deste, há ainda uma outra classe: a dos ladrões, seja organizada em sindicatos, seja a espécie de franco-puxadores. [...]\n\nConsidere a classificação morfológica do vocábulo “que” em “uma infinidade de setores produtivos, que podemos encolher ao máximo” (3º§). Indique a alternativa em que se destaca um “que” com essa mesma classificação.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 10; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "“Saiba que está praticando um gesto essencialmente econômico” (1º§).",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "“Isso quer dizer que, do ponto de vista comunitário” (1º§).",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "“o automóvel que você adquire não é um ponto de chegada” (1º§).",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "“Desde que o compre, o carro passa a interessar aos outros” (1º§).",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "“muito mais que a você mesmo” (1º§).",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "01a634339650137a4921e0cdcdbfa23bcd176e8511ad75c57dce67362186292d",
+        "original_numeric_id": 10,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nNa frase *\"uma infinidade de setores produtivos que operavam...\"*, o vocábulo **\"que\"** desempenha o papel de **pronome relativo**. Ele retoma o termo antecedente (*\"setores produtivos\"*) e introduz uma oração subordinada adjetiva (*\"que operavam\"*), exercendo sintaticamente a função de sujeito do verbo *operavam*.\n\nAnálise das demais alternativas:\n* **A, B e D estão incorretas** porque o \"que\" não atua como conjunção subordinativa integrante (não introduz oração substantiva), nem adverbial causal ou consecutiva.",
+        "source_reference": null
+      },
+      "source_content_hash": "c4f74565b2db36620a634f999721e1fae4901ef874e54c524eda3fb582eaf900"
+    }
+  ]
+}

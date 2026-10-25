@@ -1,0 +1,300 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-agente_administrativo-portugues-72da8ecbf1bf-5b7b1937657f",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "72da8ecbf1bf79542f78432b7acf5090277b9b279eb96815d2ab269bda90cd23",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "95f70efef6886dec632debbde86efe1189f22da6fd35c7aba8deaf2afc4b8a3c",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "5b7b1937657fb1dbeda4e78f093915f225b9d260a38f5c753952f680c01a3055",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:002",
+      "source_id": "agente_administrativo:2",
+      "question_type": "true_false",
+      "statement_markdown": "Abre-se uma janela do Centro Operário. Será a aula de Dona Palmira em 1920 ou há reunião para discutir os estatutos? Durante toda a minha infância, eles discutiram os estatutos. Eu não podia entender nada, mas havia pontos terrivelmente sérios. Era “Centro Operário de Proteção Mútua” ou “Centro Operário E de Proteção Mútua”? Pela noite afora, ano após ano, um mulato meio velho e magro, de óculos, o dedo em riste, a voz rascante, atacava com extraordinária ferocidade aquele E. Não conseguiu derrubá-lo; os operários talvez se sentissem fracos, sozinhos, precisavam daquele E que os conjugava com outras camadas sociais. Ficou o E, meu pai foi diretor e, quando morreu, teve auxílio no enterro, tudo sem ser operário, tudo graças àquele E. Sem o E eu talvez não tivesse estudado ali, não me sentaria no comprido banco, onde o último da esquerda era o preto Bernardino, e à direita, o rosto lindo de Lélia, com seus cabelos doces e uma covinha quando sorria. Quando não estavam discutindo os estatutos, ou providenciando um enterro de sócio, com a bandeira do Centro em cima do caixão, os operários E todos que queriam proteção mútua estavam dançando; sons de pistom atravessam meu sono infantil; eu achava estranho e ao mesmo tempo alegre e feliz haver baile na mesma sala onde eu tinha aulas.\n\nRubem Braga. Em Cachoeiro. 200 crônicas escolhidas. Rio de Janeiro: Record, 2003, p.55 (com adaptações).\n\nConsiderando os sentidos e aspectos linguísticos do texto precedente, julgue os itens a seguir.\n\nNo trecho “Será a aula de Dona Palmira em 1920 ou há reunião para discutir os estatutos?”, a forma verbal “há” poderia ser substituída pelo artigo feminino a, sem alteração do sentido do texto.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 2; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Tipologia Textual e Gêneros Discursivos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "04cc9430303a04f710e50077a11f0e49286e5becfe97d6f119740d3948f57518",
+        "original_numeric_id": 2,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nA forma verbal \"há\" empregada na oração (\"...ou há reunião para discutir os estatutos?\") corresponde ao verbo haver impessoal com sentido de existir/ocorrer, exercendo papel de predicado verbal da oração. Se for substituída pelo artigo feminino \"a\" (\"...ou a reunião para discutir os estatutos?\"), a oração perde seu verbo existencial e converte-se em mera frase nominal coordenada a \"a aula de Dona Palmira\", alterando profundamente a estrutura sintática do período e o sentido original pretendido pelo autor.",
+        "source_reference": null
+      },
+      "source_content_hash": "c7e24eabd552d3b1beb6c27662d355483acd328097137e4b35dcf1ec7085a42b"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:006",
+      "source_id": "agente_administrativo:6",
+      "question_type": "true_false",
+      "statement_markdown": "Abre-se uma janela do Centro Operário. Será a aula de Dona Palmira em 1920 ou há reunião para discutir os estatutos? Durante toda a minha infância, eles discutiram os estatutos. Eu não podia entender nada, mas havia pontos terrivelmente sérios. Era “Centro Operário de Proteção Mútua” ou “Centro Operário E de Proteção Mútua”? Pela noite afora, ano após ano, um mulato meio velho e magro, de óculos, o dedo em riste, a voz rascante, atacava com extraordinária ferocidade aquele E. Não conseguiu derrubá-lo; os operários talvez se sentissem fracos, sozinhos, precisavam daquele E que os conjugava com outras camadas sociais. Ficou o E, meu pai foi diretor e, quando morreu, teve auxílio no enterro, tudo sem ser operário, tudo graças àquele E. Sem o E eu talvez não tivesse estudado ali, não me sentaria no comprido banco, onde o último da esquerda era o preto Bernardino, e à direita, o rosto lindo de Lélia, com seus cabelos doces e uma covinha quando sorria. Quando não estavam discutindo os estatutos, ou providenciando um enterro de sócio, com a bandeira do Centro em cima do caixão, os operários E todos que queriam proteção mútua estavam dançando; sons de pistom atravessam meu sono infantil; eu achava estranho e ao mesmo tempo alegre e feliz haver baile na mesma sala onde eu tinha aulas.\n\nRubem Braga. Em Cachoeiro. 200 crônicas escolhidas. Rio de Janeiro: Record, 2003, p.55 (com adaptações).\n\nConsiderando os sentidos e aspectos linguísticos do texto precedente, julgue os itens a seguir.\n\nO texto consiste em uma narração contada na primeira pessoa do singular, com o uso de formas verbais predominantemente no passado, de maneira que evocam memórias pessoais.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 6; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Tipologia Textual e Gêneros Discursivos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "4497bc7d70ac25978d0791a798e2b3102f9ca534984fdc517f68f5c7110b4d7f",
+        "original_numeric_id": 6,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nO texto de Rubem Braga é uma típica crônica memorialística. A narrativa se desenvolve explicitamente em primeira pessoa do singular (\"minha infância\", \"Eu não podia entender\", \"meu pai\", \"eu talvez não tivesse estudado ali\", \"não me sentaria\", \"eu achava\"), empregando formas verbais predominantemente no pretérito imperfeito e perfeito do indicativo (\"discutiram\", \"atacava\", \"conseguiu\", \"precisavam\", \"morreu\", \"estavam dançando\"), com a finalidade expressa de evocar lembranças e vivências de sua meninice em Cachoeiro de Itapemirim.",
+        "source_reference": null
+      },
+      "source_content_hash": "092492f11c7ea19ed9feafdda92d98962edf7c354ef9f86cd08c987c3fe35ae0"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:011",
+      "source_id": "agente_administrativo:11",
+      "question_type": "true_false",
+      "statement_markdown": "Se houvesse um concurso para eleger a cidade brasileira com mais filhos ilustres, a pequena Cachoeiro de Itapemirim, no Espírito Santo, levaria com folga. Entre os 5.570 municípios brasileiros, difícil encontrar outro interiorano (capital é covardia, ora) que tenha gerado tantas figuras notórias para o país. Talvez Sobral, no Ceará, se aproxime em quantidade (terra do cantor Belchior, do humorista Renato Aragão, do artista plástico Zenon Barreto e do cineasta Luiz Carlos Barreto, o “Barretão”). Mas somente a pacata cidade capixaba viu nascer elenco tão sortido do folclore nacional, a ponto de receber de Vinicius de Moraes o epíteto de “capital secreta”. São cachoeirenses: o cantor e compositor Roberto Carlos; o mais importante cronista brasileiro, Rubem Braga; o compositor Sergio Sampaio; a atriz naturista Luz del Fuego; o produtor musical e diretor Carlos Imperial; o ator Jece Valadão (que foi criado lá, apesar de ter nascido no distrito de Muqui); e a atriz Darlene Glória. Também viveram por lá as irmãs Danuza e Nara Leão.\n\nInternet: <https://oglobo.globo.com/cultura> (com adaptações).\n\nEm relação aos sentidos e aspectos linguísticos do texto precedente, julgue os itens que se seguem.\n\nDepreende-se do texto que nasceram mais artistas em Cachoeiro de Itapemirim do que em qualquer capital brasileira.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 11; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Semântica e Significação das Palavras",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "8ad84b8b9547ba2f2f0ead119789cf64b85192c1d3620960972ea20016f7e919",
+        "original_numeric_id": 11,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nO texto explicita exatamente o contrário: o narrador ressalta que comparar cidades do interior com capitais não seria justo (\"capital é covardia, ora\"), circunscrevendo a comparação aos municípios interioranos do Brasil (\"difícil encontrar outro interiorano [...] que tenha gerado tantas figuras notórias para o país\"). Portanto, não se pode deduzir ou afirmar que em Cachoeiro de Itapemirim nasceram mais artistas do que em qualquer capital brasileira.",
+        "source_reference": null
+      },
+      "source_content_hash": "3c58a89df18f65f49b5f2b3a0ce6eee96d20cde6c624edfea4613b53a6dd0a0e"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:013",
+      "source_id": "agente_administrativo:13",
+      "question_type": "true_false",
+      "statement_markdown": "Se houvesse um concurso para eleger a cidade brasileira com mais filhos ilustres, a pequena Cachoeiro de Itapemirim, no Espírito Santo, levaria com folga. Entre os 5.570 municípios brasileiros, difícil encontrar outro interiorano (capital é covardia, ora) que tenha gerado tantas figuras notórias para o país. Talvez Sobral, no Ceará, se aproxime em quantidade (terra do cantor Belchior, do humorista Renato Aragão, do artista plástico Zenon Barreto e do cineasta Luiz Carlos Barreto, o “Barretão”). Mas somente a pacata cidade capixaba viu nascer elenco tão sortido do folclore nacional, a ponto de receber de Vinicius de Moraes o epíteto de “capital secreta”. São cachoeirenses: o cantor e compositor Roberto Carlos; o mais importante cronista brasileiro, Rubem Braga; o compositor Sergio Sampaio; a atriz naturista Luz del Fuego; o produtor musical e diretor Carlos Imperial; o ator Jece Valadão (que foi criado lá, apesar de ter nascido no distrito de Muqui); e a atriz Darlene Glória. Também viveram por lá as irmãs Danuza e Nara Leão.\n\nInternet: <https://oglobo.globo.com/cultura> (com adaptações).\n\nEm relação aos sentidos e aspectos linguísticos do texto precedente, julgue os itens que se seguem.\n\nSem alteração do sentido do segundo período do texto, ele poderia ser reescrito da seguinte forma: Entre os principais municípios brasileiros, seria impossível encontrar outro que, não sendo interiorano, tenha gerado tantas figuras importantes para o país.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 13; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Semântica e Significação das Palavras",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "fad3e9da7f4341460ed653aae7d3871fb0df2013ba4a37363847f6c6d8426a87",
+        "original_numeric_id": 13,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nA proposta de reescrita altera por completo o sentido do texto original. O texto original afirma que Cachoeiro se destaca dentre os municípios interioranos (\"difícil encontrar outro interiorano\"). A reescrita sugerida (\"encontrar outro que, não sendo interiorano...\") passa a exigir que a comparação seja feita com municípios que *não* sejam do interior (ou seja, capitais e regiões metropolitanas), invertendo frontalmente a delimitação e a tese defendida pelo autor.",
+        "source_reference": null
+      },
+      "source_content_hash": "f0dcc226da84aceb137ebdf0be5c2f0cc71851a67496a534b4a9829146893298"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:098",
+      "source_id": "agente_administrativo:98",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, sobre redação oficial, com base no Manual de Redação da Presidência da República.\n\nPara que não haja dúvidas quanto ao entendimento de um texto oficial, sugere-se que ele seja redigido com o máximo possível de detalhamento.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 98; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "5362a149a1419fa44d7d46772eac4564dedc9aabba80fa84a4e6d3bd8d5684b2",
+        "original_numeric_id": 98,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nConforme expressamente advertido no Manual de Redação da Presidência da República (item 1.2.3), a clareza e a comunicabilidade de um ato oficial decorrem da concisão e da objetividade. A prolixidade e o detalhamento excessivo sobrecarregam o texto de informações secundárias, tornando a leitura exaustiva e dificultando a imediata compreensão do expediente pela autoridade destinatária e pelos cidadãos.",
+        "source_reference": null
+      },
+      "source_content_hash": "b1e9a0412a9bd86809db8427a06b961173c0928332ea75ea971bcacfc23a1f5b"
+    }
+  ]
+}

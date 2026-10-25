@@ -1,0 +1,383 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_de_policia_federal-informatica-c3515df8485a-cfdcdbe3e348",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "c3515df8485ab192355dd2c9f2cd5fc325fdfcc424779258a45eea81a91b4abe",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "9bf5415c207ff2dee6f1b513f48cc1f4b3e00a224421906182f247e816e0b8ed",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "cfdcdbe3e3488fc2f6fe22961e7ee994eddff2e5a54922dbd5a6e69630761f9a",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:063",
+      "source_id": "agente_de_policia_federal:63",
+      "question_type": "true_false",
+      "statement_markdown": "Bloco II\nMarta utiliza uma estação de trabalho que executa o sistema operacional Windows 10 e está conectada à rede local da empresa em que ela trabalha. Ela acessa usualmente os sítios da intranet da empresa e também sítios da Internet pública. Após navegar por vários sítios, Marta verificou o histórico de navegação e identificou que um dos sítios acessados com sucesso por meio do protocolo HTTP tinha o endereço 172.20.1.1.\nTendo como referência essa situação hipotética, julgue os itens a seguir.\n\nO sistema operacional utilizado na estação de trabalho de Marta inclui nativamente a plataforma Windows Defender, composta por ferramentas antivírus e de firewall pessoal, entre outras.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 63; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "8cdcc1a437197028f3e58cad601475429805fe1d3ff14f1fd59cf62f4b843202",
+        "original_numeric_id": 63,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O sistema operacional Windows 10 possui, de forma nativa e integrada, a central de segurança conhecida como Windows Defender (atualmente integrada ao aplicativo Segurança do Windows). \n\nEssa plataforma engloba diversas ferramentas de proteção essenciais, incluindo o *Windows Defender Antivirus* (para proteção contra malwares em tempo real) e o *Windows Defender Firewall* (para controle de tráfego de rede de entrada e saída), dispensando a necessidade inicial de instalação de softwares de terceiros para essas funções básicas de segurança.",
+        "source_reference": null
+      },
+      "source_content_hash": "874929f5fcbd0d6a34b58aa067e0e12880d8d1e1af85dfcd833a3874b6ba9115"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:076",
+      "source_id": "agente_de_policia_federal:76",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da utilização de tecnologias, ferramentas, aplicativos e procedimentos associados a Internet/intranet, julgue os itens seguintes.\n\nNas aplicações multimídia, os fluxos de dados podem conter áudio, vídeo e metadados que viabilizam a sincronização de áudio e vídeo. Cada um desses três fluxos pode ser manipulado por diferentes programas, processos ou hardwares, mas, para que os fluxos de dados de determinada aplicação multimídia sejam qualitativamente otimizados na transmissão ou no armazenamento, eles devem ser encapsulados juntos, em um formato de contêiner.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 76; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "ecba60a037e3a36a11d39fc47656acb1a1fbfdd7adb69e2b9cd68ccfcdf0c4e3",
+        "original_numeric_id": 76,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto.\n\nEm aplicações multimídia, os fluxos de áudio, vídeo e metadados (como informações de sincronização e legendas) são gerados e processados de forma independente por diferentes codecs ou hardwares.\n\nPara que esses fluxos sejam armazenados ou transmitidos de forma eficiente e sincronizada, eles são encapsulados em um formato de **contêiner** (como MP4, MKV ou AVI), que organiza e unifica os diferentes fluxos em um único arquivo ou transmissão.",
+        "source_reference": null
+      },
+      "source_content_hash": "82db5f61e6e48ee4b4dc19cdc12381b58c4f40cbd077cb06fa8bcb8536751867"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:081",
+      "source_id": "agente_de_policia_federal:81",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando o modelo entidade-relacionamento (ER) precedente, julgue os seguintes itens, relativos a banco de dados.\n\nConforme o modelo ER em questão, um tipo de produto pode estar associado a somente 1 produto e cada produto possui um preço e uma descrição.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 81; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Banco de Dados",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "5e51ec4c224069c6139306ac462206a1e0a9b1d56f4f4dbf331285e335e4c79e",
+        "original_numeric_id": 81,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "banco-de-dados",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto.\n\nNo modelo de Entidade-Relacionamento (ER) padrão para esse cenário, a relação entre \"Tipo de Produto\" e \"Produto\" é do tipo **1 para muitos (1:N)**.\n\nIsso significa que um tipo de produto (por exemplo, \"Eletrônicos\") pode estar associado a múltiplos produtos (como \"Televisão\", \"Celular\"), e não a apenas um único produto, como afirma a assertiva.",
+        "source_reference": null
+      },
+      "source_content_hash": "5ef1009986e1a416291ffd911077a9e6bb6988b8d099c0176e955d56dd3de2c3"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:082",
+      "source_id": "agente_de_policia_federal:82",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando o modelo entidade-relacionamento (ER) precedente, julgue os seguintes itens, relativos a banco de dados.\n\nConsiderando-se apenas o diagrama apresentado, infere-se que, na aplicação das regras para a transformação do modelo ER em um modelo relacional, é necessário realizar a fusão das tabelas referentes às entidades envolvidas no relacionamento.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 82; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Banco de Dados",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "99e926f010969f789e4ff79af93764fa2e35d4ab04572fa7e36e7908a9ef0d64",
+        "original_numeric_id": 82,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "banco-de-dados",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto.\n\nNa transformação de um modelo ER para o modelo relacional, relacionamentos do tipo 1:N (um para muitos) não exigem a fusão das tabelas das entidades envolvidas.\n\nA regra padrão consiste em manter as tabelas separadas e propagar a chave primária da entidade do lado \"1\" como chave estrangeira na tabela da entidade do lado \"N\". A fusão de tabelas é uma técnica aplicada apenas em casos muito específicos de relacionamentos 1:1.",
+        "source_reference": null
+      },
+      "source_content_hash": "a19c9b3269ee6276823d5ff00a0f5a233ef8ccb8cae66c3fef4615a37d20e048"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:090",
+      "source_id": "agente_de_policia_federal:90",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens subsequentes, relativos a redes de computadores.\n\nUm protocolo da camada de transporte é implementado no sistema final e fornece comunicação lógica entre processos de aplicação que rodam em hospedeiros diferentes.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 90; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redes de Computadores",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "dc84cf847af6d6acd320652588063a13e735c2098aa3375476fe8f34cf79970a",
+        "original_numeric_id": 90,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "redes-de-computadores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta.\n\nNa arquitetura de redes de computadores (modelos OSI e TCP/IP), a **camada de transporte** tem como papel fundamental fornecer a **comunicação lógica entre processos de aplicação** que rodam em hospedeiros (*hosts*) diferentes.\n\nOs protocolos dessa camada (como TCP e UDP) são implementados e executados exclusivamente nos **sistemas finais** (dispositivos de origem e destino). Os dispositivos intermediários da rede, como roteadores e *switches*, operam tipicamente nas camadas inferiores (física, enlace e rede) e não processam as informações da camada de transporte durante o encaminhamento padrão de pacotes.",
+        "source_reference": null
+      },
+      "source_content_hash": "98114eb8b3f2ffe48bd0d835202db06f779a68a3666dd4f7e87bc965d9235f53"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:092",
+      "source_id": "agente_de_policia_federal:92",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens subsequentes, relativos a redes de computadores.\n\nDNS é um protocolo da camada de aplicação que usa o UDP — com o UDP há apresentação entre as entidades remetente e destinatária da camada de transporte antes do envio de um segmento.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 92; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redes de Computadores",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "009000aaec16848644a54cd9afb8273110d50ce5f8b91d60117f4695cdb584f8",
+        "original_numeric_id": 92,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "redes-de-computadores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta.\n\nEmbora a primeira parte esteja correta — o **DNS** (*Domain Name System*) é de fato um protocolo da camada de aplicação que utiliza prioritariamente o **UDP** na camada de transporte —, a segunda parte apresenta um erro conceitual grave.\n\nO **UDP** (*User Datagram Protocol*) é um protocolo **não orientado à conexão** (*connectionless*). Isso significa que ele **não realiza** nenhuma fase de estabelecimento de conexão, negociação ou \"apresentação\" (*handshake*) entre a origem e o destino antes de enviar os dados. O segmento é simplesmente transmitido sem garantias de entrega ou verificação prévia de estado do destinatário. \n\nA característica de realizar uma \"apresentação\" (*handshake* de três vias ou *three-way handshake*) antes do envio de dados é exclusiva de protocolos orientados à conexão, como o **TCP** (*Transmission Control Protocol*).",
+        "source_reference": null
+      },
+      "source_content_hash": "15e22705bed95cf006a0ab7c6579cb26840502df3aa66bbc3bba38e3b30c2409"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:093",
+      "source_id": "agente_de_policia_federal:93",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, relativos a noções de programação Python e R.\n\nConsidere o programa a seguir, escrito em R.\n\nx <- c (3, 5, 7)\ny <- c (1, 9, 11)\nprint (x + y)\n\nApós a execução do programa, será obtido o seguinte resultado.\n\n[1] 36",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 93; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Hardware",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "7193733c386f3e220e48da20b00a76af381013fb4113d89b606b2850c24f4226",
+        "original_numeric_id": 93,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_093.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta.\n\nNa linguagem R, a operação de soma entre dois vetores de mesmo tamanho é realizada de forma **vetorizada**, ou seja, **elemento a elemento** (*element-wise*).\n\nAo executar `x + y`, o R somará o primeiro elemento de `x` com o primeiro de `y`, o segundo de `x` com o segundo de `y`, e assim por diante. O resultado impresso será um novo vetor, e não a soma escalar de todos os elementos (que resultaria em 36 apenas se fosse utilizada a função `sum(x + y)`).\n\nO resultado correto impresso no console seria:\n`[1]  4 14 18`\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_093.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "b591098937c99a7872efe030dffb3a0e6dc41575e0c32edb709fae3553d35f1b"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-policial_rodoviario_federal-portugues-c81a3c20e65b-e958a34894f8",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "c81a3c20e65b0006f9f4979473aa7964c9ab189797edafb633af8bb31bcea4b3",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "6b1e945cb69ad19510ee46e7d0eb4869d285bafc678637ffe4e70d7510396021",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "e958a34894f8f5d3d9c303f18e004bc2db11482e2ed7649e524f5b26a4df52af",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:025",
+      "source_id": "policial_rodoviario_federal:25",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as disposições do Manual de Redação da Presidência da República (MRPR) acerca da redação oficial, julgue os itens a seguir.\n\nO vocativo, nas comunicações oficiais, deverá ser sempre seguido de vírgula.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 25; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "b3bb8e56ecbe683f2d299ed58983754a4b7f0e2a46ab7b412320e1d18c3e457c",
+        "original_numeric_id": 25,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nDe acordo com o Manual de Redação da Presidência da República (3ª edição, item 2.1.2), o vocativo é o termo de chamamento empregado para se dirigir formalmente ao destinatário e deve ser obrigatoriamente seguido de vírgula nas comunicações oficiais (ex.: \"Senhor Ministro,\", \"Excelentíssimo Senhor Presidente da República,\").",
+        "source_reference": null
+      },
+      "source_content_hash": "ebd751b71278db484c5a8802f7642a33bcb0146d05f01a0b82dd33a6d34cb56d"
+    }
+  ]
+}

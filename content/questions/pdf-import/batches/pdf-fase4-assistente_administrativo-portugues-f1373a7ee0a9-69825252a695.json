@@ -1,0 +1,1339 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-assistente_administrativo-portugues-f1373a7ee0a9-69825252a695",
+  "source": {
+    "file_name": "assistente_administrativo_ATUALIZADO.json",
+    "sha256": "f1373a7ee0a9857ac3a9d86f7ca54ddd97760222dd5a046ee20c6ecfbab8577b",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "assistente_administrativo.json",
+      "original_source_sha256": "a57c1a78597d9f629a7137c90f84d7f96492a8d5fd0eb5590acdcfffc87a6bcc",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "69825252a6956b562daad687fc569ecb301afbd44e069d5f0284e6ec9dc1b6d1",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:assistente_administrativo:002",
+      "source_id": "assistente_administrativo:2",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Automóvel: Sociedade Anônima\n(Paulo Mendes Campos)\n\nSe você quiser, compre um carro; é um conforto admirável. Mas não o faça sem conhecimento de causa, a fim de evitar desilusões futuras. Saiba que está praticando um gesto essencialmente econômico; não para a sua economia, mas para a economia coletiva. Isso quer dizer que, do ponto de vista comunitário, o automóvel que você adquire não é um ponto de chegada, uma conquista final em sua vida, mas, pelo contrário, um ponto de partida para os outros. Desde que o compre, o carro passa a interessar aos outros, muito mais que a você mesmo.\nCom o carro, você está ampliando seriamente a economia de milhares de pessoas. É uma espécie de indústria às avessas, na qual você monta um engenho não para obter lucros, mas para distribuir seu dinheiro para toda classe de pessoas: industriais europeus, biliardários do Texas, empresários brasileiros, comerciantes, operários especializados, proletários, vagabundos, etc.\nJá na compra do carro, você contribui para uma infinidade de setores produtivos, que podemos encolher ao máximo nos seguintes itens: a indústria automobilística propriamente dita, localizada no Brasil, mas sem qualquer inibição no que toca à remessa de lucros para o exterior; os vendedores de automóveis; a siderurgia; a petroquímica; as fábricas de pneus e as de artefatos de borracha; as fábricas de plásticos, couros, tintas, etc.; as fábricas de rolamentos e outras autopeças; as fábricas de relógios, rádios, etc.; as indústrias de petróleo [...]\nVocê já pode ir vendo a gravidade do seu gesto: ao comprar um carro, você entrou na órbita de toda essa gente, até ontem, você estava fora do alcance deles; hoje, seu transporte passou a ser, do ponto de vista econômico, simplesmente transcendental. Você é um homem economicamente importante – para os outros. Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você.\nMas não fica só nisso; você estará ainda girando numa constelação menor, miúda mas nada desprezível: a dos recauchutadores, eletricistas, garagistas, lavadores, olheiros, guardas de trânsito, mecânicos de esquina. Você pode ainda querer um motorista ou participar de alguma das várias modalidades de seguros para automóveis. Em outros termos, você continua entrando pelo cano. No fim deste, há ainda uma outra classe: a dos ladrões, seja organizada em sindicatos, seja a espécie de franco-puxadores. [...]\n\nAo considerar a conjugação da forma verbal destacada em “Se você quiser, compre um carro” (1º§), pode-se perceber que a segunda oração assume um caráter:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 2; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "hipotético.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "questionador.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "imperativo.",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "habitual.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "negativo.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "4c8a31896a09852765b0683319730f9b28df626bfeec57056a30c8ad87a94723",
+        "original_numeric_id": 2,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nA estrutura analisada é: \"Se você quiser [oração subordinada condicional], compre um carro [oração principal]\". O verbo \"compre\" está flexionado na terceira pessoa do singular do imperativo afirmativo, concordando com o pronome de tratamento \"você\". O modo imperativo é utilizado para exprimir conselho, exortação, convite ou ordem, conferindo à oração um caráter nitidamente imperativo.\n\n**Análise das alternativas incorretas:**\n* **A** está incorreta porque o caráter hipotético (condicional) está presente na primeira oração (\"Se você quiser\"), marcada pelo modo subjuntivo, e não na segunda.\n* **B** está incorreta porque a oração não formula uma pergunta ou questionamento.\n* **D** está incorreta porque o imperativo não expressa hábito ou rotina.\n* **E** está incorreta porque a forma verbal \"compre\" está na forma afirmativa, e não negativa (que seria \"não compre\").",
+        "source_reference": null
+      },
+      "source_content_hash": "ad99531fca8eeaaee0ea3744e8a389cb4f13924a734c247eb7f4c605606ced49"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:032",
+      "source_id": "assistente_administrativo:32",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Segundo a Lei nº 12.527/2011 Lei de Acesso à informação, cabe aos órgãos e entidades do poder público, observadas as normas e procedimentos específicos aplicáveis, assegurar os itens que estão relacionados abaixo. Diante do exposto, assinale a alternativa incorreta.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 32; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Gestão transparente da informação, propiciando amplo acesso a ela e sua divulgação",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Proteção da informação, garantindo-se sua disponibilidade",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Proteção da informação, garantindo-se sua autenticidade",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Proteção da informação, garantindo-se sua integridade",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Proteção da informação sigilosa e da informação pessoal, observada a sua irrestrição de acesso",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "2d308bc42465dc13f7f267ae8f8ef3c35b6cf983313411573325c9991a6e2e4a",
+        "original_numeric_id": 32,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão solicita a identificação da alternativa incorreta em relação aos deveres dos órgãos e entidades do poder público previstos na Lei de Acesso à Informação (Lei nº 12.527/2011).\n\nO artigo 6º da referida lei elenca as obrigações de assegurar a gestão transparente e a proteção das informações. O erro da **Alternativa E** reside na afirmação de que deve ser observada a \"irrestrição de acesso\" para informações sigilosas e pessoais. Na verdade, o inciso III do artigo 6º estabelece expressamente que deve ser observada a \"eventual restrição de acesso\" para tais informações, uma vez que o sigilo e a privacidade impõem limites ao acesso público.\n\n**Análise das alternativas corretas (em conformidade com a lei):**\n* **A) Gestão transparente...:** Corresponde fielmente ao artigo 6º, inciso I.\n* **B, C e D) Proteção da informação, garantindo-se sua disponibilidade, autenticidade e integridade:** Correspondem ao artigo 6º, inciso II, que prevê a garantia desses três atributos essenciais da informação.",
+        "source_reference": null
+      },
+      "source_content_hash": "9f40d8f87f94f78ba648e306ba3583724697edd1351663a98ff9308569972851"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:034",
+      "source_id": "assistente_administrativo:34",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Segundo a Lei 13.709/2018 - Lei Geral de Proteção de Dados, a disciplina da proteção de dados pessoais tem como fundamentos os itens relacionados abaixo. Diante do exposto, assinale a alternativa incorreta.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 34; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O respeito à privacidade",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "O desenvolvimento ambiental da inovação",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "A autodeterminação informativa",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "A liberdade de expressão, de informação, de comunicação e de opinião",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "A inviolabilidade da intimidade, da honra e da imagem",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "5542fb9c4c697e1eff097eccd091c68ef6fb41d6575f5eb6628a894c64a816c8",
+        "original_numeric_id": 34,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão solicita a identificação da alternativa incorreta quanto aos fundamentos da disciplina de proteção de dados pessoais, estabelecidos no artigo 2º da Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).\n\nO erro está na **Alternativa B**, que menciona o \"desenvolvimento ambiental da inovação\". O texto da lei, no inciso V do artigo 2º, estabelece como fundamento o **desenvolvimento econômico e tecnológico e a inovação**. A substituição de \"econômico e tecnológico\" por \"ambiental\" descaracteriza o dispositivo legal.\n\n**Análise das alternativas corretas (fundamentos previstos na lei):**\n* **A) O respeito à privacidade:** Previsto no artigo 2º, inciso I.\n* **C) A autodeterminação informativa:** Previsto no artigo 2º, inciso II.\n* **D) A liberdade de expressão, de informação, de comunicação e de opinião:** Previsto no artigo 2º, inciso III.\n* **E) A inviolabilidade da intimidade, da honra e da imagem:** Previsto no artigo 2º, inciso IV.",
+        "source_reference": null
+      },
+      "source_content_hash": "176ebad38c52ffe5f74e0cc5d576481d30a027e45d85189dcbf66d5c3d8d82d6"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:035",
+      "source_id": "assistente_administrativo:35",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Para a Lei nº 13.709/2018 - Lei Geral de Proteção de Dados, ______ dado relativo a titular que não possa ser identificado, considerando a utilização de meios técnicos razoáveis e disponíveis na ocasião de seu tratamento.\nAssinale a alternativa que preencha corretamente a lacuna.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 35; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "dado pessoal sensível",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "banco de dados",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "dado anonimizado",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "uso compartilhado de dados",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "relatório de impacto de proteção de dados",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "6052d29321c59e7f6ede03aed1aed816462525c176aebe87ec028d1cb4cadd54",
+        "original_numeric_id": 35,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige o preenchimento de lacuna com base nas definições conceituais trazidas pelo artigo 5º da Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).\n\nO enunciado traz a definição exata de **dado anonimizado**, conforme o inciso III do referido artigo:\n\n> \"III - dado anonimizado: dado relativo a titular que não possa ser identificado, considerando a utilização de meios técnicos razoáveis e disponíveis na ocasião de seu tratamento;\"\n\nPortanto, a Alternativa C é a correta.\n\n**Análise das alternativas incorretas (outros conceitos do Art. 5º):**\n* **A) dado pessoal sensível:** Dado pessoal sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural (inciso II).\n* **B) banco de dados:** Conjunto estruturado de dados pessoais, estabelecido em um ou em vários locais, em suporte eletrônico ou físico (inciso IV).\n* **D) uso compartilhado de dados:** Comunicação, difusão, transferência internacional, interconexão de dados pessoais ou tratamento compartilhado de bancos de dados pessoais por órgãos e entidades públicas no cumprimento de suas competências legais, ou entre esses e entes privados, reciprocamente, com autorização específica, para uma ou mais modalidades de tratamento permitidas por esses entes públicos, ou entre entes privados (inciso XVI).\n* **E) relatório de impacto de proteção de dados:** Documentação do controlador que contém a descrição dos processos de tratamento de dados pessoais que podem gerar riscos às liberdades civis e aos direitos fundamentais, bem como medidas, salvaguardas e mecanismos de mitigação de risco (inciso XVII).",
+        "source_reference": null
+      },
+      "source_content_hash": "285393187f631c5c77e04e9eb4316150ba88175e749245a41945c597bb539638"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:036",
+      "source_id": "assistente_administrativo:36",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Segundo a Lei nº 13.709/2018 - Lei Geral de Proteção de Dados o término do tratamento de dados pessoais ocorrerá nas hipóteses relacionadas abaixo. Diante do exposto, assinale a alternativa incorreta.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 36; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Fim do período de tratamento",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Comunicação do titular, inclusive no exercício de seu direito de revogação do consentimento",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Determinação da autoridade nacional, quando houver violação ao disposto nesta Lei",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Verificação de que a finalidade foi alcançada ou de que os dados deixaram de ser necessários ou pertinentes ao alcance da finalidade específica almejada",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Confirmação da existência de tratamento",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "bd3dbdc36fa183e20129acedc242f3d63981a36b2380c3d3083fba07acfcea80",
+        "original_numeric_id": 36,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão solicita a identificação da alternativa incorreta em relação às hipóteses de término do tratamento de dados pessoais, reguladas pelo artigo 15 da Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).\n\nA **Alternativa E** está incorreta porque a \"confirmação da existência de tratamento\" não é uma hipótese de término do tratamento, mas sim um direito do titular dos dados pessoais perante o controlador, conforme estabelecido no artigo 18, inciso I, da LGPD.\n\n**Análise das alternativas corretas (hipóteses de término do tratamento segundo o Art. 15):**\n* **A) Fim do período de tratamento:** Previsto no inciso II.\n* **B) Comunicação do titular...:** Previsto no inciso III.\n* **C) Determinação da autoridade nacional...:** Previsto no inciso IV.\n* **D) Verificação de que a finalidade foi alcançada...:** Previsto no inciso I.",
+        "source_reference": null
+      },
+      "source_content_hash": "0407650f63b30161bdc46e82d5c18200e13bb609a638920a4bb914503cac796b"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:037",
+      "source_id": "assistente_administrativo:37",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Uma administração ______ é determinada pelo respeito ao princípio da hierarquia, pelo conhecimento técnico, pela competência profissional e pelo estabelecimento e fiel cumprimento de um conjunto de normas.\nAssinale a alternativa que preencha corretamente a lacuna.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 37; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "burocrática",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "sistêmica",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "clássica",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "humana",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "relacional",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "90f73c868d781b69ee0233c6e25aa693f2affeb943689d959fb7d58071dd9cbc",
+        "original_numeric_id": 37,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda os modelos de administração e suas características teóricas. \n\nA lacuna deve ser preenchida com o termo **burocrática** (Alternativa A). O modelo de administração burocrática, fundamentado na teoria da burocracia de Max Weber, baseia-se na racionalidade legal. Suas principais características incluem o respeito estrito à hierarquia de autoridade, a exigência de conhecimento técnico e competência profissional para o preenchimento de cargos, a impessoalidade e o estabelecimento de normas e regulamentos escritos que devem ser fielmente cumpridos.\n\n**Análise das alternativas incorretas:**\n* **B) sistêmica:** Foca na organização como um sistema aberto em constante interação com o ambiente externo e na interdependência de suas partes, e não na rigidez de normas e hierarquia.\n* **C) clássica:** Embora a teoria clássica (Fayol) enfatize a estrutura e a hierarquia, a descrição detalhada que associa competência profissional, conhecimento técnico e um conjunto formal de normas escritas é a definição típica do modelo burocrático weberiano.\n* **D) humana:** Prioriza as pessoas, os grupos informais, a motivação e a liderança (Teoria das Relações Humanas), opondo-se ao formalismo burocrático.\n* **E) relacional:** Enfatiza as redes de relacionamento e interações, distanciando-se do foco em hierarquia rígida e cumprimento estrito de normas formais.",
+        "source_reference": null
+      },
+      "source_content_hash": "bf4d4bef52b97e5fecf2faea7e58515a3e56552e095c57d80dba56cc4c6150b4"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:038",
+      "source_id": "assistente_administrativo:38",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um sistema é considerado ______ quando seu resultado final é determinado pelo estado inicial.\nAssinale a alternativa que preencha corretamente a lacuna.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 38; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "aberto",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "fechado",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "misto",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "complexo",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "simples",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "35d7b5328d90adaf286010ba28b02e4942402e59a16fddb52c45d314c8714e93",
+        "original_numeric_id": 38,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nNa Teoria Geral de Sistemas (TGS) e na Teoria Administrativa, um sistema é classificado quanto à sua previsibilidade em:\n1. **Determinístico:** opera de maneira perfeitamente previsível. Dado o estado inicial e o estímulo (input), o resultado final (output) é invariavelmente determinado e sem incerteza (ex.: um programa de computador, uma engrenagem mecânica).\n2. **Probabilístico:** não permite previsão com absoluta certeza, sendo descrito por meio de probabilidades estatísticas (ex.: o comportamento humano, a economia, o clima).\n\nPortanto, o termo que preenche corretamente a lacuna é **determinístico** (alternativa B).",
+        "source_reference": null
+      },
+      "source_content_hash": "70c36e2de3f6cb6133375ca60cc1f60193517f2ae67d415500c764298ec318a8"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:040",
+      "source_id": "assistente_administrativo:40",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sobre estrutura organizacional, analise as afirmativas abaixo.\nI. Uma empresa organizada de acordo com a forma funcional sinaliza que os seus departamentos de engenharia, produção e vendas deveriam ser separados, e cada um deles lida com todos os produtos da empresa.\nII. A organização por produto divide as unidades de acordo com os produtos, os projetos ou os programas de fabricação, determinando a forma de organização da empresa.\nIII. A estrutura por área geográfica concebe as unidades com base em elementos territoriais, uma vez que as estratégias e as circunstâncias indicam que o bom desempenho da organização depende particularmente de ajuste às condições locais.\nEstão corretas as afirmativas:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 40; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "I apenas",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "II apenas",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "III apenas",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "I, II e III",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "II e III apenas",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "e4f45caf375c34f85884086878ebe77676d25d05aff2a9eb0ef01c01686f45e4",
+        "original_numeric_id": 40,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D** (I, II e III estão corretas).\n\n* **Afirmativa I (Correta):** A estrutura funcional agrupa as atividades de acordo com as funções da organização (como engenharia, produção, finanças e vendas). Nesse modelo, cada departamento é especializado em sua função e atende a todos os produtos ou serviços da empresa de forma centralizada.\n* **Afirmativa II (Correta):** A departamentalização por produtos ou serviços agrupa as atividades com base nos resultados da organização. As unidades são divididas de acordo com os produtos, projetos ou programas de fabricação, permitindo maior foco e autonomia para cada linha de produto.\n* **Afirmativa III (Correta):** A estrutura geográfica (ou territorial) organiza as unidades com base na localização geográfica ou mercado de atuação. É recomendada quando a organização está dispersa e precisa se adaptar rapidamente às condições, demandas e particularidades locais.",
+        "source_reference": null
+      },
+      "source_content_hash": "0435e2cc46d3a34f0de83886b090c8eb188b2cb1d782bdb88a2095e1c4654feb"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:041",
+      "source_id": "assistente_administrativo:41",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sobre o novo papel dos Recursos Humanos, analise as afirmativas abaixo.\nI. Propor, definir e garantir um conjunto de normas e procedimentos em linha com os princípios empresariais, de acordo com a legislação aplicável.\nII. Criar e operar sistemas que permitam que as oportunidades de emprego e desenvolvimento de carreira estejam disponíveis a todos.\nIII. Ênfase na execução das tarefas voltadas exclusivamente às necessidades internas do departamento.\nEstão corretas as afirmativas:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 41; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "I apenas",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "II apenas",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "I e II apenas",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "III apenas",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "II e III apenas",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "18426d572bae7b8aba634f8c2022407fe011bc3f3edc972ca25af039ccda2e89",
+        "original_numeric_id": 41,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C** (apenas I e II estão corretas).\n\n* **Afirmativa I (Correta):** O RH moderno atua na definição de políticas, normas e procedimentos que garantam a conformidade legal e o alinhamento com a cultura e os princípios da organização.\n* **Afirmativa II (Correta):** Cabe à gestão estratégica de pessoas criar mecanismos transparentes e equitativos de recrutamento, seleção e planos de carreira, promovendo a igualdade de oportunidades para o desenvolvimento dos colaboradores.\n* **Afirmativa III (Incorreta):** O novo papel dos Recursos Humanos é estratégico e focado no cliente interno (colaboradores e gestores) e nos resultados do negócio. A ênfase exclusiva na execução de tarefas internas do próprio departamento caracteriza o antigo modelo de Departamento Pessoal (operacional e burocrático), e não a gestão moderna de pessoas.",
+        "source_reference": null
+      },
+      "source_content_hash": "eb016ea3955247611d1a41a9d9e6575ac22f5f3e4a2b8e02a9f871041aa227e1"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:042",
+      "source_id": "assistente_administrativo:42",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um programa de avaliação tem premissas. Estas estão descritas abaixo. Diante do exposto, assinale a alternativa incorreta.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 42; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Medir o desempenho real, com clareza, sobre os papéis e as responsabilidades",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Visar à melhoria no nível de desempenho do funcionário",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Melhorar os resultados da organização",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Definir e concordar sobre tarefas-chave",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Contribuir para elevar o moral externo",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "163b1f13f41c86af1a96fec6ab7c9db871cdbc4ce215adac9e87201c42b0697b",
+        "original_numeric_id": 42,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa incorreta (gabarito da questão) é a **E**.\n\nUm programa de avaliação de desempenho é um instrumento de gestão de pessoas voltado para o ambiente interno da organização. Suas premissas fundamentais incluem:\n* **Medir o desempenho real (Alternativa A):** Fornecer um diagnóstico claro sobre as entregas e responsabilidades de cada colaborador.\n* **Melhorar o desempenho individual (Alternativa B):** Identificar pontos fortes e oportunidades de melhoria para o desenvolvimento do funcionário.\n* **Melhorar os resultados organizacionais (Alternativa C):** Alinhar o desempenho individual aos objetivos estratégicos da empresa.\n* **Definir tarefas-chave (Alternativa D):** Estabelecer metas e expectativas claras e consensuais entre gestor e subordinado.\n\n**Por que a alternativa E está incorreta?**\nO objetivo de elevar o moral e a motivação por meio do feedback e do reconhecimento é direcionado ao público **interno** (os colaboradores da organização). O \"moral externo\" (imagem perante o público externo) pode ser uma consequência indireta de uma organização saudável, mas não constitui uma premissa direta ou objetivo de um programa de avaliação de desempenho.",
+        "source_reference": null
+      },
+      "source_content_hash": "31468c32f388e3eda667f141f8803a193369e8eb32f3463d435849b9392f389b"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:043",
+      "source_id": "assistente_administrativo:43",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Nas afirmativas abaixo estão alguns conceitos associados à Qualidade. Leia as afirmativas e assinale a alternativa correta.\nI. Ação corretiva: ação levada a efeito para eliminar as causas de uma não conformidade, de um defeito ou de outra situação indesejável, de modo a impedir a sua repetição.\nII. Auditoria: consiste em um exame sistemático e independente que visa determinar se as atividades e os resultados relativos à qualidade satisfazem as disposições preestabelecidas, se tais disposições estão efetivamente implementadas e se elas são adequadas para alcançar os objetivos.\nIII. Custos da qualidade: custos relativos a assegurar e garantir a qualidade satisfatória, bem como ligados às perdas sofridas quando a qualidade satisfatória não é alcançada.\nAssinale a alternativa correta.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 43; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "As afirmativas I, II e III estão corretas",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "Apenas a afirmativa I está correta",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Apenas a afirmativa II está correta",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Apenas a afirmativas III está correta",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Apenas as afirmativas II e III estão corretas",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "5d74e9e41217b7ee186cf3a1dc5136d3b860e4557266e5e5530c8087f0712f7e",
+        "original_numeric_id": 43,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A** (as afirmativas I, II e III estão corretas).\n\n* **Afirmativa I (Correta):** A ação corretiva visa eliminar a causa raiz de uma não conformidade ou desvio já detectado, garantindo que o problema não volte a ocorrer. Diferencia-se da simples correção (que apenas corrige o efeito imediato).\n* **Afirmativa II (Correta):** A auditoria da qualidade é, por definição, um processo sistemático, documentado e independente para obter evidências e avaliá-las objetivamente, determinando se os critérios estabelecidos são atendidos.\n* **Afirmativa III (Correta):** Os custos da qualidade englobam tanto os custos para garantir a conformidade (prevenção e avaliação) quanto os custos decorrentes da não conformidade (falhas internas e externas, como retrabalho e devoluções).",
+        "source_reference": null
+      },
+      "source_content_hash": "faa4b837e0dce5482e90a87bc42126ee272651a43ad8368e9e7e7bdb8062f715"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:044",
+      "source_id": "assistente_administrativo:44",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sobre o ciclo PDCA, analise as afirmativas abaixo.\nI. O ciclo de melhoria contínua, como também é conhecido, visa identificar e organizar as atividades de um processo de solução de problemas de modo a garantir, de maneira eficaz, o desenvolvimento de uma atividade planejada.\nII. Planejar (Plan): planejamento, definição das metas, especificação dos métodos.\nIII. Agir (Act): é a ação corretiva para melhoria ou manutenção do processo.\nAssinale a alternativa correta.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 44; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Apenas as afirmativas I e II estão corretas",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "As afirmativas I, II e III estão corretas",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "Apenas a afirmativa I está correta",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Apenas a afirmativa II está correta",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Apenas a afirmativa III está correta",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "2af1c72be80f04f8f18bb1543c81057b259e2139bbbe2231f323ca1ce55b8381",
+        "original_numeric_id": 44,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O ciclo **PDCA** (também conhecido como ciclo de Deming ou Shewhart) é uma ferramenta de gestão que visa à melhoria contínua de processos e à solução de problemas. \n\nAnálise das afirmativas:\n\n*   **Afirmativa I (Correta):** O ciclo é estruturado para identificar e organizar as atividades de forma sistemática, garantindo que o planejamento seja executado e aprimorado continuamente.\n*   **Afirmativa II (Correta):** A fase **Plan (Planejar)** consiste no estabelecimento de objetivos, metas e na definição dos métodos (caminhos/planos de ação) necessários para alcançar os resultados esperados.\n*   **Afirmativa III (Correta):** A fase **Act (Agir/Corrigir)** consiste em tomar ações corretivas para eliminar desvios identificados na fase de verificação (Check), visando à melhoria contínua ou à padronização dos processos que deram certo.\n\nComo todas as afirmativas estão corretas, a alternativa que as engloba é a correta.",
+        "source_reference": null
+      },
+      "source_content_hash": "7965438e6f5f02cd8a300fced3519d95806adf06dc8b1f7812e9015fe9a212ec"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:045",
+      "source_id": "assistente_administrativo:45",
+      "question_type": "multiple_choice",
+      "statement_markdown": "______ trata-se de um conjunto de técnicas e atividades operacionais que visam satisfazer os requisitos da qualidade.\nAssinale a alternativa que preencha corretamente a lacuna.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 45; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Conformidade",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Custo de qualidade",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Auditoria",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Controle de qualidade",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Garantia da qualidade",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "8dd412d44618c2873232b5801658ba9fe58504b4e242cb8f00968e8a3006800d",
+        "original_numeric_id": 45,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a identificação do conceito que se refere ao conjunto de técnicas e atividades operacionais para satisfazer os requisitos da qualidade.\n\n*   **Controle de qualidade (Alternativa D - Correta):** Refere-se diretamente às técnicas e atividades de caráter operacional utilizadas para monitorar processos e eliminar causas de desempenho insatisfatório, garantindo o atendimento aos requisitos especificados.\n\n**Análise das alternativas incorretas:**\n*   **A) Conformidade:** É o estado de atendimento a um requisito, e não o conjunto de técnicas operacionais em si.\n*   **B) Custo de qualidade:** Refere-se aos custos financeiros associados à prevenção, avaliação e falhas na qualidade.\n*   **C) Auditoria:** É um processo sistemático, independente e documentado para obter evidências e avaliá-las objetivamente.\n*   **E) Garantia da qualidade:** Foca em prover confiança de que os requisitos da qualidade serão atendidos, possuindo um caráter mais preventivo e sistêmico do que estritamente operacional.",
+        "source_reference": null
+      },
+      "source_content_hash": "abc42e6068fcab6379bac56a27f6833c3688165cbd372c1fd590418a13fc4c85"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:046",
+      "source_id": "assistente_administrativo:46",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sobre princípios expressos da Administração Pública, princípio da ______ dispõe a conduta do administrador, pois deverá seguir de forma ética e profissional.\nAssinale a alternativa que preencha corretamente a lacuna.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 46; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "legalidade",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "moralidade",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "publicidade",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "eficiência",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "impessoalidade",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "aa78b494e1773173d6fd15fa02180fc02f566c95c5612b6f058e360f3689e574",
+        "original_numeric_id": 46,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O enunciado aborda os princípios expressos da Administração Pública (previstos no artigo 37, *caput*, da Constituição Federal) e descreve o princípio que exige do administrador uma conduta ética e profissional.\n\n*   **Princípio da Moralidade (Alternativa B - Correta):** Impõe que o agente público atue não apenas em conformidade com a lei, mas também de acordo com a ética, a boa-fé, a lealdade, a honestidade e a probidade administrativa.\n\n**Análise das alternativas incorretas:**\n*   **A) Legalidade:** Determina que a Administração Pública só pode atuar conforme autorizado ou determinado em lei.\n*   **C) Publicidade:** Exige a transparência e a divulgação oficial dos atos administrativos.\n*   **D) Eficiência:** Impõe a busca por melhores resultados com a menor utilização possível de recursos.\n*   **E) Impessoalidade:** Veda o tratamento discriminatório ou com favoritismos, além de proibir a promoção pessoal de agentes públicos em atos da administração.\n\n**Dispositivo legal**\n\n[Artigo 37, caput, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "4e208414bf14430cde85a19824c1f641f7b73dfec18c9a4f85e64ab03e6da14a"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:047",
+      "source_id": "assistente_administrativo:47",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sobre Administração Pública, analise as afirmativas abaixo.\nI. Administração Pública em sentido institucional, é o conjunto de órgãos instituídos para consecução dos objetivos do governo.\nII. Administração Pública em sentido funcional, é o conjunto das funções necessárias aos serviços públicos em geral.\nIII. Administração Pública em sentido operacional, é o desempenho perene e sistemático, legal e técnico dos serviços próprios do Estado ou por ele assumidos em benefício da colectividade.\nEstão corretas as afirmativas:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 47; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "I, II e III",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "I apenas",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "II apenas",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "III apenas",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "II e III apenas",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Semântica e Significação das Palavras",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "f2ae7d2291f53f7b91c93d518b552948cf659500060fe7fb427a92e843467e5e",
+        "original_numeric_id": 47,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda os diferentes sentidos e conceitos doutrinários de Administração Pública, baseando-se na clássica lição de Hely Lopes Meirelles:\n\n*   **Afirmativa I (Correta):** A Administração Pública em sentido **institucional** (também chamado de subjetivo ou formal) representa o conjunto de órgãos, agentes e pessoas jurídicas que o Estado institui para a execução de suas políticas e objetivos.\n*   **Afirmativa II (Correta):** Em sentido **funcional** (também chamado de objetivo ou material), a Administração Pública é a própria atividade administrativa em si, ou seja, o conjunto de funções necessárias para a prestação dos serviços públicos e o exercício do poder de polícia.\n*   **Afirmativa III (Correta):** Em sentido **operacional**, consiste no desempenho prático, perene, técnico e legal dos serviços que o Estado assume para o benefício direto da coletividade.\n\nComo todas as afirmativas estão conceitualmente corretas e alinhadas com a doutrina administrativa, a alternativa correta é a que valida as três proposições.",
+        "source_reference": null
+      },
+      "source_content_hash": "0da7f9388e722d2a23f24045f713c1e71d225954ed583c63d4c992968f5798d9"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:048",
+      "source_id": "assistente_administrativo:48",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A respeito dos objetivos de gestão por processos, assinale a alternativa incorreta.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 48; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Aumentar o valor do produto/serviço na percepção do cliente",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Aumentar a competitividade",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Atuar segundo a(s) estratégia(s) competitiva(s) considerada(s) mais relevante(s), que agregue(m) valor ao cliente",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Aumentar sensivelmente a produtividade, com eficiência e eficácia",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Simplificar processos, aumentando atividades que não acrescentem valor ao cliente",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "92d19a894d460471b516a5b6c5a8d340db79c2e94b429827826d9b65d1d09be4",
+        "original_numeric_id": 48,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão solicita a alternativa **incorreta** a respeito dos objetivos da gestão por processos.\n\n*   **Alternativa E (Incorreta/Gabarito):** A gestão por processos busca simplificar os fluxos de trabalho por meio da **eliminação ou redução** de atividades que não agregam valor ao cliente (desperdícios, burocracias excessivas, retrabalhos). Afirmar que o objetivo é \"aumentar\" tais atividades contraria diretamente os princípios de eficiência e melhoria de processos.\n\n**Análise das demais alternativas (que apresentam objetivos corretos da gestão por processos):**\n*   **A) Correta:** O foco no cliente visa aumentar a percepção de valor sobre o produto ou serviço entregue.\n*   **B) Correta:** Processos mais eficientes e integrados elevam a competitividade da organização no mercado.\n*   **C) Correta:** Alinha a operação diária às diretrizes estratégicas da organização para gerar valor real.\n*   **D) Correta:** Busca a otimização de recursos (eficiência) e o alcance dos resultados desejados (eficácia), elevando a produtividade.",
+        "source_reference": null
+      },
+      "source_content_hash": "ad8c75d179bb2471c285c465797667aab4a69bcaaf093ac5d533a55dadab1100"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:049",
+      "source_id": "assistente_administrativo:49",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sobre os enganos mais comuns na modelagem de processos, analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F).\n( ) Mapear todos os detalhes e o objetivo final.\n( ) Mapear os processos determinando, especificamente, como serão medidos os resultados.\n( ) Não usar as mesmas informações e fluxogramas de uma modelagem que funcionou perfeitamente em outra empresa.\nAssinale a alternativa que apresenta a sequência correta de cima para baixo",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 49; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "V - F - F",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "F - V - F",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "F - F - F",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "F - F - V",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "V - V - V",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "de61fb551de1023d56e65d7f9aab8d14790880fc4f3e40caf26ce591615869ee",
+        "original_numeric_id": 49,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nNa Gestão por Processos de Negócio (BPM) e na modelagem de processos (BPMN), os equívocos mais comuns incluem:\nI. Confundir modelagem de processos (*como o trabalho flui entre áreas*) com estrutura organizacional/organograma (*quem manda em quem*).\nII. Descer precocemente ao nível microscópico de procedimentos e tarefas manuais, perdendo a visão sistêmica e a cadeia de valor ponta a ponta (*end-to-end*).\nIII. Tentar mapear exceções raríssimas como se fossem o fluxo principal do processo (*caminho feliz*), tornando o modelo excessivamente complexo e inútil.\n\nA alternativa C sintetiza adequadamente esses desvios clássicos mapeados pela literatura de BPM CBOK.",
+        "source_reference": null
+      },
+      "source_content_hash": "11777c5e067933b9571cb79b0ee04962cea7b5860032ffb63d980fe98b01e4d9"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:050",
+      "source_id": "assistente_administrativo:50",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O mapeamento de processos deve executar algumas atividades. Diante do exposto, assinale a alternativa incorreta.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 50; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "expor os detalhes do processo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "ter concisão e precisão na descrição do processo",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "focar a atenção nas interfaces do processo",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "fornecer uma análise de processos poderosa e consistente",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "entrada e saída dos processos",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "e0f710b6bc3e3b4181e6095fa9e8a79d5f9e35d95299b420b218672b259759c7",
+        "original_numeric_id": 50,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O mapeamento de processos é uma técnica gerencial utilizada para identificar, compreender e documentar o fluxo de trabalho, as responsabilidades e os recursos de um processo, visando à sua análise e melhoria contínua.\n\n*   **Alternativa E (Incorreta - Gabarito):** \"Entrada e saída dos processos\" (*inputs* e *outputs*) representam componentes estruturais de um processo de negócio, e não atividades ou objetivos operacionais que o mapeamento deve executar.\n*   **Alternativas A, B, C e D (Corretas):** Descrevem perfeitamente as atividades, objetivos e características esperadas do mapeamento de processos. A técnica deve expor os detalhes operacionais (A), prezar pela concisão e precisão descritiva (B), focar nas interfaces e transições entre áreas (C) e fornecer subsídios para uma análise consistente e estruturada (D).",
+        "source_reference": null
+      },
+      "source_content_hash": "205fb3f52f10c25379492d2f4ef46cd0ff73e2d5569755e5ad3f8eae96c46671"
+    }
+  ]
+}

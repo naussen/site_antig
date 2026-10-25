@@ -1,0 +1,625 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_do_ministerio_publico_area_administrativa-portugues-74df7af44d59-f0d79b87d8ab",
+  "source": {
+    "file_name": "tecnico_do_ministerio_publico_area_administrativa_ATUALIZADO.json",
+    "sha256": "74df7af44d59dc5b630984a8e5e7fe40fed758894220a278014b288dd482883c",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_do_ministerio_publico_area_administrativa.json",
+      "original_source_sha256": "4f108d6745e5642f8962285fd7010db5f1562dfc6f07780d46a281f2e454b6aa",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "f0d79b87d8ab0df4e7f823ff243fb5ad7087578c6bc03d204ca49a80d9cf3d33",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:001",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:1",
+      "question_type": "multiple_choice",
+      "statement_markdown": "“O livro acompanha a humanidade há tempos. Sua história é complexa e envolve inúmeras mudanças; do livro em rolo ao formato atual, lá se vão 4,5 séculos. Ao longo dessa trajetória, porém, uma característica perdurou: o livro sempre foi um repositório de conhecimento que circulava na época – e foi dessa forma que entrou na sala de aula”.\nAo dizer que o livro sempre foi um repositório de conhecimento que circulava na época, a leitura do texto nos permite concluir que:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 1; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "há sempre uma necessidade de renovação do livro em razão da contínua evolução dos conhecimentos;",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "permanece a procura por um livro didático ideal, já que todos são, por definição, deficientes;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "continua a valorização do livro didático antigo e já experimentado por se ter mostrado útil através dos tempos;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "se trata de um material didático que se caracteriza por seu conservadorismo, por veicular conhecimentos estabelecidos;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "traz a marca histórica de ter veiculado conhecimentos através dos tempos e, por isso, deve preservar seus conteúdos.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "c2e954be5a56c98a98c443cabe7d9308969040ba18e0557124bd569e5addc094",
+        "original_numeric_id": 1,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A**.\n\nNo trecho em análise: *\"uma característica perdurou: o livro sempre foi um repositório de conhecimento que circulava na época\"*.\n\nComo o conhecimento humano é dinâmico e evolui continuamente ao longo dos séculos, se o livro funciona como repositório daquilo que circula no presente histórico, decorre logicamente que ele precisa passar por constante renovação e atualização para continuar cumprindo esse papel social e pedagógico.",
+        "source_reference": null
+      },
+      "source_content_hash": "5d825e548f8df62c8efeaf3e19f2a5db0a4fe5f9b7f9832cd910dc43a826adb2"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:006",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:6",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Numa entrevista, às vezes o entrevistador contamina a futura resposta do entrevistado com o seu posicionamento; a pergunta abaixo, de uma suposta entrevista, que mostra essa característica é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 6; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O que o senhor acha da definição de criatividade de Machado de Assis?",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Que estratégias educacionais o senhor recomenda diante da total falta de criatividade nas escolas?",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "Quais as marcas definidoras de criatividade?",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Como a tecnologia pode ajudar na implantação de um projeto educativo valorizador da criatividade?",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "É possível desenvolver uma educação pela criatividade com professores já formados?",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "35589bfa4732e24f7450f76673ff9f8ef11a68c9436a32ca89e9ebb4bf7678d7",
+        "original_numeric_id": 6,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nNa formulação da pergunta: *\"Que estratégias educacionais o senhor recomenda diante da total falta de criatividade nas escolas?\"*, o entrevistador introduz previamente um juízo categórico de valor pessoal e negativo (*\"total falta de criatividade nas escolas\"*).\n\nEssa premissa unilateral condiciona e contamina a resposta do entrevistado, que é forçado a partir do pressuposto imposto pelo repórter.",
+        "source_reference": null
+      },
+      "source_content_hash": "69b99293a4ceb96895e959fe9b33cea3cd96fca00c2a66af53aae823e2e8696b"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:013",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:13",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto 2\nO professor tenta exaustivamente explicar o conteúdo seguidas vezes, muda o ponto de vista, muda o esquema exposto na lousa, exemplifica de duas, três, quatro formas diferentes. A cada pausa, chama atenção de diferentes grupos de alunos, que insistem em não prestar atenção. (....) Já transpirando e quase rouco de tanto aumentar o tom de voz, o professor chama a atenção de um aluno que ri alto.\n—Fica de boa, profe. Depois eu vejo isso aí no YouTube.\n\n— Fica de boa, profe. Depois eu vejo isso aí no YouTube.\nA característica que NÃO está presente nessa frase dita pelo aluno do texto 2 é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 13; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "emprego de gíria;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "transcrição oral de uma abreviatura;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "o emprego de isso com valor pejorativo;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "falha na estruturação gramatical;",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "o uso de aí para marcar distância.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "5b6b21ebe35273cb933b1304490331bc272a140a6d6898025ff3d66a3e04e5fa",
+        "original_numeric_id": 13,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "D",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nA frase dita pelo aluno: *\"— Fica de boa, profe. Depois eu vejo isso aí no YouTube.\"* apresenta plena coesão sintática e estruturação gramatical adequada ao registro oral coloquial/informal, **não contendo falha na estruturação gramatical**.\n\nA assertiva pedia a característica que **NÃO** está presente. Os demais recursos assinalados ocorrem expressamente: gíria (*\"fica de boa\"*), abreviação oral (*\"profe\"*), pronome demonstrativo com matiz depreciativo em relação à aula do professor (*\"isso\"*) e advérbio marcando distância (*\"aí\"*).",
+        "source_reference": null
+      },
+      "source_content_hash": "774e0aa1754206d8a3553f636a4569e77edec304cc5e54c3a24a01f49b55b345"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:015",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:15",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A única frase abaixo que se mostra coerente é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 15; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Os imbecis deixam as suas impressões digitais no que dizem.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Jamais diga uma mentira que não possa provar.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "A razão é um sol severo: ilumina, mas cega.",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "Ninguém pode me calar, a menos que amarrem minhas mãos nas costas.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "É como dizia o complementarista: que empate o melhor!",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "dd2c30f49f7779ef977e297c5e410d2bcd714401f52554aff5ebfde8b02e87a1",
+        "original_numeric_id": 15,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nA frase da alternativa C (*\"A razão é um sol severo: ilumina, mas cega.\"*) constrói uma metáfora filosófica perfeitamente **coerente e verossímil**, expressando que o excesso de racionalidade, tal como a luz intensa do sol, traz clareza e lucidez, mas pode ofuscar a sensibilidade emocional.\n\nTodas as outras alternativas contêm incoerências lógicas absurdas ou trocadilhos desconexos: impressões digitais na fala (A), provar mentira (B), calar amarrando as mãos (D) e empatar o melhor (E).",
+        "source_reference": null
+      },
+      "source_content_hash": "10a309e484ea6685c431679dec7aed5e3cf3f9d55acd0422ce076a2dbd1a0a5c"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:016",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:16",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O norte-americano Alvin Toffler escreveu certa vez:\nO analfabeto do século XXI não será aquele que não conseguiu ler ou escrever, mas aquele que não puder aprender, desaprender e, por fim, aprender de novo.\nSobre a estruturação e significação desse pequeno texto, é correto afirmar que:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 16; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a estrutura do texto corresponde à de uma definição;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "o emprego da forma futura será nos indica que a frase foi escrita há mais de dois séculos;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "o uso de não, na primeira ocorrência desse advérbio, mostra oposição ao tradicional conceito de analfabeto;",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "o uso de não, na terceira ocorrência desse advérbio, limita sua referência a puder aprender;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "o texto destaca a paciência como a maior qualidade do estudioso contemporâneo.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Semântica e Significação das Palavras",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "1c2cbfc4c80b1d35bac5e296c008bf55d372fe6ba6fa04888d760ae5c0030f55",
+        "original_numeric_id": 16,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nNo aforismo de Alvin Toffler: *\"O analfabeto do século XXI **não** será aquele que não conseguiu ler ou escrever, mas aquele que...\"*.\n\nA primeira ocorrência da palavra de negação **\"não\"** atua diretamente para contrapor, negar e superar a concepção tradicional e histórica de analfabetismo (mera inaptidão para decodificar letras e palavras), introduzindo a nova tese de analfabetismo funcional voltada à capacidade de reaprender.",
+        "source_reference": null
+      },
+      "source_content_hash": "354c29621c6b074ef086fe0b2465b65197cb8f4b9de10d9b91bc0ba29a8a90be"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:017",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:17",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto 3\nOs velhos estão sempre aconselhando os jovens a guardar dinheiro. Digo que este é um mau conselho. Não guardem um centavo; invistam em si mesmo apenas. Eu nunca economizei um dólar sequer antes dos 40 anos de idade. (Henry Ford)\n\nA frase de Henry Ford (texto 3) foi traduzida com um erro gramatical, que é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 17; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "emprego de mau em lugar de mal;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "em si mesmo em lugar de em si mesmos;",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "sequer em lugar de se quer;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "a má colocação de apenas na frase;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "a redundância desnecessária em de idade.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "d8f04dae85924efb582463d4a1e9287f3afc41a860abde5d4d483f75b6bff6a0",
+        "original_numeric_id": 17,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nNo trecho: *\"Não guardem um centavo; invistam em si mesmo apenas\"*.\n\nComo a forma verbal imperativa *\"guardem\"* e *\"invistam\"* está conjugada na **3ª pessoa do plural** (dirigida aos *\"jovens\"*), o pronome reflexivo e o termo de reforço correspondente devem flexionar-se obrigatoriamente no plural para manter a harmonia de concordância: **\"em si mesmos\"**.",
+        "source_reference": null
+      },
+      "source_content_hash": "36c73f2ee90ce39479d3785c50b710628d2615904ce23f2a7a44b0c02225d52b"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:019",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:19",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A leitura de todos os bons livros é como uma conversa com todos os homens de melhor qualidade dos séculos passados. (Descartes)\nOs termos que desempenham igual função nessa frase são:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 19; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "de todos os bons livros / de melhor qualidade;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "de todos os bons livros / dos séculos passados;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "com todos os homens / dos séculos passados;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "com todos os homens / de melhor qualidade;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "de todos os bons livros / com todos os homens.",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "4c8cb5023cd7d6d0cf04be1edcf80451b53117922ce0259008abfe28016e9e98",
+        "original_numeric_id": 19,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **E**.\n\nNa frase de Descartes: *\"A leitura [de todos os bons livros] é como uma conversa [com todos os homens]...\"*.\n\nAmbos os termos exercem a função sintática de **complemento nominal**:\n\n* *\"de todos os bons livros\"* complementa o substantivo abstrato transitivo *\"leitura\"* (sentido passivo: os livros são lidos);\n* *\"com todos os homens\"* complementa o substantivo abstrato *\"conversa\"* (conversar com quem?).",
+        "source_reference": null
+      },
+      "source_content_hash": "7cde7d1106f7ff29e1a5538438b782ebb012a7ec3b77f853ec300e7182a20210"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:029",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:29",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto 5\n“No Paquistão, quando sou proibida de ir à escola, compreendo o quão importante é a educação. A educação é o poder das mulheres. (....) Nós percebemos a importância de nossa voz quando somos silenciados”. É assim que a pequena notável enxerga o horizonte e – por meio das novas tecnologias – pôde fazer ecoar sua voz.\nEducação é um ato político, e se é na sociedade (seja física ou digital) o nascedouro de faíscas de perspectivas para um mundo mais igualitário, a escola deve ser o seu maior berçário.\nEmpoderamento educacional, Ivan Aguirra\n\nO título dado ao texto de onde foi retirado o segmento (texto 5) inclui a palavra empoderamento; no caso do texto, esse termo significa:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 29; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a importância da educação em geral;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "o poder político do ato de educar;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "o valor advindo da educação para mulheres no Paquistão;",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "a importância do direito à fala numa sociedade machista;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "a força trazida pelas novas tecnologias na educação.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Semântica e Significação das Palavras",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "08d64e5da28b07ac46e374ab9975192e86e12840865c1ccdacca1a3aec1518d0",
+        "original_numeric_id": 29,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nO texto contextualiza a luta e o depoimento de Malala Yousafzai contra a opressão extremista no Paquistão: *\"No Paquistão, quando sou proibida de ir à escola, compreendo o quão importante é a educação. A educação é o poder das mulheres.\"*.\n\nNesse cenário específico, o termo **empoderamento** traduz a conquista de autonomia, dignidade e força social propiciada pelo acesso à educação para as mulheres na sociedade paquistanesa.",
+        "source_reference": null
+      },
+      "source_content_hash": "e505a7f72883a9d544921b2c4d1fb46214b1726270bf0e6f8a2115ef00d2fc7c"
+    }
+  ]
+}

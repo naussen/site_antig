@@ -1,0 +1,196 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-dpf14_009_01-administracao-financeira-e-orcamentaria-fc85fdc9d1f4-67f46ede1cfb",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "fc85fdc9d1f45a7a9beaed6c728368f3364cad59fba26e5bca2aa08fbac5e46f",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "7c65334d658e76f507a006465e38351432ef043be4c6cf520c4cf664a9007aba",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "67f46ede1cfbaa1e44d1c7638147092202d3df46fa16dd3272427f2440d9cfbc",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-financeira-e-orcamentaria",
+    "name": "Administração Financeira e Orçamentária"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:069",
+      "source_id": "dpf14_009_01:69",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere ao funcionamento e às normas que regem a elaboração do orçamento público, julgue os próximos itens.\n\nO plano plurianual — instrumento de planejamento de médio prazo do governo federal — estabelece objetivos e metas para despesas de capital, incluindo-se despesas correntes necessárias a investimentos a serem realizados durante mais de um exercício financeiro.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 69; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Planejamento e Leis Orçamentárias (PPA, LDO e LOA)",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "3248a02c2698a0e21faf9b917bc3db308cf508374a9b24050a46b09de6fec2a8",
+        "original_numeric_id": 69,
+        "original_source_content_hash": "6ef200f03362d24c4ea3bf5107891237f565ab129fcc13729bddddb897869ad7",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto e reflete exatamente a definição constitucional do Plano Plurianual (PPA). \n\nO PPA é o instrumento de planejamento de médio prazo (com vigência de quatro anos) que estabelece as diretrizes, objetivos e metas da administração pública para:\n1. As **despesas de capital** (investimentos, inversões financeiras e transferências de capital);\n2. As **outras delas decorrentes**, que correspondem justamente às despesas correntes necessárias para a manutenção, operação e funcionamento dos investimentos realizados (por exemplo, a contratação de pessoal e compra de insumos para um hospital recém-construído);\n3. As despesas relativas aos programas de duração continuada.\n\n### Dispositivo legal\n* **Constituição Federal de 1988, Art. 165, § 1º**: \"A lei que instituir o plano plurianual estabelecerá, de forma regionalizada, as diretrizes, objetivos e metas da administração pública federal para as despesas de capital e outras delas decorrentes e para as relativas aos programas de duração continuada.\"",
+        "source_reference": null
+      },
+      "source_content_hash": "8a2b26733fc6067580066bcf266048783609fcb9721417f63073bdc8f905c7d6"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:077",
+      "source_id": "dpf14_009_01:77",
+      "question_type": "true_false",
+      "statement_markdown": "Sabendo que a organização dos programas governamentais por meio de instrumentos orçamentários tem a dupla função de controlar politicamente o poder e garantir uma administração eficiente e eficaz, julgue os itens subsequentes.\n\nNo Brasil, o ciclo orçamentário é definido como processo contínuo, dinâmico e flexível, em que são avaliados os aspectos físicos e financeiros dos programas do setor público.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 77; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Orçamento Público – Constituição Federal e Lei 4.320",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "ec851c0508444223e5cbeb478d59701b12492801fe0fd170b38fe0aa3a0cd83a",
+        "original_numeric_id": 77,
+        "original_source_content_hash": "d8090b30fbfd8843e45817b40f36b6ceacfd21ea36d2fad2c5b04202fed6c104",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nO **ciclo orçamentário** (ou processo orçamentário) no Brasil é a sequência contínua, dinâmica e integrada de etapas pelas quais passa o orçamento público ao longo do tempo:\n\n1. Elaboração da proposta orçamentária pelo Poder Executivo;\n2. Estudo, discussão, votação e aprovação legislativa (Lei Orçamentária Anual);\n3. Execução orçamentária e financeira dos programas de trabalho;\n4. Controle e avaliação dos resultados e julgamento das contas pelos órgãos de controle interno e pelos Tribunais de Contas.\n\nTrata-se de um processo flexível e ininterrupto, onde o ciclo de um exercício se sobrepõe ao planejamento dos exercícios seguintes.",
+        "source_reference": null
+      },
+      "source_content_hash": "726ec72ce190f027029576696aded5d1eb76730d8a355feb6b6ec3ee80873825"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:080",
+      "source_id": "dpf14_009_01:80",
+      "question_type": "true_false",
+      "statement_markdown": "Em relação a créditos adicionais, receita, despesa pública, restos a pagar e despesas de exercícios anteriores, julgue os itens seguintes.\n\nA classificação da receita quanto à natureza visa identificar a origem do recurso que ingressa nos cofres públicos segundo o fato gerador, servindo para análise do impacto dos investimentos governamentais na economia.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 80; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Créditos Adicionais",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "3c4e60000d8301e6d29fd5625fa379da3a05cdb873d6e825bd57f9fa0d9e90de",
+        "original_numeric_id": 80,
+        "original_source_content_hash": "cdf7a13f8136f53ff0e60f4b1132ee8491f45b248d3a0fa9920681e0955eab3c",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nConforme estabelecido pela Portaria Interministerial STN/SOF nº 163/2001 e pelo Manual de Contabilidade Aplicada ao Setor Público (MCASP):\n\nA **classificação da receita por natureza** tem por objetivo primordial identificar o fato gerador e a **origem dos recursos** financeiros que ingressam nos cofres públicos, sendo estruturada em seis níveis analíticos: categoria econômica, origem, espécie, rubrica, alínea e subalínea.",
+        "source_reference": null
+      },
+      "source_content_hash": "be948bfefd36e7183e94c4564aa21ab2350ee3d240f8c18d2e7be97687c35431"
+    }
+  ]
+}

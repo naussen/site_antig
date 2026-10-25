@@ -1,0 +1,554 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-tecnico_em_enfermagem-raciocinio-logico-matematica-estatistica-e-matematica-financeira-1ea32e11bd61-81f2676e873d",
+  "source": {
+    "file_name": "tecnico_em_enfermagem_ATUALIZADO.json",
+    "sha256": "1ea32e11bd6179bfbb9dd982fbfa61d5d6960aff925abc1a021792a07b1c9811",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "tecnico_em_enfermagem.json",
+      "original_source_sha256": "6dcfa0cee6ef3a501884e1448c33fab838121224584691a29d15e7e815bf5b9c",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "81f2676e873d7b958b87ba17c01457c9e8a4d7f3928819b2d37d2dc32d425ef1",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:012",
+      "source_id": "tecnico_em_enfermagem:12",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Em um grupo de estudantes preparando-se para um concurso público, 10 são adolescentes e 15 já são adultos. A probabilidade de escolher aleatoriamente um estudante adulto desse grupo é:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 12; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "30%",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "35%",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "60%",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "65%",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "70%",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "6eac48c7c06c549e387553bca692298193940d8ef430c2f3eae906f0a5c974e6",
+        "original_numeric_id": 12,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_em_enfermagem_012.png",
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A probabilidade de um evento ocorrer é dada pela razão entre o número de resultados favoráveis e o número total de resultados possíveis no espaço amostral.\n\nNeste caso:\n* Número de casos favoráveis (estudantes adultos) = 15\n* Número total de casos possíveis (adolescentes + adultos) = 10 + 15 = 25\n\nA probabilidade (P) é:\n$$P = \\frac{15}{25} = 0,60 = 60\\%$$\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_em_enfermagem_012.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "309cbb5ebda6b68ea30b3808dec767595a6fa4fe68ac39470a8dcfa85e5b5bcd"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:014",
+      "source_id": "tecnico_em_enfermagem:14",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Dados os conjuntos de números naturais X={números ímpares menores que 10} e Y={números pares menores que 10}, o conjunto W = X ∩ Y será equivalente a:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 14; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "W = {1, 3, 5, 7, 9}",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "W = { }",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "W = {números fracionários menores que 10}",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "W = {2, 4, 6, 8}",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "W = {1, 2, 3, 4, 5, 6, 7, 8, 9}",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "4ada11ecc39c624c380c0dc253e36c3a7706e6b7a7da53c4929cf81b2669f170",
+        "original_numeric_id": 14,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_em_enfermagem_014.png",
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda a teoria dos conjuntos, especificamente a operação de interseção ($\\cap$) entre dois conjuntos numéricos no universo dos números naturais.\n\nO conjunto $X$ é composto pelos números ímpares menores que 10: $X = \\{1, 3, 5, 7, 9\\}$.\nO conjunto $Y$ é composto pelos números pares menores que 10: $Y = \\{0, 2, 4, 6, 8\\}$ (ou $\\{2, 4, 6, 8\\}$, caso o zero não seja considerado, o que não altera o resultado final).\n\nA interseção $W = X \\cap Y$ representa o conjunto dos elementos que pertencem simultaneamente a $X$ e a $Y$. Como nenhum número natural pode ser par e ímpar ao mesmo tempo, não há elementos comuns entre os dois conjuntos. Portanto, o conjunto $W$ é vazio, representado por $W = \\{ \\}$.\n\nAnálise das alternativas:\n* **A) Incorreta.** Representa o próprio conjunto $X$.\n* **B) Correta.** Representa o conjunto vazio, resultado da interseção de conjuntos disjuntos.\n* **C) Incorreta.** O universo considerado é o dos números naturais, não de números fracionários.\n* **D) Incorreta.** Representa o conjunto $Y$ (excluindo o zero).\n* **E) Incorreta.** Representa a união dos conjuntos ($X \\cup Y$), excluindo o zero.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_em_enfermagem_014.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "69d401d19f1d9b0ff45895959487a3894041ae36446a57bdb7700809abee762d"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:015",
+      "source_id": "tecnico_em_enfermagem:15",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Se um salário foi aumentado em R$500,00, o que corresponde a um aumento de 10% do valor original, o salário antes do aumento era:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 15; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "R$ 4.500,00",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "R$ 5.000,00",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "R$ 5.500,00",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "R$ 4.000,00",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "R$ 6.000,00",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "63b8726711a78d50938ccd99d3059d1855ad0741bc0e57192dc60c417430c1b3",
+        "original_numeric_id": 15,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_em_enfermagem_015.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão envolve o cálculo de porcentagem simples para determinar o valor original de um salário antes de um reajuste.\n\nSabe-se que o aumento de R$ 500,00 equivale a 10% do salário original ($S$). A relação matemática pode ser expressa pela equação:\n$$0,10 \\times S = 500$$\n\nPara isolar a variável $S$, divide-se o valor do aumento pela taxa percentual na forma decimal:\n$$S = \\frac{500}{0,10} = 5.000,00$$\n\nPortanto, o salário antes do aumento era de R$ 5.000,00.\n\nAnálise das alternativas:\n* **A) Incorreta.** R$ 4.500,00 corresponderia a um aumento de R$ 450,00.\n* **B) Correta.** R$ 5.000,00 é o valor cujo 10% equivale a R$ 500,00.\n* **C) Incorreta.** R$ 5.500,00 corresponderia a um aumento de R$ 550,00.\n* **D) Incorreta.** R$ 4.000,00 corresponderia a um aumento de R$ 400,00.\n* **E) Incorreta.** R$ 6.000,00 corresponderia a um aumento de R$ 600,00.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_em_enfermagem_015.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "810d55ec62d29402c84b1ba4616fb569e9964b9dff90ffe556ddfd637098761d"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:016",
+      "source_id": "tecnico_em_enfermagem:16",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Relacione os Conectivos Lógicos da coluna da esquerda com os seus respectivos e típicos símbolos da coluna da direita:\n(1) 'não'\n(2) 'e'\n(3) 'ou'\n\n(A) ∧\n(B) ∨\n(C) ∼ ou ¬",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 16; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "1A - 2B - 3C",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "1B - 2C - 3A",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "1B - 2A - 3C",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "1C - 2A - 3B",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "1C - 2B - 3A",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Raciocínio Lógico",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "20aa8085d7be186ccced881b010236ba1a1c3e11c187e3bbcc320402b352541b",
+        "original_numeric_id": 16,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_em_enfermagem_016.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "raciocinio-logico",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a associação correta entre os conectivos lógicos da linguagem natural e seus respectivos símbolos na lógica proposicional formal.\n\nAnálise das correlações:\n1. **\"não\" (Negação):** É simbolizado por \"$\\sim$\" ou \"$\\neg$\". Portanto, (1) associa-se a (C).\n2. **\"e\" (Conjunção):** É simbolizado por \"$\\wedge$\". Portanto, (2) associa-se a (A).\n3. **\"ou\" (Disjunção):** É simbolizado por \"$\\vee$\". Portanto, (3) associa-se a (B).\n\nA única alternativa que apresenta a correspondência correta (1C - 2A - 3B) é a alternativa D.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_em_enfermagem_016.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "750a46df2e352cfc0fd13692e16b7e387a85c31c863816d7ad4ac0ac9ef2e9c1"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:017",
+      "source_id": "tecnico_em_enfermagem:17",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Considerando um baralho com 52 cartas, sendo cada naipe (Copas, Ouros, Espadas e Paus) representado por 13 cartas, assinale a alternativa que apresenta as chances de retirar uma carta do naipe de Espadas.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 17; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Cinquenta e duas possibilidades em 52",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Quatro possibilidades em 52",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Doze possibilidades em 52",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Vinte e seis possibilidades em 52",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Treze possibilidades em 52",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "584c3f410a0882c964c53ba24b075af96e92415e40f65ac2398308a76d1eb16b",
+        "original_numeric_id": 17,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_em_enfermagem_017.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda o conceito básico de probabilidade e contagem de possibilidades.\n\nO espaço amostral (total de resultados possíveis) é composto por 52 cartas. O evento de interesse é a retirada de uma carta do naipe de Espadas. O enunciado informa explicitamente que cada um dos quatro naipes possui 13 cartas.\n\nPortanto, existem exatamente 13 casos favoráveis (cartas de Espadas) em um total de 52 casos possíveis. Isso se traduz diretamente na expressão \"treze possibilidades em 52\", o que valida a alternativa E.\n\nAnálise das alternativas:\n* **A) Incorreta.** Cinquenta e duas possibilidades em 52 representaria a certeza absoluta (100% de chance), o que ocorreria se buscássemos qualquer carta do baralho.\n* **B) Incorreta.** Quatro possibilidades em 52 representaria a chance de retirar uma carta de valor específico (por exemplo, um Ás de qualquer naipe).\n* **C) Incorreta.** Doze possibilidades em 52 não corresponde à quantidade de cartas de um naipe completo.\n* **D) Incorreta.** Vinte e seis possibilidades em 52 representaria a chance de retirar uma carta de uma determinada cor (vermelha ou preta), que abrange dois naipes inteiros.\n* **E) Correta.** Representa exatamente a proporção de cartas de um único naipe (Espadas) em relação ao total do baralho.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_em_enfermagem_017.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "ffaae0731136db66eafd940b08d7a657f3a5c85aa577fbfa6036963a3d2a4b2a"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:018",
+      "source_id": "tecnico_em_enfermagem:18",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Se uma pizza foi dividida em oito partes iguais e duas dessas partes forem comidas, assinale a alternativa que apresenta quanto sobra da pizza.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 18; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "1/3",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "2/8",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "3/4",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "7/8",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "2/4",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "1f320db478bcd0431ac55b3df8fd4124defae88e136acaaf92a8a236d4f3bfb3",
+        "original_numeric_id": 18,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_em_enfermagem_018.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão solicita a fração que representa a quantidade restante de uma pizza dividida em 8 partes iguais após o consumo de 2 partes.\n\nSubtraindo as partes consumidas do total, restam 6 partes de um total de 8, o que equivale à fração 6/8.\n\nPara encontrar a resposta nas alternativas, realiza-se a simplificação da fração dividindo o numerador e o denominador pelo máximo divisor comum, que é 2. Assim, 6 dividido por 2 resulta em 3, e 8 dividido por 2 resulta em 4, obtendo-se a fração simplificada de 3/4.\n\n**Análise das alternativas incorretas:**\n- **A) 1/3:** Representaria uma sobra de aproximadamente 33,3% da pizza, o que não condiz com a sobra real de 75%.\n- **B) 2/8:** Representa a fração consumida (2 de 8 partes), e não a que sobrou.\n- **D) 7/8:** Representaria a sobra caso apenas 1 parte tivesse sido consumida.\n- **E) 2/4:** Equivale a 1/2 (metade da pizza), o que corresponderia a uma sobra de 4 partes de 8.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_em_enfermagem_018.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "cf1fce3018598a7f24fe0e1e948f8d430311f951072c7141b3b58047df9f22ad"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:019",
+      "source_id": "tecnico_em_enfermagem:19",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Em uma biblioteca, há 50 livros do gênero romance, 40 do gênero autoajuda e 10 livros pertencem a ambos os gêneros. O total de livros na biblioteca é:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 19; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "60",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "50",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "90",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "80",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "100",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "55a7fba9432d0b4c8e651aaf2c416309acdcb08bf8e71bf6e3c76ce675889cbd",
+        "original_numeric_id": 19,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_em_enfermagem_019.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A resolução do problema envolve a teoria dos conjuntos, especificamente a união de dois conjuntos que possuem elementos em comum (interseção).\n\nO total de livros é obtido somando-se a quantidade de livros de romance com a quantidade de livros de autoajuda e, em seguida, subtraindo-se os livros que pertencem a ambos os gêneros, para evitar que sejam contados duas vezes.\n\nAlternativamente, pode-se calcular os livros exclusivos de cada gênero:\n- Apenas romance: 50 - 10 = 40 livros.\n- Apenas autoajuda: 40 - 10 = 30 livros.\n- Ambos os gêneros: 10 livros.\n\nSomando as três categorias exclusivas: 40 + 30 + 10 = 80 livros no total.\n\n**Análise das alternativas incorretas:**\n- **A) 60:** Valor incorreto que não corresponde à soma correta dos conjuntos.\n- **B) 50:** Representa apenas a quantidade total de livros de romance.\n- **C) 90:** É a soma direta de 50 e 40, desconsiderando que os 10 livros da interseção seriam contados duas vezes.\n- **E) 100:** Valor obtido por uma soma incorreta dos dados fornecidos.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_em_enfermagem_019.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "1e72fcf1d4222cdf1f25eea5f638dcca69810976f386c48a7c3734f37694a2f5"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:020",
+      "source_id": "tecnico_em_enfermagem:20",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Se 10 bananas pesam o mesmo que 6 maçãs, e 2 abacaxis pesam o mesmo que 10 bananas, assinale a alternativa que apresenta quantas maçãs equivalem a um abacaxi.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 20; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "2 maçãs equivalem a um abacaxi.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "4 maçãs equivalem a um abacaxi.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "3 maçãs equivalem a um abacaxi.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "5 maçãs equivalem a um abacaxi.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "6 maçãs equivalem a um abacaxi.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Raciocínio Lógico",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "3aedd547aa003a526085a65df44f891d1dc391ae978fe962b871ecbbdddda3e5",
+        "original_numeric_id": 20,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_em_enfermagem_020.png",
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "raciocinio-logico",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão propõe uma relação de equivalência de pesos entre diferentes frutas.\n\nA partir das premissas fornecidas:\n1. 10 bananas equivalem a 6 maçãs.\n2. 2 abacaxis equivalem a 10 bananas.\n\nPor transitividade, se 2 abacaxis equivalem a 10 bananas e estas equivalem a 6 maçãs, conclui-se diretamente que 2 abacaxis equivalem a 6 maçãs.\n\nPara determinar a equivalência de apenas 1 abacaxi, divide-se a quantidade de maçãs por 2:\n6 maçãs / 2 = 3 maçãs.\n\nPortanto, 1 abacaxi equivale a 3 maçãs.\n\n**Análise das alternativas incorretas:**\n- **A) 2 maçãs:** Incorreto, pois 2 abacaxis equivalem a 6 maçãs, logo 1 abacaxi deve equivaler a mais do que 2 maçãs.\n- **B) 4 maçãs:** Valor incorreto obtido por erro de divisão ou proporção.\n- **D) 5 maçãs:** Não corresponde à divisão de 6 por 2.\n- **E) 6 maçãs:** Representa a equivalência de 2 abacaxis, e não de apenas 1.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_em_enfermagem_020.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "440edf620d92491080f46abab32c500af44819dbb9c45d44eed5e42ae15465ad"
+    }
+  ]
+}

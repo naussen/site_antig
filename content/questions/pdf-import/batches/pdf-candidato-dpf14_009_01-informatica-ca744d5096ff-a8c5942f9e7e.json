@@ -1,0 +1,132 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-dpf14_009_01-informatica-ca744d5096ff-a8c5942f9e7e",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "ca744d5096ff5e394ded91af7cac3b914f6eebb00f4d317b5e902839773db969",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "9a60cb42fbada4944e3fe1d0564604111314b54b0d72e1bd9ebc2e3a33818aef",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "a8c5942f9e7e2262ade0e3c19fd5d4aaf895a73b7791a6ee502bb6c2dec11b7c",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:020",
+      "source_id": "dpf14_009_01:20",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos conceitos de organização, gerenciamento de arquivos e segurança da informação, julgue os itens a seguir.\n\nUm dos objetivos da segurança da informação é manter a integridade dos dados, evitando-se que eles sejam apagados ou alterados sem autorização de seu proprietário.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 20; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "627b6bfb0a2fbfba217cded51f3159b92bd4e79e88366f8331fee69076cb0f43",
+        "original_numeric_id": 20,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "official_item_number": 20
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A integridade é um dos pilares fundamentais da segurança da informação (junto à confidencialidade, disponibilidade e autenticidade). Seu objetivo principal é garantir que a informação seja mantida em seu estado original, protegendo-a contra alterações, modificações, gravações ou exclusões não autorizadas ou acidentais. A definição apresentada no enunciado está correta e alinhada com a literatura de segurança da informação.",
+        "source_reference": null
+      },
+      "source_content_hash": "e04a07a3cebe584a33ad45baa94f8bd04c890f5f39d116b6fc93e0ff01f58e11"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:021",
+      "source_id": "dpf14_009_01:21",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos conceitos de organização, gerenciamento de arquivos e segurança da informação, julgue os itens a seguir.\n\nUm arquivo sem conteúdo pode ser criado e armazenado no disco rígido de um computador, desde que seja nomeado no momento da criação.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 21; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Hardware",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "eaba1ea3e0a2432ebb07540029b142030738e60f0f24757451433d8c435169ae",
+        "original_numeric_id": 21,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "official_item_number": 21
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Os sistemas de arquivos modernos permitem a criação e o armazenamento de arquivos vazios (com tamanho de 0 bytes). Para que o sistema operacional possa registrar e gerenciar esse arquivo na tabela de alocação ou estrutura de diretórios do disco rígido, é indispensável que ele possua uma identificação, ou seja, um nome associado a ele no momento de sua criação (seja definido manualmente pelo usuário ou atribuído de forma automática pelo sistema, como \"Novo Documento de Texto\").",
+        "source_reference": null
+      },
+      "source_content_hash": "ed77557786ccddfe542e7a1a49af1905aed038b22cde167e5e88f7815195c23d"
+    }
+  ]
+}

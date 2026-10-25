@@ -1,0 +1,190 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-cargo30-administracao-de-recursos-materiais-ddedf305b20e-8f0dc39503a5",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "ddedf305b20e0a7dfd48e2ef1da2d3823dc4e437478b3edd7e62ad4a771ae524",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "ade70669f0c96aa17db7bd4f2a5081dabefc8b060fd23fdfaaa31934743bc23f",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "8f0dc39503a5bbdbd1401cc7b361c61d37473d67cc507d4a5b86f7e7403efa33",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-de-recursos-materiais",
+    "name": "Administração de Recursos Materiais"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:091",
+      "source_id": "cargo30:91",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, acerca de administração de materiais.\n\nO consumo de itens de demanda dependente deve ser calculado.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 91",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Aspectos Introdutórios",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Materiais",
+        "source_content_hash": "fbd064b1372fc3796b66e9b04cacdbf5ee3b5a21a34053233a16b58ae87a8a47",
+        "original_numeric_id": 91,
+        "original_source_content_hash": "ed5db09bba701f41926005ba6485916425e77ab526d21871346827c9e42fa3c5",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "aspectos-introdutorios",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Na administração de materiais, a demanda por itens pode ser classificada em:\n\n* **Demanda Independente**: Não depende da demanda de outros itens (ex.: produtos acabados vendidos ao cliente final). Por ser sujeita às forças de mercado, deve ser **prevista** (estimada por métodos estatísticos).\n* **Demanda Dependente**: Está diretamente vinculada à produção de outro item (ex.: a quantidade de pneus necessários depende da quantidade de carros a serem fabricados). Como a relação é direta e conhecida, o consumo desses itens deve ser **calculado** de forma exata (geralmente por meio de sistemas MRP - *Material Requirements Planning*), e não previsto.",
+        "source_reference": null
+      },
+      "source_content_hash": "205e33e3bac6b0da81fa0ce528ea6a8b6e75f74e5fd358e448c70e88944d30c0"
+    },
+    {
+      "external_id": "pdf:cargo30:093",
+      "source_id": "cargo30:93",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, acerca de administração de materiais.\n\nO consumo de itens de demanda independente deve ser previsto.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 93",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Aspectos Introdutórios",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Materiais",
+        "source_content_hash": "6b2b17163516b8af003e2be9baeb738bcac04edd196e32dabb7a9f38879e6164",
+        "original_numeric_id": 93,
+        "original_source_content_hash": "3cbaacf6e515cd6b431754f5fb5d86938ec1e4ed40819f5ce2d3ccf8f115a4d3",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "aspectos-introdutorios",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A demanda por materiais pode ser classificada em dependente e independente:\n\n* **Demanda Independente:** Ocorre quando a necessidade de um item não está vinculada à produção de outro item. É o caso de produtos acabados ou peças de reposição demandados diretamente pelo mercado externo. Como não há controle direto sobre o comportamento do mercado, o consumo desses itens deve ser estimado por meio de técnicas de previsão de demanda (modelos estatísticos, séries temporais, projeções qualitativas).\n* **Demanda Dependente:** Ocorre quando a necessidade de um item decorre diretamente da produção de outro (por exemplo, a demanda por pneus depende da quantidade de carros a serem fabricados). Nesse caso, a quantidade necessária é calculada (e não prevista) por meio de sistemas como o MRP (*Material Requirements Planning*).\n\nPortanto, a afirmação está correta ao indicar que a demanda independente deve ser prevista.",
+        "source_reference": null
+      },
+      "source_content_hash": "729aa7fefde383fbd995e8b9c80559cdb785db4e0108c93bec91a07425173f4a"
+    },
+    {
+      "external_id": "pdf:cargo30:095",
+      "source_id": "cargo30:95",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, acerca de administração de materiais.\n\nNo almoxarifado de materiais auxiliares, ficam armazenados os materiais utilizados na execução e na transformação do produto.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 95",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Almoxarifado",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Materiais",
+        "source_content_hash": "7da483670040ab9f56f4d54d309e0ecffd9ce857914ac58225228c30015652bb",
+        "original_numeric_id": 95,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "almoxarifado",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNa administração de recursos materiais e gestão de estoques, os **materiais auxiliares** correspondem aos insumos indiretos que participam dos processos de fabricação, manutenção, montagem, acabamento e embalagem, sem se constituírem na matéria-prima básica principal do produto final.\n\nO almoxarifado de materiais auxiliares é o espaço físico especificamente designado para receber, classificar, armazenar e controlar esses insumos essenciais à execução e transformação contínua das atividades operacionais.",
+        "source_reference": null
+      },
+      "source_content_hash": "06fbb17db0291c64d57541f84ee7ee0793b38f5e0d76c0e555072eda9b7f4745"
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-policial_rodoviario_federal-portugues-108c80d4738c-cc17ae059b7c",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "108c80d4738c4cf75248804f8f7a4e59a8ebc98742dd2b686f8053a30677b861",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "a311442a41cf96895e3ab6bc25877186df1354aab6cde616c4af291da4f66fd9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "cc17ae059b7cc868eebac5df88955b6410648c4632c2ef3b21b03f413d98523a",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:009",
+      "source_id": "policial_rodoviario_federal:9",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 1A18-I\nNos Estados Unidos da América, no século XIX, a passagem da polícia do sistema de justiça para o de governo da cidade significou também a passagem da noção de caça aos criminosos para a prevenção dos crimes, em um deslocamento do ato para o ator. Como na Europa, a ênfase na prevenção teria representado nova atitude diante do controle social, com o desenvolvimento pela polícia de uma habilidade específica, a de explicar e prevenir o comportamento criminoso. Isso acabou redundando no foco nas “classes perigosas”, ou seja, em setores específicos da sociedade vistos como produtores de comportamento criminoso. Nesse processo, desenvolveram-se os vários campos de saber vinculados aos sistemas de justiça criminal, polícia e prisão, voltados para a identificação, para a explicação e para a prevenção do comportamento criminoso, agora visto como “desviante”, como a medicina legal, a psiquiatria e, especialmente, a criminologia.\nNa Europa ocidental, as novas instituições estatais de vigilância deveriam controlar o exercício da força em sociedades em que os níveis de violência física nas relações interpessoais e do Estado com a sociedade estavam em declínio. De acordo com a difundida teoria do processo civilizador, de Norbert Elias, no Ocidente moderno, a agressividade, assim como outras emoções e prazeres, foi domada, “refinada” e “civilizada”. O autor estabelece um contraste entre a violência “franca e desinibida” do período medieval, que não excluía ninguém da vida social e era socialmente permitida e até certo ponto necessária, e o autocontrole e a moderação das emoções que acabaram por se impor na modernidade. A conversão do controle que se exercia por terceiros no autocontrole é relacionada à organização e à estabilização de Estados modernos, nos quais a monopolização da força física em órgãos centrais permitiu a criação de espaços pacificados. Em tais espaços, os indivíduos passaram a ser submetidos a regras e leis mais rigorosas, mas ficaram mais protegidos da irrupção da violência na sua vida, na medida em que as ameaças físicas tornaram-se despersonalizadas e monopolizadas por especialistas.\n\nCom relação às ideias e aos aspectos linguísticos do texto 1A18-I precedente, julgue os itens a seguir.\n\nA transferência da polícia do sistema de justiça para o governo da cidade marca o que pode ser considerado uma mudança de paradigma no que se refere ao papel da polícia na sociedade.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 9; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "90944ec00a9a1af2596c1d7021ca039434a844842a3598ec93ababe7e8a4967c",
+        "original_numeric_id": 9,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O texto aponta expressamente que a transição da polícia do sistema de justiça para o de governo da cidade \"significou também a passagem da noção de caça aos criminosos para a prevenção dos crimes, em um deslocamento do ato para o ator\". Essa transição conceitual e prática caracteriza uma redefinição estrutural de sua função social, o que valida a expressão \"mudança de paradigma no que se refere ao papel da polícia na sociedade\".",
+        "source_reference": null
+      },
+      "source_content_hash": "9b2960ff2edd45f97e7528d7415b9f6b1095144a09a4f703bfab25ef3e2c6d6d"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:010",
+      "source_id": "policial_rodoviario_federal:10",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 1A18-I\nNos Estados Unidos da América, no século XIX, a passagem da polícia do sistema de justiça para o de governo da cidade significou também a passagem da noção de caça aos criminosos para a prevenção dos crimes, em um deslocamento do ato para o ator. Como na Europa, a ênfase na prevenção teria representado nova atitude diante do controle social, com o desenvolvimento pela polícia de uma habilidade específica, a de explicar e prevenir o comportamento criminoso. Isso acabou redundando no foco nas “classes perigosas”, ou seja, em setores específicos da sociedade vistos como produtores de comportamento criminoso. Nesse processo, desenvolveram-se os vários campos de saber vinculados aos sistemas de justiça criminal, polícia e prisão, voltados para a identificação, para a explicação e para a prevenção do comportamento criminoso, agora visto como “desviante”, como a medicina legal, a psiquiatria e, especialmente, a criminologia.\nNa Europa ocidental, as novas instituições estatais de vigilância deveriam controlar o exercício da força em sociedades em que os níveis de violência física nas relações interpessoais e do Estado com a sociedade estavam em declínio. De acordo com a difundida teoria do processo civilizador, de Norbert Elias, no Ocidente moderno, a agressividade, assim como outras emoções e prazeres, foi domada, “refinada” e “civilizada”. O autor estabelece um contraste entre a violência “franca e desinibida” do período medieval, que não excluía ninguém da vida social e era socialmente permitida e até certo ponto necessária, e o autocontrole e a moderação das emoções que acabaram por se impor na modernidade. A conversão do controle que se exercia por terceiros no autocontrole é relacionada à organização e à estabilização de Estados modernos, nos quais a monopolização da força física em órgãos centrais permitiu a criação de espaços pacificados. Em tais espaços, os indivíduos passaram a ser submetidos a regras e leis mais rigorosas, mas ficaram mais protegidos da irrupção da violência na sua vida, na medida em que as ameaças físicas tornaram-se despersonalizadas e monopolizadas por especialistas.\n\nCom relação às ideias e aos aspectos linguísticos do texto 1A18-I precedente, julgue os itens a seguir.\n\nSeriam mantidos a correção gramatical e os sentidos do texto caso o segundo período do primeiro parágrafo fosse reescrito da seguinte maneira: Porque nos países europeus houve empenho em prevenir crimes, o que representou nova atitude de controle social, o resultado foi o desenvolvimento de uma habilidade específica pelas autoridades policiais: a de explicar e prevenir o crime.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 10; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "c1f3a9af9f0e90d13fc05121bf808faee48ec92dacc1f4b7caee8db49d20a803",
+        "original_numeric_id": 10,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A reescrita proposta altera substancialmente as relações de sentido do texto original. A expressão original \"Como na Europa\" estabelece uma relação de conformidade ou comparação (assim como ocorria no continente europeu, nos Estados Unidos a ênfase na prevenção representou uma nova atitude). Ao substituir essa estrutura por \"Porque nos países europeus houve empenho...\", a reescrita introduz uma relação de causa e efeito inexistente no texto original, sugerindo erroneamente que os acontecimentos na Europa foram a causa direta do desenvolvimento da habilidade policial descrita.",
+        "source_reference": null
+      },
+      "source_content_hash": "e72773df45a80c8443d0bdae4d3aeccc499a19e30ee5f96fc3031a98d1960f43"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:011",
+      "source_id": "policial_rodoviario_federal:11",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 1A18-I\nNos Estados Unidos da América, no século XIX, a passagem da polícia do sistema de justiça para o de governo da cidade significou também a passagem da noção de caça aos criminosos para a prevenção dos crimes, em um deslocamento do ato para o ator. Como na Europa, a ênfase na prevenção teria representado nova atitude diante do controle social, com o desenvolvimento pela polícia de uma habilidade específica, a de explicar e prevenir o comportamento criminoso. Isso acabou redundando no foco nas “classes perigosas”, ou seja, em setores específicos da sociedade vistos como produtores de comportamento criminoso. Nesse processo, desenvolveram-se os vários campos de saber vinculados aos sistemas de justiça criminal, polícia e prisão, voltados para a identificação, para a explicação e para a prevenção do comportamento criminoso, agora visto como “desviante”, como a medicina legal, a psiquiatria e, especialmente, a criminologia.\nNa Europa ocidental, as novas instituições estatais de vigilância deveriam controlar o exercício da força em sociedades em que os níveis de violência física nas relações interpessoais e do Estado com a sociedade estavam em declínio. De acordo com a difundida teoria do processo civilizador, de Norbert Elias, no Ocidente moderno, a agressividade, assim como outras emoções e prazeres, foi domada, “refinada” e “civilizada”. O autor estabelece um contraste entre a violência “franca e desinibida” do período medieval, que não excluía ninguém da vida social e era socialmente permitida e até certo ponto necessária, e o autocontrole e a moderação das emoções que acabaram por se impor na modernidade. A conversão do controle que se exercia por terceiros no autocontrole é relacionada à organização e à estabilização de Estados modernos, nos quais a monopolização da força física em órgãos centrais permitiu a criação de espaços pacificados. Em tais espaços, os indivíduos passaram a ser submetidos a regras e leis mais rigorosas, mas ficaram mais protegidos da irrupção da violência na sua vida, na medida em que as ameaças físicas tornaram-se despersonalizadas e monopolizadas por especialistas.\n\nCom relação às ideias e aos aspectos linguísticos do texto 1A18-I precedente, julgue os itens a seguir.\n\nInfere-se da leitura do primeiro parágrafo do texto que o desenvolvimento de áreas científicas ligadas à justiça criminal no século XIX está associado a visões preconceituosas sobre certos grupos de indivíduos.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 11; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "15e2e055f0637812d517e37e7fb3812c1b498351d0b5f9d07e6b483011f8a6bf",
+        "original_numeric_id": 11,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. No primeiro parágrafo, o texto explicita que a nova atitude de controle social \"redundou no foco nas 'classes perigosas', ou seja, em setores específicos da sociedade vistos como produtores de comportamento criminoso\". Em seguida, afirma que, \"Nesse processo, desenvolveram-se os vários campos de saber vinculados aos sistemas de justiça criminal...\". A associação direta entre o surgimento dessas disciplinas científicas (como a criminologia) e a estigmatização prévia de determinados grupos sociais sob o rótulo de \"classes perigosas\" autoriza a inferência de que tais saberes estavam associados a visões preconceituosas.",
+        "source_reference": null
+      },
+      "source_content_hash": "43eabf38a42a0ca36d9c88fa4a196ece34fde5cb4de3c9656bc7d05355ae1661"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:012",
+      "source_id": "policial_rodoviario_federal:12",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 1A18-I\nNos Estados Unidos da América, no século XIX, a passagem da polícia do sistema de justiça para o de governo da cidade significou também a passagem da noção de caça aos criminosos para a prevenção dos crimes, em um deslocamento do ato para o ator. Como na Europa, a ênfase na prevenção teria representado nova atitude diante do controle social, com o desenvolvimento pela polícia de uma habilidade específica, a de explicar e prevenir o comportamento criminoso. Isso acabou redundando no foco nas “classes perigosas”, ou seja, em setores específicos da sociedade vistos como produtores de comportamento criminoso. Nesse processo, desenvolveram-se os vários campos de saber vinculados aos sistemas de justiça criminal, polícia e prisão, voltados para a identificação, para a explicação e para a prevenção do comportamento criminoso, agora visto como “desviante”, como a medicina legal, a psiquiatria e, especialmente, a criminologia.\nNa Europa ocidental, as novas instituições estatais de vigilância deveriam controlar o exercício da força em sociedades em que os níveis de violência física nas relações interpessoais e do Estado com a sociedade estavam em declínio. De acordo com a difundida teoria do processo civilizador, de Norbert Elias, no Ocidente moderno, a agressividade, assim como outras emoções e prazeres, foi domada, “refinada” e “civilizada”. O autor estabelece um contraste entre a violência “franca e desinibida” do período medieval, que não excluía ninguém da vida social e era socialmente permitida e até certo ponto necessária, e o autocontrole e a moderação das emoções que acabaram por se impor na modernidade. A conversão do controle que se exercia por terceiros no autocontrole é relacionada à organização e à estabilização de Estados modernos, nos quais a monopolização da força física em órgãos centrais permitiu a criação de espaços pacificados. Em tais espaços, os indivíduos passaram a ser submetidos a regras e leis mais rigorosas, mas ficaram mais protegidos da irrupção da violência na sua vida, na medida em que as ameaças físicas tornaram-se despersonalizadas e monopolizadas por especialistas.\n\nCom relação às ideias e aos aspectos linguísticos do texto 1A18-I precedente, julgue os itens a seguir.\n\nDepreende-se do segundo parágrafo do texto que a violência na era medieval era comum e socialmente aceita.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 12; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "692681d666774d202fb557e76058bdd20da5bc9f8128ddac81219e0cfc0e396e",
+        "original_numeric_id": 12,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A conclusão de que a violência na era medieval era comum e aceita ampara-se diretamente no trecho do segundo parágrafo que descreve a violência daquele período como \"franca e desinibida\", destacando que ela \"não excluía ninguém da vida social e era socialmente permitida e até certo ponto necessária\". A permissão social e a não exclusão de nenhum indivíduo fundamentam a interpretação de que a prática era comum e aceita pela sociedade da época.",
+        "source_reference": null
+      },
+      "source_content_hash": "b87ffead8bb566e5db69d95f6de12f95457af70bdc8ab35eafc9974e8132a34e"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:016",
+      "source_id": "policial_rodoviario_federal:16",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 1A18-I\nNos Estados Unidos da América, no século XIX, a passagem da polícia do sistema de justiça para o de governo da cidade significou também a passagem da noção de caça aos criminosos para a prevenção dos crimes, em um deslocamento do ato para o ator. Como na Europa, a ênfase na prevenção teria representado nova atitude diante do controle social, com o desenvolvimento pela polícia de uma habilidade específica, a de explicar e prevenir o comportamento criminoso. Isso acabou redundando no foco nas “classes perigosas”, ou seja, em setores específicos da sociedade vistos como produtores de comportamento criminoso. Nesse processo, desenvolveram-se os vários campos de saber vinculados aos sistemas de justiça criminal, polícia e prisão, voltados para a identificação, para a explicação e para a prevenção do comportamento criminoso, agora visto como “desviante”, como a medicina legal, a psiquiatria e, especialmente, a criminologia.\nNa Europa ocidental, as novas instituições estatais de vigilância deveriam controlar o exercício da força em sociedades em que os níveis de violência física nas relações interpessoais e do Estado com a sociedade estavam em declínio. De acordo com a difundida teoria do processo civilizador, de Norbert Elias, no Ocidente moderno, a agressividade, assim como outras emoções e prazeres, foi domada, “refinada” e “civilizada”. O autor estabelece um contraste entre a violência “franca e desinibida” do período medieval, que não excluía ninguém da vida social e era socialmente permitida e até certo ponto necessária, e o autocontrole e a moderação das emoções que acabaram por se impor na modernidade. A conversão do controle que se exercia por terceiros no autocontrole é relacionada à organização e à estabilização de Estados modernos, nos quais a monopolização da força física em órgãos centrais permitiu a criação de espaços pacificados. Em tais espaços, os indivíduos passaram a ser submetidos a regras e leis mais rigorosas, mas ficaram mais protegidos da irrupção da violência na sua vida, na medida em que as ameaças físicas tornaram-se despersonalizadas e monopolizadas por especialistas.\n\nConsiderando os sentidos e os aspectos linguísticos do texto 1A18-I, julgue os itens que se seguem.\n\nInfere-se do segundo parágrafo do texto que a agressividade humana passou por um processo de transformação gradativo de perda de aspectos primitivos e animalescos.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 16; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "d77d862c36e91be556f28b73e77919dc876cb77f913e7a9e29eaed0d455c732f",
+        "original_numeric_id": 16,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A inferência é sustentada pela referência à teoria do \"processo civilizador\" de Norbert Elias, segundo a qual a agressividade \"foi domada, 'refinada' e 'civilizada'\". Os termos \"domada\" e \"refinada\", associados à ideia de um \"processo\" (que pressupõe gradação e transição ao longo do tempo), indicam a perda progressiva de características brutas, impulsivas ou selvagens, equivalentes aos \"aspectos primitivos e animalescos\" mencionados no enunciado.",
+        "source_reference": null
+      },
+      "source_content_hash": "583a1dc2f9c0b55e6d590a1d60e5326f9d4155f4326d554b685672ca72be3045"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:017",
+      "source_id": "policial_rodoviario_federal:17",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 1A18-I\nNos Estados Unidos da América, no século XIX, a passagem da polícia do sistema de justiça para o de governo da cidade significou também a passagem da noção de caça aos criminosos para a prevenção dos crimes, em um deslocamento do ato para o ator. Como na Europa, a ênfase na prevenção teria representado nova atitude diante do controle social, com o desenvolvimento pela polícia de uma habilidade específica, a de explicar e prevenir o comportamento criminoso. Isso acabou redundando no foco nas “classes perigosas”, ou seja, em setores específicos da sociedade vistos como produtores de comportamento criminoso. Nesse processo, desenvolveram-se os vários campos de saber vinculados aos sistemas de justiça criminal, polícia e prisão, voltados para a identificação, para a explicação e para a prevenção do comportamento criminoso, agora visto como “desviante”, como a medicina legal, a psiquiatria e, especialmente, a criminologia.\nNa Europa ocidental, as novas instituições estatais de vigilância deveriam controlar o exercício da força em sociedades em que os níveis de violência física nas relações interpessoais e do Estado com a sociedade estavam em declínio. De acordo com a difundida teoria do processo civilizador, de Norbert Elias, no Ocidente moderno, a agressividade, assim como outras emoções e prazeres, foi domada, “refinada” e “civilizada”. O autor estabelece um contraste entre a violência “franca e desinibida” do período medieval, que não excluía ninguém da vida social e era socialmente permitida e até certo ponto necessária, e o autocontrole e a moderação das emoções que acabaram por se impor na modernidade. A conversão do controle que se exercia por terceiros no autocontrole é relacionada à organização e à estabilização de Estados modernos, nos quais a monopolização da força física em órgãos centrais permitiu a criação de espaços pacificados. Em tais espaços, os indivíduos passaram a ser submetidos a regras e leis mais rigorosas, mas ficaram mais protegidos da irrupção da violência na sua vida, na medida em que as ameaças físicas tornaram-se despersonalizadas e monopolizadas por especialistas.\n\nConsiderando os sentidos e os aspectos linguísticos do texto 1A18-I, julgue os itens que se seguem.\n\nO emprego do vocábulo “irrupção”, no último período do texto, indica que a violência atingia os indivíduos de forma súbita.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 17; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "c0f99386dd3fb5e69d7276b7a27aabc146a52503a140066ae6b48f296b11c5a9",
+        "original_numeric_id": 17,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O substantivo \"irrupção\" deriva do verbo \"irromper\", cujo significado está dicionarizado como o ato de surgir de maneira súbita, imprevista ou violenta. No contexto do último período do texto (\"ficaram mais protegidos da irrupção da violência na sua vida\"), o termo é empregado justamente para denotar o aparecimento repentino ou a invasão abrupta da violência no cotidiano dos indivíduos.",
+        "source_reference": null
+      },
+      "source_content_hash": "f1a06a618813c74383b331ff87e302ae5f17b42b15a67d7e6d35360b377e2bdc"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:018",
+      "source_id": "policial_rodoviario_federal:18",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 1A18-I\nNos Estados Unidos da América, no século XIX, a passagem da polícia do sistema de justiça para o de governo da cidade significou também a passagem da noção de caça aos criminosos para a prevenção dos crimes, em um deslocamento do ato para o ator. Como na Europa, a ênfase na prevenção teria representado nova atitude diante do controle social, com o desenvolvimento pela polícia de uma habilidade específica, a de explicar e prevenir o comportamento criminoso. Isso acabou redundando no foco nas “classes perigosas”, ou seja, em setores específicos da sociedade vistos como produtores de comportamento criminoso. Nesse processo, desenvolveram-se os vários campos de saber vinculados aos sistemas de justiça criminal, polícia e prisão, voltados para a identificação, para a explicação e para a prevenção do comportamento criminoso, agora visto como “desviante”, como a medicina legal, a psiquiatria e, especialmente, a criminologia.\nNa Europa ocidental, as novas instituições estatais de vigilância deveriam controlar o exercício da força em sociedades em que os níveis de violência física nas relações interpessoais e do Estado com a sociedade estavam em declínio. De acordo com a difundida teoria do processo civilizador, de Norbert Elias, no Ocidente moderno, a agressividade, assim como outras emoções e prazeres, foi domada, “refinada” e “civilizada”. O autor estabelece um contraste entre a violência “franca e desinibida” do período medieval, que não excluía ninguém da vida social e era socialmente permitida e até certo ponto necessária, e o autocontrole e a moderação das emoções que acabaram por se impor na modernidade. A conversão do controle que se exercia por terceiros no autocontrole é relacionada à organização e à estabilização de Estados modernos, nos quais a monopolização da força física em órgãos centrais permitiu a criação de espaços pacificados. Em tais espaços, os indivíduos passaram a ser submetidos a regras e leis mais rigorosas, mas ficaram mais protegidos da irrupção da violência na sua vida, na medida em que as ameaças físicas tornaram-se despersonalizadas e monopolizadas por especialistas.\n\nConsiderando os sentidos e os aspectos linguísticos do texto 1A18-I, julgue os itens que se seguem.\n\nMantém-se a correção gramatical do trecho “o autocontrole e a moderação das emoções que acabaram por se impor na modernidade”, do texto, caso a forma verbal “impor” seja flexionada no plural imporem.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 18; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "b8a0e9606d295b6d3655bdb1a4a511d23d018147dadee25e78655d1981a392c6",
+        "original_numeric_id": 18,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. No trecho \"acabaram por se impor\", tem-se uma locução verbal em que o verbo auxiliar (\"acabaram\") já se encontra flexionado no plural para concordar com o sujeito composto (\"o autocontrole e a moderação das emoções\"). Em locuções verbais, a norma gramatical determina que apenas o verbo auxiliar sofra flexão de número e pessoa, devendo o verbo principal (\"impor\") permanecer na sua forma nominal de infinitivo impessoal. A flexão para \"imporem\" configuraria erro de concordância por redundância flexional.",
+        "source_reference": null
+      },
+      "source_content_hash": "99df75b3c4d105c13ebf91d7211a72e25e739a86cba8fb5eb92dc641a1206824"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:019",
+      "source_id": "policial_rodoviario_federal:19",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 1A18-I\nNos Estados Unidos da América, no século XIX, a passagem da polícia do sistema de justiça para o de governo da cidade significou também a passagem da noção de caça aos criminosos para a prevenção dos crimes, em um deslocamento do ato para o ator. Como na Europa, a ênfase na prevenção teria representado nova atitude diante do controle social, com o desenvolvimento pela polícia de uma habilidade específica, a de explicar e prevenir o comportamento criminoso. Isso acabou redundando no foco nas “classes perigosas”, ou seja, em setores específicos da sociedade vistos como produtores de comportamento criminoso. Nesse processo, desenvolveram-se os vários campos de saber vinculados aos sistemas de justiça criminal, polícia e prisão, voltados para a identificação, para a explicação e para a prevenção do comportamento criminoso, agora visto como “desviante”, como a medicina legal, a psiquiatria e, especialmente, a criminologia.\nNa Europa ocidental, as novas instituições estatais de vigilância deveriam controlar o exercício da força em sociedades em que os níveis de violência física nas relações interpessoais e do Estado com a sociedade estavam em declínio. De acordo com a difundida teoria do processo civilizador, de Norbert Elias, no Ocidente moderno, a agressividade, assim como outras emoções e prazeres, foi domada, “refinada” e “civilizada”. O autor estabelece um contraste entre a violência “franca e desinibida” do período medieval, que não excluía ninguém da vida social e era socialmente permitida e até certo ponto necessária, e o autocontrole e a moderação das emoções que acabaram por se impor na modernidade. A conversão do controle que se exercia por terceiros no autocontrole é relacionada à organização e à estabilização de Estados modernos, nos quais a monopolização da força física em órgãos centrais permitiu a criação de espaços pacificados. Em tais espaços, os indivíduos passaram a ser submetidos a regras e leis mais rigorosas, mas ficaram mais protegidos da irrupção da violência na sua vida, na medida em que as ameaças físicas tornaram-se despersonalizadas e monopolizadas por especialistas.\n\nConsiderando os sentidos e os aspectos linguísticos do texto 1A18-I, julgue os itens que se seguem.\n\nO trecho “A conversão do controle que se exercia por terceiros no autocontrole é relacionada à organização e à estabilização de Estados modernos” poderia ser reescrito da seguinte forma, sem prejuízo para os sentidos e para a correção gramatical do texto: Converter o controle efetuado por terceiros a autocontrole concatena a organização e estabilização dos Estados do mundo moderno.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 19; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "cc62ed43ccb9a19a244f5a8da1e5526ca1431def59c3d048c3ac241a3a8da0ad",
+        "original_numeric_id": 19,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A reescrita proposta apresenta problemas de regência e de semântica. Primeiramente, o verbo \"converter\", no sentido de transformar, exige a preposição \"em\" (converter em autocontrole) ou \"para\", tornando inadequado o emprego da preposição \"a\" (\"converter... a autocontrole\"). Adicionalmente, o verbo \"concatenar\" (que significa encadear, ligar de forma lógica ou sistemática) altera o sentido original de \"é relacionada à\", que expressa uma relação de associação ou correspondência passiva, e não uma ação direta de encadeamento ou articulação ativa entre os elementos.",
+        "source_reference": null
+      },
+      "source_content_hash": "7ae3cacf0f2018f5f9756147bb2c84515174f0c6ef2a58818238d0d9fe71d3c6"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:021",
+      "source_id": "policial_rodoviario_federal:21",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 1A18-I\nNos Estados Unidos da América, no século XIX, a passagem da polícia do sistema de justiça para o de governo da cidade significou também a passagem da noção de caça aos criminosos para a prevenção dos crimes, em um deslocamento do ato para o ator. Como na Europa, a ênfase na prevenção teria representado nova atitude diante do controle social, com o desenvolvimento pela polícia de uma habilidade específica, a de explicar e prevenir o comportamento criminoso. Isso acabou redundando no foco nas “classes perigosas”, ou seja, em setores específicos da sociedade vistos como produtores de comportamento criminoso. Nesse processo, desenvolveram-se os vários campos de saber vinculados aos sistemas de justiça criminal, polícia e prisão, voltados para a identificação, para a explicação e para a prevenção do comportamento criminoso, agora visto como “desviante”, como a medicina legal, a psiquiatria e, especialmente, a criminologia.\nNa Europa ocidental, as novas instituições estatais de vigilância deveriam controlar o exercício da força em sociedades em que os níveis de violência física nas relações interpessoais e do Estado com a sociedade estavam em declínio. De acordo com a difundida teoria do processo civilizador, de Norbert Elias, no Ocidente moderno, a agressividade, assim como outras emoções e prazeres, foi domada, “refinada” e “civilizada”. O autor estabelece um contraste entre a violência “franca e desinibida” do período medieval, que não excluía ninguém da vida social e era socialmente permitida e até certo ponto necessária, e o autocontrole e a moderação das emoções que acabaram por se impor na modernidade. A conversão do controle que se exercia por terceiros no autocontrole é relacionada à organização e à estabilização de Estados modernos, nos quais a monopolização da força física em órgãos centrais permitiu a criação de espaços pacificados. Em tais espaços, os indivíduos passaram a ser submetidos a regras e leis mais rigorosas, mas ficaram mais protegidos da irrupção da violência na sua vida, na medida em que as ameaças físicas tornaram-se despersonalizadas e monopolizadas por especialistas.\n\nConsiderando os sentidos e os aspectos linguísticos do texto 1A18-I, julgue os itens que se seguem.\n\nA correção gramatical do último período do texto seria mantida, embora seu sentido original fosse prejudicado, se a locução “na medida em que” fosse substituída por à medida que e a vírgula empregada logo após “vida” fosse suprimida.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 21; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "f56ecb663d25393d80f03e2ac6a92ec620a43519315547452b5b6676a36c079b",
+        "original_numeric_id": 21,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A locução conjuntiva **\"na medida em que\"** possui valor causal (equivalente a *porque*, *visto que*), enquanto a locução **\"à medida que\"** possui valor proporcional (equivalente a *à proporção que*). A substituição de uma pela outra mantém a correção gramatical do período, mas altera a relação semântica original, prejudicando o sentido original do texto.\n\nAlém disso, a supressão da vírgula que antecede a oração adverbial no final do período é perfeitamente gramatical. A vírgula que isola orações subordinadas adverbiais posicionadas em ordem direta (ou seja, após a oração principal) é de caráter facultativo. Portanto, a retirada da vírgula após \"vida\" não acarreta erro gramatical.",
+        "source_reference": null
+      },
+      "source_content_hash": "e08516c0d86ee15ae02553944fff6348f3179da3e5a9ae6c24a42395d89fc047"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-analista_administrativo-direito-administrativo-d1088d0556a6-d893f85327ca",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "d1088d0556a634bc0e47cc4b0194b18b7b11b50a2faaa9a150b68e740a974fa1",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "7b0e6efd1cd4387fd3b4024c7d594aa5aad8ca3c4f2146f6ddc96ab3d4597e20",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "d893f85327ca88fd0f81e194a785bfd5205c0183611f532daaa7aab0c977d64a",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:026",
+      "source_id": "analista_administrativo:26",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à administração pública e sua organização, julgue os itens a seguir.\n\nO IBAMA tem a prerrogativa legal de disponibilizar consulta pública acerca da abertura de bases de dados abertos do IBAMA, com o objetivo de priorizar os dados mais relevantes para os cidadãos — informações essas produzidas ou acumuladas pelo IBAMA sem vedação expressa de acesso.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 26; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "6dc90d78123f6e4899be474790758ae3406986895d6c0464202ddb69b3668dd3",
+        "original_numeric_id": 26,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8777.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. A disponibilização de consulta pública para a abertura de bases de dados abertos está em perfeita consonância com as diretrizes de transparência ativa e participação social.\n\nO IBAMA, na qualidade de autarquia federal, possui o dever de elaborar e atualizar seu Plano de Dados Abertos (PDA). Para isso, promove consultas públicas com o objetivo de identificar e priorizar as bases de dados de maior interesse e relevância para a sociedade, desde que sobre tais informações não recaia vedação legal de acesso (como sigilo legal ou proteção de dados pessoais).\n\n### Dispositivo legal\n- **Referência:** Decreto nº 8.777/2016, Art. 1º, Art. 2º e Art. 5º; Lei nº 12.527/2011.\n- **URL oficial:** https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2016/decreto/d8777.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "9b90909d08ac892f56b0e797a177461167e83dd47ce01ee62b4e3b9e39846931"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:050",
+      "source_id": "analista_administrativo:50",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando a situação hipotética de que determinado servidor público, sem prévia autorização da chefia imediata, tenha-se ausentado do serviço durante o expediente, para comprar presentes para sua família, julgue os itens a seguir, com base na Lei n.º 8.112/1990.\n\nTrata-se de conduta expressamente proibida pela referida lei.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 50; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Regime Jurídico dos Servidores Públicos (Lei nº 8.112/1990)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "eb8698ff5815813df4de6d7e7f30ee1483ea37672a36762acf5bd2258c3220fc",
+        "original_numeric_id": 50,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-juridico-dos-servidores-lei-8112",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A conduta do servidor público de ausentar-se do serviço durante o expediente, sem prévia autorização da chefia imediata, para fins particulares (como comprar presentes para a família), encontra proibição expressa no regime jurídico dos servidores públicos civis da União.\n\nO art. 117, inciso I, da Lei nº 8.112/1990 estabelece de forma literal que é proibido ao servidor \"ausentar-se do serviço durante o expediente, sem prévia autorização do chefe imediato\". A norma visa garantir a continuidade do serviço público, a assiduidade e o respeito à hierarquia administrativa.\n\nPortanto, a afirmativa de que se trata de conduta expressamente proibida pela referida lei está correta.\n\n### Dispositivo legal\n\n* **Lei nº 8.112/1990**, Art. 117, inciso I (disponível em: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm)).",
+        "source_reference": null
+      },
+      "source_content_hash": "2b9c4da8252c99d3cc2e6a9779dffe2068654fc3bde49b94d6575c6e1bb552f3"
+    }
+  ]
+}

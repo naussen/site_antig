@@ -1,0 +1,791 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_de_policia_federal-portugues-c3515df8485a-c0fd842adf73",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "c3515df8485ab192355dd2c9f2cd5fc325fdfcc424779258a45eea81a91b4abe",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "9bf5415c207ff2dee6f1b513f48cc1f4b3e00a224421906182f247e816e0b8ed",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "c0fd842adf73462b6500d7dcca9db9a95c1c44682943da9ec7f7712743c1a9c5",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:001",
+      "source_id": "agente_de_policia_federal:1",
+      "question_type": "true_false",
+      "statement_markdown": "Imagine uma operação de busca na selva. Sem mapas, binóculos ou apoio logístico; somente com um facão. Assim eram feitas as operações de combate à pornografia infantil pela Polícia Federal até o dia em que peritos criminais federais desenvolveram, no estado de Mato Grosso do Sul, o Nudetective.\nO programa executa em minutos uma busca que poderia levar meses, encontrando todo o conteúdo pornográfico de pedofilia em computadores, pendrives, smartphones e demais mídias de armazenamento.\nPara ajudar o trabalho dos peritos, existem programas que buscam os arquivos de imagem e vídeo através de sua hash ou sua assinatura digital. Logo nos primeiros testes, a detecção de imagens apresentou mais de 90% de acerto.\nPara o teste, pegaram um HD com conteúdo já periciado e rodaram o programa. Conseguiram 95% de acerto em 12 minutos. Seu diferencial era não só buscar pela assinatura digital ou nomes conhecidos, mas também por novos arquivos por intermédio da leitura dos pixels presentes na imagem calibrados a uma paleta de tons de pele. Começava a revolução em termos de investigação criminal de pornografia infantil.\nAlém da detecção de imagens e vídeos, todo o processo de busca e obtenção de resultados é simultâneo, o que economiza tempo e dinheiro.\nA licença de uso do software, que é programado em Java, é gratuita e só é disponibilizada para forças da lei e pesquisas acadêmicas. Segundo seus desenvolvedores, nunca houve o intuito de venda, pois não enxergam sentido em lucrar com algo que seja para salvar crianças. Mas, então, por que não deixá-lo disponível para todos? Somente para que não possa ser utilizado para criar formas de burlá-lo, explicam.\nDesde seu lançamento, o Nudetective já foi compartilhado com Argentina, Paraguai, Suécia, Áustria, Noruega, Nova Zelândia e Portugal. Ganhou reconhecimento e premiações em congressos forenses no Brasil e no mundo.\nInternet: <www.cartacapital.com.br> (com adaptações).\nNo que se refere aos sentidos e aos aspectos linguísticos do texto apresentado, julgue os itens seguintes.\n\nInfere-se do texto que o Nudetective foi desenvolvido especificamente para o combate à pornografia infantil.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 1; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "e608a748e58d40cd93d2a9f03425da6f264ca704c4e015dafbc9c618f5f6de61",
+        "original_numeric_id": 1,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A inferência proposta pelo item é sustentada diretamente pelo texto. No primeiro parágrafo, afirma-se que as operações de combate à pornografia infantil eram feitas de forma rudimentar até o desenvolvimento do *Nudetective* por peritos criminais federais. No quarto parágrafo, o texto reforça que o programa iniciou uma \"revolução em termos de investigação criminal de pornografia infantil\". Por fim, no sexto parágrafo, os desenvolvedores declaram que \"nunca houve o intuito de venda, pois não enxergam sentido em lucrar com algo que seja para salvar crianças\", o que confirma que a finalidade específica e exclusiva da criação do software foi o combate a esse tipo de crime.",
+        "source_reference": null
+      },
+      "source_content_hash": "e216d0af459febee80b3c053746d8f5348c47fa3b5d8a214f874f017a726bb92"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:002",
+      "source_id": "agente_de_policia_federal:2",
+      "question_type": "true_false",
+      "statement_markdown": "Imagine uma operação de busca na selva. Sem mapas, binóculos ou apoio logístico; somente com um facão. Assim eram feitas as operações de combate à pornografia infantil pela Polícia Federal até o dia em que peritos criminais federais desenvolveram, no estado de Mato Grosso do Sul, o Nudetective.\nO programa executa em minutos uma busca que poderia levar meses, encontrando todo o conteúdo pornográfico de pedofilia em computadores, pendrives, smartphones e demais mídias de armazenamento.\nPara ajudar o trabalho dos peritos, existem programas que buscam os arquivos de imagem e vídeo através de sua hash ou sua assinatura digital. Logo nos primeiros testes, a detecção de imagens apresentou mais de 90% de acerto.\nPara o teste, pegaram um HD com conteúdo já periciado e rodaram o programa. Conseguiram 95% de acerto em 12 minutos. Seu diferencial era não só buscar pela assinatura digital ou nomes conhecidos, mas também por novos arquivos por intermédio da leitura dos pixels presentes na imagem calibrados a uma paleta de tons de pele. Começava a revolução em termos de investigação criminal de pornografia infantil.\nAlém da detecção de imagens e vídeos, todo o processo de busca e obtenção de resultados é simultâneo, o que economiza tempo e dinheiro.\nA licença de uso do software, que é programado em Java, é gratuita e só é disponibilizada para forças da lei e pesquisas acadêmicas. Segundo seus desenvolvedores, nunca houve o intuito de venda, pois não enxergam sentido em lucrar com algo que seja para salvar crianças. Mas, então, por que não deixá-lo disponível para todos? Somente para que não possa ser utilizado para criar formas de burlá-lo, explicam.\nDesde seu lançamento, o Nudetective já foi compartilhado com Argentina, Paraguai, Suécia, Áustria, Noruega, Nova Zelândia e Portugal. Ganhou reconhecimento e premiações em congressos forenses no Brasil e no mundo.\nInternet: <www.cartacapital.com.br> (com adaptações).\nNo que se refere aos sentidos e aos aspectos linguísticos do texto apresentado, julgue os itens seguintes.\n\nUm dos benefícios do Nudetective para a Polícia Federal é tornar mais célere a investigação de crimes relacionados à pornografia infantil.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 2; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "81a0f13ec24b0e9552d474a0cfe93ab8b1c71a032bddcf4caa127a7177bf71bb",
+        "original_numeric_id": 2,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A celeridade proporcionada pelo software é um dos pontos centrais do texto. No segundo parágrafo, afirma-se explicitamente que \"O programa executa em minutos uma busca que poderia levar meses\". Essa drástica redução de tempo no processamento de dados otimiza o fluxo de trabalho dos peritos, tornando a investigação criminal de crimes de pornografia infantil significativamente mais rápida (célere).",
+        "source_reference": null
+      },
+      "source_content_hash": "312ddb896670b660f3a6d61508d6087a26e03c7e4e72eab02c138fc1ebf44e17"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:003",
+      "source_id": "agente_de_policia_federal:3",
+      "question_type": "true_false",
+      "statement_markdown": "Imagine uma operação de busca na selva. Sem mapas, binóculos ou apoio logístico; somente com um facão. Assim eram feitas as operações de combate à pornografia infantil pela Polícia Federal até o dia em que peritos criminais federais desenvolveram, no estado de Mato Grosso do Sul, o Nudetective.\nO programa executa em minutos uma busca que poderia levar meses, encontrando todo o conteúdo pornográfico de pedofilia em computadores, pendrives, smartphones e demais mídias de armazenamento.\nPara ajudar o trabalho dos peritos, existem programas que buscam os arquivos de imagem e vídeo através de sua hash ou sua assinatura digital. Logo nos primeiros testes, a detecção de imagens apresentou mais de 90% de acerto.\nPara o teste, pegaram um HD com conteúdo já periciado e rodaram o programa. Conseguiram 95% de acerto em 12 minutos. Seu diferencial era não só buscar pela assinatura digital ou nomes conhecidos, mas também por novos arquivos por intermédio da leitura dos pixels presentes na imagem calibrados a uma paleta de tons de pele. Começava a revolução em termos de investigação criminal de pornografia infantil.\nAlém da detecção de imagens e vídeos, todo o processo de busca e obtenção de resultados é simultâneo, o que economiza tempo e dinheiro.\nA licença de uso do software, que é programado em Java, é gratuita e só é disponibilizada para forças da lei e pesquisas acadêmicas. Segundo seus desenvolvedores, nunca houve o intuito de venda, pois não enxergam sentido em lucrar com algo que seja para salvar crianças. Mas, então, por que não deixá-lo disponível para todos? Somente para que não possa ser utilizado para criar formas de burlá-lo, explicam.\nDesde seu lançamento, o Nudetective já foi compartilhado com Argentina, Paraguai, Suécia, Áustria, Noruega, Nova Zelândia e Portugal. Ganhou reconhecimento e premiações em congressos forenses no Brasil e no mundo.\nInternet: <www.cartacapital.com.br> (com adaptações).\nNo que se refere aos sentidos e aos aspectos linguísticos do texto apresentado, julgue os itens seguintes.\n\nO primeiro parágrafo do texto informa que, antes da criação do Nudetective, a Polícia Federal não dispunha de dispositivos tecnológicos para a investigação de crimes de pedofilia na Internet.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 3; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "f9a3b89454b088fd7a89852e217665d45dba2419e80d535be39d1c9fad0923cd",
+        "original_numeric_id": 3,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque o primeiro parágrafo utiliza uma linguagem figurada (\"Sem mapas, binóculos ou apoio logístico; somente com um facão\") para ilustrar, metaforicamente, a precariedade e a dificuldade das investigações da época, e não para afirmar literalmente a ausência total de dispositivos tecnológicos. Ademais, o terceiro parágrafo contradiz a afirmação ao mencionar que \"existem programas que buscam os arquivos de imagem e vídeo através de sua hash ou sua assinatura digital\", indicando que já havia ferramentas tecnológicas de busca antes ou paralelamente ao desenvolvimento do *Nudetective*.",
+        "source_reference": null
+      },
+      "source_content_hash": "a5d8d426a2a48b0f255c8b7f624c2c239e8b5652ebf3471fef4c6162cb4c1164"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:004",
+      "source_id": "agente_de_policia_federal:4",
+      "question_type": "true_false",
+      "statement_markdown": "Imagine uma operação de busca na selva. Sem mapas, binóculos ou apoio logístico; somente com um facão. Assim eram feitas as operações de combate à pornografia infantil pela Polícia Federal até o dia em que peritos criminais federais desenvolveram, no estado de Mato Grosso do Sul, o Nudetective.\nO programa executa em minutos uma busca que poderia levar meses, encontrando todo o conteúdo pornográfico de pedofilia em computadores, pendrives, smartphones e demais mídias de armazenamento.\nPara ajudar o trabalho dos peritos, existem programas que buscam os arquivos de imagem e vídeo através de sua hash ou sua assinatura digital. Logo nos primeiros testes, a detecção de imagens apresentou mais de 90% de acerto.\nPara o teste, pegaram um HD com conteúdo já periciado e rodaram o programa. Conseguiram 95% de acerto em 12 minutos. Seu diferencial era não só buscar pela assinatura digital ou nomes conhecidos, mas também por novos arquivos por intermédio da leitura dos pixels presentes na imagem calibrados a uma paleta de tons de pele. Começava a revolução em termos de investigação criminal de pornografia infantil.\nAlém da detecção de imagens e vídeos, todo o processo de busca e obtenção de resultados é simultâneo, o que economiza tempo e dinheiro.\nA licença de uso do software, que é programado em Java, é gratuita e só é disponibilizada para forças da lei e pesquisas acadêmicas. Segundo seus desenvolvedores, nunca houve o intuito de venda, pois não enxergam sentido em lucrar com algo que seja para salvar crianças. Mas, então, por que não deixá-lo disponível para todos? Somente para que não possa ser utilizado para criar formas de burlá-lo, explicam.\nDesde seu lançamento, o Nudetective já foi compartilhado com Argentina, Paraguai, Suécia, Áustria, Noruega, Nova Zelândia e Portugal. Ganhou reconhecimento e premiações em congressos forenses no Brasil e no mundo.\nInternet: <www.cartacapital.com.br> (com adaptações).\nNo que se refere aos sentidos e aos aspectos linguísticos do texto apresentado, julgue os itens seguintes.\n\nDe acordo com o texto, diversos países da América e da Europa compraram a licença de uso do software criado pelos policiais federais do Mato Grosso do Sul, o que demonstra o reconhecimento estrangeiro da qualidade do trabalho forense do Brasil.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 4; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "ee35616dc3ac58eabe37f7b0062e593640b6dc2b3fbf4d08626de1cd65e9028c",
+        "original_numeric_id": 4,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O erro da afirmação reside no verbo \"comprar\". O texto explicita, no sexto parágrafo, que \"A licença de uso do software (...) é gratuita\" e que \"nunca houve o intuito de venda\". No sétimo parágrafo, menciona-se que o programa \"já foi compartilhado\" com outros países (como Argentina, Paraguai, Suécia, Áustria, Noruega, Nova Zelândia e Portugal), o que afasta a ideia de transação comercial ou compra de licenças.",
+        "source_reference": null
+      },
+      "source_content_hash": "46e33635b9ea76560ea6eb66e5970c3d72f789bb12f7060cfff68bebe7bb30ea"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:005",
+      "source_id": "agente_de_policia_federal:5",
+      "question_type": "true_false",
+      "statement_markdown": "Imagine uma operação de busca na selva. Sem mapas, binóculos ou apoio logístico; somente com um facão. Assim eram feitas as operações de combate à pornografia infantil pela Polícia Federal até o dia em que peritos criminais federais desenvolveram, no estado de Mato Grosso do Sul, o Nudetective.\nO programa executa em minutos uma busca que poderia levar meses, encontrando todo o conteúdo pornográfico de pedofilia em computadores, pendrives, smartphones e demais mídias de armazenamento.\nPara ajudar o trabalho dos peritos, existem programas que buscam os arquivos de imagem e vídeo através de sua hash ou sua assinatura digital. Logo nos primeiros testes, a detecção de imagens apresentou mais de 90% de acerto.\nPara o teste, pegaram um HD com conteúdo já periciado e rodaram o programa. Conseguiram 95% de acerto em 12 minutos. Seu diferencial era não só buscar pela assinatura digital ou nomes conhecidos, mas também por novos arquivos por intermédio da leitura dos pixels presentes na imagem calibrados a uma paleta de tons de pele. Começava a revolução em termos de investigação criminal de pornografia infantil.\nAlém da detecção de imagens e vídeos, todo o processo de busca e obtenção de resultados é simultâneo, o que economiza tempo e dinheiro.\nA licença de uso do software, que é programado em Java, é gratuita e só é disponibilizada para forças da lei e pesquisas acadêmicas. Segundo seus desenvolvedores, nunca houve o intuito de venda, pois não enxergam sentido em lucrar com algo que seja para salvar crianças. Mas, então, por que não deixá-lo disponível para todos? Somente para que não possa ser utilizado para criar formas de burlá-lo, explicam.\nDesde seu lançamento, o Nudetective já foi compartilhado com Argentina, Paraguai, Suécia, Áustria, Noruega, Nova Zelândia e Portugal. Ganhou reconhecimento e premiações em congressos forenses no Brasil e no mundo.\nInternet: <www.cartacapital.com.br> (com adaptações).\nNo que se refere aos sentidos e aos aspectos linguísticos do texto apresentado, julgue os itens seguintes.\n\nConclui-se do texto que a varredura do Nudetective é restrita a dispositivos conectados à Internet.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 5; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "64ca49809283d1b335627fa6771059c9e93b972ed511185ba7faa1c4c66b7797",
+        "original_numeric_id": 5,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A conclusão proposta pelo item é incorreta. O segundo parágrafo do texto enumera os locais onde o programa realiza as buscas: \"computadores, pendrives, smartphones e demais mídias de armazenamento\". Dispositivos como pendrives e mídias de armazenamento locais não necessitam de conexão ativa com a internet para serem submetidos à varredura do software, o que invalida a ideia de restrição a dispositivos conectados.",
+        "source_reference": null
+      },
+      "source_content_hash": "e277cd12817bd1a4473f0620921ee2c983174caac18d39d0de2d420324606af1"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:006",
+      "source_id": "agente_de_policia_federal:6",
+      "question_type": "true_false",
+      "statement_markdown": "Imagine uma operação de busca na selva. Sem mapas, binóculos ou apoio logístico; somente com um facão. Assim eram feitas as operações de combate à pornografia infantil pela Polícia Federal até o dia em que peritos criminais federais desenvolveram, no estado de Mato Grosso do Sul, o Nudetective.\nO programa executa em minutos uma busca que poderia levar meses, encontrando todo o conteúdo pornográfico de pedofilia em computadores, pendrives, smartphones e demais mídias de armazenamento.\nPara ajudar o trabalho dos peritos, existem programas que buscam os arquivos de imagem e vídeo através de sua hash ou sua assinatura digital. Logo nos primeiros testes, a detecção de imagens apresentou mais de 90% de acerto.\nPara o teste, pegaram um HD com conteúdo já periciado e rodaram o programa. Conseguiram 95% de acerto em 12 minutos. Seu diferencial era não só buscar pela assinatura digital ou nomes conhecidos, mas também por novos arquivos por intermédio da leitura dos pixels presentes na imagem calibrados a uma paleta de tons de pele. Começava a revolução em termos de investigação criminal de pornografia infantil.\nAlém da detecção de imagens e vídeos, todo o processo de busca e obtenção de resultados é simultâneo, o que economiza tempo e dinheiro.\nA licença de uso do software, que é programado em Java, é gratuita e só é disponibilizada para forças da lei e pesquisas acadêmicas. Segundo seus desenvolvedores, nunca houve o intuito de venda, pois não enxergam sentido em lucrar com algo que seja para salvar crianças. Mas, então, por que não deixá-lo disponível para todos? Somente para que não possa ser utilizado para criar formas de burlá-lo, explicam.\nDesde seu lançamento, o Nudetective já foi compartilhado com Argentina, Paraguai, Suécia, Áustria, Noruega, Nova Zelândia e Portugal. Ganhou reconhecimento e premiações em congressos forenses no Brasil e no mundo.\nInternet: <www.cartacapital.com.br> (com adaptações).\nNo que se refere aos sentidos e aos aspectos linguísticos do texto apresentado, julgue os itens seguintes.\n\nA inserção de uma vírgula imediatamente após a palavra “Assim” (l.2) alteraria os sentidos do texto.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 6; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "c5b755e4c5d0505249f1842d6439ed1a00b3a40ecd887d6b17a7aa422348149a",
+        "original_numeric_id": 6,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No trecho \"Assim eram feitas as operações...\", o vocábulo \"Assim\" atua como um advérbio de modo, com o sentido de \"desse modo\" ou \"desta maneira\". Caso fosse inserida uma vírgula imediatamente após o termo (\"Assim, eram feitas...\"), ele passaria a exercer a função de uma conjunção coordenativa conclusiva, equivalente a \"portanto\" ou \"por conseguinte\". Essa mudança de classe gramatical e de função sintática altera a relação semântica original do período, confirmando a correção do item.",
+        "source_reference": null
+      },
+      "source_content_hash": "21fc90030470f21b8195970473ef93b1807d4ce74f1745b6ae3561d9c473e068"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:007",
+      "source_id": "agente_de_policia_federal:7",
+      "question_type": "true_false",
+      "statement_markdown": "Imagine uma operação de busca na selva. Sem mapas, binóculos ou apoio logístico; somente com um facão. Assim eram feitas as operações de combate à pornografia infantil pela Polícia Federal até o dia em que peritos criminais federais desenvolveram, no estado de Mato Grosso do Sul, o Nudetective.\nO programa executa em minutos uma busca que poderia levar meses, encontrando todo o conteúdo pornográfico de pedofilia em computadores, pendrives, smartphones e demais mídias de armazenamento.\nPara ajudar o trabalho dos peritos, existem programas que buscam os arquivos de imagem e vídeo através de sua hash ou sua assinatura digital. Logo nos primeiros testes, a detecção de imagens apresentou mais de 90% de acerto.\nPara o teste, pegaram um HD com conteúdo já periciado e rodaram o programa. Conseguiram 95% de acerto em 12 minutos. Seu diferencial era não só buscar pela assinatura digital ou nomes conhecidos, mas também por novos arquivos por intermédio da leitura dos pixels presentes na imagem calibrados a uma paleta de tons de pele. Começava a revolução em termos de investigação criminal de pornografia infantil.\nAlém da detecção de imagens e vídeos, todo o processo de busca e obtenção de resultados é simultâneo, o que economiza tempo e dinheiro.\nA licença de uso do software, que é programado em Java, é gratuita e só é disponibilizada para forças da lei e pesquisas acadêmicas. Segundo seus desenvolvedores, nunca houve o intuito de venda, pois não enxergam sentido em lucrar com algo que seja para salvar crianças. Mas, então, por que não deixá-lo disponível para todos? Somente para que não possa ser utilizado para criar formas de burlá-lo, explicam.\nDesde seu lançamento, o Nudetective já foi compartilhado com Argentina, Paraguai, Suécia, Áustria, Noruega, Nova Zelândia e Portugal. Ganhou reconhecimento e premiações em congressos forenses no Brasil e no mundo.\nInternet: <www.cartacapital.com.br> (com adaptações).\nNo que se refere aos sentidos e aos aspectos linguísticos do texto apresentado, julgue os itens seguintes.\n\nNo período em que se insere, o termo “Logo” (l.13) expressa uma ideia de conclusão.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 7; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "869ec088f5de1adcc72279511f4bb4edfbd1719a5a868fa35d21002c3940c7ee",
+        "original_numeric_id": 7,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No contexto do trecho \"Logo nos primeiros testes...\", a palavra \"Logo\" funciona como um advérbio de tempo ou de intensidade, equivalendo a \"imediatamente\" ou \"já\". Não apresenta, portanto, valor de conjunção coordenativa conclusiva (que equivaleria a \"portanto\"), o que torna a afirmação incorreta.",
+        "source_reference": null
+      },
+      "source_content_hash": "e8ef109808aeb48e99eec23b1f24b3fb4a278d0aa4234f1def308ccb5fa8358f"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:012",
+      "source_id": "agente_de_policia_federal:12",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 12A1AAA\n1 — A polícia parisiense — disse ele — é extremamente hábil à sua maneira. Seus agentes são perseverantes, engenhosos, astutos e perfeitamente versados nos conhecimentos que seus deveres parecem exigir de modo especial. Assim, quando o delegado G... nos contou, pormenorizadamente, a maneira pela qual realizou suas pesquisas no Hotel D..., não tive dúvida de que efetuara uma investigação satisfatória (...) até o ponto a que chegou o seu trabalho.\n10 — Até o ponto a que chegou o seu trabalho? — perguntei.\n— Sim — respondeu Dupin. — As medidas adotadas não foram apenas as melhores que poderiam ser tomadas, mas realizadas com absoluta perfeição. Se a carta estivesse depositada dentro do raio de suas investigações, esses rapazes, sem dúvida, a teriam encontrado.\nRi, simplesmente — mas ele parecia haver dito tudo aquilo com a máxima seriedade.\n19 — As medidas, pois — prosseguiu —, eram boas em seu gênero, e foram bem executadas: seu defeito residia em serem inaplicáveis ao caso e ao homem em questão. Um certo conjunto de recursos altamente engenhosos é, para o delegado, uma espécie de leito de Procusto, ao qual procura adaptar à força todos os seus planos. Mas, no caso em apreço, cometeu uma série de erros, por ser demasiado profundo ou demasiado superficial. (...) E, se o delegado e toda a sua corte têm cometido tantos enganos, isso se deve (...) a uma apreciação inexata, ou melhor, a uma não apreciação da inteligência daqueles com quem se metem. Consideram engenhosas apenas as suas próprias ideias e, ao procurar alguma coisa que se ache escondida, não pensam senão nos meios que eles próprios teriam empregado para escondê-la. Estão certos apenas num ponto: naquele em que sua engenhosidade representa fielmente a da massa; mas, quando a astúcia do malfeitor é diferente da deles, o malfeitor, naturalmente, os engana. Isso sempre acontece quando a astúcia deste último está acima da deles e, muito frequentemente, quando está abaixo. Não variam seu sistema de investigação; na melhor das hipóteses, quando são instigados por algum caso insólito, ou por alguma recompensa extraordinária, ampliam ou exageram os seus modos de agir habituais, sem que se afastem, no entanto, de seus princípios.\n(...) Você compreenderá, agora, o que eu queria dizer ao afirmar que, se a carta roubada tivesse sido escondida dentro do raio de investigação do nosso delegado — ou, em outras palavras, se o princípio inspirador estivesse compreendido nos princípios do delegado —, sua descoberta seria uma questão inteiramente fora de dúvida. Este funcionário, porém, se enganou por completo, e a fonte remota de seu fracasso reside na suposição de que o ministro é um idiota, pois adquiriu renome de poeta. Segundo o delegado, todos os poetas são idiotas — e, neste caso, ele é apenas culpado de uma non distributio medii, ao inferir que todos os poetas são idiotas.\n— Mas ele é realmente poeta? — perguntei. — Sei que são dois irmãos, e que ambos adquiriram renome nas letras. O ministro, creio eu, escreveu eruditamente sobre o cálculo diferencial. É um matemático, e não um poeta.\n— Você está enganado. Conheço-o bem. E ambas as coisas. Como poeta e matemático, raciocinaria bem; como mero matemático, não raciocinaria de modo algum, e ficaria, assim, à mercê do delegado.\n61 — Você me surpreende — respondi — com essas opiniões, que têm sido desmentidas pela voz do mundo. Naturalmente, não quererá destruir, de um golpe, ideias amadurecidas durante tantos séculos. A razão matemática é há muito considerada como a razão par excellence.\nEdgar Allan Poe. A carta roubada. In: Histórias extraordinárias. Victor Civita, 1981. Tradução de Brenno Silveira e outros.\nNo que se refere à tipologia e aos sentidos do texto 12A1AAA, julgue os próximos itens.\n\nO primeiro parágrafo do texto é predominantemente descritivo, pois apresenta as características da “polícia parisiense”.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 12; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "cf84ce7b9461b65a3957d69b3d1f68f6a00e257991a1bdc015792d253d960752",
+        "original_numeric_id": 12,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. Embora o primeiro parágrafo apresente adjetivos que caracterizam os agentes da polícia parisiense (\"perseverantes, engenhosos, astutos\"), a tipologia predominante do fragmento não é a descritiva. O parágrafo introduz uma sequência narrativa (\"quando o delegado G... nos contou... não tive dúvida de que efetuara uma investigação satisfatória\") que serve de ponto de partida para o desenvolvimento do enredo e dos debates intelectuais entre os personagens. Trata-se de um texto predominantemente narrativo com forte teor argumentativo nos diálogos.",
+        "source_reference": null
+      },
+      "source_content_hash": "2f6fb01fcf2c62f5e5a4e96957935cd08e3a740ff35e4626a7b6739268c21826"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:013",
+      "source_id": "agente_de_policia_federal:13",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 12A1AAA\n1 — A polícia parisiense — disse ele — é extremamente hábil à sua maneira. Seus agentes são perseverantes, engenhosos, astutos e perfeitamente versados nos conhecimentos que seus deveres parecem exigir de modo especial. Assim, quando o delegado G... nos contou, pormenorizadamente, a maneira pela qual realizou suas pesquisas no Hotel D..., não tive dúvida de que efetuara uma investigação satisfatória (...) até o ponto a que chegou o seu trabalho.\n10 — Até o ponto a que chegou o seu trabalho? — perguntei.\n— Sim — respondeu Dupin. — As medidas adotadas não foram apenas as melhores que poderiam ser tomadas, mas realizadas com absoluta perfeição. Se a carta estivesse depositada dentro do raio de suas investigações, esses rapazes, sem dúvida, a teriam encontrado.\nRi, simplesmente — mas ele parecia haver dito tudo aquilo com a máxima seriedade.\n19 — As medidas, pois — prosseguiu —, eram boas em seu gênero, e foram bem executadas: seu defeito residia em serem inaplicáveis ao caso e ao homem em questão. Um certo conjunto de recursos altamente engenhosos é, para o delegado, uma espécie de leito de Procusto, ao qual procura adaptar à força todos os seus planos. Mas, no caso em apreço, cometeu uma série de erros, por ser demasiado profundo ou demasiado superficial. (...) E, se o delegado e toda a sua corte têm cometido tantos enganos, isso se deve (...) a uma apreciação inexata, ou melhor, a uma não apreciação da inteligência daqueles com quem se metem. Consideram engenhosas apenas as suas próprias ideias e, ao procurar alguma coisa que se ache escondida, não pensam senão nos meios que eles próprios teriam empregado para escondê-la. Estão certos apenas num ponto: naquele em que sua engenhosidade representa fielmente a da massa; mas, quando a astúcia do malfeitor é diferente da deles, o malfeitor, naturalmente, os engana. Isso sempre acontece quando a astúcia deste último está acima da deles e, muito frequentemente, quando está abaixo. Não variam seu sistema de investigação; na melhor das hipóteses, quando são instigados por algum caso insólito, ou por alguma recompensa extraordinária, ampliam ou exageram os seus modos de agir habituais, sem que se afastem, no entanto, de seus princípios.\n(...) Você compreenderá, agora, o que eu queria dizer ao afirmar que, se a carta roubada tivesse sido escondida dentro do raio de investigação do nosso delegado — ou, em outras palavras, se o princípio inspirador estivesse compreendido nos princípios do delegado —, sua descoberta seria uma questão inteiramente fora de dúvida. Este funcionário, porém, se enganou por completo, e a fonte remota de seu fracasso reside na suposição de que o ministro é um idiota, pois adquiriu renome de poeta. Segundo o delegado, todos os poetas são idiotas — e, neste caso, ele é apenas culpado de uma non distributio medii, ao inferir que todos os poetas são idiotas.\n— Mas ele é realmente poeta? — perguntei. — Sei que são dois irmãos, e que ambos adquiriram renome nas letras. O ministro, creio eu, escreveu eruditamente sobre o cálculo diferencial. É um matemático, e não um poeta.\n— Você está enganado. Conheço-o bem. E ambas as coisas. Como poeta e matemático, raciocinaria bem; como mero matemático, não raciocinaria de modo algum, e ficaria, assim, à mercê do delegado.\n61 — Você me surpreende — respondi — com essas opiniões, que têm sido desmentidas pela voz do mundo. Naturalmente, não quererá destruir, de um golpe, ideias amadurecidas durante tantos séculos. A razão matemática é há muito considerada como a razão par excellence.\nEdgar Allan Poe. A carta roubada. In: Histórias extraordinárias. Victor Civita, 1981. Tradução de Brenno Silveira e outros.\nNo que se refere à tipologia e aos sentidos do texto 12A1AAA, julgue os próximos itens.\n\nInfere-se das falas de Dupin que a opinião do delegado a respeito dos poetas foi determinante para que ele não encontrasse “a carta roubada”.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 13; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "f3506c68ae8d2d917ed626bdf0afdba1fc4eb5feea54a3b43ee9a758c64ed98e",
+        "original_numeric_id": 13,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. No quinto parágrafo, Dupin expõe de forma direta a causa do insucesso das buscas: \"Este funcionário, porém, se enganou por completo, e a fonte remota de seu fracasso reside na suposição de que o ministro é um idiota, pois adquiriu renome de poeta\". O delegado subestimou a capacidade intelectual e estratégica do ministro devido ao preconceito de que poetas seriam incapazes de raciocínio lógico complexo, o que o impediu de prever onde a carta estaria escondida.",
+        "source_reference": null
+      },
+      "source_content_hash": "bbc8cf0dd06d046a2951fd17394a153569e56cc2d2ff6bc56ac550c0b751b4d5"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:014",
+      "source_id": "agente_de_policia_federal:14",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 12A1AAA\n1 — A polícia parisiense — disse ele — é extremamente hábil à sua maneira. Seus agentes são perseverantes, engenhosos, astutos e perfeitamente versados nos conhecimentos que seus deveres parecem exigir de modo especial. Assim, quando o delegado G... nos contou, pormenorizadamente, a maneira pela qual realizou suas pesquisas no Hotel D..., não tive dúvida de que efetuara uma investigação satisfatória (...) até o ponto a que chegou o seu trabalho.\n10 — Até o ponto a que chegou o seu trabalho? — perguntei.\n— Sim — respondeu Dupin. — As medidas adotadas não foram apenas as melhores que poderiam ser tomadas, mas realizadas com absoluta perfeição. Se a carta estivesse depositada dentro do raio de suas investigações, esses rapazes, sem dúvida, a teriam encontrado.\nRi, simplesmente — mas ele parecia haver dito tudo aquilo com a máxima seriedade.\n19 — As medidas, pois — prosseguiu —, eram boas em seu gênero, e foram bem executadas: seu defeito residia em serem inaplicáveis ao caso e ao homem em questão. Um certo conjunto de recursos altamente engenhosos é, para o delegado, uma espécie de leito de Procusto, ao qual procura adaptar à força todos os seus planos. Mas, no caso em apreço, cometeu uma série de erros, por ser demasiado profundo ou demasiado superficial. (...) E, se o delegado e toda a sua corte têm cometido tantos enganos, isso se deve (...) a uma apreciação inexata, ou melhor, a uma não apreciação da inteligência daqueles com quem se metem. Consideram engenhosas apenas as suas próprias ideias e, ao procurar alguma coisa que se ache escondida, não pensam senão nos meios que eles próprios teriam empregado para escondê-la. Estão certos apenas num ponto: naquele em que sua engenhosidade representa fielmente a da massa; mas, quando a astúcia do malfeitor é diferente da deles, o malfeitor, naturalmente, os engana. Isso sempre acontece quando a astúcia deste último está acima da deles e, muito frequentemente, quando está abaixo. Não variam seu sistema de investigação; na melhor das hipóteses, quando são instigados por algum caso insólito, ou por alguma recompensa extraordinária, ampliam ou exageram os seus modos de agir habituais, sem que se afastem, no entanto, de seus princípios.\n(...) Você compreenderá, agora, o que eu queria dizer ao afirmar que, se a carta roubada tivesse sido escondida dentro do raio de investigação do nosso delegado — ou, em outras palavras, se o princípio inspirador estivesse compreendido nos princípios do delegado —, sua descoberta seria uma questão inteiramente fora de dúvida. Este funcionário, porém, se enganou por completo, e a fonte remota de seu fracasso reside na suposição de que o ministro é um idiota, pois adquiriu renome de poeta. Segundo o delegado, todos os poetas são idiotas — e, neste caso, ele é apenas culpado de uma non distributio medii, ao inferir que todos os poetas são idiotas.\n— Mas ele é realmente poeta? — perguntei. — Sei que são dois irmãos, e que ambos adquiriram renome nas letras. O ministro, creio eu, escreveu eruditamente sobre o cálculo diferencial. É um matemático, e não um poeta.\n— Você está enganado. Conheço-o bem. E ambas as coisas. Como poeta e matemático, raciocinaria bem; como mero matemático, não raciocinaria de modo algum, e ficaria, assim, à mercê do delegado.\n61 — Você me surpreende — respondi — com essas opiniões, que têm sido desmentidas pela voz do mundo. Naturalmente, não quererá destruir, de um golpe, ideias amadurecidas durante tantos séculos. A razão matemática é há muito considerada como a razão par excellence.\nEdgar Allan Poe. A carta roubada. In: Histórias extraordinárias. Victor Civita, 1981. Tradução de Brenno Silveira e outros.\nNo que se refere à tipologia e aos sentidos do texto 12A1AAA, julgue os próximos itens.\n\nDupin é irônico ao caracterizar a polícia parisiense como hábil no primeiro parágrafo, o que é comprovado pela crítica que faz, no quinto parágrafo, ao trabalho do delegado e de sua equipe, os quais, conforme Dupin, “Estão certos apenas num ponto” (l. 32 e 33).",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 14; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "1caed9773d26b5d20dacae573b1a5eccfa2988a9f257766ea92224d4fd8b6ec2",
+        "original_numeric_id": 14,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. Dupin não é irônico ao classificar a polícia parisiense como hábil. Ele reconhece genuinamente que os policiais são extremamente minuciosos, dedicados e eficientes na aplicação de seus métodos tradicionais de busca (\"As medidas adotadas não foram apenas as melhores que poderiam ser tomadas, mas realizadas com absoluta perfeição\"). O erro apontado por Dupin não é a falta de habilidade técnica, mas sim a rigidez metodológica e a incapacidade de adaptar o sistema de investigação à psicologia e à inteligência específica do investigado.",
+        "source_reference": null
+      },
+      "source_content_hash": "07f317ecc519331bbc2c0b66656a45e1a00d0a294f188e68390f415debc574be"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:015",
+      "source_id": "agente_de_policia_federal:15",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 12A1AAA\n1 — A polícia parisiense — disse ele — é extremamente hábil à sua maneira. Seus agentes são perseverantes, engenhosos, astutos e perfeitamente versados nos conhecimentos que seus deveres parecem exigir de modo especial. Assim, quando o delegado G... nos contou, pormenorizadamente, a maneira pela qual realizou suas pesquisas no Hotel D..., não tive dúvida de que efetuara uma investigação satisfatória (...) até o ponto a que chegou o seu trabalho.\n10 — Até o ponto a que chegou o seu trabalho? — perguntei.\n— Sim — respondeu Dupin. — As medidas adotadas não foram apenas as melhores que poderiam ser tomadas, mas realizadas com absoluta perfeição. Se a carta estivesse depositada dentro do raio de suas investigações, esses rapazes, sem dúvida, a teriam encontrado.\nRi, simplesmente — mas ele parecia haver dito tudo aquilo com a máxima seriedade.\n19 — As medidas, pois — prosseguiu —, eram boas em seu gênero, e foram bem executadas: seu defeito residia em serem inaplicáveis ao caso e ao homem em questão. Um certo conjunto de recursos altamente engenhosos é, para o delegado, uma espécie de leito de Procusto, ao qual procura adaptar à força todos os seus planos. Mas, no caso em apreço, cometeu uma série de erros, por ser demasiado profundo ou demasiado superficial. (...) E, se o delegado e toda a sua corte têm cometido tantos enganos, isso se deve (...) a uma apreciação inexata, ou melhor, a uma não apreciação da inteligência daqueles com quem se metem. Consideram engenhosas apenas as suas próprias ideias e, ao procurar alguma coisa que se ache escondida, não pensam senão nos meios que eles próprios teriam empregado para escondê-la. Estão certos apenas num ponto: naquele em que sua engenhosidade representa fielmente a da massa; mas, quando a astúcia do malfeitor é diferente da deles, o malfeitor, naturalmente, os engana. Isso sempre acontece quando a astúcia deste último está acima da deles e, muito frequentemente, quando está abaixo. Não variam seu sistema de investigação; na melhor das hipóteses, quando são instigados por algum caso insólito, ou por alguma recompensa extraordinária, ampliam ou exageram os seus modos de agir habituais, sem que se afastem, no entanto, de seus princípios.\n(...) Você compreenderá, agora, o que eu queria dizer ao afirmar que, se a carta roubada tivesse sido escondida dentro do raio de investigação do nosso delegado — ou, em outras palavras, se o princípio inspirador estivesse compreendido nos princípios do delegado —, sua descoberta seria uma questão inteiramente fora de dúvida. Este funcionário, porém, se enganou por completo, e a fonte remota de seu fracasso reside na suposição de que o ministro é um idiota, pois adquiriu renome de poeta. Segundo o delegado, todos os poetas são idiotas — e, neste caso, ele é apenas culpado de uma non distributio medii, ao inferir que todos os poetas são idiotas.\n— Mas ele é realmente poeta? — perguntei. — Sei que são dois irmãos, e que ambos adquiriram renome nas letras. O ministro, creio eu, escreveu eruditamente sobre o cálculo diferencial. É um matemático, e não um poeta.\n— Você está enganado. Conheço-o bem. E ambas as coisas. Como poeta e matemático, raciocinaria bem; como mero matemático, não raciocinaria de modo algum, e ficaria, assim, à mercê do delegado.\n61 — Você me surpreende — respondi — com essas opiniões, que têm sido desmentidas pela voz do mundo. Naturalmente, não quererá destruir, de um golpe, ideias amadurecidas durante tantos séculos. A razão matemática é há muito considerada como a razão par excellence.\nEdgar Allan Poe. A carta roubada. In: Histórias extraordinárias. Victor Civita, 1981. Tradução de Brenno Silveira e outros.\nNo que se refere à tipologia e aos sentidos do texto 12A1AAA, julgue os próximos itens.\n\nNa opinião de Dupin, a inteligência da polícia de Paris equipara-se à “da massa” (l.34), que, conforme se infere do texto, é uma inteligência média.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 15; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "a7bfc59bbe9e4bf147817edf6500332ad86b2110325f2a8fb83415b5ec0e5293",
+        "original_numeric_id": 15,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. No quinto parágrafo, Dupin afirma que os policiais \"Estão certos apenas num ponto: naquele em que sua engenhosidade representa fielmente a da massa\". A \"massa\" representa a coletividade comum, o padrão médio de comportamento e raciocínio da sociedade. Assim, infere-se que a inteligência e os métodos da polícia são eficazes apenas quando lidam com criminosos que operam dentro desse mesmo nível médio de astúcia, falhando quando confrontados com mentes excepcionais (acima ou abaixo da média).",
+        "source_reference": null
+      },
+      "source_content_hash": "41ade41eb8892ff0cef729c78a1be27c820312c322e2493c1421b3907f4e92b1"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:019",
+      "source_id": "agente_de_policia_federal:19",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os seguintes itens, relativos aos sentidos e aos aspectos linguísticos do texto 12A1AAA.\n\nA correção gramatical do texto seria mantida caso a forma verbal “compreenderá” (l.42) fosse substituída por compreende, embora o sentido original do período em que ela ocorre fosse alterado: no original, o emprego do futuro revela uma expectativa de Dupin em relação a seu interlocutor; com o emprego do presente, essa expectativa seria transformada em fato consumado.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 19; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "fc01d0080e0fc5b4b0fa949a1988a06f3d6297119fb66e38858993fffe7f9468",
+        "original_numeric_id": 19,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A substituição da forma verbal no futuro do presente (\"compreenderá\") pela forma no presente do indicativo (\"compreende\") mantém a plena correção gramatical do período. No entanto, ocorre alteração semântica: o futuro \"compreenderá\" expressa uma expectativa ou previsão de Dupin de que seu interlocutor passará a entender o argumento após a explicação; já o presente \"compreende\" assume essa compreensão como um fato já consolidado no momento da fala.",
+        "source_reference": null
+      },
+      "source_content_hash": "4e222a524f858d32e80c59897de07dfc31779cd05c28a82a3aca20a8af8db542"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:020",
+      "source_id": "agente_de_policia_federal:20",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os seguintes itens, relativos aos sentidos e aos aspectos linguísticos do texto 12A1AAA.\n\nDados os sentidos do sexto parágrafo, é possível supor que, na frase “E ambas as coisas”, no sétimo parágrafo, está elíptico o trecho ele é logo após “E”.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 20; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "f4cc0936befc48b20308fdee5d3a109c1b38a69f04230245218f0cc8f0fd6b47",
+        "original_numeric_id": 20,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Na estrutura de diálogo apresentada, a réplica de Dupin \"E ambas as coisas\" constitui uma frase nominal que omite termos expressos anteriormente para evitar repetição desnecessária (recurso de coesão por elipse/zeugma). Ao recuperar o contexto do sexto parágrafo, onde se discute se o ministro é matemático ou poeta, reconstrói-se a oração de forma completa como: \"E [ele é] ambas as coisas\".",
+        "source_reference": null
+      },
+      "source_content_hash": "6a298f8d23465f8db979e85ab3ad69cbb136647834b6db7ca07b872bd6df518e"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:023",
+      "source_id": "agente_de_policia_federal:23",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os seguintes itens, relativos aos sentidos e aos aspectos linguísticos do texto 12A1AAA.\n\nFeitas as devidas alterações de maiúsculas e minúsculas, o ponto e vírgula empregado logo após “bem” (l.58) poderia ser corretamente substituído por ponto final.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 23; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "6198587c266832c630cefb58e7e9438932b8c381ffaa29aa1aada0b8e268912a",
+        "original_numeric_id": 23,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto porque o ponto e vírgula separa duas orações coordenadas assindéticas que possuem independência sintática, permitindo a divisão em dois períodos distintos.\n\nNo trecho original, as orações \"Como poeta e matemático, raciocinaria bem\" e \"como mero matemático, não raciocinaria de modo algum\" apresentam uma relação de oposição, mas são estruturalmente autônomas. A substituição do ponto e vírgula por um ponto final encerra o primeiro período de forma completa e inicia um novo período, preservando a correção gramatical e a coerência do texto.\n\nA alteração exige apenas o ajuste de inicial minúscula para maiúscula na palavra seguinte (\"Como\"), conforme apontado no enunciado.",
+        "source_reference": null
+      },
+      "source_content_hash": "8c0bc1f300e37968d35520a47c2056b165155deb50946399fb7818f2b3943432"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:024",
+      "source_id": "agente_de_policia_federal:24",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os seguintes itens, relativos aos sentidos e aos aspectos linguísticos do texto 12A1AAA.\n\nA supressão da vírgula empregada logo após a palavra “algum” (l.59) manteria a correção gramatical do texto.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 24; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "815c3aadd22c76c38221b9e4cebcdbe7904e8e9262aaeebec4e6947fdda16a4e",
+        "original_numeric_id": 24,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto porque a vírgula que antecede a conjunção coordenativa aditiva \"e\" é de caráter facultativo quando as orações coordenadas possuem o mesmo sujeito.\n\nNo trecho \"...não raciocinaria de modo algum, e ficaria, assim, à mercê do delegado\", o sujeito da forma verbal \"ficaria\" é o mesmo da oração anterior (sujeito elíptico \"ele\", referindo-se ao ministro). Na Língua Portuguesa, a inserção de vírgula antes da conjunção \"e\" que liga orações com sujeitos idênticos é opcional, servindo apenas para fins de ênfase ou pausa estilística. Portanto, sua supressão não acarreta erro gramatical.\n\n**Detalhe:** A vírgula antes de \"e\" passa a ser recomendável ou obrigatória quando as orações coordenadas possuem sujeitos distintos ou para evitar ambiguidades de leitura.",
+        "source_reference": null
+      },
+      "source_content_hash": "f5cc549b3036997d9a6b83329f37021e9a3c256aa285a0aa6270a480fc315f09"
+    }
+  ]
+}

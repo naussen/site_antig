@@ -1,0 +1,80 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_do_seguro_social-direito-constitucional-8356184f677b-f3f941770df0",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "8356184f677b1f67db7c2ca11e127e96c825e8169801c0b8b25dcfb5ffc09cf5",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "de5b10d2a1ac5bee023c723ca65187afb7622a283e7467ef7e8b4dd19094f663",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "f3f941770df003e736e2cc4295586bceeff53aaa576fbb896d1bc69227ef4e21",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:025",
+      "source_id": "tecnico_do_seguro_social:25",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos direitos sociais, da nacionalidade e da garantia dos direitos políticos, julgue os itens a seguir.\n\nNo caso de senador que pretenda concorrer a outro cargo eletivo, não se exige a renúncia ao mandato atual.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 25; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Nacionalidade e Direitos Políticos",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "63f6a6254ba8d45bcbc233fc479745d67a7b91762d58b41a87a718a82df14b12",
+        "original_numeric_id": 25,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "nacionalidade-e-direitos-politicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A exigência constitucional de desincompatibilização mediante renúncia ao mandato eletivo até seis meses antes do pleito para concorrer a outros cargos aplica-se exclusivamente aos chefes do Poder Executivo (Presidente da República, Governadores de Estado e do Distrito Federal e Prefeitos), conforme estabelece o artigo 14, § 6º, da Constituição Federal de 1988.\n\nOs membros do Poder Legislativo, como senadores, deputados (federais, estaduais ou distritais) e vereadores, não estão sujeitos a essa regra de desincompatibilização. Portanto, um senador pode concorrer a qualquer outro cargo eletivo sem a necessidade de renunciar ao seu mandato atual.\n\n**Dispositivo legal:**\nArtigo 14, § 6º, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "fa95e0effb3cf37c4529fba0194d40ca3b6fd8b0da31ab1e4ac7dec2b8dc7996"
+    }
+  ]
+}

@@ -1,0 +1,245 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-cargo30-arquivologia-ddedf305b20e-4e0b268e9605",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "ddedf305b20e0a7dfd48e2ef1da2d3823dc4e437478b3edd7e62ad4a771ae524",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "ade70669f0c96aa17db7bd4f2a5081dabefc8b060fd23fdfaaa31934743bc23f",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "4e0b268e96053e5b72c54f060b3424c49faf2f22cf2500f53dae8faa0d507785",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "arquivologia",
+    "name": "Arquivologia"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:096",
+      "source_id": "cargo30:96",
+      "question_type": "true_false",
+      "statement_markdown": "A avaliação documental é uma função típica adotada mundialmente no tratamento técnico de acervos arquivísticos. Em relação a essa função, julgue os itens que se seguem.\n\nA aplicação da tabela de temporalidade permite eliminar documentos ainda no arquivo corrente.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 96",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Classificação, Tabela de Temporalidade e Destinação de Documentos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "0b8310cab9783a276ac1783cbd926036671376bbf70226d2a7c78a3e4aecfbc4",
+        "original_numeric_id": 96,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8159.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-e-tabela-de-temporalidade",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA **Tabela de Temporalidade Documental (TTD)** é o instrumento arquivístico fundamental resultante do processo de avaliação, responsável por definir os prazos de permanência dos documentos nas idades corrente e intermediária, bem como a sua destinação final.\n\nDocumentos de rotina meramente administrativa, de caráter efêmero ou com valor utilitário imediato exaurido podem ter sua eliminação sumária autorizada pela TTD diretamente na **fase corrente** (primeira idade), sem a necessidade de transferência ao arquivo intermediário.",
+        "source_reference": null
+      },
+      "source_content_hash": "8d099f2eccadd618e7215ccecac37528fc4dd34f238af6b7731b97d60f9a068a"
+    },
+    {
+      "external_id": "pdf:cargo30:097",
+      "source_id": "cargo30:97",
+      "question_type": "true_false",
+      "statement_markdown": "A avaliação documental é uma função típica adotada mundialmente no tratamento técnico de acervos arquivísticos. Em relação a essa função, julgue os itens que se seguem.\n\nA avaliação dos documentos permite aumentar o índice de recuperação da informação.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 97",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gerenciamento da Informação e a Gestão de Documentos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "671f96d32cb06722b32d9a139687e5fe0a4595537e2fcae783ffae4604602160",
+        "original_numeric_id": 97,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8159.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "gerenciamento-da-informacao-e-a-gestao-de-documentos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA função arquivística de **avaliação documental** estabelece a triagem técnica que separa documentos de guarda permanente ou transitória da massa documental desprovida de valor primário e secundário.\n\nAo autorizar o expurgo periódico do acervo desnecessário e garantir a organização padronizada dos dossiês restantes, a avaliação elimina o acúmulo desordenado e o ruído arquivístico, elevando substancialmente a rapidez, precisão e o índice de recuperação da informação pelos usuários e gestores públicos.",
+        "source_reference": null
+      },
+      "source_content_hash": "df4b53975881215f9f6941ebd1fb35631b1913d0d54947c463d4f345621c6fa7"
+    },
+    {
+      "external_id": "pdf:cargo30:098",
+      "source_id": "cargo30:98",
+      "question_type": "true_false",
+      "statement_markdown": "A avaliação documental é uma função típica adotada mundialmente no tratamento técnico de acervos arquivísticos. Em relação a essa função, julgue os itens que se seguem.\n\nComo um dos requisitos básicos de sua função, o responsável pela avaliação documental deve conhecer a estrutura e o funcionamento da instituição a ser avaliada.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 98",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gerenciamento da Informação e a Gestão de Documentos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "79947e26fbd9644da200a02f2d34b3be7a7a7038797f9dcc7e347ca937f4245c",
+        "original_numeric_id": 98,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8159.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "gerenciamento-da-informacao-e-a-gestao-de-documentos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nPara conduzir com segurança técnica a avaliação de acervos documentais, o profissional de arquivologia ou membro da Comissão Permanente de Avaliação de Documentos (CPAD) precisa deter conhecimento aprofundado sobre o histórico institucional, a estrutura organizacional, as atribuições legais, competências e o fluxo processual da instituição geradora.\n\nSem a contextualização funcional do produtor do documento, torna-se inviável determinar com exatidão seus valores administrativos, jurídicos, fiscais, probatórios e históricos.",
+        "source_reference": null
+      },
+      "source_content_hash": "6afeb91e476e4b1bad45fe267d57433053ed52277ceaac38a50e99456d8a8295"
+    },
+    {
+      "external_id": "pdf:cargo30:099",
+      "source_id": "cargo30:99",
+      "question_type": "true_false",
+      "statement_markdown": "A avaliação documental é uma função típica adotada mundialmente no tratamento técnico de acervos arquivísticos. Em relação a essa função, julgue os itens que se seguem.\n\nA aplicação dos critérios de avaliação possibilita ganho de espaço físico.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 99",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gerenciamento da Informação e a Gestão de Documentos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "fe217a98a6f5fa060bf5c9ed1bdfebddb96853a869bc827417a92f3fabb1cf4c",
+        "original_numeric_id": 99,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8159.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "gerenciamento-da-informacao-e-a-gestao-de-documentos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA eliminação criteriosa e legal de documentos que já cumpriram seus prazos de guarda e que não possuem valor secundário (histórico, científico ou probatório) desonera significativamente os depósitos arquivísticos da administração pública.\n\nEssa redução de volume documental estancado otimiza a ocupação das instalações, gerando substancial **ganho de espaço físico** e economia de recursos orçamentários de custeio e conservação predial.",
+        "source_reference": null
+      },
+      "source_content_hash": "c31dd3dd6a848f95e597d2fae09142415a8fdce5735cb2db95fb8f5cc0f56875"
+    }
+  ]
+}

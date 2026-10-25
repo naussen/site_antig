@@ -1,0 +1,171 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-tecnico_em_enfermagem-portugues-7d4d08c0fbc8-45ca04b5294d",
+  "source": {
+    "file_name": "tecnico_em_enfermagem_ATUALIZADO.json",
+    "sha256": "7d4d08c0fbc834869d967d02e4c1e9f5c505a383d6b44c1f295f1d688d13764a",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "tecnico_em_enfermagem.json",
+      "original_source_sha256": "d82e5bb88e01f70ff10fe33c96068be4d04a647ee9eeb9d4154c94a2180a057d",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "45ca04b5294d1583a94c4f8d6e401025528914fe4da778220f0ea5c2790d0a1f",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:004",
+      "source_id": "tecnico_em_enfermagem:4",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto\nAutomóvel: Sociedade Anônima\n(Paulo Mendes Campos)\nSe você quiser, compre um carro; é um conforto admirável. Mas não o faça sem conhecimento de causa, a fim de evitar desilusões futuras. Saiba que está praticando um gesto essencialmente econômico; não para a sua economia, mas para a economia coletiva. Isso quer dizer que, do ponto de vista comunitário, o automóvel que você adquire não é um ponto de chegada, uma conquista final em sua vida, mas, pelo contrário, um ponto de partida para os outros. Desde que o compre, o carro passa a interessar aos outros, muito mais que a você mesmo.\nCom o carro, você está ampliando seriamente a economia de milhares de pessoas. É uma espécie de indústria às avessas, na qual você monta um engenho não para obter lucros, mas para distribuir seu dinheiro para toda classe de pessoas: industriais europeus, biliardários do Texas, empresários brasileiros, comerciantes, operários especializados, proletários, vagabundos, etc.\nJá na compra do carro, você contribui para uma infinidade de setores produtivos, que podemos encolher ao máximo nos seguintes itens: a indústria automobilística propriamente dita, localizada no Brasil, mas sem qualquer inibição no que toca à remessa de lucros para o exterior; os vendedores de automóveis; a siderurgia; a petroquímica; as fábricas de pneus e as de artefatos de borracha; as fábricas de plásticos, couros, tintas, etc.; as fábricas de rolamentos e outras autopeças; as fábricas de relógios, rádios, etc.; as indústrias de petróleo [...]\nVocê já pode ir vendo a gravidade do seu gesto: ao comprar um carro, você entrou na órbita de toda essa gente, até ontem, você estava fora do alcance deles; hoje, seu transporte passou a ser, do ponto de vista econômico, simplesmente transcendental. Você é um homem economicamente importante – para os outros. Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você.\nMas não fica só nisso; você estará ainda girando numa constelação menor, miúda mas nada desprezível: a dos recauchutadores, eletricistas, garagistas, lavadores, olheiros, guardas de trânsito, mecânicos de esquina. Você pode ainda querer um motorista ou participar de alguma das várias modalidades de seguros para automóveis. Em outros termos, você continua entrando pelo cano. No fim deste, há ainda uma outra classe: a dos ladrões, seja organizada em sindicatos, seja a espécie de franco-puxadores. [...]\n\nO pronome “você” que ocorre, implícita ou explicitamente, ao longo do texto, faz referência:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 4; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a um leitor específico que tenha comprado um carro recentemente.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "aos leitores em geral que pretendam comprar um carro ou não.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "a um interlocutor conhecido do autor, indicando intimidade.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "aos leitores que compraram ou pretendem comprar um carro.",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "apenas às pessoas jovens que compraram carros porque gostam.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "9f98c9e34b3f0c4c4d8c8961274e735d308a3850519fc36f7e28457c23c2d71f",
+        "original_numeric_id": 4,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nNo texto de Paulo Mendes Campos, o cronista adota uma interlocução direta com os leitores por meio do pronome *\"você\"* (*\"Se você quiser, compre um carro... Saiba que está praticando um gesto... o automóvel que você adquire não é um ponto de chegada...\"*).\n\nEsse recurso estilístico dialoga amplamente com os leitores que adquiriram recentemente um automóvel ou que planejam comprar um, ironizando as ilusões econômicas associadas à posse de um veículo em sociedade.",
+        "source_reference": null
+      },
+      "source_content_hash": "8c99ea79aff6777a727917276be9b390137877656778becfb1a2ba2b616332e6"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:010",
+      "source_id": "tecnico_em_enfermagem:10",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto\nAutomóvel: Sociedade Anônima\n(Paulo Mendes Campos)\nSe você quiser, compre um carro; é um conforto admirável. Mas não o faça sem conhecimento de causa, a fim de evitar desilusões futuras. Saiba que está praticando um gesto essencialmente econômico; não para a sua economia, mas para a economia coletiva. Isso quer dizer que, do ponto de vista comunitário, o automóvel que você adquire não é um ponto de chegada, uma conquista final em sua vida, mas, pelo contrário, um ponto de partida para os outros. Desde que o compre, o carro passa a interessar aos outros, muito mais que a você mesmo.\nCom o carro, você está ampliando seriamente a economia de milhares de pessoas. É uma espécie de indústria às avessas, na qual você monta um engenho não para obter lucros, mas para distribuir seu dinheiro para toda classe de pessoas: industriais europeus, biliardários do Texas, empresários brasileiros, comerciantes, operários especializados, proletários, vagabundos, etc.\nJá na compra do carro, você contribui para uma infinidade de setores produtivos, que podemos encolher ao máximo nos seguintes itens: a indústria automobilística propriamente dita, localizada no Brasil, mas sem qualquer inibição no que toca à remessa de lucros para o exterior; os vendedores de automóveis; a siderurgia; a petroquímica; as fábricas de pneus e as de artefatos de borracha; as fábricas de plásticos, couros, tintas, etc.; as fábricas de rolamentos e outras autopeças; as fábricas de relógios, rádios, etc.; as indústrias de petróleo [...]\nVocê já pode ir vendo a gravidade do seu gesto: ao comprar um carro, você entrou na órbita de toda essa gente, até ontem, você estava fora do alcance deles; hoje, seu transporte passou a ser, do ponto de vista econômico, simplesmente transcendental. Você é um homem economicamente importante – para os outros. Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você.\nMas não fica só nisso; você estará ainda girando numa constelação menor, miúda mas nada desprezível: a dos recauchutadores, eletricistas, garagistas, lavadores, olheiros, guardas de trânsito, mecânicos de esquina. Você pode ainda querer um motorista ou participar de alguma das várias modalidades de seguros para automóveis. Em outros termos, você continua entrando pelo cano. No fim deste, há ainda uma outra classe: a dos ladrões, seja organizada em sindicatos, seja a espécie de franco-puxadores. [...]\n\nConsidere a classificação morfológica do vocábulo “que” em “uma infinidade de setores produtivos, que podemos encolher ao máximo” (3º§). Indique a alternativa em que se destaca um “que” com essa mesma classificação.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 10; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "“Saiba que está praticando um gesto essencialmente econômico” (1º§).",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "“Isso quer dizer que, do ponto de vista comunitário” (1º§).",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "“o automóvel que você adquire não é um ponto de chegada” (1º§).",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "“Desde que o compre, o carro passa a interessar aos outros” (1º§).",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "“muito mais que a você mesmo” (1º§).",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "2024565bbfa624c368ec99c3fbdf9bce2434b244b3ba13dc07426316ba578ebd",
+        "original_numeric_id": 10,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nNo trecho *\"uma infinidade de setores produtivos, que podemos encolher ao máximo\"*, o vocábulo **\"que\"** exerce a função morfológica de **pronome relativo**, pois introduz uma oração subordinada adjetiva e retoma o substantivo antecedente *\"setores produtivos\"* (*os quais podemos encolher*).\n\nNa alternativa C, em *\"o automóvel que você adquire não é um ponto de chegada\"*, o vocábulo **\"que\"** possui exatamente a mesma natureza de pronome relativo, retomando o termo antecedente *\"o automóvel\"* (*o qual você adquire*).\n\nNas demais opções: em A e B, trata-se de conjunção integrante (*\"saiba que...\"*, *\"dizer que...\"*); em D, integra locução conjuntiva temporal (*\"desde que\"*); e em E, atua como conjunção comparativa.",
+        "source_reference": null
+      },
+      "source_content_hash": "d0ebaefd0f050a7db6f8df27485e064222515d3b1ae1359b89b037bc85213e9b"
+    }
+  ]
+}

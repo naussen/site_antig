@@ -1,0 +1,77 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-prova_conhec_espec_tec_federal_control_exter_tec_adm-financas-publicas-0a47ced89ac5-ee9b9ca23085",
+  "source": {
+    "file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "0a47ced89ac5a05345c982de7b30907afc98382efebdbd645c614961168c25ed",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "e510beb0fb16eeed76a4bec98e0987a4a54d96f0ac951207a670c138e3097e90",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ee9b9ca2308560391bb34af22fec26958d9f40bbb2b6e98ad35aaae819dd0434",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "financas-publicas",
+    "name": "Finanças Públicas"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:068",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:68",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens de acordo com os dispositivos da Lei de Responsabilidade Fiscal.\n\nAs obrigações financeiras representadas por letras do Banco Central do Brasil não integram o montante da dívida pública mobiliária da União, devendo, portanto, ser desconsideradas no cálculo do montante da dívida pública consolidada do referido ente federativo.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 68; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Finanças Públicas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Financeiro",
+        "source_content_hash": "87e83b1f9945cc3d904ffa0bce84fd4f961f111506fd1682a0106a403663c4fc",
+        "original_numeric_id": 68,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "financas-publicas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto ao afirmar que as obrigações financeiras representadas por letras do Banco Central do Brasil não integram o montante da dívida pública mobiliária da União e que devem ser desconsideradas no cálculo da dívida pública consolidada.\n\nDe acordo com o art. 29, inciso II, da Lei de Responsabilidade Fiscal (Lei Complementar nº 101/2000), a dívida pública mobiliária é expressamente definida como a dívida pública representada por títulos emitidos pela União, **inclusive os do Banco Central do Brasil**, Estados e Municípios.\n\nAdemais, o § 2º do mesmo artigo determina de forma clara que será incluída na dívida pública consolidada da União a relativa à emissão de títulos de responsabilidade do Banco Central do Brasil.\n\n**Pegadinha:** Embora o art. 34 da LRF tenha proibido o Banco Central de emitir novos títulos da dívida pública a partir de dois anos após a publicação da lei (maio de 2002), as obrigações e títulos anteriormente emitidos ou de responsabilidade da instituição continuam integrando legalmente as definições de dívida pública mobiliária e consolidada da União para fins de apuração e controle.\n\n**Dispositivo legal**\n\n[Lei Complementar nº 101/2000, Art. 29, II e § 2º](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "1afd13801bad14fb5906808fe766f54e6c9bdc078cce79a7594a4d746455cb86"
+    }
+  ]
+}

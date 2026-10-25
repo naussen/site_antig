@@ -1,0 +1,100 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-escriturario_agente_comercial-portugues-dc61cc87552e-0544bcd84acf",
+  "source": {
+    "file_name": "escriturario_agente_comercial_ATUALIZADO.json",
+    "sha256": "dc61cc87552e5a02d8b0d8976fda4c03f634e0152f65f5267f98ed067ff73cc6",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "escriturario_agente_comercial.json",
+      "original_source_sha256": "01019f640948f2ffd55374ea21a7a82a58f3fdae926a71a27cc21c32ba8bbf9d",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "0544bcd84acf1b959f7512774a0f4820e64f2e090951f8c47cfced3ce9418469",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:003",
+      "source_id": "escriturario_agente_comercial:3",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Considere a expressão em destaque da seguinte passagem do parágrafo 3:\n\nO método Barbier, também chamado escrita noturna, era um código de pontos e traços em relevo impressos também em papelão. Destinava-se a enviar ordens cifradas a sentinelas em postos avançados. Estes decodificariam a mensagem até no escuro. Mas como a ideia não pegou na tropa, Barbier adaptou o método para a leitura de cegos, com o nome de grafia sonora. **O sistema** permitia a comunicação entre os cegos.\n\nNo trecho, por meio do processo de coesão textual, a expressão destacada retoma",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 3; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "“um código de pontos e traços em relevo impressos também em papelão”",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "“ordens cifradas”",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "“a mensagem”",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "“a ideia”",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "“grafia sonora”",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "4c4c26978ce40e42d055e3e96bf0abbda71c26f9aab6003bfec9cc3f79f04693",
+        "original_numeric_id": 3,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **E**.\n\nA coesão textual referencial anafórica ocorre quando um termo substitui ou retoma outro já citado no texto, garantindo a continuidade temática sem repetições desnecessárias.\n\nNo segmento destacado, a expressão em análise funciona como mecanismo de coesão anafórica que aponta de volta para o núcleo semântico apresentado no período imediatamente anterior, garantindo a progressão do texto.\n\nA alternativa E identifica precisamente o elemento referencial retomado pela expressão no contexto.",
+        "source_reference": null
+      },
+      "source_content_hash": "e0841dd304bc0fd84d71151aee04d67f928e9cec328814127d21e3143903a461"
+    }
+  ]
+}

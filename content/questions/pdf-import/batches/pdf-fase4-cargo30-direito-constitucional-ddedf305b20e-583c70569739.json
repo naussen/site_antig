@@ -1,0 +1,245 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-cargo30-direito-constitucional-ddedf305b20e-583c70569739",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "ddedf305b20e0a7dfd48e2ef1da2d3823dc4e437478b3edd7e62ad4a771ae524",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "ade70669f0c96aa17db7bd4f2a5081dabefc8b060fd23fdfaaa31934743bc23f",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "583c70569739011aedb80bec3dc7bd4f9d6e0ed86572ffb35c9e7e6948da18fe",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:108",
+      "source_id": "cargo30:108",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nAgentes de polícia federal prenderam o brasileiro Rodrigo, em flagrante delito, pela prática do crime inafiançável de tráfico de entorpecentes.\n\nCom referência a essa situação hipotética, julgue os seguintes itens, considerando o que estabelece a Constituição da República.\n\nA detenção de Rodrigo deve ser comunicada à autoridade judicial competente imediatamente após ser concretizada.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 108",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "0f040da31844878a9ea2514a62bb0b102e87531762dd5a1a2d3a660e0ac277a5",
+        "original_numeric_id": 108,
+        "original_source_content_hash": "e52e2c18a7a6f41c03db5a5d13079f29c6aad382b264495d7e5ff31757d16434",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. O texto constitucional estabelece de forma expressa a obrigatoriedade de comunicação imediata de qualquer prisão à autoridade judiciária competente. \n\nO artigo 5º, inciso LXII, da Constituição Federal de 1988 determina que a prisão de qualquer pessoa e o local onde se encontre serão comunicados imediatamente ao juiz competente e à família do preso ou à pessoa por ele indicada. Essa norma visa garantir o controle de legalidade imediato pelo Poder Judiciário e assegurar as garantias fundamentais do indivíduo privado de sua liberdade.\n\n### Dispositivo legal\n* **Artigo 5º, inciso LXII, da Constituição Federal de 1988**: [Constituição Federal](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "63b607efb6b42ca6337d5d074015c7ae20e09c4919b4cbc47ebb5f23fdc4c0b4"
+    },
+    {
+      "external_id": "pdf:cargo30:110",
+      "source_id": "cargo30:110",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nBeatriz foi condenada e presa pela prática do crime de estelionato. Após sua prisão, foi aprovada e publicada uma lei que não fere a Constituição da República e que aumentou em 20% os limites mínimo e máximo da pena privativa de liberdade previstos para o crime de estelionato.\n\nCom base nessa situação hipotética, julgue os itens que se seguem.\n\nCom a publicação da referida lei, a pena de Beatriz foi automaticamente aumentada em um quinto.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 110",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Aspectos introdutórios do Direito Constitucional",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "a79e70681eb0223c5539bd0427a5bb32d362661e663226ed6a4466548cd1d2eb",
+        "original_numeric_id": 110,
+        "original_source_content_hash": "2a3d76832bb21bf74cc163956f1eacc9035ae59b0c77cbfd850fabbca8047a09",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "aspectos-introdutorios-do-direito-constitucional",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta porque contraria o princípio constitucional da irretroatividade da lei penal mais gravosa (*lex gravior*).\n\nO artigo 5º, inciso XL, da Constituição Federal de 1988 determina expressamente que a lei penal não retroagirá, salvo para beneficiar o réu (*lex mitior*). Como a nova lei aumentou em 20% os limites mínimo e máximo da pena privativa de liberdade para o crime de estelionato, trata-se de uma norma penal prejudicial (*novatio legis in pejus*). Portanto, ela não pode retroagir para alcançar o fato praticado por Beatriz, que já havia sido condenada e presa sob a vigência da lei anterior, mais benéfica.\n\n### Dispositivo legal\n* **Artigo 5º, inciso XL, da Constituição Federal de 1988**: [Constituição Federal](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "7a3efb0af615ce9b4ae75533176d36673b70b928474dd431e4ed6c5817b896b8"
+    },
+    {
+      "external_id": "pdf:cargo30:112",
+      "source_id": "cargo30:112",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nOs agentes de polícia federal entraram em greve, reivindicando reajuste salarial. Convencido pela argumentação dos grevistas, um senador da República apresentou projeto de lei que determina a equiparação do salário dos agentes de polícia federal ao salário dos delegados de polícia federal.\n\nJulgue os itens que se seguem, relativos à situação hipotética apresentada acima.\n\nEsse projeto de lei está em desacordo com a Constituição da República, pois são de iniciativa privativa do presidente da República projetos de lei que disponham sobre aumento de remuneração de servidores públicos federais.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 112",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Aspectos introdutórios do Direito Constitucional",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "1a8a439b0a387cf727e50fb298d9832e3551d01e743527c350380e7ebcab585c",
+        "original_numeric_id": 112,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "aspectos-introdutorios-do-direito-constitucional",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA assertiva traz uma generalização incorreta e uma fundamentação equivocada:\n\n1. Conforme o Art. 61, § 1º, II, \"a\", da Constituição Federal de 1988, são de iniciativa privativa do Presidente da República as leis que disponham sobre a criação de cargos, funções ou empregos públicos na administração direta e autárquica **ou aumento de sua remuneração** restritamente no âmbito do **Poder Executivo federal**.\nA assertiva generalizou indevidamente para projetos de lei que disponham sobre aumento de remuneração de *\"servidores públicos federais\"* como um todo — o que é falso, visto que a iniciativa para dispor sobre remuneração de servidores do Legislativo pertence à Câmara dos Deputados ou ao Senado Federal (Arts. 51, IV, e 52, XIII), e de servidores do Judiciário pertence aos respectivos Tribunais e ao STF (Art. 96, II, \"b\").\n\n2. Ademais, o projeto de lei proposto tratava de **equiparação de vencimentos** entre carreiras (agentes a delegados), prática que é expressamente inconstitucional por afrontar a vedação taxativa do **Art. 37, inciso XIII, da CF/88** (*\"é vedada a vinculação ou equiparação de quaisquer espécies remuneratórias para o efeito de remuneração de pessoal do serviço público\"*).\n\nPortanto, o item está incorreto ao generalizar a competência do Executivo e atribuir a desconformidade constitucional apenas a esse fundamento.",
+        "source_reference": null
+      },
+      "source_content_hash": "7599eff8167b34236c4aa640e346c56fcb7873adf6543a96c58e626b8a7df155"
+    },
+    {
+      "external_id": "pdf:cargo30:119",
+      "source_id": "cargo30:119",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nEm cada um dos itens subseqüentes, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada.\n\nExpediu-se mandado judicial que determinava a prisão de Maria. Os policiais encarregados de prendê-la descobriram, à meia-noite do dia em que o mandado foi expedido, que ela estava no escritório de seu advogado. Nesse caso, o mandado deve ser cumprido imediatamente, mesmo que seja necessário arrombar a porta do escritório para efetuar a prisão, pois a Constituição da República permite o ingresso de policiais em imóveis não-residenciais, a qualquer hora do dia ou da noite, para fins de cumprimento de determinação judicial.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 119",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "064c088b969a4c2f6916731765ff1ba09dd73a3a953f600203cae6d9231f0496",
+        "original_numeric_id": 119,
+        "original_source_content_hash": "5901dc5bc61a91f5cadaf4461f2a5bcfafc51d7a8faea57a0c1a6f8d12e9c436",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art5"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta por contrariar as garantias fundamentais relativas à inviolabilidade do domicílio.\n\nO Supremo Tribunal Federal (STF) possui jurisprudência pacífica no sentido de que o conceito constitucional de 'casa' (Art. 5º, inciso XI, da CF/88) abrange escritórios profissionais, consultórios e outros locais de trabalho privados e não abertos ao público em geral, garantindo-lhes a proteção da inviolabilidade domiciliar.\n\nO cumprimento de mandado judicial de prisão (determinação judicial) em local protegido por essa garantia só pode ocorrer 'durante o dia', sendo vedado o ingresso forçado à meia-noite (período noturno) sem o consentimento do morador ou titular, salvo em casos de flagrante delito, desastre ou para prestar socorro. Portanto, a afirmação de que o mandado deve ser cumprido imediatamente à meia-noite, mediante arrombamento, é inconstitucional.\n\n**Dispositivo legal**\n\n[Artigo 5º, inciso XI, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art5)",
+        "source_reference": null
+      },
+      "source_content_hash": "795d7ec3afbbb04357ae8a2dda622e74dbc5f98c42f7d8c55da1ba365d2a1b82"
+    }
+  ]
+}

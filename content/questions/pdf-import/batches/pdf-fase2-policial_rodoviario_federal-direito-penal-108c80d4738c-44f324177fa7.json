@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-policial_rodoviario_federal-direito-penal-108c80d4738c-44f324177fa7",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "108c80d4738c4cf75248804f8f7a4e59a8ebc98742dd2b686f8053a30677b861",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "a311442a41cf96895e3ab6bc25877186df1354aab6cde616c4af291da4f66fd9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "44f324177fa73228f056c710bcfde98fd160e1cd399aa87b696744d9afcc2a2c",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-penal",
+    "name": "Direito Penal"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:103",
+      "source_id": "policial_rodoviario_federal:103",
+      "question_type": "true_false",
+      "statement_markdown": "Em uma abordagem durante blitz de rotina em rodovia federal, o policial constatou alteração no chassi do veículo que estava sendo fiscalizado. Questionado pelo policial, o condutor ofereceu-lhe grande quantia em dinheiro para que fosse liberado de imediato.\nConsiderando a situação hipotética apresentada, julgue os itens a seguir.\n\nNessa situação, se o policial não aceitar o dinheiro oferecido, a conduta da pessoa deve ser punida na modalidade tentada.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 103; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Do Crime",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Penal",
+        "source_content_hash": "6860a299563de7b9710d01983118f450652a18bd274e31af7b1ea96843f6eb06",
+        "original_numeric_id": 103,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "do-crime",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O crime de corrupção ativa, tipificado no art. 333 do Código Penal, possui natureza de crime formal (ou de consumação antecipada). Desse modo, o delito se consuma no exato momento em que o agente oferece ou promete a vantagem indevida ao funcionário público, sendo irrelevante para a consumação se o funcionário aceita ou rejeita a oferta, ou se o ato de ofício pretendido é efetivamente praticado. Portanto, a recusa do policial em receber o dinheiro não afasta a consumação do crime, restando inviável a punição na modalidade tentada.\n\n### Dispositivo legal\n* **Art. 333 do Código Penal (Decreto-Lei nº 2.848/1940)**\n* URL oficial: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "8f18c91b096ddec25915bd756d809a0e745990cbd312fa3d25b7b0093ab337bf"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:104",
+      "source_id": "policial_rodoviario_federal:104",
+      "question_type": "true_false",
+      "statement_markdown": "Em uma abordagem durante blitz de rotina em rodovia federal, o policial constatou alteração no chassi do veículo que estava sendo fiscalizado. Questionado pelo policial, o condutor ofereceu-lhe grande quantia em dinheiro para que fosse liberado de imediato.\nConsiderando a situação hipotética apresentada, julgue os itens a seguir.\n\nAo oferecer dinheiro para ser irregularmente liberado da blitz, o condutor praticou o crime de corrupção ativa.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 104; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Parte Especial do Código Penal",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Penal",
+        "source_content_hash": "7a60b5828b792e835fc0751ec394b92fd6db1493dba5d94e5f83f2fdd66d8c7d",
+        "original_numeric_id": 104,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "parte-especial-do-codigo-penal",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A conduta do condutor que oferece vantagem indevida (grande quantia em dinheiro) a funcionário público (policial rodoviário federal) com o objetivo de determinar que este omita ato de ofício (liberar o veículo irregular sem adotar as medidas legais cabíveis) amolda-se perfeitamente ao tipo penal de corrupção ativa, previsto no art. 333 do Código Penal.\n\n### Dispositivo legal\n* **Art. 333 do Código Penal (Decreto-Lei nº 2.848/1940)**\n* URL oficial: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "0754ee146dc91f4615ee2bd7b653faf1a46dfd62196a94fe7f9abe6b40b44add"
+    }
+  ]
+}

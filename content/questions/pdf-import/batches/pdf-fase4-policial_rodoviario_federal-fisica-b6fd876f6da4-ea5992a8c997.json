@@ -1,0 +1,196 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-policial_rodoviario_federal-fisica-b6fd876f6da4-ea5992a8c997",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "b6fd876f6da47bfc670b5edf47a194cb0192c6a872db7d5acf3f5352d639cba7",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "d0a1c5718064db035e156dbeb8982317019ea8dde6c8349e0a1cc8366d1342df",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ea5992a8c9973c84b116791fbb4228f25f62400e79900cdfd7d8756bec2fd8a6",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "fisica",
+    "name": "Física"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:040",
+      "source_id": "policial_rodoviario_federal:40",
+      "question_type": "true_false",
+      "statement_markdown": "Um projétil foi lançado obliquamente em relação ao solo em um local onde a aceleração da gravidade é constante e a resistência do ar é desprezível.\nConsiderando essa situação hipotética bem como a mecânica clássica e áreas a ela relacionadas, julgue os itens que se seguem.\n\nDurante todo o movimento, a aceleração vetorial do projétil será constante.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 40; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gravitação, Estática e Hidrostática",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Física",
+        "source_content_hash": "cc6bde606b2c2000829c756a031e5db8537bc01bff9ac8b0d8e8d72dc96dc7ce",
+        "original_numeric_id": 40,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "leis-de-newton-e-aplicacoes",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nNo lançamento oblíquo no vácuo (resistência do ar desprezível), a única força exercida sobre o corpo é a força peso:\n$$\\vec{F}_{res} = m\\vec{g} \\implies \\vec{a} = \\vec{g}$$\nSendo o campo gravitacional local suposto constante e uniforme, o vetor aceleração $\\vec{a}$ mantém-se constante em módulo, direção (vertical) e sentido (para baixo) durante toda a trajetória do projétil.",
+        "source_reference": null
+      },
+      "source_content_hash": "487b08ec6bfb035b1ad784ed7f228aee8e3ed712a56583305c9226d61c940131"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:041",
+      "source_id": "policial_rodoviario_federal:41",
+      "question_type": "true_false",
+      "statement_markdown": "Um projétil foi lançado obliquamente em relação ao solo em um local onde a aceleração da gravidade é constante e a resistência do ar é desprezível.\nConsiderando essa situação hipotética bem como a mecânica clássica e áreas a ela relacionadas, julgue os itens que se seguem.\n\nNa posição de altura máxima, a força resultante sobre o projétil será nula.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 41; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gravitação, Estática e Hidrostática",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Física",
+        "source_content_hash": "c89cf4d2360b32d8371830632b84999bfd63270fb3a79677b449cd8d9aee98df",
+        "original_numeric_id": 41,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_policial_rodoviario_federal_041.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "leis-de-newton-e-aplicacoes",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. No ponto de altura máxima de um lançamento oblíquo, a componente vertical da velocidade se anula ($v_y = 0$), mas o projétil ainda possui a componente horizontal da velocidade ($v_x = v_{0x} \\neq 0$).\n\nEm relação às forças, a única força que atua sobre o projétil durante todo o trajeto (inclusive na altura máxima) é a força peso ($\\vec{P}$), decorrente da gravidade. Portanto, a força resultante ($\\vec{F}_R$) sobre o projétil na altura máxima é igual ao seu próprio peso:\n\n$$\\vec{F}_R = \\vec{P} = m\\vec{g} \\neq 0$$\n\nComo a massa ($m$) e a gravidade ($g$) são não nulas, a força resultante não é nula em nenhum ponto da trajetória.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_policial_rodoviario_federal_041.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "cd7ee67dfeed2f0a558cdcaab190ff91e5e8779e3128fd37475cf63cab6b4779"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:043",
+      "source_id": "policial_rodoviario_federal:43",
+      "question_type": "true_false",
+      "statement_markdown": "Um projétil, de massa m e velocidade v, colidiu frontalmente com um bloco de madeira de massa M que estava em repouso em uma superfície horizontal sem atrito, preso a uma mola ideal de constante elástica k. Após a colisão, o projétil e o bloco desenvolveram um movimento solidário, o que provocou, na mola, uma compressão máxima igual a x, conforme mostra a figura a seguir.\n[Imagem de um projétil de massa m e velocidade v colidindo com um bloco de massa M preso a uma mola de constante k]\nCom referência a essa situação hipotética, à mecânica clássica e a áreas a ela correlatas, julgue os itens que se seguem.\n\nNa posição de compressão máxima, a energia potencial elástica armazenada na mola tem valor menor que o da energia cinética do projétil antes da colisão.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 43; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Trabalho, Energia e Choques Mecânicos",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Física",
+        "source_content_hash": "5c1fcc2f1155efa2cba1053735abfdaaefd4907f2451c8a1ff15f3d21e2b1372",
+        "original_numeric_id": 43,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_policial_rodoviario_federal_043.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "trabalho-energia-e-conservacao-da-energia-mecanica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O processo ocorre em duas etapas distintas:\n\n1. **A colisão**: Como o projétil e o bloco passam a se mover juntos (\"movimento solidário\"), a colisão é classificada como **perfeitamente inelástica**. Nesse tipo de colisão, há conservação da quantidade de movimento, mas ocorre a **máxima perda de energia cinética** do sistema (dissipada na forma de calor e deformação permanente).\n2. **A compressão da mola**: Após a colisão, o conjunto de massa $(m + M)$ comprime a mola em uma superfície sem atrito. Nessa etapa, a energia mecânica é conservada, de modo que toda a energia cinética do conjunto imediatamente após a colisão ($E_{cf}$) é convertida em energia potencial elástica máxima na mola ($E_{pe}$).\n\nMatematicamente, pela conservação da quantidade de movimento na colisão:\n$$m \\cdot v = (m + M) \\cdot V_f \\implies V_f = \\frac{m}{m + M} \\cdot v$$\n\nA energia cinética inicial do projétil é:\n$$E_{c0} = \\frac{1}{2} m v^2$$\n\nA energia cinética do conjunto logo após a colisão (que será totalmente convertida em potencial elástica) é:\n$$E_{cf} = \\frac{1}{2} (m + M) V_f^2 = \\frac{1}{2} (m + M) \\left(\\frac{m \\cdot v}{m + M}\\right)^2 = \\left(\\frac{m}{m + M}\\right) \\cdot \\left(\\frac{1}{2} m v^2\\right) = \\left(\\frac{m}{m + M}\\right) E_{c0}$$\n\nComo a fração $\\frac{m}{m + M}$ é estritamente menor que $1$, conclui-se que a energia potencial elástica máxima armazenada na mola ($E_{pe} = E_{cf}$) é menor do que a energia cinética inicial do projétil ($E_{c0}$).\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_policial_rodoviario_federal_043.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "50ea0074631ad27d3afd1c2790cfc1fe34499c800a6a97ae5292b8da72bd8fe9"
+    }
+  ]
+}

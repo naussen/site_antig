@@ -1,0 +1,685 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-analista_administrativo-administracao-geral-d1088d0556a6-333b2a5d7559",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "d1088d0556a634bc0e47cc4b0194b18b7b11b50a2faaa9a150b68e740a974fa1",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "7b0e6efd1cd4387fd3b4024c7d594aa5aad8ca3c4f2146f6ddc96ab3d4597e20",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "333b2a5d7559b733896a0c48e65df7df67bd793af898e8060a7aee859022ee06",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-geral",
+    "name": "Administração Geral"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:051",
+      "source_id": "analista_administrativo:51",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de administração e processo administrativo, julgue os itens a seguir.\n\nComunicações formalizadas e admissão por competência profissional são dimensões da escola burocrática de Weber.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 51; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão por Competências",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "6aa71afed1148ab0cce65c57f00661e2e18a4780dd0adfac3c3aa91799a55522",
+        "original_numeric_id": 51,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "direcao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A Teoria da Burocracia, desenvolvida pelo sociólogo Max Weber, baseia-se no modelo racional-legal de dominação e apresenta características e dimensões bem definidas para garantir a máxima eficiência da organização.\n\nEntre as principais dimensões desse modelo, destacam-se:\n1. **Caráter formal das comunicações (comunicações formalizadas)**: Todas as regras, decisões, ações e comunicações administrativas devem ser formuladas e registradas por escrito para garantir a comprovação, a consistência e a continuidade das atividades organizacionais.\n2. **Competência técnica e meritocracia (admissão por competência profissional)**: A escolha, admissão e promoção dos funcionários baseiam-se no mérito e na competência técnica (avaliados por meio de testes, exames ou títulos), e não em critérios de preferência pessoal, nepotismo ou favoritismo.\n\nPortanto, a afirmativa está correta ao identificar as comunicações formalizadas e a admissão por competência profissional como dimensões da escola burocrática de Weber.",
+        "source_reference": null
+      },
+      "source_content_hash": "d4cbf5da593c3bbb2a40370e9c1c1b0f26c5146f1b436573d362423ab505f76a"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:054",
+      "source_id": "analista_administrativo:54",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de administração e processo administrativo, julgue os itens a seguir.\n\nAlém da razão de ser da organização, a missão deve contemplar a natureza de seu negócio.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 54; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Planejamento",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "4b73dafe58ae79bd806a9789370cbff583ee005dc8581458c4c9df3cfd52840b",
+        "original_numeric_id": 54,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "planejamento",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A missão representa a identidade e o propósito orientador de uma organização. Ela define não apenas a razão de ser da instituição (por que ela existe), mas também delimita a natureza do seu negócio (o que ela faz, quais necessidades atende e quem é o seu público-alvo). Portanto, a definição do negócio é parte integrante e essencial da declaração de missão.",
+        "source_reference": null
+      },
+      "source_content_hash": "1fbd7ef3e9d6ccaed45eced39c5f22f7ac5ab5cae44cf7736a7b32454b78569f"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:059",
+      "source_id": "analista_administrativo:59",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, que se referem à administração geral.\n\nSegundo a norma ISO 9000:2000, na avaliação dos sistemas de gestão da qualidade, os processos são verificados quanto à sua eficiência ao alcançarem os resultados requeridos.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 59; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Controle e Avaliação",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "66548113fec5711905b4433759a113820bb9cb3d658b4c5707c7823a05f293e5",
+        "original_numeric_id": 59,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "controle-e-avaliacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNa sistemática da norma internacional **NBR ISO 9000:2000 / ISO 9001**, a avaliação dos sistemas de gestão da qualidade baseia-se em quatro perguntas fundamentais que abrangem o processo em sua totalidade:\n\n1. O processo está identificado e adequadamente definido?\n2. As responsabilidades estão atribuídas?\n3. Os procedimentos estão implementados e mantidos?\n4. O processo é eficaz em atingir os resultados requeridos?\n\nA assertiva restringiu incorretamente o escopo das auditorias a meros aspectos formais, desconsiderando a eficácia e a melhoria contínua exigidas pela norma.",
+        "source_reference": null
+      },
+      "source_content_hash": "1f20d817f9c6ef958167f21ebb43f96878060b13f588b3bedd4ee0244e2bd4d6"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:061",
+      "source_id": "analista_administrativo:61",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, que se referem à administração geral.\n\nNo balanced scorecard, aspectos como liderança e capital da informação são tratados na perspectiva de aprendizado e crescimento.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 61; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Direção",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "a7b23cb2663e056a4ebb0725686d1fdce94ca1b3067915c8d5f3bc5b33e536aa",
+        "original_numeric_id": 61,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "direcao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No modelo do Balanced Scorecard (BSC), desenvolvido por Kaplan e Norton, a perspectiva de **Aprendizado e Crescimento** foca na infraestrutura intangível necessária para criar valor a longo prazo. \n\nEssa perspectiva é estruturada em três categorias de ativos intangíveis:\n1. **Capital Humano:** competências, conhecimentos e habilidades dos colaboradores.\n2. **Capital da Informação:** sistemas de informação, redes, bancos de dados e infraestrutura tecnológica.\n3. **Capital Organizacional:** cultura, alinhamento, trabalho em equipe e **liderança**.\n\nDesse modo, tanto a liderança quanto o capital da informação são corretamente classificados nessa perspectiva.",
+        "source_reference": null
+      },
+      "source_content_hash": "9ee28f46d8e2ab472f57eef02a6d0b8f7b12d08d83723df5179720118a0da5ae"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:063",
+      "source_id": "analista_administrativo:63",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito à administração pública, julgue os itens que se seguem.\n\nA reintegração de servidor público cujo cargo foi extinto não é possível, mesmo que determinada judicialmente.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 63; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Teorias da Administração e das Organizações",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "08a084dce3b2206b547aed31387e04612b0f32a3cef078cf9493bd4c277b00c6",
+        "original_numeric_id": 63,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "teorias-da-administracao-e-das-organizacoes",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A reintegração é o retorno do servidor estável ao cargo anteriormente ocupado, decorrente da invalidação de sua demissão por decisão administrativa ou judicial.\n\nA extinção do cargo não obsta o cumprimento da decisão judicial de reintegração. A Constituição Federal e o regime jurídico dos servidores federais (Lei nº 8.112/1990) determinam expressamente que, se o cargo estiver extinto, o servidor estável reintegrado será colocado em **disponibilidade**, com remuneração proporcional ao tempo de serviço, até seu adequado aproveitamento em outro cargo compatível.\n\n**Dispositivo legal**\n\n[Constituição Federal de 1988, Art. 41, § 2º e § 3º; Lei nº 8.112/1990, Art. 28, § 1º](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "19855590aef0adadd3b1b75ff0d36a6b28f43fa11d8e3b216b6035e151c60fc5"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:064",
+      "source_id": "analista_administrativo:64",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito à administração pública, julgue os itens que se seguem.\n\nSuponha que determinado servidor responsável por um suprimento de fundos ainda não tenha efetuado a prestação de contas de sua aplicação, embora o prazo para fazê-lo tenha expirado. Nesse caso, não poderá ser concedido novo suprimento de fundos ao servidor.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 64; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Teorias da Administração e das Organizações",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "b474962c52be6691f059b37eb39acaf21ba1868590a9ee1680366fe741b8170f",
+        "original_numeric_id": 64,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/decreto/d93872.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "teorias-da-administracao-e-das-organizacoes",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nO **suprimento de fundos** (Regime de Adiantamento disciplinado pelo Art. 68 da Lei nº 4.320/1964 e Decreto nº 93.872/1986) é concedido a servidor sob estrita responsabilidade pessoal.\n\nA expiração do prazo fixado para aplicação e comprovação sem a respectiva prestação de contas configura omissão do dever constitucional de prestar contas (Art. 70, parágrafo único, da CF/88), ensejando a imediata instauração de **Tomada de Contas Especial (TCE)** para apuração do débito e ressarcimento ao erário.",
+        "source_reference": null
+      },
+      "source_content_hash": "b05a1c6b2499853d284431c83994060cc10638742dd4fea636db82895d9e88ea"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:065",
+      "source_id": "analista_administrativo:65",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito à administração pública, julgue os itens que se seguem.\n\nA modalidade de licitação denominada concorrência ocorre entre interessados devidamente cadastrados ou que atendam a todas as condições exigidas para cadastramento até o terceiro dia anterior à data do recebimento das propostas.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 65; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Teorias da Administração e das Organizações",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "068673332364911ac11681aabf03b51510dd4c6d9a383f67e7f8de5ef7e0e9ff",
+        "original_numeric_id": 65,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8666cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "teorias-da-administracao-e-das-organizacoes",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNos termos do Artigo 22, § 1º, da Lei nº 8.666/1993 e do Artigo 6º, inciso XXXVIII, da Lei nº 14.133/2021:\n\nA **concorrência** é a modalidade de licitação realizada entre **quaisquer interessados** que, na fase inicial de habilitação preliminar, comprovem possuir os requisitos mínimos de qualificação exigidos no edital.\n\nA modalidade restrita a interessados devidamente cadastrados ou que atendam às condições de cadastramento até o terceiro dia anterior à data de recebimento das propostas era a **tomada de preços** (Art. 22, § 2º, da Lei 8.666/93). O item atribuiu erroneamente o conceito da tomada de preços à concorrência.",
+        "source_reference": null
+      },
+      "source_content_hash": "34416677c315e17a51503829d6fccb042ca13623322ab480c91762797e041252"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:066",
+      "source_id": "analista_administrativo:66",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, quanto à reforma do aparelho do Estado, ao Estado regulador, aos conselhos de gestão, à transparência da administração pública e à gestão por competências.\n\nA reforma do aparelho do Estado teve um viés financeiro retratado pela busca do equilíbrio das contas públicas, da redução do desperdício e do resgate da imagem do servidor público perante a sociedade.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 66; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão por Competências",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "bda61ffcb4be940cbaf6b8e72df6fe7850bf109a7a492c8b94eba6609a7a17d9",
+        "original_numeric_id": 66,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/gestao/pt-br"
+      },
+      "topics": [
+        {
+          "topic_id": "direcao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA Reforma do Aparelho do Estado promovida a partir de 1995 (consubstanciada no Plano Diretor da Reforma do Aparelho do Estado - PDRAE) teve como motivação central a superação da crise fiscal do Estado brasileiro.\n\nA transição da administração pública burocrática para o modelo gerencial buscou o ajuste fiscal das contas públicas, a contenção dos déficits orçamentários e a obtenção de maior eficiência e economicidade nos gastos com pessoal e custeio estatal.",
+        "source_reference": null
+      },
+      "source_content_hash": "5d3332bbba1fb782a42143cd4d81073afd283d4df5f3eade6813be79b24663f2"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:069",
+      "source_id": "analista_administrativo:69",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, quanto à reforma do aparelho do Estado, ao Estado regulador, aos conselhos de gestão, à transparência da administração pública e à gestão por competências.\n\nOs conselhos de promoção de direitos da criança e do adolescente possuem natureza consultiva, propositiva e educativa e, por conduzirem ações inerentes à área de atuação do governo e terem poder de decisão, são considerados conselhos gestores.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 69; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão por Competências",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "2b886e0ea702279d656825670a41b3454f67dc1cfea842fb62a022c84c4c58fe",
+        "original_numeric_id": 69,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8069.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "direcao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nConforme estabelece o Estatuto da Criança e do Adolescente (ECA - Lei nº 8.069/1990, Art. 88, inciso II), os Conselhos dos Direitos da Criança e do Adolescente (em âmbito nacional, distrital, estadual e municipal) possuem natureza jurídica de órgãos colegiados de composição paritária (integrados por representantes do governo e de organizações da sociedade civil), com funções deliberativas e controladoras da política pública de atendimento.",
+        "source_reference": null
+      },
+      "source_content_hash": "772b07b0dd8c573e2244a69b02f6ea621d5069a60abd3a5ccbd0f9266fad48c5"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:070",
+      "source_id": "analista_administrativo:70",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, quanto à reforma do aparelho do Estado, ao Estado regulador, aos conselhos de gestão, à transparência da administração pública e à gestão por competências.\n\nA sociedade pode acompanhar o uso dos recursos públicos por meio das informações disponíveis no Portal da Transparência, o qual engloba, entre outras, informações sobre despesas realizadas pela Câmara dos Deputados, por exemplo.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 70; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão por Competências",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "cecd180a99e71aaa59b9920119b75b095f3cea7f97dff32b0c6929146d35ac3c",
+        "original_numeric_id": 70,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "direcao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nO controle social da administração pública e dos recursos orçamentários é multiforme e não se limita nem se restringe ao mero acompanhamento passivo das informações disponibilizadas nos portais eletrônicos de transparência.\n\nO ordenamento constitucional e legal (Lei nº 12.527/2011, Lei nº 14.129/2021 e Lei nº 13.460/2017) consagra ampla gama de instrumentos de controle social ativo, incluindo audiências públicas participativas, conselhos gestores de políticas públicas, canais de ouvidoria pública, ações populares e denúncias aos Tribunais de Contas.",
+        "source_reference": null
+      },
+      "source_content_hash": "db8cf1df6ad1d54d924bb9aaa7dea5ae967e3ddcfbbb35ba8e859c6a2d624351"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:071",
+      "source_id": "analista_administrativo:71",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à gestão de redes organizacionais, ao Sistema Integrado de Administração de Recursos Humanos (SIAPE), ao Sistema Integrado de Administração de Serviços Gerais (SIASG), à intermediação de interesses e a organizações da sociedade civil de interesse público (OSCIP), julgue os itens que se seguem.\n\nAs redes organizacionais devem ser compostas por indivíduos em busca de interesses coletivos, que desenvolvam uma confiança mútua e estejam predispostos à cooperação para solução de problemas.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 71; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Teorias da Administração e das Organizações",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "64a59adfbff2d5c6142b25bfdcb60cc2340af0e96bac51b1d994f5db3e80c8d6",
+        "original_numeric_id": 71,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "teorias-da-administracao-e-das-organizacoes",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "As redes organizacionais caracterizam-se por estruturas flexíveis, horizontais e dinâmicas, formadas por diversos atores (indivíduos, grupos ou organizações) que se articulam em torno de objetivos comuns.\n\nPara o funcionamento eficiente de uma rede, são elementos fundamentais:\n1.  **Interesses coletivos:** Alinhamento de propósitos comuns.\n2.  **Confiança mútua:** Redução de comportamentos oportunistas e facilitação do fluxo de informações.\n3.  **Cooperação:** Disposição para trabalhar conjuntamente na busca de soluções para problemas complexos que não seriam resolvidos isoladamente.",
+        "source_reference": null
+      },
+      "source_content_hash": "ec21e78843ea268673e50c13a79c5a06ea88a992b073fcd5cc50229064ad13dc"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:072",
+      "source_id": "analista_administrativo:72",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à gestão de redes organizacionais, ao Sistema Integrado de Administração de Recursos Humanos (SIAPE), ao Sistema Integrado de Administração de Serviços Gerais (SIASG), à intermediação de interesses e a organizações da sociedade civil de interesse público (OSCIP), julgue os itens que se seguem.\n\nNo SIAPE, o acesso de nível órgão possibilita o acesso a informações de servidores de diferentes órgãos, por isso deve haver respaldo legal para a sua concessão.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 72; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Teorias da Administração e das Organizações",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "8f8afec3494ff91dd97dc206e6c445d639c24c07dc1344a840ab25f09abc6371",
+        "original_numeric_id": 72,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "teorias-da-administracao-e-das-organizacoes",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No Sistema Integrado de Administração de Recursos Humanos (SIAPE), os perfis de acesso são estruturados de forma hierárquica e segregada para garantir a segurança da informação e a privacidade dos dados funcionais.\n\nO acesso configurado no nível de **órgão** limita a atuação do usuário às informações dos servidores pertencentes àquele órgão específico ou às suas unidades subordinadas. Ele não permite a visualização ou alteração de dados de servidores de outros órgãos da Administração Pública Federal, o que exigiria um perfil de acesso de nível sistêmico (central).",
+        "source_reference": null
+      },
+      "source_content_hash": "4205bc1b40b33be07ff075051ea3e1578705a1628ca8436e4f3f778c2279dd4a"
+    }
+  ]
+}

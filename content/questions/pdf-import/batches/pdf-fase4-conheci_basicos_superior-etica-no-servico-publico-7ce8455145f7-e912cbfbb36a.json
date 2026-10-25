@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-conheci_basicos_superior-etica-no-servico-publico-7ce8455145f7-e912cbfbb36a",
+  "source": {
+    "file_name": "conheci_basicos_superior_ATUALIZADO.json",
+    "sha256": "7ce8455145f7b114aa72425ef99a450ecc4281426c54f3c9855b091cd41b14d3",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "conheci_basicos_superior.json",
+      "original_source_sha256": "aaf9eb1efb2a88d71a045bc1e2e61e371649418bec45be98916a5f4b799176a6",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "e912cbfbb36ae40bc11f13f45a6bf5238c0068f7b34e08d664a6868b0bbec194",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "etica-no-servico-publico",
+    "name": "Ética no Serviço Público"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:conheci_basicos_superior:034",
+      "source_id": "conheci_basicos_superior:34",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à ética no serviço público, julgue os itens subsecutivos.\n\nExerce seu dever de cidadania, em conformidade com os padrões éticos aceitos, o servidor público que não se deixa corromper e denuncia todos os atos de corrupção de que toma conhecimento.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 34; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ética, Moral, Cidadania e Democracia",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "9aa6b36e49038225079364def7c0261f9b2b3b286d11321846e955a2f871e707",
+        "original_numeric_id": 34,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "etica-aspectos-teoricos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNos termos do Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal (Decreto nº 1.171/1994, Seção I):\n\n* O servidor público não pode desprezar o elemento ético de sua conduta, devendo decidir não apenas entre o legal e o ilegal, mas principalmente entre o honesto e o desonesto (Inciso II).\n* É dever fundamental do servidor resistir a todas as pressões e intimidações para obter favores ou vantagens indevidas e denunciar à autoridade competente ou à comissão de ética qualquer ato ou fato contrário aos princípios éticos de que tenha tomado conhecimento (Inciso XIV, 'm' e 'l').\n\nAo recusar a corrupção e denunciar irregularidades, o agente cumpre rigorosamente seu dever de cidadania e probidade.",
+        "source_reference": null
+      },
+      "source_content_hash": "ba285871de6327a7906e829ec489529f91c0d1821339090453fa984bd096e284"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:035",
+      "source_id": "conheci_basicos_superior:35",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à ética no serviço público, julgue os itens subsecutivos.\n\nO servidor que, para algumas situações de trabalho, avalia com cuidado qual a melhor maneira de agir para alcançar os resultados esperados e se orienta por princípios de justiça, está em concordância com a ética.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 35; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ética (Aspectos Teóricos)",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "4cbb00ef1115796dd4399495b82709de4bfd7b71e9dc338d76d3f1b3aa528abb",
+        "original_numeric_id": 35,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "etica-aspectos-teoricos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA conduta ética no serviço público possui caráter **permanente, universal e irrenunciável**.\n\nAfirmar que o servidor avalia o agir ético apenas *\"para algumas situações de trabalho\"* relativiza de modo inaceitável o compromisso moral do agente público. O Código de Ética (Decreto nº 1.171/1994) impõe que a dignidade, o decoro, o zelo, a eficácia e a consciência dos princípios morais devem ser observados em **todos** os atos da vida pública e funcional, sem qualquer fragmentação ou exceção casuística.",
+        "source_reference": null
+      },
+      "source_content_hash": "412f293d18c7df845f784d1cdef12493cf6821bb616f893d4b9d76f1cc0187bf"
+    }
+  ]
+}

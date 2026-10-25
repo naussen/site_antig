@@ -1,0 +1,1375 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_do_ministerio_publico_area_administrativa-direito-administrativo-74df7af44d59-725d443a478e",
+  "source": {
+    "file_name": "tecnico_do_ministerio_publico_area_administrativa_ATUALIZADO.json",
+    "sha256": "74df7af44d59dc5b630984a8e5e7fe40fed758894220a278014b288dd482883c",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_do_ministerio_publico_area_administrativa.json",
+      "original_source_sha256": "4f108d6745e5642f8962285fd7010db5f1562dfc6f07780d46a281f2e454b6aa",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "725d443a478ec0d1646499f4c8ca81babf36f993f5f5eb1f95efb8989761b14f",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:061",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:61",
+      "question_type": "multiple_choice",
+      "statement_markdown": "João estacionou seu carro em plena via pública, em local onde era proibido parar e estacionar. Horas depois, quando retornou ao local, foi informado de que agentes públicos guincharam seu veículo, que foi levado ao depósito público, haja vista que estava impedindo a regular circulação de outros carros, inclusive de ambulâncias que por ali precisam passar para chegar a hospital próximo.\nNo caso em tela, o atributo do ato administrativo que autoriza os agentes públicos a praticarem o ato com aplicação de meio direto para sua concretização, na hipótese em que os meios indiretos de coerção não atenderiam ao interesse público, é a:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 61; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "exigibilidade, sem necessidade de prévio processo administrativo ou de contraditório diferido pelo administrado;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "coercibilidade, com necessidade de prévio processo administrativo sumário com contraditório e ampla defesa ao administrado;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "autoexecutoriedade, sem necessidade de prévia intervenção do Poder Judiciário, mas se admitindo o contraditório diferido pelo administrado;",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "imperatividade, com necessidade de prévio processo administrativo ou judicial, para atendimento ao princípio do devido processo legal;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "discricionariedade, sem necessidade de prévia intervenção do Poder Judiciário, mas com prévio processo administrativo sumário.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "f5fefa577da9d51ed9c7569a47e06dd414a261dde60cdda1f88d6431958e81f4",
+        "original_numeric_id": 61,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nNa situação descrita, o veículo estacionado em local proibido bloqueava a saída de uma ambulância de emergência. A intervenção direta da autoridade de trânsito para guinchar o veículo decorre do atributo da **autoexecutoriedade** do ato administrativo / poder de polícia.\n\nA autoexecutoriedade autoriza a administração pública a executar material e diretamente suas decisões de polícia sem necessidade de prévia autorização do Poder Judiciário, assegurando-se ao administrado o contraditório e a ampla defesa em momento posterior (**contraditório diferido/postergado**).",
+        "source_reference": null
+      },
+      "source_content_hash": "fb83d78dc38785c4998ee5e2a7ac990e2ae258fb728c2c19cae49ab164fb17ba"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:062",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:62",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O Procurador-Geral de Justiça do MPRJ, em conformidade com o que consta no art. 2º, XVII, da Lei Complementar Estadual nº 106/2003, editou a Resolução GPGJ nº 2.245/2018, instituindo e dispondo sobre o Diário Oficial Eletrônico do Ministério Público do Estado do Rio de Janeiro como instrumento oficial de disponibilização e publicação dos seus atos administrativos, processuais e de comunicação em geral.\nA conduta do chefe do parquet estadual no caso concreto está calcada em seu poder:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 62; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "regulamentar de editar lei em sentido formal para disciplinar matéria de interesse da instituição, assegurando o exercício da autonomia administrativa ministerial;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "hierárquico, pois na qualidade de autoridade máxima administrativa da instituição tem a prerrogativa de inovar no ordenamento jurídico em matéria de interesse institucional;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "disciplinar, haja vista que o desatendimento às normas concretas editadas por meio da resolução geram aplicação de penalidade disciplinar ao servidor pelo Procurador-Geral;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "normativo de expedir norma geral e abstrata que facilita a execução da lei orgânica do MPRJ na matéria, minudenciando seus termos;",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "discricionário para editar normas concretas e específicas que extrapolem os limites da lei orgânica do MPRJ, no regular exercício da independência funcional da chefia institucional.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Poderes Administrativos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "95b0cec67e1f6a362f1587d79c625fb95f011d69b093171649b60cab391b1973",
+        "original_numeric_id": 62,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "D",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "deveres",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A edição de resolução pelo Procurador-Geral de Justiça para instituir e regulamentar o Diário Oficial Eletrônico do órgão é uma manifestação do **poder normativo** (ou regulamentar) da Administração Pública. Esse poder autoriza a expedição de atos gerais e abstratos destinados a detalhar, minudenciar e viabilizar a fiel execução de leis preexistentes (no caso, a Lei Orgânica do MPRJ - Lei Complementar Estadual nº 106/2003), sem criar direitos primários ou obrigações que não estejam previstos na legislação de regência.\n\n**Análise das alternativas incorretas:**\n* **A:** O chefe do Ministério Público não edita \"lei em sentido formal\", cuja competência é exclusiva do Poder Legislativo.\n* **B:** O poder hierárquico fundamenta a relação de subordinação, coordenação e fiscalização interna, mas não confere a prerrogativa de inovar originariamente no ordenamento jurídico.\n* **C:** O poder disciplinar destina-se à apuração de infrações e aplicação de penalidades a servidores ou particulares com vínculo especial, o que não corresponde à instituição de um veículo de publicação oficial.\n* **E:** O poder discricionário não autoriza a edição de normas que extrapolem os limites da lei orgânica, sob pena de violação direta ao princípio da legalidade.\n\n### Dispositivo legal\n* **Lei Complementar Estadual nº 106/2003 (Rio de Janeiro)**, artigo 2º, inciso XVII.\n  * URL oficial: [ALERJ](https://www.alerj.rj.gov.br/center_arq_inf_fatos_lei_link.asp?num_lei=106&ano_lei=2003)",
+        "source_reference": null
+      },
+      "source_content_hash": "ae6993a18036203991abdf362ea92b676be2ef5d89de2f9cee47875b355132f8"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:063",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:63",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Imagine as situações hipotéticas abaixo em que o Procurador-Geral de Justiça pratica ato administrativo, delegando sua atribuição para o:\nI. Subprocurador-Geral de Justiça de Assuntos Cíveis e Institucionais ajuizar representação por inconstitucionalidade em relação à lei X do Município Y;\nII. Diretor de Recursos Humanos decidir recursos administrativos.\nEm matéria de delegação de competência, de acordo com a Lei nº 9.784/99 e com a doutrina de Direito Administrativo:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 63; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "os atos I e II estão viciados, pois o Procurador-Geral não pode delegar qualquer tipo de competência;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "os atos I e II estão viciados, pois o Procurador-Geral não pode delegar sua competência originária;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "o ato I é válido e o II está viciado, pois não pode ser objeto de delegação decisão de recursos administrativos por expressa vedação legal;",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "o ato II é válido e o I está viciado, pois não pode ser objeto de delegação ato de ajuizamento de medida judicial por expressa vedação legal;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "os atos I e II estão válidos, pois o Procurador-Geral pode delegar qualquer tipo de competência, mediante ato expresso e formal volitivo de renúncia.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Processo Administrativo Federal (Lei nº 9.784/1999)",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "aa4f4d343e55e9f12b3761301e8bda2de6a282ee87afd94c896a5b55250f06bf",
+        "original_numeric_id": 63,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "processo-administrativo-federal-lei-9784",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A delegação de competência é a transferência temporária do exercício de atribuições de um órgão ou autoridade para outro, sendo a regra geral no processo administrativo. Contudo, a legislação estabelece limites intransponíveis a essa prática.\n\nDe acordo com o artigo 13 da Lei nº 9.784/1999, não podem ser objeto de delegação:\n1. A edição de atos de caráter normativo;\n2. A **decisão de recursos administrativos**;\n3. As matérias de competência exclusiva do órgão ou autoridade.\n\nPortanto, o **Ato II** (delegação para decidir recursos administrativos) está irremediavelmente viciado por expressa vedação legal. Por outro lado, o **Ato I** (delegação para ajuizar representação por inconstitucionalidade) é válido, pois o ajuizamento de ação judicial não se enquadra nas proibições de delegação do processo administrativo geral e é admitido pela organização institucional.\n\n**Análise das alternativas incorretas:**\n* **A e B:** A delegação é permitida como regra geral para otimizar a gestão administrativa, não havendo proibição absoluta de delegação de competências originárias pelo Procurador-Geral de Justiça.\n* **D:** Inverte a validade dos atos, considerando incorretamente o Ato II válido e o Ato I viciado.\n* **E:** A competência administrativa é irrenunciável (artigo 11 da Lei nº 9.784/1999). A delegação não constitui renúncia de competência, sendo revogável a qualquer tempo pela autoridade delegante.\n\n### Dispositivo legal\n* **Lei nº 9.784/1999**, artigos 11 e 13, inciso II.\n  * URL oficial: [Planalto](https://www.planalto.gov.br/ccivil_03/leis/l9784.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "d749f8b6663128f327381f6fa4ed05b77ead718669dd33359afbd7e75ee7e315"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:065",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:65",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O Ministério Público do Estado do Rio de Janeiro necessita realizar contratação de prestação de serviço e fornecimento de mão de obra a fim de tornar digital todo o seu acervo de artigos doutrinários subscritos por membros da instituição. Mediante decisão administrativa de cunho social, com o escopo de fomentar o exercício da cidadania inclusiva, o Procurador-Geral optou por contratar associação de pessoas com deficiência física, sem fins lucrativos e de comprovada idoneidade, para a prestação dos citados serviços, mediante dispensa de licitação.\nNo caso em tela, sob o prisma da Lei nº 8.666/93, a conduta do chefe do MPRJ é considerada:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 65; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "legal, desde que o preço contratado seja compatível com o praticado no mercado e que a contratação tenha sido precedida de regular processo administrativo;",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "legal, desde que pratique novo ato administrativo para convalidação do anterior, fundamentando-o na inexigibilidade, e não na dispensa de licitação;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "legal, pois o Administrador Público possui a discricionariedade de promover contratações de cunho social com dispensa de licitação de qualquer associação;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "ilegal, eis que o contratante deveria necessariamente realizar processo licitatório, na modalidade compatível com o valor estimado da contratação;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "ilegal, eis que o contratante deveria necessariamente realizar processo licitatório, na modalidade tomada de preços, em razão da natureza e do objeto da contratação.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Nova Lei de Licitações – Lei 14.133/21 (Parte 1)",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "aa6bc5ee22d2cbedebcbeeaed1face35dd5b78a5f0d44a4b5289cb795ed03a5b",
+        "original_numeric_id": 65,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "aplicacao-da-lei-14-133-21",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A**.\n\nO Artigo 24, inciso XX, da Lei nº 8.666/1993 (reproduzido no Art. 75, inciso XV, da Lei nº 14.133/2021) prevê expressamente a **dispensa de licitação** para:\n*\"a contratação de associação de pessoas com deficiência física, sem fins lucrativos e de comprovada idoneidade, por órgãos ou entidades da Administração Pública, para a prestação de serviços ou fornecimento de mão de obra, desde que o preço contratado seja compatível com o praticado no mercado\"*.\n\nPortanto, a conduta do Procurador-Geral de Justiça é rigorosamente **legal**, desde que o valor contratado seja compatível com os preços de mercado e a formalização seja instruída em regular processo administrativo de dispensa.",
+        "source_reference": null
+      },
+      "source_content_hash": "a0328afd892af533402358ca322e90131178f1c2366b317ec9cb8abc773d3395"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:067",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:67",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Determinado Município, após licitação na modalidade concorrência, firmou com sociedade empresária contrato de concessão de serviço público de transporte coletivo de tempo intramunicipal. No curso do contrato, durante o prazo da concessão, o poder concedente, por motivo de interesse público, deseja retomar o serviço público.\nNo caso em tela, está-se diante da extinção do contrato pela:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 67; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "encampação, que configura cláusula exorbitante, desde que mediante lei autorizativa específica e após prévio pagamento da indenização;",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "caducidade, que decorre da supremacia do interesse público, mediante prévia decisão judicial, com ulterior pagamento de indenização;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "rescisão, que decorre do poder de autotutela da Administração Pública, mediante prévia decisão judicial, com ulterior pagamento de indenização;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "anulação, que decorre da supremacia do interesse público, mediante decisão judicial, com prévio pagamento de indenização;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "caducidade, que decorre da supremacia do interesse público, independentemente de prévia decisão judicial, com ulterior pagamento de indenização.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Poderes Administrativos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "bf00ee26b24094de629e4b17ff22747f087cf4156d0d75ae47be038ab35376c8",
+        "original_numeric_id": 67,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "deveres",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A retomada do serviço público delegado pelo poder concedente durante o prazo da concessão, motivada por razões de interesse público, denomina-se **encampação** (ou resgate), conforme o artigo 37 da Lei nº 8.987/1995.\n\nA encampação é uma das formas de extinção da concessão e caracteriza-se como cláusula exorbitante do contrato administrativo. Para sua validade, a legislação exige cumulativamente:\n1. Edição de **lei autorizativa específica** pelo ente federativo concedente;\n2. **Prévio pagamento da indenização** devida à concessionária pelos investimentos em bens reversíveis ainda não amortizados ou depreciados.\n\n**Análise das alternativas incorretas:**\n* **B e E:** A caducidade é a extinção da concessão motivada pelo inadimplemento contratual (descumprimento de obrigações) por parte da concessionária, o que não corresponde à retomada por conveniência do interesse público.\n* **C:** A rescisão contratual na concessão ocorre por iniciativa da concessionária em caso de descumprimento de normas pelo poder concedente, devendo ser obrigatoriamente veiculada por via judicial (artigo 39 da Lei nº 8.987/1995).\n* **D:** A anulação decorre da constatação de ilegalidade no contrato ou na licitação antecedente, e não de razões de oportunidade e conveniência pública.\n\n### Dispositivo legal\n* **Lei nº 8.987/1995**, artigo 37.\n  * URL oficial: [Planalto](https://www.planalto.gov.br/ccivil_03/leis/l8987.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "aac31ded8bf09b85d9e18cec467e5bd352dc5fefdb2e2058b9509b617592c23d"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:068",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:68",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Em determinado Município do interior do Estado, pessoa jurídica de direito privado é prestadora do serviço público de abastecimento de água potável. Funcionários dessa sociedade empresária concessionária, no exercício da função, ao realizarem reparo em estação de tratamento de água, atingiram com um duto a criança Guilherme, que andava de bicicleta pela calçada e veio a quebrar a pena. Os pais de Guilherme buscaram a Defensoria Pública, que providenciou o ajuizamento de ação indenizatória.\nFinda a instrução processual, a Promotoria de Justiça Cível deve direcionar seu parecer no sentido da responsabilidade civil:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 68; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "objetiva da concessionária, que decorre da teoria do risco administrativo, bastando a comprovação da conduta, dano e nexo de causalidade, e sendo prescindível a demonstração do dolo ou culpa dos agentes;",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "objetiva da concessionária, que decorre da teoria do risco integral, bastando a comprovação da conduta, dano e nexo de causalidade, e sendo imprescindível a demonstração do dolo ou culpa dos agentes;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "subjetiva da concessionária, que decorre das normas de direito privado, bastando a comprovação da conduta, dano e nexo de causalidade, e do elemento subjetivo dolo ou culpa dos agentes;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "subjetiva da concessionária, que decorre da teoria do risco administrativo, bastando a comprovação da conduta, dano e nexo de causalidade, e sendo imprescindível a demonstração do dolo ou culpa dos agentes;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "subjetiva do Município, que decorre da teoria do risco integral, bastando a comprovação da conduta, dano e nexo de causalidade, e sendo prescindível a demonstração do dolo ou culpa dos agentes.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Serviços Públicos e Concessões",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "fbbdebb05d2228993d704560f789bd9506029ad94068dd0d827d2dc8acffd3ad",
+        "original_numeric_id": 68,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "criterio-de-servico-publico-doutrinario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A responsabilidade civil das pessoas jurídicas de direito privado prestadoras de serviços públicos (concessionárias e permissionárias) é de natureza **objetiva**, fundamentada na **teoria do risco administrativo**, nos termos do artigo 37, § 6º, da Constituição Federal.\n\nEssa responsabilidade estende-se tanto aos usuários do serviço quanto a terceiros não usuários (como a criança que andava de bicicleta na calçada), conforme tese fixada pelo Supremo Tribunal Federal em sede de repercussão geral (RE 591.874/MS).\n\nPara a configuração do dever de indenizar, basta a demonstração de três elementos:\n1. Conduta administrativa (ação dos funcionários da concessionária ao realizar o reparo);\n2. Dano (fratura na perna da vítima);\n3. Nexo de causalidade entre a conduta e o dano.\n\nA demonstração de dolo ou culpa dos agentes é totalmente **prescindível** (dispensável) para a responsabilização da concessionária, cabendo a esta apenas demonstrar eventuais causas excludentes do nexo causal (como culpa exclusiva da vítima, caso fortuito ou força maior) para afastar o dever de indenizar.\n\n**Análise das alternativas incorretas:**\n* **B:** A teoria do risco integral não se aplica ao caso, pois esta não admite excludentes de responsabilidade e é restrita a hipóteses excepcionais (como danos nucleares ou ambientais). Além disso, a alternativa afirma incorretamente ser \"imprescindível\" a prova de dolo ou culpa.\n* **C e D:** A responsabilidade da concessionária prestadora de serviço público é objetiva, e não subjetiva.\n* **E:** A responsabilidade primária pelo evento danoso é da própria concessionária de direito privado, e não do Município concedente (cuja responsabilidade é apenas subsidiária).\n\n### Dispositivo legal\n* **Constituição da República Federativa do Brasil de 1988**, artigo 37, § 6º.\n  * URL oficial: [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "5ba704060000213a9a9f72410d74ec8d3a2b1399ab7a9a222d3c4802e86cbe6a"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:069",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:69",
+      "question_type": "multiple_choice",
+      "statement_markdown": "João, servidor público ocupante de cargo efetivo de Analista de Sistemas, no exercício da função e na qualidade de funcionário autorizado, inseriu dados falsos e alterou indevidamente dados corretos em sistema informatizado da Administração Pública estadual. João promoveu as citadas alterações em banco de dados que compila informações estatísticas sobre segurança pública, com objetivo de maquiar índices de criminalidade na região do Batalhão de Polícia Militar onde seu irmão é Comandante e com o fim de obter vantagem indevida para si, consistente no pagamento de oitenta mil reais.\nAo receber o inquérito policial que apurou os fatos descritos contendo farta justa causa, o Promotor de Justiça deve oferecer denúncia em face de João, pela prática do crime, previsto no Código Penal:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 69; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "de inserção de dados falsos em sistema de informações, desde que se comprove que o agente efetivamente recebeu vantagem indevida;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "de inserção de dados falsos em sistema de informações, independentemente da comprovação de ter o agente efetivamente recebido o valor da vantagem indevida;",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "contra a administração pública de corrupção passiva, independentemente da comprovação de ter o agente efetivamente recebido o valor da vantagem indevida;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "contra a administração pública de corrupção passiva, desde que se comprove que o agente efetivamente recebeu o valor da vantagem indevida;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "contra a administração pública de peculato, desde que se comprove que o agente efetivamente recebeu o valor da vantagem indevida.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Poderes Administrativos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "e9f5c4ee79e9f967cb4a7ef796f206fc48a944dad464c6b4a2d861fdc5097869",
+        "original_numeric_id": 69,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "deveres",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A conduta do funcionário autorizado que insere dados falsos ou altera dados corretos em sistema informatizado ou banco de dados da Administração Pública, com o fim de obter vantagem indevida para si ou para outrem, ou para causar dano, amolda-se perfeitamente ao crime de **inserção de dados falsos em sistema de informações** (artigo 313-A do Código Penal).\n\nTrata-se de um **crime formal** (ou de consumação antecipada), que se consuma no momento em que o agente realiza a inserção ou alteração dos dados com o especial fim de agir (obter vantagem ou causar dano). A efetiva obtenção ou recebimento da vantagem indevida (no caso, os oitenta mil reais) constitui mero exaurimento do crime, sendo **independente** (prescindível) de sua comprovação para a caracterização do delito consumado.\n\n**Análise das alternativas incorretas:**\n* **A:** Incorre em erro ao condicionar a consumação do crime à efetiva comprovação do recebimento da vantagem indevida.\n* **C e D:** O crime de corrupção passiva (artigo 317 do Código Penal) é genérico e subsidiário em relação à conduta específica de inserção de dados falsos em sistema de informações (artigo 313-A), que atrai a aplicação do princípio da especialidade.\n* **E:** O crime de peculato (artigo 312 do Código Penal) pressupõe a apropriação, desvio ou subtração de dinheiro, valor ou bem móvel de que o funcionário tem a posse em razão do cargo, o que difere da conduta de manipulação de dados em sistema informatizado.\n\n### Dispositivo legal\n* **Código Penal**, artigo 313-A.\n  * URL oficial: [Planalto](https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "a3168e66f5504f5032844b6e0ba7cb08d4d6523fe395f96c2211b24c64e68953"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:070",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:70",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com o texto constitucional, em matéria de controle da Administração Pública, a fiscalização contábil, financeira, orçamentária, operacional e patrimonial do Ministério Público do Estado do Rio de Janeiro é exercida:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 70; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "pelo Poder Judiciário, com o auxílio do Tribunal de Contas Estadual, mediante controle externo e pelo sistema de controle interno do Executivo;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "pelo Tribunal de Contas Estadual, órgão auxiliar do Poder Executivo, mediante controle externo e pelo seu sistema próprio de controle interno;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "pelo Poder Legislativo, com o auxílio da Controladoria-Geral do Estado, mediante controle externo e pelo sistema de controle interno do Executivo;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "pelo Conselho Nacional do Ministério Público, mediante controle externo, não incidindo outros controles externos em nível estadual diante de sua autonomia administrativa;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "pela Assembleia Legislativa, com o auxílio do Tribunal de Contas Estadual, mediante controle externo e pelo seu sistema próprio de controle interno.",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "e390b8c451b1189cbb628c79b79f931a623426dbdbc190a7a380cad2515af4f8",
+        "original_numeric_id": 70,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A fiscalização contábil, financeira, orçamentária, operacional e patrimonial da Administração Pública estadual, incluindo os órgãos dotados de autonomia funcional e administrativa como o Ministério Público, é estruturada em dois pilares constitucionais:\n\n1. **Controle Externo:** Exercido pelo Poder Legislativo (no âmbito estadual, a **Assembleia Legislativa**), com o auxílio técnico do **Tribunal de Contas do Estado (TCE)**, conforme os artigos 70, 71 e 75 da Constituição Federal.\n2. **Controle Interno:** Exercido por cada Poder e órgão autônomo através de seu **sistema próprio de controle interno** (artigo 74 da Constituição Federal), de modo a fiscalizar a aplicação de seus recursos e apoiar o controle externo.\n\n**Análise das alternativas incorretas:**\n* **A:** O Poder Judiciário não exerce o controle externo financeiro e orçamentário ordinário da Administração, e o sistema de controle interno do Executivo não abrange o Ministério Público, que possui autonomia e controle interno próprio.\n* **B:** O Tribunal de Contas não é órgão auxiliar do Poder Executivo, mas sim do Poder Legislativo.\n* **C:** A Controladoria-Geral do Estado (CGE) integra o Poder Executivo e não realiza o controle interno do Ministério Público, que possui órgão de controle interno próprio em razão de sua autonomia constitucional.\n* **D:** O Conselho Nacional do Ministério Público (CNMP) exerce controle de atuação administrativa e financeira, mas isso não afasta a fiscalização financeira e orçamentária exercida pela Assembleia Legislativa e pelo Tribunal de Contas do Estado.\n\n### Dispositivo legal\n* **Constituição da República Federativa do Brasil de 1988**, artigos 70, 74, 75 e 127, § 2º.\n  * URL oficial: [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "1910bfcb7b61c396a26e252d4660f6e6dbd8027e94a3dca9848bcbb82436997f"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:071",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:71",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Em relação ao regime jurídico de uma sociedade de economia mista estadual exclusivamente exploradora de atividade econômica, é correto afirmar que:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 71; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "ostenta personalidade jurídica de direito público, seus servidores são estatutários e se submetem a concurso público, e são controladas pelo Tribunal de Contas;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "ostenta personalidade jurídica de direito privado, goza das prerrogativas processuais aplicadas à fazenda pública e seu pessoal não se submete a concurso público;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "somente por lei específica é autorizada a sua instituição e se submete às normas do direito privado em matéria de responsabilidade civil;",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "somente por lei específica é criada, se submete à responsabilidade civil objetiva e não incide o controle finalístico pelo ente a que está vinculada;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "somente por lei complementar é criada, se submete à responsabilidade civil subjetiva e incide o controle finalístico pelo ente a que está vinculada.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "e1d8c620861365e75a15e6913762db68379a37442a071e4a6674847f5dbf370f",
+        "original_numeric_id": 71,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A sociedade de economia mista (SEM) é uma pessoa jurídica de direito privado integrante da Administração Pública Indireta. Quando atua exclusivamente na exploração de atividade econômica, seu regime jurídico aproxima-se substancialmente do das empresas privadas.\n\n*   **Justificativa da alternativa correta (C):** A instituição de sociedade de economia mista depende de autorização por lei específica, conforme o art. 37, XIX, da Constituição Federal. Além disso, por força do art. 173, § 1º, II, da Carta Magna, as estatais exploradoras de atividade econômica sujeitam-se ao regime jurídico próprio das empresas privadas, o que atrai a aplicação das normas de direito privado em matéria de responsabilidade civil (responsabilidade subjetiva, baseada em dolo ou culpa), afastando a responsabilidade objetiva prevista no art. 37, § 6º, da Constituição, que é restrita às prestadoras de serviços públicos.\n*   **Análise das alternativas incorretas:**\n    *   **A:** Incorreta. A sociedade de economia mista possui personalidade jurídica de direito privado, e seus servidores são empregados públicos submetidos ao regime celetista (CLT), não estatutários.\n    *   **B:** Incorreta. As estatais não gozam das prerrogativas processuais da Fazenda Pública (como prazos diferenciados ou execução por precatórios), e seu pessoal obrigatoriamente se submete a concurso público para admissão (art. 37, II, da CF).\n    *   **D:** Incorreta. A sociedade de economia mista não é criada diretamente por lei, mas sim autorizada por lei específica (sua criação ocorre com o registro dos atos constitutivos no órgão de registro de comércio). Ademais, sua responsabilidade civil é subjetiva, e ela se submete, sim, ao controle finalístico (tutela ou supervisão ministerial) exercido pelo ente político ao qual está vinculada.\n    *   **E:** Incorreta. A autorização para instituição ocorre por lei específica, e não por lei complementar.\n\n**Trap/Detail:** A pegadinha comum é confundir a forma de criação das entidades da Administração Indireta. Apenas as autarquias são *criadas* diretamente por lei específica; as empresas públicas, sociedades de economia mista e fundações públicas têm sua criação apenas *autorizada* por lei específica.\n\n**Dispositivo legal**\n\n[Art. 37, XIX, e Art. 173, § 1º, II, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "ecc678caccab06b765d064a721fa8ac4ffa834028e2b230c17acdc5924fd4bcd"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:072",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:72",
+      "question_type": "multiple_choice",
+      "statement_markdown": "João, servidor público estadual estável ocupante de cargo efetivo, foi demitido após processo administrativo disciplinar. Quatro anos depois, sua demissão foi invalidada por sentença judicial transitada em julgado.\nDe acordo com a Constituição da República de 1988, João será reintegrado e José, servidor estadual estável que estava ocupando a vaga de João no momento de sua reintegração, será:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 72; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "colocado em disponibilidade, com remuneração proporcional ao tempo de contribuição, até seu adequado aproveitamento em outro cargo;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "exonerado, em razão de extinção superveniente do cargo público então provido pelo servidor, com direito a indenização;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "reconduzido ao cargo de origem, sem direito a indenização, aproveitado em outro cargo ou posto em disponibilidade com remuneração proporcional ao tempo de serviço;",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "readaptado em outro cargo similar, com redução ou cometimento de encargos diversos daqueles que o funcionário estava exercendo;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "aproveitado em cargo de natureza e vencimento hierarquicamente superiores ao anteriormente ocupado, com direito a indenização.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Poderes Administrativos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "79918e73318c25774fed25afd93eec32285568bc36500a01dc33d6f58ff6b6a0",
+        "original_numeric_id": 72,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "deveres",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O caso trata dos institutos da reintegração e da recondução, previstos no regime constitucional dos servidores públicos civis estáveis.\n\n*   **Justificativa da alternativa correta (C):** De acordo com o art. 41, § 2º, da Constituição Federal, quando a demissão de um servidor estável é invalidada por sentença judicial transitada em julgado, ocorre a sua **reintegração** (retorno ao cargo de origem com ressarcimento das vantagens). Como consequência direta, o eventual ocupante da vaga (José), se também for estável, será **reconduzido** ao cargo de origem, sem direito a indenização, ou poderá ser aproveitado em outro cargo ou, ainda, posto em disponibilidade com remuneração proporcional ao tempo de serviço.\n*   **Análise das alternativas incorretas:**\n    *   **A:** Incorreta. A colocação em disponibilidade é apenas uma das alternativas subsidiárias caso não seja possível a recondução ao cargo de origem ou o aproveitamento em outro cargo, não sendo a única ou principal medida aplicável.\n    *   **B:** Incorreta. O servidor estável José não será exonerado, pois goza da garantia da estabilidade e a invalidação da demissão do anterior ocupante enseja a aplicação das medidas protetivas constitucionais (recondução, aproveitamento ou disponibilidade).\n    *   **D:** Incorreta. A readaptação é o provimento de cargo em decorrência de limitação física ou mental sofrida pelo servidor, não se aplicando à hipótese de retorno de servidor reintegrado.\n    *   **E:** Incorreta. O aproveitamento não ocorre em cargo de nível superior e não há previsão constitucional de pagamento de indenização ao servidor que desocupa a vaga.\n\n**Trap/Detail:** O ponto de atenção é que a recondução do ocupante da vaga ocorre **sem direito a indenização**. As bancas costumam tentar confundir o candidato afirmando que o servidor reconduzido teria direito a indenização pelo tempo em que ocupou a vaga ou pelo deslocamento.\n\n**Dispositivo legal**\n\n[Art. 41, § 2º, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "aa5e6b320b8193cc81e6abcb9e4af2357c0622b827162326c9b36f6ccf1f8c21"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:073",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:73",
+      "question_type": "multiple_choice",
+      "statement_markdown": "João, renomado jornalista, recebeu de determinada fonte vídeo contendo imagens e áudio em que José, Prefeito Municipal, aparece recebendo propina para favorecer determinada sociedade empresária em certa licitação. Inconformado, José ingressa com medida judicial pleiteando a proibição de veiculação do vídeo pelo jornalista e a obrigação de fazer para ele indicar o nome da pessoa que lhe entregou o vídeo.\nDe acordo com o texto constitucional, o pleito de José:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 73; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "merece prosperar parcialmente, pois apesar de ser assegurado a todos o acesso à informação, o sigilo da fonte deve ser quebrado judicialmente quando o fato informado causar repercussão negativa na esfera jurídica de terceiro;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "merece prosperar parcialmente, pois apesar de ser assegurado a todos o acesso à informação, o sigilo da fonte deve ser quebrado judicialmente quando o fato informado envolver agente público no exercício da função;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "não merece prosperar, pois é assegurado a todos o acesso à informação e resguardado o sigilo da fonte, quando necessário ao exercício profissional, sendo tal sigilo o instrumento de concretização da própria liberdade de informação;",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "não merece prosperar, pois é assegurado a todos o acesso à informação e garantido o sigilo da fonte, sendo certo que a prova obtida ilicitamente pode servir de fundamento exclusivo para condenação criminal quando se tratar de defesa do patrimônio público;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "merece prosperar, pois é assegurado a todos o acesso à informação mediante a obtenção de provas por meios legais previstos no ordenamento jurídico, sendo vedado o sigilo da fonte e o anonimato por violação frontal ao devido processo legal.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Nova Lei de Licitações – Lei 14.133/21 (Parte 1)",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "34b45b74e622bcb9b202e3f439255841b9f84a3f809508a756a186561a22b734",
+        "original_numeric_id": 73,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "aplicacao-da-lei-14-133-21",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda as garantias fundamentais relativas à liberdade de informação, de imprensa e ao sigilo da fonte, asseguradas pela Constituição Federal de 1988.\n\n*   **Justificativa da alternativa correta (C):** O pleito do Prefeito José não merece prosperar. O art. 5º, XIV, da Constituição Federal assegura a todos o acesso à informação e resguarda expressamente o sigilo da fonte, quando necessário ao exercício profissional. O sigilo da fonte é uma prerrogativa constitucional do jornalista que atua como instrumento de concretização da própria liberdade de informação e de imprensa, impedindo que o profissional seja compelido pelo Poder Judiciário a revelar a identidade de quem lhe forneceu o material informativo. Além disso, a censura prévia é vedada pelo art. 220, § 2º, da Constituição.\n*   **Análise das alternativas incorretas:**\n    *   **A e B:** Incorretas. O sigilo da fonte não pode ser quebrado judicialmente sob o argumento de repercussão negativa na esfera jurídica de terceiros ou pelo envolvimento de agente público no exercício da função. Pelo contrário, é justamente em casos de denúncias contra agentes públicos que a proteção à fonte se mostra mais indispensável para garantir a fiscalização social.\n    *   **D:** Incorreta. Embora a primeira parte esteja correta, a alternativa erra ao afirmar que provas obtidas ilicitamente podem fundamentar exclusivamente uma condenação criminal para defesa do patrimônio público. A Constituição veda a admissão de provas obtidas por meios ilícitos no processo (art. 5º, LVI).\n    *   **E:** Incorreta. O sigilo da fonte é expressamente garantido pela Constituição, não sendo vedado, e sua observância não viola o devido processo legal.\n\n**Trap/Detail:** O sigilo da fonte é uma garantia de caráter absoluto no que tange à recusa de revelar a identidade do informante para fins profissionais, não cabendo ponderação judicial para forçar a revelação do nome da fonte sob pretexto de interesse público ou privado.\n\n**Dispositivo legal**\n\n[Art. 5º, XIV, e Art. 220, § 2º, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "0825925aaaa0901cb9a1abc1752da56d17457222a3867463113d6fa577b4a589"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:074",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:74",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Determinado Estado da Federação editou lei ordinária estadual dispondo sobre desapropriação, inclusive estabelecendo normas gerais e abstratas sobre nova modalidade de desapropriação e seu respectivo procedimento.\nInstado a se manifestar sobre a matéria, o Procurador-Geral de Justiça deve apontar a:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 74; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "constitucionalidade da lei, pois compete concorrentemente à União, Estados e Distrito Federal legislar sobre desapropriação;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "constitucionalidade da lei, pois compete concorrentemente a Estados, Distrito Federal e Municípios legislar sobre desapropriação;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "inconstitucionalidade da lei, pois compete privativamente aos Municípios legislar sobre desapropriação, diante de evidente interesse local;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "inconstitucionalidade da lei, pois compete privativamente à União legislar sobre desapropriação;",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "constitucionalidade da lei, pois compete privativamente aos Estados legislar sobre desapropriação.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "4e4e014d2e42c41476bb9746998688a02a657abec5c33e0a85a35fda243643aa",
+        "original_numeric_id": 74,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "D",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão envolve a repartição constitucional de competências legislativas entre os entes federados.\n\n*   **Justificativa da alternativa correta (D):** A lei estadual que dispõe sobre desapropriação, estabelecendo normas gerais e nova modalidade de desapropriação, padece de inconstitucionalidade formal orgânica. Isso ocorre porque, nos termos do art. 22, II, da Constituição Federal de 1988, compete **privativamente à União** legislar sobre desapropriação. Os Estados-membros não possuem competência para criar novas modalidades ou procedimentos expropriatórios gerais por meio de lei ordinária estadual.\n*   **Análise das alternativas incorretas:**\n    *   **A e B:** Incorretas. A competência para legislar sobre desapropriação não é concorrente (as competências concorrentes estão elencadas no art. 24 da CF, onde não figura a desapropriação).\n    *   **C:** Incorreta. A competência não é privativa dos Municípios. Embora os Municípios possam declarar a utilidade pública e executar desapropriações no âmbito local, a competência para *legislar* sobre a matéria é privativa da União.\n    *   **E:** Incorreta. A competência para legislar sobre desapropriação não pertence aos Estados, mas sim à União.\n\n**Trap/Detail:** Não se deve confundir a competência para *legislar* sobre desapropriação (que é privativa da União, conforme o art. 22, II, da CF) com a competência para *declarar* a utilidade pública ou interesse social e *executar* a desapropriação (que é comum/concorrente entre União, Estados, Distrito Federal e Municípios).\n\n**Dispositivo legal**\n\n[Art. 22, II, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "df4e7ad56b8b921ae82fa6db39a0ca26a2bdfd5b465a3e58373ab9570a7ed182"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:075",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:75",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Assembleia Legislativa de determinado Estado da Federação instaurou, por prazo certo, uma comissão parlamentar de inquéritos, mediante requerimento de um terço de seus membros, para apurar fato determinado, consistente em eventual esquema de mensalão envolvendo os Secretários de Estado de Fazenda e de Administração.\nInstado a promover o controle de legalidade do ato do parlamento, em relação à instauração e aos trabalhos a serem desenvolvidos pela CPI, o Ministério Público Estadual deverá consignar a:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 75; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "legalidade formal da instauração da comissão, que, durante seus trabalhos, terá poderes de investigação próprios das autoridades judiciais, como a quebra dos sigilos fiscal e bancário, além de outros previstos no Regimento Interno da Casa Legislativa;",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "ilegalidade formal da instauração da comissão, eis que o requerimento de sua instauração deveria ter sido subscrito pela maioria absoluta dos deputados, por expressa exigência constitucional;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "ilegalidade formal da instauração da comissão, eis que os investigados deveriam pertencer ao próprio Poder Legislativo, sendo certo que os agentes políticos do Poder Executivo devem ser investigados exclusivamente pelo Ministério Público;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "legalidade formal da instauração da comissão, que, durante seus trabalhos, terá poderes de investigação próprios das autoridades judiciais, como proceder à oitiva de testemunhas e determinar a busca e apreensão domiciliar e a interceptação telefônica;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "legalidade formal da instauração da comissão, cujas conclusões deverão ser encaminhadas à Procuradoria-Geral do Estado, para que promova a responsabilização civil e criminal dos infratores.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "b1347ef83d7186c8afb516b03be9f4ca8f7e42b188064ecf847c47074aef4090",
+        "original_numeric_id": 75,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige o conhecimento dos requisitos de criação e dos limites dos poderes investigatórios das Comissões Parlamentares de Inquérito (CPIs) no âmbito estadual.\n\n*   **Justificativa da alternativa correta (A):** A instauração da CPI estadual é formalmente legal, pois atende aos requisitos do art. 58, § 3º, da Constituição Federal (aplicáveis por simetria aos Estados): requerimento de 1/3 dos membros da Assembleia, prazo certo e fato determinado (esquema de desvio envolvendo secretários). No exercício de suas funções, a CPI detém poderes de investigação próprios das autoridades judiciais, o que lhe permite decretar diretamente a quebra de sigilos fiscal e bancário dos investigados, sem necessidade de prévia autorização judicial.\n*   **Análise das alternativas incorretas:**\n    *   **B:** Incorreta. O quórum constitucional exigido para a criação de CPI é de um terço (1/3) dos membros da Casa Legislativa, e não de maioria absoluta.\n    *   **C:** Incorreta. A CPI tem competência para investigar fatos determinados que envolvam agentes do Poder Executivo (como Secretários de Estado), não se limitando a investigar membros do próprio Poder Legislativo.\n    *   **D:** Incorreta. Embora a CPI tenha poderes instrutórios judiciais, ela se submete à cláusula de reserva absoluta de jurisdição. Assim, a determinação de busca e apreensão domiciliar e a interceptação telefônica (escuta das conversas) dependem exclusivamente de ordem judicial, não podendo ser decretadas pela comissão.\n    *   **E:** Incorreta. As conclusões da CPI, quando for o caso, devem ser encaminhadas ao Ministério Público (titular da ação penal pública e da ação civil pública de improbidade), e não à Procuradoria-Geral do Estado (que exerce a representação judicial e consultoria do Estado).\n\n**Trap/Detail:** Há uma distinção fundamental entre a quebra de sigilo de dados telefônicos (acesso ao registro de chamadas efetuadas/recebidas, que a CPI *pode* decretar) e a interceptação telefônica (escuta telefônica em tempo real, que a CPI *não pode* decretar por estar sob reserva de jurisdição).\n\n**Dispositivo legal**\n\n[Art. 58, § 3º, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "92a1885b1d95302face07ef4e1ce936c06bc3838df3d0163f738c20f98a9a2a6"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:076",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:76",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Tribunal de Contas de um Estado da Federação, ao analisar a legalidade de determinado convênio em nível estadual, concluiu que o Governador do Estado foi responsável por fraude milionária. Assim sendo, o TCE encaminhou cópias de seu processo administrativo, em forma de peças de informação, ao Ministério Público.\nEm relação a eventual crime comum praticado pelo Governador do Estado em exercício, no caso em tela, a atribuição para oferecer denúncia é do:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 76; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Procurador-Geral de Justiça, que deverá fazê-lo perante o Órgão Especial do Tribunal de Justiça local;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Procurador de Justiça com atribuição criminal, que deverá fazê-lo perante a Secção Criminal do Tribunal de Justiça local;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Procurador-Geral da República, que deverá fazê-lo perante o Superior Tribunal de Justiça;",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "Procurador-Geral de Justiça, que deverá fazê-lo perante o Supremo Tribunal Federal;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Promotor Criminal, que deverá fazê-lo perante o Juízo Criminal de primeiro grau de jurisdição.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Processo Administrativo Federal (Lei nº 9.784/1999)",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "221dbb25b463d2a15a0f6f8bd7f17a8eff20eef72ae1d963ffe73be487a08b4e",
+        "original_numeric_id": 76,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "processo-administrativo-federal-lei-9784",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda a competência penal originária (foro por prerrogativa de função) e a respectiva atribuição para a propositura da ação penal pública contra Governador de Estado.\n\n*   **Justificativa da alternativa correta (C):** Conforme determina o art. 105, I, \"a\", da Constituição Federal de 1988, compete originariamente ao Superior Tribunal de Justiça (STJ) processar e julgar os Governadores dos Estados e do Distrito Federal nos crimes comuns. Sendo o STJ um tribunal superior de âmbito nacional, o órgão do Ministério Público que possui atribuição constitucional para atuar perante ele e, consequentemente, oferecer a denúncia criminal contra o Governador é o Procurador-Geral da República (PGR), chefe do Ministério Público da União.\n*   **Análise das alternativas incorretas:**\n    *   **A e D:** Incorretas. O Procurador-Geral de Justiça (PGJ) é o chefe do Ministério Público Estadual e atua perante o Tribunal de Justiça local. Ele não possui atribuição para oferecer denúncia perante o STJ ou o STF em face de Governador por crime comum.\n    *   **B:** Incorreta. Os Procuradores de Justiça atuam perante o Tribunal de Justiça do Estado, órgão incompetente para julgar Governador por crime comum.\n    *   **E:** Incorreta. O Promotor de Justiça atua em primeiro grau de jurisdição, que não detém competência para processar Governador em exercício por crime comum.\n\n**Trap/Detail:** O foro por prerrogativa de função do Governador nos crimes comuns é perante o STJ. Logo, por simetria e organização do Ministério Público, a atribuição penal é do Procurador-Geral da República (PGR), e não do Procurador-Geral de Justiça (PGJ) do respectivo Estado.\n\n**Dispositivo legal**\n\n[Art. 105, I, 'a', da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "42d725a81e12186d4e640b98846be2b76a85d925fe4c4b91b8aefb79cefecbff"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:077",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:77",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Em relação ao Poder Judiciário Estadual, a Constituição do Estado do Rio de Janeiro estabelece que um quinto dos lugares do Tribunal de Justiça será composto de:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 77; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "juízes de direito de entrância especial, escolhidos pelo Governador do Estado dentre os integrantes de lista tríplice elaborada pelo Órgão Especial do próprio Tribunal de Justiça, mediante critérios objetivos previamente definidos em resolução do Conselho Nacional de Justiça;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "juízes de direito de entrância especial, escolhidos alternadamente pelos critérios de antiguidade e merecimento, sendo este último por nomeação do Governador do Estado dentre os integrantes de lista tríplice elaborada pelo Órgão Especial do próprio Tribunal de Justiça;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "membros do Ministério Público e de advogados, todos com notório saber jurídico e de reputação ilibada, com mais de quinze anos de efetiva atividade profissional, tal como ocorre em todos os demais Tribunais do país, inclusive no Supremo Tribunal Federal;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "membros do Ministério Público e de advogados, todos com notório saber jurídico e de reputação ilibada, com mais de dez anos de efetiva atividade profissional, indicados ao Tribunal em lista tríplice pelos órgãos de representação das respectivas classes;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "membros do Ministério Público, com mais de dez anos de carreira, e de advogados de notório saber jurídico e de reputação ilibada, com mais de dez anos de efetiva atividade profissional, indicados em lista sêxtupla pelos órgãos de representação das respectivas classes.",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Poderes Administrativos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "ecd72e4b6f805ab42fae28cc271694b6336433aab92920b110ea4c1c9f2a2c00",
+        "original_numeric_id": 77,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "deveres",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão trata da regra do quinto constitucional aplicada à composição dos Tribunais de Justiça estaduais, especificamente no Estado do Rio de Janeiro.\n\n*   **Justificativa da alternativa correta (E):** A Constituição do Estado do Rio de Janeiro, em perfeita simetria com o art. 94 da Constituição Federal de 1988, estabelece no seu art. 157 que um quinto (1/5) dos lugares dos Tribunais do Estado será composto de membros do Ministério Público, com mais de dez anos de carreira, e de advogados de notório saber jurídico e de reputação ilibada, com mais de dez anos de efetiva atividade profissional. Esses candidatos são indicados em lista sêxtupla pelos órgãos de representação de suas respectivas classes (OAB e Ministério Público).\n*   **Análise das alternativas incorretas:**\n    *   **A e B:** Incorretas. Os juízes de direito de carreira (entrância especial) ingressam no Tribunal de Justiça por promoção pelos critérios de antiguidade e merecimento, ocupando os demais quatro quintos (4/5) das vagas, não fazendo parte do quinto constitucional.\n    *   **C:** Incorreta. O tempo exigido de atividade profissional é de mais de dez anos, e não de quinze anos. Além disso, o Supremo Tribunal Federal (STF) não possui em sua composição a regra do quinto constitucional (seus ministros são escolhidos livremente pelo Presidente da República entre cidadãos com mais de 35 e menos de 70 anos, após aprovação pelo Senado).\n    *   **D:** Incorreta. Os órgãos de representação das classes indicam uma lista sêxtupla (com seis nomes), cabendo ao Tribunal de Justiça reduzir essa lista para uma lista tríplice (com três nomes), a qual é enviada ao Governador para a escolha final.\n\n**Trap/Detail:** Lembre-se de que a indicação inicial feita pela OAB ou pelo Ministério Público é sempre de uma lista **sêxtupla** (6 nomes). O Tribunal de Justiça é quem elabora a lista **tríplice** (3 nomes) a partir da sêxtupla recebida, enviando-a ao Chefe do Executivo para nomeação.\n\n**Dispositivo legal**\n\n[Art. 94 da Constituição Federal de 1988 e Art. 157 da Constituição do Estado do Rio de Janeiro](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "4eb11ac51d446c3bb6f0917a65d605604ef7213b2f2f5ef09e47467e013abeef"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:078",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:78",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com a Constituição da República de 1988, compete ao Conselho Nacional do Ministério Público o controle da atuação administrativa e financeira do Ministério Público e do cumprimento dos deveres funcionais de seus membros, cabendo-lhe:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 78; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "zelar pela autonomia funcional e administrativa do Ministério Público, vedada a expedição de atos regulamentares, em respeito ao Poder Legislativo, e de recomendações, em razão da autonomia do Ministério Público da União e dos Estados;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "apreciar, de ofício ou mediante provocação, a legalidade dos atos administrativos praticados por membros ou órgãos do Ministério Público da União e dos Estados, podendo desconstituí-los, revê-los ou fixar prazo para que se adotem as providências necessárias ao exato cumprimento da lei, sem prejuízo da competência dos Tribunais de Contas;",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "receber e conhecer das reclamações contra membros ou órgãos do Ministério Público da União ou dos Estados, inclusive contra seus serviços auxiliares, sem prejuízo da competência disciplinar e correicional da instituição, vedada a avocação de processos disciplinares em curso;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "elaborar relatório anual, propondo as providências que julgar necessárias sobre a situação do Ministério Público no país, bem como elaborar a proposta orçamentária do Ministério Público da União e dos Estados, dentro dos limites estabelecidos na respectiva lei de diretrizes orçamentárias;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "rever, de ofício ou mediante provocação, os processos disciplinares de membros do Ministério Público da União ou dos Estados julgados há menos de cinco anos e determinar a remoção, a disponibilidade ou a aposentadoria com subsídios ou proventos proporcionais ao tempo de contribuição e aplicar outras sanções administrativas.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "919c14b7aaf81e636bb756dc95e0d624734200d324051e532d49a65339af28a0",
+        "original_numeric_id": 78,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nO Artigo 130-A, § 2º, inciso II, da Constituição Federal de 1988 estabelece textualmente a competência do Conselho Nacional do Ministério Público (CNMP):\n\n*\"§ 2º Compete ao Conselho Nacional do Ministério Público o controle da atuação administrativa e financeira do Ministério Público e do cumprimento dos deveres funcionais de seus membros, cabendo-lhe:*  \n*...*  \n*II - **apreciar, de ofício ou mediante provocação, a legalidade dos atos administrativos praticados por membros ou órgãos do Ministério Público da União e dos Estados, podendo desconstituí-los, revê-los ou fixar prazo para que se adotem as providências necessárias ao exato cumprimento da lei, sem prejuízo da competência dos Tribunais de Contas;**\"*.\n\nA alternativa B transcreve com absoluta precisão o mandamento constitucional.",
+        "source_reference": null
+      },
+      "source_content_hash": "39fbd078055164681171412382747ccc80724a204e7d581631f620b3b4a13835"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:079",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:79",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Para que possam atuar com verdadeira independência funcional, a Constituição da República de 1988 dispôs que leis complementares da União e dos Estados estabelecerão a organização, as atribuições e o estatuto de cada Ministério Público, observadas, relativamente a seus membros, garantias como:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 79; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "estabilidade, após 3 (três) anos de efetivo exercício, só perdendo o cargo em virtude de sentença judicial transitada em julgado ou mediante procedimento de avaliação periódica de desempenho;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "estabilidade, após 3 (três) anos de efetivo exercício, só perdendo o cargo em virtude de sentença judicial transitada em julgado ou mediante processo administrativo em que lhe seja assegurada a ampla defesa;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "inamovibilidade, salvo por motivo de interesse público, mediante decisão fundamentada do Procurador-Geral, assegurada a ampla defesa;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "inamovibilidade, salvo por motivo de interesse público, mediante decisão fundamentada do Corregedor-Geral, assegurada a ampla defesa;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "vitaliciedade, após 2 (dois) anos de exercício, não podendo perder o cargo senão por sentença judicial transitada em julgado.",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Regime Jurídico dos Servidores Públicos (Lei nº 8.112/1990)",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "4e26369eb6fb1ee04287a5332e3bf89652b41c58d9d5d4c87786ea105c28d6be",
+        "original_numeric_id": 79,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-juridico-dos-servidores-lei-8112",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda as garantias constitucionais asseguradas aos membros do Ministério Público para a preservação de sua independência funcional.\n\n*   **Justificativa da alternativa correta (E):** A garantia da vitaliciedade está prevista no art. 128, § 5º, I, \"a\", da Constituição Federal. Ela é adquirida após dois anos de efetivo exercício no cargo, período durante o qual o membro passa pelo estágio probatório. Uma vez vitaliciado, o membro do Ministério Público só pode perder o cargo em virtude de sentença judicial transitada em julgado, proferida em ação civil própria para esse fim.\n*   **Análise das alternativas incorretas:**\n    *   **A e B:** Incorretas. Os membros do Ministério Público não se submetem ao regime de estabilidade (adquirida após 3 anos de exercício por servidores públicos comuns), mas sim ao regime de vitaliciedade (adquirida após 2 anos). Além disso, o membro vitalício não pode perder o cargo por processo administrativo disciplinar ou avaliação periódica de desempenho, mas apenas por sentença judicial transitada em julgado.\n    *   **C e D:** Incorretas. A inamovibilidade é, de fato, uma garantia dos membros do MP. Contudo, a exceção por motivo de interesse público exige decisão fundamentada do **órgão colegiado competente** do Ministério Público (como o Conselho Superior), pelo voto da maioria absoluta de seus membros (conforme redação dada pela EC 45/2004), assegurada ampla defesa, e não por decisão monocrática do Procurador-Geral ou do Corregedor-Geral.\n\n**Trap/Detail:** Diferencie estabilidade de vitaliciedade. A estabilidade exige 3 anos de efetivo exercício e permite a perda do cargo por processo administrativo ou avaliação de desempenho. A vitaliciedade exige apenas 2 anos e impede a perda do cargo por via administrativa, exigindo obrigatoriamente sentença judicial transitada em julgado.\n\n**Dispositivo legal**\n\n[Art. 128, § 5º, I, 'a', da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "0f09567bf91bc52cf266bc9f6f3b4081795946d122fd5b2704fed4ffd5a8e9ea"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:080",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:80",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com a Constituição da República de 1988, o Ministério Público é instituição permanente, essencial à função jurisdicional do Estado, incumbindo-lhe a defesa da ordem jurídica e do regime democrático, sendo exemplo de sua função institucional promover:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 80; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a ação penal privada e a ação de inconstitucionalidade, na forma da lei;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "a representação para fins de intervenção da União e dos Estados, nos casos previstos na referida Constituição;",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "a representação da União e dos Estados, para fins de consultoria e assessoramento jurídico do Executivo;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "a orientação jurídica, de forma integral e gratuita, aos necessitados que comprovarem insuficiência de recursos financeiros;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "o inquérito civil e a ação civil pública, para a proteção de quaisquer direitos e interesses individuais de índole constitucional.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo e Constitucional",
+        "source_content_hash": "1f6a01060a5da318038caa559a3159e0e73bd3d8acbbf41cc7d5e7b1078bc90f",
+        "original_numeric_id": 80,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão trata das funções institucionais do Ministério Público delineadas no texto constitucional.\n\n*   **Justificativa da alternativa correta (B):** Dentre as funções institucionais expressamente atribuídas ao Ministério Público pela Constituição Federal de 1988, o art. 129, IV, elenca a promoção da ação de inconstitucionalidade ou da representação para fins de intervenção da União e dos Estados, nos casos previstos na Carta Magna.\n*   **Análise das alternativas incorretas:**\n    *   **A:** Incorreta. O Ministério Público tem a atribuição privativa de promover a ação penal **pública** (art. 129, I, da CF). A ação penal privada é de iniciativa do ofendido, cabendo ao MP apenas atuar de forma subsidiária em caso de inércia (art. 5º, LIX, da CF).\n    *   **C:** Incorreta. É expressamente vedado ao Ministério Público exercer a representação judicial e a consultoria jurídica de entidades públicas (art. 129, IX, da CF), atribuições que pertencem à Advocacia Pública (como a AGU e as Procuradorias dos Estados).\n    *   **D:** Incorreta. A orientação jurídica integral e gratuita aos necessitados é função institucional da Defensoria Pública (art. 134, caput, da CF), e não do Ministério Público.\n    *   **E:** Incorreta. O inquérito civil e a ação civil pública destinam-se à proteção do patrimônio público e social, do meio ambiente e de outros interesses **difusos e coletivos** (art. 129, III, da CF), não se prestando à defesa de \"quaisquer direitos e interesses individuais\" de forma genérica.\n\n**Trap/Detail:** A vedação de representação judicial e consultoria jurídica de entidades públicas (art. 129, IX, da CF) foi uma importante mudança trazida pela Constituição de 1988 para garantir a independência do Ministério Público, separando-o da defesa direta dos interesses do governante de turno.\n\n**Dispositivo legal**\n\n[Art. 129, IV, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "9827321ca7932d62326b6b17cb595bb429359c94d40d7d48750296c1ee23d7c9"
+    }
+  ]
+}

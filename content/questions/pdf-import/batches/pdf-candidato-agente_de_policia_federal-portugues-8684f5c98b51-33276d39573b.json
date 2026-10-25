@@ -1,0 +1,185 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-agente_de_policia_federal-portugues-8684f5c98b51-33276d39573b",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "8684f5c98b5104f7efe1d71e306dea21ce1a8e63e9a46565a984c87d36331352",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "9bf5415c207ff2dee6f1b513f48cc1f4b3e00a224421906182f247e816e0b8ed",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "33276d39573bab5022c2462b645043c407a5eb7559c6fff0c0eea71e5cdf215f",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:008",
+      "source_id": "agente_de_policia_federal:8",
+      "question_type": "true_false",
+      "statement_markdown": "Imagine uma operação de busca na selva. Sem mapas, binóculos ou apoio logístico; somente com um facão. Assim eram feitas as operações de combate à pornografia infantil pela Polícia Federal até o dia em que peritos criminais federais desenvolveram, no estado de Mato Grosso do Sul, o Nudetective.\nO programa executa em minutos uma busca que poderia levar meses, encontrando todo o conteúdo pornográfico de pedofilia em computadores, pendrives, smartphones e demais mídias de armazenamento.\nPara ajudar o trabalho dos peritos, existem programas que buscam os arquivos de imagem e vídeo através de sua hash ou sua assinatura digital. Logo nos primeiros testes, a detecção de imagens apresentou mais de 90% de acerto.\nPara o teste, pegaram um HD com conteúdo já periciado e rodaram o programa. Conseguiram 95% de acerto em 12 minutos. Seu diferencial era não só buscar pela assinatura digital ou nomes conhecidos, mas também por novos arquivos por intermédio da leitura dos pixels presentes na imagem calibrados a uma paleta de tons de pele. Começava a revolução em termos de investigação criminal de pornografia infantil.\nAlém da detecção de imagens e vídeos, todo o processo de busca e obtenção de resultados é simultâneo, o que economiza tempo e dinheiro.\nA licença de uso do software, que é programado em Java, é gratuita e só é disponibilizada para forças da lei e pesquisas acadêmicas. Segundo seus desenvolvedores, nunca houve o intuito de venda, pois não enxergam sentido em lucrar com algo que seja para salvar crianças. Mas, então, por que não deixá-lo disponível para todos? Somente para que não possa ser utilizado para criar formas de burlá-lo, explicam.\nDesde seu lançamento, o Nudetective já foi compartilhado com Argentina, Paraguai, Suécia, Áustria, Noruega, Nova Zelândia e Portugal. Ganhou reconhecimento e premiações em congressos forenses no Brasil e no mundo.\nInternet: <www.cartacapital.com.br> (com adaptações).\nNo que se refere aos sentidos e aos aspectos linguísticos do texto apresentado, julgue os itens seguintes.\n\nO emprego do sinal indicativo de crase em “a uma paleta” (l.20) manteria a correção gramatical do texto, uma vez que, no trecho, o vocábulo “a” antecede palavras no feminino.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 8; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "40a722518e57b3091623dcc9d82075bd30d15348cf2e6f18ddbcfbefc98a3212",
+        "original_numeric_id": 8,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 8
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O emprego do sinal indicativo de crase em \"a uma paleta\" é incorreto. O termo \"uma\" é um artigo indefinido feminino. A regra geral da língua portuguesa veda a ocorrência de crase antes de artigos indefinidos, uma vez que a crase pressupõe a fusão da preposição \"a\" com o artigo definido feminino \"a\" (ou \"as\"). No trecho analisado, ocorre apenas a preposição \"a\", exigida pelo adjetivo \"calibrados\" (\"calibrados a algo\").",
+        "source_reference": null
+      },
+      "source_content_hash": "e14d652ae44b2d2fd590b31a6b24ab6132acd09c73fc557e93fd7388be0763f2"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:018",
+      "source_id": "agente_de_policia_federal:18",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os seguintes itens, relativos aos sentidos e aos aspectos linguísticos do texto 12A1AAA.\n\nO pronome “ele”, no trecho “ele é apenas culpado de uma non distributio medii” (l. 51 e 52), refere-se a “o ministro” (l.49).",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 18; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "6a2535fb7e0e9c4083d2661fc177d174b4c340e8490b5514dd428e1fc8b15672",
+        "original_numeric_id": 18,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 18
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. No trecho \"Segundo o delegado, todos os poetas são idiotas — e, neste caso, ele é apenas culpado de uma non distributio medii, ao inferir que todos os poetas são idiotas\", o pronome \"ele\" refere-se ao \"delegado\". É o delegado quem realiza a inferência lógica incorreta (a falácia da *non distributio medii*) ao deduzir que, pelo fato de o ministro ser poeta, ele seria necessariamente um idiota. O ministro é o objeto da suposição do delegado, não o autor do raciocínio falacioso.",
+        "source_reference": null
+      },
+      "source_content_hash": "ad02e69d16a67c68373b18671cf6866005d94e8f224cb65b4e89b81241bc52a6"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:022",
+      "source_id": "agente_de_policia_federal:22",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os seguintes itens, relativos aos sentidos e aos aspectos linguísticos do texto 12A1AAA.\n\nA supressão do sinal indicativo de crase em “à sua maneira” (l.2) manteria a correção gramatical do texto.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 22; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "42ccc6daed24f77eaea06d632c8ee6e628393e439de44c6820feb08f07f6eb21",
+        "original_numeric_id": 22,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 22
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto porque o uso do sinal indicativo de crase antes de pronomes possessivos adjetivos femininos no singular é facultativo.\n\nNa expressão \"à sua maneira\", o termo \"sua\" é um pronome possessivo adjetivo feminino singular que acompanha o substantivo \"maneira\". Nesse contexto, a utilização do artigo definido feminino \"a\" antes do pronome é opcional. Como a crase resulta da fusão da preposição \"a\" com o artigo definido \"a\", a facultatividade do artigo torna o emprego do acento grave igualmente facultativo.\n\nPortanto, a supressão do sinal indicativo de crase mantém a correção gramatical do período, resultando apenas na preposição \"a\" (\"a sua maneira\").\n\n**Detalhe:** A regra de facultatividade aplica-se apenas quando o pronome possessivo acompanha um substantivo (função adjetiva). Caso o pronome estivesse substantivado (substituindo um substantivo omitido anteriormente), a crase seria obrigatória se houvesse regência de preposição.",
+        "source_reference": null
+      },
+      "source_content_hash": "7bac70992659dd823bb7064a0d5c003d04eb38c33971918313d5199edd636f45"
+    }
+  ]
+}

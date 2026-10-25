@@ -1,0 +1,230 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-dpf14_009_01-direito-administrativo-d0899f712032-c6abc5fd3a44",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "d0899f712032d803deb1ff38fb2396f1dd37d1ffb65c7f61503d0bd058c669c4",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "9a60cb42fbada4944e3fe1d0564604111314b54b0d72e1bd9ebc2e3a33818aef",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "c6abc5fd3a443c37e6e388fd73e5b62ef1634f0a4dc1abbd6d250fece7cb6a8f",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:035",
+      "source_id": "dpf14_009_01:35",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando que o DPF é órgão responsável por exercer as funções de polícia judiciária da União, julgue os itens a seguir.\n\nOs atos praticados pelos servidores do DPF estão sujeitos ao controle ministerial, mas não ao do Tribunal de Contas da União, que é órgão auxiliar do Congresso Nacional, ao qual compete julgar apenas os atos do presidente da República e demais agentes políticos.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 35; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Controle da Administração Pública",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "f5011dacef9ef58233ac2eae3e8252c6ceeb55fa5444b8453c03e83099705b83",
+        "original_numeric_id": 35,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacoes-do-controle",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto por apresentar duas premissas falsas sobre a competência do Tribunal de Contas da União (TCU):\n\n1. **Sujeição dos atos do DPF ao TCU:** O Departamento de Polícia Federal (DPF) é um órgão integrante da Administração Pública Federal Direta. Portanto, seus atos de gestão orçamentária, financeira e patrimonial, bem como os atos de seus servidores que gerenciem recursos públicos, estão plenamente sujeitos à fiscalização e ao controle do TCU, conforme o Artigo 70 e o Artigo 71, inciso II, da Constituição Federal.\n2. **Competência do TCU quanto ao Presidente da República e agentes políticos:** O TCU não julga as contas do Presidente da República. Cabe ao TCU apenas **apreciar** as contas prestadas anualmente pelo Presidente, emitindo um parecer prévio (Artigo 71, inciso I, da CF), ao passo que o julgamento político-administrativo dessas contas é de competência exclusiva do Congresso Nacional (Artigo 49, inciso IX, da CF). Ademais, a competência de julgamento do TCU não se restringe a \"agentes políticos\", mas abrange as contas de todos os administradores e demais responsáveis por dinheiros, bens e valores públicos da administração direta e indireta (Artigo 71, inciso II, da CF).\n\n### Dispositivo legal\n* **Constituição Federal de 1988, Artigo 71, incisos I e II**.\n* URL oficial: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "43dfea742b683b2bdca0760e79d0602282ec0bfd81dc12a567185ddb38e928c1"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:038",
+      "source_id": "dpf14_009_01:38",
+      "question_type": "true_false",
+      "statement_markdown": "Considere que, durante uma operação policial, uma viatura do DPF colida com um carro de propriedade particular estacionado em via pública. Nessa situação,\n\na administração responderá pelos danos causados ao veículo particular, ainda que se comprove que o motorista da viatura policial dirigia de forma diligente e prudente.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 38; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "f940bc2baf51f592314861f06e51edf4906e22104e15b2d1af4843afecd6dbf6",
+        "original_numeric_id": 38,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A responsabilidade civil do Estado por atos comissivos de seus agentes é de natureza objetiva, fundamentada na teoria do risco administrativo, conforme o artigo 37, § 6º, da Constituição Federal de 1988.\n\nPara a caracterização do dever de indenizar, exige-se a demonstração de três elementos:\n1. Conduta comissiva de agente público atuando nessa qualidade;\n2. Dano material ou moral a terceiro;\n3. Nexo de causalidade entre a conduta e o dano.\n\nA alegação de que o motorista da viatura policial dirigia de forma diligente e prudente (ausência de culpa subjetiva) não afasta a responsabilidade do Estado. Na responsabilidade objetiva, prescinde-se da comprovação de dolo ou culpa do agente. O Estado somente se desoneraria do dever de indenizar caso restasse comprovada alguma causa excludente do nexo causal (como culpa exclusiva da vítima, caso fortuito ou força maior), o que não ocorre na situação descrita, em que o veículo particular estava regularmente estacionado.\n\n### Dispositivo legal\n* **Artigo 37, § 6º, da Constituição Federal de 1988**: estabelece que as pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros, assegurado o direito de regresso contra o responsável nos casos de dolo ou culpa.",
+        "source_reference": null
+      },
+      "source_content_hash": "dd85777a0e372d8fa36cf623d356fa884f269f6338c8d784eb6874f3ebede525"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:042",
+      "source_id": "dpf14_009_01:42",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, relativos aos atos administrativos e poderes da administração.\n\nHá presunção de legitimidade e veracidade nos atos praticados pela administração durante processo de licitação.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 42; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "a9982b898ebd29d2ba9476518df92772f419d376d81121e92769ec21b60515ab",
+        "original_numeric_id": 42,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Os atos praticados pela Administração Pública no decorrer de um procedimento licitatório qualificam-se como atos administrativos e, por conseguinte, gozam dos atributos inerentes a essa categoria jurídica.\n\nEntre esses atributos, destacam-se:\n1. **Presunção de legitimidade**: presunção de que o ato foi praticado em estrita conformidade com a lei e o ordenamento jurídico;\n2. **Presunção de veracidade**: presunção de que os fatos declarados pela Administração Pública para a prática do ato são verdadeiros.\n\nTrata-se de presunções de natureza relativa (*iuris tantum*), as quais admitem prova em contrário, transferindo ao interessado o ônus de provar eventual ilegalidade ou falsidade do ato administrativo.\n\n### Dispositivo legal\n* A presunção de legitimidade e veracidade é um princípio doutrinário e jurisprudencial consolidado do Direito Administrativo, decorrente do princípio da legalidade previsto no **Artigo 37, caput, da Constituição Federal de 1988**.",
+        "source_reference": null
+      },
+      "source_content_hash": "26b09e6542695234beec51bdc3071e36c1b63d3d30e54beed1a7628aa3b8d344"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:064",
+      "source_id": "dpf14_009_01:64",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da gestão de processos e de contratos, julgue os itens subsecutivos.\n\nCabe privativamente à União legislar acerca de normas gerais de licitação e contratação, em todas as modalidades, para as administrações públicas diretas, autárquicas e fundacionais da União, dos estados, do DF e dos municípios.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 64; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "f169ec9eae3405b6d4d3bace6dcab8345cc34b87c6be96458c55e0a8c446154b",
+        "original_numeric_id": 64,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A Constituição Federal de 1988 estabelece a repartição de competências legislativas entre os entes federativos. Conforme o texto constitucional, compete privativamente à União legislar sobre normas gerais de licitação e contratação, em todas as modalidades, abrangendo as administrações públicas diretas, autárquicas e fundacionais de todos os entes da Federação (União, Estados, Distrito Federal e Municípios).\n\nOs demais entes federativos possuem competência para legislar apenas sobre normas específicas, de caráter suplementar, respeitando as diretrizes gerais fixadas pela União.\n\n### Dispositivo legal\nArt. 22, inciso XXVII, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "cd2a604442e62eb988022fcaed365920ab40f16a37e7086c9c18803f4d079e75"
+    }
+  ]
+}

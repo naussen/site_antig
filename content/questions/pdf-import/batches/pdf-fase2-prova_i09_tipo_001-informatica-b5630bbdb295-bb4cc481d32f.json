@@ -1,0 +1,92 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-prova_i09_tipo_001-informatica-b5630bbdb295-bb4cc481d32f",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "b5630bbdb295671178518a6a56da47afa49d6b19ff3b0347fbe6974f5ac03394",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "8a1d40d330f3a1f0c9c5c49977037cbc600422d057f7b497ba1fcf422d8196bb",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "bb4cc481d32ff1f94de2f0de58df474c0eb1d9d606cc3c2617baf1d39b248952",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:016",
+      "source_id": "prova_i09_tipo_001:16",
+      "question_type": "multiple_choice",
+      "statement_markdown": "As instruções que uma CPU necessita para executar um programa são buscadas",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 16; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "nas interfaces USB.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "no disco rígido.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "na memória.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "no drive de DVD.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "no barramento de endereços.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Hardware",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Microinformática",
+        "source_content_hash": "525b483523fc37ef2c341b6e52cf4e003810b3945c809a98edb23b31c5d84e01",
+        "original_numeric_id": 16,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O ciclo de instrução de uma Unidade Central de Processamento (CPU) envolve as etapas de busca (*fetch*), decodificação (*decode*) e execução (*execute*). Durante a etapa de busca, a CPU obtém a instrução a ser executada diretamente da memória principal (RAM) ou da memória cache, que são memórias de acesso rápido e voláteis.\n\n*   **A e D estão incorretas** porque interfaces USB e drives de DVD são dispositivos de entrada/saída e de armazenamento secundário, não sendo acessados diretamente pela CPU para a busca de instruções de execução imediata.\n*   **B está incorreta** porque o disco rígido é uma memória secundária; os programas e suas instruções precisam ser carregados na memória principal antes de serem executados pela CPU.\n*   **E está incorreta** porque o barramento de endereços é o meio físico utilizado para transportar o endereço de memória onde a instrução está localizada, e não o local de armazenamento onde as instruções são buscadas.",
+        "source_reference": null
+      },
+      "source_content_hash": "0edceef8bcc7ead8f2a8a3a1647365a3597728e32678a71fc425aa57e1249409"
+    }
+  ]
+}

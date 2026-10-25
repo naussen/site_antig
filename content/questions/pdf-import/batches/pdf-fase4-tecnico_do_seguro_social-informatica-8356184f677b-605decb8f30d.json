@@ -1,0 +1,80 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_do_seguro_social-informatica-8356184f677b-605decb8f30d",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "8356184f677b1f67db7c2ca11e127e96c825e8169801c0b8b25dcfb5ffc09cf5",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "de5b10d2a1ac5bee023c723ca65187afb7622a283e7467ef7e8b4dd19094f663",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "605decb8f30d6302910c1f41a2e5974476898c03287f399c68b1285ae88b7424",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:044",
+      "source_id": "tecnico_do_seguro_social:44",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando a planilha mostrada na figura precedente, elaborada no Microsoft Excel 365, julgue o seguinte item.\n\nSe for inserida na célula B8 a fórmula indicada a seguir, o resultado a ser apresentado nessa célula será 2.\n\n=SOMASE(A2:A7;”auxílio*”;B2:B7)",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 44; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ferramentas de Escritório (Microsoft Office e LibreOffice)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "98c23493e7c49447c73440368f4c82b4ed2b53393babfe65e734632c0c074fec",
+        "original_numeric_id": 44,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_seguro_social_044.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A função `SOMASE` realiza a soma dos valores em um intervalo de soma (`B2:B7`) com base em um critério aplicado a um intervalo de busca (`A2:A7`). No critério `\"auxílio*\"`, o caractere asterisco (`*`) funciona como um caractere curinga, representando qualquer sequência de caracteres após a palavra \"auxílio\".\n\nDessa forma, a função selecionará todas as células no intervalo `A2:A7` que comecem com \"auxílio\". Na planilha da questão, isso inclui tanto a célula contendo `\"auxílio\"` (cujo valor correspondente na coluna B é 2) quanto a célula contendo `\"auxílio-reclusão\"` (cujo valor correspondente na coluna B é 3). A soma desses valores resulta em 5 (2 + 3), e não em 2.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_seguro_social_044.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "72cf25a8711c58c0d0ab70a7a0329d90de414c21dab3ce97c4af66f5f245abe7"
+    }
+  ]
+}

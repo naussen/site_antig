@@ -1,0 +1,194 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-dpf14_009_01-portugues-36e024c41540-335c59248361",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "36e024c4154028e93f93de55085bd1eac71dfffab948db68dc4a9e162264ab3c",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "149fe2efe61f738e07b039b011521a3b7313075efbf38a922899a3777a2912f9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "335c592483615603e5e07af8bffeac606c5e73caf9255babd767ac6c7febb675",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:006",
+      "source_id": "dpf14_009_01:6",
+      "question_type": "true_false",
+      "statement_markdown": "Embora não tivessem ficado claras as fontes geradoras de quebras da paz urbana, o fenômeno social marcado pelos movimentos populares que tomaram as ruas das grandes cidades brasileiras, em 2013, parecia tendente a se agravar.\nAs vítimas das agressões pessoais viram desprotegidas a paz e a segurança, direitos sagrados da cidadania. Todos foram prejudicados.\nPôde-se constatar que, em outras partes do mundo, fenômenos sociais semelhantes também ocorreram. Lá como cá, diferentes tipos de ação atingiram todo o grupo social, gerando vítimas e danos materiais. Nem sempre a intervenção das forças do Estado foi suficiente para evitar prejuízos.\nDo ponto de vista global, notou-se que a quebra da ordem foi provocada em situações diversas e ora tornou mais graves as distorções do direito, ora espalhou a insegurança coletivamente. Em qualquer das hipóteses, a população dos vários locais atingidos viu-se envolvida em perdas crescentes.\nInternet: <www1.folha.uol.com.br> (com adaptações).\nConsiderando as ideias e as estruturas linguísticas do texto, julgue os itens de 5 a 10.\n\nNa linha 13, a partícula “se” é empregada para indeterminar o sujeito.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 6; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "f29db436deec9a8ad07d927a503cd8b2a61c2ab40b8e4203669325c77a838f7a",
+        "original_numeric_id": 6,
+        "original_source_content_hash": "56c9ec238a20b31b098912d8d9a16cc98d308906d018e70d611ce8a96ff01c19",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNa oração: *\"Pôde-se constatar que, em outras partes do mundo, fenômenos sociais semelhantes também ocorreram\"*.\n\nA partícula **\"se\"** atua como **partícula apassivadora** (ou pronome apassivador), associada à locução verbal transitiva direta *\"pôde constatar\"*.\n\nA oração subordinada substantiva seguinte (*\"que, em outras partes do mundo, fenômenos sociais semelhantes também ocorreram\"*) funciona como **sujeito paciente oracional** da voz passiva sintética (equivalente à voz passiva analítica: *\"Constatar que... pôde ser feito\"*). Não se trata de índice de indeterminação do sujeito.",
+        "source_reference": null
+      },
+      "source_content_hash": "063935c81d02afa231e08e42d880ddc48defa73b41d6ab7116196a1e483ea404"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:012",
+      "source_id": "dpf14_009_01:12",
+      "question_type": "true_false",
+      "statement_markdown": "À luz das orientações constantes no Manual de Redação da Presidência da República, julgue os itens a seguir.\n\nAdmite-se o registro de impressões pessoais na redação oficial, desde que o assunto seja de interesse público e expresso em linguagem formal.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 12; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "98af6c911e692bfc786c3d67f74026a97007948fe6a4b8d2bcf829924a8ad82c",
+        "original_numeric_id": 12,
+        "original_source_content_hash": "08f0349898b7ce21546ba127c99eb4861de3dad91013c5c900cbbf794ca48792",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNa redação oficial, o princípio da **impessoalidade** é absoluto e inegociável.\n\nO documento público deve veicular unicamente a manifestação de vontade da Administração Pública e o tratamento objetivo do interesse público, sendo terminantemente vedado o registro de impressões subjetivas, opiniões particulares, desabafos ou juízos pessoais do redator sobre o assunto tratado.",
+        "source_reference": null
+      },
+      "source_content_hash": "2f01792dfb380ac06f23b35159bb094fad892cbb3bdb57a2a2893d6b09129b78"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:015",
+      "source_id": "dpf14_009_01:15",
+      "question_type": "true_false",
+      "statement_markdown": "> [!NOTE] **Gabarito Alterado pela Banca Examinadora**\n> O gabarito preliminar desta questão foi alterado pela banca examinadora no gabarito oficial definitivo (de **Certo** para **Errado**). O comentário explicativo fundamenta a decisão final da banca.\n\nJulgue os itens subsequentes, a respeito do padrão ofício em comunicações oficiais, conforme o Manual de Redação da Presidência da República.\n\nNo memorando, dispensa-se o vocativo, que deve, contudo, constar no aviso e no ofício.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 15; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "63480f2795d6c3b8de61a5e62716b11e3bf5ef35f7da8b7541770afa23e31e7e",
+        "original_numeric_id": 15,
+        "original_source_content_hash": "8ebdb295d15e00f7fa0070961f0317662c477da1375655478845f6eebca25146",
+        "answer_status": "definitivo_alterado",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica",
+        "gabarito_alterado_pela_banca": true,
+        "definitive_answer": "E",
+        "original_preliminary_answer": "C",
+        "visual_caveat_applied": true
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNa disciplina do Manual de Redação da Presidência da República (MRPR), o **Padrão Ofício** foi concebido para uniformizar as três principais modalidades de correspondência da administração pública tradicional (o aviso, o ofício e o memorando).\n\nConforme as regras do MRPR, o **vocativo** é elemento obrigatório da estrutura de todos os expedientes do Padrão Ofício (incluindo o memorando), devendo indicar o cargo ou pronome de tratamento da autoridade destinatária. O memorando não dispensa o vocativo.",
+        "source_reference": null
+      },
+      "source_content_hash": "4dbf1da1d361e48639e9c132e265c21db3aeaa8392814bbafd67467e6c802890"
+    }
+  ]
+}

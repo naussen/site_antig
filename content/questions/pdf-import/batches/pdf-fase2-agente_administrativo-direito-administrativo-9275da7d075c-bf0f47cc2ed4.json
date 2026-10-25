@@ -1,0 +1,434 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_administrativo-direito-administrativo-9275da7d075c-bf0f47cc2ed4",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "9275da7d075c14f6aecd067cee72adc350eb98cd976b0bad8b9bd014f4eb1edf",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "5da32b0a57792e090ef9d4c38cee7bda12a08609929c945e59e21312dccdc01a",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "bf0f47cc2ed4d2aefadbfa89d20770255a7fd03623aa0435815499c4151658f3",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:059",
+      "source_id": "agente_administrativo:59",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da administração pública, julgue os itens a seguir à luz da CF e do entendimento do STF.\n\nO ocupante de função de confiança que a exercer por prazo superior a cinco anos poderá incorporar ao cargo efetivo as vantagens de caráter temporário percebidas.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 59; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "564bd6e75566fd1601e69644eece1c2ded666f2d4291f17ecadc77dad4e52730",
+        "original_numeric_id": 59,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está errado. A Emenda Constitucional nº 103/2019 introduziu o § 9º ao artigo 39 da Constituição Federal, proibindo expressamente a incorporação de vantagens de caráter temporário ou daquelas vinculadas ao exercício de função de confiança ou de cargo em comissão à remuneração do cargo efetivo. Com essa alteração, foi extinta a possibilidade de incorporação dessas parcelas (conhecida historicamente como \"estabilidade financeira\" ou \"incorporação de quintos/décimos\"), independentemente do tempo de exercício da função pelo servidor.\n\n**Detalhe importante:** Legislações locais (estaduais ou municipais) que ainda prevejam essa incorporação após a promulgação da EC nº 103/2019 são incompatíveis com a ordem constitucional vigente, devendo ser observado o princípio da simetria constitucional.\n\n### Dispositivo legal\n\n* **Artigo 39, § 9º, da Constituição Federal de 1988** (Disponível em: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "5ae7a97ad57bf54c0890eb42e4df0c90ee7f4de6bca3cd5043c135f4cfd41191"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:061",
+      "source_id": "agente_administrativo:61",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens subsequentes, pertinentes à administração direta e indireta e a atos administrativos.\n\nO prefeito pode revogar os atos que pratica, porém, não pode anulá-los, uma vez que tal providência compete ao Poder Judiciário.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 61; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "c5469726160ebb9f831e6f7cd8ec845fc5ff3b1198bd7b7fdf0929ed7358fc38",
+        "original_numeric_id": 61,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque, com base no princípio da autotutela administrativa, a Administração Pública tem o poder-dever de controlar seus próprios atos. Isso significa que o prefeito, como chefe do Poder Executivo municipal, tem competência tanto para revogar seus próprios atos (por motivos de conveniência e oportunidade, ou seja, controle de mérito) quanto para anulá-los (quando eivados de vícios de ilegalidade, ou seja, controle de legalidade).\n\nA anulação de atos administrativos ilegais não é uma competência exclusiva do Poder Judiciário. O Judiciário também pode anular atos administrativos quando provocado, mas a própria Administração Pública pode e deve fazê-lo de ofício ou mediante provocação, conforme consolidado na Súmula nº 473 do Supremo Tribunal Federal (STF).\n\n**Detalhe importante:** A questão tenta induzir ao erro ao sugerir que a anulação (controle de legalidade) é monopólio do Poder Judiciário, ignorando a autotutela administrativa.\n\n**Dispositivo legal**\n\n[Súmula nº 473 do Supremo Tribunal Federal (STF)](https://jurisprudencia.stf.jus.br/pages/search/seq-sumula473/false)",
+        "source_reference": null
+      },
+      "source_content_hash": "a60f30ebf190755ce3f1808e68e0ed3815e531409e7bb1e99fba2ecb5be959dc"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:067",
+      "source_id": "agente_administrativo:67",
+      "question_type": "true_false",
+      "statement_markdown": "De acordo com o último censo do IBGE (2022), a população do município de Cachoeiro de Itapemirim é de 185.786 habitantes. Com base nesse dado, julgue os itens a seguir, sobre a aplicação da nova lei de licitação (Lei n.º 14.133/2021) ao referido município.\n\nA partir de 30/12/2023, tornou-se obrigatória a aplicação da Lei n.º 14.133/2021 para as novas licitações e contratações do município.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 67; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "eed2697cc5383174b30b43a1fe33486adeaaf18718f3f226e6ad438606deebe8",
+        "original_numeric_id": 67,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta.\n\nA Lei nº 14.133/2021 (Nova Lei de Licitações e Contratos) entrou em vigor na data de sua publicação (1º de abril de 2021), mas permitiu a utilização concomitante dos regimes anteriores durante um período de transição.\n\nA revogação definitiva da Lei nº 8.666/1993, da Lei nº 10.520/2002 (Lei do Pregão) e dos arts. 1º a 47-A da Lei nº 12.462/2011 (RDC) ocorreu em **30 de dezembro de 2023**, nos termos do art. 193, II, da Lei nº 14.133/2021 (com redação dada pela Lei Complementar nº 198/2023). A partir dessa data, a aplicação da nova lei passou a ser obrigatória para novas licitações e contratações diretas.\n\nComo o município de Cachoeiro de Itapemirim possui população de 185.786 habitantes (conforme o Censo de 2022), ele não se enquadra nas exceções temporárias de prazo (de até 6 anos) previstas no art. 176 da Lei nº 14.133/2021, as quais são restritas a municípios com até 20.000 habitantes.\n\n### Dispositivo legal\n* Art. 193, II, e Art. 176 da Lei nº 14.133/2021.",
+        "source_reference": null
+      },
+      "source_content_hash": "02b1bcd8b39d914955df6752109a4f9ecf42d02d363a607de52896ab5d7e6f5d"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:068",
+      "source_id": "agente_administrativo:68",
+      "question_type": "true_false",
+      "statement_markdown": "De acordo com o último censo do IBGE (2022), a população do município de Cachoeiro de Itapemirim é de 185.786 habitantes. Com base nesse dado, julgue os itens a seguir, sobre a aplicação da nova lei de licitação (Lei n.º 14.133/2021) ao referido município.\n\nAs licitações serão realizadas preferencialmente sob a forma eletrônica, porém, se optar pela forma presencial das licitações, o município deverá motivar a razão dessa escolha, bem como realizar sessão pública registrada em ata e gravada em áudio e vídeo.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 68; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "e39d67c20cbdb2210ae0333cc6aa3b551a7d0e44ffec4a5f3a104790cc11b3ef",
+        "original_numeric_id": 68,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta.\n\nA regra geral estabelecida pela Lei nº 14.133/2021 é a realização de licitações preferencialmente sob a forma eletrônica. A utilização da forma presencial é uma exceção que exige:\n1. Motivação explícita no processo;\n2. Registro da sessão pública em ata;\n3. Gravação da sessão em áudio e vídeo.\n\nEmbora o art. 176, II, da Lei nº 14.133/2021 conceda um prazo de 6 anos (a contar de 1º de abril de 2021) para que os municípios cumpram a obrigatoriedade da forma eletrônica, esse benefício é restrito a municípios com até 20.000 habitantes. Como o município de Cachoeiro de Itapemirim possui 185.786 habitantes, a regra geral e seus requisitos de gravação e motivação aplicam-se integralmente.\n\n### Dispositivo legal\n* Art. 17, § 2º, e Art. 176, II, da Lei nº 14.133/2021.",
+        "source_reference": null
+      },
+      "source_content_hash": "b43411c2615e2f25ccf49e54c06f43d19e06de3bb5997aa4e3f4584d9696205f"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:070",
+      "source_id": "agente_administrativo:70",
+      "question_type": "true_false",
+      "statement_markdown": "De acordo com o último censo do IBGE (2022), a população do município de Cachoeiro de Itapemirim é de 185.786 habitantes. Com base nesse dado, julgue os itens a seguir, sobre a aplicação da nova lei de licitação (Lei n.º 14.133/2021) ao referido município.\n\nÉ obrigatório ao município instituir central de compras, com o objetivo de realizar compras em grande escala para atender a diversos órgãos e entidades sob sua competência.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 70; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "5b6c362b8e6e4f8f6c9f648f86e2a7ecbd81abe5c09983526c4da8d4d280bea8",
+        "original_numeric_id": 70,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta.\n\nO art. 181, caput, da Lei nº 14.133/2021 impõe aos entes federativos (União, Estados, Distrito Federal e Municípios) o dever de instituir centrais de compras. O objetivo dessa medida é centralizar as aquisições para realizar compras em grande escala, otimizando o atendimento a diversos órgãos e entidades sob sua competência, além de reduzir custos operacionais e logísticos.\n\nA única flexibilização a essa regra é direcionada aos municípios com até 10.000 habitantes, aos quais é facultado cumprir essa obrigação preferencialmente por meio da constituição de consórcio público (art. 181, parágrafo único). Como o município de Cachoeiro de Itapemirim possui 185.786 habitantes, a instituição da central de compras é obrigatória.\n\n### Dispositivo legal\n* Art. 181, caput e parágrafo único, da Lei nº 14.133/2021.",
+        "source_reference": null
+      },
+      "source_content_hash": "9208183c78c650c3692bd67801cb075824d7f179f138234704d33c0f315ceb8e"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:086",
+      "source_id": "agente_administrativo:86",
+      "question_type": "true_false",
+      "statement_markdown": "Com referência a compras e contratações públicas para fornecimento de insumos e bens patrimoniais, julgue os itens seguintes.\n\nPara adquirir bens patrimoniais, a administração pública deve ter como diretriz legal a Lei n.º 8.666/1993.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 86; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "faa33693f3caf8b622a7922a246a79a660e04cd7a0dfa53f81c6e62e96c49d26",
+        "original_numeric_id": 86,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque a Lei nº 8.666/1993 foi revogada de forma definitiva em 30 de dezembro de 2023, nos termos do artigo 193, inciso II, da Lei nº 14.133/2021 (com prazo de transição prorrogado pela Lei Complementar nº 198/2023). Atualmente, a diretriz legal obrigatória para a aquisição de bens patrimoniais e demais contratações públicas é a Lei nº 14.133/2021 (Nova Lei de Licitações e Contratos Administrativos).\n\n**Pegadinha:** A banca tenta confundir ao utilizar uma legislação que, embora tenha regido as contratações públicas por três décadas, não se encontra mais em vigor para a instauração de novos processos licitatórios.\n\n### Dispositivo legal\n* **Dispositivo:** Lei nº 14.133/2021, Art. 193, II.\n* **Fonte oficial:** [Portal da Legislação - Planalto](https://www.planalto.gov.br/ccivil_03/_ato2021-2024/2021/lei/l14133.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "585487a84252f75a3b63ce31585b577c7d8909c317c41794573596bfee32e32c"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:087",
+      "source_id": "agente_administrativo:87",
+      "question_type": "true_false",
+      "statement_markdown": "Com referência a compras e contratações públicas para fornecimento de insumos e bens patrimoniais, julgue os itens seguintes.\n\nO sistema de registro de preços pode ser utilizado em casos de dispensa de licitação.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 87; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "78a23238407e9a4ac3c1058e58afbfeec569d5298ffe0b2ce1db89c9022e2b11",
+        "original_numeric_id": 87,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. De acordo com a Lei nº 14.133/2021, o Sistema de Registro de Preços (SRP) pode ser utilizado tanto em processos licitatórios quanto em contratações diretas. O artigo 82, § 6º, prevê expressamente que o SRP poderá, na forma de regulamento, ser utilizado nas hipóteses de inexigibilidade e de dispensa de licitação para a aquisição de bens ou para a contratação de serviços por mais de um órgão ou entidade. Além disso, o artigo 6º, inciso XLV, que define o SRP, menciona expressamente a sua realização mediante contratação direta.\n\n**Detalhe importante:** O uso do SRP em contratações diretas é uma inovação legislativa expressa da Nova Lei de Licitações, uma vez que o regime anterior limitava o registro de preços aos procedimentos licitatórios.\n\n### Dispositivo legal\n* **Dispositivo:** Lei nº 14.133/2021, Art. 6º, XLV, e Art. 82, § 6º.\n* **Fonte oficial:** [Portal da Legislação - Planalto](https://www.planalto.gov.br/ccivil_03/_ato2021-2024/2021/lei/l14133.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "05c28ecc276501e368d6caef8f59129e3745bfabd12bbcba46d76ea8ecf57709"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:090",
+      "source_id": "agente_administrativo:90",
+      "question_type": "true_false",
+      "statement_markdown": "Com referência a compras e contratações públicas para fornecimento de insumos e bens patrimoniais, julgue os itens seguintes.\n\nO processo licitatório para registro de preços só poderá ocorrer na modalidade pregão eletrônico.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 90; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "e38daad76547497d3f5791133f9f8034b1b7cadb8d3eac4def4bd5083f849723",
+        "original_numeric_id": 90,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. O Sistema de Registro de Preços (SRP) não é restrito à modalidade de pregão eletrônico.\n\nO artigo 6º, inciso XLV, da Lei nº 14.133/2021 define o SRP como o conjunto de procedimentos para realização de registro formal de preços mediante contratação direta (dispensa ou inexigibilidade) ou licitação nas modalidades **pregão** ou **concorrência**. Portanto, a concorrência também é perfeitamente cabível para o registro de preços, a depender da natureza do objeto (por exemplo, bens e serviços especiais ou obras e serviços de engenharia).\n\n**Pegadinha:** O uso de termos restritivos como \"só poderá\" ou \"exclusivamente\" frequentemente indica erro em questões de concurso. A Nova Lei de Licitações ampliou as possibilidades de aplicação do SRP, permitindo inclusive o seu uso para a contratação de obras e serviços de engenharia por meio da modalidade concorrência.\n\n### Dispositivo legal\n* **Dispositivo:** Lei nº 14.133/2021, Art. 6º, XLV, e Art. 82.\n* **Fonte oficial:** [Portal da Legislação - Planalto](https://www.planalto.gov.br/ccivil_03/_ato2021-2024/2021/lei/l14133.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "64c90b3f8941fc7fa1717e91fed76ab17151a4d5eb4c99aee7142fed65aafc72"
+    }
+  ]
+}

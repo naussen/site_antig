@@ -1,0 +1,1150 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-escriturario_agente_comercial-vendas-e-negociacao-dc61cc87552e-ef54564865bf",
+  "source": {
+    "file_name": "escriturario_agente_comercial_ATUALIZADO.json",
+    "sha256": "dc61cc87552e5a02d8b0d8976fda4c03f634e0152f65f5267f98ed067ff73cc6",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "escriturario_agente_comercial.json",
+      "original_source_sha256": "01019f640948f2ffd55374ea21a7a82a58f3fdae926a71a27cc21c32ba8bbf9d",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ef54564865bfca866137b470281084f514e6f30d17afb121e0dea087091d7939",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "vendas-e-negociacao",
+    "name": "Vendas e Negociação"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:056",
+      "source_id": "escriturario_agente_comercial:56",
+      "question_type": "multiple_choice",
+      "statement_markdown": "D é um deficiente visual e necessita realizar atendimento presencial em determinada agência bancária. Dirige-se ao local onde possui conta corrente e vários investimentos com seu acompanhante vidente, que também necessita do mesmo serviço. Ao ingressar no estabelecimento bancário, verifica a existência de longa fila para obtenção de idêntico serviço. O gerente da agência, constatando a necessidade do correntista, pessoalmente disponibiliza um caixa, que presta os serviços a D, bem como ao seu acompanhante.\n\nNos termos da Lei nº 13.146, de 06 de julho de 2015, a providência do gerente",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 56; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "confronta com o princípio da igualdade entre os correntistas.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "caracteriza um privilégio que deve ser reprimido.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "está em dissonância com o posto na norma por privilegiar o acompanhante.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "realiza o direito a receber atendimento prioritário.",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "é medida sem proteção pelo estatuto legal.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Técnicas de Vendas e Atendimento ao Cliente",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "a64e19654c507482327b8f240dda5a1bc41222e7735f141f5b2e9649b1eabf79",
+        "original_numeric_id": 56,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "D",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnicas-de-vendas-e-atendimento-ao-cliente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nA Lei nº 13.146/2015 (Estatuto da Pessoa com Deficiência) assegura às pessoas com deficiência e com mobilidade reduzida prioridade de atendimento em todas as instituições e órgãos públicos e privados que prestam serviços à população (art. 9º).\n\nA lei expressamente determina que o atendimento prioritário inclui a disponibilização de recursos de acessibilidade, comunicação e instalações adaptadas, sendo vedada qualquer cobrança adicional ou tratamento discriminatório.\n\nA conduta descrita na alternativa D reflete o estrito cumprimento das obrigações legais de acessibilidade e atendimento prioritário impostas pelo Estatuto.\n\n### Dispositivo legal\n[Lei nº 13.146/2015, Art. 9º](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "38096d80c2cd92c3282f5690619ce74675ff27046c453aba3557f2ed776ed980"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:057",
+      "source_id": "escriturario_agente_comercial:57",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um indivíduo é correntista de determinada instituição financeira que lhe apresenta, através dos responsáveis internos, proposta para investimento no mercado de renda variável, apresentando o mercado de capitais como capaz de superar o rendimento fixo de várias aplicações financeiras, sem apresentar as desvantagens e perigos desse setor da economia.\n\nNesse contexto, nos termos da Lei nº 8.078/1990, a atuação dos prepostos da instituição financeira estaria violando a regra da",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 57; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "lucratividade planejada",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "informação adequada",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "menor onerosidade",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "capacidade econômica",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "conservação de valores",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Técnicas de Vendas e Atendimento ao Cliente",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "8a227bb5d65e41ed805efb18c25f83e617eef9a711958ffdc507a8c961705366",
+        "original_numeric_id": 57,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnicas-de-vendas-e-atendimento-ao-cliente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O Código de Defesa do Consumidor (CDC) estabelece como direito básico do consumidor a informação adequada e clara sobre os diferentes produtos e serviços, com especificação correta de quantidade, características, composição, qualidade, tributos incidentes e preço, bem como sobre os riscos que apresentem. Ao ofertar investimentos em renda variável omitindo os riscos e perigos inerentes a esse mercado, a instituição financeira descumpre esse dever legal, violando o princípio da informação adequada.\n\n**Análise das alternativas:**\n* **A) Incorreta.** Não existe o princípio da \"lucratividade planejada\" no rol de direitos básicos do CDC.\n* **B) Correta.** A omissão de riscos em ofertas financeiras fere diretamente o direito à informação adequada (Art. 6º, III, do CDC).\n* **C) Incorreta.** O princípio da menor onerosidade é um conceito do direito processual civil (execução), não se aplicando a essa relação de consumo de forma direta.\n* **D) Incorreta.** A capacidade econômica é um critério de fixação de indenizações ou análise de hipossuficiência, não sendo a regra violada pela falta de clareza na oferta.\n* **E) Incorreta.** Não há previsão de regra de \"conservação de valores\" aplicável a essa conduta de omissão informativa.\n\n**Dispositivo legal**\n\n[Lei nº 8.078, de 11 de setembro de 1990 (Código de Defesa do Consumidor), Art. 6º, inciso III](https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "f49c8ca4480828684e22886ab369514c8da5136854547a586e6d38f79d9bf4c6"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:058",
+      "source_id": "escriturario_agente_comercial:58",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um cliente da instituição financeira M.O. apresenta reclamação sobre lançamentos indevidos na sua conta corrente sobre os quais solicitou esclarecimento. A instituição quedou-se inerte, tendo o cliente renovado seu pleito por vinte outras vezes. Sem esmorecer, procurou saber quais seriam as alternativas previstas na legislação para amparar sua pretensão, uma vez que foram esgotados os meios normais de acesso ao cliente previstos.\n\nNos termos da Resolução CMN nº 4.860, de 23 de outubro de 2020, o caso deve merecer a intervenção da",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 58; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Presidência da instituição",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Auditoria da instituição",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Diretoria da instituição",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Ouvidoria da instituição",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Corregedoria da instituição",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Técnicas de Vendas e Atendimento ao Cliente",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "fa0954cf3002b5e6094f8e8532ddccf5ab10cee69e9ee446535e31736aa9b8d8",
+        "original_numeric_id": 58,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "D",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnicas-de-vendas-e-atendimento-ao-cliente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nA Resolução CMN nº 4.860/2020 dispõe sobre a estrutura, o funcionamento e as atribuições da ouvidoria das instituições financeiras e demais instituições autorizadas a funcionar pelo Banco Central do Brasil.\n\nA Ouvidoria tem como finalidade atuar como canal de última instância de recurso para os clientes e usuários de produtos e serviços que não tenham ficado satisfeitos com a solução apresentada pelo atendimento habitual (SAC/agência) ou nos casos de recusa de atendimento.\n\nA alternativa D retrata fielmente essa competência recursal e mediadora da Ouvidoria no âmbito do Sistema Financeiro Nacional.\n\n### Dispositivo legal\n[Resolução CMN nº 4.860/2020, Art. 2º e Art. 3º](https://www.bcb.gov.br)",
+        "source_reference": null
+      },
+      "source_content_hash": "e0e7d99f027fa3c3dad8f4d580ced3ee59482bc7f505713ffe01ed4ae3f26834"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:059",
+      "source_id": "escriturario_agente_comercial:59",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um vendedor do departamento de seguros de um banco foi chamado para atender um cliente que desejava informações a respeito de renovação de apólice de seguro de vida. Antes de encontrá-lo, o vendedor foi orientado pelo supervisor a acessar uma base de dados com informações pessoais dos clientes que o banco mantinha ilicitamente. Ao explorar essa base de dados, o vendedor descobriu que o cliente era acometido de uma enfermidade crônica que comprometia em muito a sua saúde. De posse dessa informação, o vendedor alterou sua estratégia de negociação e impôs condições para renovação que eram bem mais desfavoráveis ao cliente.\n\nO problema ético observado nesse caso é caracterizado como",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 59; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "propina",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "aliciamento",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "espionagem",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "desafio tácito",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "conflito de interesses",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Técnicas de Negociação e Gestão de Conflitos",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "a7e8020551c039b21a2ea3b65f94881fb5435727e916b69ff628105f0fd6f7cc",
+        "original_numeric_id": 59,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "resolucao-de-conflitos-e-negociacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O caso narrado descreve a obtenção e o uso de informações confidenciais e pessoais de forma ilícita (acesso a banco de dados mantido ilegalmente sobre a saúde do cliente) para obter vantagem comercial em uma negociação. Na ética empresarial e de vendas, a prática de coletar informações confidenciais de terceiros sem autorização ou por meios ilícitos para usá-las estrategicamente contra eles é classificada como **espionagem** (ou espionagem corporativa/industrial).\n\n**Análise das alternativas:**\n* **A) Incorreta.** Propina envolve o pagamento de suborno a agentes para obter vantagem, o que não ocorreu no caso.\n* **B) Incorreta.** Aliciamento refere-se a atrair ou desviar clientes ou funcionários de concorrentes de forma desleal.\n* **C) Correta.** A conduta de acessar e explorar dados privados de forma ilícita para obter vantagem competitiva configura espionagem.\n* **D) Incorreta.** Desafio tácito não é um termo técnico aplicável a essa conduta ética ilícita.\n* **E) Incorreta.** O conflito de interesses ocorre quando o interesse pessoal do agente colide com os deveres de seu cargo, o que difere da conduta de espionar e usar dados ilícitos contra o cliente.",
+        "source_reference": null
+      },
+      "source_content_hash": "2aa684f97e3fcfaf81d343af0187612fa77ab4f21b2c3b3a633bfb550e521bdf"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:060",
+      "source_id": "escriturario_agente_comercial:60",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um consultor levantou o desempenho dos canais de vendas remotos de cinco empresas ao longo de uma semana e montou a Tabela apresentada a seguir.\n\n| Empresa | Compras iniciadas na semana | Compras finalizadas na semana |\n|---|---|---|\n| V | 480 | 400 |\n| W | 600 | 380 |\n| X | 800 | 450 |\n| Y | 450 | 330 |\n| Z | 580 | 430 |\n\nCom base nessa Tabela, a menor taxa de abandono foi registrada pela empresa",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 60; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "V",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "W",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "X",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Y",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Z",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Técnicas de Vendas e Atendimento ao Cliente",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "7d09d9af6b40458d49d8284cabe4844478734e45e04588bf22bb106398945fc6",
+        "original_numeric_id": 60,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_escriturario_agente_comercial_060.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnicas-de-vendas-e-atendimento-ao-cliente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A taxa de abandono representa a proporção de transações que foram iniciadas, mas não foram concluídas pelo cliente. Para encontrar a menor taxa de abandono, deve-se calcular a diferença entre as compras iniciadas e as finalizadas (que representa o total de abandonos) e dividir esse resultado pelo total de compras iniciadas.\n\nFórmula da taxa de abandono ($T_a$):\n$$T_a = \\frac{\\text{Iniciadas} - \\text{Finalizadas}}{\\text{Iniciadas}}$$\n\nEfetuando os cálculos para cada empresa:\n* **Empresa V:** $(480 - 400) / 480 = 80 / 480 \\approx 16,67\\%$\n* **Empresa W:** $(600 - 380) / 600 = 220 / 600 \\approx 36,67\\%$\n* **Empresa X:** $(800 - 450) / 800 = 350 / 800 = 43,75\\%$\n* **Empresa Y:** $(450 - 330) / 450 = 120 / 450 \\approx 26,67\\%$\n* **Empresa Z:** $(580 - 430) / 580 = 150 / 580 \\approx 25,86\\%$\n\nA menor taxa de abandono registrada é a da empresa V, com aproximadamente $16,67\\%$.\n\n**Macete:** Para agilizar o cálculo na prova, pode-se simplificar as frações:\n* V: $80/480 = 1/6 \\approx 0,166$\n* W: $220/600 = 11/30 \\approx 0,366$\n* X: $350/800 = 7/16 \\approx 0,437$\n* Y: $120/450 = 4/15 \\approx 0,266$\n* Z: $150/580 = 15/58 \\approx 0,258$\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_escriturario_agente_comercial_060.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "bac0a31abb34aa2b8f657327188c9d7801ca070f8a61f8c320b2dee5d463abe7"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:061",
+      "source_id": "escriturario_agente_comercial:61",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A gerência de uma agência bancária analisou os padrões de qualidade no atendimento aos clientes ao longo de um mês, e, como resultado, iniciou uma série de treinamentos focados na execução dos serviços prometidos aos clientes de forma segura e precisa.\n\nDessa forma, a gerência está propondo tratar da dimensão da qualidade denominada",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 61; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "entrega",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "empatia",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "resposta",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "tangibilidade",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "confiabilidade",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Técnicas de Vendas e Atendimento ao Cliente",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "81f3e7a17520db0922a7af22fe1fe96bc9d4ef6c30e855fced728686ce36bc4c",
+        "original_numeric_id": 61,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnicas-de-vendas-e-atendimento-ao-cliente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No modelo SERVQUAL, desenvolvido por Parasuraman, Zeithaml e Berry, a qualidade dos serviços é avaliada por meio de cinco dimensões fundamentais. A dimensão da **confiabilidade** (*reliability*) é definida como a capacidade de executar o serviço prometido de maneira segura, precisa, consistente e confiável, correspondendo exatamente ao foco do treinamento proposto pela gerência.\n\n**Análise das alternativas:**\n* **A) Incorreta.** \"Entrega\" não é uma das cinco dimensões formais do modelo SERVQUAL.\n* **B) Incorreta.** A empatia refere-se ao atendimento personalizado, atencioso e individualizado oferecido aos clientes.\n* **C) Incorreta.** A dimensão de resposta (*responsiveness*) diz respeito à presteza, rapidez e disposição para ajudar os clientes e fornecer o serviço prontamente.\n* **D) Incorreta.** A tangibilidade refere-se aos aspectos físicos do serviço, como instalações, equipamentos, aparência dos funcionários e materiais de comunicação.\n* **E) Correta.** A confiabilidade traduz a execução correta e segura do serviço prometido desde a primeira vez.",
+        "source_reference": null
+      },
+      "source_content_hash": "940eed2180236d6d1f3e7a6c28cc5f4b6138c41413c04ce22ea3236d2ccd57cc"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:062",
+      "source_id": "escriturario_agente_comercial:62",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O diretor de um banco está preocupado com a jornada do cliente e tem concentrado atenção na fase da assimilação, a qual considera a mais importante.\n\nLevando-se em conta o caminho dos 5As do cliente, na fase de assimilação, o consumidor",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 62; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "processa as mensagens das marcas e é atraído por algumas dessas mensagens.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "pesquisa mais informações a respeito das marcas ofertadas no mercado.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "decide qual marca e onde comprar o produto ou serviço desejado.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "é exposto às marcas a partir de experiências, anúncios e recomendações.",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "passa a dar preferência por uma marca específica e torna-se leal a essa marca.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Comportamento do Consumidor e Satisfação",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "c2b8d2cb191411ac5daf0e7fecd15b0682b0d755d0fe62a5f0e62e981b5bc7c0",
+        "original_numeric_id": 62,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "D",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "satisfacao-retencao-e-fidelizacao-de-clientes",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O modelo dos 5As, proposto por Philip Kotler no livro *Marketing 4.0*, mapeia a jornada do consumidor em cinco etapas sequenciais: **Assimilação** (*Aware*), **Atração** (*Appeal*), **Arguição** (*Ask*), **Ação** (*Act*) e **Apologia** (*Advocate*).\n\nNa primeira fase, a **Assimilação**, o consumidor é exposto de forma passiva a uma variedade de marcas por meio de publicidade, experiências anteriores ou recomendações de terceiros. Portanto, a alternativa D descreve perfeitamente essa etapa inicial de exposição e reconhecimento.\n\n**Análise das alternativas incorretas:**\n* **A) Incorreta.** O processamento de mensagens e a atração por marcas específicas caracterizam a fase de **Atração** (*Appeal*).\n* **B) Incorreta.** A busca ativa por informações e pesquisas sobre as marcas ofertadas define a fase de **Arguição** (*Ask*).\n* **C) Incorreta.** A decisão de compra e a efetivação da transação correspondem à fase de **Ação** (*Act*).\n* **E) Incorreta.** A preferência consolidada, a recompra e a recomendação leal da marca caracterizam a fase de **Apologia** (*Advocate*).",
+        "source_reference": null
+      },
+      "source_content_hash": "c77770688c344e61bc4524b4723e02298587b9ebdf7ba0e959832c5cd404157b"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:063",
+      "source_id": "escriturario_agente_comercial:63",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A empresa X fabrica bijuterias de prata há mais de dez anos e conseguiu um empréstimo bancário que será usado em ações para ampliar as suas vendas. A diretora de marketing decidiu que parte dos recursos será gasto em novas estratégias de comunicação da empresa e solicitou que a equipe de marketing desenvolvesse uma proposta de inbound marketing.\n\nA proposta que atende à solicitação da diretora e corresponde a uma ação de inbound marketing é a seguinte:",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 63; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Contratar consultores para a avaliação de todo o processo produtivo, visando à redução dos custos de produção e, consequentemente, à redução dos preços.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Reunir os revendedores espalhados por todo o país via videoconferência e promover um treinamento focado em argumentos de persuasão.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Produzir vídeos que ensinam como manter e customizar bijuterias de prata e disponibilizar esse material para livre acesso em redes sociais.",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "Solicitar aos engenheiros de produto que eles desenvolvam ligas de prata mais resistentes e apresentar essa nova característica do produto em propagandas.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Montar uma rede própria de lojas e tratar internamente de todo o processo de comercialização das bijuterias para fortalecer o marketing de relacionamento.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Técnicas de Vendas e Atendimento ao Cliente",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "98f07b99820859438028e603b1b4ffcda935591893437eb66aefa8e539962d9d",
+        "original_numeric_id": 63,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnicas-de-vendas-e-atendimento-ao-cliente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O *Inbound Marketing*, ou marketing de atração, consiste em atrair o interesse dos consumidores de forma voluntária por meio da criação e compartilhamento de conteúdo relevante, útil e educativo. Em vez de interromper o público com propagandas tradicionais (*Outbound Marketing*), a empresa constrói um relacionamento oferecendo soluções para as dúvidas e necessidades do cliente.\n\nA alternativa C exemplifica essa estratégia ao propor a produção de vídeos instrutivos sobre manutenção e customização de bijuterias de prata. Esse conteúdo gera valor para o público-alvo, atraindo-o organicamente para os canais da marca.\n\n**Análise das alternativas incorretas:**\n* **A) Incorreta.** A contratação de consultores para otimização de processos e redução de custos é uma ação de gestão operacional e estratégia de preços, não de marketing de atração.\n* **B) Incorreta.** O treinamento de revendedores focado em persuasão é uma ação de capacitação de força de vendas (estratégia *push* ou de empurrão).\n* **D) Incorreta.** O desenvolvimento de novas ligas metálicas e sua divulgação em propagandas tradicionais configuram desenvolvimento de produto e publicidade convencional (*Outbound Marketing*).\n* **E) Incorreta.** A criação de uma rede de lojas próprias e a verticalização da comercialização referem-se a decisões de canais de distribuição e marketing de relacionamento, não se enquadrando no conceito de atração por conteúdo digital.",
+        "source_reference": null
+      },
+      "source_content_hash": "e173baf6252c97c82af7827b8193c7721abedb415ecdf8517b00611aa65b058c"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:064",
+      "source_id": "escriturario_agente_comercial:64",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Uma característica do atendimento bancário, que interfere decisivamente na percepção dos clientes, é a inseparabilidade – cuja importância se manifesta no fato de que o prestador de serviço é o serviço.\n\nSendo assim, para administrar corretamente essa característica, o agente comercial deve estar preparado para",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 64; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "assumir totalmente os fatos que ocorrem em sua agência.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "completar o estoque pleno dos serviços prestados.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "compreender seus próprios benefícios e anseios.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "orientar os clientes na escolha de produtos adequados.",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "tornar tangíveis os serviços ofertados aos clientes.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Técnicas de Vendas e Atendimento ao Cliente",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "862bf55f8a6be3d9f2851215b6df74349df0b698c1153e9eceafbeab84776a1e",
+        "original_numeric_id": 64,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "D",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnicas-de-vendas-e-atendimento-ao-cliente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A **inseparabilidade** é a característica dos serviços que determina que a sua produção e o seu consumo ocorrem de forma simultânea. Como o cliente participa ativamente do processo de entrega, a figura do prestador de serviço confunde-se com o próprio serviço prestado.\n\nPara administrar essa característica de forma eficiente, o agente comercial deve estar preparado para interagir diretamente com o cliente, oferecendo um atendimento consultivo e orientando-o na escolha dos produtos mais adequados (Alternativa D). Essa conduta assegura que a experiência de consumo, que ocorre em tempo real, seja positiva.\n\n**Análise das alternativas incorretas:**\n* **A) Incorreta.** Assumir a responsabilidade por eventos da agência é uma postura profissional, mas não se relaciona diretamente com a gestão da inseparabilidade entre produção e consumo.\n* **B) Incorreta.** Serviços não podem ser estocados devido à característica da **perecibilidade**.\n* **C) Incorreta.** O foco do atendimento deve estar voltado para a compreensão das necessidades e anseios do *cliente*, e não do próprio funcionário.\n* **E) Incorreta.** A tentativa de tornar os serviços mais concretos por meio de representações físicas visa mitigar a característica da **intangibilidade**, e não da inseparabilidade.",
+        "source_reference": null
+      },
+      "source_content_hash": "53974795fb36de5eb8e8a5b28efb057912e81eb8af52ada1535e54d0239f8de6"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:065",
+      "source_id": "escriturario_agente_comercial:65",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Frequentemente, os bancos realizam pesquisas de satisfação dos clientes com o objetivo de",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 65; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "acompanhar o passo a passo do cotidiano de suas equipes.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "aperfeiçoar o atendimento prestado por seus funcionários.",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "fornecer parâmetros éticos para suas ações sociais.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "fortalecer a vigilância sobre a equipe de atendimento.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "monitorar o trabalho que vem dos seus fornecedores.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Comportamento do Consumidor e Satisfação",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "cddf5163b4763907e72f28f748034974af59f3c92459d6a96fc63e458a993513",
+        "original_numeric_id": 65,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "satisfacao-retencao-e-fidelizacao-de-clientes",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "As pesquisas de satisfação de clientes são ferramentas de diagnóstico que visam mensurar a percepção do público em relação à qualidade dos serviços recebidos. O objetivo principal dessas pesquisas é identificar pontos de melhoria e desvios no padrão de qualidade para que a instituição possa implementar ações corretivas, como treinamentos e ajustes de processos, visando **aperfeiçoar o atendimento prestado por seus funcionários** (Alternativa B).\n\n**Análise das alternativas incorretas:**\n* **A) Incorreta.** O acompanhamento diário das atividades das equipes é realizado por meio de ferramentas de gestão interna e supervisão direta, não por pesquisas externas com clientes.\n* **C) Incorreta.** Parâmetros éticos e ações sociais são definidos por políticas de governança corporativa, códigos de conduta e diretrizes de responsabilidade socioambiental.\n* **D) Incorreta.** Utilizar pesquisas de satisfação para \"fortalecer a vigilância\" desvirtua o caráter pedagógico e de melhoria contínua da ferramenta, gerando um clima organizacional desfavorável.\n* **E) Incorreta.** O monitoramento de fornecedores é realizado por meio de indicadores de desempenho específicos (como *Service Level Agreements* - SLAs) e auditorias de suprimentos, e não por pesquisas de satisfação do cliente final.",
+        "source_reference": null
+      },
+      "source_content_hash": "120057c03390dc63d75a9e14e2c39a3925f7d481eafd2468c7f4745d35c782cf"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:066",
+      "source_id": "escriturario_agente_comercial:66",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Para aumentar o valor percebido pelo cliente, o agente comercial deve reduzir os custos da transação, incluindo aqueles que vão além dos fatores financeiros, como, por exemplo, o",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 66; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "desgaste emocional até a definição do negócio.",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "impacto da aquisição no orçamento familiar.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "montante em dinheiro investido ao longo do tempo.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "parcelamento do total investido, quando houver.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "preço dos produtos ofertados pelos concorrentes.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Técnicas de Vendas e Atendimento ao Cliente",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "5c8371810ce91aac020e73c5466d04ff51e52541a5742a16933c8077f766b94e",
+        "original_numeric_id": 66,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnicas-de-vendas-e-atendimento-ao-cliente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O valor percebido pelo cliente é determinado pela equação entre os benefícios recebidos e os custos totais incorridos para a aquisição de um produto ou serviço. Segundo a literatura de marketing (como Philip Kotler), o custo total para o cliente é composto por parcelas monetárias (financeiras) e não monetárias (não financeiras), que englobam o custo de tempo, o custo de energia física e os custos psíquicos.\n\nO **desgaste emocional** até a definição do negócio (Alternativa A) constitui um custo psíquico (não financeiro). Ao minimizar a ansiedade, a burocracia e a insegurança do cliente durante a negociação, o agente comercial reduz esse custo não financeiro, elevando o valor percebido da transação.\n\n**Análise das alternativas incorretas:**\n* **B) Incorreta.** O impacto no orçamento familiar refere-se diretamente ao desembolso de recursos, caracterizando um fator estritamente financeiro.\n* **C) Incorreta.** O montante em dinheiro investido é a definição direta do custo monetário (financeiro).\n* **D) Incorreta.** O parcelamento do valor investido é uma modalidade de financiamento, ligada diretamente às condições financeiras da transação.\n* **E) Incorreta.** O preço praticado pela concorrência é uma variável externa de mercado, e não um custo intrínseco à transação específica que o agente está realizando com o cliente.",
+        "source_reference": null
+      },
+      "source_content_hash": "2672b3152f970d366edb1cef918121afdf0188dd167fbcc66ddce29727629e8b"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:067",
+      "source_id": "escriturario_agente_comercial:67",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Uma instituição bancária criou três contas únicas que não existiam no mercado financeiro: Digital, para movimentação exclusiva pelos seus canais de conveniência, Universitária, para pessoas que estão cursando o Ensino Superior, e Agrícola, para produtores rurais, com concessão de crédito e benefícios exclusivos.\n\nEssa ação é denominada",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 67; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "estratégia de posicionamento",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "tecnografia",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "personalização em massa",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "hospitalidade",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "vantagem competitiva sustentável",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Técnicas de Vendas e Atendimento ao Cliente",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "d6890a7146e8d13eeb2ac01f494561e32650396343169daa51f8c78dfea0a43b",
+        "original_numeric_id": 67,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnicas-de-vendas-e-atendimento-ao-cliente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A criação de produtos ou serviços específicos direcionados a segmentos de mercado bem delimitados (como a conta Digital para usuários de canais de conveniência, a Universitária para estudantes de ensino superior e a Agrícola para produtores rurais) constitui uma **estratégia de posicionamento**. O posicionamento busca projetar a oferta da empresa de modo que ela ocupe um lugar distinto e valorizado na mente do público-alvo de cada segmento.\n\n**Análise das alternativas incorretas:**\n* **B) Incorreta.** Tecnografia é uma metodologia de segmentação baseada no comportamento e na atitude dos consumidores em relação à tecnologia, não correspondendo à criação de pacotes de serviços segmentados.\n* **C) Incorreta.** A personalização em massa envolve a customização individual de produtos ou serviços em larga escala para atender às especificações de cada cliente individualmente. No caso apresentado, foram criadas três categorias padronizadas de contas para grupos específicos.\n* **D) Incorreta.** Hospitalidade refere-se ao conjunto de práticas de acolhimento, cortesia e bem-estar oferecidos ao cliente durante a prestação do serviço, não se confundindo com a estruturação de portfólio de produtos por segmento.\n* **E) Incorreta.** Vantagem competitiva sustentável é o resultado de longo prazo obtido por uma organização que possui recursos e capacidades difíceis de serem imitados ou superados pela concorrência. A ação descrita é o meio tático de posicionamento, e não a vantagem em si.",
+        "source_reference": null
+      },
+      "source_content_hash": "cb1e1bf75e64715ea148bdce009a89efacc79d367a4f866464ca498e2f9cd6c3"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:068",
+      "source_id": "escriturario_agente_comercial:68",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Na sua prática publicitária para venda de um produto/serviço, uma instituição bancária vem adotando gatilhos mentais.\n\nEla acionou o gatilho da escassez e da urgência quando ofereceu um(a)",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 68; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "plano de previdência de acordo com a renda do cliente que foi contratado por cinco de seus colegas.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "recomendação de um especialista em finanças pessoais que já trabalhou com o pessoal da empresa do cliente para a compra de um seguro de vida.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "e-book gratuito e um podcast sobre investimentos para os clientes que se subscrevem em seu canal/plataforma.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "exposição de cases, entrevistas com especialistas do banco com conteúdos informativos para conhecer a sua marca.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "compra de um número limitado de cotas de um fundo agrícola, disponível para o cliente apenas nas 48 horas subsequentes ao oferecimento.",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Técnicas de Vendas e Atendimento ao Cliente",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "b8b30ad2c5d11455ffb4b79f201ef2a7b214ae266a35545d1aeb2ba8f00220ff",
+        "original_numeric_id": 68,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnicas-de-vendas-e-atendimento-ao-cliente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **E**.\n\nEm técnicas de vendas, negociação e psicologia do consumo, os gatilhos mentais são estímulos que influenciam as decisões de compra:\n1. **Gatilho da Escassez:** desperta o receio de perder a oportunidade devido ao número limitado de vagas, unidades ou condições disponíveis (*\"últimas unidades disponíveis\"*).\n2. **Gatilho da Urgência:** impõe um limite temporal intransponível para a tomada de decisão (*\"oferta válida somente até o final do expediente de hoje\"*).\n\nA alternativa E apresenta exatamente a condição combinada de limitação de tempo e quantidade que aciona simultaneamente ambos os gatilhos.",
+        "source_reference": null
+      },
+      "source_content_hash": "9f352965678cb33779feb86ef604dbb012685b8700e9c7f487850a08d33ba428"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:069",
+      "source_id": "escriturario_agente_comercial:69",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Na venda de um cartão de crédito, um corretor ficou preocupado em ajudar o cliente a identificar os riscos da decisão de compra. Para tanto, enfatizou três aspectos para o cliente: este não perderia dinheiro se fizesse essa compra; esse cartão seria aceito sempre e onde o cliente desejasse realizar uma compra; os colegas de trabalho do cliente aprovariam a escolha dessa bandeira renomada.\n\nEsses três argumentos utilizados pelo corretor para reduzir as inseguranças do cliente podem minimizar três tipos de riscos percebidos na pré-compra:",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 69; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "físico, sensorial, temporal",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "psicológico, físico, biológico",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "financeiro, funcional, social",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "ergonômico, mecânico, sensorial",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "estratégico, operacional, de conformidade",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Técnicas de Vendas e Atendimento ao Cliente",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "42028fc1de2c597c7667466313d8745f1c5df1a26dc819dcbb83f65faf732a11",
+        "original_numeric_id": 69,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnicas-de-vendas-e-atendimento-ao-cliente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A teoria do comportamento do consumidor identifica diferentes tipos de riscos percebidos que geram insegurança no momento da pré-compra. Para mitigar essas barreiras, o vendedor deve alinhar seus argumentos aos riscos específicos identificados:\n\n1. **Risco Financeiro:** Mitigado pelo argumento de que o cliente \"não perderia dinheiro se fizesse essa compra\", garantindo a segurança patrimonial da transação.\n2. **Risco Funcional (ou de Desempenho):** Mitigado pela garantia de que o \"cartão seria aceito sempre e onde o cliente desejasse\", assegurando que o produto cumprirá perfeitamente a sua função prática.\n3. **Risco Social:** Mitigado pela afirmação de que \"os colegas de trabalho do cliente aprovariam a escolha\", reduzindo o receio de desaprovação ou julgamento negativo por parte do grupo de referência do consumidor.\n\nPortanto, a sequência correta é **financeiro, funcional, social** (Alternativa C).\n\n**Análise das alternativas incorretas:**\nAs demais alternativas trazem classificações que não correspondem aos argumentos do enunciado:\n* O risco **físico** refere-se a ameaças à integridade física ou à saúde do usuário (irrelevante para o uso de um cartão de crédito).\n* O risco **temporal** refere-se à perda de tempo caso o produto falhe.\n* Riscos **ergonômicos, mecânicos, biológicos ou de conformidade** pertencem a outras áreas de estudo (como segurança do trabalho, engenharia ou *compliance*) e não descrevem os riscos de consumo abordados na situação.",
+        "source_reference": null
+      },
+      "source_content_hash": "8470c72d81020459f6d7f1a92347b10a4b17fd22a3ffdb6658665969606b5f01"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:070",
+      "source_id": "escriturario_agente_comercial:70",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O diretor operacional de um banco destacou que, para tomar decisões estratégicas inteligentes, é preciso entender como o esforço de vendas está alinhado às variáveis do ambiente interno do sistema de marketing organizacional, tais como as seguintes:",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 70; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "demografia e fatores legais e políticos",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "estrutura de preços e sistema de distribuição",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "fatores socioculturais e planejamento do produto",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "competição e ambiente físico",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "condições econômicas e tecnologia",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Técnicas de Vendas e Atendimento ao Cliente",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Vendas e Negociação",
+        "source_content_hash": "6bd83d47bf515c658ab8203ead76aa6e8ab627585dcdf1b3c39059448534e5e9",
+        "original_numeric_id": 70,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnicas-de-vendas-e-atendimento-ao-cliente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No planejamento estratégico de marketing, as variáveis que influenciam a organização são divididas em:\n* **Macroambiente (Ambiente Externo):** Composto por forças incontroláveis que afetam todas as empresas do mercado (fatores demográficos, econômicos, socioculturais, tecnológicos, políticos/legais e naturais).\n* **Ambiente Interno (Microambiente Controlável):** Composto por elementos sobre os quais a empresa possui controle direto, representados principalmente pelo composto de marketing (os 4 Ps: Produto, Preço, Praça/Distribuição e Promoção).\n\nA **estrutura de preços** (Preço) e o **sistema de distribuição** (Praça) são variáveis controláveis que pertencem ao ambiente interno do sistema de marketing da organização (Alternativa B).\n\n**Análise das alternativas incorretas:**\n* **A) Incorreta.** Demografia e fatores legais e políticos são forças externas e incontroláveis do macroambiente.\n* **C) Incorreta.** Fatores socioculturais pertencem ao macroambiente externo.\n* **D) Incorreta.** A competição (concorrentes) faz parte do microambiente externo, e o ambiente físico (recursos naturais) pertence ao macroambiente.\n* **E) Incorreta.** Condições econômicas e avanços tecnológicos são variáveis externas típicas do macroambiente.",
+        "source_reference": null
+      },
+      "source_content_hash": "bc183b4115ee1a1aa85567f970d0d313d49df9db8e08dea4279685ee68d6c588"
+    }
+  ]
+}

@@ -1,0 +1,450 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-prova_conhec_basicos_tec_federal_control_exter_tec_adm-portugues-7823bc2fc43c-ec6d8f6d556e",
+  "source": {
+    "file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "7823bc2fc43c5e136ac60da722e3e299280c7835d6d476966acf08491d0bfcf7",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "cb0421eefe790fc8619534a2a1f0aa7b54af0ff8abce22779b8e91d6cb714a78",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ec6d8f6d556ee09f3cf5bcd4299d71b5d8dd346a438ded68d1d29501395fe3e9",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:005",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:5",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 1 a 10\n\nNas sociedades antigas, tanto as leis quanto os códigos eram considerados expressões da vontade divina, revelada mediante a imposição de legisladores que dispunham de privilégios dinásticos e de uma legitimidade garantida pela casa sacerdotal. As leis eram objeto de respeito e veneração, e, por serem asseguradas por sanções sobrenaturais, dificilmente o homem primitivo questionava sua validez e sua aplicabilidade. Escreve H. Summer Maine que algumas experiências societárias, ao permitirem o declínio do poder real e o enfraquecimento de monarcas hereditários, acabaram por favorecer a emergência de aristocracias, depositárias da produção legislativa, com capacidade de julgar e de resolver conflitos. Aquele momento inicial de um direito sagrado e ritualizado, expressão das divindades, desenvolveu-se na direção de práticas normativas consuetudinárias. À época do direito consuetudinário, largo período em que não se conheceu a invenção da escrita, uma casta, ou aristocracia, investida do poder judicial, era o único meio que poderia conservar, com algum rigor, os costumes da raça ou da tribo. O costume aparece como expressão da legalidade, de forma lenta e espontânea, instrumentalizada pela repetição de atos, usos e práticas.\nA invenção e a difusão da técnica da escritura, somadas à compilação de costumes tradicionais, proporcionaram os primeiros códigos da Antiguidade, como o de Hamurábi, o de Manu, o de Sólon e a Lei das XII Tábuas. Constata-se, destarte, que os textos legislados e escritos eram melhores depositários do direito e meios mais eficazes para conservá-lo que a memória de certo número de pessoas, por mais força que tivessem em função de seu constante exercício. Esse direito antigo, tanto no Oriente quanto no Ocidente, não diferenciava, na essência, prescrições civis, religiosas e morais. Somente em tempos mais avançados da civilização é que se começou a distinguir o direito da moral e a religião do direito. Certamente, de todos os povos antigos, foi com os romanos que o direito avançou para uma autonomia diante da religião e da moral.\n\nAntônio C. Walker. O direito nas sociedades primitivas. In: Antônio C. Walker (Org.) Fundamentos de história do direito. Belo Horizonte: Del Rey, 2006, p. 19-20 (com adaptações).\n\nCom relação a aspectos linguísticos do texto, julgue os próximos itens.\n\nSeriam mantidos o sentido e a correção do texto caso o termo “instrumentalizada” (l.21) fosse empregado no masculino: instrumentalizado.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 5; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Análise Sintática e Concordância",
+        "source_content_hash": "f9e8410466affe73ee2856f3da21a4579904f1a1fd9c7ed9d22601acaa97ca34",
+        "original_numeric_id": 5,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "official_item_number": 5
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado** porque a alteração proposta modifica o sentido original do trecho.\n\nNo texto, a forma feminina \"instrumentalizada\" funciona como adjetivo (ou introduz uma oração reduzida de particípio) que se refere e concorda em gênero e número com os substantivos femininos anteriores \"expressão\" ou \"legalidade\" (\"expressão da legalidade [...] instrumentalizada\").\n\nCaso o termo fosse flexionado no masculino (\"instrumentalizado\"), a concordância sintática seria deslocada para o substantivo masculino \"costume\" (\"O costume aparece [...] instrumentalizado\"). Embora a frase continuasse gramaticalmente correta, haveria uma alteração semântica importante: no original, a *expressão da legalidade* é que se instrumentaliza pela repetição de atos; com a alteração, o próprio *costume* passaria a ser o elemento instrumentalizado. Portanto, o sentido original não seria mantido.",
+        "source_reference": null
+      },
+      "source_content_hash": "c89ddbabec7ef11823837dbb5a1e9cadd5059073cda149ba39e91a787b3b6cbf"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:006",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:6",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 1 a 10\n\nNas sociedades antigas, tanto as leis quanto os códigos eram considerados expressões da vontade divina, revelada mediante a imposição de legisladores que dispunham de privilégios dinásticos e de uma legitimidade garantida pela casa sacerdotal. As leis eram objeto de respeito e veneração, e, por serem asseguradas por sanções sobrenaturais, dificilmente o homem primitivo questionava sua validez e sua aplicabilidade. Escreve H. Summer Maine que algumas experiências societárias, ao permitirem o declínio do poder real e o enfraquecimento de monarcas hereditários, acabaram por favorecer a emergência de aristocracias, depositárias da produção legislativa, com capacidade de julgar e de resolver conflitos. Aquele momento inicial de um direito sagrado e ritualizado, expressão das divindades, desenvolveu-se na direção de práticas normativas consuetudinárias. À época do direito consuetudinário, largo período em que não se conheceu a invenção da escrita, uma casta, ou aristocracia, investida do poder judicial, era o único meio que poderia conservar, com algum rigor, os costumes da raça ou da tribo. O costume aparece como expressão da legalidade, de forma lenta e espontânea, instrumentalizada pela repetição de atos, usos e práticas.\nA invenção e a difusão da técnica da escritura, somadas à compilação de costumes tradicionais, proporcionaram os primeiros códigos da Antiguidade, como o de Hamurábi, o de Manu, o de Sólon e a Lei das XII Tábuas. Constata-se, destarte, que os textos legislados e escritos eram melhores depositários do direito e meios mais eficazes para conservá-lo que a memória de certo número de pessoas, por mais força que tivessem em função de seu constante exercício. Esse direito antigo, tanto no Oriente quanto no Ocidente, não diferenciava, na essência, prescrições civis, religiosas e morais. Somente em tempos mais avançados da civilização é que se começou a distinguir o direito da moral e a religião do direito. Certamente, de todos os povos antigos, foi com os romanos que o direito avançou para uma autonomia diante da religião e da moral.\n\nAntônio C. Walker. O direito nas sociedades primitivas. In: Antônio C. Walker (Org.) Fundamentos de história do direito. Belo Horizonte: Del Rey, 2006, p. 19-20 (com adaptações).\n\nCom relação a aspectos linguísticos do texto, julgue os próximos itens.\n\nO emprego do sinal indicativo de crase no trecho “somadas à compilação de costumes tradicionais” (l.24) é facultativo, razão por que sua supressão não acarretaria prejuízo para o sentido nem para a correção do período.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 6; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Crase",
+        "source_content_hash": "21a18035c93da1362623ea4adee99f285114d7734243caccadbbfa973d4f4e91",
+        "original_numeric_id": 6,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "official_item_number": 6
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado** porque o emprego do sinal indicativo de crase no trecho analisado é **obrigatório**, e não facultativo.\n\nA ocorrência da crase é determinada pela fusão de dois elementos:\n1. A preposição **a**, exigida pela regência do adjetivo/particípio \"somadas\" (quem ou o que é somado, é somado **a** alguma coisa);\n2. O artigo definido feminino **a**, que determina o substantivo feminino \"compilação\" (**a** compilação de costumes).\n\nA contração desses dois elementos resulta em **à** (\"somadas à compilação\"). A supressão do acento grave acarretaria erro gramatical por desrespeito às regras de regência nominal. Os casos de crase facultativa na língua portuguesa restringem-se a situações específicas (antes de nomes próprios femininos, antes de pronomes possessivos femininos singulares e após a preposição \"até\"), nenhuma das quais se aplica ao contexto da questão.",
+        "source_reference": null
+      },
+      "source_content_hash": "c190ee367ce8d33b4496e5ec5bb270f16fcb81e7e5bd0448de8decfae1b9036e"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:008",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:8",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 1 a 10\n\nNas sociedades antigas, tanto as leis quanto os códigos eram considerados expressões da vontade divina, revelada mediante a imposição de legisladores que dispunham de privilégios dinásticos e de uma legitimidade garantida pela casa sacerdotal. As leis eram objeto de respeito e veneração, e, por serem asseguradas por sanções sobrenaturais, dificilmente o homem primitivo questionava sua validez e sua aplicabilidade. Escreve H. Summer Maine que algumas experiências societárias, ao permitirem o declínio do poder real e o enfraquecimento de monarcas hereditários, acabaram por favorecer a emergência de aristocracias, depositárias da produção legislativa, com capacidade de julgar e de resolver conflitos. Aquele momento inicial de um direito sagrado e ritualizado, expressão das divindades, desenvolveu-se na direção de práticas normativas consuetudinárias. À época do direito consuetudinário, largo período em que não se conheceu a invenção da escrita, uma casta, ou aristocracia, investida do poder judicial, era o único meio que poderia conservar, com algum rigor, os costumes da raça ou da tribo. O costume aparece como expressão da legalidade, de forma lenta e espontânea, instrumentalizada pela repetição de atos, usos e práticas.\nA invenção e a difusão da técnica da escritura, somadas à compilação de costumes tradicionais, proporcionaram os primeiros códigos da Antiguidade, como o de Hamurábi, o de Manu, o de Sólon e a Lei das XII Tábuas. Constata-se, destarte, que os textos legislados e escritos eram melhores depositários do direito e meios mais eficazes para conservá-lo que a memória de certo número de pessoas, por mais força que tieldessem em função de seu constante exercício. Esse direito antigo, tanto no Oriente quanto no Ocidente, não diferenciava, na essência, prescrições civis, religiosas e morais. Somente em tempos mais avançados da civilização é que se começou a distinguir o direito da moral e a religião do direito. Certamente, de todos os povos antigos, foi com os romanos que o direito avançou para uma autonomia diante da religião e da moral.\n\nAntônio C. Walker. O direito nas sociedades primitivas. In: Antônio C. Walker (Org.) Fundamentos de história do direito. Belo Horizonte: Del Rey, 2006, p. 19-20 (com adaptações).\n\nCom relação a aspectos linguísticos do texto, julgue os próximos itens.\n\nTanto em “desenvolveu-se” (l.14) quanto em “Constata-se” (l.27), a partícula “se” desempenha a mesma função sintática.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 8; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Funções do Se",
+        "source_content_hash": "ef8fc619f0af16a344083f2cc1f87c38bca210e9df46bad0aab7e24bbd0b8915",
+        "original_numeric_id": 8,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "official_item_number": 8
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado** porque as ocorrências da partícula \"se\" nos trechos indicados desempenham funções sintáticas e classificações distintas:\n\n1. **\"desenvolveu-se\" (l. 14):** O verbo \"desenvolver-se\", neste contexto de mudança de estado ou processo, é classificado como pronominal. A partícula \"se\" atua como **parte integrante do verbo (PIV)**, não exercendo função sintática autônoma e servindo apenas para constituir a forma verbal.\n2. **\"Constata-se\" (l. 27):** O verbo \"constatar\" é transitivo direto (VTD) e rege a oração subordinada substantiva objetiva direta \"que os textos legislados e escritos eram melhores depositários...\". Com a presença do \"se\", essa oração passa a funcionar como sujeito paciente (oração subordinada substantiva subjetiva) em uma estrutura de voz passiva sintética. Portanto, o \"se\" atua como **partícula apassivadora (PA)** (equivalente a: *Constata-se isso* = *Isso é constatado*).\n\nComo as funções são distintas (parte integrante do verbo versus partícula apassivadora), a afirmação de que desempenham a mesma função sintática é incorreta.",
+        "source_reference": null
+      },
+      "source_content_hash": "39a2fda575bd22f7babe1412f9ffc4f4dd417472cea7f96255f315fd0c50ce18"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:010",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:10",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 1 a 10\n\nNas sociedades antigas, tanto as leis quanto os códigos eram considerados expressões da vontade divina, revelada mediante a imposição de legisladores que dispunham de privilégios dinásticos e de uma legitimidade garantida pela casa sacerdotal. As leis eram objeto de respeito e veneração, e, por serem asseguradas por sanções sobrenaturais, dificilmente o homem primitivo questionava sua validez e sua aplicabilidade. Escreve H. Summer Maine que algumas experiências societárias, ao permitirem o declínio do poder real e o enfraquecimento de monarcas hereditários, acabaram por favorecer a emergência de aristocracias, depositárias da produção legislativa, com capacidade de julgar e de resolver conflitos. Aquele momento inicial de um direito sagrado e ritualizado, expressão das divindades, desenvolveu-se na direção de práticas normativas consuetudinárias. À época do direito consuetudinário, largo período em que não se conheceu a invenção da escrita, uma casta, ou aristocracia, investida do poder judicial, era o único meio que poderia conservar, com algum rigor, os costumes da raça ou da tribo. O costume aparece como expressão da legalidade, de forma lenta e espontânea, instrumentalizada pela repetição de atos, usos e práticas.\nA invenção e a difusão da técnica da escritura, somadas à compilação de costumes tradicionais, proporcionaram os primeiros códigos da Antiguidade, como o de Hamurábi, o de Manu, o de Sólon e a Lei das XII Tábuas. Constata-se, destarte, que os textos legislados e escritos eram melhores depositários do direito e meios mais eficazes para conservá-lo que a memória de certo número de pessoas, por mais força que tivessem em função de seu constante exercício. Esse direito antigo, tanto no Oriente quanto no Ocidente, não diferenciava, na essência, prescrições civis, religiosas e morais. Somente em tempos mais avançados da civilização é que se começou a distinguir o direito da moral e a religião do direito. Certamente, de todos os povos antigos, foi com os romanos que o direito avançou para uma autonomia diante da religião e da moral.\n\nAntônio C. Walker. O direito nas sociedades primitivas. In: Antônio C. Walker (Org.) Fundamentos de história do direito. Belo Horizonte: Del Rey, 2006, p. 19-20 (com adaptações).\n\nCom relação a aspectos linguísticos do texto, julgue os próximos itens.\n\nSem prejuízo do sentido do texto, o termo “destarte” (l.27) poderia ser substituído por contudo ou todavia.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 10; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conjunções e Conectivos",
+        "source_content_hash": "becd85f8983d998d7a549c29b5705d1c727fcdc0d9ba47b5040ce8b1e37afafc",
+        "original_numeric_id": 10,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "official_item_number": 10
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado** porque os conectivos mencionados pertencem a classes semânticas distintas e estabelecem relações lógicas opostas no período.\n\n* **Destarte** é uma conjunção/advérbio de valor **conclusivo**, equivalente a \"assim\", \"desse modo\", \"portanto\" ou \"desta forma\". No texto, introduz a conclusão lógica decorrente das premissas apresentadas no parágrafo anterior.\n* **Contudo** e **todavia** são conjunções **adversativas**, utilizadas para introduzir uma ideia de oposição, contraste ou quebra de expectativa (equivalentes a \"mas\", \"porém\", \"entretanto\").\n\nA substituição de um conectivo conclusivo por um adversativo alteraria completamente a coerência e a relação lógico-semântica do texto, gerando prejuízo evidente ao sentido original.",
+        "source_reference": null
+      },
+      "source_content_hash": "7c55dee68fee74d3b42a0fa9809f77e718208062fd55b393a6ef2cd95290afa5"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:017",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:17",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 11 a 22\n\nA dimensão “ético-filosófica” do liberalismo denota afirmação de valores e direitos básicos atribuíveis à natureza moral e racional do ser humano. Suas diretrizes se assentam nos princípios da liberdade pessoal, do individualismo, da tolerância, da dignidade e da crença na vida. Já o aspecto “econômico” refere-se, sobretudo, às condições que abrangem a propriedade privada, a economia de mercado, a ausência ou minimização do controle estatal, a livre empresa e a iniciativa privada. Ainda como parte integrante desse referencial, encontram-se os direitos econômicos, representados pelo direito de propriedade, o direito de herança, o direito de acumular riqueza e capital. Por último, a perspectiva “político-jurídica” do liberalismo está calcada em princípios básicos como: consentimento individual, representação política, divisão dos poderes e descentralização administrativa, entre outros.\nTendo presente essas asserções genéricas, podemos compreender melhor as ambiguidades e os limites do liberalismo brasileiro, porquanto, desde os primórdios, ele teve de conviver com uma estrutura político-administrativa patrimonialista e com uma dominação econômica escravista das elites agrárias. Emília Viotti da Costa defende que não se deve realçar em demasia a importância das ideias liberais europeias nas convulsões sociais ocorridas no Brasil (Inconfidência Mineira, Revolução Pernambucana etc.) desde fins do século XVIII, pois tais movimentos não chegaram a ter grande alcance ideológico. Para a autora, a nova doutrina era de conhecimento limitado entre determinados segmentos revolucionários. O que importa ter em vista é essa distinção entre o liberalismo europeu, como ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza, e o liberalismo brasileiro, uma versão mais restrita do liberalismo europeu.\n\nAntonio Wolkmer. História do direito no Brasil. Rio de Janeiro: Editora Forense, 2003, p. 63-4 (com adaptações).\n\nA respeito das ideias e de aspectos linguísticos do texto, julgue os itens que se seguem.\n\nA ideia introduzida pela conjunção “porquanto” (l.19) poderia ser expressa também por conquanto.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 17; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conjunções e Conectivos",
+        "source_content_hash": "cdd78e7810a6834f47ea8ddd8a43a988d5a9fc9d1466c9a32e4df367e14b8ad6",
+        "original_numeric_id": 17,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "official_item_number": 17
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**. As conjunções \"porquanto\" e \"conquanto\" possuem valores semânticos completamente distintos e não são intercambiáveis:\n\n*   **Porquanto:** Conjunção coordenativa explicativa ou subordinativa causal (equivale a *pois*, *porque*, *já que*).\n*   **Conquanto:** Conjunção subordinativa concessiva (equivale a *embora*, *ainda que*, *posto que*).\n\nA substituição de uma pela outra alteraria o sentido de causa/explicação para concessão, prejudicando a coerência do período.",
+        "source_reference": null
+      },
+      "source_content_hash": "ab29ba97585a45abc0e1d8670e189cfecbdcfe8fae447519e10550231acd95aa"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:018",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:18",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 11 a 22\n\nA dimensão “ético-filosófica” do liberalismo denota afirmação de valores e direitos básicos atribuíveis à natureza moral e racional do ser humano. Suas diretrizes se assentam nos princípios da liberdade pessoal, do individualismo, da tolerância, da dignidade e da crença na vida. Já o aspecto “econômico” refere-se, sobretudo, às condições que abrangem a propriedade privada, a economia de mercado, a ausência ou minimização do controle estatal, a livre empresa e a iniciativa privada. Ainda como parte integrante desse referencial, encontram-se os direitos econômicos, representados pelo direito de propriedade, o direito de herança, o direito de acumular riqueza e capital. Por último, a perspectiva “político-jurídica” do liberalismo está calcada em princípios básicos como: consentimento individual, representação política, divisão dos poderes e descentralização administrativa, entre outros.\nTendo presente essas asserções genéricas, podemos compreender melhor as ambiguidades e os limites do liberalismo brasileiro, porquanto, desde os primórdios, ele teve de conviver com uma estrutura político-administrativa patrimonialista e com uma dominação econômica escravista das elites agrárias. Emília Viotti da Costa defende que não se deve realçar em demasia a importância das ideias liberais europeias nas convulsões sociais ocorridas no Brasil (Inconfidência Mineira, Revolução Pernambucana etc.) desde fins do século XVIII, pois tais movimentos não chegaram a ter grande alcance ideológico. Para a autora, a nova doutrina era de conhecimento limitado entre determinados segmentos revolucionários. O que importa ter em vista é essa distinção entre o liberalismo europeu, como ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza, e o liberalismo brasileiro, uma versão mais restrita do liberalismo europeu.\n\nAntonio Wolkmer. História do direito no Brasil. Rio de Janeiro: Editora Forense, 2003, p. 63-4 (com adaptações).\n\nA respeito das ideias e de aspectos linguísticos do texto, julgue os itens que se seguem.\n\nNo texto, o vocábulo “calcada” (l.13) está empregado com o sentido de fundamentada, apoiada.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 18; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Significação das Palavras",
+        "source_content_hash": "811276cebddc91be13d19fa387d3d189e041cf54bff4c1727930baf5a5865b49",
+        "original_numeric_id": 18,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "official_item_number": 18
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**. No trecho \"a perspectiva 'político-jurídica' do liberalismo está calcada em princípios básicos\", o particípio \"calcada\" (derivado do verbo calcar) é empregado em sentido figurado.\n\nNesse contexto, significa que a referida perspectiva está assentada, baseada, fundamentada ou apoiada sobre tais princípios. Portanto, a substituição proposta preserva perfeitamente a semântica original do texto.",
+        "source_reference": null
+      },
+      "source_content_hash": "0a27450e9f02afea0768205d7231f36e128d0e88aeff34b19553bfbc63363082"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:019",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:19",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 11 a 22\n\nA dimensão “ético-filosófica” do liberalismo denota afirmação de valores e direitos básicos atribuíveis à natureza moral e racional do ser humano. Suas diretrizes se assentam nos princípios da liberdade pessoal, do individualismo, da tolerância, da dignidade e da crença na vida. Já o aspecto “econômico” refere-se, sobretudo, às condições que abrangem a propriedade privada, a economia de mercado, a ausência ou minimização do controle estatal, a livre empresa e a iniciativa privada. Ainda como parte integrante desse referencial, encontram-se os direitos econômicos, representados pelo direito de propriedade, o direito de herança, o direito de acumular riqueza e capital. Por último, a perspectiva “político-jurídica” do liberalismo está calcada em princípios básicos como: consentimento individual, representação política, divisão dos poderes e descentralização administrativa, entre outros.\nTendo presente essas asserções genéricas, podemos compreender melhor as ambiguidades e os limites do liberalismo brasileiro, porquanto, desde os primórdios, ele teve de conviver com uma estrutura político-administrativa patrimonialista e com uma dominação econômica escravista das elites agrárias. Emília Viotti da Costa defende que não se deve realçar em demasia a importância das ideias liberais europeias nas convulsões sociais ocorridas no Brasil (Inconfidência Mineira, Revolução Pernambucana etc.) desde fins do século XVIII, pois tais movimentos não chegaram a ter grande alcance ideológico. Para a autora, a nova doutrina era de conhecimento limitado entre determinados segmentos revolucionários. O que importa ter em vista é essa distinção entre o liberalismo europeu, como ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza, e o liberalismo brasileiro, uma versão mais restrita do liberalismo europeu.\n\nAntonio Wolkmer. História do direito no Brasil. Rio de Janeiro: Editora Forense, 2003, p. 63-4 (com adaptações).\n\nA respeito das ideias e de aspectos linguísticos do texto, julgue os itens que se seguem.\n\nSem prejuízo para a correção gramatical do texto, a forma verbal “encontram”, em “encontram-se os direitos econômicos” (l.10), poderia ser flexionada no singular: encontra-se os direitos econômicos.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 19; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Concordância Verbal",
+        "source_content_hash": "1cfe4ebd141e8cc7fe73837c6a22004f6ff6fcf87d3b413d6d72b0de6b8d12d4",
+        "original_numeric_id": 19,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "official_item_number": 19
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**. Na oração \"encontram-se os direitos econômicos\", o pronome \"se\" funciona como partícula apassivadora (equivalendo a *os direitos econômicos são encontrados*).\n\nNessa estrutura de voz passiva sintética, o termo \"os direitos econômicos\" é o sujeito paciente da oração. Como o sujeito está no plural, a regra geral de concordância verbal exige que o verbo flexione obrigatoriamente no plural (\"encontram-se\"). A alteração para o singular (\"encontra-se\") geraria um erro gramatical grave.",
+        "source_reference": null
+      },
+      "source_content_hash": "83d12fad6d3984c586a9893d1558f6fb0e06ff708f53862a8d0847acac21927a"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:020",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:20",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 11 a 22\n\nA dimensão “ético-filosófica” do liberalismo denota afirmação de valores e direitos básicos atribuíveis à natureza moral e racional do ser humano. Suas diretrizes se assentam nos princípios da liberdade pessoal, do individualismo, da tolerância, da dignidade e da crença na vida. Já o aspecto “econômico” refere-se, sobretudo, às condições que abrangem a propriedade privada, a economia de mercado, a ausência ou minimização do controle estatal, a livre empresa e a iniciativa privada. Ainda como parte integrante desse referencial, encontram-se os direitos econômicos, representados pelo direito de propriedade, o direito de herança, o direito de acumular riqueza e capital. Por último, a perspectiva “político-jurídica” do liberalismo está calcada em princípios básicos como: consentimento individual, representação política, divisão dos poderes e descentralização administrativa, entre outros.\nTendo presente essas asserções genéricas, podemos compreender melhor as ambiguidades e os limites do liberalismo brasileiro, porquanto, desde os primórdios, ele teve de conviver com uma estrutura político-administrativa patrimonialista e com uma dominação econômica escravista das elites agrárias. Emília Viotti da Costa defende que não se deve realçar em demasia a importância das ideias liberais europeias nas convulsões sociais ocorridas no Brasil (Inconfidência Mineira, Revolução Pernambucana etc.) desde fins do século XVIII, pois tais movimentos não chegaram a ter grande alcance ideológico. Para a autora, a nova doutrina era de conhecimento limitado entre determinados segmentos revolucionários. O que importa ter em vista é essa distinção entre o liberalismo europeu, como ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza, e o liberalismo brasileiro, uma versão mais restrita do liberalismo europeu.\n\nAntonio Wolkmer. História do direito no Brasil. Rio de Janeiro: Editora Forense, 2003, p. 63-4 (com adaptações).\n\nJulgue os itens que se seguem, referentes aos sentidos e a aspectos gramaticais do texto.\n\nA forma verbal “denota” (l.1) poderia ser corretamente substituída, no texto, pelo seu sinônimo manifesta.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 20; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Significação das Palavras",
+        "source_content_hash": "b732e2d32a040e2e909f64b942f67508eba9da740c3216d4952b2189bb3a8ee3",
+        "original_numeric_id": 20,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "official_item_number": 20
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**. O verbo \"denotar\" significa indicar por meio de indícios, significar, revelar ou manifestar.\n\nNo contexto da linha 1 (\"A dimensão 'ético-filosófica' do liberalismo denota afirmação de valores...\"), a substituição por \"manifesta\" mantém a correção gramatical e a coerência semântica, expressando adequadamente a ideia de que a dimensão ético-filosófica exterioriza ou revela a afirmação de tais valores.",
+        "source_reference": null
+      },
+      "source_content_hash": "17ef33953bb1e6e80cda4c461fb76d48fec1d93e513880416a17dce825dd54bc"
+    }
+  ]
+}

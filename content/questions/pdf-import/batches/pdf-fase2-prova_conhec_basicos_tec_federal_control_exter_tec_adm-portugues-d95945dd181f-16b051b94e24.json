@@ -1,0 +1,587 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-prova_conhec_basicos_tec_federal_control_exter_tec_adm-portugues-d95945dd181f-16b051b94e24",
+  "source": {
+    "file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "d95945dd181f1eb45ac1925bc608c39c59502ec921ff6088fd7fa8ea452ebe47",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "cb0421eefe790fc8619534a2a1f0aa7b54af0ff8abce22779b8e91d6cb714a78",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "16b051b94e247d9d688d4dafbec676fe9e891c46429dc49877600c96896ec36f",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:001",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:1",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 1 a 10\n\nNas sociedades antigas, tanto as leis quanto os códigos eram considerados expressões da vontade divina, revelada mediante a imposição de legisladores que dispunham de privilégios dinásticos e de uma legitimidade garantida pela casa sacerdotal. As leis eram objeto de respeito e veneração, e, por serem asseguradas por sanções sobrenaturais, dificilmente o homem primitivo questionava sua validez e sua aplicabilidade. Escreve H. Summer Maine que algumas experiências societárias, ao permitirem o declínio do poder real e o enfraquecimento de monarcas hereditários, acabaram por favorecer a emergência de aristocracias, depositárias da produção legislativa, com capacidade de julgar e de resolver conflitos. Aquele momento inicial de um direito sagrado e ritualizado, expressão das divindades, desenvolveu-se na direção de práticas normativas consuetudinárias. À época do direito consuetudinário, largo período em que não se conheceu a invenção da escrita, uma casta, ou aristocracia, investida do poder judicial, era o único meio que poderia conservar, com algum rigor, os costumes da raça ou da tribo. O costume aparece como expressão da legalidade, de forma lenta e espontânea, instrumentalizada pela repetição de atos, usos e práticas.\nA invenção e a difusão da técnica da escritura, somadas à compilação de costumes tradicionais, proporcionaram os primeiros códigos da Antiguidade, como o de Hamurábi, o de Manu, o de Sólon e a Lei das XII Tábuas. Constata-se, destarte, que os textos legislados e escritos eram melhores depositários do direito e meios mais eficazes para conservá-lo que a memória de certo número de pessoas, por mais força que tivessem em função de seu constante exercício. Esse direito antigo, tanto no Oriente quanto no Ocidente, não diferenciava, na essência, prescrições civis, religiosas e morais. Somente em tempos mais avançados da civilização é que se começou a distinguir o direito da moral e a religião do direito. Certamente, de todos os povos antigos, foi com os romanos que o direito avançou para uma autonomia diante da religião e da moral.\n\nAntônio C. Walker. O direito nas sociedades primitivas. In: Antônio C. Walker (Org.) Fundamentos de história do direito. Belo Horizonte: Del Rey, 2006, p. 19-20 (com adaptações).\n\nConforme as ideias apresentadas no texto,\n\na legislação escrita era mais confiável que a legislação instrumentalizada pela repetição de usos.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 1; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Compreensão e Interpretação de Textos",
+        "source_content_hash": "5d478c8179a5c10bd3fe49476483bc309d77f9cb7c50ec84233c7ed64fe8a901",
+        "original_numeric_id": 1,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **correto**.\n\nA afirmação reflete diretamente o trecho do segundo parágrafo do texto: *\"Constata-se, destarte, que os textos legislados e escritos eram melhores depositários do direito e meios mais eficazes para conservá-lo que a memória de certo número de pessoas...\"*.\n\nNo primeiro parágrafo, o autor explica que, no período do direito consuetudinário, o costume era *\"instrumentalizado pela repetição de atos, usos e práticas\"* e conservado pela memória de uma casta ou aristocracia. Ao contrapor essa forma de preservação com o advento da escrita, o texto valida a ideia de que a legislação escrita (textos legislados e escritos) apresentava maior eficácia e confiabilidade na conservação do direito do que a tradição baseada na repetição de usos e na memória humana.",
+        "source_reference": null
+      },
+      "source_content_hash": "86599355b89ae2cc56c7130bb387336e79f848ff03d927c49538f856430c7ca3"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:002",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:2",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 1 a 10\n\nNas sociedades antigas, tanto as leis quanto os códigos eram considerados expressões da vontade divina, revelada mediante a imposição de legisladores que dispunham de privilégios dinásticos e de uma legitimidade garantida pela casa sacerdotal. As leis eram objeto de respeito e veneração, e, por serem asseguradas por sanções sobrenaturais, dificilmente o homem primitivo questionava sua validez e sua aplicabilidade. Escreve H. Summer Maine que algumas experiências societárias, ao permitirem o declínio do poder real e o enfraquecimento de monarcas hereditários, acabaram por favorecer a emergência de aristocracias, depositárias da produção legislativa, com capacidade de julgar e de resolver conflitos. Aquele momento inicial de um direito sagrado e ritualizado, expressão das divindades, desenvolveu-se na direção de práticas normativas consuetudinárias. À época do direito consuetudinário, largo período em que não se conheceu a invenção da escrita, uma casta, ou aristocracia, investida do poder judicial, era o único meio que poderia conservar, com algum rigor, os costumes da raça ou da tribo. O costume aparece como expressão da legalidade, de forma lenta e espontânea, instrumentalizada pela repetição de atos, usos e práticas.\nA invenção e a difusão da técnica da escritura, somadas à compilação de costumes tradicionais, proporcionaram os primeiros códigos da Antiguidade, como o de Hamurábi, o de Manu, o de Sólon e a Lei das XII Tábuas. Constata-se, destarte, que os textos legislados e escritos eram melhores depositários do direito e meios mais eficazes para conservá-lo que a memória de certo número de pessoas, por mais força que tivessem em função de seu constante exercício. Esse direito antigo, tanto no Oriente quanto no Ocidente, não diferenciava, na essência, prescrições civis, religiosas e morais. Somente em tempos mais avançados da civilização é que se começou a distinguir o direito da moral e a religião do direito. Certamente, de todos os povos antigos, foi com os romanos que o direito avançou para uma autonomia diante da religião e da moral.\n\nAntônio C. Walker. O direito nas sociedades primitivas. In: Antônio C. Walker (Org.) Fundamentos de história do direito. Belo Horizonte: Del Rey, 2006, p. 19-20 (com adaptações).\n\nConforme as ideias apresentadas no texto,\n\na evolução do direito desde as sociedades antigas passou por apenas dois períodos evolutivos.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 2; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Compreensão e Interpretação de Textos",
+        "source_content_hash": "5bb8901b2af467d48282b80da29d92422b3c75897ef9c5b317d0a3c7cbcb8661",
+        "original_numeric_id": 2,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nO texto descreve uma evolução do direito que engloba mais de dois períodos. Identificam-se, ao longo da narrativa histórica apresentada, pelo menos quatro momentos ou fases evolutivas:\n\n1. O momento inicial de um direito sagrado e ritualizado, considerado expressão da vontade divina (primeiro parágrafo);\n2. A época do direito consuetudinário, caracterizada por práticas normativas baseadas em costumes, usos e repetição de atos (primeiro parágrafo);\n3. O período de compilação de costumes tradicionais e surgimento dos primeiros códigos escritos da Antiguidade, decorrente da invenção da escrita (segundo parágrafo);\n4. O período de autonomização do direito, em que se iniciou a distinção entre direito, moral e religião, consolidada especialmente com os romanos (segundo parágrafo).\n\nPortanto, a restrição a \"apenas dois períodos\" contraria a progressão histórica descrita pelo autor.",
+        "source_reference": null
+      },
+      "source_content_hash": "c54496a32dc6a2c90a92a5457bc3e84e5eaf4d95f9705ff153658e77ef8b52a2"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:003",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:3",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 1 a 10\n\nNas sociedades antigas, tanto as leis quanto os códigos eram considerados expressões da vontade divina, revelada mediante a imposição de legisladores que dispunham de privilégios dinásticos e de uma legitimidade garantida pela casa sacerdotal. As leis eram objeto de respeito e veneração, e, por serem asseguradas por sanções sobrenaturais, dificilmente o homem primitivo questionava sua validez e sua aplicabilidade. Escreve H. Summer Maine que algumas experiências societárias, ao permitirem o declínio do poder real e o enfraquecimento de monarcas hereditários, acabaram por favorecer a emergência de aristocracias, depositárias da produção legislativa, com capacidade de julgar e de resolver conflitos. Aquele momento inicial de um direito sagrado e ritualizado, expressão das divindades, desenvolveu-se na direção de práticas normativas consuetudinárias. À época do direito consuetudinário, largo período em que não se conheceu a invenção da escrita, uma casta, ou aristocracia, investida do poder judicial, era o único meio que poderia conservar, com algum rigor, os costumes da raça ou da tribo. O costume aparece como expressão da legalidade, de forma lenta e espontânea, instrumentalizada pela repetição de atos, usos e práticas.\nA invenção e a difusão da técnica da escritura, somadas à compilação de costumes tradicionais, proporcionaram os primeiros códigos da Antiguidade, como o de Hamurábi, o de Manu, o de Sólon e a Lei das XII Tábuas. Constata-se, destarte, que os textos legislados e escritos eram melhores depositários do direito e meios mais eficazes para conservá-lo que a memória de certo número de pessoas, por mais força que tivessem em função de seu constante exercício. Esse direito antigo, tanto no Oriente quanto no Ocidente, não diferenciava, na essência, prescrições civis, religiosas e morais. Somente em tempos mais avançados da civilização é que se começou a distinguir o direito da moral e a religião do direito. Certamente, de todos os povos antigos, foi com os romanos que o direito avançou para uma autonomia diante da religião e da moral.\n\nAntônio C. Walker. O direito nas sociedades primitivas. In: Antônio C. Walker (Org.) Fundamentos de história do direito. Belo Horizonte: Del Rey, 2006, p. 19-20 (com adaptações).\n\nConforme as ideias apresentadas no texto,\n\nnas sociedades antigas, a origem do direito esteve diretamente relacionada ao declínio do poder real exercido por monarcas hereditários e à emergência de aristocracias.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 3; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Compreensão e Interpretação de Textos",
+        "source_content_hash": "ee39ac9245b181172c2fb39e15edb04634d09596e468cfbe5ca2fd1ecd0eba3a",
+        "original_numeric_id": 3,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nDe acordo com o primeiro parágrafo do texto, a origem do direito nas sociedades antigas estava associada à religiosidade e à divindade, visto que *\"tanto as leis quanto os códigos eram considerados expressões da vontade divina\"*.\n\nO declínio do poder real e a consequente emergência de aristocracias não deram origem ao direito, mas sim favoreceram uma transição em seu desenvolvimento, permitindo que o *\"momento inicial de um direito sagrado e ritualizado, expressão das divindades, desenvolveu-se na direção de práticas normativas consuetudinárias\"*. Assim, confunde-se o fator de transição/desenvolvimento com a origem histórica do direito descrita no texto.",
+        "source_reference": null
+      },
+      "source_content_hash": "a46dec48588042b47d8f75db7b62fdf2b55c5d1958a6b29d27f9fd6b0bc15795"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:004",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:4",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 1 a 10\n\nNas sociedades antigas, tanto as leis quanto os códigos eram considerados expressões da vontade divina, revelada mediante a imposição de legisladores que dispunham de privilégios dinásticos e de uma legitimidade garantida pela casa sacerdotal. As leis eram objeto de respeito e veneração, e, por serem asseguradas por sanções sobrenaturais, dificilmente o homem primitivo questionava sua validez e sua aplicabilidade. Escreve H. Summer Maine que algumas experiências societárias, ao permitirem o declínio do poder real e o enfraquecimento de monarcas hereditários, acabaram por favorecer a emergência de aristocracias, depositárias da produção legislativa, com capacidade de julgar e de resolver conflitos. Aquele momento inicial de um direito sagrado e ritualizado, expressão das divindades, desenvolveu-se na direção de práticas normativas consuetudinárias. À época do direito consuetudinário, largo período em que não se conheceu a invenção da escrita, uma casta, ou aristocracia, investida do poder judicial, era o único meio que poderia conservar, com algum rigor, os costumes da raça ou da tribo. O costume aparece como expressão da legalidade, de forma lenta e espontânea, instrumentalizada pela repetição de atos, usos e práticas.\nA invenção e a difusão da técnica da escritura, somadas à compilação de costumes tradicionais, proporcionaram os primeiros códigos da Antiguidade, como o de Hamurábi, o de Manu, o de Sólon e a Lei das XII Tábuas. Constata-se, destarte, que os textos legislados e escritos eram melhores depositários do direito e meios mais eficazes para conservá-lo que a memória de certo número de pessoas, por mais força que tivessem em função de seu constante exercício. Esse direito antigo, tanto no Oriente quanto no Ocidente, não diferenciava, na essência, prescrições civis, religiosas e morais. Somente em tempos mais avançados da civilização é que se começou a distinguir o direito da moral e a religião do direito. Certamente, de todos os povos antigos, foi com os romanos que o direito avançou para uma autonomia diante da religião e da moral.\n\nAntônio C. Walker. O direito nas sociedades primitivas. In: Antônio C. Walker (Org.) Fundamentos de história do direito. Belo Horizonte: Del Rey, 2006, p. 19-20 (com adaptações).\n\nConforme as ideias apresentadas no texto,\n\nnas sociedades antigas, houve período em que o direito era consuetudinário, ou seja, baseava-se nas práticas, nos hábitos e nos costumes da sociedade.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 4; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Compreensão e Interpretação de Textos",
+        "source_content_hash": "48dc95dff090c7bc7c3b74d0a69179527fed6764c94f97a2990cf1520d9fb1ba",
+        "original_numeric_id": 4,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **correto**.\n\nO texto confirma explicitamente a existência de um período em que o direito era consuetudinário no primeiro parágrafo: *\"À época do direito consuetudinário, largo período em que não se conheceu a invenção da escrita...\"*.\n\nAlém disso, o autor define esse modelo ao afirmar que *\"O costume aparece como expressão da legalidade, de forma lenta e espontânea, instrumentalizada pela repetição de atos, usos e práticas\"*, o que valida a explicação do item de que o direito consuetudinário se baseava nas práticas, nos hábitos e nos costumes da sociedade.",
+        "source_reference": null
+      },
+      "source_content_hash": "83b217d0ec4e425a7fa135cbaa4434f420d1a4c3baa97e5d89f78ace361c92f1"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:011",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:11",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 11 a 22\n\nA dimensão “ético-filosófica” do liberalismo denota afirmação de valores e direitos básicos atribuíveis à natureza moral e racional do ser humano. Suas diretrizes se assentam nos princípios da liberdade pessoal, do individualismo, da tolerância, da dignidade e da crença na vida. Já o aspecto “econômico” refere-se, sobretudo, às condições que abrangem a propriedade privada, a economia de mercado, a ausência ou minimização do controle estatal, a livre empresa e a iniciativa privada. Ainda como parte integrante desse referencial, encontram-se os direitos econômicos, representados pelo direito de propriedade, o direito de herança, o direito de acumular riqueza e capital. Por último, a perspectiva “político-jurídica” do liberalismo está calcada em princípios básicos como: consentimento individual, representação política, divisão dos poderes e descentralização administrativa, entre outros.\nTendo presente essas asserções genéricas, podemos compreender melhor as ambiguidades e os limites do liberalismo brasileiro, porquanto, desde os primórdios, ele teve de conviver com uma estrutura político-administrativa patrimonialista e com uma dominação econômica escravista das elites agrárias. Emília Viotti da Costa defende que não se deve realçar em demasia a importância das ideias liberais europeias nas convulsões sociais ocorridas no Brasil (Inconfidência Mineira, Revolução Pernambucana etc.) desde fins do século XVIII, pois tais movimentos não chegaram a ter grande alcance ideológico. Para a autora, a nova doutrina era de conhecimento limitado entre determinados segmentos revolucionários. O que importa ter em vista é essa distinção entre o liberalismo europeu, como ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza, e o liberalismo brasileiro, uma versão mais restrita do liberalismo europeu.\n\nAntonio Wolkmer. História do direito no Brasil. Rio de Janeiro: Editora Forense, 2003, p. 63-4 (com adaptações).\n\nJulgue os próximos itens, relativos às ideias do texto.\n\nO autor menciona as ideias defendidas por Emília Viotti da Costa como um contraponto a suas próprias ideias, e acaba por refutar as ideias da referida autora.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 11; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Compreensão e Interpretação de Textos",
+        "source_content_hash": "ea44dc615336005a4a09430598c60fa18832b6cd35d5b20dd8254550d863bdc8",
+        "original_numeric_id": 11,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**. O autor do texto não apresenta as ideias de Emília Viotti da Costa como um contraponto para refutá-las. Na verdade, ele se apropria da autoridade teórica da historiadora para corroborar e fundamentar sua própria tese sobre as ambiguidades e os limites do liberalismo no Brasil. \n\nNo segundo parágrafo, o autor introduz a perspectiva de Emília Viotti da Costa para explicar por que não se deve superestimar a influência das ideias liberais europeias nos movimentos sociais brasileiros do final do século XVIII, reforçando a distinção entre o liberalismo europeu e a versão restrita que ocorreu no Brasil.",
+        "source_reference": null
+      },
+      "source_content_hash": "75068610543181c14a3c6205f5e060181700c54d7062ced691ac67bafe50cb11"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:012",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:12",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 11 a 22\n\nA dimensão “ético-filosófica” do liberalismo denota afirmação de valores e direitos básicos atribuíveis à natureza moral e racional do ser humano. Suas diretrizes se assentam nos princípios da liberdade pessoal, do individualismo, da tolerância, da dignidade e da crença na vida. Já o aspecto “econômico” refere-se, sobretudo, às condições que abrangem a propriedade privada, a economia de mercado, a ausência ou minimização do controle estatal, a livre empresa e a iniciativa privada. Ainda como parte integrante desse referencial, encontram-se os direitos econômicos, representados pelo direito de propriedade, o direito de herança, o direito de acumular riqueza e capital. Por último, a perspectiva “político-jurídica” do liberalismo está calcada em princípios básicos como: consentimento individual, representação política, divisão dos poderes e descentralização administrativa, entre outros.\nTendo presente essas asserções genéricas, podemos compreender melhor as ambiguidades e os limites do liberalismo brasileiro, porquanto, desde os primórdios, ele teve de conviver com uma estrutura político-administrativa patrimonialista e com uma dominação econômica escravista das elites agrárias. Emília Viotti da Costa defende que não se deve realçar em demasia a importância das ideias liberais europeias nas convulsões sociais ocorridas no Brasil (Inconfidência Mineira, Revolução Pernambucana etc.) desde fins do século XVIII, pois tais movimentos não chegaram a ter grande alcance ideológico. Para a autora, a nova doutrina era de conhecimento limitado entre determinados segmentos revolucionários. O que importa ter em vista é essa distinção entre o liberalismo europeu, como ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza, e o liberalismo brasileiro, uma versão mais restrita do liberalismo europeu.\n\nAntonio Wolkmer. História do direito no Brasil. Rio de Janeiro: Editora Forense, 2003, p. 63-4 (com adaptações).\n\nJulgue os próximos itens, relativos às ideias do texto.\n\nConclui-se do texto que o autor apresenta uma reflexão, de cunho comparativo, acerca das relações estabelecidas entre movimentos sociais ocorridos no Brasil e sua vinculação com determinada doutrina europeia.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 12; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Compreensão e Interpretação de Textos",
+        "source_content_hash": "dae940269bbedc465b8296c3c53d5f9dd12fee04496f951064f8f62c9d5a30c4",
+        "original_numeric_id": 12,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**. O texto desenvolve uma reflexão de caráter nitidamente comparativo ao confrontar o \"liberalismo europeu\" com o \"liberalismo brasileiro\". \n\nEssa comparação serve para analisar a relação e a influência dessa doutrina estrangeira sobre as revoltas e movimentos sociais ocorridos no Brasil colonial e imperial (como a Inconfidência Mineira e a Revolução Pernambucana), concluindo, com base em Emília Viotti da Costa, que tais movimentos tiveram alcance ideológico limitado e que a doutrina europeia assumiu por aqui uma versão bem mais restrita.",
+        "source_reference": null
+      },
+      "source_content_hash": "eaa26e00086b05b91ba28a9d87bee0b3cf26f68137d3250c51d3a707a69ff87b"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:013",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:13",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 11 a 22\n\nA dimensão “ético-filosófica” do liberalismo denota afirmação de valores e direitos básicos atribuíveis à natureza moral e racional do ser humano. Suas diretrizes se assentam nos princípios da liberdade pessoal, do individualismo, da tolerância, da dignidade e da crença na vida. Já o aspecto “econômico” refere-se, sobretudo, às condições que abrangem a propriedade privada, a economia de mercado, a ausência ou minimização do controle estatal, a livre empresa e a iniciativa privada. Ainda como parte integrante desse referencial, encontram-se os direitos econômicos, representados pelo direito de propriedade, o direito de herança, o direito de acumular riqueza e capital. Por último, a perspectiva “político-jurídica” do liberalismo está calcada em princípios básicos como: consentimento individual, representação política, divisão dos poderes e descentralização administrativa, entre outros.\nTendo presente essas asserções genéricas, podemos compreender melhor as ambiguidades e os limites do liberalismo brasileiro, porquanto, desde os primórdios, ele teve de conviver com uma estrutura político-administrativa patrimonialista e com uma dominação econômica escravista das elites agrárias. Emília Viotti da Costa defende que não se deve realçar em demasia a importância das ideias liberais europeias nas convulsões sociais ocorridas no Brasil (Inconfidência Mineira, Revolução Pernambucana etc.) desde fins do século XVIII, pois tais movimentos não chegaram a ter grande alcance ideológico. Para a autora, a nova doutrina era de conhecimento limitado entre determinados segmentos revolucionários. O que importa ter em vista é essa distinção entre o liberalismo europeu, como ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza, e o liberalismo brasileiro, uma versão mais restrita do liberalismo europeu.\n\nAntonio Wolkmer. História do direito no Brasil. Rio de Janeiro: Editora Forense, 2003, p. 63-4 (com adaptações).\n\nJulgue os próximos itens, relativos às ideias do texto.\n\nO autor defende que, seja na Europa, seja no Brasil, o liberalismo funcionou historicamente como uma ideologia predominantemente contrarrevolucionária.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 13; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Compreensão e Interpretação de Textos",
+        "source_content_hash": "f46ec32cdc329b6c6a248a5644da73a920914235797ffe1635d735a6064d0abb",
+        "original_numeric_id": 13,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**. O autor não caracteriza o liberalismo como uma ideologia predominantemente contrarrevolucionária em ambos os cenários. \n\nPelo contrário, o texto define explicitamente o liberalismo europeu como uma \"ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza\". No caso brasileiro, aponta-se que foi uma \"versão mais restrita\", que conviveu com o patrimonialismo e a escravidão, mas em nenhum momento o autor conceitua a doutrina como contrarrevolucionária.",
+        "source_reference": null
+      },
+      "source_content_hash": "4c736fe719ba3c48f8738bfae739ba98f4eaddb0d7d788120983eafbeda44dbb"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:014",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:14",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 11 a 22\n\nA dimensão “ético-filosófica” do liberalismo denota afirmação de valores e direitos básicos atribuíveis à natureza moral e racional do ser humano. Suas diretrizes se assentam nos princípios da liberdade pessoal, do individualismo, da tolerância, da dignidade e da crença na vida. Já o aspecto “econômico” refere-se, sobretudo, às condições que abrangem a propriedade privada, a economia de mercado, a ausência ou minimização do controle estatal, a livre empresa e a iniciativa privada. Ainda como parte integrante desse referencial, encontram-se os direitos econômicos, representados pelo direito de propriedade, o direito de herança, o direito de acumular riqueza e capital. Por último, a perspectiva “político-jurídica” do liberalismo está calcada em princípios básicos como: consentimento individual, representação política, divisão dos poderes e descentralização administrativa, entre outros.\nTendo presente essas asserções genéricas, podemos compreender melhor as ambiguidades e os limites do liberalismo brasileiro, porquanto, desde os primórdios, ele teve de conviver com uma estrutura político-administrativa patrimonialista e com uma dominação econômica escravista das elites agrárias. Emília Viotti da Costa defende que não se deve realçar em demasia a importância das ideias liberais europeias nas convulsões sociais ocorridas no Brasil (Inconfidência Mineira, Revolução Pernambucana etc.) desde fins do século XVIII, pois tais movimentos não chegaram a ter grande alcance ideológico. Para a autora, a nova doutrina era de conhecimento limitado entre determinados segmentos revolucionários. O que importa ter em vista é essa distinção entre o liberalismo europeu, como ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza, e o liberalismo brasileiro, uma versão mais restrita do liberalismo europeu.\n\nAntonio Wolkmer. História do direito no Brasil. Rio de Janeiro: Editora Forense, 2003, p. 63-4 (com adaptações).\n\nJulgue os próximos itens, relativos às ideias do texto.\n\nSegundo o autor do texto, não há coerência entre a perspectiva ‘político-jurídica’ e a dimensão econômica do liberalismo.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 14; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Compreensão e Interpretação de Textos",
+        "source_content_hash": "7eff56595f0d608a14828b668b91755daefe0823fe6ca4943c9d60c6782eaeb6",
+        "original_numeric_id": 14,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**. O autor não afirma que há incoerência teórica intrínseca entre a perspectiva político-jurídica e a dimensão econômica do liberalismo. \n\nAs contradições, ambiguidades e limites apontados no segundo parágrafo referem-se especificamente à aplicação prática e histórica do liberalismo *no Brasil*, onde a doutrina teve de coexistir com uma estrutura político-administrativa patrimonialista e com a dominação econômica escravista das elites agrárias. Trata-se de uma incoerência histórica contextualizada, e não de uma incompatibilidade teórica entre as vertentes da própria doutrina.",
+        "source_reference": null
+      },
+      "source_content_hash": "47dacbe39337ce48e602f1105c54797c4388d3b58a9bcf0fbdf415397dad8af1"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:016",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:16",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 11 a 22\n\nA dimensão “ético-filosófica” do liberalismo denota afirmação de valores e direitos básicos atribuíveis à natureza moral e racional do ser humano. Suas diretrizes se assentam nos princípios da liberdade pessoal, do individualismo, da tolerância, da dignidade e da crença na vida. Já o aspecto “econômico” refere-se, sobretudo, às condições que abrangem a propriedade privada, a economia de mercado, a ausência ou minimização do controle estatal, a livre empresa e a iniciativa privada. Ainda como parte integrante desse referencial, encontram-se os direitos econômicos, representados pelo direito de propriedade, o direito de herança, o direito de acumular riqueza e capital. Por último, a perspectiva “político-jurídica” do liberalismo está calcada em princípios básicos como: consentimento individual, representação política, divisão dos poderes e descentralização administrativa, entre outros.\nTendo presente essas asserções genéricas, podemos compreender melhor as ambiguidades e os limites do liberalismo brasileiro, porquanto, desde os primórdios, ele teve de conviver com uma estrutura político-administrativa patrimonialista e com uma dominação econômica escravista das elites agrárias. Emília Viotti da Costa defende que não se deve realçar em demasia a importância das ideias liberais europeias nas convulsões sociais ocorridas no Brasil (Inconfidência Mineira, Revolução Pernambucana etc.) desde fins do século XVIII, pois tais movimentos não chegaram a ter grande alcance ideológico. Para a autora, a nova doutrina era de conhecimento limitado entre determinados segmentos revolucionários. O que importa ter em vista é essa distinção entre o liberalismo europeu, como ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza, e o liberalismo brasileiro, uma versão mais restrita do liberalismo europeu.\n\nAntonio Wolkmer. História do direito no Brasil. Rio de Janeiro: Editora Forense, 2003, p. 63-4 (com adaptações).\n\nA respeito das ideias e de aspectos linguísticos do texto, julgue os itens que se seguem.\n\nNo segundo período do segundo parágrafo, a expressão “tais movimentos” (l.26) refere-se aos seguintes termos, expressos anteriormente, nesse mesmo período: “ideias liberais”, “convulsões sociais”, “Inconfidência Mineira” e “Revolução Pernambucana”.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 16; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Coesão e Coerência",
+        "source_content_hash": "e0fea9172de50985fa7f55bb97f99830f7f709f743bb016ed22f70665ce22789",
+        "original_numeric_id": 16,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**. A expressão coesiva anafórica \"tais movimentos\" refere-se especificamente às \"convulsões sociais ocorridas no Brasil (Inconfidência Mineira, Revolução Pernambucana etc.)\". \n\nO termo \"ideias liberais\" (ou \"ideias liberais europeias\") refere-se a conceitos teóricos e doutrinários, e não a movimentos ou revoltas em si. Portanto, incluir \"ideias liberais\" como referente de \"tais movimentos\" está incorreto sob o aspecto da coesão textual.",
+        "source_reference": null
+      },
+      "source_content_hash": "1a34b6f21cc8b1275e9a8c9f4a6ebd22509a21e6d7a94e38c5e7945e2909e553"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:021",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:21",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 11 a 22\n\nA dimensão “ético-filosófica” do liberalismo denota afirmação de valores e direitos básicos atribuíveis à natureza moral e racional do ser humano. Suas diretrizes se assentam nos princípios da liberdade pessoal, do individualismo, da tolerância, da dignidade e da crença na vida. Já o aspecto “econômico” refere-se, sobretudo, às condições que abrangem a propriedade privada, a economia de mercado, a ausência ou minimização do controle estatal, a livre empresa e a iniciativa privada. Ainda como parte integrante desse referencial, encontram-se os direitos econômicos, representados pelo direito de propriedade, o direito de herança, o direito de acumular riqueza e capital. Por último, a perspectiva “político-jurídica” do liberalismo está calcada em princípios básicos como: consentimento individual, representação política, divisão dos poderes e descentralização administrativa, entre outros.\nTendo presente essas asserções genéricas, podemos compreender melhor as ambiguidades e os limites do liberalismo brasileiro, porquanto, desde os primórdios, ele teve de conviver com uma estrutura político-administrativa patrimonialista e com uma dominação econômica escravista das elites agrárias. Emília Viotti da Costa defende que não se deve realçar em demasia a importância das ideias liberais europeias nas convulsões sociais ocorridas no Brasil (Inconfidência Mineira, Revolução Pernambucana etc.) desde fins do século XVIII, pois tais movimentos não chegaram a ter grande alcance ideológico. Para a autora, a nova doutrina era de conhecimento limitado entre determinados segmentos revolucionários. O que importa ter em vista é essa distinção entre o liberalismo europeu, como ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza, e o liberalismo brasileiro, uma versão mais restrita do liberalismo europeu.\n\nAntonio Wolkmer. História do direito no Brasil. Rio de Janeiro: Editora Forense, 2003, p. 63-4 (com adaptações).\n\nJulgue os itens que se seguem, referentes aos sentidos e a aspectos gramaticais do texto.\n\nPara o autor do texto, o liberalismo tem sua origem relacionada a três elementos distintos: a dimensão ‘ético-filosófica’, a dimensão econômica e a perspectiva ‘político-jurídica’.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 21; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Compreensão e Interpretação de Textos",
+        "source_content_hash": "988dbe3ee7855506511b62d622482f12d03b3c2c101c38883ad5f615d46b6f90",
+        "original_numeric_id": 21,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque o texto não associa a origem do liberalismo às três dimensões mencionadas.\n\nNo primeiro parágrafo, o autor apresenta a dimensão “ético-filosófica”, o aspecto “econômico” e a perspectiva “político-jurídica” como partes integrantes do referencial teórico e conceitual do liberalismo (“Ainda como parte integrante desse referencial...”). O texto descreve e caracteriza cada uma dessas vertentes, mas em nenhum momento afirma que a origem histórica ou o surgimento do liberalismo decorre da relação entre esses três elementos.\n\n**Pegadinha:** O examinador tenta confundir a descrição dos componentes estruturais de um conceito (as dimensões que o caracterizam) com a sua gênese histórica (origem).",
+        "source_reference": null
+      },
+      "source_content_hash": "c2af0aaa1f3e4eaf16c4e8fd487b1dd7a2268ceb2167052e78529de96def9a9a"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:022",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:22",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 11 a 22\n\nA dimensão “ético-filosófica” do liberalismo denota afirmação de valores e direitos básicos atribuíveis à natureza moral e racional do ser humano. Suas diretrizes se assentam nos princípios da liberdade pessoal, do individualismo, da tolerância, da dignidade e da crença na vida. Já o aspecto “econômico” refere-se, sobretudo, às condições que abrangem a propriedade privada, a economia de mercado, a ausência ou minimização do controle estatal, a livre empresa e a iniciativa privada. Ainda como parte integrante desse referencial, encontram-se os direitos econômicos, representados pelo direito de propriedade, o direito de herança, o direito de acumular riqueza e capital. Por último, a perspectiva “político-jurídica” do liberalismo está calcada em princípios básicos como: consentimento individual, representação política, divisão dos poderes e descentralização administrativa, entre outros.\nTendo presente essas asserções genéricas, podemos compreender melhor as ambiguidades e os limites do liberalismo brasileiro, porquanto, desde os primórdios, ele teve de conviver com uma estrutura político-administrativa patrimonialista e com uma dominação econômica escravista das elites agrárias. Emília Viotti da Costa defende que não se deve realçar em demasia a importância das ideias liberais europeias nas convulsões sociais ocorridas no Brasil (Inconfidência Mineira, Revolução Pernambucana etc.) desde fins do século XVIII, pois tais movimentos não chegaram a ter grande alcance ideológico. Para a autora, a nova doutrina era de conhecimento limitado entre determinados segmentos revolucionários. O que importa ter em vista é essa distinção entre o liberalismo europeu, como ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza, e o liberalismo brasileiro, uma versão mais restrita do liberalismo europeu.\n\nAntonio Wolkmer. História do direito no Brasil. Rio de Janeiro: Editora Forense, 2003, p. 63-4 (com adaptações).\n\nJulgue os itens que se seguem, referentes aos sentidos e a aspectos gramaticais do texto.\n\nO terceiro período do primeiro parágrafo do texto poderia ser corretamente reescrito da seguinte forma: Agora cita-se o aspecto econômico relacionado, por princípio, a condições relativas à propriedade privada, a economia de mercado, a ausência ou minimização do controle estatal, a livre empresa e a iniciativa privada.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 22; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Reescrita de Frases",
+        "source_content_hash": "47fcfabf038e719859b307104f5cd852e5a5f56a1b3afe2425789eee3fe6fa33",
+        "original_numeric_id": 22,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto devido a um erro de paralelismo sintático na reescrita proposta.\n\nNa reescrita, o adjetivo \"relativas\" exige a preposição \"a\". Ao listar os elementos regidos por esse adjetivo, o primeiro termo recebe o sinal indicativo de crase (\"à propriedade privada\"), o que demonstra a fusão da preposição \"a\" com o artigo feminino \"a\". \n\nPara que o paralelismo sintático seja mantido na coordenação dos termos subsequentes, todos os demais substantivos femininos determinados da lista deveriam receber a crase:\n* ...relativas **à** propriedade privada, **à** economia de mercado, **à** ausência ou minimização do controle estatal, **à** livre empresa e **à** iniciativa privada.\n\nComo a reescrita omitiu a crase nos termos seguintes (\"a economia de mercado, a ausência...\", etc.), ocorreu uma quebra de paralelismo, tornando a frase gramaticalmente incorreta segundo a norma-padrão.\n\n**Detalhe:** Outra opção correta seria omitir o artigo de todos os termos, usando apenas a preposição \"a\" sem crase em nenhum deles (\"relativas a propriedade privada, a economia de mercado...\"), o que também não foi feito.",
+        "source_reference": null
+      },
+      "source_content_hash": "7c8fb4659e41e9b53f10851c0b41537fa6e6e0ea4828f7b4d04f9ea2e8a5a0cf"
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-prova_conhec_espec_tec_federal_control_exter_tec_adm-direito-administrativo-0a47ced89ac5-6356c6b04d0f",
+  "source": {
+    "file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "0a47ced89ac5a05345c982de7b30907afc98382efebdbd645c614961168c25ed",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "e510beb0fb16eeed76a4bec98e0987a4a54d96f0ac951207a670c138e3097e90",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "6356c6b04d0fd6bf0a9012da0aad23061af51047b7c926fa08f0b83ebb88a5e1",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:052",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:52",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da invalidação, da revogação e da convalidação dos atos administrativos, julgue os itens a seguir.\n\nConforme a teoria dos motivos determinantes, a validade do ato administrativo vincula-se aos motivos que o determinaram, sendo, portanto, nulo o ato administrativo cujo motivo estiver dissociado da situação de direito ou de fato que determinou ou autorizou a sua realização.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 52; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "9c3b88884c374975e341dccb4c56581f5ecd244713aeb422247e63db04f2cd6e",
+        "original_numeric_id": 52,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A Teoria dos Motivos Determinantes estabelece que a validade do ato administrativo está estritamente vinculada aos motivos indicados como fundamento para a sua prática.\n\nDesse modo, se os motivos de fato ou de direito declarados pelo agente público forem inexistentes, falsos ou juridicamente inadequados para justificar a conduta, o ato administrativo padece de vício de legalidade, ensejando a sua nulidade. A motivação obrigatória com indicação dos pressupostos de fato e de direito é um requisito de validade do ato, conforme a legislação de processo administrativo.\n\n### Dispositivo legal\n- **Referência:** Lei nº 9.784/1999, art. 2º, parágrafo único, inciso VII.\n- **URL oficial:** https://www.planalto.gov.br/ccivil_03/leis/l9784.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "efae6921e31e5bf7d067e184de4ff63ecf963acd89e04b6afa0f69014eee4a9b"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:054",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:54",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, relativos aos atos administrativos.\n\nÉ proibido delegar a edição de atos de caráter normativo.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 54; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "8c188794cca369ab4223d1ad308539b2cf00d7b63e5e461a7e2a4c99dac527e4",
+        "original_numeric_id": 54,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A competência administrativa é, em regra, irrenunciável, mas a legislação admite os institutos da delegação e da avocação (art. 11 da Lei nº 9.784/1999). No entanto, a delegação não é irrestrita. O art. 13 da referida lei estabelece três hipóteses em que a delegação é expressamente proibida:\n\n1. A edição de atos de caráter normativo (inciso I);\n2. A decisão de recursos administrativos (inciso II);\n3. As matérias de competência exclusiva do órgão ou autoridade (inciso III).\n\n**Macete**: Para memorizar as matérias que **não** podem ser objeto de delegação, utiliza-se o mnemônico **CENORA**:\n* **CE**: **C**ompetência **E**xclusiva;\n* **NO**: Atos de caráter **NO**rmativo;\n* **RA**: Recursos **A**dministrativos.\n\n### Dispositivo legal\n* **Dispositivo**: Artigo 13, inciso I, da Lei nº 9.784/1999.\n* **Fonte oficial**: [Portal da Legislação - Planalto](https://www.planalto.gov.br/ccivil_03/leis/l9784.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "778eeb7bbce8b941aaa16628eacc4e013100930f526314492fcd9da3a1953986"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:056",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:56",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, relativos aos atos administrativos.\n\nEventuais recursos contra decisão emanada em processo administrativo devem ser dirigidos à autoridade que a tiver proferido, que tem poder para realizar juízo de retratação e reconsiderar a decisão.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 56; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Processo Administrativo Federal - Lei 9.784/1999",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "0ea6adb0d2253924a623451e1005075a8f80a5a928b4d421536f187749971645",
+        "original_numeric_id": 56,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "disposicoes-gerais-art-1",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. No âmbito do processo administrativo federal, o recurso administrativo deve ser dirigido à própria autoridade que proferiu a decisão impugnada (art. 56, § 1º, da Lei nº 9.784/1999).\n\nEssa autoridade dispõe de um prazo de 5 (cinco) dias para exercer o juízo de retratação (reconsideração). Caso decida não reconsiderar a sua decisão, ela tem o dever de encaminhar o recurso à autoridade hierarquicamente superior para que esta proceda ao julgamento.\n\n### Dispositivo legal\n* **Dispositivo**: Artigo 56, § 1º, da Lei nº 9.784/1999.\n* **Fonte oficial**: [Portal da Legislação - Planalto](https://www.planalto.gov.br/ccivil_03/leis/l9784.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "4f6a7ac8f01b2a450ef33eae0061cadbb5ed6035f23ba93dc25db972d505e5ca"
+    }
+  ]
+}

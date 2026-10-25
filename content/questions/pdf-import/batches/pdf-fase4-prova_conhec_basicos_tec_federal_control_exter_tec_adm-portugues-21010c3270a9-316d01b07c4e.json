@@ -1,0 +1,139 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_conhec_basicos_tec_federal_control_exter_tec_adm-portugues-21010c3270a9-316d01b07c4e",
+  "source": {
+    "file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "21010c3270a94d5246d6af08096f1a65be212e74fd70cd018225e31bd255bee9",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "940eab3df891c952570d89153f116f9db2f9f9a6d1f207e3196c3bd34a4d15cf",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "316d01b07c4e7c05e9ab534b705723bfa0510b733080208c80871cc934a79d56",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:007",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:7",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 1 a 10\n\nNas sociedades antigas, tanto as leis quanto os códigos eram considerados expressões da vontade divina, revelada mediante a imposição de legisladores que dispunham de privilégios dinásticos e de uma legitimidade garantida pela casa sacerdotal. As leis eram objeto de respeito e veneração, e, por serem asseguradas por sanções sobrenaturais, dificilmente o homem primitivo questionava sua validez e sua aplicabilidade. Escreve H. Summer Maine que algumas experiências societárias, ao permitirem o declínio do poder real e o enfraquecimento de monarcas hereditários, acabaram por favorecer a emergência de aristocracias, depositárias da produção legislativa, com capacidade de julgar e de resolver conflitos. Aquele momento inicial de um direito sagrado e ritualizado, expressão das divindades, desenvolveu-se na direção de práticas normativas consuetudinárias. À época do direito consuetudinário, largo período em que não se conheceu a invenção da escrita, uma casta, ou aristocracia, investida do poder judicial, era o único meio que poderia conservar, com algum rigor, os costumes da raça ou da tribo. O costume aparece como expressão da legalidade, de forma lenta e espontânea, instrumentalizada pela repetição de atos, usos e práticas.\nA invenção e a difusão da técnica da escritura, somadas à compilação de costumes tradicionais, proporcionaram os primeiros códigos da Antiguidade, como o de Hamurábi, o de Manu, o de Sólon e a Lei das XII Tábuas. Constata-se, destarte, que os textos legislados e escritos eram melhores depositários do direito e meios mais eficazes para conservá-lo que a memória de certo número de pessoas, por mais força que tivessem em função de seu constante exercício. Esse direito antigo, tanto no Oriente quanto no Ocidente, não diferenciava, na essência, prescrições civis, religiosas e morais. Somente em tempos mais avançados da civilização é que se começou a distinguir o direito da moral e a religião do direito. Certamente, de todos os povos antigos, foi com os romanos que o direito avançou para uma autonomia diante da religião e da moral.\n\nAntônio C. Walker. O direito nas sociedades primitivas. In: Antônio C. Walker (Org.) Fundamentos de história do direito. Belo Horizonte: Del Rey, 2006, p. 19-20 (com adaptações).\n\nCom relação a aspectos linguísticos do texto, julgue os próximos itens.\n\nNa linha 8, o emprego de vírgula logo após “H. Summer Maine” prejudicaria a correção gramatical do período.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 7; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Pontuação",
+        "source_content_hash": "9709a09e76a29024f3083bd2bb76b5865777469d4a6f1dbdfa7cfdeffce2c278",
+        "original_numeric_id": 7,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo** (C).\n\nA inserção de uma vírgula imediatamente após o termo \"H. Summer Maine\" prejudicaria a correção gramatical do texto, pois provocaria a separação indevida entre o sujeito e o predicado, ou entre o elemento nominal e a sua oração/complemento imediato.\n\nDe acordo com as regras canônicas de pontuação da Língua Portuguesa, é expressamente proibido separar por vírgula simples o sujeito de seu respectivo verbo, bem como o verbo de seus complementos obrigatórios.",
+        "source_reference": null
+      },
+      "source_content_hash": "b359cf62e8855ccf8504891c7617bd45b1cc17a2bfff56a76d238b7b1b852066"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:015",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:15",
+      "question_type": "true_false",
+      "statement_markdown": "Texto para os itens de 11 a 22\n\nA dimensão “ético-filosófica” do liberalismo denota afirmação de valores e direitos básicos atribuíveis à natureza moral e racional do ser humano. Suas diretrizes se assentam nos princípios da liberdade pessoal, do individualismo, da tolerância, da dignidade e da crença na vida. Já o aspecto “econômico” refere-se, sobretudo, às condições que abrangem a propriedade privada, a economia de mercado, a ausência ou minimização do controle estatal, a livre empresa e a iniciativa privada. Ainda como parte integrante desse referencial, encontram-se os direitos econômicos, representados pelo direito de propriedade, o direito de herança, o direito de acumular riqueza e capital. Por último, a perspectiva “político-jurídica” do liberalismo está calcada em princípios básicos como: consentimento individual, representação política, divisão dos poderes e descentralização administrativa, entre outros.\nTendo presente essas asserções genéricas, podemos compreender melhor as ambiguidades e os limites do liberalismo brasileiro, porquanto, desde os primórdios, ele teve de conviver com uma estrutura político-administrativa patrimonialista e com uma dominação econômica escravista das elites agrárias. Emília Viotti da Costa defende que não se deve realçar em demasia a importância das ideias liberais europeias nas convulsões sociais ocorridas no Brasil (Inconfidência Mineira, Revolução Pernambucana etc.) desde fins do século XVIII, pois tais movimentos não chegaram a ter grande alcance ideológico. Para a autora, a nova doutrina era de conhecimento limitado entre determinados segmentos revolucionários. O que importa ter em vista é essa distinção entre o liberalismo europeu, como ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza, e o liberalismo brasileiro, uma versão mais restrita do liberalismo europeu.\n\nAntonio Wolkmer. História do direito no Brasil. Rio de Janeiro: Editora Forense, 2003, p. 63-4 (com adaptações).\n\nA respeito das ideias e de aspectos linguísticos do texto, julgue os itens que se seguem.\n\nSem prejuízo para a correção gramatical ou para o sentido do período, o trecho “como ideologia revolucionária (...) os privilégios da nobreza” (l. 30 a 32) poderia ser substituído por: que era uma ideologia revolucionária articulada por novos setores emergentes e forjados na luta contra os privilégios da nobreza.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 15; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Semântica e Significação das Palavras",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Reescrita de Frases",
+        "source_content_hash": "a345231203e0349c94aa5010c4f8e9bf8e936f1ad4a9105f81ea46a2ea1bce3f",
+        "original_numeric_id": 15,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado** (E).\n\nA substituição do segmento *\"como ideologia revolucionária\"* por *\"que era uma ideologia revolucionária\"* acarreta evidente **alteração de sentido** no período original.\n\nNo texto original, a expressão preposicionada *\"como ideologia revolucionária\"* atua como adjunto adverbial com valor conformativo ou modal/comparativo (*na qualidade de / sob a forma de ideologia revolucionária*). Ao substituí-la por *\"que era uma ideologia revolucionária\"*, introduz-se uma oração subordinada adjetiva explicativa, que atribui um predicado pretérito categórico e estático, modificando a articulação semântica idealizada pelo autor.\n\nPortanto, o item que afirmava inexistir prejuízo para o sentido do período está incorreto, conforme gabarito oficial definitivo da banca examinadora (CESPE/CEBRASPE).",
+        "source_reference": null
+      },
+      "source_content_hash": "bd836d3d36dddcb408b8a9d82d45ecfb4baee9a6de162d444e8d50fa1baec515"
+    }
+  ]
+}

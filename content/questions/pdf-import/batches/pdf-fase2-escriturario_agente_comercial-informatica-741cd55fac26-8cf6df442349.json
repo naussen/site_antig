@@ -1,0 +1,686 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-escriturario_agente_comercial-informatica-741cd55fac26-8cf6df442349",
+  "source": {
+    "file_name": "escriturario_agente_comercial_ATUALIZADO.json",
+    "sha256": "741cd55fac263d8edfe29869bc66425509b93453fb35dfdbbecc4deea8b18568",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "escriturario_agente_comercial.json",
+      "original_source_sha256": "712ee07d18b6c6f75b8792c6bf5ca6ea068b2c5f60c13f6565f4cab1c39926d7",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "8cf6df4423499669859de3e95c9ee73f626d770ee996728c8cb11c4c3b2f54ee",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:043",
+      "source_id": "escriturario_agente_comercial:43",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A ferramenta de Webmail viabiliza o uso do serviço de correio eletrônico de empresas utilizando um navegador Web. Após a composição de uma nova mensagem de correio eletrônico, o usuário deve fazer a submissão do formulário para o servidor Web que, por sua vez, fará a submissão do conteúdo da mensagem para a fila do servidor de correio eletrônico.\n\nOs protocolos de comunicação utilizados nestas duas etapas são, respectivamente,",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 43; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "HTTP e SMTP",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "SMTP e HTTP",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "POP3 e SMTP",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "SMTP e POP3",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "HTTP e POP3",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "ea9e7f22273b6bf643dc3a3608e9928af0993d3b72921b2a1cf7b6bd44b5728a",
+        "original_numeric_id": 43,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A**.\n\nA questão descreve duas etapas distintas de comunicação no uso de um serviço de Webmail:\n\n1. **Primeira etapa (Navegador Web para Servidor Web):** O usuário preenche um formulário em uma página web e o submete. Como essa comunicação ocorre entre o navegador do cliente e o servidor web que hospeda o Webmail, o protocolo utilizado é o **HTTP** (ou sua versão segura, HTTPS).\n2. **Segunda etapa (Servidor Web para Servidor de Correio):** O servidor web, após receber os dados do formulário, precisa encaminhar a mensagem para a fila de processamento do servidor de e-mail. O protocolo padrão da internet para a transferência e envio de mensagens de correio eletrônico entre servidores é o **SMTP** (*Simple Mail Transfer Protocol*).\n\n**Análise das alternativas incorretas:**\n* **B) SMTP e HTTP:** Apresenta os protocolos na ordem inversa.\n* **C, D e E) POP3:** O protocolo POP3 (*Post Office Protocol*) é utilizado exclusivamente para a **recepção/download** de mensagens de um servidor de correio para um cliente local, não participando do envio de mensagens descrito no enunciado.",
+        "source_reference": null
+      },
+      "source_content_hash": "c1e0b25f1d11303ed1b690c1d6a1a8469baff801a89f67279d75c22bfbdcf935"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:044",
+      "source_id": "escriturario_agente_comercial:44",
+      "question_type": "multiple_choice",
+      "statement_markdown": "As estações de trabalho de uma empresa estão sujeitas a ataques que podem provocar vazamentos ou destruição completa dos dados. Uma boa prática de segurança é utilizar uma amostra biométrica para se conectar aos seus dispositivos, aplicativos, serviços on-line e redes. O Windows 10 possui um recurso de segurança de entrada que possibilita usar uma amostra biométrica do rosto, da íris e da impressão digital, ou, ainda, um PIN (Personal Identification Number).\n\nTal recurso é o",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 44; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Windows Security",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Windows Hello",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Advanced Login",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Enhanced Login",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Enhanced Authentication",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "13dd5e0d2e1a2d03f7cd1df54f046bb4666e534bd775dfd7848adbad4277aa90",
+        "original_numeric_id": 44,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nO **Windows Hello** é o recurso de segurança integrado ao Windows 10 (e mantido no Windows 11) que permite ao usuário autenticar-se no dispositivo de forma rápida e segura utilizando biometria (reconhecimento facial, leitura de íris ou impressão digital) ou um código PIN pessoal.\n\n**Análise das alternativas incorretas:**\n* **A) Windows Security:** É a central de segurança do sistema (antigo Windows Defender), que engloba proteção contra vírus, firewall e desempenho do dispositivo, mas não é o nome específico do recurso de login biométrico.\n* **C, D e E) Advanced Login, Enhanced Login e Enhanced Authentication:** São termos fictícios criados pela banca para confundir o candidato, sem correspondência com recursos oficiais do sistema operacional Windows.",
+        "source_reference": null
+      },
+      "source_content_hash": "d2c912ed1a074470890ccaf71aa230fa55e74f99fa1cd15fc57ab922baec0907"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:045",
+      "source_id": "escriturario_agente_comercial:45",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um colaborador de uma empresa precisa restaurar uma versão específica de um documento que está sendo editado no aplicativo Word do Microsoft Office 365.\n\nPara verificar as versões do documento que estão disponíveis para a restauração, o colaborador deve selecionar o menu",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 45; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Arquivo, escolher a opção Histórico e selecionar a opção Controle de Versões.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Arquivo, escolher a opção Sobre e selecionar a opção Controle de Versões.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Arquivo, escolher a opção Informações e selecionar a opção Histórico de Versões.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Revisão, selecionar a opção Controlar Alterações e selecionar a opção De todas as Pessoas.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Revisão, selecionar a opção Controlar Alterações e selecionar a opção Somente as Minhas.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Computação na Nuvem (Cloud Computing)",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "412996aa478f26e0d1fc37438b73291edfbcc2b250bad54607da1e6f76012052",
+        "original_numeric_id": 45,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "computacao-na-nuvem-cloud-computing",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nNo Microsoft Word integrado ao Office 365, quando o documento está armazenado em serviços de nuvem da Microsoft (como OneDrive ou SharePoint), o recurso de salvamento automático mantém um registro das alterações. Para visualizar e restaurar essas versões anteriores, o usuário deve acessar o menu **Arquivo**, clicar na guia **Informações** e selecionar a opção **Histórico de Versões**.\n\n**Análise das alternativas incorretas:**\n* **A e B:** Não existem as opções \"Histórico > Controle de Versões\" ou \"Sobre > Controle de Versões\" no menu Arquivo para essa finalidade.\n* **D e E:** A guia **Revisão** e o recurso **Controlar Alterações** servem para monitorar e exibir as edições feitas no documento em tempo real (como inserções e exclusões de texto), mas não gerenciam o histórico de salvamento de arquivos anteriores para fins de restauração completa de versões.",
+        "source_reference": null
+      },
+      "source_content_hash": "0ca1da004492cb9a719ee14dd06918f078014d0c219c607c45c82a4f7743ae19"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:046",
+      "source_id": "escriturario_agente_comercial:46",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Os mecanismos de segurança combinam técnicas e ações de segurança para prover a proteção de usuários e de dados.\n\nO mecanismo de segurança que consiste em definir as ações que uma determinada entidade pode executar, ou a quais informações essa entidade pode ter acesso, é o de",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 46; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "identificação",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "integridade",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "autenticação",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "autorização",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "confidencialidade",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "a3abe108a9c271d7bf52978862b272d27385b75c4479a3163ed3acf2becbdf6b",
+        "original_numeric_id": 46,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nO mecanismo de segurança que determina o que uma entidade (usuário, processo ou sistema) pode fazer ou a quais recursos ela pode ter acesso é a **autorização**. Ela ocorre após a identificação e a autenticação, definindo os privilégios e permissões do usuário.\n\n**Análise das alternativas incorretas:**\n* **A) Identificação:** É o ato de uma entidade se apresentar ao sistema (por exemplo, informando um nome de usuário ou login).\n* **B) Integridade:** É a garantia de que a informação não foi alterada ou corrompida de forma não autorizada durante o armazenamento ou transmissão.\n* **C) Autenticação:** É o processo de verificação da identidade declarada (por exemplo, validando uma senha ou biometria).\n* **E) Confidencialidade:** É a garantia de que a informação estará acessível apenas a pessoas explicitamente autorizadas, geralmente obtida por meio de criptografia.",
+        "source_reference": null
+      },
+      "source_content_hash": "650f037d01a0b3261de5dd46ceb271f053064e1b0620103167925abe432e51f4"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:048",
+      "source_id": "escriturario_agente_comercial:48",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O som de uma música pode ser digitalizado e armazenado em um arquivo de computador. Suponha que em seu computador exista um arquivo de áudio que contém uma música e que foi codificado em um determinado formato (ex: MP3).\n\nPara poder reproduzir esse arquivo de áudio, no seu computador, é necessário ter um(a)",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 48; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "bom monitor de vídeo.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "microfone adequado.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "programa antivírus atualizado e em funcionamento.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "programa que faça a decodificação correta do arquivo.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "ligação com a internet em funcionamento.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Hardware",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "1aac4545942fc682e45a18f6c04f63e4a42f2ac05ec6dc187e2aa29f8d05b856",
+        "original_numeric_id": 48,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nPara que um arquivo de áudio digitalizado e codificado (como o formato MP3) possa ser reproduzido, o sistema operacional necessita de um software (reprodutor de mídia) que possua o algoritmo de **decodificação** (codec) correspondente. Esse programa traduz os dados binários compactados do arquivo em sinais de áudio que a placa de som do computador consegue enviar para as caixas de som ou fones de ouvido.\n\n**Análise das alternativas incorretas:**\n* **A) bom monitor de vídeo:** O monitor exibe imagens, sendo irrelevante para a reprodução exclusiva de áudio.\n* **B) microfone adequado:** O microfone é um dispositivo de entrada (captura de som), enquanto a reprodução exige dispositivos de saída (alto-falantes/fones).\n* **C) programa antivírus atualizado:** Embora importante para a segurança geral, o antivírus não realiza a função de decodificação de arquivos de mídia.\n* **E) ligação com a internet:** Se o arquivo já está armazenado localmente no computador, não há necessidade de conexão com a internet para sua reprodução.",
+        "source_reference": null
+      },
+      "source_content_hash": "0003c0b9583b9eab80f75a84b7b2f7b4be9fcdf38d960e2a4820343e21604717"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:049",
+      "source_id": "escriturario_agente_comercial:49",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sistemas de suporte à decisão podem ser utilizados no nível gerencial de uma empresa, por exemplo na busca de maior eficiência e produtividade, e também podem ser utilizados no nível estratégico.\n\nOs sistemas de apoio à decisão no nível estratégico de uma empresa via de regra utilizam apenas dados",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 49; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "internos, da própria empresa.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "externos, do mercado onde a empresa atua.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "detalhados, dos concorrentes da empresa.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "internos, da própria empresa, complementados por dados externos, do mercado onde a empresa atua.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "externos, do mercado onde a empresa atua, complementados por dados detalhados dos concorrentes da empresa.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "22df043230827f03d4f3e7b9c9fad27fe5e09bc3a9cbeb3cbf00f162f6788427",
+        "original_numeric_id": 49,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nNo nível estratégico de uma organização, as decisões envolvem o planejamento de longo prazo e o posicionamento da empresa perante o mercado. Para subsidiar essas decisões, os Sistemas de Apoio à Decisão (SAD) e os Sistemas de Informação Executiva (SIE) devem consolidar **dados internos** (como faturamento, custos e capacidade produtiva) e complementá-los com **dados externos** (como tendências de mercado, indicadores econômicos, legislação e comportamento dos concorrentes).\n\n**Análise das alternativas incorretas:**\n* **A e B:** Limitar a análise apenas a dados internos ou apenas a dados externos impede uma visão estratégica completa, que exige a correlação entre o ambiente interno e o externo.\n* **C e E:** Focar exclusivamente ou prioritariamente em dados detalhados de concorrentes desconsidera a importância dos dados operacionais e financeiros da própria empresa, inviabilizando o planejamento estratégico interno.",
+        "source_reference": null
+      },
+      "source_content_hash": "e3c969b10ccc557f730b1bfbd403b623be8dc8e4d946e8edf8d9033164ff7bcf"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:050",
+      "source_id": "escriturario_agente_comercial:50",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O Google Drive é uma das várias ferramentas da empresa Google que existem na nuvem.\n\nEssa ferramenta é particularmente adequada para",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 50; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "administrar agendas.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "compartilhar arquivos de qualquer formato.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "enviar e receber mensagens de correio eletrônico.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "realizar apresentações ao vivo via internet.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "realizar reuniões remotas via internet em tempo real.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "fe29e9e60adfdf04a9b073badd2b0ae1d1f3d093d2a1abdc605b3569cad76804",
+        "original_numeric_id": 50,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nO **Google Drive** é um serviço de armazenamento em nuvem (*cloud storage*). Sua função primordial é permitir que usuários guardem, organizem, sincronizem e **compartilhem arquivos de qualquer formato** (documentos, imagens, vídeos, PDFs, arquivos compactados, etc.) com outras pessoas por meio de links ou permissões diretas.\n\n**Análise das alternativas incorretas:**\n* **A) administrar agendas:** Essa é a função do *Google Agenda* (Google Calendar).\n* **C) enviar e receber mensagens de correio eletrônico:** Essa é a função do *Gmail*.\n* **D) realizar apresentações ao vivo via internet:** Apresentações de slides são criadas no *Google Apresentações* (Google Slides), e transmissões ao vivo utilizam plataformas como o *YouTube* ou *Google Meet*.\n* **E) realizar reuniões remotas via internet em tempo real:** Essa é a função do *Google Meet*.",
+        "source_reference": null
+      },
+      "source_content_hash": "7f0c19297bdd6f46e6c631721c8256920384e0b3ff3c9830e154962561b5a421"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:051",
+      "source_id": "escriturario_agente_comercial:51",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Uma situação que ocorre no dia a dia da utilização de correio eletrônico é uma pessoa A (emissor), após enviar uma mensagem X para uma outra pessoa B (destinatário), receber uma resposta automática que informa que a caixa de correio do destinatário está cheia.\n\nIsso significa que a(o)",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 51; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "espaço ocupado por mensagens na caixa de correio do destinatário atingiu o limite autorizado.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "quantidade de mensagens na caixa de correio do destinatário atingiu o limite autorizado.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "quantidade de mensagens enviadas pelo emissor atingiu o limite autorizado.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "quantidade máxima de mensagens que podem ser recebidas pelo destinatário naquele dia foi atingida.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "espaço ocupado pela mensagem X é muito grande, e seu envio não foi autorizado pela infraestrutura do emissor.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "6338df3749e0e90962d76831da5a71db69bf847fb10f07c94c4f67e0baf2508f",
+        "original_numeric_id": 51,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A**.\n\nQuando um servidor de e-mail rejeita uma mensagem e retorna um aviso de \"caixa de correio cheia\" (*mailbox quota exceeded*), significa que o **espaço de armazenamento em disco** (medido em MB ou GB) alocado pelo provedor para a conta daquele destinatário específico foi totalmente preenchido pelas mensagens e anexos acumulados, impedindo o recebimento de novos e-mails até que espaço seja liberado.\n\n**Análise das alternativas incorretas:**\n* **B e D:** Os limites de armazenamento de e-mail são baseados no tamanho físico dos dados (bytes), e não na quantidade absoluta de mensagens ou em limites diários de recebimento.\n* **C e E:** O problema reside exclusivamente no lado do destinatário (armazenamento esgotado), não tendo relação com limites de envio do emissor ou com o tamanho individual da mensagem enviada.",
+        "source_reference": null
+      },
+      "source_content_hash": "5e0c8a7ad4cfaeb092b34d958425737e396ec700cf428d3cb12f8ec7c814a17e"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:053",
+      "source_id": "escriturario_agente_comercial:53",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sistemas de inteligência de negócio fornecem várias funcionalidades analíticas para atender à necessidade de entender rapidamente uma situação e tomar a decisão correta sobre ela.\n\nDentre essas funcionalidades, está a conhecida como dashboard, que é uma ferramenta",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 53; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "de consulta ad-hoc em SQL aos dados mantidos no data warehouse da empresa, por meio de técnicas no-code ou low-code.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "de mineração de dados que permite fazer previsões sobre o desempenho da empresa.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "que permite operações OLAP ad-hoc e é ligada diretamente ao banco de dados centralizado e operacional da empresa.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "que permite aos usuários criar relatórios com tabelas de cruzamento de dados, do tipo pivot-table, a partir de parâmetros que são definidos previamente.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "visual, para apresentar dados de desempenho pré-definidos pelos usuários.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Banco de Dados",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "1c3a983e4fbd95d97cad1363cbf766fa839bd71d1a9c9f7556dc94f8f08cd17f",
+        "original_numeric_id": 53,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "banco-de-dados",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No contexto de Business Intelligence (BI), um *dashboard* (painel de controle) é uma interface gráfica projetada para apresentar, de forma consolidada e visual, indicadores-chave de desempenho (KPIs) e métricas relevantes para o negócio. Ele permite que os gestores monitorem a situação da empresa rapidamente e tomem decisões fundamentadas com base em dados previamente estruturados e definidos.\n\n**Análise das alternativas:**\n* **A) Incorreta.** Ferramentas de consulta *ad-hoc* em SQL servem para extração direta de dados, enquanto o *dashboard* foca na visualização consolidada de informações já processadas.\n* **B) Incorreta.** A mineração de dados (*data mining*) envolve a descoberta de padrões ocultos em grandes volumes de dados, o que difere da proposta de exibição visual de um *dashboard*.\n* **C) Incorreta.** O acesso direto e em tempo real a bancos de dados operacionais (OLTP) para operações *ad-hoc* complexas pode comprometer o desempenho dos sistemas transacionais. Além disso, *dashboards* geralmente consomem dados de repositórios analíticos (como Data Warehouses).\n* **D) Incorreta.** A criação de tabelas dinâmicas (*pivot-tables*) é uma funcionalidade típica de ferramentas de planilha eletrônica ou relatórios analíticos detalhados, não sendo a definição de um *dashboard*.\n* **E) Correta.** Define perfeitamente o *dashboard* como uma ferramenta visual para exibição de indicadores de desempenho pré-definidos.",
+        "source_reference": null
+      },
+      "source_content_hash": "658757ad76e73605af4008d276eccb23b8c9c2e906495ce7d6db5dff956aa89f"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:054",
+      "source_id": "escriturario_agente_comercial:54",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Segundo o Resumo Técnico do Censo da Educação Superior 2020, publicado pelo INEP, em 2020, pela primeira vez, o número de ingressantes de graduação na modalidade de ensino a distância (EaD) superou o de ingressantes na modalidade presencial.\n\nA modalidade de EaD, atualmente, é uma opção real para o estudante de graduação brasileiro, graças a características que facilitam o acesso ao saber, como a(o)",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 54; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "eliminação da necessidade da interação social para a aprendizagem.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "autoaprendizagem mediada por recursos didáticos em diferentes suportes de informação.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "supervisão direta do docente por meio de sistemas tecnológicos inibidores da autonomia.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "sincronismo e a delimitação física do espaço geográfico dos encontros entre docente e discentes.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "uso de vias de mão única para a comunicação entre docente e discente.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "1dbb7adcdd43b203bf069d1b150b3baea179140898bc5c43539c1189cb48680e",
+        "original_numeric_id": 54,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A Educação a Distância (EaD) fundamenta-se na flexibilidade de tempo e espaço, exigindo do estudante um papel ativo no processo de aprendizagem. Essa modalidade viabiliza o acesso ao conhecimento por meio da autoaprendizagem, na qual o aluno gerencia seu próprio ritmo de estudos, mediado por materiais didáticos estruturados em múltiplos formatos (como videoaulas, textos digitais, podcasts e plataformas interativas).\n\n**Análise das alternativas:**\n* **A) Incorreta.** A interação social não é eliminada; ela é reconfigurada por meio de ferramentas de comunicação digital (fóruns, chats, videoconferências).\n* **B) Correta.** A autoaprendizagem mediada por recursos multimídia é a base metodológica e tecnológica que viabiliza a EaD.\n* **C) Incorreta.** O modelo pedagógico da EaD busca estimular a autonomia do estudante, e não inibi-la por meio de supervisão docente direta e controladora.\n* **D) Incorreta.** A EaD caracteriza-se justamente pela quebra da delimitação física e, majoritariamente, pelo assincronismo das atividades.\n* **E) Incorreta.** A comunicação na EaD deve ser bidirecional ou multidirecional, promovendo o diálogo constante entre docentes, tutores e discentes.",
+        "source_reference": null
+      },
+      "source_content_hash": "bda0c5713974be2f176aaee64292d04be906ce6c53f998eeb5d48b44db995672"
+    }
+  ]
+}

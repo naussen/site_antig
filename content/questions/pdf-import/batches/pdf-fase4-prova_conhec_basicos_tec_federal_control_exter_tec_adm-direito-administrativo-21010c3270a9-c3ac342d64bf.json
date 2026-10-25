@@ -1,0 +1,82 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_conhec_basicos_tec_federal_control_exter_tec_adm-direito-administrativo-21010c3270a9-c3ac342d64bf",
+  "source": {
+    "file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "21010c3270a94d5246d6af08096f1a65be212e74fd70cd018225e31bd255bee9",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "940eab3df891c952570d89153f116f9db2f9f9a6d1f207e3196c3bd34a4d15cf",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "c3ac342d64bfb7ea70b1fe493b9a02bc90bdad2a0d1bab8af2acd7d09837122d",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:032",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:32",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere aos princípios e conceitos da administração pública e aos servidores públicos, julgue os próximos itens.\n\nOfenderá o princípio da impessoalidade a atuação administrativa que contrariar, além da lei, a moral, os bons costumes, a honestidade ou os deveres de boa administração.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 32; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Regime Jurídico dos Servidores Públicos (Lei nº 8.112/1990)",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "8706e17548d343abf0af866bf68d91b708d8ec7dcf76914c1df788c8c9f73f16",
+        "original_numeric_id": 32,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-juridico-dos-servidores-lei-8112",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A conduta administrativa que contraria a moral, os bons costumes, a honestidade ou os deveres de boa administração configura ofensa direta ao princípio da **moralidade**, e não ao princípio da impessoalidade. O princípio da impessoalidade, por sua vez, determina que a atuação da Administração Pública deve ser voltada ao interesse público, sem favorecimentos ou discriminações pessoais, além de proibir a promoção pessoal de agentes públicos em atos, programas, obras ou serviços públicos. Portanto, a associação feita no enunciado está incorreta.\n\n### Dispositivo legal\n* [Art. 37, caput, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "1b64d72f93a81530f08c8dd01a5a29193bff511ed04b70948181db3f23aa3181"
+    }
+  ]
+}

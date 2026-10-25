@@ -1,0 +1,424 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-dpf14_009_01-atualidades-fc85fdc9d1f4-ab6b404189fd",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "fc85fdc9d1f45a7a9beaed6c728368f3364cad59fba26e5bca2aa08fbac5e46f",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "7c65334d658e76f507a006465e38351432ef043be4c6cf520c4cf664a9007aba",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ab6b404189fd50b3a12b7d4a548ccf0fc5f3694a1d782645ffbf6a76412132ea",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "atualidades",
+    "name": "Atualidades"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:028",
+      "source_id": "dpf14_009_01:28",
+      "question_type": "true_false",
+      "statement_markdown": "A Organização das Nações Unidas (ONU) fez, no final do ano de 2013, um apelo recorde para operações de ajuda humanitária em dezessete países em 2014. Metade do dinheiro, cerca de 6,5 bilhões de dólares, será destinada a socorrer 16 milhões de sírios afetados pela guerra civil que já dura quase três anos.\nO Globo, 17/12/2013, p. 27 (com adaptações).\nTendo o fragmento de texto acima como referência inicial e considerando os múltiplos aspectos que ele suscita, julgue os itens subsequentes.\n\nA guerra civil a que o texto se refere faz retornar o clima elevado de tensão no Oriente Médio, região pacificada desde a instalação plena do Estado da Palestina.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 28; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "ca10e55bc4108d7d6ce1ae6c5b343ba77094d23d592abc506748eec702f428b0",
+        "original_numeric_id": 28,
+        "original_source_content_hash": "473e22a21e949c6bc6ab40fd51e3b6394723a4d000fa45f5b536502c84024c59",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque apresenta duas premissas falsas sobre a geopolítica do Oriente Médio. Primeiro, a região não é pacificada, sendo historicamente marcada por intensas tensões, guerras civis, disputas territoriais e conflitos sectários. Segundo, não houve a \"instalação plena do Estado da Palestina\" de modo a pacificar a região; a criação e o reconhecimento do Estado palestino continuam sendo um dos temas mais debatidos e inacabados das relações internacionais, com disputas contínuas entre israelenses e palestinos. Portanto, a afirmação de que a região está pacificada desde tal evento é factualmente incorreta.",
+        "source_reference": null
+      },
+      "source_content_hash": "b23e1326d458a0087c752df7870f45afbefa3a33482092e31f1ad8927e636299"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:029",
+      "source_id": "dpf14_009_01:29",
+      "question_type": "true_false",
+      "statement_markdown": "A Organização das Nações Unidas (ONU) fez, no final do ano de 2013, um apelo recorde para operações de ajuda humanitária em dezessete países em 2014. Metade do dinheiro, cerca de 6,5 bilhões de dólares, será destinada a socorrer 16 milhões de sírios afetados pela guerra civil que já dura quase três anos.\nO Globo, 17/12/2013, p. 27 (com adaptações).\nTendo o fragmento de texto acima como referência inicial e considerando os múltiplos aspectos que ele suscita, julgue os itens subsequentes.\n\nA ONU, criada após a Segunda Guerra Mundial, tem por finalidade principal a manutenção da paz e da segurança internacional.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 29; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "10ce8e1cba1245c5b35131ac90ec8637fe0ac3558a18dc0c8c90ef961d54f62a",
+        "original_numeric_id": 29,
+        "original_source_content_hash": "2173ffd2972a9672b45322aa30aa6ba0084e86e9eb231ed36c635f0e1c870522",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A Organização das Nações Unidas (ONU) foi fundada em 1945, imediatamente após o término da Segunda Guerra Mundial, com o objetivo de evitar novos conflitos globais de grande escala. Conforme estabelecido no Artigo 1º, parágrafo 1, de sua Carta de fundação (Carta das Nações Unidas), o propósito primordial da organização é a manutenção da paz e da segurança internacionais, atuando na prevenção de ameaças, na repressão de atos de agressão e na solução pacífica de controvérsias internacionais.\n\n**Dispositivo legal**\n\n[Artigo 1º, parágrafo 1, da Carta das Nações Unidas (promulgada pelo Decreto nº 19.841/1945)](https://www.planalto.gov.br/ccivil_03/decreto/1930-1949/d19841.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "8c69da28b5269fbb6c45c91bfebe240bbffbda976748c66ad0fba63e75ae4a74"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:030",
+      "source_id": "dpf14_009_01:30",
+      "question_type": "true_false",
+      "statement_markdown": "A Organização das Nações Unidas (ONU) fez, no final do ano de 2013, um apelo recorde para operações de ajuda humanitária em dezessete países em 2014. Metade do dinheiro, cerca de 6,5 bilhões de dólares, será destinada a socorrer 16 milhões de sírios afetados pela guerra civil que já dura quase três anos.\nO Globo, 17/12/2013, p. 27 (com adaptações).\nTendo o fragmento de texto acima como referência inicial e considerando os múltiplos aspectos que ele suscita, julgue os itens subsequentes.\n\nEntre as agências especializadas da ONU que atuam em escala global incluem-se as voltadas para a saúde (OMS), para a agricultura e alimentação (FAO) e para a educação, ciência e cultura (UNESCO).",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 30; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "3f1b41ec24c391e3ca06e7bec4cb43f418c4878b255e6b6f7abd7689cfc29761",
+        "original_numeric_id": 30,
+        "original_source_content_hash": "08d63f3642c65ce573c96e18a89b87717a6a602b578e9564cbf0cef9ae29a874",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O Sistema das Nações Unidas é composto por diversos órgãos e agências especializadas que atuam de forma autônoma, mas coordenada, em áreas específicas do desenvolvimento humano e social em escala global. Entre essas agências, destacam-se:\n\n* **OMS (Organização Mundial da Saúde):** focada na saúde pública global;\n* **FAO (Organização das Nações Unidas para a Alimentação e a Agricultura):** voltada ao combate à fome, segurança alimentar e desenvolvimento agrícola;\n* **UNESCO (Organização das Nações Unidas para a Educação, a Ciência e a Cultura):** dedicada a promover a paz e a segurança por meio da cooperação internacional nessas áreas.",
+        "source_reference": null
+      },
+      "source_content_hash": "e02d2a42b29d337c1ab5717ff84f24e077eb05f55ebd301a949d047cdb0dcd10"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:031",
+      "source_id": "dpf14_009_01:31",
+      "question_type": "true_false",
+      "statement_markdown": "A Organização das Nações Unidas (ONU) fez, no final do ano de 2013, um apelo recorde para operações de ajuda humanitária em dezessete países em 2014. Metade do dinheiro, cerca de 6,5 bilhões de dólares, será destinada a socorrer 16 milhões de sírios afetados pela guerra civil que já dura quase três anos.\nO Globo, 17/12/2013, p. 27 (com adaptações).\nTendo o fragmento de texto acima como referência inicial e considerando os múltiplos aspectos que ele suscita, julgue os itens subsequentes.\n\nDiversas organizações não governamentais dedicam-se ao trabalho humanitário em âmbito mundial, a exemplo da Cruz Vermelha Internacional.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 31; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "7988ca99f7026b95e6d17e1ee0a2663e2653dbd46180c75f007f450574da7e34",
+        "original_numeric_id": 31,
+        "original_source_content_hash": "5b40432dfd618baee87fad666125eaded52587b4fdc07061c95dbf337ddc4810",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O Movimento Internacional da Cruz Vermelha e do Crescente Vermelho é amplamente reconhecido por sua atuação humanitária global em cenários de conflitos armados, desastres naturais e crises humanitárias. Embora o Comitê Internacional da Cruz Vermelha (CICV) possua um status jurídico internacional singular e *sui generis* conferido pelas Convenções de Genebra (o que o diferencia de uma ONG comum em termos de direito internacional público), em provas de conhecimentos gerais e atualidades ele é frequentemente associado e classificado sob o conceito amplo de organização não governamental (ONG) devido à sua natureza privada, independente de governos, neutra e sem fins lucrativos.",
+        "source_reference": null
+      },
+      "source_content_hash": "8f42bcf92fd628492a148b3e4edb112c892d45ccfc0a3a40ff9cc20363599e51"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:032",
+      "source_id": "dpf14_009_01:32",
+      "question_type": "true_false",
+      "statement_markdown": "Segundo a Pesquisa Nacional de Vitimização, a parte da população afetada pela violência é maior do que se poderia imaginar. Um em cada cinco brasileiros que vivem nas cidades com mais de 15 mil habitantes foi vítima de uma ação criminosa — agressão, sequestro, fraude, ofensas sexuais, discriminação, furto e roubo — no período de doze meses abrangido pela pesquisa. A porcentagem da população vítima desses vários tipos de ocorrência varia muito de estado para estado.\nO Estado de S.Paulo, 17/12/2013, p. A3 (com adaptações).\nTendo o fragmento de texto acima como referência inicial e considerando a amplitude do tema que ele focaliza, julgue os itens que se seguem.\n\nNos centros urbanos do Brasil, especially nos de maior dimensão demográfica, a ação das facções criminosas contribui decisivamente para o aumento dos índices de violência.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 32; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sociedade, Educação, Segurança e Cidadania",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "2d1ee34d7614e94ddcc30d18502d914f98a06c3aedf38e6b765f203cd8fba81f",
+        "original_numeric_id": 32,
+        "original_source_content_hash": "76e2532997b486bb43704c992185d686fb466a9138f8f93967156dee182c256e",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "sociedade-seguranca-publica-e-cidadania",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nOs relatórios e estudos sociológicos da segurança pública no Brasil (como o Anuário Brasileiro de Segurança Pública e a Pesquisa Nacional de Vitimização) demonstram consistentemente que a expansão e a disputa territorial entre **facções criminosas organizadas** (ligadas ao narcotráfico, extorsão e milícias) nas grandes regiões metropolitanas e capitais exercem papel preponderante e decisivo na elevação das taxas de homicídios e na vitimização da população urbana.",
+        "source_reference": null
+      },
+      "source_content_hash": "405514eb8260802d3f09fd93c3b888f31c0d16e256aa2fa2b6207b5d326a709e"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:033",
+      "source_id": "dpf14_009_01:33",
+      "question_type": "true_false",
+      "statement_markdown": "Segundo a Pesquisa Nacional de Vitimização, a parte da população afetada pela violência é maior do que se poderia imaginar. Um em cada cinco brasileiros que vivem nas cidades com mais de 15 mil habitantes foi vítima de uma ação criminosa — agressão, sequestro, fraude, ofensas sexuais, discriminação, furto e roubo — no período de doze meses abrangido pela pesquisa. A porcentagem da população vítima desses vários tipos de ocorrência varia muito de estado para estado.\nO Estado de S.Paulo, 17/12/2013, p. A3 (com adaptações).\nTendo o fragmento de texto acima como referência inicial e considerando a amplitude do tema que ele focaliza, julgue os itens que se seguem.\n\nA ação de organismos multilaterais, como a ONU e o Tribunal Penal Internacional, contribuiu consideravelmente para a redução da ação do crime organizado em escala global, especialmente o relacionado ao tráfico de drogas ilícitas e à lavagem de dinheiro.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 33; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "643fb217c921034b02a471e297425dc6a8efc4a14e4bb725f1bf2e14ad07ecd4",
+        "original_numeric_id": 33,
+        "original_source_content_hash": "6de3fd7e91a1507119254e1bb38e718330c421bf54e9b80a14a359d353f0c169",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto por dois motivos principais:\n\n1. **Competência do Tribunal Penal Internacional (TPI):** O TPI não possui competência para julgar crimes de tráfico de drogas ilícitas ou de lavagem de dinheiro. Conforme o Artigo 5º do Estatuto de Roma, a jurisdição do Tribunal limita-se aos crimes mais graves que afetam a comunidade internacional em seu conjunto: crime de genocídio, crimes contra a humanidade, crimes de guerra e crime de agressão.\n2. **Eficácia contra o Crime Organizado:** Embora existam esforços e tratados multilaterais (como a Convenção das Nações Unidas contra o Crime Organizado Transnacional - Convenção de Palermo), a ação de organismos multilaterais não reduziu consideravelmente a atuação do crime organizado em escala global. Pelo contrário, o tráfico internacional de drogas e a lavagem de dinheiro continuam em expansão e representam desafios complexos e crescentes para a segurança internacional.\n\n### Dispositivo legal\n* **Estatuto de Roma do Tribunal Penal Internacional, Artigo 5º** (promulgado pelo Decreto nº 4.388/2002).\n* URL oficial: https://www.planalto.gov.br/ccivil_03/decreto/2002/d4388.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "41dc68ae5b9a2f7f7f665ea10b72f411aa27cc45e7be46cf469ae939d2b2c20e"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:034",
+      "source_id": "dpf14_009_01:34",
+      "question_type": "true_false",
+      "statement_markdown": "Segundo a Pesquisa Nacional de Vitimização, a parte da população afetada pela violência é maior do que se poderia imaginar. Um em cada cinco brasileiros que vivem nas cidades com mais de 15 mil habitantes foi vítima de uma ação criminosa — agressão, sequestro, fraude, ofensas sexuais, discriminação, furto e roubo — no período de doze meses abrangido pela pesquisa. A porcentagem da população vítima desses vários tipos de ocorrência varia muito de estado para estado.\nO Estado de S.Paulo, 17/12/2013, p. A3 (com adaptações).\nTendo o fragmento de texto acima como referência inicial e considerando a amplitude do tema que ele focaliza, julgue os itens que se seguem.\n\nO fortalecimento das ações na área de segurança nos estados brasileiros deveu-se à fusão das polícias civil e militar, ocorrida em 2012, mediante a aprovação de emenda constitucional.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 34; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sociedade, Educação, Segurança e Cidadania",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "c3c18908d5d943e5249febe2c825347be7755841549e2fe49ccc8ca1ac60356b",
+        "original_numeric_id": 34,
+        "original_source_content_hash": "eafe39ee596add3c3ad817c628c5a22d7de94d283c6b404b2e8b2d290460018d",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "sociedade-seguranca-publica-e-cidadania",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque não houve fusão das polícias civis e militares no Brasil em 2012, tampouco em qualquer outro período. \n\nA segurança pública nos estados brasileiros continua estruturada de forma bipartida, conforme estabelece o Artigo 144 da Constituição Federal de 1988. As polícias civis e as polícias militares permanecem como órgãos distintos e independentes:\n* **Polícias Civis:** Dirigidas por delegados de polícia de carreira, incumbem-se das funções de polícia judiciária e da apuração de infrações penais, exceto as militares.\n* **Polícias Militares:** Cabem a polícia ostensiva e a preservação da ordem pública.\n\nEmbora existam debates e Propostas de Emenda à Constituição (PECs) que discutem a unificação ou desmilitarização das polícias, nenhuma proposta de fusão foi aprovada ou implementada.\n\n### Dispositivo legal\n* **Constituição Federal de 1988, Artigo 144**.\n* URL oficial: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "143834d4b998222c54495f47e6abe5eae27dc77a7ffbb6e9bfddfd00c20f1251"
+    }
+  ]
+}

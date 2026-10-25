@@ -1,0 +1,196 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-policial_rodoviario_federal-raciocinio-logico-matematica-estatistica-e-matematica-financeira-b6fd876f6da4-a26a8d1724e6",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "b6fd876f6da47bfc670b5edf47a194cb0192c6a872db7d5acf3f5352d639cba7",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "d0a1c5718064db035e156dbeb8982317019ea8dde6c8349e0a1cc8366d1342df",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "a26a8d1724e690c73b42fc40ce1419a728ba218b7aa57344e4d61a701cd44e88",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:027",
+      "source_id": "policial_rodoviario_federal:27",
+      "question_type": "true_false",
+      "statement_markdown": "Foi modelado que o espalhamento de uma notícia em uma população — entendido como o percentual de indivíduos dessa população que recebe essa notícia por unidade de tempo — é diretamente proporcional ao percentual de indivíduos da população que já conhecem a notícia multiplicado pelo percentual de indivíduos dessa população que ainda não a conhecem até aquele instante. A constante k de proporcionalidade depende, entre outros fatores, do impacto da notícia na vida dos envolvidos e de propriedades dos meios de comunicação disponíveis.\nTendo como base essas informações e considerando que, para certa notícia, k = 1, julgue os itens seguintes.\n\nDe acordo com a modelagem realizada, é possível que, em determinado instante, o espalhamento da notícia seja superior a 50% por unidade de tempo.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 27; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico e Matemática",
+        "source_content_hash": "83101dddaa5df20839374648f7307b5738376ac74f747a36c9b1ebc8492a8781",
+        "original_numeric_id": 27,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nAnálise do modelo matemático do espalhamento:\nSejam $p$ a proporção da população que já conhece a notícia ($0 \\le p \\le 1$) e $(1-p)$ a que ainda não conhece. Com a constante de proporcionalidade $k = 1$, a taxa de espalhamento por unidade de tempo é dada pela função quadrática:\n$$E(p) = 1 \\cdot p \\cdot (1 - p) = p - p^2$$\nO valor máximo dessa parábola ocorre no vértice:\n$$p_v = -\\frac{b}{2a} = -\\frac{1}{2(-1)} = 0,5 = 50\\%$$\nO espalhamento máximo teórico possível é:\n$$E_{\\max} = E(0,5) = 0,5 \\times (1 - 0,5) = 0,25 = 25\\%$$\nPortanto, é matematicamente impossível que o espalhamento atinja ou supere $50\\%$ por unidade de tempo.",
+        "source_reference": null
+      },
+      "source_content_hash": "10317c145084427d1dfb394c42555b644fc3338ff84b15eb473b6da68c49216f"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:030",
+      "source_id": "policial_rodoviario_federal:30",
+      "question_type": "true_false",
+      "statement_markdown": "Foi modelado que o espalhamento de uma notícia em uma população — entendido como o percentual de indivíduos dessa população que recebe essa notícia por unidade de tempo — é diretamente proporcional ao percentual de indivíduos da população que já conhecem a notícia multiplicado pelo percentual de indivíduos dessa população que ainda não a conhecem até aquele instante. A constante k de proporcionalidade depende, entre outros fatores, do impacto da notícia na vida dos envolvidos e de propriedades dos meios de comunicação disponíveis.\nTendo como base essas informações e considerando que, para certa notícia, k = 1, julgue os itens seguintes.\n\nSe, em determinado instante, o espalhamento de uma notícia é igual a 16% por unidade de tempo, então, nesse instante, mais de 75% da população ainda desconhece a notícia.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 30; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico e Matemática",
+        "source_content_hash": "0ead40d15e67649ee0736108309322699f9547fc2a0a8eab4cca8efd80cd4548",
+        "original_numeric_id": 30,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nEquacionando o espalhamento $E = 16\\% = 0,16$ com $k = 1$:\n$$p(1-p) = 0,16 \\implies p^2 - p + 0,16 = 0$$\nResolvendo a equação do segundo grau pelo discriminante:\n$$\\Delta = (-1)^2 - 4(1)(0,16) = 1 - 0,64 = 0,36$$\n$$p = \\frac{1 \\pm 0,6}{2} \\implies p_1 = 0,80 = 80\\% \\quad \\text{ou} \\quad p_2 = 0,20 = 20\\%$$\nA proporção de pessoas que desconhecem a notícia é $(1-p)$:\n- Se $p = 0,80$, então $(1-p) = 20\\%$ da população desconhece a notícia;\n- Se $p = 0,20$, então $(1-p) = 80\\%$ da população desconhece a notícia.\nComo há duas soluções válidas e em uma delas apenas $20\\%$ desconhece a notícia (valor muito inferior a $75\\%$), não se pode afirmar categoricamente que mais de $75\\%$ desconhece a informação.",
+        "source_reference": null
+      },
+      "source_content_hash": "79dd9c08c6c11962b6dfecd766d5e75cc08d90e51e0ed745ff84061b63002d49"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:031",
+      "source_id": "policial_rodoviario_federal:31",
+      "question_type": "true_false",
+      "statement_markdown": "Em uma operação da PRF, foram fiscalizados: 20 veículos automotores até o fim da primeira hora; 60 veículos automotores até o fim da segunda hora; 120 veículos automotores até o fim da terceira hora; 200 veículos automotores até o fim da quarta hora; e 300 veículos automotores até o fim da quinta hora. O padrão numérico observado manteve-se até o fim da décima hora, quando, então, foi finalizada a operação.\nConsiderando essa situação hipotética, julgue os itens seguintes.\n\nMais de 550 veículos terão sido fiscalizados até o fim da sétima hora de realização da operação.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 31; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico e Matemática",
+        "source_content_hash": "12dea8c3575a5ce9ab345cfc3b923fc61aff3d1235161a91ce260376eabff400",
+        "original_numeric_id": 31,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nObservando os dados da fiscalização por hora:\n- Fim da 1ª hora: $20$ veículos;\n- Fim da 2ª hora: $60$ veículos (acréscimo de $40$);\n- Fim da 3ª hora: $120$ veículos (acréscimo de $60$);\n- Fim da 4ª hora: $200$ veículos (acréscimo de $80$);\n- Fim da 5ª hora: $300$ veículos (acréscimo de $100$).\n\nA quantidade de veículos fiscalizados em cada hora $n$ segue a progressão $q_n = 20n$.\nO total acumulado até a hora $n$ corresponde à soma dos termos:\n$$S_n = \\sum_{i=1}^n 20i = 20 \\times \\frac{n(n+1)}{2} = 10n(n+1)$$\nPara a 7ª hora ($n = 7$):\n$$S_7 = 10 \\times 7 \\times (7 + 1) = 10 \\times 7 \\times 8 = 560\\text{ veículos}$$\nComo $560 > 550$, a assertiva é correta.",
+        "source_reference": null
+      },
+      "source_content_hash": "2cb871ed9e7a0474498891a7280285e3820e6ca59bc9a0506c5539619ca9d37c"
+    }
+  ]
+}

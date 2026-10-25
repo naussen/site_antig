@@ -1,0 +1,1400 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-cargo30-relacoes-humanas-e-atendimento-ddedf305b20e-981f283222c0",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "ddedf305b20e0a7dfd48e2ef1da2d3823dc4e437478b3edd7e62ad4a771ae524",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "ade70669f0c96aa17db7bd4f2a5081dabefc8b060fd23fdfaaa31934743bc23f",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "981f283222c03b5f9d1836a08a0e9d69c21cdfd436e4f2c395abb3d37783ff63",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "relacoes-humanas-e-atendimento",
+    "name": "Relações Humanas e Atendimento"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:061",
+      "source_id": "cargo30:61",
+      "question_type": "true_false",
+      "statement_markdown": "Novas competências começam a ser exigidas pelas organizações, que reinventam sua dinâmica produtiva, desenvolvendo novas formas de trabalho e de resolução de conflitos. Surgem novos paradigmas de relações das organizações com fornecedores, clientes e colaboradores. Nesse contexto, as relações humanas no ambiente de trabalho têm sido foco da atenção dos gestores, para que sejam desenvolvidas habilidades e atitudes necessárias ao manejo inteligente das relações interpessoais.\n\nTendo o texto acima como referência inicial e considerando aspectos relevantes das relações humanas no ambiente de trabalho, julgue os itens que se seguem.\n\nNas relações interpessoais, as pessoas devem não só agir com franqueza ao emitir suas opiniões mas também livrar-se da imposição de limites nos relacionamentos pessoais ou profissionais.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 61",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Trabalho em Equipe e Gestão de Conflitos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "27e0dcd07abbfd5c82422fe26835c99b34767cf3b3f53a4802a3ba38a15317ba",
+        "original_numeric_id": 61,
+        "original_source_content_hash": "be8fdeb8f1e71dbb0afc679b03387f9dff6811e9732016dd18a35f4f49ba51f3",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-conflitos-e-relacionamento-no-ambiente-de-trabalho",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. No campo das relações humanas e da psicologia organizacional, a existência e o respeito a limites são fundamentais para a manutenção de um ambiente de trabalho saudável, ético e produtivo.\n\nEmbora a franqueza e a transparência sejam qualidades desejáveis na comunicação interpessoal, a ausência de limites (\"livrar-se da imposição de limites\") compromete a privacidade, o respeito mútuo, a hierarquia e a ética profissional, gerando conflitos, assédio e desgaste nas relações de trabalho. O estabelecimento de limites claros é o que viabiliza a convivência harmônica entre diferentes indivíduos em uma organização.",
+        "source_reference": null
+      },
+      "source_content_hash": "58453e23200d3cd7a80b5554a38f4bc34016aa91ba31c8399eabff07524f4288"
+    },
+    {
+      "external_id": "pdf:cargo30:062",
+      "source_id": "cargo30:62",
+      "question_type": "true_false",
+      "statement_markdown": "Novas competências começam a ser exigidas pelas organizações, que reinventam sua dinâmica produtiva, desenvolvendo novas formas de trabalho e de resolução de conflitos. Surgem novos paradigmas de relações das organizações com fornecedores, clientes e colaboradores. Nesse contexto, as relações humanas no ambiente de trabalho têm sido foco da atenção dos gestores, para que sejam desenvolvidas habilidades e atitudes necessárias ao manejo inteligente das relações interpessoais.\n\nTendo o texto acima como referência inicial e considerando aspectos relevantes das relações humanas no ambiente de trabalho, julgue os itens que se seguem.\n\nUm dos requisitos atuais de sucesso das organizações fundamenta-se no conceito de inteligência emocional dos gestores.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 62",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Trabalho em Equipe e Gestão de Conflitos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "aca0e55bd332bc25705e6741f757bedf620224aa13fb9cb466d4913c8b4afca5",
+        "original_numeric_id": 62,
+        "original_source_content_hash": "bf0d455ac8506db726a4294fbca6968fd2325caaaf386f4c1778f076558dc216",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-conflitos-e-relacionamento-no-ambiente-de-trabalho",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A inteligência emocional, conceito amplamente difundido na psicologia organizacional, refere-se à capacidade de identificar, compreender e gerenciar as próprias emoções e as dos outros. No ambiente corporativo contemporâneo, os gestores que possuem essa competência conseguem liderar de forma mais inspiradora, mediar conflitos com empatia e manter um clima organizacional favorável. Portanto, a inteligência emocional dos líderes é, de fato, considerada um dos pilares para o sucesso e a sustentabilidade das organizações modernas.",
+        "source_reference": null
+      },
+      "source_content_hash": "cc642e7fa4ea75a066f3f22b8cc62d458f6129b8e76554bcbfabb4e1177ee103"
+    },
+    {
+      "external_id": "pdf:cargo30:063",
+      "source_id": "cargo30:63",
+      "question_type": "true_false",
+      "statement_markdown": "Novas competências começam a ser exigidas pelas organizações, que reinventam sua dinâmica produtiva, desenvolvendo novas formas de trabalho e de resolução de conflitos. Surgem novos paradigmas de relações das organizações com fornecedores, clientes e colaboradores. Nesse contexto, as relações humanas no ambiente de trabalho têm sido foco da atenção dos gestores, para que sejam desenvolvidas habilidades e atitudes necessárias ao manejo inteligente das relações interpessoais.\n\nTendo o texto acima como referência inicial e considerando aspectos relevantes das relações humanas no ambiente de trabalho, julgue os itens que se seguem.\n\nA satisfação com o trabalho resulta de um somatório de elementos, entre os quais se inclui a qualidade das relações humanas vividas no ambiente de trabalho, variável de grande impacto na produtividade.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 63",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Trabalho em Equipe e Gestão de Conflitos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "60819c4e053a4661c2bc948401e97c253a431e0536a5b9e9664cb99de65cd26e",
+        "original_numeric_id": 63,
+        "original_source_content_hash": "0e8a8c1f24648cfa60fcbce0beddbce26f6e476ef5151bb3902aa8edecc7b0a1",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-conflitos-e-relacionamento-no-ambiente-de-trabalho",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A satisfação no trabalho é um construto multidimensional que resulta da percepção do trabalhador sobre diversos fatores, tais como remuneração, condições físicas, perspectivas de carreira e, de forma muito significativa, a qualidade das relações interpessoais com colegas e superiores. Relações humanas saudáveis e colaborativas promovem o bem-estar psicológico e o engajamento, o que se traduz diretamente em maior produtividade e na redução de índices de absenteísmo e rotatividade.",
+        "source_reference": null
+      },
+      "source_content_hash": "174b77b830ba920131214204cb7255050eb50ef807476da0dde9452699e67435"
+    },
+    {
+      "external_id": "pdf:cargo30:064",
+      "source_id": "cargo30:64",
+      "question_type": "true_false",
+      "statement_markdown": "Novas competências começam a ser exigidas pelas organizações, que reinventam sua dinâmica produtiva, desenvolvendo novas formas de trabalho e de resolução de conflitos. Surgem novos paradigmas de relações das organizações com fornecedores, clientes e colaboradores. Nesse contexto, as relações humanas no ambiente de trabalho têm sido foco da atenção dos gestores, para que sejam desenvolvidas habilidades e atitudes necessárias ao manejo inteligente das relações interpessoais.\n\nTendo o texto acima como referência inicial e considerando aspectos relevantes das relações humanas no ambiente de trabalho, julgue os itens que se seguem.\n\nRelações humanas infortunadas geram nos empregados duas possíveis reações: a espera passiva, mas otimista, de que as condições relacionais melhorem na organização ou a investida ativa de busca de melhoria dessas condições. A segunda reação é invariavelmente a melhor, pois possibilita agregar valor à resolução de problemas.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 64",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Trabalho em Equipe e Gestão de Conflitos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "b01751c910ecffaaeb7d36c97e6eec9c60fe54e5ac33b7a7c5a0c152079b58db",
+        "original_numeric_id": 64,
+        "original_source_content_hash": "d6941ae4cd5339e6ff6cb802fe97f0c46514fd120814e09609ced96fe66e95cb",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-conflitos-e-relacionamento-no-ambiente-de-trabalho",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação apresenta dois erros conceituais importantes:\n\n1. **Limitação de alternativas:** Reduz as reações a apenas duas opções (espera passiva ou investida ativa). A literatura de comportamento organizacional, como o modelo EVLN (*Exit, Voice, Loyalty, Neglect*), aponta que os indivíduos podem reagir de outras formas a condições desfavoráveis, incluindo a saída da organização (*Exit*) ou a negligência/desleixo com as tarefas (*Neglect*).\n2. **Generalização indevida:** O uso do termo \"invariavelmente a melhor\" invalida a questão. A eficácia de uma postura ativa de busca por melhorias depende diretamente do contexto e da cultura organizacional. Em ambientes altamente autoritários ou punitivos, a tentativa de intervenção ativa pode gerar retaliações e prejuízos ao colaborador, não sendo, portanto, a melhor alternativa em todos os cenários.",
+        "source_reference": null
+      },
+      "source_content_hash": "0bf6d1d906cd0c6706e45c43c049b1b7c2e5aa0d3d50d8e19c2c1594e905a1cc"
+    },
+    {
+      "external_id": "pdf:cargo30:065",
+      "source_id": "cargo30:65",
+      "question_type": "true_false",
+      "statement_markdown": "Novas competências começam a ser exigidas pelas organizações, que reinventam sua dinâmica produtiva, desenvolvendo novas formas de trabalho e de resolução de conflitos. Surgem novos paradigmas de relações das organizações com fornecedores, clientes e colaboradores. Nesse contexto, as relações humanas no ambiente de trabalho têm sido foco da atenção dos gestores, para que sejam desenvolvidas habilidades e atitudes necessárias ao manejo inteligente das relações interpessoais.\n\nTendo o texto acima como referência inicial e considerando aspectos relevantes das relações humanas no ambiente de trabalho, julgue os itens que se seguem.\n\nSão, geralmente, bem-sucedidos os relacionamentos interpessoais em que as pessoas são capazes de demonstrar suas necessidades e de relacioná-las de modo eficaz ao que os outros têm a lhes oferecer.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 65",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Trabalho em Equipe e Gestão de Conflitos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "8e492e2767122765922a18ad5a7ad59e9edc512ea03a7139cb246b5c0d3e0aa3",
+        "original_numeric_id": 65,
+        "original_source_content_hash": "1a6aaf3d3bb2a713e3dff95f755cb1d828f432594bc8d8d1662933f4db15ecc7",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-conflitos-e-relacionamento-no-ambiente-de-trabalho",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O sucesso nas relações interpessoais está diretamente ligado à assertividade e à reciprocidade. Quando os indivíduos possuem a habilidade de expressar claramente suas necessidades e expectativas, e conseguem alinhar essas demandas com o que os outros podem oferecer, estabelece-se uma relação de cooperação e benefício mútuo. Esse alinhamento reduz ruídos de comunicação, evita frustrações e fortalece a confiança entre as partes.",
+        "source_reference": null
+      },
+      "source_content_hash": "3c205ea1469d9da1820481f828e58b2a7b248b4d6244fab145fa7a976b771dc1"
+    },
+    {
+      "external_id": "pdf:cargo30:066",
+      "source_id": "cargo30:66",
+      "question_type": "true_false",
+      "statement_markdown": "Novas competências começam a ser exigidas pelas organizações, que reinventam sua dinâmica produtiva, desenvolvendo novas formas de trabalho e de resolução de conflitos. Surgem novos paradigmas de relações das organizações com fornecedores, clientes e colaboradores. Nesse contexto, as relações humanas no ambiente de trabalho têm sido foco da atenção dos gestores, para que sejam desenvolvidas habilidades e atitudes necessárias ao manejo inteligente das relações interpessoais.\n\nTendo o texto acima como referência inicial e considerando aspectos relevantes das relações humanas no ambiente de trabalho, julgue os itens que se seguem.\n\nNas relações humanas, ocorre um conflito quando um indivíduo percebe que outra pessoa afeta ou pode afetar negativamente algo a que ele atribui importância.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 66",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Trabalho em Equipe e Gestão de Conflitos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "749310b14db426e7bda16791987fcdb64f06d0f56961e7874331be4f6e9308f7",
+        "original_numeric_id": 66,
+        "original_source_content_hash": "ba46ab75d71459e91c60191fc64b3179efab1f1636bc1c5bb0ce16a472f8cfcb",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-conflitos-e-relacionamento-no-ambiente-de-trabalho",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A definição trazida pelo item está em perfeita consonância com a literatura clássica de comportamento organizacional. O conflito é entendido como um processo que se inicia quando uma das partes percebe que a outra afetou negativamente, ou está prestes a afetar negativamente, algo que a primeira considera importante. A existência do conflito depende, fundamentalmente, dessa percepção de incompatibilidade de objetivos ou de interferência mútua.",
+        "source_reference": null
+      },
+      "source_content_hash": "52d39320adf02c7a685f9a1f5d031352b9500cbf48c8416875eab603fbf7e6ac"
+    },
+    {
+      "external_id": "pdf:cargo30:067",
+      "source_id": "cargo30:67",
+      "question_type": "true_false",
+      "statement_markdown": "Novas competências começam a ser exigidas pelas organizações, que reinventam sua dinâmica produtiva, desenvolvendo novas formas de trabalho e de resolução de conflitos. Surgem novos paradigmas de relações das organizações com fornecedores, clientes e colaboradores. Nesse contexto, as relações humanas no ambiente de trabalho têm sido foco da atenção dos gestores, para que sejam desenvolvidas habilidades e atitudes necessárias ao manejo inteligente das relações interpessoais.\n\nTendo o texto acima como referência inicial e considerando aspectos relevantes das relações humanas no ambiente de trabalho, julgue os itens que se seguem.\n\nComo os efeitos dos conflitos, nos grupos de trabalho, são sempre negativos, os gestores devem lidar com eles com muita rapidez para evitarem que se manifestem com freqüência.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 67",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Trabalho em Equipe e Gestão de Conflitos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "5ddb7aad482e17a75b62a9c3e4a0089791cbc76107ce836626f9c84840906a8b",
+        "original_numeric_id": 67,
+        "original_source_content_hash": "aed7ad5600b85829b30b27358684f5becb0b506f6469cf181cc5a29f78e59a7f",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-conflitos-e-relacionamento-no-ambiente-de-trabalho",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O erro do item está na afirmação de que os efeitos dos conflitos são \"sempre negativos\". A visão interacionista moderna do conflito estabelece que eles podem ser classificados em:\n\n* **Disfuncionais (negativos):** Aqueles que atrapalham o desempenho do grupo, como os conflitos de relacionamento pessoal.\n* **Funcionais (positivos):** Aqueles que apoiam as metas do grupo e melhoram seu desempenho. Conflitos de tarefa ou de processo em níveis moderados estimulam a criatividade, desafiam o *status quo*, evitam o pensamento de grupo (*groupthink*) e levam a decisões mais bem fundamentadas. Portanto, os gestores não devem eliminar todos os conflitos, mas sim gerenciá-los de forma construtiva.",
+        "source_reference": null
+      },
+      "source_content_hash": "cbf194b5f5c86bed7a284eea745b0b65b909f684bd93057389659e3c340bb228"
+    },
+    {
+      "external_id": "pdf:cargo30:068",
+      "source_id": "cargo30:68",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca do trabalho de relações públicas (RP) em uma organização, julgue os itens subseqüentes.\n\nO trabalho de RP tem-se expandido como necessário e merecedor de respeito e apoio público, embora muitas organizações ainda se julguem capazes de manejar suas RP sem o auxílio de assessoria técnica.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 68",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Atendimento ao Cidadão e Qualidade no Serviço Público",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Públicas",
+        "source_content_hash": "e392242726ea027e5ee6b5bcb76219e9603e35417d014c4ec5128734a680988e",
+        "original_numeric_id": 68,
+        "original_source_content_hash": "0ffeeb6b670cd9cc7e4e45fd4a73faa24d35634767587ee8636c0818f126d76f",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "qualidade-no-atendimento-ao-cidadao-e-ao-usuario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item descreve corretamente a realidade do mercado de Relações Públicas (RP). Por um lado, a complexidade do ambiente de negócios e a velocidade da informação tornaram a gestão da comunicação e do relacionamento com os públicos uma atividade estratégica indispensável e respeitada. Por outro lado, ainda persiste em algumas organizações a falsa premissa de que a comunicação pode ser gerida de forma intuitiva ou amadora, dispensando o suporte técnico de profissionais especializados na área.",
+        "source_reference": null
+      },
+      "source_content_hash": "635947b9b1954d65615327992c2d119190c1e077c210d3dd84db32ca77f68fee"
+    },
+    {
+      "external_id": "pdf:cargo30:069",
+      "source_id": "cargo30:69",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca do trabalho de relações públicas (RP) em uma organização, julgue os itens subseqüentes.\n\nA imagem de uma organização é objeto de análise constante dos profissionais de RP, que cuidam da correção de uma eventual imagem equivocada e da manutenção da imagem desejada. Isso é válido em relação à imagem externa, pois a imagem interna independe do trabalho de RP.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 69",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Públicas",
+        "source_content_hash": "3e1b41fb98f274ac4542835318237837534d8d096ea682fa0bb6c6af1cd16765",
+        "original_numeric_id": 69,
+        "original_source_content_hash": "056f325e34c78b648cb30db5c9057cc2dd2d1903f3da4cb94cc70442a5b2600c",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O erro do item reside na afirmação de que a imagem interna independe do trabalho de Relações Públicas. O público interno (colaboradores, gestores, acionistas) é um dos públicos mais estratégicos de qualquer organização. O trabalho de RP envolve diretamente a comunicação interna e o endomarketing, visando alinhar a percepção dos funcionários com a identidade, missão e valores da empresa. Uma imagem externa positiva e autêntica é reflexo direto de uma imagem interna bem consolidada e integrada.",
+        "source_reference": null
+      },
+      "source_content_hash": "4ab3f444b0ae14135a92df16fdd25a356541d36346df7c1c0dbbf43840a00a76"
+    },
+    {
+      "external_id": "pdf:cargo30:070",
+      "source_id": "cargo30:70",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca do trabalho de relações públicas (RP) em uma organização, julgue os itens subseqüentes.\n\nOs instrumentos que fornecem feedback acerca da eficiência e eficácia da organização incluem as pesquisas de opinião, os serviços de ouvidoria e a caixa de sugestões.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 70",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Públicas",
+        "source_content_hash": "6db508c8230ac00edebace22ebb6d3810f94985048006c34d99334f9b7661e04",
+        "original_numeric_id": 70,
+        "original_source_content_hash": "4fa05d910feae030895c77350782835d2fd27068cc5918ccb84880d15bdf377c",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "As pesquisas de opinião, os serviços de ouvidoria e as caixas de sugestões são instrumentos clássicos de comunicação ascendente (que flui dos públicos em direção à alta administração). Essas ferramentas funcionam como canais de retroalimentação (*feedback*), permitindo que a organização avalie a percepção de seus públicos internos e externos sobre seus processos, produtos e serviços, identificando pontos de melhoria na eficiência e eficácia organizacional.",
+        "source_reference": null
+      },
+      "source_content_hash": "96d57d089ea3c15898a95d76a2f25403d68f5d1052e6091710d0930f5d4826cd"
+    },
+    {
+      "external_id": "pdf:cargo30:071",
+      "source_id": "cargo30:71",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca do trabalho de relações públicas (RP) em uma organização, julgue os itens subseqüentes.\n\nO objetivo principal das RP é promover o conhecimento e a compreensão, por parte do público-alvo, das realizações e dos objetivos de determinada organização.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 71",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Atendimento ao Cidadão e Qualidade no Serviço Público",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Públicas",
+        "source_content_hash": "d56f29d44403afa54e9764c904ba1688b3f6abeafec096949fd5c9be75d6d809",
+        "original_numeric_id": 71,
+        "original_source_content_hash": "d7a34f1a795174b6d27fd4513a5d12816e11c60bd2572831fd30007ceed30b5f",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "qualidade-no-atendimento-ao-cidadao-e-ao-usuario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O objetivo primordial das Relações Públicas é estabelecer e manter linhas mútuas de comunicação, compreensão, aceitação e cooperação entre uma organização e seus públicos. Para que isso ocorra, o profissional de RP atua promovendo a transparência, divulgando as realizações, políticas e objetivos da instituição, de modo que o público-alvo compreenda e apoie as ações da organização, gerando credibilidade e valor reputacional.",
+        "source_reference": null
+      },
+      "source_content_hash": "0c5cbc75a8e8ad291fb534799db2535fb4c105cccb9dd8e7e6e5213204691d03"
+    },
+    {
+      "external_id": "pdf:cargo30:072",
+      "source_id": "cargo30:72",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca do trabalho de relações públicas (RP) em uma organização, julgue os itens subseqüentes.\n\nAs organizações bem-sucedidas reconhecem que grande parte de seu sucesso deve-se ao trabalho de RP, que, por meio da comunicação contínua, ajuda a criar e a manter a credibilidade da organização no mercado.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 72",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Públicas",
+        "source_content_hash": "2ed63393c1e0f15bae29f07b6e4867cc77e2f72674f14ef093c2cb7442455861",
+        "original_numeric_id": 72,
+        "original_source_content_hash": "47c1c2c37ace96d1e6b9bb1d86695e64a97cf3df769ff91d8ff29580fef77187",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O papel das Relações Públicas (RP) é essencialmente estratégico e contínuo, focado na construção, mediação e manutenção de relacionamentos de confiança entre a organização e seus diversos públicos (público interno, clientes, parceiros, comunidade e imprensa). \n\nA credibilidade de uma instituição no mercado é diretamente influenciada por essa comunicação planejada e sistemática. Portanto, as organizações que alcançam o sucesso reconhecem que a consolidação de sua reputação e imagem institucional decorre diretamente do trabalho estruturado de RP.",
+        "source_reference": null
+      },
+      "source_content_hash": "8b6a7c837eca5a7133027dcff4826199af1806625a39ecbdcf88a68676189865"
+    },
+    {
+      "external_id": "pdf:cargo30:073",
+      "source_id": "cargo30:73",
+      "question_type": "true_false",
+      "statement_markdown": "Lúcio é agente administrativo do DPF com lotação na unidade do Distrito Federal. No exercício do cargo, Lúcio deve manter contatos com seus pares, com técnicos de nível superior e com autoridades de alto nível hierárquico. Além disso, deve supervisionar trabalhos relacionados às áreas de pessoal, orçamento, organização, métodos e material. Essas atribuições exigem que ele seja competente na comunicação interpessoal.\n\nEm face da situação hipotética apresentada acima, julgue os itens seguintes, relativos ao processo de comunicação humana nas relações internas e públicas de trabalho.\n\nLúcio deve levar em conta que os canais de comunicação diferem quanto à capacidade de transmitir informações.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 73",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "a54114a086ef1ca45c90f2830a06da2168e3b2aeb1a10ce9cc03d92832157334",
+        "original_numeric_id": 73,
+        "original_source_content_hash": "131887b565185d852b85e3c842af0fe0f94ba6e3df37cb1208e9790973afd898",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Os canais de comunicação possuem diferentes capacidades de transmissão de dados, feedback e pistas não verbais. \n\nDe acordo com a Teoria da Riqueza da Mídia, os canais variam desde os mais \"ricos\" (como a comunicação presencial, que permite feedback imediato, linguagem corporal e tom de voz) até os mais \"pobres\" (como relatórios formais e memorandos, que transmitem dados limitados e sem interação em tempo real). Portanto, o emissor deve selecionar o canal mais adequado à complexidade da mensagem que deseja transmitir.",
+        "source_reference": null
+      },
+      "source_content_hash": "a18ff3a5a888d4824708488a567246ef25822e07482a6eeae6e4ccbabb49676b"
+    },
+    {
+      "external_id": "pdf:cargo30:074",
+      "source_id": "cargo30:74",
+      "question_type": "true_false",
+      "statement_markdown": "Lúcio é agente administrativo do DPF com lotação na unidade do Distrito Federal. No exercício do cargo, Lúcio deve manter contatos com seus pares, com técnicos de nível superior e com autoridades de alto nível hierárquico. Além disso, deve supervisionar trabalhos relacionados às áreas de pessoal, orçamento, organização, métodos e material. Essas atribuições exigem que ele seja competente na comunicação interpessoal.\n\nEm face da situação hipotética apresentada acima, julgue os itens seguintes, relativos ao processo de comunicação humana nas relações internas e públicas de trabalho.\n\nSendo Lúcio, na sua organização, responsável por contatos tanto horizontais quanto verticais, ele deve usar a mesma linguagem em todas as situações.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 74",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "bc6669a747f103ef5a65d347e93984575fce4c2f801899c79c95fd4857e1f21b",
+        "original_numeric_id": 74,
+        "original_source_content_hash": "404cb2526cb1fb1ca6f258d29dfc739af9f8acdcf18ad6f8366da5b21785c878",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A comunicação interpessoal eficiente pressupõe a adaptabilidade do emissor ao seu interlocutor e ao contexto hierárquico. \n\n* **Comunicação horizontal:** Ocorre entre pares ou colegas de mesmo nível hierárquico, permitindo uma linguagem frequentemente mais direta, técnica ou informal.\n* **Comunicação vertical:** Ocorre entre diferentes níveis hierárquicos (ascendente ou descendente), exigindo níveis distintos de formalidade, polidez e estruturação da mensagem.\n\nUtilizar rigorosamente a mesma linguagem em todas as situações ignora as barreiras de comunicação e a necessidade de adequação ao receptor, o que prejudica a clareza e a eficácia do processo comunicativo.",
+        "source_reference": null
+      },
+      "source_content_hash": "c06818801f678488d5ed3dbe1d50f12c2c1d32609b62c3441000b6fd672912c4"
+    },
+    {
+      "external_id": "pdf:cargo30:075",
+      "source_id": "cargo30:75",
+      "question_type": "true_false",
+      "statement_markdown": "Lúcio é agente administrativo do DPF com lotação na unidade do Distrito Federal. No exercício do cargo, Lúcio deve manter contatos com seus pares, com técnicos de nível superior e com autoridades de alto nível hierárquico. Além disso, deve supervisionar trabalhos relacionados às áreas de pessoal, orçamento, organização, métodos e material. Essas atribuições exigem que ele seja competente na comunicação interpessoal.\n\nEm face da situação hipotética apresentada acima, julgue os itens seguintes, relativos ao processo de comunicação humana nas relações internas e públicas de trabalho.\n\nPara enviar a seus superiores informações relativas à publicação de nova legislação pertinente ao trabalho do DPF, Lúcio poderá fazer uso de e-mail, que é um canal de comunicação apropriado para esse fim.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 75",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "4b59c3a32b297b0f1f8dfc9ded389e513df44592c01d4733d9b911ed01792e71",
+        "original_numeric_id": 75,
+        "original_source_content_hash": "c6bdeb160fec4a0a45cc06bb97781d9e8df3eee43b1bad31bc9d5855eab08cc3",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O correio eletrônico (e-mail) é uma ferramenta de comunicação oficial amplamente aceita e utilizada na administração pública. \n\nPara o envio de informações de caráter informativo e documental, como a publicação de uma nova legislação de interesse do órgão, o e-mail apresenta-se como um canal altamente apropriado. Ele permite o registro escrito da comunicação, o envio de anexos (como a íntegra da lei) e a disseminação rápida da informação para múltiplos destinatários de forma simultânea.",
+        "source_reference": null
+      },
+      "source_content_hash": "1a9de6bfa8198c2cc0c291f31ff91cf50e0b54cd233d793e76bf0e845b370ee6"
+    },
+    {
+      "external_id": "pdf:cargo30:076",
+      "source_id": "cargo30:76",
+      "question_type": "true_false",
+      "statement_markdown": "Lúcio é agente administrativo do DPF com lotação na unidade do Distrito Federal. No exercício do cargo, Lúcio deve manter contatos com seus pares, com técnicos de nível superior e com autoridades de alto nível hierárquico. Além disso, deve supervisionar trabalhos relacionados às áreas de pessoal, orçamento, organização, métodos e material. Essas atribuições exigem que ele seja competente na comunicação interpessoal.\n\nEm face da situação hipotética apresentada acima, julgue os itens seguintes, relativos ao processo de comunicação humana nas relações internas e públicas de trabalho.\n\nNo exercício de sua função, Lúcio deve ater-se à comunicação verbal, pois a comunicação gestual é inexeqüível nas organizações.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 76",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "d6863088c50eb8e81478d08b398b4f4cefe5b5ec911853004c24113611d0a071",
+        "original_numeric_id": 76,
+        "original_source_content_hash": "1068f062b44bec97b3d83e6d71c01a6bc6d1bd98abac450ea87c01534328ed98",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A comunicação humana é um processo multidimensional composto por elementos verbais (orais e escritos) e não verbais (gestos, expressões faciais, postura corporal e tom de voz). \n\nNas interações diárias de trabalho, a comunicação gestual e corporal ocorre de maneira contínua e inevitável, servindo para complementar, reforçar, ilustrar ou até mesmo contradizer a mensagem verbal. Portanto, é incorreto afirmar que a comunicação gestual é \"inexequível\" (impossível de ser realizada ou praticada) no ambiente organizacional.",
+        "source_reference": null
+      },
+      "source_content_hash": "d24a523a8c51d47e97afbac5b6e4244b293a0ba0ab0f9be0afe820b43613044d"
+    },
+    {
+      "external_id": "pdf:cargo30:077",
+      "source_id": "cargo30:77",
+      "question_type": "true_false",
+      "statement_markdown": "Lúcio é agente administrativo do DPF com lotação na unidade do Distrito Federal. No exercício do cargo, Lúcio deve manter contatos com seus pares, com técnicos de nível superior e com autoridades de alto nível hierárquico. Além disso, deve supervisionar trabalhos relacionados às áreas de pessoal, orçamento, organização, métodos e material. Essas atribuições exigem que ele seja competente na comunicação interpessoal.\n\nEm face da situação hipotética apresentada acima, julgue os itens seguintes, relativos ao processo de comunicação humana nas relações internas e públicas de trabalho.\n\nQuando Lúcio se comunica com seus pares utilizando terminologia especializada ou linguagem específica de seu grupo profissional, ele está-se valendo de um jargão.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 77",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Trabalho em Equipe e Gestão de Conflitos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "f4da273aae9c8f86b991b06d03a853b3b6049f0e5fd249a3d258b4794b3d83bc",
+        "original_numeric_id": 77,
+        "original_source_content_hash": "605c37043764abf4e78fc2fd1029b18b92ee1920b1723e7d2672c0c3b31c1071",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-conflitos-e-relacionamento-no-ambiente-de-trabalho",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O jargão consiste no vocabulário específico, termos técnicos ou expressões compartilhadas por membros de um determinado grupo profissional ou social. No contexto apresentado, quando Lúcio utiliza terminologia especializada com seus pares (outros agentes administrativos ou técnicos da mesma área), ele está empregando o jargão próprio de sua atividade. Essa linguagem técnica facilita a precisão e a rapidez na transmissão de mensagens entre indivíduos que compartilham o mesmo repertório de conhecimentos, embora possa atuar como barreira de comunicação se utilizada com pessoas externas ao grupo.",
+        "source_reference": null
+      },
+      "source_content_hash": "3e84eaa8d76fbf549665ece424a32404365d0884dedce33c839b5be94e0eac54"
+    },
+    {
+      "external_id": "pdf:cargo30:078",
+      "source_id": "cargo30:78",
+      "question_type": "true_false",
+      "statement_markdown": "Lúcio é agente administrativo do DPF com lotação na unidade do Distrito Federal. No exercício do cargo, Lúcio deve manter contatos com seus pares, com técnicos de nível superior e com autoridades de alto nível hierárquico. Além disso, deve supervisionar trabalhos relacionados às áreas de pessoal, orçamento, organização, métodos e material. Essas atribuições exigem que ele seja competente na comunicação interpessoal.\n\nEm face da situação hipotética apresentada acima, julgue os itens seguintes, relativos ao processo de comunicação humana nas relações internas e públicas de trabalho.\n\nConsidere que, ao se comunicar com seus superiores, Lúcio manipule a informação para que ela seja recebida de maneira mais favorável. Nesse caso, Lúcio cria uma barreira à comunicação eficaz.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 78",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "541ec2bba4008a3fef2af232f2f90538c4a06ca05353c306e2d1399f08c9c3c7",
+        "original_numeric_id": 78,
+        "original_source_content_hash": "946e23474fe56dba0ae8945672476f72dc91a2f24456155257e0ed12a000dd22",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A manipulação deliberada da informação pelo emissor para torná-la mais favorável ou palatável ao receptor é denominada, na teoria da comunicação, como \"filtragem\". Ao filtrar as informações enviadas aos seus superiores, Lúcio impede que dados reais e potencialmente problemáticos cheguem ao topo da hierarquia de forma fidedigna. Esse comportamento distorce a realidade organizacional e constitui uma barreira clássica à comunicação eficaz, pois compromete a tomada de decisões baseada em fatos reais.",
+        "source_reference": null
+      },
+      "source_content_hash": "df3324d72b6e3492133ceebc33b4a9a9f7c9604b7071d2df5bdd786c585f86f4"
+    },
+    {
+      "external_id": "pdf:cargo30:079",
+      "source_id": "cargo30:79",
+      "question_type": "true_false",
+      "statement_markdown": "Lúcio é agente administrativo do DPF com lotação na unidade do Distrito Federal. No exercício do cargo, Lúcio deve manter contatos com seus pares, com técnicos de nível superior e com autoridades de alto nível hierárquico. Além disso, deve supervisionar trabalhos relacionados às áreas de pessoal, orçamento, organização, métodos e material. Essas atribuições exigem que ele seja competente na comunicação interpessoal.\n\nEm face da situação hipotética apresentada acima, julgue os itens seguintes, relativos ao processo de comunicação humana nas relações internas e públicas de trabalho.\n\nA comunicação de Lúcio será descendente toda vez que ele estiver mantendo contato com autoridades.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 79",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "27016433b3570f86fc268ef90722cac1d2341e3c8bd25fc80f3de6c2ce368cd4",
+        "original_numeric_id": 79,
+        "original_source_content_hash": "60375009f1fd506af73d2d12e76690b1ae5888378d94717d662ebf1b8db56a2a",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A direção do fluxo de comunicação é determinada pela posição hierárquica dos interlocutores. A comunicação realizada por Lúcio (agente administrativo) direcionada a autoridades de alto nível hierárquico (superiores) classifica-se como comunicação **ascendente** (de baixo para cima), e não descendente. A comunicação descendente ocorre no sentido oposto, ou seja, de superiores para subordinados (por exemplo, quando as autoridades emitem diretrizes ou instruções para Lúcio).",
+        "source_reference": null
+      },
+      "source_content_hash": "350ad5bda7273d9c3fcb1ad72a1afcbfa036b1c84abd90261bfb87df7f87bb68"
+    },
+    {
+      "external_id": "pdf:cargo30:080",
+      "source_id": "cargo30:80",
+      "question_type": "true_false",
+      "statement_markdown": "Lúcio é agente administrativo do DPF com lotação na unidade do Distrito Federal. No exercício do cargo, Lúcio deve manter contatos com seus pares, com técnicos de nível superior e com autoridades de alto nível hierárquico. Além disso, deve supervisionar trabalhos relacionados às áreas de pessoal, orçamento, organização, métodos e material. Essas atribuições exigem que ele seja competente na comunicação interpessoal.\n\nEm face da situação hipotética apresentada acima, julgue os itens seguintes, relativos ao processo de comunicação humana nas relações internas e públicas de trabalho.\n\nAs redes de comunicação interpessoal utilizadas por Lúcio no DPF são caracterizadas como redes informais de comunicação, pois ele conhece as pessoas com as quais se comunica.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 80",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "a23f63d02094e4d75eb6959d7f059e4982063395adeda96043c0b3ff39e5f213",
+        "original_numeric_id": 80,
+        "original_source_content_hash": "e2d7701cad155379d3d6a49189a0bdcbd797ad3c62bed4469a24b08f1839afd1",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O fato de Lúcio conhecer pessoalmente seus interlocutores não define a natureza da rede de comunicação como informal. As redes formais de comunicação são aquelas estabelecidas pela estrutura organizacional oficial, seguindo a cadeia de comando e os canais institucionais necessários para a execução das tarefas (como a supervisão de pessoal, orçamento e material descrita no enunciado). As redes informais, por outro lado, surgem espontaneamente das interações sociais e de amizade, independentemente dos cargos ocupados. Portanto, as comunicações funcionais de Lúcio no exercício de suas atribuições integram a rede formal da instituição.",
+        "source_reference": null
+      },
+      "source_content_hash": "d7705c858d5e0fea7a5f2565205a3c3ddcd481bac801f9344ac3cfdc63f2a717"
+    },
+    {
+      "external_id": "pdf:cargo30:081",
+      "source_id": "cargo30:81",
+      "question_type": "true_false",
+      "statement_markdown": "Suponha que, na organização Felicidade Ltda., a unidade de recursos humanos (RH) conta com 10 empregados. Nesse setor, o clima organizacional vem-se caracterizando por manifestações de inveja, ressentimentos, inimizades pessoais. As ações que o gerente de RH deve adotar para melhorar o clima organizacional dessa empresa incluem\n\npromover, em primeiro lugar, a negociação entre os subordinados e a direção da organização, buscando conciliar as metas organizacionais com os interesses individuais.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 81",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "c451a31545e7b955e503f42a98a397ff87a8ae296e2fa2ba3427bc047c467655",
+        "original_numeric_id": 81,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNa teoria das relações humanas e da gestão de pessoas, o clima organizacional reflete a percepção coletiva dos colaboradores sobre o ambiente de trabalho e o nível de satisfação das relações interpessoais.\n\nQuando há degradação do clima decorrente de conflitos e ressentimentos, uma das medidas prioritárias do gestor de Recursos Humanos consiste em atuar como mediador, promovendo o diálogo e a negociação transparente entre as demandas dos servidores e os objetivos estratégicos da organização, harmonizando metas institucionais e interesses individuais para restabelecer a cooperação.",
+        "source_reference": null
+      },
+      "source_content_hash": "40f9318ccfa508430ce27c04ea3874af050df49d77ad22a26784263374341b3f"
+    },
+    {
+      "external_id": "pdf:cargo30:082",
+      "source_id": "cargo30:82",
+      "question_type": "true_false",
+      "statement_markdown": "Suponha que, na organização Felicidade Ltda., a unidade de recursos humanos (RH) conta com 10 empregados. Nesse setor, o clima organizacional vem-se caracterizando por manifestações de inveja, ressentimentos, inimizades pessoais. As ações que o gerente de RH deve adotar para melhorar o clima organizacional dessa empresa incluem\n\niniciar um processo de comunicação que exclua o feedback centrado em mentira sobre desafeto.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 82",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "6cb335fc713a071f1ca6ed25a404c8709519216b748825a8bc6506372bdb0410",
+        "original_numeric_id": 82,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nAmbientes corporativos contaminados por intrigas e desconfiança são amplamente alimentados por fluxos informais de comunicação degradada (como a \"rádio-peão\", boatos e fofocas deliberadas voltadas a prejudicar colegas de trabalho).\n\nPara sanear o clima organizacional, cabe à liderança institucionalizar processos formais, éticos e transparentes de comunicação, assegurando que o retorno de desempenho (*feedback*) seja técnico, construtivo, embasado em fatos concretos e orientado ao desenvolvimento, repudiando expressamente manifestações mentirosas e difamações dirigidas a desafetos.",
+        "source_reference": null
+      },
+      "source_content_hash": "e4d13b59bd39eca9586b52f3e6192b2a785cfd04780e89c5b4374dbb4374faf8"
+    },
+    {
+      "external_id": "pdf:cargo30:083",
+      "source_id": "cargo30:83",
+      "question_type": "true_false",
+      "statement_markdown": "Suponha que, na organização Felicidade Ltda., a unidade de recursos humanos (RH) conta com 10 empregados. Nesse setor, o clima organizacional vem-se caracterizando por manifestações de inveja, ressentimentos, inimizades pessoais. As ações que o gerente de RH deve adotar para melhorar o clima organizacional dessa empresa incluem\n\nrealizar uma análise organizacional revendo o organograma, os fluxogramas, o estatuto e o regimento interno.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 83",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "41924547585d95fd07cc459c6d7e06066ef9081704794f5bc26df4e7340496c2",
+        "original_numeric_id": 83,
+        "original_source_content_hash": "b33973ae34701dec4d28e8cbb455b9cc0dfaff8a0f945431fbe283bc0f5bedcd",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A situação descrita no enunciado evidencia um problema de clima organizacional decorrente de conflitos interpessoais e comportamentais (inveja, ressentimentos e inimizades). \n\nPara solucionar ou mitigar problemas dessa natureza, as ações devem ser direcionadas à gestão de pessoas, mediação de conflitos e desenvolvimento interpessoal. A revisão de aspectos estruturais e formais da organização — como organograma, fluxogramas, estatuto e regimento interno — foca na estrutura organizacional e nos processos de trabalho, não possuindo eficácia direta sobre as relações humanas e os sentimentos dos colaboradores. Portanto, tais medidas são inadequadas para o cenário apresentado.",
+        "source_reference": null
+      },
+      "source_content_hash": "50ade945738781b5ebc17afb0014cfc7e7f4cb5bbe3a49e363786ecd9160fe60"
+    },
+    {
+      "external_id": "pdf:cargo30:084",
+      "source_id": "cargo30:84",
+      "question_type": "true_false",
+      "statement_markdown": "Suponha que, na organização Felicidade Ltda., a unidade de recursos humanos (RH) conta com 10 empregados. Nesse setor, o clima organizacional vem-se caracterizando por manifestações de inveja, ressentimentos, inimizades pessoais. As ações que o gerente de RH deve adotar para melhorar o clima organizacional dessa empresa incluem\n\npropor aos insatisfeitos que se demitam.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 84",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "5287300aabf925c13d33cf9bac1dd3bad5c056ad556a0cc3aa1626549ea7ad11",
+        "original_numeric_id": 84,
+        "original_source_content_hash": "10f1c3679e9768aafbfec9b9db71e64b83eaf620a68f03161092289dd46ce5b9",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Propor a demissão de colaboradores insatisfeitos não constitui uma técnica de gestão de conflitos ou de melhoria do clima organizacional. \n\nEm gestão de pessoas, o papel do gestor de Recursos Humanos diante de um clima desfavorável deve ser ativo e mediador, buscando identificar as causas das insatisfações e dos atritos interpessoais para tratá-los. A sugestão de desligamento, além de ser uma medida extrema e punitiva, gera insegurança psicológica no restante da equipe, o que tende a deteriorar ainda mais o clima organizacional.",
+        "source_reference": null
+      },
+      "source_content_hash": "554ecc08e43bc8c91215d9fa0daa73430df8dc57b06ce5e7b71dbf7c81b0b297"
+    },
+    {
+      "external_id": "pdf:cargo30:085",
+      "source_id": "cargo30:85",
+      "question_type": "true_false",
+      "statement_markdown": "Suponha que, na organização Felicidade Ltda., a unidade de recursos humanos (RH) conta com 10 empregados. Nesse setor, o clima organizacional vem-se caracterizando por manifestações de inveja, ressentimentos, inimizades pessoais. As ações que o gerente de RH deve adotar para melhorar o clima organizacional dessa empresa incluem\n\nestimular a auto-reflexão e, em um segundo momento, implantar um processo participativo que possibilite aos empregados exporem o que sentem e proporem soluções para melhorar o clima organizacional.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 85",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Relacionamento Interpessoal e Comunicação Assertiva",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Relações Humanas",
+        "source_content_hash": "99f635fbc2afc2438ed294c8a7c8471f448427e13c44002326d3a9fd77194f5d",
+        "original_numeric_id": 85,
+        "original_source_content_hash": "5d555b76d5e83396af81ba7b93626f890401853271d6be10687ad13f93848519",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "comunicacao-interpessoal-e-trabalho-em-equipe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A ação proposta está alinhada com as práticas modernas de Desenvolvimento Organizacional (DO) e gestão de conflitos. \n\nDiante de problemas de relacionamento (inveja, ressentimentos e inimizades), a intervenção deve focar no aspecto humano. Estimular a autorreflexão permite que cada indivíduo avalie seu próprio comportamento e impacto no grupo. Posteriormente, a implementação de um processo participativo abre espaço para o diálogo seguro, permitindo que os colaboradores externalizem suas percepções e colaborem ativamente na construção de soluções, promovendo o engajamento e a melhoria sustentável do clima organizacional.",
+        "source_reference": null
+      },
+      "source_content_hash": "f3fab896ac2ed9f0789edcd44dd6cf6268e781b28ec1473791b8277fbdd2bcb2"
+    }
+  ]
+}

@@ -1,0 +1,950 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-prova_i09_tipo_001-portugues-b5630bbdb295-69d7a3182777",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "b5630bbdb295671178518a6a56da47afa49d6b19ff3b0347fbe6974f5ac03394",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "8a1d40d330f3a1f0c9c5c49977037cbc600422d057f7b497ba1fcf422d8196bb",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "69d7a31827774a0b5262dd74c5285d35a8f76e1c14ee5dfa6f554eefdcda84ff",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:001",
+      "source_id": "prova_i09_tipo_001:1",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 1 a 4 referem-se ao texto abaixo.\n\nRio Grande do Norte: a esquina do continente\n\nOs portugueses tentaram iniciar a colonização em 1535, mas os índios potiguares resistiram e os franceses invadiram. A ocupação portuguesa só se efetivou no final do século, com a fundação do Forte dos Reis Magos e da Vila de Natal. O clima pouco favorável ao cultivo da cana levou a atividade econômica para a pecuária. O Estado tornou-se centro de criação de gado para abastecer os Estados vizinhos e começou a ganhar importância a extração do sal – hoje, o Rio Grande do Norte responde por 95% de todo o sal extraído no país. O petróleo é outra fonte de recursos: é o maior produtor nacional de petróleo em terra e o segundo no mar. Os 410 quilômetros de praias garantem um lugar especial para o turismo na economia estadual.\n\nO litoral oriental compõe o Polo Costa das Dunas − com belas praias, falésias, dunas e o maior cajueiro do mundo –, do qual faz parte a capital, Natal. O Polo Costa Branca, no oeste do Estado, é caracterizado pelo contraste: de um lado, a caatinga; do outro, o mar, com dunas, falésias e quilômetros de praias praticamente desertas. A região é grande produtora de sal, petróleo e frutas; abriga sítios arqueológicos e até um vulcão extinto, o Pico do Cabugi, em Angicos. Mossoró é a segunda cidade mais importante. Além da rica história, é conhecida por suas águas termais, pelo artesanato reunido no mercado São João e pelas salinas.\n\nCaicó, Currais Novos e Açari compõem o chamado Polo do Seridó, dominado pela caatinga e com sítios arqueológicos importantes, serras majestosas e cavernas misteriosas. Em Caicó há vários açudes e formações rochosas naturais que desafiam a imaginação do homem. O turismo de aventura encontra seu espaço no Polo Serrano, cujo clima ameno e geografia formada por montanhas e grutas atraem os adeptos do ecoturismo.\n\nOutro polo atraente é Agreste/Trairi, com sua sucessão de serras, rochas e lajedos nos 13 municípios que compõem a região. Em Santa Cruz, a subida ao Monte Carmelo desvenda toda a beleza do sertão potiguar – em breve, o local vai abrigar um complexo voltado principalmente para o turismo religioso. A vaquejada e o Arraiá do Lampião são as grandes atrações de Tangará, que oferece ainda um belíssimo panorama no Açude do Trairi.\n\n(Nordeste. 30/10/2010, Encarte no jornal O Estado de S. Paulo).\n\nO texto se estrutura notadamente",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 1; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "com o objetivo de esclarecer alguns aspectos cronológicos do processo histórico de formação do Estado e de suas bases econômicas, desde a época da colonização.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "como uma crônica baseada em aspectos históricos, em que se apresentam tópicos que salientam as formações geográficas do Estado.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "de maneira dissertativa, em que se discutem as várias divisões regionais do Estado com a finalidade de comprovar qual delas se apresenta como a mais bela.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "sob forma narrativa, de início, e descritiva, a seguir, visando a despertar interesse turístico para as atrações que o Estado oferece.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "de forma instrucional, como orientação a eventuais viajantes que se disponham a conhecer a região, apresentando-les uma ordem preferencial de visitação.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "f1801da2e2832f487cd12fc5ffb7f4c9b234ec9b443377aca78074951a6fd371",
+        "original_numeric_id": 1,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A estrutura do texto mescla tipologias textuais de forma sequencial para atingir seu objetivo comunicativo:\n\n* **Início (Narrativo):** O primeiro parágrafo apresenta fatos históricos cronologicamente ordenados sobre a colonização do Rio Grande do Norte (\"Os portugueses tentaram iniciar a colonização em 1535... A ocupação portuguesa só se efetivou no final do século...\") e a evolução de suas atividades econômicas.\n* **Sequência (Descritivo):** A partir do segundo parágrafo, o texto passa a caracterizar detalhadamente as diferentes regiões do estado (os \"Polos\"), enumerando suas belezas naturais, relevo, clima e atrações turísticas, com o intuito de atrair visitantes.\n\n**Análise das alternativas incorretas:**\n\n* **A** está incorreta porque o foco principal do texto não é a cronologia histórica, que serve apenas como introdução no primeiro parágrafo.\n* **B** está incorreta porque o texto não se configura como uma crônica (gênero literário marcado pela subjetividade e reflexão sobre o cotidiano), mas sim como um texto informativo/promocional de turismo.\n* **C** está incorreta porque a estrutura não é predominantemente dissertativa (não há debate de ideias ou defesa de uma tese) e o texto não busca \"comprovar\" qual polo é o mais belo, mas sim descrever as qualidades de todos eles.\n* **E** está incorreta porque o texto não possui caráter instrucional (como receitas ou manuais) e não estabelece um roteiro ou ordem de preferência para a visitação.",
+        "source_reference": null
+      },
+      "source_content_hash": "e9a37bbb0df8a66cf9757951304d38cd8663869edbb5ab9826aa11de512d3dde"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:002",
+      "source_id": "prova_i09_tipo_001:2",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 1 a 4 referem-se ao texto abaixo.\n\nRio Grande do Norte: a esquina do continente\n\nOs portugueses tentaram iniciar a colonização em 1535, mas os índios potiguares resistiram e os franceses invadiram. A ocupação portuguesa só se efetivou no final do século, com a fundação do Forte dos Reis Magos e da Vila de Natal. O clima pouco favorável ao cultivo da cana levou a atividade econômica para a pecuária. O Estado tornou-se centro de criação de gado para abastecer os Estados vizinhos e começou a ganhar importância a extração do sal – hoje, o Rio Grande do Norte responde por 95% de todo o sal extraído no país. O petróleo é outra fonte de recursos: é o maior produtor nacional de petróleo em terra e o segundo no mar. Os 410 quilômetros de praias garantem um lugar especial para o turismo na economia estadual.\n\nO litoral oriental compõe o Polo Costa das Dunas − com belas praias, falésias, dunas e o maior cajueiro do mundo –, do qual faz parte a capital, Natal. O Polo Costa Branca, no oeste do Estado, é caracterizado pelo contraste: de um lado, a caatinga; do outro, o mar, com dunas, falésias e quilômetros de praias praticamente desertas. A região é grande produtora de sal, petróleo e frutas; abriga sítios arqueológicos e até um vulcão extinto, o Pico do Cabugi, em Angicos. Mossoró é a segunda cidade mais importante. Além da rica história, é conhecida por suas águas termais, pelo artesanato reunido no mercado São João e pelas salinas.\n\nCaicó, Currais Novos e Açari compõem o chamado Polo do Seridó, dominado pela caatinga e com sítios arqueológicos importantes, serras majestosas e cavernas misteriosas. Em Caicó há vários açudes e formações rochosas naturais que desafiam a imaginação do homem. O turismo de aventura encontra seu espaço no Polo Serrano, cujo clima ameno e geografia formada por montanhas e grutas atraem os adeptos do ecoturismo.\n\nOutro polo atraente é Agreste/Trairi, com sua sucessão de serras, rochas e lajedos nos 13 municípios que compõem a região. Em Santa Cruz, a subida ao Monte Carmelo desvenda toda a beleza do sertão potiguar – em breve, o local vai abrigar um complexo voltado principalmente para o turismo religioso. A vaquejada e o Arraiá do Lampião são as grandes atrações de Tangará, que oferece ainda um belíssimo panorama no Açude do Trairi.\n\n(Nordeste. 30/10/2010, Encarte no jornal O Estado de S. Paulo).\n\nCom a substituição dos segmentos grifados pela expressão entre parênteses ao final da transcrição, o verbo que deverá ser colocado no plural está em:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 2; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "... em breve, o local vai abrigar um complexo voltado principalmente para o turismo religioso. (la região do Agreste/Trairi).",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "A ocupação portuguesa só se efetivou no final do século, com a fundação do Forte dos Reis Magos e da Vila de Natal. (A ocupação pelos portugueses).",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "A região é grande produtora de sal, petróleo e frutas ... (A região de dunas, falésias e praias desertas).",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "O turismo de aventura encontra seu espaço no Polo Serrano ... (O turismo voltado para atividades de aventura).",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "... e começou a ganhar importância a extração do sal ... (os recursos obtidos com a extração do sal).",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "85b7abe55ccdc6a0e98ddf4c795fdf68820bb848b55426c9250c4e9e3cc09158",
+        "original_numeric_id": 2,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige conhecimento sobre concordância verbal, especificamente a identificação do núcleo do sujeito para determinar a flexão do verbo.\n\n* **Análise da alternativa correta (E):** Na estrutura original, tem-se: \"... e **começou** [verbo no singular] a ganhar importância **a extração** [núcleo do sujeito no singular] do sal...\". Ao substituir o sujeito por \"os recursos obtidos com a extração do sal\", o novo núcleo do sujeito passa a ser o substantivo plural **\"recursos\"**. Consequentemente, a locução verbal deve ser flexionada no plural para manter a concordância: \"... e **começaram** a ganhar importância **os recursos** obtidos...\".\n\n**Análise das alternativas incorretas (onde o verbo permanece no singular):**\n\n* **A:** \"... em breve, **o local** [núcleo singular] **vai** abrigar...\". Substituindo por \"a região do Agreste/Trairi\", o núcleo continua singular (\"região\"), mantendo o verbo no singular: \"... **vai** abrigar...\".\n* **B:** \"**A ocupação** [núcleo singular] portuguesa só **se efetivou**...\". Substituindo por \"A ocupação pelos portugueses\", o núcleo do sujeito continua sendo o substantivo singular \"ocupação\", mantendo o verbo no singular: \"... só **se efetivou**...\".\n* **C:** \"**A região** [núcleo singular] **é** grande produtora...\". Substituindo por \"A região de dunas, falésias e praias desertas\", o núcleo do sujeito permanece sendo o substantivo singular \"região\", mantendo o verbo no singular: \"... **é** grande produtora...\".\n* **D:** \"**O turismo** [núcleo singular] de aventura **encontra** seu espaço...\". Substituindo por \"O turismo voltado para atividades de aventura\", o núcleo do sujeito continua sendo o substantivo singular \"turismo\", mantendo o verbo no singular: \"... **encontra** seu espaço...\".",
+        "source_reference": null
+      },
+      "source_content_hash": "77f86757acd4ab42fa8e434fd1621d3d044b3f6a538489b330720596c232e7f1"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:004",
+      "source_id": "prova_i09_tipo_001:4",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 1 a 4 referem-se ao texto abaixo.\n\nRio Grande do Norte: a esquina do continente\n\nOs portugueses tentaram iniciar a colonização em 1535, mas os índios potiguares resistiram e os franceses invadiram. A ocupação portuguesa só se efetivou no final do século, com a fundação do Forte dos Reis Magos e da Vila de Natal. O clima pouco favorável ao cultivo da cana levou a atividade econômica para a pecuária. O Estado tornou-se centro de criação de gado para abastecer os Estados vizinhos e começou a ganhar importância a extração do sal – hoje, o Rio Grande do Norte responde por 95% de todo o sal extraído no país. O petróleo é outra fonte de recursos: é o maior produtor nacional de petróleo em terra e o segundo no mar. Os 410 quilômetros de praias garantem um lugar especial para o turismo na economia estadual.\n\nO litoral oriental compõe o Polo Costa das Dunas − com belas praias, falésias, dunas e o maior cajueiro do mundo –, do qual faz parte a capital, Natal. O Polo Costa Branca, no oeste do Estado, é caracterizado pelo contraste: de um lado, a caatinga; do outro, o mar, com dunas, falésias e quilômetros de praias praticamente desertas. A região é grande produtora de sal, petróleo e frutas; abriga sítios arqueológicos e até um vulcão extinto, o Pico do Cabugi, em Angicos. Mossoró é a segunda cidade mais importante. Além da rica história, é conhecida por suas águas termais, pelo artesanato reunido no mercado São João e pelas salinas.\n\nCaicó, Currais Novos e Açari compõem o chamado Polo do Seridó, dominado pela caatinga e com sítios arqueológicos importantes, serras majestosas e cavernas misteriosas. Em Caicó há vários açudes e formações rochosas naturais que desafiam a imaginação do homem. O turismo de aventura encontra seu espaço no Polo Serrano, cujo clima ameno e geografia formada por montanhas e grutas atraem os adeptos do ecoturismo.\n\nOutro polo atraente é Agreste/Trairi, com sua sucessão de serras, rochas e lajedos nos 13 municípios que compõem a região. Em Santa Cruz, a subida ao Monte Carmelo desvenda toda a beleza do sertão potiguar – em breve, o local vai abrigar um complexo voltado principalmente para o turismo religioso. A vaquejada e o Arraiá do Lampião são as grandes atrações de Tangará, que oferece ainda um belíssimo panorama no Açude do Trairi.\n\n(Nordeste. 30/10/2010, Encarte no jornal O Estado de S. Paulo).\n\nAs informações mais importantes contidas no texto estão resumidas, com clareza e correção, em:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 4; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Os Polos em que é dividido o Estado do Rio Grande do Norte é de beleza incomparável, com belas praias, dunas, falésias e açudes de lindo panorama, como também a caatinga. A atividade econômica está concentrada na extração do sal e na exploração do petróleo, em terra e no mar, mas apesar do clima pouco favorável para o cultivo, frutas são produzidas no Estado.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "O Rio Grande do Norte é um Estado cuja economia se baseia na extração de sal, na pecuária, no turismo e na exploração de petróleo. Quanto às suas riquezas naturais e atrações turísticas, observam-se belas praias, dunas, falésias. Encontram-se, ainda, sítios arqueológicos importantes e várias formações rochosas, com serras e cavernas, além de açudes.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "No litoral do Rio Grande do Norte encontra-se belas praias, dunas e falésias, com formações rochosas naturais inacreditáveis, servindo para o turismo, até mesmo de aventura e o ecoturismo, despertando interesse de aventureiros que se dispõem a conhecer toda essa região de belezas com açudes na região que eles se encontram.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "O Estado do Rio Grande do Norte, desde a colonização, se divide em Polos, por suas regiões que mostram contraste entre mar e sertão, com produções de frutas, assim como petróleo e sal, com rica história e o artesanato em alguns deles. Também se observa formações rochosas em outros, e pelos açudes, ainda mais os sítios arqueológicos importantes.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "O Estado em questão está sobressaindo pela produção de sal e de petróleo, também na pecuária, desde a colonização, mais ainda que os vizinhos. Ele tem belas praias, dunas, falésias e até vulcão extinto, como sítios arqueológicos de importância em todo o Estado, com seus polos distribuídos por todo ele, e ainda produz cana, mesmo com clima pouco favorável.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "0781767eed7a50b0c0eb78f2d9a62bcd8f09393efd7df6b3f10aaf9c5237e28a",
+        "original_numeric_id": 4,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa **B** sintetiza adequadamente as informações do texto (aspectos econômicos e geográficos/turísticos) com correção gramatical e clareza.\n\n**Análise dos erros das demais alternativas:**\n\n* **A:** Apresenta erro de concordância verbal em \"Os Polos [plural]... **é** [singular] de beleza incomparável\". O correto seria \"Os Polos... **são**\".\n* **C:** Apresenta erro de concordância verbal na voz passiva sintética em \"**encontra-se** [singular] belas praias [sujeito paciente no plural]\". O correto seria \"**encontram-se** belas praias\".\n* **D:** Apresenta erro de concordância verbal em \"se **observa** [singular] formações rochosas [sujeito paciente no plural]\". O correto seria \"se **observam**\". Além disso, o texto não afirma que o estado se divide em polos \"desde a colonização\".\n* **E:** Apresenta erro de interpretação de texto ao afirmar que o estado \"ainda produz cana, mesmo com clima pouco favorável\". O texto original afirma expressamente o oposto: \"O clima pouco favorável ao cultivo da cana **levou a atividade econômica para a pecuária**\".",
+        "source_reference": null
+      },
+      "source_content_hash": "7ba61710ed6c41489341781308806daae2574b3ff4a067ab0bb252520e1e4c25"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:005",
+      "source_id": "prova_i09_tipo_001:5",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 5 a 8 referem-se ao texto abaixo.\n\nOs ecos da Revolução do Porto haviam chegado ao Brasil e bastaram algumas semanas para inflamar os ânimos dos brasileiros e portugueses que cercavam a corte. Na manhã de 26 de fevereiro, uma multidão exigia a presença do rei no centro do Rio de Janeiro e a assinatura da Constituição liberal. Ao ouvir as notícias, a alguns quilômetros dali, D. João mandou fechar todas as janelas do palácio São Cristóvão, como fazia em noites de trovoadas.\n\nPouco depois chegou o Príncipe D. Pedro, que passara a madrugada em conversas com os rebeldes. Vinha buscar o rei. D. João estava apavorado com a lembrança da ainda recente Revolução Francesa. Apesar do medo, D. João embarcou na carruagem que o aguardava e seguiu para o centro da cidade. A caminho, no entanto, percebeu que, em lugar de ofensas e gritos de protestos, a multidão aclamava seu nome. Ao contrário do odiado Luís XVI, o rei do Brasil era amado e querido pelo povo carioca.\n\n(Adaptado de Laurentino Gomes, 1808. São Paulo: Planeta, 2007)\n\nAo ouvir as notícias, a alguns quilômetros dali, D. João mandou fechar todas as janelas do palácio São Cristóvão, como fazia em noites de trovoadas. (1º parágrafo)\n\nCom a afirmativa acima, o autor",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 5; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "exprime uma opinião pessoal taxativa a respeito da atitude do rei diante da iminência da Revolução do Porto.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "critica de modo inflexível a atitude do rei, que, acuado, passa o poder para as mãos do filho.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "demonstra que o rei era dono de uma personalidade intempestiva, que se assemelhava a uma chuva forte.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "sugere, de modo indireto, que o rei havia se alarmado com a informação recebida.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "utiliza-se de ironia para induzir o leitor à conclusão de que seria mais do que justo depor o rei.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "0fa985ff482d95287f0d3f3430680ed426611e7d2e847cd1b140112ffd48b065",
+        "original_numeric_id": 5,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O trecho destaca uma reação física e comportamental de D. João VI diante de uma notícia política impactante: mandar fechar as janelas do palácio. \n\nAo associar essa atitude ao comportamento que o monarca adotava \"em noites de trovoadas\" (fenômeno natural associado ao medo, barulho e necessidade de proteção), o autor utiliza uma analogia para sugerir, de forma indireta e figurada, o estado de temor, sobressalto e alarme em que o rei se encontrava ao tomar conhecimento dos acontecimentos revolucionários.\n\n**Análise das alternativas incorretas:**\n\n* **A:** O autor não emite uma opinião pessoal direta ou taxativa; ele utiliza uma descrição de comportamento para sugerir o estado psicológico do rei.\n* **B:** Não há, nesse trecho, uma crítica inflexível ou menção à transferência imediata de poder para o príncipe.\n* **C:** A comparação não visa caracterizar a personalidade do rei como \"intempestiva\" ou violenta como uma tempestade, mas sim retratar o seu medo diante de situações ameaçadoras.\n* **E:** O trecho não se vale de ironia com o propósito de defender ou induzir à deposição do monarca.",
+        "source_reference": null
+      },
+      "source_content_hash": "4fcae5d6e987530fbdf814882c37fa020acb7308a9767e1d3903a32090d2c996"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:006",
+      "source_id": "prova_i09_tipo_001:6",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 5 a 8 referem-se ao texto abaixo.\n\nOs ecos da Revolução do Porto haviam chegado ao Brasil e bastaram algumas semanas para inflamar os ânimos dos brasileiros e portugueses que cercavam a corte. Na manhã de 26 de fevereiro, uma multidão exigia a presença do rei no centro do Rio de Janeiro e a assinatura da Constituição liberal. Ao ouvir as notícias, a alguns quilômetros dali, D. João mandou fechar todas as janelas do palácio São Cristóvão, como fazia em noites de trovoadas.\n\nPouco depois chegou o Príncipe D. Pedro, que passara a madrugada em conversas com os rebeldes. Vinha buscar o rei. D. João estava apavorado com a lembrança da ainda recente Revolução Francesa. Apesar do medo, D. João embarcou na carruagem que o aguardava e seguiu para o centro da cidade. A caminho, no entanto, percebeu que, em lugar de ofensas e gritos de protestos, a multidão aclamava seu nome. Ao contrário do odiado Luís XVI, o rei do Brasil era amado e querido pelo povo carioca.\n\n(Adaptado de Laurentino Gomes, 1808. São Paulo: Planeta, 2007)\n\n... como fazia em noites de trovoadas. (1º parágrafo)\n\nO verbo flexionado nos mesmos tempo e modo em que se encontra o grifado acima está em:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 6; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Ao ouvir as notícias...",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "... D. João embarcou na carruagem...",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "... que passara a madrugada...",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "... bastaram algumas semanas...",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "... que o aguardava...",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "5ae88bc6c1bde7ae449c5065d6845af3ddad6aab45ad3065bbd7f68d017a2d10",
+        "original_numeric_id": 6,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a identificação de correlação de tempo e modo verbal.\n\nO verbo destacado no enunciado é **\"fazia\"** (infinitivo *fazer*), que está flexionado no **Pretérito Imperfeito do Indicativo**, indicando uma ação habitual ou contínua no passado.\n\nAnálise das alternativas:\n\n* **A:** \"ouvir\" está no **Infinitivo** (forma nominal).\n* **B:** \"embarcou\" (infinitivo *embarcar*) está no **Pretérito Perfeito do Indicativo** (ação pontual e concluída no passado).\n* **C:** \"passara\" (infinitivo *passar*) está no **Pretérito Mais-que-Perfeito do Indicativo** (ação anterior a outra ação também no passado).\n* **D:** \"bastaram\" (infinitivo *bastar*) está no **Pretérito Perfeito do Indicativo**.\n* **E:** **\"aguardava\"** (infinitivo *aguardar*) está flexionado no **Pretérito Imperfeito do Indicativo**, apresentando exatamente a mesma flexão de tempo e modo que o verbo \"fazia\".",
+        "source_reference": null
+      },
+      "source_content_hash": "3a9aa6f1c0c7e8a85f571485da08333036434e3b82d346c2e80df8d514807820"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:007",
+      "source_id": "prova_i09_tipo_001:7",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 5 a 8 referem-se ao texto abaixo.\n\nOs ecos da Revolução do Porto haviam chegado ao Brasil e bastaram algumas semanas para inflamar os ânimos dos brasileiros e portugueses que cercavam a corte. Na manhã de 26 de fevereiro, uma multidão exigia a presença do rei no centro do Rio de Janeiro e a assinatura da Constituição liberal. Ao ouvir as notícias, a alguns quilômetros dali, D. João mandou fechar todas as janelas do palácio São Cristóvão, como fazia em noites de trovoadas.\n\nPouco depois chegou o Príncipe D. Pedro, que passara a madrugada em conversas com os rebeldes. Vinha buscar o rei. D. João estava apavorado com a lembrança da ainda recente Revolução Francesa. Apesar do medo, D. João embarcou na carruagem que o aguardava e seguiu para o centro da cidade. A caminho, no entanto, percebeu que, em lugar de ofensas e gritos de protestos, a multidão aclamava seu nome. Ao contrário do odiado Luís XVI, o rei do Brasil era amado e querido pelo povo carioca.\n\n(Adaptado de Laurentino Gomes, 1808. São Paulo: Planeta, 2007)\n\nApesar do medo, D. João embarcou na carruagem que o aguardava e seguiu para o centro da cidade. A caminho, no entanto, percebeu que, em lugar de ofensas e gritos de protestos, a multidão aclamava seu nome. (2º parágrafo)\n\nO trecho acima está reescrito com correção e lógica em:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 7; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Embora estivesse com medo, D. João subiu na carruagem que estava esperando por ele e dirigiu-se ao centro da cidade. Entretanto, durante o trajeto, em vez de escutar ofensas e protestos, ouviu o seu nome ser aclamado pela multidão.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Por estar com medo, D. João subiu na carruagem que o esperara, dirigindo-se ao centro da cidade. A medida que se aproximava do seu destino, escutou a multidão aclamar o seu nome, porém não insultando-o e ofendendo-o.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "À medida que estava com medo, D. João subiu na carruagem cuja esperara, dirigindo-se ao centro da cidade. Todavia, durante o trajeto, escutaria gritos de aprovação ao invés de ofensas e protestos.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Porém, com medo, D. João sobe na carruagem que esperava-o, dirigindo-se para o centro da cidade. Ao estar-se aproximando do seu destino, escutaria seu nome sendo aclamado pela multidão, que, para sua surpresa, não protestava ou gritavam ofensas.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Estando com medo, todavia, D. João subiu na carruagem que o esperava para se dirigir no centro da cidade. Surpreende-o, pois que, no caminho, escuta a multidão aclamando o seu nome em vez de estar gritando ofensas e protestos.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "87d7619a09658097710251abd3590be35bfc448bcc5b7bcfa33b71459e18501a",
+        "original_numeric_id": 7,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a identificação da reescrita que mantém a correção gramatical e o sentido original do trecho destacado.\n\n*   **Análise do trecho original:** \n    *   \"Apesar do medo\" introduz uma ideia de concessão.\n    *   \"no entanto\" é uma conjunção coordenativa adversativa (oposição).\n    *   \"em lugar de\" indica substituição/oposição.\n\n*   **Análise da alternativa correta (A):**\n    *   \"Embora estivesse com medo\" preserva perfeitamente o valor concessivo de \"Apesar do medo\".\n    *   \"dirigiu-se ao centro\" respeita a regência do verbo pronominal *dirigir-se* (quem se dirige, dirige-se *a* algum lugar).\n    *   \"Entretanto\" mantém o valor adversativo de \"no entanto\".\n    *   \"em vez de\" equivale semanticamente a \"em lugar de\".\n\n*   **Análise das incorreções nas demais alternativas:**\n    *   **B:** \"Por estar com medo\" indica causa, alterando o sentido concessivo original. Além disso, falta crase em \"A medida que\" (o correto é \"À medida que\") e ocorre erro de colocação pronominal em \"não insultando-o\" (a palavra negativa \"não\" atrai o pronome: *não o insultando*).\n    *   **C:** \"À medida que\" expressa proporcionalidade, o que desvirtua o sentido de concessão. O uso do pronome relativo em \"cuja esperara\" é incorreto, pois \"cujo\" deve indicar posse e vir entre dois substantivos.\n    *   **D:** O início com \"Porém, com medo\" altera a relação de concessão para adversidade direta de forma truncada. Há erro de colocação pronominal em \"que esperava-o\" (o pronome relativo \"que\" exige próclise: *que o esperava*) e falta de concordância em \"não protestava ou gritavam\" (mistura de singular e plural para o mesmo sujeito).\n    *   **E:** A regência em \"dirigir no centro\" está incorreta (o correto seria *dirigir-se ao centro*). A construção \"pois que\" introduz uma explicação/causa que não condiz com o sentido original.",
+        "source_reference": null
+      },
+      "source_content_hash": "5a6585ebf6a72933fe6b2ea5fd34f94a8aa43774848309cd79ff60dc6da66f60"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:008",
+      "source_id": "prova_i09_tipo_001:8",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 5 a 8 referem-se ao texto abaixo.\n\nOs ecos da Revolução do Porto haviam chegado ao Brasil e bastaram algumas semanas para inflamar os ânimos dos brasileiros e portugueses que cercavam a corte. Na manhã de 26 de fevereiro, uma multidão exigia a presença do rei no centro do Rio de Janeiro e a assinatura da Constituição liberal. Ao ouvir as notícias, a alguns quilômetros dali, D. João mandou fechar todas as janelas do palácio São Cristóvão, como fazia em noites de trovoadas.\n\nPouco depois chegou o Príncipe D. Pedro, que passara a madrugada em conversas com os rebeldes. Vinha buscar o rei. D. João estava apavorado com a lembrança da ainda recente Revolução Francesa. Apesar do medo, D. João embarcou na carruagem que o aguardava e seguiu para o centro da cidade. A caminho, no entanto, percebeu que, em lugar de ofensas e gritos de protestos, a multidão aclamava seu nome. Ao contrário do odiado Luís XVI, o rei do Brasil era amado e querido pelo povo carioca.\n\n(Adaptado de Laurentino Gomes, 1808. São Paulo: Planeta, 2007)\n\nGraças ...... resistência de portugueses e espanhóis, a Inglaterra furou o bloqueio imposto por Napoleão e deu início ...... campanha vitoriosa que causaria ...... queda do imperador francês.\n\nPreenchem as lacunas da frase acima, na ordem dada,",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 8; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a - à - a",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "à - a - a",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "à - à - a",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "a - a - à",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "à - a - à",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "6b2871d9bde6c26629605182df66b856136e820f2926b89708f85f04e0b49362",
+        "original_numeric_id": 8,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige o conhecimento das regras de regência nominal e verbal para o emprego correto do acento indicativo de crase.\n\n*   **Primeira lacuna:** \"Graças ...... resistência...\"\n    *   A locução prepositiva \"graças a\" exige a preposição **a**.\n    *   O substantivo feminino \"resistência\" admite o artigo feminino **a**.\n    *   Fusão: preposição **a** + artigo **a** = **à**.\n\n*   **Segunda lacuna:** \"...deu início ...... campanha...\"\n    *   O substantivo \"início\" rege a preposição **a** (quem dá início, dá início *a* alguma coisa).\n    *   O substantivo feminino \"campanha\" admite o artigo feminino **a**.\n    *   Fusão: preposição **a** + artigo **a** = **à**.\n\n*   **Terceira lacuna:** \"...que causaria ...... queda...\"\n    *   O verbo \"causar\" é transitivo direto (quem causa, causa *algo*), não exigindo preposição.\n    *   O substantivo feminino \"queda\" é precedido apenas pelo artigo feminino **a**.\n    *   Portanto, não ocorre crase: apenas **a**.\n\nCombinando as lacunas, obtém-se a sequência: **à - à - a**.",
+        "source_reference": null
+      },
+      "source_content_hash": "620eea37812e253aa3033f7c85e475c9b66575657c9eeab191bfebcc682fe939"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:009",
+      "source_id": "prova_i09_tipo_001:9",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 9 a 11 referem-se ao texto abaixo.\n\nO corvo e o jarro\n\nUm pobre corvo, quase morto de sede, avistou de repente um jarro de água. Aliviado e muito alegre, voou velozmente para o jarro.\n\nMas, embora o jarro contivesse água, o nível estava tão baixo que, por mais que o corvo se esforçasse, não havia meio de alcançá-la. O corvo, então, tentou virá-lo, na esperança de pelo menos beber um pouco da água derramada. Mas o jarro era pesado demais para ele.\n\nPor fim, correndo os olhos à volta, viu pedrinhas ali perto. Foi, então, pegando-as uma a uma e atirando-as dentro do jarro. Lentamente a água foi subindo até a borda, e finalmente pôde matar a sede.\n\n(Fábulas de Esopo, recontadas por Robert Mathias, Círculo do Livro, p. 46)\n\nTípica das fábulas, a moral da história que pode ser depreendida da leitura de O corvo e o jarro é:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 9; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "A utilidade é mais importante do que a beleza.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Devagar se vai ao longe.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "O hábito torna as coisas familiares e fáceis para nós.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "A necessidade é a mãe da invenção.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Contra esperteza, esperteza e meia.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "56a44965f557ce83a2d66c0097f8ffe709e109935a5f40e3eb4963e62c2b4459",
+        "original_numeric_id": 9,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão solicita a identificação da moral da história que melhor se depreende da fábula \"O corvo e o jarro\".\n\n*   **Análise do texto:**\n    O corvo encontra-se em uma situação de extrema necessidade (\"quase morto de sede\"). Diante do obstáculo de não conseguir alcançar a água no fundo do jarro, ele não desiste e usa a inteligência para criar uma solução prática: jogar pedrinhas uma a uma para fazer o nível da água subir. \n\n*   **Análise das alternativas:**\n    *   **A (Incorreta):** O texto não faz qualquer comparação entre utilidade e beleza.\n    *   **B (Incorreta):** Embora o corvo jogue as pedrinhas \"lentamente\", a ideia central não é a lentidão ou a persistência temporal pura, mas sim a engenhosidade gerada pela situação limite.\n    *   **C (Incorreta):** O hábito não é o tema da história, pois o corvo realiza uma ação inédita e improvisada para resolver um problema imediato.\n    *   **D (Correta):** \"A necessidade é a mãe da invenção\" sintetiza perfeitamente o enredo: a urgência da sede (necessidade) força o corvo a conceber um método criativo (invenção) para alcançar a água.\n    *   **E (Incorreta):** Não há uma disputa de esperteza ou trapaça entre personagens que justifique essa moral.",
+        "source_reference": null
+      },
+      "source_content_hash": "b70eded585c7d8cb4aecc5896102814d1043c91afcc4127c5f389ee6146efd4e"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:010",
+      "source_id": "prova_i09_tipo_001:10",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 9 a 11 referem-se ao texto abaixo.\n\nO corvo e o jarro\n\nUm pobre corvo, quase morto de sede, avistou de repente um jarro de água. Aliviado e muito alegre, voou velozmente para o jarro.\n\nMas, embora o jarro contivesse água, o nível estava tão baixo que, por mais que o corvo se esforçasse, não havia meio de alcançá-la. O corvo, então, tentou virá-lo, na esperança de pelo menos beber um pouco da água derramada. Mas o jarro era pesado demais para ele.\n\nPor fim, correndo os olhos à volta, viu pedrinhas ali perto. Foi, então, pegando-as uma a uma e atirando-as dentro do jarro. Lentamente a água foi subindo até a borda, e finalmente pôde matar a sede.\n\n(Fábulas de Esopo, recontadas por Robert Mathias, Círculo do Livro, p. 46)\n\nA reconstrução de um segmento do texto, com um diferente emprego pronominal, que mantém a correção e o sentido originais é:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 10; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "não havia meio de alcançá-la = não havia como alcançar-lhe.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "o jarro era pesado demais para ele = o jarro lhe era por demais pesado.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "atirando-as dentro do jarro = atirando-lhes para dentro do jarro.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "O corvo, então, tentou virá-lo = O corvo, então, lhe tentou virar.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "pegando-as uma a uma = pegando-lhes uma a uma.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "78c500f8ce5181de0a8b2fc99013ee1d7c4c2c7a873d933a9b032321dda409a5",
+        "original_numeric_id": 10,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a identificação da reescrita que substitui corretamente os pronomes, mantendo a norma-padrão e o sentido original.\n\n*   **Análise da alternativa correta (B):**\n    *   Original: \"o jarro era pesado demais **para ele**\"\n    *   Reescrita: \"o jarro **lhe** era por demais pesado.\"\n    *   O pronome oblíquo átono **lhe** pode funcionar como complemento nominal (equivalente a \"para ele\"), associado ao adjetivo \"pesado\". A substituição é perfeitamente gramatical e preserva o sentido. A locução \"por demais\" equivale a \"demais\".\n\n*   **Análise dos erros nas demais alternativas:**\n    *   **A:** \"alcançar-lhe\" está incorreto. O verbo *alcançar* é transitivo direto (alcançar algo/alguém), exigindo pronome de objeto direto (*alcançá-la*), e não o pronome *lhe* (objeto indireto).\n    *   **C:** \"atirando-lhes\" está incorreto. No contexto, o verbo *atirar* é transitivo direto em relação às pedras (atirar as pedras = atirá-las). O pronome *lhes* não pode funcionar como objeto direto.\n    *   **D:** \"lhe tentou virar\" está incorreto. O verbo *virar* é transitivo direto (virar o jarro = virá-lo). O pronome *lhe* não deve ser usado como objeto direto.\n    *   **E:** \"pegando-lhes\" está incorreto. O verbo *pegar* é transitivo direto (pegar as pedras = pegando-as). O pronome *lhes* é inadequado para o objeto direto.",
+        "source_reference": null
+      },
+      "source_content_hash": "5167bb1671fea288827dae6a17baf07b66d921b0dda62156f700398bd5461099"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:011",
+      "source_id": "prova_i09_tipo_001:11",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 9 a 11 referem-se ao texto abaixo.\n\nO corvo e o jarro\n\nUm pobre corvo, quase morto de sede, avistou de repente um jarro de água. Aliviado e muito alegre, voou velozmente para o jarro.\n\nMas, embora o jarro contivesse água, o nível estava tão baixo que, por mais que o corvo se esforçasse, não havia meio de alcançá-la. O corvo, então, tentou virá-lo, na esperança de pelo menos beber um pouco da água derramada. Mas o jarro era pesado demais para ele.\n\nPor fim, correndo os olhos à volta, viu pedrinhas ali perto. Foi, então, pegando-as uma a uma e atirando-as dentro do jarro. Lentamente a água foi subindo até a borda, e finalmente pôde matar a sede.\n\n(Fábulas de Esopo, recontadas por Robert Mathias, Círculo do Livro, p. 46)\n\n... viu pedrinhas ali perto. (3º parágrafo)\n\nA passagem para a voz passiva da frase acima resulta na seguinte forma verbal:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 11; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "são vistas.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "tinha visto.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "foram vistas.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "viu-se.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "é visto.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "5d6d10f2ce087878d7124a4b29b7d9775387a3df2c2ec9ee82361091522d9698",
+        "original_numeric_id": 11,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para realizar a transposição da oração \"... viu pedrinhas ali perto\" para a voz passiva analítica, deve-se seguir as regras de correspondência sintático-semântica:\n\n1. **Identificação dos termos na voz ativa:**\n   * Sujeito elíptico: *Ele* (o corvo).\n   * Verbo transitivo direto: *viu* (flexionado no pretérito perfeito do indicativo, 3ª pessoa do singular).\n   * Objeto direto: *pedrinhas* (substantivo feminino plural).\n\n2. **Transformação para a voz passiva:**\n   * O objeto direto (*pedrinhas*) torna-se o **sujeito paciente**.\n   * O verbo principal (*ver*) assume a forma de particípio (*vistas*), concordando em gênero e número com o sujeito paciente.\n   * O verbo auxiliar *ser* é introduzido no mesmo tempo e modo do verbo original (pretérito perfeito do indicativo) e deve concordar com o novo sujeito (*pedrinhas*), resultando na forma **foram**.\n\nAssim, a locução verbal passiva correspondente é **foram vistas** (\"pedrinhas foram vistas por ele ali perto\").\n\n**Análise das alternativas incorretas:**\n* **A) são vistas:** O verbo auxiliar está no presente do indicativo, alterando o tempo verbal original (pretérito perfeito).\n* **B) tinha visto:** Trata-se de uma forma verbal ativa no pretérito mais-que-perfeito composto do indicativo.\n* **D) viu-se:** Trata-se de uma tentativa de voz passiva sintética, porém incorreta, pois o verbo não concorda com o sujeito plural (*pedrinhas*), o que exigiria a forma *viram-se*.\n* **E) é visto:** O verbo auxiliar está no presente do indicativo e no singular, divergindo do tempo original e do número do sujeito.",
+        "source_reference": null
+      },
+      "source_content_hash": "adb9bb98e92458a412b0d26d6fdc06abdb3cfb19a4ee14ee6fd60a8f99b9571c"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:012",
+      "source_id": "prova_i09_tipo_001:12",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A redação de documentos oficiais deve pautar-se por impessoalidade, clareza, concisão e pelo uso correto da norma culta. Todas essas qualidades são respeitadas no seguinte trecho:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 12; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Este setor do Governo Estadual, responsável pelo atendimento a vítimas de desastres naturais, elaborou um plano geral de assistência a ser encaminhado às entidades que colaboram nesse atendimento, para a adequada efetivação dos trabalhos nas ocasiões de calamidade pública.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "O Instituto Benefício para Todos deverá estar sendo convidado para fazer parte de uma campanha destinada a angariar donativos, que se espera seja suficiente para atender a todos os desabrigados da enchente; conforme estipulado pela Coordenadoria, que foi considerada de relevante interesse social.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Como Deputado da Bancada Estadual, sinto-me avexado por que não estou podendo atender com mais prontidão e benefícios as vítimas dessa implacável seca, que teve motivos alheios à minha vontade para não conseguir isso.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Membros da Comissão Técnica destinada a averiguar a distribuição de favores em troca de votos, apurou que o Presidente do Conselho de Agricultores do Estado afirmou ao seu Vice de que ele poderia estar sendo investigado por desvio de verbas.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "O critério metodológico de escolha dos participantes das equipes de atendimento à vítimas de desastres naturais estão sendo preparados, tendo em vista que é importante observar a correspondência entre tais desastres e o atingimento de pessoas nessa situação.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "3aa26d337dc94602efb16cc00e0161ea7bd6f4ee14f4e760c3b31612691fed14",
+        "original_numeric_id": 12,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A redação oficial exige o emprego da norma-padrão da língua portuguesa, além de clareza, concisão e impessoalidade.\n\n* **Alternativa A (Correta):** O trecho é impessoal (não há marcas de primeira pessoa), claro, conciso e gramaticalmente correto. A crase em \"às entidades\" está correta (preposição *a* exigida por \"encaminhado\" + artigo feminino plural *as*), e a ausência de crase em \"a vítimas\" também está correta, pois o \"a\" é apenas preposição diante de palavra no plural usada em sentido genérico.\n\n**Análise dos erros das alternativas incorretas:**\n* **B) Incorreta:** Apresenta vício de linguagem conhecido como gerundismo na locução \"deverá estar sendo convidado\" (em vez de *será convidado* ou *deve ser convidado*). Além disso, a pontuação após \"Coordenadoria\" isola incorretamente uma oração adjetiva explicativa que perde o nexo com o restante do período.\n* **C) Incorreta:** Fere gravemente o princípio da impessoalidade ao utilizar pronomes e verbos em primeira pessoa (\"sinto-me\", \"minha vontade\"). Apresenta vocabulário coloquial inadequado (\"avexado\"), gerundismo (\"não estou podendo atender\") e erro de grafia/sintaxe em \"por que\" (deveria ser a conjunção explicativa/causal *porque*).\n* **D) Incorreta:** Apresenta erro de concordância verbal, pois o sujeito \"Membros da Comissão Técnica\" (plural) exige o verbo no plural (\"apuraram\", e não \"apurou\"). Há também erro de regência verbal em \"afirmou ao seu Vice de que\" (o verbo *afirmar* é transitivo direto e indireto, exigindo a conjunção integrante sem preposição: *afirmou ao seu Vice que*). Registra-se ainda o gerundismo em \"poderia estar sendo investigado\".\n* **E) Incorreta:** Apresenta erro de concordância verbal, pois o núcleo do sujeito é \"O critério\" (singular), o que exige o verbo no singular (\"está sendo preparado\", e não \"estão sendo preparados\"). Há também erro no uso do acento indicativo de crase em \"à vítimas\", pois não se usa crase antes de palavra no plural quando o \"a\" está no singular.",
+        "source_reference": null
+      },
+      "source_content_hash": "8982bc23ad47a3fca12e6f1213bd23c26d779e99c4aab1b1967e686eefd3a166"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:013",
+      "source_id": "prova_i09_tipo_001:13",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 13 a 15 referem-se ao texto abaixo.\n\nJoão e Maria\n\nAgora eu era o herói\nE o meu cavalo só falava inglês\nA noiva do cowboy\nEra você\nAlém das outras três\n\nEu enfrentava os batalhões\nOs alemães e seus canhões\nGuardava o meu bodoque\nE ensaiava um rock\nPara as matinês\n\n(...)\n\nNão, não fuja não\nFinja que agora eu era o seu brinquedo\nEu era o seu pião\nO seu bicho preferido\n\nSim, me dê a mão\nA gente agora já não tinha medo\nNo tempo da maldade\nAcho que a gente nem tinha nascido\n\nChico Buarque e Sivuca\n\nI. Nos versos Agora eu era o herói e A gente agora já não tinha medo, o uso do advérbio agora mostra-se inadequado, pois os verbos conjugados no pretérito imperfeito designam fatos transcorridos no tempo passado.\n\nII. Em Finja que agora eu era o seu brinquedo e Sim, me dê a mão, os verbos grifados estão flexionados no mesmo modo.\n\nIII. Substituindo-se a expressão a gente pelo pronome nós nos versos A gente agora já não tinha medo e Acho que a gente nem tinha nascido, a forma verbal resultante, sem alterar o contexto, será teríamos.\n\nEstá correto o que se afirma em",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 13; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "I, apenas.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "II, apenas.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "III, apenas.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "I e II, apenas.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "I, II e III.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "ec47ec725b93dba32ff16303053977be305fa8d36f3dba78ba0ed316f04ee261",
+        "original_numeric_id": 13,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise detalhada das afirmativas com base no texto da canção \"João e Maria\":\n\n* **Afirmativa I (Incorreta):** O uso do advérbio *agora* associado a verbos no pretérito imperfeito do indicativo (*era*, *tinha*) não é inadequado. Trata-se de um recurso estilístico conhecido como **imperfeito lúdico** ou de projeção, muito comum na representação de brincadeiras infantis de faz de conta. O advérbio atualiza o momento da narrativa dentro do universo imaginário criado pelas crianças, sendo plenamente adequado ao gênero poético.\n\n* **Afirmativa II (Correta):** Os verbos *Finja* (do verbo *fingir*) e *dê* (do verbo *dar*) estão flexionados no **modo imperativo** (especificamente, no imperativo afirmativo, na 3ª pessoa do singular \"você\", derivados do presente do subjuntivo: *que você finja*, *que você dê*).\n\n* **Afirmativa III (Incorreta):** A locução pronominal *a gente* equivale semanticamente ao pronome *nós*, mas exige concordância verbal em terceira pessoa do singular (*a gente tinha*). Ao realizar a substituição por *nós*, deve-se manter o mesmo tempo e modo verbal (pretérito imperfeito do indicativo). Portanto, a forma resultante correta é **tínhamos** (\"nós agora já não tínhamos medo\"). A forma *teríamos* pertence ao futuro do pretérito do indicativo, o que alteraria a relação temporal do texto original.",
+        "source_reference": null
+      },
+      "source_content_hash": "3f62f61bf5dc65e33856620aab4b5abe58d478018359aeafb8ecdc2d5730061f"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:014",
+      "source_id": "prova_i09_tipo_001:14",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 13 a 15 referem-se ao texto abaixo.\n\nJoão e Maria\n\nAgora eu era o herói\nE o meu cavalo só falava inglês\nA noiva do cowboy\nEra você\nAlém das outras três\n\nEu enfrentava os batalhões\nOs alemães e seus canhões\nGuardava o meu bodoque\nE ensaiava um rock\nPara as matinês\n\n(...)\n\nNão, não fuja não\nFinja que agora eu era o seu brinquedo\nEu era o seu pião\nO seu bicho preferido\n\nSim, me dê a mão\nA gente agora já não tinha medo\nNo tempo da maldade\nAcho que a gente nem tinha nascido\n\nChico Buarque e Sivuca\n\nEu enfrentava os batalhões\nOs alemães e seus canhões\nGuardava o meu bodoque\nE ensaiava um rock\nPara as matinês\n\nOs versos acima estão corretamente pontuados em:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 14; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Eu enfrentava, os batalhões − os alemães e seus canhões −, guardava o meu bodoque e ensaiava um rock: para as matinês.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Eu enfrentava, os batalhões, os alemães e seus canhões. Guardava o meu bodoque e ensaiava um rock, para as matinês.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Eu enfrentava: os batalhões, os alemães e seus canhões − guardava o meu bodoque e ensaiava, um rock para as matinês.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Eu enfrentava os batalhões; os alemães e seus canhões: guardava o meu bodoque e ensaiava um rock − para as matinês.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Eu enfrentava os batalhões, os alemães e seus canhões; guardava o meu bodoque e ensaiava um rock para as matinês.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "59c98eba290b7eeb005563f42276912a7d71f238a669ead2da8e10504b1d7fb0",
+        "original_numeric_id": 14,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A pontuação correta deve respeitar as relações sintáticas entre os termos da oração, evitando a separação de sujeito e predicado, ou de verbos e seus complementos.\n\n* **Alternativa E (Correta):** \n  * A vírgula em \"... os batalhões, os alemães e seus canhões\" separa corretamente os elementos coordenados que funcionam como objetos diretos do verbo *enfrentava*.\n  * O ponto e vírgula (\";\") separa adequadamente as duas grandes orações coordenadas independentes do período (\"Eu enfrentava...\" e \"guardava...\"), conferindo uma pausa maior e organizando a estrutura que já possui vírgulas internas.\n  * A segunda parte (\"guardava o meu bodoque e ensaiava um rock para as matinês\") não possui interrupções desnecessárias, mantendo a fluidez da leitura.\n\n**Análise dos erros das alternativas incorretas:**\n* **A) Incorreta:** A vírgula após \"enfrentava\" separa incorretamente o verbo de seus objetos diretos. O uso de dois travessões isolando \"os alemães e seus canhões\" quebra a estrutura da enumeração. O uso de dois-pontos antes de \"para as matinês\" é inadequado, pois não há introdução de explicação, síntese ou citação.\n* **B) Incorreta:** Assim como na alternativa A, a vírgula após \"enfrentava\" isola indevidamente o verbo de seu complemento. A vírgula antes de \"para as matinês\" é desnecessária, pois separa a locução adverbial de finalidade em posição final na frase.\n* **C) Incorreta:** O uso de dois-pontos após \"enfrentava\" é incorreto por separar o verbo de seus complementos diretos. Há também uma vírgula inadequada separando o verbo \"ensaiava\" de seu objeto direto \"um rock\".\n* **D) Incorreta:** O ponto e vírgula após \"batalhões\" quebra a sequência da enumeração de objetos diretos do verbo \"enfrentava\". O uso de dois-pontos antes de \"guardava\" e do travessão antes de \"para as matinês\" é sintaticamente injustificado.",
+        "source_reference": null
+      },
+      "source_content_hash": "fa2ea3c45c561d923e9ea108994035177f6b3027d551bb792e2863951612c93f"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:015",
+      "source_id": "prova_i09_tipo_001:15",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 13 a 15 referem-se ao texto abaixo.\n\nJoão e Maria\n\nAgora eu era o herói\nE o meu cavalo só falava inglês\nA noiva do cowboy\nEra você\nAlém das outras três\n\nEu enfrentava os batalhões\nOs alemães e seus canhões\nGuardava o meu bodoque\nE ensaiava um rock\nPara as matinês\n\n(...)\n\nNão, não fuja não\nFinja que agora eu era o seu brinquedo\nEu era o seu pião\nO seu bicho preferido\n\nSim, me dê a mão\nA gente agora já não tinha medo\nNo tempo da maldade\nAcho que a gente nem tinha nascido\n\nChico Buarque e Sivuca\n\nÉ comum que, durante suas brincadeiras, as crianças se ...... para um universo mágico e ...... a identidade de uma personagem admirada, ...... um super-herói ou uma figura da realeza.\n\nPreenche corretamente as lacunas da frase acima, na ordem dada, o que está em:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 15; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "transportem – assumam – seja",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "transportam – assumiriam – sendo",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "transportariam – assumiriam – seria",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "transportam – assumem – seja",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "transportem – assumem – seria",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "fab30e93f35001b46a3ca935520e6fb98a6ee8ce78e5af25850e683a3bbacbb4",
+        "original_numeric_id": 15,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A resolução desta questão depende da correta correlação verbal exigida pela estrutura sintática do período:\n\n1. **Primeira e segunda lacunas:** A oração principal inicia-se com a expressão impessoal **\"É comum que...\"**, a qual exige que as orações subordinadas integrantes subjetivas seguintes apresentem verbos no **modo subjuntivo** (que exprime hipótese, possibilidade ou desejo no presente). \n   * Portanto, para concordar com o sujeito plural \"as crianças\", utiliza-se o presente do subjuntivo: **transportem** (\"que as crianças se *transportem*\") e **assumam** (\"e *assumam* a identidade\", mantendo o paralelismo sintático com a primeira oração).\n\n2. **Terceira lacuna:** Para introduzir os exemplos exemplificativos/alternativos (\"um super-herói ou uma figura da realeza\"), utiliza-se a conjunção coordenativa alternativa correlativa formada pelo verbo *ser* no presente do subjuntivo: **seja** (\"*seja* um super-herói ou...\").\n\nDessa forma, a sequência correta e harmônica é **transportem – assumam – seja**.\n\n**Análise das alternativas incorretas:**\n* **B) Incorreta:** Utiliza \"transportam\" (presente do indicativo) e \"assumiriam\" (futuro do pretérito do indicativo), rompendo a exigência do modo subjuntivo.\n* **C) Incorreta:** Utiliza formas do futuro do pretérito do indicativo (\"transportariam\" e \"assumiriam\"), inadequadas após a regência de \"É comum que\".\n* **D) Incorreta:** Utiliza o modo indicativo nas duas primeiras formas (\"transportam\" e \"assumem\").\n* **E) Incorreta:** Embora acerte a primeira lacuna (\"transportem\"), falha ao colocar a segunda no indicativo (\"assumem\") e a terceira no futuro do pretérito (\"seria\"), quebrando a correlação temporal.",
+        "source_reference": null
+      },
+      "source_content_hash": "5d640d294c935e4614dc3a31e3006ded5b312e817ff920ed72f7faa9b01d29ba"
+    }
+  ]
+}

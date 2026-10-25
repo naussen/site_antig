@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_de_policia_federal-direito-penal-c3515df8485a-995e99a8c749",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "c3515df8485ab192355dd2c9f2cd5fc325fdfcc424779258a45eea81a91b4abe",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "9bf5415c207ff2dee6f1b513f48cc1f4b3e00a224421906182f247e816e0b8ed",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "995e99a8c749afd4492c80f261d239d3397638f3c3e5d01cd4d2d5cabfb8ed32",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-penal",
+    "name": "Direito Penal"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:033",
+      "source_id": "agente_de_policia_federal:33",
+      "question_type": "true_false",
+      "statement_markdown": "Depois de adquirir um revólver calibre 38, que sabia ser produto de crime, José passou a portá-lo municiado, sem autorização e em desacordo com determinação legal. O comportamento suspeito de José levou-o a ser abordado em operação policial de rotina. Sem a autorização de porte de arma de fogo, José foi conduzido à delegacia, onde foi instaurado inquérito policial.\nTendo como referência essa situação hipotética, julgue os itens seguintes.\n\nA receptação praticada por José consumou-se a partir do momento em que ele adquiriu o armamento.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 33; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Parte Especial do Código Penal",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Penal",
+        "source_content_hash": "8ce4c8b5ce5d5b430a0527c709747f46fb184f9ea4646745b7b0db33a26cda66",
+        "original_numeric_id": 33,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "parte-especial-do-codigo-penal",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O crime de receptação, previsto no artigo 180, caput, do Código Penal, apresenta múltiplos núcleos verbais (condutas alternativas). A consumação do delito varia conforme a conduta praticada pelo agente:\n\n* **Condutas de \"adquirir\" ou \"receber\":** São classificadas como crimes instantâneos. A consumação ocorre no exato momento em que o agente obtém a posse ou a propriedade do bem ciente de sua origem ilícita.\n* **Condutas de \"transportar\", \"conduzir\" ou \"ocultar\":** São classificadas pela jurisprudência como crimes permanentes, cuja consumação se prolonga no tempo enquanto o agente mantiver o bem sob seu poder.\n\nComo a situação hipotética descreve que José praticou a conduta de \"adquirir\" um revólver sabendo ser produto de crime, a infração penal consumou-se de forma instantânea no momento em que a aquisição foi realizada.\n\n**Detalhe importante:** Não se deve confundir a permanência do porte ilegal da arma de fogo (crime autônomo praticado posteriormente) com a instantaneidade da receptação na modalidade de adquirir.\n\n**Dispositivo legal**\n\n[Artigo 180, caput, do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal)](https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "5ffdf21db7736d78f721a225594bbd169addd646fe3934b86621d3744607b9c5"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:034",
+      "source_id": "agente_de_policia_federal:34",
+      "question_type": "true_false",
+      "statement_markdown": "Depois de adquirir um revólver calibre 38, que sabia ser produto de crime, José passou a portá-lo municiado, sem autorização e em desacordo com determinação legal. O comportamento suspeito de José levou-o a ser abordado em operação policial de rotina. Sem a autorização de porte de arma de fogo, José foi conduzido à delegacia, onde foi instaurado inquérito policial.\nTendo como referência essa situação hipotética, julgue os itens seguintes.\n\nSe, durante o processo judicial a que José for submetido, for editada nova lei que diminua a pena para o crime de receptação, ele não poderá se beneficiar desse fato, pois o direito penal brasileiro norteia-se pelo princípio de aplicação da lei vigente à época do fato.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 34; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Parte Especial do Código Penal",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Penal",
+        "source_content_hash": "6ad326839dab6bd29a3ee89639f6dada57f9d63c103b4bd2d82e2f407ea79b9a",
+        "original_numeric_id": 34,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "parte-especial-do-codigo-penal",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta ao afirmar que o réu não poderá se beneficiar de uma nova lei que diminua a pena.\n\nO princípio da irretroatividade da lei penal é a regra no direito penal brasileiro, mas comporta uma exceção constitucional absoluta: a retroatividade da lei penal mais benéfica (*novatio legis in mellius*).\n\nSe uma lei posterior trouxer qualquer tipo de benefício ao agente — como a redução da pena —, ela retroagirá para alcançar fatos praticados antes de sua vigência. Essa aplicação retroativa ocorre mesmo se o processo judicial estiver em andamento ou se já houver sentença condenatória transitada em julgado.\n\n**Dispositivo legal**\n\n[Artigo 5º, inciso XL, da Constituição Federal de 1988 e Artigo 2º, parágrafo único, do Decreto-Lei nº 2.848, de 7 de dezembro de 1940 (Código Penal)](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "b65744200621274701be16000b39188481200b0935d313da5fa2ccfff2a36b38"
+    }
+  ]
+}

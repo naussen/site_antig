@@ -1,0 +1,94 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-escriturario_agente_comercial-informatica-3431fc8bc4b0-a516c0900337",
+  "source": {
+    "file_name": "escriturario_agente_comercial_ATUALIZADO.json",
+    "sha256": "3431fc8bc4b0a22b5753d698bd645915b9d034aa09f1107f8135068051f98a0e",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "escriturario_agente_comercial.json",
+      "original_source_sha256": "712ee07d18b6c6f75b8792c6bf5ca6ea068b2c5f60c13f6565f4cab1c39926d7",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "a516c0900337976da8d2bce4b74c7585454d8103b4c49b7d9c011edee0dcea5a",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:055",
+      "source_id": "escriturario_agente_comercial:55",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A utilização de computadores compartilhados aumenta o nível de risco da segurança da informação. Para reduzir tais riscos, pode-se ativar a navegação privativa, que não salva as informações de navegação, como histórico e cookies, e não deixa rastros após o término da sessão. Para navegar de forma privativa no Mozilla Firefox, o usuário deve abrir uma nova janela privativa, pressionando a seguinte combinação de teclas:",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 55; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Ctrl+N",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Ctrl+P",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Ctrl+T",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Ctrl+Shift+P",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Ctrl+Shift+A",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "02e07a8e5575ef083c11ceae8dc5a4efe02d1912c4e7e77a8889de554bb8d400",
+        "original_numeric_id": 55,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null,
+        "official_item_number": 55
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A navegação privativa (ou em modo de navegação anônima) é um recurso de privacidade que impede o salvamento local de dados de navegação, como histórico de páginas visitadas, cookies e dados de formulários. No navegador Mozilla Firefox, o atalho de teclado padrão para abrir uma nova janela privativa é **Ctrl + Shift + P**.\n\n**Análise das alternativas:**\n* **A) Incorreta.** `Ctrl + N` abre uma nova janela de navegação padrão.\n* **B) Incorreta.** `Ctrl + P` aciona o comando de impressão da página atual.\n* **C) Incorreta.** `Ctrl + T` abre uma nova aba (guia) na janela ativa.\n* **D) Correta.** `Ctrl + Shift + P` é o atalho específico para a janela privativa no Firefox (diferente do Google Chrome, que utiliza `Ctrl + Shift + N`).\n* **E) Incorreta.** `Ctrl + Shift + A` abre a página de gerenciamento de extensões e temas (Add-ons) no Firefox.",
+        "source_reference": null
+      },
+      "source_content_hash": "66c9deec7752eb75a65de98ea2cc314d00bbced2c0cb92d1753c893febb4677e"
+    }
+  ]
+}

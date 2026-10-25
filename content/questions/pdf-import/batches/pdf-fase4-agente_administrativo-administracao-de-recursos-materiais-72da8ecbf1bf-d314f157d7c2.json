@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-agente_administrativo-administracao-de-recursos-materiais-72da8ecbf1bf-d314f157d7c2",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "72da8ecbf1bf79542f78432b7acf5090277b9b279eb96815d2ab269bda90cd23",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "95f70efef6886dec632debbde86efe1189f22da6fd35c7aba8deaf2afc4b8a3c",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "d314f157d7c2653d3d213574f8ad8405f8e75c75cfa6f5dae2f341e7d875f588",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-de-recursos-materiais",
+    "name": "Administração de Recursos Materiais"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:091",
+      "source_id": "agente_administrativo:91",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, relativos à administração de patrimônio, materiais e logística.\n\nO sistema de máximos-mínimos é indicado para casos em que houver dificuldade para determinar o consumo.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 91; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Estoques, Ressuprimento e Reposição",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Recursos Materiais",
+        "source_content_hash": "bc73d706949755c648de6cb524cd8547e28d16c40a9b45689215b206b2ac5f32",
+        "original_numeric_id": 91,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-estoques",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nO sistema de reposição periódica por máximos-mínimos (ponto de pedido) apoia-se em margens de estoque mínimo (estoque de segurança) dimensionadas exatamente para absorver flutuações imprevisíveis no ritmo de consumo e eventuais atrasos no tempo de ressuprimento (lead time), sendo indicado quando há irregularidade ou dificuldade na estimativa precisa do consumo futuro.",
+        "source_reference": null
+      },
+      "source_content_hash": "95a8a6d14d03440657b9cb169b61e3b59babff91656c4fe5e64e81fca15d4565"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:094",
+      "source_id": "agente_administrativo:94",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, relativos à administração de patrimônio, materiais e logística.\n\nA carga de 500 resmas de papel A4 pode ser realizada com paletes de uma face.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 94; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Movimentação, Transporte e Armazenamento de Materiais",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Recursos Materiais",
+        "source_content_hash": "3559de637bfc5d2c6aec9ea709584c11b43da8e7517d385e5b5e86c9bdc25432",
+        "original_numeric_id": 94,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "distribuicao-de-materiais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nUma carga de 500 resmas de papel A4 apresenta massa considerável: como cada resma pesa aproximadamente $2,3\\text{ kg}$, o lote totaliza mais de $1.150\\text{ kg}$ (mais de 1 tonelada de carga compacta e pesada). Paletes de face única (skids) não possuem travamento inferior e estabilidade para suportar e movimentar com segurança cargas paletizadas desse porte e peso, exigindo o uso de paletes de duas faces e quatro entradas (como o palete padrão PBR) para garantir integridade e estabilidade logística.",
+        "source_reference": null
+      },
+      "source_content_hash": "a65abb147ad1fcc58a5f86f2713a44498abe836ce7863f41bbe8e52d79bf6de1"
+    }
+  ]
+}

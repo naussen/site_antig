@@ -1,0 +1,238 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-dpf14_009_01-raciocinio-logico-matematica-estatistica-e-matematica-financeira-ca744d5096ff-991f1a119374",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "ca744d5096ff5e394ded91af7cac3b914f6eebb00f4d317b5e902839773db969",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "9a60cb42fbada4944e3fe1d0564604111314b54b0d72e1bd9ebc2e3a33818aef",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "991f1a119374dab4528baf1d9cde43b4b47e36440f9cf4f4eb3d7d0befe50ee1",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:022",
+      "source_id": "dpf14_009_01:22",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando que P seja a proposição “Não basta à mulher de César ser honesta, ela precisa parecer honesta”, julgue os itens seguintes, acerca da lógica sentencial.\n\nA negação da proposição P está corretamente expressa por “Basta à mulher de César ser honesta, ela não precisa parecer honesta”.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 22; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Raciocínio Lógico",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "9da066546e2656a51931520d2b6e9722f0fbd495527eb3293f6741fa8a8106cd",
+        "original_numeric_id": 22,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "official_item_number": 22
+      },
+      "topics": [
+        {
+          "topic_id": "raciocinio-logico",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A proposição $P$ apresentada é uma conjunção (conectivo \"e\", aqui representado implicitamente pela vírgula):\n\n*   $A$: \"Não basta à mulher de César ser honesta\"\n*   $B$: \"ela precisa parecer honesta\"\n\nPara negar uma conjunção da forma $A \\land B$, aplica-se a primeira Lei de De Morgan:\n$$\\neg(A \\land B) \\equiv \\neg A \\lor \\neg B$$\n\nOnde:\n*   $\\neg A$: \"Basta à mulher de César ser honesta\"\n*   $\\neg B$: \"ela não precisa parecer honesta\"\n\nPortanto, a negação correta deve utilizar o conectivo disjuntivo **\"ou\"**:\n*   *\"Basta à mulher de César ser honesta **ou** ela não precisa parecer honesta\"*\n\nO item propõe como negação uma nova conjunção (mantendo a vírgula com valor de \"e\"), o que torna a afirmação incorreta.",
+        "source_reference": null
+      },
+      "source_content_hash": "317d88bf6de51745082ce60f7bdb7378fa523a5932a2825dca26700d5fb8c4ee"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:023",
+      "source_id": "dpf14_009_01:23",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando que P seja a proposição “Não basta à mulher de César ser honesta, ela precisa parecer honesta”, julgue os itens seguintes, acerca da lógica sentencial.\n\nSe a proposição “Basta à mulher de César ser honesta” for falsa e a proposição “A mulher de César precisa parecer honesta” for verdadeira, então a proposição P será verdadeira.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 23; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Raciocínio Lógico",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "6adef3ee8f56c5aa991445707e452daa70f793d54365401f033bcaec705bbda3",
+        "original_numeric_id": 23,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "official_item_number": 23
+      },
+      "topics": [
+        {
+          "topic_id": "raciocinio-logico",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A proposição $P$ é uma conjunção composta por duas partes:\n1.  **Primeira parte ($A$):** \"Não basta à mulher de César ser honesta\"\n2.  **Segunda parte ($B$):** \"ela precisa parecer honesta\"\n\nO enunciado do item define os seguintes valores lógicos:\n*   A proposição *\"Basta à mulher de César ser honesta\"* é **falsa**. Logo, a sua negação ($A$) é **verdadeira**.\n*   A proposição *\"A mulher de César precisa parecer honesta\"* ($B$) é **verdadeira**.\n\nComo ambas as partes da conjunção ($A$ e $B$) são verdadeiras, o valor lógico da conjunção $P$ ($A \\land B$) é obrigatoriamente **verdadeiro**.",
+        "source_reference": null
+      },
+      "source_content_hash": "d8a6db75e3d2d1887d0189c0dc9dc78edd978e1d7b142d2c660cdacde7419c67"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:024",
+      "source_id": "dpf14_009_01:24",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando que P seja a proposição “Não basta à mulher de César ser honesta, ela precisa parecer honesta”, julgue os itens seguintes, acerca da lógica sentencial.\n\nSe a proposição “A mulher de César é honesta” for falsa e a proposição “A mulher de César parece honesta” for verdadeira, então a proposição P será verdadeira.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 24; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Raciocínio Lógico",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "7a4e4990e8cb554c025ebe7c3430c0a91089c4bb71a9f394044a7a75f26cafa6",
+        "original_numeric_id": 24,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "official_item_number": 24
+      },
+      "topics": [
+        {
+          "topic_id": "raciocinio-logico",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A proposição $P$ trata de relações de suficiência e necessidade:\n*   \"Não basta...\" (não é suficiente)\n*   \"precisa...\" (é necessário)\n\nOs valores lógicos das proposições simples *\"A mulher de César é honesta\"* e *\"A mulher de César parece honesta\"* descrevem fatos simples sobre a honestidade e a aparência. Eles não determinam, por si sós, as regras de suficiência ou necessidade expressas em $P$. \n\nPor exemplo, o fato de ela ser ou não honesta não altera a regra geral de se \"basta\" ou \"não basta\" ser honesta para o contexto em questão. Portanto, não é possível concluir que a proposição $P$ será verdadeira com base apenas nessas premissas.",
+        "source_reference": null
+      },
+      "source_content_hash": "90ac39ffb74e4dc84f17e34f32ab60f6e67239c543996fdef21d90b45e1f472d"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:025",
+      "source_id": "dpf14_009_01:25",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando que P seja a proposição “Não basta à mulher de César ser honesta, ela precisa parecer honesta”, julgue os itens seguintes, acerca da lógica sentencial.\n\nA negação da proposição P está corretamente expressa por “Basta à mulher de César ser honesta ou ela não precisa parecer honesta”.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 25; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Raciocínio Lógico",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "0dfe2c259f582511d964e218ba4f3a6ad52e2a49bab1ee1951538fa6fc4a96cd",
+        "original_numeric_id": 25,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "official_item_number": 25
+      },
+      "topics": [
+        {
+          "topic_id": "raciocinio-logico",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A proposição $P$ é uma conjunção implícita (representada pela vírgula com função de \"e\") entre duas proposições:\n*   $A$: \"Não basta à mulher de César ser honesta\"\n*   $B$: \"ela precisa parecer honesta\"\n\nPara negar uma conjunção ($A \\land B$), aplica-se a Lei de De Morgan:\n$$\\neg(A \\land B) \\equiv \\neg A \\lor \\neg B$$\n\nRealizando as negações individuais:\n*   $\\neg A$: \"Basta à mulher de César ser honesta\"\n*   $\\neg B$: \"ela não precisa parecer honesta\"\n\nUnindo-as com o conectivo disjuntivo **\"ou\"**, obtém-se exatamente a frase proposta pelo item: *\"Basta à mulher de César ser honesta ou ela não precisa parecer honesta\"*.",
+        "source_reference": null
+      },
+      "source_content_hash": "ab8409e60c604ad7de810296df756df63a5de96b5c89af1996fb87039bee8632"
+    }
+  ]
+}

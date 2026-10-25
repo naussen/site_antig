@@ -1,0 +1,80 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-cargo30-informatica-8e6bc2f8d2e8-2dc986f71fdc",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "8e6bc2f8d2e83e7156ca5868dd4df7cecb47126d15cc93486bec48bb47d5821f",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "ade70669f0c96aa17db7bd4f2a5081dabefc8b060fd23fdfaaa31934743bc23f",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "2dc986f71fdcde732e312a7bee1155c05411a3edf0c0501430e56c111aa43b3a",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:047",
+      "source_id": "cargo30:47",
+      "question_type": "true_false",
+      "statement_markdown": "Com base na janela do Outlook Express 6 (OE6) parcialmente ilustrada na figura acima, julgue os itens a seguir.\n\nDe acordo com as informações apresentadas na figura, é correto concluir que, na pasta associada a Caixa de entrada, existem 1.954 mensagens de correio eletrônico armazenadas, das quais 491 constam como não lidas.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 47",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "e0b794ea40f403c53a1e7988f05cdd116121351b1c8008ba26345ff7256137b6",
+        "original_numeric_id": 47,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNa interface gráfica padrão do cliente de e-mail Outlook Express (OE6):\n\n1. Na árvore de pastas à esquerda, o nome da pasta *\"Caixa de entrada\"* é acompanhado pelo número entre parênteses indicando as mensagens não lidas: `Caixa de entrada (491)`.\n2. Na barra de status localizada na borda inferior da janela, o sistema apresenta a contagem global e o status das mensagens da pasta selecionada: `1.954 mensagem(ns), 491 não lida(s)`.\n\nPortanto, a conclusão extraída das informações visuais da figura está rigorosamente correta.",
+        "source_reference": null
+      },
+      "source_content_hash": "ddf3ec76a474f6bcaf0f04362cc2cc8b71e3f80ab27dafdcd7d0dd8d9b4a85c4"
+    }
+  ]
+}

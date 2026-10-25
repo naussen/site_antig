@@ -1,0 +1,575 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-agente_administrativo-legislacao-municipal-72da8ecbf1bf-989877e294ef",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "72da8ecbf1bf79542f78432b7acf5090277b9b279eb96815d2ab269bda90cd23",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "95f70efef6886dec632debbde86efe1189f22da6fd35c7aba8deaf2afc4b8a3c",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "989877e294ef789c548ab9b44201b11878581a6d127b8b059cdeb0f338358673",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "legislacao-municipal",
+    "name": "Legislação Municipal"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:031",
+      "source_id": "agente_administrativo:31",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à Lei Orgânica do Município de Cachoeiro de Itapemirim, julgue os itens que se seguem.\n\nO governo municipal tem por objetivo fundamental promover o bem-estar de todos os munícipes, dando prioridade, entre outras áreas, à educação, principalmente à pré-escola e ao ensino fundamental.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 31; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Lei Orgânica Municipal",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Municipal",
+        "source_content_hash": "7aae9ee5f06e93f36a2e9ecf73275291d0911f686ee5e590916959b7fd0bc44e",
+        "original_numeric_id": 31,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "lei-organica-municipal",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nDe acordo com a Lei Orgânica do Município de Cachoeiro de Itapemirim e em estrita consonância com a Constituição Federal (art. 211, § 2º da CF/88), o Município atua prioritariamente na educação infantil (creche e pré-escola) e no ensino fundamental, tendo por finalidade fundamental prover o bem-estar e o desenvolvimento social e humano de toda a sua comunidade.",
+        "source_reference": null
+      },
+      "source_content_hash": "30ac4a7941e6c3c731a7b0767be0a0ebc31f0810a922f7a38ba3ef201840b63b"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:032",
+      "source_id": "agente_administrativo:32",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à Lei Orgânica do Município de Cachoeiro de Itapemirim, julgue os itens que se seguem.\n\nO município poderá sofrer intervenção estadual se deixar de prestar as contas devidas, na forma da lei, e(ou) se não aplicar o mínimo exigido da receita municipal na manutenção e no desenvolvimento do ensino.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 32; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Lei Orgânica Municipal",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Municipal",
+        "source_content_hash": "e076f64407a99d866bec57223fd88b9c761dc0e9a75b0178c53c4bf1b58c0aca",
+        "original_numeric_id": 32,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.pge.es.gov.br"
+      },
+      "topics": [
+        {
+          "topic_id": "lei-organica-municipal",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A intervenção do Estado no Município é uma medida excepcional regulada pela Constituição Federal e pela Constituição do Estado do Espírito Santo. O Estado poderá intervir no Município caso este deixe de prestar as contas devidas na forma da lei ou não aplique o mínimo exigido da receita municipal na manutenção e no desenvolvimento do ensino.\n\n### Dispositivo legal\nArt. 30, II e III, da Constituição do Estado do Espírito Santo; Art. 35, II e III, da Constituição Federal.",
+        "source_reference": null
+      },
+      "source_content_hash": "a11085f638ce0130223d5bbc05d2ae5b7d1404dab6590dcee44fb423c6deb6d3"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:033",
+      "source_id": "agente_administrativo:33",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à Lei Orgânica do Município de Cachoeiro de Itapemirim, julgue os itens que se seguem.\n\nA escolha da direção das escolas municipais compete ao prefeito, que poderá nomear para esse cargo servidor ocupante de cargo comissionado.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 33; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatuto dos Servidores Públicos Municipais",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Municipal",
+        "source_content_hash": "c43d64bc5c61602db0b11d9dfd14512380b3d4ec56eb06ea54abee8cc46ee6ac",
+        "original_numeric_id": 33,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "estatuto-dos-servidores-publicos-municipais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nNos termos da Lei Orgânica Municipal de Cachoeiro de Itapemirim e das diretrizes constitucionais da gestão democrática do ensino público (CF/88, art. 206, VI), a escolha dos diretores das escolas municipais não constitui livre provimento comissionado unilateral do Prefeito, adotando-se procedimentos democráticos com participação da comunidade escolar ou processos seletivos específicos baseados em mérito e escolha colegiada.",
+        "source_reference": null
+      },
+      "source_content_hash": "9606eaa29ffd217d41b418ce4eb79d73fbf76807f19ce1988e4bbeb35947669b"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:034",
+      "source_id": "agente_administrativo:34",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à Lei Orgânica do Município de Cachoeiro de Itapemirim, julgue os itens que se seguem.\n\nO orçamento público do município deve ser encaminhado pelo prefeito à Câmara Municipal, que, por sua vez, deve votar tal peça orçamentária e fiscalizar a sua correta execução.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 34; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Lei Orgânica Municipal",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Municipal",
+        "source_content_hash": "5688af81767a3e8f718c46e49cba0bcb688e9f450c8e38dbedf65517a5f36292",
+        "original_numeric_id": 34,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "lei-organica-municipal",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nEm perfeita harmonia com o modelo orçamentário constitucional (art. 165 e 166 da CF/88), a iniciativa das leis orçamentárias (PPA, LDO e LOA) cabe privativamente ao Chefe do Poder Executivo (Prefeito). A Câmara Municipal detém a competência privativa para apreciar, emendar, votar a lei orçamentária anual e exercer o controle externo da sua execução financeira e orçamentária.",
+        "source_reference": null
+      },
+      "source_content_hash": "721be015a0f8b54d2ab89a7283d20e3eb74a0357c1120bda0d08ea5114e28b74"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:035",
+      "source_id": "agente_administrativo:35",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à Lei Orgânica do Município de Cachoeiro de Itapemirim, julgue os itens que se seguem.\n\nO ensino com jornada integral não é previsto para as escolas municipais, mas apenas para as estaduais.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 35; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Lei Orgânica Municipal",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Municipal",
+        "source_content_hash": "6c12e65ec9f396c4c7a5c2bd0c332c0cefad587c8f1f9d629f5b73cbc692c6c3",
+        "original_numeric_id": 35,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "lei-organica-municipal",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nA educação em tempo integral é diretriz obrigatória do Plano Nacional de Educação (Meta 6 da Lei nº 13.005/2014) e está expressamente prevista para a rede pública de ensino, inclusive no âmbito municipal de Cachoeiro de Itapemirim, que estabelece políticas progressivas de expansão da jornada integral nas unidades de ensino municipais, não sendo exclusividade da rede estadual.",
+        "source_reference": null
+      },
+      "source_content_hash": "e2c6396eb2a11c01ac7ae1585b678124dd42998d47176aa9bc94e7162eee5549"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:036",
+      "source_id": "agente_administrativo:36",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do Estatuto dos Servidores Públicos do Município de Cachoeiro de Itapemirim (Lei Municipal n.º 4.009/1994), julgue os itens a seguir.\n\nO servidor pode exercer atividade de comércio, desde que isso se dê fora do horário do expediente e não comprometa a sua produtividade no serviço público.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 36; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatuto dos Servidores Públicos Municipais",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Municipal",
+        "source_content_hash": "2d94cfe99dc125c78e4e8f0d5019342d121f31dac82e837262d7ed127125f708",
+        "original_numeric_id": 36,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "estatuto-dos-servidores-publicos-municipais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nNos moldes do regime estatutário do funcionalismo público (Lei Municipal nº 4.009/1994 e regime geral da Lei nº 8.112/1990, art. 117, X), é expressamente vedado ao servidor público participar de gerência ou administração de sociedade privada, personificada ou não personificada, bem como exercer o comércio, ainda que fora do horário de expediente, permitindo-se a sua participação apenas na qualidade de cotista ou acionista.",
+        "source_reference": null
+      },
+      "source_content_hash": "2330e659fbcbb2f9599e16c23396d4612d579025a016630e6d3033c72703ba4a"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:037",
+      "source_id": "agente_administrativo:37",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do Estatuto dos Servidores Públicos do Município de Cachoeiro de Itapemirim (Lei Municipal n.º 4.009/1994), julgue os itens a seguir.\n\nConstitui infração disciplinar retardar ou deixar de praticar, indevidamente, ato de ofício ou praticá-lo contra disposição expressa em lei, para satisfazer interesses ou sentimentos pessoais.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 37; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Estatuto dos Servidores Públicos Municipais",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Municipal",
+        "source_content_hash": "3b99b1a286ef920be4e95a5739ebcfa8f7d82db7b9a09b7ba855142cad3c4538",
+        "original_numeric_id": 37,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.cachoeiro.es.gov.br"
+      },
+      "topics": [
+        {
+          "topic_id": "estatuto-dos-servidores-publicos-municipais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nA conduta de retardar ou deixar de praticar ato de ofício indevidamente, ou praticá-lo contra disposição expressa de lei para atender a interesse ou sentimento pessoal, configura expressamente infração disciplinar grave no regime jurídico estatutário municipal (e correlato crime de prevaricação no Código Penal e infração aos deveres de lealdade e probidade administrativa).",
+        "source_reference": null
+      },
+      "source_content_hash": "d65d93816b8b0c7a264a3cdcd294050f0a0410288471e242e240f65d21482327"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:038",
+      "source_id": "agente_administrativo:38",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do Estatuto dos Servidores Públicos do Município de Cachoeiro de Itapemirim (Lei Municipal n.º 4.009/1994), julgue os itens a seguir.\n\nAo entrar em exercício, o servidor nomeado para cargo de provimento efetivo ficará sujeito a estágio probatório por período de trinta e seis meses, durante o qual sua aptidão e sua capacidade serão objeto de avaliação para o desempenho do cargo.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 38; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Estatuto dos Servidores Públicos Municipais",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Municipal",
+        "source_content_hash": "46fe69c2990bbd1381084096067c01d99f50608cc883a9c76e6160e2ab83349d",
+        "original_numeric_id": 38,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "estatuto-dos-servidores-publicos-municipais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nConforme estabelecido pela Emenda Constitucional nº 19/1998 (art. 41 da CF/88) e harmonizado nos estatutos de servidores públicos, o servidor nomeado para cargo de provimento efetivo em virtude de concurso público cumpre estágio probatório pelo período de 36 (trinta e seis) meses (3 anos), período em que sua assiduidade, disciplina, capacidade de iniciativa, produtividade e responsabilidade são formalmente avaliadas.",
+        "source_reference": null
+      },
+      "source_content_hash": "ee515a0dedbb4d302d54152984b9f7d2e8f584ed088bc9bce08f4aa49da64a46"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:039",
+      "source_id": "agente_administrativo:39",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do Estatuto dos Servidores Públicos do Município de Cachoeiro de Itapemirim (Lei Municipal n.º 4.009/1994), julgue os itens a seguir.\n\nUma das hipóteses de vacância de cargo efetivo é a investidura em cargo de governo.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 39; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatuto dos Servidores Públicos Municipais",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Municipal",
+        "source_content_hash": "668096425abe09273ed413ae245a9399931e2a820cd14aa83237956c3ce264d9",
+        "original_numeric_id": 39,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "estatuto-dos-servidores-publicos-municipais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nA investidura em cargo em comissão ou função de governo/confiança não gera vacância do cargo de provimento efetivo, mas sim mero afastamento do exercício com garantia de retorno. As causas taxativas de vacância são: exoneração, demissão, promoção, readaptação, aposentadoria, posse em outro cargo inacumulável e falecimento.",
+        "source_reference": null
+      },
+      "source_content_hash": "86af93535b2c13c0c9cdd15df18d0ec15b5acdecc89ca449a20529cd0ddd6c74"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:040",
+      "source_id": "agente_administrativo:40",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do Estatuto dos Servidores Públicos do Município de Cachoeiro de Itapemirim (Lei Municipal n.º 4.009/1994), julgue os itens a seguir.\n\nA exoneração do cargo é uma das sanções impostas ao servidor que cometer infração disciplinar grave.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 40; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatuto dos Servidores Públicos Municipais",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Municipal",
+        "source_content_hash": "b470092114811f383f3bdbbb948b928cfe9305a06fdf5eb12621b51a18299fa3",
+        "original_numeric_id": 40,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "estatuto-dos-servidores-publicos-municipais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nA exoneração não possui caráter punitivo ou sancionador; trata-se do desfazimento do vínculo funcional a pedido do servidor ou de ofício (ex.: não aprovação em estágio probatório ou exoneração de cargo em comissão). As sanções disciplinares previstas em lei para faltas graves são a suspensão, a demissão, a cassação de aposentadoria ou a destituição de cargo em comissão.",
+        "source_reference": null
+      },
+      "source_content_hash": "e83f5bce3f07d51f27b1655ad385db2d533bf25ce0483d92b0288ef0dbafd623"
+    }
+  ]
+}

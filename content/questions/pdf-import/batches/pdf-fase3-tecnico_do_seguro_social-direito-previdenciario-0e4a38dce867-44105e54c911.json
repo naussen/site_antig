@@ -1,0 +1,190 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-tecnico_do_seguro_social-direito-previdenciario-0e4a38dce867-44105e54c911",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "0e4a38dce867d15ea95dc17a7fc6406a547911ee91105cff869ce9bf23f49a99",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "de5b10d2a1ac5bee023c723ca65187afb7622a283e7467ef7e8b4dd19094f663",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "44105e54c9115d75284cd6caa12343857e473a36784a75700111ea37835820b1",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-previdenciario",
+    "name": "Direito Previdenciário"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:063",
+      "source_id": "tecnico_do_seguro_social:63",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do contribuinte individual, do segurado especial e do segurado facultativo, julgue os itens seguintes.\n\nSuponha-se que, para complementar a renda familiar, Flávio, servidor público federal, exerça eventualmente atividade como motorista de aplicativo. Nessa situação hipotética, na condição de motorista de aplicativo, Flávio é considerado segurado obrigatório do RGPS.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 63; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Regime Geral de Previdência Social – RGPS",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "0655dac006e3f56ae3c8b2f06235c847083b5b80ac184d7a8fc7f4a5ac136e8c",
+        "original_numeric_id": 63,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-geral-de-previdencia-social-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNos termos do Artigo 12, § 2º, da Lei nº 8.212/1991 e do Artigo 11, § 2º, da Lei nº 8.213/1991, todo indivíduo que exerce concomitantemente mais de uma atividade remunerada sujeita a regimes de previdência distintos é **obrigatoriamente filiado** em relação a cada uma dessas atividades.\n\nSendo Flávio servidor público titular de cargo efetivo vinculado a Regime Próprio de Previdência Social (RPPS), ao exercer em paralelo atividade econômica remunerada no comércio por conta própria, enquadra-se compulsoriamente como **contribuinte individual** perante o Regime Geral de Previdência Social (RGPS), devendo recolher a respectiva contribuição previdenciária.",
+        "source_reference": null
+      },
+      "source_content_hash": "906e0f7d62fd2e8857c83a2ae9b23cfd869341e9b915b1f74dc2905c898fbdf1"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:074",
+      "source_id": "tecnico_do_seguro_social:74",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca do recolhimento e do reajustamento de benefícios, bem como das competências do INSS e da Secretaria da Receita Federal do Brasil, julgue os itens a seguir.\n\nOs valores do salário de contribuição e dos benefícios de prestação continuada da previdência social são reajustados na mesma época e nos mesmos índices.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 74; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Salário de Contribuição",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "08ee0acbffa4d67fe64fe7305888aeeff00210acf7eb5f8801517aadddae43f9",
+        "original_numeric_id": 74,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "salario-de-contribuicao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nConforme estabelece o Artigo 41-A da Lei nº 8.213/1991 (Plano de Benefícios da Previdência Social) e as disposições correlatas da Lei nº 8.212/1991:\n\nO valor dos benefícios em manutenção e os limites da tabela do salário de contribuição são reajustados periodicamente na **mesma data**, mediante índice oficial que preserve, de forma permanente, o valor real dos benefícios (atualmente o Índice Nacional de Preços ao Consumidor - INPC).",
+        "source_reference": null
+      },
+      "source_content_hash": "1c0c9c8f274318c06f6f3c683ded6d88d8aef1e9cf6695f42f9dbf2d19f8fd09"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:118",
+      "source_id": "tecnico_do_seguro_social:118",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito ao benefício de prestação continuada e ao auxílio-inclusão conforme as disposições da Lei Orgânica da Assistência Social (LOAS), julgue os itens subsecutivos.\n\nCompete ao INSS a operacionalização do benefício de prestação continuada.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 118; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Lei de Assistência Social (LOAS) – Lei 8.742/93 e Decreto 6.214/07",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "962f5d859d848cbd56c9c995d33ce2aa894300b4468f5dff17be424df335b615",
+        "original_numeric_id": 118,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6214.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "lei-de-assistencia-social-loas-lei-8-742-93-e-decreto-6-214-07",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNos termos do Artigo 12 do Decreto nº 6.214/2007 (Regulamento do Benefício de Prestação Continuada) e das diretrizes da Lei nº 8.742/1993 (LOAS):\n\n*\"Art. 12. Compete ao **Instituto Nacional do Seguro Social - INSS** a operacionalização do BPC, que compreende a recepção dos requerimentos, a análise, concessão, manutenção, pagamento, cessação e fiscalização do benefício.\"*\n\nEmbora o BPC integre a política de Assistência Social gerida pelo Ministério do Desenvolvimento e Assistência Social, sua execução administrativa prática e operacional cabe integralmente à estrutura do INSS.",
+        "source_reference": null
+      },
+      "source_content_hash": "c86d333c885c27cf6da9353a7ab97058bd6d07c745d07c6601e361b7073dc2d6"
+    }
+  ]
+}

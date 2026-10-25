@@ -1,0 +1,1412 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_em_enfermagem-portugues-76f64f3ddf4d-f7e204abd795",
+  "source": {
+    "file_name": "tecnico_em_enfermagem_ATUALIZADO.json",
+    "sha256": "76f64f3ddf4d3822e329101339345d50044b899f9b8fae52267aeb267323adcc",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_em_enfermagem.json",
+      "original_source_sha256": "d82e5bb88e01f70ff10fe33c96068be4d04a647ee9eeb9d4154c94a2180a057d",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "f7e204abd79507c673d8946931acece74d81fb8974112325b8227707d04fc11f",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:041",
+      "source_id": "tecnico_em_enfermagem:41",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O Técnico de Enfermagem exerce as atividades auxiliares, de nível médio técnico, atribuídas à equipe de enfermagem. Considerando esta afirmativa, assinale a alternativa incorreta.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 41; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Assistir ao Enfermeiro no planejamento, programação, orientação e supervisão das atividades de assistência de enfermagem",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Assistir ao Enfermeiro na prevenção e no controle sistemático da infecção hospitalar",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Assistir ao Enfermeiro na prestação de cuidados diretos de enfermagem a pacientes em estado grave",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Realizar consultoria, auditoria e emissão de parecer sobre matéria de enfermagem",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Integrar a equipe de saúde",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "10f394f622ff440fc4fbb07496357e33c09ef7a686e25ae6d36c7003b5e57cc4",
+        "original_numeric_id": 41,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l7498.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa incorreta (gabarito da questão) é a **D**.\n\nA Lei nº 7.498/1986, que regulamenta o exercício profissional da enfermagem, estabelece as competências privativas do Enfermeiro em seu Artigo 11:\n*\"Art. 11. O Enfermeiro exerce todas as atividades de enfermagem, cabendo-lhe:*  \n*I - privativamente:*  \n*...*  \n*h) consultoria, auditoria e emissão de parecer sobre matéria de enfermagem;\"*\n\nPortanto, prestar consultoria, auditoria e emitir pareceres técnicos são funções privativas do Enfermeiro de nível superior, sendo vedadas ao Técnico de Enfermagem (cujas atribuições de nível médio estão discriminadas no Artigo 12 da referida lei).",
+        "source_reference": null
+      },
+      "source_content_hash": "eedd9a86d9d7ae6954625b6fb5ab1773a108d410f317a264471ad7384d3a540c"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:042",
+      "source_id": "tecnico_em_enfermagem:42",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O pré-operatório mediato é definido como:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 42; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "é o período da marcação da cirurgia até 24 horas antes do procedimento",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "é o período da marcação da cirurgia até o momento do procedimento",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "é quando paciente está a 24 horas da cirurgia",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "é o momento que o paciente é transferido para o bloco cirúrgico até sua admissão na unidade de cuidado pós anestésicos",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "é o período da marcação da cirurgia até 02 horas antes do procedimento",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "3460216d53153e1d02399c774bf44890a83bc9ba0741ad12c197d38958fb556a",
+        "original_numeric_id": 42,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito está correto na alternativa **A**. Na assistência de enfermagem perioperatória, o período pré-operatório é subdividido em duas fases distintas com base no tempo que antecede o procedimento cirúrgico:\n\n* **Pré-operatório Mediato (Alternativa A):** Compreende o intervalo de tempo que vai desde a indicação ou marcação da cirurgia até as 24 horas que antecedem o início do procedimento. Nesse período, realizam-se exames pré-operatórios, avaliação clínica e orientações gerais.\n* **Pré-operatório Imediato:** Corresponde às 24 horas imediatamente anteriores à cirurgia, momento em que são realizados os preparos físicos específicos (jejum, higiene corporal, esvaziamento vesical, administração de medicação pré-anestésica, etc.).\n\nAnálise das alternativas incorretas:\n* **B:** Descreve todo o período pré-operatório de forma genérica, sem a subdivisão temporal.\n* **C:** Refere-se ao início do pré-operatório imediato.\n* **D:** Descreve o período transoperatório/intraoperatório.\n* **E:** Apresenta um limite temporal incorreto (2 horas).",
+        "source_reference": null
+      },
+      "source_content_hash": "7c7fc78632cd2aa09609636136a3690a05bfdbee8f5d0086b149f8df9d63f646"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:043",
+      "source_id": "tecnico_em_enfermagem:43",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Analise as afirmativas abaixo sobre as atribuições do técnico de enfermagem na RPA (recuperação pós anestésica), e dê valores Verdadeiro (V) ou Falso (F).\n\n( ) realizar manutenção da unidade para atendimento aos pacientes, de acordo com as orientações do enfermeiro\n( ) prestar cuidados de enfermagem aos pacientes, conforme prescrição de enfermagem\n( ) realizar com segurança a alta e transferência dos pacientes para emfermaria de origem\n( ) elaborar plano de cuidados, supervisionar sua execução e realizar as atividades complexas de enfermagem, com base na Sistematização da Assistência de Enfermagem Perioperatória (SAEP)\n\nAssinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 43; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "V - V - V - V",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "V - V - V - F",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "V - V - F - F",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "V - F - V - V",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "F - V - V - F",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "941403592eec84d1d097e7c21359219f528636e0921fad4a4edce1a8c46c4354",
+        "original_numeric_id": 43,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l7498.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B** (V - V - V - F).\n\nAnálise das afirmativas sobre a atuação na Sala de Recuperação Pós-Anestésica (SRPA):\n\n* **(V)** *Realizar manutenção da unidade para atendimento aos pacientes, de acordo com as orientações do enfermeiro:* Atividade de apoio e preparo do ambiente privativo de enfermagem.\n* **(V)** *Prestar cuidados de enfermagem aos pacientes, conforme prescrição de enfermagem:* Atribuição legal do Técnico de Enfermagem conforme o Art. 12 da Lei nº 7.498/1986.\n* **(V)** *Realizar com segurança a alta e transferência dos pacientes para a enfermaria de origem:* Faz parte do fluxo assistencial integrado da equipe sob validação médica e de enfermagem.\n* **(F)** *Elaborar plano de cuidados, supervisionar sua execução e realizar as atividades complexas de enfermagem com base na SAEP:* A elaboração do plano de cuidados (prescrição de enfermagem), a coordenação da equipe e a execução de procedimentos complexos em pacientes graves são atividades **privativas do Enfermeiro** (Art. 11, I, \"c\" e \"i\", da Lei nº 7.498/1986 e Resolução COFEN nº 736/2024).\n\nA sequência correta é: **V - V - V - F**.",
+        "source_reference": null
+      },
+      "source_content_hash": "7e904c572f7fe05dcbef3766b5f1c36f009d0205e7a395503e34b9fee4e083aa"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:044",
+      "source_id": "tecnico_em_enfermagem:44",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O IAK (Índice de Aldrete e Kroulik) é um sistema numérico (escala) que permite a coleta de dados por critérios definidos. Tem como objetivo sistematizar as condições fisiológicas para a previsibilidade da alta da sala de recuperação anestésica (RPA). Assinale a alternativa que contenha os dados avaliados no IAK.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 44; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "avalia atividade motora, respiratória, circulatória e o estado de consciência",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "avalia a abertura ocular, resposta verbal e resposta motora",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "avalia a dor: dor grave, dor moderada e dor leve",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "avalia o tempo de intervalo de aferição de controles; oxigenação; terapêutica medicamentosa; integridade cutâneo mucosa; alimentação e hidratação",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "avalia atividade motora, respiratória, circulatória, estado de consciência e saturação de oxigênio",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "1cd008056d69265cbb73324b71e451ce69c97ab14e24bc3b6c9bdd31ec2d0bca",
+        "original_numeric_id": 44,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O Índice de Aldrete e Kroulik (IAK) é um sistema de pontuação utilizado na Sala de Recuperação Pós-Anestésica (SRPA) para avaliar a recuperação fisiológica do paciente e determinar o momento seguro para a alta.\n\nA versão modificada do índice avalia **cinco parâmetros** específicos, atribuindo a cada um deles uma nota de 0 a 2:\n1. **Atividade motora**: capacidade de mover os membros voluntariamente ou sob comando.\n2. **Respiração**: capacidade de respirar profundamente e tossir livremente.\n3. **Circulação**: estabilidade da pressão arterial em relação ao nível pré-anestésico.\n4. **Consciência**: nível de lucidez e orientação do paciente.\n5. **Saturação de oxigênio**: mensurada por oximetria de pulso (que substituiu a avaliação da cor da pele da escala original).\n\n**Análise das alternativas incorretas:**\n* **A**: Omite a saturação de oxigênio, que é um dos cinco parâmetros fundamentais da escala modificada.\n* **B**: Descreve os componentes da Escala de Coma de Glasgow (abertura ocular, resposta verbal e resposta motora), utilizada para avaliar o nível de consciência neurológica, e não os critérios de alta anestésica.\n* **C**: Refere-se a escalas de avaliação de dor (como a escala visual analógica ou numérica), que não compõem o IAK.\n* **D**: Lista parâmetros gerais de monitorização e cuidados de enfermagem, mas não corresponde aos critérios sistematizados do IAK.",
+        "source_reference": null
+      },
+      "source_content_hash": "9d79dda572ec01d4aac85ac79162015d0f31aa6bc12884ff5035cc20199b7b12"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:045",
+      "source_id": "tecnico_em_enfermagem:45",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Assinale a alternativa que contenha um exemplo de cirurgia infectada.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 45; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Amputação de pé diabético",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "Apendicectomia",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Cirurgias dentárias",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Amigdalectomia",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Cirurgias cardíacas",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "35510d0cc0ca09eeacf2c04f901757af5e1504e2f3eb26fc6ae3bbf3ed4e9e54",
+        "original_numeric_id": 45,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/1998/prt2616_12_05_1998.html"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A classificação das cirurgias de acordo com o potencial de contaminação baseia-se na presença de microrganismos no sítio cirúrgico no momento da intervenção. As categorias são:\n\n* **Cirurgias Limpas**: realizadas em tecidos estéreis ou passíveis de descontaminação, sem penetração nos tratos digestivo, respiratório ou urinário, e sem falhas técnicas (ex: cirurgias cardíacas eletivas).\n* **Cirurgias Potencialmente Contaminadas**: realizadas em tecidos colonizados por flora bacteriana pouco numerosa ou em tecidos de difícil descontaminação, sob condições controladas (ex: apendicectomia não perfurada, amigdalectomia, cirurgias dentárias).\n* **Cirurgias Contaminadas**: realizadas em tecidos recentemente traumatizados e abertos, com inflamação aguda sem pus, ou com grande contaminação pelo trato gastrointestinal.\n* **Cirurgias Infectadas**: realizadas em tecidos com infecção ativa, presença de pus (supuração), tecido necrótico ou corpos estranhos (ex: amputação de pé diabético infectado/gangrenoso).\n\n**Análise das alternativas incorretas:**\n* **B, C e D**: São classificadas como **potencialmente contaminadas**, pois ocorrem em tratos colonizados por microbiota própria (digestivo/oral), porém sem processo infeccioso ou necrose ativa no momento inicial.\n* **E**: É classificada como **limpa**, desde que não haja abertura de vias colonizadas ou quebra de barreira asséptica.\n\n**Dispositivo legal**\n\n[Portaria MS/Anvisa nº 2616, de 12 de maio de 1998](https://bvsms.saude.gov.br/bvs/saudelegis/gm/1998/prt2616_12_05_1998.html)",
+        "source_reference": null
+      },
+      "source_content_hash": "1c282fc311741811b2854f42360e517040f7e2a1af4dd1646101775a2fd94d15"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:046",
+      "source_id": "tecnico_em_enfermagem:46",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sobre os sintomas que indicam gravidade nos acidentes com aranhas do gênero Phoneutria (armadeira), analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F).\n\n( ) dor local\n( ) edema agudo do pulmão\n( ) edema local\n( ) hipotensão arterial\n\nAssinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 46; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "V - V - V - V",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "V - V - F - F",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "F - V - F - V",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "F - V - V - F",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "V - V - F - V",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Tipologia Textual e Gêneros Discursivos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "cc1b43a11ade63fa07eeaf6c2aed5917635ccaa6e60fe0508c820e9fc2062137",
+        "original_numeric_id": 46,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Nos acidentes causados por aranhas do gênero *Phoneutria* (conhecidas popularmente como aranhas-armadeiras), a classificação de gravidade orienta a conduta terapêutica (soroterapia):\n\n* **Manifestações Locais (Casos Leves/Moderados)**: A dor local (de intensidade variável, frequentemente imediata e irradiada) e o edema local discreto são as manifestações mais comuns, presentes na grande maioria dos casos, não indicando, isoladamente, gravidade sistêmica.\n* **Manifestações de Gravidade (Casos Graves)**: O envenenamento grave caracteriza-se por alterações sistêmicas decorrentes da ação neurotóxica do veneno, que incluem manifestações cardiovasculares e respiratórias graves, tais como **edema agudo de pulmão** e choque/**hipotensão arterial** (além de sudorese profusa, vômitos frequentes, priapismo e agitação psicomotora).\n\nPortanto, analisando as afirmativas sob a ótica de \"sintomas que indicam gravidade\":\n1. ( **F** ) dor local (sintoma comum/leve)\n2. ( **V** ) edema agudo do pulmão (sintoma de gravidade)\n3. ( **F** ) edema local (sintoma comum/leve)\n4. ( **V** ) hipotensão arterial (sintoma de gravidade)\n\nA sequência correta é **F - V - F - V**.\n\n**Dispositivo legal**\n\n[Manual de Diagnóstico e Tratamento de Acidentes por Animais Peçonhentos (Ministério da Saúde)](https://www.gov.br/saude/pt-br/assuntos/saude-de-a-a-z/a/animais-peconhentos)",
+        "source_reference": null
+      },
+      "source_content_hash": "c8c6a2a75cb9a8711c1e12b834a36cfc16e8911799314b597560db316711fd35"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:047",
+      "source_id": "tecnico_em_enfermagem:47",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A reanimação da parada cardiorrespiratória deve ser feita com o uso de compressões torácicas a uma frequência de ______ compressões/minutos, comprimindo o tórax a uma profundidade de ______ para adulto médio, evitando ultrapassar a profundidade de ______, permitindo o retorno total do tórax após cada compressão, minimizando as interrupções, ventilando adequadamente (30 compressões para cada 2 ventilações).\nAssinale a alternativa que preencha correta e respectivamente as lacunas.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 47; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "100 a 130 / 5cm / 10cm",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "100 a 120 / 5cm / 6cm",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "100 a 120 / 6cm / 7cm",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "90 a 100 / 5cm / 7cm",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "90 a 120 / 5cm / 6cm",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "f76c71f2b553b125c1aa857d05a586a884a2ed8fb2f761d20355c7e067a530a8",
+        "original_numeric_id": 47,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nConforme as Diretrizes Internacionais de Ressuscitação Cardiopulmonar (RCP) da American Heart Association (AHA) e da Sociedade Brasileira de Cardiologia (SBC), a realização de compressões torácicas de alta qualidade no suporte de vida em adultos requer:\n\n1. **Frequência de compressão:** entre **100 e 120 compressões por minuto**;\n2. **Profundidade de compressão:** de pelo menos **5 cm** (2 polegadas) no adulto médio;\n3. **Profundidade máxima recomendada:** evitar ultrapassar **6 cm** (2,4 polegadas), prevenindo lesões viscerais ou fraturas excessivas;\n4. Permitir o retorno completo do tórax após cada compressão e minimizar as interrupções.\n\nAs lacunas são preenchidas correta e respectivamente por: **100 a 120 / 5cm / 6cm**.",
+        "source_reference": null
+      },
+      "source_content_hash": "3b3e30b1e6071a386efd348ad4ce5a1fa61a90a5efcfd01ffd495859f480daf4"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:048",
+      "source_id": "tecnico_em_enfermagem:48",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O uso preconizado do cloridrato de epinefrina na parada Cardiorrespiratória do adulto é de ______ IV/IO, sendo utilizada de ______ minutos.\nAssinale a alternativa que preencha correta e respectivamente as lacunas.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 48; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "1,5mg / 3 a 5",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "2 mg / 3 a 5",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "1mg / 2 a 5",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "1mg / 3 a 5",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "2mg / 2 a 5",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "6ffb8f6ab6eb91eefaba881c67c939c17081e70cded25f5f99ec5299bec2865e",
+        "original_numeric_id": 48,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nNos protocolos de Suporte Avançado de Vida Cardiovascular (ACLS) para o tratamento da Parada Cardiorrespiratória (PCR) em adultos (tanto para ritmos chocáveis — FV/TV sem pulso — quanto para ritmos não chocáveis — assistolia e AESP):\n\n* A dose preconizada de **epinefrina (adrenalina)** é de **1 mg** por via intravenosa (IV) ou intraóssea (IO);\n* O intervalo de repetição da administração é a cada **3 a 5 minutos**, acompanhado de flush de solução salina para infusão rápida.\n\nPortanto, o preenchimento correto das lacunas é: **1mg / 3 a 5**.",
+        "source_reference": null
+      },
+      "source_content_hash": "41650139f13b9d9fc76c944b2642a1e63e1dc31ff64325f5fa023295ee1cede7"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:049",
+      "source_id": "tecnico_em_enfermagem:49",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sobre doenças de notificação compulsória, analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F).\n\n( ) Dengue\n( ) Difteria\n( ) Diarreia\n( ) Doença Meningocócica e Outras Meningites\n\nAssinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 49; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "V - V - F - V",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "V - V - V - V",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "F - V - V - V",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "V - V - F - F",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "F - V - V - F",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "6a61bf43c88d5531d5a8707ce905ab15184977872ed3cfc2629f58c26549849b",
+        "original_numeric_id": 49,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://bvsms.saude.gov.br/bvs/saudelegis/gm/2017/prc0004_03_10_2017.html"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A resolução da questão exige o conhecimento da Lista Nacional de Notificação Compulsória de doenças, agravos e eventos de saúde pública, regulamentada pelo Ministério da Saúde.\n\n- **Dengue (V):** É uma doença de notificação compulsória, com fluxos de notificação que variam entre semanal e imediata (em caso de óbitos ou em situações de emergência de saúde pública).\n- **Difteria (V):** Doença de notificação compulsória imediata devido ao seu potencial de transmissibilidade e gravidade.\n- **Diarreia (F):** A diarreia genérica não consta na lista de notificação compulsória. O que existe é a vigilância epidemiológica da Doença Diarreica Aguda (DDA) de forma integrada e sentinela, mas não a notificação individualizada e compulsória de qualquer quadro diarreico.\n- **Doença Meningocócica e Outras Meningites (V):** São de notificação compulsória devido à alta morbimortalidade e potencial de surtos.\n\nPortanto, a sequência correta é **V - V - F - V**, correspondendo à alternativa A.\n\n### Dispositivo legal\nPortaria de Consolidação GM/MS nº 4, de 28 de setembro de 2017, Anexo 1 do Anexo V (que consolida as normas sobre os sistemas e subsistemas do SUS, especificamente a lista nacional de notificação compulsória).",
+        "source_reference": null
+      },
+      "source_content_hash": "0258a5bad4dc09e8d31abfb4644a0c902fd0d9bcaec1d619cf281a11138868c0"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:050",
+      "source_id": "tecnico_em_enfermagem:50",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A prevenção da hipoglicemia hospitalar (HG) é de extrema importância, impactando na morbidade-mortalidade hospitalar. A HG hospitalar é definida como:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 50; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "como uma glicemia < 54 mg/dL ou que requer ajuda para sua correção",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "qualquer glicemia < 70 mg/dL",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "qualquer glicemia < 50 mg/dL",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "como uma glicemia < 60 mg/dL ou que requer ajuda para sua correção",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "qualquer glicemia < 80 mg/dL",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "90f076cb1002df6e048808bc3b6278f720d12e47008003e08ae135289a469bd9",
+        "original_numeric_id": 50,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nDe acordo com as diretrizes da Sociedade Brasileira de Diabetes (SBD) e da American Diabetes Association (ADA) sobre monitoramento e manejo glicêmico intra-hospitalar, a **hipoglicemia hospitalar** é definida clinicamente como **qualquer glicemia inferior a 70 mg/dL** (3,9 mmol/L).\n\nEsse valor representa o nível de alerta clínico (Nível 1) no qual medidas corretivas (oferta de carboidratos orais de absorção rápida ou glicose hipertônica intravenosa) devem ser imediatamente implementadas para evitar complicações neurológicas, eventos cardiovasculares e o agravamento da morbimortalidade hospitalar.",
+        "source_reference": null
+      },
+      "source_content_hash": "7de5f41292649d6f4ceb64b923227958e74c9d8b587477dbb7a1aa4069dade56"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:051",
+      "source_id": "tecnico_em_enfermagem:51",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sobre sinais clínicos da sepse, analise as afirmativas abaixo e dê valores Verdadeiro (V) ou Falso (F).\n\n( ) Febre (temperatura corporal > 38,3°C).\n( ) Hipotermia (temperatura basal < 36°C).\n( ) Frequência cardíaca > 90bpm/min ou mais do que dois desvios-padrão (DP) acima do valor normal para a idade.\n( ) Bradicardia.\n\nAssinale a alternativa que apresenta a sequência correta de cima para baixo.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 51; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "V - V - V - F",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "V - V - F - F",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "V - F - V - F",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "V - V - V - V",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "V - F - F - F",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "0785fb433ddd5a70564987024d48d224f236c01d97f9e4c936d9bbe2477d8664",
+        "original_numeric_id": 51,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A** (V - V - V - F).\n\nA avaliação dos sinais clínicos clássicos da Síndrome da Resposta Inflamatória Sistêmica (SIRS) e da triagem de sepse hospitalar revela:\n\n* **(V) Febre:** temperatura corporal elevada (> 38,3 ºC) é manifestação frequente do processo infeccioso sistêmico.\n* **(V) Hipotermia:** temperatura corporal central baixa (< 36 ºC) constitui sinal de extrema gravidade em quadros de sepse, especialmente em idosos e imunossuprimidos.\n* **(V) Frequência cardíaca > 90 bpm:** a taquicardia reflete a resposta fisiológica compensatória ao aumento do consumo metabólico de oxigênio e à vasodilatação inflamatória.\n* **(F) Bradicardia:** a resposta típica inflamatória/séptica sistêmica em adultos é a taquicardia; a bradicardia não compõe os critérios clássicos de SIRS/sepse inicial.\n\nA sequência correta é: **V - V - V - F**.",
+        "source_reference": null
+      },
+      "source_content_hash": "bf0a73d4efa21a81e6ac7974809ddf264db87dff6a7a966702e9782582de8b33"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:053",
+      "source_id": "tecnico_em_enfermagem:53",
+      "question_type": "multiple_choice",
+      "statement_markdown": "São consideradas IST (Infecção Sexualmente Transmissível), exceto:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 53; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "doença inflamatória pélvica (DIP)",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "donovanose",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "gonorreia e infecção por clamídia",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "uveíte",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "sífilis",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "4f5c109163a4da83cd3dffb852f1a7382cd1d2baf3bf530f462a21f5f822572a",
+        "original_numeric_id": 53,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/saude/pt-br/assuntos/saude-de-a-z/i/ist"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão solicita a identificação da alternativa que **não** representa uma Infecção Sexualmente Transmissível (IST).\n\n*   **Alternativa Correta (D):** A uveíte consiste na inflamação do trato uveal (íris, corpo ciliar e coroide) do olho. Embora possa ser secundária a infecções sistêmicas (como sífilis ou tuberculose) ou a doenças autoimunes, a uveíte em si não é classificada como uma IST.\n*   **Alternativas Incorretas (A, B, C, E):**\n    *   *Doença Inflamatória Pélvica (DIP):* É uma síndrome clínica decorrente da ascensão de microrganismos do trato genital inferior, frequentemente associada a ISTs como gonorreia e infecção por clamídia.\n    *   *Donovanose:* É uma IST crônica progressiva, causada pela bactéria *Klebsiella granulomatis*.\n    *   *Gonorreia e infecção por clamídia:* São infecções bacterianas clássicas transmitidas por via sexual, causadas por *Neisseria gonorrhoeae* e *Chlamydia trachomatis*, respectivamente.\n    *   *Sífilis:* É uma IST sistêmica causada pela espiroqueta *Treponema pallidum*.\n\n**Dispositivo legal**\n\n[Protocolo Clínico e Diretrizes Terapêuticas para Atenção Integral às Pessoas com Infecções Sexualmente Transmissíveis (PCDT-IST), Ministério da Saúde](https://www.gov.br/saude/pt-br/assuntos/saude-de-a-z/i/ist)",
+        "source_reference": null
+      },
+      "source_content_hash": "df26fc53f47cf5a4533d444450697377b8c3a839035f4336f06097f9181c0601"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:054",
+      "source_id": "tecnico_em_enfermagem:54",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um paciente ingeriu, na soma de todas as fontes, 1500 ml, mas apresentou perda de 900 ml, teremos como resultado ______ o que indica que o balanço hídrico do paciente no período analisado é ______.\n\nAssinale a alternativa que preencha correta e respectivamente as lacunas.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 54; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "500 ml, positivo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "600 ml, positivo",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "500 ml, negativo",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "600 ml, negativo",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "650 ml, positivo",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "3b96fb4a809b0c616d30d8853fb19d24a6f05d6435ee0af122aa7c767f302800",
+        "original_numeric_id": 54,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_em_enfermagem_054.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O balanço hídrico consiste no monitoramento quantitativo dos líquidos que entram (ganhos) e saem (perdas) do organismo de um paciente em um determinado período.\n\n*   **Cálculo:** Subtraindo-se o total de perdas do total de ganhos, obtém-se o valor do balanço.\n*   **Classificação:**\n    *   Se os ganhos forem maiores que as perdas, o resultado é maior que zero, caracterizando um **balanço positivo**.\n    *   Se as perdas superarem os ganhos, o resultado é menor que zero, caracterizando um **balanço negativo**.\n\nNo caso apresentado, a diferença de 600 ml indica retenção de líquidos em relação à perda, configurando balanço positivo.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_em_enfermagem_054.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "2ef18ed0803b5c7ba8f0893d43d64d5533e7ff7b88ee82dc9b66212dd432e827"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:055",
+      "source_id": "tecnico_em_enfermagem:55",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A identificação correta do paciente é o processo pelo qual se assegura ao paciente que a ele é destinado determinado tipo de procedimento ou tratamento, sobre esse assunto, é correto afirmar que:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 55; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "é necessário usar pelo menos um identificador em pulseira branca padronizada, colocada num membro do paciente para que seja conferido antes do cuidado",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "é necessário usar pelo menos dois identificadores em pulseira branca padronizada, colocada num membro do paciente para que seja conferido antes do cuidado",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "A confirmação da identificação do paciente será realizada após o cuidado prestado ao paciente",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "A identificação de todos os pacientes deve ser realizada assim que receber atendimento médico, através de uma pulseira",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "A identificação de todos os pacientes deve ser realizada assim que passar por consulta de enfermagem, através de uma pulseira",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "141f4f784e46b20187d1fc31ea5839ea9b85c870430d1efe94dcd8829b2191b0",
+        "original_numeric_id": 55,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/anvisa/pt-br/assuntos/servicosdesaude/seguranca-do-paciente"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A identificação correta do paciente visa reduzir a ocorrência de incidentes e erros de procedimento nos serviços de saúde.\n\n*   **Alternativa Correta (B):** Conforme as diretrizes do Programa Nacional de Segurança do Paciente (PNSP), o protocolo exige a utilização de, no mínimo, **dois identificadores** (por exemplo, nome completo do paciente e data de nascimento) em uma pulseira de cor branca padronizada, que deve ser checada ativamente antes de qualquer cuidado, procedimento ou administração de medicamentos.\n*   **Alternativas Incorretas:**\n    *   *A:* Incorreta por mencionar apenas \"um identificador\".\n    *   *C:* A confirmação da identificação deve ser realizada **antes** de qualquer cuidado prestado, e não após.\n    *   *D e E:* A identificação por pulseira deve ser realizada no momento da admissão/entrada do paciente no serviço de saúde (seja na recepção ou triagem), e não apenas após o atendimento médico ou consulta de enfermagem específicos.\n\n**Dispositivo legal**\n\n[Portaria MS/GM nº 529/2013 e Protocolo de Identificação do Paciente (Anvisa/MS)](https://www.gov.br/anvisa/pt-br/assuntos/servicosdesaude/seguranca-do-paciente)",
+        "source_reference": null
+      },
+      "source_content_hash": "c50441f6858e4ad0301c0e91eec314c071d99ce4da03508fe8ee2cd70db97f15"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:056",
+      "source_id": "tecnico_em_enfermagem:56",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Quando as pupilas apresentam tamanhos semelhantes são chamadas de:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 56; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "pupilas mióticas",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "pupilas midriáticas",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "pupilas anisocóricas",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "pupilas isocóricas",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "pupilas reagentes",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "7cbba04f655131d6cebe79070e4bd0ddb6ce681cad5f59fa5470b0594b31b8b2",
+        "original_numeric_id": 56,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A avaliação pupilar é um componente essencial do exame neurológico. A terminologia clínica para o diâmetro e simetria das pupilas define:\n\n*   **Pupilas Isocóricas (Alternativa D):** Apresentam diâmetros iguais ou muito semelhantes, indicando normalidade na simetria pupilar.\n*   **Análise das demais alternativas:**\n    *   *Mióticas (A):* Pupilas contraídas (diâmetro reduzido).\n    *   *Midriáticas (B):* Pupilas dilatadas (diâmetro aumentado).\n    *   *Anisocóricas (C):* Pupilas com tamanhos desiguais (uma maior que a outra), o que pode indicar sofrimento cerebral ou lesão neurológica.\n    *   *Reagentes (E):* Refere-se à capacidade de contração da pupila quando exposta a um estímulo luminoso (reflexo fotomotor), não ao tamanho comparativo entre elas.",
+        "source_reference": null
+      },
+      "source_content_hash": "2c3f2eb7657c1e645940413d05a5154ecfe3f6ebaadcb369ce0a5547b4f5e949"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:057",
+      "source_id": "tecnico_em_enfermagem:57",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O hemotórax é definido por:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 57; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "é a presença de ar no espaço pleural",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "é a entrada contínua de ar para o interior da cavidade torácica sem qualquer saída",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "é a presença de sangue no espaço pleural",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "é a presença de sangue na parede torácica",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "é a presença de sangue no tecido pulmonar",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "9a5feb86dc5aba85dd7901e1bef1df4ba75237b40e4ce2f3f11adee5e4069e52",
+        "original_numeric_id": 57,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O hemotórax caracteriza-se pelo acúmulo de sangue na cavidade pleural (o espaço virtual entre a pleura visceral e a pleura parietal).\n\n*   **Alternativa Correta (C):** A definição exata de hemotórax é a presença de sangue no espaço pleural, frequentemente decorrente de traumas torácicos (abertos ou fechados) ou complicações cirúrgicas.\n*   **Análise das demais alternativas:**\n    *   *A e B:* Descrevem o pneumotórax (presença de ar no espaço pleural) e o pneumotórax hipertensivo (entrada contínua de ar sem saída).\n    *   *D:* Sangue na parede torácica caracteriza hematoma ou contusão de partes moles, não hemotórax.\n    *   *E:* Sangue no tecido pulmonar (parênquima) caracteriza contusão pulmonar ou hemorragia alveolar, e não hemotórax.",
+        "source_reference": null
+      },
+      "source_content_hash": "240f62916ac2f9cd88a6290be5034063f845dca751cf193dc38c65f334e774bf"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:058",
+      "source_id": "tecnico_em_enfermagem:58",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Em um adulto jovem, o pulso entre 60 e 100 bpm (batidas por minuto) é considerado:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 58; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "bradisfigmia",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "taquisfigmia",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "taquicardia",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "bradicardia",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "normocardia",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "794a68fead269e1a7abebc84029b2838bba9c242fcf3718ff15ca125e6ecbb09",
+        "original_numeric_id": 58,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda a terminologia técnica utilizada na avaliação dos sinais vitais, especificamente a frequência cardíaca e o pulso em adultos.\n\n*   **Normocardia (Alternativa E - Correta):** É o termo técnico que define a frequência cardíaca normal, que em adultos jovens em repouso varia de **60 a 100 bpm**.\n\n**Análise das alternativas incorretas:**\n*   **Bradisfigmia (Alternativa A):** Refere-se ao pulso fino e lento (frequência de pulso abaixo de 60 batimentos por minuto).\n*   **Taquisfigmia (Alternativa B):** Refere-se ao pulso rápido e acelerado (frequência de pulso acima de 100 batimentos por minuto).\n*   **Taquicardia (Alternativa C):** É o aumento da frequência cardíaca acima de 100 bpm.\n*   **Bradicardia (Alternativa D):** É a diminuição da frequência cardíaca abaixo de 60 bpm.\n\n💡 **Macete de Resolução:** Lembre-se de que o prefixo *normo-* indica normalidade, enquanto *bradi-* indica lentidão/diminuição e *taqui-* indica rapidez/aumento. O sufixo *-cardia* refere-se ao coração (frequência cardíaca) e *-sfigmia* refere-se ao pulso arterial.",
+        "source_reference": null
+      },
+      "source_content_hash": "9a22a75de6b36bca8d5ee010e2dd470d7850b8366b3d8400fe268b02c0b7f180"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:059",
+      "source_id": "tecnico_em_enfermagem:59",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um paciente com história de febre remitente, significa que:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 59; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "apresenta picos febris e períodos de apirexia",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "hipertermia diária com mais de 1°C de variação sem apirexia",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "é cíclica – pode aparecer todo dia em um período do dia (cotidiana), em um dia e outro não ou em dois dias sem febre",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "dias com apirexia e dias com febre sem grandes oscilações",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "acima do normal, variando até 1°C",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Semântica e Significação das Palavras",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "de45cc7d46ab4d2ca2b9a6d299f696239f5145360c7eb2069e7aa6a62240fcc8",
+        "original_numeric_id": 59,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige o conhecimento sobre os diferentes padrões gráficos ou tipos de febre na semiologia clínica.\n\n*   **Febre Remitente (Alternativa B - Correta):** Caracteriza-se por hipertermia diária com variações de temperatura maiores que 1°C, mas **sem períodos de apirexia** (ou seja, a temperatura oscila, mas nunca atinge o valor normal de referência).\n\n**Análise das alternativas incorretas:**\n*   **Alternativa A:** Descreve a **febre intermitente**, na qual ocorrem picos febris intercalados com períodos de temperatura normal (apirexia).\n*   **Alternativa C:** Descreve a **febre recorrente ou cíclica**, comum em patologias como a malária (terçã ou quartã), onde a febre surge após dias de apirexia.\n*   **Alternativa D:** Também se assemelha à descrição de febre recorrente ou ondulante, caracterizada por períodos de febre que duram dias, seguidos por períodos de normalidade.\n*   **Alternativa E:** Descreve a **febre contínua**, na qual a temperatura permanece constantemente acima do normal, com variações diárias pequenas (geralmente inferiores a 1°C).",
+        "source_reference": null
+      },
+      "source_content_hash": "aa2fabe54a411a74f4e5eff6014376497e0166d054d46d44aab69499d5d08598"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:060",
+      "source_id": "tecnico_em_enfermagem:60",
+      "question_type": "multiple_choice",
+      "statement_markdown": "São situações em que se recomenda adiar a vacinação para as vacinas virais vivas atenuadas orais ou injetáveis, exceto:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 60; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "tratamento com corticosteróides em dose imunossupressora",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "outras terapêuticas imunodepressoras como quimioterapia antineoplásica, radioterapia",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "transplantados de medula óssea",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "doença aguda benigna sem febre",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "após a administração intramuscular de imunoglobulinas específicas",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "62cc9a4f1cdba7d2349f4c51dab493c55311529a9c18f2dbd54124487e6ab6c6",
+        "original_numeric_id": 60,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/saude/pt-br"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta (que NÃO justifica adiar a vacinação) é a **D**.\n\nConforme as normas técnicas do Programa Nacional de Imunizações (PNI) do Ministério da Saúde:\n* **Doenças agudas benignas sem febre ou afebris** (como coriza, resfriado leve, tosse branda ou diarreia sem desidratação) **não contraindicam nem justificam o adiamento** da aplicação de vacinas, inclusive vacinas virais vivas atenuadas.\n\nPor outro lado, o uso de corticoides em doses imunossupressoras (opção A), quimioterapia/radioterapia (opção B), transplante de medula óssea (opção C) e uso recente de imunoglobulinas específicas (opção E) constituem situações clínicas formais de contraindicação temporária ou adiamento obrigatório, a fim de evitar a replicação descontrolada do vírus vacinal ou a neutralização da resposta imune por anticorpos circulantes.",
+        "source_reference": null
+      },
+      "source_content_hash": "71c036e8fb6f4e6417b66461b91d540122e4c93238c8a960d97945dbe8107f53"
+    }
+  ]
+}

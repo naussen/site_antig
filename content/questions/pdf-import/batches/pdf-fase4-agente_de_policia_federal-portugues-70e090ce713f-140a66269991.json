@@ -1,0 +1,253 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-agente_de_policia_federal-portugues-70e090ce713f-140a66269991",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "70e090ce713f4efa7afccdd8f75dc126a6b6ec258a638c6883c5beff394c0223",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "63798e30405cda1d6b06c925e3f47b587362e4b8ff5a540fff55d47fa673a6e7",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "140a66269991de7ac06a82951607dc3592e800b1976cacbada6cdb6244eeb9c3",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:009",
+      "source_id": "agente_de_policia_federal:9",
+      "question_type": "true_false",
+      "statement_markdown": "Não se concebe que um ato normativo de qualquer natureza seja redigido de forma obscura, que dificulte ou impossibilite sua compreensão. A transparência do sentido dos atos normativos, bem como sua inteligibilidade, são requisitos do próprio Estado de direito: é inaceitável que um texto legal não seja entendido pelos cidadãos. A publicidade implica, pois, necessariamente, clareza e concisão.\nBrasil. Presidência da República. Manual de Redação da Presidência da República. 2.ª ed. Brasília, 2002.\nConsiderando o fragmento de texto apresentado, julgue os seguintes itens, de acordo com o disposto no Manual de Redação da Presidência da República (MRPR).\n\nA redação dos atos normativos deve permitir que cada cidadão, a partir de suas condições próprias de leitura, atribua ao texto legal sua própria interpretação.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 9; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "08925ec8d22b783bb4c081844453a8b481ef2c3826793cbd04bc17da228a2d85",
+        "original_numeric_id": 9,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA redação de atos normativos e expedientes oficiais deve ser pautada pelo princípio da **clareza**, da **precisão** e da **unívoca interpretação**, conforme determinam a Lei Complementar nº 95/1998 e o Manual de Redação da Presidência da República (MRPR).\n\nO texto legal e oficial jamais deve dar margem a ambiguidades ou permitir que cada cidadão interprete a norma a partir de critérios subjetivos ou interesses individuais. Ao contrário, a redação deve garantir certeza jurídica, uniformidade e clareza no entendimento de todos os administrados.",
+        "source_reference": null
+      },
+      "source_content_hash": "7572ed710a4c52c09de5777694ef2a7fd6c0ebcf910d4e3fdc9984ba3c3e0efb"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:010",
+      "source_id": "agente_de_policia_federal:10",
+      "question_type": "true_false",
+      "statement_markdown": "Não se concebe que um ato normativo de qualquer natureza seja redigido de forma obscura, que dificulte ou impossibilite sua compreensão. A transparência do sentido dos atos normativos, bem como sua inteligibilidade, são requisitos do próprio Estado de direito: é inaceitável que um texto legal não seja entendido pelos cidadãos. A publicidade implica, pois, necessariamente, clareza e concisão.\nBrasil. Presidência da República. Manual de Redação da Presidência da República. 2.ª ed. Brasília, 2002.\nConsiderando o fragmento de texto apresentado, julgue os seguintes itens, de acordo com o disposto no Manual de Redação da Presidência da República (MRPR).\n\nEmbora estabeleça parâmetros para o uso da língua em redações oficiais, o MRPR rejeita a adoção de um padrão de escrita baseado em uma linguagem administrativa específica, alheia à evolução natural da língua.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 10; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "cd1d0461574273488b8b90385d9ed7f4227b91682638870aa677468a3a94c0d0",
+        "original_numeric_id": 10,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nConforme expressamente consignado na introdução do Manual de Redação da Presidência da República (MRPR):\n\nEmbora defina diretrizes estilísticas, modelos de expedientes e padronize regras formais para a administração pública federal, o MRPR não pretende esgotar ou substituir a gramática normativa da língua portuguesa, reconhecendo a autoridade dos manuais acadêmicos, dicionários de referência e do Vocabulário Ortográfico da Língua Portuguesa (VOLP) para dirimir dúvidas gramaticais gerais.",
+        "source_reference": null
+      },
+      "source_content_hash": "8ba8b643d8c326d6a34e5d6d74b87c4c83214eae5cd84a3f821c7a921365aad2"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:016",
+      "source_id": "agente_de_policia_federal:16",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 12A1AAA\n1 — A polícia parisiense — disse ele — é extremamente hábil à sua maneira. Seus agentes são perseverantes, engenhosos, astutos e perfeitamente versados nos conhecimentos que seus deveres parecem exigir de modo especial. Assim, quando o delegado G... nos contou, pormenorizadamente, a maneira pela qual realizou suas pesquisas no Hotel D..., não tive dúvida de que efetuara uma investigação satisfatória (...) até o ponto a que chegou o seu trabalho.\n10 — Até o ponto a que chegou o seu trabalho? — perguntei.\n— Sim — respondeu Dupin. — As medidas adotadas não foram apenas as melhores que poderiam ser tomadas, mas realizadas com absoluta perfeição. Se a carta estivesse depositada dentro do raio de suas investigações, esses rapazes, sem dúvida, a teriam encontrado.\nRi, simplesmente — mas ele parecia haver dito tudo aquilo com a máxima seriedade.\n19 — As medidas, pois — prosseguiu —, eram boas em seu gênero, e foram bem executadas: seu defeito residia em serem inaplicáveis ao caso e ao homem em questão. Um certo conjunto de recursos altamente engenhosos é, para o delegado, uma espécie de leito de Procusto, ao qual procura adaptar à força todos os seus planos. Mas, no caso em apreço, cometeu uma série de erros, por ser demasiado profundo ou demasiado superficial. (...) E, se o delegado e toda a sua corte têm cometido tantos enganos, isso se deve (...) a uma apreciação inexata, ou melhor, a uma não apreciação da inteligência daqueles com quem se metem. Consideram engenhosas apenas as suas próprias ideias e, ao procurar alguma coisa que se ache escondida, não pensam senão nos meios que eles próprios teriam empregado para escondê-la. Estão certos apenas num ponto: naquele em que sua engenhosidade representa fielmente a da massa; mas, quando a astúcia do malfeitor é diferente da deles, o malfeitor, naturalmente, os engana. Isso sempre acontece quando a astúcia deste último está acima da deles e, muito frequentemente, quando está abaixo. Não variam seu sistema de investigação; na melhor das hipóteses, quando são instigados por algum caso insólito, ou por alguma recompensa extraordinária, ampliam ou exageram os seus modos de agir habituais, sem que se afastem, no entanto, de seus princípios.\n(...) Você compreenderá, agora, o que eu queria dizer ao afirmar que, se a carta roubada tivesse sido escondida dentro do raio de investigação do nosso delegado — ou, em outras palavras, se o princípio inspirador estivesse compreendido nos princípios do delegado —, sua descoberta seria uma questão inteiramente fora de dúvida. Este funcionário, porém, se enganou por completo, e a fonte remota de seu fracasso reside na suposição de que o ministro é um idiota, pois adquiriu renome de poeta. Segundo o delegado, todos os poetas são idiotas — e, neste caso, ele é apenas culpado de uma non distributio medii, ao inferir que todos os poetas são idiotas.\n— Mas ele é realmente poeta? — perguntei. — Sei que são dois irmãos, e que ambos adquiriram renome nas letras. O ministro, creio eu, escreveu eruditamente sobre o cálculo diferencial. É um matemático, e não um poeta.\n— Você está enganado. Conheço-o bem. E ambas as coisas. Como poeta e matemático, raciocinaria bem; como mero matemático, não raciocinaria de modo algum, e ficaria, assim, à mercê do delegado.\n61 — Você me surpreende — respondi — com essas opiniões, que têm sido desmentidas pela voz do mundo. Naturalmente, não quererá destruir, de um golpe, ideias amadurecidas durante tantos séculos. A razão matemática é há muito considerada como a razão par excellence.\nEdgar Allan Poe. A carta roubada. In: Histórias extraordinárias. Victor Civita, 1981. Tradução de Brenno Silveira e outros.\nNo que se refere à tipologia e aos sentidos do texto 12A1AAA, julgue os próximos itens.\n\nO narrador discorda de Dupin com relação à opinião de que o fato de o ministro ser poeta é o que lhe permite raciocinar bem, o que fica evidente no último parágrafo do texto.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 16; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Tipologia Textual e Gêneros Discursivos",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "db8ad4cbc28370e8ae138c0c4deed423c56266377d007a23c72a4510788370f0",
+        "original_numeric_id": 16,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNo clássico conto policial de Edgar Allan Poe (\"A Carta Roubada\"), o narrador dialoga com o detetive Dupin e compartilha de seu raciocínio dedutivo.\n\nEm nenhum momento do texto o narrador manifesta discordância em relação à genialidade e aos métodos intelectuais de Dupin ao analisar o perfil do Ministro D*** (que reúne as habilidades de poeta e matemático). A leitura do fragmento comprova a convergência e a admiração do narrador pelo método analítico de Dupin.",
+        "source_reference": null
+      },
+      "source_content_hash": "64811f89509b3dd47bd009580e35b0655f4a3df0226990bfe09232760b8a023f"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:017",
+      "source_id": "agente_de_policia_federal:17",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os seguintes itens, relativos aos sentidos e aos aspectos linguísticos do texto 12A1AAA.\n\nMantendo-se a correção gramatical e os sentidos originais do texto, o seu sexto parágrafo poderia ser assim reescrito: Perguntei, entretanto, se ele era realmente poeta. Sabia que são dois irmãos e que ambos adquiriram renome nas letras. O ministro, acreditava eu, escrevia eruditamente sobre o cálculo diferencial: é um matemático, não um poeta.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 17; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Semântica e Significação das Palavras",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "72d1988d64aa1965b660b61f487ef41d375a8097c8b4c4d222c8e4fa0a34c57d",
+        "original_numeric_id": 17,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA proposta de alteração sintática do segundo parágrafo do texto introduz erro de paralelismo e altera substancialmente a relação lógica e semântica original entre as causas e as conclusões dedutivas formuladas pelo personagem Dupin.\n\nAo reescrever o período com nova pontuação e conjunções inadequadas, compromete-se a correção gramatical e distorcem-se os sentidos estritos pretendidos pelo autor.",
+        "source_reference": null
+      },
+      "source_content_hash": "6c21bf57305e7e6d774bd1f87559c8f7c502786706d0be893859054afcbe7273"
+    }
+  ]
+}

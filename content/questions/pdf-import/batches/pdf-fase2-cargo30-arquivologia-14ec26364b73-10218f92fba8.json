@@ -1,0 +1,332 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-cargo30-arquivologia-14ec26364b73-10218f92fba8",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "14ec26364b73e9d47b2c5581aa9242bbae266f9dece6cf292f0206e67204b603",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "4cf2583924232a76b401cdfc24313fb757e305aad1b2fdad61bd5c3798ffc63b",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "10218f92fba8e86e248b72c5ba61efdd1427c690ead5c766a8bead3ed82716b8",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "arquivologia",
+    "name": "Arquivologia"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:100",
+      "source_id": "cargo30:100",
+      "question_type": "true_false",
+      "statement_markdown": "A avaliação documental é uma função típica adotada mundialmente no tratamento técnico de acervos arquivísticos. Em relação a essa função, julgue os itens que se seguem.\n\nA avaliação documental provoca, necessariamente, aumento de recursos humanos e de materiais.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 100",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gerenciamento da Informação e a Gestão de Documentos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "fb3a13963ef0fb3429b9adffac9511ede20f094c315ee0c333493baa805d2811",
+        "original_numeric_id": 100,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "gerenciamento-da-informacao-e-a-gestao-de-documentos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O objetivo da avaliação documental é a racionalização dos arquivos, promovendo a eficiência administrativa e a economia de recursos. Embora a fase de planejamento e elaboração dos instrumentos de classificação e avaliação demande esforço técnico inicial, a sua aplicação prática gera a redução sistemática do volume documental. Isso diminui a necessidade de espaço físico, de mobiliário de armazenamento (pastas, caixas, estantes) e de pessoal para a manutenção de massas documentais acumuladas sem utilidade. Portanto, a avaliação não provoca, necessariamente, o aumento de recursos, mas sim a sua otimização e redução a médio e longo prazo.",
+        "source_reference": null
+      },
+      "source_content_hash": "53dbdf2a5a65d60e2665c349da2acb27ddfd643aca8596845a39fc4eee389332"
+    },
+    {
+      "external_id": "pdf:cargo30:101",
+      "source_id": "cargo30:101",
+      "question_type": "true_false",
+      "statement_markdown": "A organização dos arquivos correntes do DPF e de outros órgãos públicos e privados pressupõe atividades indispensáveis para a recuperação e a preservação da informação. Considerando esse pressuposto, julgue os itens a seguir.\n\nNos arquivos correntes, são guardados os documentos utilizados com muita freqüência pelos funcionários do órgão.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 101",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Arquivo Corrente",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "eeed5567bcc5363e5f86a3750d8239e3a46bc56985f164c6de0676b1e2c2b7ec",
+        "original_numeric_id": 101,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "arquivo-corrente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Os arquivos correntes (também conhecidos como de primeira idade) são constituídos por documentos em curso ou que, mesmo sem movimentação ativa, são objeto de consultas frequentes e contínuas por parte da administração produtora, devido ao seu valor primário (administrativo, legal ou fiscal). Por estarem em uso constante para o cumprimento das atividades cotidianas do órgão, devem ser mantidos próximos aos setores produtores para facilitar o acesso rápido.\n\n### Dispositivo legal\n\nLei nº 8.159, de 8 de janeiro de 1991, Art. 8º, § 1º.",
+        "source_reference": null
+      },
+      "source_content_hash": "f281dae3dd4a9befccbb77ffe2cf1ae214eb38b99266f342c0e84064e6702b4f"
+    },
+    {
+      "external_id": "pdf:cargo30:102",
+      "source_id": "cargo30:102",
+      "question_type": "true_false",
+      "statement_markdown": "A organização dos arquivos correntes do DPF e de outros órgãos públicos e privados pressupõe atividades indispensáveis para a recuperação e a preservação da informação. Considerando esse pressuposto, julgue os itens a seguir.\n\nO responsável pela guarda dos documentos nos arquivos correntes não pode emprestá-los a outros setores do próprio órgão; por isso, deverá copiá-los quando houver algum pedido de informação.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 102",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gerenciamento da Informação e a Gestão de Documentos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "271e6846e8289e63057d30970be6b7e213c47ffbc2bbea654d3c911a2c69ef89",
+        "original_numeric_id": 102,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "gerenciamento-da-informacao-e-a-gestao-de-documentos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O empréstimo de documentos originais a outros setores da própria instituição é uma atividade rotineira e plenamente admitida na gestão de arquivos correntes. Para viabilizar essa prática com segurança, o arquivo utiliza instrumentos de controle de empréstimo e consulta, registrando o setor solicitante, o responsável e o prazo de devolução. A exigência de extração sistemática de cópias para atender a demandas internas de informação é incorreta, pois geraria custos desnecessários e contrariaria o princípio de racionalização de documentos, provocando o acúmulo de cópias desnecessárias (massa documental acumulada).",
+        "source_reference": null
+      },
+      "source_content_hash": "c28795eb4228b2848eba147214e505b703260a38b41efbb3d9e4f732434a9325"
+    },
+    {
+      "external_id": "pdf:cargo30:103",
+      "source_id": "cargo30:103",
+      "question_type": "true_false",
+      "statement_markdown": "A organização dos arquivos correntes do DPF e de outros órgãos públicos e privados pressupõe atividades indispensáveis para a recuperação e a preservação da informação. Considerando esse pressuposto, julgue os itens a seguir.\n\nPara melhor preservação dos documentos, deve-se guardá-los em caixas ou pastas suspensas, acondicionadas em estantes ou em arquivos de madeira, e deve-se utilizar espaços físicos que recebam diretamente a luz solar.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 103",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Acondicionamento e Armazenamento",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "46cd766e6b69312d4738e7aebe9c31ff806db965eda7ecc5ef203fb8c39b9312",
+        "original_numeric_id": 103,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "acondicionamento-e-armazenamento",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A preservação física de documentos arquivísticos exige condições ambientais e de mobiliário adequadas, as quais são contrariadas por duas afirmações do enunciado:\n\n1. **Mobiliário de madeira:** O uso de arquivos ou estantes de madeira não é recomendado, pois a madeira é um material inflamável, propício à proliferação de insetos xilófagos (como cupins) e pode liberar substâncias ácidas que aceleram a deterioração do papel. O recomendável é o uso de mobiliário de metal (aço) tratado com pintura epóxi.\n2. **Luz solar direta:** A incidência direta de luz solar (radiação ultravioleta e infravermelha) é um dos principais agentes físicos de degradação de documentos, provocando o amarelamento, o ressecamento e a fragilização das fibras do papel, além do desbotamento de tintas. Os depósitos de arquivo devem possuir iluminação controlada e proteção contra a radiação solar.",
+        "source_reference": null
+      },
+      "source_content_hash": "bdd3977fb5c0f39124720534b45915575afef59605da62a7a1bef4ae92dc05e3"
+    },
+    {
+      "external_id": "pdf:cargo30:104",
+      "source_id": "cargo30:104",
+      "question_type": "true_false",
+      "statement_markdown": "A organização dos arquivos correntes do DPF e de outros órgãos públicos e privados pressupõe atividades indispensáveis para a recuperação e a preservação da informação. Considerando esse pressuposto, julgue os itens a seguir.\n\nOs funcionários responsáveis pelos arquivos correntes devem efetuar a autuação, o controle da tramitação, a distribuição e a expedição dos documentos sob sua guarda.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 104",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Arquivo Corrente",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "a77af8f4b8bed8c26d3e6d2e2faa6a1c9bdc8ac9c7c3de0713e15974e53db3e2",
+        "original_numeric_id": 104,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "arquivo-corrente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "As atividades descritas no enunciado — autuação, controle de tramitação, distribuição e expedição de documentos — são atribuições típicas do setor de **Protocolo** (ou serviço de protocolo).\n\nEmbora o protocolo e o arquivo corrente integrem a fase corrente da gestão de documentos, eles desempenham funções distintas:\n\n* **Protocolo:** Responsável pelo recebimento, registro, autuação (dar início a um processo administrativo), classificação, distribuição, controle da tramitação e expedição dos documentos.\n* **Arquivo Corrente:** Responsável pela guarda, ordenação, conservação, consulta e empréstimo dos documentos que ainda possuem valor administrativo e são frequentemente consultados pelo órgão produtor.\n\nPortanto, os funcionários do arquivo corrente não efetuam a autuação e a expedição de documentos, tarefas que ocorrem antes do arquivamento ou de forma independente pelo setor de protocolo.",
+        "source_reference": null
+      },
+      "source_content_hash": "b57f9e34a2b10e4ba0c3c606d7a1086fa3a2b92d2252923211c06cd4f7d89e60"
+    },
+    {
+      "external_id": "pdf:cargo30:105",
+      "source_id": "cargo30:105",
+      "question_type": "true_false",
+      "statement_markdown": "A organização dos arquivos correntes do DPF e de outros órgãos públicos e privados pressupõe atividades indispensáveis para a recuperação e a preservação da informação. Considerando esse pressuposto, julgue os itens a seguir.\n\nPara bem ordenar os documentos, o responsável pelo arquivo dispõe de vários métodos, como o geográfico, o alfabético e o numérico-cronológico.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 105",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Acondicionamento e Armazenamento",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "0f5c6c406cccbde10b3e91e62d8397b81bc3e1351d895c63633878edcbd1c4e2",
+        "original_numeric_id": 105,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "acondicionamento-e-armazenamento",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A ordenação de documentos em arquivos pode ser realizada por meio de diferentes métodos de arquivamento, classificados em básicos e padronizados. O enunciado cita corretamente três métodos amplamente utilizados na prática arquivística:\n\n* **Método Alfabético:** Método direto em que a ordenação é feita seguindo a ordem alfabética dos nomes (de pessoas, instituições ou eventos).\n* **Método Geográfico:** Método direto em que a ordenação é feita de acordo com o local ou procedência (país, estado, cidade).\n* **Método Numérico-Cronológico:** Método indireto em que os documentos são organizados pela data de produção ou recebimento, associada a um número sequencial.",
+        "source_reference": null
+      },
+      "source_content_hash": "eaaf364bb80edb04b0a40d05f76e493f5315d49d7a19a93c8d8540632a6da92b"
+    }
+  ]
+}

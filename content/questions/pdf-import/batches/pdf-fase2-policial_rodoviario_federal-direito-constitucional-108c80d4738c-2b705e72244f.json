@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-policial_rodoviario_federal-direito-constitucional-108c80d4738c-2b705e72244f",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "108c80d4738c4cf75248804f8f7a4e59a8ebc98742dd2b686f8053a30677b861",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "a311442a41cf96895e3ab6bc25877186df1354aab6cde616c4af291da4f66fd9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "2b705e72244ff2c90e3788754bc54ae44e453a626f0f8651869383ae34a63815",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:093",
+      "source_id": "policial_rodoviario_federal:93",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de direitos fundamentais, garantias e remédios constitucionais, julgue os itens a seguir.\n\nA manifestação pública em defesa da abolição de crime, por ser considerada incitação à prática de fato criminoso, não está protegida pela liberdade de reunião.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 93; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "e5804ac2867b5af4ab1fde5b1d543be8e80c8dea572fd3f203ce9195508c7e2d",
+        "original_numeric_id": 93,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmativa está incorreta. O Supremo Tribunal Federal (STF), no julgamento da ADPF 187 e da ADI 4274, firmou o entendimento de que manifestações públicas em defesa da abolição de crimes ou da descriminalização de condutas (como a \"Marcha da Maconha\") constituem exercício legítimo das liberdades constitucionais de expressão e de reunião.\n\nTais atos não se confundem com incitação à prática de fato criminoso ou apologia ao crime, desde que realizados de forma pacífica, sem armas e sem o consumo efetivo de substâncias ilícitas no local. A defesa de mudanças legislativas ou de políticas públicas é protegida pelo pluralismo político e pela livre manifestação do pensamento.\n\n### Dispositivo legal\n* **Constituição Federal de 1988, Art. 5º, incisos IV e XVI**\n* **Jurisprudência:** STF, ADPF 187 e ADI 4274\n* **URL Oficial:** [Planalto - Constituição Federal](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "e0251926665d2975fd5ec838c6c8cfa1247b360a177130f37c4e696ced3efadf"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:097",
+      "source_id": "policial_rodoviario_federal:97",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de direitos fundamentais, garantias e remédios constitucionais, julgue os itens a seguir.\n\nDe acordo com o Supremo Tribunal Federal, não é cabível habeas data para a obtenção de informações a respeito da identidade de responsáveis por agressões e denúncias feitas contra o impetrante.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 97; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "a314429a0270ed933782ac11edbf37058abbb3ef72934685763f644fe5e08a3c",
+        "original_numeric_id": 97,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O *habeas data* é um remédio constitucional de caráter estritamente personalíssimo, destinado a assegurar o conhecimento de informações relativas à pessoa do impetrante constantes de registros ou bancos de dados de entidades governamentais ou de caráter público, ou para a retificação de dados (art. 5º, LXXII, da CF/88). Conforme entendimento consolidado do Supremo Tribunal Federal (STF), o *habeas data* não é a via processual adequada para a obtenção de informações relativas a terceiros, o que inclui a identidade de pessoas que tenham formulado denúncias ou praticado agressões contra o impetrante, visto que tais dados não constituem informações pessoais do próprio impetrante.\n\n### Dispositivo legal\n* **Art. 5º, LXXII, \"a\", da Constituição Federal de 1988**\n* URL oficial: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "ef5789e41728539a13f1e2091b96b33b965ce8be05f5f0803e82a1197c434c98"
+    }
+  ]
+}

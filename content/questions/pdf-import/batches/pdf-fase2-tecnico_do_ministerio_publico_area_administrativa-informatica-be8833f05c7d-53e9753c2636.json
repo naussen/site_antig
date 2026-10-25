@@ -1,0 +1,422 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-tecnico_do_ministerio_publico_area_administrativa-informatica-be8833f05c7d-53e9753c2636",
+  "source": {
+    "file_name": "tecnico_do_ministerio_publico_area_administrativa_ATUALIZADO.json",
+    "sha256": "be8833f05c7dc3fc713c3cef305c312520e16748ef98c329f6fbbe57d90905b7",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "tecnico_do_ministerio_publico_area_administrativa.json",
+      "original_source_sha256": "2976130818df2aae9a14ec1aa61321f02e8f9c02cc280baa4e3c5d73c8a106ba",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "53e9753c2636e770c5fafbafde9c56d099ca5e1d3410b2bd7ba8689159ecea25",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:053",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:53",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No contexto do MS Excel 2010 BR, a linguagem de programação empregada na construção de macros é conhecida como:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 53; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "CSS;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Java;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Python;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Script;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "VBA.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "653197077844cc70c2e7a040c8dff7379c77fc6c7c999c38198e8c132b4bce28",
+        "original_numeric_id": 53,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No Microsoft Excel 2010 (e em outras versões do pacote MS Office), a automação de tarefas repetitivas é realizada por meio de macros. A linguagem de programação integrada ao ambiente do Office para o desenvolvimento e edição dessas macros é o **VBA (Visual Basic for Applications)**.\n\nAnálise das demais alternativas:\n*   **CSS** (*Cascading Style Sheets*): É uma linguagem de estilo utilizada para definir a apresentação de documentos escritos em HTML ou XML na web.\n*   **Java**: É uma linguagem de programação de uso geral, orientada a objetos e multiplataforma, sem relação nativa com a execução de macros no Excel 2010.\n*   **Python**: Embora seja uma linguagem de programação extremamente popular (e recentemente integrada a versões modernas do Excel 365), não era a linguagem padrão de macros no Excel 2010.\n*   **Script**: É um termo genérico para sequências de instruções escritas para serem interpretadas, não se referindo a uma linguagem específica do Excel.",
+        "source_reference": null
+      },
+      "source_content_hash": "834a97d1a546076e2b217e87c010662d41d3ff1cca5a746e77a75251841dbe9b"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:054",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:54",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Considere uma planilha do MS Excel 2010 BR cujas células A1, A2 e A3 contêm, respectivamente, os valores 10, 30 e 40. Na célula C1, foi digitada a fórmula\n=(A1+A2+A3)/4\ne todas as demais células da planilha permaneceram intocadas. Sabendo-se que a célula C1 foi copiada por meio da combinação Ctrl-C e colada, com Ctrl-V, na célula E1, o valor exibido nesta última é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 54; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "0",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "5",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "20",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "22,5",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "80",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Hardware",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "e7595c9983d2e718c751632743a436379e310045ec9ae4c8a182255e6899ec8b",
+        "original_numeric_id": 54,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_054.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda o comportamento das referências relativas no Microsoft Excel ao copiar e colar fórmulas.\n\n1.  **Cálculo do valor inicial em C1:**\n    A célula C1 contém a fórmula `=(A1+A2+A3)/4`.\n    Substituindo os valores fornecidos (A1 = 10, A2 = 30, A3 = 40):\n    `C1 = (10 + 30 + 40) / 4 = 80 / 4 = 20`.\n\n2.  **Deslocamento da cópia (de C1 para E1):**\n    Ao copiar a fórmula de C1 e colá-la em E1, ocorre um deslocamento de **duas colunas para a direita** (da coluna C para a coluna E) e **nenhuma linha** (permanece na linha 1).\n\n3.  **Atualização das referências relativas:**\n    Como as referências na fórmula original são relativas (não possuem o caractere `$` para fixá-las), elas serão deslocadas na mesma proporção (+2 colunas):\n    *   `A1` deslocado duas colunas para a direita torna-se `C1`.\n    *   `A2` deslocado duas colunas para a direita torna-se `C2`.\n    *   `A3` deslocado duas colunas para a direita torna-se `C3`.\n    \n    A nova fórmula em E1 será: `=(C1+C2+C3)/4`.\n\n4.  **Cálculo do valor em E1:**\n    *   `C1` possui o valor calculado anteriormente: `20`.\n    *   `C2` e `C3` não contêm dados (estão vazias), sendo interpretadas como `0` pelo Excel.\n    \n    Substituindo os valores na nova fórmula:\n    `E1 = (20 + 0 + 0) / 4 = 20 / 4 = 5`.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_054.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "38beb967a763f96ccc9dcd15ba7e69801e647d917869a121636198bff99c3cd0"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:055",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:55",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O Pincel de Formatação disponível na guia Página Inicial do MS Word 2010 destina-se a:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 55; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "copiar a formatação de um trecho e aplicá-la a outro;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "preencher uma forma desenhada com uma determinada cor;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "colorir o fundo de um parágrafo;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "criar desenhos a partir do movimento do mouse;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "colorir as células de uma tabela.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Banco de Dados",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "c2607f45e40d4a8077b51665c40a70cd3f0ba46143501ef93e4dfd1154dff98c",
+        "original_numeric_id": 55,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "banco-de-dados",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O **Pincel de Formatação** (representado pelo ícone de um pincel na guia Página Inicial) é uma ferramenta clássica do Microsoft Word projetada exclusivamente para **copiar a formatação** (como tipo de fonte, tamanho, cor, negrito, itálico, espaçamento, etc.) de um trecho de texto ou objeto selecionado e aplicá-la rapidamente a outro trecho.\n\nAnálise das alternativas incorretas:\n*   **B e E:** O preenchimento de formas ou de células de tabelas é realizado por ferramentas de sombreamento ou preenchimento de cor, localizadas nas respectivas guias de ferramentas de desenho ou tabela.\n*   **C:** A cor de fundo de um parágrafo é alterada pela ferramenta de sombreamento (ícone de balde de tinta).\n*   **D:** A criação de desenhos livres é feita por meio de ferramentas de desenho/canetas, e não pelo pincel de formatação.",
+        "source_reference": null
+      },
+      "source_content_hash": "91911143a4841544495ed257ce38fd0c32f13c41cf6bdb95a468829565ccb408"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:057",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:57",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O navegador Google Chrome é amplamente utilizado e, como seus similares, oferece a possibilidade de limpar dados de navegação que são acumulados ao longo do uso. Considere a lista a seguir.\nI. Arquivos downloaded pelo navegador;\nII. Cookies;\nIII. Histórico de navegação;\nIV. Imagens e arquivos armazenados no cache do navegador;\nV. Páginas gravadas pelo comando “salvar como...”.\nNo caso do Chrome, especificamente, as opções oferecidas na limpeza de dados de navegação cobrem, dessa lista, apenas os casos:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 57; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "I, II, IV, V;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "I, III, V;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "II, III, IV;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "II, III, V;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "III, IV, V.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "1062547192aaf183568d0d4cf63f34ec104d17387dcd18086825c21291b41b65",
+        "original_numeric_id": 57,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A funcionalidade \"Limpar dados de navegação\" do Google Chrome (acessível pelo atalho `Ctrl + Shift + Del`) destina-se a apagar rastros e arquivos temporários gerados durante a navegação na web. \n\nAnálise dos itens:\n*   **I. Arquivos downloaded pelo navegador (Não cobre):** A limpeza apaga apenas o *histórico* de downloads (a lista de arquivos baixados exibida no navegador), mas **não** exclui os arquivos físicos que foram salvos no disco rígido do computador.\n*   **II. Cookies (Cobre):** São pequenos arquivos de texto que os sites salvam para lembrar preferências e sessões; são limpos por essa ferramenta.\n*   **III. Histórico de navegação (Cobre):** A lista de endereços de sites visitados é limpa.\n*   **IV. Imagens e arquivos armazenados no cache (Cobre):** Arquivos temporários armazenados localmente para acelerar o carregamento futuro de páginas são limpos.\n*   **V. Páginas gravadas pelo comando \"salvar como...\" (Não cobre):** Trata-se de arquivos locais salvos deliberadamente pelo usuário no sistema de arquivos do computador, fora do escopo de dados temporários do navegador.\n\nPortanto, a ferramenta cobre apenas os casos **II, III e IV**.",
+        "source_reference": null
+      },
+      "source_content_hash": "c4d2000ae701536bc9be987f0e5b258f74fb4bf922eef7ee8807ac288a98fde0"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:059",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:59",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Maria recebeu um arquivo PDF e, ao tentar abri-lo no Windows 10 com um duplo clique, notou que o arquivo foi exibido pelo Chrome, e não no Adobe Acrobat Reader (AAR), preferido de Maria.\nPara que, futuramente, o AAR seja aberto automaticamente numa situação como a descrita, Maria deve:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 59; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "fazer o redirecionamento no menu padrão do Chrome com a opção Configurações;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "clicar no nome do arquivo e usar a opção “Abrir como...” no Explorador de Arquivos pelo menos uma vez;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "ajustar a configuração da extensão PDF nas Configurações do Windows na opção Aplicativos;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "reconfigurar o padrão de exibição de arquivos com o Windows Media Player;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "configurar o sistema por meio do aplicativo Gerenciamento do Computador nas Ferramentas Administrativas do Windows.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "8d5802e73575818b4b23d92662d7933898af7cd881950dae3c91396ede038ba8",
+        "original_numeric_id": 59,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para alterar de forma definitiva o aplicativo padrão associado a uma extensão de arquivo (no caso, associar a extensão `.pdf` ao Adobe Acrobat Reader em vez do Google Chrome) no Windows 10, o caminho oficial e centralizado é através do painel de **Configurações** do sistema.\n\n*   **Caminho correto (Alternativa C):** Acessar `Configurações` -> `Aplicativos` -> `Aplicativos padrão` e selecionar o aplicativo desejado para o formato PDF (ou escolher por tipo de arquivo).\n*   **Análise da pegadinha na Alternativa B:** A opção \"Abrir com...\" (e não \"Abrir como...\") no Explorador de Arquivos permite alterar o programa padrão, mas apenas se o usuário marcar explicitamente a caixa de seleção \"Sempre usar este aplicativo para abrir arquivos .pdf\". O enunciado afirma apenas \"usar a opção [...] pelo menos uma vez\", o que abriria o arquivo pontualmente sem garantir a associação futura automática se a caixa não for marcada. Além disso, a nomenclatura correta do recurso é \"Abrir com\".",
+        "source_reference": null
+      },
+      "source_content_hash": "83f53d6e6188dff049c8642df66c74b350c68660e319a6ae5086dd9d2fc2b0d9"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:060",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:60",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A troca de dados entre sistemas computacionais é normalmente realizada por meio de arquivos que seguem padrões de formato e organização. Desse modo, diferentes agentes com diferentes equipamentos podem enviar e receber dados estruturados muito facilmente. Nesse contexto, analise um trecho do conteúdo de um dado arquivo a seguir.\n<nota>\n <para>Rita</para>\n <de>Bernardo</de>\n <titulo>Lembrete</titulo>\n <texto>O pacote &lt;chegou&gt; ...</texto>\n</nota>\nCom base nesse trecho, é correto deduzir que a organização desse arquivo segue o padrão conhecido como:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 60; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "CSS",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "CSV",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "ODF",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "PDF",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "XML",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "ed06c44a64aed7a0f570d972cd121addef316ed857ed7ebe72272122bcdab1fd",
+        "original_numeric_id": 60,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O trecho apresentado no enunciado exibe uma estrutura hierárquica baseada em marcações personalizadas delimitadas pelos caracteres `<` e `>` (como `<nota>`, `<para>`, `<de>`), que são fechadas por tags correspondentes contendo uma barra (como `</para>`, `</nota>`). \n\nEssa sintaxe é a característica fundamental do padrão **XML (eXtensible Markup Language)**, uma linguagem de marcação projetada para armazenar e transportar dados de forma estruturada e legível tanto por humanos quanto por máquinas.\n\nAnálise das demais alternativas:\n*   **CSS**: Utiliza seletores e blocos de declaração entre chaves `{}` para estilização de páginas web.\n*   **CSV**: Utiliza texto puro com valores separados por delimitadores (como vírgulas ou pontos e vírgulas), sem tags.\n*   **ODF**: É um formato de documento aberto compactado (geralmente um arquivo ZIP contendo vários arquivos XML internos), não sendo exibido diretamente como texto puro estruturado dessa forma simples.\n*   **PDF**: É um formato binário/postscript complexo, cujo código-fonte não é estruturado em tags legíveis como as apresentadas.",
+        "source_reference": null
+      },
+      "source_content_hash": "b2da66c8d554ea98c9438c0afeca0fc178f3512f770a79dcb3ea3100ceb46cca"
+    }
+  ]
+}

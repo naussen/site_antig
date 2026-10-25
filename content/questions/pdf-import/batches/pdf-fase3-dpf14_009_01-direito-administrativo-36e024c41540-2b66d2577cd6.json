@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-dpf14_009_01-direito-administrativo-36e024c41540-2b66d2577cd6",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "36e024c4154028e93f93de55085bd1eac71dfffab948db68dc4a9e162264ab3c",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "149fe2efe61f738e07b039b011521a3b7313075efbf38a922899a3777a2912f9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "2b66d2577cd63d29dd2c08c725bdb9ab626fb68a637eb763a9f5e06b32070d4b",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:037",
+      "source_id": "dpf14_009_01:37",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando que o DPF é órgão responsável por exercer as funções de polícia judiciária da União, julgue os itens a seguir.\n\nA instituição de órgão próprio para exercer as atribuições de polícia judiciária no âmbito da União é exemplo de descentralização administrativa.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 37; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "4ff714bf827df3cc206da64d55856b186886125c09c24b36ce36713ea4073ff1",
+        "original_numeric_id": 37,
+        "original_source_content_hash": "e15224eeb49df816625fa972051fc01ff9d0b72d075f617418c8e6740074f5a1",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA criação, estruturação e distribuição de competências entre unidades de polícia judiciária no seio do Departamento de Polícia Federal, dentro da mesma pessoa jurídica de direito público (a União), constitui um processo típico de **desconcentração administrativa** (técnica interna de especialização de órgãos).\n\nA **descentralização**, por outro lado, consiste na transferência de competências estatais para uma nova pessoa jurídica distinta (integrante da administração indireta ou particular delegatário de serviço público).",
+        "source_reference": null
+      },
+      "source_content_hash": "de6df34f729bb9cbb785492cfe8ce53777ee5aafe3647aca8a0dd5686ee1eec3"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:096",
+      "source_id": "dpf14_009_01:96",
+      "question_type": "true_false",
+      "statement_markdown": "Os órgãos da administração direta ou indireta devem dar publicidade, mensalmente, em órgão de divulgação oficial ou em quadro de avisos de amplo acesso público, à relação de todas as compras feitas mediante licitação, de maneira a clarificar a identificação do bem comprado, seu preço unitário, a quantidade adquirida, o nome do vendedor e o valor total da operação, dispensando-se a publicação das compras feitas com dispensa de licitação.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 96; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "2f2fe8607058a335ab8eed18349a4915456cd271b250009640c6936011f5f252",
+        "original_numeric_id": 96,
+        "original_source_content_hash": "3daf0a84db5fcdc87229894ac0968885fb8ce936b1ab76961e91cb1de3beda21",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA publicidade dos atos administrativos dá-se precipuamente mediante publicação individual e contemporânea de cada ato oficial nos veículos competentes (como o Diário Oficial da União ou portais de transparência institucional) para que produzam seus regulares efeitos jurídicos e início de prazos.\n\nNão existe imposição legal genérica obrigando todos os órgãos públicos a realizarem compilação resumida mensal de todos os seus atos administrativos em órgãos de imprensa privada comercial. O princípio da publicidade cumpre-se pelos canais oficiais de publicação contínua previstos na lei.",
+        "source_reference": null
+      },
+      "source_content_hash": "326e16ad73f74f2384da61a990c060409418d33e7e2db899a7d2d81e1f16a195"
+    }
+  ]
+}

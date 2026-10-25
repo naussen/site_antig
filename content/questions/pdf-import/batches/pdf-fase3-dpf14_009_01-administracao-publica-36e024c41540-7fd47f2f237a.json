@@ -1,0 +1,80 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-dpf14_009_01-administracao-publica-36e024c41540-7fd47f2f237a",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "36e024c4154028e93f93de55085bd1eac71dfffab948db68dc4a9e162264ab3c",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "149fe2efe61f738e07b039b011521a3b7313075efbf38a922899a3777a2912f9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "7fd47f2f237ac70895b8c265170f12e6129a1d781983fc9464f83294ce92d242",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-publica",
+    "name": "Administração Pública"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:087",
+      "source_id": "dpf14_009_01:87",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da gestão de pessoas nas organizações, julgue os itens a seguir.\n\nCompete à unidade de gestão de pessoas regular as relações de trabalho entre grupos com níveis distintos de poder dentro e fora da organização.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 87; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "0d51695feb6513a84d114fe78cc2c667538ec33b17edae14eb2de80bd018d91d",
+        "original_numeric_id": 87,
+        "original_source_content_hash": "d6d3082ed691a627291413a1ef59ad8b5d0da3a485ce9de94b573ea5bd8c3e08",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNa estrutura da gestão estratégica de pessoas na administração pública, compete à unidade setorial de Recursos Humanos atuar na mediação e disciplina das relações funcionais e laborais entre os servidores e a instituição, zelando pelo cumprimento do regime jurídico, pelos direitos e deveres estatutários, mediação de conflitos e implementação de políticas de valorização do trabalho e do clima organizacional.",
+        "source_reference": null
+      },
+      "source_content_hash": "9e49201f380fa39bf462ad8ffcbe5f877daa5fdb30ed5106c9f58d12b57df4f4"
+    }
+  ]
+}

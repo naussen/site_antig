@@ -1,0 +1,310 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_conhec_espec_tec_federal_control_exter_tec_adm-administracao-geral-2d98daf27802-a73d30b210ac",
+  "source": {
+    "file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "2d98daf27802e405fca85477918bdf8251233e40cf39d87c93c75911b4f2d217",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "614ffeecc3c93f4cc8340b9f894f63a12d0a60896d888641786ae1cca7abe548",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "a73d30b210ac605055e3f8ca1bbb06d42e662cc671fa44461973342cfc5ccb9b",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-geral",
+    "name": "Administração Geral"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:088",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:88",
+      "question_type": "true_false",
+      "statement_markdown": "Em relação aos conceitos gerais e à importância da administração, julgue os itens a seguir.\n\nAtualmente, a abordagem da administração é predominantemente comportamental, com as pessoas representando o foco de conhecimento, informação, decisão, ação e avaliação das atividades da empresa.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 88; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Pessoas e Desenvolvimento Organizacional",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Geral",
+        "source_content_hash": "dfddbe309474946c3b11ecf29e972322adb6862d5217fb51d158ce44f0bbce86",
+        "original_numeric_id": 88,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "direcao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNa Teoria Geral da Administração contemporânea, superou-se a visão meramente mecanicista e fechada das teorias clássicas de Taylor e Fayol. A abordagem moderna é marcadamente **comportamental e sistêmica**, enxergando a organização como um sistema sociotécnico aberto, onde os indivíduos, a cultura, a motivação humana e a interação contínua com as contingências do ambiente externo determinam a eficácia institucional.",
+        "source_reference": null
+      },
+      "source_content_hash": "278de13788a4edf737dd77a46a7c1d9a2df06295792c8dda3a306f93621de8c8"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:093",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:93",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, a respeito das funções administrativas de planejamento, organização, direção e controle.\n\nPor meio do planejamento, definem-se os objetivos e decide-se sobre os recursos e tarefas necessários para alcançá-los adequadamente, dividindo-se o trabalho, atribuindo-se responsabilidades às pessoas e estabelecendo-se mecanismos de comunicação e coordenação.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 93; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Pessoas e Desenvolvimento Organizacional",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Geral",
+        "source_content_hash": "5b3c5a059a77fe1fe9cd579fd0c1a31e9b2ffbeb9eab1bc717a6205363d4b5a4",
+        "original_numeric_id": 93,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "direcao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque mistura as atribuições de duas funções administrativas distintas: o **Planejamento** e a **Organização**.\n\n*   **Planejamento**: É a função que define os objetivos e decide sobre os recursos e tarefas necessários para alcançá-los (primeira parte do enunciado).\n*   **Organização**: É a função responsável por estruturar a empresa, o que envolve a divisão do trabalho, a atribuição de responsabilidades às pessoas (departamentalização e cargos) e o estabelecimento de mecanismos de comunicação e coordenação (segunda parte do enunciado).\n\nPortanto, a divisão do trabalho e a atribuição de responsabilidades não ocorrem \"por meio do planejamento\", mas sim por meio da função de organização.",
+        "source_reference": null
+      },
+      "source_content_hash": "b9a9de31513eb101b573061ac14c0ca0fee590a3d52e5638aeef061bc0f8a49f"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:094",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:94",
+      "question_type": "true_false",
+      "statement_markdown": "Tendo em vista que a mudança, a inovação e a cultura são variáveis importantes para o desenvolvimento organizacional, julgue os seguintes itens.\n\nO modelo social, por preconizar o conhecimento como recurso primário, apresenta ao universo organizacional a complexidade das relações econômicas, políticas, sociais, tecnológicas, culturais e dos valores pessoais de cada indivíduo.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 94; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Pessoas e Desenvolvimento Organizacional",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Geral",
+        "source_content_hash": "fcefbe4b73be9598b2850c64a2ac7315e36e3ba2f8be2dbcd544a7642f938786",
+        "original_numeric_id": 94,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "direcao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNo modelo da sociedade pós-industrial e da gestão do conhecimento, o capital intelectual passa a ser o recurso produtivo primário.\n\nEssa evolução substitui as estruturas burocráticas piramidais e verticalizadas por **organizações planas, horizontais e flexíveis em rede**, caracterizadas pela descentralização do poder de decisão, trabalho colaborativo multidisciplinar e alto fluxo de comunicação lateral.",
+        "source_reference": null
+      },
+      "source_content_hash": "f4f308c83994aa4895703d04143bacb898aaba03e26553df0342db1b67455110"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:095",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:95",
+      "question_type": "true_false",
+      "statement_markdown": "Tendo em vista que a mudança, a inovação e a cultura são variáveis importantes para o desenvolvimento organizacional, julgue os seguintes itens.\n\nA era da informação é corresponsável por mudanças na gestão de pessoas e apresenta o conceito de competência com base em três pilares fundamentais — conhecimento, habilidade e atitude —, os quais servem de embasamento para a alocação de recursos e a tomada de decisão.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 95; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão por Competências",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Geral",
+        "source_content_hash": "52fb8cacaa2127b1b08b76297691dbcfd3ffcc16fb43f35e595ff9bfd5cde63a",
+        "original_numeric_id": 95,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "direcao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está **correta**.\n\nCom o advento da Era da Informação (a partir da década de 1990), o capital intelectual passou a ser o recurso mais valioso das organizações. Nesse cenário, a gestão de pessoas migrou de um modelo meramente burocrático para uma abordagem estratégica baseada em competências.\n\nO conceito de competência é tradicionalmente estruturado sobre três pilares fundamentais, conhecidos pela sigla **CHA**:\n*   **C**onhecimento: O saber (domínio teórico);\n*   **H**abilidade: O saber fazer (aplicação prática do conhecimento);\n*   **A**titude: O querer fazer (comportamento e motivação).\n\nEsses pilares servem como referencial para mapear lacunas de desempenho, orientar processos de recrutamento e seleção, direcionar programas de treinamento e fundamentar a tomada de decisões sobre a alocação de recursos humanos e financeiros na organização.",
+        "source_reference": null
+      },
+      "source_content_hash": "34536d3cc7ab47fb083da71e6a7482a4beaee3551990ea7b341157e63aecdc76"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:096",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:96",
+      "question_type": "true_false",
+      "statement_markdown": "Tendo em vista que a mudança, a inovação e a cultura são variáveis importantes para o desenvolvimento organizacional, julgue os seguintes itens.\n\nA cultura define a missão da organização e seu papel em relação ao meio ambiente, projetando uma imagem para os clientes, fornecedores e outras partes interessadas, mas também podendo criar disfunções que prejudiquem a capacidade de resolver problemas de convivência interna e adaptação externa.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 96; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Pessoas e Desenvolvimento Organizacional",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Geral",
+        "source_content_hash": "03640f451c6b19da1f1e78a2fca2255cf9b89e2d881c798859bfb4ff767eca9b",
+        "original_numeric_id": 96,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "direcao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está **correta**.\n\nA cultura organizacional possui uma dupla dimensão, apresentando tanto funções adaptativas e integradoras quanto disfunções:\n\n1.  **Funções Positivas:** Define as fronteiras da organização, transmite um sentimento de identidade aos seus membros, facilita o comprometimento com objetivos coletivos (em detrimento de interesses meramente individuais) e projeta a imagem e a missão institucional para o público externo (clientes, fornecedores, parceiros).\n2.  **Disfunções:** Quando a cultura se torna excessivamente rígida, ela gera barreiras à mudança, à diversidade e a fusões/aquisições. Essas disfunções prejudicam a flexibilidade necessária para resolver problemas de convivência interna e de adaptação às demandas do ambiente externo.",
+        "source_reference": null
+      },
+      "source_content_hash": "a58d45627471d7adb01e94790425f99041a71d7b2e86041c4afc0da6aea49582"
+    }
+  ]
+}

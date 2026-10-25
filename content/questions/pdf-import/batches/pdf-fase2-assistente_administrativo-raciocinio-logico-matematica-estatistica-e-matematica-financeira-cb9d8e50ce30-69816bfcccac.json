@@ -1,0 +1,224 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-assistente_administrativo-raciocinio-logico-matematica-estatistica-e-matematica-financeira-cb9d8e50ce30-69816bfcccac",
+  "source": {
+    "file_name": "assistente_administrativo_ATUALIZADO.json",
+    "sha256": "cb9d8e50ce300d4a5bd8877a14ccc4602e3d9ce9389c4e35c2e017d8ceeb29bb",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "assistente_administrativo.json",
+      "original_source_sha256": "076507bac3393262fd875a9487f40c6baf0b9380bc7894d096c4f07a503c5610",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "69816bfcccac708e72c12cb49330ff56ffc8c8c5099e7b2d5c0fc13838e08af5",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:assistente_administrativo:012",
+      "source_id": "assistente_administrativo:12",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Em um grupo de estudantes preparando-se para um concurso público, 10 são adolescentes e 15 já são adultos. A probabilidade de escolher aleatoriamente um estudante adulto desse grupo é:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "assistente_administrativo.pdf, questão 12; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "30%",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "35%",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "60%",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "65%",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "70%",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "6eac48c7c06c549e387553bca692298193940d8ef430c2f3eae906f0a5c974e6",
+        "original_numeric_id": 12,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_assistente_administrativo_012.png",
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A probabilidade de um evento ocorrer é dada pela razão entre o número de casos favoráveis e o número total de casos possíveis.\n\nNo problema apresentado:\n* O número de casos favoráveis (estudantes adultos) é **15**.\n* O número total de estudantes no grupo é a soma de adolescentes e adultos: **10 + 15 = 25**.\n\nA probabilidade será:\n$$\\text{P} = \\frac{15}{25}$$\n\nSimplificando a fração por 5, obtém-se $\\frac{3}{5}$, que equivale a $0,60$ ou **60%**.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_assistente_administrativo_012.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "8b8f83a76f3fa88545a13f3d2d069960a3f9378b9d5623370f8475152f560b76"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:014",
+      "source_id": "assistente_administrativo:14",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Dados os conjuntos de números naturais X={números ímpares menores que 10} e Y={números pares menores que 10}, o conjunto W = X ∩ Y será equivalente a:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "assistente_administrativo.pdf, questão 14; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "W = {1, 3, 5, 7, 9}",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "W = { }",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "W = {números fracionários menores que 10}",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "W = {2, 4, 6, 8}",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "W = {1, 2, 3, 4, 5, 6, 7, 8, 9}",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "4ada11ecc39c624c380c0dc253e36c3a7706e6b7a7da53c4929cf81b2669f170",
+        "original_numeric_id": 14,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_assistente_administrativo_014.png",
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a determinação da interseção entre dois conjuntos numéricos, $X$ e $Y$.\n\n* **Conjunto $X$ (números ímpares menores que 10):** $X = \\{1, 3, 5, 7, 9\\}$.\n* **Conjunto $Y$ (números pares menores que 10):** $Y = \\{0, 2, 4, 6, 8\\}$ (ou $\\{2, 4, 6, 8\\}$, caso o zero não seja considerado, o que não altera o resultado final).\n\nA operação de interseção ($X \\cap Y$) resulta em um novo conjunto contendo apenas os elementos que pertencem simultaneamente a $X$ e a $Y$. Como nenhum número natural pode ser par e ímpar ao mesmo tempo, não há elementos comuns entre os dois conjuntos. Portanto, o conjunto $W$ é vazio, representado por $\\{\\}$ ou $\\varnothing$.\n\n**Análise das alternativas incorretas:**\n* **A) Incorreta.** Representa o próprio conjunto $X$ (apenas os ímpares).\n* **C) Incorreta.** O enunciado trata de conjuntos de números naturais, não havendo relação com números fracionários.\n* **D) Incorreta.** Representa o conjunto $Y$ (apenas os pares, excluindo o zero).\n* **E) Incorreta.** Representa a união dos conjuntos ($X \\cup Y$), e não a interseção ($X \\cap Y$).\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_assistente_administrativo_014.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "37fa1ebd863a8eb78358cfdb2bf8c4b0cb087170a1c3937f8da918d111d9aee2"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:015",
+      "source_id": "assistente_administrativo:15",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Se um salário foi aumentado em R$500,00, o que corresponde a um aumento de 10% do valor original, o salário antes do aumento era:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "assistente_administrativo.pdf, questão 15; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "R$ 4.500,00",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "R$ 5.000,00",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "R$ 5.500,00",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "R$ 4.000,00",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "R$ 6.000,00",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "63b8726711a78d50938ccd99d3059d1855ad0741bc0e57192dc60c417430c1b3",
+        "original_numeric_id": 15,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_assistente_administrativo_015.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda um problema de porcentagem simples, no qual se busca determinar o valor original (100%) a partir de uma parte conhecida (10%).\n\nO enunciado informa que o aumento de R$ 500,00 equivale a 10% do salário original. Para encontrar o valor total correspondente a 100%, basta dividir o valor do aumento pela representação decimal da porcentagem ($10\\% = 0,10$):\n\n$$\\text{Salário Original} = \\frac{500}{0,10} = 5.000,00$$\n\n**Análise das alternativas incorretas:**\n* **A) Incorreta.** Se o salário original fosse R$ 4.500,00, o aumento de 10% seria de R$ 450,00.\n* **C) Incorreta.** Se o salário original fosse R$ 5.500,00, o aumento de 10% seria de R$ 550,00.\n* **D) Incorreta.** Se o salário original fosse R$ 4.000,00, o aumento de 10% seria de R$ 400,00.\n* **E) Incorreta.** Se o salário original fosse R$ 6.000,00, o aumento de 10% seria de R$ 600,00.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_assistente_administrativo_015.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "5129f711270ac22416a3f217653da5ce09aef9a903a85d16f84014569b57d7a6"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_em_enfermagem-raciocinio-logico-matematica-estatistica-e-matematica-financeira-76f64f3ddf4d-b3f7f963bdec",
+  "source": {
+    "file_name": "tecnico_em_enfermagem_ATUALIZADO.json",
+    "sha256": "76f64f3ddf4d3822e329101339345d50044b899f9b8fae52267aeb267323adcc",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_em_enfermagem.json",
+      "original_source_sha256": "d82e5bb88e01f70ff10fe33c96068be4d04a647ee9eeb9d4154c94a2180a057d",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "b3f7f963bdec59ff2a3be52f191c1045b98fbeb7a4e91452cc2c387d8dac970f",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:011",
+      "source_id": "tecnico_em_enfermagem:11",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Para a resolução de problemas de sequências apresenta-se esta sucessão de letras maiúsculas: A, D, G, __, a letra que falta é:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 11; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "J",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "K",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "H",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "I",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "F",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "f88d4c62fe2bcde3a89166be8b20e2bba86e0f9926efedb008bd5eb31dd2f666",
+        "original_numeric_id": 11,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_em_enfermagem_011.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para identificar a letra que falta na sequência (A, D, G, __), analisa-se o intervalo entre as letras no alfabeto oficial de 26 letras:\n\n* De **A** para **D**: pulam-se duas letras (**B** e **C**).\n* De **D** para **G**: pulam-se duas letras (**E** e **F**).\n* Seguindo o mesmo padrão, de **G** para a próxima letra, devem-se pular duas letras (**H** e **I**), resultando na letra **J**.\n\nTambém é possível resolver associando cada letra à sua posição numérica no alfabeto:\n* A = 1ª posição\n* D = 4ª posição (1 + 3)\n* G = 7ª posição (4 + 3)\n* Próxima = 10ª posição (7 + 3) -> letra **J**.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_em_enfermagem_011.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "0fa851723321572ba53e6bbaf178d50653d82e7ebd332119be946e3bc71e9423"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:013",
+      "source_id": "tecnico_em_enfermagem:13",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Adalberto, Bernardo, Caetano e Pedro são quatro amigos que gostam de jogar futebol. Caetano joga melhor que Pedro, Bernardo joga melhor que Caetano e Adalberto joga melhor que Bernardo. Assinale a alternativa que apresenta a opção que esteja logicamente correta.",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 13; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Bernardo joga melhor que Adalberto",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Caetano joga melhor que Bernardo",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Pedro joga melhor que Adalberto",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Pedro joga melhor que Caetano",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Adalberto joga melhor que Pedro",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "0bbcbe4e5ea9d14a9b94ca720dfa2f29273ade823bd44efc7cd747610d84b7b5",
+        "original_numeric_id": 13,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_em_enfermagem_013.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a ordenação de elementos com base em relações de desigualdade (\"joga melhor que\"). A partir das premissas fornecidas pelo enunciado, estabelece-se a seguinte ordem de habilidade:\n\n1. Caetano joga melhor que Pedro ($C > P$)\n2. Bernardo joga melhor que Caetano ($B > C$)\n3. Adalberto joga melhor que Bernardo ($A > B$)\n\nEncadeando as desigualdades, obtém-se a relação completa de ordenação decrescente: Adalberto > Bernardo > Caetano > Pedro.\n\nAnálise das alternativas:\n* **A) Incorreta.** Bernardo joga pior que Adalberto ($B < A$).\n* **B) Incorreta.** Caetano joga pior que Bernardo ($C < B$).\n* **C) Incorreta.** Pedro é o que apresenta o menor desempenho de todos, logo joga pior que Adalberto ($P < A$).\n* **D) Incorreta.** Pedro joga pior que Caetano ($P < C$).\n* **E) Correta.** Como Adalberto está no topo da ordenação e Pedro na base, conclui-se diretamente que Adalberto joga melhor que Pedro ($A > P$).\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_em_enfermagem_013.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "6ddb5146587d375113f9b3107cc79aaeb3d19d9cad740d3ed78e6dd84e9995fa"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-policial_rodoviario_federal-direito-administrativo-b6fd876f6da4-68bd74e8e2c7",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "b6fd876f6da47bfc670b5edf47a194cb0192c6a872db7d5acf3f5352d639cba7",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "d0a1c5718064db035e156dbeb8982317019ea8dde6c8349e0a1cc8366d1342df",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "68bd74e8e2c7b5f5bfbde66d5e23f2c9b54b3aaf795a05a6b712b2a7d6d4f175",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:090",
+      "source_id": "policial_rodoviario_federal:90",
+      "question_type": "true_false",
+      "statement_markdown": "Determinado órgão público firmou contrato administrativo com uma empresa de reconhecida especialização no mercado, para a prestação de serviços de treinamento de pessoal de natureza singular aos seus servidores. Durante a execução do contrato, a empresa descumpriu uma das cláusulas contratuais. A administração pública, então, aplicou multa por inexecução parcial do acordado. Insatisfeita, a empresa impetrou mandado de segurança no Poder Judiciário em face do ato administrativo que aplicara a penalidade sem prévia oitiva.\nConsiderando essa situação hipotética, julgue os itens que se seguem.\n\nEssa situação caracteriza contratação direta por dispensa de licitação.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 90; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Poderes Administrativos",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "ded07fd5c5be400e59549d118083ba468353e3693848a807fe6cfb711b5bc637",
+        "original_numeric_id": 90,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "deveres",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nA contratação de serviços técnicos especializados de treinamento e aperfeiçoamento de pessoal, dotados de natureza singular e firmados com empresa ou profissional de notória especialização, configura hipótese clássica de **inexigibilidade de licitação** (inviabilidade de competição, conforme o art. 25, inciso II, da Lei nº 8.666/1993 e o art. 74, inciso III, \"f\", da Lei nº 14.133/2021), e não de dispensa.",
+        "source_reference": null
+      },
+      "source_content_hash": "de20aa357e07bd23a555f144cd4ec0b9230e6bae1710bfc47ecc427cd4afb589"
+    }
+  ]
+}

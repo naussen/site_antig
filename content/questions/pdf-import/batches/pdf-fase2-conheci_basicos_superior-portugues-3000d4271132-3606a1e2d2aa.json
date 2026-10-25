@@ -1,0 +1,536 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-conheci_basicos_superior-portugues-3000d4271132-3606a1e2d2aa",
+  "source": {
+    "file_name": "conheci_basicos_superior_ATUALIZADO.json",
+    "sha256": "3000d42711328f5dba7e425cb1aa6b685dc58390abb29f1e798342c2c567b9e6",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "conheci_basicos_superior.json",
+      "original_source_sha256": "b206400e7cdbc8349a44515c2afe3ee6461cc3fb9fdceb3ff70127850f57917b",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "3606a1e2d2aa3258aded974a68362aa65a5e72b3743541a61fa5abf008411506",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:conheci_basicos_superior:002",
+      "source_id": "conheci_basicos_superior:2",
+      "question_type": "true_false",
+      "statement_markdown": "De acordo com uma lista da International Union for the Conservation of Nature, o Brasil é o país com o maior número de espécies de aves ameaçadas de extinção, com um total de 123 espécies sofrendo risco real de desaparecer da natureza em um futuro não tão distante. A Mata Atlântica concentra cerca de 80% de todas as aves ameaçadas no país, fato que resulta de muitos anos de exploração e desmatamentos. Atualmente, restam apenas cerca de 10% da floresta original, não sendo homogênea essa proporção de floresta remanescente ao longo de toda a Mata Atlântica. A situação é mais séria na região Nordeste, especialmente nos estados de Alagoas e Pernambuco, onde a maior parte da floresta original foi substituída por plantações de cana-de-açúcar. É nessa região que ainda podem ser encontrados os últimos exemplares das aves mais raras em todo o país, como o criticamente ameaçado limpa-folha-do-nordeste (Philydor novaesi). Essa pequena ave de dezoito centímetros vive no estrato médio e dossel de florestas bem conservadas e ricas em bromélias, onde procura artrópodes dos quais se alimenta. Atualmente, as duas únicas localidades onde a espécie pode ser encontrada são a Estação Ecológica de Murici, em Alagoas, e a Serra do Urubu, em Pernambuco.\n\nPedro F. Develey et al. O Brasil e suas aves. In: Scientific American Brasil, 2013 (com adaptações).\n\nJulgue os itens seguintes, relativos às ideias e aos aspectos estruturais do texto acima.\n\nA inserção de vírgula logo após o vocábulo “encontrada” (l.21), além de preservar a correção gramatical do texto, daria ênfase à informação contida no trecho “as duas únicas localidades onde a espécie pode ser encontrada” (l.20-21).",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 2; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "1c3c42e058201122023311e0d02bce7804e887b343ec22afdcca9b964e7c9c1c",
+        "original_numeric_id": 2,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A inserção de uma vírgula logo após o vocábulo \"encontrada\" incorre em erro gramatical grave, pois viola uma das regras mais fundamentais de pontuação da língua portuguesa.\n\n*   **Análise Sintática:** O trecho \"as duas únicas localidades onde a espécie pode ser encontrada\" funciona como o sujeito da oração principal, cujo verbo de ligação é \"são\".\n*   **Regra de Pontuação:** Na norma culta, é proibido separar o sujeito do predicado (ou do verbo) por meio de vírgula, exceto se houver um termo intercalado isolado por dupla vírgula (uma antes e outra depois), o que não ocorre no caso proposto. Portanto, a alteração prejudica a correção gramatical do texto.",
+        "source_reference": null
+      },
+      "source_content_hash": "4e8f13217938b9163f046f1a97920c4c256dceb53a49a375f52ae480c659929d"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:003",
+      "source_id": "conheci_basicos_superior:3",
+      "question_type": "true_false",
+      "statement_markdown": "De acordo com uma lista da International Union for the Conservation of Nature, o Brasil é o país com o maior número de espécies de aves ameaçadas de extinção, com um total de 123 espécies sofrendo risco real de desaparecer da natureza em um futuro não tão distante. A Mata Atlântica concentra cerca de 80% de todas as aves ameaçadas no país, fato que resulta de muitos anos de exploração e desmatamentos. Atualmente, restam apenas cerca de 10% da floresta original, não sendo homogênea essa proporção de floresta remanescente ao longo de toda a Mata Atlântica. A situação é mais séria na região Nordeste, especialmente nos estados de Alagoas e Pernambuco, onde a maior parte da floresta original foi substituída por plantações de cana-de-açúcar. É nessa região que ainda podem ser encontrados os últimos exemplares das aves mais raras em todo o país, como o criticamente ameaçado limpa-folha-do-nordeste (Philydor novaesi). Essa pequena ave de dezoito centímetros vive no estrato médio e dossel de florestas bem conservadas e ricas em bromélias, onde procura artrópodes dos quais se alimenta. Atualmente, as duas únicas localidades onde a espécie pode ser encontrada são a Estação Ecológica de Murici, em Alagoas, e a Serra do Urubu, em Pernambuco.\n\nPedro F. Develey et al. O Brasil e suas aves. In: Scientific American Brasil, 2013 (com adaptações).\n\nJulgue os itens seguintes, relativos às ideias e aos aspectos estruturais do texto acima.\n\nNas sequências “toda a Mata Atlântica” (l.10) e “todo o país” (l.15-16), os artigos definidos “a” e “o” são opcionais, podendo ser suprimidos sem que haja prejuízo à correção gramatical e à significação dos períodos de que fazem parte.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 3; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "ed7e657f6cba2daa7664cf0a5d53b2d0a8078fbc7a136212e5e397e03cc2226b",
+        "original_numeric_id": 3,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A supressão dos artigos definidos \"a\" e \"o\" nas expressões indicadas altera substancialmente a significação original do texto, tornando o item incorreto.\n\n*   **Diferença Semântica:**\n    *   **Todo(a) + artigo + substantivo singular:** Indica a totalidade de um elemento específico (\"o inteiro\", \"por completo\"). Assim, \"toda a Mata Atlântica\" refere-se à totalidade daquele bioma específico, e \"todo o país\" refere-se à totalidade do território brasileiro.\n    *   **Todo(a) + substantivo singular (sem artigo):** Assume valor de generalização, equivalendo a \"qualquer\" ou \"cada\". Desse modo, \"toda Mata Atlântica\" significaria \"qualquer mata atlântica\" e \"todo país\" significaria \"qualquer país\".\n\nLogo, embora a omissão não gerasse necessariamente incorreção gramatical isolada, haveria evidente prejuízo à significação original e à coerência do texto.",
+        "source_reference": null
+      },
+      "source_content_hash": "f2f4e9346295a20fc0fc5a4c130221f4a799b18bf0ca8c423d774d6ebb886596"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:005",
+      "source_id": "conheci_basicos_superior:5",
+      "question_type": "true_false",
+      "statement_markdown": "De acordo com uma lista da International Union for the Conservation of Nature, o Brasil é o país com o maior número de espécies de aves ameaçadas de extinção, com um total de 123 espécies sofrendo risco real de desaparecer da natureza em um futuro não tão distante. A Mata Atlântica concentra cerca de 80% de todas as aves ameaçadas no país, fato que resulta de muitos anos de exploração e desmatamentos. Atualmente, restam apenas cerca de 10% da floresta original, não sendo homogênea essa proporção de floresta remanescente ao longo de toda a Mata Atlântica. A situação é mais séria na região Nordeste, especialmente nos estados de Alagoas e Pernambuco, onde a maior parte da floresta original foi substituída por plantações de cana-de-açúcar. É nessa região que ainda podem ser encontrados os últimos exemplares das aves mais raras em todo o país, como o criticamente ameaçado limpa-folha-do-nordeste (Philydor novaesi). Essa pequena ave de dezoito centímetros vive no estrato médio e dossel de florestas bem conservadas e ricas em bromélias, onde procura artrópodes dos quais se alimenta. Atualmente, as duas únicas localidades onde a espécie pode ser encontrada são a Estação Ecológica de Murici, em Alagoas, e a Serra do Urubu, em Pernambuco.\n\nPedro F. Develey et al. O Brasil e suas aves. In: Scientific American Brasil, 2013 (com adaptações).\n\nJulgue os itens seguintes, relativos às ideias e aos aspectos estruturais do texto acima.\n\nO vocábulo “remanescente” (l.10) poderia ser substituído por ameaçada, sem alteração do sentido original do texto.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 5; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "191249a0be5e98e7cf6248308210a01b6cebfeb439ad973b2a3188b91df4bd20",
+        "original_numeric_id": 5,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque os vocábulos **remanescente** e **ameaçada** possuem significados distintos e não intercambiáveis no contexto.\n\n* **Remanescente**: refere-se àquilo que resta, que sobra ou que é restante. No texto, alude à parcela de floresta original que ainda resiste (cerca de 10%).\n* **Ameaçada**: refere-se àquilo que sofre ameaça, que corre perigo de extinção ou destruição.\n\nSubstituir \"remanescente\" por \"ameaçada\" alteraria o sentido original, pois passaria a indicar a proporção de floresta sob perigo, e não a proporção de floresta que ainda resta.",
+        "source_reference": null
+      },
+      "source_content_hash": "3f69e29273ee37a5907eb67b6d2da3a52cd98ee36aa3a17bbaddec8fb5f5825d"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:006",
+      "source_id": "conheci_basicos_superior:6",
+      "question_type": "true_false",
+      "statement_markdown": "Construímos coisas o tempo todo, mas como saberemos quanto tempo vão durar? Se construirmos depósitos para resíduos nucleares, precisaremos ter certeza de que os contêineres vão resistir até que o material dentro deles não mais seja perigoso. E, se não quisermos encher o planeta de lixo, é bom sabermos quanto tempo leva para que plásticos e outros materiais se decomponham. A única forma de termos certeza é submetendo esses materiais a testes de estresse por cerca de 100 mil anos para ver como reagem. Então, poderíamos aprender a construir coisas que realmente duram — ou que se decompõem de uma forma “verde”. Experimentos submeteriam materiais ao desgaste e a ataques químicos, como variações de alcalinidade, e, ainda, alterariam a temperatura ambiente para simular os ciclos de dia e noite e das estações. Com as técnicas de simulação em laboratórios de que dispomos atualmente, por exemplo, não se pode prever como será o desempenho da bateria de um carro elétrico nos próximos quinze anos. As simulações de computador podem, por fim, tornar-se sofisticadas a ponto de substituir experimentos de longo prazo. Enquanto isso, no entanto, precisamos adotar cautela extra ao construirmos coisas que precisam durar.\n\nKristin Persson. Como os materiais se decompõem? In: Scientific American Brasil, s/d, 2013 (com adaptações).\n\nAcerca de aspectos estruturais do texto acima e das ideias nele contidas, julgue os itens a seguir.\n\nA expressão “no entanto” (l.20) poderia ser substituída pelo vocábulo entretanto, sem que houvesse prejuízo à correção gramatical e ao sentido do texto.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 6; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "72db22603d665922c8d18160ef5d82990d49c093f5721bed79708375db29d11b",
+        "original_numeric_id": 6,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. As expressões **\"no entanto\"** e **\"entretanto\"** pertencem à classe das conjunções coordenativas adversativas. Ambas introduzem uma ideia de oposição, contraste ou ressalva em relação ao que foi dito anteriormente.\n\nPor possuírem o mesmo valor semântico e a mesma função sintática, a substituição de uma pela outra preserva integralmente a correção gramatical e o sentido original do período.",
+        "source_reference": null
+      },
+      "source_content_hash": "f24da300d8623978bed5b6c1ce4ed4b61f4d50d9b4892d512419c36b1879c0dd"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:008",
+      "source_id": "conheci_basicos_superior:8",
+      "question_type": "true_false",
+      "statement_markdown": "Construímos coisas o tempo todo, mas como saberemos quanto tempo vão durar? Se construirmos depósitos para resíduos nucleares, precisaremos ter certeza de que os contêineres vão resistir até que o material dentro deles não mais seja perigoso. E, se não quisermos encher o planeta de lixo, é bom sabermos quanto tempo leva para que plásticos e outros materiais se decomponham. A única forma de termos certeza é submetendo esses materiais a testes de estresse por cerca de 100 mil anos para ver como reagem. Então, poderíamos aprender a construir coisas que realmente duram — ou que se decompõem de uma forma “verde”. Experimentos submeteriam materiais ao desgaste e a ataques químicos, como variações de alcalinidade, e, ainda, alterariam a temperatura ambiente para simular os ciclos de dia e noite e das estações. Com as técnicas de simulação em laboratórios de que dispomos atualmente, por exemplo, não se pode prever como será o desempenho da bateria de um carro elétrico nos próximos quinze anos. As simulações de computador podem, por fim, tornar-se sofisticadas a ponto de substituir experimentos de longo prazo. Enquanto isso, no entanto, precisamos adotar cautela extra ao construirmos coisas que precisam durar.\n\nKristin Persson. Como os materiais se decompõem? In: Scientific American Brasil, s/d, 2013 (com adaptações).\n\nAcerca de aspectos estruturais do texto acima e das ideias nele contidas, julgue os itens a seguir.\n\nO texto permaneceria gramaticalmente correto caso as formas verbais infinitivas “ver” (l.9), “aprender” (l.10) e “substituir” (l.19) fossem substituídas pelas formas flexionadas vermos, aprendermos e substituírem, respectivamente.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 8; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "13299f1121cd1096c6e1cf8fd7c718dcb53324acf476bc45f883125ba886ad04",
+        "original_numeric_id": 8,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque a flexão da forma verbal \"aprender\" para \"aprendermos\" gera erro gramatical.\n\nNo trecho \"poderíamos aprender\", tem-se uma locução verbal, na qual o verbo auxiliar (\"poderíamos\") já se encontra flexionado (1ª pessoa do plural). De acordo com as regras de regência e colocação verbal da norma-padrão, o verbo principal de uma locução verbal deve permanecer em sua forma nominal (infinitivo impessoal), não admitindo flexão. Assim, a construção \"poderíamos aprendermos\" é incorreta.\n\nEmbora as flexões de \"ver\" para \"vermos\" (infinitivo flexionado concordando com o sujeito elíptico \"nós\") e de \"substituir\" para \"substituírem\" (concordando com \"simulações\") fossem admissíveis, o erro na locução verbal invalida a afirmação.",
+        "source_reference": null
+      },
+      "source_content_hash": "3a5dd67e42ea5aafe701aceb51f05d1754913ea622b7655c31a8812f3c0a9280"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:009",
+      "source_id": "conheci_basicos_superior:9",
+      "question_type": "true_false",
+      "statement_markdown": "Se a Dinamarca tivesse seguido a corrente rodoviária dominante desde a década de 60 do século passado, nunca viraria um modelo de planejamento urbano. Em uma época em que parecia fazer mais sentido priorizar o trânsito de carros, Copenhague apostou na criação da primeira rua para pedestres do país. Antes de se tornar o maior calçadão da Europa, com um quilômetro de extensão, a Strøget era uma rua comercial dominada por automóveis, assim como todo o centro da cidade. O arquiteto por trás da iniciativa, Jan Gehl, acreditava que os espaços urbanos deveriam servir para a interação social. Na época, foi criticado pela imprensa e por comerciantes, que ponderavam que as pessoas não passariam muito tempo ao ar livre em uma capital gélida. Erraram. As vendas triplicaram, e a rua de pedestres foi ocupada pelos moradores. A experiência reforçou as convicções de Gehl, que defende o planejamento das cidades para o usufruto e o conforto das pessoas.\n\nCamilo Gomide. Cidades prazerosas. In: Planeta, fev./2014 (com adaptações).\n\nJulgue os itens de 9 a 11, referentes às ideias e às estruturas linguísticas do texto acima.\n\nÉ objetivo do texto defender a ideia de que comerciantes do mundo inteiro podem triplicar seu faturamento caso seja adotado o modelo de planejamento urbano da Dinamarca.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 9; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "d492c8715defff7693e53b548f59a61d29b7b1d4f05d0373d0d1a98aa7b228e7",
+        "original_numeric_id": 9,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado** porque incorre em erro de extrapolação. \n\nO objetivo do texto é relatar a experiência bem-sucedida de planejamento urbano de Copenhague, que priorizou pedestres em detrimento de automóveis na década de 1960. O faturamento triplicado é mencionado como um resultado específico e concreto ocorrido na rua *Strøget* (\"As vendas triplicaram, e a rua de pedestres foi ocupada pelos moradores\"). \n\nO texto não generaliza esse resultado para \"comerciantes do mundo inteiro\", tampouco define como objetivo principal a defesa de uma tese comercial global. A intenção do texto é valorizar o planejamento urbano voltado para o usufruto e o conforto das pessoas, conforme defendido pelo arquiteto Jan Gehl.",
+        "source_reference": null
+      },
+      "source_content_hash": "9f64e384034c8d0352f163d4c3d8eaa5be43c642d161e51827f7e83127b4bbcd"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:010",
+      "source_id": "conheci_basicos_superior:10",
+      "question_type": "true_false",
+      "statement_markdown": "Se a Dinamarca tivesse seguido a corrente rodoviária dominante desde a década de 60 do século passado, nunca viraria um modelo de planejamento urbano. Em uma época em que parecia fazer mais sentido priorizar o trânsito de carros, Copenhague apostou na criação da primeira rua para pedestres do país. Antes de se tornar o maior calçadão da Europa, com um quilômetro de extensão, a Strøget era uma rua comercial dominada por automóveis, assim como todo o centro da cidade. O arquiteto por trás da iniciativa, Jan Gehl, acreditava que os espaços urbanos deveriam servir para a interação social. Na época, foi criticado pela imprensa e por comerciantes, que ponderavam que as pessoas não passariam muito tempo ao ar livre em uma capital gélida. Erraram. As vendas triplicaram, e a rua de pedestres foi ocupada pelos moradores. A experiência reforçou as convicções de Gehl, que defende o planejamento das cidades para o usufruto e o conforto das pessoas.\n\nCamilo Gomide. Cidades prazerosas. In: Planeta, fev./2014 (com adaptações).\n\nJulgue os itens de 9 a 11, referentes às ideias e às estruturas linguísticas do texto acima.\n\nAs sequências “primeira rua para pedestres do país” (l.5-6), “o maior calçadão da Europa” (l.6) e “uma rua comercial dominada por automóveis” (l.7-8) identificam um mesmo referente: a rua Strøget.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 10; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "bc5b56c0b3782746827f0b271a4edd3d11fa68996250d833d98da7ecd33077cc",
+        "original_numeric_id": 10,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo** pois todas as três expressões destacadas funcionam como elementos de coesão referencial que remetem ao mesmo elemento: a rua **Strøget**.\n\nAnálise das passagens no texto:\n1. **\"primeira rua para pedestres do país\"**: O texto afirma que Copenhague apostou na criação da primeira rua para pedestres do país. Na frase seguinte, essa rua é identificada nominalmente: \"Antes de se tornar o maior calçadão da Europa... a Strøget era...\".\n2. **\"o maior calçadão da Europa\"**: O trecho \"Antes de se tornar o maior calçadão da Europa [...] a Strøget...\" qualifica diretamente a Strøget.\n3. **\"uma rua comercial dominada por automóveis\"**: O trecho \"...a Strøget era uma rua comercial dominada por automóveis...\" classifica o estado anterior da mesma via.\n\nPortanto, há perfeita identidade referencial entre os três termos.",
+        "source_reference": null
+      },
+      "source_content_hash": "10555840798a2d5d4f808dd6de64273590f2ef249f51c05c9dfacf2031334ec6"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:011",
+      "source_id": "conheci_basicos_superior:11",
+      "question_type": "true_false",
+      "statement_markdown": "Se a Dinamarca tivesse seguido a corrente rodoviária dominante desde a década de 60 do século passado, nunca viraria um modelo de planejamento urbano. Em uma época em que parecia fazer mais sentido priorizar o trânsito de carros, Copenhague apostou na criação da primeira rua para pedestres do país. Antes de se tornar o maior calçadão da Europa, com um quilômetro de extensão, a Strøget era uma rua comercial dominada por automóveis, assim como todo o centro da cidade. O arquiteto por trás da iniciativa, Jan Gehl, acreditava que os espaços urbanos deveriam servir para a interação social. Na época, foi criticado pela imprensa e por comerciantes, que ponderavam que as pessoas não passariam muito tempo ao ar livre em uma capital gélida. Erraram. As vendas triplicaram, e a rua de pedestres foi ocupada pelos moradores. A experiência reforçou as convicções de Gehl, que defende o planejamento das cidades para o usufruto e o conforto das pessoas.\n\nCamilo Gomide. Cidades prazerosas. In: Planeta, fev./2014 (com adaptações).\n\nJulgue os itens de 9 a 11, referentes às ideias e às estruturas linguísticas do texto acima.\n\nNas sequências “acreditava que os espaços urbanos” (l.9-10) e “ponderavam que as pessoas não passariam” (l.12), o “que” introduz complementos oracionais para as formas verbais “acreditava” e “ponderavam”.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 11; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "1139fefcd738c9307d07ef92fa68d9527d3135f68c6bec24631d8808fd9327a6",
+        "original_numeric_id": 11,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nEm ambas as ocorrências, a palavra \"que\" classifica-se como **conjunção integrante**, cuja função é introduzir orações subordinadas substantivas. Essas orações atuam como complementos verbais (objetos diretos) das formas verbais que as antecedem:\n\n1. **\"acreditava [isso]\"**: O verbo \"acreditar\" é transitivo direto no contexto (\"quem acredita, acredita em algo\" ou \"acredita algo/que\"). A oração \"que os espaços urbanos deveriam servir para a interação social\" funciona como objeto direto oracional (complemento) de \"acreditava\".\n2. **\"ponderavam [isso]\"**: O verbo \"ponderar\" é transitivo direto. A oração \"que as pessoas não passariam muito tempo ao ar livre...\" funciona como objeto direto oracional (complemento) de \"ponderavam\".",
+        "source_reference": null
+      },
+      "source_content_hash": "72af7a1db0f100c511ae41d52cf1330ab028bd519326125649eabcf3a530bf62"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:012",
+      "source_id": "conheci_basicos_superior:12",
+      "question_type": "true_false",
+      "statement_markdown": "O ofício de catador conquistou espaço em âmbito público em 2010, com a sanção da Política Nacional de Resíduos Sólidos. Após vinte anos de tramitação, a nova lei regula a destinação dos produtos com ciclo de vida durável, integrando o poder público, as empresas e a população na gestão dos resíduos. Os estados e municípios deverão adotar os novos parâmetros até agosto de 2014, caso contrário, não receberão recursos da União. Nesse contexto, a lei propõe incentivos dos municípios para a organização desses trabalhadores em cooperativas, em detrimento do trabalho autônomo dos catadores de rua. A maioria dos catadores autônomos, entretanto, é moradora de rua ou desempregada, sem acesso ao mercado de trabalho formal. Em muitos casos, são dependentes químicos ou alcoólatras, e não têm horários estabelecidos para o trabalho. Entre as razões para preferir a informalidade, estão a liberdade para estabelecer horários, a desconfiança da hierarquia das cooperativas, o pagamento semanal em vez de diário e a incompatibilidade com a forma da organização.\n\nEmily Almeida. Emancipação dos catadores. In: Darcy, set.-out./2013 (com adaptações).\n\nA respeito dos aspectos estruturais e interpretativos do texto acima, julgue os seguintes itens.\n\nNa linha 13, caso se substituísse o trecho “ao mercado de trabalho formal” por às benesses das leis trabalhistas, a correção gramatical do período seria mantida, visto que o elemento “acesso” rege complemento com a preposição a e “benesses” está especificado pelo artigo as.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 12; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "f89608d5865410d2e482421d2cb6591e7b708168d20d35a4cb860f1744b6ee32",
+        "original_numeric_id": 12,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA substituição proposta mantém a correção gramatical devido às regras de regência nominal e de crase:\n\n1. **Regência do nome \"acesso\"**: O substantivo \"acesso\" exige a preposição **a** (quem tem acesso, tem acesso *a* alguma coisa).\n2. **Artigo definido**: O substantivo feminino plural \"benesses\" admite a anteposição do artigo definido feminino plural **as**.\n3. **Fusão (Crase)**: A união da preposição exigida pelo nome (\"a\") com o artigo que acompanha o substantivo (\"as\") resulta na contração **às** (a + as = às).\n\nComo o termo original \"ao mercado de trabalho formal\" utilizava a preposição \"a\" combinada com o artigo masculino \"o\" (a + o = ao), a substituição por um termo feminino plural exige a marcação do acento grave indicativo de crase (\"às benesses\").",
+        "source_reference": null
+      },
+      "source_content_hash": "53e7d309b2c4433d9c145d7a853893d5c555e5c69762d701d4d08dda21fd2544"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:013",
+      "source_id": "conheci_basicos_superior:13",
+      "question_type": "true_false",
+      "statement_markdown": "O ofício de catador conquistou espaço em âmbito público em 2010, com a sanção da Política Nacional de Resíduos Sólidos. Após vinte anos de tramitação, a nova lei regula a destinação dos produtos com ciclo de vida durável, integrando o poder público, as empresas e a população na gestão dos resíduos. Os estados e municípios deverão adotar os novos parâmetros até agosto de 2014, caso contrário, não receberão recursos da União. Nesse contexto, a lei propõe incentivos dos municípios para a organização desses trabalhadores em cooperativas, em detrimento do trabalho autônomo dos catadores de rua. A maioria dos catadores autônomos, entretanto, é moradora de rua ou desempregada, sem acesso ao mercado de trabalho formal. Em muitos casos, são dependentes químicos ou alcoólatras, e não têm horários estabelecidos para o trabalho. Entre as razões para preferir a informalidade, estão a liberdade para estabelecer horários, a desconfiança da hierarquia das cooperativas, o pagamento semanal em vez de diário e a incompatibilidade com a forma da organização.\n\nEmily Almeida. Emancipação dos catadores. In: Darcy, set.-out./2013 (com adaptações).\n\nA respeito dos aspectos estruturais e interpretativos do texto acima, julgue os seguintes itens.\n\nO elemento coesivo sentencial “entretanto” (l.12) tem a finalidade semântica de introduzir uma relação de adversidade entre a informação expressa no período de que faz parte e a informação expressa nos períodos que o antecedem.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 13; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "cb0019c73a38a43ae25901aaca1a894693edc0c7bff7ed7d1049a1e112114fe6",
+        "original_numeric_id": 13,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nO vocábulo \"entretanto\" é uma **conjunção coordenativa adversativa**. Do ponto de vista semântico, sua função é estabelecer uma relação de oposição, contraste ou quebra de expectativa entre duas ideias.\n\nNo texto:\n* O período anterior menciona que a lei propõe incentivos para a organização dos trabalhadores em cooperativas, visando superar o trabalho autônomo.\n* O período iniciado com \"A maioria dos catadores autônomos, entretanto...\" apresenta a realidade de vulnerabilidade social desses trabalhadores (moradores de rua, desempregados, dependentes químicos), o que contrasta e impõe dificuldades práticas à pretendida organização em cooperativas.\n\nPortanto, o conectivo introduz corretamente uma relação de adversidade com o que foi exposto anteriormente.",
+        "source_reference": null
+      },
+      "source_content_hash": "4cded39c292a00ece32038880e4d52470426ec4922a5a937bc67a6bb3b11cd06"
+    }
+  ]
+}

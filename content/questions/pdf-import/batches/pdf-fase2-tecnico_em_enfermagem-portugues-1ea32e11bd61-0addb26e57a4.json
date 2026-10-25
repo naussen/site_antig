@@ -1,0 +1,356 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-tecnico_em_enfermagem-portugues-1ea32e11bd61-0addb26e57a4",
+  "source": {
+    "file_name": "tecnico_em_enfermagem_ATUALIZADO.json",
+    "sha256": "1ea32e11bd6179bfbb9dd982fbfa61d5d6960aff925abc1a021792a07b1c9811",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "tecnico_em_enfermagem.json",
+      "original_source_sha256": "6dcfa0cee6ef3a501884e1448c33fab838121224584691a29d15e7e815bf5b9c",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "0addb26e57a4e44e0f0a6d54dbfcce8eb89455ab02dcfdfe7e80e3d92ce1e046",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:001",
+      "source_id": "tecnico_em_enfermagem:1",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto\nAutomóvel: Sociedade Anônima\n(Paulo Mendes Campos)\nSe você quiser, compre um carro; é um conforto admirável. Mas não o faça sem conhecimento de causa, a fim de evitar desilusões futuras. Saiba que está praticando um gesto essencialmente econômico; não para a sua economia, mas para a economia coletiva. Isso quer dizer que, do ponto de vista comunitário, o automóvel que você adquire não é um ponto de chegada, uma conquista final em sua vida, mas, pelo contrário, um ponto de partida para os outros. Desde que o compre, o carro passa a interessar aos outros, muito mais que a você mesmo.\nCom o carro, você está ampliando seriamente a economia de milhares de pessoas. É uma espécie de indústria às avessas, na qual você monta um engenho não para obter lucros, mas para distribuir seu dinheiro para toda classe de pessoas: industriais europeus, biliardários do Texas, empresários brasileiros, comerciantes, operários especializados, proletários, vagabundos, etc.\nJá na compra do carro, você contribui para uma infinidade de setores produtivos, que podemos encolher ao máximo nos seguintes itens: a indústria automobilística propriamente dita, localizada no Brasil, mas sem qualquer inibição no que toca à remessa de lucros para o exterior; os vendedores de automóveis; a siderurgia; a petroquímica; as fábricas de pneus e as de artefatos de borracha; as fábricas de plásticos, couros, tintas, etc.; as fábricas de rolamentos e outras autopeças; as fábricas de relógios, rádios, etc.; as indústrias de petróleo [...]\nVocê já pode ir vendo a gravidade do seu gesto: ao comprar um carro, você entrou na órbita de toda essa gente, até ontem, você estava fora do alcance deles; hoje, seu transporte passou a ser, do ponto de vista econômico, simplesmente transcendental. Você é um homem economicamente importante – para os outros. Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você.\nMas não fica só nisso; você estará ainda girando numa constelação menor, miúda mas nada desprezível: a dos recauchutadores, eletricistas, garagistas, lavadores, olheiros, guardas de trânsito, mecânicos de esquina. Você pode ainda querer um motorista ou participar de alguma das várias modalidades de seguros para automóveis. Em outros termos, você continua entrando pelo cano. No fim deste, há ainda uma outra classe: a dos ladrões, seja organizada em sindicatos, seja a espécie de franco-puxadores. [...]\n\nA partir da leitura atenta do texto, conclui-se que seu título cumpre um papel irônico uma vez que:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 1; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "faz referência documentação exigida no ato da compra de um automóvel.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "são listados, detalhadamente, os interesses de vários membros da sociedade.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "o proprietário do automóvel passa a ser ignorado pelas pessoas que o cercam.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "se destaca o fato de que outros lucram com o automóvel, mas não o proprietário.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "revela o resultado de uma conquista pessoal anônima no sistema capitalista.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "7e8bb1844376d156667e874fdd3026ef32009b960f60c097043842025a2a933b",
+        "original_numeric_id": 1,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nO título \"Automóvel: Sociedade Anônima\" carrega um teor irônico que é explicitado diretamente no quarto parágrafo do texto: \"Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você\". A ironia reside no contraste entre o conceito comercial de uma sociedade anônima (onde os acionistas buscam obter lucro) e a realidade do proprietário do veículo, que arca com todos os custos de aquisição e manutenção, gerando lucro para uma vasta cadeia de terceiros (indústrias, mecânicos, revendedores), sem obter qualquer retorno financeiro para si.\n\n**Análise das alternativas incorretas:**\n* **A** está incorreta porque o texto não aborda trâmites burocráticos ou documentação de compra.\n* **B** está incorreta porque, embora o texto liste os setores beneficiados, a ironia do título não se justifica pela mera listagem, mas sim pelo fato de o proprietário ser excluído dos lucros.\n* **C** está incorreta porque o proprietário não é ignorado; pelo contrário, ele passa a ser o centro das atenções econômicas de diversos prestadores de serviços.\n* **E** está incorreta porque o texto desconstrói a ideia de que o carro seja uma conquista pessoal isolada, enfatizando seu papel puramente coletivo e de distribuição de renda forçada.",
+        "source_reference": null
+      },
+      "source_content_hash": "2591a06c001f988f12d8b50e3d49e7a2ea2be935a2f471ea8aad0482b74f95f8"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:002",
+      "source_id": "tecnico_em_enfermagem:2",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto\nAutomóvel: Sociedade Anônima\n(Paulo Mendes Campos)\nSe você quiser, compre um carro; é um conforto admirável. Mas não o faça sem conhecimento de causa, a fim de evitar desilusões futuras. Saiba que está praticando um gesto essencialmente econômico; não para a sua economia, mas para a economia coletiva. Isso quer dizer que, do ponto de vista comunitário, o automóvel que você adquire não é um ponto de chegada, uma conquista final em sua vida, mas, pelo contrário, um ponto de partida para os outros. Desde que o compre, o carro passa a interessar aos outros, muito mais que a você mesmo.\nCom o carro, você está ampliando seriamente a economia de milhares de pessoas. É uma espécie de indústria às avessas, na qual você monta um engenho não para obter lucros, mas para distribuir seu dinheiro para toda classe de pessoas: industriais europeus, biliardários do Texas, empresários brasileiros, comerciantes, operários especializados, proletários, vagabundos, etc.\nJá na compra do carro, você contribui para uma infinidade de setores produtivos, que podemos encolher ao máximo nos seguintes itens: a indústria automobilística propriamente dita, localizada no Brasil, mas sem qualquer inibição no que toca à remessa de lucros para o exterior; os vendedores de automóveis; a siderurgia; a petroquímica; as fábricas de pneus e as de artefatos de borracha; as fábricas de plásticos, couros, tintas, etc.; as fábricas de rolamentos e outras autopeças; as fábricas de relógios, rádios, etc.; as indústrias de petróleo [...]\nVocê já pode ir vendo a gravidade do seu gesto: ao comprar um carro, você entrou na órbita de toda essa gente, até ontem, você estava fora do alcance deles; hoje, seu transporte passou a ser, do ponto de vista econômico, simplesmente transcendental. Você é um homem economicamente importante – para os outros. Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você.\nMas não fica só nisso; você estará ainda girando numa constelação menor, miúda mas nada desprezível: a dos recauchutadores, eletricistas, garagistas, lavadores, olheiros, guardas de trânsito, mecânicos de esquina. Você pode ainda querer um motorista ou participar de alguma das várias modalidades de seguros para automóveis. Em outros termos, você continua entrando pelo cano. No fim deste, há ainda uma outra classe: a dos ladrões, seja organizada em sindicatos, seja a espécie de franco-puxadores. [...]\n\nAo considerar a conjugação da forma verbal destacada em “Se você quiser, compre um carro” (1º§), pode-se perceber que a segunda oração assume um caráter:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 2; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "hipotético.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "questionador.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "imperativo.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "habitual.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "negativo.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "9cb826dd5ca14ec67ceeee24746526699e9a81590432c94021f7832f873c1863",
+        "original_numeric_id": 2,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nNa estrutura \"Se você quiser, compre um carro\", a forma verbal \"compre\" está conjugada no modo imperativo afirmativo (referente à terceira pessoa do singular, concordando com o pronome de tratamento \"você\"). O modo imperativo é empregado para exprimir conselhos, ordens, pedidos ou instruções, conferindo à oração um caráter nitidamente imperativo (de recomendação ou exortação).\n\n**Análise das alternativas incorretas:**\n* **A** está incorreta porque o caráter hipotético (condicional) está presente na primeira oração (\"Se você quiser\"), marcada pelo uso do subjuntivo.\n* **B** está incorreta porque a oração não apresenta estrutura interrogativa ou entonação de questionamento.\n* **D** está incorreta porque o imperativo não indica uma ação habitual ou rotineira.\n* **E** está incorreta porque a oração é afirmativa, não contendo advérbios ou elementos de negação.",
+        "source_reference": null
+      },
+      "source_content_hash": "488262ad56b4bd360ab6bfe54e262b90d559a003e49678cc7ee59e58582853a2"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:003",
+      "source_id": "tecnico_em_enfermagem:3",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto\nAutomóvel: Sociedade Anônima\n(Paulo Mendes Campos)\nSe você quiser, compre um carro; é um conforto admirável. Mas não o faça sem conhecimento de causa, a fim de evitar desilusões futuras. Saiba que está praticando um gesto essencialmente econômico; não para a sua economia, mas para a economia coletiva. Isso quer dizer que, do ponto de vista comunitário, o automóvel que você adquire não é um ponto de chegada, uma conquista final em sua vida, mas, pelo contrário, um ponto de partida para os outros. Desde que o compre, o carro passa a interessar aos outros, muito mais que a você mesmo.\nCom o carro, você está ampliando seriamente a economia de milhares de pessoas. É uma espécie de indústria às avessas, na qual você monta um engenho não para obter lucros, mas para distribuir seu dinheiro para toda classe de pessoas: industriais europeus, biliardários do Texas, empresários brasileiros, comerciantes, operários especializados, proletários, vagabundos, etc.\nJá na compra do carro, você contribui para uma infinidade de setores produtivos, que podemos encolher ao máximo nos seguintes itens: a indústria automobilística propriamente dita, localizada no Brasil, mas sem qualquer inibição no que toca à remessa de lucros para o exterior; os vendedores de automóveis; a siderurgia; a petroquímica; as fábricas de pneus e as de artefatos de borracha; as fábricas de plásticos, couros, tintas, etc.; as fábricas de rolamentos e outras autopeças; as fábricas de relógios, rádios, etc.; as indústrias de petróleo [...]\nVocê já pode ir vendo a gravidade do seu gesto: ao comprar um carro, você entrou na órbita de toda essa gente, até ontem, você estava fora do alcance deles; hoje, seu transporte passou a ser, do ponto de vista econômico, simplesmente transcendental. Você é um homem economicamente importante – para os outros. Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você.\nMas não fica só nisso; você estará ainda girando numa constelação menor, miúda mas nada desprezível: a dos recauchutadores, eletricistas, garagistas, lavadores, olheiros, guardas de trânsito, mecânicos de esquina. Você pode ainda querer um motorista ou participar de alguma das várias modalidades de seguros para automóveis. Em outros termos, você continua entrando pelo cano. No fim deste, há ainda uma outra classe: a dos ladrões, seja organizada em sindicatos, seja a espécie de franco-puxadores. [...]\n\nEntre as orações “compre um carro; é um conforto admirável” (1º§), há um ponto e vírgula. Sem prejuízo de sentido para o enunciado, esse sinal de pontuação poderia ser substituído por um conectivo de valor:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 3; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "explicativo.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "adversativo.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "aditivo.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "comparativo.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "conclusivo.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "c1210e33d7ca602fcb43d9305d9fdc1466d8713c8caa4d21f07fa4695a29f621",
+        "original_numeric_id": 3,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O ponto e vírgula, no trecho destacado, separa duas orações coordenadas assindéticas. A segunda oração (\"é um conforto admirável\") apresenta uma justificativa ou explicação para a recomendação expressa na primeira (\"compre um carro\"). \n\nDesse modo, o sinal de pontuação pode ser substituído por um conectivo de valor **explicativo** (como *pois*, *porque* ou *porquanto*) sem que haja prejuízo para o sentido original do enunciado.\n\n**Análise das alternativas incorretas:**\n* **B) adversativo:** Indicaria oposição ou contraste (ex.: *mas*, *porém*), o que não cabe no contexto.\n* **C) aditivo:** Indicaria soma de ideias (ex.: *e*, *além disso*).\n* **D) comparativo:** Estabeleceria uma relação de comparação (ex.: *como*, *tal qual*).\n* **E) conclusivo:** Indicaria uma dedução ou conclusão lógica (ex.: *portanto*, *logo*).",
+        "source_reference": null
+      },
+      "source_content_hash": "f6b4588766aaaf53918f11c2b87ed2f2ba4ac157ee93a93ea4b4e201f087b83e"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:005",
+      "source_id": "tecnico_em_enfermagem:5",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto\nAutomóvel: Sociedade Anônima\n(Paulo Mendes Campos)\nSe você quiser, compre um carro; é um conforto admirável. Mas não o faça sem conhecimento de causa, a fim de evitar desilusões futuras. Saiba que está praticando um gesto essencialmente econômico; não para a sua economia, mas para a economia coletiva. Isso quer dizer que, do ponto de vista comunitário, o automóvel que você adquire não é um ponto de chegada, uma conquista final em sua vida, mas, pelo contrário, um ponto de partida para os outros. Desde que o compre, o carro passa a interessar aos outros, muito mais que a você mesmo.\nCom o carro, você está ampliando seriamente a economia de milhares de pessoas. É uma espécie de indústria às avessas, na qual você monta um engenho não para obter lucros, mas para distribuir seu dinheiro para toda classe de pessoas: industriais europeus, biliardários do Texas, empresários brasileiros, comerciantes, operários especializados, proletários, vagabundos, etc.\nJá na compra do carro, você contribui para uma infinidade de setores produtivos, que podemos encolher ao máximo nos seguintes itens: a indústria automobilística propriamente dita, localizada no Brasil, mas sem qualquer inibição no que toca à remessa de lucros para o exterior; os vendedores de automóveis; a siderurgia; a petroquímica; as fábricas de pneus e as de artefatos de borracha; as fábricas de plásticos, couros, tintas, etc.; as fábricas de rolamentos e outras autopeças; as fábricas de relógios, rádios, etc.; as indústrias de petróleo [...]\nVocê já pode ir vendo a gravidade do seu gesto: ao comprar um carro, você entrou na órbita de toda essa gente, até ontem, você estava fora do alcance deles; hoje, seu transporte passou a ser, do ponto de vista econômico, simplesmente transcendental. Você é um homem economicamente importante – para os outros. Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você.\nMas não fica só nisso; você estará ainda girando numa constelação menor, miúda mas nada desprezível: a dos recauchutadores, eletricistas, garagistas, lavadores, olheiros, guardas de trânsito, mecânicos de esquina. Você pode ainda querer um motorista ou participar de alguma das várias modalidades de seguros para automóveis. Em outros termos, você continua entrando pelo cano. No fim deste, há ainda uma outra classe: a dos ladrões, seja organizada em sindicatos, seja a espécie de franco-puxadores. [...]\n\nO texto é uma crônica que tem sua estrutura organizada, predominantemente, pela tipologia:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 5; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "descritiva.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "injuntiva.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "narrativa.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "inventiva.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "dissertativa.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "d0e95c96d307c76b5838733e837fb59466249330392692983514f311d18f7db9",
+        "original_numeric_id": 5,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Embora o texto pertença ao gênero literário crônica, a sua estrutura é organizada, predominantemente, pela tipologia **dissertativa** (especificamente a dissertativo-argumentativa). \n\nO autor não se limita a contar uma história (narrativa) ou a descrever um objeto (descritiva). Em vez disso, ele desenvolve uma reflexão crítica, apresentando uma tese central (a de que a compra de um automóvel é um ato de impacto econômico essencialmente coletivo, e não individual) e sustentando-a por meio de argumentos, exemplificações e relações de causa e efeito.\n\n**Análise das alternativas incorretas:**\n* **A) descritiva:** Busca retratar detalhadamente aspectos físicos, visuais ou psicológicos de seres, objetos ou cenários, o que não é o foco do texto.\n* **B) injuntiva:** Tem como objetivo instruir, orientar ou dar ordens ao interlocutor (como em manuais ou receitas). Embora haja verbos no imperativo no início, essa tipologia não predomina no texto como um todo.\n* **C) narrativa:** Caracteriza-se pelo relato de fatos e ações situados no tempo e no espaço, envolvendo personagens, o que não estrutura a espinha dorsal do texto.\n* **D) inventiva:** Não constitui uma tipologia textual reconhecida pela tradição gramatical e acadêmica.",
+        "source_reference": null
+      },
+      "source_content_hash": "582b71effd3e1cf44f9e637de58e4b10da8166124aa1b4b02131f3acea1c81d4"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:009",
+      "source_id": "tecnico_em_enfermagem:9",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto\nAutomóvel: Sociedade Anônima\n(Paulo Mendes Campos)\nSe você quiser, compre um carro; é um conforto admirável. Mas não o faça sem conhecimento de causa, a fim de evitar desilusões futuras. Saiba que está praticando um gesto essencialmente econômico; não para a sua economia, mas para a economia coletiva. Isso quer dizer que, do ponto de vista comunitário, o automóvel que você adquire não é um ponto de chegada, uma conquista final em sua vida, mas, pelo contrário, um ponto de partida para os outros. Desde que o compre, o carro passa a interessar aos outros, muito mais que a você mesmo.\nCom o carro, você está ampliando seriamente a economia de milhares de pessoas. É uma espécie de indústria às avessas, na qual você monta um engenho não para obter lucros, mas para distribuir seu dinheiro para toda classe de pessoas: industriais europeus, biliardários do Texas, empresários brasileiros, comerciantes, operários especializados, proletários, vagabundos, etc.\nJá na compra do carro, você contribui para uma infinidade de setores produtivos, que podemos encolher ao máximo nos seguintes itens: a indústria automobilística propriamente dita, localizada no Brasil, mas sem qualquer inibição no que toca à remessa de lucros para o exterior; os vendedores de automóveis; a siderurgia; a petroquímica; as fábricas de pneus e as de artefatos de borracha; as fábricas de plásticos, couros, tintas, etc.; as fábricas de rolamentos e outras autopeças; as fábricas de relógios, rádios, etc.; as indústrias de petróleo [...]\nVocê já pode ir vendo a gravidade do seu gesto: ao comprar um carro, você entrou na órbita de toda essa gente, até ontem, você estava fora do alcance deles; hoje, seu transporte passou a ser, do ponto de vista econômico, simplesmente transcendental. Você é um homem economicamente importante – para os outros. Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você.\nMas não fica só nisso; você estará ainda girando numa constelação menor, miúda mas nada desprezível: a dos recauchutadores, eletricistas, garagistas, lavadores, olheiros, guardas de trânsito, mecânicos de esquina. Você pode ainda querer um motorista ou participar de alguma das várias modalidades de seguros para automóveis. Em outros termos, você continua entrando pelo cano. No fim deste, há ainda uma outra classe: a dos ladrões, seja organizada em sindicatos, seja a espécie de franco-puxadores. [...]\n\nNo último parágrafo, a expressão destacada em “Em outros termos, você continua entrando pelo cano.” cumpre o seguinte efeito linguístico:",
+      "exam_board": "IBFC",
+      "institution": "EBSERH",
+      "position_name": "Técnico em Enfermagem",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "tecnico_em_enfermagem.pdf, questão 9; tecnico_em_enfermagem_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "revela uma inadequação em relação à fala do interlocutor.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "aponta que será feita uma retificação da informação apresentada.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "sinaliza ao leitor a introdução de um registro mais informal.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "introduz uma oração de caráter concessivo.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "indica uma ressalva em relação ao conteúdo anterior.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_em_enfermagem.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "00477f1f3a59006174861538f3ecf6d19f940d737910db95c6e5489a620166e3",
+        "original_numeric_id": 9,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A expressão \"entrar pelo cano\" é uma expressão idiomática de cunho popular (gíria) que significa sofrer prejuízo, dar-se mal ou ser logrado. No contexto do texto, que apresenta uma linguagem predominantemente formal e padrão, a inserção dessa expressão coloquial promove uma quebra de expectativa estilística, sinalizando a introdução de um registro mais informal.\n\n**Análise das alternativas incorretas:**\n* **A) Incorreta.** Não há diálogo ou fala de um interlocutor sendo corrigida ou considerada inadequada no trecho.\n* **B) Incorreta.** A expressão não retifica (corrige) nenhuma informação anterior, mas sim ilustra de forma figurada a situação de prejuízo financeiro contínuo do proprietário do veículo.\n* **D) Incorreta.** A expressão não possui valor de conjunção ou locução concessiva (como \"embora\" ou \"ainda que\"), tratando-se de uma locução verbal informal.\n* **E) Incorreta.** Não se trata de uma ressalva (limitação ou restrição ao que foi dito), mas sim de uma conclusão metafórica sobre o fluxo constante de gastos.",
+        "source_reference": null
+      },
+      "source_content_hash": "8aae31cf0f690982b3c135b89b5e6cbc93369f80ebaf3c22bd6cd95f9afd42cb"
+    }
+  ]
+}

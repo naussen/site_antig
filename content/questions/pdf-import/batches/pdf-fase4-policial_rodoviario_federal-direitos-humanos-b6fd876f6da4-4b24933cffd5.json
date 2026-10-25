@@ -1,0 +1,310 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-policial_rodoviario_federal-direitos-humanos-b6fd876f6da4-4b24933cffd5",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "b6fd876f6da47bfc670b5edf47a194cb0192c6a872db7d5acf3f5352d639cba7",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "d0a1c5718064db035e156dbeb8982317019ea8dde6c8349e0a1cc8366d1342df",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "4b24933cffd5d6cb8d792047d3004d34715c05b46eff5bd9083c3fb4bb392739",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direitos-humanos",
+    "name": "Direitos Humanos"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:116",
+      "source_id": "policial_rodoviario_federal:116",
+      "question_type": "true_false",
+      "statement_markdown": "À luz da Constituição Federal de 1988 (CF), do Pacto de São José da Costa Rica e do entendimento do Supremo Tribunal Federal, julgue os itens que se seguem, relativos aos direitos humanos.\n\nA Convenção Internacional dos Direitos das Pessoas com Deficiência possui status supraconstitucional no ordenamento pátrio, sendo um exemplo de instrumento normativo internacional de caráter inclusivo adotado pelo Brasil para promover a acessibilidade e a autodeterminação de pessoas com deficiência.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 116; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Convenção Americana sobre Direitos Humanos (Pacto de São José)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direitos Humanos",
+        "source_content_hash": "88ba78747691d60b076acefa51c50bfcc9d1246f164cf3952551227087df18b0",
+        "original_numeric_id": 116,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "convencao-americana-sobre-direitos-humanos-pacto-de-san-jose",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. No ordenamento jurídico brasileiro, os tratados e convenções internacionais sobre direitos humanos que forem aprovados em cada Casa do Congresso Nacional, em dois turnos, por três quintos dos votos dos respectivos membros, são equivalentes às emendas constitucionais, conforme dispõe o artigo 5º, § 3º, da Constituição Federal de 1988.\n\nA Convenção Internacional sobre os Direitos das Pessoas com Deficiência e seu Protocolo Facultativo foram aprovados exatamente sob esse rito qualificado (por meio do Decreto Legislativo nº 186/2008 e promulgados pelo Decreto nº 6.949/2009). Consequentemente, esse diploma internacional possui **status constitucional** (integrando o bloco de constitucionalidade), e não status supraconstitucional.\n\n**Pegadinha:** O erro reside unicamente na qualificação do status hierárquico da convenção como 'supraconstitucional'. No Brasil, não há normas com status acima da própria Constituição Federal. Os tratados de direitos humanos aprovados pelo rito comum possuem status supralegal (abaixo da Constituição e acima das leis ordinárias), enquanto os aprovados pelo rito do artigo 5º, § 3º, possuem status constitucional.\n\n**Dispositivo legal**\n\n[Artigo 5º, § 3º da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "1d683c50acb8be104ef5bbdac14a432194c75101423b658181c2fe1279e29c8c"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:117",
+      "source_id": "policial_rodoviario_federal:117",
+      "question_type": "true_false",
+      "statement_markdown": "À luz da Constituição Federal de 1988 (CF), do Pacto de São José da Costa Rica e do entendimento do Supremo Tribunal Federal, julgue os itens que se seguem, relativos aos direitos humanos.\n\nA mera intuição de que esteja havendo tráfico de drogas em uma casa não configura justa causa para autorizar o ingresso sem mandado judicial ou sem o consentimento do morador, exceto em caso de flagrante delito.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 117; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Convenção Americana sobre Direitos Humanos (Pacto de São José)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direitos Humanos",
+        "source_content_hash": "73a0fa7f403187f9cb91e9d3038d48d996d28f0b3eeacb5c1cd60b7954421302",
+        "original_numeric_id": 117,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "convencao-americana-sobre-direitos-humanos-pacto-de-san-jose",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A Constituição Federal, no artigo 5º, inciso XI, consagra a inviolabilidade do domicílio, estabelecendo que a casa é asilo inviolável do indivíduo e que ninguém nela poderá penetrar sem consentimento do morador, salvo em caso de flagrante delito ou desastre, ou para prestar socorro, ou, durante o dia, por determinação judicial.\n\nO Supremo Tribunal Federal, ao julgar o Recurso Extraordinário nº 603.616/RO (Tema 280 da Repercussão Geral), fixou a tese de que o ingresso forçado em domicílio sem mandado judicial, mesmo em período noturno, só é legítimo quando amparado em 'fundadas razões' (justa causa), devidamente justificadas a posteriori, que indiquem que dentro da residência ocorre situação de flagrante delito.\n\nA mera intuição, suspeita subjetiva ou denúncia anônima desprovida de outros elementos investigativos prévios e objetivos não caracterizam justa causa para afastar a garantia constitucional da inviolabilidade domiciliar.\n\n**Dispositivo legal**\n\n[Artigo 5º, inciso XI da Constituição Federal de 1988 e Tema 280 de Repercussão Geral do STF (RE 603.616/RO)](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "1278637bf64f4a357c4c36f16376aa82ec2b65e4f5e33ed780ad9b668891603d"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:118",
+      "source_id": "policial_rodoviario_federal:118",
+      "question_type": "true_false",
+      "statement_markdown": "À luz da Constituição Federal de 1988 (CF), do Pacto de São José da Costa Rica e do entendimento do Supremo Tribunal Federal, julgue os itens que se seguem, relativos aos direitos humanos.\n\nO aviso prévio é uma condicionante ao exercício do direito de reunião previsto na CF: a inexistência de notificação às autoridades competentes torna ilegal a manifestação coletiva.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 118; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Convenção Americana sobre Direitos Humanos (Pacto de São José)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direitos Humanos",
+        "source_content_hash": "878800a161c38ff43ac28db9ab312b0650d55a6b3f5c6530e328bcf47c26b04f",
+        "original_numeric_id": 118,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "convencao-americana-sobre-direitos-humanos-pacto-de-san-jose",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. O direito de reunião é uma garantia fundamental prevista no artigo 5º, inciso XVI, da Constituição Federal de 1988, que estabelece que todos podem reunir-se pacificamente, sem armas, em locais abertos ao público, independentemente de autorização, desde que não frustrem outra reunião anteriormente convocada para o mesmo local, sendo apenas exigido prévio aviso à autoridade competente.\n\nO Supremo Tribunal Federal, no julgamento do Recurso Extraordinário nº 806.339/SE (Tema 855 da Repercussão Geral), pacificou o entendimento de que a exigência constitucional do aviso prévio não possui caráter condicionante absoluto a ponto de tornar a manifestação ilegal caso inexista notificação formal por escrito. Segundo a Corte, a exigência de aviso prévio é satisfeita quando o poder público toma conhecimento da reunião por outros meios de veiculação de informação (como redes sociais ou imprensa) em tempo hábil para que possa zelar pela segurança pública e pela ordem, garantindo o livre exercício do direito de reunião e a fluidez do trânsito.\n\n**Dispositivo legal**\n\n[Artigo 5º, inciso XVI da Constituição Federal de 1988 e Tema 855 de Repercussão Geral do STF (RE 806.339/SE)](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "7ac571962b6da42f7b7aa8a0a805aad15590c1059865cad85327abf264d6c322"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:119",
+      "source_id": "policial_rodoviario_federal:119",
+      "question_type": "true_false",
+      "statement_markdown": "À luz da Constituição Federal de 1988 (CF), do Pacto de São José da Costa Rica e do entendimento do Supremo Tribunal Federal, julgue os itens que se seguem, relativos aos direitos humanos.\n\nA Declaração Universal dos Direitos Humanos, um dos primeiros instrumentos normativos gerais de direitos humanos adotados por uma organização internacional, destacou-se pelo fato de comportar a ideia de dignidade da pessoa humana como ponto de convergência da ética universal e do fundamento valorativo do sistema protetivo global dos direitos humanos.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 119; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Declaração Universal dos Direitos Humanos (DUDH)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direitos Humanos",
+        "source_content_hash": "cae5fc49ed65d907efd77d67ed303f64e6f4a8f157a514402ace4ae9280da426",
+        "original_numeric_id": 119,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "declaracao-universal-dos-direitos-humanos-dudh",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nA Declaração Universal dos Direitos Humanos (DUDH, 1948), marco fundacional do Direito Internacional dos Direitos Humanos, consagrou no seu preâmbulo e no seu art. 1º a dignidade inerente a todos os membros da família humana e a igualdade de direitos inalienáveis como fundamento ético universal e eixo valorativo de convergência de toda a ordem protetiva internacional contemporânea.",
+        "source_reference": null
+      },
+      "source_content_hash": "a83cb8b6813c0967497d4042b526174c09dcfecc460e5d67aa8ccd9dd7ea310b"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:120",
+      "source_id": "policial_rodoviario_federal:120",
+      "question_type": "true_false",
+      "statement_markdown": "À luz da Constituição Federal de 1988 (CF), do Pacto de São José da Costa Rica e do entendimento do Supremo Tribunal Federal, julgue os itens que se seguem, relativos aos direitos humanos.\n\nA alteração do gênero nos assentamentos de registro civil independe da realização de procedimento cirúrgico, denominado transgenitalização, ou da comprovação da realização de tratamentos hormonais ou patologizantes, por parte da pessoa interessada.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 120; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Convenção Americana sobre Direitos Humanos (Pacto de São José)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direitos Humanos",
+        "source_content_hash": "e28f91802498e9c653ceb57b59ac2223d554f0242430cabfe6501ebbfb8027ec",
+        "original_numeric_id": 120,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "convencao-americana-sobre-direitos-humanos-pacto-de-san-jose",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **correto**.\n\nO Supremo Tribunal Federal (STF), ao julgar a Ação Direta de Inconstitucionalidade (ADI) 4.275/DF, fixou o entendimento de que as pessoas transgêneras têm o direito de alterar o prenome e o gênero diretamente no registro civil, independentemente da realização de cirurgia de redesignação sexual (transgenitalização) ou da apresentação de laudos médicos, tratamentos hormonais ou diagnósticos patologizantes.\n\nEsse entendimento fundamenta-se nos princípios constitucionais da dignidade da pessoa humana, da igualdade, da liberdade e da privacidade, bem como no direito à identidade de gênero e à autodeterminação, em consonância com as diretrizes de direitos humanos e a Opinião Consultiva nº 24/17 da Corte Interamericana de Direitos Humanos.\n\n### Dispositivo legal\n\n* **Referência:** STF, ADI 4275/DF, Relator Min. Marco Aurélio, Redator para o acórdão Min. Edson Fachin, julgado em 01/03/2018.\n* **URL oficial:** https://portal.stf.jus.br/processos/detalhe.asp?incidente=2691371",
+        "source_reference": null
+      },
+      "source_content_hash": "a593cd84768b40f990d629ee346850a41e3bcbe748ce7e557c50c2f9741dbab2"
+    }
+  ]
+}

@@ -1,0 +1,520 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-analista_ambiental_conhec_especi-legislacao-do-sus-d2ac5698f205-f002d32070c0",
+  "source": {
+    "file_name": "analista_ambiental_conhec_especi_ATUALIZADO.json",
+    "sha256": "d2ac5698f205a2638f1eaf79d0aedfc74d2cf54a6c2e1dadb69fe6ad34e8b6c4",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "analista_ambiental_conhec_especi.json",
+      "original_source_sha256": "df2e94ac9bbd67e22ac3acfaa869525b68daefee34c5d89f472cafa6b27243d5",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "f002d32070c0f9ff600a45e7c4dbdfb1bb8675beb610c21928bc69a32d7ab1d2",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "legislacao-do-sus",
+    "name": "Legislação do SUS"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:080",
+      "source_id": "analista_ambiental_conhec_especi:80",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere a recursos florestais, julgue os próximos itens.\n\nOs métodos de valoração econômica ambiental são ferramentas que podem ser empregadas na criação de florestas sociais, que são florestas em que se priorizam o manejo sustentável, o equilíbrio das organizações sociais no campo do trabalho e a qualidade de vida das populações rurais, evitando-se a geração de grandes impactos ambientais.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 80; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "8357579f0dd03aa2636ac3677f4a50fb749c0470ea8b0ccd82e21c629ac64f42",
+        "original_numeric_id": 80,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. As florestas sociais (ou silvicultura comunitária) são iniciativas focadas no manejo sustentável de recursos florestais por populações locais, visando à melhoria da qualidade de vida, geração de renda e conservação ambiental.\n\nOs **métodos de valoração econômica ambiental** (como o método de valoração contingente, custo de viagem, preços hedônicos ou custo de reposição) são ferramentas analíticas que permitem atribuir valor monetário aos bens e serviços ecossistêmicos providos por essas florestas (como regulação hídrica, sequestro de carbono, conservação da biodiversidade e bem-estar social). \n\nA aplicação dessas ferramentas é de extrema utilidade na criação e no planejamento de florestas sociais, pois ajuda a demonstrar a viabilidade socioeconômica do projeto, a captar recursos financeiros externos (como pagamentos por serviços ambientais) e a subsidiar políticas públicas de desenvolvimento rural sustentável.",
+        "source_reference": null
+      },
+      "source_content_hash": "059eaab67a93bd2e133557c7d650a549fbb72149ee402fe5b2d1868246526a52"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:095",
+      "source_id": "analista_ambiental_conhec_especi:95",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito à gestão e ao manejo de unidades de conservação (UCs), julgue os itens subsequentes.\n\nA legislação referente ao Sistema Nacional de Unidades de Conservação da Natureza (SNUC) abrangeu o conceito de sistema nacional de unidades de conservação constante de legislações federais anteriores e lançou a definição de reserva de desenvolvimento sustentável.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 95; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "fe8f7c6c1ebf8c04c3da980d11f436fed79fbdbed3372f252b6ffde8cfc82632",
+        "original_numeric_id": 95,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l9985.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. A Lei nº 9.985/2000 (Lei do SNUC) consolidou e organizou o conceito de sistema nacional de unidades de conservação, que já vinha sendo delineado em legislações e políticas anteriores.\n\nAlém disso, o SNUC inovou ao introduzir formalmente no ordenamento jurídico federal a categoria de \"Reserva de Desenvolvimento Sustentável\" (RDS) como uma unidade de conservação de uso sustentável, destinada a preservar as populações tradicionais e assegurar o uso sustentável dos recursos naturais.",
+        "source_reference": null
+      },
+      "source_content_hash": "503456b56ea4fbc286b6f5a7a52f675f76810584e6d7862c2561f12dafe62183"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:096",
+      "source_id": "analista_ambiental_conhec_especi:96",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da questão fundiária na Amazônia e de povos e comunidades tradicionais, julgue os itens seguintes.\n\nConsiderando-se o critério de sustentabilidade ecológica e a pressão de uso que um grupo social impõe ao meio ambiente por meio de uma combinação de fatores de ordem territorial e geográfica, econômica e cultural, é correto afirmar que apenas os povos indígenas relativamente isolados apresentam, atualmente, uma ocupação de baixo impacto ambiental na Amazônia brasileira.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 96; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "12cc41136e027bdd4fa0569e895626ef9870943dc777a1a88f50097386d05f04",
+        "original_numeric_id": 96,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta. O uso do termo restritivo \"apenas\" invalida a afirmação.\n\nDiversas outras comunidades e povos tradicionais da Amazônia brasileira — como seringueiros, ribeirinhos, quilombolas, castanheiros e quebradeiras de coco-babaçu — também realizam ocupação e uso da terra com baixo impacto ambiental, baseando-se em práticas históricas de manejo sustentável e de baixo carbono, não se limitando aos povos indígenas relativamente isolados.",
+        "source_reference": null
+      },
+      "source_content_hash": "c6edda8e60192fe49e8d3772a912a5481d7fb4abd227dc527d469f283e742721"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:097",
+      "source_id": "analista_ambiental_conhec_especi:97",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da questão fundiária na Amazônia e de povos e comunidades tradicionais, julgue os itens seguintes.\n\nA política nacional de desenvolvimento sustentável de povos e comunidades tradicionais, em consonância com a Constituição Federal de 1988, promove o reconhecimento dos direitos específicos para os povos indígenas e quilombolas, não compreendendo, contudo, os agroextrativistas, os seringueiros, as quebradeiras de coco-babaçu, os pescadores artesanais e as caiçaras.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 97; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Princípios e Diretrizes do SUS na Constituição Federal de 1988",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "3f18f4b9b1a0b908afe51be0619d4fe5f5f7671398c9bd2f1f2a3f0a24c57fab",
+        "original_numeric_id": 97,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6040.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "evolucao-historica-e-principios-do-sus",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA Política Nacional de Desenvolvimento Sustentável dos Povos e Comunidades Tradicionais (PNPCT), instituída pelo **Decreto nº 6.040/2007**, adota uma concepção ampla e inclusiva de povos e comunidades tradicionais:\n\nSeu Artigo 3º, inciso I, define tais grupos como grupos culturalmente diferenciados que possuem formas próprias de organização social e ocupam territórios ancestrais essenciais para sua reprodução cultural e econômica. O escopo da política abrange expressamente, além de indígenas e quilombolas, os **seringueiros, castanheiros, quebradeiras de coco-babaçu, ribeirinhos, pescadores artesanais, caiçaras, pantaneiros, retireiros e faxinalenses**.",
+        "source_reference": null
+      },
+      "source_content_hash": "55eb22452eb47d5d1a6ae75791eb87955833c5aa53c33fedeb3dc7dd88ca0116"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:116",
+      "source_id": "analista_ambiental_conhec_especi:116",
+      "question_type": "true_false",
+      "statement_markdown": "Uma reserva de desenvolvimento sustentável federal na Amazônia Legal, de expressiva diversidade biológica, é habitada por famílias de pequenos produtores rurais, algumas em situação de extrema pobreza, e outras com padrão financeiro mais elevado.\n\nTendo a situação acima como referência, julgue os itens que se seguem, com base nas normas aplicáveis.\n\nIncumbe-se aos órgãos do SISNAMA, entre eles, o ICMBio, a promoção da educação ambiental nas reservas de desenvolvimento sustentável.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 116; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "cfd0eacfd11066a34013162a78cd1f5701851e2cefd3432f654543ad69fbf632",
+        "original_numeric_id": 116,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l9795.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**. A Política Nacional de Educação Ambiental estabelece que a promoção da educação ambiental incumbe aos órgãos integrantes do Sistema Nacional do Meio Ambiente (SISNAMA). Sendo o Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio) uma autarquia federal que atua como órgão executor do SISNAMA, cabe a ele promover e executar ações de educação ambiental no âmbito das Unidades de Conservação federais sob sua gestão, o que inclui as Reservas de Desenvolvimento Sustentável (RDS).\n\n### Dispositivo legal\n* **Lei nº 9.795/1999** (Política Nacional de Educação Ambiental), Art. 3º, inciso II.\n* **Lei nº 11.516/2007**, Art. 1º.",
+        "source_reference": null
+      },
+      "source_content_hash": "2e50e66003417e8dfc2ad13d8d8b75639eed7b0d413da250fe27330a63bf92c6"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:117",
+      "source_id": "analista_ambiental_conhec_especi:117",
+      "question_type": "true_false",
+      "statement_markdown": "Uma reserva de desenvolvimento sustentável federal na Amazônia Legal, de expressiva diversidade biológica, é habitada por famílias de pequenos produtores rurais, algumas em situação de extrema pobreza, e outras com padrão financeiro mais elevado.\n\nTendo a situação acima como referência, julgue os itens que se seguem, com base nas normas aplicáveis.\n\nAs famílias dos pequenos produtores rurais em situação de extrema pobreza podem se beneficiar do Programa Bolsa Verde, por tempo indeterminado, caso cumpram com os compromissos assumidos no termo de adesão ao programa.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 117; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "d8bc7b33e5200b7e503d400642a1bbd74768b8ba647649798355fff1f6cf483e",
+        "original_numeric_id": 117,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12512.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nO Programa de Apoio à Conservação Ambiental (Programa Bolsa Verde), instituído pela Lei nº 12.512/2011, estabelece em seu Artigo 5º que a concessão do benefício financeiro tem prazo de duração de **2 (dois) anos**, podendo ser renovado mediante verificação do cumprimento das metas e da continuidade do estado de extrema pobreza e conservação ambiental.\n\nO benefício não é concedido por prazo indeterminado, estando expressamente condicionado a períodos certos e a revisões periódicas periódicas de conformidade.",
+        "source_reference": null
+      },
+      "source_content_hash": "fb6a394a76f1e9019e988061766e18f46bd053a5464306f055dcd556c9cc6594"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:118",
+      "source_id": "analista_ambiental_conhec_especi:118",
+      "question_type": "true_false",
+      "statement_markdown": "Uma reserva de desenvolvimento sustentável federal na Amazônia Legal, de expressiva diversidade biológica, é habitada por famílias de pequenos produtores rurais, algumas em situação de extrema pobreza, e outras com padrão financeiro mais elevado.\n\nTendo a situação acima como referência, julgue os itens que se seguem, com base nas normas aplicáveis.\n\nÉ competência do ICMBio a execução de políticas que coordenam a preservação ambiental e os direitos das populações que habitam no local.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 118; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "d81391f396f2874582dbf36375b4d92c50f92eb66161aa1ccfe89c9ee99642a8",
+        "original_numeric_id": 118,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11516.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**. O Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio) tem, entre suas finalidades institucionais, a execução das políticas relativas ao uso sustentável dos recursos naturais renováveis e o apoio ao extrativismo e às populações tradicionais nas unidades de conservação de uso sustentável instituídas pela União. Como as Reservas de Desenvolvimento Sustentável (RDS) são unidades de uso sustentável habitadas por populações tradicionais, compete diretamente ao ICMBio conciliar a preservação ambiental com a garantia dos direitos dessas comunidades.\n\n### Dispositivo legal\n* **Lei nº 11.516/2007**, Art. 1º, inciso II.\n* **Lei nº 9.985/2000** (SNUC), Art. 20.",
+        "source_reference": null
+      },
+      "source_content_hash": "03b144a311ce3d9df46297b35c937d05a09b646e7c80f5c2d1ed6738f0211d7c"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:119",
+      "source_id": "analista_ambiental_conhec_especi:119",
+      "question_type": "true_false",
+      "statement_markdown": "Uma reserva de desenvolvimento sustentável federal na Amazônia Legal, de expressiva diversidade biológica, é habitada por famílias de pequenos produtores rurais, algumas em situação de extrema pobreza, e outras com padrão financeiro mais elevado.\n\nTendo a situação acima como referência, julgue os itens que se seguem, com base nas normas aplicáveis.\n\nO ICMBio tem competência para aplicar multas relacionadas a infrações administrativas que ocorrerem na reserva de desenvolvimento sustentável e para licenciar atividades efetivas ou potencialmente poluidoras que pretendam ser desenvolvidas na área.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 119; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "043b5d8f081fcd6f7e6993fbca9d03c70c09ab8a636b0f774247599cfd2d8d23",
+        "original_numeric_id": 119,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11516.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNos termos da Lei nº 11.516/2007 (Art. 1º) e da Lei Complementar nº 140/2011:\n\nO ICMBio detém competência para exercer o poder de polícia ambiental e autuar/aplicar sanções administrativas (como multas) por infrações cometidas no interior das Unidades de Conservação federais.\n\nContudo, a competência para o **licenciamento ambiental** de atividades efetiva ou potencialmente poluidoras na esfera federal pertence originariamente ao **IBAMA** (Art. 7º da LC 140/2011), cabendo ao ICMBio apenas manifestar-se prévia e obrigatoriamente quando o empreendimento afetar diretamente uma UC federal gerida pela autarquia.",
+        "source_reference": null
+      },
+      "source_content_hash": "ce4e71bd465a7025dff467d8083003c39be3c5b95b8c787afc6b35a1ea11b2b3"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:120",
+      "source_id": "analista_ambiental_conhec_especi:120",
+      "question_type": "true_false",
+      "statement_markdown": "Uma reserva de desenvolvimento sustentável federal na Amazônia Legal, de expressiva diversidade biológica, é habitada por famílias de pequenos produtores rurais, algumas em situação de extrema pobreza, e outras com padrão financeiro mais elevado.\n\nTendo a situação acima como referência, julgue os itens que se seguem, com base nas normas aplicáveis.\n\nAs atividades e os resultados do Programa Bolsa Verde serão acompanhados pelo Ministério do Meio Ambiente, que monitorará a cobertura vegetal das áreas objeto do programa com frequência mínima anual.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 120; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "e7faf425a06831095bc6eca735599843237b2d4df3cc96ea0ab705a3ed7fc763",
+        "original_numeric_id": 120,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7572.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nO Decreto nº 7.572/2011, que regulamentou o Programa Bolsa Verde (Lei nº 12.512/2011), prevê expressamente em seu Artigo 7º que o acompanhamento das atividades do programa e o monitoramento da manutenção da cobertura vegetal nas áreas conservadas serão realizados pelo Ministério do Meio Ambiente (MMA), com apoio de sensoriamento remoto e imagens de satélite, com **frequência mínima anual**.",
+        "source_reference": null
+      },
+      "source_content_hash": "6d6a6640968c161a05737e82d25fb0e63beb9f3576a83b8ffb841c5f31fa6532"
+    }
+  ]
+}

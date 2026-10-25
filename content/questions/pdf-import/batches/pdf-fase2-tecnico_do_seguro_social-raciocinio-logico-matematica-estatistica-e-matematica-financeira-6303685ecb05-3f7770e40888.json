@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-tecnico_do_seguro_social-raciocinio-logico-matematica-estatistica-e-matematica-financeira-6303685ecb05-3f7770e40888",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "6303685ecb05a17026689ea714434eb749b136afd9838f8455367497b631cc0f",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "4eaf0e6930a8700363f76961716af089a527cb11e4282c667f45b06f21532285",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "3f7770e40888d61a6fde563edce784b1f7946cedf8d1d28fccead793293821d7",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:049",
+      "source_id": "tecnico_do_seguro_social:49",
+      "question_type": "true_false",
+      "statement_markdown": "Entre os servidores de certa repartição do INSS, sabe-se que 65% gostam de trabalhar com atendimento ao público e, desses, 30% gostam também de trabalhos administrativos.\n\nCom base na situação hipotética descrita, julgue os itens subsequentes.\n\nSe todos os servidores da repartição gostam de pelo menos uma das modalidades de trabalho mencionadas, então mais de 30% deles gostam de trabalhos administrativos.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 49; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "f425eaaca1ed290f4ff810f3a6c40f3b70e214a0735b8e4a56f9fc928aaa4a7f",
+        "original_numeric_id": 49,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_seguro_social_049.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para resolver a questão, aplica-se a teoria dos conjuntos e a fórmula da união de dois conjuntos.\n\nDefinem-se os seguintes conjuntos:\n* P: servidores que gostam de atendimento ao público.\n* A: servidores que gostam de trabalhos administrativos.\n\nA partir dos dados do enunciado:\n1. P = 65%\n2. A interseção entre os que gostam de atendimento e de administração (P e A) é de 30% dos que gostam de atendimento:\n   P e A = 30% de 65% = 0,30 * 65% = 19,5%\n\nO item estabelece a condição de que todos os servidores gostam de pelo menos uma das modalidades. Isso significa que a união dos dois conjuntos representa a totalidade dos servidores (100%):\nP ou A = 100%\n\nUtilizando a fórmula da união de dois conjuntos:\nP ou A = P + A - (P e A)\n100% = 65% + A - 19,5%\n100% = 45,5% + A\nA = 100% - 45,5% = 54,5%\n\nComo 54,5% é maior do que 30%, a afirmação de que mais de 30% dos servidores gostam de trabalhos administrativos está correta.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_seguro_social_049.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "11a5a06e8dad18b18a815cba7197b240b9992f60b173db2d20afe55c55a04fef"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:050",
+      "source_id": "tecnico_do_seguro_social:50",
+      "question_type": "true_false",
+      "statement_markdown": "Entre os servidores de certa repartição do INSS, sabe-se que 65% gostam de trabalhar com atendimento ao público e, desses, 30% gostam também de trabalhos administrativos.\n\nCom base na situação hipotética descrita, julgue os itens subsequentes.\n\nEntre todos os servidores da repartição, mais de 20% gostam das duas modalidades de trabalho mencionadas.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 50; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "8375491c4ae93174e854c02d29f6c93737bdff987013641dfacb19585cfbd38e",
+        "original_numeric_id": 50,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_seguro_social_050.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão requer o cálculo da porcentagem de servidores que pertencem simultaneamente aos dois grupos mencionados (atendimento ao público e trabalhos administrativos), ou seja, a interseção entre os conjuntos.\n\nDe acordo com o enunciado:\n* 65% dos servidores gostam de trabalhar com atendimento ao público.\n* Desse grupo de 65%, uma parcela de 30% também gosta de trabalhos administrativos.\n\nPara encontrar a porcentagem do total de servidores que gostam de ambas as modalidades, calcula-se 30% sobre os 65%:\nInterseção = 30% de 65% = 0,30 * 65% = 19,5%\n\nComo 19,5% é menor do que 20%, a afirmação de que \"mais de 20%\" gostam das duas modalidades está incorreta.\n\n**Dica de prova:** Atenção ao termo \"desses\", que indica que a porcentagem subsequente (30%) deve ser aplicada sobre o subgrupo já estabelecido (65%), e não sobre o total geral de 100%.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_seguro_social_050.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "fa2fe03eba1fc3a1d98d841655aba46bd7df15092b6d100075a89cc1dce46822"
+    }
+  ]
+}

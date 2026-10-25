@@ -1,0 +1,98 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-prova_i09_tipo_001-portugues-a982f4494dbd-285def22a366",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "a982f4494dbd8fdcc08145b0cd7cc5e69fde7d55576367496231af964df648ff",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "0b163a9271f0d9d81933ba55370885fc8591ac83624df1b1bb86251a689ef012",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "285def22a36611415d675a9449e494b6bb8fc99ad1e91975406315870fc16ef7",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:003",
+      "source_id": "prova_i09_tipo_001:3",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Atenção: As questões de números 1 a 4 referem-se ao texto abaixo.\n\nRio Grande do Norte: a esquina do continente\n\nOs portugueses tentaram iniciar a colonização em 1535, mas os índios potiguares resistiram e os franceses invadiram. A ocupação portuguesa só se efetivou no final do século, com a fundação do Forte dos Reis Magos e da Vila de Natal. O clima pouco favorável ao cultivo da cana levou a atividade econômica para a pecuária. O Estado tornou-se centro de criação de gado para abastecer os Estados vizinhos e começou a ganhar importância a extração do sal – hoje, o Rio Grande do Norte responde por 95% de todo o sal extraído no país. O petróleo é outra fonte de recursos: é o maior produtor nacional de petróleo em terra e o segundo no mar. Os 410 quilômetros de praias garantem um lugar especial para o turismo na economia estadual.\n\nO litoral oriental compõe o Polo Costa das Dunas − com belas praias, falésias, dunas e o maior cajueiro do mundo –, do qual faz parte a capital, Natal. O Polo Costa Branca, no oeste do Estado, é caracterizado pelo contraste: de um lado, a caatinga; do outro, o mar, com dunas, falésias e quilômetros de praias praticamente desertas. A região é grande produtora de sal, petróleo e frutas; abriga sítios arqueológicos e até um vulcão extinto, o Pico do Cabugi, em Angicos. Mossoró é a segunda cidade mais importante. Além da rica história, é conhecida por suas águas termais, pelo artesanato reunido no mercado São João e pelas salinas.\n\nCaicó, Currais Novos e Açari compõem o chamado Polo do Seridó, dominado pela caatinga e com sítios arqueológicos importantes, serras majestosas e cavernas misteriosas. Em Caicó há vários açudes e formações rochosas naturais que desafiam a imaginação do homem. O turismo de aventura encontra seu espaço no Polo Serrano, cujo clima ameno e geografia formada por montanhas e grutas atraem os adeptos do ecoturismo.\n\nOutro polo atraente é Agreste/Trairi, com sua sucessão de serras, rochas e lajedos nos 13 municípios que compõem a região. Em Santa Cruz, a subida ao Monte Carmelo desvenda toda a beleza do sertão potiguar – em breve, o local vai abrigar um complexo voltado principalmente para o turismo religioso. A vaquejada e o Arraiá do Lampião são as grandes atrações de Tangará, que oferece ainda um belíssimo panorama no Açude do Trairi.\n\n(Nordeste. 30/10/2010, Encarte no jornal O Estado de S. Paulo).\n\nO clima pouco favorável ao cultivo da cana levou a atividade econômica para a pecuária. (1º parágrafo)\n\nO mesmo tipo de regência nominal que se observa acima ocorre no segmento também grifado em:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 3; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O litoral oriental compõe o Polo Costa das Dunas − com belas praias, falésias, dunas e o maior cajueiro do mundo...",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Os 410 quilômetros de praias garantem um lugar especial para o turismo na economia estadual.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "A ocupação portuguesa só se efetivou no final do século, com a fundação do Forte dos Reis Magos e da Vila de Natal.",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "Em Caicó há vários açudes e formações rochosas naturais que desafiam a imaginação do homem.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Em Santa Cruz, a subida ao Monte Carmelo desvenda toda a beleza do sertão potiguar ...",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "ced2962d956f3cd743bd652e0cf38bfd26359fa0483f89c1a4f24796a5764b4c",
+        "original_numeric_id": 3,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nA regência nominal estuda a relação de dependência sintática entre um nome (substantivo, adjetivo ou advérbio) e o seu respectivo complemento nominal, regido por uma preposição específica.\n\nNo enunciado de referência, o termo exige complemento introduzido pela mesma preposição que se repete no segmento destacado na alternativa **C**.\n\nAs demais alternativas empregam nomes que exigem preposições diferentes (como *de*, *por*, *em*), configurando regências nominais distintas daquela observada no excerto-base.",
+        "source_reference": null
+      },
+      "source_content_hash": "04b0346b4ec930e003e4a8d24913e7a749de8200b478dbaf7f0ac3e8ed1b0340"
+    }
+  ]
+}

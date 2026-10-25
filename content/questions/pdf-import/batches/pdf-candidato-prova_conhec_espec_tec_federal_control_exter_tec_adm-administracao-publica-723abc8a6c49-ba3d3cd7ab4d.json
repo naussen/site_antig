@@ -1,0 +1,185 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-prova_conhec_espec_tec_federal_control_exter_tec_adm-administracao-publica-723abc8a6c49-ba3d3cd7ab4d",
+  "source": {
+    "file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "723abc8a6c49e5bacf9c6f647589846657fe97c3042bf9fe1f72a8c107208bea",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "e510beb0fb16eeed76a4bec98e0987a4a54d96f0ac951207a670c138e3097e90",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ba3d3cd7ab4d5ea0e16042d21b3e9dce6a65fd4c87a1075f683b7c2908595731",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-publica",
+    "name": "Administração Pública"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:097",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:97",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca das tendências na gestão de pessoas e na gestão de desempenho, julgue os itens subsequentes.\n\nOs indivíduos com elevada autoeficácia prescindem da participação em programas de treinamento e desenvolvimento.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 97; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "846b48fad850c77cb6d441b9d6c082196527aa1acb138ba7e38ca5a20e1013cc",
+        "original_numeric_id": 97,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "official_item_number": 97
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está **errada**.\n\nO erro da questão reside no uso do verbo **prescindir**, que significa \"dispensar\" ou \"não precisar\".\n\nA **autoeficácia** é a crença que um indivíduo possui em sua própria capacidade de desempenhar com sucesso uma tarefa específica. Embora pessoas com alta autoeficácia tendam a ser mais motivadas, persistentes e confiantes diante de desafios, elas **não dispensam** (não prescindem de) programas de treinamento e desenvolvimento (T&D).\n\nO treinamento e o desenvolvimento são indispensáveis para qualquer colaborador, independentemente de seu nível de autoeficácia, pois as organizações operam em ambientes dinâmicos que exigem constante atualização de conhecimentos técnicos, novas ferramentas de trabalho, alinhamento cultural e desenvolvimento de novas competências.",
+        "source_reference": null
+      },
+      "source_content_hash": "bdeb6150564d09b2523e63973c041428faeca8862b3bc5c8b82022bd52f02f86"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:098",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:98",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca das tendências na gestão de pessoas e na gestão de desempenho, julgue os itens subsequentes.\n\nOs testes de simulação de desempenho vêm se tornando cada vez mais populares, por demandarem pouquíssima elaboração para serem aplicados e por focarem diversos requisitos além daqueles relacionados ao trabalho.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 98; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "b228e5ef17d0c69d3499e03a58dd0fe0410aa5573b484f3a18a228345ca9da6d",
+        "original_numeric_id": 98,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "official_item_number": 98
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está **errada** por apresentar duas informações incorretas sobre os testes de simulação de desempenho:\n\n1.  **\"Demandarem pouquíssima elaboração\":** Pelo contrário, os testes de simulação (como amostras de trabalho e centros de avaliação/*assessment centers*) exigem alto esforço de planejamento, elaboração de cenários fidedignos, treinamento de avaliadores e custos elevados de aplicação.\n2.  **\"Focarem diversos requisitos além daqueles relacionados ao trabalho\":** O objetivo central da simulação é justamente o oposto. Esses testes buscam focar de maneira estrita e direta nos comportamentos e requisitos indispensáveis para a execução das tarefas do cargo em questão, garantindo alta validade de conteúdo e minimizando a avaliação de aspectos irrelevantes para a função.",
+        "source_reference": null
+      },
+      "source_content_hash": "059b35d0e3b743b7ca2fcf3d31dc23f3419e3d5732ccc3ebedbf791a9880caf7"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:099",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:99",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca das tendências na gestão de pessoas e na gestão de desempenho, julgue os itens subsequentes.\n\nA capacidade de influenciar o comportamento dos indivíduos é a ideia central que sustenta um programa de avaliação de desempenho.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 99; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Pessoas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Gestão de Pessoas",
+        "source_content_hash": "62d2ba7d5b276a2bb4771c484dc2d597618b27c6b219c317a041c385f0de9900",
+        "original_numeric_id": 99,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "official_item_number": 99
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-pessoas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está **correta**.\n\nA avaliação de desempenho não é um fim em si mesma, nem um mero instrumento burocrático de mensuração passiva. A sua ideia central e razão de ser é atuar como um mecanismo de retroalimentação (feedback) capaz de **influenciar, moldar e direcionar o comportamento** dos colaboradores.\n\nAo identificar pontos fortes e oportunidades de melhoria, o programa busca motivar o indivíduo, corrigir desvios de conduta ou de execução e alinhar o comportamento individual aos objetivos estratégicos e padrões de excelência esperados pela organização.",
+        "source_reference": null
+      },
+      "source_content_hash": "49641277241d52a26923cc0631568689404e16fcec014032e3dd73a34a0edba7"
+    }
+  ]
+}

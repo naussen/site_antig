@@ -1,0 +1,369 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-dpf14_009_01-portugues-fc85fdc9d1f4-8159f53a049c",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "fc85fdc9d1f45a7a9beaed6c728368f3364cad59fba26e5bca2aa08fbac5e46f",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "7c65334d658e76f507a006465e38351432ef043be4c6cf520c4cf664a9007aba",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "8159f53a049c3952790e4e8eaf0a87ab02a059302111eb28a9e9f3779f6b0bf7",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:001",
+      "source_id": "dpf14_009_01:1",
+      "question_type": "true_false",
+      "statement_markdown": "Acho que, se eu não fosse tão covarde, o mundo seria um lugar melhor. Não que a melhora do mundo dependa de uma só pessoa, mas, se o medo não fosse constante, as pessoas se uniriam mais e incendiariam de entusiasmo a humanidade. Mas o que vejo no espelho é um homem abatido diante das atrocidades que afetam os menos favorecidos.\nSe tivesse coragem, não aceitaria crianças passarem fome, frio e abandono. Elas nos assustam com armas nos semáforos, pedem esmolas, são amontoadas em escolas que não ensinam, e, por mais que chorem, somos imunes a essas lágrimas.\nSou um covarde diante da violência contra a mulher, do homem contra o homem. E porque os índios estão tão longe da minha aldeia e suas flechas não atingem meus olhos nem o coração, não me importa que tirem suas terras, sua alma. Analfabeto de solidariedade, não sei ler sinais de fumaça. Se tivesse um nome indígena, seria “cachorro medroso”. Se fosse o tal ser humano forte que alardeio, não aceitaria famílias sem terem onde morar.\nSérgio Vaz. Antes que seja tarde. In: Caros Amigos, mai./2013, p. 8 (com adaptações).\nCom base na leitura do texto, julgue os itens seguintes.\n\nA supressão das vírgulas que isolam a oração “se o medo não fosse constante” (l.3) não afetaria a correção gramatical do texto.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 1; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "a201cb7dad82ef891fe85e526608e80cd13dbd72d2a1084601b5985b11f1b7c1",
+        "original_numeric_id": 1,
+        "original_source_content_hash": "80a286cc4a8a44b212779bfffdbda430011b782602ffab70c249bb0792faa9e0",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNo período: *\"Não que a melhora do mundo dependa de uma só pessoa, mas, **se o medo não fosse constante**, as pessoas se uniriam mais...\"*.\n\nA oração *\"se o medo não fosse constante\"* é uma oração subordinada adverbial condicional intercalada entre a conjunção adversativa *\"mas\"* e a oração principal *\"as pessoas se uniriam mais\"*.\n\nO isolamento por vírgulas é obrigatório em razão de seu deslocamento intercalado. A eliminação pura e simples das vírgulas prejudicaria gravemente a pontuação canônica e a correção gramatical do período.",
+        "source_reference": null
+      },
+      "source_content_hash": "055c68f1e3e2635276e742aef1017916b970a1c7b7e333406d94889c606f5c4f"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:002",
+      "source_id": "dpf14_009_01:2",
+      "question_type": "true_false",
+      "statement_markdown": "Acho que, se eu não fosse tão covarde, o mundo seria um lugar melhor. Não que a melhora do mundo dependa de uma só pessoa, mas, se o medo não fosse constante, as pessoas se uniriam mais e incendiariam de entusiasmo a humanidade. Mas o que vejo no espelho é um homem abatido diante das atrocidades que afetam os menos favorecidos.\nSe tivesse coragem, não aceitaria crianças passarem fome, frio e abandono. Elas nos assustam com armas nos semáforos, pedem esmolas, são amontoadas em escolas que não ensinam, e, por mais que chorem, somos imunes a essas lágrimas.\nSou um covarde diante da violência contra a mulher, do homem contra o homem. E porque os índios estão tão longe da minha aldeia e suas flechas não atingem meus olhos nem o coração, não me importa que tirem suas terras, sua alma. Analfabeto de solidariedade, não sei ler sinais de fumaça. Se tivesse um nome indígena, seria “cachorro medroso”. Se fosse o tal ser humano forte que alardeio, não aceitaria famílias sem terem onde morar.\nSérgio Vaz. Antes que seja tarde. In: Caros Amigos, mai./2013, p. 8 (com adaptações).\nCom base na leitura do texto, julgue os itens seguintes.\n\nA coerência e a coesão do texto não seriam prejudicadas se o trecho “se o medo não fosse constante, as pessoas (...) a humanidade.” (l.3-4) fosse reescrito da seguinte forma: se o medo não for constante, as pessoas se unirão mais e incendiarão de entusiasmo a humanidade.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 2; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "3cf7dc8c3183a801afea9ead83c348c618485cc6247835ab2859351470c8dd2a",
+        "original_numeric_id": 2,
+        "original_source_content_hash": "a99820c13f509e94eee90d509d8e88871c378f1e49ad3f999c6f31636e9aba29",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNo trecho original: *\"se o medo não fosse constante, as pessoas se uniriam mais e incendiariam de entusiasmo a humanidade\"* (correlação hipotética entre o pretérito imperfeito do subjuntivo *fosse* e o futuro do pretérito do indicativo *uniriam / incendiariam*).\n\nA reescrita proposta estabelece correlação no plano do provável/factual com verbos no presente do subjuntivo e futuro do presente do indicativo: *\"se o medo não **for** constante, as pessoas se **unirão** mais e **incendiarão** de entusiasmo a humanidade\"*.\n\nEssa correlação modo-temporal é plenamente aceita e legítima na gramática normativa, mantendo a coesão frasal e a coerência lógica das ideias.",
+        "source_reference": null
+      },
+      "source_content_hash": "8985e996073b4b6e578d41b017b8f79ea2d703d11d4539923ed2d39d2a6acb15"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:003",
+      "source_id": "dpf14_009_01:3",
+      "question_type": "true_false",
+      "statement_markdown": "> [!NOTE] **Gabarito Alterado pela Banca Examinadora**\n> O gabarito preliminar desta questão foi alterado pela banca examinadora no gabarito oficial definitivo (de **Certo** para **Errado**). O comentário explicativo fundamenta a decisão final da banca.\n\nAcho que, se eu não fosse tão covarde, o mundo seria um lugar melhor. Não que a melhora do mundo dependa de uma só pessoa, mas, se o medo não fosse constante, as pessoas se uniriam mais e incendiariam de entusiasmo a humanidade. Mas o que vejo no espelho é um homem abatido diante das atrocidades que afetam os menos favorecidos.\nSe tivesse coragem, não aceitaria crianças passarem fome, frio e abandono. Elas nos assustam com armas nos semáforos, pedem esmolas, são amontoadas em escolas que não ensinam, e, por mais que chorem, somos imunes a essas lágrimas.\nSou um covarde diante da violência contra a mulher, do homem contra o homem. E porque os índios estão tão longe da minha aldeia e suas flechas não atingem meus olhos nem o coração, não me importa que tirem suas terras, sua alma. Analfabeto de solidariedade, não sei ler sinais de fumaça. Se tivesse um nome indígena, seria “cachorro medroso”. Se fosse o tal ser humano forte que alardeio, não aceitaria famílias sem terem onde morar.\nSérgio Vaz. Antes que seja tarde. In: Caros Amigos, mai./2013, p. 8 (com adaptações).\nCom base na leitura do texto, julgue os itens seguintes.\n\nO verbo alardear, em “Se fosse o tal ser humano forte que alardeio” (l.16-17), está empregado no sentido de vangloriar-se, gabar-se.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 3; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "72eeaede38bf96799caa1ef627e149baf1ad84fa3ee8d4fd10152e8dce7fdedb",
+        "original_numeric_id": 3,
+        "original_source_content_hash": "63e6d3f8cbacad3ef192743ad3748b1c180dde98d8d87ca8a09d0fa7cab7627f",
+        "answer_status": "definitivo_alterado",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null,
+        "gabarito_alterado_pela_banca": true,
+        "visual_caveat_applied": true,
+        "original_preliminary_answer": "C",
+        "definitive_answer": "E"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado** (gabarito definitivo alterado pela banca Cebraspe de Certo para Errado).\n\nNo trecho: *\"Se fosse o tal ser humano forte que alardeio, não aceitaria famílias sem terem onde morar\"*.\n\nO verbo **alardear** é empregado como verbo transitivo direto com o significado de **proclamar publicamente**, **divulgar com ênfase**, **ostentar perante os outros** (o narrador apregoa ser um ser humano forte, mas no íntimo se sente fraco/covarde).\n\nOs verbos *vangloriar-se* e *gabar-se* possuem natureza tipicamente pronominal e conotação de jactância/arrogância reflexiva. A banca Cebraspe retificou o gabarito oficial para **Errado** em razão da inadequação semântica e sintática estrita da equiparação proposta.",
+        "source_reference": null
+      },
+      "source_content_hash": "aedb70b38347d5105f4c6087884ef1272d651bf7b285dee2096834c9dfa10fdc"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:005",
+      "source_id": "dpf14_009_01:5",
+      "question_type": "true_false",
+      "statement_markdown": "Embora não tivessem ficado claras as fontes geradoras de quebras da paz urbana, o fenômeno social marcado pelos movimentos populares que tomaram as ruas das grandes cidades brasileiras, em 2013, parecia tendente a se agravar.\nAs vítimas das agressões pessoais viram desprotegidas a paz e a segurança, direitos sagrados da cidadania. Todos foram prejudicados.\nPôde-se constatar que, em outras partes do mundo, fenômenos sociais semelhantes também ocorreram. Lá como cá, diferentes tipos de ação atingiram todo o grupo social, gerando vítimas e danos materiais. Nem sempre a intervenção das forças do Estado foi suficiente para evitar prejuízos.\nDo ponto de vista global, notou-se que a quebra da ordem foi provocada em situações diversas e ora tornou mais graves as distorções do direito, ora espalhou a insegurança coletivamente. Em qualquer das hipóteses, a população dos vários locais atingidos viu-se envolvida em perdas crescentes.\nInternet: <www1.folha.uol.com.br> (com adaptações).\nConsiderando as ideias e as estruturas linguísticas do texto, julgue os itens de 5 a 10.\n\nDepreende-se das ideias do primeiro parágrafo do texto que a identificação da origem do fenômeno social representado pelos movimentos sociais ocorridos em 2013 seria suficiente para evitar que eles se agravassem.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 5; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "7d1174db3d1714af1e0a1d439b28f93ad6595918dd65f06a0a217e76b6092cb3",
+        "original_numeric_id": 5,
+        "original_source_content_hash": "bb65296bce1829fa2fca7c6a8c29987433b9970439dc61e4e778b3a67a3714fb",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nO primeiro parágrafo do texto afirma:\n*\"Embora não tivessem ficado claras as fontes geradoras de quebras da paz urbana, o fenômeno social marcado pelos movimentos populares que tomaram as ruas das grandes cidades brasileiras, em 2013, parecia tendente a se agravar.\"*.\n\nO texto limita-se a constatar que as origens do fenômeno não estavam nítidas e que as manifestações pareciam se intensificar. Em nenhum momento o autor afirma ou autoriza concluir que a mera identificação da origem dos protestos seria *suficiente* para estancar ou evitar o seu agravamento.",
+        "source_reference": null
+      },
+      "source_content_hash": "be76f90af99e8ba5353e1bcc7e6fe3d58d24f2afd64683f5e51db9d32813b287"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:011",
+      "source_id": "dpf14_009_01:11",
+      "question_type": "true_false",
+      "statement_markdown": "À luz das orientações constantes no Manual de Redação da Presidência da República, julgue os itens a seguir.\n\nA obrigatoriedade do uso do padrão culto da língua e o requisito de impessoalidade são incompatíveis com o emprego da linguagem técnica nas comunicações oficiais.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 11; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "44ef772b66b03c7f62143f898c753f92c60857f7302148f428940512c401e368",
+        "original_numeric_id": 11,
+        "original_source_content_hash": "04c4f54d50eafda4972b8b36b87ef9ad5fb06524c0c0cf7d530c9c14cd712d28",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nDe acordo com o Manual de Redação da Presidência da República (MRPR), o uso do padrão culto da língua e o atributo da impessoalidade aplicam-se **obrigatoriamente a todas as comunicações oficiais**, sem exceção.\n\nO envio de mensagens por correio eletrônico institucional não autoriza o abandono da norma-padrão nem da impessoalidade. A agilidade do meio eletrônico não flexibiliza o dever de formalidade, precisão vocabular e decoro inerentes aos atos do Poder Público.",
+        "source_reference": null
+      },
+      "source_content_hash": "217ec0fcc74e98aad6b0bc0805c728861a4d4ecdf6b58b10ef60bed93c514879"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:013",
+      "source_id": "dpf14_009_01:13",
+      "question_type": "true_false",
+      "statement_markdown": "À luz das orientações constantes no Manual de Redação da Presidência da República, julgue os itens a seguir.\n\nA concisão, que consiste no respeito ao princípio da economia linguística, é uma característica fundamental em telegramas, modalidade dispendiosa de comunicação.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 13; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "fde877a72412052a3049ebed534933de844f7669d43ad28cf0687ac2142be38c",
+        "original_numeric_id": 13,
+        "original_source_content_hash": "aab7f80d50948295a6e328d422bbaacc37daea23dd07ac4bfb4999937c869276",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nO Manual de Redação da Presidência da República destaca a **concisão** como qualidade textual fundamental do ato administrativo, consistindo em transmitir o máximo de informações úteis com o mínimo indispensável de palavras (economia linguística).\n\nEssa concisão atinge sua máxima exigência nos telegramas governamentais, modalidade formal de tarifação por palavras e de custo financeiro significativo para os cofres públicos, onde a eliminação de redundâncias é imperativa.",
+        "source_reference": null
+      },
+      "source_content_hash": "edfa94d5f157d61347b4a3a380ef669f88ac275b6e3fd5480e0cc8b95b134e7f"
+    }
+  ]
+}

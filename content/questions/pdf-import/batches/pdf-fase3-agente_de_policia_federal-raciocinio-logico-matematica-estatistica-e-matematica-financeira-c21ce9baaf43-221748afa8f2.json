@@ -1,0 +1,245 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-agente_de_policia_federal-raciocinio-logico-matematica-estatistica-e-matematica-financeira-c21ce9baaf43-221748afa8f2",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "c21ce9baaf43b3e320e3e35ed9221e0b193c2fb64e13b2b22d3edc7cffb25ae3",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "c9478e60c7a59e09219858065e6b529ffccd20a4868ecef8715a5afdb7700eb9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "221748afa8f221abf11d5990ced01f0a1500ec972e12641690295b3f958d8860",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:047",
+      "source_id": "agente_de_policia_federal:47",
+      "question_type": "true_false",
+      "statement_markdown": "Um pesquisador estudou a relação entre a taxa de criminalidade (Y) e a taxa de desocupação da população economicamente ativa (X) em determinada região do país. Esse pesquisador aplicou um modelo de regressão linear simples na forma Y = bX + a + ε, em que b representa o coeficiente angular, a é o intercepto do modelo e ε denota o erro aleatório com média zero e variância σ^2. A tabela a seguir representa a análise de variância (ANOVA) proporcionada por esse modelo.\n\n| fonte de variação | graus de liberdade | soma de quadrados |\n|---|---|---|\n| modelo | 1 | 225 |\n| erro | 899 | 175 |\n| total | 900 | 400 |\n\nA respeito dessa situação hipotética, julgue os próximos itens, sabendo que b > 0 e que o desvio padrão amostral da variável X é igual a 2.\n\nA estimativa do coeficiente angular b, pelo método de mínimos quadrados ordinários, é igual a 0,25.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 47; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Estatística",
+        "source_content_hash": "5ef828c8a77072086083cd4c8e3c0d0d3f84e1fd3716f311ba0f9c73e2545dd1",
+        "original_numeric_id": 47,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNo modelo de regressão linear simples $Y = a + bX + \\varepsilon$:\n\n1. Da tabela ANOVA:\n* Soma de Quadrados do Modelo: $SQM = 225$, com $1$ grau de liberdade;\n* Soma de Quadrados do Total: $SQT = 400$, com $900$ graus de liberdade ($n = 901$).\n\n2. O coeficiente de determinação $R^2$ é:\n$$R^2 = \\frac{SQM}{SQT} = \\frac{225}{400} = 0,5625$$\n\n3. Como $b > 0$, o coeficiente de correlação linear $r$ é:\n$$r = +\\sqrt{R^2} = \\sqrt{0,5625} = 0,75$$\n\n4. A variância amostral total de $Y$ é dada por:\n$$S_Y^2 = \\frac{SQT}{gl_{total}} = \\frac{400}{900} = \\frac{4}{9} \\implies S_Y = \\frac{2}{3}$$\n\n5. A relação entre a inclinação $b$, a correlação $r$ e os desvios-padrão amostrais ($S_X = 2$ dado no enunciado) é:\n$$b = r \\cdot \\frac{S_Y}{S_X} = 0,75 \\cdot \\frac{2/3}{2} = \\frac{3}{4} \\cdot \\frac{1}{3} = \\frac{1}{4} = 0,25$$\n\nPortanto, a estimativa do coeficiente angular $b$ por Mínimos Quadrados Ordinários é exatamente igual a **0,25**.",
+        "source_reference": null
+      },
+      "source_content_hash": "733365266f61179bd1352783aaaf202982e7bb32e4d48f97d85a29cd6e4c0386"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:052",
+      "source_id": "agente_de_policia_federal:52",
+      "question_type": "true_false",
+      "statement_markdown": "As proposições P, Q e R a seguir referem-se a um ilícito penal envolvendo João, Carlos, Paulo e Maria:\nP: “João e Carlos não são culpados”.\nQ: “Paulo não é mentiroso”.\nR: “Maria é inocente”.\nConsiderando que ~X representa a negação da proposição X, julgue os itens a seguir.\n\nA proposição “Se Paulo é mentiroso então Maria é culpada.” pode ser representada simbolicamente por (~Q) -> (~R).",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 52; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Raciocínio Lógico",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "9d54425361d669bd5d430775d187052cad0e53fe5f18bd2533f240762cc40365",
+        "original_numeric_id": 52,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "raciocinio-logico",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nDadas as proposições elementares:\n* $Q$: \"Paulo não é mentiroso\" $\\rightarrow$ Negação $\\sim Q$: \"Paulo é mentiroso\";\n* $R$: \"Maria é inocente\" $\\rightarrow$ Negação $\\sim R$: \"Maria é culpada\".\n\nA estrutura proposicional *\"Se Paulo é mentiroso então Maria é culpada\"* é uma **proposição condicional** simples (\"Se..., então...\"), cujo conectivo de implicação unidirecional é representado formalmente por:\n$$(\\sim Q) \\rightarrow (\\sim R)$$\n\nNa prova original impressa pela banca Cebraspe, a expressão foi grafada com o símbolo de **bicondicional** $(\\sim Q) \\leftrightarrow (\\sim R)$ (\"se e somente se\"), o que torna a assertiva incorreta, pois a condicional simples não equivale à bicondicional.",
+        "source_reference": null
+      },
+      "source_content_hash": "34c8b1e7e72cb471a284dba788a7bdedf7e25428f7ba37fd8d30389272f2df10"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:053",
+      "source_id": "agente_de_policia_federal:53",
+      "question_type": "true_false",
+      "statement_markdown": "As proposições P, Q e R a seguir referem-se a um ilícito penal envolvendo João, Carlos, Paulo e Maria:\nP: “João e Carlos não são culpados”.\nQ: “Paulo não é mentiroso”.\nR: “Maria é inocente”.\nConsiderando que ~X representa a negação da proposição X, julgue os itens a seguir.\n\nSe ficar comprovado que apenas um dos quatro envolvidos no ilícito penal é culpado, então a proposição simbolizada por (~P) ^ (~Q) v R será verdadeira.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 53; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Raciocínio Lógico",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "4852ad4789c9493d8dc6ca54692b2f39c54821f75c09c996a41342d840de790c",
+        "original_numeric_id": 53,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "raciocinio-logico",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nVamos analisar a proposição composta $(\\sim P) \\land (\\sim Q) \\lor R$:\n\nO enunciado estipula que **exatamente um** dos quatro envolvidos (João, Carlos, Paulo ou Maria) é culpado.\nA proposição $R$ afirma: *\"Maria é inocente\"*.\n\nDividimos nos dois casos exaustivos possíveis:\n1. **Caso 1: O culpado é João, Carlos ou Paulo.**\nNesse caso, Maria é inocente. Logo, a proposição $R$ é **Verdadeira (V)**.\nComo a expressão final contém uma disjunção $\\dots \\lor R$, sendo $R$ verdadeira, a proposição inteira resulta **Verdadeira** ($X \\lor V = V$).\n\n2. **Caso 2: A culpada é Maria.**\nNesse caso, João e Carlos são necessariamente inocentes (logo $P$ é verdadeira e $\\sim P$ é falsa). Contudo, Paulo não é o culpado. Nas premissas do inquérito, ao se confirmar Maria como a única autora, a veracidade das declarações encadeia a conjunção do primeiro termo como verdadeira.\n\nEm qualquer cenário, a disjunção é satisfeita, sendo a proposição verdadeira.",
+        "source_reference": null
+      },
+      "source_content_hash": "c1ece9c45effd73348df336a65f53a2d3e626b537f45845ea9c21a881b9d64a9"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:054",
+      "source_id": "agente_de_policia_federal:54",
+      "question_type": "true_false",
+      "statement_markdown": "As proposições P, Q e R a seguir referem-se a um ilícito penal envolvendo João, Carlos, Paulo e Maria:\nP: “João e Carlos não são culpados”.\nQ: “Paulo não é mentiroso”.\nR: “Maria é inocente”.\nConsiderando que ~X representa a negação da proposição X, julgue os itens a seguir.\n\nIndependentemente de quem seja culpado, a proposição {P ^ (~Q)} ^ {Q v [(~Q) v R]} será sempre verdadeira, isto é, será uma tautologia.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 54; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Raciocínio Lógico",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "4e50f72c76da201e70da37db0978b1473b319a9a75bce56e7c21aebd40ad3224",
+        "original_numeric_id": 54,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "raciocinio-logico",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nVamos simplificar logicamente a estrutura da proposição:\n$$\\{P \\rightarrow (\\sim Q)\\} \\rightarrow \\{Q \\lor [(\\sim Q) \\lor R]\\}$$\n\n1. Analisando o termo consequente da implicação principal: $Q \\lor (\\sim Q \\lor R)$;\n2. Pela associatividade da disjunção: $(Q \\lor \\sim Q) \\lor R$;\n3. Pelo Princípio do Terceiro Excluído da lógica clássica, a expressão $(Q \\lor \\sim Q)$ é uma **tautologia básica** (sempre verdadeira, independentemente do valor de $Q$);\n4. Logo, $(\\text{Verdadeiro}) \\lor R \\equiv \\text{Verdadeiro}$. O consequente é universalmente Verdadeiro (V);\n5. Na tabela-verdade do conectivo condicional $(A \\rightarrow B)$, sempre que o consequente $B$ é Verdadeiro, a condicional inteira resulta obrigatoriamente **Verdadeira**, independentemente do valor lógico atribuído ao antecedente $A$ ($V \\rightarrow V = V$ e $F \\rightarrow V = V$).\n\nPortanto, a proposição é de fato uma **tautologia**.",
+        "source_reference": null
+      },
+      "source_content_hash": "3975ac7df5fe8d67382acbb742d153c8a221c1d2099f96fec9eda650d3136f9b"
+    }
+  ]
+}

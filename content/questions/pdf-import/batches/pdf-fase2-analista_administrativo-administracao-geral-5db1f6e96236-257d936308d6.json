@@ -1,0 +1,587 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-analista_administrativo-administracao-geral-5db1f6e96236-257d936308d6",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "5db1f6e962369b1d7913fb92dbdb0da8daeda71ce6c9d495931ad2d14292df2c",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "0fc614916228bfa45383f0df7c8e33baaccace7bb05b812e4da6dc6bb1c76217",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "257d936308d67ed9fb2ccb9bcf7616cd0a320e5e827fef3109d5351f8cdefb4c",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-geral",
+    "name": "Administração Geral"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:052",
+      "source_id": "analista_administrativo:52",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de administração e processo administrativo, julgue os itens a seguir.\n\nNo modelo administrativo adotado pelo Brasil a partir de 1967, é prevista a descentralização das atividades da administração federal para a esfera privada.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 52; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "9584f15b53564783d2a7043a441e4aaa9115c026235aaff14f6704465ef49f6c",
+        "original_numeric_id": 52,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O modelo de reforma administrativa introduzido no Brasil pelo Decreto-Lei nº 200/1967 representou um marco na tentativa de superação da rigidez burocrática e na busca pela eficiência, estabelecendo princípios fundamentais como o planejamento, a coordenação, a descentralização, a delegação de competência e o controle.\n\nO princípio da descentralização, consagrado no art. 10 do referido diploma legal, prevê expressamente que a execução das atividades da Administração Federal deve ser amplamente descentralizada. O § 1º do mesmo artigo detalha que essa descentralização será posta em prática em três planos principais, incluindo, na alínea \"c\", a transferência de atividades \"da Administração Federal para a órbita privada, mediante contratos ou concessões\".\n\nPortanto, a afirmativa está correta ao apontar que o modelo administrativo adotado a partir de 1967 prevê a descentralização de atividades para a esfera privada.\n\n### Dispositivo legal\n\n* **Decreto-Lei nº 200/1967**, Art. 10, § 1º, alínea \"c\" (disponível em: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm)).",
+        "source_reference": null
+      },
+      "source_content_hash": "dd213fea1521204875474573ba3fd403b6165c75e4f7945563e24fc40c57164d"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:053",
+      "source_id": "analista_administrativo:53",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de administração e processo administrativo, julgue os itens a seguir.\n\nPara que seja eficaz, o processo administrativo deve ser assumido por cada gestor da instituição, de forma isolada.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 53; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão por Processos",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "30dce34fe4e20d2cd038dbe3b41f711edca1612e9d4d28861ed6f244febec8b7",
+        "original_numeric_id": 53,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-por-processos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O processo administrativo — composto pelas funções de planejar, organizar, dirigir e controlar — possui natureza sistêmica, interativa e integrada. A busca pela eficácia organizacional pressupõe a coordenação e a sinergia entre as diversas áreas e gestores da instituição. A atuação isolada de cada gestor contraria a visão sistêmica da administração, pois fragmenta as ações e prejudica o alinhamento com os objetivos globais da organização.",
+        "source_reference": null
+      },
+      "source_content_hash": "2aaf1a63eed3eb9b8137c7502a4cb34eab5fb9a132147fcc1b3b04473fb9cf78"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:055",
+      "source_id": "analista_administrativo:55",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de administração e processo administrativo, julgue os itens a seguir.\n\nA superespecialização é uma limitação comum na departamentalização funcional.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 55; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "256e7bd4248d7a67d7b50d5f8db7453548aa70e7cbe175ce2500799bfd01af78",
+        "original_numeric_id": 55,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A departamentalização funcional agrupa as atividades da organização com base na especialidade das tarefas (como finanças, marketing, recursos humanos). Embora essa estrutura otimize o uso de recursos especializados e promova a eficiência técnica, ela apresenta como limitação a superespecialização. Esse fenômeno tende a isolar os departamentos, gerando a chamada \"visão de túnel\", na qual os colaboradores priorizam as metas de sua própria área em detrimento dos objetivos globais da organização.",
+        "source_reference": null
+      },
+      "source_content_hash": "ce3b3e8b23044298e3d426adecc964397c44d1b4e8e8bf313ddf6b58078c2d00"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:056",
+      "source_id": "analista_administrativo:56",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de administração e processo administrativo, julgue os itens a seguir.\n\nA análise organizacional interna é uma das etapas do planejamento tático.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 56; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Planejamento",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "ad2101588b0c0e8eba3123524205e550a8e7f73920bd7ef42f4276965d18ce32",
+        "original_numeric_id": 56,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "planejamento",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A análise organizacional interna (identificação de forças e fraquezas) e a análise externa (mapeamento de oportunidades e ameaças) constituem o diagnóstico estratégico, que é uma etapa fundamental do **planejamento estratégico**. O planejamento tático, por sua vez, atua no nível intermediário da organização, desdobrando as diretrizes estratégicas em planos de médio prazo para áreas ou departamentos específicos, partindo das premissas já estabelecidas no nível estratégico.",
+        "source_reference": null
+      },
+      "source_content_hash": "b4f6968e1da2bf2858934b4c83aa24aa6fbbd2d4c37f2422ba43748719dd40af"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:058",
+      "source_id": "analista_administrativo:58",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, que se referem à administração geral.\n\nOs métodos ágeis na gestão de projetos referem-se à capacidade de responder às mudanças que ocorrem durante o desenvolvimento dos projetos.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 58; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Projetos",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "4ed27fd9868827dbd465d9774087a960b73ab1908ad300eabebb066d9ba6014c",
+        "original_numeric_id": 58,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-projetos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Os métodos ágeis de gestão de projetos baseiam-se em ciclos de desenvolvimento iterativos e incrementais. Um dos pilares fundamentais dessas metodologias, conforme expresso no Manifesto Ágil, é a valorização da \"resposta a mudanças mais do que seguir um plano\". Dessa forma, o foco principal reside na capacidade de adaptação rápida e contínua frente a novos requisitos, feedbacks ou imprevistos que surjam durante a execução do projeto.",
+        "source_reference": null
+      },
+      "source_content_hash": "beceb60012ad26122d5100a80995a388ff9b42ef51510d4bc3b2e1aad577523b"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:060",
+      "source_id": "analista_administrativo:60",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, que se referem à administração geral.\n\nA abordagem de Deming acerca da gestão da qualidade total é baseada no seguinte tripé: planejamento, controle e melhoria da qualidade.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 60; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão da Qualidade",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "74bee24085b872895c5027bc6915b71c722bd90a2cc579532bc9c1ea4a448d0b",
+        "original_numeric_id": 60,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-da-qualidade",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva atribui incorretamente a W. Edwards Deming a autoria do tripé da qualidade (planejamento, controle e melhoria).\n\nEsse conceito é tecnicamente denominado **Trilogia de Juran**, formulado por Joseph M. Juran. \n\nPara fins de diferenciação em provas:\n* **Joseph M. Juran:** Trilogia da Qualidade (Planejamento, Controle e Melhoria).\n* **W. Edwards Deming:** 14 Princípios da Qualidade e a disseminação do Ciclo PDCA (Plan-Do-Check-Act).",
+        "source_reference": null
+      },
+      "source_content_hash": "3ad6d485d97c86625ab909d10c5dedcd319363076ff36627b6a0aa8c2cdd9136"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:067",
+      "source_id": "analista_administrativo:67",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, quanto à reforma do aparelho do Estado, ao Estado regulador, aos conselhos de gestão, à transparência da administração pública e à gestão por competências.\n\nNa perspectiva da gestão por competências, as competências individuais devem ser definidas em observância aos diferentes níveis de funções ocupadas, e o desenvolvimento ou aprimoramento dessas competências possibilita que o empregado assuma atribuições mais complexas.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 67; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "03ceb7d6e78282ea812a0f89463d284ff320d8d876c6e18283a0010296736aac",
+        "original_numeric_id": 67,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Na gestão por competências, busca-se alinhar as competências individuais (conhecimentos, habilidades e atitudes) às necessidades estratégicas da organização.\n\nAs competências exigidas variam conforme o nível de complexidade e de responsabilidade das funções ocupadas na estrutura organizacional. À medida que o colaborador desenvolve e aprimora suas competências individuais, ele se torna capacitado a assumir atribuições de maior complexidade, viabilizando o crescimento profissional e a progressão na carreira.",
+        "source_reference": null
+      },
+      "source_content_hash": "3066a222a54dd625ecf9284866578f28635c2fc5e411be3d681ce6d160bdbcb1"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:068",
+      "source_id": "analista_administrativo:68",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, quanto à reforma do aparelho do Estado, ao Estado regulador, aos conselhos de gestão, à transparência da administração pública e à gestão por competências.\n\nO processo de desestatização faz que o Estado perca força na sua função de Estado regulador.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 68; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão por Processos",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "71dac94796001c2a06ce90bbaf1be44653a5ede298340e75b56fb054b0970925",
+        "original_numeric_id": 68,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-por-processos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O processo de desestatização, característico das reformas administrativas orientadas para o modelo gerencial (como a ocorrida no Brasil na década de 1990), não enfraquece a função reguladora do Estado. \n\nPelo contrário, ao transferir a execução de serviços públicos e atividades econômicas para a iniciativa privada (privatizações e concessões), o Estado deixa de ser o executor direto (\"Estado Produtor\") e passa a focar na regulação, normatização e fiscalização dessas atividades (\"Estado Regulador\"), o que exige o fortalecimento de agências reguladoras e de mecanismos de controle.",
+        "source_reference": null
+      },
+      "source_content_hash": "fc2de35ed692e15a9f0f59b3870dd8dc804e03f72522dc45b63c818815abbf76"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:073",
+      "source_id": "analista_administrativo:73",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à gestão de redes organizacionais, ao Sistema Integrado de Administração de Recursos Humanos (SIAPE), ao Sistema Integrado de Administração de Serviços Gerais (SIASG), à intermediação de interesses e a organizações da sociedade civil de interesse público (OSCIP), julgue os itens que se seguem.\n\nPara promover a divulgação eletrônica de compras, englobando o cadastramento dos processos de compras e contratações da administração pública, o SIASG possui um módulo específico, denominado Subsistema de Gestão de Contratos (SICON).",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 73; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão por Processos",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "f59afc9678858bf73bb562570f2a9033d24ba9f7ae0f212db0ff94e03e4fb884",
+        "original_numeric_id": 73,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-por-processos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O Sistema Integrado de Administração de Serviços Gerais (SIASG) é composto por diversos subsistemas com finalidades específicas:\n\n*   **SIDEC (Sistema de Divulgação Eletrônica de Compras):** É o módulo responsável por viabilizar a divulgação eletrônica das licitações, dispensas e inexigibilidades, além do cadastramento dos editais.\n*   **SICON (Subsistema de Gestão de Contratos):** Destina-se ao registro, acompanhamento e controle da execução dos contratos administrativos celebrados.\n\nPortanto, o enunciado erra ao atribuir ao SICON a função de divulgação eletrônica de compras.",
+        "source_reference": null
+      },
+      "source_content_hash": "edac1fbb10916593ada9793fda58210adf3e5812425b433daec7658d6c26c8a5"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:074",
+      "source_id": "analista_administrativo:74",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à gestão de redes organizacionais, ao Sistema Integrado de Administração de Recursos Humanos (SIAPE), ao Sistema Integrado de Administração de Serviços Gerais (SIASG), à intermediação de interesses e a organizações da sociedade civil de interesse público (OSCIP), julgue os itens que se seguem.\n\nUma fundação pública que possua a finalidade de promover assistência social em regiões de difícil acesso pode ser qualificada como OSCIP.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 74; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "f77a0f911ccbbb51ded4d3c9ddcce31fe67e657fc1f376304decabd57724f231",
+        "original_numeric_id": 74,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque as fundações públicas estão expressamente impedidas de obter a qualificação como Organização da Sociedade Civil de Interesse Público (OSCIP). \n\nA Lei nº 9.790/1999, em seu artigo 2º, inciso XI, veda essa qualificação às fundações públicas, independentemente de sua finalidade institucional (como a promoção de assistência social). Portanto, a natureza jurídica de fundação pública obsta a qualificação como OSCIP, que é reservada a pessoas jurídicas de direito privado sem fins lucrativos que atendam aos requisitos legais.\n\n**Dispositivo legal:**\nLei nº 9.790/1999, Art. 2º, XI.",
+        "source_reference": null
+      },
+      "source_content_hash": "e3d13172440d6bf90d304b7057c9113272dc542e239d60f70f547d7abaa59a5b"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:075",
+      "source_id": "analista_administrativo:75",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à gestão de redes organizacionais, ao Sistema Integrado de Administração de Recursos Humanos (SIAPE), ao Sistema Integrado de Administração de Serviços Gerais (SIASG), à intermediação de interesses e a organizações da sociedade civil de interesse público (OSCIP), julgue os itens que se seguem.\n\nA intermediação de interesses caracterizada pela coerção, ou seja, obrigações mútuas mediante consentimento individual e sem regulamentação formal, é típica do corporativismo.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 75; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração",
+        "source_content_hash": "45d44feba3865049980b88aa2dcbee49a61802f5f26bdb405538edf810bc5842",
+        "original_numeric_id": 75,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto ao associar o corporativismo a relações \"sem regulamentação formal\" e baseadas em \"consentimento individual\". \n\nO corporativismo, como modelo de intermediação de interesses, caracteriza-se justamente pela forte presença do Estado na organização, estruturação e regulamentação formal dos grupos de interesse, os quais possuem representação monopolista e institucionalizada. A ausência de regulamentação formal e a base em relações individuais ou informais são características que se aproximam de outros modelos de intermediação, como o clientelismo ou o pluralismo fragmentado, e não do corporativismo.",
+        "source_reference": null
+      },
+      "source_content_hash": "df7a680c6c53b02602607f56101cae4515a9b0d24527ced7812336fdd854f2e8"
+    }
+  ]
+}

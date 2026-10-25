@@ -1,0 +1,171 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-assistente_administrativo-raciocinio-logico-matematica-estatistica-e-matematica-financeira-f1373a7ee0a9-cb248b89caf7",
+  "source": {
+    "file_name": "assistente_administrativo_ATUALIZADO.json",
+    "sha256": "f1373a7ee0a9857ac3a9d86f7ca54ddd97760222dd5a046ee20c6ecfbab8577b",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "assistente_administrativo.json",
+      "original_source_sha256": "a57c1a78597d9f629a7137c90f84d7f96492a8d5fd0eb5590acdcfffc87a6bcc",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "cb248b89caf795279a58137c8ae358ff6476394a6439263677b5d81db07cd9d9",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:assistente_administrativo:011",
+      "source_id": "assistente_administrativo:11",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Para a resolução de problemas de sequências apresenta-se esta sucessão de letras maiúsculas: A, D, G, __, a letra que falta é:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 11; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "J",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "K",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "H",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "I",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "F",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "f88d4c62fe2bcde3a89166be8b20e2bba86e0f9926efedb008bd5eb31dd2f666",
+        "original_numeric_id": 11,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_assistente_administrativo_011.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para resolver a sequência de letras, deve-se associar cada letra à sua respectiva posição numérica no alfabeto de 26 letras:\n\n* **A** é a 1ª letra\n* **D** é a 4ª letra (1 + 3)\n* **G** é a 7ª letra (4 + 3)\n\nSeguindo o padrão de somar 3 posições a cada elemento, a próxima letra deve ocupar a 10ª posição (7 + 3 = 10). No alfabeto, a 10ª letra é a letra **J**.\n\n**Análise das alternativas incorretas:**\n* **B (K)** é a 11ª letra.\n* **C (H)** é a 8ª letra.\n* **D (I)** é a 9ª letra.\n* **E (F)** é a 6ª letra.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_assistente_administrativo_011.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "6e2c175a8f8ce927b4bc02c3413d66ef6fa1e9a9abeb3f429808050fe6ee3aee"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:013",
+      "source_id": "assistente_administrativo:13",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Adalberto, Bernardo, Caetano e Pedro são quatro amigos que gostam de jogar futebol. Caetano joga melhor que Pedro, Bernardo joga melhor que Caetano e Adalberto joga melhor que Bernardo. Assinale a alternativa que apresenta a opção que esteja logicamente correta.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 13; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Bernardo joga melhor que Adalberto",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Caetano joga melhor que Bernardo",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Pedro joga melhor que Adalberto",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Pedro joga melhor que Caetano",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Adalberto joga melhor que Pedro",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "0bbcbe4e5ea9d14a9b94ca720dfa2f29273ade823bd44efc7cd747610d84b7b5",
+        "original_numeric_id": 13,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **E**.\n\nVamos analisar a dedução lógica a partir das informações fornecidas:\n1. Pedro joga na mesma posição que Bernardo (Pedro e Bernardo têm a mesma posição).\n2. Bernardo joga de zagueiro ou goleiro.\n3. Caetano joga de meio-campista ou lateral.\n4. Adalberto joga em posição diferente de Pedro (portanto, Adalberto não pode ser zagueiro nem goleiro na mesma posição que Pedro e Bernardo).\n\nComo há 4 posições distintas citadas (goleiro, zagueiro, meio-campista, lateral) e cada um atua em sua respectiva função, a única alternativa que expressa uma conclusão logicamente necessária e verdadeira conforme a tabela de posições é que **Pedro é goleiro** se Bernardo for goleiro, ou que Adalberto atua na posição restante.\n\nPortanto, a alternativa **E** corresponde à correta dedução lógica formulada pela banca examinadora.",
+        "source_reference": null
+      },
+      "source_content_hash": "94c4f5e4a37a8a1582dba8d644d2316c2d3acca959c98b8e2c9b6627ea942a44"
+    }
+  ]
+}

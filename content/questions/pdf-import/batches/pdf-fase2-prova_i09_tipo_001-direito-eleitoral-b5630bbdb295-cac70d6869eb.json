@@ -1,0 +1,224 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-prova_i09_tipo_001-direito-eleitoral-b5630bbdb295-cac70d6869eb",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "b5630bbdb295671178518a6a56da47afa49d6b19ff3b0347fbe6974f5ac03394",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "8a1d40d330f3a1f0c9c5c49977037cbc600422d057f7b497ba1fcf422d8196bb",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "cac70d6869eb822a97acb80b1417ee1af647895f8c9fa4ba811393136f206fbd",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-eleitoral",
+    "name": "Direito Eleitoral"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:051",
+      "source_id": "prova_i09_tipo_001:51",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A zona eleitoral corresponde",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 51; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "à dimensão espacial dos Estados-membros ou à do Distrito Federal, em se tratando de eleições estaduais ou distritais.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "ao menor núcleo de organização da Justiça Eleitoral, contendo, cada uma, um número máximo de 400 (quatrocentos) eleitores.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "à competência definida em relação aos juízes eleitorais.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "à unidade previamente definida em lei complementar de iniciativa do Tribunal Superior Eleitoral.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "à uma organização que, na conformidade do artigo 36 do Código Eleitoral, compreende a figura de um Juiz de Direito, seu Presidente, e 2 (dois) a 4 (quatro) cidadãos de notória idoneidade, com a função de expedir os boletins de apuração.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização da Justiça Eleitoral (CF/88 e Código Eleitoral)",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Eleitoral",
+        "source_content_hash": "724292e9d7e4887ca7806036887933b2b3e6722e97720f66865f2293e492e622",
+        "original_numeric_id": 51,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao-da-justica-eleitoral-cf-88-e-codigo-eleitoral",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "### Justificativa\nA zona eleitoral é a divisão geográfica que delimita a jurisdição de cada Juiz Eleitoral (primeira instância da Justiça Eleitoral). Portanto, corresponde à competência territorial definida em relação aos juízes eleitorais.\n\n### Análise das alternativas\n- **A) Incorreta.** A dimensão espacial dos Estados-membros ou do Distrito Federal corresponde à **circunscrição eleitoral** (artigo 86 do Código Eleitoral), e não à zona eleitoral.\n- **B) Incorreta.** O menor núcleo de organização da Justiça Eleitoral é a **seção eleitoral** (local físico de votação onde funciona a mesa receptora de votos), e não a zona eleitoral.\n- **C) Correta.** A zona eleitoral delimita o espaço geográfico de atuação e a competência de cada juiz eleitoral, conforme o artigo 32 do Código Eleitoral.\n- **D) Incorreta.** A criação e a divisão de zonas eleitorais não são definidas por lei complementar, mas sim por ato administrativo do Tribunal Superior Eleitoral (TSE), nos termos do artigo 23, inciso VIII, do Código Eleitoral.\n- **E) Incorreta.** A organização composta por um Juiz de Direito (Presidente) e dois a quatro cidadãos de notória idoneidade corresponde à **Junta Eleitoral** (artigo 36 do Código Eleitoral).\n\n### Dispositivo legal\n- **Código Eleitoral (Lei nº 4.737/1965)**, artigos 23, inciso VIII, 32, 36 e 86.\n  - [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "2ed30d32c04843c8044f5d1c2a3c94e482a8da26c5371dd039602d9947bdbb15"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:054",
+      "source_id": "prova_i09_tipo_001:54",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O procedimento de revisão do eleitorado tem por finalidade:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 54; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a verificação de fraudes no alistamento de uma zona eleitoral ou município, resultando, quando confirmada a existência de qualquer fraude, no cancelamento de ofício das inscrições eleitorais irregulares.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "a verificação de fraudes no alistamento de uma zona eleitoral ou município, resultando, quando provada a fraude em proporção comprometedora, no cancelamento de ofício das inscrições eleitorais irregulares.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "a contabilização do eleitorado em uma zona eleitoral ou município, sendo sempre realizado no ano anterior às eleições.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "a contabilização do eleitorado em uma zona eleitoral ou município, sendo sempre realizado no mesmo ano em que realizadas as eleições.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "a verificação de fraudes no alistamento de uma zona eleitoral ou município, resultando, quando provada a fraude em proporção de no mínimo 20% (vinte por cento) do eleitorado, no cancelamento de ofício das inscrições eleitorais irregulares.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Organização da Justiça Eleitoral (CF/88 e Código Eleitoral)",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Eleitoral",
+        "source_content_hash": "54e7a399173cbccce4fe54ca3411506f1cc4a53f0cd0f3779fe49ddcb271f6a2",
+        "original_numeric_id": 54,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao-da-justica-eleitoral-cf-88-e-codigo-eleitoral",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "### Justificativa\nO procedimento de revisão do eleitorado tem por finalidade apurar a existência de fraudes no alistamento eleitoral de determinada zona ou município. Conforme o artigo 71, § 4º, do Código Eleitoral, provada a fraude em proporção comprometedora, o Tribunal Regional Eleitoral ordenará a revisão do eleitorado, com o consequente cancelamento de ofício das inscrições correspondentes aos títulos que não forem apresentados à revisão.\n\n### Análise das alternativas\n- **A) Incorreta.** A legislação exige que a fraude seja provada em \"proporção comprometedora\" para justificar a revisão do eleitorado, e não \"qualquer fraude\" de forma genérica.\n- **B) Correta.** Reflete a literalidade do artigo 71, § 4º, do Código Eleitoral e do artigo 58, *caput*, da Resolução TSE nº 23.659/2021.\n- **C) e D) Incorretas.** A finalidade da revisão do eleitorado não é a mera \"contabilização\" do eleitorado, mas sim a apuração e o saneamento de fraudes no alistamento. Além disso, o procedimento não é realizado \"sempre no ano anterior\" ou \"sempre no mesmo ano\" das eleições de forma fixa, mas sim quando houver indícios/provas de fraude ou quando preenchidos os requisitos estatísticos específicos previstos no artigo 92 da Lei nº 9.504/1997.\n- **E) Incorreta.** A legislação eleitoral não fixa um percentual mínimo rígido de \"20% (vinte por cento) do eleitorado\" para caracterizar a fraude no alistamento por denúncia fundamentada (artigo 71, § 4º, do Código Eleitoral), utilizando o conceito jurídico indeterminado \"proporção comprometedora\".\n\n### Dispositivo legal\n- **Código Eleitoral (Lei nº 4.737/1965)**, artigo 71, § 4º.\n  - [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm)\n- **Resolução TSE nº 23.659/2021**, artigo 58, *caput*.\n  - [Portal do TSE](https://www.tse.jus.br/legislacao/compilada/res/2021/resolucao-no-23-659-de-26-de-outubro-de-2021)",
+        "source_reference": null
+      },
+      "source_content_hash": "efc1d9a8f5fe810828d91ea9a348eebbefa132744aa12f6aabb7a2ae181fa276"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:057",
+      "source_id": "prova_i09_tipo_001:57",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Inconformado em razão da derrota no pleito eleitoral, o candidato formula perante a Junta Eleitoral pedido de recontagem de votos, alegando que o resultado está sob suspeita. Ao conhecer do pedido, cabe ao juiz presidente da Junta Eleitoral",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 57; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "recusar a realização do procedimento de recontagem, salvo quando presentes hipóteses legais específicas como, por exemplo, a apresentação do total de votos nulos, brancos ou válidos destoante da média geral das demais seções do mesmo município.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "recusar a realização do procedimento de recontagem, salvo quando presentes hipóteses legais específicas como, por exemplo, quando exista diferença relevante no percentual de votos apurados para cada candidato em relação à última pesquisa eleitoral realizada por instituto credenciado ao Tribunal Superior Eleitoral.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "realizar, obrigatoriamente, o procedimento de recontagem, podendo, contudo, requerer ao Tribunal Regional Eleitoral a dispensa de fazê-lo, sob o fundamento de que a recontagem tem natureza meramente procrastinatória.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "realizar o procedimento de recontagem por uma única vez, sem análise do mérito, não cabendo novos pedidos de recontagem.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "recusar a realização do procedimento de recontagem, salvo quando presentes hipóteses legais específicas como, por exemplo, no caso de votação por cédulas, a pequena diferença entre os votos conferidos aos candidatos.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Organização da Justiça Eleitoral (CF/88 e Código Eleitoral)",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Eleitoral",
+        "source_content_hash": "484a413928c8dc4081b2ccaab41b689be8f4ee3b6114d1d507fa14e764f40276",
+        "original_numeric_id": 57,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao-da-justica-eleitoral-cf-88-e-codigo-eleitoral",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa **A** está correta. A regra geral no processo eleitoral é a presunção de legitimidade e regularidade da votação eletrônica, cabendo ao juiz presidente da Junta Eleitoral recusar pedidos genéricos de recontagem de votos baseados em meras suspeitas sem amparo fático ou legal. Contudo, a lei estabelece hipóteses excepcionais e específicas em que a recontagem é obrigatória. Uma dessas hipóteses ocorre quando fica evidenciada a apresentação de totais de votos nulos, brancos ou válidos destoantes da média geral das demais seções do mesmo município ou zona eleitoral, conforme o artigo 88, inciso II, da Lei nº 9.504/1997.\n\nAnálise das alternativas incorretas:\n* **B** está incorreta porque a discrepância entre o resultado das urnas e pesquisas eleitorais prévias não constitui hipótese legal autorizadora de recontagem de votos.\n* **C** está incorreta porque a recontagem não é de realização obrigatória diante de qualquer pedido genérico, e o juiz não necessita requerer dispensa ao Tribunal Regional Eleitoral para indeferir pleitos procrastinatórios.\n* **D** está incorreta porque a recontagem não ocorre de forma automática ou \"por uma única vez sem análise de mérito\". Ela exige o preenchimento de requisitos legais estritos.\n* **E** está incorreta porque a mera \"pequena diferença entre os votos conferidos aos candidatos\" não é causa legal para recontagem de votos, mesmo em caso de votação por cédulas, conforme pacífica jurisprudência do Tribunal Superior Eleitoral.\n\n### Dispositivo legal\n* **Lei nº 9.504/1997**, Artigo 88, inciso II.",
+        "source_reference": null
+      },
+      "source_content_hash": "0770ca1a990d470622303c4e7f7bfd49d35004817940150cf0a50ffb0a618d33"
+    }
+  ]
+}

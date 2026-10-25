@@ -1,0 +1,520 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-conheci_basicos_superior-portugues-7ce8455145f7-86a8156e3c89",
+  "source": {
+    "file_name": "conheci_basicos_superior_ATUALIZADO.json",
+    "sha256": "7ce8455145f7b114aa72425ef99a450ecc4281426c54f3c9855b091cd41b14d3",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "conheci_basicos_superior.json",
+      "original_source_sha256": "aaf9eb1efb2a88d71a045bc1e2e61e371649418bec45be98916a5f4b799176a6",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "86a8156e3c898ab5d1090a1f302a9afc3abb0408112155db5bbf41c5f3bdfefc",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:conheci_basicos_superior:001",
+      "source_id": "conheci_basicos_superior:1",
+      "question_type": "true_false",
+      "statement_markdown": "De acordo com uma lista da International Union for the Conservation of Nature, o Brasil é o país com o maior número de espécies de aves ameaçadas de extinção, com um total de 123 espécies sofrendo risco real de desaparecer da natureza em um futuro não tão distante. A Mata Atlântica concentra cerca de 80% de todas as aves ameaçadas no país, fato que resulta de muitos anos de exploração e desmatamentos. Atualmente, restam apenas cerca de 10% da floresta original, não sendo homogênea essa proporção de floresta remanescente ao longo de toda a Mata Atlântica. A situação é mais séria na região Nordeste, especialmente nos estados de Alagoas e Pernambuco, onde a maior parte da floresta original foi substituída por plantações de cana-de-açúcar. É nessa região que ainda podem ser encontrados os últimos exemplares das aves mais raras em todo o país, como o criticamente ameaçado limpa-folha-do-nordeste (Philydor novaesi). Essa pequena ave de dezoito centímetros vive no estrato médio e dossel de florestas bem conservadas e ricas em bromélias, onde procura artrópodes dos quais se alimenta. Atualmente, as duas únicas localidades onde a espécie pode ser encontrada são a Estação Ecológica de Murici, em Alagoas, e a Serra do Urubu, em Pernambuco.\n\nPedro F. Develey et al. O Brasil e suas aves. In: Scientific American Brasil, 2013 (com adaptações).\n\nJulgue os itens seguintes, relativos às ideias e aos aspectos estruturais do texto acima.\n\nA correção gramatical e o sentido original do texto seriam preservados caso o vocábulo “onde”, nas linhas 12 e 19 fosse substituído pela expressão em que.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 1; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "3184f85f999d465e21733606515aa7e380a854fa8a432bcd31930f9de02865dc",
+        "original_numeric_id": 1,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNa norma-padrão da língua portuguesa, o pronome relativo **\"onde\"** deve ser restrito à referência a lugares físicos, concretos e delimitados espacialmente no texto (*\"florestas bem conservadas e ricas em bromélias, onde...\"* e *\"duas únicas localidades onde...\"*).\n\nPor sua vez, a locução pronominal **\"em que\"** (preposição *em* + pronome relativo *que*) possui amplitude funcional para retomar antecedentes locativos ou situacionais sem restrição. Portanto, a substituição de \"onde\" por \"em que\" nas linhas 12 e 19 mantém a rigorosa correção gramatical e preserva as relações semânticas e o sentido original do período.",
+        "source_reference": null
+      },
+      "source_content_hash": "a64ad5f97d2e271b16653ac1a75b7a983538a41b25f5a942dbb052d6374d6581"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:014",
+      "source_id": "conheci_basicos_superior:14",
+      "question_type": "true_false",
+      "statement_markdown": "O ofício de catador conquistou espaço em âmbito público em 2010, com a sanção da Política Nacional de Resíduos Sólidos. Após vinte anos de tramitação, a nova lei regula a destinação dos produtos com ciclo de vida durável, integrando o poder público, as empresas e a população na gestão dos resíduos. Os estados e municípios deverão adotar os novos parâmetros até agosto de 2014, caso contrário, não receberão recursos da União. Nesse contexto, a lei propõe incentivos dos municípios para a organização desses trabalhadores em cooperativas, em detrimento do trabalho autônomo dos catadores de rua. A maioria dos catadores autônomos, entretanto, é moradora de rua ou desempregada, sem acesso ao mercado de trabalho formal. Em muitos casos, são dependentes químicos ou alcoólatras, e não têm horários estabelecidos para o trabalho. Entre as razões para preferir a informalidade, estão a liberdade para estabelecer horários, a desconfiança da hierarquia das cooperativas, o pagamento semanal em vez de diário e a incompatibilidade com a forma da organização.\n\nEmily Almeida. Emancipação dos catadores. In: Darcy, set.-out./2013 (com adaptações).\n\nA respeito dos aspectos estruturais e interpretativos do texto acima, julgue os seguintes itens.\n\nSem prejuízo para o sentido original e para a correção gramatical do texto, o período “Em muitos casos (...) trabalho” (l.13-15) poderia ser reescrito da seguinte forma: Em muitos casos, o catador é dependente químico ou alcoólatra, e não tem horários estabelecidos para o trabalho.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 14; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Semântica e Significação das Palavras",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "b4c34e8970bf18598b89ee919b4f83f51ac83a3ebbfb6b20db5ea92640af6ada",
+        "original_numeric_id": 14,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nO trecho original registra: *\"Em muitos casos, são dependentes químicos ou alcoólatras, e não têm horários estabelecidos para o trabalho\"*.\n\nNa reescrita proposta: *\"Em muitos casos, o catador é dependente químico ou alcoólatra, e não tem horários estabelecidos para o trabalho\"*, o sujeito foi individualizado por meio de um substantivo no singular empregado com valor genérico e coletivo (*\"o catador\"*). Todas as concordâncias verbais e nominais foram perfeitamente ajustadas (*\"é\"*, *\"não tem\"* no singular, sem acento circunflexo diferencial). A reescrita é gramaticalmente irretocável e mantém o sentido original de generalização do perfil desses trabalhadores.",
+        "source_reference": null
+      },
+      "source_content_hash": "c09b93220ab4359ba66f4f4d74539a30498cda61af0d8b84d6b8617e5aa6cfaf"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:015",
+      "source_id": "conheci_basicos_superior:15",
+      "question_type": "true_false",
+      "statement_markdown": "O ofício de catador conquistou espaço em âmbito público em 2010, com a sanção da Política Nacional de Resíduos Sólidos. Após vinte anos de tramitação, a nova lei regula a destinação dos produtos com ciclo de vida durável, integrando o poder público, as empresas e a população na gestão dos resíduos. Os estados e municípios deverão adotar os novos parâmetros até agosto de 2014, caso contrário, não receberão recursos da União. Nesse contexto, a lei propõe incentivos dos municípios para a organização desses trabalhadores em cooperativas, em detrimento do trabalho autônomo dos catadores de rua. A maioria dos catadores autônomos, entretanto, é moradora de rua ou desempregada, sem acesso ao mercado de trabalho formal. Em muitos casos, são dependentes químicos ou alcoólatras, e não têm horários estabelecidos para o trabalho. Entre as razões para preferir a informalidade, estão a liberdade para estabelecer horários, a desconfiança da hierarquia das cooperativas, o pagamento semanal em vez de diário e a incompatibilidade com a forma da organização.\n\nEmily Almeida. Emancipação dos catadores. In: Darcy, set.-out./2013 (com adaptações).\n\nA respeito dos aspectos estruturais e interpretativos do texto acima, julgue os seguintes itens.\n\nO período “Os estados e municípios (...) recursos da União” (l.6-8) poderia ser reescrito, sem que houvesse prejuízo para a sua gramática e significação, da seguinte maneira: A menos que adotem os novos parâmetros até agosto de 2014, os estados e municípios receberão recursos da União.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 15; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Semântica e Significação das Palavras",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "96175a2528d9d5b160df9090c84cf0c5343a36a79e61f71397aaa7007ac06eb9",
+        "original_numeric_id": 15,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA reescrita proposta incorre em grave erro de correlação verbal e inadequação de modo gramatical: *\"Os estados e municípios não receberão recursos da União, caso não adotarem os novos parâmetros...\"*.\n\nA conjunção subordinativa condicional **\"caso\"** rege obrigatoriamente o verbo no **presente do subjuntivo** (*\"caso não **adotem**\"*) ou no pretérito imperfeito do subjuntivo (*\"caso não adotassem\"*). A forma verbal *\"adotarem\"* (futuro do subjuntivo) somente seria admitida se a conjunção utilizada fosse **\"se\"** (*\"se não adotarem\"*). Portanto, a estrutura viola a norma culta gramatical.",
+        "source_reference": null
+      },
+      "source_content_hash": "0dd4501be8a353610197364e2c42ef05ddab1346e9fa289e67117c30f274d42c"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:018",
+      "source_id": "conheci_basicos_superior:18",
+      "question_type": "true_false",
+      "statement_markdown": "Em resposta aos recorrentes pedidos, tratando de solicitação de materiais para uso interno, informamos que a Sessão de Compras e Materiais disponibiliza formulários para preenchimento das demandas de cada setor, com as respectivas justificativas para compras de material para uso interno.\n\nCordialmente,\n\nMaria Silva\nSupervisora da Sessão de Compras e Materiais\n\nConsiderando esse texto e as normas do Manual de Redação da Presidência da República, julgue os itens subsequentes.\n\nCaso o texto de Maria Silva fosse enviado por meio de correio eletrônico, estaria correto constar da mensagem um pedido de confirmação de recebimento.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 18; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "c7d7461f5cc11ede5a08bdce491bd77cb95473f9ba3d73b568285982d3de89cc",
+        "original_numeric_id": 18,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nConforme as diretrizes do Manual de Redação da Presidência da República para a comunicação por correio eletrônico (e-mail institucional), o e-mail é admitido como instrumento célere de comunicação oficial entre servidores, setores e órgãos públicos.\n\nPara assegurar o valor probatório e a certeza do recebimento de informações, orientações ou pedidos administrativos relevantes, é recomendável e perfeitamente correto incluir na mensagem uma solicitação explícita de **confirmação de recebimento** pelo destinatário.",
+        "source_reference": null
+      },
+      "source_content_hash": "54cabdb173c9ded8666dcdc6b8b525fb6cd08b5c9f2ec6b355c3539206b2bae3"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:042",
+      "source_id": "conheci_basicos_superior:42",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, com base nas disposições da Lei n.º 11.516/2007 e do Decreto n.º 7.515/2011.\n\nCompetem ao comitê gestor do ICMBio o planejamento, a coordenação e a execução da atividade de apoio parlamentar de interesse do instituto.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 42; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação",
+        "source_content_hash": "15485f364a08a6af2f23b1ed92dc392ad60a4092047b9dcf232566b8bdb65f0f",
+        "original_numeric_id": 42,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11516.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nDe acordo com a Lei nº 11.516/2007 e a estrutura regimental do Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio):\n\nAs atividades de planejamento, articulação e execução do apoio parlamentar e relações institucionais com o Congresso Nacional competem à **Presidência** do ICMBio ou a uma assessoria especializada direta de articulação parlamentar, e não ao Comitê Gestor.\n\nO Comitê Gestor é órgão colegiado superior de deliberação estratégica e formulação de diretrizes centrais de gestão das unidades de conservação, não lhe competindo a execução operacional das relações e do apoio parlamentar cotidiano.",
+        "source_reference": null
+      },
+      "source_content_hash": "4fba39551532d811e5dbc27fb0df681abbda36c84666e03da43b90071ec22b71"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:043",
+      "source_id": "conheci_basicos_superior:43",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, com base nas disposições da Lei n.º 11.516/2007 e do Decreto n.º 7.515/2011.\n\nDepois da criação do ICMBio, com finalidade específica de exercer o poder de polícia ambiental para a proteção das unidades de conservação instituídas pela União, retirou-se do IBAMA a prerrogativa de exercer esse poder.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 43; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação",
+        "source_content_hash": "b5cdd3378cc416899a779a195ebfdd827466cdf7d8eaf26e977ac5e6817beb96",
+        "original_numeric_id": 43,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11516.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**. A criação do ICMBio não retirou do IBAMA a prerrogativa de exercer o poder de polícia ambiental para a proteção das unidades de conservação instituídas pela União. O parágrafo único do art. 1º da Lei nº 11.516/2007 estabelece expressamente que o exercício do poder de polícia ambiental pelo ICMBio não exclui o exercício supletivo desse mesmo poder pelo IBAMA.\n\n### Dispositivo legal\n* **Lei nº 11.516/2007, Art. 1º, parágrafo único** (disponível no [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11516.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "673c63cb60bc55a90ee3dae07d1ab870b16b7e7ad71f1e22f16a1c70fe22cf6e"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:044",
+      "source_id": "conheci_basicos_superior:44",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, com base nas disposições da Lei n.º 8.112/1990 e da Lei n.º 9.784/1999.\n\nCaso um analista do ICMBio tenha sido nomeado para determinado cargo em comissão no próprio instituto, não poderá ser nomeado, mesmo interinamente, para outro cargo de confiança.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 44; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação",
+        "source_content_hash": "0700b95b54a13db88e42ccebf0b71b113e2c40e10d7ba7fcc65d06c3079e4d49",
+        "original_numeric_id": 44,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**. De acordo com o parágrafo único do art. 9º da Lei nº 8.112/1990, o servidor ocupante de cargo em comissão ou de natureza especial poderá ser nomeado para ter exercício, interinamente, em outro cargo de confiança, sem prejuízo das atribuições do que atualmente ocupa. Nesse caso, o servidor deverá optar pela remuneração de um dos cargos durante o período da interinidade. Portanto, a nomeação interina é permitida.\n\n### Dispositivo legal\n* **Lei nº 8.112/1990, Art. 9º, parágrafo único** (disponível no [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "306d9a7b301402cfeb6242cd9645f5790d33ae872398b222e809c87aa2d7dda3"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:047",
+      "source_id": "conheci_basicos_superior:47",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca das disposições da Lei n.º 12.527/2011, julgue os itens subsequentes.\n\nConsidere que, em 2014, um cidadão tenha solicitado acesso a documentação produzida e classificada como reservada pelo ICMBio em 2008. Nessa situação, o instituto poderá indeferir o pedido, a depender do conteúdo da documentação.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 47; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação",
+        "source_content_hash": "e9ef0798c2c3f5926af1a375408030574e7afc4d5a0c51e176032c1a6f1c0e20",
+        "original_numeric_id": 47,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA Lei de Acesso à Informação (Lei nº 12.527/2011, Art. 24, § 1º, inciso III) prevê o prazo máximo de classificação da informação no grau **reservado** em até **5 (cinco) anos** a contar da data de sua produção.\n\nEm 2014, um documento classificado como reservado em 2008 já teve seu prazo máximo legal de 5 anos exaurido (expirado em 2013). Entretanto, o indeferimento ainda poderá ocorrer a depender do seu conteúdo específico, caso a informação veicule dados pessoais de terceiros (relativos à intimidade, vida privada, honra e imagem, protegidos por até 100 anos pelo Art. 31 da LAI) ou configure hipótese legal de sigilo fiscal, bancário ou judicial concorrente.",
+        "source_reference": null
+      },
+      "source_content_hash": "c0e18479074d64b7da58951e4822d3d52a8c3b62fa74ca0bee7d95113c6b4894"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:050",
+      "source_id": "conheci_basicos_superior:50",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens a seguir, com base nas disposições do Decreto n.º 5.707/2006 e do Decreto n.º 7.133/2010.\n\nCaso um analista do ICMBio, empossado no cargo em 2009 e lotado na sede do próprio instituto, não ocupe cargo em comissão nem função de confiança, as suas avaliações anuais de desempenho individual serão realizadas apenas pela chefia imediata.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 50; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação",
+        "source_content_hash": "dc2a1c4a91c27a26aeab132c81f4c5c048d64619d5afb9a84fa75a6732f580f9",
+        "original_numeric_id": 50,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/decreto/d7133.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nConforme as regras do Decreto nº 7.133/2010, que regulamenta a avaliação de desempenho individual para concessão de gratificações no Poder Executivo Federal:\n\nA avaliação de desempenho individual é composta por múltiplos fatores e instrumentos de aferição, não se restringindo exclusivamente à avaliação da chefia imediata. O sistema normativo prevê a **autoavaliação** realizada pelo próprio servidor, a avaliação da chefia imediata e, em muitos casos, a avaliação pelos membros da própria equipe de trabalho (avaliação de 360º ou pares), garantindo o contraditório e a ampla defesa em comissão de recursos.",
+        "source_reference": null
+      },
+      "source_content_hash": "60d6edaeae18bb178f4c3a958b4e3201b5bea1918cc1e131fbcd716fe74862c0"
+    }
+  ]
+}

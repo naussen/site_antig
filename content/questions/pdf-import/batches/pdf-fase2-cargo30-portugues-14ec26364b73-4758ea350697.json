@@ -1,0 +1,791 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-cargo30-portugues-14ec26364b73-4758ea350697",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "14ec26364b73e9d47b2c5581aa9242bbae266f9dece6cf292f0206e67204b603",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "4cf2583924232a76b401cdfc24313fb757e305aad1b2fdad61bd5c3798ffc63b",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "4758ea350697d031ff992321d16f3d57588544c34aa4561efeba6c65fa9b7171",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:001",
+      "source_id": "cargo30:1",
+      "question_type": "true_false",
+      "statement_markdown": "Já existe, felizmente, em nosso país, uma consciência nacional — em formação, é certo —, que vai introduzindo o elemento da dignidade humana em nossa legislação e para a qual a escravidão, apesar de hereditária, é uma verdadeira mancha de Caim que o Brasil traz na fronte. Essa consciência, que está temperando a nossa alma e, por fim, há de humanizá-la, resulta da mistura de duas correntes diversas: o arrependimento dos descendentes de senhores e a afinidade de sofrimento dos herdeiros de escravos.\nNão tenho, portanto, medo de não encontrar o acolhimento por parte de um número bastante considerável de compatriotas meus, a saber: os que sentem a dor do escravo como se fora própria, e ainda mais, como parte de uma dor maior — a do Brasil, ultrajado e humilhado; os que têm a altivez de pensar — e a coragem de aceitar as conseqüências desse pensamento — que a pátria, como a mãe, quando não existe para os filhos mais infelizes, não existe para os mais dignos; aqueles para quem a escravidão, degradação sistemática da natureza humana por interesses mercenários e egoístas, se não é infamante para o homem educado e feliz que a inflige, não pode sê-lo para o ente desfigurado e oprimido que a sofre; por fim, os que conhecem as influências sobre o nosso país daquela instituição no passado e, no presente, o seu custo ruinoso, e prevêem os efeitos da sua continuação indefinida.\nPossa ser bem aceita por eles esta lembrança de um correligionário ausente, mandada do exterior, donde se ama ainda mais a pátria do que no próprio país.\nQuanto a mim, julgar-me-ei mais do que recompensado, se as sementes de liberdade, direito e justiça derem uma boa colheita no solo ainda virgem da nova geração. (Londres, 8 de abril de 1883)\n\nJoaquim Nabuco. O abolicionismo. In: Intérpretes do Brasil, vol. I, Rio de Janeiro: Nova Aguilar, 2000, p. 21 (com adaptações).\n\nEm relação ao texto acima e ao tema nele abordado, julgue os itens a seguir.\n\nO que Joaquim Nabuco escrevia em sua época vai ganhando densidade nos dias de hoje. Prova disso é o atual debate a respeito da política afirmativa, a qual, envolvendo, inclusive, a adoção de cotas, tem por objetivo reduzir as enormes desigualdades sociais geradas pela escravidão.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 1",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "9aefe097d9a9870959716d548d73e32e77e97fae40a11937ba3a646851503448",
+        "original_numeric_id": 1,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta porque estabelece uma relação direta e historicamente fundamentada entre o pensamento abolicionista de Joaquim Nabuco e os debates contemporâneos sobre políticas de ação afirmativa. No texto, Nabuco aponta que a escravidão deixou marcas profundas na sociedade brasileira (\"uma verdadeira mancha de Caim que o Brasil traz na fronte\") e que a superação desse legado exige uma tomada de consciência nacional. As políticas afirmativas modernas, como a reserva de vagas (cotas), fundamentam-se justamente na necessidade de reparar e reduzir as desigualdades socioeconômicas estruturais que têm origem histórica no período escravocrata, conferindo atualidade e densidade prática às preocupações manifestadas pelo autor em 1883.",
+        "source_reference": null
+      },
+      "source_content_hash": "6344cbdc9a02d0e2dd4872831e53d0835db95e90ef9f1d66451b440fb3c746b5"
+    },
+    {
+      "external_id": "pdf:cargo30:002",
+      "source_id": "cargo30:2",
+      "question_type": "true_false",
+      "statement_markdown": "Já existe, felizmente, em nosso país, uma consciência nacional — em formação, é certo —, que vai introduzindo o elemento da dignidade humana em nossa legislação e para a qual a escravidão, apesar de hereditária, é uma verdadeira mancha de Caim que o Brasil traz na fronte. Essa consciência, que está temperando a nossa alma e, por fim, há de humanizá-la, resulta da mistura de duas correntes diversas: o arrependimento dos descendentes de senhores e a afinidade de sofrimento dos herdeiros de escravos.\nNão tenho, portanto, medo de não encontrar o acolhimento por parte de um número bastante considerável de compatriotas meus, a saber: os que sentem a dor do escravo como se fora própria, e ainda mais, como parte de uma dor maior — a do Brasil, ultrajado e humilhado; os que têm a altivez de pensar — e a coragem de aceitar as conseqüências desse pensamento — que a pátria, como a mãe, quando não existe para os filhos mais infelizes, não existe para os mais dignos; aqueles para quem a escravidão, degradação sistemática da natureza humana por interesses mercenários e egoístas, se não é infamante para o homem educado e feliz que a inflige, não pode sê-lo para o ente desfigurado e oprimido que a sofre; por fim, os que conhecem as influências sobre o nosso país daquela instituição no passado e, no presente, o seu custo ruinoso, e prevêem os efeitos da sua continuação indefinida.\nPossa ser bem aceita por eles esta lembrança de um correligionário ausente, mandada do exterior, donde se ama ainda mais a pátria do que no próprio país.\nQuanto a mim, julgar-me-ei mais do que recompensado, se as sementes de liberdade, direito e justiça derem uma boa colheita no solo ainda virgem da nova geração. (Londres, 8 de abril de 1883)\n\nJoaquim Nabuco. O abolicionismo. In: Intérpretes do Brasil, vol. I, Rio de Janeiro: Nova Aguilar, 2000, p. 21 (com adaptações).\n\nEm relação ao texto acima e ao tema nele abordado, julgue os itens a seguir.\n\nA expansão do sistema educacional brasileiro, especialmente nas redes escolares públicas, resultou na eliminação quase total das diferenças quanto a acesso e permanência nas escolas e desempenho escolar de brancos, negros e pardos. Essa realidade transportou-se para o mercado de trabalho, como demonstra a igualdade de salários pagos a cidadãos de diferentes raças.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 2",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "776195ac11d7c3d797f86129ca9feed2a9219570c1e9f82b10dd94f5c0e60ca9",
+        "original_numeric_id": 2,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta porque descreve um cenário de igualdade racial e educacional que não condiz com a realidade socioeconômica do Brasil. Dados estatísticos oficiais (como os do IBGE) demonstram que, apesar da expansão do acesso à educação pública, ainda persistem disparidades significativas entre brancos, negros e pardos no que tange à permanência escolar, ao desempenho acadêmico e, consequentemente, à remuneração no mercado de trabalho. Portanto, a tese de \"eliminação quase total\" das diferenças e de \"igualdade de salários\" é factualmente incorreta.",
+        "source_reference": null
+      },
+      "source_content_hash": "602af613a460ce2abfa05883d1aa6c88dd6a54d79334bcedca4f16220b43d834"
+    },
+    {
+      "external_id": "pdf:cargo30:003",
+      "source_id": "cargo30:3",
+      "question_type": "true_false",
+      "statement_markdown": "Já existe, felizmente, em nosso país, uma consciência nacional — em formação, é certo —, que vai introduzindo o elemento da dignidade humana em nossa legislação e para a qual a escravidão, apesar de hereditária, é uma verdadeira mancha de Caim que o Brasil traz na fronte. Essa consciência, que está temperando a nossa alma e, por fim, há de humanizá-la, resulta da mistura de duas correntes diversas: o arrependimento dos descendentes de senhores e a afinidade de sofrimento dos herdeiros de escravos.\nNão tenho, portanto, medo de não encontrar o acolhimento por parte de um número bastante considerável de compatriotas meus, a saber: os que sentem a dor do escravo como se fora própria, e ainda mais, como parte de uma dor maior — a do Brasil, ultrajado e humilhado; os que têm a altivez de pensar — e a coragem de aceitar as conseqüências desse pensamento — que a pátria, como a mãe, quando não existe para os filhos mais infelizes, não existe para os mais dignos; aqueles para quem a escravidão, degradação sistemática da natureza humana por interesses mercenários e egoístas, se não é infamante para o homem educado e feliz que a inflige, não pode sê-lo para o ente desfigurado e oprimido que a sofre; por fim, os que conhecem as influências sobre o nosso país daquela instituição no passado e, no presente, o seu custo ruinoso, e prevêem os efeitos da sua continuação indefinida.\nPossa ser bem aceita por eles esta lembrança de um correligionário ausente, mandada do exterior, donde se ama ainda mais a pátria do que no próprio país.\nQuanto a mim, julgar-me-ei mais do que recompensado, se as sementes de liberdade, direito e justiça derem uma boa colheita no solo ainda virgem da nova geração. (Londres, 8 de abril de 1883)\n\nJoaquim Nabuco. O abolicionismo. In: Intérpretes do Brasil, vol. I, Rio de Janeiro: Nova Aguilar, 2000, p. 21 (com adaptações).\n\nEm relação ao texto acima e ao tema nele abordado, julgue os itens a seguir.\n\nA idéia principal do texto pode assim ser expressa: O amor à pátria é mais forte quando se está longe dela e a dor do escravo é sentida como se fosse própria.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 3",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "f26a1b55c69c7b2147b80795838815d7387378b5357d980bb6e51aca24b87c02",
+        "original_numeric_id": 3,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta porque confunde ideias secundárias e recursos argumentativos com a ideia central do texto. O tema central defendido por Joaquim Nabuco é a necessidade urgente de consolidação de uma \"consciência nacional\" capaz de extinguir a escravidão, a qual ele define como uma degradação da natureza humana e um entrave ao desenvolvimento do país. O sentimento de distância da pátria (mencionado no terceiro parágrafo) e a empatia pela dor do escravo (mencionada no segundo parágrafo) são argumentos de apoio que ilustram a sensibilidade do autor e de seus aliados, mas não constituem o núcleo temático da obra.",
+        "source_reference": null
+      },
+      "source_content_hash": "4482c2de398100ce2029761cd854668ba6212c7c8ac8c9b0e38c4915e7dea55e"
+    },
+    {
+      "external_id": "pdf:cargo30:004",
+      "source_id": "cargo30:4",
+      "question_type": "true_false",
+      "statement_markdown": "Já existe, felizmente, em nosso país, uma consciência nacional — em formação, é certo —, que vai introduzindo o elemento da dignidade humana em nossa legislação e para a qual a escravidão, apesar de hereditária, é uma verdadeira mancha de Caim que o Brasil traz na fronte. Essa consciência, que está temperando a nossa alma e, por fim, há de humanizá-la, resulta da mistura de duas correntes diversas: o arrependimento dos descendentes de senhores e a afinidade de sofrimento dos herdeiros de escravos.\nNão tenho, portanto, medo de não encontrar o acolhimento por parte de um número bastante considerável de compatriotas meus, a saber: os que sentem a dor do escravo como se fora própria, e ainda mais, como parte de uma dor maior — a do Brasil, ultrajado e humilhado; os que têm a altivez de pensar — e a coragem de aceitar as conseqüências desse pensamento — que a pátria, como a mãe, quando não existe para os filhos mais infelizes, não existe para os mais dignos; aqueles para quem a escravidão, degradação sistemática da natureza humana por interesses mercenários e egoístas, se não é infamante para o homem educado e feliz que a inflige, não pode sê-lo para o ente desfigurado e oprimido que a sofre; por fim, os que conhecem as influências sobre o nosso país daquela instituição no passado e, no presente, o seu custo ruinoso, e prevêem os efeitos da sua continuação indefinida.\nPossa ser bem aceita por eles esta lembrança de um correligionário ausente, mandada do exterior, donde se ama ainda mais a pátria do que no próprio país.\nQuanto a mim, julgar-me-ei mais do que recompensado, se as sementes de liberdade, direito e justiça derem uma boa colheita no solo ainda virgem da nova geração. (Londres, 8 de abril de 1883)\n\nJoaquim Nabuco. O abolicionismo. In: Intérpretes do Brasil, vol. I, Rio de Janeiro: Nova Aguilar, 2000, p. 21 (com adaptações).\n\nEm relação ao texto acima e ao tema nele abordado, julgue os itens a seguir.\n\nO autor do texto sugere que não teme as divergências políticas das duas correntes que formam a consciência nacional, porque conta com a receptividade da maioria dos compatriotas, contrários à escravidão.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 4",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "8360b204c5af27476adf25081a1e5354bca6ffb30cb9b2157334ed481f94a04f",
+        "original_numeric_id": 4,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta por apresentar duas incoerências em relação ao texto:\n\n1. **Divergências políticas:** O autor não sugere a existência de conflitos ou divergências entre as duas correntes mencionadas. Pelo contrário, ele afirma que a consciência nacional \"resulta da mistura de duas correntes diversas: o arrependimento dos descendentes de senhores e a afinidade de sofrimento dos herdeiros de escravos\", indicando convergência e complementaridade, e não oposição.\n2. **Receptividade da maioria:** Nabuco escreve que não teme deixar de encontrar acolhimento por parte de \"um número bastante considerável de compatriotas\", o que indica uma parcela expressiva e qualificada de aliados, mas não equivale semanticamente à \"maioria\" da população da época.",
+        "source_reference": null
+      },
+      "source_content_hash": "e8684f998ac1604e750bc787540280d332231f2e3344030cd513d000a46ea2b0"
+    },
+    {
+      "external_id": "pdf:cargo30:005",
+      "source_id": "cargo30:5",
+      "question_type": "true_false",
+      "statement_markdown": "Já existe, felizmente, em nosso país, uma consciência nacional — em formação, é certo —, que vai introduzindo o elemento da dignidade humana em nossa legislação e para a qual a escravidão, apesar de hereditária, é uma verdadeira mancha de Caim que o Brasil traz na fronte. Essa consciência, que está temperando a nossa alma e, por fim, há de humanizá-la, resulta da mistura de duas correntes diversas: o arrependimento dos descendentes de senhores e a afinidade de sofrimento dos herdeiros de escravos.\nNão tenho, portanto, medo de não encontrar o acolhimento por parte de um número bastante considerável de compatriotas meus, a saber: os que sentem a dor do escravo como se fora própria, e ainda mais, como parte de uma dor maior — a do Brasil, ultrajado e humilhado; os que têm a altivez de pensar — e a coragem de aceitar as conseqüências desse pensamento — que a pátria, como a mãe, quando não existe para os filhos mais infelizes, não existe para os mais dignos; aqueles para quem a escravidão, degradação sistemática da natureza humana por interesses mercenários e egoístas, se não é infamante para o homem educado e feliz que a inflige, não pode sê-lo para o ente desfigurado e oprimido que a sofre; por fim, os que conhecem as influências sobre o nosso país daquela instituição no passado e, no presente, o seu custo ruinoso, e prevêem os efeitos da sua continuação indefinida.\nPossa ser bem aceita por eles esta lembrança de um correligionário ausente, mandada do exterior, donde se ama ainda mais a pátria do que no próprio país.\nQuanto a mim, julgar-me-ei mais do que recompensado, se as sementes de liberdade, direito e justiça derem uma boa colheita no solo ainda virgem da nova geração. (Londres, 8 de abril de 1883)\n\nJoaquim Nabuco. O abolicionismo. In: Intérpretes do Brasil, vol. I, Rio de Janeiro: Nova Aguilar, 2000, p. 21 (com adaptações).\n\nEm relação ao texto acima e ao tema nele abordado, julgue os itens a seguir.\n\nNo texto, o termo “para a qual” (l.3) tem o sentido de para essa dignidade humana.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 5",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "e8e3bf9aacef0ddd4f2b6a393006d1a95e309e2df1534d4cd01ea1fe6743de5b",
+        "original_numeric_id": 5,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. No trecho \"uma consciência nacional [...] que vai introduzindo o elemento da dignidade humana em nossa legislação e para a qual a escravidão [...] é uma verdadeira mancha de Caim\", o pronome relativo \"a qual\" retoma o antecedente feminino singular **\"uma consciência nacional\"**.\n\nAo realizar a substituição proposta, percebe-se a incoerência de sentido: é a *consciência nacional* que considera a escravidão uma mancha de Caim, e não a *dignidade humana*.",
+        "source_reference": null
+      },
+      "source_content_hash": "28c25a8e93bdd9f4fcddec84348862cd2d9afd1acd4be4cd8f619b956ed26825"
+    },
+    {
+      "external_id": "pdf:cargo30:006",
+      "source_id": "cargo30:6",
+      "question_type": "true_false",
+      "statement_markdown": "Já existe, felizmente, em nosso país, uma consciência nacional — em formação, é certo —, que vai introduzindo o elemento da dignidade humana em nossa legislação e para a qual a escravidão, apesar de hereditária, é uma verdadeira mancha de Caim que o Brasil traz na fronte. Essa consciência, que está temperando a nossa alma e, por fim, há de humanizá-la, resulta da mistura de duas correntes diversas: o arrependimento dos descendentes de senhores e a afinidade de sofrimento dos herdeiros de escravos.\nNão tenho, portanto, medo de não encontrar o acolhimento por parte de um número bastante considerável de compatriotas meus, a saber: os que sentem a dor do escravo como se fora própria, e ainda mais, como parte de uma dor maior — a do Brasil, ultrajado e humilhado; os que têm a altivez de pensar — e a coragem de aceitar as conseqüências desse pensamento — que a pátria, como a mãe, quando não existe para os filhos mais infelizes, não existe para os mais dignos; aqueles para quem a escravidão, degradação sistemática da natureza humana por interesses mercenários e egoístas, se não é infamante para o homem educado e feliz que a inflige, não pode sê-lo para o ente desfigurado e oprimido que a sofre; por fim, os que conhecem as influências sobre o nosso país daquela instituição no passado e, no presente, o seu custo ruinoso, e prevêem os efeitos da sua continuação indefinida.\nPossa ser bem aceita por eles esta lembrança de um correligionário ausente, mandada do exterior, donde se ama ainda mais a pátria do que no próprio país.\nQuanto a mim, julgar-me-ei mais do que recompensado, se as sementes de liberdade, direito e justiça derem uma boa colheita no solo ainda virgem da nova geração. (Londres, 8 de abril de 1883)\n\nJoaquim Nabuco. O abolicionismo. In: Intérpretes do Brasil, vol. I, Rio de Janeiro: Nova Aguilar, 2000, p. 21 (com adaptações).\n\nEm relação ao texto acima e ao tema nele abordado, julgue os itens a seguir.\n\nNo contexto em que está empregada, a palavra “hereditária” (l.4) reforça a idéia de que a escravidão é uma questão genética.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 6",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "6d84f4c7b758cbc03878d69122408d634c94766b7ccb1c92b0f3b0aa911ef104",
+        "original_numeric_id": 6,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. No contexto histórico e social do texto, o adjetivo \"hereditária\" refere-se ao estatuto jurídico da escravidão na época, em que a condição de escravizado era transmitida de mãe para filho (aspecto legal e social de herança de status). Não há qualquer relação com determinismo biológico ou fatores genéticos, conceitos que desvirtuariam a crítica social e moral realizada por Joaquim Nabuco.",
+        "source_reference": null
+      },
+      "source_content_hash": "dc5c8a5ad6be6b136af061896e4aad8d83adf08626c6abb317537ef61e18fe57"
+    },
+    {
+      "external_id": "pdf:cargo30:007",
+      "source_id": "cargo30:7",
+      "question_type": "true_false",
+      "statement_markdown": "Já existe, felizmente, em nosso país, uma consciência nacional — em formação, é certo —, que vai introduzindo o elemento da dignidade humana em nossa legislação e para a qual a escravidão, apesar de hereditária, é uma verdadeira mancha de Caim que o Brasil traz na fronte. Essa consciência, que está temperando a nossa alma e, por fim, há de humanizá-la, resulta da mistura de duas correntes diversas: o arrependimento dos descendentes de senhores e a afinidade de sofrimento dos herdeiros de escravos.\nNão tenho, portanto, medo de não encontrar o acolhimento por parte de um número bastante considerável de compatriotas meus, a saber: os que sentem a dor do escravo como se fora própria, e ainda mais, como parte de uma dor maior — a do Brasil, ultrajado e humilhado; os que têm a altivez de pensar — e a coragem de aceitar as conseqüências desse pensamento — que a pátria, como a mãe, quando não existe para os filhos mais infelizes, não existe para os mais dignos; aqueles para quem a escravidão, degradação sistemática da natureza humana por interesses mercenários e egoístas, se não é infamante para o homem educado e feliz que a inflige, não pode sê-lo para o ente desfigurado e oprimido que a sofre; por fim, os que conhecem as influências sobre o nosso país daquela instituição no passado e, no presente, o seu custo ruinoso, e prevêem os efeitos da sua continuação indefinida.\nPossa ser bem aceita por eles esta lembrança de um correligionário ausente, mandada do exterior, donde se ama ainda mais a pátria do que no próprio país.\nQuanto a mim, julgar-me-ei mais do que recompensado, se as sementes de liberdade, direito e justiça derem uma boa colheita no solo ainda virgem da nova geração. (Londres, 8 de abril de 1883)\n\nJoaquim Nabuco. O abolicionismo. In: Intérpretes do Brasil, vol. I, Rio de Janeiro: Nova Aguilar, 2000, p. 21 (com adaptações).\n\nEm relação ao texto acima e ao tema nele abordado, julgue os itens a seguir.\n\nNos trechos “é uma verdadeira mancha de Caim que o Brasil traz na fronte” (l.4-5) e “uma boa colheita no solo ainda virgem da nova geração” (l.29-30), foi utilizada linguagem figurada.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 7",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "2bf777f2ed5b1c517f540827940b501cf50f5fee38847edc87fa26025b661175",
+        "original_numeric_id": 7,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. Ambos os trechos utilizam figuras de linguagem (especificamente a metáfora) para transmitir ideias abstratas de forma expressiva:\n\n* No primeiro trecho, \"mancha de Caim que o Brasil traz na fronte\" é uma metáfora de base bíblica para representar a culpa moral e a vergonha nacional decorrentes da manutenção da escravidão.\n* No segundo trecho, \"uma boa colheita no solo ainda virgem da nova geração\" utiliza termos do campo agrícola de forma figurada para se referir aos frutos positivos (liberdade, direito e justiça) que se espera obter com a educação e a formação moral dos jovens.",
+        "source_reference": null
+      },
+      "source_content_hash": "1f3211760dc46179c2e6aed5ad1d4b1f339d471e8894d6e9cbdf75a56462baf1"
+    },
+    {
+      "external_id": "pdf:cargo30:009",
+      "source_id": "cargo30:9",
+      "question_type": "true_false",
+      "statement_markdown": "Já existe, felizmente, em nosso país, uma consciência nacional — em formação, é certo —, que vai introduzindo o elemento da dignidade humana em nossa legislação e para a qual a escravidão, apesar de hereditária, é uma verdadeira mancha de Caim que o Brasil traz na fronte. Essa consciência, que está temperando a nossa alma e, por fim, há de humanizá-la, resulta da mistura de duas correntes diversas: o arrependimento dos descendentes de senhores e a afinidade de sofrimento dos herdeiros de escravos.\nNão tenho, portanto, medo de não encontrar o acolhimento por parte de um número bastante considerável de compatriotas meus, a saber: os que sentem a dor do escravo como se fora própria, e ainda mais, como parte de uma dor maior — a do Brasil, ultrajado e humilhado; os que têm a altivez de pensar — e a coragem de aceitar as conseqüências desse pensamento — que a pátria, como a mãe, quando não existe para os filhos mais infelizes, não existe para os mais dignos; aqueles para quem a escravidão, degradação sistemática da natureza humana por interesses mercenários e egoístas, se não é infamante para o homem educado e feliz que a inflige, não pode sê-lo para o ente desfigurado e oprimido que a sofre; por fim, os que conhecem as influências sobre o nosso país daquela instituição no passado e, no presente, o seu custo ruinoso, e prevêem os efeitos da sua continuação indefinida.\nPossa ser bem aceita por eles esta lembrança de um correligionário ausente, mandada do exterior, donde se ama ainda mais a pátria do que no próprio país.\nQuanto a mim, julgar-me-ei mais do que recompensado, se as sementes de liberdade, direito e justiça derem uma boa colheita no solo ainda virgem da nova geração. (Londres, 8 de abril de 1883)\n\nJoaquim Nabuco. O abolicionismo. In: Intérpretes do Brasil, vol. I, Rio de Janeiro: Nova Aguilar, 2000, p. 21 (com adaptações).\n\nEm relação ao texto acima e ao tema nele abordado, julgue os itens a seguir.\n\nNas linhas 11 e 12, será mantida a correção gramatical se a expressão “por parte de (...) meus” for assim reescrita: por parte de bastantes compatriotas meus.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 9",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "032caaacfc7a13389cce71f6a209d9122aa0a731c54f3a405f810ed58bdba551",
+        "original_numeric_id": 9,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. Na reescrita proposta, a palavra \"bastante\" deixa de funcionar como advérbio (como ocorria em \"bastante considerável\", onde modificava o adjetivo \"considerável\") e passa a atuar como **pronome adjetivo indefinido**, equivalendo a \"muitos\". Nessa função gramatical, deve obrigatoriamente flexionar em número para concordar com o substantivo a que se refere (\"compatriotas\"), resultando na forma plural correta: \"bastantes compatriotas\".",
+        "source_reference": null
+      },
+      "source_content_hash": "866292709d9eec645c98d825ecb74dc1566a339f5727b2fbba7bd720607fbea1"
+    },
+    {
+      "external_id": "pdf:cargo30:010",
+      "source_id": "cargo30:10",
+      "question_type": "true_false",
+      "statement_markdown": "Já existe, felizmente, em nosso país, uma consciência nacional — em formação, é certo —, que vai introduzindo o elemento da dignidade humana em nossa legislação e para a qual a escravidão, apesar de hereditária, é uma verdadeira mancha de Caim que o Brasil traz na fronte. Essa consciência, que está temperando a nossa alma e, por fim, há de humanizá-la, resulta da mistura de duas correntes diversas: o arrependimento dos descendentes de senhores e a afinidade de sofrimento dos herdeiros de escravos.\nNão tenho, portanto, medo de não encontrar o acolhimento por parte de um número bastante considerável de compatriotas meus, a saber: os que sentem a dor do escravo como se fora própria, e ainda mais, como parte de uma dor maior — a do Brasil, ultrajado e humilhado; os que têm a altivez de pensar — e a coragem de aceitar as conseqüências desse pensamento — que a pátria, como a mãe, quando não existe para os filhos mais infelizes, não existe para os mais dignos; aqueles para quem a escravidão, degradação sistemática da natureza humana por interesses mercenários e egoístas, se não é infamante para o homem educado e feliz que a inflige, não pode sê-lo para o ente desfigurado e oprimido que a sofre; por fim, os que conhecem as influências sobre o nosso país daquela instituição no passado e, no presente, o seu custo ruinoso, e prevêem os efeitos da sua continuação indefinida.\nPossa ser bem aceita por eles esta lembrança de um correligionário ausente, mandada do exterior, donde se ama ainda mais a pátria do que no próprio país.\nQuanto a mim, julgar-me-ei mais do que recompensado, se as sementes de liberdade, direito e justiça derem uma boa colheita no solo ainda virgem da nova geração. (Londres, 8 de abril de 1883)\n\nJoaquim Nabuco. O abolicionismo. In: Intérpretes do Brasil, vol. I, Rio de Janeiro: Nova Aguilar, 2000, p. 21 (com adaptações).\n\nEm relação ao texto acima e ao tema nele abordado, julgue os itens a seguir.\n\nSem prejuízo para os sentidos do texto, a forma verbal “inflige” (l.20) poderia ser substituída por suporta.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 10",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "fb7e28532786daec8e7611e331b28b5237793110ca8a04363e34f3c723d0fcc9",
+        "original_numeric_id": 10,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta porque os verbos possuem significados opostos no contexto da relação de opressão descrita:\n\n* **Infligir** significa aplicar, impor, causar um sofrimento ou castigo. No texto, refere-se à ação do opressor (\"o homem educado e feliz que a inflige\").\n* **Suportar** significa aguentar, tolerar, sofrer. No texto, essa ação é atribuída à vítima (\"o ente desfigurado e oprimido que a sofre\").\n\nA substituição de \"inflige\" por \"suporta\" inverteria os papéis do agente e do paciente da violência da escravidão, gerando grave prejuízo semântico e incoerência textual.",
+        "source_reference": null
+      },
+      "source_content_hash": "0f5e6a4b43716ac97bd3439a79544cfe4bc4bd8c29f517fd4ffbfb77ea1c2b0c"
+    },
+    {
+      "external_id": "pdf:cargo30:011",
+      "source_id": "cargo30:11",
+      "question_type": "true_false",
+      "statement_markdown": "Já existe, felizmente, em nosso país, uma consciência nacional — em formação, é certo —, que vai introduzindo o elemento da dignidade humana em nossa legislação e para a qual a escravidão, apesar de hereditária, é uma verdadeira mancha de Caim que o Brasil traz na fronte. Essa consciência, que está temperando a nossa alma e, por fim, há de humanizá-la, resulta da mistura de duas correntes diversas: o arrependimento dos descendentes de senhores e a afinidade de sofrimento dos herdeiros de escravos.\nNão tenho, portanto, medo de não encontrar o acolhimento por parte de um número bastante considerável de compatriotas meus, a saber: os que sentem a dor do escravo como se fora própria, e ainda mais, como parte de uma dor maior — a do Brasil, ultrajado e humilhado; os que têm a altivez de pensar — e a coragem de aceitar as conseqüências desse pensamento — que a pátria, como a mãe, quando não existe para os filhos mais infelizes, não existe para os mais dignos; aqueles para quem a escravidão, degradação sistemática da natureza humana por interesses mercenários e egoístas, se não é infamante para o homem educado e feliz que a inflige, não pode sê-lo para o ente desfigurado e oprimido que a sofre; por fim, os que conhecem as influências sobre o nosso país daquela instituição no passado e, no presente, o seu custo ruinoso, e prevêem os efeitos da sua continuação indefinida.\nPossa ser bem aceita por eles esta lembrança de um correligionário ausente, mandada do exterior, donde se ama ainda mais a pátria do que no próprio país.\nQuanto a mim, julgar-me-ei mais do que recompensado, se as sementes de liberdade, direito e justiça derem uma boa colheita no solo ainda virgem da nova geração. (Londres, 8 de abril de 1883)\n\nJoaquim Nabuco. O abolicionismo. In: Intérpretes do Brasil, vol. I, Rio de Janeiro: Nova Aguilar, 2000, p. 21 (com adaptações).\n\nEm relação ao texto acima e ao tema nele abordado, julgue os itens a seguir.\n\nA expressão “o seu custo ruinoso” (l.23) exerce a função de aposto, o que justifica a sua colocação entre vírgulas.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 11",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "1222938a7e4e1c63635433e79a586655f65596bc390bb08a4190acefc0c42aca",
+        "original_numeric_id": 11,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque a expressão \"o seu custo ruinoso\" não funciona como aposto. \n\nNo trecho \"os que conhecem as influências sobre o nosso país daquela instituição no passado e, no presente, o seu custo ruinoso\", o verbo \"conhecer\" é transitivo direto e possui dois objetos diretos coordenados entre si pela conjunção \"e\":\n1. \"as influências sobre o nosso país daquela instituição no passado\"\n2. \"o seu custo ruinoso\"\n\nA colocação de vírgulas no trecho justifica-se pela intercalação do adjunto adverbial de tempo \"no presente\". Portanto, a pontuação não serve para isolar um aposto, mas sim para demarcar a estrutura adverbial deslocada.",
+        "source_reference": null
+      },
+      "source_content_hash": "2bd5776a013575fc0b9f0afaef3f9fd6e5a8488b29455e0533f7d575e185c283"
+    },
+    {
+      "external_id": "pdf:cargo30:016",
+      "source_id": "cargo30:16",
+      "question_type": "true_false",
+      "statement_markdown": "Os atentados terroristas a Nova Iorque e Washington são a evidência de que o atual modelo de globalização afeta os esforços de implantação mundial dos direitos humanos. Graças ao avanço da tecnologia de comunicações — dos meios de transporte à Internet —, o Planeta tornou-se, de fato, uma grande aldeia. Somos todos vizinhos uns dos outros e podemos assistir, em tempo real, ao que se passa no hemisfério oposto ao que habitamos.\n\nFrei Betto. Internet: <www.dhnet.org.br/denunciar> (com adaptações).\n\nCom base no texto acima e considerando as múltiplas implicações do tema que ele focaliza, julgue os itens seguintes.\n\nNa linha 4, a substituição de “Graças ao” por Devido o prejudicaria a correção gramatical do texto.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 16",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "808281e3837e4893ea78e0e1be8b43cc946025e8831117a68efb0bd5ff80b704",
+        "original_numeric_id": 16,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A locução prepositiva \"graças a\" exige a preposição \"a\", que se aglutina com o artigo \"o\" em \"graças ao\". Ao substituí-la por \"devido\", deve-se manter a regência nominal que exige a preposição \"a\" (\"devido a\"). A omissão da preposição em \"Devido o avanço\" gera um erro de regência, prejudicando a correção gramatical do texto. O correto seria \"Devido ao avanço\".",
+        "source_reference": null
+      },
+      "source_content_hash": "5aa478c0946e04a7013b919d7ff5b6ce2dace29fdeb3b24d2d1e61be99d4e352"
+    },
+    {
+      "external_id": "pdf:cargo30:017",
+      "source_id": "cargo30:17",
+      "question_type": "true_false",
+      "statement_markdown": "Os atentados terroristas a Nova Iorque e Washington são a evidência de que o atual modelo de globalização afeta os esforços de implantação mundial dos direitos humanos. Graças ao avanço da tecnologia de comunicações — dos meios de transporte à Internet —, o Planeta tornou-se, de fato, uma grande aldeia. Somos todos vizinhos uns dos outros e podemos assistir, em tempo real, ao que se passa no hemisfério oposto ao que habitamos.\n\nFrei Betto. Internet: <www.dhnet.org.br/denunciar> (com adaptações).\n\nCom base no texto acima e considerando as múltiplas implicações do tema que ele focaliza, julgue os itens seguintes.\n\nNa linha 5, a expressão entre travessões poderia ser substituída por desde os meios de transporte até a Internet, sem que houvesse prejuízo para a correção gramatical do texto.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 17",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "e04ee1773a6a07c7bd3dd2fa1bc6b43cca7dd8cb241129a73ba7403a96d7d8a1",
+        "original_numeric_id": 17,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A estrutura correlativa \"desde os meios de transporte até a Internet\" substitui adequadamente a estrutura original \"dos meios de transporte à Internet\" sem prejuízo gramatical. A ausência de crase em \"até a Internet\" é plenamente correta, pois, após a preposição \"até\", o emprego da preposição \"a\" é facultativo. Assim, pode-se usar apenas o artigo definido feminino (\"até a Internet\") ou a contração com a preposição (\"até à Internet\").",
+        "source_reference": null
+      },
+      "source_content_hash": "306d92fb430028c1ed95c8366d632b44ab7c8d755709125a312e1d75ad9ece46"
+    },
+    {
+      "external_id": "pdf:cargo30:024",
+      "source_id": "cargo30:24",
+      "question_type": "true_false",
+      "statement_markdown": "A proximidade não nos tem tornado mais solidários e amigos. À luz da crescente mercantilização das relações humanas, quase tudo é encarado em termos de lucro e benefício. Não importa que guerras fratricidas ameacem a existência de nações africanas. Os países metropolitanos continuarão fabricando e exportando armas — que a África não produz — e permanecerão insensíveis ao genocídio se, no palco das operações, não houver diamantes, petróleo ou qualquer outra riqueza que justifique a intervenção das tropas globocolonizadas, como ocorreu no Iraque e na Iugoslávia.\n\nIdem, ibidem.\n\nTendo o texto acima como referência e considerando o cenário mundial contemporâneo, julgue os itens que se seguem.\n\nA oração “que justifique a intervenção das tropas globocolonizadas” (l.9-10) não está antecedida por vírgula porque expressa restrição.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 24",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "24eef9d3af08135787d221b77e9a6a87479e02b11e04da1d7528160bf5a83303",
+        "original_numeric_id": 24,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A oração \"que justifique a intervenção das tropas globocolonizadas\" qualifica o substantivo antecedente \"riqueza\". \n\nComo essa oração delimita e especifica o sentido de \"riqueza\" (não se trata de qualquer riqueza, mas especificamente daquela que justifica a intervenção), ela é classificada como uma **oração subordinada adjetiva restritiva**. Na norma-padrão da língua portuguesa, as orações adjetivas restritivas não devem ser isoladas por vírgulas, diferentemente das explicativas.",
+        "source_reference": null
+      },
+      "source_content_hash": "4eb7d36ce7a8fa9874fb77a8a0e2dcf86303aa4e1d43280329c6b7aa82469dd0"
+    },
+    {
+      "external_id": "pdf:cargo30:028",
+      "source_id": "cargo30:28",
+      "question_type": "true_false",
+      "statement_markdown": "Freqüentemente, a análise do crime inclui uma série de reflexões e comentários que ultrapassam, em muito, o ato delituoso em si; são questões que envolvem a ética, a moral, a psicologia e a psiquiatria simultaneamente. Sempre há alguém atrelando ao criminoso traços e características psicopatológicas ou sociológicas.\nA despeito dos recentes conhecimentos da neurociência, a maioria das pesquisas não encontrou uma associação entre patologias psíquicas e risco de se cometer crime de grande violência, ou encontrou apenas uma discreta associação, estatisticamente insignificante.\n\nInternet: <http://www.psiqweb.med.br/forense/forense.html> (com adaptações).\n\nCom relação ao texto acima e a aspectos relevantes que o tema suscita, julgue os itens subseqüentes.\n\nAo se substituir a expressão “A despeito dos” (l.7) por Em detrimento dos, a informação do texto modifica-se e há prejuízo para a coerência textual.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 28",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "787c69c802354dc41bcf208e5abe779d1d8940c7bf09ca013dadd5ddc2e27a36",
+        "original_numeric_id": 28,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A substituição proposta altera substancialmente o sentido original do texto e prejudica a sua coerência:\n\n* **A despeito de:** É uma locução prepositiva de valor concessivo, equivalente a \"apesar de\", \"não obstante\" ou \"embora existam\". Introduz uma ideia de contraste que não impede o fato principal.\n* **Em detrimento de:** Significa \"em prejuízo de\", \"com dano a\" ou \"causando perda para\".\n\nAo realizar a troca, a frase passaria a indicar que as pesquisas foram feitas prejudicando os conhecimentos da neurociência, o que desvirtua completamente a relação lógica de concessão estabelecida pelo autor.",
+        "source_reference": null
+      },
+      "source_content_hash": "f1bba1bab6108bebda1282d5eba029c3965db0456c4f1c968cae84f9c6712354"
+    },
+    {
+      "external_id": "pdf:cargo30:029",
+      "source_id": "cargo30:29",
+      "question_type": "true_false",
+      "statement_markdown": "Freqüentemente, a análise do crime inclui uma série de reflexões e comentários que ultrapassam, em muito, o ato delituoso em si; são questões que envolvem a ética, a moral, a psicologia e a psiquiatria simultaneamente. Sempre há alguém atrelando ao criminoso traços e características psicopatológicas ou sociológicas.\nA despeito dos recentes conhecimentos da neurociência, a maioria das pesquisas não encontrou uma associação entre patologias psíquicas e risco de se cometer crime de grande violência, ou encontrou apenas uma discreta associação, estatisticamente insignificante.\n\nInternet: <http://www.psiqweb.med.br/forense/forense.html> (com adaptações).\n\nCom relação ao texto acima e a aspectos relevantes que o tema suscita, julgue os itens subseqüentes.\n\nA direção argumentativa do texto leva a concluir que atos criminosos violentos estão significativamente mais associados a psicopatas do que a pessoas consideradas normais na população em geral.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 29",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "e816f77aaeb863f2ed6a1366a4fefa72931d0cc21c5593858b4ea54fdbcdf6bf",
+        "original_numeric_id": 29,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está errado. A direção argumentativa do texto aponta no sentido oposto ao afirmado. \n\nO segundo parágrafo explicita que \"a maioria das pesquisas não encontrou uma associação entre patologias psíquicas e risco de se cometer crime de grande violência, ou encontrou apenas uma discreta associação, estatisticamente insignificante\". Portanto, o texto refuta a ideia de que crimes violentos estejam significativamente mais associados a indivíduos com psicopatologias do que à população em geral.",
+        "source_reference": null
+      },
+      "source_content_hash": "8def06aca870d45db87ab3e5e84be19ff3ffd6dd773ac42007a1f9efaff10014"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-agente_de_policia_federal-portugues-c21ce9baaf43-6b30f40ea301",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "c21ce9baaf43b3e320e3e35ed9221e0b193c2fb64e13b2b22d3edc7cffb25ae3",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "c9478e60c7a59e09219858065e6b529ffccd20a4868ecef8715a5afdb7700eb9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "6b30f40ea3018e22b4383e517d4a62e0fc506e5ec8be9b444267f702d1e9ae31",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:011",
+      "source_id": "agente_de_policia_federal:11",
+      "question_type": "true_false",
+      "statement_markdown": "Não se concebe que um ato normativo de qualquer natureza seja redigido de forma obscura, que dificulte ou impossibilite sua compreensão. A transparência do sentido dos atos normativos, bem como sua inteligibilidade, são requisitos do próprio Estado de direito: é inaceitável que um texto legal não seja entendido pelos cidadãos. A publicidade implica, pois, necessariamente, clareza e concisão.\nBrasil. Presidência da República. Manual de Redação da Presidência da República. 2.ª ed. Brasília, 2002.\nConsiderando o fragmento de texto apresentado, julgue os seguintes itens, de acordo com o disposto no Manual de Redação da Presidência da República (MRPR).\n\nA concisão é uma qualidade da redação oficial que atende ao princípio da economia linguística, segundo o qual se deve reduzir ao mínimo de palavras possível o conteúdo a ser comunicado, evitando-se redundâncias ou trechos inúteis.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 11; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "1f44cf096cf4e4ad5ddd4b52e8365c0be352a8868ebe25923a6e621d450403d8",
+        "original_numeric_id": 11,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nDe acordo com o Manual de Redação da Presidência da República, a **concisão** é o atributo da redação oficial que consiste em dizer o máximo de ideias com o mínimo indispensável de palavras, obedecendo ao princípio da **economia linguística**.\n\nA concisão elimina redundâncias, períodos prolixos, chavões e adjetivações dispensáveis, tornando o ato administrativo ágil, direto e economicamente eficiente tanto para quem escreve quanto para quem lê.",
+        "source_reference": null
+      },
+      "source_content_hash": "ad8365fb5652db4f94156ee79b43a63e9847e3e4abbcdb45935ff7d2da6e8430"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:021",
+      "source_id": "agente_de_policia_federal:21",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os seguintes itens, relativos aos sentidos e aos aspectos linguísticos do texto 12A1AAA.\n\nNo trecho “ao procurar alguma coisa que se ache escondida” (l. 30 e 31), o pronome “que” exerce a função de complemento da forma verbal “ache”.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 21; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "05717dfadbc5dae9dedd6caafb915e4680fc3f5f91b542cf1a5ba5cfdd7ed126",
+        "original_numeric_id": 21,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNo trecho *\"ao procurar alguma coisa que se ache escondida\"* (l. 30 e 31):\n\nO verbo **achar-se** foi empregado com o significado de **encontrar-se**, **estar situada**, **permanecer** em determinado estado ou local (*\"alguma coisa que se encontre escondida\"*).\n\nNão possui a acepção de emitir opinião subjetiva ou formular juízo de valor pessoal (\"julgar-se\", \"pensar-se\").",
+        "source_reference": null
+      },
+      "source_content_hash": "833a5b028177d6b53d9fb13489afdfa9e0bbfbe17ca275e14778076652e00d28"
+    }
+  ]
+}

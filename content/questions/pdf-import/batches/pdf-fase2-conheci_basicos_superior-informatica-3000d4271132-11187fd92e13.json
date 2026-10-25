@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-conheci_basicos_superior-informatica-3000d4271132-11187fd92e13",
+  "source": {
+    "file_name": "conheci_basicos_superior_ATUALIZADO.json",
+    "sha256": "3000d42711328f5dba7e425cb1aa6b685dc58390abb29f1e798342c2c567b9e6",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "conheci_basicos_superior.json",
+      "original_source_sha256": "b206400e7cdbc8349a44515c2afe3ee6461cc3fb9fdceb3ff70127850f57917b",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "11187fd92e131154dbf119ce5c60313010386904caa6caec7046fd5a5b4c1caf",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:conheci_basicos_superior:021",
+      "source_id": "conheci_basicos_superior:21",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação a programas de navegação e de correio eletrônico, julgue os itens a seguir.\n\nO recurso do Mozilla Thunderbird que permite agrupar e ordenar mensagens é utilizado somente quando cada mensagem tiver sido marcada por um dos filtros da opção Marcadores.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 21; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "1d2064c97d3fde76dde8c094dcadce7da796fa59bf881707a38e2274fa11be55",
+        "original_numeric_id": 21,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto ao afirmar que o recurso de agrupar e ordenar mensagens no Mozilla Thunderbird é utilizado \"somente\" quando as mensagens são marcadas por filtros da opção Marcadores.\n\nNa realidade, o Thunderbird permite a ordenação e o agrupamento de mensagens com base em diversos critérios padrão de metadados de e-mail, tais como:\n* Data;\n* Remetente (De);\n* Assunto;\n* Tamanho;\n* Status de leitura (Lidas/Não lidas).\n\nEssas funções de organização são nativas e independentes da aplicação prévia de marcadores ou filtros específicos.",
+        "source_reference": null
+      },
+      "source_content_hash": "a81efdb0fa6038a5636f26f1157748a9bb858c5e0a5b0ee3727d563836677557"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:023",
+      "source_id": "conheci_basicos_superior:23",
+      "question_type": "true_false",
+      "statement_markdown": "No que concerne à rede de computadores e à segurança da informação, julgue os itens que se seguem.\n\nO nobreak, equipamento programado para ser acionado automaticamente na falta de energia elétrica, oferece disponibilidade e segurança aos computadores.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 23; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "28b84ba0856f1c53f489180589cabbb0c9900fa09a9e1a5fd27239e3cea3f0cb",
+        "original_numeric_id": 23,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto.\n\nO **nobreak** (também conhecido como UPS - *Uninterruptible Power Supply*) desempenha duas funções principais que se alinham diretamente com os conceitos de segurança da informação e infraestrutura:\n\n1. **Disponibilidade**: Ao fornecer energia temporária por meio de suas baterias internas durante uma queda de energia da rede elétrica, o equipamento garante que o computador continue funcionando, mantendo o sistema disponível.\n2. **Segurança**: Protege o hardware contra flutuações de tensão (surtos elétricos) e evita o desligamento abrupto do sistema operacional, o que previne a corrupção de arquivos e danos físicos aos componentes internos do computador.",
+        "source_reference": null
+      },
+      "source_content_hash": "4d3809458e7068e489346a3b8a7185b5e47976ba286ed9abc9836376141fb4da"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:025",
+      "source_id": "conheci_basicos_superior:25",
+      "question_type": "true_false",
+      "statement_markdown": "No que concerne à rede de computadores e à segurança da informação, julgue os itens que se seguem.\n\nO uso do becape do tipo incremental permite que sejam copiados apenas os arquivos gravados desde o último becape normal ou incremental.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 25; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "e55a12af64d3da9620390a67f01166a29e882aa2397a594d120d7f67f0f5fa48",
+        "original_numeric_id": 25,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O backup incremental é projetado para otimizar o tempo de execução e o espaço de armazenamento. Ele realiza a cópia apenas dos arquivos que foram criados ou modificados desde o último backup realizado, independentemente de este último ter sido um backup completo (normal) ou outro backup incremental.\n\nApós a realização da cópia, os arquivos são marcados como copiados (o atributo de arquivo é desmarcado), garantindo que não sejam duplicados no próximo backup incremental caso não sofram novas alterações.\n\n**Diferenciação importante:**\n* **Backup Incremental:** Copia os arquivos alterados desde o último backup (completo ou incremental) e limpa o atributo de arquivo.\n* **Backup Diferencial:** Copia os arquivos alterados desde o último backup *completo* (normal) e não limpa o atributo de arquivo.",
+        "source_reference": null
+      },
+      "source_content_hash": "efbd14891ea6b2a83fb19eff817ead5fc1a544bfb262107a5e8eb5de3448b84b"
+    }
+  ]
+}

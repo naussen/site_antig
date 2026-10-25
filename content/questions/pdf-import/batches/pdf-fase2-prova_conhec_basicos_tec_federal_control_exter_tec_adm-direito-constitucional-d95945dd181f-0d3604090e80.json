@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-prova_conhec_basicos_tec_federal_control_exter_tec_adm-direito-constitucional-d95945dd181f-0d3604090e80",
+  "source": {
+    "file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "d95945dd181f1eb45ac1925bc608c39c59502ec921ff6088fd7fa8ea452ebe47",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "cb0421eefe790fc8619534a2a1f0aa7b54af0ff8abce22779b8e91d6cb714a78",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "0d3604090e8097bf58ef4b6065ce596efba71cca6af274ba729a6805027ebfa4",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:026",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:26",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos direitos e garantias fundamentais individuais e coletivos resguardados pela Constituição Federal de 1988, julgue os itens subsequentes.\n\nO mandado de segurança coletivo pode ser impetrado por partido político que tenha representação no Congresso Nacional.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 26; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "1bcd65ce1c603683a1a076e21685745f1a5f6a196677e3fb68555cc91c7f43bc",
+        "original_numeric_id": 26,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. O mandado de segurança coletivo é um remédio constitucional destinado à proteção de direito líquido e certo, não amparado por *habeas corpus* ou *habeas data*, quando a ilegalidade ou o abuso de poder for praticado por autoridade pública ou agente de pessoa jurídica no exercício de atribuições do Poder Público.\n\nA legitimidade ativa para a impetração do mandado de segurança coletivo é restrita aos sujeitos indicados expressamente no texto constitucional. Dentre eles, figura o partido político com representação no Congresso Nacional. Para que se configure essa representação, basta que a agremiação possua pelo menos um parlamentar (seja deputado federal ou senador) em exercício no Congresso Nacional.\n\n### Dispositivo legal\nArt. 5º, inciso LXX, alínea \"a\", da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "b20245f2f6a25fdea3a53c5b052ec5814005b206b5224f8fa96541bca9c3ac3e"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:027",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:27",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos direitos e garantias fundamentais individuais e coletivos resguardados pela Constituição Federal de 1988, julgue os itens subsequentes.\n\nA casa é asilo inviolável do indivíduo, de modo que ninguém pode nela penetrar sem o consentimento do morador, salvo por determinação judicial; nessa circunstância, a entrada poderá ocorrer em qualquer horário.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 27; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "5a00b5a707d11d14e706f564b28410d3fb96b856953cf79cb0a7cceacd7b8c30",
+        "original_numeric_id": 27,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. A inviolabilidade do domicílio é uma garantia constitucional que assegura que a casa é asilo inviolável do indivíduo. O ingresso no domicílio sem o consentimento do morador é uma medida excepcional e restrita a quatro hipóteses taxativas:\n\n1. Flagrante delito (a qualquer hora);\n2. Desastre (a qualquer hora);\n3. Prestação de socorro (a qualquer hora);\n4. Determinação judicial (exclusivamente **durante o dia**).\n\n**Pegadinha:** A determinação judicial é a única das exceções que possui limitação temporal expressa na Constituição, não sendo permitida a sua execução durante a noite.\n\n### Dispositivo legal\nArt. 5º, inciso XI, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "dd0921ff67d078db490ee4de8fb97f7e1ff267da4d506860138fff5a9f7a0e67"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:028",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:28",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos direitos e garantias fundamentais individuais e coletivos resguardados pela Constituição Federal de 1988, julgue os itens subsequentes.\n\nNo Brasil, é vedada a pena de morte em quaisquer situações.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 28; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "2508f701fb5859c094a2dbe3476102bf69cf6e9bb8528dee04dc4d34994f83d1",
+        "original_numeric_id": 28,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. Embora a proibição da pena de morte seja a regra geral no ordenamento jurídico brasileiro, ela não possui caráter absoluto. A própria Constituição Federal de 1988 estabelece uma exceção expressa no caso de guerra declarada, nos termos do artigo 84, inciso XIX.\n\n**Detalhe importante:** O direito à vida é um direito fundamental, mas não é ilimitado ou absoluto, encontrando relativização em situações extremas previstas pelo próprio constituinte originário.\n\n### Dispositivo legal\nArt. 5º, inciso XLVII, alínea \"a\", da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "28bf160b0cfa72bd23b330e507c67ad8a32473f336bbaf0a685f2111bcfb5b64"
+    }
+  ]
+}

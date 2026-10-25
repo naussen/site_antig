@@ -1,0 +1,80 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-agente_de_policia_federal-direito-administrativo-c21ce9baaf43-801cdf602daa",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "c21ce9baaf43b3e320e3e35ed9221e0b193c2fb64e13b2b22d3edc7cffb25ae3",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "c9478e60c7a59e09219858065e6b529ffccd20a4868ecef8715a5afdb7700eb9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "801cdf602daa16fffb73ba26a5d59d583448742a994c925f228a7a17527e562b",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:026",
+      "source_id": "agente_de_policia_federal:26",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da organização da administração pública brasileira, julgue os itens subsequentes.\n\nAo outorgar determinada atribuição a pessoa não integrante de sua administração direta, o Estado serve-se da denominada desconcentração administrativa.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 26; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "18d6d214e0e79ab13ce1937cde36d13a04814aad493b188caa7abce132532654",
+        "original_numeric_id": 26,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA atribuição de determinadas competências a pessoas não integrantes da Administração Direta caracteriza a técnica da **descentralização** administrativa.\n\nNa descentralização por colaboração ou delegação (como ocorre na contratação de concessionárias ou permissionárias de serviços públicos), o Estado transfere a execução material da atividade, mas **conserva permanentemente a titularidade do serviço, o poder de fiscalização, regulação e controle** sobre o prestador. O ente público jamais renuncia ao poder de fiscalização e intervenção sobre os serviços de sua alçada.",
+        "source_reference": null
+      },
+      "source_content_hash": "2a25772d5fe1193a375852e84cad7086ea8cafcce53a476564a3e9d7eda2e479"
+    }
+  ]
+}

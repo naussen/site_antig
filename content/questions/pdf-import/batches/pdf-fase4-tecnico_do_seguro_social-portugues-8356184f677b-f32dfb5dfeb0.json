@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_do_seguro_social-portugues-8356184f677b-f32dfb5dfeb0",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "8356184f677b1f67db7c2ca11e127e96c825e8169801c0b8b25dcfb5ffc09cf5",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "de5b10d2a1ac5bee023c723ca65187afb7622a283e7467ef7e8b4dd19094f663",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "f32dfb5dfeb0a87d94e8adc04c6e042e7b4211bdc43caa0e2b686aa6428a42ba",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:003",
+      "source_id": "tecnico_do_seguro_social:3",
+      "question_type": "true_false",
+      "statement_markdown": "Texto CB1A1-I\n\nAs pessoas que driblaram o desemprego trabalhando por conta própria desde o início da pandemia estão ganhando 31% menos em comparação com as que optaram por esse tipo de trabalho dois anos antes da covid-19. Entre estas, o rendimento médio mensal era de R$ 2.074, enquanto, entre aquelas, o rendimento é de R$ 1.434. Os dados, publicados no Boletim Emprego em Pauta, são do Departamento Intersindical de Estatística e Estudos Socioeconômicos (DIEESE) e foram obtidos a partir de uma análise comparativa que levou em conta os resultados referentes ao quarto trimestre de 2021 da Pesquisa Nacional por Amostra de Domicílio, realizada pelo Instituto Brasileiro de Geografia e Estatística.\nAo final de 2021, o número de trabalhadores por conta própria havia crescido 6,6%. A maioria não tem nenhuma proteção social, o que confirma a precarização do trabalho até mesmo para quem conseguiu se manter no mercado por conta própria. Três em cada quatro pessoas que trabalham por conta própria deixam de contribuir para a previdência social, ou seja, apenas 12,7% desses trabalhadores conseguem pagar a contribuição previdenciária para o Instituto Nacional do Seguro Social (INSS), para terem alguma segurança no futuro com a aposentadoria e outros benefícios. Entre os mais antigos, o percentual era de 58,3%.\nOs técnicos do DIEESE sugerem as seguintes hipóteses para explicar esse percentual menor de inscrição no cadastro nacional da pessoa jurídica (CNPJ) entre aqueles que começaram a trabalhar mais recentemente por conta própria: a baixa remuneração e a incerteza do negócio, assim como a preocupação com o endividamento que a regularização do trabalho pode gerar.\n\nInternet: <www.cut.org.br> (com adaptações).\n\nEm relação às ideias do texto CB1A1-I, julgue os seguintes itens.\n\nNo texto, os dados indicativos de que a maioria das pessoas que trabalha por conta própria não contribui para a previdência social são utilizados como argumento para comprovar a precarização do trabalho, no Brasil, desde o início da pandemia de covid-19 até o final de 2021.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 3; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "612d94caf2953ef6173f21f0136b50d4e3217a2cf01a971ff1e8bea8ddfd051d",
+        "original_numeric_id": 3,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNo segundo parágrafo do texto CB1A1-I, o autor argumenta que a expressiva expansão dos trabalhadores por conta própria verificada no período da pandemia (2020 a 2021) foi marcada por profunda vulnerabilidade:\n*\"A maioria não tem nenhuma proteção social, o que confirma a precarização do trabalho até mesmo para quem conseguiu se manter no mercado por conta própria.* *Três em cada quatro pessoas que trabalham por conta própria deixam de contribuir para a previdência social...\"*.\n\nOs dados estatísticos do DIEESE sobre a baixa cobertura previdenciária servem diretamente como argumento central para fundamentar e comprovar a tese da precarização do trabalho autônomo no Brasil durante a crise sanitária.",
+        "source_reference": null
+      },
+      "source_content_hash": "4f941e9615da6a88e3b21b2a4224cb2a3f02e46cc8698f2311e9a244b24e78a9"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:008",
+      "source_id": "tecnico_do_seguro_social:8",
+      "question_type": "true_false",
+      "statement_markdown": "Ora, graças a Deus, lá se foi mais um. Um ano, quero dizer. Menos um na conta, mais uma prestação paga. E tem quem fique melancólico. Tem quem deteste ver à porta a cara do mascate em cada primeiro do mês, cobrando o vencido. Quando compram fiado, têm a sensação de que o homem deu de presente, e se esquecem das prestações, que serão, cada uma, uma facada. Nem se lembram dessa outra prestação que se paga a toda hora, tabela Price insaciável comendo juros de vida, todo dia um pouquinho mais; um cabelo que fica branco, mais um milímetro de pele que enruga, uma camada infinitesimal acrescentada à artéria que endurece, um pouco mais de fadiga no coração, que também é carne e se cansa com aquele bater sem folga. E o olho que enxerga menos, e o dente que caria e trata de abrir lugar primeiro para o pivô, depois para a dentadura completa.\nO engraçado é que muito poucos reconhecem isso. Convencem-se de que a morte chega de repente, que não houve desgaste preparatório, e nos apanha em plena flor da juventude, ou em plena frutificação da maturidade; se imaginam uma rosa que foi colhida em plena beleza desabrochada. Mas a rosa, se a não apanha o jardineiro, que será ela no dia seguinte, após o mormaço do sol e a friagem do sereno? A hora da colheita não interessa ― de qualquer modo, o destino dela era murchar, perder as pétalas, secar, sumir-se.\nA gente, porém, não pode pensar muito nessas coisas. Tem que pensar em alegrias, sugestionar-se, sugestionar os outros. Vamos dar festas, vamos aguardar o ano novo com esperanças e risadas e beijos congratulatórios. Desejar uns aos outros saúde, riqueza e venturas. Fazer de conta que não se sabe; sim, como se a gente nem desconfiasse. Tudo que nos espera: dentro do corpo o que vai sangrar, doer, inflamar, envelhecer. As cólicas de fígado, as dores de cabeça, as azias, os reumatismos, as gripes com febre, quem sabe o tifo, o atropelamento. Tudo escondido, esperando. Sem falar nos que vão ficar tuberculosos, nas mulheres que vão fazer cesariana. Os que vão perder o emprego, os que se verão doidos com as dívidas, os que hão de esperar nas filas ― que seremos quase todos. E os que, não morrendo, hão de ver a morte lhes entrando de casa adentro, carregando o filho, pai, amor, amizade. As missas de sétimo dia, as cartas de rompimento, os bilhetes de despedida. E até guerra, quem sabe? Desgostos, desgostos de toda espécie. Qual de nós passa um dia, dois dias, sem um desgosto? Quanto mais um ano!\n\nRachel de Queiroz. Um ano de menos.\nIn: O Cruzeiro, Rio de Janeiro, dez./1951 (com adaptações).\n\nAcerca das ideias e de aspectos linguísticos do texto precedente, julgue os itens que se seguem.\n\nNo texto, a autora incentiva uma postura otimista durante a passagem de ano, apesar de manifestar uma visão pessimista quanto ao porvir.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 8; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "bb2543837779bc2584a8eda9efe33b061d7e4cc6800b98504f8cb1b5ee95202d",
+        "original_numeric_id": 8,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNo terceiro parágrafo da crônica, a narradora estabelece um contraste entre a consciência inexorável do envelhecimento/finitude humana e a necessidade psicológica de celebrar a passagem do ano:\n*\"A gente, porém, não pode pensar muito nessas coisas. Tem que pensar em alegrias, sugestionar-se, sugestionar os outros. Vamos dar festas, vamos aguardar o ano novo com esperanças e risadas e beijos congratulatórios. Desejar uns aos outros saúde, riqueza e venturas.\"*.\n\nA autora expressamente incentiva uma atitude de otimismo, celebração e esperança compartilhada durante o rito da passagem de ano.",
+        "source_reference": null
+      },
+      "source_content_hash": "add8ccbc2c307739a014e89580d058bfff2e38e0c37cbf7b79f64a3675dd7046"
+    }
+  ]
+}

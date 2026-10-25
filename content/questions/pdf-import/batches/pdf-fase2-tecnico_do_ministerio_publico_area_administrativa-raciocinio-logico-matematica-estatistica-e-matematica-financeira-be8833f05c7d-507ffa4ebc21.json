@@ -1,0 +1,422 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-tecnico_do_ministerio_publico_area_administrativa-raciocinio-logico-matematica-estatistica-e-matematica-financeira-be8833f05c7d-507ffa4ebc21",
+  "source": {
+    "file_name": "tecnico_do_ministerio_publico_area_administrativa_ATUALIZADO.json",
+    "sha256": "be8833f05c7dc3fc713c3cef305c312520e16748ef98c329f6fbbe57d90905b7",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "tecnico_do_ministerio_publico_area_administrativa.json",
+      "original_source_sha256": "2976130818df2aae9a14ec1aa61321f02e8f9c02cc280baa4e3c5d73c8a106ba",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "507ffa4ebc21ff78711621e9b1052294c328b2c761bc4494d2a94103f8b2d061",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:031",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:31",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Ernesto foi promovido e seu salário aumentou 40%, passando a ser de R$3.500,00.\nO salário de Ernesto antes da promoção era de:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 31; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "R$1.900,00;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "R$2.100,00;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "R$2.400,00;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "R$2.500,00;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "R$2.800,00.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico Matemático",
+        "source_content_hash": "a0eb87bd001be88abfce30a4bfd935957ca1df837f7a58e1c5a8501dc32cca11",
+        "original_numeric_id": 31,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_031.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O problema trata de aumento percentual sobre um valor inicial desconhecido. O erro comum é calcular 40% diretamente sobre o valor final de R$ 3.500,00 (o que daria R$ 1.400,00, levando à alternativa incorreta B, R$ 2.100,00). O percentual de aumento deve ser aplicado sobre o valor original (anterior à promoção).\n\nRepresentando o salário original por $S$, o novo salário é equivalente a 140% de $S$, ou seja, $1,4 \\cdot S = 3500$. Dividindo 3500 por 1,4, obtém-se R$ 2.500,00.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_031.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "b38818b97e7f9b488fdaf77106e1f215fcf0699108b78fb407e8de8143d67783"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:032",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:32",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Uma empresa criou um arquivo com uma sequência de pastas identificadas com uma letra do alfabeto e um número escrito com dois dígitos, como se vê a seguir.\nA00, A01, A02, A03, ..., A99, B00, B01, B02, ..., Z99\nA quantidade de pastas depois de D37 e antes de F23 é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 32; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "85;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "86;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "184;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "185;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "186.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico Matemático",
+        "source_content_hash": "82aff858179efb816a09a7e38b931211422a8596ab0ca04424be38e3f3e413b6",
+        "original_numeric_id": 32,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_032.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a contagem precisa de elementos em uma sequência alfanumérica ordenada. O termo \"depois de D37 e antes de F23\" indica que os limites D37 e F23 não devem ser incluídos na contagem (intervalo aberto).\n\nPara a letra D, as pastas de interesse vão de D38 a D99. A quantidade é dada por $99 - 38 + 1 = 62$.\n\nPara a letra E, todas as 100 pastas (de E00 a E99) estão incluídas.\n\nPara a letra F, as pastas de interesse vão de F00 a F22. A quantidade é de $22 - 0 + 1 = 23$ pastas.\n\nSomando os três grupos: $62 + 100 + 23 = 185$.\n\n*Pegadinha:* Esquecer de excluir os extremos ou errar a contagem inclusiva de intervalos (por exemplo, fazer $99 - 38 = 61$ em vez de $62$) leva a alternativas incorretas como a A, B ou C.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_032.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "fef060d2e192d2cfecb0a4e0bdf7e3733b37b84f82c8d049493658f4d8235398"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:033",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:33",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Entre as pessoas A, B, C, D, E, duas delas serão escolhidas por sorteio para integrarem o conselho diretor de uma empresa. O diretor da empresa conhece essas cinco pessoas e disse:\n“Gostaria que A ou B fossem sorteados, mas não gostaria que D fosse sorteado”.\nA probabilidade de que o desejo do diretor da empresa se realize é de:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 33; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "30%;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "40%;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "50%;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "60%;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "70%.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico Matemático",
+        "source_content_hash": "f57a087cccb7b30a2101f51b90e052835be30a65c19f0a00e9f45c177a066a2b",
+        "original_numeric_id": 33,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_033.png",
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para calcular a probabilidade, divide-se o número de casos favoráveis pelo número de casos possíveis.\n\nO espaço amostral consiste na escolha de 2 pessoas dentre 5 disponíveis, o que corresponde a uma combinação simples: $C_{5,2} = 10$ duplas possíveis.\n\nO evento desejado exige que pelo menos uma das pessoas A ou B seja escolhida, e que a pessoa D não seja escolhida.\n\nExcluindo D do grupo, restam as pessoas A, B, C e E. As duplas possíveis formadas apenas por essas quatro pessoas são: {A, B}, {A, C}, {A, E}, {B, C}, {B, E} e {C, E}.\n\nDentre essas, a dupla {C, E} não atende à condição de ter \"A ou B\". Portanto, restam exatamente 5 duplas favoráveis: {A, B}, {A, C}, {A, E}, {B, C} e {B, E}.\n\nA probabilidade é de $\\frac{5}{10} = 50\\%$.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_033.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "cea0b6fb1456a1b6c5a9a2f0b2a6a2f36a76a6a170e6f3e194641dbb118798b3"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:035",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:35",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Certa calculadora possui a tecla T. A tecla T, quando apertada, subtrai uma unidade do número que está no visor e multiplica o número resultante por 2. Por exemplo, se o número 10 está no visor e a tecla T é apertada, o resultado da operação é (10 – 1)x2 = 18.\nValdo tinha um número natural no visor dessa calculadora, apertou 3 vezes, em sequência, a tecla T e o resultado foi 450.\nA soma dos algarismos do número que Valdo tinha inicialmente no visor é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 35; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "9;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "10;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "11;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "12;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "13.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico Matemático",
+        "source_content_hash": "41d30d0c6066e1cdeda2b9f4600ee336ab721a96da9d0800c1f7e804f97c1d1c",
+        "original_numeric_id": 35,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_035.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para encontrar o número inicial, aplica-se a operação inversa de forma sucessiva a partir do resultado final (450).\n\nA operação direta consiste em subtrair 1 e multiplicar por 2: $T(x) = 2(x - 1)$.\n\nA operação inversa consiste em dividir por 2 e somar 1: $T^{-1}(y) = \\frac{y}{2} + 1$.\n\nAplicando a operação inversa três vezes:\n1. Primeira regressão: $\\frac{450}{2} + 1 = 226$.\n2. Segunda regressão: $\\frac{226}{2} + 1 = 114$.\n3. Terceira regressão (número original): $\\frac{114}{2} + 1 = 58$.\n\nO número inicial no visor era 58. A soma de seus algarismos é $5 + 8 = 13$.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_035.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "908621eec2aa43bee4d6dbca86326bbddbd1a235caf78bc0e631a0a21d02a0f4"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:037",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:37",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O jantar de comemoração de um casamento será realizado em um salão que possui mesas redondas iguais e que comportam até 6 pessoas cada uma. Colocando 5 convidados em cada mesa, todas as mesas seriam ocupadas e dois convidados ficariam sem lugar. Colocando 6 convidados em cada mesa, todos os convidados ficariam sentados e 3 mesas ficariam vazias.\nO número de convidados é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 37; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "96;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "102;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "108;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "112;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "114.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico Matemático",
+        "source_content_hash": "9bbcd1deae30a73d287145be084be49dac34fe790741922eae991f3d2324c3f9",
+        "original_numeric_id": 37,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_037.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A resolução do problema baseia-se na modelagem de um sistema de equações de primeiro grau com duas variáveis: o número de mesas ($M$) e o número de convidados ($C$).\n\nA primeira condição estabelece que, ao alocar 5 pessoas por mesa, utilizam-se todas as mesas e sobram 2 pessoas, o que se traduz na equação $C = 5M + 2$.\n\nA segunda condição indica que, ao alocar 6 pessoas por mesa, todos se sentam e sobram 3 mesas vazias, ou seja, apenas $M - 3$ mesas são utilizadas. Isso se traduz na equação $C = 6(M - 3)$.\n\nIgualando as duas expressões para $C$, obtém-se $5M + 2 = 6M - 18$, de onde se conclui que $M = 20$. Substituindo o número de mesas em qualquer uma das equações, encontra-se $C = 102$ convidados.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_037.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "c4b0bc59dce12d153bcacb3f2835ec2f04aaaee61f5cd82ceeb4246b007fc871"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:039",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:39",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um saco contém bolas brancas, vermelhas, azuis e pretas, sendo 5 de cada cor. Antônio retirou no escuro certa quantidade de bolas e disse: “Entre as bolas que retirei, há três da mesma cor”.\nPara que a frase dita por Antônio seja obrigatoriamente verdadeira, o número mínimo de bolas que ele retirou do saco é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 39; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "9;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "10;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "11;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "12;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "13.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico Matemático",
+        "source_content_hash": "a46656a89e53b79095f63b94336baf17815fba9e5ab976df003eb96d7938c18b",
+        "original_numeric_id": 39,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_039.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda o Princípio da Casa dos Pombos (também conhecido como Teorema de Dirichlet ou método do \"pior caso\").\n\nPara garantir que pelo menos 3 bolas tenham a mesma cor, deve-se projetar a situação mais desfavorável possível, na qual se retira o maior número de bolas sem que a condição seja satisfeita.\n\nComo existem 4 cores disponíveis (branca, vermelha, azul e preta), o pior cenário ocorre quando se retiram exatamente 2 bolas de cada cor, totalizando $2 \\times 4 = 8$ bolas. Nesse momento, ainda não há 3 bolas de nenhuma cor.\n\nQualquer bola adicional retirada (a 9ª bola) pertencerá obrigatoriamente a uma das quatro cores já sorteadas, completando um grupo de 3 bolas da mesma cor. Assim, o número mínimo necessário é 9.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_039.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "4f244d6e541ce0e66bec8759d910b9b363ff5c76209522f05a2ba2fc4cbbfbfd"
+    }
+  ]
+}

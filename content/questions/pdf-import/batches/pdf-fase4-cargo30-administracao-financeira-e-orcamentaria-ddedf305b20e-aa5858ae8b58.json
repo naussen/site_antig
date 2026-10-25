@@ -1,0 +1,190 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-cargo30-administracao-financeira-e-orcamentaria-ddedf305b20e-aa5858ae8b58",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "ddedf305b20e0a7dfd48e2ef1da2d3823dc4e437478b3edd7e62ad4a771ae524",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "ade70669f0c96aa17db7bd4f2a5081dabefc8b060fd23fdfaaa31934743bc23f",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "aa5858ae8b586751af733482264b95435d6ab1a6929715a264fbdcb414c223cb",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-financeira-e-orcamentaria",
+    "name": "Administração Financeira e Orçamentária"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:087",
+      "source_id": "cargo30:87",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação a conceitos de administração financeira, especialmente no que se refere a balanço patrimonial, julgue os itens abaixo.\n\nO ativo circulante engloba, além das disponibilidades, créditos, estoques e despesas antecipadas realizáveis no exercício social subseqüente.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 87",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Créditos Adicionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira",
+        "source_content_hash": "4cd8f418a4c43d5cb9055079f675d3f8cfa90ed7826b47f1f9e6569b8926c569",
+        "original_numeric_id": 87,
+        "original_source_content_hash": "2b3ce2edee19ea27398e2b5fe84e8a9d145bd7c77b3a4b4752dfae33f951b8a1",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmativa define corretamente a composição do Ativo Circulante de acordo com as normas contábeis e a legislação societária brasileira.\n\nO Ativo Circulante agrupa as disponibilidades (caixa, equivalentes de caixa) e os bens e direitos que se realizarão em moeda ou serão consumidos no curso do exercício social subsequente (geralmente 12 meses). Isso inclui expressamente:\n* **Disponibilidades:** numerário em caixa e depósitos bancários;\n* **Créditos:** contas a receber de clientes e outros direitos realizáveis no curto prazo;\n* **Estoques:** mercadorias, matérias-primas e produtos em elaboração;\n* **Despesas antecipadas:** despesas pagas antecipadamente cujos benefícios ou prestação de serviços ocorrerão no exercício seguinte (como prêmios de seguros a apropriar).\n\n**Dispositivo legal**\n\n[Lei nº 6.404/1976, Art. 179, inciso I](https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "492add01a2762011d80edc813d37f3a09eee319f22163f80b9cb6ae158daa487"
+    },
+    {
+      "external_id": "pdf:cargo30:088",
+      "source_id": "cargo30:88",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação a conceitos de administração financeira, especialmente no que se refere a balanço patrimonial, julgue os itens abaixo.\n\nLucros ou prejuízos acumulados são parte das reservas de lucros que ainda não teve seu destino final determinado.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 88",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Créditos Adicionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira",
+        "source_content_hash": "fdcb352d42c87ee9aafef30134cac9d8c4cee32d8d67b6d19315e2ff09e5d0d9",
+        "original_numeric_id": 88,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nSob a ótica contábil clássica e a sistemática societária original da Lei nº 6.404/1976 (vigente no ano do concurso de 2004), a conta de **Lucros ou Prejuízos Acumulados** no Patrimônio Líquido representava a parcela de lucros gerados pela entidade que permanecia retida temporariamente, aguardando deliberação da assembleia geral sobre sua destinação definitiva (distribuição de dividendos, aumento de capital ou transferência para reservas de lucros específicas).\n\n*Nota histórica:* A partir da Lei nº 11.638/2007, as sociedades anônimas não mais podem apresentar saldo credor na conta de lucros acumulados ao fim do exercício, devendo destinar integralmente o lucro apurado.",
+        "source_reference": null
+      },
+      "source_content_hash": "57fad28cca1bb994341521d533073adbeb3d854d8aa114aa5759c00e44b9d16b"
+    },
+    {
+      "external_id": "pdf:cargo30:089",
+      "source_id": "cargo30:89",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação a conceitos de administração financeira, especialmente no que se refere a balanço patrimonial, julgue os itens abaixo.\n\nOs estoques são avaliados apenas pelo custo de aquisição corrigido monetariamente. Os que estão sujeitos à perda de valor por causa do tempo, da obsolescência e do uso são periodicamente baixados.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 89",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Créditos Adicionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira",
+        "source_content_hash": "17f53e7f3fa1d86454da1fc8416f894ac537c495a164e8b5bea269c876555cda",
+        "original_numeric_id": 89,
+        "original_source_content_hash": "6012e55d02bb820bf672feee86a4f07745364a3515b75cb98a0be8b76d9fb9e9",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto por dois motivos principais:\n\n1. **Critério de Avaliação**: Os estoques não são avaliados apenas pelo custo de aquisição. De acordo com a legislação societária, os estoques devem ser avaliados pelo custo de aquisição ou de produção, ou pelo valor líquido de realização (valor de mercado), dos dois o menor. Trata-se da aplicação do princípio da prudência.\n2. **Correção Monetária**: A correção monetária das demonstrações financeiras foi extinta no Brasil pela Lei nº 9.249/1995. Portanto, não há que se falar em custo de aquisição corrigido monetariamente de forma sistemática no balanço patrimonial atual.\n\n**Pegadinha**: O uso da palavra \"apenas\" restringe indevidamente as regras de mensuração de estoques, desconsiderando a regra do \"custo ou mercado, dos dois o menor\".\n\n**Dispositivo legal**\n\n[Lei nº 6.404/1976, Art. 183, inciso II; Lei nº 9.249/1995, Art. 4º](https://www.planalto.gov.br/ccivil_03/leis/l6404consol.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "d72997902946dd1f27ace32448c427bad5bfb8e00eda3b31a7f9402b74df2d2a"
+    }
+  ]
+}

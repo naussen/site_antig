@@ -1,0 +1,198 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-agente_de_policia_federal-legislacao-penal-especial-70e090ce713f-9bc5eb3764f1",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "70e090ce713f4efa7afccdd8f75dc126a6b6ec258a638c6883c5beff394c0223",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "63798e30405cda1d6b06c925e3f47b587362e4b8ff5a540fff55d47fa673a6e7",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "9bc5eb3764f1073cfa835f650930e3db95c62ff9819ba808d8e8b77e25492263",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "legislacao-penal-especial",
+    "name": "Legislação Penal Especial"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:038",
+      "source_id": "agente_de_policia_federal:38",
+      "question_type": "true_false",
+      "statement_markdown": "Em cada um dos itens que se seguem, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada com base em disposições das Leis n.os 9.605/1998, 11.343/2006 e 13.445/2017.\n\nDurante uma vistoria, no estado do Paraná, em passageiros que viajavam de ônibus de Foz do Iguaçu – PR para Florianópolis – SC, policiais rodoviários federais encontraram seis quilos de maconha na mochila de Lucas, que foi preso em flagrante delito. Nessa situação, no cálculo da pena de Lucas, não se considerará a majorante do tráfico interestadual de drogas, pois a transposição da fronteira entre os estados ainda não tinha ocorrido.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 38; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "5eb50f1be0045d7f81affca6f181a4f1b5b853f639ecbf4571677675b1a7643a",
+        "original_numeric_id": 38,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta ao afirmar que a majorante do tráfico interestadual não será aplicada sob a justificativa de que a fronteira estadual não foi efetivamente transposta.\n\nDe acordo com a jurisprudência consolidada do Superior Tribunal de Justiça (STJ), a aplicação da causa de aumento de pena decorrente do tráfico entre estados da Federação prescinde da efetiva travessia da divisa interestadual. Exige-se apenas a comprovação inequívoca de que a substância entorpecente tinha como destino outro estado.\n\nNo caso apresentado, a viagem de ônibus com rota iniciada no Paraná e destino final em Santa Catarina evidencia a intenção de realizar o tráfico interestadual, justificando a incidência da majorante.\n\n**Dispositivo legal**\n\n[Súmula 587 do Superior Tribunal de Justiça (STJ) e Artigo 40, inciso V, da Lei nº 11.343, de 23 de agosto de 2006](https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11343.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "e69aaf8b8d37a220c11106ed95a18a6bb6259ab7c101c6f475c3a95eaafe599b"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:039",
+      "source_id": "agente_de_policia_federal:39",
+      "question_type": "true_false",
+      "statement_markdown": "> [!NOTE] **Gabarito Alterado pela Banca Examinadora**\n> O gabarito preliminar desta questão foi alterado pela banca examinadora no gabarito oficial definitivo (de **Certo** para **Errado**). O comentário explicativo fundamenta a decisão final da banca.\n\nEm cada um dos itens que se seguem, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada com base em disposições das Leis n.os 9.605/1998, 11.343/2006 e 13.445/2017.\n\nEm determinado estado da Federação, vários imigrantes foram encontrados em situação irregular e notificados pessoalmente para proceder à regularização migratória em prazo não superior a sessenta dias. Nesse caso, o imigrante que não regularizar sua situação poderá ser deportado e, iniciado o procedimento administrativo de deportação, a Defensoria Pública da União deverá ser notificada para que possa prestar a devida assistência ao deportando.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 39; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "b5504a0396b36430cbd8c4b17f8bcc8cf9813518a90bd39fa154109a42843c87",
+        "original_numeric_id": 39,
+        "original_source_content_hash": "6111dbe62e6ea11e501a89b0099172fd0b56a8642b42043c591af91863730189",
+        "answer_status": "definitivo_alterado",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13445.htm",
+        "gabarito_alterado_pela_banca": true,
+        "visual_caveat_applied": true,
+        "original_preliminary_answer": "C",
+        "definitive_answer": "E"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta devido à indicação equivocada do prazo legal para a regularização migratória que precede a deportação.\n\nNos termos da Lei de Migração, a deportação é uma medida administrativa de retirada compulsória que exige prévia notificação pessoal do imigrante em situação irregular. O prazo legal estabelecido para que o indivíduo regularize sua situação ou deixe o país voluntariamente deve ser **não inferior a 60 dias** (podendo ser prorrogado por igual período), e não \"não superior a sessenta dias\", como afirmado na questão.\n\n**Dispositivo legal**\n\n[Artigo 50, § 1º, da Lei nº 13.445, de 24 de maio de 2017](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13445.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "eaf1cea14274487dada40220009b1ba073d86b35350cb84467834f73a455931d"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:040",
+      "source_id": "agente_de_policia_federal:40",
+      "question_type": "true_false",
+      "statement_markdown": "Em cada um dos itens que se seguem, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada com base em disposições das Leis n.os 9.605/1998, 11.343/2006 e 13.445/2017.\n\nEm operação da Polícia Federal, um cidadão foi flagrado tentando pescar em local interditado por órgão federal. O pescador argumentou que, apesar da tentativa, não obteve êxito na pesca. Nessa situação, mesmo sem o sucesso pretendido, o pescador responderá por crime previsto na lei que tipifica os crimes ambientais.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 40; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "9a770684dbe886c1a52aa56e211493f77dafebc963bc4cf75a52f24ba3b082af",
+        "original_numeric_id": 40,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. O pescador responderá pelo crime ambiental mesmo sem ter capturado nenhum espécime.\n\nO artigo 34 da Lei de Crimes Ambientais tipifica a conduta de pescar em locais interditados pelo órgão competente. Para fins de subsunção penal, o conceito de \"pesca\" é definido de forma ampla pelo artigo 36 da mesma lei como \"todo ato tendente a retirar, extrair, coletar, apanhar, apreender ou capturar espécimes\".\n\nA utilização da expressão \"ato tendente\" indica que o delito é de natureza formal. Assim, a consumação ocorre com a realização de atos executórios voltados à pesca (como a preparação e o lançamento de instrumentos de pesca na água), prescindindo do resultado naturalístico consistente na efetiva captura de peixes.\n\n**Dispositivo legal**\n\n[Artigo 34 e Artigo 36 da Lei nº 9.605, de 12 de fevereiro de 1998](https://www.planalto.gov.br/ccivil_03/leis/l9605.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "9ab4f20635fb9d713766d6a84c6409d4cbacf6413e87423cb2d071fc82075e00"
+    }
+  ]
+}

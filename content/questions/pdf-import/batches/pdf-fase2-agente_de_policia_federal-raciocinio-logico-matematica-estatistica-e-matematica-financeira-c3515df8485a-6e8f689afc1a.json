@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_de_policia_federal-raciocinio-logico-matematica-estatistica-e-matematica-financeira-c3515df8485a-6e8f689afc1a",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "c3515df8485ab192355dd2c9f2cd5fc325fdfcc424779258a45eea81a91b4abe",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "9bf5415c207ff2dee6f1b513f48cc1f4b3e00a224421906182f247e816e0b8ed",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "6e8f689afc1a4e8735eb4a2c821595da63b735b9affd36ac62585a0e893ee5da",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:056",
+      "source_id": "agente_de_policia_federal:56",
+      "question_type": "true_false",
+      "statement_markdown": "As proposições P, Q e R a seguir referem-se a um ilícito penal envolvendo João, Carlos, Paulo e Maria:\nP: “João e Carlos não são culpados”.\nQ: “Paulo não é mentiroso”.\nR: “Maria é inocente”.\nConsiderando que ~X representa a negação da proposição X, julgue os itens a seguir.\n\nSe as três proposições P, Q e R forem falsas, então pelo menos duas das pessoas envolvidas no ilícito penal serão culpadas.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 56; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Raciocínio Lógico",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "003930b5c4c45a4aa9f1ff1b958e4384e01a66b0ef6de4ee8494210f2f0c7f7b",
+        "original_numeric_id": 56,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_056.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "raciocinio-logico",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A análise baseia-se na negação das proposições simples e compostas dadas:\n\n1. **Proposição $P$ é falsa**: A afirmação original é \"João e Carlos não são culpados\", que equivale logicamente a \"João não é culpado **e** Carlos não é culpado\". A negação dessa conjunção (pelas Leis de De Morgan) determina que \"João é culpado **ou** Carlos é culpado\". Portanto, pelo menos um dos dois é culpado.\n\n2. **Proposição $R$ é falsa**: A afirmação original é \"Maria é inocente\". A sua negação direta indica que \"Maria não é inocente\", ou seja, Maria é culpada.\n\nComo Maria é uma pessoa distinta de João e Carlos, tem-se a culpabilidade de Maria somada à culpabilidade de pelo menos um dos outros dois. Logo, há no mínimo duas pessoas culpadas envolvidas no ilícito penal.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_056.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "76a326eec6173e77e6d7253490edf6ec437bdec488c8aa5b3f0abfe54636e1e0"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:057",
+      "source_id": "agente_de_policia_federal:57",
+      "question_type": "true_false",
+      "statement_markdown": "Em um aeroporto, 30 passageiros que desembarcaram de determinado voo e que estiveram nos países A, B ou C, nos quais ocorre uma epidemia infecciosa, foram selecionados para ser examinados. Constatou-se que exatamente 25 dos passageiros selecionados estiveram em A ou em B, nenhum desses 25 passageiros esteve em C e 6 desses 25 passageiros estiveram em A e em B.\nCom referência a essa situação hipotética, julgue os itens que se seguem.\n\nSe 11 passageiros estiveram em B, então mais de 15 estiveram em A.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 57; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "778ae05137fc001e4db893273da8ee34790a6d62643d719fa0d2e22810c0f0ee",
+        "original_numeric_id": 57,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_057.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão pode ser resolvida por meio da teoria dos conjuntos. \n\nDefinem-se os conjuntos:\n* $A$: passageiros que estiveram no país A.\n* $B$: passageiros que estiveram no país B.\n\nO enunciado informa que:\n* O total de passageiros que estiveram em A ou B é $n(A \\cup B) = 25$.\n* A interseção de passageiros que estiveram em ambos é $n(A \\cap B) = 6$.\n\nAplicando a fórmula da união de dois conjuntos:\n$$n(A \\cup B) = n(A) + n(B) - n(A \\cap B)$$\n\nSubstituindo os valores conhecidos:\n$$25 = n(A) + n(B) - 6 \\implies n(A) + n(B) = 31$$\n\nSe o número de passageiros que estiveram em B é $n(B) = 11$, tem-se:\n$$n(A) + 11 = 31 \\implies n(A) = 20$$\n\nComo 20 é maior do que 15, a afirmação está correta.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_057.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "462b8a3105bb0e5e3bdf60535832e3ea69da740be3520c50287418d8d5ddcad7"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:058",
+      "source_id": "agente_de_policia_federal:58",
+      "question_type": "true_false",
+      "statement_markdown": "Em um aeroporto, 30 passageiros que desembarcaram de determinado voo e que estiveram nos países A, B ou C, nos quais ocorre uma epidemia infecciosa, foram selecionados para ser examinados. Constatou-se que exatamente 25 dos passageiros selecionados estiveram em A ou em B, nenhum desses 25 passageiros esteve em C e 6 desses 25 passageiros estiveram em A e em B.\nCom referência a essa situação hipotética, julgue os itens que se seguem.\n\nSe 2 dos 30 passageiros selecionados forem escolhidos ao acaso, então a probabilidade de esses 2 passageiros terem estado em 2 desses países é inferior a 1/30.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 58; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "61fa931ae91e6161a960e1526e654d3b4a0abc0a5358bf86bf4acdc2e60f3fd9",
+        "original_numeric_id": 58,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_058.png",
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para calcular a probabilidade solicitada, identificam-se os casos favoráveis e os casos possíveis:\n\n1. **Casos possíveis**: Consistem em escolher 2 passageiros quaisquer dentre o total de 30 selecionados. Isso é dado pela combinação de 30 elementos tomados de 2 em 2:\n   $$C_{30, 2} = \\frac{30 \\times 29}{2} = 435$$\n\n2. **Casos favoráveis**: Consistem em escolher 2 passageiros que estiveram em exatamente 2 países. O enunciado indica que nenhum dos 25 passageiros que visitaram A ou B esteve em C. Portanto, os únicos passageiros que estiveram em 2 países são os 6 que estiveram em A e em B. A escolha de 2 desses 6 passageiros é dada por:\n   $$C_{6, 2} = \\frac{6 \\times 5}{2} = 15$$\n\n3. **Cálculo da probabilidade ($P$)**:\n   $$P = \\frac{15}{435} = \\frac{1}{29}$$\n\nComparando as frações, tem-se que $\\frac{1}{29} > \\frac{1}{30}$. Portanto, a probabilidade é superior (e não inferior) a $\\frac{1}{30}$, tornando o item incorreto.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_058.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "85a6d5215b2960feff0f7f49306b81a3672b7b695c8455d5e7b463896de86cf5"
+    }
+  ]
+}

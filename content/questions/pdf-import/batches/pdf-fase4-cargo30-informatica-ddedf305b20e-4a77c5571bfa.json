@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-cargo30-informatica-ddedf305b20e-4a77c5571bfa",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "ddedf305b20e0a7dfd48e2ef1da2d3823dc4e437478b3edd7e62ad4a771ae524",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "ade70669f0c96aa17db7bd4f2a5081dabefc8b060fd23fdfaaa31934743bc23f",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "4a77c5571bfa1cfcff8676dffde08d1f64614a608ba6934fb48573d8a50ec047",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:041",
+      "source_id": "cargo30:41",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando a figura acima, que ilustra uma janela do Word 2002 em execução em um computador do tipo PC, julgue os itens a seguir.\n\nO trecho de “Com” a “descentralizada.” ficará selecionado após realizadas as seguintes ações: clicar sobre “Com”; pressionar e manter pressionada a tecla Ctrl; clicar sobre “área”; liberar a tecla Ctrl.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 41",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ferramentas de Escritório (Microsoft Office e LibreOffice)",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "8e0418f8e176a668b28f27671c288d7ca1055b4b1a087fb97960655efac03228",
+        "original_numeric_id": 41,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNo Microsoft Word, o atalho padrão de mouse e teclado para selecionar uma **frase inteira** (ou seja, todo o período sintático compreendido desde a sua letra maiúscula inicial até o respectivo ponto final) consiste em manter pressionada a tecla **Ctrl** e dar um clique com o botão esquerdo do mouse sobre qualquer palavra contida no período.\n\nComo o período em análise se inicia no vocábulo *\"Com\"* e encerra-se com o ponto final após a palavra *\"descentralizada.\"*, ao clicar sobre qualquer palavra da frase (como *\"área\"*) com a tecla Ctrl pressionada, todo o trecho é automaticamente selecionado.",
+        "source_reference": null
+      },
+      "source_content_hash": "90197d77a33ee00a31d1afc21ce86bdfc448cf61d8ae4d1a35a745739cb64fc0"
+    },
+    {
+      "external_id": "pdf:cargo30:050",
+      "source_id": "cargo30:50",
+      "question_type": "true_false",
+      "statement_markdown": "A figura acima mostra uma janela do Excel 2002 que contém uma planilha de dados relativos a apreensão de drogas. Com relação a essa janela e ao Excel 2002, julgue os itens que se seguem.\n\nPara se calcular a soma dos conteúdos numéricos das células B2, B3 e B4 e se ter registrado o resultado na célula B5, é suficiente executar a seguinte seqüência de ações: clicar a célula B5; digitar soma(B2,B4) e, em seguida, teclar Enter.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 50",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ferramentas de Escritório (Microsoft Office e LibreOffice)",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "b3d346ee7f736f484e345c18a8de7b257f0d5545f60323fac5f7d3faeed87af4",
+        "original_numeric_id": 50,
+        "original_source_content_hash": "981e509a2a744aa7f44f5f26afd2fac15da3ae54b6061267bbccb691372f7c12",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O procedimento descrito apresenta dois erros fundamentais que impedem a realização do cálculo:\n\n1. **Ausência do sinal de igualdade (`=`)**: No Excel, toda fórmula ou função deve ser iniciada com o caractere `=` (por exemplo, `=SOMA(...)`). Sem esse sinal, o aplicativo interpreta a digitação apenas como texto literal, exibindo exatamente o texto \"soma(B2,B4)\" na célula, sem efetuar cálculo algum.\n2. **Sintaxe incorreta do intervalo**: A utilização da vírgula (ou ponto e vírgula, a depender da configuração regional) como separador em `SOMA(B2,B4)` indica a soma individual apenas das células B2 e B4, deixando de fora a célula B3. Para somar o intervalo contínuo de B2 a B4, deve-se utilizar o operador de dois-pontos (`:`), resultando na fórmula correta `=SOMA(B2:B4)`.",
+        "source_reference": null
+      },
+      "source_content_hash": "4bc910a4a3806bd01158ec19c6fbeca015563dac1e478eb09a68ccaff2bdab9e"
+    }
+  ]
+}

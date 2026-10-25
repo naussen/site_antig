@@ -1,0 +1,230 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-prova_conhec_espec_tec_federal_control_exter_tec_adm-administracao-geral-0a47ced89ac5-1640cbabb1ac",
+  "source": {
+    "file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "0a47ced89ac5a05345c982de7b30907afc98382efebdbd645c614961168c25ed",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "e510beb0fb16eeed76a4bec98e0987a4a54d96f0ac951207a670c138e3097e90",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "1640cbabb1ac99748e52664a2a8444cf18ae8dd97975042d435211a08eeb1fd7",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-geral",
+    "name": "Administração Geral"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:089",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:89",
+      "question_type": "true_false",
+      "statement_markdown": "Em relação aos conceitos gerais e à importância da administração, julgue os itens a seguir.\n\nA eficiência dos processos produtivos, o combate ao desperdício, a administração como processos e a eficiência do modo burocrático de organização são ideias preconizadas pela escola neoclássica da administração.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 89; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão por Processos",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Geral",
+        "source_content_hash": "b5ad8395b37608b59503c933dacd799b3710aa2d78b2524a29d5f8e04eb4d5d1",
+        "original_numeric_id": 89,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-por-processos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. As ideias mencionadas no enunciado não foram originalmente preconizadas pela Escola Neoclássica da Administração, mas sim por teorias precedentes:\n\n* **Eficiência dos processos produtivos e combate ao desperdício:** preconizados pela Administração Científica (Frederick Taylor).\n* **Administração como processos:** preconizada pela Teoria Clássica (Henri Fayol).\n* **Eficiência do modo burocrático de organização:** preconizada pela Teoria da Burocracia (Max Weber).\n\nA Escola Neoclássica (cujo principal expoente é Peter Drucker) caracteriza-se pela retomada eclética, atualização e aplicação prática dessas teorias anteriores, mas não pela formulação original de tais conceitos.",
+        "source_reference": null
+      },
+      "source_content_hash": "146f6fbcf48ca7fc951dbbff5ed243414b8642513272671c5f33f00e875b00f8"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:090",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:90",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as diversas escolas e teorias da administração, julgue os itens que se seguem.\n\nA teoria geral de sistemas baseia-se no princípio de que, nas empresas, nada é absoluto, tudo é relativo, dependendo de variáveis que geralmente são incontroláveis, por estarem em seu ambiente externo, especialmente na prospecção de cenários e mercados.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 90; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Geral",
+        "source_content_hash": "79a2ee308632ed577a6ba347221162fc29a1cf6c1b5941000878330e8ad25a22",
+        "original_numeric_id": 90,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque a descrição apresentada refere-se à **Teoria da Contingência**, e não à Teoria Geral de Sistemas.\n\nO princípio de que \"nada é absoluto, tudo é relativo\" e de que as práticas administrativas dependem de variáveis ambientais externas e incontroláveis é o postulado básico da abordagem contingencial. \n\nPor outro lado, a **Teoria Geral de Sistemas** foca na organização como um sistema aberto composto por partes interdependentes que interagem entre si e com o ambiente (entradas, processamento, saídas e retroalimentação), buscando a sinergia e o equilíbrio (homeostase), sem adotar o relativismo extremo característico da teoria da contingência.",
+        "source_reference": null
+      },
+      "source_content_hash": "33fa713ec4419e77ef47a2e7a2e05b82b5da0d969d3b83bb2c339f1d17dc0dcc"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:091",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:91",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as diversas escolas e teorias da administração, julgue os itens que se seguem.\n\nA teoria da burocracia, proposta por Max Weber, sustentada pelo tripé racionalidade, impessoalidade e profissionalismo, tem como principais objetivos a eficiência, a eficácia e a efetividade dos processos organizacionais.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 91; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão por Processos",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Geral",
+        "source_content_hash": "b05627a9fd36c6568b60ec31fc3580cf3ff5ec4cd44ad274d632650e612dd050",
+        "original_numeric_id": 91,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-por-processos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto.\n\nEmbora a Teoria da Burocracia de Max Weber seja de fato fundamentada no tripé da racionalidade, impessoalidade e profissionalismo, seu objetivo primordial é a busca pela **eficiência** (por meio da padronização de procedimentos, previsibilidade de comportamentos e otimização do uso dos recursos).\n\nOs conceitos de **eficácia** (atingimento de metas e objetivos) e, especialmente, **efetividade** (impacto real e transformador gerado no ambiente externo) são desenvolvimentos teóricos posteriores e característicos de modelos de gestão contemporâneos (como a administração pública gerencial), não fazendo parte do escopo original da burocracia weberiana.",
+        "source_reference": null
+      },
+      "source_content_hash": "304d2c3e32a1ae177b8591b5c1015e5736623289cc38bc4e1916780593ffa03e"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:092",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:92",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, a respeito das funções administrativas de planejamento, organização, direção e controle.\n\nO desempenho de qualquer papel gerencial, seja na alta administração, seja nas gerências intermediária e operacional, depende de habilidades conceituais, humanas e técnicas, sendo as habilidades técnicas as mais requeridas daqueles que ocupam cargos de alto nível hierárquico.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 92; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Planejamento",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Geral",
+        "source_content_hash": "d7f978c5d3fcc1da3a292a528922906660c2724ad554a4fac3b91d164c7806b2",
+        "original_numeric_id": 92,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "planejamento",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto ao afirmar que as habilidades técnicas são as mais requeridas no alto nível hierárquico.\n\nDe acordo com a clássica tipologia de Robert Katz, a distribuição das habilidades necessárias ao administrador varia conforme o nível organizacional:\n\n*   **Habilidades Conceituais**: Envolvem a visão sistêmica da organização, facilidade para lidar com ideias abstratas, conceitos e planejamento estratégico. São as mais exigidas no **alto nível hierárquico** (alta administração).\n*   **Habilidades Humanas**: Envolvem o relacionamento interpessoal, comunicação, liderança e trabalho em equipe. São necessárias de forma equilibrada em **todos os níveis** hierárquicos.\n*   **Habilidades Técnicas**: Envolvem o uso de ferramentas, métodos, técnicas e conhecimentos específicos para a execução de tarefas físicas ou operacionais. São as mais exigidas no **nível operacional**.",
+        "source_reference": null
+      },
+      "source_content_hash": "9841cf02b32b6ccb2b612bcfa2cb8378e7a93d5b4b77f5d22a1d57861b6151e2"
+    }
+  ]
+}

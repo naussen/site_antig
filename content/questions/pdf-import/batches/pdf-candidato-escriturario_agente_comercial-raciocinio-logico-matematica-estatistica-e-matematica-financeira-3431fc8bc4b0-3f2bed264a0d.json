@@ -1,0 +1,434 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-escriturario_agente_comercial-raciocinio-logico-matematica-estatistica-e-matematica-financeira-3431fc8bc4b0-3f2bed264a0d",
+  "source": {
+    "file_name": "escriturario_agente_comercial_ATUALIZADO.json",
+    "sha256": "3431fc8bc4b0a22b5753d698bd645915b9d034aa09f1107f8135068051f98a0e",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "escriturario_agente_comercial.json",
+      "original_source_sha256": "712ee07d18b6c6f75b8792c6bf5ca6ea068b2c5f60c13f6565f4cab1c39926d7",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "3f2bed264a0d6d0ffefb35be87564e42c66dbecf07ae3d6e99228cf3f4f86dd0",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:016",
+      "source_id": "escriturario_agente_comercial:16",
+      "question_type": "multiple_choice",
+      "statement_markdown": "As 2023 assertivas a seguir estão escritas em um caderno.\n\n1) Só 1 assertiva é falsa neste caderno.\n2) Só 2 assertivas são falsas neste caderno.\n3) Só 3 assertivas são falsas neste caderno.\n.\n.\n.\nn) Só n assertivas são falsas neste caderno.\n.\n.\n.\n2022) Só 2022 assertivas são falsas neste caderno.\n2023) Só 2023 assertivas são falsas neste caderno.\n\nConsiderando-se essas 2023 assertivas, o número de assertivas verdadeiras é",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 16; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "2023",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "2022",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "1011",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "1",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "0",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática",
+        "source_content_hash": "ef53c4511da55ec0cb58969d1c05e277ac397620a105f19136da7ee2a6b90303",
+        "original_numeric_id": 16,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_escriturario_agente_comercial_016.png",
+        "classification": "fixed_subject",
+        "official_url": null,
+        "official_item_number": 16
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Cada uma das 2023 afirmações declara uma quantidade exclusiva de afirmações falsas no caderno. Como duas afirmações que indicam quantidades diferentes de falsidades não podem ser verdadeiras simultaneamente, conclui-se que **no máximo uma afirmação é verdadeira**.\n\nSe exatamente uma afirmação for verdadeira, as outras $2023 - 1 = 2022$ afirmações devem ser falsas.\n\nAnalisando a afirmação de número 2022: \"Só 2022 assertivas são falsas neste caderno\".\n*   Se essa afirmação for a única verdadeira, então existem exatamente 2022 afirmações falsas.\n*   Isso é perfeitamente consistente, pois a afirmação 2022 é verdadeira e todas as outras 2022 afirmações (de 1 a 2021, e a 2023) são falsas.\n\nQualquer outra suposição (como nenhuma ser verdadeira, ou mais de uma ser verdadeira) gera contradição lógica. Portanto, há exatamente 1 assertiva verdadeira.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_escriturario_agente_comercial_016.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "1800466a7dab0bef3a326e2ecdb9e846c3447a934b16d1bcd0105c9dc8beaf92"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:017",
+      "source_id": "escriturario_agente_comercial:17",
+      "question_type": "multiple_choice",
+      "statement_markdown": "J convenceu o diretor de um curso preparatório a abrir uma turma especialmente para o concurso em que ele pretende se inscrever, e comprometeu-se a trazer mais alunos para formar essa turma. O diretor do curso estabeleceu a seguinte condição:\n\n— Uma sala com 70 lugares, ou seja, com capacidade para até 70 estudantes, será disponibilizada para a turma, desde que cada estudante, incluindo você, J, pague mensalmente R$ 660,00, mais R$ 30,00 por cada lugar vago.\n\nConsiderando-se a condição estabelecida pelo diretor, para que o curso tenha arrecadação mensal máxima com essa turma, ela deverá ter exatamente x estudantes. Dividindo-se x por 5, obtém-se resto igual a",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 17; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "0",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "1",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "2",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "3",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "4",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática",
+        "source_content_hash": "a91f4a93af07aa2365fb7a3f5a50307d91892d4a04380c7070c22ee1d6d90e21",
+        "original_numeric_id": 17,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_escriturario_agente_comercial_017.png",
+        "classification": "fixed_subject",
+        "official_url": null,
+        "official_item_number": 17
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para resolver o problema, modela-se a receita mensal do curso como uma função quadrática em termos do número de estudantes $x$.\n\n1.  **Preço por estudante ($P$):** Cada estudante paga R$ 660,00 fixos mais R$ 30,00 por cada lugar vago. Como a sala tem 70 lugares, o número de lugares vagos é $(70 - x)$.\n    $$P(x) = 660 + 30(70 - x) = 660 + 2100 - 30x = 2760 - 30x$$\n\n2.  **Receita total ($R$):** A receita é o produto do número de estudantes pelo preço cobrado de cada um.\n    $$R(x) = x \\cdot (2760 - 30x) = -30x^2 + 2760x$$\n\n3.  **Ponto de máximo:** Como a função é uma parábola com concavidade voltada para baixo ($a = -30 < 0$), o valor de $x$ que maximiza a receita é a abscissa do vértice ($x_v$):\n    $$x_v = \\frac{-b}{2a} = \\frac{-2760}{2(-30)} = \\frac{2760}{60} = 46$$\n\n4.  **Resto da divisão:** O número de estudantes para arrecadação máxima é $x = 46$. Dividindo 46 por 5, obtém-se:\n    $$46 = 5 \\cdot 9 + 1$$\n    O resto da divisão é igual a 1.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_escriturario_agente_comercial_017.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "19b6b10fe0f39719717eb90cfcea0f53c2763b49393e56dfc585d7857e00ef2f"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:018",
+      "source_id": "escriturario_agente_comercial:18",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A sequência dos primeiros 2100 números inteiros positivos foi disposta em uma Tabela, da seguinte forma:\n\n| | Coluna 1 | Coluna 2 | Coluna 3 | Coluna 4 | Coluna 5 | Coluna 6 | Coluna 7 |\n|---|---|---|---|---|---|---|---|\n| Linha 1 | 1 | 2 | 3 | 4 | 5 | 6 | |\n| Linha 2 | | 7 | 8 | 9 | 10 | 11 | 12 |\n| Linha 3 | 13 | 14 | 15 | 16 | 17 | 18 | |\n| Linha 4 | | 19 | 20 | 21 | 22 | 23 | 24 |\n| Linha 5 | 25 | 26 | 27 | 28 | 29 | 30 | |\n| . | . | . | . | . | . | . | . |\n| . | . | . | . | . | . | . | . |\n| . | . | . | . | . | . | . | . |\n\nNessa distribuição, as linhas de número ímpar recebem só seis números da sequência, a partir da Coluna 1, ficando a Coluna 7 vazia; já as linhas de número par também recebem só seis números da sequência, mas a partir da Coluna 2, ficando a Coluna 1 vazia, como pode ser observado na Tabela apresentada.\n\nSendo assim, os números 1808 e 2023 estão escritos, respectivamente, nas seguintes colunas:",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 18; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "6 e 4",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "3 e 3",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "6 e 3",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "6 e 2",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "3 e 2",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática",
+        "source_content_hash": "553f6a53ec7e3d124f2d0769e3d28d85323aa3cde7265025d2c65b5306330b2d",
+        "original_numeric_id": 18,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_escriturario_agente_comercial_018.png",
+        "classification": "fixed_subject",
+        "official_url": null,
+        "official_item_number": 18
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A tabela distribui os números em linhas de 6 elementos cada:\n*   **Linhas ímpares:** preenchidas da Coluna 1 à Coluna 6 (Coluna 7 vazia).\n*   **Linhas pares:** preenchidas da Coluna 2 à Coluna 7 (Coluna 1 vazia).\n\nPara determinar a posição de um número $N$, primeiro identificamos em qual linha ele se encontra dividindo $N$ por 6 e arredondando o resultado para cima.\n\n1.  **Para o número 1808:**\n    *   $\\frac{1808}{6} \\approx 301,33 \\implies$ Linha 302 (par).\n    *   A linha anterior (301) termina no número $301 \\times 6 = 1806$.\n    *   A Linha 302 (par) começa na Coluna 2 com o número 1807.\n    *   Portanto, o número 1808 estará na **Coluna 3**.\n\n2.  **Para o número 2023:**\n    *   $\\frac{2023}{6} \\approx 337,17 \\implies$ Linha 338 (par).\n    *   A linha anterior (337) termina no número $337 \\times 6 = 2022$.\n    *   A Linha 338 (par) começa na Coluna 2 com o número 2023.\n    *   Portanto, o número 2023 estará na **Coluna 2**.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_escriturario_agente_comercial_018.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "92c594ba79aec648260f414be521aed043c76dd74477bbd7b85a82eda57bdbe6"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:020",
+      "source_id": "escriturario_agente_comercial:20",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um investidor muito supersticioso escolhe, mensalmente, um conjunto de três tipos de investimento para aplicar alguma quantia. Ele toma por regra dispor apenas dos mesmos nove tipos de investimentos e nunca repetir, em um mesmo mês, o mesmo conjunto de três tipos já usados em qualquer mês anterior. Por exemplo, se no 1º mês ele escolheu os investimentos de tipos A, B e C; no 2º mês, A, B e D; e no 3º mês, E, F e G, então ele não poderá investir novamente, num mesmo mês, por exemplo, no conjunto dos investimentos de tipos A, B e C, por já tê-lo usado no 1º mês.\n\nConsiderando-se as condições descritas, o número máximo de meses em que o investidor poderá fazer esses investimentos é",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 20; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "84",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "60",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "56",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "48",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "35",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática",
+        "source_content_hash": "4ae754fb2bf7e468039f4bc978f75f53866937226d054688b71332c1381ec514",
+        "original_numeric_id": 20,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_escriturario_agente_comercial_020.png",
+        "classification": "fixed_subject",
+        "official_url": null,
+        "official_item_number": 20
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O problema consiste em determinar o número máximo de meses em que o investidor pode escolher conjuntos distintos de 3 tipos de investimentos, dentre os 9 disponíveis, sem repetir nenhum conjunto.\n\nComo a ordem de escolha dos investimentos dentro do conjunto não importa (por exemplo, escolher os investimentos A, B e C é o mesmo que escolher B, C e A), utilizamos o conceito de **Combinação Simples**:\n\n$$C_{9, 3} = \\frac{9!}{3!(9-3)!} = \\frac{9 \\times 8 \\times 7}{3 \\times 2 \\times 1} = 3 \\times 4 \\times 7 = 84$$\n\nPortanto, o número máximo de meses é 84.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_escriturario_agente_comercial_020.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "be9c4ab0705b27627251292ffb7caba472e808372faaa4de6c9eebe18c42079d"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:026",
+      "source_id": "escriturario_agente_comercial:26",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um cliente tem duas opções para investir R$ 100.000,00 em um prazo de 2 anos. A primeira opção oferece um retorno de 12% ao ano no regime de juros compostos, mas há cobrança de 15% de imposto sobre os juros proporcionados pelo investimento. Já a segunda opção oferece um retorno de 10% ao ano no regime de juros compostos, mas sem qualquer cobrança de imposto.\n\nAo escolher a opção mais lucrativa, ao final de exatos dois anos de investimento, esse cliente receberá a mais, em relação à opção menos lucrativa, uma quantia, em R$, igual a",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 26; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "624,00",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "824,00",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "1.524,00",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "2.940,00",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "4.440,00",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Matemática Financeira",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática Financeira",
+        "source_content_hash": "d2c06fa39752f63528e57aa79f14b14792efb1a7fa891f5b47d8bf747b612a59",
+        "original_numeric_id": 26,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_escriturario_agente_comercial_026.png",
+        "classification": "fixed_subject",
+        "official_url": null,
+        "official_item_number": 26
+      },
+      "topics": [
+        {
+          "topic_id": "matematica-financeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para determinar a diferença de rentabilidade entre as duas opções de investimento, calcula-se o montante líquido obtido ao final de dois anos para cada uma delas.\n\n**Opção 1 (com imposto de 15% sobre os juros):**\n* O montante bruto acumulado a uma taxa de 12% ao ano sob juros compostos é de R$ 125.440,00.\n* Os juros brutos gerados totalizam R$ 25.440,00.\n* O imposto de renda devido é de 15% sobre os juros, resultando em R$ 3.816,00.\n* Subtraindo o imposto do montante bruto, obtém-se o montante líquido de R$ 121.624,00.\n\n**Opção 2 (isenta de imposto):**\n* O montante acumulado a uma taxa de 10% ao ano sob juros compostos é de R$ 121.000,00. Como não há incidência de imposto, este é o valor líquido final.\n\n**Comparação:**\nA diferença entre o montante líquido da opção mais lucrativa (Opção 1) e o da menos lucrativa (Opção 2) é de:\n$$\\text{Diferença} = 121.624,00 - 121.000,00 = 624,00$$\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_escriturario_agente_comercial_026.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "e643a3ba53d20083943888ecc25da709c838e85bf6db191ce036a86afe665162"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:029",
+      "source_id": "escriturario_agente_comercial:29",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A empresa XYZ planeja comprar um equipamento em janeiro de 2023, cujo preço à vista é R$ 300.000,00, pagando com uma entrada e mais duas parcelas. A entrada, correspondente à primeira parcela, será paga em janeiro de 2023 (no ato da compra); a segunda parcela, em janeiro de 2024, no valor de R$ 150.000,00; e a terceira parcela, em janeiro de 2025, também no valor de R$ 150.000,00.\n\nConsiderando-se a equivalência financeira a juros compostos, se a taxa de juros cobrada pelo vendedor é de 10% ao ano, o valor da entrada (primeira parcela no ato da compra), em R$, será, aproximadamente,",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 29; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "20.000,00",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "39.670,00",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "48.750,00",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "54.280,00",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "63.000,00",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Matemática Financeira",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática Financeira",
+        "source_content_hash": "0bfb263adb4959c9e8ced77284e2d9e66d43a922fca1968080a46c9679a4ad50",
+        "original_numeric_id": 29,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_escriturario_agente_comercial_029.png",
+        "classification": "fixed_subject",
+        "official_url": null,
+        "official_item_number": 29
+      },
+      "topics": [
+        {
+          "topic_id": "matematica-financeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para encontrar o valor da entrada, aplica-se o princípio da equivalência financeira, trazendo todos os fluxos de caixa futuros para a data zero (janeiro de 2023), que corresponde ao momento da compra à vista.\n\nA equação de equivalência na data focal zero é dada por:\n$$\\text{Preço à Vista} = \\text{Entrada} + \\frac{\\text{Parcela}_1}{(1 + i)^1} + \\frac{\\text{Parcela}_2}{(1 + i)^2}$$\n\nSubstituindo os valores conhecidos:\n$$300.000 = E + \\frac{150.000}{1,10} + \\frac{150.000}{1,21}$$\n$$300.000 = E + 136.363,64 + 123.966,94$$\n$$300.000 = E + 260.330,58$$\n$$E = 300.000 - 260.330,58 = 39.669,42$$\n\nO valor aproximado da entrada é de **R$ 39.670,00**.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_escriturario_agente_comercial_029.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "c57f3cd1eda57bcfc7b8839b590d2192496e736f7da988c4a09938ef55d1866d"
+    }
+  ]
+}

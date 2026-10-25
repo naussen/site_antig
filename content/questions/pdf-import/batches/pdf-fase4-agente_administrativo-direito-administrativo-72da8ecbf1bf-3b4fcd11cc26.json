@@ -1,0 +1,300 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-agente_administrativo-direito-administrativo-72da8ecbf1bf-3b4fcd11cc26",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "72da8ecbf1bf79542f78432b7acf5090277b9b279eb96815d2ab269bda90cd23",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "95f70efef6886dec632debbde86efe1189f22da6fd35c7aba8deaf2afc4b8a3c",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "3b4fcd11cc26cca548f969dc96b656102abff362828dee508f2b955f34c8fba7",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:058",
+      "source_id": "agente_administrativo:58",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da administração pública, julgue os itens a seguir à luz da CF e do entendimento do STF.\n\nAinda que haja grave crise econômica, são irredutíveis os vencimentos dos ocupantes de cargos públicos.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 58; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "18be1e271b9aab841427e5d1b84194c4498feacdee0702f22b7eca8dc889d9dd",
+        "original_numeric_id": 58,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A irredutibilidade de vencimentos é uma garantia constitucional assegurada aos ocupantes de cargos e empregos públicos. O Supremo Tribunal Federal (STF), ao julgar a ADI 2.238, consolidou o entendimento de que é inconstitucional a redução proporcional de jornada de trabalho e de vencimentos de servidores públicos para fins de adequação aos limites de despesas com pessoal previstos na Lei de Responsabilidade Fiscal (LRF). Assim, mesmo diante de grave crise econômica ou fiscal, a Administração Pública não pode reduzir os vencimentos dos servidores.\n\n**Detalhe importante:** A irredutibilidade protege o valor nominal dos vencimentos, e não o valor real (poder de compra), o qual é protegido pelo direito à revisão geral anual, que depende de lei específica.\n\n### Dispositivo legal\n\n* **Artigo 37, inciso XV, da Constituição Federal de 1988** (Disponível em: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)\n* **STF - Ação Direta de Inconstitucionalidade (ADI) 2.238** (Disponível em: https://portal.stf.jus.br/)",
+        "source_reference": null
+      },
+      "source_content_hash": "3ed3f1820f2878e0c478f4bc4c9a21b18cc6207aafb78431d8ea23fd242ae001"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:066",
+      "source_id": "agente_administrativo:66",
+      "question_type": "true_false",
+      "statement_markdown": "De acordo com o último censo do IBGE (2022), a população do município de Cachoeiro de Itapemirim é de 185.786 habitantes. Com base nesse dado, julgue os itens a seguir, sobre a aplicação da nova lei de licitação (Lei n.º 14.133/2021) ao referido município.\n\nO município poderá aderir à ata de registro de preços de órgão ou entidade gerenciadora de outros municípios, mas não às atas de estado ou da União, por se tratar de entes federativos de grau diverso.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 66; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Poderes Administrativos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "34af041987e335b3c46670d9d335b7b92d5a85c0d20c26cbc3d0dbad90f2fde6",
+        "original_numeric_id": 66,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2021-2024/2021/lei/l14133.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "deveres",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta ao afirmar que o município não pode aderir a atas de registro de preços da União ou de estados.\n\nDe acordo com o art. 86, § 3º, da Lei nº 14.133/2021 (com redação dada pela Lei nº 14.770/2023), a faculdade de aderir à ata de registro de preços na condição de não participante (conhecida doutrinariamente como \"carona\") pode ser exercida por órgãos e entidades municipais em relação a:\n1. Atas de registro de preços de órgãos ou entidades gerenciadoras federais, estaduais ou distritais (inciso I);\n2. Atas de registro de preços de órgãos ou entidades gerenciadoras de outros municípios, desde que o sistema de registro de preços tenha sido formalizado mediante licitação (inciso II).\n\nPortanto, o município de Cachoeiro de Itapemirim pode aderir tanto a atas de outros municípios quanto a atas de estados ou da União, inexistindo a vedação apontada.\n\n### Dispositivo legal\n* Art. 86, § 3º, I e II, da Lei nº 14.133/2021.",
+        "source_reference": null
+      },
+      "source_content_hash": "9a963ebcc26fffed0cba380916479d164c1870318dd208cad53f9691cf055b20"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:069",
+      "source_id": "agente_administrativo:69",
+      "question_type": "true_false",
+      "statement_markdown": "De acordo com o último censo do IBGE (2022), a população do município de Cachoeiro de Itapemirim é de 185.786 habitantes. Com base nesse dado, julgue os itens a seguir, sobre a aplicação da nova lei de licitação (Lei n.º 14.133/2021) ao referido município.\n\nA publicidade do edital de licitação deve ser realizada mediante divulgação e manutenção no Portal Nacional de Contratações Públicas, sendo facultativa a publicação do extrato do edital no Diário Oficial do município.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 69; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Nova Lei de Licitações – Lei 14.133/21 (Parte 1)",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "dee08f0120e19d6d392ebd61be66b04b67b1140f231da37378d77d762a03b17b",
+        "original_numeric_id": 69,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2021-2024/2021/lei/l14133.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "aplicacao-da-lei-14-133-21",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta ao classificar como facultativa a publicação do extrato do edital no Diário Oficial do município.\n\nNos termos do art. 54, caput, da Lei nº 14.133/2021, a publicidade do edital de licitação ocorre mediante a divulgação e manutenção de seu inteiro teor no Portal Nacional de Contratações Públicas (PNCP).\n\nContudo, o § 1º do mesmo artigo estabelece expressamente que, sem prejuízo da divulgação no PNCP, é **obrigatória** a publicação do extrato do edital no Diário Oficial do respectivo ente federativo (no caso, o Diário Oficial do Município), bem como em jornal diário de grande circulação.\n\n### Dispositivo legal\n* Art. 54, caput e § 1º, da Lei nº 14.133/2021.",
+        "source_reference": null
+      },
+      "source_content_hash": "4693b1bffd4b887e19f7d9c9da5f6b390e23fa4f0a5e5048a8861159bd8534d5"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:088",
+      "source_id": "agente_administrativo:88",
+      "question_type": "true_false",
+      "statement_markdown": "Com referência a compras e contratações públicas para fornecimento de insumos e bens patrimoniais, julgue os itens seguintes.\n\nUm processo licitatório para a aquisição de mobiliário escolar pode ser realizado com o critério de julgamento do tipo técnica e preço.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 88; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "2a456ac018eecd786b2b13c0c08a7dc5f08ad43bd90a3172909325d3c2f4b8d9",
+        "original_numeric_id": 88,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nO mobiliário escolar é considerado bem comum (cujos padrões de desempenho e qualidade podem ser objetivamente definidos pelo edital por meio de especificações usuais de mercado). Para aquisição de bens comuns, a modalidade prioritária é o pregão eletrônico, adotando-se os critérios de julgamento de **menor preço** ou **maior desconto**. O critério de técnica e preço é restrito a serviços técnicos de natureza predominantemente intelectual ou de alta complexidade tecnológica (Lei nº 14.133/2021, art. 36 e Lei nº 10.520/2002).",
+        "source_reference": null
+      },
+      "source_content_hash": "637cfa718af2c50adbbf9be6f64e3f4f19d5978be8b8c4f20610c060be4cb2b5"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:089",
+      "source_id": "agente_administrativo:89",
+      "question_type": "true_false",
+      "statement_markdown": "Com referência a compras e contratações públicas para fornecimento de insumos e bens patrimoniais, julgue os itens seguintes.\n\nA estimativa de valor de uma aquisição pretendida por uma prefeitura municipal pode ser mantida em sigilo até o final do processo licitatório.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 89; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "55d97dcd7d775a5800745505f021d0fe64c9ec251d7c0f5ee0df4cf305061c66",
+        "original_numeric_id": 89,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nConforme estabelece o art. 24 da Nova Lei de Licitações (Lei nº 14.133/2021), desde que expressamente justificado no processo administrativo, o orçamento estimado da contratação poderá ter caráter sigiloso para os licitantes até o encerramento do envio de lances ou julgamento das propostas comerciais, sem prejuízo do acesso aos órgãos de controle. O objetivo é evitar que os licitantes balizem suas propostas pelo valor teto, estimulando maior competitividade e descontos.",
+        "source_reference": null
+      },
+      "source_content_hash": "2f2bd3ac434e2d3defddbf2f0d65210912ca7f31a1c909924cee3b2bd5d62c86"
+    }
+  ]
+}

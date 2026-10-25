@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_de_policia_federal-direito-administrativo-c3515df8485a-ac73dea9a1d0",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "c3515df8485ab192355dd2c9f2cd5fc325fdfcc424779258a45eea81a91b4abe",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "9bf5415c207ff2dee6f1b513f48cc1f4b3e00a224421906182f247e816e0b8ed",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ac73dea9a1d0d7a679d6920664499303fa78b1321ae330d8f071edc52c5b385a",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:027",
+      "source_id": "agente_de_policia_federal:27",
+      "question_type": "true_false",
+      "statement_markdown": "A administração pública, além de estar sujeita ao controle dos Poderes Legislativo e Judiciário, exerce controle sobre seus próprios atos. Tendo como referência inicial essas informações, julgue os itens a seguir, acerca do controle da administração pública.\n\nO poder de autotutela tem fundamento, preponderantemente, nos princípios da legalidade e da preponderância do interesse público e pode ser exercido de ofício quando a autoridade competente verificar ilegalidade em ato da própria administração.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 27; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "6e3a9db91769ba31a885b6f3cd99f21b2c98285b037762338c847959f65dc804",
+        "original_numeric_id": 27,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto porque o princípio da autotutela administrativa confere à Administração Pública o poder-dever de controlar a legalidade e o mérito de seus próprios atos, de ofício ou mediante provocação.\n\nEsse poder fundamenta-se essencialmente nos princípios da legalidade (visto que a Administração não pode manter atos contrários ao ordenamento jurídico) e da supremacia do interesse público (pois o interesse coletivo exige uma atuação administrativa regular e eficiente). A autotutela autoriza a anulação de atos ilegais e a revogação de atos inconvenientes ou inoportunos, podendo ser exercida de ofício pela autoridade competente, sem a necessidade de intervenção do Poder Judiciário.\n\n### Dispositivo legal\n* **Súmula nº 473 do STF**\n* **Lei nº 9.784/1999, art. 53**",
+        "source_reference": null
+      },
+      "source_content_hash": "a34172159ec45dc84587744da3b08608af0253d752ba4e9a2a405428609396a2"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:028",
+      "source_id": "agente_de_policia_federal:28",
+      "question_type": "true_false",
+      "statement_markdown": "A administração pública, além de estar sujeita ao controle dos Poderes Legislativo e Judiciário, exerce controle sobre seus próprios atos. Tendo como referência inicial essas informações, julgue os itens a seguir, acerca do controle da administração pública.\n\nO Poder Judiciário tem competência para apreciar o mérito dos atos discricionários exarados pela administração pública, devendo, no entanto, restringir-se à análise da legalidade desses atos.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 28; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "30942d67c425f0cd1d83248a5374a12e074e39966cfb2be5b643c3c511b501b0",
+        "original_numeric_id": 28,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque o Poder Judiciário não possui competência para apreciar o mérito dos atos discricionários exarados pela Administração Pública.\n\nO mérito administrativo envolve o juízo de conveniência e oportunidade na prática do ato, cuja valoração é de atribuição exclusiva do Poder Executivo (ou do administrador público competente). Uma eventual incursão do Poder Judiciário sobre o mérito administrativo violaria o princípio constitucional da separação dos poderes. O controle exercido pelo Judiciário sobre os atos discricionários restringe-se estritamente à análise de sua legalidade e constitucionalidade, incluindo a verificação de desvios de finalidade e a observância dos princípios da razoabilidade e da proporcionalidade.\n\n**Pegadinha:** A banca constrói uma afirmação contraditória ao afirmar que o Judiciário \"tem competência para apreciar o mérito\", mas que deve \"restringir-se à análise da legalidade\". Se o controle se restringe à legalidade, o Judiciário não pode apreciar o mérito.\n\n### Dispositivo legal\n* **Constituição Federal de 1988, art. 2º**",
+        "source_reference": null
+      },
+      "source_content_hash": "aa183eb718acd3e2ca5fa06d314cfa0d73aac02621e3d1c541e186992c94cf64"
+    }
+  ]
+}

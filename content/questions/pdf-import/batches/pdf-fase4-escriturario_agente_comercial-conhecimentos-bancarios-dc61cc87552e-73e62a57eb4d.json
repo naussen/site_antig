@@ -1,0 +1,700 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-escriturario_agente_comercial-conhecimentos-bancarios-dc61cc87552e-73e62a57eb4d",
+  "source": {
+    "file_name": "escriturario_agente_comercial_ATUALIZADO.json",
+    "sha256": "dc61cc87552e5a02d8b0d8976fda4c03f634e0152f65f5267f98ed067ff73cc6",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "escriturario_agente_comercial.json",
+      "original_source_sha256": "01019f640948f2ffd55374ea21a7a82a58f3fdae926a71a27cc21c32ba8bbf9d",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "73e62a57eb4d9a0c87914371924a22d9da4df0722340cc63e3bd452df474bab2",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "conhecimentos-bancarios",
+    "name": "Conhecimentos Bancários"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:031",
+      "source_id": "escriturario_agente_comercial:31",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um consultor financeiro capta clientela para investir em instituição financeira legalmente autorizada a funcionar pelo Banco Central do Brasil, sendo eficiente na sua atividade. Em determinado momento, é informado pelo seu contato na referida instituição de que um dos indivíduos indicados estaria realizando operações de aportes de recursos em descompasso com sua capacidade financeira. Nos termos da Carta Circular nº 4.001, de 29 de janeiro de 2020, os fatos descritos pertinentes aos aportes constituem a ocorrência de indícios de suspeita de lavagem de dinheiro para fins dos procedimentos relacionados às suas atividades financeiras de",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 31; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "monitoramento",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "bloqueio",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "interdição",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "exclusão",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "análise",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Banco Central do Brasil (BACEN) e Conselho Monetário Nacional (CMN)",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Bancários",
+        "source_content_hash": "ee3f89602f26b6672c9c1adf0e61e89bec261a2a0a5ca1410111fa9a064a0232",
+        "original_numeric_id": 31,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "banco-central-do-brasil-e-cmn",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A**.\n\nNos termos da Lei nº 7.492/1986 (Lei dos Crimes contra o Sistema Financeiro Nacional), fazer operar, sem a devida autorização, ou com autorização obtida mediante declaração falsa, instituição financeira, inclusive de distribuição de valores mobiliários ou de câmbio, constitui crime contra o sistema financeiro (art. 16).\n\nA captação de clientela para aplicação de recursos em instituições financeiras requer estrita observância das normas regulamentares emitidas pelo Conselho Monetário Nacional (CMN) e pelo Banco Central do Brasil (Bacen).\n\nA conduta descrita na alternativa A subsume-se perfeitamente aos tipos legais e regulamentares do Sistema Financeiro Nacional.\n\n### Dispositivo legal\n[Lei nº 7.492/1986, Art. 16](https://www.planalto.gov.br/ccivil_03/leis/l7492.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "546ed53080914bc10e90922bc9e037033e59a2086edb1fa7c5a193a529137c10"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:032",
+      "source_id": "escriturario_agente_comercial:32",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Uma funcionária de determinada instituição financeira segue religião de matriz africana, fato conhecido dos demais colegas de trabalho. Após reunião com a equipe da qual participa, é surpreendida com afirmações desairosas em relação aos que são integrantes da referida religião. Diante disso, formula reclamação ao Coordenador Geral do grupo de trabalho, assentando sua inconformidade com o evento.\n\nEssa situação não ocorreria facilmente no Banco do Brasil, uma vez que, nos termos do seu Código de Ética, as relações devem ser pautadas pelo respeito a várias diferenças, dentre as quais figuram as diferenças",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 32; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "pessoais",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "religiosas",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "cambiais",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "preventivas",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "alteradas",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Estrutura do Sistema Financeiro Nacional (SFN)",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Bancários",
+        "source_content_hash": "5fd43c2b6a5edf48b717f8a3855c63d1d4e400cb3d01785ca24b4feb30f2161a",
+        "original_numeric_id": 32,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "sistema-financeiro-nacional-sfn",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nDe acordo com o Código de Ética e as Normas de Conduta do Banco do Brasil, a atuação de seus colaboradores é pautada pelos princípios de integridade, legalidade, transparência, responsabilidade socioambiental e repúdio a qualquer prática de conflito de interesses, corrupção, lavagem de dinheiro ou facilitação de vantagens indevidas.\n\nO Código de Ética prevê mecanismos rígidos de controle interno e conformidade (*compliance*), canais formais de denúncia e segregação de funções para mitigar desvios operacionais, como destacado na alternativa B.",
+        "source_reference": null
+      },
+      "source_content_hash": "1f3df5de123918097db72b672c89cfba7b0aef2cd1db2f65deb1e1bfad3ed00b"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:034",
+      "source_id": "escriturario_agente_comercial:34",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Se os preços das mercadorias produzidas no Brasil e nos Estados Unidos forem calculados em uma mesma moeda comum (por exemplo, em Dólar americano) e, na pressuposição de que todos os demais fatores permaneçam constantes, uma desvalorização real da moeda brasileira em relação ao Dólar americano",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 34; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "desestimulará as exportações brasileiras para os Estados Unidos.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "tornará relativamente mais baratas as viagens turísticas dos brasileiros para os Estados Unidos.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "encarecerá relativamente os produtos exportados do Brasil para os Estados Unidos.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "barateará relativamente os produtos exportados do Brasil para os Estados Unidos.",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "manterá inalterados os preços dos produtos exportados do Brasil para os Estados Unidos.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Estrutura do Sistema Financeiro Nacional (SFN)",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Bancários",
+        "source_content_hash": "1f91c2adb3e497a2a8dab5c36aeebe7347d1070495e2b93341b5c490dde397df",
+        "original_numeric_id": 34,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "D",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "sistema-financeiro-nacional-sfn",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão analisa o impacto cambial sobre o comércio exterior sob a ótica da taxa de câmbio real.\n\nQuando ocorre uma desvalorização real do Real (R$) em relação ao Dólar americano (US$), significa que o poder de compra da moeda brasileira diminuiu frente à moeda americana. Consequentemente, ao converter os preços dos produtos brasileiros para dólares, eles passam a custar menos para o comprador estrangeiro.\n\n*   **D) Correta.** Os produtos exportados pelo Brasil tornam-se relativamente mais baratos em dólares, aumentando sua competitividade no exterior.\n*   **A) Incorreta.** A desvalorização estimula as exportações brasileiras, pois os produtos ficam mais baratos para os estrangeiros.\n*   **B) Incorreta.** Viagens de brasileiros para os EUA tornam-se mais caras, pois o dólar ficou mais caro em termos reais.\n*   **C) Incorreta.** Os produtos exportados tornam-se mais baratos, não mais caros.\n*   **E) Incorreta.** Os preços relativos sofrem alteração direta pela variação cambial real.",
+        "source_reference": null
+      },
+      "source_content_hash": "858229917502f2ab83c7fb7034b9b9298a91fc77dab331233f55ee3f16ae13b4"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:035",
+      "source_id": "escriturario_agente_comercial:35",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A função principal das operações de Tesouraria bancária é",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 35; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "aprimorar a qualidade de atendimento aos clientes.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "ampliar o uso de serviços digitais nas transações financeiras.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "administrar os fluxos de despesas e receitas da instituição financeira, visando a controlar os gastos e a maximizar os lucros.",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "aumentar a carteira de serviços financeiros oferecidos aos clientes.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "gerenciar as atividades de marketing, publicidade e propaganda da instituição financeira.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Estrutura do Sistema Financeiro Nacional (SFN)",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Bancários",
+        "source_content_hash": "7817f2f3301deaa8010e1f6c00ec384662a6fb95b81f03a9fd383068f84c0a38",
+        "original_numeric_id": 35,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "sistema-financeiro-nacional-sfn",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda as funções precípuas da tesouraria em uma instituição financeira.\n\nA tesouraria atua na gestão de ativos e passivos (ALM - *Asset and Liability Management*), controlando o fluxo de caixa diário, administrando os riscos de mercado e de liquidez, e garantindo que a instituição possua recursos suficientes para honrar seus compromissos ao menor custo possível, buscando otimizar o resultado financeiro.\n\n*   **C) Correta.** Define com precisão a atividade de gerenciar os fluxos de entradas (receitas) e saídas (despesas) de recursos para controle de gastos e maximização de lucros.\n*   **A, B, D e E) Incorretas.** Atendimento ao cliente, canais digitais, expansão de carteira comercial e marketing são atribuições de outras áreas específicas do banco (comercial, tecnologia, produtos e comunicação), não da tesouraria.",
+        "source_reference": null
+      },
+      "source_content_hash": "1b93294f8e0e07afebc7310562b8faf18ae5eea85c3bd4d087c433c072324463"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:036",
+      "source_id": "escriturario_agente_comercial:36",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O comportamento das taxas de câmbio nominais e reais é fundamental para a tomada de decisões por parte de produtores e investidores. Enquanto as taxas de câmbio nominais são cotadas diariamente nos mercados de câmbio, as taxas de câmbio reais são determinadas pelas forças subjacentes à paridade real do poder de compra entre a moeda nacional e a moeda estrangeira.\n\nConsidere o conceito de paridade relativa real do poder de compra. Considere, também, que, no início de um determinado período, a taxa de câmbio nominal R$/US$ seja igual à paridade relativa real do poder de compra. Nesse contexto, para que a paridade relativa real do poder de compra (ou seja, a taxa de câmbio real R$/US$) fique constante, entre o início e o final daquele período, será preciso que a taxa de desvalorização nominal do Real brasileiro em relação ao Dólar americano seja",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 36; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "igual à diferença entre as taxas de inflação americana e brasileira, acumuladas no período.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "igual à diferença entre as taxas de inflação brasileira e americana, acumuladas no período.",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "igual à taxa de inflação brasileira acumulada no período.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "igual à taxa de inflação americana acumulada no período.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "livremente cotada no mercado de câmbio, sem relação com as taxas de inflação brasileira e americana, acumuladas no período.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Mercado de Câmbio, Capitais e Títulos Públicos",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Bancários",
+        "source_content_hash": "418003817e1c189b2e44573c248f38ff8d176cb7a6f53b410e80ebf1a373293e",
+        "original_numeric_id": 36,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "mercado-de-cambio-e-operacoes-com-moeda-estrangeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a aplicação do conceito de Paridade Relativa do Poder de Compra (PPC).\n\nA taxa de câmbio real ($E_r$) relaciona a taxa de câmbio nominal ($E_n$) e os níveis de preços doméstico ($P_d$) e estrangeiro ($P_f$) pela fórmula:\n$$E_r = E_n \\times \\frac{P_f}{P_d}$$\n\nPara que a taxa de câmbio real permaneça constante ao longo do tempo, a variação percentual da taxa de câmbio nominal deve ser igual à diferença entre a taxa de inflação doméstica (brasileira) e a taxa de inflação estrangeira (americana):\n$$\\Delta\\% E_n \\approx \\pi_{Brasil} - \\pi_{EUA}$$\n\n*   **B) Correta.** A desvalorização nominal do Real deve ser igual à diferença entre as taxas de inflação brasileira e americana.\n*   **A) Incorreta.** Inverte a ordem das inflações, o que resultaria em apreciação nominal caso a inflação brasileira fosse maior.\n*   **C e D) Incorretas.** Ignoram o diferencial de inflação, considerando apenas um dos países.\n*   **E) Incorreta.** Há relação direta e matemática entre as taxas de inflação e a variação cambial nominal para a manutenção da paridade real.",
+        "source_reference": null
+      },
+      "source_content_hash": "c71e421fc93cf3189aa9ae18434d1c9ff9381d67a1be7617e41f7a10258f3acf"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:037",
+      "source_id": "escriturario_agente_comercial:37",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A oferta da moeda (meios de pagamento M1) no Brasil tende a se expandir se as autoridades monetárias",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 37; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "comprarem liquidamente títulos públicos em operações de mercado aberto.",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "aumentarem a taxa de recolhimento de reserva compulsória sobre os depósitos nos bancos.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "aumentarem a taxa do redesconto dos empréstimos de liquidez.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "aumentarem os dividendos pagos pelas empresas públicas.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "diminuírem os impostos indiretos incidentes sobre os bens de investimento.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Estrutura do Sistema Financeiro Nacional (SFN)",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Bancários",
+        "source_content_hash": "f78599941bc8533a3079a3d2661beb6fa754d1f60792bb16781a4cfb29f4bf43",
+        "original_numeric_id": 37,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "sistema-financeiro-nacional-sfn",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda os instrumentos de política monetária e seus impactos sobre os meios de pagamento (M1).\n\nQuando a autoridade monetária deseja realizar uma política monetária expansionista (aumentar a oferta de moeda), ela compra títulos públicos federais que estão em poder do público ou dos bancos comerciais. Ao pagar por esses títulos, o Banco Central injeta liquidez (moeda) no sistema financeiro.\n\n*   **A) Correta.** A compra líquida de títulos públicos expande a base monetária e, por consequência, o multiplicador monetário eleva o M1.\n*   **B) Incorreta.** O aumento do recolhimento compulsório retira dinheiro de circulação, reduzindo a oferta de moeda (política contracionista).\n*   **C) Incorreta.** O aumento da taxa de redesconto desestimula os bancos comerciais a tomarem empréstimos com o Banco Central, contraindo a oferta de moeda.\n*   **D e E) Incorretas.** Tratam de medidas de política fiscal e tributária que não têm como efeito direto e imediato a expansão controlada dos meios de pagamento M1 por via de política monetária.",
+        "source_reference": null
+      },
+      "source_content_hash": "408127e38821ece3395998941f3760bc9bb7ae2a1c2d2ce8f20c241509f5789b"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:038",
+      "source_id": "escriturario_agente_comercial:38",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Considerando-se o atual regime cambial brasileiro, uma redução pronunciada da taxa de juros dos Estados Unidos, relativamente à taxa de juros no Brasil, tenderia a fazer com que",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 38; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a moeda brasileira, o Real, se valorizasse cambialmente em relação ao Dólar americano.",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "as exportações brasileiras para os Estados Unidos fossem cambialmente estimuladas.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "as reservas brasileiras de divisas em Dólar americano diminuíssem.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "os fluxos de capitais financeiros brasileiros para os Estados Unidos aumentassem.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "as importações brasileiras originárias dos Estados Unidos fossem cambialmente desestimuladas.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Estrutura do Sistema Financeiro Nacional (SFN)",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Bancários",
+        "source_content_hash": "7d267fe4bca69859d9d7887c0af8fc7233670850de5e5965a1c870144e4ce613",
+        "original_numeric_id": 38,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "sistema-financeiro-nacional-sfn",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão analisa a relação entre diferenciais de taxas de juros internacionais e taxas de câmbio sob regime de câmbio flutuante.\n\nCom a redução da taxa de juros nos Estados Unidos em relação à taxa de juros no Brasil, os ativos financeiros brasileiros tornam-se comparativamente mais rentáveis e atraentes para investidores globais. Isso gera um fluxo de entrada de capital estrangeiro (dólares) no Brasil. O aumento da oferta de dólares no mercado de câmbio doméstico faz com que o preço do dólar caia e, consequentemente, o Real se valorize.\n\n*   **A) Correta.** O Real se valoriza cambialmente devido à maior entrada de divisas estrangeiras.\n*   **B) Incorreta.** A valorização do Real encarece os produtos brasileiros no exterior, desestimulando as exportações.\n*   **C) Incorreta.** O fluxo de entrada de dólares tende a aumentar as reservas internacionais do país caso o Banco Central atue comprando o excedente.\n*   **D) Incorreta.** O fluxo de capitais financeiros ocorreria no sentido inverso (dos EUA para o Brasil).\n*   **E) Incorreta.** Com o Real valorizado, os produtos importados dos EUA tornam-se mais baratos em moeda nacional, estimulando as importações.",
+        "source_reference": null
+      },
+      "source_content_hash": "fbab98e2e3a5921f8c3d259a74355fa0a2d67f9b5b1fc553b99bcc4c3027a04d"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:039",
+      "source_id": "escriturario_agente_comercial:39",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No caso de um regime de taxa de câmbio fixa entre o Real e o Dólar americano, verifica-se que as",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 39; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "diferenças de taxa de inflação entre o Brasil e os Estados Unidos não alterariam a taxa de câmbio real entre as moedas desses dois países.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "políticas monetárias expansionistas nos Estados Unidos causariam recessão no Brasil.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "políticas monetárias no Brasil e nos Estados Unidos seriam sempre contracionistas.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "taxas de câmbio entre o Real e a moeda europeia seriam fixas.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "taxas de juros no Brasil e nos Estados Unidos seriam muito próximas, se houvesse muita mobilidade de capital financeiro entre esses dois países.",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Mercado de Câmbio, Capitais e Títulos Públicos",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Bancários",
+        "source_content_hash": "2b40d5f049508a490484c489d9145f4a33f20b4eaf6cedf3ab440991b660f3cb",
+        "original_numeric_id": 39,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "mercado-de-cambio-e-operacoes-com-moeda-estrangeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda o funcionamento do regime de câmbio fixo sob a ótica da macroeconomia aberta (Trindade Impossível ou Trilema de Mundell-Fleming).\n\nEm um cenário de livre mobilidade de capitais e câmbio fixo, o país perde a autonomia de sua política monetária. Se a taxa de juros interna for superior à externa, haverá uma entrada massiva de capital, forçando a autoridade monetária a comprar dólares e emitir moeda nacional para manter a taxa de câmbio fixa, o que reduz a taxa de juros interna até que ela se iguale à internacional. O oposto ocorre se a taxa interna for menor.\n\n*   **E) Correta.** As taxas de juros doméstica e estrangeira tendem a se igualar devido à arbitragem de capital sob livre mobilidade.\n*   **A) Incorreta.** Diferenças de inflação alteram a taxa de câmbio real, pois a taxa nominal está fixada ($E_r = E_n \\times P_f / P_d$).\n*   **B) Incorreta.** Políticas expansionistas nos EUA reduziriam os juros americanos, gerando fluxo de capital para o Brasil e forçando uma expansão monetária também no Brasil para manter o câmbio fixo, o que é expansionista, não recessivo.\n*   **C) Incorreta.** Não há obrigatoriedade de as políticas serem sempre contracionistas.\n*   **D) Incorreta.** Fixar o câmbio em relação ao Dólar não garante paridade fixa em relação a outras moedas (como o Euro), a menos que o próprio Dólar também esteja fixado ao Euro.",
+        "source_reference": null
+      },
+      "source_content_hash": "4aa59a2c6af0406a061872db295b9b079884750e3aec0878d5281a8d4222f15b"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:040",
+      "source_id": "escriturario_agente_comercial:40",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O Conselho Monetário Nacional (CMN) é um órgão importante do Sistema Financeiro Nacional.\n\nAs atribuições do CMN são inúmeras, entre as quais",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 40; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "regular os serviços de compensação de cheques e outros papéis.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "autorizar a emissão de papel moeda.",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "determinar, via Comitê de Política Monetária, a taxa de juros Selic.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "autorizar o funcionamento das instituições financeiras operando no país.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "emitir títulos do CMN, responsabilizando-se pelo seu resgate.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Banco Central do Brasil (BACEN) e Conselho Monetário Nacional (CMN)",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Bancários",
+        "source_content_hash": "562f9daa3ec4a4e9888d625f90c25d605d73e3887aef52cbb2526ea1bf682661",
+        "original_numeric_id": 40,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "banco-central-do-brasil-e-cmn",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nO Conselho Monetário Nacional (CMN) é o órgão superior e normativo do Sistema Financeiro Nacional (SFN), criado pela Lei nº 4.595/1964. Suas atribuições são de caráter exclusivamente diretivo e regulatório, não possuindo funções executivas ou operacionais de fiscalização direta de instituições (atribuição que cabe ao Banco Central do Brasil e à CVM).\n\nEntre as competências expressas do CMN fixadas no art. 4º da Lei nº 4.595/1964 destacam-se: regular a constituição, funcionamento e fiscalização das instituições financeiras; fixar as diretrizes e normas da política cambial, monetária e creditícia; e disciplinar o crédito em todas as suas modalidades.\n\nA alternativa B descreve com exatidão uma dessas competências normativas superiores do CMN.\n\n### Dispositivo legal\n[Lei nº 4.595/1964, Art. 3º e Art. 4º](https://www.planalto.gov.br/ccivil_03/leis/l4595.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "be9780c49dea18fec31219f7cbb2916f7f166d2c7ba8e4033dffbdc86de948b1"
+    }
+  ]
+}

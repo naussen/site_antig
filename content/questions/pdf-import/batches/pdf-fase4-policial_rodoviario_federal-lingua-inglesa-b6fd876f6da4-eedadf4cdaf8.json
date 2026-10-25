@@ -1,0 +1,424 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-policial_rodoviario_federal-lingua-inglesa-b6fd876f6da4-eedadf4cdaf8",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "b6fd876f6da47bfc670b5edf47a194cb0192c6a872db7d5acf3f5352d639cba7",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "d0a1c5718064db035e156dbeb8982317019ea8dde6c8349e0a1cc8366d1342df",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "eedadf4cdaf8c45a15b3924b048eb33b7fd7053df8a0931b3ef75f9f80055744",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "lingua-inglesa",
+    "name": "Língua Inglesa"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:002",
+      "source_id": "policial_rodoviario_federal:2",
+      "question_type": "true_false",
+      "statement_markdown": "A deep freeze this week in the Lone Star state, which relies on electricity to heat many homes, is causing power demand to skyrocket. At the same time, natural gas, coal, wind and nuclear facilities in Texas have been knocked offline by the unthinkably low temperatures.\n“The extreme cold is causing the entire system to freeze up,” said Jason Bordoff, director of Columbia University’s Center on Global Energy Policy. “All sources of energy are underperforming in the extreme cold because they’re not designed to handle these unusual conditions.”\nThe ripple effects are being felt around the nation as Texas’ prolific oil-and-gas industry stumbles.\nIt’s striking that these power outages are happening in a state with abundant energy resources. Texas produces more electricity than any other US state — generating almost twice as much as Florida, the next-closest, according to federal statistics.\nWind power is also booming in Texas, which produced about 28% of all the US wind-powered electricity in 2019, the EIA said. But the problem is that not only is Texas an energy superpower, it tends to be an above-average temperature state. That means its infrastructure is ill-prepared for the cold spell currently wreaking havoc. And the consequences are being felt by millions.\nCritics of renewable energy have pointed out that wind turbines have frozen or needed to be shut down due to the extreme weather.\nEven though other places with colder weather (like Iowa and Denmark) rely on wind for even larger shares of power, experts said the turbines in Texas were not winterized for the unexpected freeze.\nBut this is not just about wind turbines going down. Natural gas and coal-fired power plants need water to stay online. Yet those water facilities froze in the cold temperatures and others lost access to the electricity they require to operate.\nIt’s too early to definitively say what went wrong in Texas and how to prevent similar outages. More information will need to be released by state authorities. Still, some experts say the criticism of wind power appears overdone already. “In terms of the blame game, the focus on wind is a red herring. It’s more of a political issue than what is causing the power problems on the grid,” said Dan Cohan, associate professor of environmental engineering at Rice University.\nThe energy crisis in Texas raises also questions about the nature of the state’s deregulated and decentralized electric grid. Unlike other states, Texas has made a conscious decision to isolate its grid from the rest of the country.\nThat means that when things are running smoothly, Texas can’t export excess power to neighboring states. And in the current crisis, it can’t import power either.\n\nAbout ideas stated in the text above and the words used in it, judge the following items.\n\nIn the last paragraph of the text, “That” refers to the decision by Texas to isolate its energy grid from the rest of the country.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 2; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Grammar and Sentence Structures",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Inglês",
+        "source_content_hash": "54e63eed8ff6eda68e6ed84069758e183f66a38eb7332b0ecc1b5fffc7c2196d",
+        "original_numeric_id": 2,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/gab_definitivo_578_prf_ing_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "gramatica-tempos-verbais-e-conectores-em-ingles",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a análise de coesão referencial em língua inglesa, especificamente a identificação do referente do pronome demonstrativo \"That\" no início do último parágrafo do texto.\n\nO trecho final do texto apresenta a seguinte estrutura:\n*\"Unlike other states, Texas has made a conscious decision to isolate its grid from the rest of the country. That means that when things are running smoothly, Texas can’t export excess power to neighboring states.\"*\n\nO pronome demonstrativo **\"That\"** atua como um elemento de coesão anafórica, retomando toda a oração anterior: a decisão consciente do Texas de isolar sua rede elétrica do restante do país (*\"Texas has made a conscious decision to isolate its grid from the rest of the country\"*).\n\nA estrutura *\"That means...\"* (Isso significa...) introduz a consequência direta dessa decisão de isolamento (a impossibilidade de exportar ou importar energia). Portanto, a afirmação de que \"That\" se refere à decisão do Texas de isolar sua rede de energia do restante do país está correta.",
+        "source_reference": null
+      },
+      "source_content_hash": "b7e79ecc89a8d61c53d3f70698a3bfe16327268fb895ea9f2f22f93effced9df"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:003",
+      "source_id": "policial_rodoviario_federal:3",
+      "question_type": "true_false",
+      "statement_markdown": "A deep freeze this week in the Lone Star state, which relies on electricity to heat many homes, is causing power demand to skyrocket. At the same time, natural gas, coal, wind and nuclear facilities in Texas have been knocked offline by the unthinkably low temperatures.\n“The extreme cold is causing the entire system to freeze up,” said Jason Bordoff, director of Columbia University’s Center on Global Energy Policy. “All sources of energy are underperforming in the extreme cold because they’re not designed to handle these unusual conditions.”\nThe ripple effects are being felt around the nation as Texas’ prolific oil-and-gas industry stumbles.\nIt’s striking that these power outages are happening in a state with abundant energy resources. Texas produces more electricity than any other US state — generating almost twice as much as Florida, the next-closest, according to federal statistics.\nWind power is also booming in Texas, which produced about 28% of all the US wind-powered electricity in 2019, the EIA said. But the problem is that not only is Texas an energy superpower, it tends to be an above-average temperature state. That means its infrastructure is ill-prepared for the cold spell currently wreaking havoc. And the consequences are being felt by millions.\nCritics of renewable energy have pointed out that wind turbines have frozen or needed to be shut down due to the extreme weather.\nEven though other places with colder weather (like Iowa and Denmark) rely on wind for even larger shares of power, experts said the turbines in Texas were not winterized for the unexpected freeze.\nBut this is not just about wind turbines going down. Natural gas and coal-fired power plants need water to stay online. Yet those water facilities froze in the cold temperatures and others lost access to the electricity they require to operate.\nIt’s too early to definitively say what went wrong in Texas and how to prevent similar outages. More information will need to be released by state authorities. Still, some experts say the criticism of wind power appears overdone already. “In terms of the blame game, the focus on wind is a red herring. It’s more of a political issue than what is causing the power problems on the grid,” said Dan Cohan, associate professor of environmental engineering at Rice University.\nThe energy crisis in Texas raises also questions about the nature of the state’s deregulated and decentralized electric grid. Unlike other states, Texas has made a conscious decision to isolate its grid from the rest of the country.\nThat means that when things are running smoothly, Texas can’t export excess power to neighboring states. And in the current crisis, it can’t import power either.\n\nAbout ideas stated in the text above and the words used in it, judge the following items.\n\nDespite the cold temperatures, energy production in Texas continued unimpeded.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 3; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Grammar and Sentence Structures",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Inglês",
+        "source_content_hash": "d26cf4a6ff9e56ec59a8c596be03274f4b878e4d85b55e1fdf6848332d8887cc",
+        "original_numeric_id": 3,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/gab_definitivo_578_prf_ing_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "gramatica-tempos-verbais-e-conectores-em-ingles",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão avalia a compreensão de texto em língua inglesa, exigindo a verificação de informações explícitas sobre os impactos das baixas temperaturas na produção de energia no Texas.\n\nA assertiva afirma que, apesar das temperaturas frias, a produção de energia no Texas continuou sem impedimentos (*\"continued unimpeded\"*). No entanto, o texto descreve um cenário de colapso e severa interrupção na geração de energia:\n\n1. No primeiro parágrafo, afirma-se que instalações de gás natural, carvão, eólica e nuclear foram tiradas de operação pelas temperaturas extremamente baixas: *\"natural gas, coal, wind and nuclear facilities in Texas have been knocked offline by the unthinkably low temperatures\"*.\n2. No segundo parágrafo, o diretor do Centro de Política Energética Global da Universidade de Columbia afirma que todas as fontes de energia operaram abaixo do esperado devido ao frio extremo: *\"All sources of energy are underperforming in the extreme cold because they’re not designed to handle these unusual conditions\"*.\n3. No quinto parágrafo, destaca-se que a infraestrutura do estado estava mal preparada para a onda de frio que causava estragos: *\"its infrastructure is ill-prepared for the cold spell currently wreaking havoc\"*.\n\nPortanto, a produção de energia foi gravemente afetada e interrompida, o que contradiz diretamente o termo *\"unimpeded\"* (sem impedimentos) utilizado na assertiva.",
+        "source_reference": null
+      },
+      "source_content_hash": "50d7dd1aeee0c97c7b17b0a38076e46b93d5e744529ef2520ad3e85705e76766"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:004",
+      "source_id": "policial_rodoviario_federal:4",
+      "question_type": "true_false",
+      "statement_markdown": "A deep freeze this week in the Lone Star state, which relies on electricity to heat many homes, is causing power demand to skyrocket. At the same time, natural gas, coal, wind and nuclear facilities in Texas have been knocked offline by the unthinkably low temperatures.\n“The extreme cold is causing the entire system to freeze up,” said Jason Bordoff, director of Columbia University’s Center on Global Energy Policy. “All sources of energy are underperforming in the extreme cold because they’re not designed to handle these unusual conditions.”\nThe ripple effects are being felt around the nation as Texas’ prolific oil-and-gas industry stumbles.\nIt’s striking that these power outages are happening in a state with abundant energy resources. Texas produces more electricity than any other US state — generating almost twice as much as Florida, the next-closest, according to federal statistics.\nWind power is also booming in Texas, which produced about 28% of all the US wind-powered electricity in 2019, the EIA said. But the problem is that not only is Texas an energy superpower, it tends to be an above-average temperature state. That means its infrastructure is ill-prepared for the cold spell currently wreaking havoc. And the consequences are being felt by millions.\nCritics of renewable energy have pointed out that wind turbines have frozen or needed to be shut down due to the extreme weather.\nEven though other places with colder weather (like Iowa and Denmark) rely on wind for even larger shares of power, experts said the turbines in Texas were not winterized for the unexpected freeze.\nBut this is not just about wind turbines going down. Natural gas and coal-fired power plants need water to stay online. Yet those water facilities froze in the cold temperatures and others lost access to the electricity they require to operate.\nIt’s too early to definitively say what went wrong in Texas and how to prevent similar outages. More information will need to be released by state authorities. Still, some experts say the criticism of wind power appears overdone already. “In terms of the blame game, the focus on wind is a red herring. It’s more of a political issue than what is causing the power problems on the grid,” said Dan Cohan, associate professor of environmental engineering at Rice University.\nThe energy crisis in Texas raises also questions about the nature of the state’s deregulated and decentralized electric grid. Unlike other states, Texas has made a conscious decision to isolate its grid from the rest of the country.\nThat means that when things are running smoothly, Texas can’t export excess power to neighboring states. And in the current crisis, it can’t import power either.\n\nAbout ideas stated in the text above and the words used in it, judge the following items.\n\nChanges in energy production in Texas are having an impact across the United States.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 4; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Grammar and Sentence Structures",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Inglês",
+        "source_content_hash": "ba0bc2fab14c2d1f0fe55242d14aaf1035fa0f362bf84f12ad727dc8b3576eea",
+        "original_numeric_id": 4,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/gab_definitivo_578_prf_ing_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "gramatica-tempos-verbais-e-conectores-em-ingles",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nO terceiro parágrafo do texto explicita de forma inequívoca que os desdobramentos da crise energética texana afetam os Estados Unidos como um todo: \"The ripple effects are being felt around the nation as Texas’ prolific oil-and-gas industry stumbles\" (Os efeitos em cadeia estão sendo sentidos em toda a nação à medida que a prolífica indústria de petróleo e gás do Texas vacila).",
+        "source_reference": null
+      },
+      "source_content_hash": "74bfd8f273afb4c554c9ec1cb77a72cdc554527118c36e89954201f652107f27"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:005",
+      "source_id": "policial_rodoviario_federal:5",
+      "question_type": "true_false",
+      "statement_markdown": "A deep freeze this week in the Lone Star state, which relies on electricity to heat many homes, is causing power demand to skyrocket. At the same time, natural gas, coal, wind and nuclear facilities in Texas have been knocked offline by the unthinkably low temperatures.\n“The extreme cold is causing the entire system to freeze up,” said Jason Bordoff, director of Columbia University’s Center on Global Energy Policy. “All sources of energy are underperforming in the extreme cold because they’re not designed to handle these unusual conditions.”\nThe ripple effects are being felt around the nation as Texas’ prolific oil-and-gas industry stumbles.\nIt’s striking that these power outages are happening in a state with abundant energy resources. Texas produces more electricity than any other US state — generating almost twice as much as Florida, the next-closest, according to federal statistics.\nWind power is also booming in Texas, which produced about 28% of all the US wind-powered electricity in 2019, the EIA said. But the problem is that not only is Texas an energy superpower, it tends to be an above-average temperature state. That means its infrastructure is ill-prepared for the cold spell currently wreaking havoc. And the consequences are being felt by millions.\nCritics of renewable energy have pointed out that wind turbines have frozen or needed to be shut down due to the extreme weather.\nEven though other places with colder weather (like Iowa and Denmark) rely on wind for even larger shares of power, experts said the turbines in Texas were not winterized for the unexpected freeze.\nBut this is not just about wind turbines going down. Natural gas and coal-fired power plants need water to stay online. Yet those water facilities froze in the cold temperatures and others lost access to the electricity they require to operate.\nIt’s too early to definitively say what went wrong in Texas and how to prevent similar outages. More information will need to be released by state authorities. Still, some experts say the criticism of wind power appears overdone already. “In terms of the blame game, the focus on wind is a red herring. It’s more of a political issue than what is causing the power problems on the grid,” said Dan Cohan, associate professor of environmental engineering at Rice University.\nThe energy crisis in Texas raises also questions about the nature of the state’s deregulated and decentralized electric grid. Unlike other states, Texas has made a conscious decision to isolate its grid from the rest of the country.\nThat means that when things are running smoothly, Texas can’t export excess power to neighboring states. And in the current crisis, it can’t import power either.\n\nAbout ideas stated in the text above and the words used in it, judge the following items.\n\nThere are other states, like Florida, that produce energy on a level similar to that of Texas.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 5; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Grammar and Sentence Structures",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Inglês",
+        "source_content_hash": "04d910059a00467eeab7fac805bdfc48492ecf487911a2d3e0d3fdacab72cef1",
+        "original_numeric_id": 5,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/gab_definitivo_578_prf_ing_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "gramatica-tempos-verbais-e-conectores-em-ingles",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nO quarto parágrafo informa expressamente que o Texas produz quase o dobro de energia do segundo colocado (a Flórida): \"Texas produces more electricity than any other US state — generating almost twice as much as Florida, the next-closest, according to federal statistics\". Portanto, a produção da Flórida não está em patamar similar à do Texas, mas em aproximadamente a metade.",
+        "source_reference": null
+      },
+      "source_content_hash": "da99f5ddb35c904f585c36e7b887aaf3288ac0cfb1a12cc10fbfda74b8da6b7b"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:006",
+      "source_id": "policial_rodoviario_federal:6",
+      "question_type": "true_false",
+      "statement_markdown": "A deep freeze this week in the Lone Star state, which relies on electricity to heat many homes, is causing power demand to skyrocket. At the same time, natural gas, coal, wind and nuclear facilities in Texas have been knocked offline by the unthinkably low temperatures.\n“The extreme cold is causing the entire system to freeze up,” said Jason Bordoff, director of Columbia University’s Center on Global Energy Policy. “All sources of energy are underperforming in the extreme cold because they’re not designed to handle these unusual conditions.”\nThe ripple effects are being felt around the nation as Texas’ prolific oil-and-gas industry stumbles.\nIt’s striking that these power outages are happening in a state with abundant energy resources. Texas produces more electricity than any other US state — generating almost twice as much as Florida, the next-closest, according to federal statistics.\nWind power is also booming in Texas, which produced about 28% of all the US wind-powered electricity in 2019, the EIA said. But the problem is that not only is Texas an energy superpower, it tends to be an above-average temperature state. That means its infrastructure is ill-prepared for the cold spell currently wreaking havoc. And the consequences are being felt by millions.\nCritics of renewable energy have pointed out that wind turbines have frozen or needed to be shut down due to the extreme weather.\nEven though other places with colder weather (like Iowa and Denmark) rely on wind for even larger shares of power, experts said the turbines in Texas were not winterized for the unexpected freeze.\nBut this is not just about wind turbines going down. Natural gas and coal-fired power plants need water to stay online. Yet those water facilities froze in the cold temperatures and others lost access to the electricity they require to operate.\nIt’s too early to definitively say what went wrong in Texas and how to prevent similar outages. More information will need to be released by state authorities. Still, some experts say the criticism of wind power appears overdone already. “In terms of the blame game, the focus on wind is a red herring. It’s more of a political issue than what is causing the power problems on the grid,” said Dan Cohan, associate professor of environmental engineering at Rice University.\nThe energy crisis in Texas raises also questions about the nature of the state’s deregulated and decentralized electric grid. Unlike other states, Texas has made a conscious decision to isolate its grid from the rest of the country.\nThat means that when things are running smoothly, Texas can’t export excess power to neighboring states. And in the current crisis, it can’t import power either.\n\nAbout ideas stated in the text above and the words used in it, judge the following items.\n\nThere are places in the world where wind power works well in freezing temperatures.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 6; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Grammar and Sentence Structures",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Inglês",
+        "source_content_hash": "6ed3fd32a37abb53b0d0b71195306415455c976ed11e8c78487ad2b8b5b8145a",
+        "original_numeric_id": 6,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/gab_definitivo_578_prf_ing_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "gramatica-tempos-verbais-e-conectores-em-ingles",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nNo sétimo parágrafo, o texto destaca que locais com clima mais rigoroso dependem com sucesso da energia eólica em fatias ainda maiores: \"Even though other places with colder weather (like Iowa and Denmark) rely on wind for even larger shares of power, experts said the turbines in Texas were not winterized for the unexpected freeze\". Isso comprova que em regiões preparadas (com adaptação para o inverno), a energia eólica opera eficientemente mesmo sob temperaturas de congelamento.",
+        "source_reference": null
+      },
+      "source_content_hash": "580e569ee067ee4630982687c1a7416a28190e48b30bc4f5c98a8438eb1754e5"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:007",
+      "source_id": "policial_rodoviario_federal:7",
+      "question_type": "true_false",
+      "statement_markdown": "A deep freeze this week in the Lone Star state, which relies on electricity to heat many homes, is causing power demand to skyrocket. At the same time, natural gas, coal, wind and nuclear facilities in Texas have been knocked offline by the unthinkably low temperatures.\n“The extreme cold is causing the entire system to freeze up,” said Jason Bordoff, director of Columbia University’s Center on Global Energy Policy. “All sources of energy are underperforming in the extreme cold because they’re not designed to handle these unusual conditions.”\nThe ripple effects are being felt around the nation as Texas’ prolific oil-and-gas industry stumbles.\nIt’s striking that these power outages are happening in a state with abundant energy resources. Texas produces more electricity than any other US state — generating almost twice as much as Florida, the next-closest, according to federal statistics.\nWind power is also booming in Texas, which produced about 28% of all the US wind-powered electricity in 2019, the EIA said. But the problem is that not only is Texas an energy superpower, it tends to be an above-average temperature state. That means its infrastructure is ill-prepared for the cold spell currently wreaking havoc. And the consequences are being felt by millions.\nCritics of renewable energy have pointed out that wind turbines have frozen or needed to be shut down due to the extreme weather.\nEven though other places with colder weather (like Iowa and Denmark) rely on wind for even larger shares of power, experts said the turbines in Texas were not winterized for the unexpected freeze.\nBut this is not just about wind turbines going down. Natural gas and coal-fired power plants need water to stay online. Yet those water facilities froze in the cold temperatures and others lost access to the electricity they require to operate.\nIt’s too early to definitively say what went wrong in Texas and how to prevent similar outages. More information will need to be released by state authorities. Still, some experts say the criticism of wind power appears overdone already. “In terms of the blame game, the focus on wind is a red herring. It’s more of a political issue than what is causing the power problems on the grid,” said Dan Cohan, associate professor of environmental engineering at Rice University.\nThe energy crisis in Texas raises also questions about the nature of the state’s deregulated and decentralized electric grid. Unlike other states, Texas has made a conscious decision to isolate its grid from the rest of the country.\nThat means that when things are running smoothly, Texas can’t export excess power to neighboring states. And in the current crisis, it can’t import power either.\n\nAbout ideas stated in the text above and the words used in it, judge the following items.\n\nIn “Natural gas and coal-fired power plants need water to stay online. Yet those water facilities froze in the cold temperatures and others lost access to the electricity they require to operate”, it is possible to substitute “Yet” for Even so without changing the meaning of the sentence.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 7; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Grammar and Sentence Structures",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Inglês",
+        "source_content_hash": "df08ae55e3ac4959b11747ba43a446aa48497002c8ac971d7a9ee4bf9ef296c2",
+        "original_numeric_id": 7,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/gab_definitivo_578_prf_ing_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "gramatica-tempos-verbais-e-conectores-em-ingles",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nNo trecho em análise, o conectivo \"Yet\" é empregado como conjunção adversativa/concessiva com o sentido de \"contudo\", \"no entanto\", \"ainda assim\" (\"Yet those water facilities froze...\"). A locução \"Even so\" (\"mesmo assim\", \"ainda assim\") exerce exatamente o mesmo papel discursivo de contraposição concessiva, mantendo a correção gramatical e o sentido original.",
+        "source_reference": null
+      },
+      "source_content_hash": "4c6e2b1301cccb0ceab995d57493200d1e59e26999877ba3e680daa67d237a99"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:008",
+      "source_id": "policial_rodoviario_federal:8",
+      "question_type": "true_false",
+      "statement_markdown": "A deep freeze this week in the Lone Star state, which relies on electricity to heat many homes, is causing power demand to skyrocket. At the same time, natural gas, coal, wind and nuclear facilities in Texas have been knocked offline by the unthinkably low temperatures.\n“The extreme cold is causing the entire system to freeze up,” said Jason Bordoff, director of Columbia University’s Center on Global Energy Policy. “All sources of energy are underperforming in the extreme cold because they’re not designed to handle these unusual conditions.”\nThe ripple effects are being felt around the nation as Texas’ prolific oil-and-gas industry stumbles.\nIt’s striking that these power outages are happening in a state with abundant energy resources. Texas produces more electricity than any other US state — generating almost twice as much as Florida, the next-closest, according to federal statistics.\nWind power is also booming in Texas, which produced about 28% of all the US wind-powered electricity in 2019, the EIA said. But the problem is that not only is Texas an energy superpower, it tends to be an above-average temperature state. That means its infrastructure is ill-prepared for the cold spell currently wreaking havoc. And the consequences are being felt by millions.\nCritics of renewable energy have pointed out that wind turbines have frozen or needed to be shut down due to the extreme weather.\nEven though other places with colder weather (like Iowa and Denmark) rely on wind for even larger shares of power, experts said the turbines in Texas were not winterized for the unexpected freeze.\nBut this is not just about wind turbines going down. Natural gas and coal-fired power plants need water to stay online. Yet those water facilities froze in the cold temperatures and others lost access to the electricity they require to operate.\nIt’s too early to definitively say what went wrong in Texas and how to prevent similar outages. More information will need to be released by state authorities. Still, some experts say the criticism of wind power appears overdone already. “In terms of the blame game, the focus on wind is a red herring. It’s more of a political issue than what is causing the power problems on the grid,” said Dan Cohan, associate professor of environmental engineering at Rice University.\nThe energy crisis in Texas raises also questions about the nature of the state’s deregulated and decentralized electric grid. Unlike other states, Texas has made a conscious decision to isolate its grid from the rest of the country.\nThat means that when things are running smoothly, Texas can’t export excess power to neighboring states. And in the current crisis, it can’t import power either.\n\nAbout ideas stated in the text above and the words used in it, judge the following items.\n\nThe text points to the lack of wind as the primary cause for a dip in the production of wind energy during the period described.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 8; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Grammar and Sentence Structures",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Inglês",
+        "source_content_hash": "681f73c2a563e287e99b93bd6aa7c70ef287b04478d4fa3f3c6569b3232f861b",
+        "original_numeric_id": 8,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/gab_definitivo_578_prf_ing_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "gramatica-tempos-verbais-e-conectores-em-ingles",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nO texto não aponta a falta de ventos (\"lack of wind\") como a causa primária da queda na geração eólica, mas sim as temperaturas extremamente baixas que congelaram as turbinas não preparadas para invernos rigorosos (\"wind turbines have frozen or needed to be shut down due to the extreme weather\"). Ademais, especialistas apontam que culpar as turbinas eólicas é uma pista falsa (\"a red herring\"), pois a falha atingiu todo o sistema, incluindo usinas a gás natural e carvão cujas instalações de água congelaram.",
+        "source_reference": null
+      },
+      "source_content_hash": "4a08f9e4764120adf0ca89556bc420210e0577c2291670423513639eee1fd33c"
+    }
+  ]
+}

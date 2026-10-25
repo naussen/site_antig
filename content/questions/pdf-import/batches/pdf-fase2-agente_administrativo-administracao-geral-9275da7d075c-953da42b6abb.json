@@ -1,0 +1,77 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_administrativo-administracao-geral-9275da7d075c-953da42b6abb",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "9275da7d075c14f6aecd067cee72adc350eb98cd976b0bad8b9bd014f4eb1edf",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "5da32b0a57792e090ef9d4c38cee7bda12a08609929c945e59e21312dccdc01a",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "953da42b6abba25dc0f043649e4ce87877815070e48dff7500270d7c46be66a0",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-geral",
+    "name": "Administração Geral"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:064",
+      "source_id": "agente_administrativo:64",
+      "question_type": "true_false",
+      "statement_markdown": "No tocante à gestão por competências e às tendências em gestão de pessoas no setor público, julgue os itens que se seguem.\n\nA política contemporânea de remuneração do servidor público tende a basear-se em competências e desempenho, em que assume maior relevância o conhecimento técnico, além de habilidades e atitudes aplicadas ao resultado.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 64; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Controle e Avaliação",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Geral",
+        "source_content_hash": "3039510ef9e1a384621018d8862b2c48de3aba074614c3738ee96afba6b817b2",
+        "original_numeric_id": 64,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "controle-e-avaliacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Alinhada aos princípios da administração pública gerencial, a gestão de pessoas contemporânea no setor público busca superar o modelo tradicional de remuneração baseado estritamente em tempo de serviço ou titulação formal (critérios burocráticos).\n\nA tendência atual é a adoção de políticas de remuneração e desenvolvimento baseadas em competências e desempenho. Nesse modelo, valoriza-se a entrega efetiva do servidor, ou seja, a aplicação prática do conjunto de conhecimentos (saber), habilidades (saber fazer) e atitudes (querer fazer) — o famoso conceito de CHA — direcionada à obtenção de resultados concretos para a sociedade.",
+        "source_reference": null
+      },
+      "source_content_hash": "2d4730b5cb11008f7f546798428604a8dcd659f2192d10e7b045fd777e67f946"
+    }
+  ]
+}

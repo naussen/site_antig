@@ -1,0 +1,238 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-policial_rodoviario_federal-portugues-8614e5ae4125-13e6b7cdd40d",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "8614e5ae4125c0f2ac2e149748ceec6e4515618c2c2d474c5a320e45e7726151",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "a311442a41cf96895e3ab6bc25877186df1354aab6cde616c4af291da4f66fd9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "13e6b7cdd40d85fa3e317dfa507af129efdc9576210d1725a5de848626556189",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:015",
+      "source_id": "policial_rodoviario_federal:15",
+      "question_type": "true_false",
+      "statement_markdown": "Texto 1A18-I\nNos Estados Unidos da América, no século XIX, a passagem da polícia do sistema de justiça para o de governo da cidade significou também a passagem da noção de caça aos criminosos para a prevenção dos crimes, em um deslocamento do ato para o ator. Como na Europa, a ênfase na prevenção teria representado nova atitude diante do controle social, com o desenvolvimento pela polícia de uma habilidade específica, a de explicar e prevenir o comportamento criminoso. Isso acabou redundando no foco nas “classes perigosas”, ou seja, em setores específicos da sociedade vistos como produtores de comportamento criminoso. Nesse processo, desenvolveram-se os vários campos de saber vinculados aos sistemas de justiça criminal, polícia e prisão, voltados para a identificação, para a explicação e para a prevenção do comportamento criminoso, agora visto como “desviante”, como a medicina legal, a psiquiatria e, especialmente, a criminologia.\nNa Europa ocidental, as novas instituições estatais de vigilância deveriam controlar o exercício da força em sociedades em que os níveis de violência física nas relações interpessoais e do Estado com a sociedade estavam em declínio. De acordo com a difundida teoria do processo civilizador, de Norbert Elias, no Ocidente moderno, a agressividade, assim como outras emoções e prazeres, foi domada, “refinada” e “civilizada”. O autor estabelece um contraste entre a violência “franca e desinibida” do período medieval, que não excluía ninguém da vida social e era socialmente permitida e até certo ponto necessária, e o autocontrole e a moderação das emoções que acabaram por se impor na modernidade. A conversão do controle que se exercia por terceiros no autocontrole é relacionada à organização e à estabilização de Estados modernos, nos quais a monopolização da força física em órgãos centrais permitiu a criação de espaços pacificados. Em tais espaços, os indivíduos passaram a ser submetidos a regras e leis mais rigorosas, mas ficaram mais protegidos da irrupção da violência na sua vida, na medida em que as ameaças físicas tornaram-se despersonalizadas e monopolizadas por especialistas.\n\nConsiderando os sentidos e os aspectos linguísticos do texto 1A18-I, julgue os itens que se seguem.\n\nO pronome “Isso”, que introduz o terceiro período do primeiro parágrafo do texto, poderia ser corretamente substituído por O que.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 15; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "1d78f827cb65b20686854722a5bfad59dce7071da89df23eb0316877ad6c2f87",
+        "original_numeric_id": 15,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "official_item_number": 15
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. O pronome demonstrativo \"Isso\" funciona como sujeito do verbo \"acabou\" e inicia um período independente, retomando de forma anafórica as ideias expressas no período anterior. A substituição por \"O que\" comprometeria a correção gramatical, pois a estrutura passaria a introduzir uma oração subordinada adjetiva explicativa sem uma oração principal correspondente no mesmo período, resultando em fragmentação sintática e erro de coesão.",
+        "source_reference": null
+      },
+      "source_content_hash": "8887585c18f595a3adc55451095da3b1cfdf683d4f9b056f01a54f7cb0e6b961"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:022",
+      "source_id": "policial_rodoviario_federal:22",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as disposições do Manual de Redação da Presidência da República (MRPR) acerca da redação oficial, julgue os itens a seguir.\n\nEntre as características da redação oficial incluem-se a objetividade, a impessoalidade e a informatividade.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 22; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "e14a4d220028ea3604944ae7c5ccafc34b2509880183d7935f088cd04f227729",
+        "original_numeric_id": 22,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "official_item_number": 22
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. De acordo com o Manual de Redação da Presidência da República (MRPR), as características fundamentais da redação oficial são:\n\n1. Clareza e precisão;\n2. Objetividade;\n3. Concisão;\n4. Coesão e coerência;\n5. Impessoalidade;\n6. Formalidade e padronização;\n7. Uso da norma padrão da língua portuguesa.\n\nA **informatividade** não é elencada pelo manual como uma característica própria ou requisito formal da redação oficial, tornando a afirmativa incorreta.\n\n**Dispositivo legal**\n\n[Manual de Redação da Presidência da República, 3ª Edição (2018), Capítulo 1, Item 1.1](https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica)",
+        "source_reference": null
+      },
+      "source_content_hash": "70fbbca96aec332ef0182592aa91d294edd3b083dfa511d61b331a3880debeb4"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:023",
+      "source_id": "policial_rodoviario_federal:23",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as disposições do Manual de Redação da Presidência da República (MRPR) acerca da redação oficial, julgue os itens a seguir.\n\nDe acordo com a legislação vigente, o e-mail institucional tem valor documental e, por isso, deve ser aceito como documento original.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 23; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "b19e55fc3eedca9b01a92cf3c44e0615d19ecae663201de14dc59ff837bce9b9",
+        "original_numeric_id": 23,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "official_item_number": 25
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. Conforme o Manual de Redação da Presidência da República, o correio eletrônico (e-mail) é um meio de comunicação rápido e eficaz, mas não possui valor documental intrínseco e automático para ser aceito como documento original em qualquer circunstância. Para que um documento eletrônico (inclusive o e-mail) tenha valor documental equivalente a um original, ele deve ser assinado digitalmente com o uso de certificação digital ICP-Brasil, nos termos da legislação vigente.\n\n**Dispositivo legal**\n\n[Manual de Redação da Presidência da República, 3ª Edição (2018), Capítulo 3, Item 3.4](https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica)",
+        "source_reference": null
+      },
+      "source_content_hash": "c7fa545ad6fa5eef04f7a08ea87eb0d38514f67ea67fe573f258f2ac7794a45d"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:024",
+      "source_id": "policial_rodoviario_federal:24",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as disposições do Manual de Redação da Presidência da República (MRPR) acerca da redação oficial, julgue os itens a seguir.\n\nNa identificação do signatário de uma comunicação oficial destinada a uma pessoa do sexo feminino, dispensa-se flexão de gênero no nome do cargo.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 24; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "5bfe4ac7421ecc6982810fa70bc426543de702de2893e81025325ede21fff367",
+        "original_numeric_id": 24,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "official_item_number": 23
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. O Manual de Redação da Presidência da República estabelece expressamente que o cargo ocupado por pessoa do sexo feminino deve ser flexionado no gênero feminino na identificação do signatário (por exemplo: *Coordenadora-Geral*, *Diretora-Geral*, *Secretária*). Portanto, não há dispensa de flexão de gênero para cargos ocupados por mulheres.\n\n**Dispositivo legal**\n\n[Manual de Redação da Presidência da República, 3ª Edição (2018), Capítulo 2, Item 2.2](https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica)",
+        "source_reference": null
+      },
+      "source_content_hash": "48425de1c84695310c1788de3981b6182bdeec09c1259fe347d695136767f269"
+    }
+  ]
+}

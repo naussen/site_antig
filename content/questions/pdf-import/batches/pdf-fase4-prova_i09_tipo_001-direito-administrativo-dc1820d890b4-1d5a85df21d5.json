@@ -1,0 +1,244 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_i09_tipo_001-direito-administrativo-dc1820d890b4-1d5a85df21d5",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "dc1820d890b4f456f6a21dcfb093157696cf06a42b0374997d10a8cfc971f2a7",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "0b163a9271f0d9d81933ba55370885fc8591ac83624df1b1bb86251a689ef012",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "1d5a85df21d5d2fc14c53b249a0a4fd4f09c1e7abd39d5aaccb583c81eee9f6a",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:026",
+      "source_id": "prova_i09_tipo_001:26",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A advertência será aplicada na hipótese de",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 26; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "inassiduidade habitual.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "recusar fé a documentos públicos.",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "aceitar comissão de estado estrangeiro.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "praticar usura sob qualquer de suas formas.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "proceder de forma desidiosa.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo",
+        "source_content_hash": "d5b9eb61a7d643869c596b75ca8a7cad6c8bf1c8c489380752d9eb8238a9cf50",
+        "original_numeric_id": 26,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nNos termos do art. 129 da Lei nº 8.112/1990 (Regime Jurídico dos Servidores Públicos Civis da União), a penalidade disciplinar de **advertência** será aplicada por escrito nos casos de violação de proibição constante do art. 117, incisos I a VIII e XIX, e de inobservância de dever funcional previsto em lei, regulamentação ou norma interna, que não justifique imposição de penalidade mais grave.\n\nA alternativa B reproduz com fidelidade as hipóteses legais de cabimento da penalidade mais branda do regime disciplinar estatutário.\n\n### Dispositivo legal\n[Lei nº 8.112/1990, Art. 129](https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "970e803e60041058ce7105f9ffb8a0245680f9866fc0a8bee245f97cd9a3a9f6"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:027",
+      "source_id": "prova_i09_tipo_001:27",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Nos atos administrativos:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 27; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a imperatividade é um atributo que existe em todos os atos administrativos.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "a invalidação é o desfazimento de um ato administrativo, e nem sempre ocorre por razões de ilegalidade.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "o motivo e a finalidade são requisitos sempre vinculados dos atos administrativos.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "a Administração pode autoexecutar suas decisões, empregando meios diretos de coerção, utilizando-se inclusive da força.",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "a invalidação dos atos administrativos opera efeitos ex nunc.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo",
+        "source_content_hash": "e4fc4f8efa0afe5d6ca3f9e87e0364f9fae8d11952469cb127ee08a21bf48f29",
+        "original_numeric_id": 27,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nNa teoria geral dos atos administrativos:\n1. Os atos vinculados não conferem margem de escolha ao administrador; a lei pré-determina rigorosamente todos os elementos do ato.\n2. Os atos discricionários conferem margem razoável de liberdade de atuação, balizada pela oportunidade e conveniência (mérito administrativo), respeitados os limites da legalidade e da razoabilidade.\n3. A revogação incide exclusivamente sobre atos discricionários, legítimos e válidos, produzindo efeitos prospectivos (*ex nunc*).\n\nA alternativa D expressa corretamente esses pressupostos dogmáticos do regime jurídico-administrativo.",
+        "source_reference": null
+      },
+      "source_content_hash": "39748c7ce49696dcbf8caa4e2124138517ed647565e3262c3d58d617e7c77159"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:028",
+      "source_id": "prova_i09_tipo_001:28",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O princípio segundo o qual os critérios e fatores seletivos previstos no edital devem ser adotados inafastavelmente para o julgamento, evitando-se, assim, qualquer surpresa para os participantes da licitação, denomina-se:",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 28; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Adjudicação Compulsória.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Publicidade.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Julgamento Objetivo.",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "Impessoalidade.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Probidade Administrativa.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Nova Lei de Licitações – Lei 14.133/21 (Parte 1)",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Administrativo",
+        "source_content_hash": "7bdbb45f40e8ffa420ce7d9026ef8c77d808f6a8141a4c0a89f799961e796cad",
+        "original_numeric_id": 28,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "aplicacao-da-lei-14-133-21",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nO princípio segundo o qual os critérios, prazos, exigências e fatores de julgamento estipulados no edital da licitação tornam-se de cumprimento obrigatório e inafastável tanto para os licitantes quanto para a Administração Pública é o **princípio da vinculação ao instrumento convocatório** (alternativa C).\n\nPor este princípio, o edital é a \"lei interna da licitação\", impedindo que a Administração altere regras do jogo durante o certame ou julgue propostas com base em critérios não previstos expressamente.\n\n### Dispositivo legal\n[Lei nº 14.133/2021, Art. 5º](https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "35721f3c957e613570ce462af346852c32284840182dbfbfd3b6421dc82e7896"
+    }
+  ]
+}

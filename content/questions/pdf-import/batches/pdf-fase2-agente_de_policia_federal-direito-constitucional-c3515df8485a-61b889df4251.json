@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_de_policia_federal-direito-constitucional-c3515df8485a-61b889df4251",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "c3515df8485ab192355dd2c9f2cd5fc325fdfcc424779258a45eea81a91b4abe",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "9bf5415c207ff2dee6f1b513f48cc1f4b3e00a224421906182f247e816e0b8ed",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "61b889df4251d2e0f624750b61730245c19f6f644806a33944024d9c99bbc045",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:031",
+      "source_id": "agente_de_policia_federal:31",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à segurança pública e à atuação da Polícia Federal, julgue os itens seguintes.\n\nA Polícia Federal tem a atribuição de apurar infrações que exijam repressão uniforme e tenham repercussão internacional; infrações que exijam repressão uniforme, mas que tenham repercussão interestadual, devem ser apuradas pelas polícias civis e militares.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 31; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Da defesa do Estado e das instituições democráticas",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "9d7d1031d7fdd84f36eeafeffa525d9038a3922fc939b88c005a5a316c2aa7fe",
+        "original_numeric_id": 31,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "defesa-do-estado-e-das-instituicoes-democraticas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque a competência para apurar infrações penais que exijam repressão uniforme e apresentem repercussão interestadual também é atribuída à Polícia Federal, e não às polícias civis e militares.\n\nDe acordo com a redação do art. 144, § 1º, inciso I, da Constituição Federal de 1988, a Polícia Federal destina-se a apurar infrações penais contra a ordem política e social ou em detrimento de bens, serviços e interesses da União ou de suas entidades autárquicas e empresas públicas, assim como outras infrações cuja prática tenha repercussão interestadual ou internacional e exija repressão uniforme, segundo se dispuser em lei.\n\nPortanto, a repercussão interestadual não afasta a atribuição da Polícia Federal, desde que preenchidos os requisitos constitucionais e legais de repressão uniforme.\n\n### Dispositivo legal\n* **Constituição Federal de 1988, art. 144, § 1º, inciso I**",
+        "source_reference": null
+      },
+      "source_content_hash": "b537e9ae88a38a347623c7284353c1d7f79b48649875e7bb64b0092c9b96f42b"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:032",
+      "source_id": "agente_de_policia_federal:32",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à segurança pública e à atuação da Polícia Federal, julgue os itens seguintes.\n\nCompete à Polícia Federal exercer, com exclusividade, as funções de polícia judiciária da União.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 32; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Da defesa do Estado e das instituições democráticas",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "2c8db8b2e9c33ccdcf91ba81121eb6d7003411ca9244739fa3b81e4e5041071a",
+        "original_numeric_id": 32,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "defesa-do-estado-e-das-instituicoes-democraticas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto porque reproduz fielmente a determinação contida no texto constitucional sobre as atribuições da Polícia Federal.\n\nConforme estabelece o art. 144, § 1º, inciso IV, da Constituição Federal de 1988, a Polícia Federal, instituída por lei como órgão permanente, estruturado em carreira e mantido pela União, destina-se a exercer, com exclusividade, as funções de polícia judiciária da União.\n\n**Detalhe:** Embora a função de polícia judiciária da União seja exclusiva da Polícia Federal, essa exclusividade não impede que outros órgãos realizem investigações de natureza administrativa ou penal no âmbito de suas competências constitucionais específicas, como o Ministério Público (por meio de procedimentos investigatórios criminais) ou o Poder Legislativo (por meio de Comissões Parlamentares de Inquérito - CPIs).\n\n### Dispositivo legal\n* **Constituição Federal de 1988, art. 144, § 1º, inciso IV**",
+        "source_reference": null
+      },
+      "source_content_hash": "df5354c40cb20d4ff130efd64b1013c9fc79f886a68a6b22c54880e3766dce05"
+    }
+  ]
+}

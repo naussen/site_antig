@@ -1,0 +1,190 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-conheci_basicos_superior-direito-administrativo-7ce8455145f7-b4bc2792d5c4",
+  "source": {
+    "file_name": "conheci_basicos_superior_ATUALIZADO.json",
+    "sha256": "7ce8455145f7b114aa72425ef99a450ecc4281426c54f3c9855b091cd41b14d3",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "conheci_basicos_superior.json",
+      "original_source_sha256": "aaf9eb1efb2a88d71a045bc1e2e61e371649418bec45be98916a5f4b799176a6",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "b4bc2792d5c446cb4bffc50ea596c87440a995ffced7f4fa9f082184835affef",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:conheci_basicos_superior:046",
+      "source_id": "conheci_basicos_superior:46",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, com base nas disposições da Lei n.º 8.112/1990 e da Lei n.º 9.784/1999.\n\nConsidere que Pedro, técnico judiciário de um tribunal de justiça, tenha tomado posse no cargo de analista do ICMBio em 2011 e se aposentado voluntariamente, aos sessenta anos de idade, em 2012. Nessa situação hipotética, se Pedro requerer sua reversão ao instituto em 2014, ainda que haja cargo vago e interesse da administração, sua solicitação deverá ser indeferida.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 46; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Regime Jurídico dos Servidores Públicos (Lei nº 8.112/1990)",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação",
+        "source_content_hash": "666fa7448e67aa62508c2293a7636f5376a77810d7a0189540716128750d7bd2",
+        "original_numeric_id": 46,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-juridico-dos-servidores-lei-8112",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nConforme o Artigo 25, inciso II, da Lei nº 8.112/1990, a reversão no interesse da administração pública do servidor aposentado voluntariamente está subordinada a requisitos cumulativos e temporais estritos:\n\n1. Tenha solicitado a reversão;\n2. A aposentadoria tenha sido voluntária;\n3. Era estável quando na atividade;\n4. A aposentadoria tenha ocorrido nos **cinco anos anteriores à solicitação**;\n5. Haja cargo vago.\n\nNo caso concreto hipotético, Pedro tomou posse como analista do ICMBio em 2011 e aposentou-se voluntariamente em 2012, isto é, com apenas **1 ano de exercício**, sem ter sequer concluído o estágio probatório de 3 anos (Art. 20 da Lei 8.112/90 c/c Art. 41 da CF/88) para adquirir a estabilidade no cargo. Não preenchido o requisito indispensável da estabilidade prévia no cargo do qual se aposentou, a reversão é expressamente inviável e deve ser indeferida.",
+        "source_reference": null
+      },
+      "source_content_hash": "e5486657ea0bef819ae76c5c09d39acd2013ce0dcb89a8f41dbc09b2c7ebd59d"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:048",
+      "source_id": "conheci_basicos_superior:48",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca das disposições da Lei n.º 12.527/2011, julgue os itens subsequentes.\n\nConsidere que um servidor público tenha, intencionalmente, fornecido informação incorreta a respeito do relatório de monitoramento de determinada unidade de conservação. Nessa situação, se for apurada infração administrativa na conduta do agente, a ele será aplicada a sanção de advertência.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 48; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Regime Jurídico dos Servidores Públicos (Lei nº 8.112/1990)",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação",
+        "source_content_hash": "3f92d1bdc43923a3103b3a0341056e04d8b33474a73ef8d0b1e069c2f163a6b3",
+        "original_numeric_id": 48,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-juridico-dos-servidores-lei-8112",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nConforme o Artigo 32 da Lei de Acesso à Informação (Lei nº 12.527/2011):\n\n*\"Art. 32. Constituem condutas ilícitas que ensejam responsabilidade do agente público ou militar:*  \n*...*  \n*IV - divulgar ou permitir a divulgação ou acessar ou permitir acesso indevido a informações sigilosas ou informações pessoais;*  \n*V - forjar, destruir, desfigurar, alterar ou ocultar, total ou parcialmente, documento ou informação sob sua custódia;*  \n*VI - **fornecer intencionalmente informação incorreta, incompleta ou inexata**;*  \n*§ 2º Pelas condutas descritas no caput deste artigo, o agente público responderá administrativamente, sujeitando-se, no mínimo, às sanções de **suspensão**, sem prejuízo das sanções civis e criminais cabíveis.\"*\n\nA conduta intencional sujeita o agente, no mínimo, à pena de **suspensão**, sendo inaplicável a sanção mais branda de advertência.",
+        "source_reference": null
+      },
+      "source_content_hash": "c9af01816891c284c28e1cc35d090f052dee74f9e0f2887d2052eae15a2aa23e"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:049",
+      "source_id": "conheci_basicos_superior:49",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens a seguir, com base nas disposições do Decreto n.º 5.707/2006 e do Decreto n.º 7.133/2010.\n\nConsidere que um analista do ICMBio, empossado no cargo em 2008, solicite licença, em 2014, para capacitação, a fim de elaborar sua dissertação de mestrado. Nessa situação, o instituto poderá concedê-la ao servidor, que dela poderá utilizar integralmente para produzir sua dissertação.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 49; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Poderes Administrativos",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação",
+        "source_content_hash": "1288c52d7c24cf813a601d3839b6153232bb55e3fbb41fcaa2e1d560c1cf1dcf",
+        "original_numeric_id": 49,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "deveres",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNos termos do Art. 87 da Lei nº 8.112/1990 e do Decreto nº 5.707/2006 (Política Nacional de Desenvolvimento de Pessoal):\n\nApós cada quinquênio de efetivo exercício, o servidor público federal pode, no interesse da administração, afastar-se do exercício do cargo efetivo, com a respectiva remuneração, por até **três meses**, para participar de curso de capacitação profissional (licença para capacitação).\n\nO normativo federal autoriza expressamente que o período da licença seja utilizado de forma integral para a elaboração de trabalho de conclusão de curso de pós-graduação stricto sensu (como a elaboração de dissertação de mestrado ou tese de doutorado), desde que pertinente às atividades do órgão.",
+        "source_reference": null
+      },
+      "source_content_hash": "c2deb0ee3b2840f1315827520db23dbf0b888eecf63db9f54e1785ebc9d38f86"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_conhec_basicos_tec_federal_control_exter_tec_adm-controle-externo-21010c3270a9-5e70074d90e2",
+  "source": {
+    "file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "21010c3270a94d5246d6af08096f1a65be212e74fd70cd018225e31bd255bee9",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "940eab3df891c952570d89153f116f9db2f9f9a6d1f207e3196c3bd34a4d15cf",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "5e70074d90e2719b6743e521e4399f9235968bf91b2633ca56d59583ae200325",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "controle-externo",
+    "name": "Controle Externo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:023",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:23",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando o papel constitucional do TCU no que concerne à apreciação, à fiscalização e ao julgamento das contas públicas, julgue os itens a seguir.\n\nO TCU dispõe de competência para sustar diretamente a execução de um contrato cuja irregularidade seja verificada.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 23; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "43f614607d970650365be97331c09fd76a322e6bf48cdc11958949bbac6b14df",
+        "original_numeric_id": 23,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque o Tribunal de Contas da União (TCU) não possui competência para sustar diretamente a execução de contratos administrativos.\n\nDe acordo com o texto constitucional, a competência para a sustação direta de contrato é exclusiva do Congresso Nacional, que deve solicitar imediatamente as medidas cabíveis ao Poder Executivo. O TCU atua de forma subsidiária: caso o Congresso Nacional ou o Poder Executivo não adotem as providências necessárias no prazo de noventa dias, a Corte de Contas então decidirá a respeito da sustação.\n\n**Pegadinha:** É fundamental não confundir a sustação de **atos administrativos** com a sustação de **contratos**. O TCU tem competência para sustar diretamente atos administrativos ilegais (conforme o art. 71, inciso X, da CF/88), mas, no caso de contratos, a competência direta é do Poder Legislativo (Congresso Nacional), cabendo ao TCU apenas a atuação subsidiária descrita.\n\n### Dispositivo legal\n* **Referência:** Art. 71, § 1º e § 2º da Constituição Federal de 1988\n* **URL oficial:** https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "f8a8816809bc261f56525196bb3b50e3fe6f59139675d3067b928b27ae05e30a"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:024",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:24",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando o papel constitucional do TCU no que concerne à apreciação, à fiscalização e ao julgamento das contas públicas, julgue os itens a seguir.\n\nCompete ao TCU julgar as contas do presidente da República.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 24; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "8fa1d70e550645d8a098734923b812338080306302cb2dd6c7477b8b23590ef9",
+        "original_numeric_id": 24,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque o Tribunal de Contas da União (TCU) não julga as contas do Presidente da República.\n\nA competência do TCU em relação às contas prestadas anualmente pelo Presidente da República restringe-se a **apreciá-las**, emitindo um parecer prévio no prazo de sessenta dias a contar de seu recebimento. O julgamento propriamente dito (de caráter político-administrativo) é de competência exclusiva do Congresso Nacional.\n\n**Pegadinha:** A banca explora a confusão clássica entre os verbos \"apreciar\" (atribuição técnica do TCU) e \"julgar\" (atribuição política do Congresso Nacional) no que tange às contas do chefe do Poder Executivo Federal.\n\n### Dispositivo legal\n* **Referência:** Art. 49, inciso IX, e Art. 71, inciso I, da Constituição Federal de 1988\n* **URL oficial:** https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "d1e9ee5dcdc54c8854b177bbda4a30515d135f4f1e48ad3aecfd7037e03997e3"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:025",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:25",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando o papel constitucional do TCU no que concerne à apreciação, à fiscalização e ao julgamento das contas públicas, julgue os itens a seguir.\n\nCompete ao TCU julgar, administrativamente, as contas dos administradores e demais responsáveis por recursos públicos, no âmbito dos Poderes Executivo, Legislativo e Judiciário.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 25; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "0ac5c9cb82fe13e735e6c8995bc1a0e97d39bbf9b7027830b2e61c4b1faf5bd5",
+        "original_numeric_id": 25,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto, pois reflete fielmente a competência julgadora do Tribunal de Contas da União (TCU) estabelecida na Constituição Federal.\n\nCabe ao TCU julgar, em âmbito administrativo-técnico, as contas dos administradores e demais responsáveis por dinheiros, bens e valores públicos da administração direta e indireta, incluídas as fundações e sociedades instituídas e mantidas pelo Poder Público federal. Essa jurisdição de controle externo estende-se a todos os Poderes da União (Executivo, Legislativo e Judiciário).\n\n**Detalhe:** Diferentemente das contas do Presidente da República (que são apenas apreciadas pelo TCU e julgadas pelo Congresso), as contas dos demais administradores e gestores públicos de todos os Poderes são efetivamente **julgadas** pelo próprio TCU, em decisão de natureza técnica e administrativa.\n\n### Dispositivo legal\n* **Referência:** Art. 71, inciso II, da Constituição Federal de 1988\n* **URL oficial:** https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "ca4421f2dae3980e86c2a47fc8dd0b71f2cd9580d8df428e30a040cbaca5a0d3"
+    }
+  ]
+}

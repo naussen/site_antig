@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-tecnico_do_seguro_social-informatica-6303685ecb05-87e8d2107754",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "6303685ecb05a17026689ea714434eb749b136afd9838f8455367497b631cc0f",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "4eaf0e6930a8700363f76961716af089a527cb11e4282c667f45b06f21532285",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "87e8d2107754ef7b13780e1d9b3918a4972852d5a7589290069d31068a879618",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:041",
+      "source_id": "tecnico_do_seguro_social:41",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, relativos a noções de informática.\n\nNo Windows 10, a Segurança do Windows verifica continuamente a existência de malwares e vírus e inclui um programa antivírus chamado Microsoft Defender Antivírus.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 41; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "ab9ed6e2b7149ac1ac3222a72c5c14d6f8d2f1fc329a88ae4ed6737c846a0d5a",
+        "original_numeric_id": 41,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. No sistema operacional Windows 10, a ferramenta \"Segurança do Windows\" (anteriormente conhecida como Central de Segurança do Windows Defender) atua como uma central integrada de proteção. Ela realiza o monitoramento contínuo e em tempo real do dispositivo para identificar e neutralizar vírus, malwares e outras ameaças à segurança. O principal componente responsável por essa varredura ativa e contínua é o Microsoft Defender Antivírus, que vem integrado nativamente ao sistema operacional.",
+        "source_reference": null
+      },
+      "source_content_hash": "7046162d71c5d0ca515ad440a3e0c5f43caf2ff284c0cddb4838d964449a5e1d"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:043",
+      "source_id": "tecnico_do_seguro_social:43",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, relativos a noções de informática.\n\nCom a finalidade de proteger os seus arquivos no Windows 10, o usuário pode criptografá-los pelo aplicativo Windows Defender Firewall, no painel Segurança do Windows.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 43; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "933503ea3c6acdbe3bb58142d15d26b445aed4968c2a825871708ed5305a5476",
+        "original_numeric_id": 43,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. O Windows Defender Firewall é um mecanismo de segurança de rede cuja função principal é monitorar e filtrar o tráfego de dados de entrada e saída, bloqueando acessos não autorizados à rede. Ele não possui a funcionalidade de criptografar arquivos locais. No Windows 10, a proteção de arquivos por meio de criptografia é realizada por outras ferramentas nativas do sistema, como o BitLocker (para criptografia de unidades de disco inteiras) ou o EFS (Encrypting File System, para criptografar arquivos e pastas específicos).",
+        "source_reference": null
+      },
+      "source_content_hash": "5330fb99005bbe5f549e9d46015e809f9f225371400a83b9e24ae3e17621b075"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:045",
+      "source_id": "tecnico_do_seguro_social:45",
+      "question_type": "true_false",
+      "statement_markdown": "A próxima imagem representa uma mensagem de e-mail gerenciada por meio do Microsoft Outlook 365, no idioma Português (Brasil). A mensagem se encontra na Caixa de Entrada e seu remetente foi omitido.\n\nA partir das informações e da imagem anteriores, julgue o item que se segue.\n\nSe o usuário tiver clicado primeiramente no ícone ... e, em seguida, em Sinalizador, a mensagem será enviada para a pasta Lixo Eletrônico, o remetente será bloqueado e quaisquer mensagens futuras desse remetente serão enviadas automaticamente para o Lixo Eletrônico.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 45; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "2be9309f6f04dc8253175dec407049b6efbfbc09400a3a3e5ec94bffab9a40c7",
+        "original_numeric_id": 45,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. No Microsoft Outlook 365, a opção \"Sinalizador\" (representada por um ícone de bandeira) é utilizada para marcar uma mensagem para acompanhamento posterior (follow-up), adicionando um lembrete visual ou inserindo-a na lista de tarefas do usuário. Ela não tem relação com o bloqueio de remetentes ou com o envio de mensagens para a pasta de Lixo Eletrônico. Para enviar uma mensagem para o Lixo Eletrônico e bloquear o remetente, o usuário deve utilizar opções específicas de segurança ou de lixo eletrônico (como \"Bloquear Remetente\" ou \"Lixo Eletrônico\").",
+        "source_reference": null
+      },
+      "source_content_hash": "ad40ba6cab8a64e07a9f0322fe0a7c3dcd404a11a9b5eeb2b9a011d929df7b53"
+    }
+  ]
+}

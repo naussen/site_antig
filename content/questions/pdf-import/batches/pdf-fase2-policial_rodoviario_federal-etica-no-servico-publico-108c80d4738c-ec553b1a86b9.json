@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-policial_rodoviario_federal-etica-no-servico-publico-108c80d4738c-ec553b1a86b9",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "108c80d4738c4cf75248804f8f7a4e59a8ebc98742dd2b686f8053a30677b861",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "a311442a41cf96895e3ab6bc25877186df1354aab6cde616c4af291da4f66fd9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ec553b1a86b9bc57ce4f1f88960aa5604da72dc596eaf49fc11470226a005a54",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "etica-no-servico-publico",
+    "name": "Ética no Serviço Público"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:048",
+      "source_id": "policial_rodoviario_federal:48",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da ética no serviço público, da administração pública federal bem como dos servidores públicos federais e seus direitos e deveres, julgue os itens que se seguem.\n\nA estratégia, que consiste em um mecanismo para o exercício da governança pública, compreende a definição de diretrizes, objetivos, planos e ações, para que os serviços de responsabilidade da organização alcancem o resultado pretendido.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 48; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ética (Aspectos Teóricos)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "dc22a414d206aa9bcce374dcc5f80509fae972c2100997c77eba8564d83d374b",
+        "original_numeric_id": 48,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "etica-aspectos-teoricos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A assertiva reproduz fielmente a definição de **estratégia** como um dos mecanismos para o exercício da governança pública, conforme estabelecido no Decreto nº 9.203/2017.\n\nO referido decreto define três mecanismos de governança pública (liderança, estratégia e controle), sendo a estratégia conceituada como a definição de diretrizes, objetivos, planos e ações para que os serviços e produtos alcancem o resultado pretendido.\n\n### Dispositivo legal\n\n**Decreto nº 9.203/2017, art. 5º, inciso II**\n\n[Portal da Legislação - Decreto nº 9.203/2017](https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/decreto/d9203.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "8e138a4faa59cf04247b8c60191279088b867cdfc6486c17c5fbb6b183fbb732"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:049",
+      "source_id": "policial_rodoviario_federal:49",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da ética no serviço público, da administração pública federal bem como dos servidores públicos federais e seus direitos e deveres, julgue os itens que se seguem.\n\nCaso terceiro solicite, por telefone, informação sobre aquisições de determinado órgão público, o servidor deverá orientá-lo a preencher o formulário padrão, disponibilizado em meio eletrônico e físico, com os dados exigidos pela lei.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 49; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ética (Aspectos Teóricos)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "d824e94384a24f2c6feed48b712531e100fdf049714bbe94d89b1756e5aa15e7",
+        "original_numeric_id": 49,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "etica-aspectos-teoricos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. O erro reside no uso do verbo imperativo \"deverá\", que impõe uma obrigação inexistente ao servidor público.\n\nDe acordo com o Decreto nº 7.724/2012, que regulamenta a Lei de Acesso à Informação (LAI) no âmbito do Poder Executivo federal, embora o pedido de acesso seja preferencialmente apresentado em formulário padrão (físico ou eletrônico), **é facultado** aos órgãos e entidades receber pedidos por outros meios legítimos, como contato telefônico ou correspondência eletrônica, desde que atendidos os requisitos de identificação do requerente e especificação da informação pretendida.\n\nPortanto, o servidor não é obrigado a exigir o preenchimento do formulário padrão, podendo receber a solicitação diretamente por telefone se o órgão adotar essa facilidade.\n\n### Dispositivo legal\n\n**Decreto nº 7.724/2012, art. 11, § 3º**\n\n[Portal da Legislação - Decreto nº 7.724/2012](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/decreto/d7724.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "8ebf10622208151d7811267c74ba0d527b281c38a0c23c2dbcb128cb22a48cf5"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:050",
+      "source_id": "policial_rodoviario_federal:50",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da ética no serviço público, da administração pública federal bem como dos servidores públicos federais e seus direitos e deveres, julgue os itens que se seguem.\n\nO investigado poderá ter vista dos autos, com direito a cópia se assim o desejar, mesmo antes da notificação da existência de procedimento investigatório em comissão de ética.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 50; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ética (Aspectos Teóricos)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "b01c2e9d616f76d465ca5687c1bc035990668d2ad781f2902838cba640c6125a",
+        "original_numeric_id": 50,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "etica-aspectos-teoricos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A assertiva reflete exatamente o que dispõe o art. 14 e seu parágrafo único do Decreto nº 6.029/2007, que instituiu o Sistema de Gestão da Ética do Poder Executivo Federal.\n\nDe acordo com a norma, a qualquer pessoa que esteja sendo investigada é assegurado o direito de saber o que lhe está sendo imputado, de conhecer o teor da acusação e de ter vista dos autos no recinto das Comissões de Ética, mesmo que ainda não tenha sido notificada da existência do procedimento investigatório. Esse direito abrange, inclusive, a obtenção de cópia dos autos e de certidão de seu teor.\n\n### Dispositivo legal\n\n**Decreto nº 6.029/2007, art. 14, parágrafo único**\n\n[Portal da Legislação - Decreto nº 6.029/2007](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "89d52db9329a96e367ebe2c316a151b4f8760271df8c1ed6b09025c83887bd67"
+    }
+  ]
+}

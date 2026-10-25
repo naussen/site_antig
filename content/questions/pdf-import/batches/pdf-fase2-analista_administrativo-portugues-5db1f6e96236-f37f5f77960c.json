@@ -1,0 +1,332 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-analista_administrativo-portugues-5db1f6e96236-f37f5f77960c",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "5db1f6e962369b1d7913fb92dbdb0da8daeda71ce6c9d495931ad2d14292df2c",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "0fc614916228bfa45383f0df7c8e33baaccace7bb05b812e4da6dc6bb1c76217",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "f37f5f77960c8c9e351cca91f43a14616ec2bae62bf773f2ea60b919f70f7882",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:002",
+      "source_id": "analista_administrativo:2",
+      "question_type": "true_false",
+      "statement_markdown": "Texto CB2A1-I\n\nAssim como cidadania e cultura formam um par integrado de significações, cultura e territorialidade são, de certo modo, sinônimos. A cultura, forma de comunicação do indivíduo e do grupo com o universo, é herança, mas também um reaprendizado das relações profundas entre o ser humano e o seu meio, um resultado obtido por intermédio do próprio processo de viver. Incluindo o processo produtivo e as práticas sociais, a cultura é o que nos dá a consciência de pertencer a um grupo, do qual é o cimento. É por isso que as migrações agridem o indivíduo, roubando-lhe parte do ser, obrigando-o a uma nova e dura adaptação em seu novo lugar. Desterritorialização é frequentemente outra palavra para significar alienação, estranhamento, que são, também, desculturização.\nEsse processo é, também, o que comanda as migrações, que são, por si sós, processos de desterritorialização e, paralelamente, processos de desculturização. O novo ambiente opera como uma espécie de denotador. Sua relação com o novo morador se manifesta dialeticamente como territorialidade nova e cultura nova, que interferem reciprocamente, mudando paralelamente territorialidade e cultura, e mudando o ser humano.\n\nMilton Santos. O espaço do Cidadão. 7.ª ed. São Paulo: Editora da Universidade de São Paulo, 2020, p. 81-83 (com adaptações).\n\nConsiderando as ideias, os sentidos e os aspectos linguísticos do texto CB2A1-I, julgue os seguintes itens.\n\nO segundo período do primeiro parágrafo apresenta um argumento a favor da afirmação de que cultura e territorialidade são sinônimos.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 2; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "ff0b5b3119ee279a8ed77eed37fe34a00939b145cd495876c3bcce4ea1628539",
+        "original_numeric_id": 2,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O primeiro período do texto apresenta a tese de que \"cultura e territorialidade são, de certo modo, sinônimos\". O segundo período fundamenta essa afirmação ao definir a cultura como \"um reaprendizado das relações profundas entre o ser humano e o seu meio\". Ao associar intrinsecamente a cultura ao \"meio\" (espaço geográfico, território), o autor oferece um argumento que sustenta a sinonímia proposta inicialmente.",
+        "source_reference": null
+      },
+      "source_content_hash": "0e9a7b6d9ae12eac1c9125614d138665846362f345307ec6b41c6fa8524205cd"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:003",
+      "source_id": "analista_administrativo:3",
+      "question_type": "true_false",
+      "statement_markdown": "Texto CB2A1-I\n\nAssim como cidadania e cultura formam um par integrado de significações, cultura e territorialidade são, de certo modo, sinônimos. A cultura, forma de comunicação do indivíduo e do grupo com o universo, é herança, mas também um reaprendizado das relações profundas entre o ser humano e o seu meio, um resultado obtido por intermédio do próprio processo de viver. Incluindo o processo produtivo e as práticas sociais, a cultura é o que nos dá a consciência de pertencer a um grupo, do qual é o cimento. É por isso que as migrações agridem o indivíduo, roubando-lhe parte do ser, obrigando-o a uma nova e dura adaptação em seu novo lugar. Desterritorialização é frequentemente outra palavra para significar alienação, estranhamento, que são, também, desculturização.\nEsse processo é, também, o que comanda as migrações, que são, por si sós, processos de desterritorialização e, paralelamente, processos de desculturização. O novo ambiente opera como uma espécie de denotador. Sua relação com o novo morador se manifesta dialeticamente como territorialidade nova e cultura nova, que interferem reciprocamente, mudando paralelamente territorialidade e cultura, e mudando o ser humano.\n\nMilton Santos. O espaço do Cidadão. 7.ª ed. São Paulo: Editora da Universidade de São Paulo, 2020, p. 81-83 (com adaptações).\n\nConsiderando as ideias, os sentidos e os aspectos linguísticos do texto CB2A1-I, julgue os seguintes itens.\n\nOs sentidos do segundo período do primeiro parágrafo seriam alterados, embora sua correção gramatical fosse mantida, caso o segmento “forma de comunicação do indivíduo e do grupo com o universo” fosse deslocado para o início do período, reescrevendo-se o trecho “A cultura, forma de comunicação do indivíduo e do grupo com o universo, é herança” da seguinte maneira: Forma de comunicação do indivíduo e do grupo com o universo, a cultura é herança.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 3; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "37fe4efb12e36a47abbbde6b5b78368516bf0fe8aad6056a8f0256a6e02133bc",
+        "original_numeric_id": 3,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O segmento \"forma de comunicação do indivíduo e do grupo com o universo\" funciona originalmente como um aposto explicativo do termo \"A cultura\". Ao deslocar esse termo para o início do período (\"Forma de comunicação..., a cultura é...\"), a relação explicativa e a referência ao substantivo \"cultura\" são plenamente preservadas. A correção gramatical é mantida e não ocorre alteração semântica (de sentido), o que torna incorreta a afirmação do item.",
+        "source_reference": null
+      },
+      "source_content_hash": "d271a59fb18062c3e1a764ae52015bf8e53983b8775c2a979ca34a99bb0fd14e"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:005",
+      "source_id": "analista_administrativo:5",
+      "question_type": "true_false",
+      "statement_markdown": "Texto CB2A1-I\n\nAssim como cidadania e cultura formam um par integrado de significações, cultura e territorialidade são, de certo modo, sinônimos. A cultura, forma de comunicação do indivíduo e do grupo com o universo, é herança, mas também um reaprendizado das relações profundas entre o ser humano e o seu meio, um resultado obtido por intermédio do próprio processo de viver. Incluindo o processo produtivo e as práticas sociais, a cultura é o que nos dá a consciência de pertencer a um grupo, do qual é o cimento. É por isso que as migrações agridem o indivíduo, roubando-lhe parte do ser, obrigando-o a uma nova e dura adaptação em seu novo lugar. Desterritorialização é frequentemente outra palavra para significar alienação, estranhamento, que são, também, desculturização.\nEsse processo é, também, o que comanda as migrações, que são, por si sós, processos de desterritorialização e, paralelamente, processos de desculturização. O novo ambiente opera como uma espécie de denotador. Sua relação com o novo morador se manifesta dialeticamente como territorialidade nova e cultura nova, que interferem reciprocamente, mudando paralelamente territorialidade e cultura, e mudando o ser humano.\n\nMilton Santos. O espaço do Cidadão. 7.ª ed. São Paulo: Editora da Universidade de São Paulo, 2020, p. 81-83 (com adaptações).\n\nConsiderando as ideias, os sentidos e os aspectos linguísticos do texto CB2A1-I, julgue os seguintes itens.\n\nO emprego da expressão “É (...) que”, no quarto período do primeiro parágrafo, enfatiza que as migrações agridem o indivíduo pelas razões expressas no segundo e no terceiro período desse mesmo parágrafo, e não por outras quaisquer.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 5; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "0b90e4c5fa85553715c983cbd45c044a7965c6aecade711e6aaf6b4afe72e803",
+        "original_numeric_id": 5,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A construção \"É... que\" constitui uma locução de realce (ou expletiva), utilizada para enfatizar o termo que se encontra intercalado — no caso, a locução causal \"por isso\". Esse elemento coesivo (\"por isso\") retoma as ideias desenvolvidas nos períodos anteriores (a cultura como cimento social e relação com o meio). Assim, a estrutura sintática destaca que são exatamente esses fatores previamente expostos que motivam a agressão das migrações ao indivíduo.",
+        "source_reference": null
+      },
+      "source_content_hash": "275c58ee9e6da753df135b2baf2fcb6fe0010dd44ea9001ddce15d2ddcdc7821"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:007",
+      "source_id": "analista_administrativo:7",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação aos aspectos linguísticos do texto CB2A1-I, julgue os itens que se seguem.\n\nEm “roubando-lhe parte do ser” (quarto período do primeiro parágrafo), a forma pronominal “lhe” transmite ideia de posse, indicando que as migrações roubam parte do ser dos indivíduos.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 7; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "23305362f82a622dee14ff4e7aa07252e0e3ce7839851a63d23523832c140e3f",
+        "original_numeric_id": 7,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No trecho \"roubando-lhe parte do ser\", o pronome oblíquo \"lhe\" refere-se ao \"indivíduo\" mencionado anteriormente no período (\"as migrações agridem o indivíduo\"). Do ponto de vista sintático-semântico, o pronome assume valor possessivo (equivalente a \"seu\" ou \"dele\"), indicando que as migrações roubam a \"parte do ser do indivíduo\". Essa função é classificada como adjunto adnominal de valor possessivo.",
+        "source_reference": null
+      },
+      "source_content_hash": "39442c4515bf395ceb3012c7687b82473ed896ca1c37bd140fd32a272901a86f"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:009",
+      "source_id": "analista_administrativo:9",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação aos aspectos linguísticos do texto CB2A1-I, julgue os itens que se seguem.\n\nA oração “o que comanda as migrações” (segundo parágrafo) está empregada entre vírgulas porque tem caráter explicativo.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 9; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "971e9479dc13a6f3fdaa8f47feea58c7a163b359cb1d8470ad1281315556722c",
+        "original_numeric_id": 9,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Ao analisar o trecho \"Esse processo é, também, o que comanda as migrações\", observa-se que as vírgulas isolam o adjunto adverbial \"também\", e não a oração \"o que comanda as migrações\". A oração em questão inicia-se após a segunda vírgula e não está intercalada nem isolada por pontuação, o que invalida a afirmação do item.",
+        "source_reference": null
+      },
+      "source_content_hash": "781bc950ac2a442ff3c40fe5dc964c5a90bec25f23eddc34fd0b179cd513edc5"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:010",
+      "source_id": "analista_administrativo:10",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação aos aspectos linguísticos do texto CB2A1-I, julgue os itens que se seguem.\n\nA inserção de uma vírgula logo após “Assim”, no início do primeiro parágrafo, manteria a correção gramatical e a coerência do texto.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 10; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "09985a758b10b90f1402754629d52b69b02e97f0bc9d889688d8c5ca5da3d5f8",
+        "original_numeric_id": 10,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A expressão \"Assim como\" inicia o texto como uma locução conjuntiva subordinativa comparativa, estabelecendo um paralelo entre a relação \"cidadania e cultura\" e a relação \"cultura e territorialidade\". A inserção de uma vírgula imediatamente após \"Assim\" quebraria a unidade dessa locução conjuntiva, inviabilizando a estrutura sintática comparativa e prejudicando tanto a correção gramatical quanto a coerência original do período.",
+        "source_reference": null
+      },
+      "source_content_hash": "447a59525b7a20fb6f77b2e0a313c75fdd2a92d6cb3862bd80f0c59f9af61334"
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-policial_rodoviario_federal-informatica-8614e5ae4125-07944214282b",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "8614e5ae4125c0f2ac2e149748ceec6e4515618c2c2d474c5a320e45e7726151",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "a311442a41cf96895e3ab6bc25877186df1354aab6cde616c4af291da4f66fd9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "07944214282bbc98e1c929eab880577f3514c74005c32fc5f34ec787abc2cbb1",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:033",
+      "source_id": "policial_rodoviario_federal:33",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere a Internet, intranet e noções do sistema operacional Windows, julgue os itens que se seguem.\n\nNo Windows, ainda que seja possível compartilhar configurações — como plano de fundo e histórico de navegação do Internet Explorer — entre computadores que utilizem a mesma conta em outras máquinas com Windows 10, não é permitido, em razão da segurança, o compartilhamento de senhas.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 33; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "a1e29300b7b8675786093c1aba27094bb58657a3d0f10aaf3480b76f9dff5c8f",
+        "original_numeric_id": 33,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "official_item_number": 34
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque o Windows 10 permite, sim, a sincronização de senhas entre diferentes dispositivos conectados com a mesma conta Microsoft.\n\nPor meio do recurso \"Sincronizar suas configurações\" (disponível em Configurações > Contas > Sincronizar suas configurações), o usuário pode optar por sincronizar diversos elementos de personalização e segurança, incluindo temas, preferências de idioma, facilidade de acesso e, explicitamente, **senhas** (como credenciais de sites e redes Wi-Fi). Essa sincronização é realizada de forma criptografada na nuvem associada à conta Microsoft do usuário, garantindo a segurança do processo.",
+        "source_reference": null
+      },
+      "source_content_hash": "12a5c9b7464d5c7a11bcb9b487505be9b057296bbbc59b15344c53a3ad80a826"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:034",
+      "source_id": "policial_rodoviario_federal:34",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere a Internet, intranet e noções do sistema operacional Windows, julgue os itens que se seguem.\n\nEmbora as versões mais atuais do Mozilla Firefox e do Google Chrome permitam salvar e sincronizar senhas para realizar, posteriormente, login automático em formulários de sítios da Internet, essa ação somente será possível se os sítios em questão estiverem disponibilizados em uma intranet e utilizarem o protocolo HTTPS.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 34; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "e63f12515fb25a92aca5e36faf5b554a8ffafd9a4bf845cb53efb792b09ea9ab",
+        "original_numeric_id": 34,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "official_item_number": 33
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto por impor restrições inexistentes ao funcionamento dos gerenciadores de senhas integrados aos navegadores Mozilla Firefox e Google Chrome.\n\nEsses navegadores permitem salvar, preencher e sincronizar senhas tanto em sítios da **Internet pública** quanto de **intranets**. Além disso, embora o uso do protocolo seguro HTTPS seja fortemente recomendado e os navegadores exibam alertas de segurança ao trafegar dados em conexões inseguras (HTTP), a funcionalidade de salvar e preencher senhas não é bloqueada ou restrita exclusivamente a conexões HTTPS.",
+        "source_reference": null
+      },
+      "source_content_hash": "d9189d7894a8dd427fdd9c464ae8a7068f6cad7ab5e02178947855777a1ea94a"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:038",
+      "source_id": "policial_rodoviario_federal:38",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de segurança e de cloud computing, julgue os itens subsequentes.\n\nIdentifica-se Software como Serviço (SaaS) quando um provedor de serviços oferece acesso a um ambiente baseado em cloud, no qual os usuários podem construir e disponibilizar aplicativos.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 38; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Computação na Nuvem (Cloud Computing)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "f4d594431d1992de3582f1d0d376e0f07f9936e44d01a7043cd959394fe5374d",
+        "original_numeric_id": 38,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "official_item_number": 38
+      },
+      "topics": [
+        {
+          "topic_id": "computacao-na-nuvem-cloud-computing",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque inverte os conceitos de modelos de serviço em computação em nuvem (*cloud computing*).\n\nA descrição de um ambiente no qual os usuários podem **construir, testar, hospedar e disponibilizar aplicativos** refere-se ao modelo de **Plataforma como Serviço (PaaS - *Platform as a Service*)**. Exemplos de PaaS incluem o Heroku e o Google App Engine.\n\nPor outro lado, o **Software como Serviço (SaaS - *Software as a Service*)** ocorre quando o provedor oferece um aplicativo de software completo e pronto para uso final via internet, sem que o usuário precise se preocupar com o desenvolvimento ou infraestrutura subjacente. Exemplos de SaaS incluem o Microsoft 365, o Google Workspace e o Netflix.",
+        "source_reference": null
+      },
+      "source_content_hash": "5fe8d366a910d310aff8eb7f8a0ac1f0c31341289cb7fd75ccc8ecbc40db381c"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:039",
+      "source_id": "policial_rodoviario_federal:39",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de segurança e de cloud computing, julgue os itens subsequentes.\n\nRansomware é um programa malicioso de computador que se propaga por meio da inserção de cópias de si mesmo em arquivos criptografados.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 39; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ameaças Virtuais",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "3e351e689547e9eb798165a01bc54713870dd29de8218602f7fd164b7e6d4dd4",
+        "original_numeric_id": 39,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "official_item_number": 37
+      },
+      "topics": [
+        {
+          "topic_id": "ameacas-virtuais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque mistura as características de dois tipos distintos de códigos maliciosos (*malware*): o *ransomware* e o *vírus*.\n\n* **Ransomware**: É um código malicioso que torna inacessíveis os dados armazenados em um equipamento, geralmente usando criptografia forte, e exige o pagamento de um resgate (*ransom*) para restabelecer o acesso do usuário aos arquivos.\n* **Vírus**: É um programa ou parte de um código que se propaga inserindo cópias de si mesmo e se tornando parte de outros programas e arquivos de um sistema.\n\nPortanto, o *ransomware* não se propaga inserindo cópias de si mesmo dentro de arquivos criptografados; ele apenas criptografa os arquivos existentes para extorquir a vítima.",
+        "source_reference": null
+      },
+      "source_content_hash": "6aa60b8764d01294df3096d713e0a5f59171d8fbc12306ad65d22c333d39a0a1"
+    }
+  ]
+}

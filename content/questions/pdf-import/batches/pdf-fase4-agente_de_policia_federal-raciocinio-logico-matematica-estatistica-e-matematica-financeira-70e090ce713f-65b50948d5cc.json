@@ -1,0 +1,198 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-agente_de_policia_federal-raciocinio-logico-matematica-estatistica-e-matematica-financeira-70e090ce713f-65b50948d5cc",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "70e090ce713f4efa7afccdd8f75dc126a6b6ec258a638c6883c5beff394c0223",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "63798e30405cda1d6b06c925e3f47b587362e4b8ff5a540fff55d47fa673a6e7",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "65b50948d5cce9e2ef39020e4950e9192c31a88188715ca2abb25e3f94717d25",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:055",
+      "source_id": "agente_de_policia_federal:55",
+      "question_type": "true_false",
+      "statement_markdown": "As proposições P, Q e R a seguir referem-se a um ilícito penal envolvendo João, Carlos, Paulo e Maria:\nP: “João e Carlos não são culpados”.\nQ: “Paulo não é mentiroso”.\nR: “Maria é inocente”.\nConsiderando que ~X representa a negação da proposição X, julgue os itens a seguir.\n\nAs proposições P v (~Q) ^ (~R) e R ^ [Q v (~P)] são equivalentes.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 55; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "9e86b8f0d489ef9c2b51531b161052e338d9d0cc8d1ee99e816a69d02be7f2e7",
+        "original_numeric_id": 55,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nPara verificar a equivalência lógica entre as proposições:\n$$A: P \\lor (\\sim Q \\land \\sim R)$$\n$$B: R \\land (Q \\lor \\sim P)$$\n\nBasta analisar uma linha de teste da tabela-verdade:\n* Seja $P = \\text{Falso}$, $Q = \\text{Falso}$ e $R = \\text{Falso}$:\n  * Na proposição $A$: $P \\lor (\\sim Q \\land \\sim R) = F \\lor (V \\land V) = F \\lor V = \\text{Verdadeiro}$;\n  * Na proposição $B$: $R \\land (Q \\lor \\sim P) = F \\land (F \\lor V) = F \\land V = \\text{Falso}$.\n\nComo para a mesma valoração de variáveis as expressões assumem valores lógicos opostos ($A = V$ e $B = F$), elas **não são logicamente equivalentes**.",
+        "source_reference": null
+      },
+      "source_content_hash": "d652815ba776b13891ba7e256e2c6eed7f32a455379f244664fd290b9cb7c420"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:059",
+      "source_id": "agente_de_policia_federal:59",
+      "question_type": "true_false",
+      "statement_markdown": "Em um aeroporto, 30 passageiros que desembarcaram de determinado voo e que estiveram nos países A, B ou C, nos quais ocorre uma epidemia infecciosa, foram selecionados para ser examinados. Constatou-se que exatamente 25 dos passageiros selecionados estiveram em A ou em B, nenhum desses 25 passageiros esteve em C e 6 desses 25 passageiros estiveram em A e em B.\nCom referência a essa situação hipotética, julgue os itens que se seguem.\n\nA quantidade de maneiras distintas de se escolher 2 dos 30 passageiros selecionados de modo que pelo menos um deles tenha estado em C é superior a 100.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 59; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "9f238fcf8ed6b49e512883c998388fb93c355931c105fb488839a92137a38907",
+        "original_numeric_id": 59,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_059.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A resolução pode ser feita de forma direta ou pelo método complementar:\n\n1. **Identificação dos grupos**:\n   * Total de passageiros: 30\n   * Passageiros que estiveram em A ou B: 25 (nenhum destes esteve em C)\n   * Passageiros que estiveram em C: $30 - 25 = 5$\n\n2. **Método complementar**:\n   * Total de maneiras de escolher 2 passageiros quaisquer dentre os 30:\n     $$C_{30, 2} = \\frac{30 \\times 29}{2} = 435$$\n   * Maneiras de escolher 2 passageiros de modo que **nenhum** tenha estado em C (ou seja, escolher apenas dentre os 25 que estiveram em A ou B):\n     $$C_{25, 2} = \\frac{25 \\times 24}{2} = 300$$\n   * Maneiras de escolher de modo que **pelo menos um** tenha estado em C:\n     $$\\text{Total} - \\text{Nenhum em C} = 435 - 300 = 135$$\n\nComo 135 é superior a 100, o item está correto.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_059.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "6979f21572fde1df60d6f8b42c3f174204afea633e54dbb7b787aaf76de0bcc9"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:060",
+      "source_id": "agente_de_policia_federal:60",
+      "question_type": "true_false",
+      "statement_markdown": "> [!NOTE] **Gabarito Alterado pela Banca Examinadora**\n> O gabarito preliminar desta questão foi alterado pela banca examinadora no gabarito oficial definitivo (de **Certo** para **Errado**). O comentário explicativo fundamenta a decisão final da banca.\n\nEm um aeroporto, 30 passageiros que desembarcaram de determinado voo e que estiveram nos países A, B ou C, nos quais ocorre uma epidemia infecciosa, foram selecionados para ser examinados. Constatou-se que exatamente 25 dos passageiros selecionados estiveram em A ou em B, nenhum desses 25 passageiros esteve em C e 6 desses 25 passageiros estiveram em A e em B.\nCom referência a essa situação hipotética, julgue os itens que se seguem.\n\nConsidere que, separando-se o grupo de passageiros selecionados que visitou o país A, o grupo que visitou o país B e o grupo que visitou o país C, seja verificado, em cada um desses grupos, que pelo menos a metade dos seus componentes era do sexo masculino. Nessa situação, conclui-se que o grupo de 30 passageiros selecionados tem, no máximo, 14 mulheres.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 60; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "42d207ee0cf357e565c2fa224334ed8668072521a5a028e076cba9b36cd84db4",
+        "original_numeric_id": 60,
+        "original_source_content_hash": "94446822c217877f642104e7cdd883b363357349f8a3fed56156c72a9968cf42",
+        "answer_status": "definitivo_alterado",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_060.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null,
+        "gabarito_alterado_pela_banca": true,
+        "visual_caveat_applied": true,
+        "original_preliminary_answer": "C",
+        "definitive_answer": "E"
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para analisar o número máximo de mulheres, busca-se minimizar a quantidade de homens em cada grupo, respeitando a condição de que os homens devem representar pelo menos metade de cada grupo ($A$, $B$ e $C$):\n\n1. **Grupo C** (5 pessoas): Para que pelo menos metade seja homem, o grupo deve ter no mínimo 3 homens. Logo, o número máximo de mulheres em C é 2.\n2. **Grupos A e B** (25 pessoas no total, com interseção de 6 pessoas):\n   * Para maximizar o número de mulheres, os 6 passageiros da interseção ($A \\cap B$) devem ser homens. Como eles pertencem a ambos os grupos, a presença deles ajuda a cumprir a cota mínima de homens em $A$ e em $B$ simultaneamente, liberando espaço para mais mulheres nas partes exclusivas.\n   * Sejam $F_a$ e $F_b$ as mulheres exclusivas de A e B, e $H_a$ e $H_b$ os homens exclusivos de A e B.\n   * O total de pessoas exclusivas é $19$, ou seja, $F_a + F_b + H_a + H_b = 19$.\n   * Condição para o grupo A: $H_a + 6 \\ge F_a \\implies F_a - H_a \\le 6$.\n   * Condição para o grupo B: $H_b + 6 \\ge F_b \\implies F_b - H_b \\le 6$.\n   * Somando as duas restrições: $(F_a + F_b) - (H_a + H_b) \\le 12$.\n   * Atribuindo $F_a + F_b = 15$ e $H_a + H_b = 4$, a inequação é satisfeita ($15 - 4 = 11 \\le 12$).\n   * Exemplo de distribuição válida: $F_a = 8, H_a = 2$ (Grupo A tem 8 mulheres e 8 homens); $F_b = 7, H_b = 2$ (Grupo B tem 7 mulheres e 8 homens).\n\nNesse cenário, o total de mulheres é $15$ (em A e B) + $2$ (em C) = $17$ mulheres. Portanto, o limite máximo não é de 14 mulheres.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_060.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "f504898592add0d86c536c1e11cef088f981a1e6d9b13c69d723800d0daf1623"
+    }
+  ]
+}

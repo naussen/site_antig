@@ -1,0 +1,960 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-analista_administrativo-direito-ambiental-d1088d0556a6-b625d629590f",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "d1088d0556a634bc0e47cc4b0194b18b7b11b50a2faaa9a150b68e740a974fa1",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "7b0e6efd1cd4387fd3b4024c7d594aa5aad8ca3c4f2146f6ddc96ab3d4597e20",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "b625d629590fb29869db10a823c60e68d3ce59274db5880f82902dad4695afcd",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-ambiental",
+    "name": "Direito Ambiental"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:018",
+      "source_id": "analista_administrativo:18",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da responsabilidade por dano ambiental, julgue os itens subsequentes.\n\nDiferentemente da responsabilidade civil ambiental, que é de natureza objetiva, a responsabilidade administrativa ambiental demanda a demonstração de dolo ou culpa do agente poluidor.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 18; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Ambiental",
+        "source_content_hash": "6c2d6c60c33c5795cfb286a1f8db0a0eef6353814a8d69188dd6f60b5eb4f634",
+        "original_numeric_id": 18,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l6938.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta porque diferencia adequadamente as naturezas das responsabilidades civil e administrativa em matéria ambiental, em consonância com a legislação e a jurisprudência pacificada do Superior Tribunal de Justiça (STJ):\n\n1. **Responsabilidade Civil Ambiental (Objetiva):** É regida pela teoria do risco integral, conforme o art. 14, § 1º, da Lei nº 6.938/1981. Não se exige a comprovação de dolo ou culpa do agente poluidor, bastando a demonstração do dano ambiental e do nexo de causalidade entre a atividade desenvolvida e o prejuízo causado.\n2. **Responsabilidade Administrativa Ambiental (Subjetiva):** Exige a demonstração do elemento subjetivo (dolo ou culpa) do infrator, além do nexo causal e da conduta. O STJ consolidou esse entendimento no julgamento do EREsp 1.318.051/RJ (Informativo 650), assentando que a aplicação de penalidades administrativas deve obedecer à sistemática da teoria da culpabilidade, não se aplicando a lógica da responsabilidade objetiva da esfera cível.\n\n**Detalhe importante:** A distinção evita que terceiros que não concorreram diretamente para a infração administrativa (com dolo ou culpa) sejam punidos com sanções de caráter pessoal/punitivo, como multas, embora ainda possam responder civilmente pela reparação do dano devido à natureza propter rem e objetiva da obrigação civil.\n\n### Dispositivo legal\n* **Lei nº 6.938/1981, art. 14, § 1º** ([Planalto](https://www.planalto.gov.br/ccivil_03/leis/l6938.htm))\n* **Jurisprudência do STJ (EREsp 1.318.051/RJ)** ([STJ](https://www.stj.jus.br))",
+        "source_reference": null
+      },
+      "source_content_hash": "afb89c4e4b13ef49080136f957f1f8f8f04dae315963a63d0e088ccf18f6c517"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:019",
+      "source_id": "analista_administrativo:19",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da responsabilidade por dano ambiental, julgue os itens subsequentes.\n\nDe acordo com o entendimento do Superior Tribunal de Justiça, havendo comprovado dano ambiental por falha de fiscalização, a administração pública responderá, solidariamente com o agente poluidor, na execução do dever de indenizar e de reparar o dano, uma vez que a responsabilidade civil do Estado por omissão é objetiva.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 19; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Ambiental",
+        "source_content_hash": "f427a4274e2b9b6c732e3d9273e0fcafca697c0aa824ca656bd55f348ecc6462",
+        "original_numeric_id": 19,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.stj.jus.br"
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta porque contraria o entendimento sumulado do Superior Tribunal de Justiça (STJ) a respeito da forma de execução da responsabilidade civil do Estado por omissão na fiscalização ambiental:\n\n1. **Execução Subsidiária:** Conforme a Súmula 652 do STJ, a responsabilidade civil da Administração Pública por danos ao meio ambiente decorrente de sua omissão no dever de fiscalização é de caráter solidário, mas de **execução subsidiária**. Isso significa que há benefício de ordem: o Estado só será executado se o poluidor direto (degradador) não cumprir a obrigação de reparar ou indenizar, seja por insolvência, exaurimento patrimonial ou incapacidade técnica. O enunciado erra ao afirmar que a Administração responderá solidariamente *na execução*.\n2. **Responsabilidade por Omissão:** Ademais, a responsabilidade civil do Estado por omissão administrativa, em regra, fundamenta-se na responsabilidade subjetiva (falha do serviço ou *faute du service*), exigindo a comprovação de dolo ou culpa (negligência, imperícia ou imprudência) na fiscalização, e não de forma puramente objetiva como sugerido no trecho final do enunciado.\n\n**Pegadinha comum:** A solidariedade na obrigação de indenizar (fase de conhecimento/condenação) não se confunde com a solidariedade na fase de execução. O STJ adotou a execução subsidiária para evitar que o Estado se torne um \"segurador universal\" de degradadores privados.\n\n### Dispositivo legal\n* **Súmula 652 do Superior Tribunal de Justiça** ([STJ](https://www.stj.jus.br))",
+        "source_reference": null
+      },
+      "source_content_hash": "fac6bfe7ef4fc9db909ce06f8d2cde37df3ba130f83bdd480d7dffdfc117b80d"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:020",
+      "source_id": "analista_administrativo:20",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos princípios fundamentais do direito ambiental previstos na Constituição Federal de 1988, julgue o item a seguir.\n\nA participação dos cidadãos na elaboração de normas do direito ambiental e na execução de políticas ambientais é mecanismo de participação direta da sociedade na busca do meio ambiente ecologicamente equilibrado, o que se respalda no princípio democrático.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 20; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Ambiental",
+        "source_content_hash": "58508f7b60e978e9fb8be457b4e3ee6a223ebfedacfb53ecd80ddb2041f97f88",
+        "original_numeric_id": 20,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta porque descreve com precisão o princípio democrático (ou princípio da participação) no âmbito do Direito Ambiental:\n\n1. **Princípio da Participação:** Este princípio assegura que a sociedade civil intervenha diretamente tanto na formulação de normas jurídicas ambientais quanto na execução e fiscalização de políticas públicas voltadas à proteção do meio ambiente.\n2. **Fundamento Constitucional:** A participação direta encontra respaldo no art. 225, caput, da Constituição Federal de 1988, que impõe não apenas ao Poder Público, mas também à **coletividade**, o dever de defender e preservar o meio ambiente ecologicamente equilibrado para as presentes e futuras gerações.\n\n**Detalhe importante:** A participação social se concretiza por meio de diversos instrumentos democráticos, tais como audiências públicas no licenciamento ambiental, consultas públicas, ação popular ambiental e a representação de entidades civis em órgãos colegiados como o Conselho Nacional do Meio Ambiente (CONAMA).\n\n### Dispositivo legal\n* **Constituição Federal de 1988, art. 225, caput** ([Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "3f8e0680d804aa5e976adaf05f4e5f8237c46eccd449fdaed4a2226d517deb76"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:021",
+      "source_id": "analista_administrativo:21",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca do meio ambiente e dos direitos das populações indígenas, julgue o próximo item.\n\nO aproveitamento dos recursos hídricos, a pesquisa e a lavra de riquezas mineiras em terras indígenas só podem ser efetivados mediante autorização do Senado Federal, ouvidas as comunidades afetadas.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 21; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Ambiental",
+        "source_content_hash": "b2ccb67463dccdf1247567c512e8e3466ae8952de0bea6ee4bcf3b75b51625fe",
+        "original_numeric_id": 21,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta porque atribui erroneamente a competência exclusiva ao Senado Federal, quando a Constituição Federal exige a autorização do Congresso Nacional:\n\n1. **Competência do Congresso Nacional:** O art. 231, § 3º, da Constituição Federal de 1988 estabelece expressamente que o aproveitamento dos recursos hídricos (incluídos os potenciais energéticos), bem como a pesquisa e a lavra de riquezas minerais em terras indígenas, dependem de autorização do **Congresso Nacional** (Câmara dos Deputados e Senado Federal conjuntamente), e não de apenas uma de suas casas legislativas de forma isolada.\n2. **Requisitos Constitucionais:** Para que ocorra tal exploração, a norma constitucional exige cumulativamente:\n   - Autorização do Congresso Nacional;\n   - Oitiva das comunidades indígenas afetadas;\n   - Participação dos indígenas nos resultados da lavra, na forma da lei.\n\n**Pegadinha comum:** A banca costuma trocar \"Congresso Nacional\" por \"Senado Federal\" ou \"Câmara dos Deputados\" para induzir o candidato ao erro em questões que envolvem competências constitucionais e terras indígenas.\n\n### Dispositivo legal\n* **Constituição Federal de 1988, art. 231, § 3º** ([Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "13b8756e20d240f5f59b779499aebbcb97ff6cd2965385eb1c0389b7e5b21734"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:027",
+      "source_id": "analista_administrativo:27",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da Política Nacional do Meio Ambiente, dos crimes ambientais, das competências ambientais, da proteção da vegetação nativa, do Sistema Nacional de Unidades de Conservação da Natureza, do Conselho Nacional da Amazônia Legal e do especialista em meio ambiente, julgue os itens a seguir.\n\nA assessoria ao presidente da República nas diretrizes governamentais para o meio ambiente será prestada pelo Conselho de Governo, órgão superior do Sistema Nacional do Meio Ambiente.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 27; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Crimes Ambientais e Sanções Penais (Lei nº 9.605/1998)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Ambiental",
+        "source_content_hash": "f83a1d0a5e17b5d5bcf33c9a4e9616b92eadc7cb9cb17a1015d29f5cf2c117d1",
+        "original_numeric_id": 27,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l6938.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "crimes-ambientais-lei-9605",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. De acordo com a estrutura do Sistema Nacional do Meio Ambiente (SISNAMA), o Conselho de Governo atua como o órgão superior.\n\nSua atribuição legal precípua é assessorar o Presidente da República na formulação da política nacional e no estabelecimento das diretrizes governamentais voltadas para o meio ambiente e os recursos ambientais.\n\n**Pegadinha:** É comum confundir as funções do Conselho de Governo (órgão superior, de assessoramento político direto ao Presidente) com as do CONAMA (órgão consultivo e deliberativo, responsável por estabelecer normas, padrões e resoluções técnicas).\n\n### Dispositivo legal\n- **Referência:** Lei nº 6.938/1981, Art. 6º, inciso I.\n- **URL oficial:** https://www.planalto.gov.br/ccivil_03/leis/l6938.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "0c7d80b3d0cf0626601765ec6f8b229c8935b9b4f50857640db0116211eb6937"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:028",
+      "source_id": "analista_administrativo:28",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da Política Nacional do Meio Ambiente, dos crimes ambientais, das competências ambientais, da proteção da vegetação nativa, do Sistema Nacional de Unidades de Conservação da Natureza, do Conselho Nacional da Amazônia Legal e do especialista em meio ambiente, julgue os itens a seguir.\n\nO fato de o agente de crime ambiental comunicar previamente ao órgão competente o perigo iminente de degradação ambiental enseja atenuação da pena.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 28; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Crimes Ambientais e Sanções Penais (Lei nº 9.605/1998)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Ambiental",
+        "source_content_hash": "4666dcb35bbd83294c9955c2897657bb1ab6d22e8c7bebdbbead6a75c3e9f1b4",
+        "original_numeric_id": 28,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "crimes-ambientais-lei-9605",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **correto**.\n\nA Lei de Crimes Ambientais (Lei nº 9.605/1998) estabelece as circunstâncias que atenuam a pena do infrator. O artigo 14, inciso III, prevê expressamente que a comunicação prévia pelo agente do perigo iminente de degradação ambiental é uma causa de atenuação da pena. Essa medida visa estimular a cooperação do agente com a administração pública para evitar ou mitigar danos ecológicos.\n\n**Detalhe importante:** É necessário atentar para a diferença entre as circunstâncias atenuantes (artigo 14) e as agravantes (artigo 15). Por exemplo, cometer a infração mediante abuso de direito de licença ou autorização ambiental é uma circunstância que agrava a pena, e não que a atenua.\n\n### Dispositivo legal\n\n* **Referência:** Artigo 14, inciso III, da Lei nº 9.605/1998.\n* **Portal Oficial:** [Planalto](https://www.planalto.gov.br/ccivil_03/leis/l9605.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "4b36c53019e2a7bf91329453419a4d3c102fee5dc78518e820a6d0f1cd55d879"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:029",
+      "source_id": "analista_administrativo:29",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da Política Nacional do Meio Ambiente, dos crimes ambientais, das competências ambientais, da proteção da vegetação nativa, do Sistema Nacional de Unidades de Conservação da Natureza, do Conselho Nacional da Amazônia Legal e do especialista em meio ambiente, julgue os itens a seguir.\n\nÉ legalmente previsto que qualquer pessoa, ao constatar infração ambiental decorrente de empreendimento potencialmente poluidor, possa dirigir representação, inclusive de forma anônima, ao órgão responsável pelo licenciamento.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 29; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Crimes Ambientais e Sanções Penais (Lei nº 9.605/1998)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Ambiental",
+        "source_content_hash": "fe7af8c6b27d10132ce515e8f29f7197f00cf355deabece7e4e77c67078fe4c7",
+        "original_numeric_id": 29,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/lcp/lcp140.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "crimes-ambientais-lei-9605",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **incorreto**.\n\nA Lei Complementar nº 140/2011 prevê a possibilidade de qualquer pessoa dirigir representação ao órgão responsável pelo licenciamento ou autorização ambiental ao constatar infração decorrente de empreendimento ou atividade poluidora. No entanto, o artigo 17, § 1º, exige expressamente que essa pessoa esteja **legalmente identificada**. Portanto, a norma afasta a possibilidade de representação anônima para esse fim específico de exercício do poder de polícia.\n\n**Detalhe importante:** Embora o anonimato seja vedado para a representação formal prevista na LC 140/2011, isso não impede que os órgãos ambientais recebam denúncias anônimas por canais informais (como disque-denúncia) e realizem fiscalizações de ofício com base nelas. Contudo, a representação formal descrita no texto legal exige identificação.\n\n### Dispositivo legal\n\n* **Referência:** Artigo 17, § 1º, da Lei Complementar nº 140/2011.\n* **Portal Oficial:** [Planalto](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp140.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "375363ad4c2eced44df8888c32e1d7b3b9e5a58d29a87a727cdefd0a0ae02c44"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:030",
+      "source_id": "analista_administrativo:30",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da Política Nacional do Meio Ambiente, dos crimes ambientais, das competências ambientais, da proteção da vegetação nativa, do Sistema Nacional de Unidades de Conservação da Natureza, do Conselho Nacional da Amazônia Legal e do especialista em meio ambiente, julgue os itens a seguir.\n\nEmbora os pantanais sejam áreas de uso restrito, é permitida a sua exploração ecologicamente sustentável.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 30; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Crimes Ambientais e Sanções Penais (Lei nº 9.605/1998)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Ambiental",
+        "source_content_hash": "7d7547d207d598cfe3b3f8033f87b00a4be8e2d3f601e9334184191377ec4f02",
+        "original_numeric_id": 30,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "crimes-ambientais-lei-9605",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **correto**.\n\nO Código Florestal (Lei nº 12.651/2012) classifica os pantanais e as planícies pantaneiras como áreas de uso restrito. O artigo 10 da referida lei autoriza expressamente a exploração ecologicamente sustentável dessas áreas, determinando que sejam consideradas as recomendações técnicas dos órgãos oficiais de pesquisa. Novas supressões de vegetação nativa para uso alternativo do solo ficam condicionadas à autorização do órgão estadual do meio ambiente.\n\n**Detalhe importante:** A classificação de uma área como de \"uso restrito\" não equivale à proibição total de exploração (como ocorre em áreas de preservação permanente sob condições estritas), mas sim à imposição de limites e critérios técnicos específicos para garantir a sustentabilidade do ecossistema.\n\n### Dispositivo legal\n\n* **Referência:** Artigo 10 da Lei nº 12.651/2012.\n* **Portal Oficial:** [Planalto](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "d34dc569523ebcd97ef7cff1b4c9970e76507ee35c4755367e438c8f5a6ed580"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:031",
+      "source_id": "analista_administrativo:31",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da Política Nacional do Meio Ambiente, dos crimes ambientais, das competências ambientais, da proteção da vegetação nativa, do Sistema Nacional de Unidades de Conservação da Natureza, do Conselho Nacional da Amazônia Legal e do especialista em meio ambiente, julgue os itens a seguir.\n\nDesde que não sejam impostas restrições ao uso, é permitida a constituição de área de relevante interesse ecológico em propriedade privada.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 31; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Crimes Ambientais e Sanções Penais (Lei nº 9.605/1998)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Ambiental",
+        "source_content_hash": "b0a70369ee7f37f38925fcfcc8bf2bb265fdbc49667629b2fbedb285e3caeb45",
+        "original_numeric_id": 31,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l9985.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "crimes-ambientais-lei-9605",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **incorreto**.\n\nA Área de Relevante Interesse Ecológico (ARIE) é uma unidade de conservação de uso sustentável que pode ser constituída tanto por terras públicas quanto privadas, conforme o artigo 16, § 1º, da Lei nº 9.985/2000 (Lei do SNUC). No entanto, o § 2º do mesmo artigo estabelece expressamente que, respeitados os limites constitucionais, **podem ser estabelecidas normas e restrições** para a utilização de propriedade privada nela localizada.\n\n**Pegadinha:** A assertiva inverte a lógica da unidade de conservação ao afirmar que a constituição da ARIE em propriedade privada é permitida \"desde que não sejam impostas restrições ao uso\". Na verdade, a imposição de restrições e normas de uso é justamente o instrumento legal utilizado para compatibilizar a propriedade privada com os objetivos de conservação da natureza.\n\n### Dispositivo legal\n\n* **Referência:** Artigo 16, § 1º e § 2º, da Lei nº 9.985/2000.\n* **Portal Oficial:** [Planalto](https://www.planalto.gov.br/ccivil_03/leis/l9985.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "08c961fa994a10338299cf3d1e94addf91ecfb7b6ed635381f3d22353a1935a4"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:033",
+      "source_id": "analista_administrativo:33",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da Política Nacional do Meio Ambiente, dos crimes ambientais, das competências ambientais, da proteção da vegetação nativa, do Sistema Nacional de Unidades de Conservação da Natureza, do Conselho Nacional da Amazônia Legal e do especialista em meio ambiente, julgue os itens a seguir.\n\nO ordenamento dos recursos florestais é uma das atribuições do analista ambiental.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 33; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Crimes Ambientais e Sanções Penais (Lei nº 9.605/1998)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Ambiental",
+        "source_content_hash": "a9db5e66bad4c4ca2e0bca3267a1a281c46c5ee7a638588cd444893a43f17dc4",
+        "original_numeric_id": 33,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l10410.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "crimes-ambientais-lei-9605",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. De acordo com a Lei nº 10.410/2002, que dispõe sobre a criação da Carreira de Especialista em Meio Ambiente, o cargo de Analista Ambiental possui atribuições voltadas ao planejamento ambiental, organizacional e estratégico afetos à execução das políticas nacionais de meio ambiente formuladas no âmbito da União. Dentre as atividades expressamente listadas na referida lei, o inciso IV do artigo 4º prevê o ordenamento dos recursos florestais e pesqueiros como uma das atribuições desse cargo.\n\n### Dispositivo legal\n* **Lei nº 10.410/2002, Art. 4º, IV**: [https://www.planalto.gov.br/ccivil_03/leis/l10410.htm](https://www.planalto.gov.br/ccivil_03/leis/l10410.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "b12c6b0d3a8c9ab5b1f689d73730282e867f72f10266c1f8574ba454397de468"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:034",
+      "source_id": "analista_administrativo:34",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do meio ambiente, dos princípios do direito ambiental e do dano ambiental, julgue os itens subsequentes.\n\nComo meio de assegurar a efetividade do direito de todos ao meio ambiente ecologicamente equilibrado, a Constituição Federal de 1988 determina prestações materiais e atuação legislativa pelos três entes federativos.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 34; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Ambiental",
+        "source_content_hash": "9005ac00cf4272816076575857e3b63d9e9620a9d51c5a75823c021c987d259c",
+        "original_numeric_id": 34,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. O direito ao meio ambiente ecologicamente equilibrado, consagrado no *caput* do artigo 225 da Constituição Federal de 1988, impõe ao Poder Público e à coletividade o dever de defendê-lo e preservá-lo. Para assegurar a efetividade desse direito, o § 1º do mesmo artigo estabelece uma série de incumbências ao Poder Público. Essas obrigações demandam tanto prestações materiais (como a criação de espaços protegidos, controle de poluição e preservação de espécies) quanto atuação legislativa e regulatória. Tais deveres são compartilhados de forma comum e concorrente entre a União, os Estados, o Distrito Federal e os Municípios, no âmbito de suas respectivas competências constitucionais.\n\n### Dispositivo legal\n* **Constituição Federal de 1988, Art. 225, *caput* e § 1º**: [https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "61d9b02e620d5440e2e8ff519886d2b96201ef5bdcbafe1ff030a4ebcd24c59a"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:035",
+      "source_id": "analista_administrativo:35",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do meio ambiente, dos princípios do direito ambiental e do dano ambiental, julgue os itens subsequentes.\n\nO dano moral coletivo ambiental, embora atinja direitos da personalidade de um grupo determinado, depende, para fins de indenização, da demonstração de que resultou em dor ou indignação à coletividade.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 35; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Ambiental",
+        "source_content_hash": "04bca12ef8cb069f6f9e66e1a7f3022288ed035d2add923f4ff1b94ce5e78239",
+        "original_numeric_id": 35,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://portal.stj.jus.br"
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA jurisprudência pacífica do Superior Tribunal de Justiça (Súmula e precedentes da 1ª e 2ª Turmas) fixou que o **dano moral coletivo ambiental** não se confunde com o sofrimento ou dor psicológica individualizada das pessoas. Ele decorre da violação intolerável e injustificável de direitos difusos e do patrimônio ecológico de toda a coletividade, operando-se *in re ipsa* (pela mera gravidade objetiva do fato lesivo ao meio ambiente), sendo prescindível a afetação a direitos da personalidade de indivíduos específicos.",
+        "source_reference": null
+      },
+      "source_content_hash": "3ecb22db800dbc869cdd7d94a613e16af2b36744972656351328ce0db29d6f53"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:036",
+      "source_id": "analista_administrativo:36",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do meio ambiente, dos princípios do direito ambiental e do dano ambiental, julgue os itens subsequentes.\n\nA alteração ou supressão dos espaços territoriais especialmente protegidos somente poderá ser permitida por ato do Conselho Nacional do Meio Ambiente.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 36; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Ambiental",
+        "source_content_hash": "056252b37a4af62c01ba7ea03fb72e35e0c95e85c61970494e15e94059e89ba0",
+        "original_numeric_id": 36,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta. Segundo o artigo 225, § 1º, inciso III, da Constituição Federal de 1988, a definição de espaços territoriais especialmente protegidos pode ser feita por ato do Poder Público (como decretos), mas a sua **alteração ou supressão** somente é permitida mediante **lei em sentido estrito**. Portanto, é vedada a alteração ou supressão desses espaços por meio de ato administrativo, como uma resolução do Conselho Nacional do Meio Ambiente (CONAMA).\n\n### Dispositivo legal\n* **Constituição Federal de 1988, Art. 225, § 1º, III**: [https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "994084f953966d38682ce6a2560161e54e2cb1c289ca18b62359d2154bdbdbc9"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:037",
+      "source_id": "analista_administrativo:37",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do meio ambiente, dos princípios do direito ambiental e do dano ambiental, julgue os itens subsequentes.\n\nEmbora não tenha status constitucional, o estudo de impacto ambiental é importante instrumento quando se trata do desempenho de atividades potencialmente causadoras de significativa degradação ambiental.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 37; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Ambiental",
+        "source_content_hash": "59b9980e2df234441d787fcee35f9f2f481cb5a96d7f32f5d797e4ccfbb50748",
+        "original_numeric_id": 37,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta. O estudo prévio de impacto ambiental (EIA) possui **status constitucional**, estando expressamente previsto no artigo 225, § 1º, inciso IV, da Constituição Federal de 1988. A Carta Magna determina que o Poder Público deve exigir, na forma da lei, o estudo prévio de impacto ambiental para a instalação de obra ou atividade potencialmente causadora de significativa degradação do meio ambiente, devendo-se dar publicidade a esse estudo.\n\n### Dispositivo legal\n* **Constituição Federal de 1988, Art. 225, § 1º, IV**: [https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "6947521e5162e990b2566aa4f9b1421136e733cd649c2a0153a211201ecacd2d"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:038",
+      "source_id": "analista_administrativo:38",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do meio ambiente, dos princípios do direito ambiental e do dano ambiental, julgue os itens subsequentes.\n\nPelo princípio do poluidor pagador, aquele que poluir deverá responder pelo prejuízo que causar ao meio ambiente, de forma pecuniária ou mediante a prática de atos.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 38; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Ambiental",
+        "source_content_hash": "1afc4407b3ac03f976852023b4f57b0de394aaa974065f2da52257506afc5259",
+        "original_numeric_id": 38,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l6938.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. O princípio do poluidor-pagador estabelece que os custos decorrentes da poluição e da degradação ambiental devem ser internalizados pelo poluidor, que tem a obrigação de responder pelos prejuízos causados. Essa responsabilização pode ocorrer de forma pecuniária (por meio do pagamento de indenizações ou compensações financeiras) ou mediante a prática de atos (como a obrigação de fazer consistente na recuperação e restauração da área degradada), conforme previsto na Lei da Política Nacional do Meio Ambiente (Lei nº 6.938/1981) e na própria Constituição Federal.\n\n### Dispositivo legal\n* **Lei nº 6.938/1981, Art. 4º, VII**: [https://www.planalto.gov.br/ccivil_03/leis/l6938.htm](https://www.planalto.gov.br/ccivil_03/leis/l6938.htm)\n* **Constituição Federal de 1988, Art. 225, § 3º**: [https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "dc04e38cc6289dae13a11174a3ccec67130684cc2a31602523e8419c9a0572f9"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:039",
+      "source_id": "analista_administrativo:39",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do meio ambiente, dos princípios do direito ambiental e do dano ambiental, julgue os itens subsequentes.\n\nO princípio da prevenção é adotado pela Política Nacional do Meio Ambiente como um dos seus objetivos.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 39; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Ambiental",
+        "source_content_hash": "2bf6326061118c85ad556849b965c2a949b4748fd8b19f3ba6e72fd76f8b9893",
+        "original_numeric_id": 39,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l6938.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. Embora a Lei nº 6.938/1981 (Política Nacional do Meio Ambiente - PNMA) não utilize expressamente o termo 'princípio da prevenção' no rol de seus objetivos literais (artigo 4º), a doutrina e a jurisprudência entendem que a prevenção é a lógica central que orienta toda a política pública ambiental. O objetivo geral da PNMA, previsto no artigo 2º, é a 'preservação, melhoria e recuperação da qualidade ambiental propícia à vida'. A preservação e a manutenção do equilíbrio ecológico (artigo 4º, I e VI) são a própria materialização do princípio da prevenção, que visa evitar a ocorrência de danos ambientais conhecidos antes que eles se concretizem, utilizando para isso instrumentos como o licenciamento ambiental e a avaliação de impacto ambiental.\n\n### Dispositivo legal\n* **Lei nº 6.938/1981, Art. 2º e Art. 4º, I e VI**: [https://www.planalto.gov.br/ccivil_03/leis/l6938.htm](https://www.planalto.gov.br/ccivil_03/leis/l6938.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "ff38074ea2189f979f8470ea3e28dc8ca32ca49d4fbc160ecae833d187ae74a2"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:040",
+      "source_id": "analista_administrativo:40",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do meio ambiente, dos princípios do direito ambiental e do dano ambiental, julgue os itens subsequentes.\n\nAquele a quem se impute um dano ambiental potencial deverá arcar com o ônus de provar que sua atividade não configura nenhum tipo de risco ambiental.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 40; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Ambiental",
+        "source_content_hash": "2f7299f135eb8afe7c6b577318c580781160cb8e827697d8ec4ba25a96f6e1f9",
+        "original_numeric_id": 40,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.stj.jus.br"
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. No Direito Ambiental, vigora o princípio da precaução, que orienta a atuação preventiva diante de riscos ou incertezas científicas sobre potenciais danos ao meio ambiente. Como reflexo desse princípio, o Superior Tribunal de Justiça (STJ) consolidou o entendimento de que se aplica a inversão do ônus da prova nas ações de degradação ambiental (Súmula 618/STJ). Dessa forma, cabe ao empreendedor ou àquele a quem se imputa a atividade potencialmente poluidora o ônus de provar que sua conduta não gera risco ou dano ambiental, e não ao autor da ação ou ao órgão fiscalizador.\n\n### Dispositivo legal\n* **Súmula 618 do Superior Tribunal de Justiça (STJ)**: [https://www.stj.jus.br](https://www.stj.jus.br)",
+        "source_reference": null
+      },
+      "source_content_hash": "662a6fb7099c93ccc7bc03b28a664ef371daff9c18a631c0251fd01b3f5adc06"
+    }
+  ]
+}

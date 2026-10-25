@@ -1,0 +1,332 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_de_policia_federal-contabilidade-geral-e-avancada-c3515df8485a-2bff0f705a7c",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "c3515df8485ab192355dd2c9f2cd5fc325fdfcc424779258a45eea81a91b4abe",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "9bf5415c207ff2dee6f1b513f48cc1f4b3e00a224421906182f247e816e0b8ed",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "2bff0f705a7cc2864669a1dd7082bfca63f69f59433f62982c60d2c230d0d89f",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "contabilidade-geral-e-avancada",
+    "name": "Contabilidade Geral e Avançada"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:097",
+      "source_id": "agente_de_policia_federal:97",
+      "question_type": "true_false",
+      "statement_markdown": "Bloco III\nConsiderando que a contabilidade é a ciência que estuda os fenômenos patrimoniais sob o aspecto da finalidade organizacional, julgue os itens a seguir, no que se refere a conceitos, objetivos e finalidades da contabilidade.\n\nSob a ótica citada, o objeto da contabilidade é o patrimônio do ente contábil específico.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 97; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Conceitos Básicos da Contabilidade",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "f0cc196ea573362afdc8b2d98966a1d098f0602e64c0f33b375cc7aeac96e410",
+        "original_numeric_id": 97,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos-basicos-da-contabilidade",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. O objeto de estudo da ciência contábil é o **patrimônio** das entidades (sejam elas pessoas físicas ou jurídicas, com ou sem fins lucrativos). O patrimônio é definido como o conjunto de bens, direitos e obrigações vinculados a um ente contábil específico.",
+        "source_reference": null
+      },
+      "source_content_hash": "b27f3c846d9787fdbac7cb68ad689f0a504b714425a8d0ff539c5937f91caedd"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:098",
+      "source_id": "agente_de_policia_federal:98",
+      "question_type": "true_false",
+      "statement_markdown": "Bloco III\nConsiderando que a contabilidade é a ciência que estuda os fenômenos patrimoniais sob o aspecto da finalidade organizacional, julgue os itens a seguir, no que se refere a conceitos, objetivos e finalidades da contabilidade.\n\nPara o estudo da contabilidade, patrimônio é a diferença entre ativos e passivos detidos pelas entidades.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 98; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos Básicos da Contabilidade",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "0184fd9fd4e6a404616b3c9a5d57b479ef1a62afeb5c8baab2dab8afc8faaa2a",
+        "original_numeric_id": 98,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos-basicos-da-contabilidade",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta porque confunde o conceito de **Patrimônio** com o de **Patrimônio Líquido**:\n\n* **Patrimônio**: É o conjunto de bens, direitos (ativos) e obrigações (passivos) de uma entidade.\n* **Patrimônio Líquido**: É a diferença aritmética entre o valor dos ativos e o valor dos passivos (Ativo - Passivo = Patrimônio Líquido).\n\nPortanto, o patrimônio em si engloba todos os elementos (positivos e negativos), e não apenas a diferença líquida entre eles.",
+        "source_reference": null
+      },
+      "source_content_hash": "b04eb5250d1d8af06d097e300f660a172f35dc053c236cedcd4fda32d7d43da2"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:099",
+      "source_id": "agente_de_policia_federal:99",
+      "question_type": "true_false",
+      "statement_markdown": "Bloco III\nConsiderando que a contabilidade é a ciência que estuda os fenômenos patrimoniais sob o aspecto da finalidade organizacional, julgue os itens a seguir, no que se refere a conceitos, objetivos e finalidades da contabilidade.\n\nA contabilidade integra o rol das ciências exatas por estar dedicada à mensuração da riqueza do ente contábil.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 99; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos Básicos da Contabilidade",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "bdefb9d44ef1bc3e18bfa7f9d8bf61cedfb1599ff0cb8c9e9930bad2481ef7cf",
+        "original_numeric_id": 99,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos-basicos-da-contabilidade",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. A contabilidade pertence ao rol das **ciências sociais aplicadas**, e não das ciências exatas. Embora utilize ferramentas matemáticas e quantitativas para a mensuração e o controle da riqueza patrimonial, o seu foco está na ação humana e nos efeitos que as decisões dos gestores provocam sobre o patrimônio das entidades.",
+        "source_reference": null
+      },
+      "source_content_hash": "32b2ae17b682368166962fc8e3d6fbe1408ffd87e2498d23f25c46a07261d247"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:112",
+      "source_id": "agente_de_policia_federal:112",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere ao balancete de verificação contábil, julgue os itens subsequentes.\n\nO balancete de verificação é um resumo ordenado de todas as contas utilizadas pela contabilidade da entidade que o apresenta, destinando-se a detectar todos os possíveis erros de contabilização eventualmente ocorridos.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 112; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Balancete de Verificação",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "2b57c2f4c8495c83ae23ff875670b828a7a548d245930b4f177ea6a2d2703173",
+        "original_numeric_id": 112,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "balancete-de-verificacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. O balancete de verificação baseia-se na igualdade matemática do método das partidas dobradas (o total de débitos deve ser igual ao total de créditos). No entanto, ele **não** é capaz de detectar todos os erros de contabilização.\n\nExemplos de erros que o balancete de verificação não consegue detectar:\n* **Omissão total de um lançamento:** Se uma transação inteira deixar de ser escriturada, a igualdade entre débitos e créditos se mantém.\n* **Erro de imputação (troca de contas):** Se um débito for feito em uma conta de despesa incorreta (por exemplo, debitar Despesas de Aluguel em vez de Despesas de Água), o balancete continuará fechando.\n* **Erros de compensação:** Se houver um erro de R$ 100 a mais a débito em uma conta e R$ 100 a mais a crédito em outra conta, os totais continuarão batendo.",
+        "source_reference": null
+      },
+      "source_content_hash": "0dae2505280ac2b0509d74a1d9d73772eeaf1427fd911898eaf23c1b2328c1ac"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:113",
+      "source_id": "agente_de_policia_federal:113",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere ao balancete de verificação contábil, julgue os itens subsequentes.\n\nO balancete de verificação pode ser levantado em modelos que vão de um mínimo de duas colunas a um máximo de seis colunas.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 113; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Balancete de Verificação",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "b8a377c013567784cfbc291fbfab5a59b81039022f295c0af14c4c8705789df4",
+        "original_numeric_id": 113,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "balancete-de-verificacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. O balancete de verificação não possui um limite máximo de seis colunas.\n\nEle pode ser elaborado em diversos formatos, a depender da necessidade de detalhamento da entidade, variando de um mínimo de 2 colunas até modelos mais complexos de 8 colunas (ou mais). Os modelos mais comuns são:\n* **2 colunas:** Saldos atuais (Devedores e Credores).\n* **4 colunas:** Saldos anteriores (Devedores e Credores) e Saldos atuais (Devedores e Credores).\n* **6 colunas:** Saldos anteriores, Movimentação do período (Débito e Crédito) e Saldos atuais.\n* **8 colunas:** Saldos anteriores, Movimentação do período, Saldos antes do encerramento e Saldos finais pós-encerramento.",
+        "source_reference": null
+      },
+      "source_content_hash": "7a2490ede54d6d621a2300a7023d6e3136b671361054929a4a88172b3809f378"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:114",
+      "source_id": "agente_de_policia_federal:114",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere ao balancete de verificação contábil, julgue os itens subsequentes.\n\nEm um balancete de seis colunas, apresentam-se, inicialmente, os saldos existentes nas rubricas contábeis no final do período anterior, seguidos da letra D ou C, que indicam se o referido saldo é devedor ou credor, respectivamente.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 114; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Balancete de Verificação",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "bcf5d1e2ed5887ca3fbdbe76b19595f4060a8f31b52ad3d81bb6939af0d50f7f",
+        "original_numeric_id": 114,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "balancete-de-verificacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. No balancete de verificação de seis colunas, as duas primeiras colunas são destinadas especificamente para separar os saldos anteriores em **Saldos Devedores** (1ª coluna) e **Saldos Credores** (2ª coluna).\n\nComo cada saldo é alocado em sua respectiva coluna de acordo com a sua natureza, torna-se desnecessária e incorreta a utilização das letras \"D\" ou \"C\" ao lado dos valores para identificá-los. A indicação por letras é comum em balancetes simplificados de duas colunas, mas não nos modelos pluricolunares onde as colunas já exercem essa função de classificação.",
+        "source_reference": null
+      },
+      "source_content_hash": "b5e1d60446c6e13cf7487bba58898ab47a1077d0899c77a81215fd87ef055b87"
+    }
+  ]
+}

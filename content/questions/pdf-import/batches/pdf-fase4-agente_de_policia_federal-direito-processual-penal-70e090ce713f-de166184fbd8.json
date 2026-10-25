@@ -1,0 +1,82 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-agente_de_policia_federal-direito-processual-penal-70e090ce713f-de166184fbd8",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "70e090ce713f4efa7afccdd8f75dc126a6b6ec258a638c6883c5beff394c0223",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "63798e30405cda1d6b06c925e3f47b587362e4b8ff5a540fff55d47fa673a6e7",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "de166184fbd8df1dd6f4262f5be718dd8b75500c98d029852fc1060b99dc1564",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-processual-penal",
+    "name": "Direito Processual Penal"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:035",
+      "source_id": "agente_de_policia_federal:35",
+      "question_type": "true_false",
+      "statement_markdown": "Depois de adquirir um revólver calibre 38, que sabia ser produto de crime, José passou a portá-lo municiado, sem autorização e em desacordo com determinação legal. O comportamento suspeito de José levou-o a ser abordado em operação policial de rotina. Sem a autorização de porte de arma de fogo, José foi conduzido à delegacia, onde foi instaurado inquérito policial.\nTendo como referência essa situação hipotética, julgue os itens seguintes.\n\nO inquérito instaurado contra José é procedimento de natureza administrativa, cuja finalidade é obter informações a respeito da autoria e da materialidade do delito.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 35; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Inquérito Policial",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Processual Penal",
+        "source_content_hash": "a9d53a1cb53b5bdb27381b1b3cf788317fe2154bb6e730f735509e1b66e9f5c2",
+        "original_numeric_id": 35,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "inquerito-policial-e-investigacao-criminal",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O inquérito policial é classificado pela doutrina e pela jurisprudência como um procedimento administrativo preparatório, de caráter informativo, conduzido pela polícia judiciária.\n\nA finalidade precípua desse procedimento é a busca de elementos de informação que demonstrem a materialidade da infração penal e apontem indícios suficientes de autoria. Esses elementos são indispensáveis para viabilizar o oferecimento da denúncia pelo Ministério Público ou da queixa-crime pelo ofendido, servindo de lastro para a justa causa da ação penal.\n\n**Dispositivo legal**\n\n[Artigo 4º do Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal)](https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "aec74574f4324be58cea6a678752eeaec057151c44f09f79c701c57ffd381b88"
+    }
+  ]
+}

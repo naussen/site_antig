@@ -1,0 +1,538 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_conhec_espec_tec_federal_control_exter_tec_adm-contabilidade-publica-2d98daf27802-5af454466c92",
+  "source": {
+    "file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "2d98daf27802e405fca85477918bdf8251233e40cf39d87c93c75911b4f2d217",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "614ffeecc3c93f4cc8340b9f894f63a12d0a60896d888641786ae1cca7abe548",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "5af454466c92a1a557864ef6b3e25517b97860b6132579f374eac82791ae8bcd",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "contabilidade-publica",
+    "name": "Contabilidade Pública"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:063",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:63",
+      "question_type": "true_false",
+      "statement_markdown": "À luz do Manual de Contabilidade Aplicada ao Setor Público, julgue os itens subsequentes.\n\nOs ingressos extraorçamentários, tais como os oriundos de depósitos em caução, têm caráter temporário e representam passivos exigíveis do Estado, sendo sua restituição independente de autorização legislativa.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 63; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Plano de Contas Aplicado ao Setor Público (PCASP)",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "77b3865bd9404f6e71646faa2af140049f98cc7f4fc4c36a3637950e9c1f3dff",
+        "original_numeric_id": 63,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nDe acordo com a Lei nº 4.320/1964 e o Manual de Contabilidade Aplicada ao Setor Público (MCASP), os **ingressos extraorçamentários** são recursos financeiros que ingressam no caixa público em caráter eminentemente temporário, constituindo meras entradas compensatórias.\n\nComo o Estado atua unicamente como depositário fiel ou garantidor desses valores (a exemplo de depósitos em caução para garantia contratual, fianças, consignações em folha de pagamento e retenções tributárias a repassar), o ingresso financeiro vem acompanhado de uma obrigação correlata de restituição no Passivo Financeiro, não integrando a Lei Orçamentária Anual nem acrescendo o patrimônio líquido público.",
+        "source_reference": null
+      },
+      "source_content_hash": "2b6ab3206824374fcca90122d6b5fc889dde717004b72668e3918f338281fda8"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:064",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:64",
+      "question_type": "true_false",
+      "statement_markdown": "À luz do Manual de Contabilidade Aplicada ao Setor Público, julgue os itens subsequentes.\n\nA operação de crédito, que é um exemplo de receita orçamentária não efetiva, constitui fato contábil permutativo, não afetando a situação patrimonial líquida do Estado quando do reconhecimento contábil do crédito.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 64; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Plano de Contas Aplicado ao Setor Público (PCASP)",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "429388f679901a1f5ceb6fe8d41aab736982c4e9f194e171cd70a91950f09a9f",
+        "original_numeric_id": 64,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA **operação de crédito** (empréstimos e financiamentos obtidos pelo ente público) é classificada como **receita orçamentária de capital** (Art. 11, § 4º, da Lei nº 4.320/1964).\n\nSob o aspecto patrimonial, trata-se de uma **receita não efetiva** (por mutação patrimonial), pois o ingresso de disponibilidades no Ativo é exatamente anulado pelo aumento equivalente no Passivo Exigível (dívida fundada pública), sem provocar qualquer alteração líquida positiva no Patrimônio Líquido no momento de sua arrecadação.",
+        "source_reference": null
+      },
+      "source_content_hash": "34e06013777c20c8af45f3d4cade167ba794ec8e8735e4eae3121ca080cb32d5"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:065",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:65",
+      "question_type": "true_false",
+      "statement_markdown": "À luz do Manual de Contabilidade Aplicada ao Setor Público, julgue os itens subsequentes.\n\nO registro do ingresso financeiro resultante da venda à vista de um imóvel de propriedade da União deve ser tratado contabilmente como receita corrente, enquanto o ingresso financeiro decorrente do aluguel a terceiros de imóvel de propriedade da União deve ser tratado como receita de capital.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 65; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Plano de Contas Aplicado ao Setor Público (PCASP)",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "3acf476863d558957f79406d23290cf3eb4be555f877d4d6e940b567881630e2",
+        "original_numeric_id": 65,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está errado, pois inverte as classificações econômicas das receitas públicas descritas.\n\nA venda à vista de um bem imóvel de propriedade da União representa a alienação de um elemento do ativo permanente (conversão de bens em espécie). De acordo com a Lei nº 4.320/1964 e o MCASP, os ingressos provenientes da alienação de componentes do ativo são classificados como **Receitas de Capital** (origem Alienação de Bens).\n\nPor outro lado, o ingresso financeiro decorrente do aluguel de um imóvel público a terceiros representa a exploração e fruição econômica do patrimônio do ente, sem que haja a perda da propriedade do bem. Esse ingresso é classificado como **Receita Corrente** (origem Receita Patrimonial).\n\n### Dispositivo legal\n* **Lei nº 4.320/1964**, Art. 11, §§ 1º e 2º.\n* URL oficial: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l4320.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "dd49f393ed2d773749d7910fa1941955600cf53525db70afb7672541d1d6e9e0"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:066",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:66",
+      "question_type": "true_false",
+      "statement_markdown": "À luz do Manual de Contabilidade Aplicada ao Setor Público, julgue os itens subsequentes.\n\nOs ingressos financeiros decorrentes de amortizações de empréstimos ou financiamentos concedidos pelo ente público por meio de títulos e contratos representam receitas de capital, mas os juros recebidos relacionados a esses empréstimos ou financiamentos são tratados como receitas correntes.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 66; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Plano de Contas Aplicado ao Setor Público (PCASP)",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "55e11bd453fd7f0154f0275b2a02798c32311215d0642e7cfa536e0e062e1fd7",
+        "original_numeric_id": 66,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nConforme estabelece o Artigo 11, § 4º, da Lei nº 4.320/1964 e as normas do MCASP, a **amortização de empréstimos concedidos** constitui modalidade de **receita de capital**.\n\nEla corresponde ao retorno de recursos financeiros anteriormente emprestados ou financiados pela entidade governamental a terceiros, representando o resgate de direitos realizáveis (baixa no ativo não circulante realizável com entrada correspondente nas disponibilidades).",
+        "source_reference": null
+      },
+      "source_content_hash": "6791541a393bcc1dfae2d694a673b716318ac696fb8b9ba17978013f172a0948"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:070",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:70",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, acerca dos estágios da despesa orçamentária.\n\nA apuração da quantia exata a ser paga em relação às despesas incorridas por um ente federativo ocorre na fase de pagamento, sendo vedada a adoção de regime de adiantamento com vistas a honrar o pagamento dessas despesas.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 70; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos, Campo de Atuação e Regimes Contábeis",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "9cd8220aef396ba44d4a3d787c0908992bdb00cf69cc5e9555898f7ed6fee533",
+        "original_numeric_id": 70,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos-campo-de-atuacao-e-regimes-contabeis",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item apresenta dois erros conceituais distintos em relação às normas de finanças públicas e contabilidade pública:\n\n1. **Fase de apuração do valor:** A apuração da quantia exata a ser paga (importância exata a pagar) ocorre no estágio da **liquidação** da despesa, e não no pagamento. A liquidação consiste na verificação do direito adquirido pelo credor com base em títulos e documentos comprobatórios, tendo por fim apurar a origem, o objeto, a importância exata e a quem se deve pagar, conforme o art. 63, § 1º, da Lei nº 4.320/1964.\n2. **Regime de adiantamento:** Ao contrário do afirmado, o regime de adiantamento (conhecido no âmbito federal como suprimento de fundos) **não é vedado**. Ele é expressamente autorizado pelo art. 68 da Lei nº 4.320/1964 para os casos de despesas definidas em lei que não possam subordinar-se ao processo normal de aplicação (como despesas miúdas de pronto pagamento ou de caráter urgente).\n\n**Dispositivo legal**\n\n[Lei nº 4.320/1964, Art. 63, § 1º, II e Art. 68](https://www.planalto.gov.br/ccivil_03/leis/l4320.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "dd12557dede9ff4f4b58047a746c077ea2422c320eb2b89d98001c3f0a47ce66"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:071",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:71",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, acerca dos estágios da despesa orçamentária.\n\nRealiza-se por meio de empenho global a reserva de dotação orçamentária de compromissos decorrentes de despesas contratuais com pagamento sujeito a parcelamento.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 71; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "SIAFI e Execução Orçamentária da Despesa e Receita",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "db641a0b1e3fdc04112e5c7ac3fd94668071375d721231f4aee553b8c643a320",
+        "original_numeric_id": 71,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "siafi-e-execucao-orcamentaria-da-despesa-e-receita",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O empenho é o primeiro estágio da execução da despesa pública e consiste no ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de implemento de condição.\n\nA legislação prevê três modalidades de empenho: ordinário, por estimativa e global.\n\nO **empenho global** é a modalidade adequada para despesas contratuais e outras sujeitas a parcelamento, cujo montante total é previamente conhecido, mas o pagamento é realizado em parcelas (como aluguéis, contratos de prestação de serviços continuados, etc.). Essa previsão está expressamente contida no art. 60, § 3º, da Lei nº 4.320/1964.\n\n**Diferenciação importante:**\n* **Ordinário:** Utilizado para despesas de valor fixo e pagamento único.\n* **Por Estimativa:** Utilizado para despesas cujo montante total não se possa determinar previamente (ex.: contas de água, energia elétrica e telefone).\n* **Global:** Utilizado para despesas contratuais de valor conhecido, com pagamentos parcelados.\n\n**Dispositivo legal**\n\n[Lei nº 4.320/1964, Art. 60, § 3º](https://www.planalto.gov.br/ccivil_03/leis/l4320.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "f5c6f4fd950c3f30a870b90e7c5bc21c1abf0b9ead31953d35f8596d28a38769"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:072",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:72",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito à Guia de Recolhimento da União (GRU), julgue o item subsequente.\n\nA GRU é o documento destinado ao recolhimento de receitas à Conta Única do Tesouro Nacional, mantida no Banco Central do Brasil, e o agente financeiro centralizador dessa arrecadação é o Banco do Brasil S.A., que, por sua vez, recebe tarifas pela prestação desse serviço à União.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 72; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Plano de Contas Aplicado ao Setor Público (PCASP)",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "39deadeb5592a92f9d8669c35cfa89b056f098bb729bc6356772b1e5a0229d4a",
+        "original_numeric_id": 72,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA **Guia de Recolhimento da União (GRU)** é o documento padrão para arrecadação de receitas próprias, taxas, custas judiciais, multas e serviços de órgãos da administração direta e indireta federal na Conta Única do Tesouro Nacional.\n\nContudo, a GRU **não é o instrumento único e exclusivo** para todo e qualquer recolhimento à Conta Única. As receitas tributárias federais administradas pela Receita Federal do Brasil são arrecadadas mediante **DARF** (Documento de Arrecadação de Receitas Federais), e as contribuições previdenciárias tradicionais mediante GPS/DARF.",
+        "source_reference": null
+      },
+      "source_content_hash": "99dc7b5f7b2c37989712bbf31e63080744a529dd3265aa1c77900f129e38e036"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:074",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:74",
+      "question_type": "true_false",
+      "statement_markdown": "Um serviço de manutenção de imóveis foi prestado a um ente da Federação no mês de outubro de 2014. Em 31/12/2014, apesar de já ter passado pelas fases de empenho e liquidação, o valor do serviço ainda não havia sido pago ao prestador do serviço.\n\nCom referência a essa situação hipotética, julgue os próximos itens.\n\nTrata-se, nesse caso, de uma despesa não processada e cujo valor deve ser inscrito em restos a pagar.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 74; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "SIAFI e Execução Orçamentária da Despesa e Receita",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "607713d83552b81f03f8f84b8f356f08e8df56e9d85877012488ad8df5ebb3e5",
+        "original_numeric_id": 74,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "siafi-e-execucao-orcamentaria-da-despesa-e-receita",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A classificação dos Restos a Pagar divide-se em duas categorias principais:\n\n1. **Restos a Pagar Processados:** despesas que já foram empenhadas e liquidadas, ou seja, o credor já cumpriu sua obrigação (prestou o serviço ou entregou o bem) e o direito ao pagamento foi verificado e homologado pela Administração Pública, restando apenas o pagamento financeiro.\n2. **Restos a Pagar Não Processados:** despesas apenas empenhadas, mas que ainda não passaram pela fase de liquidação até o encerramento do exercício financeiro.\n\nNo caso em tela, o serviço de manutenção foi prestado em outubro de 2014 e passou pelas fases de empenho e liquidação antes de 31/12/2014. Portanto, trata-se de **Restos a Pagar Processados**, o que torna a afirmação incorreta ao classificá-la como \"não processada\".\n\n**Dispositivo legal**\n\n[Lei nº 4.320/1964, Art. 36; Decreto nº 93.872/1986, Art. 67](https://www.planalto.gov.br/ccivil_03/leis/l4320.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "c525051b4379cc9ad687bf9c16b123faca1b22d0ee8cc619eb964c680c43e743"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:075",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:75",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue o item seguinte, relativo ao Sistema Integrado de Administração Financeira do Governo Federal (SIAFI).\n\nO CPR (Contas a Pagar e a Receber), um subsistema do SIAFI, permite a geração automática de ordens bancárias e de documentos de recolhimento de tributos e contribuições que, em conjunto com outros documentos, servirão para montar o fluxo financeiro de cada unidade gestora.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 75; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Plano de Contas Aplicado ao Setor Público (PCASP)",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "b3db3117ddfdac532e5b34250fb85ac18a485bb568cbbceed6a0959a1e66ff64",
+        "original_numeric_id": 75,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNo Sistema Integrado de Administração Financeira do Governo Federal (SIAFI), o subsistema **CPR (Contas a Pagar e a Receber)** é o módulo responsável pelo controle contábil das obrigações a liquidar e direitos a receber das Unidades Gestoras.\n\nEle automatiza a geração de documentos de liquidação da despesa (Nota de Lançamento por Evento) e documentos de pagamento (como a Ordem Bancária - OB), integrando a gestão de compromissos com fornecedores com a execução orçamentária e financeira.",
+        "source_reference": null
+      },
+      "source_content_hash": "4e0ad9839a82e738c1833974e2548350ae344a15847e56ef93999e37e726f691"
+    }
+  ]
+}

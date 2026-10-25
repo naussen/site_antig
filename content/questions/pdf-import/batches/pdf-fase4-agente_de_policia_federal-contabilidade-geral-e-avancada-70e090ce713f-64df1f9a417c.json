@@ -1,0 +1,994 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-agente_de_policia_federal-contabilidade-geral-e-avancada-70e090ce713f-64df1f9a417c",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "70e090ce713f4efa7afccdd8f75dc126a6b6ec258a638c6883c5beff394c0223",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "63798e30405cda1d6b06c925e3f47b587362e4b8ff5a540fff55d47fa673a6e7",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "64df1f9a417cbd95f2c383860c2cc6d6582ebb2255b6cca4b4aa97486786d7a7",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "contabilidade-geral-e-avancada",
+    "name": "Contabilidade Geral e Avançada"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:100",
+      "source_id": "agente_de_policia_federal:100",
+      "question_type": "true_false",
+      "statement_markdown": "Nas demonstrações contábeis de determinada empresa, foram selecionadas as contas a seguir, reunidas em quatro grupos, e seus respectivos saldos.\n\ngrupo 1\ncaixa e equivalentes R$ 10.000\ncréditos contra clientes R$ 350.000\nestoques para revenda R$ 250.000\nveículos R$ 120.000\n\ngrupo 2\nduplicatas descontadas R$ 100.000\nfornecedores R$ 80.000\nsalários e encargos a pagar R$ 50.000\n\ngrupo 3\ncapital social R$ 400.000\nreservas de lucros R$ 100.000\n\ngrupo 4\ndepreciação R$ 15.000\nvendas líquidas R$ 2.000.000\nsalários e encargos R$ 450.000\n\nCom base nessas informações, julgue os seguintes itens.\n\nO rol de contas está incompleto, visto que o total de saldos das contas dos grupos 1 e 2 supera o montante do grupo 3.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 100; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "d416eb69f95b4ff357cbef161d4d265318c14c40ca457576193b3bb110317e54",
+        "original_numeric_id": 100,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA equação fundamental do patrimônio estabelece que:\n$$\\text{Ativo} = \\text{Passivo Exigível} + \\text{Patrimônio Líquido}$$\n\nNo rol de contas apresentado:\n* Grupo 1 (Ativo): R$ 10.000 + R$ 350.000 + R$ 250.000 + R$ 120.000 = R$ 730.000;\n* Grupo 2 (Passivo Exigível): Duplicatas Descontadas R$ 100.000 + Fornecedores R$ 80.000 + Salários a Pagar R$ 50.000 = R$ 230.000;\n* Grupo 3 (Patrimônio Líquido): Capital Social R$ 400.000 + Reservas de Lucros R$ 100.000 = R$ 500.000.\n\nO balancete antes do encerramento do exercício ainda contém as contas de resultado do Grupo 4 (Receitas e Despesas). Portanto, o fato de a soma de contas de ativo e passivo diferir do PL antes da apuração do resultado não autoriza concluir que o rol esteja incompleto.",
+        "source_reference": null
+      },
+      "source_content_hash": "fb6a3510265540409b977905542acd23eb7707b71857183a71ac5802c23a1321"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:101",
+      "source_id": "agente_de_policia_federal:101",
+      "question_type": "true_false",
+      "statement_markdown": "Nas demonstrações contábeis de determinada empresa, foram selecionadas as contas a seguir, reunidas em quatro grupos, e seus respectivos saldos.\n\ngrupo 1\ncaixa e equivalentes R$ 10.000\ncréditos contra clientes R$ 350.000\nestoques para revenda R$ 250.000\nveículos R$ 120.000\n\ngrupo 2\nduplicatas descontadas R$ 100.000\nfornecedores R$ 80.000\nsalários e encargos a pagar R$ 50.000\n\ngrupo 3\ncapital social R$ 400.000\nreservas de lucros R$ 100.000\n\ngrupo 4\ndepreciação R$ 15.000\nvendas líquidas R$ 2.000.000\nsalários e encargos R$ 450.000\n\nCom base nessas informações, julgue os seguintes itens.\n\nUm fato modificativo exige um registro contábil em conta do grupo 4.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 101; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "c25368fecc97689c447c2dc20d4fe02240e22a6bfc36f22526ebd209b0060091",
+        "original_numeric_id": 101,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nOs **fatos modificativos** (aumentativos ou diminutivos) são aqueles eventos contábeis que alteram o valor do Patrimônio Líquido da entidade.\n\nComo o Grupo 4 abriga as contas de **resultado** (receitas e despesas), o reconhecimento de qualquer receita ou despesa afeta diretamente o lucro/prejuízo do exercício (que será incorporado ao Patrimônio Líquido), exigindo necessariamente um lançamento a débito ou a crédito em contas desse grupo.",
+        "source_reference": null
+      },
+      "source_content_hash": "dfa3b22f948111c5a7c5e00da3e784129f2144e303edd9193ff8eddc39cfc440"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:102",
+      "source_id": "agente_de_policia_federal:102",
+      "question_type": "true_false",
+      "statement_markdown": "Nas demonstrações contábeis de determinada empresa, foram selecionadas as contas a seguir, reunidas em quatro grupos, e seus respectivos saldos.\n\ngrupo 1\ncaixa e equivalentes R$ 10.000\ncréditos contra clientes R$ 350.000\nestoques para revenda R$ 250.000\nveículos R$ 120.000\n\ngrupo 2\nduplicatas descontadas R$ 100.000\nfornecedores R$ 80.000\nsalários e encargos a pagar R$ 50.000\n\ngrupo 3\ncapital social R$ 400.000\nreservas de lucros R$ 100.000\n\ngrupo 4\ndepreciação R$ 15.000\nvendas líquidas R$ 2.000.000\nsalários e encargos R$ 450.000\n\nCom base nessas informações, julgue os seguintes itens.\n\nSe a empresa realizar um crédito em conta do grupo 1, em contrapartida a um débito em contas dos grupos 2 e 4, ela estará representando um fato misto.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 102; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "b83fbffc033ddec19be48b503373b837d7391f7c029a410115db5e15f2dce822",
+        "original_numeric_id": 102,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nAs contas do Grupo 1 correspondem ao **Ativo** (natureza devedora). Um lançamento a **crédito** em conta do Ativo representa a diminuição ou baixa de um bem ou direito (como a saída de dinheiro da conta caixa/bancos).\n\nSe a contrapartida for um débito em outra conta patrimonial (por exemplo, débito em Fornecedores do Grupo 2 para liquidar uma obrigação), trata-se de um fato permutativo que reflete fidedignamente uma redução concomitante de ativo e passivo.",
+        "source_reference": null
+      },
+      "source_content_hash": "0e2c19b1236690d2eaee3a72cff968d82d2f568649ccc42fc5d15f05913e8e8b"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:103",
+      "source_id": "agente_de_policia_federal:103",
+      "question_type": "true_false",
+      "statement_markdown": "Determinada sociedade comercial criou uma rubrica contábil para abrigar os valores dos estão em trânsito. Na abertura do exercício corrente, essa rubrica possuía saldo de R$ 50.000.\nA respeito dessa situação hipotética, julgue os próximos itens.\n\nA referida conta é de natureza credora.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 103; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "07079119a73005d8e0ef02497f21da1947e894bd565095c1657dfd568377a57c",
+        "original_numeric_id": 103,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nAs contas do **Ativo** possuem natureza tipicamente **devedora** (seus saldos aumentam com lançamentos a débito e diminuem com créditos).\n\nA conta descrita no enunciado pertence ao Grupo 1 (bens e direitos da sociedade), possuindo natureza estritamente devedora, e não credora.",
+        "source_reference": null
+      },
+      "source_content_hash": "7aeb53bb548e3c5b6b9a6096d275b3ba2e701192cce45741586710d9442df321"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:104",
+      "source_id": "agente_de_policia_federal:104",
+      "question_type": "true_false",
+      "statement_markdown": "Determinada sociedade comercial criou uma rubrica contábil para abrigar os valores dos estão em trânsito. Na abertura do exercício corrente, essa rubrica possuía saldo de R$ 50.000.\nA respeito dessa situação hipotética, julgue os próximos itens.\n\nNo plano de contas da sociedade, a conta descrita integra o ativo disponível.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 104; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "f87e0c7cb47bbe1563d0b5146cdad7873e470019081ab5f3d7efcb9368762877",
+        "original_numeric_id": 104,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA conta de **duplicatas descontadas** (operações de desconto bancário de títulos a receber) não integra o ativo disponível.\n\nO **ativo disponível** compreende unicamente as disponibilidades financeiras imediatas da sociedade (dinheiro em caixa, depósitos bancários à vista e aplicações financeiras de liquidez imediata conversíveis em caixa).\n\nNa sistemática contábil moderna, as duplicatas descontadas representam obrigações financeiras perante a instituição financeira que realizou a antecipação, sendo classificadas no **Passivo Exigível** (Empréstimos e Financiamentos a Curto Prazo).",
+        "source_reference": null
+      },
+      "source_content_hash": "610561038d2b46db09af4d272d3fe1f32a8479ca00861a39220f2502cf4362bd"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:105",
+      "source_id": "agente_de_policia_federal:105",
+      "question_type": "true_false",
+      "statement_markdown": "Determinada sociedade comercial criou uma rubrica contábil para abrigar os valores dos estão em trânsito. Na abertura do exercício corrente, essa rubrica possuía saldo de R$ 50.000.\nA respeito dessa situação hipotética, julgue os próximos itens.\n\nA aquisição de mercadorias para revenda, quando classificável na conta mencionada, gerará uma contrapartida em conta de fornecedores ou de caixa e equivalentes.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 105; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "0fbfccb26f106aa0674ebe3eb8bec4e7f6bf0b14308d158a8110ecd5cccc150c",
+        "original_numeric_id": 105,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA aquisição de mercadorias para revenda por uma sociedade comercial é ativada inicialmente na conta de **Estoques** (Ativo Circulante).\n\nQuando a empresa adota o sistema de inventário periódico ou quando as mercadorias são vendidas, o valor respectivo é baixado do ativo e reconhecido no resultado como **Custo das Mercadorias Vendidas (CMV)**, participando da apuração do lucro bruto na DRE.",
+        "source_reference": null
+      },
+      "source_content_hash": "7b722ba0a0364dcd81d253392311a56b9956806f824b68149743fd18794dac81"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:106",
+      "source_id": "agente_de_policia_federal:106",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à escrituração contábil nos livros das sociedades, julgue os itens subsequentes.\n\nA aquisição à vista de um veículo pelo valor de R$ 80.000, ainda que esse valor resulte de um desconto, negociado no momento da aquisição, no valor de R$ 4.000, representa-se por meio de um lançamento de primeira fórmula.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 106; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "fb7d7fa61b340eba6875ce449ea338d20d6cd979043e2ab4558a0d55dabadabe",
+        "original_numeric_id": 106,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA aquisição à vista de um veículo no valor de R$ 80.000 envolve o seguinte lançamento contábil de escrituração:\n\n* **Débito:** Veículos (Ativo Não Circulante - Imobilizado) $\\rightarrow$ R$ 80.000\n* **Crédito:** Caixa / Bancos Conta Movimento (Ativo Circulante - Disponível) $\\rightarrow$ R$ 80.000\n\nComo a operação opera uma troca exclusiva entre elementos do Ativo (aumento de um bem e redução equivalente de disponibilidades), sem alterar o montante do Patrimônio Líquido, classifica-se tecnicamente como um **fato contábil permutativo (ou compensativo) entre elementos do ativo**.",
+        "source_reference": null
+      },
+      "source_content_hash": "b58594167760f80515695ba38266921c46a412f9d04c904d4fab421a8e8df48b"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:107",
+      "source_id": "agente_de_policia_federal:107",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à escrituração contábil nos livros das sociedades, julgue os itens subsequentes.\n\nEm função da competência contábil, deve ser considerado despesa do exercício corrente o valor do aluguel do imóvel que tenha sido utilizado no exercício corrente e só será pago no exercício seguinte.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 107; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "fad63d188b382039790fd2edbd2e966b63bae2420ab8054fc995f4d7b299ec46",
+        "original_numeric_id": 107,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nDe acordo com o **Princípio da Competência** (NBC TG Estrutura Conceitual e Art. 177 da Lei nº 6.404/1976):\n\nAs receitas e as despesas devem ser incluídas na apuração do resultado do período em que ocorrerem seus respectivos fatos geradores, independentemente do momento do seu efetivo recebimento ou pagamento financeiro.\n\nSe o fato gerador da despesa ocorreu no exercício corrente (consumo de serviços, salários trabalhados, etc.), ela deve ser compulsoriamente reconhecida como despesa do exercício em curso.",
+        "source_reference": null
+      },
+      "source_content_hash": "6945d9c0de3df7fdc3114e4ea266e1aab74ce00902784fc23165a6e276f6f7d7"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:108",
+      "source_id": "agente_de_policia_federal:108",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à escrituração contábil nos livros das sociedades, julgue os itens subsequentes.\n\nEm algumas atividades, é comum que o cliente realize um adiantamento ao fornecedor, por conta do bem ou do serviço que lhe será entregue. Quando do efetivo recebimento do adiantamento, o fornecedor, em cumprimento ao regime de caixa, deverá lançar em sua contabilidade um crédito em conta de passivo, em contrapartida à conta caixa ou equivalentes.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 108; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "00a03e3de5172de2700d28feef5d2d48a3c1e9266365f86a2525a34abbea8929",
+        "original_numeric_id": 108,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nQuando um cliente efetua um adiantamento financeiro ao fornecedor por conta de mercadorias ou serviços a serem entregues futuramente, a entidade fornecedora registra:\n\n* **Débito:** Caixa / Bancos (Ativo Circulante);\n* **Crédito:** Adiantamento de Clientes (Passivo Circulante - Obrigações operacionais).\n\nEsse valor **NÃO é receita do exercício** no momento do adiantamento. Ele representa uma dívida/obrigação de entregar bens ou prestar serviços. O reconhecimento da receita de vendas somente ocorrerá quando o bem for efetivamente entregue e a obrigação de desempenho for cumprida (NBC TG 47 - Receita de Contrato com Cliente).",
+        "source_reference": null
+      },
+      "source_content_hash": "533dd46aaf0a05e43bef5ee2056c596bca138c4b47989160d737fb12696934ba"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:109",
+      "source_id": "agente_de_policia_federal:109",
+      "question_type": "true_false",
+      "statement_markdown": "Determinada sociedade comercial realizou, no período corrente, as transações apresentadas a seguir.\n\n* Apropriou a terceira cota anual cheia de depreciação de um veículo, originalmente adquirido por R$ 60.000, com vida útil estimada em 5 anos. A empresa tem como política considerar um valor residual de 10% para todos os seus bens. O método de depreciação empregado é o da soma dos dígitos dos anos.\n* Descontou, no banco onde mantém conta, uma duplicata a vencer em 60 dias. O título, com valor nominal de R$ 100.000, gerou um crédito de R$ 97.000 na conta-corrente da empresa.\n* Vendeu mercadorias por R$ 10.000, líquido de tributos, realizando a baixa dos estoques correspondentes, no valor de R$ 5.500.\n\nNessa situação hipotética,\n\na venda de mercadorias gerou um resultado com mercadorias de R$ 4.500.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 109; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "4414a1cede4ce5f27536b62ece719f4d4642a532479148c5288b8f351822c75a",
+        "original_numeric_id": 109,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_109.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. O Resultado com Mercadorias (RCM) representa o lucro bruto operacional obtido diretamente com a atividade de comercialização.\n\nO cálculo do RCM é dado pela diferença entre a Receita Líquida de Vendas (RLV) e o Custo das Mercadorias Vendidas (CMV):\n\n$$\\text{RCM} = \\text{Receita Líquida} - \\text{CMV}$$\n\nSubstituindo os valores fornecidos pelo enunciado:\n* Receita líquida de tributos: R$ 10.000\n* Baixa dos estoques (CMV): R$ 5.500\n* $\\text{RCM} = 10.000 - 5.500 = 4.500$\n\nPortanto, o resultado gerado pela transação foi de fato R$ 4.500.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_109.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "f94a6a68692d7e921d42bb68f7bced2a5c37f6f6055473fc6eab8ce9ac5e5bc9"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:110",
+      "source_id": "agente_de_policia_federal:110",
+      "question_type": "true_false",
+      "statement_markdown": "Determinada sociedade comercial realizou, no período corrente, as transações apresentadas a seguir.\n\n* Apropriou a terceira cota anual cheia de depreciação de um veículo, originalmente adquirido por R$ 60.000, com vida útil estimada em 5 anos. A empresa tem como política considerar um valor residual de 10% para todos os seus bens. O método de depreciação empregado é o da soma dos dígitos dos anos.\n* Descontou, no banco onde mantém conta, uma duplicata a vencer em 60 dias. O título, com valor nominal de R$ 100.000, gerou um crédito de R$ 97.000 na conta-corrente da empresa.\n* Vendeu mercadorias por R$ 10.000, líquido de tributos, realizando a baixa dos estão correspondentes, no valor de R$ 5.500.\n\nNessa situação hipotética,\n\na empresa, no momento do desconto do título, contabilizou despesa com encargos financeiros de R$ 3.000.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 110; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "296b63560a7c17f3b0a88170b1ccb7f1b381a52858bfcc75a27b3d60f51847ac",
+        "original_numeric_id": 110,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNa operação de desconto bancário de duplicatas no valor nominal de R$ 100.000 com crédito de R$ 97.000 e encargos de R$ 3.000 com vencimento em 60 dias:\n\nPelo **regime de competência**, a despesa financeira não pode ser contabilizada integralmente no ato da contratação da operação bancária.\nNo momento da liberação dos recursos, a diferença de R$ 3.000 deve ser registrada como **Encargos Financeiros a Transcorrer** (conta redutora do passivo de empréstimos bancários), para ser apropriada mensalmente ao resultado como despesa financeira *pro rata temporis* ao longo do prazo de vigência da operação (60 dias).",
+        "source_reference": null
+      },
+      "source_content_hash": "108fa6d2849202c4b06402f71437de4d99e618abe43e0c0f60d47e64eb609bfd"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:111",
+      "source_id": "agente_de_policia_federal:111",
+      "question_type": "true_false",
+      "statement_markdown": "Determinada sociedade comercial realizou, no período corrente, as transações apresentadas a seguir.\n\n* Apropriou a terceira cota anual cheia de depreciação de um veículo, originalmente adquirido por R$ 60.000, com vida útil estimada em 5 anos. A empresa tem como política considerar um valor residual de 10% para todos os seus bens. O método de depreciação empregado é o da soma dos dígitos dos anos.\n* Descontou, no banco onde mantém conta, uma duplicata a vencer em 60 dias. O título, com valor nominal de R$ 100.000, gerou um crédito de R$ 97.000 na conta-corrente da empresa.\n* Vendeu mercadorias por R$ 10.000, líquido de tributos, realizando a baixa dos estão correspondentes, no valor de R$ 5.500.\n\nNessa situação hipotética,\n\na depreciação do veículo gerou um crédito de R$ 10.800 na conta de depreciação acumulada.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 111; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "c230126cfa79aaa4aea53c339a7816943c1f35aea3e033a0ea9749200a76c61a",
+        "original_numeric_id": 111,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nVamos calcular a cota de depreciação anual pelo **Método da Soma dos Dígitos dos Anos (Método de Cole)**:\n\n1. Custo de Aquisição: R$ 60.000;\n2. Valor Residual (10%): R$ 6.000;\n3. **Valor Depreciável:** R$ 60.000 - R$ 6.000 = **R$ 54.000**;\n4. Vida útil de 5 anos. A soma dos dígitos dos anos é:\n$$S = 1 + 2 + 3 + 4 + 5 = 15$$\n5. Pelo método decrescente, a fração de depreciação para cada ano é:\n* 1º ano: $5/15$\n* 2º ano: $4/15$\n* **3º ano:** $\\mathbf{3/15} = \\mathbf{1/5}$\n\n6. A cota cheia de depreciação do 3º ano é:\n$$\\text{Depreciação}_{ano 3} = R\\$ 54.000 \\times \\frac{3}{15} = R\\$ 54.000 \\times 0,20 = \\mathbf{R\\$ 10.800}$$\n\nO registro contábil dá-se mediante débito em Despesa com Depreciação (Resultado) e **crédito de R$ 10.800 na conta retificadora de Depreciação Acumulada** (Ativo Imobilizado).",
+        "source_reference": null
+      },
+      "source_content_hash": "7dd866ca343be609de1ef99a38d2370ba63d6c6a1cdf9db15367e68d45b33dc8"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:115",
+      "source_id": "agente_de_policia_federal:115",
+      "question_type": "true_false",
+      "statement_markdown": "Considere os dados da tabela a seguir, retidos da contabilidade de determinada sociedade empresarial, com valores em reais (R$).\n\n| Conta | Valor (R$) |\n|---|---|\n| caixa e equivalentes | 10.000 |\n| duplicatas a receber | 80.000 |\n| estoques | 50.000 |\n| máquinas | 100.000 |\n| terrenos | 160.000 |\n| marcas e patentes | 100.000 |\n| fornecedores | 200.000 |\n| duplicatas descontadas | 40.000 |\n| salários e encargos a pagar | 200.000 |\n| capital social | 150.000 |\n| vendas de mercadorias | 1.000.000 |\n| custo das mercadorias vendidas | 600.000 |\n| despesas administrativas | 90.000 |\n| despesas comerciais | 160.000 |\n| despesas financeiras | 33.000 |\n| outras despesas | 41.000 |\n| IR e CSLL | 26.000 |\n\nCom base nessas informações, julgue os itens que se seguem.\n\nAs contas do ativo dessa empresa somam R$ 500.000.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 115; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "ef1c983c0b49f418a967989e621f7177fe1a20f17126fa06be3c5931debbab03",
+        "original_numeric_id": 115,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nIdentificando e somando as contas que integram o **Ativo** na tabela apresentada:\n\n* Caixa e equivalentes de caixa: R$ 10.000\n* Duplicatas a receber: R$ 80.000\n* Estoques: R$ 50.000\n* Máquinas: R$ 100.000\n* Terrenos: R$ 160.000\n* Marcas e patentes: R$ 100.000\n\n$$\\text{Total do Ativo} = 10.000 + 80.000 + 50.000 + 100.000 + 160.000 + 100.000 = \\mathbf{R\\$ 500.000}$$\n\n*(Nota: Fornecedores, Salários a Pagar e Duplicatas Descontadas integram o Passivo Exigível; Capital Social integra o PL; as demais contas são de resultado).*",
+        "source_reference": null
+      },
+      "source_content_hash": "70c0f8f45974ddc1d916e79c28308b82f95fa7d1156eefe0b071a12af9069fd0"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:116",
+      "source_id": "agente_de_policia_federal:116",
+      "question_type": "true_false",
+      "statement_markdown": "Considere os dados da tabela a seguir, retidos da contabilidade de determinada sociedade empresarial, com valores em reais (R$).\n\n| Conta | Valor (R$) |\n|---|---|\n| caixa e equivalentes | 10.000 |\n| duplicatas a receber | 80.000 |\n| estoques | 50.000 |\n| máquinas | 100.000 |\n| terrenos | 160.000 |\n| marcas e patentes | 100.000 |\n| fornecedores | 200.000 |\n| duplicatas descontadas | 40.000 |\n| salários e encargos a pagar | 200.000 |\n| capital social | 150.000 |\n| vendas de mercadorias | 1.000.000 |\n| custo das mercadorias vendidas | 600.000 |\n| despesas administrativas | 90.000 |\n| despesas comerciais | 160.000 |\n| despesas financeiras | 33.000 |\n| outras despesas | 41.000 |\n| IR e CSLL | 26.000 |\n\nCom base nessas informações, julgue os itens que se seguem.\n\nO lucro bruto do exercício da referida empresa foi de R$ 50.000.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 116; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "047b0bc3b51fd3fcf27ef43693b541d9da231dc1344cb203f5266671db95784b",
+        "original_numeric_id": 116,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_116.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta porque confunde o conceito de **Lucro Bruto** com o de **Lucro Líquido**.\n\nO **Lucro Bruto** é obtido pela subtração do Custo das Mercadorias Vendidas (CMV) da Receita de Vendas:\n$$\\text{Lucro Bruto} = \\text{Vendas de Mercadorias} - \\text{CMV}$$\n$$\\text{Lucro Bruto} = R\\$ 1.000.000 - R\\$ 600.000 = R\\$ 400.000$$\n\nPara chegar ao valor de R$ 50.000 apresentado na questão, é necessário deduzir as demais despesas e impostos, o que resulta no **Lucro Líquido do Exercício (LLE)**:\n*   Lucro Bruto: R$ 400.000\n*   (-) Despesas administrativas: R$ 90.000\n*   (-) Despesas comerciais: R$ 160.000\n*   (-) Despesas financeiras: R$ 33.000\n*   (-) Outras despesas: R$ 41.000\n*   (=) Resultado antes dos tributos (LAIR): R$ 76.000\n*   (-) IR e CSLL: R$ 26.000\n*   (=) **Lucro Líquido do Exercício: R$ 50.000**\n\n**Pegadinha:** A banca utilizou o resultado final da Demonstração do Resultado do Exercício (Lucro Líquido) e o denominou incorretamente como Lucro Bruto.\n\n**Dispositivo legal**\n\n[Lei nº 6.404/1976, Art. 187, incisos II a VI](https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm)\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_116.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "0e78e5e7d867da381185080192c7532af029eb2142b98a27e4b092db325c2070"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:118",
+      "source_id": "agente_de_policia_federal:118",
+      "question_type": "true_false",
+      "statement_markdown": "Com base no disposto na Lei n.º 6.404/1976 e suas alterações e na Norma Brasileira de Contabilidade – NBC TSP Estrutura Conceitual/2016, julgue os itens subsecutivos.\n\nA lei das sociedades por ações aplica-se a todas as companhias ou sociedades anônimas, independentemente de suas ações serem, ou não, comercializadas em bolsa de valores.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 118; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "0eea2c18109934d3e688f3d3ec4b3c299e806b00b6b94857ce826ca3f9d6b7dd",
+        "original_numeric_id": 118,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. A Lei das Sociedades por Ações (Lei nº 6.404/1976) aplica-se de forma geral a todas as companhias ou sociedades anônimas.\n\nA própria legislação divide as companhias em:\n1.  **Abertas:** aquelas cujos valores mobiliários de sua emissão são admitidos à negociação no mercado de valores mobiliários (como bolsas de valores ou mercado de balcão).\n2.  **Fechadas:** aquelas que não possuem valores mobiliários negociados publicamente.\n\nAmbas as categorias estão sob a égide da referida lei, variando apenas a incidência de normas específicas adicionais para as companhias abertas, as quais também se submetem à regulação da Comissão de Valores Mobiliários (CVM).\n\n**Dispositivo legal**\n\n[Lei nº 6.404/1976, Art. 1º e Art. 4º](https://www.planalto.gov.br/ccivil_03/leis/l6404compilada.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "5a6587d4a4ac802e2f36551f5e8f55c36fd05eaf414394e86a31513b0db073f0"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:119",
+      "source_id": "agente_de_policia_federal:119",
+      "question_type": "true_false",
+      "statement_markdown": "Com base no disposto na Lei n.º 6.404/1976 e suas alterações e na Norma Brasileira de Contabilidade – NBC TSP Estrutura Conceitual/2016, julgue os itens subsecutivos.\n\nDe acordo com a Norma Brasileira de Contabilidade, para que uma informação contábil seja capaz de fazer a diferença nas decisões, ela deve ter valor preditivo, confirmatório ou ambos.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 119; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "07df3a57fcf20807cd07ee9879a3f1c24c0dde289b4351511c201647a1fdd499",
+        "original_numeric_id": 119,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nDe acordo com a **NBC TG Estrutura Conceitual** (convergente ao CPC 00 R2), no Capítulo 2 (Características Qualitativas da Informação Contábil Útil):\n\n*\"2.7 A informação contábil-financeira é capaz de fazer a diferença nas decisões se tiver **valor preditivo**, **valor confirmatório** ou **ambos**.*  \n*2.8 A informação contábil-financeira tem valor preditivo se puder ser utilizada como dado de entrada em processos empregados pelos usuários para prever resultados futuros.*  \n*2.9 A informação contábil-financeira tem valor confirmatório se fornecer feedback (confirmar ou alterar) sobre avaliações anteriores.\"*\n\nA assertiva transcreve com exatidão a definição normativa da característica de relevância.",
+        "source_reference": null
+      },
+      "source_content_hash": "985a63226719b092e64a207d607b947bd61b503fbf773e4181fe98cca894d6fd"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:120",
+      "source_id": "agente_de_policia_federal:120",
+      "question_type": "true_false",
+      "statement_markdown": "Com base no disposto na Lei n.º 6.404/1976 e suas alterações e na Norma Brasileira de Contabilidade – NBC TSP Estrutura Conceitual/2016, julgue os itens subsecutivos.\n\nRelevância, materialidade e fidedignidade são as características qualitativas fundamentais da informação contábil útil.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 120; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ativo e Critérios de Avaliação do Ativo",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Geral",
+        "source_content_hash": "b49b65df04b0e64c034657aec53c34b2517e817e6e7d97f03861cde65fa27d76",
+        "original_numeric_id": 120,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ativo-e-criterios-de-avaliacao-do-ativo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nDe acordo com a NBC TG Estrutura Conceitual para Relatório Financeiro (CPC 00 R2 e NBC TSP):\n\nAs características qualitativas **fundamentais** da informação contábil útil são apenas **duas**:\n1. **Relevância**;\n2. **Representação Fidedigna** (ou fidedignidade).\n\nA **materialidade** é tratada pela norma como um *aspecto específico da relevância* com base na natureza e magnitude das informações da entidade, e não como uma terceira característica qualitativa fundamental autônoma. Ademais, as características de melhoria são: comparabilidade, verificabilidade, tempestividade e compreensibilidade.",
+        "source_reference": null
+      },
+      "source_content_hash": "514f8eb1adc8311b8b623d03422015b9a8f5a306134a0bf66f3b2580de7561ad"
+    }
+  ]
+}

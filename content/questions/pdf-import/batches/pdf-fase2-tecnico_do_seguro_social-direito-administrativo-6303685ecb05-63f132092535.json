@@ -1,0 +1,230 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-tecnico_do_seguro_social-direito-administrativo-6303685ecb05-63f132092535",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "6303685ecb05a17026689ea714434eb749b136afd9838f8455367497b631cc0f",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "4eaf0e6930a8700363f76961716af089a527cb11e4282c667f45b06f21532285",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "63f1320925357955cf054613d81043502b2ccb0e14b727cd240f5c0248bc8d83",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:031",
+      "source_id": "tecnico_do_seguro_social:31",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da administração pública, do direito administrativo e da organização administrativa da União, julgue os itens a seguir.\n\nA transmissão de competência de uma pessoa jurídica de direito público para outra configura a descontração.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 31; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "9f81929a30349ba543d10fe7627cd2ee658becedbd2f863e4d89e328bc9925ee",
+        "original_numeric_id": 31,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto por apresentar dois erros conceituais e terminológicos.\n\nPrimeiramente, a transmissão de competência de uma pessoa jurídica de direito público para outra configura o fenômeno da **descentralização** administrativa (e não desconcentração ou o termo inexistente trazido na questão). Na descentralização, há a criação de uma nova pessoa jurídica (ou delegação a uma já existente) para a execução de determinado serviço, sem relação de subordinação hierárquica.\n\nEm segundo lugar, o termo **\"descontração\"** utilizado no enunciado não possui qualquer significado ou validade jurídica no âmbito do Direito Administrativo, tratando-se de uma evidente pegadinha terminológica da banca examinadora.\n\nPara fins de distinção:\n* **Descentralização:** Distribuição de competências entre pessoas jurídicas distintas (há a criação de entidades da Administração Indireta ou delegação a particulares).\n* **Desconcentração:** Distribuição interna de competências dentro de uma mesma pessoa jurídica, o que resulta na criação de órgãos públicos (há relação de hierarquia e subordinação).\n\n### Dispositivo legal\n* **Referência:** Decreto-Lei nº 200/1967, Art. 6º, III.\n* **URL oficial:** [Planalto](https://www.planalto.gov.br/ccivil_03/decreto-lei/del0200.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "415b1d262f6345db9019486139ab3c5346f3219662dc0690a4049fde6093d3fd"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:034",
+      "source_id": "tecnico_do_seguro_social:34",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos agentes públicos, do regime jurídico único dos servidores públicos federais, dos poderes administrativos e do ato administrativo, julgue os itens seguintes.\n\nOs jurados, embora colaborem temporariamente com a administração pública, não podem ser considerados agentes públicos.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 34; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "b00f0e428643e8789b4ea8fb8dd116238a79c30728f46239dcfbcc9324bf821e",
+        "original_numeric_id": 34,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto.\n\nNo Direito Administrativo, o conceito de **agente público** é extremamente amplo e abrange qualquer pessoa física que preste serviços ao Estado ou exerça uma função pública, independentemente do tipo de vínculo, de haver ou não remuneração, ou de a atividade ser permanente ou temporária.\n\nOs **jurados** (assim como os mesários eleitorais e os conselheiros tutelares) enquadram-se na categoria de **agentes honoríficos**, que são particulares convocados ou requisitados para colaborar temporariamente com o Poder Público em razão de sua condição cívica ou de sua honorabilidade.\n\nEmbora não possuam vínculo empregatício ou profissional permanente com a Administração Pública e, em regra, não recebam remuneração, eles exercem uma função pública relevante e, portanto, **são considerados agentes públicos** para todos os efeitos legais (inclusive penais e de improbidade administrativa) durante o período de sua atuação.\n\nO art. 2º da Lei de Improbidade Administrativa (Lei nº 8.429/1992) corrobora essa amplitude ao definir agente público como todo aquele que exerce, ainda que transitoriamente ou sem remuneração, por eleição, nomeação, designação, contratação ou qualquer outra forma de investidura ou vínculo, mandato, cargo, emprego ou função nas entidades públicas.\n\n### Dispositivo legal\n* **Referência:** Lei nº 8.429/1992, Art. 2º.\n* **URL oficial:** [Planalto](https://www.planalto.gov.br/ccivil_03/leis/l8429.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "3fbc1afb69211011e654318a09276735353f75e2729542c63adb5626cf578c4b"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:037",
+      "source_id": "tecnico_do_seguro_social:37",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos serviços públicos, do controle e responsabilização da administração, da improbidade administrativa e do processo administrativo, julgue os próximos itens.\n\nA delegação de competência de um titular a outro depende da existência de subordinação hierárquica.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 37; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Atos Administrativos",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "c8894dafee4ec95de8b2309508cbd7dec95656a80a5c0a0f09eea35daa5ef3be",
+        "original_numeric_id": 37,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. No âmbito do processo administrativo federal, a delegação de competência é um instrumento de descentralização de atribuições que não pressupõe, obrigatoriamente, a existência de subordinação hierárquica entre o delegante e o delegado. Conforme a Lei nº 9.784/1999, um órgão administrativo e seu titular podem delegar parte de sua competência a outros órgãos ou titulares \"ainda que estes não lhe sejam hierarquicamente subordinados\", desde que não haja impedimento legal e seja conveniente por razões técnicas, sociais, econômicas, jurídicas ou territoriais. A delegação pode, portanto, ocorrer tanto de forma vertical (com hierarquia) quanto horizontal (sem hierarquia).\n\n### Dispositivo legal\n* **Lei nº 9.784/1999, Art. 12**\n* URL oficial: [Planalto](https://www.planalto.gov.br/ccivil_03/leis/l9784.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "ecb3d6d3412d528df9185510bb6986b9d3784e84293d16d54a1cc93135daed7f"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:038",
+      "source_id": "tecnico_do_seguro_social:38",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos serviços públicos, do controle e responsabilização da administração, da improbidade administrativa e do processo administrativo, julgue os próximos itens.\n\nA concessão administrativa se dá quando seu objeto é a prestação de serviço do qual a administração pública seja a usuária, ainda que indireta.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 38; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Serviços Públicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "2103c14ddbd5f49b46764c52549f54b704ebea4c21063c9dbec97887b71cb7ab",
+        "original_numeric_id": 38,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "criterio-de-servico-publico-doutrinario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. De acordo com a Lei nº 11.079/2004, que regula as parcerias público-privadas (PPPs), a concessão administrativa é caracterizada como o contrato de prestação de serviços em que a Administração Pública figura como a usuária direta ou indireta das utilidades prestadas, ainda que o contrato envolva a execução de obra ou o fornecimento e instalação de bens. Essa modalidade se diferencia da concessão patrocinada, na qual há a prestação de serviços públicos ou obras públicas com cobrança de tarifa dos usuários associada a uma contraprestação pecuniária do parceiro público.\n\n### Dispositivo legal\n* **Lei nº 11.079/2004, Art. 2º, § 2º**\n* URL oficial: [Planalto](https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2004/lei/l11079.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "9cadb0cd011c279706e090f66bb5ef38e3eae81e6f94c17b17fcf6ebfa22710c"
+    }
+  ]
+}

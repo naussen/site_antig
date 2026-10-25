@@ -1,0 +1,290 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-prova_i09_tipo_001-direito-civil-b5630bbdb295-e1e386985d53",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "b5630bbdb295671178518a6a56da47afa49d6b19ff3b0347fbe6974f5ac03394",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "8a1d40d330f3a1f0c9c5c49977037cbc600422d057f7b497ba1fcf422d8196bb",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "e1e386985d53031a129994be2c8bc6b255b4049aa593b2d905adf3b6715d9cdb",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-civil",
+    "name": "Direito Civil"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:043",
+      "source_id": "prova_i09_tipo_001:43",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com o Código Civil brasileiro, os partidos políticos, as organizações religiosas e as associações são pessoas jurídicas de direito",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 43; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "público.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "privado.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "público, privado e privado, respectivamente.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "público, público e privado, respectivamente.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "privado, privado e público, respectivamente.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Das Pessoas Jurídicas",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Civil",
+        "source_content_hash": "ed584ec5af1e614331d128b4453c8e5d0aa8f083440f82a2bb5b16767d77c4c0",
+        "original_numeric_id": 43,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "comeco-da-personalidade-juridica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A classificação das pessoas jurídicas no ordenamento civil brasileiro divide-as entre pessoas jurídicas de direito público (interno ou externo) e de direito privado.\n\nDe acordo com a legislação civil, os partidos políticos, as organizações religiosas e as associações constam expressamente no rol das pessoas jurídicas de direito privado.\n\n**Análise das alternativas incorretas:**\n* **A, C, D e E:** Estão incorretas por classificarem, total ou parcialmente, as associações, organizações religiosas ou partidos políticos como pessoas jurídicas de direito público. As pessoas jurídicas de direito público interno estão elencadas em rol distinto (como a União, Estados, Municípios, autarquias e fundações públicas).\n\n**Detalhe de atualização legislativa:** Embora a questão continue plenamente válida e atualizada quanto ao gabarito, vale ressaltar que o rol do artigo 44 do Código Civil sofreu alterações recentes: a Empresa Individual de Responsabilidade Limitada (EIRELI) foi revogada pela Lei nº 14.382/2022, e a Lei nº 15.068/2024 incluiu os \"empreendimentos de economia solidária\" (inciso VII) como nova espécie de pessoa jurídica de direito privado.\n\n### Dispositivo legal\nArtigo 44, incisos I, IV e V, da Lei nº 10.406/2002 (Código Civil).\nURL oficial: https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "4051863ac59a6924f0775009c81c6f77b8f58ac13b431f05d5b540022f9913c2"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:046",
+      "source_id": "prova_i09_tipo_001:46",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Uma nota de R$ 100,00 e um saco de arroz são bens",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 46; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "infungíveis e consumíveis.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "móveis e infungíveis.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "móveis e fungíveis.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "móveis e indivisíveis.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "imóveis e consumíveis.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Dos Bens",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Civil",
+        "source_content_hash": "6bac91d44540acbe2ea8bbf47490ddbf4957c96d18efca40b73585424af80271",
+        "original_numeric_id": 46,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-doutrinaria",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A classificação dos bens no direito civil baseia-se em suas características físicas e jurídicas:\n\n1. **Bens móveis:** São aqueles que podem ser transportados de um lugar para outro, por força própria ou alheia, sem que ocorra alteração em sua substância ou destinação econômico-social. Tanto a cédula de dinheiro quanto o saco de arroz enquadram-se nessa definição.\n2. **Bens fungíveis:** São os bens móveis que podem ser substituídos por outros da mesma espécie, qualidade e quantidade. Uma nota de R$ 100,00 pode ser substituída por outra de igual valor, assim como um saco de arroz pode ser trocado por outro equivalente.\n\n**Análise das alternativas incorretas:**\n* **A e B:** Incorretas ao classificarem os bens como infungíveis, uma vez que ambos admitem substituição por equivalentes de mesma espécie, qualidade e quantidade.\n* **D:** Incorreta ao classificar os bens como indivisíveis. Embora a cédula de dinheiro possua indivisibilidade física para manter seu valor nominal unitário, o saco de arroz é perfeitamente divisível. Ademais, a classificação principal e mais abrangente que define ambos conjuntamente é a de bens móveis e fungíveis.\n* **E:** Incorreta ao classificar os bens como imóveis, visto que ambos podem ser deslocados sem perda de substância.\n\n### Dispositivo legal\nArtigos 82 e 85 da Lei nº 10.406/2002 (Código Civil).\nURL oficial: https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "d42be0e699f5018a3b7c2a4b2dec4e92771963595dfb48b598cf0b350c2f3239"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:048",
+      "source_id": "prova_i09_tipo_001:48",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Tratando-se de coisa móvel da qual o adquirente já estava na posse, ele, de regra, decai do direito de obter a redibição ou abatimento no preço no prazo de",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 48; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "quarenta e cinco dias contados da alienação.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "trinta dias contados da alienação.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "quinze dias contados da alienação.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "sessenta dias contados da alienação.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "noventa dias contados da alienação.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Dos Bens",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Civil",
+        "source_content_hash": "19199b513d07e6be72e07a2ee0c4aab523d01a756d971440e5936bce99d957b7",
+        "original_numeric_id": 48,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_prova_i09_tipo_001_048.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-doutrinaria",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige o conhecimento do prazo decadencial para a propositura de ação edilícia (redibitória ou estimatória) envolvendo vício oculto em coisa móvel quando o adquirente já se encontrava na posse do bem. O caput do artigo 445 do Código Civil estabelece que o adquirente decai do direito de obter a redibição ou o abatimento no preço no prazo de 30 dias, se a coisa for móvel, contados da entrega efetiva. Contudo, a parte final do mesmo dispositivo traz uma regra especial: se o adquirente já estava na posse da coisa, o prazo conta-se a partir da alienação e é reduzido à metade. Portanto, aplicando-se a redução de metade sobre o prazo padrão de 30 dias, obtém-se o prazo de 15 dias contados da alienação.\n\nAnálise das alternativas incorretas:\n- **A, B, D e E:** Trazem prazos incorretos (45, 30, 60 e 90 dias, respectivamente), pois desconsideram a redução legal pela metade do prazo de 30 dias aplicável aos bens móveis sob posse prévia do adquirente.\n\n**Dispositivo legal**\n\n[Artigo 445, caput, da Lei nº 10.406/2002 (Código Civil)](https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm)\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_prova_i09_tipo_001_048.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "22650e50c5b7581a6bfe8b3240282cc67c5464cfd67125468236faaaaec141ce"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:050",
+      "source_id": "prova_i09_tipo_001:50",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No contrato aleatório, por ser objeto dele coisas futuras, tomando o adquirente a si o risco de virem a existir em qualquer quantidade, o alienante que não tiver concorrido culposamente",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 50; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "não terá direito a qualquer valor porque o contrato será considerado inexistente, sendo as partes obrigadas a ressarcir perdas e danos.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "terá direito ao preço proporcional à quantidade que a coisa venha a existir.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "não terá direito a qualquer valor, estando o contrato desfeito em razão da divergência na quantidade.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "terá direito ao preço proporcional à quantidade que a coisa venha a existir acrescido de 30% deste valor.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "terá direito a todo o preço, ainda que a coisa venha a existir em quantidade inferior à esperada.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Da Responsabilidade Civil",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Civil",
+        "source_content_hash": "f4b3c000f23b19a53bcff3dd92dfd45baa70a49bfc2fbaa6d92f1cb2ea361829",
+        "original_numeric_id": 50,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "da-responsabilidade-civil",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão trata dos contratos aleatórios que envolvem coisas futuras, especificamente a modalidade em que o adquirente assume o risco de as coisas virem a existir em qualquer quantidade (conhecida doutrinariamente como *emptio rei speratae* com assunção de risco sobre a quantidade). Conforme o artigo 459 do Código Civil, se o adquirente tomar para si o risco de as coisas futuras virem a existir em qualquer quantidade, o alienante terá direito a todo o preço pactuado, desde que não tenha concorrido com culpa, ainda que a coisa venha a existir em quantidade inferior à esperada.\n\nAnálise das alternativas incorretas:\n- **A e C:** Estão incorretas porque negam o direito do alienante ao recebimento do preço ou consideram o contrato inexistente/desfeito, o que desconsidera a natureza aleatória da avença e a assunção do risco pelo adquirente.\n- **B e D:** Estão incorretas ao prever o pagamento proporcional à quantidade existente ou ao inventar um acréscimo de 30% sobre o valor, regras que não encontram respaldo no regime jurídico dos contratos aleatórios previsto no Código Civil.\n\n**Dispositivo legal**\n\n[Artigo 459 da Lei nº 10.406/2002 (Código Civil)](https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "aca219de95323fd5e3c9fbf1a5dc3a977e8237cbfc3e7cb5999bcf03a55fb2d1"
+    }
+  ]
+}

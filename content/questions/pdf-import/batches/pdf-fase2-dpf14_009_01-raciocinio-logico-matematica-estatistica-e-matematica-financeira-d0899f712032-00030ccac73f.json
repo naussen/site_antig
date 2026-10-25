@@ -1,0 +1,77 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-dpf14_009_01-raciocinio-logico-matematica-estatistica-e-matematica-financeira-d0899f712032-00030ccac73f",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "d0899f712032d803deb1ff38fb2396f1dd37d1ffb65c7f61503d0bd058c669c4",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "9a60cb42fbada4944e3fe1d0564604111314b54b0d72e1bd9ebc2e3a33818aef",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "00030ccac73f887542941772765a5d775ddcc14e24cb0c7ad88b672aa91a0c58",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:027",
+      "source_id": "dpf14_009_01:27",
+      "question_type": "true_false",
+      "statement_markdown": "A partir de uma amostra de 1.200 candidatos a cargos em determinado concurso, verificou-se que 600 deles se inscreveram para o cargo A, 400 se inscreveram para o cargo B e 400, para cargos distintos de A e de B. Alguns que se inscreveram para o cargo A também se inscreveram para o cargo B.\nA respeito dessa situação hipotética, julgue os itens subsecutivos.\n\nMenos de 180 candidatos se inscreveram no concurso para os cargos A e B.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 27; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico",
+        "source_content_hash": "e28aa47a2e3dfa2e61a6037e086065efdabd407f4249ee73dabccabd8553bff8",
+        "original_numeric_id": 27,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_dpf14_009_01_027.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para resolver a questão, utiliza-se a relação de união entre dois conjuntos:\n\n1. O total de candidatos na amostra é de $1.200$.\n2. Como $400$ candidatos se inscreveram em cargos distintos de A e B, o total de candidatos que se inscreveram em pelo menos um dos dois cargos (União de A e B) é:\n   $$1.200 - 400 = 800$$\n3. Aplicando a fórmula da união de dois conjuntos:\n   $$n(A \\cup B) = n(A) + n(B) - n(A \\cap B)$$\n   $$800 = 600 + 400 - n(A \\cap B)$$\n   $$n(A \\cap B) = 1.000 - 800 = 200$$\n\nPortanto, exatamente $200$ candidatos se inscreveram para ambos os cargos (A e B). Como $200$ é maior do que $180$, o item está incorreto.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_dpf14_009_01_027.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "785b4dd61c94c14d8e60e4351dbaece65e8cd5b538054248b3d9f3c0fea6f9ea"
+    }
+  ]
+}

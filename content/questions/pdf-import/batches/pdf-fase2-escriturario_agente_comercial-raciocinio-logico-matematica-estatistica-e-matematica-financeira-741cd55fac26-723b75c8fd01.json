@@ -1,0 +1,224 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-escriturario_agente_comercial-raciocinio-logico-matematica-estatistica-e-matematica-financeira-741cd55fac26-723b75c8fd01",
+  "source": {
+    "file_name": "escriturario_agente_comercial_ATUALIZADO.json",
+    "sha256": "741cd55fac263d8edfe29869bc66425509b93453fb35dfdbbecc4deea8b18568",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "escriturario_agente_comercial.json",
+      "original_source_sha256": "712ee07d18b6c6f75b8792c6bf5ca6ea068b2c5f60c13f6565f4cab1c39926d7",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "723b75c8fd010f8abc009ade547f4ac873acafa4777d72ac1b4cad19afe2e137",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:027",
+      "source_id": "escriturario_agente_comercial:27",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um banco oferece para um cliente um investimento que lhe proporcionará uma taxa de juros de 1% ao mês, no regime de juros compostos. Esse mesmo banco também disponibiliza, para o mesmo cliente, uma linha de crédito de fácil acesso chamada cheque especial, cobrando uma taxa de juros de 4% ao mês, no regime de juros compostos.\n\nPara esse cliente, a diferença entre a taxa anual da operação financeira disponível no cheque especial e a taxa anual da operação financeira disponível no investimento oferecido é\n\nDado:\n$1,01^{12} = 1,1268$;\n$1,04^{12} = 1,6010$",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 27; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "12,68%",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "36,00%",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "47,42%",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "48,68%",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "60,10%",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Matemática Financeira",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática Financeira",
+        "source_content_hash": "ec09849948409a192d7b97f6fd54da80a0b6fdb89bd17bc7e2876a5f82757e06",
+        "original_numeric_id": 27,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_escriturario_agente_comercial_027.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica-financeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para resolver a questão, é necessário converter as taxas mensais em taxas anuais equivalentes sob o regime de juros compostos e, em seguida, calcular a diferença entre elas.\n\n**1. Taxa anual equivalente do investimento (1% ao mês):**\n$$(1 + 0,01)^{12} - 1 = 1,01^{12} - 1$$\nUtilizando o dado fornecido ($1,01^{12} = 1,1268$):\n$$1,1268 - 1 = 0,1268 = 12,68\\%\\text{ ao ano}$$\n\n**2. Taxa anual equivalente do cheque especial (4% ao mês):**\n$$(1 + 0,04)^{12} - 1 = 1,04^{12} - 1$$\nUtilizando o dado fornecido ($1,04^{12} = 1,6010$):\n$$1,6010 - 1 = 0,6010 = 60,10\\%\\text{ ao ano}$$\n\n**3. Diferença entre as taxas anuais:**\n$$\\text{Diferença} = 60,10\\% - 12,68\\% = 47,42\\%$$\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_escriturario_agente_comercial_027.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "72f61d815a37c0d38de4af2ceb6aff9673d565a29d99083e4dafa67d0281c472"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:028",
+      "source_id": "escriturario_agente_comercial:28",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O capital de um cliente do segmento ultra-especial ficou aplicado durante 50 dias a uma taxa de juros simples de 1,5% ao mês. Ao final desse prazo, o cliente resgatou tudo e pagou R$ 4.500,00, referentes a 22,5% de imposto de renda sobre os juros proporcionados pelo investimento.\n\nConsiderando-se o mês com 30 dias, o valor aplicado nessa operação, em R$, foi",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 28; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "450.000,00",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "700.000,00",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "750.000,00",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "800.000,00",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "950.000,00",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Matemática Financeira",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática Financeira",
+        "source_content_hash": "95c3b6739cde3b1004377d090b2d69dc26e1fb03e95064eb0ad10cc75bfc1497",
+        "original_numeric_id": 28,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_escriturario_agente_comercial_028.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica-financeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A resolução do problema exige determinar primeiramente o valor total dos juros gerados pela aplicação e, posteriormente, calcular o capital inicial utilizando a fórmula de juros simples.\n\n**1. Cálculo dos juros gerados (J):**\nO imposto de renda pago (R$ 4.500,00) corresponde a 22,5% dos juros obtidos. Assim:\n$$0,225 \\times J = 4.500 \\implies J = \\frac{4.500}{0,225} = 20.000,00$$\n\n**2. Ajuste da taxa de juros simples:**\nA taxa é de 1,5% ao mês. Considerando o mês comercial de 30 dias, a taxa diária equivalente em juros simples é:\n$$i_{\\text{diária}} = \\frac{1,5\\%}{30} = 0,05\\%\\text{ ao dia}$$\nPara o período de 50 dias, a taxa acumulada é:\n$$i_{\\text{acumulada}} = 50 \\times 0,05\\% = 2,5\\% = 0,025$$\n\n**3. Cálculo do capital aplicado (C):**\nUtilizando a fórmula dos juros simples ($J = C \\times i$):\n$$20.000 = C \\times 0,025 \\implies C = \\frac{20.000}{0,025} = 800.000,00$$\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_escriturario_agente_comercial_028.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "eff365794b37b2f58d9d1b3581106cca354664868ce795c67b79f70ad07c9453"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:030",
+      "source_id": "escriturario_agente_comercial:30",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Uma empresa tomou um empréstimo de R$ 50.000,00 em janeiro de 2022, a uma taxa de juros compostos de 5% ao mês. Para amortizar parte da dívida, a empresa pagou R$ 30.000,00 em março de 2022, e R$ 20.000,00 em abril de 2022.\n\nNo que se refere a esse empréstimo, o valor, em R$, do saldo devedor dessa empresa, em maio de 2022, era, aproximadamente,",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 30; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "3.625,00",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "3.806,00",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "6.381,00",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "6.700,00",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "7.201,00",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Matemática Financeira",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática Financeira",
+        "source_content_hash": "4b81af112fe4012180c7bcf1da3f901806648ae3426a421777ea49233f81d4ed",
+        "original_numeric_id": 30,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_escriturario_agente_comercial_030.png",
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica-financeira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A evolução do saldo devedor deve ser calculada mês a mês, aplicando-se a taxa de juros de 5% sobre o saldo devedor do período anterior e subtraindo os pagamentos efetuados nos respectivos meses.\n\n* **Janeiro de 2022:** Saldo devedor inicial de R$ 50.000,00.\n* **Fevereiro de 2022:** Incidência de 5% de juros.\n  $$\\text{Saldo} = 50.000,00 \\times 1,05 = 52.500,00$$\n* **Março de 2022:** Incidência de 5% de juros e amortização de R$ 30.000,00.\n  $$\\text{Saldo antes do pagamento} = 52.500,00 \\times 1,05 = 55.125,00$$\n  $$\\text{Saldo após pagamento} = 55.125,00 - 30.000,00 = 25.125,00$$\n* **Abril de 2022:** Incidência de 5% de juros e amortização de R$ 20.000,00.\n  $$\\text{Saldo antes do pagamento} = 25.125,00 \\times 1,05 = 26.381,25$$\n  $$\\text{Saldo após pagamento} = 26.381,25 - 20.000,00 = 6.381,25$$\n* **Maio de 2022:** Incidência de 5% de juros sobre o saldo remanescente.\n  $$\\text{Saldo final} = 6.381,25 \\times 1,05 = 6.700,31$$\n\nO saldo devedor em maio de 2022 era de, aproximadamente, **R$ 6.700,00**.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_escriturario_agente_comercial_030.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "234db65aba364fdf5819873666404da2b89f3e9ebcd599d99229ff8d436efcd6"
+    }
+  ]
+}

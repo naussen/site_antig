@@ -1,0 +1,310 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_conhec_basicos_tec_federal_control_exter_tec_adm-atualidades-21010c3270a9-cbbfd3edb9fb",
+  "source": {
+    "file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "21010c3270a94d5246d6af08096f1a65be212e74fd70cd018225e31bd255bee9",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "940eab3df891c952570d89153f116f9db2f9f9a6d1f207e3196c3bd34a4d15cf",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "cbbfd3edb9fb9cb56c44e81046fdbb7845d97ef4d853df6ab99c15addb1f4891",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "atualidades",
+    "name": "Atualidades"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:043",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:43",
+      "question_type": "true_false",
+      "statement_markdown": "Segundo o economista francês Thomas Piketty, autor do best-seller O Capital no Século XXI, “A combinação de inflação mínima e grandes superávits primários — ou seja, de arrecadação de impostos em valor superior ao dos gastos públicos — durante décadas pode funcionar, mas leva um longo tempo. Essa estratégia não foi adotada pela Alemanha e pela França — felizmente — após a Segunda Guerra Mundial, quando tinham uma dívida pública maior do que a atual dívida da Grécia. Recorreu-se, nesses casos, à inflação e a medidas excepcionais, mas também se recorreu à reestruturação da dívida, e toda a dívida da Alemanha foi anulada em 1953. É incrível que hoje digam à Espanha e à Grécia que a única solução é devolver até o último euro, quando se sabe que isso não vai funcionar”.\n\nInternet: <exame.abril.com.br> (com adaptações).\n\nTendo o texto acima como referência inicial, julgue os itens a seguir.\n\nEste ano, o governo grego exigiu da Alemanha o pagamento de 279 bilhões de euros como reparação pela ocupação nazista da Grécia durante a Segunda Guerra Mundial. No atual contexto de crise econômica, sendo a Alemanha uma das principais credoras da Grécia e país-sede do Banco Central Europeu, tal exigência se coloca como uma arma retórica frente à opinião pública, com a intenção de forçar uma situação na qual moralmente ninguém possa exigir do governo grego o pagamento de suas dívidas, já que ninguém espera que tal valor seja de fato repassado à Grécia.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 43; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Mercado Financeiro, Tecnologia e Inovação",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "210ebad46e160ef0f83a5f7703947a47d88b5d1f7b6d22b8c388be721adff884",
+        "original_numeric_id": 43,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnologia-inovacao-e-sociedade-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Em abril de 2015, no auge das discussões sobre a crise da dívida pública grega e as medidas de austeridade fiscal exigidas pelos credores internacionais, o governo da Grécia apresentou um relatório oficial estimando em 278,7 bilhões de euros (aproximadamente 279 bilhões) o valor devido pela Alemanha como reparação pelos danos materiais, crimes e empréstimos forçados ocorridos durante a ocupação nazista na Segunda Guerra Mundial.\n\nA Alemanha, que é a maior economia da Zona do Euro, uma das principais credoras da Grécia e país-sede do Banco Central Europeu (sediado em Frankfurt), rejeitou a cobrança sob o argumento de que as questões de reparação de guerra já haviam sido resolvidas juridicamente e politicamente em acordos anteriores (como o acordo de 1960 e o Tratado Dois Mais Quatro de 1990).\n\nNo cenário geopolítico e econômico da época, a cobrança formalizada pela Grécia foi amplamente analisada como uma estratégia retórica e política direcionada à opinião pública. O objetivo era contrapor a pressão moral exercida pelos credores europeus (liderados pela Alemanha) sobre o governo grego para o pagamento de suas dívidas, criando um contraponto ético e histórico, visto que a viabilidade prática do recebimento integral desse montante era considerada nula.",
+        "source_reference": null
+      },
+      "source_content_hash": "2538cbdbf72845ea84f978d6561da3474a2418d2635cf9df9fb38b6afc99d5ca"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:044",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:44",
+      "question_type": "true_false",
+      "statement_markdown": "Segundo o economista francês Thomas Piketty, autor do best-seller O Capital no Século XXI, “A combinação de inflação mínima e grandes superávits primários — ou seja, de arrecadação de impostos em valor superior ao dos gastos públicos — durante décadas pode funcionar, mas leva um longo tempo. Essa estratégia não foi adotada pela Alemanha e pela França — felizmente — após a Segunda Guerra Mundial, quando tinham uma dívida pública maior do que a atual dívida da Grécia. Recorreu-se, nesses casos, à inflação e a medidas excepcionais, mas também se recorreu à reestruturação da dívida, e toda a dívida da Alemanha foi anulada em 1953. É incrível que hoje digam à Espanha e à Grécia que a única solução é devolver até o último euro, quando se sabe que isso não vai funcionar”.\n\nInternet: <exame.abril.com.br> (com adaptações).\n\nTendo o texto acima como referência inicial, julgue os itens a seguir.\n\nEmbora o resultado do recente referendo grego acerca do ajuste econômico tenha sido classificado por órgãos da imprensa como surpreendente, diversos países europeus experimentaram manifestações contra as medidas econômicas de austeridade nas semanas anteriores ao pleito realizado na Grécia.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 44; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "940b92f57f50d071d0dc3cbffb1f9c54194d97ddd15197254fbf059493b8a01f",
+        "original_numeric_id": 44,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O referendo grego realizado em 5 de julho de 2015 consultou a população sobre a aceitação das condições de resgate financeiro propostas pela Comissão Europeia, pelo Fundo Monetário Internacional (FMI) e pelo Banco Central Europeu (BCE). O resultado apontou a vitória expressiva do \"Não\" (com 61,3% dos votos), rejeitando as medidas de austeridade. Esse desfecho foi classificado por diversos veículos de imprensa internacionais como surpreendente, uma vez que as pesquisas de opinião prévias indicavam um cenário de empate técnico ou de leve vantagem para o \"Sim\".\n\nAlém disso, nas semanas que antecederam a votação, diversas manifestações populares de oposição às políticas de austeridade fiscal e de solidariedade ao povo grego ocorreram não apenas na Grécia, mas também em várias capitais e grandes cidades de outros países europeus (como Espanha, Itália, França, Alemanha e Reino Unido), refletindo o descontentamento social generalizado com as políticas de corte de gastos públicos na Zona do Euro.",
+        "source_reference": null
+      },
+      "source_content_hash": "ebe9cd07b9dc76b0ef8d0ff981ad1021f2dbbcae1a8611da9a65819792352db9"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:045",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:45",
+      "question_type": "true_false",
+      "statement_markdown": "Segundo o economista francês Thomas Piketty, autor do best-seller O Capital no Século XXI, “A combinação de inflação mínima e grandes superávits primários — ou seja, de arrecadação de impostos em valor superior ao dos gastos públicos — durante décadas pode funcionar, mas leva um longo tempo. Essa estratégia não foi adotada pela Alemanha e pela França — felizmente — após a Segunda Guerra Mundial, quando tinham uma dívida pública maior do que a atual dívida da Grécia. Recorreu-se, nesses casos, à inflação e a medidas excepcionais, mas também se recorreu à reestruturação da dívida, e toda a dívida da Alemanha foi anulada em 1953. É incrível que hoje digam à Espanha e à Grécia que a única solução é devolver até o último euro, quando se sabe que isso não vai funcionar”.\n\nInternet: <exame.abril.com.br> (com adaptações).\n\nTendo o texto acima como referência inicial, julgue os itens a seguir.\n\nA União Europeia exige, desde 2002, que todos os seus países-membros adotem o euro como moeda oficial, medida que visa fortalecer as relações comerciais dentro do continente e evitar que se repitam casos como o da Grécia — país que usa o dracma, a moeda mais antiga do mundo em circulação.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 45; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Mercado Financeiro, Tecnologia e Inovação",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "65b63800843dc876f6b224beebe86c03582f5763e37e7599a0e849030567a924",
+        "original_numeric_id": 45,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnologia-inovacao-e-sociedade-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto devido a múltiplos erros factuais em sua redação:\n\n1. **Adoção obrigatória do euro:** A União Europeia não exige que todos os seus países-membros adotem o euro como moeda oficial. Embora a adesão à Zona do Euro seja um objetivo de longo prazo para a maioria dos membros (condicionada ao cumprimento dos critérios de convergência de Maastricht), existem exceções legais de exclusão (*opt-out*), como a obtida pela Dinamarca. Além disso, diversos países membros (como Suécia, Polônia, Hungria e República Tcheca) continuam utilizando suas moedas nacionais por não cumprirem ou não desejarem acelerar a transição para os critérios exigidos.\n2. **Moeda da Grécia:** A Grécia adotou o euro como sua moeda oficial em 2001 (com a circulação física de cédulas e moedas iniciada em 2002). Portanto, a afirmação de que a Grécia atualmente \"usa o dracma\" está incorreta, pois a antiga moeda nacional grega foi substituída pelo euro e deixou de circular.",
+        "source_reference": null
+      },
+      "source_content_hash": "a7f98271cae20b0af39cdcb31e19349cfd9095c716109ef71a9642a78c63764d"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:047",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:47",
+      "question_type": "true_false",
+      "statement_markdown": "Sobre a importância das cortes de justiça na vida privada das pessoas comuns, julgue o item abaixo.\n\nRecentemente, a Suprema Corte dos EUA declarou inconstitucionais as leis que proibiam o casamento entre pessoas do mesmo gênero em vários estados norte-americanos. No Brasil, o casamento entre pessoas do mesmo gênero ainda não é legalmente permitido.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 47; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sociedade, Educação, Segurança e Cidadania",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "03e7b6c2c032529754d890c8054577a807588a67afbb98c0c83888d26e248963",
+        "original_numeric_id": 47,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "sociedade-seguranca-publica-e-cidadania",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque o casamento civil entre pessoas do mesmo gênero é legalmente permitido no Brasil.\n\nO Supremo Tribunal Federal (STF), no julgamento conjunto da ADI 4277 e da ADPF 132 em 2011, reconheceu a união estável homoafetiva como entidade familiar. Posteriormente, em 2013, o Conselho Nacional de Justiça (CNJ) editou a Resolução nº 175, que proíbe as autoridades competentes de recusarem a habilitação, a celebração de casamento civil ou a conversão de união estável em casamento entre pessoas do mesmo sexo. Portanto, a afirmação de que o casamento homoafetivo não é legalmente permitido no país contraria o ordenamento jurídico e a jurisprudência pátria.\n\n### Dispositivo legal\n- **Referência:** Resolução CNJ nº 175/2013, art. 1º; STF, ADI 4277 e ADPF 132.\n- **URL oficial:** https://atos.cnj.jus.br/atos/detalhar/1754",
+        "source_reference": null
+      },
+      "source_content_hash": "2cfe40773635affd115775b447e3ed84990db24d971a1af5a0f42296b256b2f1"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:048",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:48",
+      "question_type": "true_false",
+      "statement_markdown": "Um número cada vez maior de simpatizantes em todo o mundo, dispostos a praticar atos violentos, adere ao grupo terrorista autointitulado Estado Islâmico na Síria e no Iraque e luta ao lado dos extremistas. Só na Alemanha, mais de 450 pessoas teriam deixado o país com esse objetivo, conforme o presidente do Departamento Federal de Proteção da Constituição. E muitas delas retornam. De acordo com Departamento Federal de Investigações, cerca de 120 já retornaram. Essas pessoas são temidas pelas autoridades, pois os que regressam estão doutrinados e treinados em armas e explosivos. Essas notícias têm alarmado também os políticos. Por isso, o governo alemão estuda maneiras de impedir a saída de homens e mulheres dispostos a se unir a terroristas. Isso não é muito fácil, porque as leis de nacionalidades e extradição não podem simplesmente ser canceladas. Essa é uma das muitas lições da ditadura nazista.\n\nInternet: <dw.com> (com adaptações).\n\nJulgue os seguintes itens, referentes ao tema do texto acima e aos múltiplos aspectos a ele relacionados.\n\nA definição de terrorismo é bastante controversa, mas há um consenso básico: terroristas são aqueles que lutam contra o Estado e também contra um de seus elementos básicos, o povo.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 48; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "63a899cb18dcd71cc857386e3fe96c8745e69617978ddbd8ad7225d41aaa08af",
+        "original_numeric_id": 48,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque não existe consenso básico, seja no plano internacional ou na doutrina especializada, acerca da definição de terrorismo. Trata-se de um conceito amplamente debatido e controverso.\n\nAlém disso, a definição apresentada na assertiva — de que terroristas são aqueles que lutam contra o Estado e contra o povo — é incompleta e incorreta, pois desconsidera outras manifestações do fenômeno, como o terrorismo de Estado, no qual agentes do próprio aparato estatal praticam atos de violência e terror contra a sua própria população.",
+        "source_reference": null
+      },
+      "source_content_hash": "6a0340b55c7990e958c979fa3c9993e491d5661ad1bf96dc8f3c09c545d8995f"
+    }
+  ]
+}

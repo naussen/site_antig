@@ -1,0 +1,325 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_do_ministerio_publico_area_administrativa-raciocinio-logico-matematica-estatistica-e-matematica-financeira-74df7af44d59-a455a39e28a4",
+  "source": {
+    "file_name": "tecnico_do_ministerio_publico_area_administrativa_ATUALIZADO.json",
+    "sha256": "74df7af44d59dc5b630984a8e5e7fe40fed758894220a278014b288dd482883c",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_do_ministerio_publico_area_administrativa.json",
+      "original_source_sha256": "4f108d6745e5642f8962285fd7010db5f1562dfc6f07780d46a281f2e454b6aa",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "a455a39e28a457c0af7c62c42cd6d9ef3a55249b87a8ecf777b824fe4c6205fb",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:034",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:34",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Moacir possui 15.000 reais guardados e pretende utilizá-los para pagar uma parte das prestações de um terreno que comprou financiado. Cada prestação é de 700 reais. No mês de outubro de 2019, pagou a primeira prestação e fará o mesmo em cada um dos meses seguintes.\nUtilizando o dinheiro guardado, a última prestação que poderá pagar será, em 2021, no mês de:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 34; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "maio;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "junho;",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "julho;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "agosto;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "setembro.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico Matemático",
+        "source_content_hash": "dbbaab938d5f5757f00900a4760700bbc49338e6ec03592533ead916c75de74c",
+        "original_numeric_id": 34,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_034.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O problema requer a determinação do número máximo de parcelas inteiras que podem ser pagas com o montante disponível e, em seguida, a projeção cronológica dessas parcelas.\n\nDividindo o valor total de R$ 15.000,00 pelo valor de cada prestação (R$ 700,00), obtém-se 21 parcelas inteiras (com sobra de R$ 300,00, insuficiente para uma nova parcela).\n\nA contagem dos meses inicia-se em outubro de 2019 (1ª parcela).\n\nEm 2019, são pagas 3 parcelas (outubro, novembro e dezembro).\n\nEm 2020, são pagas mais 12 parcelas (de janeiro a dezembro), totalizando 15 parcelas pagas até o fim de 2020.\n\nPara completar as 21 parcelas, restam 6 parcelas a serem pagas em 2021. A 6ª parcela de 2021 corresponde ao 6º mês do ano, que é junho.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_034.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "3ca0137037af5bea847da152f47fe14583cb756da246bf324ed800e024a87684"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:036",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:36",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Valdo é estagiário em um escritório de advocacia e, na semana que vem, deverá escolher para trabalhar três dias de segunda a sábado. O escritório não permite que um estagiário trabalhe dois dias consecutivos.\nO número de possibilidades que Valdo tem para escolher seus dias de trabalho é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 36; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "2;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "3;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "4;",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "5;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "6.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico Matemático",
+        "source_content_hash": "d9e189188932405af72b401de16752e9bff043bbcf0172cbf89d33307e72c143",
+        "original_numeric_id": 36,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C** (4 possibilidades).\n\nValdo deve escolher 3 dias de trabalho entre os 6 dias disponíveis de segunda a sábado (representados pelos números {1, 2, 3, 4, 5, 6}), sem que haja dois dias consecutivos.\n\nListando as combinações possíveis que atendem a essa restrição de não adjacência:\n1. {1, 3, 5} -> Segunda, Quarta, Sexta;\n2. {1, 3, 6} -> Segunda, Quarta, Sábado;\n3. {1, 4, 6} -> Segunda, Quinta, Sábado;\n4. {2, 4, 6} -> Terça, Quinta, Sábado.\n\nExistem exatamente **4 possibilidades**.",
+        "source_reference": null
+      },
+      "source_content_hash": "cbf380bd12efa7dbbf874f6d9ce572e7334d0c8115d623262d62a7d7829f8c6d"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:038",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:38",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Chico, Serafim, Juvenal e Dirceu trabalham juntos e, em certo momento, Dirceu pergunta:\nQue dia do mês é hoje?\nAs respostas dos outros três foram:\nChico: hoje não é dia 15.\nSerafim: ontem foi dia 13.\nJuvenal: hoje é dia 15.\nSabe-se que um deles mentiu e os outros disseram a verdade.\nO dia em que Dirceu fez a pergunta foi dia:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 38; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "13;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "14;",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "15;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "16;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "17.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico Matemático",
+        "source_content_hash": "16310ee7d96850389b5055dd220d86c9d45c13668c8ac537f9bcaa446da46efb",
+        "original_numeric_id": 38,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_038.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Este é um problema clássico de lógica de mentiras e verdades. A chave para a resolução rápida é identificar a contradição entre as falas de Chico (\"hoje não é dia 15\") e Juvenal (\"hoje é dia 15\").\n\nComo as duas afirmações são mutuamente excludentes, uma delas é necessariamente verdadeira e a outra é falsa. Dado que o enunciado afirma que apenas uma pessoa mentiu, o mentiroso deve ser Chico ou Juvenal.\n\nConsequentemente, a afirmação de Serafim (\"ontem foi dia 13\") é obrigatoriamente verdadeira. Se ontem foi dia 13, hoje é dia 14.\n\nVerificando a consistência: se hoje é dia 14, Chico diz a verdade, Serafim diz a verdade e Juvenal mente, o que atende perfeitamente à condição de haver apenas um mentiroso.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_038.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "952b7a1a4c057f62542d273f961b980cb44ecc597db7830112965f333ee2ef31"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:040",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:40",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Considere a sentença: “João não tomou café e saiu de casa”.\nA negação dessa sentença é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 40; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "João tomou café e saiu de casa;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "João não tomou café e não saiu de casa;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "João tomou café e não saiu de casa;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "João não tomou café ou saiu de casa;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "João tomou café ou não saiu de casa.",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Estatística",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico Matemático",
+        "source_content_hash": "8ca9662ff91b8cb28f5545c4932788259a38141305dc2b51ed1ed56d4a6c1645",
+        "original_numeric_id": 40,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "estatistica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **E**.\n\nSejam as proposições simples:\n* $p$: \"João tomou café\"\n* $q$: \"João saiu de casa\"\n\nA proposição do enunciado é dada por: $\\neg p \\land q$ (\"João não tomou café E saiu de casa\").\n\nPelas **Leis de De Morgan**, a negação lógica de uma conjunção $\\neg(A \\land B)$ equivale a $\\neg A \\lor \\neg B$:\n$$\\neg(\\neg p \\land q) \\equiv p \\lor \\neg q$$\n\nTraduzindo para a linguagem natural: **\"João tomou café OU não saiu de casa\"**.",
+        "source_reference": null
+      },
+      "source_content_hash": "0f085a741b9eb3acb0a7c81005e1237ea6c377334ff858b849572ce9fa042a18"
+    }
+  ]
+}

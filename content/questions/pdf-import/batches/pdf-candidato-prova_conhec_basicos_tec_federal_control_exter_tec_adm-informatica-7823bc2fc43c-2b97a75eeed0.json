@@ -1,0 +1,132 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-prova_conhec_basicos_tec_federal_control_exter_tec_adm-informatica-7823bc2fc43c-2b97a75eeed0",
+  "source": {
+    "file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "7823bc2fc43c5e136ac60da722e3e299280c7835d6d476966acf08491d0bfcf7",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "cb0421eefe790fc8619534a2a1f0aa7b54af0ff8abce22779b8e91d6cb714a78",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "2b97a75eeed0e718cbb9f050e420f888470923d1e16bda96b38dff843344d081",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:035",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:35",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos sistemas operacionais Linux e Windows, do Microsoft PowerPoint 2013 e de redes de computadores, julgue os itens a seguir.\n\nMesmo que seja uma rede privada de determinado órgão ou empresa destinada a compartilhar informações confidenciais, uma intranet poderá ser acessada por um computador remoto localizado na rede mundial de computadores, a Internet.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 35; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "b70be45d0dd35d8bb7dbf6c15585958787b9cc7d77cf433338723a7f7c00aaff",
+        "original_numeric_id": 35,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "official_item_number": 35
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Embora a intranet seja uma rede privada e restrita a uma organização, ela pode ser acessada remotamente a partir da Internet por usuários autorizados. Para garantir a segurança e a confidencialidade das informações durante esse acesso externo, utilizam-se tecnologias de comunicação segura, como redes virtuais privadas (VPN - *Virtual Private Network*), que criam um canal criptografado (túnel) sobre a infraestrutura pública da Internet, ou por meio de uma extranet. Portanto, a afirmação está correta.",
+        "source_reference": null
+      },
+      "source_content_hash": "9e4a1316a719e57a64940f5b4374a5b76e0cf63a16527e8f4718874b62a55fc9"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:039",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:39",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, relativos ao gerenciamento de arquivos e pastas e à segurança da informação.\n\nUm dos procedimentos de segurança quanto à navegação na Internet é sair das páginas que exigem autenticação por meio dos botões ou links destinados para esse fim, como, por exemplo, Sair, Desconectar, Logout etc., e não simplesmente fechar o browser.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 39; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "aeb13f7f5d46244fa1768e85617768b185fe2428ae33259e12da23fef89ba765",
+        "original_numeric_id": 39,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_cb1_01.pdf",
+        "official_item_number": 39
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A recomendação de segurança apresentada está correta. Ao utilizar botões ou links específicos como \"Sair\", \"Desconectar\" ou \"Logout\", o usuário envia uma instrução direta ao servidor para que a sessão ativa seja encerrada imediatamente, invalidando os *cookies* de sessão e os tokens de autenticação.\n\nSe o usuário apenas fechar o navegador (ou a aba), a sessão pode permanecer ativa no servidor por um determinado período de tempo (*timeout*). Caso outra pessoa acesse o mesmo computador e reabra o navegador antes da expiração automática da sessão, ela poderá acessar a conta do usuário sem a necessidade de digitar a senha novamente, gerando um risco de segurança.",
+        "source_reference": null
+      },
+      "source_content_hash": "8366cc3716f4f57af9b600710cfe319e43851697611321bbbf42de448ea017f5"
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_administrativo-arquivologia-9275da7d075c-cba7fd1078da",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "9275da7d075c14f6aecd067cee72adc350eb98cd976b0bad8b9bd014f4eb1edf",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "5da32b0a57792e090ef9d4c38cee7bda12a08609929c945e59e21312dccdc01a",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "cba7fd1078daeaeac07c4dcd48b28200281992d5156037abe7fc6cf7e33b881c",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "arquivologia",
+    "name": "Arquivologia"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:076",
+      "source_id": "agente_administrativo:76",
+      "question_type": "true_false",
+      "statement_markdown": "À luz da legislação que dispõe sobre a política nacional de arquivos e dos preceitos arquivísticos, julgue os próximos itens.\n\nPreservação, conservação e restauração são medidas que devem ser aplicadas a todos os acervos, em caso de necessidade; como exemplo de restauração tem-se a ação de reforçar com papel japonês e cola orgânica um pedaço rasgado de um documento em papel.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 76; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Acondicionamento e Armazenamento",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "1aa7c7b5fdc35ca39cfb31f0e89e5209ea02d93c1fc045ba9d13564d2e885fd8",
+        "original_numeric_id": 76,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "acondicionamento-e-armazenamento",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. No âmbito da conservação de documentos, as ações dividem-se em:\n\n* **Preservação:** medidas globais de prevenção contra a deterioração (controle ambiental, segurança, etc.).\n* **Conservação:** intervenções físicas diretas ou indiretas para estabilizar o estado físico do documento.\n* **Restauração:** intervenções diretas que visam restabelecer a integridade física e a legibilidade do documento danificado.\n\nO reparo de rasgos utilizando papel japonês (de fibras longas e neutras) e adesivo orgânico reversível (como a cola de amido de trigo ou metilcelulose) é um exemplo clássico de procedimento de restauração de suporte em papel, pois respeita os critérios de reversibilidade e compatibilidade de materiais.",
+        "source_reference": null
+      },
+      "source_content_hash": "a00b3ff2cce4840159893ff9573e0dcc99fa720a693c52ec27fef910da96a40d"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:077",
+      "source_id": "agente_administrativo:77",
+      "question_type": "true_false",
+      "statement_markdown": "À luz da legislação que dispõe sobre a política nacional de arquivos e dos preceitos arquivísticos, julgue os próximos itens.\n\nO documento de arquivo difere de outros documentos devido ao seu suporte e formato, uma vez que são considerados arquivos apenas os textuais; documentos de outros suportes, formatos e gêneros são destinados a centros de documentação, bibliotecas e museus.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 77; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Classificação dos Documentos de Arquivo",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "e3eb74a2721773b63c74add6e0b3f27b3b2d9f692672bb9228468aabc6e905b2",
+        "original_numeric_id": 77,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-dos-documentos-de-arquivo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está errada. Os documentos de arquivo não se caracterizam pelo suporte (papel, fita magnética, meio digital) ou pelo formato, tampouco se restringem ao gênero textual. Um documento de arquivo pode ser iconográfico, cartográfico, audiovisual, sonoro ou informático, desde que tenha sido produzido ou recebido por uma pessoa física ou jurídica no exercício de suas funções e atividades, mantendo relação orgânica com as demais peças do acervo. A destinação a bibliotecas ou museus decorre da natureza colecionável, do valor cultural ou da ausência de organicidade administrativa desses materiais, e não do suporte físico em si.",
+        "source_reference": null
+      },
+      "source_content_hash": "451f41c8884dd1322969d06e2cd2d9c35aed6252468ff3d0064ffcb79a4526e5"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:079",
+      "source_id": "agente_administrativo:79",
+      "question_type": "true_false",
+      "statement_markdown": "À luz da legislação que dispõe sobre a política nacional de arquivos e dos preceitos arquivísticos, julgue os próximos itens.\n\nA classificação do documento deve ser feita de acordo com a importância para o produtor e o documento deve permanecer arquivado enquanto houver interesse nele.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 79; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Classificação dos Documentos de Arquivo",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "58f6a6dd416d9b80a6b7c5fb59834fe17bd94273de71d233643ad4eed2d89eb5",
+        "original_numeric_id": 79,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-dos-documentos-de-arquivo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está errada por dois motivos conceituais:\n\n1. **Classificação:** A classificação de documentos de arquivo baseia-se na análise das funções e atividades do órgão gerador (critério funcional ou estrutural-funcional), refletindo a estrutura orgânica e a produção documental, e não em uma avaliação subjetiva de \"importância\" para o produtor.\n2. **Temporalidade:** O tempo de guarda e a destinação final (eliminação ou guarda permanente) dos documentos são determinados por critérios técnicos e jurídicos consolidados na Tabela de Temporalidade de Documentos (TTD), aprovada por autoridade competente, e não pela mera conveniência ou \"interesse\" informal do produtor.",
+        "source_reference": null
+      },
+      "source_content_hash": "08e7c4ca9ccc1e65b9439af7460367a1beb7e764494a0cfe991b248a250720e3"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:081",
+      "source_id": "agente_administrativo:81",
+      "question_type": "true_false",
+      "statement_markdown": "Com referência à gestão, classificação e temporalidade de documentos, julgue os itens que se seguem.\n\nDesfigurar e destruir documentos de interesse público e social é crime que está sujeito a responsabilização penal, civil e administrativa.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 81; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Classificação dos Documentos de Arquivo",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "b4e61ebe039843d8f4d0ffe32fff560aaca53b56f2e71f1c60d2bc9445950ca1",
+        "original_numeric_id": 81,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-dos-documentos-de-arquivo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A conduta de desfigurar ou destruir documentos de valor permanente ou de interesse público e social é expressamente tipificada na legislação brasileira como passível de tríplice responsabilização (penal, civil e administrativa).\n\nO fundamento principal encontra-se no artigo 25 da Lei de Arquivos (Lei nº 8.159/1991). Adicionalmente, a destruição de documentos públicos é tipificada como crime no artigo 305 do Código Penal (crime de supressão de documento) e no artigo 62, inciso II, da Lei de Crimes Ambientais (Lei nº 9.605/1998), que trata da destruição de arquivos ou registros protegidos por lei.\n\n**Pegadinha:** A banca costuma tentar confundir o candidato sugerindo que a responsabilidade se limita à esfera administrativa ou civil, mas a legislação prevê expressamente a cumulação com a esfera penal.\n\n### Dispositivo legal\n* **Lei nº 8.159/1991, Art. 25** (Disponível em: https://www.planalto.gov.br/ccivil_03/leis/l8159.htm)\n* **Lei nº 9.605/1998, Art. 62, II** (Disponível em: https://www.planalto.gov.br/ccivil_03/leis/l9605.htm)\n* **Código Penal, Art. 305** (Disponível em: https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "383f5444adf9d44b3f331fd937ab4515653d9ba2a5dbbbbdec58cf29a7b71238"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:082",
+      "source_id": "agente_administrativo:82",
+      "question_type": "true_false",
+      "statement_markdown": "Com referência à gestão, classificação e temporalidade de documentos, julgue os itens que se seguem.\n\nA eliminação de arquivo é a ação de destruir o documento sem valor histórico e(ou) cultural de forma irreversível.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 82; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gerenciamento da Informação e a Gestão de Documentos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "19e868fb106426289a5d20a32eaf83cf4b6a29e1e4b35ddacf7f57a1e0060384",
+        "original_numeric_id": 82,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "gerenciamento-da-informacao-e-a-gestao-de-documentos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. De acordo com o Dicionário Brasileiro de Terminologia Arquivística (DBTA), a eliminação é a \"destruição de documentos que, na avaliação, foram considerados sem valor permanente\". O valor permanente (ou secundário) engloba os valores histórico, cultural, probatório e informativo. Portanto, documentos desprovidos desses valores são passíveis de eliminação após cumprirem seus prazos de guarda na fase corrente e intermediária.\n\nA eliminação deve ocorrer de forma irreversível (física ou logicamente) para garantir que as informações descartadas não possam ser recuperadas ou restauradas, em conformidade com as diretrizes de segurança da informação e proteção de dados pessoais.\n\n**Detalhe importante:** A eliminação não pode ser feita de forma indiscriminada; ela exige a elaboração prévia de Listagem de Eliminação de Documentos, publicação de Edital de Ciência de Eliminação e posterior registro no Termo de Eliminação de Documentos, sob a supervisão da Comissão Permanente de Avaliação de Documentos (CPAD).\n\n### Dispositivo legal\n* **Dicionário Brasileiro de Terminologia Arquivística (Arquivo Nacional, 2005, p. 74)** (Disponível em: https://www.gov.br/conarq/pt-br/centrais-de-conteudo/publicacoes/dicionario_de_terminologia_arquivistica.pdf)",
+        "source_reference": null
+      },
+      "source_content_hash": "191b575ebb94bf707f3c3951caabbc21d1ea201c5fc9e9bd3b147f41597a8b8f"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:085",
+      "source_id": "agente_administrativo:85",
+      "question_type": "true_false",
+      "statement_markdown": "Com referência à gestão, classificação e temporalidade de documentos, julgue os itens que se seguem.\n\nA classificação de um documento pode ser feita com base no grau de sigilo da informação nele contida.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 85; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Classificação dos Documentos de Arquivo",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "b164ff00c65e2ad4b43ff6c514b1703ec755854ea2c174e2a3d72e97e9173621",
+        "original_numeric_id": 85,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-dos-documentos-de-arquivo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Na arquivologia, o termo \"classificação\" possui mais de uma acepção técnica. Conforme o Dicionário Brasileiro de Terminologia Arquivística (DBTA), a classificação pode se referir tanto à organização temática/funcional de documentos (com base em um plano de classificação) quanto à atribuição de graus de sigilo (classificação de segurança).\n\nA classificação de segurança consiste na atribuição de graus de sigilo (como reservado, secreto ou ultrassecreto, nos termos da Lei de Acesso à Informação - Lei nº 12.527/2011) a documentos ou às informações neles contidas, com o objetivo de limitar o acesso e salvaguardar dados que possam pôr em risco a segurança da sociedade ou do Estado.\n\n**Detalhe importante:** A banca explora a polissemia do termo \"classificação\". Embora a classificação por assunto (funcional) seja a mais comum na rotina administrativa, a classificação de segurança (por grau de sigilo) é uma operação arquivística igualmente válida e prevista na terminologia oficial.\n\n### Dispositivo legal\n* **Dicionário Brasileiro de Terminologia Arquivística (Arquivo Nacional, 2005, p. 51)** (Disponível em: https://www.gov.br/conarq/pt-br/centrais-de-conteudo/publicacoes/dicionario_de_terminologia_arquivistica.pdf)\n* **Lei nº 12.527/2011 (Lei de Acesso à Informação), Art. 23 e Art. 24** (Disponível em: https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "91a6385c368713ac88be24092924cd527d902aef50a1c9e04192ec8222423201"
+    }
+  ]
+}

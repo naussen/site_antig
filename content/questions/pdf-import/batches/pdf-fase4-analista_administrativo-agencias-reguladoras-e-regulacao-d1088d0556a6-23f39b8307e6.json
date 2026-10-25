@@ -1,0 +1,300 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-analista_administrativo-agencias-reguladoras-e-regulacao-d1088d0556a6-23f39b8307e6",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "d1088d0556a634bc0e47cc4b0194b18b7b11b50a2faaa9a150b68e740a974fa1",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "7b0e6efd1cd4387fd3b4024c7d594aa5aad8ca3c4f2146f6ddc96ab3d4597e20",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "23f39b8307e633c5e4285a940843d8b9e57160b800836b7a72750924d70ed9c4",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "agencias-reguladoras-e-regulacao",
+    "name": "Agências Reguladoras e Regulação"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:041",
+      "source_id": "analista_administrativo:41",
+      "question_type": "true_false",
+      "statement_markdown": "Cada um dos itens que se seguem apresenta uma situação hipotética seguida de uma assertiva a ser julgada, acerca da atuação regulatória do Estado.\n\nEm 2022, determinado programa de controle da poluição do ar entrará em uma fase que prevê novos parâmetros para medir emissões de hidrocarbonetos e emissões evaporativas. Nessa situação, a regulação de padrões de emissão de poluentes por veículos automotores promoverá o aumento da concorrência no mercado e a mitigação de barreiras à entrada no mercado, beneficiando o consumidor final ao proporcionar-lhe variada concorrência, preços reduzidos e produtos mais eficientes.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 41; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Agências Reguladoras, Marcos Legais e Atribuições",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Regulação",
+        "source_content_hash": "93613b2e3cfbd9c4ec348d5256c920890225ed1db59648888e3fd811e8812a43",
+        "original_numeric_id": 41,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "lei-geral-das-agencias-reguladoras-lei-13848",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta. Na economia da regulação, a imposição de padrões ambientais mais rígidos (como novos limites de emissão de poluentes por veículos automotores) exige elevados investimentos em tecnologia, pesquisa e desenvolvimento por parte das montadoras para que seus produtos se adequem às novas exigências. Esses altos custos de conformidade regulatória funcionam como **barreiras à entrada** no mercado, dificultando o ingresso de novos concorrentes (especialmente de menor porte). Consequentemente, esse tipo de regulação tende a **reduzir a concorrência** e a **elevar os preços** dos produtos para o consumidor final, contrariando o que afirma a assertiva.",
+        "source_reference": null
+      },
+      "source_content_hash": "686153b9017931e2ba859115a5da9a9ed2362f309f15fd3a1529a8b70e0dcc68"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:042",
+      "source_id": "analista_administrativo:42",
+      "question_type": "true_false",
+      "statement_markdown": "Cada um dos itens que se seguem apresenta uma situação hipotética seguida de uma assertiva a ser julgada, acerca da atuação regulatória do Estado.\n\nFoi aberta consulta pública para decisão acerca da alocação de recursos do Estado para investimento ou em um parque nacional, ou em novos equipamentos para as Forças Armadas. Nessa situação hipotética, a realização de uma consulta pública revela, de maneira eficiente, a preferência de consumo da população.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 42; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Processo Regulatório, Audiências Públicas e Participação Social",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Regulação",
+        "source_content_hash": "06a9746e90b4044eba35e8e908e085ea2470b8e182fdb1485d62fe0756793296",
+        "original_numeric_id": 42,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "processo-regulatorio-e-analise-de-impacto-regulatorio-air",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta. Na economia do setor público e na teoria da escolha pública (*Public Choice*), a realização de uma consulta pública não é considerada um mecanismo eficiente para revelar as reais preferências de consumo da população sobre a alocação de recursos públicos. Primeiramente, tanto um parque nacional quanto a defesa nacional (equipamentos para as Forças Armadas) são **bens públicos** (não rivais e não excludentes), o que gera o problema do carona (*free-rider*), onde os indivíduos têm incentivos para omitir ou distorcer suas verdadeiras preferências. Além disso, consultas públicas sofrem com o **viés de autosseleção**, pois tendem a atrair apenas grupos de interesse organizados ou indivíduos diretamente afetados, não refletindo a preferência da coletividade de forma estatisticamente representativa ou economicamente eficiente.",
+        "source_reference": null
+      },
+      "source_content_hash": "e80f3628c4707053c39ec3505feac2f77a74ef9ea727ae457e5c045e29b1f38c"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:043",
+      "source_id": "analista_administrativo:43",
+      "question_type": "true_false",
+      "statement_markdown": "Cada um dos itens que se seguem apresenta uma situação hipotética seguida de uma assertiva a ser julgada, acerca da atuação regulatória do Estado.\n\nO poder público pretende estabelecer a cobrança de tarifa de usuários de determinado parque nacional cuja administração foi concedida à iniciativa privada. A intenção é definir uma tarifa módica, fixada no menor patamar possível, tanto para democratizar o acesso ao parque quanto para viabilizar a continuidade da exploração do serviço com determinado nível de qualidade. O poder público decidiu, então, definir a tarifa em função do custo do serviço, de forma a garantir a recuperação dos custos totais e assegurar uma margem de lucro que assegure a viabilidade da exploração do serviço pelo ente privado. Nessa situação hipotética, basta ao Estado definir a tarifa em função do custo marginal do serviço, para garantir a mesma eficiência que seria observada na fixação de preço de mercado.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 43; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Agências Reguladoras, Marcos Legais e Atribuições",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Regulação",
+        "source_content_hash": "25c704d145bd3c5530424e50f180ba3507a008f8f3cb10b69ce1ddf1de2bb981",
+        "original_numeric_id": 43,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "lei-geral-das-agencias-reguladoras-lei-13848",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está **errada**.\n\nNa teoria da regulação econômica, a administração de um parque nacional concedida à iniciativa privada costuma apresentar uma estrutura de custos caracterizada por elevados custos fixos (infraestrutura, segurança, manutenção) e custos marginais baixos ou nulos para cada visitante adicional. Essa configuração caracteriza um monopólio natural com custos médios decrescentes (economias de escala).\n\nNesse cenário, se o Estado fixar a tarifa com base exclusivamente no custo marginal ($P = CMg$), que seria a condição de eficiência alocativa em concorrência perfeita, o preço cobrado será inferior ao custo médio ($CMg < CMe$). Como consequência, a concessionária privada operará com prejuízo sistemático, inviabilizando a exploração do serviço e descumprindo o objetivo de garantir a recuperação dos custos totais e uma margem de lucro justa.\n\nPara conciliar a modicidade tarifária com a sustentabilidade financeira do projeto, a regulação deve empregar outros métodos tarifários, como a precificação pelo custo médio ($P = CMe$) ou tarifas em duas partes, e não apenas o custo marginal.",
+        "source_reference": null
+      },
+      "source_content_hash": "4fd2c2e46e812ff1ec3c8f466ed3aa24a44004cf7b43aec21d6bbc5e6ec4605a"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:044",
+      "source_id": "analista_administrativo:44",
+      "question_type": "true_false",
+      "statement_markdown": "Cada um dos itens que se seguem apresenta uma situação hipotética seguida de uma assertiva a ser julgada, acerca da atuação regulatória do Estado.\n\nA partir de 2019, passou a ser cobrada uma taxa de entrada dos turistas que visitam certo parque nacional, visando-se à remuneração dos investimentos em infraestrutura feitos pela concessionária que administra o parque. Nesse caso, com o início da cobrança da taxa de acesso, o parque nacional deixou de ser um bem público — no sentido econômico — e se tornou um bem quase público, em decorrência da possibilidade de exclusão de usuários que não possam pagar a taxa de acesso, apesar de ainda se caracterizar pela não rivalidade no consumo.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 44; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Agências Reguladoras, Marcos Legais e Atribuições",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Regulação",
+        "source_content_hash": "52d6f78df6c98cb5d9d61f01c13a33e7a90061c7be34fc5ae23080538b326635",
+        "original_numeric_id": 44,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "lei-geral-das-agencias-reguladoras-lei-13848",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está **correta**.\n\nNo âmbito da ciência econômica, a classificação dos bens baseia-se em dois critérios fundamentais:\n\n1. **Rivalidade:** o consumo do bem por um indivíduo reduz a quantidade ou a qualidade disponível para os demais.\n2. **Exclusão:** é possível impedir, por meios físicos ou econômicos, que um indivíduo consuma o bem caso ele não pague por ele.\n\nUm bem público puro caracteriza-se pela não rivalidade e pela não exclusão. No entanto, ao introduzir a cobrança de uma taxa de entrada para os turistas, o parque nacional passa a adotar o princípio da exclusão, pois o acesso é restrito apenas àqueles que efetuarem o pagamento.\n\nComo o parque ainda mantém a característica de não rivalidade no consumo (a presença de um visitante não impede nem reduz o usufruto das belezas naturais por outro visitante, respeitados os limites de capacidade de carga), ele deixa de ser um bem público puro e passa a ser classificado como um **bem quase público** (também denominado bem de clube ou bem coletivo).",
+        "source_reference": null
+      },
+      "source_content_hash": "f31842d836076ba605dbb0fdb6d3bde976a6c8c2a2bc94652ade4cdec9827e34"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:045",
+      "source_id": "analista_administrativo:45",
+      "question_type": "true_false",
+      "statement_markdown": "Cada um dos itens que se seguem apresenta uma situação hipotética seguida de uma assertiva a ser julgada, acerca da atuação regulatória do Estado.\n\nDeterminado projeto de lei propõe que veículos elétricos ou híbridos sejam isentos do imposto sobre produtos industrializados (IPI), bem como que sejam reduzidas a zero as alíquotas do PIS/PASEP e da COFINS incidentes na venda de carros elétricos. Nessa situação, se aprovado o projeto de lei, a concessão de benefícios fiscais a veículos automotores que não emitem poluentes atmosféricos promoverá, segundo a teoria econômica da regulação, internalização de benefícios econômico-sociais decorrentes da diminuição da poluição atmosférica em centros urbanos, com reflexo na saúde pública da população e no custo privado da produção e comercialização desses veículos.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 45; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Agências Reguladoras, Marcos Legais e Atribuições",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Regulação",
+        "source_content_hash": "3468a96b1076f991bfa585cca55886486d5a328ab2b377dec28ce88e29e8d074",
+        "original_numeric_id": 45,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "lei-geral-das-agencias-reguladoras-lei-13848",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNa teoria da regulação econômica, o Estado atua tanto por via regulatória impositiva (comando e controle) quanto por **regulação indutiva e concorrencial**.\n\nA concessão de incentivos fiscais, desonerações tributárias ou benefícios tarifários para veículos híbridos e elétricos é um instrumento clássico de regulação por incentivo (*nudging* regulatório) que induz o mercado e os consumidores a adotarem tecnologias limpas de menor emissão de carbono.",
+        "source_reference": null
+      },
+      "source_content_hash": "d33ee95aba2b3ef0769af05819df030985c8497db09561a93f5ac7063648c851"
+    }
+  ]
+}

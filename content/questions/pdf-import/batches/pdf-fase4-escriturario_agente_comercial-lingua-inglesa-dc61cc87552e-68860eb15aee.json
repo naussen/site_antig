@@ -1,0 +1,400 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-escriturario_agente_comercial-lingua-inglesa-dc61cc87552e-68860eb15aee",
+  "source": {
+    "file_name": "escriturario_agente_comercial_ATUALIZADO.json",
+    "sha256": "dc61cc87552e5a02d8b0d8976fda4c03f634e0152f65f5267f98ed067ff73cc6",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "escriturario_agente_comercial.json",
+      "original_source_sha256": "01019f640948f2ffd55374ea21a7a82a58f3fdae926a71a27cc21c32ba8bbf9d",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "68860eb15aeea5aeb6c54fa822a7a8c6f1fd5901e1f20211cfdcbde02fc6ece0",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "lingua-inglesa",
+    "name": "Língua Inglesa"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:011",
+      "source_id": "escriturario_agente_comercial:11",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Fed’s Jefferson says inflation is U.S. central bank’s most worrisome problem\n\nInflation is the most serious problem facing the Federal Reserve and “may take some time” to address, Fed Governor Philip Jefferson said on Tuesday in his first public remarks since joining the U.S. central bank’s governing body.\n\n“Restoring price stability may take some time and will likely result in a period of below-trend growth,” Jefferson told a conference in Atlanta, joining the current Fed consensus for continued interest rate increases to battle price pressures.\n\n“I want to assure you that my colleagues and I are resolute that we will bring inflation back down to 2% ... We are committed to taking the further steps necessary.”\n\nMonetary policy that stabilizes inflation “can produce long-term, noninflationary economic expansions ... that economic history suggests is an ideal framework or environment for inclusive growth,” Jefferson said. “So, it is important that we get back to that kind of economy. And that is what I think the intent of the Fed is.”\n\nFed Chair Jerome Powell has admitted that the central bank’s intent to slow economic growth will cause economic “pain” and likely increased unemployment, but that the worst outcome would be to let inflation take root.\n\nIn his remarks, Jefferson said there are reasons to think rigid conditions in the labor market are already easing. Indeed new data on Tuesday showed a severe decrease in job openings in August that began to bring the number of workers sought by companies more in line with the numbers of unemployed.\n\nThat could help reduce salary growth, Jefferson said, and there were indications as well that “supply bottlenecks have, finally, begun to resolve,” and could also help slow down price increases.\n\nBut it remains uncertain how that will work, and in the meantime “inflation remains elevated, and this is the problem that concerns me most,” Jefferson said. “Inflation creates economic burdens for households and businesses, and everyone feels its effects.”\n\nThe main purpose of the text is to",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 11; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "argue that slowing the economic growth will definitely cause inflation to take root.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "indicate that inflation is a serious problem, and it needs to be adequately dealt with.",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "suggest that restoring price stability will certainly increase inflation.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "show that controlling inflation is a minor concern, compared to unemployment.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "inform that the U.S. central bank’s monetary policy has already decreased inflation to 2%.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Reading Comprehension and Text Interpretation",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Inglesa",
+        "source_content_hash": "0339292073dad3064f9fe600fd33b9adeae70bf09e85119e7b18347b96296657",
+        "original_numeric_id": 11,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "compreensao-e-interpretacao-de-textos-em-ingles",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O objetivo principal do texto é apresentar a inflação como o problema mais sério enfrentado pelo Federal Reserve (o banco central americano) e a necessidade de combatê-la de forma decidida.\n\n*   **A) Incorreta.** O texto menciona que a intenção de desacelerar o crescimento econômico visa a evitar que a inflação se enraíze (*\"let inflation take root\"*), e não que a desaceleração causará o enraizamento da inflação.\n*   **B) Correta.** Logo no primeiro parágrafo, afirma-se que *\"Inflation is the most serious problem facing the Federal Reserve\"* (A inflação é o problema mais sério enfrentado pelo Federal Reserve) e que demandará tempo para ser resolvido, alinhando-se perfeitamente com a ideia de que é um problema sério que precisa ser tratado adequadamente.\n*   **C) Incorreta.** O texto indica que restaurar a estabilidade de preços é o objetivo para reduzir a inflação, e não que isso aumentará a inflação.\n*   **D) Incorreta.** O controle da inflação é tratado como a preocupação mais importante (*\"most worrisome problem\"*), e não como uma preocupação menor em relação ao desemprego.\n*   **E) Incorreta.** O texto afirma que o comitê está determinado a trazer a inflação de volta para 2% (*\"bring inflation back down to 2%\"*), indicando uma meta futura, e não que a política monetária já tenha atingido esse patamar.",
+        "source_reference": null
+      },
+      "source_content_hash": "70620b37715cdc6285a0ba434b0fc38c0fab74ea65d2b6488a15301bfdeb89ce"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:012",
+      "source_id": "escriturario_agente_comercial:12",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Fed’s Jefferson says inflation is U.S. central bank’s most worrisome problem\n\nInflation is the most serious problem facing the Federal Reserve and “may take some time” to address, Fed Governor Philip Jefferson said on Tuesday in his first public remarks since joining the U.S. central bank’s governing body.\n\n“Restoring price stability may take some time and will likely result in a period of below-trend growth,” Jefferson told a conference in Atlanta, joining the current Fed consensus for continued interest rate increases to battle price pressures.\n\n“I want to assure you that my colleagues and I are resolute that we will bring inflation back down to 2% ... We are committed to taking the further steps necessary.”\n\nMonetary policy that stabilizes inflation “can produce long-term, noninflationary economic expansions ... that economic history suggests is an ideal framework or environment for inclusive growth,” Jefferson said. “So, it is important that we get back to that kind of economy. And that is what I think the intent of the Fed is.”\n\nFed Chair Jerome Powell has admitted that the central bank’s intent to slow economic growth will cause economic “pain” and likely increased unemployment, but that the worst outcome would be to let inflation take root.\n\nIn his remarks, Jefferson said there are reasons to think rigid conditions in the labor market are already easing. Indeed new data on Tuesday showed a severe decrease in job openings in August that began to bring the number of workers sought by companies more in line with the numbers of unemployed.\n\nThat could help reduce salary growth, Jefferson said, and there were indications as well that “supply bottlenecks have, finally, begun to resolve,” and could also help slow down price increases.\n\nBut it remains uncertain how that will work, and in the meantime “inflation remains elevated, and this is the problem that concerns me most,” Jefferson said. “Inflation creates economic burdens for households and businesses, and everyone feels its effects.”\n\nIn the segment of 5th paragraph “the worst outcome would be to let inflation take root”, the words would be signal",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 12; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a certain future",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "a definite past",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "a hypothetical possibility",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "an indefinite present",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "an inevitable destiny",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Vocabulary and Semantics",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Inglesa",
+        "source_content_hash": "0e3137a6e8e5310e70391647e06d939b47518958846c5f22cef8fe05a71ca1ad",
+        "original_numeric_id": 12,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "vocabulario-sinonimos-e-antonimos-em-ingles",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A expressão *\"would be\"* (seria) é a forma condicional do verbo *to be*. No trecho *\"the worst outcome would be to let inflation take root\"* (o pior resultado seria deixar a inflação se enraizar), ela é utilizada para projetar um cenário hipotético, ou seja, uma possibilidade caso as medidas necessárias não sejam tomadas.\n\n*   **A) Incorreta.** Um futuro certo seria expresso por *\"will be\"*.\n*   **B) Incorreta.** Um passado definido seria expresso por *\"was/were\"*.\n*   **C) Correta.** O condicional *\"would be\"* sinaliza uma possibilidade hipotética (*a hypothetical possibility*).\n*   **D) Incorreta.** Não se trata de um presente indefinido.\n*   **E) Incorreta.** Não indica um destino inevitável, mas sim uma consequência condicional a uma omissão.",
+        "source_reference": null
+      },
+      "source_content_hash": "1f09782a07e327b48419014b46d9a76b9ea37e969cde6002a42a6290e9a67774"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:013",
+      "source_id": "escriturario_agente_comercial:13",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Fed’s Jefferson says inflation is U.S. central bank’s most worrisome problem\n\nInflation is the most serious problem facing the Federal Reserve and “may take some time” to address, Fed Governor Philip Jefferson said on Tuesday in his first public remarks since joining the U.S. central bank’s governing body.\n\n“Restoring price stability may take some time and will likely result in a period of below-trend growth,” Jefferson told a conference in Atlanta, joining the current Fed consensus for continued interest rate increases to battle price pressures.\n\n“I want to assure you that my colleagues and I are resolute that we will bring inflation back down to 2% ... We are committed to taking the further steps necessary.”\n\nMonetary policy that stabilizes inflation “can produce long-term, noninflationary economic expansions ... that economic history suggests is an ideal framework or environment for inclusive growth,” Jefferson said. “So, it is important that we get back to that kind of economy. And that is what I think the intent of the Fed is.”\n\nFed Chair Jerome Powell has admitted that the central bank’s intent to slow economic growth will cause economic “pain” and likely increased unemployment, but that the worst outcome would be to let inflation take root.\n\nIn his remarks, Jefferson said there are reasons to think rigid conditions in the labor market are already easing. Indeed new data on Tuesday showed a severe decrease in job openings in August that began to bring the number of workers sought by companies more in line with the numbers of unemployed.\n\nThat could help reduce salary growth, Jefferson said, and there were indications as well that “supply bottlenecks have, finally, begun to resolve,” and could also help slow down price increases.\n\nBut it remains uncertain how that will work, and in the meantime “inflation remains elevated, and this is the problem that concerns me most,” Jefferson said. “Inflation creates economic burdens for households and businesses, and everyone feels its effects.”\n\nIn the fragment of 5th paragraph “the worst outcome would be to let inflation take root”, the expression take root could be replaced, with no change in meaning, by",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 13; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "be extinguished.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "become inactive.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "come to an agreement.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "be disconsidered.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "become established.",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Vocabulary and Semantics",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Inglesa",
+        "source_content_hash": "925721591dd31cb230f7dd20caaf9fc4c71a6384456a9889371528e83ea5c9ee",
+        "original_numeric_id": 13,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "vocabulario-sinonimos-e-antonimos-em-ingles",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A expressão idiomática *\"take root\"* (literalmente, \"criar raízes\") significa estabelecer-se, fixar-se ou consolidar-se em determinado local ou situação. No contexto econômico do texto, refere-se à inflação se consolidar ou se tornar permanente na economia.\n\n*   **A) Incorreta.** *\"Be extinguished\"* significa ser extinta, o oposto de criar raízes.\n*   **B) Incorreta.** *\"Become inactive\"* significa tornar-se inativa.\n*   **C) Incorreta.** *\"Come to an agreement\"* significa chegar a um acordo.\n*   **D) Incorreta.** *\"Be disconsidered\"* significa ser desconsiderada.\n*   **E) Correta.** *\"Become established\"* significa estabelecer-se ou consolidar-se, sendo o sinônimo perfeito para *\"take root\"* no contexto apresentado.",
+        "source_reference": null
+      },
+      "source_content_hash": "0e4a2ff46879146eb5c405781f27a3ca81e6392659619c3ab6bae3c3661cb00e"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:014",
+      "source_id": "escriturario_agente_comercial:14",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Fed’s Jefferson says inflation is U.S. central bank’s most worrisome problem\n\nInflation is the most serious problem facing the Federal Reserve and “may take some time” to address, Fed Governor Philip Jefferson said on Tuesday in his first public remarks since joining the U.S. central bank’s governing body.\n\n“Restoring price stability may take some time and will likely result in a period of below-trend growth,” Jefferson told a conference in Atlanta, joining the current Fed consensus for continued interest rate increases to battle price pressures.\n\n“I want to assure you that my colleagues and I are resolute that we will bring inflation back down to 2% ... We are committed to taking the further steps necessary.”\n\nMonetary policy that stabilizes inflation “can produce long-term, noninflationary economic expansions ... that economic history suggests is an ideal framework or environment for inclusive growth,” Jefferson said. “So, it is important that we get back to that kind of economy. And that is what I think the intent of the Fed is.”\n\nFed Chair Jerome Powell has admitted that the central bank’s intent to slow economic growth will cause economic “pain” and likely increased unemployment, but that the worst outcome would be to let inflation take root.\n\nIn his remarks, Jefferson said there are reasons to think rigid conditions in the labor market are already easing. Indeed new data on Tuesday showed a severe decrease in job openings in August that began to bring the number of workers sought by companies more in line with the numbers of unemployed.\n\nThat could help reduce salary growth, Jefferson said, and there were indications as well that “supply bottlenecks have, finally, begun to resolve,” and could also help slow down price increases.\n\nBut it remains uncertain how that will work, and in the meantime “inflation remains elevated, and this is the problem that concerns me most,” Jefferson said. “Inflation creates economic burdens for households and businesses, and everyone feels its effects.”\n\nIn the section of last paragraph “it remains uncertain how that will work, and in the meantime inflation remains elevated”, the expression in the meantime is synonymous with",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 14; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "in the past",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "sometimes",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "in the future",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "always",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "for now",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Vocabulary and Semantics",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Inglesa",
+        "source_content_hash": "850a80d61b8a6f36a15317e5b95edbe47e0e831c7904e33946cfc60678f62e12",
+        "original_numeric_id": 14,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "vocabulario-sinonimos-e-antonimos-em-ingles",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A locução adverbial *\"in the meantime\"* significa \"enquanto isso\", \"nesse ínterim\" ou \"por enquanto\", indicando uma situação temporária que ocorre até que outra se resolva.\n\n*   **A) Incorreta.** *\"In the past\"* refere-se ao passado.\n*   **B) Incorreta.** *\"Sometimes\"* significa às vezes.\n*   **C) Incorreta.** *\"In the future\"* refere-se ao futuro.\n*   **D) Incorreta.** *\"Always\"* significa sempre.\n*   **E) Correta.** *\"For now\"* (por ora, por enquanto) é a opção que melhor substitui a expressão, mantendo a ideia de transitoriedade temporal enquanto não se sabe como as medidas funcionarão.",
+        "source_reference": null
+      },
+      "source_content_hash": "0a3946f78857e20aa4ae52b4a36a20f4e8f30ddc2e325f177da9c4e0cb2c25e2"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:015",
+      "source_id": "escriturario_agente_comercial:15",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Fed’s Jefferson says inflation is U.S. central bank’s most worrisome problem\n\nInflation is the most serious problem facing the Federal Reserve and “may take some time” to address, Fed Governor Philip Jefferson said on Tuesday in his first public remarks since joining the U.S. central bank’s governing body.\n\n“Restoring price stability may take some time and will likely result in a period of below-trend growth,” Jefferson told a conference in Atlanta, joining the current Fed consensus for continued interest rate increases to battle price pressures.\n\n“I want to assure you that my colleagues and I are resolute that we will bring inflation back down to 2% ... We are committed to taking the further steps necessary.”\n\nMonetary policy that stabilizes inflation “can produce long-term, noninflationary economic expansions ... that economic history suggests is an ideal framework or environment for inclusive growth,” Jefferson said. “So, it is important that we get back to that kind of economy. And that is what I think the intent of the Fed is.”\n\nFed Chair Jerome Powell has admitted that the central bank’s intent to slow economic growth will cause economic “pain” and likely increased unemployment, but that the worst outcome would be to let inflation take root.\n\nIn his remarks, Jefferson said there are reasons to think rigid conditions in the labor market are already easing. Indeed new data on Tuesday showed a severe decrease in job openings in August that began to bring the number of workers sought by companies more in line with the numbers of unemployed.\n\nThat could help reduce salary growth, Jefferson said, and there were indications as well that “supply bottlenecks have, finally, begun to resolve,” and could also help slow down price increases.\n\nBut it remains uncertain how that will work, and in the meantime “inflation remains elevated, and this is the problem that concerns me most,” Jefferson said. “Inflation creates economic burdens for households and businesses, and everyone feels its effects.”\n\nThe fragment of last paragraph “Inflation creates economic burdens for households and businesses” means that inflation",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 15; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "alleviates families and jobs.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "oppresses families and companies.",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "stimulates institutions and commerce.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "supports institutions and jobs.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "promotes savings and investments.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Reading Comprehension and Text Interpretation",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Inglesa",
+        "source_content_hash": "c39d8c30329d2910b3e03076669e79e3b2b2f033b75450d8bc524df7f02c2950",
+        "original_numeric_id": 15,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "compreensao-e-interpretacao-de-textos-em-ingles",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A análise do vocabulário do fragmento revela:\n*   *\"Burdens\"*: fardos, encargos, ônus ou dificuldades (associado a oprimir/sobrecarregar).\n*   *\"Households\"*: lares, unidades familiares (famílias).\n*   *\"Businesses\"*: negócios, empreendimentos (empresas).\n\nPortanto, a frase *\"Inflation creates economic burdens for households and businesses\"* traduz-se como \"A inflação cria fardos econômicos para famílias e empresas\", o que equivale a dizer que a inflação oprime famílias e empresas.\n\n*   **A) Incorreta.** *\"Alleviates\"* significa alivia, o que contradiz o sentido de fardo (*burden*).\n*   **B) Correta.** *\"Oppresses families and companies\"* traduz adequadamente o sentido de sobrecarregar/oprimir as famílias (*households*) e empresas (*businesses*).\n*   **C) Incorreta.** *\"Stimulates\"* significa estimula, o que descaracteriza o efeito negativo da inflação descrito.\n*   **D) Incorreta.** *\"Supports\"* significa apoia ou sustenta.\n*   **E) Incorreta.** *\"Promotes\"* significa promove, o que é incorreto, pois a inflação corrói a poupança e os investimentos.",
+        "source_reference": null
+      },
+      "source_content_hash": "e1e5a08ded647b72d195f6707e608c36443be7a9c52887d22d573b0163eb2d5d"
+    }
+  ]
+}

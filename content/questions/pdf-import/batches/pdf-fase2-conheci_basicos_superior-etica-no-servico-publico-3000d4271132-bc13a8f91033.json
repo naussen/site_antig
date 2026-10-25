@@ -1,0 +1,230 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-conheci_basicos_superior-etica-no-servico-publico-3000d4271132-bc13a8f91033",
+  "source": {
+    "file_name": "conheci_basicos_superior_ATUALIZADO.json",
+    "sha256": "3000d42711328f5dba7e425cb1aa6b685dc58390abb29f1e798342c2c567b9e6",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "conheci_basicos_superior.json",
+      "original_source_sha256": "b206400e7cdbc8349a44515c2afe3ee6461cc3fb9fdceb3ff70127850f57917b",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "bc13a8f91033cdf56b18430a8f4ce429034c880e8675dcb3a8d1ce1a84240771",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "etica-no-servico-publico",
+    "name": "Ética no Serviço Público"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:conheci_basicos_superior:036",
+      "source_id": "conheci_basicos_superior:36",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à ética no serviço público, julgue os itens subsecutivos.\n\nO servidor que é visto habitualmente embriagado fora de seu horário de expediente, mas cumpre suas atividades com esmero durante seu horário de trabalho não fere a ética do serviço público.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 36; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ética (Aspectos Teóricos)",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "1cdae24e1004a658fa53bcd4c75bc1ab972fe762b383a9ce8c788d7353ef547d",
+        "original_numeric_id": 36,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "etica-aspectos-teoricos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A conduta do servidor público fora do horário de expediente reflete diretamente na reputação da instituição que ele representa. O Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal estabelece expressamente que a vida particular do servidor repercute em sua vida funcional.\n\nDessa forma, apresentar-se habitualmente embriagado, mesmo fora do serviço, constitui uma conduta vedada que fere a ética do serviço público, invalidando a afirmação de que tal comportamento não geraria infração ética pelo fato de o trabalho ser cumprido com esmero.\n\n### Dispositivo legal\nDecreto nº 1.171/1994, Anexo, Capítulo I, Seção III, Inciso XV, alínea \"n\".",
+        "source_reference": null
+      },
+      "source_content_hash": "70ecac4b2b523d95a336675845a352b8236cf4aa134a3445a994d416691dd3ba"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:038",
+      "source_id": "conheci_basicos_superior:38",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à ética no serviço público, julgue os itens subsecutivos.\n\nPromover ações de apreço no interior da repartição pública não fere nenhuma norma ética ou administrativa do serviço público, uma vez que, com isso, pretende-se garantir um bom ambiente de trabalho.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 38; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ética (Aspectos Teóricos)",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "39425136a773267daabc957f1ae2e04dd3791b4485af1c22e79ba522c86b9c56",
+        "original_numeric_id": 38,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "etica-aspectos-teoricos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta porque a promoção de manifestações de apreço ou desapreço no recinto da repartição pública é expressamente proibida pela legislação administrativa federal.\n\nEmbora o enunciado sugira uma finalidade positiva (garantir um bom ambiente de trabalho), a norma legal visa manter a impessoalidade, a neutralidade e a ordem no ambiente de trabalho, evitando favoritismos, divisões ou constrangimentos entre os servidores.\n\n### Dispositivo legal\nLei nº 8.112/1990, Artigo 117, inciso V.",
+        "source_reference": null
+      },
+      "source_content_hash": "9739f29398b7d9e619dd79ffa5d74511f4f744f9974ad78942b4168d9bc30ebe"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:039",
+      "source_id": "conheci_basicos_superior:39",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à ética no serviço público, julgue os itens subsecutivos.\n\nSuponha que um servidor utilize, às vezes, o veículo da repartição para resolver problemas particulares. Isso constitui ilícito no serviço público mesmo que a resolução desses problemas proporcione melhoria do desempenho do servidor no exercício de suas funções.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 39; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ética (Aspectos Teóricos)",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "7353dc1a644e88bfee1ff4bcddb2d66195f6ffaef043552e4832b02867cc34ab",
+        "original_numeric_id": 39,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "etica-aspectos-teoricos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A utilização de bens e recursos materiais pertencentes à repartição pública para fins particulares é uma conduta expressamente proibida pela legislação.\n\nO desvio de finalidade no uso de um veículo oficial configura ilícito administrativo e ato de improbidade administrativa que importa enriquecimento ilícito ou prejuízo ao erário. Justificativas de ordem pessoal, como a alegação de que a resolução de problemas particulares traria melhoria indireta no desempenho das funções, não afastam a ilicitude da conduta, pois o princípio da supremacia do interesse público e a indisponibilidade dos bens públicos devem prevalecer.\n\n### Dispositivo legal\nLei nº 8.112/1990, Artigo 117, inciso XVI, e Lei nº 8.429/1992, Artigo 9º, inciso IV.",
+        "source_reference": null
+      },
+      "source_content_hash": "508d17db0d5938ce3b39204861cc2a79f7c9ff9a6206730624443dc9ff013f49"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:040",
+      "source_id": "conheci_basicos_superior:40",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à ética no serviço público, julgue os itens subsecutivos.\n\nConsidere que um servidor, ao atender um usuário, tenha-o deixado esperando por muito tempo, fato que resultou na formação de uma longa fila em seu setor. Nesse caso, como o servidor se prestou a buscar informações benéficas para o usuário, primando pela precisão de seu trabalho, acima da celeridade, ele não feriu o Código de Ética do Servidor Público do Poder Executivo Federal.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "conheci_basicos_superior.pdf, questão 40; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ética (Aspectos Teóricos)",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "7a4d25d86c5ca8f9f2e7ff1e06f3b96de80cbd17248fdd851a71c8cdb2ee40b7",
+        "original_numeric_id": 40,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "etica-aspectos-teoricos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O Código de Ética do Poder Executivo Federal estabelece que a rapidez e a eficiência no atendimento são deveres fundamentais do servidor. A lentidão ou o atraso na prestação dos serviços públicos não configura mera falta de cortesia, mas sim um dano moral causado aos usuários do serviço.\n\nPortanto, ainda que o servidor busque precisão nas informações, a formação de longas filas e a espera excessiva violam os preceitos éticos de celeridade e eficácia previstos na norma.\n\n### Dispositivo legal\nDecreto nº 1.171/1994, Anexo, Capítulo I, Seção I, Inciso X.",
+        "source_reference": null
+      },
+      "source_content_hash": "6cf047379d4eb678bceac485394910c9f12b027378f375d8b97221dbc02c9fe1"
+    }
+  ]
+}

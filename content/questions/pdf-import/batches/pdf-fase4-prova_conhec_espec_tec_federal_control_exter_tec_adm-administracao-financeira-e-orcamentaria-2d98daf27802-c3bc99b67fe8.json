@@ -1,0 +1,82 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_conhec_espec_tec_federal_control_exter_tec_adm-administracao-financeira-e-orcamentaria-2d98daf27802-c3bc99b67fe8",
+  "source": {
+    "file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "2d98daf27802e405fca85477918bdf8251233e40cf39d87c93c75911b4f2d217",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "614ffeecc3c93f4cc8340b9f894f63a12d0a60896d888641786ae1cca7abe548",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "c3bc99b67fe8a020f78d75cfddf2e5fcdcea00dd88f4ea4e04a7222fe6ed7fd0",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-financeira-e-orcamentaria",
+    "name": "Administração Financeira e Orçamentária"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:069",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:69",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens de acordo com os dispositivos da Lei de Responsabilidade Fiscal.\n\nO projeto de lei orçamentária anual deve contemplar reserva de contingência destinada a honrar passivos contingentes, bem como outros riscos e eventos fiscais não previstos pelo ente federativo. O montante dessa reserva deve ser definido com base na receita corrente líquida do referido ente.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 69; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Receita Pública",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Financeiro",
+        "source_content_hash": "8ce9e0279a562e9b6ae9d8d63a5b16374bc42d02106bb0f0c6960ea9fc14922d",
+        "original_numeric_id": 69,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "receita-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A Lei de Responsabilidade Fiscal (LRF) estabelece regras específicas para a elaboração do projeto de lei orçamentária anual (PLOA), incluindo a obrigatoriedade de prever a reserva de contingência.\n\nConforme o art. 5º, inciso III, da Lei Complementar nº 101/2000, a proposta orçamentária deve conter uma reserva de contingência destinada ao atendimento de passivos contingentes e outros riscos e eventos fiscais imprevistos.\n\nO dispositivo legal determina que tanto a forma de utilização quanto o montante dessa reserva serão estabelecidos na Lei de Diretrizes Orçamentárias (LDO), sendo o montante calculado com base na **receita corrente líquida (RCL)** do respectivo ente federativo.\n\n**Detalhe importante:** A LDO define os parâmetros e o percentual sobre a RCL, enquanto a Lei Orçamentária Anual (LOA) efetivamente consigna a dotação global sob o título de \"Reserva de Contingência\".",
+        "source_reference": null
+      },
+      "source_content_hash": "f5ef6a7db7ee27087e65acb0a0f76a977d6da9b354756c9ca0f863965a21028e"
+    }
+  ]
+}

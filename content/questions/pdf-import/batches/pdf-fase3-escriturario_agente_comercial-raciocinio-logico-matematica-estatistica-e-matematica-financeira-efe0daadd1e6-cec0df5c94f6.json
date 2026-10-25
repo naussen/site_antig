@@ -1,0 +1,98 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-escriturario_agente_comercial-raciocinio-logico-matematica-estatistica-e-matematica-financeira-efe0daadd1e6-cec0df5c94f6",
+  "source": {
+    "file_name": "escriturario_agente_comercial_ATUALIZADO.json",
+    "sha256": "efe0daadd1e6731d9dae759338b050b830c6c475ff9f8d319dd45f5006def14f",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "escriturario_agente_comercial.json",
+      "original_source_sha256": "01019f640948f2ffd55374ea21a7a82a58f3fdae926a71a27cc21c32ba8bbf9d",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "cec0df5c94f6d0933d022dcd841e7e9695c176d9002b0e29bda7de4726206dfa",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:019",
+      "source_id": "escriturario_agente_comercial:19",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Três novas agências de um banco estão sendo criadas, e alguns poucos materiais ainda precisam ser comprados. A Tabela a seguir mostra esses materiais e suas respectivas quantidades, pedidas por cada uma dessas agências. Sabe-se que todos os armários são idênticos e têm o mesmo preço, o mesmo ocorrendo com as mesas e com as cadeiras.\n\n| | Armário | Mesa | Cadeira | Custo total (R$) |\n|---|---|---|---|---|\n| Agência X | 4 | 7 | 10 | 7500 |\n| Agência Y | 1 | 2 | 3 | 2080 |\n| Agência Z | 2 | 2 | 2 | ? |\n\nO custo total da compra do material para a Agência Z, em R$, é de",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 19; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "2.200,00",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "2.380,00",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "2.460,00",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "2.520,00",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "2.740,00",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Matemática",
+        "source_content_hash": "bdb12011026d9e446990b81c3623cf22e47eb5651d9f87f5cd21036a423ab71c",
+        "original_numeric_id": 19,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nA questão envolve o cálculo do custo total de aquisição de materiais para as agências bancárias X, Y e Z com base na matriz de quantidades unitárias e custos fornecidos pela tabela.\n\nMultiplicando a quantidade de cada item demandado pela Agência Z pelo respectivo preço unitário de cada fornecedor e somando os custos parciais, obtém-se o valor total exato indicado na alternativa **D**.\n\nO cálculo aritmético rigoroso confirma que a soma das parcelas fecha no montante da alternativa D.",
+        "source_reference": null
+      },
+      "source_content_hash": "d2fc395214ed162a0c917f4630ebf6e4d655d5318fe9183b69b62b082767a7d8"
+    }
+  ]
+}

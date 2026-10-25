@@ -1,0 +1,880 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-agente_de_policia_federal-informatica-70e090ce713f-33c15ba8094f",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "70e090ce713f4efa7afccdd8f75dc126a6b6ec258a638c6883c5beff394c0223",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "63798e30405cda1d6b06c925e3f47b587362e4b8ff5a540fff55d47fa673a6e7",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "33c15ba8094f1f45fe288b1b92fba034f1d7caf4f6a585c3a6c81a211aa51064",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:065",
+      "source_id": "agente_de_policia_federal:65",
+      "question_type": "true_false",
+      "statement_markdown": "Bloco II\nMarta utiliza uma estação de trabalho que executa o sistema operacional Windows 10 e está conectada à rede local da empresa em que ela trabalha. Ela acessa usualmente os sítios da intranet da empresa e também sítios da Internet pública. Após navegar por vários sítios, Marta verificou o histórico de navegação e identificou que um dos sítios acessados com sucesso por meio do protocolo HTTP tinha o endereço 172.20.1.1.\nTendo como referência essa situação hipotética, julgue os itens a seguir.\n\nA despeito das configurações dos ativos de segurança corporativos e do serviço de firewall instalado na estação de trabalho, Marta poderá acessar remotamente sua estação de trabalho usando a Conexão de Área de Trabalho Remota, a partir de outra estação conectada à Internet.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 65; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sistemas Operacionais (Windows e Linux)",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "386f625dc42d1387cc6b3c1ea07bab48c1500ff1fc2594cc010e65aa2ee41858",
+        "original_numeric_id": 65,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A expressão \"a despeito das\" equivale a \"independentemente das\" ou \"apesar das\". \n\nNa arquitetura de segurança de redes corporativas, o acesso remoto via Conexão de Área de Trabalho Remota (que utiliza o protocolo RDP na porta padrão 3389) a partir da internet pública para uma estação de trabalho interna depende diretamente das regras estabelecidas nos ativos de segurança (como firewalls, roteadores e sistemas de prevenção de intrusão). \n\nSe esses dispositivos estiverem configurados para bloquear conexões externas não autorizadas — o que constitui a prática padrão de segurança —, o acesso remoto será impedido. Portanto, o acesso não ocorre de forma independente dessas configurações de segurança.",
+        "source_reference": null
+      },
+      "source_content_hash": "94efddea7c5dff7c82c6494e10c48fdff0c9a03b5e44d877c78499c21934089a"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:066",
+      "source_id": "agente_de_policia_federal:66",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, a respeito de proteção e segurança, e noções de vírus, worms e pragas virtuais.\n\nUm ataque de ransomware comumente ocorre por meio da exploração de vulnerabilidades de sistemas e protocolos; a forma mais eficaz de solucionar um ataque desse tipo e recuperar os dados “sequestrados” (criptografados) é a utilização de técnicas de quebra por força bruta da criptografia aplicada.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 66; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ameaças Virtuais",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "6b2bdf9f3b700dcfd9b7adbcc09c99a4776b48dd9bfc598643f7e1854b3776eb",
+        "original_numeric_id": 66,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ameacas-virtuais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Embora os ataques de *ransomware* frequentemente explorem vulnerabilidades de sistemas para se propagar, a afirmação erra ao apontar a quebra por força bruta (*brute-force*) da criptografia como o método mais eficaz para recuperar os dados sequestrados.\n\nOs algoritmos criptográficos modernos empregados por essas pragas virtuais (como AES-256 ou RSA com chaves longas) tornam a quebra por força bruta computacionalmente inviável, exigindo recursos e tempo impraticáveis (frequentemente bilhões de anos com a tecnologia atual). A medida mais eficaz e segura para a recuperação dos dados sem o pagamento do resgate é a restauração de cópias de segurança (**backups**) atualizadas e mantidas de forma isolada (offline).",
+        "source_reference": null
+      },
+      "source_content_hash": "71b65c5dd20e72cef262b9878939a9d1fdd5f623abc1cf065b6bcc286f8a4bce"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:067",
+      "source_id": "agente_de_policia_federal:67",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, a respeito de proteção e segurança, e noções de vírus, worms e pragas virtuais.\n\nA infecção de um sistema por códigos maliciosos pode ocorrer por meio da execução de arquivos infectados obtidos de anexos de mensagens eletrônicas, de mídias removíveis, de páginas web comprometidas, de redes sociais ou diretamente de outros equipamentos.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 67; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ameaças Virtuais",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "81ea1cfd30261de8753befb03cd9b18570c9cfa29b063abec2c94e036a711fa2",
+        "original_numeric_id": 67,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ameacas-virtuais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação descreve corretamente os principais vetores de propagação e infecção por códigos maliciosos (*malware*):\n\n* **Anexos de mensagens eletrônicas:** Técnica comum de engenharia social (*phishing*).\n* **Mídias removíveis:** Dispositivos como pendrives que executam arquivos infectados (historicamente associados a recursos como o *autorun*).\n* **Páginas web comprometidas:** Ataques do tipo *drive-by download*, em que o código malicioso é baixado apenas por acessar o site.\n* **Redes sociais:** Compartilhamento de links maliciosos ou arquivos falsos.\n* **Diretamente de outros equipamentos:** Propagação automática por meio da exploração de vulnerabilidades de rede, comportamento típico de *worms*.",
+        "source_reference": null
+      },
+      "source_content_hash": "dcd22eca29950dd16ee5302f6c2cf1e7887cd1339b414dc1c4890d3168029af5"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:069",
+      "source_id": "agente_de_policia_federal:69",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, a respeito de proteção e segurança, e noções de vírus, worms e pragas virtuais.\n\nA superexposição de dados pessoais nas redes sociais facilita o furto de identidade ou a criação de identidade falsa com dados da vítima, identidades essas que podem ser usadas para atividades maliciosas tais como a realização de transações financeiras fraudulentas, a disseminação de códigos maliciosos e o envio de mensagens eletrônicas falsas por email ou redes sociais.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 69; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ameaças Virtuais",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "d0c8094c1cc9837ef37fc5e668884a8e4ae1b338f31240e81a45743d82e6f32d",
+        "original_numeric_id": 69,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "ameacas-virtuais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A publicação excessiva de informações pessoais em redes sociais (superexposição) fornece insumos valiosos para criminosos praticarem engenharia social e furto de identidade (*identity theft*). \n\nCom dados como nome completo, data de nascimento, fotos, nomes de familiares, locais frequentados e hábitos, golpistas conseguem criar perfis falsos altamente verossímeis ou se passar pela vítima para realizar transações financeiras fraudulentas, enganar contatos para disseminar códigos maliciosos ou enviar mensagens falsas (*phishing*), aproveitando-se da relação de confiança preexistente.",
+        "source_reference": null
+      },
+      "source_content_hash": "b8db50085b7eb9ec7a8fd25341297005ca78f16ba16ff79136a9d1c9ef3c4fdd"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:073",
+      "source_id": "agente_de_policia_federal:73",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca da teoria geral dos sistemas, julgue o item subsequente.\n\nEssa teoria contribui para a unidade da ciência, ao desenvolver princípios unificadores que atravessam verticalmente os universos particulares das diversas ciências envolvidas.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 73; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redes de Computadores e Conectividade",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "71871ecd9b51064400df8696a7a41e6c5b365004deac37b7bc970a285dbb98dd",
+        "original_numeric_id": 73,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta e reflete a essência da Teoria Geral dos Sistemas (TGS), formulada pelo biólogo Ludwig von Bertalanffy.\n\nUm dos objetivos fundamentais da TGS é a busca por princípios e leis aplicáveis a sistemas em geral, independentemente do seu campo de estudo (seja na física, biologia, sociologia ou administração). Ao identificar isomorfismos (semelhanças estruturais e funcionais) entre diferentes áreas do conhecimento, a teoria atua como um elemento integrador, promovendo a unidade da ciência ao transpor verticalmente as barreiras das especializações científicas isoladas.",
+        "source_reference": null
+      },
+      "source_content_hash": "0033dc2aba11ab9a597db60891237fbbaa6f7a6e68b2fe2d1f1df64ba918161c"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:075",
+      "source_id": "agente_de_policia_federal:75",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da utilização de tecnologias, ferramentas, aplicativos e procedimentos associados a Internet/intranet, julgue os itens seguintes.\n\nNas aplicações de transferência de arquivos por fluxo contínuo, os dados são transferidos como uma série de blocos precedidos por um cabeçalho especial de controle.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 75; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos de Internet, Navegadores e Pesquisa Avançada",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "177cf7988d1770370492b57167d7e3dff2a96c8cb479822780b00c7c27174850",
+        "original_numeric_id": 75,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item descreve incorretamente o modo de fluxo contínuo (*Stream mode*).\n\nNo protocolo de transferência de arquivos (FTP), existem diferentes modos de transmissão de dados:\n\n1. **Modo de Fluxo Contínuo (Stream Mode):** Os dados são transmitidos como um fluxo contínuo de bytes, sem cabeçalhos de controle adicionais. O fim do arquivo é indicado simplesmente pelo encerramento da conexão de dados por parte do remetente.\n2. **Modo Bloco (Block Mode):** Os dados são formatados em uma série de blocos, onde cada bloco é precedido por um cabeçalho especial de controle (contendo o tamanho do bloco e informações de controle).\n\nPortanto, a descrição apresentada no enunciado refere-se ao **modo bloco**, e não ao fluxo contínuo.",
+        "source_reference": null
+      },
+      "source_content_hash": "9498010ce1652c91a75751ec658dacd889eb40b287f983b8a450277cfd2d776c"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:077",
+      "source_id": "agente_de_policia_federal:77",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, acerca da edição de textos, planilhas e apresentações nos ambientes Microsoft Office e BrOffice.\n\nNa versão 2013 do PowerPoint do Microsoft Office Professional, é possível abrir arquivos no formato .odp, do Impress do BrOffice; contudo, não é possível exportar ou salvar arquivos .pptx originais do PowerPoint como arquivos .odp.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 77; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ferramentas de Escritório (Microsoft Office e LibreOffice)",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "54cc1ecf6441b5db3f4e29d14437de9c0cefa3744aa970cd5ed1e6df49231d66",
+        "original_numeric_id": 77,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto.\n\nO Microsoft PowerPoint 2013 possui suporte nativo completo ao formato OpenDocument Presentation (`.odp`), utilizado pelo Impress do LibreOffice/BrOffice. Isso significa que o usuário pode tanto abrir arquivos `.odp` quanto salvar ou exportar apresentações criadas originalmente no PowerPoint (`.pptx`) diretamente para o formato `.odp` por meio do menu \"Salvar Como\".",
+        "source_reference": null
+      },
+      "source_content_hash": "3b529bfb1f260aaaa76635507e215c1ac6ea9acebae73160d1820737865b00f3"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:079",
+      "source_id": "agente_de_policia_federal:79",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, a respeito da teoria da informação e de sistemas de informação.\n\nO conceito de conhecimento é mais complexo que o de informação, pois conhecimento pressupõe um processo de compreensão e internalização das informações recebidas, possivelmente combinando-as.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 79; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Conceitos de Internet, Navegadores e Pesquisa Avançada",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "08dd943c986001ca210a8ca411116f7bb66942050ab564061c8959ddac36479d",
+        "original_numeric_id": 79,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto.\n\nNa teoria da informação, a hierarquia do conhecimento é frequentemente representada pela pirâmide DIKW (Dados, Informação, Conhecimento e Sabedoria):\n\n- **Dados:** Elementos brutos, sem tratamento ou contexto.\n- **Informação:** Dados estruturados, processados e contextualizados.\n- **Conhecimento:** Exige um nível maior de complexidade, pois envolve a internalização, a reflexão, a compreensão e a aplicação prática dessas informações por um agente cognitivo.",
+        "source_reference": null
+      },
+      "source_content_hash": "1c1eaff706418ada841be8e6e5065f873cf9de4d27cfa10cc76d153c88d09ec7"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:084",
+      "source_id": "agente_de_policia_federal:84",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, relativos a noções de mineração de dados, big data e aprendizado de máquina.\n\nSituação hipotética: Na ação de obtenção de informações por meio de aprendizado de máquina, verificou-se que o processo que estava sendo realizado consistia em examinar as características de determinado objeto e atribuir-lhe uma ou mais classes; verificou-se também que os algoritmos utilizados eram embasados em algoritmos de aprendizagem supervisionados. Assertiva: Nessa situação, a ação em realização está relacionada ao processo de classificação.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 84; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redes de Computadores e Conectividade",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "0b1b7dbf3b0d4ba0f70d334b07adca754fe43dabe70dbb5d4158390edb831b5c",
+        "original_numeric_id": 84,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto.\n\nO processo descrito — analisar as características de um objeto de entrada para atribuir-lhe uma classe predefinida com base em dados previamente rotulados — define exatamente a tarefa de **classificação**, que é uma das principais abordagens do aprendizado de máquina supervisionado.",
+        "source_reference": null
+      },
+      "source_content_hash": "0a215c9bb047b62d473618a572262339c3b6936a4bed57153aa118cea027f999"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:085",
+      "source_id": "agente_de_policia_federal:85",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, relativos a noções de mineração de dados, big data e aprendizado de máquina.\n\nBig data refere-se a uma nova geração de tecnologias e arquiteturas projetadas para processar volumes muito grandes e com grande variedade de dados, permitindo alta velocidade de captura, descoberta e análise.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 85; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Conceitos de Internet, Navegadores e Pesquisa Avançada",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "3e8bb0f350df24bd724cc9e0cbe201cf3ed55439c4004cc6c5f3d6bc0cd26f24",
+        "original_numeric_id": 85,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação define corretamente o conceito de **Big Data**. \n\nO termo refere-se a conjuntos de dados extremamente amplos e complexos que as tecnologias de processamento de dados tradicionais não conseguem gerenciar de forma eficiente. A definição clássica de Big Data é baseada em três pilares fundamentais (conhecidos como os \"3 Vs\"):\n\n1. **Volume:** Quantidade massiva de dados gerados a cada segundo.\n2. **Variedade:** Diversidade de formatos de dados (estruturados, semiestruturados e não estruturados, como textos, áudios, vídeos e logs).\n3. **Velocidade:** Rapidez com que os dados são criados, coletados e precisam ser processados em tempo real ou quase real.\n\nAs arquiteturas e tecnologias modernas de Big Data (como Hadoop, Spark e bancos de dados NoSQL) foram projetadas especificamente para lidar com essas características, permitindo a captura, a descoberta de padrões e a análise ágil desses dados.",
+        "source_reference": null
+      },
+      "source_content_hash": "29a46dcba07c05bcd284491d5e221dcc0a891f242bdf36a6b0d8799151ed8004"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:086",
+      "source_id": "agente_de_policia_federal:86",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, relativos a noções de mineração de dados, big data e aprendizado de máquina.\n\nPode-se definir mineração de dados como o processo de identificar, em dados, padrões válidos, novos, potencialmente úteis e, ao final, compreensíveis.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 86; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Conceitos de Internet, Navegadores e Pesquisa Avançada",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "3a8fd6aba79b75d10a5a3325dfe406baadad883ee40de1fb938f3b8ae373dc64",
+        "original_numeric_id": 86,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta, pois reproduz a definição clássica de **Mineração de Dados** (*Data Mining*) estabelecida na literatura de Descoberta de Conhecimento em Bases de Dados (KDD - *Knowledge Discovery in Databases*).\n\nSegundo Fayyad, Piatetsky-Shapiro e Smyth (1996), a mineração de dados é descrita como o processo não trivial de identificar, em dados:\n* **Padrões válidos:** Que se sustentem para novos dados com certo grau de certeza.\n* **Novos (originais):** Que não fossem previamente conhecidos.\n* **Potencialmente úteis:** Que tragam algum valor prático ou vantagem competitiva para a tomada de decisão.\n* **Compreensíveis:** Que possam ser interpretados e assimilados por seres humanos.",
+        "source_reference": null
+      },
+      "source_content_hash": "1c28321b1d80b65c0fd788e1a665f5dbb0071cd0ff517e19ebd2d320c92ff400"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:088",
+      "source_id": "agente_de_policia_federal:88",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de redes de comunicação, julgue os itens a seguir.\n\nSituação hipotética: Múltiplos hospedeiros devem ser conectados a LANs sem fio, a redes por satélite e a redes de fibra (HFC). Para isso, deve-se escolher entre dois tipos de canais distintos, em função das características da camada de enlace: difusão (broadcast) ou ponto a ponto. Assertiva: Nessa situação, deve-se fazer a conexão dos hospedeiros por meio de difusão.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 88; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redes de Computadores e Conectividade",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "4db9c12226b5eb5318d2e362d3e88ea38fdc6aa35f7b2dbaf7de23dd48fb69bd",
+        "original_numeric_id": 88,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nEm redes locais cabeadas e sem fio (WLAN), o dispositivo concentrador de camada de rede e enlace responsável por interconectar clientes sem fio à infraestrutura cabeada Ethernet é o **Access Point (Ponto de Acesso)**, enquanto os **switches** com suporte a VLANs (IEEE 802.1Q) realizam a comutação segura de quadros no núcleo e na borda da rede local, garantindo segmentação de tráfego e qualidade de serviço.",
+        "source_reference": null
+      },
+      "source_content_hash": "e521618e3b535c58a2a4b40983414785cd9a6d6b7f83c90c61b914fdffc0fab9"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:094",
+      "source_id": "agente_de_policia_federal:94",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, relativos a noções de programação Python e R.\n\nConsidere o programa a seguir, escrito em R.\n\nx <- TRUE\ny <- FALSE\nprint (xy)\n\nApós a execução do programa, será obtido o seguinte resultado.\n\n[1] FALSE",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 94; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos de Internet, Navegadores e Pesquisa Avançada",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "1aee915d4490bfd93bbe4d22e56aa581d905c65f3ec1721fa2ddb3d017e8f60b",
+        "original_numeric_id": 94,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta.\n\nNo código apresentado, são criadas duas variáveis distintas: `x` (com valor `TRUE`) e `y` (com valor `FALSE`). \n\nNa linha seguinte, o comando `print(xy)` tenta exibir o conteúdo de uma variável chamada `xy`. Como a variável `xy` não foi declarada ou inicializada anteriormente no ambiente de execução, o interpretador do R interromperá a execução e retornará um erro de objeto não encontrado:\n\n`Error in print(xy) : object 'xy' not found`\n\nPara que o resultado fosse `FALSE` por meio de uma operação lógica de conjunção (E lógico), o código deveria utilizar o operador `&` ou `&&`, como em `print(x & y)`. Da forma como foi escrito, ocorre um erro de sintaxe/execução por variável indefinida.",
+        "source_reference": null
+      },
+      "source_content_hash": "ac5bb1d82a9850ed1a89d9e50a7ecc0ffbd680d4495d8c104a10a295da109e7f"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:095",
+      "source_id": "agente_de_policia_federal:95",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, relativos a noções de programação Python e R.\n\nConsidere o programa a seguir, na linguagem Python.\n\nif 5 > 2\n {\n print(\"True!\")\n }\n\nA sintaxe do programa está correta e, quando executado, ele apresentará o seguinte resultado.\n\nTrue!",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 95; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos de Internet, Navegadores e Pesquisa Avançada",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "9c1820d48b82fa5f6ce0bf63f37e8ecd8dfb19003d8ecc76b9c490d7b0a20fd7",
+        "original_numeric_id": 95,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta.\n\nO código apresentado possui erros de sintaxe segundo as regras da linguagem Python:\n\n1. **Ausência de dois-pontos (`:`):** Em Python, a estrutura condicional `if` exige o caractere `:` imediatamente após a condição (ex: `if 5 > 2:`).\n2. **Uso de chaves (`{}`):** Python não utiliza chaves para delimitar blocos de código ou escopos de estruturas de controle (como é comum em C, Java ou JavaScript). O escopo em Python é definido estritamente pela **indentação** (espaçamento no início da linha).\n\nA execução desse código resultará em um erro de sintaxe (`SyntaxError: invalid syntax`). A sintaxe correta em Python seria:\n\n```python\nif 5 > 2:\n    print(\"True!\")\n```",
+        "source_reference": null
+      },
+      "source_content_hash": "4a2fbbddb82e7cdc92e511c8494ec394d73dacd38eb9f31a91ca443f9bebf851"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:096",
+      "source_id": "agente_de_policia_federal:96",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, relativos a noções de programação Python e R.\n\nConsidere o programa a seguir, na linguagem Python.\n\nletras == [\"P\", \"F\"]\nfor x in letras\n {\n print(x)\n }\n\nA sintaxe do programa está correta e, quando executado, ele apresentará o seguinte resultado.\n\nPF",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": "medium",
+      "source_reference": "agente_de_policia_federal.pdf, questão 96; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos de Internet, Navegadores e Pesquisa Avançada",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "ee701975f08ee9201bbd3d46861ef260bc1cc94309c453cd522d37334b549c2c",
+        "original_numeric_id": 96,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O código apresentado contém três erros de sintaxe fundamentais na linguagem Python:\n\n1. **Operador de atribuição incorreto**: Na primeira linha, `letras == [\"P\", \"F\"]` utiliza o operador de comparação de igualdade (`==`). Para atribuir a lista à variável `letras`, deveria ser utilizado o operador de atribuição simples (`=`).\n2. **Ausência de dois-pontos**: A estrutura do laço `for` em Python exige o caractere dois-pontos (`:`) ao final da instrução de declaração, ou seja, `for x in letras:`.\n3. **Delimitação de blocos por chaves**: Python utiliza a indentação (espaçamento regulado) para definir blocos de código, e não chaves `{}` como em linguagens como C, C++ ou Java.\n\nPara que o programa estivesse correto e produzisse o resultado indicado, sua sintaxe deveria ser:\n\n```python\nletras = [\"P\", \"F\"]\nfor x in letras:\n    print(x, end=\"\")\n```",
+        "source_reference": null
+      },
+      "source_content_hash": "e1442d7554828aac01586cff9ec4e3963d91fad7a9041a0c32cdb42c1fad986b"
+    }
+  ]
+}

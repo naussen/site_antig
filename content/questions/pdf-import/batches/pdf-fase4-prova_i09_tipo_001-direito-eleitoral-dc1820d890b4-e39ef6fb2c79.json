@@ -1,0 +1,463 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_i09_tipo_001-direito-eleitoral-dc1820d890b4-e39ef6fb2c79",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "dc1820d890b4f456f6a21dcfb093157696cf06a42b0374997d10a8cfc971f2a7",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "0b163a9271f0d9d81933ba55370885fc8591ac83624df1b1bb86251a689ef012",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "e39ef6fb2c793d0404fa60d5df730d74172ac0b91ddcf1879cd4d6b2cc88a0a4",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-eleitoral",
+    "name": "Direito Eleitoral"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:052",
+      "source_id": "prova_i09_tipo_001:52",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O alistamento eleitoral é um requisito indispensável para o exercício do voto, consistindo no procedimento pelo qual o cidadão qualifica-se perante a Justiça Eleitoral e se insere como membro do eleitorado nacional. O alistamento pode ou deve ser realizado",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 52; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "facultativamente para os maiores de dezesseis e menores de dezoito anos, ainda que completem os dezesseis anos no ano em que se realizarem as eleições, desde que até a data do pleito.",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "facultativamente no caso dos conscritos e analfabetos.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "ex officio, isto é, por impulso próprio do órgão estatal.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "facultativamente no caso de pessoa portadora de deficiência, quando reste comprovado que o cumprimento das obrigações eleitorais relativas ao alistamento é impossível ou demasiadamente oneroso.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "obrigatoriamente pelos que se encontrem fora do país.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Ações e Recursos Eleitorais",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Eleitoral",
+        "source_content_hash": "940e653d3c8a0ae4c4ee05984e0fc7feebee58494c2ff84ceee332b75531d6d2",
+        "original_numeric_id": 52,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "acoes-e-recursos-eleitorais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A**.\n\nConforme preceitua o art. 14, § 1º, da Constituição Federal de 1988 e a legislação eleitoral, o alistamento eleitoral e o voto são:\nI. **Obrigatórios** para os maiores de 18 anos;\nII. **Facultativos** para:\n  a) os analfabetos;\n  b) os maiores de setenta anos;\n  c) os maiores de dezesseis e menores de dezoito anos.\n\nO alistamento consiste no procedimento administrativo perante a Justiça Eleitoral que confere ao cidadão o título eleitoral e a consequente capacidade eleitoral ativa.\n\nA alternativa A sintetiza com correção essas regras constitucionais incondicionais.\n\n### Dispositivo legal\n[Constituição Federal de 1988, Art. 14, § 1º](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "34438d7a4174ed596ed79584d2f5815afd554bd50c7e166396bfa9bd70c5f88a"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:053",
+      "source_id": "prova_i09_tipo_001:53",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A diplomação é o ato pelo qual a Justiça Eleitoral habilita os candidatos eleitos e seus suplentes a exercer seus respectivos mandatos. Dentre suas características, destaca-se que",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 53; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a competência para outorgar a diplomação pode ser de um órgão monocrático ou colegiado, conforme a instância em que ocorra.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "a data da diplomação não pode ser alterada pela Justiça Eleitoral, uma vez que constitui objeto de norma expressa, de natureza cogente, na legislação eleitoral.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "a expedição do diploma pode ser fiscalizada por partido político, coligação, candidato ou membro do Ministério Público, ante seu caráter de ato jurídico público.",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "nas eleições majoritárias são diplomados somente os candidatos eleitos ao Poder Executivo, não sendo cabível a diplomação dos vices.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "existindo recurso contrário à diplomação, esta será sobrestada enquanto não julgado o recurso.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ações e Recursos Eleitorais",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Eleitoral",
+        "source_content_hash": "4c743020f4f12ed1ff49dadb6a9e1d0866517fe0aa4205f09d93062c34844e64",
+        "original_numeric_id": 53,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l4737compilada.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "acoes-e-recursos-eleitorais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nA diplomação é o ato formal e solene pelo qual a Justiça Eleitoral atesta quem são os candidatos efetivamente eleitos e seus respectivos suplentes, habilitando-os à futura posse nos cargos públicos eletivos (art. 215 do Código Eleitoral).\n\nA diplomação encerra formalmente o processo eleitoral em sentido estrito e inaugura o prazo decadencial de 3 dias para a interposição de Recurso Contra Expedição de Diploma (RCED) e de 15 dias para a Ação de Impugnação de Mandato Eletivo (AIME), prevista no art. 14, § 10, da Constituição Federal.\n\nA alternativa C retrata adequadamente a natureza jurídica e os efeitos do ato de diplomação.\n\n### Dispositivo legal\n[Código Eleitoral - Lei nº 4.737/1965, Art. 215](https://www.planalto.gov.br/ccivil_03/leis/l4737compilada.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "d8ca2f1c4ec604d90e8e339a5a7a7da9d5cdb03d384da2267f5bb4da4800b5fd"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:055",
+      "source_id": "prova_i09_tipo_001:55",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A prestação de contas nas campanhas eleitorais configura procedimento obrigatório, tendente a preservar a lisura e a transparência no fluir financeiro de candidatos e partidos em tal período. Realizada perante a Justiça Eleitoral, a prestação de contas nas campanhas eleitorais está regulamentada na Lei nº 9.504/97, a qual prevê, entre outras normas, obrigações a partidos e candidatos no sentido de prestar informações acerca da arrecadação e dispêndio de recursos, os procedimentos para a apresentação das contas e as consequências da não apresentação ou rejeição das contas. Entre tais normas, vale destacar que",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 55; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a prestação de contas poderá ser feita por preposto do candidato ou pelos doadores para o comitê financeiro.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "no caso de eleição para cargo majoritário, cabe ao comitê financeiro, e não ao candidato, o encaminhamento à Justiça Eleitoral das informações contidas nas prestações de contas.",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "a inobservância do prazo para encaminhamento das prestações de contas não impede a diplomação, embora esta tenha seus efeitos suspensos enquanto não concluída a prestação de contas.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "a Justiça Eleitoral verificará a regularidade das contas de campanha, sendo duas suas condutas possíveis: a aprovação ou a desaprovação das contas.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "não prestadas as contas no prazo legal, a Justiça Eleitoral lhes considerará, de imediato, desaprovadas.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Ações e Recursos Eleitorais",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Eleitoral",
+        "source_content_hash": "1d9b4b59925184ed8b37ee883501e198d03a0395c6c2278d90f1c741d7c67f08",
+        "original_numeric_id": 55,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l9504.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "acoes-e-recursos-eleitorais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nA prestação de contas de campanha eleitoral é dever inafastável de todos os candidatos e partidos políticos, regulada pelo art. 28 e seguintes da Lei nº 9.504/1997 (Lei das Eleições).\n\nA não apresentação de contas impede a obtenção da certidão de quitação eleitoral até o final da legislatura, persistindo os efeitos da restrição até que as contas sejam efetivamente apresentadas e julgadas.\n\nA alternativa B descreve fielmente as consequências e o rito processual do dever de prestar contas na Justiça Eleitoral.\n\n### Dispositivo legal\n[Lei nº 9.504/1997, Art. 28 a Art. 32](https://www.planalto.gov.br/ccivil_03/leis/l9504.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "aefd853a16a3d3b0d6f0abb7e811e1d5f06cd2e3c789f6ad9c715a1f7b159a3e"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:056",
+      "source_id": "prova_i09_tipo_001:56",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O regimento interno do Tribunal Regional Eleitoral do Rio Grande do Norte prevê a existência de duas comissões permanentes: a de Regimento e a de Jurisprudência. Entre as atribuições de cada comissão, ressalta-se que",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 56; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "cabe exclusivamente à comissão de Regimento a iniciativa para a apresentação de qualquer emenda ao regimento interno do Tribunal.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "a comissão de Regimento é responsável por aprovar as alterações no regimento interno do Tribunal.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "a comissão de Jurisprudência, presidida pelo juiz mais antigo, tem a função de decidir as reclamações por erro material na ata do Plenário e na publicação de acórdãos.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "à comissão de Regimento incumbe opinar, em processo administrativo, quando consultada pelo Presidente.",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "à comissão de Jurisprudência é vedada a apresentação de emendas ao regimento interno do Tribunal.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Ações e Recursos Eleitorais",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Eleitoral",
+        "source_content_hash": "3a17e977ac1445d00aa0978a90b0b8b6d571e9bfd18ddb12b96c3f4a32f31238",
+        "original_numeric_id": 56,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "acoes-e-recursos-eleitorais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nDe acordo com a disciplina regimental dos Tribunais Regionais Eleitorais e o art. 120 da Constituição Federal, o Corregedor Regional Eleitoral é eleito dentre os Desembargadores do Tribunal de Justiça que integram o Pleno da Corte Eleitoral.\n\nA Corregedoria Regional Eleitoral possui atribuição de fiscalização, inspeção e correição sobre as zonas e juízos eleitorais do respectivo Estado, expedindo provimentos e instaurando sindicâncias para regularidade dos serviços cartorários.\n\nA alternativa D corresponde exatamente a essas diretrizes regimentais e constitucionais.\n\n### Dispositivo legal\n[Constituição Federal de 1988, Art. 120](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "021304245aa1eb267e3cae6d08f5f80f57dccba4d4a39d7d34f310fcc2eeab66"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:058",
+      "source_id": "prova_i09_tipo_001:58",
+      "question_type": "multiple_choice",
+      "statement_markdown": "As agremiações políticas e coligações possuem prerrogativas de fiscalização do processo de votação e apuração das eleições, as quais são garantidas por normas expressas na legislação eleitoral, sendo que, caso não observadas, podem acarretar nulidades na votação. Entre tais prerrogativas, insere-se",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 58; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a nomeação de fiscal para fiscalizar seção eleitoral, sendo-lhe vedado, contudo, nomear o mesmo fiscal para mais de uma seção, ainda que no mesmo local de votação.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "o requerimento do registro, na Justiça Eleitoral, dos fiscais e delegados que participarão da fiscalização, para que aquela expeça as credenciais necessárias à livre circulação nas seções eleitorais.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "o conhecimento antecipado dos programas de computador utilizados no processamento eletrônico da totalização dos resultados, podendo, inclusive, apresentar, em relação a eles, impugnação fundamentada à Justiça Eleitoral.",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "constituir sistema próprio de fiscalização, apuração e totalização dos resultados, contratando, inclusive, empresas de auditoria de sistemas de sua confiança, independente de credenciamento junto à Justiça Eleitoral, as quais receberão, previamente, os programas de computador e, simultaneamente, os mesmos dados alimentadores do sistema oficial de apuração e totalização.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "obter cópia do boletim de urna, sem limitação temporal para seu requerimento.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ações e Recursos Eleitorais",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Eleitoral",
+        "source_content_hash": "8e250c0b35fee5408b68ed2b094eec8c7265303556f21ed0b2966a0fabf9f757",
+        "original_numeric_id": 58,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l9504.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "acoes-e-recursos-eleitorais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nO art. 66 da Lei nº 9.504/1997 estabelece que os partidos políticos e coligações concorrentes ao pleito têm ampla prerrogativa de fiscalizar todas as fases do processo de votação e apuração das eleições, inclusive o desenvolvimento, lacração, assinatura digital e carga das urnas eletrônicas.\n\nOs fiscais partidários e delegados credenciados podem acompanhar a expedição do boletim de urna (BU), o registro digital do voto (RDV) e requerer cópias para conferência paralela da totalização.\n\nA alternativa C consagra essa garantia republicana e democrática da fiscalização partidária do sufrágio.\n\n### Dispositivo legal\n[Lei nº 9.504/1997, Art. 66](https://www.planalto.gov.br/ccivil_03/leis/l9504.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "69b98b954e8bcbb85e6d008e174da5beb5492b9b2577f5b4408a02c5519dd5dc"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:060",
+      "source_id": "prova_i09_tipo_001:60",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O processo eleitoral é uma das formas de concretização do princípio democrático, razão pela qual é merecedor de diversas garantias previstas, expressamente, na legislação. Entre tais garantias, destaca-se que",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 60; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "nenhuma autoridade poderá, desde cinco dias antes e até quarenta e oito horas depois do encerramento da eleição, prender ou deter qualquer eleitor, ainda que em flagrante delito ou em virtude de sentença criminal condenatória por crime inafiançável.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "os membros das Mesas Receptoras, durante o exercício de suas funções, não poderão ser detidos ou presos, salvo o caso de flagrante delito. Tal garantia não se estende aos fiscais dos partidos.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "o eleitor, embora não possua a prerrogativa de representar diretamente ao corregedor geral ou regional da Justiça Federal, pode provocar o Ministério Público ou o partido político para que o faça.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "é proibida, durante o ato eleitoral, a presença de força pública no edifício em que funcionar Mesa Receptora, ou nas imediações, sendo que a força armada conservar-se-á a cem metros da Seção Eleitoral e não poderá aproximar-se do lugar da votação, ou nele penetrar, sem ordem do Presidente da Mesa.",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "aos partidos políticos é assegurada a prioridade postal durante o ano da realização das eleições, para remessa de material de propaganda de seus candidatos registrados.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Ações e Recursos Eleitorais",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Eleitoral",
+        "source_content_hash": "65ee1339654c13416fbf7c676e16d6c3bd57c9e0868d189a6d58d51a5c0e28fb",
+        "original_numeric_id": 60,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l4737compilado.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "acoes-e-recursos-eleitorais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa **D** está correta. O Código Eleitoral estabelece garantias para assegurar a liberdade do voto e a tranquilidade dos trabalhos eleitorais. O artigo 238 proíbe a presença de força pública no edifício em que funcionar a Mesa Receptora ou em suas imediações. Complementarmente, o artigo 141 determina que a força armada deve conservar-se a cem metros da seção eleitoral, não podendo aproximar-se ou penetrar no local de votação sem ordem expressa do Presidente da Mesa Receptora.\n\nAnálise das alternativas incorretas:\n* **A** está incorreta porque a proibição de prisão de eleitores nos cinco dias anteriores e até quarenta e oito horas após o encerramento da eleição comporta exceções expressas: flagrante delito, sentença criminal condenatória por crime inafiançável ou desrespeito a salvo-conduto (artigo 236, *caput*, do Código Eleitoral).\n* **B** está incorreta porque a garantia contra detenção ou prisão durante o exercício das funções estende-se expressamente aos fiscais de partido, conforme o artigo 236, § 1º, do Código Eleitoral.\n* **C** está incorreta porque qualquer eleitor tem a prerrogativa de se dirigir diretamente ao Corregedor-Geral ou Regional para relatar infrações e requerer providências, nos termos do artigo 237, § 2º, do Código Eleitoral.\n* **E** está incorreta porque a prioridade postal assegurada aos partidos políticos para remessa de material de propaganda de seus candidatos registrados é limitada aos 60 (sessenta) dias anteriores à realização das eleições, e não durante todo o ano, conforme o artigo 239 do Código Eleitoral.\n\n### Dispositivo legal\n* **Código Eleitoral**, Artigos 141, 236, 237, § 2º, 238 e 239.",
+        "source_reference": null
+      },
+      "source_content_hash": "9198c542b1980928c8cb0596755e19f1435125ae37c1701ad7922da970de3edd"
+    }
+  ]
+}

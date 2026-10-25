@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-tecnico_do_seguro_social-etica-no-servico-publico-6303685ecb05-338573e39d24",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "6303685ecb05a17026689ea714434eb749b136afd9838f8455367497b631cc0f",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "4eaf0e6930a8700363f76961716af089a527cb11e4282c667f45b06f21532285",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "338573e39d24136996fc8f2363224d865935d0b03a3040638d4d635ef0928ec5",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "etica-no-servico-publico",
+    "name": "Ética no Serviço Público"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:016",
+      "source_id": "tecnico_do_seguro_social:16",
+      "question_type": "true_false",
+      "statement_markdown": "Com base no disposto no Decreto n.º 1.171/1994, que aprova o Código de Ética Profissional do Servidor Público Civil do Poder Executivo Federal, julgue os itens a seguir.\n\nÉ vedado ao servidor público federal ligar seu nome a empreendimentos de cunho duvidoso, mesmo que o servidor respeite, no ambiente de trabalho, todos os deveres fundamentais a ele aplicáveis.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 16; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ética (Aspectos Teóricos)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "b11183dbef56effbaff1dcf4bbfa81d16903db61bd6135f7f0478a02a0fa459a",
+        "original_numeric_id": 16,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "etica-aspectos-teoricos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A vedação de vincular o nome a empreendimentos de cunho duvidoso possui caráter absoluto e não é mitigada ou compensada pelo fato de o servidor cumprir exemplarmente seus deveres funcionais dentro da repartição pública. \n\nA conduta ética do servidor público projeta-se para além do ambiente estrito de trabalho, alcançando sua vida pública e privada. Assim, a preservação da dignidade da função pública impede que o agente associe sua imagem a atividades suspeitas ou moralmente questionáveis em qualquer esfera de sua vida.\n\n### Dispositivo legal\n* **Norma:** Decreto nº 1.171/1994, Anexo, Seção III, inciso XV, alínea \"p\".\n* **Link oficial:** [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/decreto/d1171.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "f890d73ccb49c24cc9f15d287fec89ef41bb47c3b7f822ac84b3293392745620"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:018",
+      "source_id": "tecnico_do_seguro_social:18",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes de acordo com as disposições do Decreto n.º 6.029/2007, que institui o Sistema de Gestão da Ética do Poder Executivo Federal.\n\nCaso determinado ministro de Estado pretenda realizar consulta a respeito de matéria de ética pública, a referida consulta deverá ser dirigida à Comissão de Ética Pública (CEP), que integra o Sistema de Gestão da Ética do Poder Executivo Federal.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 18; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ética (Aspectos Teóricos)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "ff2cf3a117688d55b892dce82d24a4fd356540dc5a244928532d24acf820b4a4",
+        "original_numeric_id": 18,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "etica-aspectos-teoricos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O Decreto nº 6.029/2007, que institui o Sistema de Gestão da Ética do Poder Executivo Federal, define a Comissão de Ética Pública (CEP) como a instância competente para atuar como órgão consultivo do Presidente da República e dos Ministros de Estado em matéria de ética pública.\n\nDesse modo, qualquer consulta formulada por Ministro de Estado sobre o tema deve ser encaminhada diretamente à CEP, que centraliza essa atribuição consultiva no âmbito da alta administração federal.\n\n### Dispositivo legal\n* **Norma:** Decreto nº 6.029/2007, Artigo 4º, inciso I.\n* **Link oficial:** [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "7bed7251a93a681f3d49ab2c3fdb16700c7de7885815cb6750dbbd3bceb189b4"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:020",
+      "source_id": "tecnico_do_seguro_social:20",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes de acordo com as disposições do Decreto n.º 6.029/2007, que institui o Sistema de Gestão da Ética do Poder Executivo Federal.\n\nAs instâncias superiores dos órgãos e das entidades do Poder Executivo Federal estão dispensadas de garantir os recursos humanos, materiais e financeiros para que a Comissão de Ética cumpra com suas atribuições, uma vez que essas comissões devem ser mantidas por meio de recursos próprios, obtidos mediante cobrança para emissão de pareceres a respeito de questões que envolvam temas relacionados à ética no serviço público.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 20; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ética (Aspectos Teóricos)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Ética no Serviço Público",
+        "source_content_hash": "e7efd0d6480277ef427a52e6d6e484dd528ffe59318156205b540f89c57de2ca",
+        "original_numeric_id": 20,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "etica-aspectos-teoricos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. As comissões de ética não possuem autonomia financeira para cobrar por pareceres ou serviços prestados, sendo a atividade pública de natureza estritamente gratuita e voltada ao interesse público.\n\nO Decreto nº 6.029/2007 determina expressamente que os órgãos e entidades da Administração Pública Federal direta e indireta têm a obrigação de fornecer todo o suporte técnico, material, financeiro e de recursos humanos necessário para o pleno funcionamento de suas respectivas Comissões de Ética.\n\n### Dispositivo legal\n* **Norma:** Decreto nº 6.029/2007, Artigo 8º.\n* **Link oficial:** [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/decreto/d6029.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "c5a727de24c733a2eb48d20188e752a6a540deb41e69083d6ed5418107ded187"
+    }
+  ]
+}

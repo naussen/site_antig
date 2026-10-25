@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_administrativo-raciocinio-logico-matematica-estatistica-e-matematica-financeira-9275da7d075c-44f90f988e6e",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "9275da7d075c14f6aecd067cee72adc350eb98cd976b0bad8b9bd014f4eb1edf",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "5da32b0a57792e090ef9d4c38cee7bda12a08609929c945e59e21312dccdc01a",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "44f90f988e6ed4eaf417635dd0cb62cd5a477e533ff3407b0ee1fc6bba946ed2",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "name": "Raciocínio Lógico, Matemática, Estatística e Matemática Financeira"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:026",
+      "source_id": "agente_administrativo:26",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, referentes a razões e proporções, juros simples, trigonometria, geometria e funções.\n\nSe o custo de construção de um muro for R$ 75,00 por m$^2$, então, para se construir um muro de 2,5 m de altura em um terreno com 12 m de largura e 15 m de comprimento, o custo total será de R$ 10.125,00.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 26; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico e Matemática",
+        "source_content_hash": "e93747f0b03041321c098e44bec442efd6773c5eaaefff69e121e1512e1e5a92",
+        "original_numeric_id": 26,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_administrativo_026.png",
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Para calcular o custo total da construção do muro ao redor do terreno retangular, primeiro determina-se o perímetro do terreno, que corresponde ao comprimento total do muro. O terreno possui 12 metros de largura e 15 metros de comprimento, logo, o perímetro é a soma de todos os lados:\n$$2 \\times (12 + 15) = 54\\text{ metros}$$\n\nEm seguida, calcula-se a área total do muro multiplicando o perímetro pela altura de 2,5 metros:\n$$54 \\times 2,5 = 135\\text{ m}^2$$\n\nPor fim, multiplica-se a área total pelo custo unitário de construção por metro quadrado:\n$$135\\text{ m}^2 \\times \\text{R\\$ } 75,00 = \\text{R\\$ } 10.125,00$$\n\nO valor coincide exatamente com o apresentado no enunciado.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_administrativo_026.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "044cfa56992d0459d2231c63d82303fdb0099d7967ca02f1f82bc4e21e194af3"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:027",
+      "source_id": "agente_administrativo:27",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens seguintes, referentes a razões e proporções, juros simples, trigonometria, geometria e funções.\n\nSe o lucro (L) diário, em reais, de um vendedor é dado pela função quadrática $L(u) = 25u - 0,25u^2$, em que $u$ é a quantidade de produtos vendidos por dia, então o lucro máximo diário que esse vendedor pode ter é de R$ 100,00.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 27; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Matemática",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Raciocínio Lógico e Matemática",
+        "source_content_hash": "80e03acc547849554d67352394d11b2d027d5ce08bd1e68f5c3167ea0fa6a878",
+        "original_numeric_id": 27,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_agente_administrativo_027.png",
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "matematica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A função que determina o lucro é uma função quadrática da forma $L(u) = -0,25u^2 + 25u$, onde os coeficientes são $a = -0,25$ e $b = 25$. Como o coeficiente $a$ é negativo, a parábola possui concavidade voltada para baixo, apresentando um ponto de máximo no seu vértice.\n\nA quantidade de produtos $u$ que maximiza o lucro é dada pela coordenada $u_v$ do vértice:\n$$u_v = -\\frac{b}{2a} = -\\frac{25}{2 \\times (-0,25)} = \\frac{25}{0,5} = 50\\text{ unidades}$$\n\nSubstituindo esse valor na função para encontrar o lucro máximo ($L_{máx}$):\n$$L(50) = 25(50) - 0,25(50)^2 = 1250 - 0,25(2500) = 1250 - 625 = \\text{R\\$ } 625,00$$\n\nPortanto, o lucro máximo diário é de R$ 625,00, e não de R$ 100,00.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_administrativo_027.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "bd78fa8850a0736fc6ac21b41df6ff47ad5ca13722ebaad5d0f6ebe2f6267fab"
+    }
+  ]
+}

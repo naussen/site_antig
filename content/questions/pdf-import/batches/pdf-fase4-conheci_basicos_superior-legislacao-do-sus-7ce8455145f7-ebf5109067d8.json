@@ -1,0 +1,80 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-conheci_basicos_superior-legislacao-do-sus-7ce8455145f7-ebf5109067d8",
+  "source": {
+    "file_name": "conheci_basicos_superior_ATUALIZADO.json",
+    "sha256": "7ce8455145f7b114aa72425ef99a450ecc4281426c54f3c9855b091cd41b14d3",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "conheci_basicos_superior.json",
+      "original_source_sha256": "aaf9eb1efb2a88d71a045bc1e2e61e371649418bec45be98916a5f4b799176a6",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ebf5109067d8ea1808ae5882d7e3ea00063f0cb6ed0a0c0ec68f31e72eb85422",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "legislacao-do-sus",
+    "name": "Legislação do SUS"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:conheci_basicos_superior:041",
+      "source_id": "conheci_basicos_superior:41",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, com base nas disposições da Lei n.º 11.516/2007 e do Decreto n.º 7.515/2011.\n\nConsidere que a União tenha criado uma unidade de conservação de uso sustentável em um estado da Federação e que outro estado tenha criado em seu território o mesmo tipo de unidade. Nessa situação, caberá ao ICMBio executar as políticas relativas ao uso sustentável dos recursos naturais em ambas as áreas.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 41; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização, Gestão e Financiamento do SUS",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação",
+        "source_content_hash": "704b25fccb40792bf730ecd3f8c588188f6176702344f62ce0bddced36047f06",
+        "original_numeric_id": 41,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11516.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "participacao-da-comunidade-e-transferencia-de-recursos-lei-8142",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**. O ICMBio é uma autarquia federal e, nos termos do art. 1º, incisos I e II, da Lei nº 11.516/2007, sua finalidade de executar ações da política nacional de unidades de conservação e políticas relativas ao uso sustentável dos recursos naturais renováveis restringe-se às unidades de conservação instituídas pela União. Para as unidades de conservação instituídas pelos estados, a competência executora pertence aos respectivos órgãos ambientais estaduais (integrantes do SISNAMA), não cabendo ao ICMBio atuar em ambas as áreas.\n\n### Dispositivo legal\n* **Lei nº 11.516/2007, Art. 1º, incisos I e II** (disponível no [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11516.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "1f823d5e3217ad8f827330b66f9b4e82f48269aa146f223a68935697b7c381d7"
+    }
+  ]
+}

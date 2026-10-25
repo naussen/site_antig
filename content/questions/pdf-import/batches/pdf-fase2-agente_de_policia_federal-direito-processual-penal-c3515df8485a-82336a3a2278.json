@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_de_policia_federal-direito-processual-penal-c3515df8485a-82336a3a2278",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "c3515df8485ab192355dd2c9f2cd5fc325fdfcc424779258a45eea81a91b4abe",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "9bf5415c207ff2dee6f1b513f48cc1f4b3e00a224421906182f247e816e0b8ed",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "82336a3a2278bc42266af2cee0e37692d4724f762b1b4188f1cd41007dff8d59",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-processual-penal",
+    "name": "Direito Processual Penal"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:036",
+      "source_id": "agente_de_policia_federal:36",
+      "question_type": "true_false",
+      "statement_markdown": "Depois de adquirir um revólver calibre 38, que sabia ser produto de crime, José passou a portá-lo municiado, sem autorização e em desacordo com determinação legal. O comportamento suspeito de José levou-o a ser abordado em operação policial de rotina. Sem a autorização de porte de arma de fogo, José foi conduzido à delegacia, onde foi instaurado inquérito policial.\nTendo como referência essa situação hipotética, julgue os itens seguintes.\n\nCaso declarações de José sejam divergentes de declarações de testemunhas da receptação praticada, poderá ser realizada a acareação, que é uma medida cabível exclusivamente na fase investigatória.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 36; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Inquérito Policial (IP)",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Processual Penal",
+        "source_content_hash": "50f7e6037ac7f948bb6a46502a6137a643594e57f9564ba28981ecd51edf4f16",
+        "original_numeric_id": 36,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "inquerito-policial-ip",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta ao restringir a realização da acareação exclusivamente à fase investigatória.\n\nA acareação é um meio de prova que consiste no confronto direto entre pessoas (acusados, testemunhas ou ofendidos) cujas declarações anteriores apresentem divergências sobre pontos relevantes do caso. Esse procedimento é plenamente cabível em duas fases distintas do processo penal:\n\n1. **Fase investigatória:** Conduzida pela autoridade policial no âmbito do inquérito policial.\n2. **Fase judicial:** Realizada perante o juiz durante a instrução processual penal.\n\n**Dispositivo legal**\n\n[Artigo 6º, inciso VI, e Artigo 229 do Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal)](https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "ae7d89a8b0641b10d0915bd31ce766499d0241301b6f93ab975aeee5e121ba9d"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:037",
+      "source_id": "agente_de_policia_federal:37",
+      "question_type": "true_false",
+      "statement_markdown": "Depois de adquirir um revólver calibre 38, que sabia ser produto de crime, José passou a portá-lo municiado, sem autorização e em desacordo com determinação legal. O comportamento suspeito de José levou-o a ser abordado em operação policial de rotina. Sem a autorização de porte de arma de fogo, José foi conduzido à delegacia, onde foi instaurado inquérito policial.\nTendo como referência essa situação hipotética, julgue os itens seguintes.\n\nOs agentes de polícia podem decidir, discricionariamente, acerca da conveniência ou não de efetivar a prisão em flagrante de José.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 37; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Inquérito Policial (IP)",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Processual Penal",
+        "source_content_hash": "ca090144e86a13b090ac3428616d3630f4c1c95ec59a24f12efe831f9ebde2f4",
+        "original_numeric_id": 37,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "inquerito-policial-ip",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta ao atribuir caráter discricionário à atuação dos agentes de polícia na efetivação da prisão em flagrante.\n\nO Código de Processo Penal adota a distinção clássica entre duas situações de flagrante:\n\n* **Flagrante facultativo:** Aplicável a qualquer pessoa do povo, que \"poderá\" prender quem estiver em flagrante delito. Trata-se de uma faculdade.\n* **Flagrante obrigatório (ou compulsório):** Aplicável às autoridades policiais e seus agentes, que \"deverão\" efetuar a prisão. Trata-se de um dever de ofício, configurando ato estritamente vinculado, sem margem para juízo de conveniência ou oportunidade.\n\n**Dispositivo legal**\n\n[Artigo 301 do Decreto-Lei nº 3.689, de 3 de outubro de 1941 (Código de Processo Penal)](https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "1fd7fe70f4a70407d8f0ce932d48a221368ecdd390d9f1b91b6855b439549248"
+    }
+  ]
+}

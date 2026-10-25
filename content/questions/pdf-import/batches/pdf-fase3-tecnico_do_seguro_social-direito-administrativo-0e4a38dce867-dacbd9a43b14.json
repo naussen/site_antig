@@ -1,0 +1,80 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-tecnico_do_seguro_social-direito-administrativo-0e4a38dce867-dacbd9a43b14",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "0e4a38dce867d15ea95dc17a7fc6406a547911ee91105cff869ce9bf23f49a99",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "de5b10d2a1ac5bee023c723ca65187afb7622a283e7467ef7e8b4dd19094f663",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "dacbd9a43b14a4d5818c88af20743e5c71500ef53a6dbd877042ed09d9b213a6",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:032",
+      "source_id": "tecnico_do_seguro_social:32",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da administração pública, do direito administrativo e da organização administrativa da União, julgue os itens a seguir.\n\nO ato administrativo praticado por agente público no exercício da sua função expressa o sentido orgânico da administração pública.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 32; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "1164a54d98be4964636693ad9448808dad7e1ed93764bed9e93c29170aee3d6b",
+        "original_numeric_id": 32,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nO ato administrativo portador de **vício insanável de legalidade** (como usurpação de poder, desvio de finalidade ou objeto juridicamente impossível/ilícito) é considerado um ato **nulo de pleno direito**.\n\nDe acordo com a Súmula 473 do Supremo Tribunal Federal e o Art. 53 da Lei nº 9.784/1999, a Administração Pública deve **anular** seus próprios atos quando eivados de vício de legalidade, não produzindo tais atos efeitos jurídicos válidos originários, operando a anulação com eficácia retroativa (*ex tunc*).",
+        "source_reference": null
+      },
+      "source_content_hash": "f71ed509f22e7f6a6314159406175e315955794bac3473297af650119fa937f0"
+    }
+  ]
+}

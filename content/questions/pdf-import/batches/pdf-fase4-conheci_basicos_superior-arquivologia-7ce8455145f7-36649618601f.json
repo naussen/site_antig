@@ -1,0 +1,80 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-conheci_basicos_superior-arquivologia-7ce8455145f7-36649618601f",
+  "source": {
+    "file_name": "conheci_basicos_superior_ATUALIZADO.json",
+    "sha256": "7ce8455145f7b114aa72425ef99a450ecc4281426c54f3c9855b091cd41b14d3",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "conheci_basicos_superior.json",
+      "original_source_sha256": "aaf9eb1efb2a88d71a045bc1e2e61e371649418bec45be98916a5f4b799176a6",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "36649618601f0ce88185e022d61a93e4687b1b152891b3f59ef078e91ed096fa",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "arquivologia",
+    "name": "Arquivologia"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:conheci_basicos_superior:045",
+      "source_id": "conheci_basicos_superior:45",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, com base nas disposições da Lei n.º 8.112/1990 e da Lei n.º 9.784/1999.\n\nConsidere que, ao conferir o conteúdo de requerimento apresentado por um cidadão ao ICMBio, o analista responsável tenha recusado o recebimento do documento por ausência de alguns dados. Nessa situação, é vedada à administração a recusa imotivada do documento, cabendo ao servidor orientar o cidadão a suprir as falhas.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)",
+      "position_name": "Nível Superior",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "conheci_basicos_superior.pdf, questão 45; conheci_basicos_superior_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gerenciamento da Informação e a Gestão de Documentos",
+      "source_metadata": {
+        "source_file": "conheci_basicos_superior.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação",
+        "source_content_hash": "66d5e8bd51ef6b6a2c694bf73f61c6aa1067756701cf5301e4aecb48de622788",
+        "original_numeric_id": 45,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l9784.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "gerenciamento-da-informacao-e-a-gestao-de-documentos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**. A conduta de recusar o recebimento de requerimento sob a alegação de ausência de dados é vedada pela Lei do Processo Administrativo Federal. Conforme o parágrafo único do art. 6º da Lei nº 9.784/1999, é proibida a recusa imotivada de recebimento de documentos, devendo o servidor orientar o interessado quanto ao suprimento de eventuais falhas.\n\n### Dispositivo legal\n* **Lei nº 9.784/1999, Art. 6º, parágrafo único** (disponível no [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l9784.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "ff9bfc283f02417750fdc0cd3d143dbe4999339ce9f03cb257cdb442b716635d"
+    }
+  ]
+}

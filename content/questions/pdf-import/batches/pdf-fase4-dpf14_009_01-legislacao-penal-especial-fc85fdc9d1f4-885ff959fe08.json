@@ -1,0 +1,426 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-dpf14_009_01-legislacao-penal-especial-fc85fdc9d1f4-885ff959fe08",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "fc85fdc9d1f45a7a9beaed6c728368f3364cad59fba26e5bca2aa08fbac5e46f",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "7c65334d658e76f507a006465e38351432ef043be4c6cf520c4cf664a9007aba",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "885ff959fe08ef53266740b676fe2eb20280b6c1696e105c7995c74f5d84086f",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "legislacao-penal-especial",
+    "name": "Legislação Penal Especial"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:112",
+      "source_id": "dpf14_009_01:112",
+      "question_type": "true_false",
+      "statement_markdown": "Em cada um dos itens a seguir, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada, com base nos dispositivos da Lei n.º 10.357/2001, que estabelece normas de controle e fiscalização sobre produtos químicos que, direta ou indiretamente, possam ser destinados à elaboração ilícita de substâncias entorpecentes, psicotrópicas ou que determinem dependência física ou psíquica.\n\nUma empresa comercializa determinado produto químico que pode ser utilizado como insumo na elaboração de substância que causa dependência química. Nessa situação, as atividades dessa empresa devem ser fiscalizadas pelo DPF, juntamente com o Exército Brasileiro.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 112; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "f33cdd572f90409df688d8538f4f80a59d1bea1d6531dcfa953860e2e08c830f",
+        "original_numeric_id": 112,
+        "original_source_content_hash": "70ed119263e19fd6bb83697eed5ddf07984a4090ef5966794b315cb55dd08643",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA Lei nº 10.357/2001 e o Decreto nº 4.274/2002 estabelecem o controle e a fiscalização de produtos químicos que possam ser utilizados como insumo ou reagente para a elaboração ilícita de substâncias entorpecentes e psicotrópicas:\n\nA competência legal para exercer esse controle, emitir o Certificado de Registro Cadastral (CRC) e fiscalizar as empresas que produzem, armazenam, transportam ou comercializam tais substâncias pertence exclusivamente ao **Departamento de Polícia Federal (DPF)**, e não aos órgãos de vigilância sanitária ou órgãos ambientais.",
+        "source_reference": null
+      },
+      "source_content_hash": "aac4e1785a55e8d20297b3c9660602346311b8308a832d72bd48997679d1364d"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:113",
+      "source_id": "dpf14_009_01:113",
+      "question_type": "true_false",
+      "statement_markdown": "> [!NOTE] **Gabarito Alterado pela Banca Examinadora**\n> O gabarito preliminar desta questão foi alterado pela banca examinadora no gabarito oficial definitivo (de **Certo** para **Errado**). O comentário explicativo fundamenta a decisão final da banca.\n\nEm cada um dos itens a seguir, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada, com base nos dispositivos da Lei n.º 10.357/2001, que estabelece normas de controle e fiscalização sobre produtos químicos que, direta ou indiretamente, possam ser destinados à elaboração ilícita de substâncias entorpecentes, psicotrópicas ou que determinem dependência física ou psíquica.\n\nO gerente de uma empresa de reciclagem de produtos químicos controlados tomou conhecimento de que um dos empregados da empresa desviava parte desses produtos, a fim de produzir, ilicitamente, entorpecentes. Nessa situação, caso não informe esse fato às autoridades competentes, o gerente incorrerá em infração administrativa e penal.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 113; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "52ff69a260b92456fa8a25ae6cd065d45f089c47a746c3fb2cf7816a287a39d3",
+        "original_numeric_id": 113,
+        "original_source_content_hash": "a96477edf7d8aa624c975094c3b99a0588de064288c6fd9dd00c62b6e50e6c37",
+        "answer_status": "definitivo_alterado",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l10357.htm",
+        "gabarito_alterado_pela_banca": true,
+        "visual_caveat_applied": true,
+        "original_preliminary_answer": "C",
+        "definitive_answer": "E"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está **errada**. \n\nA conduta de deixar de informar qualquer suspeita de desvio de produto químico controlado para fins ilícitos está expressamente prevista na Lei nº 10.357/2001. Contudo, o diploma legal em questão dispõe estritamente sobre normas de controle e fiscalização administrativa, de modo que tal omissão configura apenas **infração administrativa**, conforme o art. 12, inciso VII. \n\nA Lei nº 10.357/2001 não tipifica crimes (infrações penais). Conforme o art. 14, *caput*, a aplicação das sanções administrativas previstas nessa lei ocorre \"independentemente de responsabilidade penal\", a qual deve ser apurada com base na legislação penal comum (como a Lei de Drogas, Lei nº 11.343/2006), caso a conduta do agente se amolde a algum tipo penal ali previsto. Portanto, a afirmação de que o gerente incorrerá automaticamente em infração administrativa *e penal* pela mera omissão sob a égide da Lei nº 10.357/2001 está incorreta.\n\n*Pegadinha:* A banca tentou confundir o candidato ao misturar a esfera administrativa (regulada pela Lei nº 10.357/2001) com a esfera penal, sugerindo que a infração administrativa geraria de forma automática uma infração penal correspondente na mesma lei.\n\n### Dispositivo legal\n* **Lei nº 10.357/2001, Art. 12, VII e Art. 14** ([Planalto](https://www.planalto.gov.br/ccivil_03/leis/l10357.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "d5405216262aa1ef570e84efaa4e2b395f480c20bfd2cd63f3e628e183b8a8b0"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:115",
+      "source_id": "dpf14_009_01:115",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, relativos à situação jurídica do estrangeiro no Brasil.\n\nA propriedade de bem imóvel no Brasil não confere ao estrangeiro o direito de obter visto de qualquer natureza nem autorização de permanência no território nacional.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 115; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "18598eccdb202a0ef06ff778a4854d1468d4609cff18ac578678082620f4a602",
+        "original_numeric_id": 115,
+        "original_source_content_hash": "bd1340c27d032008679fc414e16dde3aa7a44ebda2b2b6784e7194f9ae671502",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNo ordenamento jurídico brasileiro (sob o Estatuto do Estrangeiro - Lei nº 6.815/1980 e mantido na Lei de Migração - Lei nº 13.445/2017), a mera propriedade ou posse de bens imóveis situados em território nacional **não assegura nem confere automaticamente ao estrangeiro o direito à obtenção de visto permanente ou autorização de residência**.\n\nA autorização de permanência e visto está condicionada a critérios legais estritos de soberania estatal, reunião familiar, refúgio, trabalho com vínculo formal ou investimento econômico qualificado devidamente aprovado perante as autoridades migratórias federais.",
+        "source_reference": null
+      },
+      "source_content_hash": "e8d9d80f9b2dd0eaca1db4f663257d29779fe5b21eb6bfd823344a0f7f06340e"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:117",
+      "source_id": "dpf14_009_01:117",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito ao Estatuto do Desarmamento, julgue os seguintes itens.\n\nPara obter porte de arma de fogo de uso permitido, agente da Polícia Federal deve apresentar, entre outros documentos, comprovação de capacidade técnica e de aptidão psicológica para o manuseio de arma de fogo.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 117; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "1f010b3c1d0b807b95a739aa09f63584369126fbc4b34a89fe09ca88a31b89fe",
+        "original_numeric_id": 117,
+        "original_source_content_hash": "f1da485f745913b68a814a308dbdaa4b235319285b98f48a9be9af25e60b3126",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está **errada**.\n\nOs agentes da Polícia Federal, na qualidade de integrantes dos órgãos de segurança pública previstos no art. 144 da Constituição Federal, possuem direito ao **porte de arma de fogo funcional** decorrente diretamente da lei (art. 6º, inciso II, da Lei nº 10.826/2003 - Estatuto do Desarmamento). \n\nDiferentemente do cidadão comum, que precisa requerer autorização de porte ao Sinarm e apresentar, de forma individualizada, a comprovação de capacidade técnica e de aptidão psicológica (conforme exigido pelo art. 4º, inciso III, e art. 10 da referida lei), os policiais federais têm o porte autorizado em razão do cargo público que ocupam. A comprovação de sua aptidão técnica e psicológica é realizada de forma institucional, durante o curso de formação profissional na Academia Nacional de Polícia e em avaliações periódicas internas da própria corporação, não sendo necessária a apresentação de tais documentos para a \"obtenção\" do porte perante o órgão de controle geral (Sinarm), uma vez que o porte é inerente à sua identidade funcional.\n\n*Macete:* Lembre-se de que os agentes de segurança pública (policiais federais, rodoviários federais, civis, militares, etc.) possuem porte funcional e institucional. Eles não se submetem ao procedimento comum de requerimento de porte aplicável aos civis.\n\n### Dispositivo legal\n* **Lei nº 10.826/2003, Art. 6º, II e § 1º** ([Planalto](https://www.planalto.gov.br/ccivil_03/leis/2003/l10.826.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "e4f7fabc76cbdb1b5e27a108822f68e7ad471c360c08a4cb5e8f2603a8cd1be7"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:118",
+      "source_id": "dpf14_009_01:118",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito ao Estatuto do Desarmamento, julgue os seguintes itens.\n\nConsidere que, em uma briga de trânsito, Joaquim tenha sacado uma arma de fogo e efetuado vários disparos contra Gilmar, com a intenção de matá-lo, e que nenhum dos tiros tenha atingido o alvo. Nessa situação, Joaquim responderá tão somente pela prática do crime de disparo de arma de fogo.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 118; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "ce030cc507ba3a0a2bf35ee13970a0c98cd5fbada97652fd9f70cc90afcb4128",
+        "original_numeric_id": 118,
+        "original_source_content_hash": "57986af230bacbf1a70bca9f28f63f823bf3e2e27c9a8993fbfe4e31b87d2d30",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O cerne da questão reside na aplicação do princípio da consunção (ou absorção) e na análise da subsidiariedade expressa do crime de disparo de arma de fogo.\n\nO crime de disparo de arma de fogo, tipificado no artigo 15 da Lei nº 10.826/2003, possui natureza expressamente subsidiária, conforme se extrai da redação do próprio tipo penal: *\"desde que essa conduta não tenha como finalidade a prática de outro crime\"*.\n\nNo caso hipotético apresentado, Joaquim efetuou os disparos com a clara intenção de matar Gilmar (*animus necandi*). Como nenhum dos disparos atingiu o alvo, configurou-se a tentativa de homicídio (especificamente a denominada tentativa branca ou incruenta), prevista no artigo 121, *caput*, combinado com o artigo 14, inciso II, ambos do Código Penal.\n\nPelo princípio da consunção, o crime-meio (disparo de arma de fogo) é absorvido pelo crime-fim (tentativa de homicídio), uma vez que os disparos integraram o *iter criminis* da conduta voltada a ceifar a vida da vítima. Portanto, Joaquim responderá por tentativa de homicídio, e não apenas pelo crime de disparo de arma de fogo.\n\n**Pegadinha:** A assertiva tenta induzir ao erro ao sugerir que, pelo fato de nenhum tiro ter atingido o alvo (tentativa incruenta), o agente responderia apenas pelo disparo. Contudo, a ausência de lesão física na vítima não descaracteriza a tentativa de homicídio quando demonstrada a intenção de matar.\n\n### Dispositivo legal\n\n* **Lei nº 10.826/2003 (Estatuto do Desarmamento):** Artigo 15.\n* **Decreto-Lei nº 2.848/1940 (Código Penal):** Artigo 121, *caput*, c/c Artigo 14, inciso II.",
+        "source_reference": null
+      },
+      "source_content_hash": "038800612e0093ff46b0c02d7a09b0997b481900f7af1bae03073c0645553067"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:119",
+      "source_id": "dpf14_009_01:119",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito ao Estatuto do Desarmamento, julgue os seguintes itens.\n\nConsidere que Armando, dentista, tenha comprado um revólver calibre .38 e que, semanas depois, sua amiga Júlia, empresária do ramo têxtil, tenha-lhe revelado interesse em adquirir a arma. Nessa situação, o revólver só poderá ser vendido mediante autorização do Sistema Nacional de Armas.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 119; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "81f8ca32f3133ba672c48f7b778bf63e798f069f2fe76e54d8c527b66f1b30a4",
+        "original_numeric_id": 119,
+        "original_source_content_hash": "c99b391282b4c0b02f42ddc3cd829ed65b534cf7c0c30dfd49b38beaab0acb83",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige o conhecimento das regras de comercialização de armas de fogo entre particulares (pessoas físicas) previstas no Estatuto do Desarmamento.\n\nDe acordo com o artigo 4º, § 5º, da Lei nº 10.826/2003, a comercialização de armas de fogo, acessórios e munições entre pessoas físicas somente será efetivada mediante autorização do Sistema Nacional de Armas (Sinarm).\n\nNo caso apresentado, Armando e Júlia são pessoas físicas (particulares). Portanto, a transferência de propriedade do revólver calibre .38 por meio de venda entre eles exige, obrigatoriamente, a prévia autorização do Sinarm para que seja considerada regular.\n\n**Detalhe importante:** Mesmo que a arma seja de uso permitido e o proprietário original a tenha adquirido legalmente, qualquer transferência de propriedade entre particulares não pode ser feita de forma direta e informal, exigindo a intervenção e autorização do órgão de controle (Sinarm).\n\n### Dispositivo legal\n\n* **Lei nº 10.826/2003 (Estatuto do Desarmamento):** Artigo 4º, § 5º.",
+        "source_reference": null
+      },
+      "source_content_hash": "81324f59e5346a2e97b9495fb051063af765da7f4bbf079d7411f3839ffc2f26"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:120",
+      "source_id": "dpf14_009_01:120",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da investigação criminal conduzida pelo delegado de polícia, julgue o item abaixo.\n\nSuponha que um delegado da Polícia Federal, ao tomar conhecimento de um ilícito penal federal, instaure inquérito policial para a apuração do fato e da autoria do ilícito e que, no curso do procedimento, o seu superior hierárquico, alegando motivo de interesse público, redistribua o inquérito a outro delegado. Nessa situação, o ato do superior hierárquico está em desacordo com a legislação, que veda expressamente a redistribuição de inquéritos policiais em curso.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 120; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Decreto-Lei 3.688/41 – Lei das Contravenções Penais (LCP)",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Legislação Especial",
+        "source_content_hash": "0e6e494e9d981cb54efc2d11490c13c1bd3a7ba6f3ae2e40afffa461260b99cb",
+        "original_numeric_id": 120,
+        "original_source_content_hash": "f0e81f6f7528961467b74fc48622df63567cf81a76c91bc949c88da402a63026",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "decreto-lei-3-688-41-lei-das-contravencoes-penais-lcp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nConforme estabelece o Código de Processo Penal e a jurisprudência sumulada do Superior Tribunal de Justiça (Súmula 90 do STJ):\n\nCompete à **Justiça Comum** (e à polícia judiciária civil ou federal) processar e investigar o crime comum praticado por militar quando a conduta não se amoldar a hipótese estrita de crime militar definida no Artigo 9º do Código Penal Militar (como crimes cometidos em lugar não sujeito à administração militar contra civil ou sem relação com as funções militares específicas).\n\nO delegado da Polícia Federal não deve declinar compulsoriamente a apuração à autoridade militar quando o ilícito for de natureza puramente comum.",
+        "source_reference": null
+      },
+      "source_content_hash": "193a25aa6d3ec28dec8f92a1d3e8c16eea5b3c25dd8d8035e256f6ebb50bfa90"
+    }
+  ]
+}

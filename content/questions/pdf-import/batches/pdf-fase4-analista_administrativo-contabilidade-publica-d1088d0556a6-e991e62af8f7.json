@@ -1,0 +1,960 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-analista_administrativo-contabilidade-publica-d1088d0556a6-e991e62af8f7",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "d1088d0556a634bc0e47cc4b0194b18b7b11b50a2faaa9a150b68e740a974fa1",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "7b0e6efd1cd4387fd3b4024c7d594aa5aad8ca3c4f2146f6ddc96ab3d4597e20",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "e991e62af8f7477ce2964407e77d7a5fb3cccbecf06aabaa542d8a6345e04de6",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "contabilidade-publica",
+    "name": "Contabilidade Pública"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:081",
+      "source_id": "analista_administrativo:81",
+      "question_type": "true_false",
+      "statement_markdown": "Os seguintes dados referem-se a contas extraídas do balanço financeiro de um hipotético ente público no ano de 2020.\n\n| referência | valor (em R$) |\n| --- | --- |\n| serviço da dívida (juros e encargos) | 100.000,00 |\n| empréstimos de curto prazo com o Banco do Brasil e com a Caixa Econômica Federal | 2.000.000,00 |\n| empréstimos de longo prazo com o Banco Mundial | 3.000.000,00 |\n| empréstimos de longo prazo com o Banco Nacional do Desenvolvimento Econômico e Social (BNDES) | 4.000.000,00 |\n| restos a pagar | 1.000.000,00 |\n| TOTAL | 10.100.000,00 |\n\nCom relação à classificação da dívida pública nessa situação hipotética, julgue os próximos itens.\n\nA dívida flutuante desse ente público, no período mencionado, era de R$ 2.100.000,00.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 81; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Demonstrações Contábeis Aplicadas ao Setor Público (DCASP)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "9b625c5cec853fb76ab21f03133ef48a355f8cf8ef64d58a54851db18ceff70f",
+        "original_numeric_id": 81,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_analista_administrativo_081.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l4320.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "demonstracoes-contabeis-aplicadas-ao-setor-publico-dcasp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A classificação da dívida pública em flutuante e fundada (ou consolidada) é disciplinada pela Lei nº 4.320/1964.\n\nDe acordo com o art. 92 da referida lei, a **dívida flutuante** compreende:\n- Os restos a pagar, excluídos os serviços da dívida;\n- Os serviços da dívida a pagar;\n- Os depósitos;\n- Os débitos de tesouraria (como empréstimos de curto prazo).\n\nAnalisando os dados fornecidos:\n- **Serviço da dívida (juros e encargos):** R$ 100.000,00\n- **Empréstimos de curto prazo:** R$ 2.000.000,00\n- **Restos a pagar:** R$ 1.000.000,00\n\nSomando esses valores, obtém-se o montante de **R$ 3.100.000,00** para a dívida flutuante. Portanto, a afirmação de que o valor era de R$ 2.100.000,00 está incorreta.\n\n**Dispositivo legal**\n\n[Art. 92 da Lei nº 4.320/1964](https://www.planalto.gov.br/ccivil_03/leis/l4320.htm)\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_analista_administrativo_081.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "6bf4a4cd2d49547a83796920c650f001488b70fcbba7c146cef057f1fc25286a"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:082",
+      "source_id": "analista_administrativo:82",
+      "question_type": "true_false",
+      "statement_markdown": "Os seguintes dados referem-se a contas extraídas do balanço financeiro de um hipotético ente público no ano de 2020.\n\n| referência | valor (em R$) |\n| --- | --- |\n| serviço da dívida (juros e encargos) | 100.000,00 |\n| empréstimos de curto prazo com o Banco do Brasil e com a Caixa Econômica Federal | 2.000.000,00 |\n| empréstimos de longo prazo com o Banco Mundial | 3.000.000,00 |\n| empréstimos de longo prazo com o Banco Nacional do Desenvolvimento Econômico e Social (BNDES) | 4.000.000,00 |\n| restos a pagar | 1.000.000,00 |\n| TOTAL | 10.100.000,00 |\n\nCom relação à classificação da dívida pública nessa situação hipotética, julgue os próximos itens.\n\nA dívida fundada desse ente público, no período mencionado, era de R$ 7.000.000,00.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 82; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Demonstrações Contábeis Aplicadas ao Setor Público (DCASP)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "7edff192b86156f0b0b0c9cd779eba28204f5c03e1783c8261a8601a98729855",
+        "original_numeric_id": 82,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_analista_administrativo_082.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l4320.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "demonstracoes-contabeis-aplicadas-ao-setor-publico-dcasp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A **dívida fundada** (ou consolidada), nos termos do art. 98 da Lei nº 4.320/1964, compreende os compromissos de exigibilidade superior a doze meses, contraídos para atender a desequilíbrio orçamentário ou a financiamento de obras e serviços públicos.\n\nCom base na tabela fornecida, os itens que se enquadram como dívida fundada são as obrigações de longo prazo:\n- **Empréstimos de longo prazo com o Banco Mundial:** R$ 3.000.000,00\n- **Empréstimos de longo prazo com o BNDES:** R$ 4.000.000,00\n\nSomando-se esses valores, o montante da dívida fundada é de **R$ 7.000.000,00**, o que torna a afirmativa correta.\n\n**Dispositivo legal**\n\n[Art. 98 da Lei nº 4.320/1964](https://www.planalto.gov.br/ccivil_03/leis/l4320.htm)\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_analista_administrativo_082.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "b315359caf59d123dbbff9b2a9ec15e715a411f35fd738f346cae2268835fa5e"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:083",
+      "source_id": "analista_administrativo:83",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação às receitas públicas, julgue os itens a seguir.\n\nA dívida ativa não se confunde com a dívida pública, uma vez que é um direito do ente público, devendo ser reconhecida contabilmente no ativo.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 83; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Plano de Contas Aplicado ao Setor Público (PCASP)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "5e4100c28645946dc78cf75777622307a567725249b36f492bcfd6419e1bbaa2",
+        "original_numeric_id": 83,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l4320.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Existe uma distinção fundamental entre os conceitos de **dívida ativa** e **dívida pública**:\n\n1. **Dívida Ativa:** Representa o conjunto de créditos tributários e não tributários, regularmente inscritos pela repartição administrativa competente, após esgotado o prazo fixado para pagamento. Trata-se de um **direito a receber** do ente público perante terceiros, sendo, portanto, classificada no **Ativo** do balanço patrimonial.\n2. **Dívida Pública:** Representa as **obrigações** financeiras contraídas pelo ente público perante terceiros (como empréstimos, financiamentos e títulos públicos), figurando no **Passivo**.\n\nDesse modo, a afirmação está correta ao apontar que a dívida ativa é um direito do ente público e não se confunde com a dívida pública.\n\n**Dispositivo legal**\n\n[Art. 39 da Lei nº 4.320/1964](https://www.planalto.gov.br/ccivil_03/leis/l4320.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "3a8b5be86c0efd50800a6c893f2571f45ee4f3c6a4e96d78428503a7bacf97b0"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:084",
+      "source_id": "analista_administrativo:84",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação às receitas públicas, julgue os itens a seguir.\n\nDe acordo com a Lei n.º 4.320/1964, as receitas públicas classificam-se nas categorias econômicas de receitas dinâmicas e receitas estáticas.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 84; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos, Campo de Atuação e Regimes Contábeis",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "c7688dd2e1904ddd321629fa73a40226eba53954cc3c3d781354cc41730984df",
+        "original_numeric_id": 84,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l4320.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos-campo-de-atuacao-e-regimes-contabeis",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "De acordo com o art. 11 da Lei nº 4.320/1964, as receitas públicas classificam-se nas categorias econômicas de **Receitas Correntes** e **Receitas de Capital**. A legislação de direito financeiro não prevê as categorias de \"receitas dinâmicas\" e \"receitas estáticas\", tornando a afirmação incorreta.\n\n**Dispositivo legal:**\nLei nº 4.320/1964, Art. 11.",
+        "source_reference": null
+      },
+      "source_content_hash": "afc8b0ff7a361e99c4caa41cb41331bdef8764637aa488d6ad649b0197556b6e"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:087",
+      "source_id": "analista_administrativo:87",
+      "question_type": "true_false",
+      "statement_markdown": "Uma entidade pública realizou regular licitação para a compra de computadores. A entrega dos computadores foi efetivada e devidamente atestada pelo órgão público em 31/12/2020. Contudo, em virtude de burocracia interna da entidade, o pagamento só foi realizado trinta dias após a entrega dos computadores.\n\nTendo como referência essa situação hipotética, julgue os itens que se seguem.\n\nPara o correto lançamento, a despesa empenhada relativa à compra dos computadores deve ter sido registrada contabilmente, em 2020, como restos a pagar não processados.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 87; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Plano de Contas Aplicado ao Setor Público (PCASP)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "b1a438b35e63d2cedbe055ae88be4c5a3a37c508ee01b91cadaa472314a250da",
+        "original_numeric_id": 87,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l4320.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "De acordo com o art. 36 da Lei nº 4.320/1964, consideram-se Restos a Pagar as despesas empenhadas mas não pagas até o dia 31 de dezembro, distinguindo-se as processadas das não processadas.\n\nNo caso hipotético, a entrega dos computadores foi efetivada e devidamente atestada (liquidada) pelo órgão público em 31/12/2020. Como a despesa foi empenhada e liquidada dentro do exercício de 2020, mas o pagamento não ocorreu até o encerramento do ano, ela deve ser registrada contabilmente como **Restos a Pagar Processados**. Os Restos a Pagar Não Processados referem-se a despesas empenhadas cuja liquidação ainda não ocorreu até 31 de dezembro.\n\n**Dispositivo legal:**\nLei nº 4.320/1964, Art. 36.",
+        "source_reference": null
+      },
+      "source_content_hash": "59ece8b4bc42a9292dccd08a2acf04857f4d23b73af0319bb0c64688008dd593"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:088",
+      "source_id": "analista_administrativo:88",
+      "question_type": "true_false",
+      "statement_markdown": "Uma entidade pública realizou regular licitação para a compra de computadores. A entrega dos computadores foi efetivada e devidamente atestada pelo órgão público em 31/12/2020. Contudo, em virtude de burocracia interna da entidade, o pagamento só foi realizado trinta dias após a entrega dos computadores.\n\nTendo como referência essa situação hipotética, julgue os itens que se seguem.\n\nEm 2020, o órgão em questão efetivou os estágios de empenho e liquidação da despesa relativa à aquisição dos computadores.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 88; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "SIAFI e Execução Orçamentária da Despesa e Receita",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "5c17a816fe54fb8df362b48703976a59472eae7dad7d40d700c2b6a3fbd01873",
+        "original_numeric_id": 88,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l4320.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "siafi-e-execucao-orcamentaria-da-despesa-e-receita",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A execução da despesa pública percorre três estágios sucessivos: empenho, liquidação e pagamento.\n\n1. O **empenho** é o ato emanado de autoridade competente que cria para o Estado obrigação de pagamento pendente ou não de implemento de condição, devendo preceder a entrega do bem (arts. 58 e 60 da Lei nº 4.320/1964).\n2. A **liquidação** consiste na verificação do direito adquirido pelo credor tendo por base os títulos e documentos comprobatórios do respectivo crédito, o que ocorreu em 31/12/2020 com a entrega efetivada e devidamente atestada dos computadores (art. 63 da Lei nº 4.320/1964).\n\nPortanto, em 2020, o órgão efetivou tanto o empenho quanto a liquidação da despesa, restando pendente apenas o estágio do pagamento, realizado no exercício seguinte.\n\n**Dispositivo legal:**\nLei nº 4.320/1964, Arts. 58, 60 e 63.",
+        "source_reference": null
+      },
+      "source_content_hash": "bca4f008b58999a5f9c067bcdc9c813132c568bcde320d112b15aaf8788f99e1"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:089",
+      "source_id": "analista_administrativo:89",
+      "question_type": "true_false",
+      "statement_markdown": "O governo federal pretende criar, mediante projeto de lei, o Programa Federal de Auxílio ao Primeiro Emprego. Trata-se de despesa continuada (com execução superior a dois exercícios) que objetiva ajudar os jovens a conseguir o primeiro emprego. O auxílio oferecido pelo programa consistirá de 1 salário mínimo mensal por empregado, para cada empresa.\n\nA partir dessa situação hipotética, julgue o item a seguir.\n\nDe acordo com a Lei de Responsabilidade Fiscal, esse programa poderá ser viabilizado, desde que o respectivo projeto contenha estimativa do seu impacto orçamentário-financeiro no exercício em que ele entrar em vigor, bem como declaração do ordenador da despesa de que o aumento terá adequação orçamentária e financeira em relação à lei orçamentária anual (LOA).",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 89; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos, Campo de Atuação e Regimes Contábeis",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "ee176d501c6357880f6d85afe17d1cd92d5a2ea53c6e3b71d78cbfae4d25cdc6",
+        "original_numeric_id": 89,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos-campo-de-atuacao-e-regimes-contabeis",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A criação ou o aumento de uma Despesa Obrigatória de Caráter Continuado (DOCC) — definida como a despesa corrente derivada de lei, medida provisória ou ato administrativo normativo que fixe para o ente a obrigação legal de sua execução por um período superior a dois exercícios — exige o cumprimento de requisitos rígidos estabelecidos pela Lei de Responsabilidade Fiscal (LRF).\n\nDe acordo com o art. 17, § 1º, combinado com o art. 16, inciso I, da LRF, os atos que criarem ou aumentarem despesa obrigatória de caráter continuado devem ser instruídos com a estimativa do impacto orçamentário-financeiro no exercício em que deva entrar em vigor **e nos dois subsequentes** (e não apenas no exercício de entrada em vigor, como afirma o enunciado).\n\nAlém disso, exige-se a demonstração da origem dos recursos para o seu custeio e a comprovação de que a despesa não afetará as metas de resultados fiscais, devendo seus efeitos financeiros ser compensados pelo aumento permanente de receita ou pela redução permanente de despesa (art. 17, § 2º). A mera declaração do ordenador de despesa sobre a adequação orçamentária e financeira em relação à LOA, embora exigida para o aumento de despesas em geral (art. 16, II), é insuficiente para viabilizar a criação de uma DOCC sem as devidas medidas de compensação e a estimativa trienal de impacto.\n\n**Pegadinha:** A banca tentou confundir o candidato ao limitar a estimativa de impacto orçamentário-financeiro apenas ao 'exercício em que ele entrar em vigor', omitindo a exigência legal de abranger também os dois exercícios subsequentes (período trienal), além de omitir a necessidade de compensação financeira exigida especificamente para as despesas continuadas.\n\n### Dispositivo legal\n* **Referência:** Lei Complementar nº 101/2000, Art. 16, inciso I, e Art. 17, §§ 1º e 2º.\n* **URL Oficial:** [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "3f723088e4139d5cf667a0295520cf2737f5a643f2111fa23b3f28385319b202"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:090",
+      "source_id": "analista_administrativo:90",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação ao plano plurianual, julgue o próximo item.\n\nO plano plurianual deverá conter o anexo de metas fiscais.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 90; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos, Campo de Atuação e Regimes Contábeis",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "c515e08f6bdf15c207760ba4c9d68746628367136bc9d17757b57e68c0f7a3ac",
+        "original_numeric_id": 90,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos-campo-de-atuacao-e-regimes-contabeis",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O planejamento e o orçamento público no Brasil são estruturados por meio de três leis fundamentais: o Plano Plurianual (PPA), a Lei de Diretrizes Orçamentárias (LDO) e a Lei Orçamentária Anual (LOA). Cada um desses instrumentos possui conteúdos e anexos específicos definidos pela Constituição Federal e pela Lei de Responsabilidade Fiscal (LRF).\n\nO Anexo de Metas Fiscais (AMF) é um documento integrante do projeto de **Lei de Diretrizes Orçamentárias (LDO)**, conforme determina expressamente o art. 4º, § 1º, da LRF. Esse anexo estabelece metas anuais, em valores correntes e constantes, relativas a receitas, despesas, resultados nominal e primário e montante da dívida pública, para o exercício a que se referirem e para os dois seguintes.\n\nO Plano Plurianual (PPA), por sua vez, estabelece de forma regionalizada as diretrizes, objetivos e metas da administração pública federal para as despesas de capital e outras delas decorrentes, bem como para as relativas aos programas de duração continuada (art. 165, § 1º, da CF/88), não contendo o referido anexo de metas fiscais.\n\n**Pegadinha:** A associação incorreta de anexos específicos da LDO (como o Anexo de Metas Fiscais ou o Anexo de Riscos Fiscais) ao PPA ou à LOA é uma estratégia recorrente em provas de concurso para induzir o candidato ao erro.\n\n### Dispositivo legal\n* **Referência:** Lei Complementar nº 101/2000, Art. 4º, § 1º.\n* **URL Oficial:** [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "537b8f9a96f533b2bf7e3494d3de47b4acc875cc773587d87473f528dd2d7c3e"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:091",
+      "source_id": "analista_administrativo:91",
+      "question_type": "true_false",
+      "statement_markdown": "Quanto ao reconhecimento das variações patrimoniais diminutivas (VPD) e das variações patrimoniais aumentativas (VPA) no âmbito do setor público, julgue os itens a seguir.\n\nNão é possível reconhecer uma VPD após a liquidação da despesa orçamentária.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 91; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Patrimônio Público e Variações Patrimoniais",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "4ae5193e7fadb393e0ae02987fea4b1cc7b26e21336a6da6fb4400209eef0470",
+        "original_numeric_id": 91,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/tesouronacional/pt-br/ativos-da-uniao/contabilidade-publica/mcasp"
+      },
+      "topics": [
+        {
+          "topic_id": "patrimonio-publico-e-variacoes-patrimoniais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No âmbito da Contabilidade Aplicada ao Setor Público, deve-se distinguir claramente o enfoque orçamentário do enfoque patrimonial. Sob o enfoque patrimonial, os fatos que afetam o patrimônio público devem ser registrados com base no regime de competência, ou seja, no momento da ocorrência do seu fato gerador, independentemente da execução orçamentária.\n\nDe acordo com o Manual de Contabilidade Aplicada ao Setor Público (MCASP), existem três relações temporais possíveis entre o segundo estágio da execução da despesa orçamentária (liquidação) e o reconhecimento da Variação Patrimonial Diminutiva (VPD):\n1. **Antes da liquidação:** O fato gerador ocorre antes do processamento orçamentário da liquidação (ex.: apropriação mensal do 13º salário e encargos).\n2. **Simultâneo à liquidação:** O fato gerador coincide com a liquidação da despesa (ex.: prestação de serviços de terceiros de execução imediata).\n3. **Após a liquidação:** O fato gerador ocorre em momento posterior à liquidação orçamentária.\n\nUm exemplo clássico de reconhecimento de VPD após a liquidação é a aquisição de material de consumo para estoque (almoxarifado). No momento da entrega do material, ocorre a liquidação da despesa orçamentária e a incorporação do bem ao ativo (estoque), sem alteração do patrimônio líquido (fato permutativo). A VPD correspondente só será reconhecida posteriormente, quando houver o consumo efetivo do material (fato gerador da despesa patrimonial). Outro exemplo é a concessão de suprimento de fundos, em que a despesa orçamentária é liquidada e paga no ato da concessão, mas a VPD só é registrada após a prestação de contas.\n\nPortanto, é perfeitamente possível e comum o reconhecimento de uma VPD após a liquidação da despesa orçamentária.\n\n### Dispositivo legal\n* **Referência:** Manual de Contabilidade Aplicada ao Setor Público (MCASP), Parte II - Procedimentos Contábeis Patrimoniais.\n* **URL Oficial:** [Secretaria do Tesouro Nacional](https://www.gov.br/tesouronacional/pt-br/ativos-da-uniao/contabilidade-publica/mcasp)",
+        "source_reference": null
+      },
+      "source_content_hash": "9466ca05849c5ce94b027912b8e3b8222986c7e15865a0c8954b58a6c2f3781e"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:092",
+      "source_id": "analista_administrativo:92",
+      "question_type": "true_false",
+      "statement_markdown": "Quanto ao reconhecimento das variações patrimoniais diminutivas (VPD) e das variações patrimoniais aumentativas (VPA) no âmbito do setor público, julgue os itens a seguir.\n\nUma VPA é realizada no caso do recebimento efetivo de uma doação.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 92; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Patrimônio Público e Variações Patrimoniais",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "e5cffd881d907cb5075e02cda03cec9f19410781938d55b4d7fc4d8494bd361e",
+        "original_numeric_id": 92,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/tesouronacional/pt-br/ativos-da-uniao/contabilidade-publica/mcasp"
+      },
+      "topics": [
+        {
+          "topic_id": "patrimonio-publico-e-variacoes-patrimoniais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Sob o enfoque patrimonial, as Variações Patrimoniais Aumentativas (VPA) representam incrementos nos benefícios econômicos ou no potencial de serviços durante o período contábil, na forma de entrada de recursos ou aumento de ativos, ou diminuição de passivos, que resultem em aumento do patrimônio líquido, exceto os relativos a contribuições dos proprietários.\n\nO Manual de Contabilidade Aplicada ao Setor Público (MCASP) estabelece critérios específicos para considerar uma VPA como realizada. Entre as hipóteses previstas, considera-se realizada a VPA:\n1. Nas transações com contribuintes e terceiros, quando estes efetuarem o pagamento ou assumirem compromisso firme de efetivá-lo;\n2. Quando da extinção, parcial ou total, de um passivo, sem o desaparecimento concomitante de um ativo de valor igual ou maior;\n3. **No recebimento efetivo de doações e subvenções**;\n4. Pela geração natural de novos ativos, independentemente da intervenção de terceiros.\n\nDessa forma, o recebimento efetivo de uma doação (como um bem móvel, imóvel ou recursos financeiros) configura a realização de uma VPA, pois acarreta a entrada de um ativo sem a contrapartida de um passivo ou de uma redução de outro ativo, resultando no aumento do patrimônio líquido da entidade recebedora (fato modificativo aumentativo).\n\n**Detalhe importante:** O reconhecimento da doação como VPA exige que seja provável a fruição de benefícios econômicos futuros ou potencial de serviços e que o valor justo do ativo possa ser mensurado com confiabilidade.\n\n### Dispositivo legal\n* **Referência:** Manual de Contabilidade Aplicada ao Setor Público (MCASP), Parte II - Procedimentos Contábeis Patrimoniais.\n* **URL Oficial:** [Secretaria do Tesouro Nacional](https://www.gov.br/tesouronacional/pt-br/ativos-da-uniao/contabilidade-publica/mcasp)",
+        "source_reference": null
+      },
+      "source_content_hash": "dfe53ccffad3086f4e822b32e7db4c4141083f04f71b42c3d4d6d7bb545e06dc"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:093",
+      "source_id": "analista_administrativo:93",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação ao processo de mensuração de ativos intangíveis e à depreciação do ativo imobilizado, julgue os itens seguintes.\n\nEm razão de sua natureza, os bens que tenham sido usados anteriormente à sua posse pela administração pública submetem-se aos mesmos prazos de vida útil definidos para os bens novos.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 93; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos, Campo de Atuação e Regimes Contábeis",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "af4266650bab21a5e865e15109edcafb121ec79b9b0cd277d2512e94b23ebd3c",
+        "original_numeric_id": 93,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/tesouronacional/pt-br/ativos-da-uniao/contabilidade-publica/mcasp"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos-campo-de-atuacao-e-regimes-contabeis",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A depreciação acumulada de bens do ativo imobilizado deve refletir o desgaste pelo uso, a obsolescência e a ação do tempo ao longo de sua vida útil estimada. Quando a administração pública adquire ou recebe bens que já foram utilizados anteriormente por terceiros, a definição do prazo de vida útil para fins de depreciação segue regras específicas, não se confundindo obrigatoriamente com os prazos estabelecidos para bens novos.\n\nDe acordo com as diretrizes do Manual de Contabilidade Aplicada ao Setor Público (MCASP) e as normas técnicas de contabilidade (NBC TSP 07 - Ativo Imobilizado), para bens que tenham sido usados anteriormente à sua posse pela administração pública, pode-se estabelecer como novo prazo de vida útil:\n1. **A metade do tempo de vida útil** definido para a respectiva classe de bens novos;\n2. **O restante do tempo de vida útil** do bem, levando em consideração a sua primeira instalação; ou\n3. **O resultado de uma avaliação técnica** que defina o tempo de vida útil restante pelo qual o bem ainda poderá gerar benefícios ou potencial de serviços para o ente.\n\nPortanto, a afirmação de que os bens usados submetem-se obrigatoriamente aos mesmos prazos de vida útil definidos para os bens novos está incorreta, pois a norma faculta a adoção de critérios que adequem a depreciação ao estado real de conservação e uso do bem.\n\n### Dispositivo legal\n* **Referência:** Manual de Contabilidade Aplicada ao Setor Público (MCASP), Parte II - Procedimentos Contábeis Patrimoniais; NBC TSP 07 - Ativo Imobilizado.\n* **URL Oficial:** [Secretaria do Tesouro Nacional](https://www.gov.br/tesouronacional/pt-br/ativos-da-uniao/contabilidade-publica/mcasp)",
+        "source_reference": null
+      },
+      "source_content_hash": "237275a80ab545de23a551f411beb66bb4ecfb0cab621383e3b5b1bcf87d3724"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:094",
+      "source_id": "analista_administrativo:94",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação ao processo de mensuração de ativos intangíveis e à depreciação do ativo imobilizado, julgue os itens seguintes.\n\nUm ativo intangível adquirido por meio de transação sem contraprestação deve ser mensurado inicialmente pelo seu custo histórico.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 94; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos, Campo de Atuação e Regimes Contábeis",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "246c0d840f316327212032d648dc75466b979b13286c54ed52ed53a22eae4c04",
+        "original_numeric_id": 94,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/tesouronacional/pt-br"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos-campo-de-atuacao-e-regimes-contabeis",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nDe acordo com as Normas Brasileiras de Contabilidade Aplicadas ao Setor Público (NBC TSP 08 - Ativo Intangível) e o MCASP:\n\nUm ativo intangível adquirido por meio de uma **transação sem contraprestação** (como por doação de terceiros ou transferência governamental não onerosa) deve ser mensurado inicialmente pelo seu **valor justo** na data de sua aquisição/incorporação patrimonial, e não por valor simbólico ou custo zero.",
+        "source_reference": null
+      },
+      "source_content_hash": "722d6ea0b954d2fe5768222bdcb36739684ef8b3f0883906df9a64506ff3deb3"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:095",
+      "source_id": "analista_administrativo:95",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens subsequentes, relativos à estrutura do Plano de Contas Aplicado ao Setor Público (PCASP) e à natureza da informação contábil.\n\nOs fatos financeiros e não financeiros relacionados com a composição do patrimônio público e suas variações qualitativas e quantitativas devem ser registrados em contas de natureza de informação patrimonial.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 95; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Plano de Contas Aplicado ao Setor Público (PCASP)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "93b5348033e9734b6effa92bc36e789fdad9bfdefa1709298ab5fda705072a6b",
+        "original_numeric_id": 95,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/tesouronacional/pt-br"
+      },
+      "topics": [
+        {
+          "topic_id": "plano-de-contas-aplicado-ao-setor-publico-pcasp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNo Sistema Contábil Aplicado ao Setor Público, o **Subsistema de Informações Patrimoniais** registra, processa e evidencia todos os atos e fatos contábeis (financeiros e não financeiros, permutativos, modificativos aumentativos e diminutivos) que afetam ou venham a afetar a composição quantitativa e qualitativa do patrimônio público e sua variação líquida.",
+        "source_reference": null
+      },
+      "source_content_hash": "2fc53ba7618a8f859b562cccf8ed6001150c0d177c9494108b59fa9fbaae4b64"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:097",
+      "source_id": "analista_administrativo:97",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as regras relacionadas à consolidação das demonstrações contábeis aplicadas ao setor público, julgue os próximos itens.\n\nA consolidação nacional das contas é de competência da Secretaria do Tesouro Nacional e abrange todas as esferas de governo (União, estados, Distrito Federal e municípios).",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 97; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Demonstrações Contábeis Aplicadas ao Setor Público (DCASP)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "84d41f662f04ab7d68856f70f6e23a085a317aa7f24c6bd882e3f9bce01c6bc8",
+        "original_numeric_id": 97,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "demonstracoes-contabeis-aplicadas-ao-setor-publico-dcasp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nO Artigo 51 da Lei de Responsabilidade Fiscal (Lei Complementar nº 101/2000) atribui expressamente ao Poder Executivo da União, por intermédio da **Secretaria do Tesouro Nacional (STN)**, a competência legal exclusiva para consolidar as contas públicas de todos os entes da Federação (União, Estados, Distrito Federal e Municípios), emitindo anualmente o Balanço do Setor Público Nacional (BSPN).",
+        "source_reference": null
+      },
+      "source_content_hash": "13175240abc73d151e381d97c16e72e970b0efa5d63f07092873640949278d54"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:098",
+      "source_id": "analista_administrativo:98",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as regras relacionadas à consolidação das demonstrações contábeis aplicadas ao setor público, julgue os próximos itens.\n\nA consolidação das demonstrações contábeis pode ser feita tanto no âmbito intragovernamental (em cada ente da Federação) quanto em âmbito intergovernamental (consolidação nacional).",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 98; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Demonstrações Contábeis Aplicadas ao Setor Público (DCASP)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "565b6e84287231ef9243b63a0218829d44ad628e4dd2e01a9926199a9c68b4bd",
+        "original_numeric_id": 98,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "demonstracoes-contabeis-aplicadas-ao-setor-publico-dcasp",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nDe acordo com a LRF e as diretrizes do MCASP, a consolidação das demonstrações contábeis no setor público opera-se em dois níveis fundamentais:\n\n1. **Consolidação Intragovernamental:** no âmbito interno de cada ente político, integrando os Poderes Executivo, Legislativo e Judiciário, órgãos autônomos e autarquias/fundações;\n2. **Consolidação Intergovernamental:** no âmbito nacional, agregando os dados de todos os entes da Federação brasileira, com a devida eliminação dos saldos e transferências recíprocas.",
+        "source_reference": null
+      },
+      "source_content_hash": "36090835488b83dfc19e94ef31f62ab3838282b5f2f4f391cb69169f62d44c7c"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:099",
+      "source_id": "analista_administrativo:99",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens subsequentes, relativos à estrutura da codificação definida para as fontes ou destinações de recursos e sua utilização na previsão e execução orçamentárias.\n\nHá a necessidade de identificação do exercício ao qual se referem os valores extraorçamentários, a exemplo do que acontece com os demais recursos financeiros.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 99; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos, Campo de Atuação e Regimes Contábeis",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "6756e74084a9c71600fdbe1006f4a7c8ffe0f06e4e9ac48184a7db7179c3defe",
+        "original_numeric_id": 99,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/tesouronacional/pt-br"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos-campo-de-atuacao-e-regimes-contabeis",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNo Plano de Contas Aplicado ao Setor Público (PCASP), a estrutura das contas contábeis obedece a uma codificação padronizada única (Classes, Grupos, Subgrupos, Títulos, Subtítulos, Itens e Subitens).\n\nO exercício financeiro a que se referem os registros contábeis não é codificado no número da conta contábil em si, mas sim identificado nos atributos de sistema dos lançamentos contábeis (cabeçalho dos documentos contábeis e tabelas temporais do sistema).",
+        "source_reference": null
+      },
+      "source_content_hash": "46b2d8f4ba94dc63c66afc84ca4ec33b5f74920ec03494abd16f16116aa910c0"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:100",
+      "source_id": "analista_administrativo:100",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens subsequentes, relativos à estrutura da codificação definida para as fontes ou destinações de recursos e sua utilização na previsão e execução orçamentárias.\n\nCaso estabeleçam detalhamentos adicionais aos códigos padronizados, os entes federados locais deverão enviar tais detalhamentos à Secretaria do Tesouro Nacional.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 100; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos, Campo de Atuação e Regimes Contábeis",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Contabilidade Pública",
+        "source_content_hash": "737a5a24fc23682b2be861527a1de92c9f4240cf4f09232fdee5f7c5624ef402",
+        "original_numeric_id": 100,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp101.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "conceitos-campo-de-atuacao-e-regimes-contabeis",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA Secretaria do Tesouro Nacional (STN), na condição de órgão central de contabilidade federal, padroniza a estrutura do PCASP até o nível necessário para viabilizar a consolidação nacional das contas públicas (nível de detalhamento obrigatório).\n\nEmbora os entes federados possam criar detalhamentos adicionais nos níveis mais analíticos (subitens) para atender a especificidades locais, esses desdobramentos **não podem desrespeitar, alterar ou suprimir** a codificação padronizada fixada pela STN nos níveis superiores, sob pena de inviabilizar a consolidação federativa das demonstrações contábeis.",
+        "source_reference": null
+      },
+      "source_content_hash": "ad8b21b5096472f644c519c97040f61a3adf3a133e49bc3936b71bfed4f1329c"
+    }
+  ]
+}

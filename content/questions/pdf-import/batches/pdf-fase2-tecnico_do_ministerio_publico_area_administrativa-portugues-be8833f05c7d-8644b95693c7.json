@@ -1,0 +1,1412 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-tecnico_do_ministerio_publico_area_administrativa-portugues-be8833f05c7d-8644b95693c7",
+  "source": {
+    "file_name": "tecnico_do_ministerio_publico_area_administrativa_ATUALIZADO.json",
+    "sha256": "be8833f05c7dc3fc713c3cef305c312520e16748ef98c329f6fbbe57d90905b7",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "tecnico_do_ministerio_publico_area_administrativa.json",
+      "original_source_sha256": "2976130818df2aae9a14ec1aa61321f02e8f9c02cc280baa4e3c5d73c8a106ba",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "8644b95693c72ee6df99e7c828f6deaf68cfb6a2e67c2c2f08bfaddea9be8231",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:002",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:2",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A introdução do nº 13 da revista Educatrix diz o seguinte:\nAntes de iniciar a leitura, pare e pense com quantas pessoas você compartilhou informações hoje. Agora mesmo, neste exato momento, nós estamos trocando bagagens culturais: a história da vida de quem escreve daqui e a de quem lê daí. Há, de fato, uma premissa básica para a sobrevivência humana: o viver em comunidade e a vivência compartilhada.\nSobre a estruturação desse texto, é correto afirmar que:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 2; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "as formas verbais pare e pense indicam uma ordem para que o leitor possa realizar corretamente a leitura do texto;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "no segmento Agora mesmo, neste exato momento há uma construção enfática, já que há redundância nos termos;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "as formas daqui e daí mostram uma oposição entre autor e leitores em relação às mensagens;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "a expressão de fato indica uma confirmação de algo negado anteriormente;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "nos segmentos viver em comunidade e vivência compartilhada há uma obrigatória interdependência.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "5e7f7a27e1198667caf9defaae5e2cbacc27a3a03e8cdc764616520ed8a0181a",
+        "original_numeric_id": 2,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito é a alternativa **B**.\n\nA expressão \"Agora mesmo, neste exato momento\" reúne duas locuções de valor temporal que indicam rigorosamente o mesmo instante de tempo (o presente imediato). Essa repetição de ideias idênticas configura um pleonasmo ou redundância estilística, cujo objetivo é enfatizar a simultaneidade entre o ato de escrita do autor e o de leitura pelo receptor.\n\nAnálise das alternativas incorretas:\n* **A** está incorreta porque as formas imperativas \"pare\" e \"pense\" funcionam como um convite ou exortação à reflexão do leitor, e não como uma ordem impositiva ou instrução técnica necessária para viabilizar a leitura física do texto.\n* **C** está incorreta porque os advérbios de lugar \"daqui\" (próximo ao emissor) e \"daí\" (próximo ao receptor) delimitam o espaço físico de cada interlocutor no processo de comunicação, não indicando oposição ou divergência quanto ao conteúdo das mensagens.\n* **D** está incorreta porque a locução \"de fato\" funciona como um conector de confirmação ou reforço de uma asserção positiva feita anteriormente (a troca de bagagens culturais), e não como a retificação de uma negação prévia.\n* **E** está incorreta porque, embora os conceitos de \"viver em comunidade\" e \"vivência compartilhada\" sejam semanticamente próximos e complementares no contexto, o texto não estabelece uma relação de interdependência lógica formal ou obrigatória entre eles.",
+        "source_reference": null
+      },
+      "source_content_hash": "7d76e44c0c4be74238b8da4dc5b205e448f4b19360698c17aae4291688f3b982"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:003",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:3",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No mesmo número da revista Educatrix, aparece o seguinte texto sobre criatividade:\nA criatividade é uma questão constantemente colocada em pauta na educação contemporânea. Tendências, como a cultura maker, têm entre suas razões de ser a busca de um sonho pedagógico que se perde na preparação para o vestibular e no progressivo aumento da competitividade: a formação de seres humanos capazes de inovar e criar soluções.\nA afirmação inadequada sobre esse fragmento textual é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 3; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "o primeiro período do texto é uma afirmação de caráter geral que introduz a apresentação do tema;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "a definição de criatividade é dada pela capacidade de inovar e criar soluções;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "o sonho pedagógico perseguido está expresso ao final do texto: a formação de seres humanos capazes de inovar e criar soluções;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "a preparação para o vestibular é uma oportunidade única para o desenvolvimento da criatividade individual;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "o aumento da competitividade leva à perda da formação de seres humanos criativos.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "f59a7430fabc01a1eeb705e193ae72a8613131b4779a311bd1d7536d4f1d02ec",
+        "original_numeric_id": 3,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito é a alternativa **D** (afirmação inadequada).\n\nO texto afirma expressamente que o \"sonho pedagógico\" (definido como \"a formação de seres humanos capazes de inovar e criar soluções\") \"se perde na preparação para o vestibular e no progressivo aumento da competitividade\". Portanto, classificar a preparação para o vestibular como uma \"oportunidade única para o desenvolvimento da criatividade\" contraria diretamente a tese do fragmento, que a aponta como um dos fatores responsáveis pela perda desse aspecto criativo.\n\nAnálise das demais alternativas (que trazem afirmações adequadas ao texto):\n* **A** está correta porque o primeiro período (\"A criatividade é uma questão constantemente colocada em pauta na educação contemporânea\") funciona como uma introdução de caráter amplo e contextualizador sobre o tema.\n* **B** está correta porque o texto associa a criatividade (tema central) ao sonho pedagógico de formar \"seres humanos capazes de inovar e criar soluções\", estabelecendo uma equivalência definicional.\n* **C** está correta porque o segmento após os dois pontos (\"a formação de seres humanos capazes de inovar e criar soluções\") funciona como aposto explicativo que detalha em que consiste o \"sonho pedagógico\".\n* **E** está correta porque o texto aponta o \"progressivo aumento da competitividade\" como um dos agentes causadores da perda do sonho pedagógico voltado à inovação e criação.",
+        "source_reference": null
+      },
+      "source_content_hash": "c47601a8f06486a8679483490bd70ad8b7479e5f9b0ec499adccd2abde817f74"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:004",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:4",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto 1\nO trecho a seguir é a primeira pergunta de uma entrevista em que o entrevistador (E) questiona a física Cássia Fernandez (CF) sobre criatividade:\n(E) – Muito se fala sobre criatividade. Mas qual a definição mais aceita sobre o que é ser uma pessoa criativa?\n(CF) – Existem definições gerais de criatividade, utilizadas pelo senso comum, mas não existe um consenso no mundo acadêmico. À medida que as pesquisas se aprofundam, vemos que o tema é mais e mais complexo. Contudo, não se pode abrir mão de buscar tornar essa definição mais precisa para que as estratégias educacionais sejam mais efetivas.\n\nA afirmação inadequada sobre o texto 1 é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 4; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "por conveniência, a ação de falar sobre a criatividade não é atribuída a pessoa alguma;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "pela pergunta do entrevistador, deduz-se que há uma série de definições sobre criatividade;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "o senso comum, segundo CF, é um bom indicador de qualidade acadêmica de uma definição;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "as estratégias educacionais receberiam grande ajuda a partir de uma boa definição do que seja criatividade;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "à medida que as pesquisas se aprofundam, verifica-se a grande complexidade do tema.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "6a69a4850b67f980a229049479b2a0a523c4818d4a3d62a7b3a61cd1b5e53b2e",
+        "original_numeric_id": 4,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito é a alternativa **C** (afirmação inadequada).\n\nA entrevistada Cássia Fernandez (CF) aponta que existem definições gerais utilizadas pelo senso comum, mas ressalta que \"não existe um consenso no mundo acadêmico\". Em nenhum momento ela qualifica o senso comum como um \"bom indicador de qualidade acadêmica\"; ao contrário, ela estabelece uma distinção entre as noções populares (senso comum) e o rigor científico exigido no ambiente acadêmico para tornar a definição mais precisa.\n\nAnálise das demais alternativas (que trazem afirmações adequadas ao texto):\n* **A** está correta porque a estrutura de voz passiva sintética \"Muito se fala\" omite deliberadamente o agente da ação, não atribuindo o ato de falar a nenhum indivíduo específico.\n* **B** está correta porque a indagação sobre \"qual a definição mais aceita\" pressupõe logicamente a coexistência de múltiplas definições concorrentes sobre o tema.\n* **D** está correta porque o texto indica que buscar uma definição mais precisa é necessário \"para que as estratégias educacionais sejam mais efetivas\".\n* **E** está correta porque reproduz fielmente o trecho: \"À medida que as pesquisas se aprofundam, vemos que o tema é mais e mais complexo\".",
+        "source_reference": null
+      },
+      "source_content_hash": "c44aa86c6cb38ce5478fdf5a97f59ba785d871a1b113ef5e49532d6f0e9ac282"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:005",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:5",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto 1\nO trecho a seguir é a primeira pergunta de uma entrevista em que o entrevistador (E) questiona a física Cássia Fernandez (CF) sobre criatividade:\n(E) – Muito se fala sobre criatividade. Mas qual a definição mais aceita sobre o que é ser uma pessoa criativa?\n(CF) – Existem definições gerais de criatividade, utilizadas pelo senso comum, mas não existe um consenso no mundo acadêmico. À medida que as pesquisas se aprofundam, vemos que o tema é mais e mais complexo. Contudo, não se pode abrir mão de buscar tornar essa definição mais precisa para que as estratégias educacionais sejam mais efetivas.\n\nNo texto 1 há um conjunto de segmentos que podem se apresentar sob a forma nominal em lugar da forma verbal; a opção em que essa substituição NÃO mantém o sentido original é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 5; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "o que é ser uma pessoa criativa = a existência de uma pessoa criativa;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "à medida que as pesquisas se aprofundam = com o aprofundamento das pesquisas;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "que o tema é mais e mais complexo = a maior complexidade do tema;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "de buscar tornar essa definição mais precisa = da busca de mais precisão nessa definição;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "que as estratégias educacionais sejam mais efetivas = mais efetividade das estratégias educacionais.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "593e3daa117c6a504a998a7b2deb730fdfd1b3f4d1e989016d05b03973a1e26e",
+        "original_numeric_id": 5,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito é a alternativa **A**.\n\nA oração \"o que é ser uma pessoa criativa\" discute a essência, a definição e as características qualitativas que configuram a criatividade em um indivíduo. Ao substituí-la por \"a existência de uma pessoa criativa\", o sentido é alterado para a dimensão ontológica (o fato de haver ou não alguém criativo no mundo), desvirtuando a discussão conceitual proposta no texto original.\n\nAnálise das alternativas que mantêm o sentido original (nominais equivalentes):\n* **B** preserva a relação de proporcionalidade e concomitância temporal ao converter a oração subordinada proporcional em uma estrutura preposicionada equivalente (\"com o aprofundamento\").\n* **C** sintetiza a oração substantiva objetiva direta em um sintagma nominal que expressa a gradação da característica (\"a maior complexidade\").\n* **D** substitui a oração infinitiva de valor completivo nominal por um substantivo cognato (\"busca\") seguido de complemento (\"de mais precisão\").\n* **E** converte a oração subordinada de valor final/consecutivo em um sintagma nominal focado no substantivo abstrato correspondente (\"efetividade\").",
+        "source_reference": null
+      },
+      "source_content_hash": "5ead41808c9da69178942b9641633e88f8eae2deee8ea10cc48c1bbd0a3ed65c"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:007",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:7",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Uma segunda pergunta da mesma entrevista com a Cássia Fernandez (texto 1) é a seguinte:\n(E) – A busca de uma educação mais criativa se deve ao desenvolvimento da Pedagogia ou a uma pressão crescente do mundo do trabalho?\n(CF) – Hoje, a busca pela criatividade vem como demanda do mercado. Sou contra essa visão utilitária, mas é assim que funciona. Em um mundo onde a automação avança, onde há um fluxo gigantesco de dados, precisamos cada vez mais da criatividade. O mercado busca esse perfil profissional e a educação vem se pautando por isso. Ocorre que o modelo educativo tradicional não deixa espaço nenhum para a criatividade, pois tudo se baseia na repetição, como um modelo fordista.\nDiante da pergunta formulada pelo entrevistado (E), a resposta de (CF):",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 7; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "não opta por nenhuma das sugestões dadas;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "escolhe uma terceira opção como resposta;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "foge do questionamento, desviando o assunto;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "opta por uma resposta que une as duas opções;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "indica claramente a segunda das opções como verdadeira.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "f99c45549b38927121743544c5f809e7a29e0f8d14130f78c0f1b5909d874916",
+        "original_numeric_id": 7,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito é a alternativa **E**.\n\nO entrevistador apresenta uma pergunta disjuntiva com duas opções de causa para a busca por criatividade: 1) \"desenvolvimento da Pedagogia\" ou 2) \"pressão crescente do mundo do trabalho\". A entrevistada inicia sua resposta afirmando: \"Hoje, a busca pela criatividade vem como demanda do mercado\". A expressão \"demanda do mercado\" é um sinônimo direto de \"pressão do mundo do trabalho\", o que configura a escolha clara e direta da segunda opção proposta.\n\nAnálise das alternativas incorretas:\n* **A** e **B** estão incorretas porque a entrevistada adota precisamente uma das alternativas oferecidas pelo entrevistador, não a rejeitando nem propondo uma terceira via alheia ao mercado/trabalho.\n* **C** está incorreta porque a resposta é direta e aborda exatamente o núcleo da pergunta formulada.\n* **D** está incorreta porque a entrevistada não atribui a busca pela criatividade ao desenvolvimento da Pedagogia (primeira opção); pelo contrário, ela critica o modelo educativo tradicional por não deixar espaço para a criatividade.",
+        "source_reference": null
+      },
+      "source_content_hash": "75f232186a880e49c6a022c8f364c32218a7176a48e2be54a5add7618f4a3f69"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:008",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:8",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sou contra essa visão utilitária, mas é assim que funciona.\nEssa frase pode ser reescrita de vários modos; a única forma que altera o seu sentido original é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 8; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Mesmo sendo contra essa visão utilitária, é assim que funciona;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Apesar de ser contra essa visão utilitária, é assim que funciona;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "É assim que funciona a despeito de eu ser contra essa visão utilitária;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Ainda que eu seja contra essa visão utilitária, é assim que funciona;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "É assim que funciona a menos que eu seja contra essa visão utilitária.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "b511459007cda8ae6a4677cc67c0a1a26f368a23df626018d0597bcef87999ce",
+        "original_numeric_id": 8,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito é a alternativa **E**.\n\nA frase original estabelece uma relação de oposição (adversativa/concessiva) entre a opinião pessoal da autora (\"Sou contra\") e a realidade factual (\"é assim que funciona\"). As alternativas **A**, **B**, **C** e **D** preservam essa relação por meio de conectivos concessivos (\"mesmo sendo\", \"apesar de\", \"a despeito de\", \"ainda que\"). \n\nA alternativa **E**, por outro lado, emprega a locução \"a menos que\", que possui valor condicional-exclusivo (equivalente a \"exceto se\" ou \"caso não\"), alterando substancialmente o sentido original ao transformar a oposição em uma condição de exceção.",
+        "source_reference": null
+      },
+      "source_content_hash": "27276bb0e39ee0d050fc6637b5d65f9e6c3100f96499ab448dd1ed5b7138a1c5"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:010",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:10",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Ler não é natural. Mesmo falar e conversar não são atos naturais, são culturais. Portanto, ninguém nasce sabendo falar, conversar, ler ou escrever. Nem aprende sozinho. São habilidades e conhecimentos que precisam ser transmitidos e ensinados. A linguagem articulada não é um fenômeno da natureza, é da cultura. Vem do grupo social, ou seja, se ninguém ensinar, não se aprende.\nA frase abaixo que NÃO mostra ligação temática com esse segmento textual da escritora Ana Maria Machado é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 10; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "transmitir experiências para a geração seguinte é uma necessidade inevitável para a sobrevivência humana;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "é claro que as famílias ensinaram e ainda ensinam muita coisa, mas outras demandas surgiram e houve necessidade de instâncias institucionais nesse processo;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "o ambiente da sala de aula influencia no processo de ensino-aprendizagem e na metodologia empregada nas aulas;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "a educação selecionou e sintetizou, entre tantos saberes acumulados, aquilo que devia ser indispensável aos que chegam a este mundo;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "a humanidade criou alguns ofícios para garantir que a herança cultural pudesse se propagar por meio da transmissão escrita.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "78cfb81b6bac63b4b9392d19faec966d32129d5c8aa66189460ac4b0947a6325",
+        "original_numeric_id": 10,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O gabarito é a alternativa **C**.\n\nO texto de Ana Maria Machado discute a linguagem, a leitura e a escrita sob a perspectiva da oposição entre natureza e cultura, defendendo que tais habilidades não são inatas, mas sim construções sociais que exigem transmissão intergeracional. \n\nA alternativa **C** afasta-se desse eixo temático ao focar em variáveis microestruturais do ambiente escolar (o espaço físico da sala de aula e a metodologia de ensino), assunto que não se correlaciona com a discussão macro sobre a herança cultural e a necessidade de socialização para o aprendizado da linguagem.\n\nAnálise das alternativas que possuem ligação temática:\n* **A** aborda a transmissão de experiências entre gerações, o que se alinha diretamente à tese de que o conhecimento precisa ser transmitido.\n* **B** trata do papel das famílias e das instituições no processo de ensino, dialogando com a ideia de que \"se ninguém ensinar, não se aprende\".\n* **D** discute a seleção de saberes indispensáveis para os novos integrantes da sociedade, refletindo a transmissão cultural mencionada no texto.\n* **E** refere-se à propagação da herança cultural por meio da transmissão escrita, o que converge com a afirmação de que ler e escrever são atos culturais transmitidos socialmente.",
+        "source_reference": null
+      },
+      "source_content_hash": "5526c18e0c5167770c5816c57c9660f84f1565a2e8fa656917281c5323119d6c"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:011",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:11",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Todo cidadão, numa sociedade democrática, tem o direito às mesmas oportunidades. Não podemos admitir que alguém que passou por uma escola sinta-se barrado no baile. (Ana Maria Machado)\nNesse fragmento textual, critica-se sobretudo:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 11; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a desigualdade social;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "a crise da democracia;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "a falta de inserção social;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "o analfabetismo;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "a pedagogia escolar.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "163514b86d539ef281dee5a555ca62e1b2981ac0bf8498c40333b86bcdd4527f",
+        "original_numeric_id": 11,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nO fragmento textual utiliza a metáfora \"sinta-se barrado no baile\" para ilustrar a situação de indivíduos que, apesar de terem cumprido uma etapa de preparação e formação (passar pela escola), encontram-se impedidos de usufruir das oportunidades oferecidas pela sociedade. Essa exclusão do ambiente de oportunidades caracteriza diretamente a **falta de inserção social**.\n\n**Análise das alternativas incorretas:**\n* **A) a desigualdade social:** Embora a desigualdade social seja um pano de fundo, a crítica central e específica do texto foca no sentimento de exclusão e na barreira de acesso às oportunidades por quem já passou pela escola.\n* **B) a crise da democracia:** O texto pressupõe que, em uma sociedade democrática, todos deveriam ter as mesmas oportunidades, mas não foca em diagnosticar uma crise institucional ou política da democracia em si.\n* **D) o analfabetismo:** O texto menciona expressamente o indivíduo \"que passou por uma escola\", o que afasta o analfabetismo como foco da crítica.\n* **E) a pedagogia escolar:** A crítica não se direciona aos métodos de ensino ou à pedagogia adotada pelas escolas, mas sim ao destino social do estudante após a escolarização.",
+        "source_reference": null
+      },
+      "source_content_hash": "ab4a7ef9d03b976fac626e1800b0b399ca75cd902ef024ecf9d48e919fa3f445"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:012",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:12",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto 2\nO professor tenta exaustivamente explicar o conteúdo seguidas vezes, muda o ponto de vista, muda o esquema exposto na lousa, exemplifica de duas, três, quatro formas diferentes. A cada pausa, chama atenção de diferentes grupos de alunos, que insistem em não prestar atenção. (....) Já transpirando e quase rouco de tanto aumentar o tom de voz, o professor chama a atenção de um aluno que ri alto.\n—Fica de boa, profe. Depois eu vejo isso aí no YouTube.\n\nEntre as estratégias didáticas empregadas pelo professor (texto 2), só está ausente:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 12; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a repetição de conteúdos;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "o foco variado;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "a técnica da explicação;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "a exemplificação prática;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "a pausa reflexiva.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "82e051920ab9e555c1d9a17dcc3f5a658115c60161342def5bc38061a3a2e0e4",
+        "original_numeric_id": 12,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **E**.\n\nNo texto, o termo \"pausa\" aparece no trecho: *\"A cada pausa, chama atenção de diferentes grupos de alunos...\"*. Trata-se de uma interrupção com finalidade puramente disciplinar (chamar a atenção de alunos dispersos), e não de uma **pausa reflexiva**, que seria uma estratégia didática planejada para que os alunos pensem e consolidem o conteúdo explicado.\n\n**Análise das alternativas presentes no texto:**\n* **A) a repetição de conteúdos:** Está presente em *\"explicar o conteúdo seguidas vezes\"*.\n* **B) o foco variado:** Está presente em *\"muda o ponto de vista, muda o esquema exposto na lousa\"*.\n* **C) a técnica da explicação:** Está presente em *\"tenta exaustivamente explicar\"*.\n* **D) a exemplificação prática:** Está presente em *\"exemplifica de duas, três, quatro formas diferentes\"*.",
+        "source_reference": null
+      },
+      "source_content_hash": "df00891e974966c240e35e4f03983a22921838c7d03e3d578d25945b6fc0744f"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:014",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:14",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Ler nas entrelinhas. Esta frase dá conta de uma das muitas sutilezas da escrita, indicando que num texto até o que não está escrito deve ser lido, pois o sentido vai muito além das palavras, situando-se no contexto, para que não se perca “o espírito da coisa”. (Deonísio da Silva)\nUm segmento incoerente retirado desse texto é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 14; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Esta frase dá conta de uma das muitas sutilezas da escrita;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "num texto até o que não está escrito deve ser lido;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "pois o sentido vai muito além das palavras;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "o sentido (....) situando-se no contexto;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "para que não se perca “o espírito da coisa”.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "03044cf53bcbb3a052802e1f54e0ca04cd80aef1aefb473cb433076ecbfc38c4",
+        "original_numeric_id": 14,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nO segmento *\"num texto até o que não está escrito deve ser lido\"* apresenta uma contradição lógica em termos literais (um paradoxo), pois, por definição, a leitura pressupõe a existência de um texto escrito. Embora o trecho faça sentido no plano metafórico (referindo-se à interpretação de subentendidos e pressupostos), ele é, sob a ótica estritamente lógica e literal, o único segmento que carrega uma incoerência interna.\n\n**Análise das alternativas incorretas:**\n* **A, C, D e E:** Todos esses segmentos são perfeitamente coerentes e lógicos em suas formulações, descrevendo de forma direta e sem contradições os aspectos da escrita, da busca pelo sentido contextualizado e da apreensão da essência da mensagem (\"o espírito da coisa\").",
+        "source_reference": null
+      },
+      "source_content_hash": "909db3d81080b11706f0717e84cb8a4adfd3976a95bc2014045c0ade2438fb10"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:018",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:18",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto 3\nOs velhos estão sempre aconselhando os jovens a guardar dinheiro. Digo que este é um mau conselho. Não guardem um centavo; invistam em si mesmo apenas. Eu nunca economizei um dólar sequer antes dos 40 anos de idade. (Henry Ford)\n\nVelhos e jovens no texto 3 são originalmente adjetivos que se encontram substantivados; o mesmo ocorre na seguinte frase:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 18; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Os homens realmente educados são os autodidatas;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "O que a escultura faz ao mármore, a instrução faz à alma humana;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Você é único. Se isso não é suficiente, algo se perdeu;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "É difícil uma pessoa sentir-se confortável sem ter a própria aprovação;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "O homem sem educação é a caricatura de si mesmo.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "c9f764f2725fec6612c89f353a2d886d9029e9149d0114ac6597f3ee54a86561",
+        "original_numeric_id": 18,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A**.\n\nNo texto original, as palavras \"velhos\" e \"jovens\" são adjetivos que passaram pelo processo de derivação imprópria (substantivação) ao virem precedidos de artigos definidos (*\"Os velhos\"*, *\"os jovens\"*). O mesmo fenômeno ocorre na alternativa A com a palavra **autodidatas**. Originalmente um adjetivo (como em \"estudantes autodidatas\"), ela passa a funcionar como substantivo na oração ao ser precedida pelo artigo definido masculino plural: *\"os autodidatas\"*.\n\n**Análise das alternativas incorretas:**\n* **B) O que a escultura faz ao mármore, a instrução faz à alma humana:** Os termos \"escultura\", \"mármore\", \"instrução\" e \"alma\" são substantivos nativos. \"Humana\" funciona estritamente como adjetivo.\n* **C) Você é único. Se isso não é suficiente, algo se perdeu:** Os termos \"único\" e \"suficiente\" mantêm sua classe original de adjetivos, funcionando como predicativos.\n* **D) É difícil uma pessoa sentir-se confortável sem ter a própria aprovação:** \"Pessoa\" e \"aprovação\" são substantivos nativos; \"confortável\" é adjetivo.\n* **E) O homem sem educação é a caricatura de si mesmo:** \"Homem\", \"educação\" e \"caricatura\" são substantivos em sua origem e emprego.",
+        "source_reference": null
+      },
+      "source_content_hash": "d0d4dc0426ab70d82bfb84ba43d6a33fd3022e1bde6317d5e3ef162906b98cfe"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:020",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:20",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A frase abaixo em que ocorre uma falha gramatical é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 20; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Cada um deve dedicar-se à sua própria educação até o último dia;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Não se trata de ler muito de tudo. É necessário digerir-se o que se lê;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Não pretendas ser demasiado justo nem saber mais do que lhe convém;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Nascemos príncipes e a educação faz de nós sapos;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "O amor-próprio ofendido não perdoa jamais.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "6f1e19770282999be217050f0437c70b8d8b53a63d1ea9b1f261dfc5db3540ed",
+        "original_numeric_id": 20,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **C**.\n\nOcorre nesta frase um desvio contra a **uniformidade de tratamento** (mistura de pessoas gramaticais). O verbo **pretendas** está conjugado na 2ª pessoa do singular (*tu*), ao passo que o pronome oblíquo **lhe** refere-se à 3ª pessoa do singular (*ele/ela/você*). Para manter a correção gramatical, a frase deveria harmonizar-se na 2ª pessoa (*\"nem saber mais do que **te** convém\"*) ou na 3ª pessoa (*\"Não **pretenda**... do que **lhe** convém\"*).\n\n**Análise das alternativas corretas:**\n* **A) Cada um deve dedicar-se à sua própria educação...:** Uso correto da crase diante de pronome possessivo feminino singular antecedendo substantivo feminino, além de perfeita concordância de terceira pessoa.\n* **B) ...É necessário digerir-se o que se lê:** Emprego correto da partícula apassivadora \"se\" e da estrutura de voz passiva sintética.\n* **D) Nascemos príncipes e a educação faz de nós sapos:** Estrutura sintática e concordância nominal/verbal plenamente corretas.\n* **E) O amor-próprio ofendido não perdoa jamais:** Grafia correta do substantivo composto com hífen e sintaxe adequada.",
+        "source_reference": null
+      },
+      "source_content_hash": "45b76e32efa64611e766e75cf8c7d6954156ab8767e12791f884c32b1b898aa0"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:021",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:21",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No terreno da educação, são muito comuns as figuras de linguagem que envolvem alimentação; a frase abaixo em que isso NÃO ocorre é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 21; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "O cozinheiro se faz, porém o bom cozinheiro nasce;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "No que conseguir ler, não procure tanto o saber, mas o sabor;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Não se trata de ler muito de tudo. É necessário digerir-se o que se lê;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Não procures o que é muito difícil para ti, não investigues o que não coube no teu prato;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Ler um livro medíocre é uma tarefa sem sal.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "76407a732c814f3da150f879baf27daaccd3ca91c8c452487c31074ba2f1ea25",
+        "original_numeric_id": 21,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão solicita a identificação da alternativa em que **não** ocorre o uso de figuras de linguagem associadas à alimentação no contexto educacional.\n\n* **Alternativa A (Correta):** O termo \"cozinheiro\" é empregado em seu sentido estritamente literal, referindo-se ao próprio ofício da culinária. Não há transposição metafórica para o campo do aprendizado ou da leitura.\n* **Alternativa B:** Ocorre um trocadilho metafórico entre \"saber\" (conhecimento) e \"sabor\" (paladar), relacionando a leitura ao prazer sensorial da comida.\n* **Alternativa C:** O verbo \"digerir\" é empregado de forma figurada para indicar a assimilação e a compreensão profunda do conteúdo lido.\n* **Alternativa D:** A expressão \"não coube no teu prato\" funciona como metáfora para limites de capacidade intelectual ou de escopo de investigação pessoal.\n* **Alternativa E:** A locução \"sem sal\" é uma metáfora para algo desinteressante ou medíocre, aplicada aqui à qualidade de um livro.",
+        "source_reference": null
+      },
+      "source_content_hash": "6d29c994eb19d86f99de46b8143384f6538ba5aeffc555216e39cd91d0bc8b03"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:022",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:22",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O astrônomo que descobriu o cometa de Halley se chamava Halley. O médico que descobriu a doença de Chagas se chamava Chagas. O cientista que descobriu o complexo de Golgi se chamava Golgi. Puxa vida, são essas coincidências que me fazem acreditar em Deus. (Eugênio Mohallem)\nEsse pensamento apresenta um problema de raciocínio que é o de:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 22; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "trocar o geral pelo particular;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "inverter a ordem dos fatos;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "confundir causa e consequência;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "misturar condição e ação;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "tirar conclusão de premissas falsas.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "e5237b1b4bf73ee8c5dfe3be33501712725c0f94099cd49e8b36e1372e06cb9d",
+        "original_numeric_id": 22,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O texto apresenta uma falha lógica de raciocínio baseada na inversão de causalidade.\n\n* **Alternativa C (Correta):** O autor confunde a causa com a consequência. O cometa, a doença e a organela celular receberam os nomes de Halley, Chagas e Golgi como **consequência** de terem sido descobertos por esses cientistas (homenagem póstuma ou nominal). O autor inverte essa lógica ao sugerir que já existia uma coincidência prévia entre o nome do elemento e o nome de quem o descobriria.\n* **Alternativas A, B, D e E:** Não descrevem o problema lógico do texto. Não há substituição do geral pelo particular (A), simples inversão cronológica sem nexo causal (B), confusão entre condição e ação (D) ou premissas falsas (E), visto que os fatos históricos citados sobre os descobridores são verdadeiros.",
+        "source_reference": null
+      },
+      "source_content_hash": "5b24e507358ca7f5d966b68b231386c297cb02cc5266013091a74c2868bc6376"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:023",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:23",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto 4\nAssim que toca o sinal indicando o fim das aulas, um grupo de alunos sai correndo das salas. Eles não estão com pressa de ir embora, como seria de se esperar após nove horas e meia de atividade escolar, mas para ir ao pátio, onde vão ensaiar para a fanfarra ou treinar handebol.\nEm um colégio onde 30% dos alunos repetiam ou abandonavam os estudos, houve um receio inicial em aumentar o tempo de classe, com o período integral. A solução surpreendeu, fez aumentar o interesse dos jovens pelos estudos e melhorou os indicadores educacionais da unidade.\n\nO primeiro parágrafo do texto 4 mistura dois tipos de textos, que são:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 23; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "narrativo / dissertativo-expositivo;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "narrativo / descritivo;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "descritivo / dissertativo-argumentativo;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "descritivo / dissertativo-expositivo;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "dissertativo-expositivo / dissertativo-argumentativo.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "b1c5fc6e1d4ef92944aa938354bb240a17e30550c6dc31e3391561c5d4f8cf33",
+        "original_numeric_id": 23,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A análise do primeiro parágrafo do Texto 4 revela a coexistência de duas tipologias textuais distintas:\n\n* **Alternativa A (Correta):** Há a presença do tipo **narrativo**, caracterizado pela sucessão temporal de ações dinâmicas (\"toca o sinal\", \"sai correndo das salas\", \"vão ensaiar\"), associado ao tipo **dissertativo-expositivo**, no qual se apresenta uma explicação e análise da conduta dos alunos (\"Eles não estão com pressa de ir embora, como seria de se esperar após nove horas e meia de atividade escolar...\").\n* **Alternativas B, C e D:** O trecho não apresenta marcas de tipologia predominantemente descritiva, que exigiria uma caracterização estática e detalhada de aspectos físicos ou de cenários.\n* **Alternativa E:** Não há caráter predominantemente argumentativo no primeiro parágrafo, pois o autor não busca persuadir o leitor por meio da defesa de uma tese, limitando-se a expor a rotina e o comportamento dos estudantes.",
+        "source_reference": null
+      },
+      "source_content_hash": "b5885b9d89045f4941f440db090db8d8baf5e5fbf22cb17022b42706f3df9730"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:024",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:24",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto 4\nAssim que toca o sinal indicando o fim das aulas, um grupo de alunos sai correndo das salas. Eles não estão com pressa de ir embora, como seria de se esperar após nove horas e meia de atividade escolar, mas para ir ao pátio, onde vão ensaiar para a fanfarra ou treinar handebol.\nEm um colégio onde 30% dos alunos repetiam ou abandonavam os estudos, houve um receio inicial em aumentar o tempo de classe, com o período integral. A solução surpreendeu, fez aumentar o interesse dos jovens pelos estudos e melhorou os indicadores educacionais da unidade.\n\nNo texto 4, o segundo período do primeiro parágrafo, em relação ao período anterior, mostra:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 24; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "uma exemplificação;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "uma justificativa;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "uma explicitação;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "uma quebra de expectativa;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "uma incoerência flagrante.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "181722287440a588ddc5d498ee162084bbdbce5a0f7c531455ca6aa32c39fce6",
+        "original_numeric_id": 24,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A relação de sentido entre os dois primeiros períodos do primeiro parágrafo baseia-se no contraste de expectativas:\n\n* **Alternativa D (Correta):** O primeiro período relata que os alunos saem correndo da sala assim que o sinal toca. A expectativa natural (senso comum) é de que eles queiram ir embora rapidamente após um longo período de aulas. O segundo período quebra essa expectativa ao esclarecer que a pressa se deve ao desejo de permanecer na escola para realizar atividades no pátio (ensaiar ou treinar).\n* **Alternativas A, B, C e E:** O segundo período não funciona como mera exemplificação (A), justificativa causal direta para a saída em si (B), simples explicitação neutra (C) ou incoerência (E), pois a conduta dos alunos é plenamente explicada e justificada pelo contexto apresentado.",
+        "source_reference": null
+      },
+      "source_content_hash": "71df778a9d7be584dd1e4aca6d43757d3f9fb7d00c044464035ac0b20ba4d035"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:025",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:25",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto 4\nAssim que toca o sinal indicando o fim das aulas, um grupo de alunos sai correndo das salas. Eles não estão com pressa de ir embora, como seria de se esperar após nove horas e meia de atividade escolar, mas para ir ao pátio, onde vão ensaiar para a fanfarra ou treinar handebol.\nEm um colégio onde 30% dos alunos repetiam ou abandonavam os estudos, houve um receio inicial em aumentar o tempo de classe, com o período integral. A solução surpreendeu, fez aumentar o interesse dos jovens pelos estudos e melhorou os indicadores educacionais da unidade.\n\nO segundo parágrafo do texto 4 desempenha um conjunto de papéis; o que é inadequado ao texto é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 25; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "mostra a mudança realizada no colégio citado;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "justifica a atitude dos alunos, citada no primeiro parágrafo;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "indica uma estratégia de renovação no magistério;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "mostra uma etapa anterior aos fatos do primeiro parágrafo;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "compara dois momentos da vida escolar.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "dab90fcab9ad18322234880f8e0bfde6eb6f741d61866bff2f3fdb0655e1456c",
+        "original_numeric_id": 25,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a identificação da afirmativa que traz uma interpretação inadequada sobre as funções do segundo parágrafo do Texto 4.\n\n* **Alternativa C (Correta):** O segundo parágrafo aborda a transição para o período integral e a consequente melhoria nos indicadores de rendimento dos alunos. Não há qualquer menção a estratégias de renovação, contratação ou capacitação voltadas ao corpo docente (magistério).\n* **Alternativa A:** É adequada, pois o texto explicita a mudança para o \"período integral\".\n* **Alternativa B:** É adequada, pois a melhoria do ambiente escolar e a oferta de novas atividades justificam o entusiasmo dos alunos descrito no primeiro parágrafo.\n* **Alternativa D:** É adequada, pois o parágrafo resgata o cenário prévio à mudança (\"onde 30% dos alunos repetiam ou abandonavam os estudos\").\n* **Alternativa E:** É adequada, pois confronta o momento de altos índices de repetência/abandono com o momento posterior de melhora nos indicadores educacionais.",
+        "source_reference": null
+      },
+      "source_content_hash": "7dd78621efbb3fcbcd4b9906e42558c58d730066312ff4c3f66fdde7b8ffff25"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:026",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:26",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto 5\n“No Paquistão, quando sou proibida de ir à escola, compreendo o quão importante é a educação. A educação é o poder das mulheres. (....) Nós percebemos a importância de nossa voz quando somos silenciados”. É assim que a pequena notável enxerga o horizonte e – por meio das novas tecnologias – pôde fazer ecoar sua voz.\nEducação é um ato político, e se é na sociedade (seja física ou digital) o nascedouro de faíscas de perspectivas para um mundo mais igualitário, a escola deve ser o seu maior berçário.\nEmpoderamento educacional, Ivan Aguirra\n\nQuando escrevemos, usamos linguagem lógica e linguagem figurada; o vocábulo ou segmento abaixo (texto 5) que representa a linguagem lógica é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 26; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "nascedouro;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "faíscas;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "berçário;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "tecnologias;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "horizonte.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "c46b4cf6d810cdd42ca01d6036c0939da7fce858732da210df51b5272608db67",
+        "original_numeric_id": 26,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda a distinção entre denotação (linguagem lógica/literal) e conotação (linguagem figurada).\n\n* **Alternativa D (Correta):** O vocábulo \"tecnologias\" é empregado em seu sentido literal e objetivo, referindo-se aos meios técnicos e digitais reais que permitiram a propagação da voz da estudante.\n* **Alternativas A, B, C e E:** Apresentam termos empregados em sentido figurado (metafórico) no contexto do texto:\n  * \"nascedouro\" (A) e \"berçário\" (C) são metáforas para o local de origem e desenvolvimento de ideias e perspectivas sociais;\n  * \"faíscas\" (B) representa o surgimento inicial de novas ideias ou esperanças;\n  * \"horizonte\" (E) simboliza as perspectivas futuras de vida e educação.",
+        "source_reference": null
+      },
+      "source_content_hash": "c6fdf75068d56353a6e25c28bb73d9bc08876f892324bff000b1a7e275ca1485"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:027",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:27",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto 5\n“No Paquistão, quando sou proibida de ir à escola, compreendo o quão importante é a educação. A educação é o poder das mulheres. (....) Nós percebemos a importância de nossa voz quando somos silenciados”. É assim que a pequena notável enxerga o horizonte e – por meio das novas tecnologias – pôde fazer ecoar sua voz.\nEducação é um ato político, e se é na sociedade (seja física ou digital) o nascedouro de faíscas de perspectivas para um mundo mais igualitário, a escola deve ser o seu maior berçário.\nEmpoderamento educacional, Ivan Aguirra\n\nO sinal gráfico do texto 5 que mostra seu sentido de forma correta é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 27; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "as aspas indicam que o trecho selecionado é de grande importância para o texto;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "os parênteses com pontos em seu interior indicam que algo foi censurado no texto original;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "os parênteses com palavras em seu interior indicam a presença de uma informação esquecida anteriormente;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "as letras maiúsculas no início de Paquistão e Educação foram empregadas pelo mesmo motivo;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "os pequenos travessões que destacam por meio das novas tecnologias inserem uma nova informação no texto.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "6a289e0a7f5f950dadd8602de84bcfd4bf548b339bf3518d63ea1bfede5b3f92",
+        "original_numeric_id": 27,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise das funções dos sinais gráficos e de pontuação no Texto 5:\n\n* **Alternativa E (Correta):** Os travessões isolam o adjunto adverbial de meio \"por meio das novas tecnologias\", que funciona como uma estrutura intercalada, acrescentando uma informação explicativa sobre o modo como a voz da jovem pôde ecoar.\n* **Alternativa A:** As aspas delimitam uma citação direta (discurso alheio), e não apenas um destaque de importância temática.\n* **Alternativa B:** Os parênteses com pontos de suspensão `(....)` indicam a supressão (omissão) de um trecho do texto original, e não censura.\n* **Alternativa C:** Os parênteses em \"(seja física ou digital)\" servem para especificar ou exemplificar os tipos de sociedade, e não para recuperar uma informação esquecida.\n* **Alternativa D:** \"Paquistão\" exige inicial maiúscula por ser substantivo próprio (nome de país). \"Educação\" inicia-se com maiúscula por estar em início de período (no segundo parágrafo).",
+        "source_reference": null
+      },
+      "source_content_hash": "d9da67fc94e975c0fbcda073a81c10ad6b22c2d440a90b058237d6cc67aa71b8"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:028",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:28",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Texto 5\n“No Paquistão, quando sou proibida de ir à escola, compreendo o quão importante é a educação. A educação é o poder das mulheres. (....) Nós percebemos a importância de nossa voz quando somos silenciados”. É assim que a pequena notável enxerga o horizonte e – por meio das novas tecnologias – pôde fazer ecoar sua voz.\nEducação é um ato político, e se é na sociedade (seja física ou digital) o nascedouro de faíscas de perspectivas para um mundo mais igualitário, a escola deve ser o seu maior berçário.\nEmpoderamento educacional, Ivan Aguirra\n\nNo texto 5 são utilizados alguns meios linguísticos com função específica; o item abaixo em que os exemplos citados NÃO correspondem ao elemento destacado é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 28; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "voz passiva: sou proibida / somos silenciados;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "conexão entre orações: quando sou proibida / quando somos silenciados;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "intensificação de grau: quão importante / mais igualitário;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "palavras de coesão com os antecedentes: assim / berçário;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "adjetivação: político / igualitário.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "2cc50d02dd2b476a6cbf2a8e25b810dada9b5b935f02c8468cc23d1ed9b2eb08",
+        "original_numeric_id": 28,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a identificação da alternativa que associa incorretamente um elemento linguístico à sua respectiva função no texto.\n\n* **Alternativa D (Correta):** O termo \"berçário\" é um substantivo empregado de forma metafórica no encerramento do texto. Ele não atua como um elemento gramatical de coesão referencial anafórica (retomada de antecedentes), diferentemente do advérbio \"assim\", que sintetiza a declaração anterior. Portanto, a associação está incorreta.\n* **Alternativa A:** Ambos os segmentos (\"sou proibida\" e \"somos silenciados\") estão estruturados na voz passiva analítica (verbo auxiliar + particípio).\n* **Alternativa B:** A conjunção subordinativa temporal \"quando\" atua conectando as orações subordinadas às suas respectivas orações principais.\n* **Alternativa C:** \"Quão\" e \"mais\" atuam como intensificadores de grau dos adjetivos \"importante\" e \"igualitário\".\n* **Alternativa E:** \"Político\" e \"igualitário\" exercem papel de adjetivação, caracterizando os substantivos \"ato\" e \"mundo\".",
+        "source_reference": null
+      },
+      "source_content_hash": "5e172cb9fd284f7b96d646489a88df4484669f6487b1bd9a24e89204eae23574"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:030",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:30",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Em todas as palavras abaixo há elementos formais sublinhados que são de enorme uso em nossa língua; o valor semântico desses elementos está corretamente exemplificado em:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": null,
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 30; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "lugar: vindouro e duradouro;",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "doença: tuberculose e celulose;",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "golpe: cacetada e molecada;",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "possibilidade: manipulável e nomeável;",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "atividade: jornalismo e raquitismo.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "e32ef7a501511eb5ef6fabfcbe0e91ad472caec501552abf7cec060ed0f045d9",
+        "original_numeric_id": 30,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão analisa o valor semântico de sufixos formadores de palavras na língua portuguesa.\n\n* **Alternativa D (Correta):** O sufixo \"-vel\" (presente em \"-ável\") é formador de adjetivos a partir de verbos e expressa a ideia de possibilidade, capacidade ou aptidão de sofrer a ação expressa pelo verbo original (aquilo que se pode manipular / aquilo que se pode nomear).\n* **Alternativa A:** O sufixo \"-douro\" pode indicar lugar (como em \"ancoradouro\"), mas em \"vindouro\" (que há de vir) e \"duradouro\" (que dura muito) ele indica relação temporal ou de estado.\n* **Alternativa B:** O sufixo \"-ose\" indica processo patológico/doença em \"tuberculose\", mas em \"celulose\" refere-se a um composto químico (carboidrato).\n* **Alternativa C:** O sufixo \"-ada\" indica golpe/impacto em \"cacetada\", mas em \"molecada\" funciona como coletivo (grupo de moleques).\n* **Alternativa E:** O sufixo \"-ismo\" indica doutrina, sistema ou atividade em \"jornalismo\", mas em \"raquitismo\" indica uma condição patológica (doença).",
+        "source_reference": null
+      },
+      "source_content_hash": "72c278997869c20d55b9454e51eed53de3195356cedf750675abe67cd6901a20"
+    }
+  ]
+}

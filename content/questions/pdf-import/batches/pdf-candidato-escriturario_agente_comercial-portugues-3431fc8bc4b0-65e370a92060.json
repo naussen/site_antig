@@ -1,0 +1,230 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-escriturario_agente_comercial-portugues-3431fc8bc4b0-65e370a92060",
+  "source": {
+    "file_name": "escriturario_agente_comercial_ATUALIZADO.json",
+    "sha256": "3431fc8bc4b0a22b5753d698bd645915b9d034aa09f1107f8135068051f98a0e",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "escriturario_agente_comercial.json",
+      "original_source_sha256": "712ee07d18b6c6f75b8792c6bf5ca6ea068b2c5f60c13f6565f4cab1c39926d7",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "65e370a920608fdf277b230b4d371802e9dc818e7dd20845ebb4cbef5b171b1e",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:008",
+      "source_id": "escriturario_agente_comercial:8",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com a norma-padrão da língua portuguesa, o sinal indicativo de crase está corretamente empregado em:",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 8; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Braille foi forçado à superar sua cegueira.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "O professor referiu-se à um aluno brilhante: Braille.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Braille não foi reconhecido até que se consolidasse à oficialização de seu método.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Ele queria ensinar à todos os alunos o seu sistema de escrita.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Todos estavam à espera de que o valor de Braille fosse reconhecido.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "1cb1837241b441e89ebef75f5f2b9bcf2527527b5674a65e479f5afdb12d1e95",
+        "original_numeric_id": 8,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null,
+        "official_item_number": 8
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a aplicação das regras de uso do acento indicativo de crase.\n\n* **Correta (E):** A locução prepositiva feminina *\"à espera de\"* exige obrigatoriamente o acento grave indicativo de crase, conforme a norma-padrão.\n\n* **Incorreta (A):** Não ocorre crase antes de verbos no infinitivo (*\"superar\"*).\n* **Incorreta (B):** Não ocorre crase antes de artigo indefinido masculino (*\"um\"*).\n* **Incorreta (C):** O termo \"oficialização\" funciona como sujeito da oração passiva pronominal (*\"que se consolidasse a oficialização\"*), não sendo precedido por preposição, o que impede a ocorrência de crase.\n* **Incorreta (D):** Não ocorre crase antes de pronome indefinido plural (*\"todos\"*).",
+        "source_reference": null
+      },
+      "source_content_hash": "f4e39cadf9aed63c9322293b79c12e5aab8646f3d212225d6a950ae1fd641151"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:009",
+      "source_id": "escriturario_agente_comercial:9",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A frase em que a palavra destacada respeita as regras da concordância nominal de acordo com a norma-padrão da língua portuguesa é:",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 9; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Hoje, Braille e seu método são muitos conhecidos.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Depois do acidente, Braille e sua família não ficaram só.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Há bastante razões para se considerar Braille um herói nacional.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Os alunos ficavam meio desorientados com o método de Barbier.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "O sistema de códigos de Braille tinha menas limitações que o de Barbier.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "199b331318a02f09048aa742e9510d030e9471ebd1ae684b3d3bd80662703734",
+        "original_numeric_id": 9,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null,
+        "official_item_number": 9
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda as regras de concordância nominal da norma-padrão.\n\n* **Correta (D):** A palavra \"meio\", quando equivale a \"um pouco\" ou \"parcialmente\", funciona como advérbio de intensidade e, por conseguinte, é invariável (*\"meio desorientados\"*).\n\n* **Incorreta (A):** O termo \"muito\" funciona como advérbio modificando o adjetivo \"conhecidos\", devendo permanecer invariável (*\"muito conhecidos\"*).\n* **Incorreta (B):** A palavra \"só\", com sentido de \"sozinhos\", funciona como adjetivo e deve concordar com o sujeito plural (*\"não ficaram sós\"*).\n* **Incorreta (C):** O termo \"bastante\" funciona como pronome adjetivo associado ao substantivo \"razões\", devendo flexionar-se no plural (*\"bastantes razões\"*).\n* **Incorreta (E):** A palavra \"menas\" não existe na norma-padrão da língua portuguesa; o termo \"menos\" é invariável (*\"menos limitações\"*).",
+        "source_reference": null
+      },
+      "source_content_hash": "fdc8bceb61a2b9a513c02dd45f47de6e3a67ea8416d1a82cefc928aaba52021a"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:010",
+      "source_id": "escriturario_agente_comercial:10",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O pronome oblíquo átono está colocado de acordo com a norma-padrão da língua portuguesa em:",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 10; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Me surpreende a história de vida de Braille.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Seu método não trouxe-lhe reconhecimento em vida.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "O menino cego aos cinco anos tornar-se-ia um herói nacional na França.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Quantos impressionaram-nos como Braille?",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Braille recebia os alunos e sempre auxiliava-os com o método criado.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "d482b4b16c371df62b370eaf9810e30c5409231b580f827665e21f10135b0bce",
+        "original_numeric_id": 10,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": null,
+        "official_item_number": 10
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão avalia o emprego dos pronomes oblíquos átonos segundo as regras de colocação pronominal da norma-padrão.\n\n* **Correta (C):** O verbo \"tornaria\" está conjugado no futuro do pretérito do indicativo. Como não há palavra atrativa antes dele que exija a próclise, a mesóclise é obrigatória (*\"tornar-se-ia\"*).\n\n* **Incorreta (A):** A norma-padrão proíbe iniciar períodos com pronome oblíquo átono. O correto seria a ênclise: *\"Surpreende-me\"*.\n* **Incorreta (B):** A palavra negativa \"não\" é um caso clássico de atração obrigatória, exigindo a próclise: *\"não lhe trouxe\"*.\n* **Incorreta (D):** O pronome interrogativo/indefinito \"Quantos\" atrai o pronome oblíquo, exigindo a próclise: *\"Quantos nos impressionaram\"*.\n* **Incorreta (E):** O advérbio \"sempre\" atrai o pronome oblíquo, exigindo a próclise: *\"sempre os auxiliava\"*.",
+        "source_reference": null
+      },
+      "source_content_hash": "656eebc13431bc1ed21d3bc45a68bea235a92db0a6f9f45490a3905a8b363871"
+    }
+  ]
+}

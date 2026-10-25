@@ -1,0 +1,905 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-analista_ambiental_conhec_especi-direito-ambiental-d2ac5698f205-83cc3625e616",
+  "source": {
+    "file_name": "analista_ambiental_conhec_especi_ATUALIZADO.json",
+    "sha256": "d2ac5698f205a2638f1eaf79d0aedfc74d2cf54a6c2e1dadb69fe6ad34e8b6c4",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "analista_ambiental_conhec_especi.json",
+      "original_source_sha256": "df2e94ac9bbd67e22ac3acfaa869525b68daefee34c5d89f472cafa6b27243d5",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "83cc3625e616ac2b4340ac5a78fa9455f978521758408cf1fc9b09e8dbeb3770",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-ambiental",
+    "name": "Direito Ambiental"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:051",
+      "source_id": "analista_ambiental_conhec_especi:51",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere a hotspots e centros de endemismo, julgue os itens a seguir.\n\nOs altos índices de endemismo na Mata Atlântica e na Floresta Amazônica caracterizam essas áreas como hotspots.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 51; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "741412431e3e19baef1cafdbe0cb09c51bdaffb9615ec6cc2256d9442d5adb5c",
+        "original_numeric_id": 51,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O conceito de *hotspot* de biodiversidade baseia-se em dois critérios ecológicos objetivos estabelecidos por Norman Myers:\n1. **Endemismo:** a região deve conter pelo menos 1.500 espécies endêmicas de plantas vasculares (mais de 0,5% do total mundial).\n2. **Grau de ameaça:** a região deve ter perdido 70% ou mais de sua vegetação original.\n\nNo território brasileiro, apenas a **Mata Atlântica** e o **Cerrado** atendem a ambos os critérios e são formalmente classificados como *hotspots*. \n\nA **Floresta Amazônica**, apesar de possuir elevados índices de biodiversidade e endemismo, ainda conserva mais de 80% de sua cobertura florestal original. Portanto, por não cumprir o critério de degradação severa (perda de pelo menos 70% da vegetação), a Amazônia não é classificada como um *hotspot*, mas sim como uma Área de Alta Biodiversidade Silvestre (*High Biodiversity Wilderness Area*).",
+        "source_reference": null
+      },
+      "source_content_hash": "c09386536e57df3f6a3554db3aef0198882216e8589c52abc72601b8a88354a2"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:052",
+      "source_id": "analista_ambiental_conhec_especi:52",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere a hotspots e centros de endemismo, julgue os itens a seguir.\n\nAs regiões em que se identifica pelo menos uma espécie de ocorrência restrita (endêmica) são consideradas áreas de endemismo.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 52; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "711d06c1ff9f78da5535a6e2bcc86b17515b9eb5af0d534e249deac04536de93",
+        "original_numeric_id": 52,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Na biogeografia, o conceito de **área de endemismo** refere-se a uma região geográfica caracterizada pela ocorrência congruente de táxons de distribuição restrita. \n\nA identificação de apenas uma única espécie endêmica em determinada localidade não é suficiente para declará-la como uma área de endemismo. Para que tal classificação ocorra, é necessária a **congruência espacial** (sobreposição de limites de distribuição) de **duas ou mais espécies** endêmicas não aparentadas. Essa sobreposição indica que os diferentes táxons compartilharam uma história evolutiva comum, respondendo às mesmas barreiras geográficas e eventos de vicariância ao longo do tempo geológico.",
+        "source_reference": null
+      },
+      "source_content_hash": "24293cae166a4057d7440eb1b417d74be544f1d91f874c4c210113a32c0d767b"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:053",
+      "source_id": "analista_ambiental_conhec_especi:53",
+      "question_type": "true_false",
+      "statement_markdown": "A ocupação e o uso desordenado da terra nas regiões adjacentes às planícies do Pantanal são hoje uma das principais ameaças à conservação da biodiversidade local. Outra atividade que também ameaça esse bioma é a produção de energia por usinas hidrelétricas. As hidrelétricas promovem alterações no hábitat de espécies aquáticas e semiaquáticas e, consequentemente, nos serviços ecossistêmicos que essas espécies desempenham na região.\n\nInternet: <revistapesquisa.fapesp.br> (com adaptações).\n\nAcerca do Pantanal e das atividades antrópicas relacionadas à perda de biodiversidade, julgue os itens seguintes.\n\nA construção de mecanismos de transposição de peixes, como as escadas e as eclusas, é uma estratégia adotada para atenuar os efeitos do barramento na migração de peixes reofílicos e, consequentemente, conservar populações ex situ.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 53; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "248b7aba187b3cb109217f4dd415c267b0ae6fa9590a9467998aefa0caba0597",
+        "original_numeric_id": 53,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A distinção fundamental nesta questão reside nos conceitos de conservação *in situ* e *ex situ*:\n\n*   **Conservação *in situ*:** refere-se à conservação dos ecossistemas e habitats naturais e à manutenção e recuperação de populações viáveis de espécies em seus ambientes naturais.\n*   **Conservação *ex situ*:** refere-se à conservação de componentes da diversidade biológica fora de seus habitats naturais (por exemplo, em criatórios científicos, jardins botânicos, aquários ou bancos de sementes).\n\nA construção de mecanismos de transposição de peixes (como escadas e eclusas) visa restabelecer a conectividade fluvial, permitindo que os peixes reofílicos (migradores) superem o obstáculo físico da barragem para desovar a montante, mantendo as populações em seu próprio ambiente natural. Logo, trata-se de uma medida de manejo e conservação **_in situ_**.",
+        "source_reference": null
+      },
+      "source_content_hash": "de5cd8a74649200d8f8250f87abe0ffe0a795cd66e9292249f69ce7dfac0cc06"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:054",
+      "source_id": "analista_ambiental_conhec_especi:54",
+      "question_type": "true_false",
+      "statement_markdown": "A ocupação e o uso desordenado da terra nas regiões adjacentes às planícies do Pantanal são hoje uma das principais ameaças à conservação da biodiversidade local. Outra atividade que também ameaça esse bioma é a produção de energia por usinas hidrelétricas. As hidrelétricas promovem alterações no hábitat de espécies aquáticas e semiaquáticas e, consequentemente, nos serviços ecossistêmicos que essas espécies desempenham na região.\n\nInternet: <revistapesquisa.fapesp.br> (com adaptações).\n\nAcerca do Pantanal e das atividades antrópicas relacionadas à perda de biodiversidade, julgue os itens seguintes.\n\nEmbora apresente reduzida taxa de endemismo e seja o menor bioma brasileiro, o Pantanal exerce função biológica importante, ao abrigar a maior riqueza de aves do Brasil e ser rota de muitas espécies de aves migratórias.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 54; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "5223dcc0787a77bfb9fbbeafbd5c840771d02cfb68cd6fb7e9efccca41c6f5a6",
+        "original_numeric_id": 54,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A análise das premissas sobre o bioma Pantanal revela o erro da afirmação:\n\n1. **Menor bioma brasileiro e reduzido endemismo (Correto):** O Pantanal ocupa cerca de 1,8% do território nacional, sendo o menor bioma em extensão. Suas taxas de endemismo são baixas porque a planície é geologicamente recente e recebe forte influência biológica dos biomas vizinhos (Cerrado, Amazônia e Chaco).\n2. **Maior riqueza de aves do Brasil (Incorreto):** A **riqueza** (número total de espécies diferentes) de aves no Pantanal é expressiva, mas é significativamente menor do que a encontrada na Amazônia e na Mata Atlântica, que lideram esse ranking no país devido à maior complexidade estrutural de suas florestas. O Pantanal destaca-se, na verdade, pela elevada **abundância** (quantidade de indivíduos de uma mesma espécie visíveis simultaneamente) e por servir como importante área de alimentação e rota para aves migratórias.",
+        "source_reference": null
+      },
+      "source_content_hash": "fd6f9fc18af3f64b53ac67744088b8e0fd74e9903867794deaac31af8c957460"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:057",
+      "source_id": "analista_ambiental_conhec_especi:57",
+      "question_type": "true_false",
+      "statement_markdown": "Nas figuras acima, é ilustrada uma paisagem em dois momentos distintos: na figura I, são representados três fragmentos florestais (1, 2 e 3) circundados por áreas de vegetação secundária; na figura II, é ilustrada uma rodovia que atravessa o fragmento florestal 1, dividindo-o em dois novos fragmentos (1’ e 1’’). Com base nessas informações e nas figuras apresentadas, julgue os itens que se seguem, considerando que uma espécie X apresente subpopulações que migram entre os fragmentos 1, 2 e 3 e que as setas nas figuras indiquem a direção dessas migrações.\n\nNa figura I, a conexão entre as manchas de hábitat e os movimentos ocasionais dos indivíduos da espécie X entre elas caracteriza uma metapopulação. Caso a subpopulação da espécie X se extinga na área 3, essa área passará a ser desconsiderada no que diz respeito à área de vida da metapopulação.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 57; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "e9945e21d4eb10e41ae7cf9f934ff8bc641535ee0fb91f60fe23370f8ae64e1a",
+        "original_numeric_id": 57,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. Na ecologia de paisagens e na teoria de metapopulações (modelo de Levins e suas variações), uma metapopulação é definida como um conjunto de subpopulações locais que habitam manchas de hábitat discretas e que apresentam dinâmica de extinção local e recolonização.\n\nSe a subpopulação da espécie X se extinguir na mancha 3, essa área **não** deixa de ser considerada parte da área de vida ou do sistema da metapopulação. Pelo contrário, a mancha 3 passa a ser classificada como uma \"mancha vaga\" ou \"não ocupada\", que permanece disponível para ser recolonizada no futuro por indivíduos migrantes vindos das manchas 1 ou 2 (efeito de resgate ou recolonização). A existência de manchas vazias é um componente essencial para a persistência de longo prazo de uma metapopulação.",
+        "source_reference": null
+      },
+      "source_content_hash": "8717d34daba7ab8ae913f3e09a9ef97fbe7583f7746386433984e6f7646ef602"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:058",
+      "source_id": "analista_ambiental_conhec_especi:58",
+      "question_type": "true_false",
+      "statement_markdown": "Nas figuras acima, é ilustrada uma paisagem em dois momentos distintos: na figura I, são representados três fragmentos florestais (1, 2 e 3) circundados por áreas de vegetação secundária; na figura II, é ilustrada uma rodovia que atravessa o fragmento florestal 1, dividindo-o em dois novos fragmentos (1’ e 1’’). Com base nessas informações e nas figuras apresentadas, julgue os itens que se seguem, considerando que uma espécie X apresente subpopulações que migram entre os fragmentos 1, 2 e 3 e que as setas nas figuras indiquem a direção dessas migrações.\n\nO efeito de borda decorrente da construção da rodovia será maior no fragmento 1’.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 58; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "cefc5315b871a4759c942e24b1f3450da3be58cc22c7bff5005205f8558a265b",
+        "original_numeric_id": 58,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNa ecologia de paisagens, o **efeito de borda** é inversamente proporcional à área e diretamente dependente do perímetro e do formato do fragmento.\n\nQuanto menor a área de um fragmento florestal remanescente, maior é a proporção relativa de sua área total exposta às alterações microclimáticas (como incidência direta de radiação solar, vento e dessecação) nas faixas de contato com a matriz circundante.\n\nNa figura apresentada na prova, o fragmento 1' é consideravelmente maior e mais compacto do que o fragmento 1'', o que significa que o fragmento 1'' (menor e mais estreito) sofrerá um efeito de borda proporcionalmente muito mais intenso do que o fragmento 1'.",
+        "source_reference": null
+      },
+      "source_content_hash": "bef0f2574427001eeee76fcccbb07298ac1b1b2a83e9b821008740d43640781f"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:059",
+      "source_id": "analista_ambiental_conhec_especi:59",
+      "question_type": "true_false",
+      "statement_markdown": "Nas figuras acima, é ilustrada uma paisagem em dois momentos distintos: na figura I, são representados três fragmentos florestais (1, 2 e 3) circundados por áreas de vegetação secundária; na figura II, é ilustrada uma rodovia que atravessa o fragmento florestal 1, dividindo-o em dois novos fragmentos (1’ e 1’’). Com base nessas informações e nas figuras apresentadas, julgue os itens que se seguem, considerando que uma espécie X apresente subpopulações que migram entre os fragmentos 1, 2 e 3 e que as setas nas figuras indiquem a direção dessas migrações.\n\nAs subpopulações das áreas 2 e 3 não interagem geneticamente entre si. Por essa razão, a construção da rodovia não modificará o fluxo gênico entre elas.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 59; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "cf03d224a0dacfc4a32a54ee0ad895cc84ff6158d615350796e91c15cc1e5669",
+        "original_numeric_id": 59,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA fragmentação de habitats por rodovias e estradas cria barreiras físicas ao deslocamento de animais, alterando a conectividade estrutural e funcional da paisagem.\n\nAinda que duas subpopulações periféricas (como 2 e 3) não mantenham migrações diretas entre si, a dispersão de indivíduos e o consequente fluxo gênico entre elas ocorrem de forma intermediada através do fragmento central 1. Ao seccionar o fragmento 1 com uma rodovia, o tráfego de veículos e o desmatamento criam efeito de barreira que interrompe ou reduz drasticamente a circulação de dispersores, afetando de forma indelével a dinâmica metapopulacional e o fluxo gênico em toda a paisagem.",
+        "source_reference": null
+      },
+      "source_content_hash": "e9a234c7cd758af7e91baa9cadff9e56e2760dee6150830b7646d79b548ab39b"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:060",
+      "source_id": "analista_ambiental_conhec_especi:60",
+      "question_type": "true_false",
+      "statement_markdown": "Nas figuras acima, é ilustrada uma paisagem em dois momentos distintos: na figura I, são representados três fragmentos florestais (1, 2 e 3) circundados por áreas de vegetação secundária; na figura II, é ilustrada uma rodovia que atravessa o fragmento florestal 1, dividindo-o em dois novos fragmentos (1’ e 1’’). Com base nessas informações e nas figuras apresentadas, julgue os itens que se seguem, considerando que uma espécie X apresente subpopulações que migram entre os fragmentos 1, 2 e 3 e que as setas nas figuras indiquem a direção dessas migrações.\n\nAs possíveis consequências da construção da rodovia incluem o aumento da luminosidade e a redução da umidade nas bordas dos fragmentos, efeitos que favorecem a proliferação de espécies vegetais pioneiras.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 60; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "9d71185935470ea7125a833b30a1c737160d5e16b99fc86fa493ce41a13082e9",
+        "original_numeric_id": 60,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A abertura de uma rodovia no interior de um fragmento florestal contínuo gera o chamado **efeito de borda**.\n\nEsse fenômeno altera as condições microclimáticas na zona de transição entre a floresta e a área aberta da rodovia, resultando em:\n* **Aumento da luminosidade:** devido à remoção do dossel florestal.\n* **Redução da umidade relativa do ar e do solo:** decorrente da maior exposição ao vento e à radiação solar direta.\n\nEssas condições de maior luminosidade e menor umidade são desfavoráveis para espécies de clímax (típicas de interior de floresta), mas são ideais para o recrutamento e o desenvolvimento de **espécies vegetais pioneiras**, que possuem sementes fotoblásticas positivas (que germinam sob luz direta) e rápido crescimento em áreas abertas.",
+        "source_reference": null
+      },
+      "source_content_hash": "b3613d95cfb352ca902610d9dca1309c1c9fecb80f217b3734ad6a343eb09dbc"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:061",
+      "source_id": "analista_ambiental_conhec_especi:61",
+      "question_type": "true_false",
+      "statement_markdown": "Uma espécie de anta já conhecida pelas comunidades ribeirinhas e indígenas dos estados de Rondônia e do Amazonas foi recentemente descrita por pesquisadores e batizada de Tapirus kabomani. Esse exemplar é a quinta espécie do gênero e, como todas as outras espécies de antas viventes, originou-se por especiação alopátrica.\n\nInternet: <www.ufmg.br/online/arquivos> (com adaptações).\n\nTendo o fragmento de texto acima como referência, julgue os itens subsequentes, relativos à biologia e taxonomia animal.\n\nA especiação alopátrica das antas viventes ocorreu por divergência genética entre populações que habitavam determinada região devido a redução no fluxo gênico, ao ponto de surgirem espécies diferentes, o que prescindiu da existência de distância geográfica em larga escala.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 61; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "55fea11229b5ce83b4d63ba805eff37480e1e505562ad4fe5a505205840b6e49",
+        "original_numeric_id": 61,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto devido ao uso do termo \"prescindiu\". Na biologia evolutiva, **prescindir** significa \"dispensar\" ou \"não necessitar\".\n\nA **especiação alopátrica** (ou geográfica) é caracterizada obrigatoriamente pela existência de uma barreira geográfica física ou por uma distância geográfica em larga escala que isola fisicamente as populações, interrompendo o fluxo gênico entre elas. Portanto, esse processo **não prescinde** (não dispensa) a separação geográfica; ao contrário, ele a exige como condição inicial para que ocorra a divergência genética por deriva e seleção natural.\n\n* **Macete de resolução:** Em provas do CESPE/Cebraspe, atente-se sempre às palavras \"prescindir\" (dispensar) e \"imprescindível\" (indispensável), que frequentemente são utilizadas para inverter o sentido biológico ou jurídico de um conceito.",
+        "source_reference": null
+      },
+      "source_content_hash": "da33f5bb2754b22c295224846ddf69307754a8a0f97ec7417daa105224a2d074"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:063",
+      "source_id": "analista_ambiental_conhec_especi:63",
+      "question_type": "true_false",
+      "statement_markdown": "Uma espécie de anta já conhecida pelas comunidades ribeirinhas e indígenas dos estados de Rondônia e do Amazonas foi recentemente descrita por pesquisadores e batizada de Tapirus kabomani. Esse exemplar é a quinta espécie do gênero e, como todas as outras espécies de antas viventes, originou-se por especiação alopátrica.\n\nInternet: <www.ufmg.br/online/arquivos> (com adaptações).\n\nTendo o fragmento de texto acima como referência, julgue os itens subsequentes, relativos à biologia e taxonomia animal.\n\nCiclo reprodutivo longo, com período de gestação superior a doze meses, e geração, na maioria das vezes, de apenas um filhote por gestação são características que aumentam a vulnerabilidade das antas às pressões ambientais.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 63; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "36db113b64a96fda49eebed2c18dc62651fe54ae29e0ea977357ee665c9d061e",
+        "original_numeric_id": 63,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. As antas (gênero *Tapirus*) são animais de grande porte que adotam a chamada **estratégia reprodutiva K** (ou estrategistas-K).\n\nAs principais características biológicas desse grupo incluem:\n* **Longo período de gestação:** dura aproximadamente 13 a 14 meses (portanto, superior a 12 meses).\n* **Baixa taxa de natalidade:** nascimento de apenas um filhote por gestação.\n* **Longo intervalo entre partos e cuidado parental prolongado.**\n\nEsses fatores biológicos intrínsecos resultam em um baixo potencial de crescimento populacional. Consequentemente, quando as populações sofrem pressões ambientais ou antrópicas (como caça, atropelamentos e perda de hábitat), a taxa de recrutamento de novos indivíduos é extremamente lenta, o que eleva significativamente a vulnerabilidade da espécie à extinção local.",
+        "source_reference": null
+      },
+      "source_content_hash": "c8fd39d3fd9a3254f8e8146f687db0f3aa55a6fe35960126a6e37f0ce9b4350a"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:064",
+      "source_id": "analista_ambiental_conhec_especi:64",
+      "question_type": "true_false",
+      "statement_markdown": "A Aniba rosaeodora, conhecida popularmente como pau-rosa, foi muito explorada para produção de um óleo aromático extraído de sua madeira triturada. O resultado é que as populações da árvore foram diminuindo drasticamente, chegando a desaparecer em vários pontos da Amazônia. Atualmente, o pau-rosa faz parte de uma lista de espécies ameaçadas de extinção. O corte da árvore só é permitido com um plano de manejo sustentável aprovado pelo IBAMA. Nos últimos anos, pesquisadores começaram a estudar o plantio e o uso sustentável da espécie. As mudas podem ser formadas a partir de sementes coletadas na mata.\n\nInternet: <www.globo.com> (com adaptações).\n\nTendo como referência o texto acima, julgue os itens seguintes, a respeito de botânica e taxonomia vegetal.\n\nA castanheira (Bertholletia excelsa), o mogno-brasileiro (Swietenia macrophylla) e o pau-brasil (Caesalpinia echinata) são árvores da flora nativa da Floresta Amazônica que estão ameaçadas de extinção.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 64; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "6e55556433e09d0cb79cf5d760e582de7489e14d7c88485621be9b22eabca0d9",
+        "original_numeric_id": 64,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque o **pau-brasil** (*Paubrasilia echinata*, anteriormente classificado como *Caesalpinia echinata*) **não** é uma espécie nativa da Floresta Amazônica.\n\nO pau-brasil é uma árvore endêmica e símbolo do bioma **Mata Atlântica**, ocorrendo originalmente na floresta estacional semidecídua e na floresta ombrófila densa ao longo da costa brasileira (do Rio Grande do Norte ao Rio de Janeiro). Embora a castanheira (*Bertholletia excelsa*) e o mogno-brasileiro (*Swietenia macrophylla*) sejam, de fato, espécies nativas da Amazônia e ameaçadas de extinção, a inclusão do pau-brasil invalida a afirmação.",
+        "source_reference": null
+      },
+      "source_content_hash": "845e4fac8f93b6e2555fbbcf3e8930729a0f37f5316aac07b6626b6ec69665ca"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:066",
+      "source_id": "analista_ambiental_conhec_especi:66",
+      "question_type": "true_false",
+      "statement_markdown": "A Aniba rosaeodora, conhecida popularmente como pau-rosa, foi muito explorada para produção de um óleo aromático extraído de sua madeira triturada. O resultado é que as populações da árvore foram diminuindo drasticamente, chegando a desaparecer em vários pontos da Amazônia. Atualmente, o pau-rosa faz parte de uma lista de espécies ameaçadas de extinção. O corte da árvore só é permitido com um plano de manejo sustentável aprovado pelo IBAMA. Nos últimos anos, pesquisadores começaram a estudar o plantio e o uso sustentável da espécie. As mudas podem ser formadas a partir de sementes coletadas na mata.\n\nInternet: <www.globo.com> (com adaptações).\n\nTendo como referência o texto acima, julgue os itens seguintes, a respeito de botânica e taxonomia vegetal.\n\nA Copaifera sp., assim como a Aniba rosaeodora, consiste em uma magnoliófita encontrada na Floresta Amazônica que está sujeita à exploração humana para a obtenção de óleos. Esses óleos, produtos do metabolismo secundário desses vegatais, podem ser utilizados em estudos taxonômicos.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 66; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "8c17cec5be347ed189551f34241aec2b99201ca27addeb2fd6347b945530ae5f",
+        "original_numeric_id": 66,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A análise detalhada dos elementos da afirmação confirma sua veracidade:\n\n1. **Classificação botânica:** Tanto a copaíba (*Copaifera* sp., família Fabaceae) quanto o pau-rosa (*Aniba rosaeodora*, família Lauraceae) pertencem ao grupo das angiospermas, também denominadas **magnoliófitas** (divisão Magnoliophyta). Ambos são táxons nativos da Floresta Amazônica.\n2. **Exploração de óleos:** Ambas as espécies são historicamente exploradas pela ação humana para a extração de óleos. O pau-rosa fornece o óleo essencial rico em linalol (extraído do caule), e a copaíba fornece o óleo-resina (extraído por perfuração do tronco).\n3. **Metabolismo secundário:** Os óleos essenciais e resinas são produtos do **metabolismo secundário** das plantas, desempenhando funções de defesa contra patógenos e herbívoros.\n4. **Uso taxonômico:** A composição química desses metabólitos secundários é altamente específica de cada táxon, servindo como ferramenta na **quimiotaxonomia** (ou taxonomia química) para auxiliar na identificação, diferenciação e classificação de espécies e gêneros botânicos.",
+        "source_reference": null
+      },
+      "source_content_hash": "a15f2702c4cfdf01eaa2a0cbf6755f11da22aa3885e050b44a85049398f8824b"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:068",
+      "source_id": "analista_ambiental_conhec_especi:68",
+      "question_type": "true_false",
+      "statement_markdown": "A compreensão da dimensão da diversidade genética e da história evolutiva dos organismos vivos é crucial para estudos de biodiversidade geral, contribuindo na criação de programas para a conservação dessa biodiversidade. A respeito desse assunto, julgue os itens subsequentes, considerando a região neotropical.\n\nA piranha da espécie Pygocentrus piraya, um peixe pertencente ao grupo dos Siluriformes, é encontrada abundantemente na Amazônia.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 68; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "ea5a3caf8eb9e5edd67ed70ae2dc75a6b0b924b21d15e2586fe6db38d659c141",
+        "original_numeric_id": 68,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item apresenta dois erros conceituais importantes:\n\n1. **Classificação Taxonômica:** A piranha *Pygocentrus piraya* pertence à ordem **Characiformes** (família Serrasalmidae), grupo que engloba peixes com escamas como lambaris, pacus e piranhas. A ordem **Siluriformes** compreende os peixes de couro, como bagres, surubins e cascudos.\n2. **Distribuição Geográfica:** A espécie *Pygocentrus piraya* (conhecida popularmente como piranha-do-são-francisco) é endêmica da bacia do **Rio São Francisco**, não ocorrendo de forma nativa ou abundante na bacia Amazônica, onde predominam outras espécies do gênero, como *Pygocentrus nattereri*.",
+        "source_reference": null
+      },
+      "source_content_hash": "66d0036dcd7cde1e23d7f74f17b4d0fde478a879c044a652f6cf549b45605bd5"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:069",
+      "source_id": "analista_ambiental_conhec_especi:69",
+      "question_type": "true_false",
+      "statement_markdown": "A compreensão da dimensão da diversidade genética e da história evolutiva dos organismos vivos é crucial para estudos de biodiversidade geral, contribuindo na criação de programas para a conservação dessa biodiversidade. A respeito desse assunto, julgue os itens subsequentes, considerando a região neotropical.\n\nMarcadores genéticos e moleculares podem ser utilizados em estudos filogeográficos para explicar relações de ancestralidade comuns, rotas de migração e padrões de dispersão de espécies.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 69; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "38732e9cfb635674174ab7fc1c56ed97856ef35f1d8e77ff827cc8cfd462e30c",
+        "original_numeric_id": 69,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A filogeografia é uma disciplina que integra a genética de populações, a sistemática filogenética e a biogeografia para compreender os fatores históricos que moldaram a distribuição espacial das linhagens genéticas.\n\nPara alcançar esse objetivo, utilizam-se marcadores genéticos e moleculares (como sequências de DNA mitocondrial, microssatélites e polimorfismos de nucleotídeo único - SNPs). A análise desses marcadores permite estimar o tempo de divergência entre populações, identificar barreiras geográficas históricas, mapear rotas de migração e reconstruir os padrões de dispersão e colonização das espécies ao longo do tempo geológico.",
+        "source_reference": null
+      },
+      "source_content_hash": "809167172b78d6ce55f521a1bb2c74df267125fae042572c68be3a28d8b6eb03"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:070",
+      "source_id": "analista_ambiental_conhec_especi:70",
+      "question_type": "true_false",
+      "statement_markdown": "A compreensão da dimensão da diversidade genética e da história evolutiva dos organismos vivos é crucial para estudos de biodiversidade geral, contribuindo na criação de programas para a conservação dessa biodiversidade. A respeito desse assunto, julgue os itens subsequentes, considerando a região neotropical.\n\nA ictiofauna estuarina e marinha da costa norte do Brasil apresenta grande valor comercial e social, além de grande relevância em termos biogeográficos e ecológicos, contudo ainda é pouco estudada, se comparada a outras regiões do país.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 70; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "5b0b26818e53d5e353b675f7df4d94b23ed488c01c132addfc97407319c36e48",
+        "original_numeric_id": 70,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A costa norte do Brasil, fortemente influenciada pela descarga de sedimentos e água doce da pluma do Rio Amazonas, abriga ecossistemas estuarinos e marinhos de altíssima produtividade biológica, com papel ecológico crucial e grande relevância socioeconômica para a pesca artesanal e industrial.\n\nNo entanto, devido a dificuldades logísticas, menor densidade de centros de pesquisa locais e histórico de concentração de recursos científicos nas regiões Sul, Sudeste e Nordeste, a ictiofauna da costa norte permanece comparativamente menos inventariada e estudada na literatura científica.",
+        "source_reference": null
+      },
+      "source_content_hash": "a4f66b6191f4e5a5282b30c324a4111212f1d895b3040c5240ad07b4bd02e463"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:076",
+      "source_id": "analista_ambiental_conhec_especi:76",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere a recursos florestais, julgue os próximos itens.\n\nA recuperação de áreas com vegetação no entorno dos rios, denominadas matas ripárias, auxilia na proteção dos recursos hídricos e na manutenção da integridade ecológica das áreas de várzea, além de propiciar um corredor ecológico para a fauna e a flora, não contribuindo, contudo, para a manutenção da bacia hidrográfica dessas áreas.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 76; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Política Nacional do Meio Ambiente (Lei nº 6.938/1981)",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "2d0160ca35b5effc6e379bd783e9c7bada5efb5c802d73d6f5988afdf1e04c47",
+        "original_numeric_id": 76,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "politica-nacional-do-meio-ambiente-pnma-lei-6938",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto devido à sua afirmação final de que as matas ripárias (ou ciliares) \"não contribuem, contudo, para a manutenção da bacia hidrográfica dessas áreas\".\n\nNa realidade, a vegetação ripária desempenha um papel ecológico e hidrológico sistêmico crucial para toda a bacia hidrográfica, atuando diretamente em:\n\n1. **Controle de processos erosivos e assoreamento:** Evita o carreamento de sedimentos para o leito dos rios.\n2. **Filtragem de poluentes:** Retém defensivos agrícolas e nutrientes carreados pela enxurrada, protegendo a qualidade da água.\n3. **Regulação do fluxo hídrico:** Facilita a infiltração da água no solo, alimentando o lençol freático e estabilizando a vazão dos rios ao longo do ano.\n\nPortanto, a integridade das matas ripárias é indissociável da manutenção e saúde de toda a bacia hidrográfica.",
+        "source_reference": null
+      },
+      "source_content_hash": "734e172f1bd0e94320d410b01efeef2f619329f68c1df7e16a9ddd4e3438c0c7"
+    }
+  ]
+}

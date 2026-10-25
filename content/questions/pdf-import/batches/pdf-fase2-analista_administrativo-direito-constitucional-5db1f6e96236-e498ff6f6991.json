@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-analista_administrativo-direito-constitucional-5db1f6e96236-e498ff6f6991",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "5db1f6e962369b1d7913fb92dbdb0da8daeda71ce6c9d495931ad2d14292df2c",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "0fc614916228bfa45383f0df7c8e33baaccace7bb05b812e4da6dc6bb1c76217",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "e498ff6f6991ea6db0d97d896eddc76baf4a06bfe3bbf666c5a7b3dfb61069fa",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:016",
+      "source_id": "analista_administrativo:16",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da competência constitucional dos entes federativos, julgue os itens a seguir.\n\nEm razão da essencialidade do direito ambiental, compete privativamente à União fiscalizar as concessões de direitos de pesquisa e exploração de recursos minerais nos estados-membros.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 16; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Da organização do Estado",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "f8c02677125048c20687e966ee22f298e99bf6a94daf956761077b62c47e0952",
+        "original_numeric_id": 16,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao-do-estado",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. Sob a égide da Constituição Federal de 1988, registrar, acompanhar e fiscalizar as concessões de direitos de pesquisa e exploração de recursos hídricos e minerais em seus territórios é uma competência administrativa comum da União, dos Estados, do Distrito Federal e dos Municípios.\n\nTrata-se de competência material comum, prevista no art. 23, inciso XI, da Carta Magna, e não de competência privativa da União.\n\n**Detalhe da pegadinha:** O examinador tentou induzir ao erro ao utilizar a justificativa da \"essencialidade do direito ambiental\" para classificar a competência de fiscalização como privativa da União, quando, na verdade, a proteção ambiental e a fiscalização de recursos minerais são compartilhadas entre todos os entes federativos.\n\n### Dispositivo legal\nArt. 23, inciso XI, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "782f946f1d06edfca7e37a15d5ce1daa2178988184a106b96f3e798219456dc8"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:017",
+      "source_id": "analista_administrativo:17",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da competência constitucional dos entes federativos, julgue os itens a seguir.\n\nMediante lei ordinária federal, poderão ser fixadas normas para cooperação entre a União, os estados, o Distrito Federal e os municípios com o objetivo de promover o equilíbrio do desenvolvimento e do bem-estar em âmbito nacional.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 17; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Da organização do Estado",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "12a513f2ca84795297f4f75e59d77c48be4a0ccdde072a3deae82257208e383c",
+        "original_numeric_id": 17,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao-do-estado",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. De acordo com a Constituição Federal de 1988, as normas para a cooperação entre a União, os Estados, o Distrito Federal e os Municípios, com o objetivo de promover o equilíbrio do desenvolvimento e do bem-estar em âmbito nacional, devem ser fixadas por meio de **leis complementares**, e não de lei ordinária federal.\n\nO parágrafo único do art. 23 da Constituição Federal estabelece expressamente a exigência de lei complementar para essa finalidade.\n\n**Detalhe da pegadinha:** A banca frequentemente substitui a exigência de \"lei complementar\" por \"lei ordinária\" para confundir o candidato quanto ao instrumento legislativo adequado exigido pela Constituição.\n\n### Dispositivo legal\nArt. 23, parágrafo único, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "1dce495ba191cd05abfd73f7b6a9647e1a40e1cb1fbf42c22c21120eda6b0a9b"
+    }
+  ]
+}

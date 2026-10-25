@@ -1,0 +1,1125 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-cargo30-atualidades-ddedf305b20e-fd765421d155",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "ddedf305b20e0a7dfd48e2ef1da2d3823dc4e437478b3edd7e62ad4a771ae524",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "ade70669f0c96aa17db7bd4f2a5081dabefc8b060fd23fdfaaa31934743bc23f",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "fd765421d155a0518dcfeb37b0a6e31650e12762ed74a940b5ceb31dfff76949",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "atualidades",
+    "name": "Atualidades"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:012",
+      "source_id": "cargo30:12",
+      "question_type": "true_false",
+      "statement_markdown": "Os atentados terroristas a Nova Iorque e Washington são a evidência de que o atual modelo de globalização afeta os esforços de implantação mundial dos direitos humanos. Graças ao avanço da tecnologia de comunicações — dos meios de transporte à Internet —, o Planeta tornou-se, de fato, uma grande aldeia. Somos todos vizinhos uns dos outros e podemos assistir, em tempo real, ao que se passa no hemisfério oposto ao que habitamos.\n\nFrei Betto. Internet: <www.dhnet.org.br/denunciar> (com adaptações).\n\nCom base no texto acima e considerando as múltiplas implicações do tema que ele focaliza, julgue os itens seguintes.\n\nNos recentes episódios do Oriente Médio, a atuação de uma rede de televisão árabe — Al Jazeera — funciona como uma espécie de contraponto ao quase monopólio da informação, que, até bem pouco tempo, pertencia à mídia ocidental.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 12",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "94aeb80a9f77d39f4dd337cbcba0c1d60f9c6f59d549926deb4ed32f22fdf2f6",
+        "original_numeric_id": 12,
+        "original_source_content_hash": "587b82ae6f6e28d7bfaed41452ebfafd62f956e2883c207de53fd6aac9fe5a74",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A rede de televisão *Al Jazeera*, fundada em 1996 no Catar, ganhou projeção global no início dos anos 2000, especialmente durante os conflitos no Afeganistão e no Iraque. A emissora destacou-se por apresentar uma perspectiva editorial árabe e independente dos grandes conglomerados de comunicação ocidentais (como CNN e BBC), que até então detinham quase o monopólio da cobertura jornalística internacional de grande alcance na região.",
+        "source_reference": null
+      },
+      "source_content_hash": "c3f66e58be88955fcaaffc88ca55263cf5d43557c73537b5cfdc3175944c1562"
+    },
+    {
+      "external_id": "pdf:cargo30:013",
+      "source_id": "cargo30:13",
+      "question_type": "true_false",
+      "statement_markdown": "Os atentados terroristas a Nova Iorque e Washington são a evidência de que o atual modelo de globalização afeta os esforços de implantação mundial dos direitos humanos. Graças ao avanço da tecnologia de comunicações — dos meios de transporte à Internet —, o Planeta tornou-se, de fato, uma grande aldeia. Somos todos vizinhos uns dos outros e podemos assistir, em tempo real, ao que se passa no hemisfério oposto ao que habitamos.\n\nFrei Betto. Internet: <www.dhnet.org.br/denunciar> (com adaptações).\n\nCom base no texto acima e considerando as múltiplas implicações do tema que ele focaliza, julgue os itens seguintes.\n\nUm caso extremo de terrorismo, que espalhou o pânico nos Estados Unidos da América (EUA) e assustou a opinião pública mundial, foi o atentado de 11 de setembro de 2001, que atingiu o Pentágono e as torres do World Trade Center.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 13",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "7f3bb24af344beea8c4884b65220df4cca7b40834c1848b74fa166cef129fc29",
+        "original_numeric_id": 13,
+        "original_source_content_hash": "811a65053764e1afaacf0a43b2c9082cd574d3fa5f8d56a763289ce994aa161b",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Os ataques terroristas de 11 de setembro de 2001, coordenados pela organização Al-Qaeda, consistiram no sequestro de aviões comerciais que foram colididos contra as torres gêmeas do World Trade Center, em Nova York, e contra o prédio do Pentágono, em Washington (além de um quarto avião que caiu na Pensilvânia). O evento causou grande impacto na geopolítica mundial e na opinião pública.",
+        "source_reference": null
+      },
+      "source_content_hash": "2b24b667fe8ecff8a950d802850d43518a6f17e385dec5c3bffbfbbdeff69a37"
+    },
+    {
+      "external_id": "pdf:cargo30:014",
+      "source_id": "cargo30:14",
+      "question_type": "true_false",
+      "statement_markdown": "Os atentados terroristas a Nova Iorque e Washington são a evidência de que o atual modelo de globalização afeta os esforços de implantação mundial dos direitos humanos. Graças ao avanço da tecnologia de comunicações — dos meios de transporte à Internet —, o Planeta tornou-se, de fato, uma grande aldeia. Somos todos vizinhos uns dos outros e podemos assistir, em tempo real, ao que se passa no hemisfério oposto ao que habitamos.\n\nFrei Betto. Internet: <www.dhnet.org.br/denunciar> (com adaptações).\n\nCom base no texto acima e considerando as múltiplas implicações do tema que ele focaliza, julgue os itens seguintes.\n\nA globalização não se restringe aos aspectos econômicos, conquanto eles sejam fundamentais. Da mesma forma que as inovações tecnológicas atingem diretamente o sistema produtivo, ampliando-lhe a capacidade e mundializando os mercados, elas também facilitam a circulação de pessoas, idéias e culturas, tornando o mundo menor também sob esse prisma.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 14",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "8fd258349aa7b9bc82d029bad439f7051286528d102cb02d3e7c8b6798717a40",
+        "original_numeric_id": 14,
+        "original_source_content_hash": "3a4ff90daa8b811d93fbfb8579882ca00941eeabdf5aec894b58f88c54b9712d",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A globalização é um processo multidimensional. Embora a integração econômica e financeira seja um de seus pilares fundamentais, o avanço tecnológico nos transportes e nas telecomunicações encurtou distâncias e facilitou o fluxo de informações, culturas, ideias e migrações humanas, caracterizando o conceito de \"aldeia global\" mencionado no texto.",
+        "source_reference": null
+      },
+      "source_content_hash": "8090bf946e0b22b74732fd06b2c8081bb4f5abe25040954b7f2e2d4675e9505d"
+    },
+    {
+      "external_id": "pdf:cargo30:015",
+      "source_id": "cargo30:15",
+      "question_type": "true_false",
+      "statement_markdown": "Os atentados terroristas a Nova Iorque e Washington são a evidência de que o atual modelo de globalização afeta os esforços de implantação mundial dos direitos humanos. Graças ao avanço da tecnologia de comunicações — dos meios de transporte à Internet —, o Planeta tornou-se, de fato, uma grande aldeia. Somos todos vizinhos uns dos outros e podemos assistir, em tempo real, ao que se passa no hemisfério oposto ao que habitamos.\n\nFrei Betto. Internet: <www.dhnet.org.br/denunciar> (com adaptações).\n\nCom base no texto acima e considerando as múltiplas implicações do tema que ele focaliza, julgue os itens seguintes.\n\nO autor do texto aponta a utilização de sofisticada tecnologia de comunicações como a principal causa da prevalência do modelo de globalização econômica, que atenta contra os direitos humanos.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 15",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "9c6256a515f7680b09c3825144b38be7138a713b7cdfee509932312bb020fd63",
+        "original_numeric_id": 15,
+        "original_source_content_hash": "94a6a9c669a3a83b19a1c58ba75d8e59bd0d353871a8fa9b0dee100ccef4f097",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. O autor do texto aponta que o avanço da tecnologia de comunicações transformou o planeta em uma \"grande aldeia\", permitindo a conexão em tempo real. No entanto, ele não afirma que essa tecnologia seja a \"principal causa\" da prevalência do modelo de globalização econômica ou de seus impactos negativos sobre os direitos humanos. A tecnologia é descrita como um meio facilitador da integração, e não como a causa geradora do sistema econômico em si.",
+        "source_reference": null
+      },
+      "source_content_hash": "1864416edb9bfb363f5dd228cd73225ceaa90a44e7d08288d3ac1043a2e02754"
+    },
+    {
+      "external_id": "pdf:cargo30:020",
+      "source_id": "cargo30:20",
+      "question_type": "true_false",
+      "statement_markdown": "A proximidade não nos tem tornado mais solidários e amigos. À luz da crescente mercantilização das relações humanas, quase tudo é encarado em termos de lucro e benefício. Não importa que guerras fratricidas ameacem a existência de nações africanas. Os países metropolitanos continuarão fabricando e exportando armas — que a África não produz — e permanecerão insensíveis ao genocídio se, no palco das operações, não houver diamantes, petróleo ou qualquer outra riqueza que justifique a intervenção das tropas globocolonizadas, como ocorreu no Iraque e na Iugoslávia.\n\nIdem, ibidem.\n\nTendo o texto acima como referência e considerando o cenário mundial contemporâneo, julgue os itens que se seguem.\n\nA idéia expressa pela palavra “mercantilização” (l.2), que é oposta à de solidariedade e à de amizade, articula-se com as noções de mercado e de relações baseadas em vantagens. É essa idéia que se tem mostrado muito presente nos encontros internacionais de chefes de Estado e de governo, marcados pela celebração de acordos comerciais.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 20",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "ce3662fbf37bcd0d11994469c21b155fcba1832b2a7451aae731218f2b191056",
+        "original_numeric_id": 20,
+        "original_source_content_hash": "2ad8bc33aec06c16fb1f5bd9fb200c53a219b2023b397ddff3fda35f5995220f",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O conceito de \"mercantilização\" refere-se à transformação de bens, serviços e relações humanas em mercadorias orientadas pelo lucro e pela obtenção de vantagens mútuas. O texto contrapõe essa lógica aos valores de solidariedade e amizade. Na geopolítica contemporânea, essa dinâmica se reflete de forma evidente nas reuniões de cúpula internacionais, onde as decisões e acordos bilaterais ou multilaterais são pautados predominantemente por interesses comerciais e econômicos.",
+        "source_reference": null
+      },
+      "source_content_hash": "587a4591c8f6a66f8adfc29e1aeea6e0c13d0ece509eba04e26489c44552b634"
+    },
+    {
+      "external_id": "pdf:cargo30:021",
+      "source_id": "cargo30:21",
+      "question_type": "true_false",
+      "statement_markdown": "A proximidade não nos tem tornado mais solidários e amigos. À luz da crescente mercantilização das relações humanas, quase tudo é encarado em termos de lucro e benefício. Não importa que guerras fratricidas ameacem a existência de nações africanas. Os países metropolitanos continuarão fabricando e exportando armas — que a África não produz — e permanecerão insensíveis ao genocídio se, no palco das operações, não houver diamantes, petróleo ou qualquer outra riqueza que justifique a intervenção das tropas globocolonizadas, como ocorreu no Iraque e na Iugoslávia.\n\nIdem, ibidem.\n\nTendo o texto acima como referência e considerando o cenário mundial contemporâneo, julgue os itens que se seguem.\n\nA palavra “genocídio” (l.7) significa extermínio deliberado, parcial ou total, de uma comunidade, grupo étnico, racial ou religioso.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 21",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "65cd0dc826506507ecf6eff74d352dcd3558b10aa9226c12730fd5a4ea3f6782",
+        "original_numeric_id": 21,
+        "original_source_content_hash": "14af570fcccd314dc91071a682927818438e0b4b256c6beb4b3a0f0e6119d1bb",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/decreto/1950-1969/d30822.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A definição apresentada para o termo \"genocídio\" corresponde exatamente ao seu significado tanto no âmbito lexicográfico (dicionários) quanto no âmbito jurídico internacional.\n\nO genocídio consiste na destruição deliberada, parcial ou total, de um grupo nacional, étnico, racial ou religioso. Essa definição foi consolidada pela Convenção para a Prevenção e a Repressão do Crime de Genocídio, adotada pela Assembleia Geral das Nações Unidas em 1948 e incorporada ao ordenamento brasileiro.\n\n**Dispositivo legal**\n\n[Decreto nº 30.822, de 6 de maio de 1952, Artigo II](https://www.planalto.gov.br/ccivil_03/decreto/1950-1969/d30822.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "2b4e5cbde7c856b1d4d75339210e805d6046e6fb0fccb90ee47807ef5d96d47c"
+    },
+    {
+      "external_id": "pdf:cargo30:023",
+      "source_id": "cargo30:23",
+      "question_type": "true_false",
+      "statement_markdown": "A proximidade não nos tem tornado mais solidários e amigos. À luz da crescente mercantilização das relações humanas, quase tudo é encarado em termos de lucro e benefício. Não importa que guerras fratricidas ameacem a existência de nações africanas. Os países metropolitanos continuarão fabricando e exportando armas — que a África não produz — e permanecerão insensíveis ao genocídio se, no palco das operações, não houver diamantes, petróleo ou qualquer outra riqueza que justifique a intervenção das tropas globocolonizadas, como ocorreu no Iraque e na Iugoslávia.\n\nIdem, ibidem.\n\nTendo o texto acima como referência e considerando o cenário mundial contemporâneo, julgue os itens que se seguem.\n\nDepreende-se do neologismo “globocolonizadas” (l.10) que os exércitos que atuam nas intervenções em países que vivem guerras genocidas representam forças hegemônicas do processo de globalização.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 23",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "c340fe245c7404b8fb0f65095db8b09f5d61ca1f4498d10f15b5c24dbefb2fdd",
+        "original_numeric_id": 23,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nO neologismo *\"globocolonizadas\"* resulta do processo morfológico de composição que associa os elementos *globo* (referente ao fenômeno da globalização) e *colonizadas* (referente à dominação e subordinação colonial).\n\nNo contexto do texto (*\"intervenção das tropas globocolonizadas, como ocorreu no Iraque e na Iugoslávia\"*), o autor constrói uma postura crítica, denunciando que as intervenções militares internacionais mascaradas sob o pretexto de pacificação ou ajuda humanitária atuam, na realidade, como braços armados a serviço das forças econômicas hegemônicas e dos interesses imperialistas da globalização capitalista.",
+        "source_reference": null
+      },
+      "source_content_hash": "855bd923d643b8df67f74fac4f8ec2966efba98fca5d520b56af5c0c536c13e8"
+    },
+    {
+      "external_id": "pdf:cargo30:025",
+      "source_id": "cargo30:25",
+      "question_type": "true_false",
+      "statement_markdown": "A proximidade não nos tem tornado mais solidários e amigos. À luz da crescente mercantilização das relações humanas, quase tudo é encarado em termos de lucro e benefício. Não importa que guerras fratricidas ameacem a existência de nações africanas. Os países metropolitanos continuarão fabricando e exportando armas — que a África não produz — e permanecerão insensíveis ao genocídio se, no palco das operações, não houver diamantes, petróleo ou qualquer outra riqueza que justifique a intervenção das tropas globocolonizadas, como ocorreu no Iraque e na Iugoslávia.\n\nIdem, ibidem.\n\nTendo o texto acima como referência e considerando o cenário mundial contemporâneo, julgue os itens que se seguem.\n\nDepreende-se das idéias do texto que somente haverá intervenção estrangeira para impedir ou atenuar guerras nos países e regiões onde existam riquezas que possam interessar outros países.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 25",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "f1c51716be385e95ff06533527135df151ea82e0c3ad91970fdf6df0a554eec0",
+        "original_numeric_id": 25,
+        "original_source_content_hash": "e57f264923cd2caf113a5faf8e0654278541590988d026c57afebf95cd6de557",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A conclusão apresentada decorre diretamente da interpretação do trecho: \"[os países metropolitanos] permanecerão insensíveis ao genocídio se, no palco das operações, não houver diamantes, petróleo ou qualquer outra riqueza que justifique a intervenção...\".\n\nA estrutura condicional (\"se... não houver [riqueza] que justifique\") estabelece que a existência de recursos econômicos de interesse das potências estrangeiras é condição necessária para que ocorra a intervenção militar, confirmando a afirmação de que a ausência de tais riquezas resulta em omissão e insensibilidade diante de conflitos e genocídios.",
+        "source_reference": null
+      },
+      "source_content_hash": "f261d4d024de48b7821184cb35924e050b9081bdba2a011590e4974f1dede563"
+    },
+    {
+      "external_id": "pdf:cargo30:026",
+      "source_id": "cargo30:26",
+      "question_type": "true_false",
+      "statement_markdown": "A proximidade não nos tem tornado mais solidários e amigos. À luz da crescente mercantilização das relações humanas, quase tudo é encarado em termos de lucro e benefício. Não importa que guerras fratricidas ameacem a existência de nações africanas. Os países metropolitanos continuarão fabricando e exportando armas — que a África não produz — e permanecerão insensíveis ao genocídio se, no palco das operações, não houver diamantes, petróleo ou qualquer outra riqueza que justifique a intervenção das tropas globocolonizadas, como ocorreu no Iraque e na Iugoslávia.\n\nIdem, ibidem.\n\nTendo o texto acima como referência e considerando o cenário mundial contemporâneo, julgue os itens que se seguem.\n\nDa Idade Moderna aos dias de hoje, a África vem participando ativamente do processo de desenvolvimento capitalista. Se, no passado, fornecia escravos, hoje abastece o mercado mundial com produtos minerais e constitui um rico mercado consumidor.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 26",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "1f9a6a633ff2897f36ee0cd5e3e15daaf47cea6b402f8ad757871983c97c6e30",
+        "original_numeric_id": 26,
+        "original_source_content_hash": "dd4e5b38805884385dc82846e07b933ddba0ce2fbea3aec25a40cf2b7bc31ac8",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está errado. Embora a África historicamente tenha fornecido mão de obra escravizada e continue a abastecer o mercado global com recursos minerais (como diamantes e petróleo), o continente não pode ser caracterizado como um \"rico mercado consumidor\".\n\nDevido ao processo histórico de colonização, exploração e dependência econômica, a maior parte das nações africanas apresenta baixos índices de desenvolvimento socioeconômico e reduzido poder aquisitivo populacional, situando o continente em uma posição periférica e de consumo limitado na divisão internacional do trabalho.",
+        "source_reference": null
+      },
+      "source_content_hash": "559ffc7da73d376185ba7aef5376631c47a8b0d345ebf9ec74e989dae4bf2cf1"
+    },
+    {
+      "external_id": "pdf:cargo30:027",
+      "source_id": "cargo30:27",
+      "question_type": "true_false",
+      "statement_markdown": "A proximidade não nos tem tornado mais solidários e amigos. À luz da crescente mercantilização das relações humanas, quase tudo é encarado em termos de lucro e benefício. Não importa que guerras fratricidas ameacem a existência de nações africanas. Os países metropolitanos continuarão fabricando e exportando armas — que a África não produz — e permanecerão insensíveis ao genocídio se, no palco das operações, não houver diamantes, petróleo ou qualquer outra riqueza que justifique a intervenção das tropas globocolonizadas, como ocorreu no Iraque e na Iugoslávia.\n\nIdem, ibidem.\n\nTendo o texto acima como referência e considerando o cenário mundial contemporâneo, julgue os itens que se seguem.\n\nOsama bin Laden, considerado inimigo público número 1 dos norte-americanos, justamente por suas ações terroristas, foi capturado, julgado e executado pelos EUA, alguns meses após a invasão do Iraque.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 27",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "3478f51f8412dbaf54f3364e2644ec82b219bff09e0575c94c6f387301281d93",
+        "original_numeric_id": 27,
+        "original_source_content_hash": "59c87aad2c7cf3cb2a81a47a9cc5c4422f629ee98007ad854c5523e51e7c3795",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está errado. Osama bin Laden não foi capturado, julgado e executado pelo sistema judicial norte-americano. Ele foi morto em 2 de maio de 2011, durante uma operação militar secreta de forças especiais dos Estados Unidos (Navy SEALs) em Abbottabad, no Paquistão.\n\nAlém disso, a invasão do Iraque ocorreu em 2003, e no ano de aplicação desta prova (2004), Bin Laden ainda se encontrava foragido, tornando a afirmação cronológica e faticamente incorreta.",
+        "source_reference": null
+      },
+      "source_content_hash": "d05c4edb1babaee850e10762d49a0497f698518360b0e79877cb1cd4d59a7988"
+    },
+    {
+      "external_id": "pdf:cargo30:030",
+      "source_id": "cargo30:30",
+      "question_type": "true_false",
+      "statement_markdown": "Freqüentemente, a análise do crime inclui uma série de reflexões e comentários que ultrapassam, em muito, o ato delituoso em si; são questões que envolvem a ética, a moral, a psicologia e a psiquiatria simultaneamente. Sempre há alguém atrelando ao criminoso traços e características psicopatológicas ou sociológicas.\nA despeito dos recentes conhecimentos da neurociência, a maioria das pesquisas não encontrou uma associação entre patologias psíquicas e risco de se cometer crime de grande violência, ou encontrou apenas uma discreta associação, estatisticamente insignificante.\n\nInternet: <http://www.psiqweb.med.br/forense/forense.html> (com adaptações).\n\nCom relação ao texto acima e a aspectos relevantes que o tema suscita, julgue os itens subseqüentes.\n\nImportantes operações realizadas pela Polícia Federal, a exemplo das denominadas Anaconda, Gafanhoto e Vampiro, desvendaram atos delituosos na administração do dinheiro público.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 30",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sociedade, Educação, Segurança e Cidadania",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "610cb56f844387950dbf7067439e371943542fb59527e555f6981acff7d41ccb",
+        "original_numeric_id": 30,
+        "original_source_content_hash": "c89460e707838ce9b53575d8f270ed92e49d7e38babc70f75fcf0f394ce9e5f3",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sociedade-seguranca-publica-e-cidadania",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. As operações citadas foram marcos da atuação da Polícia Federal no combate a crimes financeiros e desvio de verbas públicas no início dos anos 2000:\n\n* **Operação Anaconda (2003):** Investigou um esquema de venda de sentenças judiciais e lavagem de dinheiro envolvendo magistrados, policiais e advogados.\n* **Operação Gafanhoto (2003):** Desarticulou um esquema de desvio de dinheiro público por meio da inclusão de funcionários fantasmas na folha de pagamento do governo do estado de Roraima.\n* **Operação Vampiro (2004):** Apurou fraudes e pagamento de propina em licitações para compras de hemoderivados no Ministério da Saúde.",
+        "source_reference": null
+      },
+      "source_content_hash": "2a9442673ec1787b798e9bcb72cbd45a74e639ec21206e5d2ee38e7dfe65e2d9"
+    },
+    {
+      "external_id": "pdf:cargo30:031",
+      "source_id": "cargo30:31",
+      "question_type": "true_false",
+      "statement_markdown": "Guerras, guerrilhas, terrorismo, ditaduras, massacres, recessão, violência urbana, corrupção, miséria — nos últimos 50 anos, raras vezes tivemos um panorama mundial tão melancólico como o atual. Se antes luziam frestas de esperança, a atual galeria de pedestais vazios só agrava o desânimo. A mentira, mãe de todas as desgraças, esconde-se atrás de cada conflito, móvel de todos os confrontos. Na história das guerras, sempre houve uma falsidade primal, impostura nuclear. Por isso, a tarefa dos pacifistas não se resume a tapar trincheiras, travar gatilhos ou destruir armas. Antes de silenciar os tambores marciais, impõe-se desvendar as fraudes que os motivaram.\n\nAlberto Dines. A era da mentira, hora de verdades. In: Jornal do Brasil, 29/5/2004, p. A9 (com adaptações).\n\nTendo o texto acima como referência inicial, julgue os itens seguintes, relativos ao mundo contemporâneo.\n\nAo referir-se a “panorama mundial tão melancólico” (l.3) e a “galeria de pedestais vazios” (l.4-5), o autor do texto acusa as atuais lideranças pacifistas do mundo de não estarem à altura dos desafios do tempo presente e de serem menos preparadas que as do passado.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 31",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "01e3a0240d6a98f9d7ed1cb99577a372d5d2af1e9137d02f14e09ad642a79fe4",
+        "original_numeric_id": 31,
+        "original_source_content_hash": "bfe26ab130c04bbfd78540dfd27ec3139feb8df276c73e4bd01e5c7bd689e0b1",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque a expressão \"galeria de pedestais vazios\" refere-se à ausência generalizada de grandes líderes, referências ou figuras inspiradoras no cenário mundial contemporâneo, que antes traziam \"frestas de esperança\". O autor não direciona essa crítica especificamente às \"lideranças pacifistas\", as quais são mencionadas posteriormente no texto no contexto de sua missão prática (desvendar as fraudes que motivam as guerras), e não sob uma acusação de despreparo técnico ou intelectual em comparação ao passado.",
+        "source_reference": null
+      },
+      "source_content_hash": "18412ae756b529dd8c56dff5b79810a7b795531339791ea681c03687f5b54c7c"
+    },
+    {
+      "external_id": "pdf:cargo30:032",
+      "source_id": "cargo30:32",
+      "question_type": "true_false",
+      "statement_markdown": "Guerras, guerrilhas, terrorismo, ditaduras, massacres, recessão, violência urbana, corrupção, miséria — nos últimos 50 anos, raras vezes tivemos um panorama mundial tão melancólico como o atual. Se antes luziam frestas de esperança, a atual galeria de pedestais vazios só agrava o desânimo. A mentira, mãe de todas as desgraças, esconde-se atrás de cada conflito, móvel de todos os confrontos. Na história das guerras, sempre houve uma falsidade primal, impostura nuclear. Por isso, a tarefa dos pacifistas não se resume a tapar trincheiras, travar gatilhos ou destruir armas. Antes de silenciar os tambores marciais, impõe-se desvendar as fraudes que os motivaram.\n\nAlberto Dines. A era da mentira, hora de verdades. In: Jornal do Brasil, 29/5/2004, p. A9 (com adaptações).\n\nTendo o texto acima como referência inicial, julgue os itens seguintes, relativos ao mundo contemporâneo.\n\nA “mentira, mãe de todas as desgraças,” (l.5) não esteve presente no episódio da invasão do Iraque. O motivo alegado pelos EUA para atacar esse país — a existência de arsenal de armas de destruição em massa — foi plenamente comprovado.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 32",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "912406c2ecf6877dfe9d5f99b6c4cbe2ecb987fb0fb1921377b98be326677395",
+        "original_numeric_id": 32,
+        "original_source_content_hash": "624cd553f452f839f548537f364093022b4345307122c90deb147110d73e55b9",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque a alegação de que o Iraque possuía um arsenal de armas de destruição em massa, utilizada pela administração dos Estados Unidos para justificar a invasão do país em 2003, revelou-se infundada. Investigações posteriores conduzidas por órgãos internacionais e pelas próprias forças de coalizão confirmaram a inexistência de tais armas, caracterizando o episódio como um exemplo histórico de pretexto falso para a deflagração de um conflito armado.",
+        "source_reference": null
+      },
+      "source_content_hash": "2f37241804bfb210ba66df42770002a4458dabef53ab003467b50eafa39a75d3"
+    },
+    {
+      "external_id": "pdf:cargo30:033",
+      "source_id": "cargo30:33",
+      "question_type": "true_false",
+      "statement_markdown": "Guerras, guerrilhas, terrorismo, ditaduras, massacres, recessão, violência urbana, corrupção, miséria — nos últimos 50 anos, raras vezes tivemos um panorama mundial tão melancólico como o atual. Se antes luziam frestas de esperança, a atual galeria de pedestais vazios só agrava o desânimo. A mentira, mãe de todas as desgraças, esconde-se atrás de cada conflito, móvel de todos os confrontos. Na história das guerras, sempre houve uma falsidade primal, impostura nuclear. Por isso, a tarefa dos pacifistas não se resume a tapar trincheiras, travar gatilhos ou destruir armas. Antes de silenciar os tambores marciais, impõe-se desvendar as fraudes que os motivaram.\n\nAlberto Dines. A era da mentira, hora de verdades. In: Jornal do Brasil, 29/5/2004, p. A9 (com adaptações).\n\nTendo o texto acima como referência inicial, julgue os itens seguintes, relativos ao mundo contemporâneo.\n\nA “corrupção” (l.2), a que o texto alude, não é um fenômeno exclusivamente brasileiro, pois atinge governos e grandes empresas pelo mundo afora.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 33",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "8e8d8f8dddcc6634175ba12bbf137e5153bffd397c548ef38501b4f679eaa339",
+        "original_numeric_id": 33,
+        "original_source_content_hash": "7a6a40aa5ec7186c0a0fe0cafd05592e86932ffc823116d738570e62ddc05deb",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A corrupção é um fenômeno de caráter transnacional e sistêmico, que se manifesta em diferentes graus em governos, instituições públicas e corporações privadas ao redor do globo. O texto de Alberto Dines aborda a corrupção dentro de um \"panorama mundial\", reforçando que tais mazelas sociais e políticas não se restringem a uma única nação.",
+        "source_reference": null
+      },
+      "source_content_hash": "6ae5f848b7f7edde9de116e0d5148e83b43bc58172659aef87f6152946b9f70e"
+    },
+    {
+      "external_id": "pdf:cargo30:034",
+      "source_id": "cargo30:34",
+      "question_type": "true_false",
+      "statement_markdown": "Guerras, guerrilhas, terrorismo, ditaduras, massacres, recessão, violência urbana, corrupção, miséria — nos últimos 50 anos, raras vezes tivemos um panorama mundial tão melancólico como o atual. Se antes luziam frestas de esperança, a atual galeria de pedestais vazios só agrava o desânimo. A mentira, mãe de todas as desgraças, esconde-se atrás de cada conflito, móvel de todos os confrontos. Na história das guerras, sempre houve uma falsidade primal, impostura nuclear. Por isso, a tarefa dos pacifistas não se resume a tapar trincheiras, travar gatilhos ou destruir armas. Antes de silenciar os tambores marciais, impõe-se desvendar as fraudes que os motivaram.\n\nAlberto Dines. A era da mentira, hora de verdades. In: Jornal do Brasil, 29/5/2004, p. A9 (com adaptações).\n\nTendo o texto acima como referência inicial, julgue os itens seguintes, relativos ao mundo contemporâneo.\n\nO termo “recessão” (l.2) significa, em linhas gerais, retrocesso econômico, ou seja, um quadro de crise na economia que tende a gerar problemas sociais e políticos.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 34",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "d5a4c6739c58e7b3d6862e0e4460aceb26970933ef94c402b3bfe358a63079c8",
+        "original_numeric_id": 34,
+        "original_source_content_hash": "47316af707e706e550486510957a704dc1d55731761c25182fa87f5ef690bc4c",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. No âmbito da macroeconomia, a recessão caracteriza-se por um período de contração ou declínio generalizado da atividade econômica (geralmente medido pela queda consecutiva do Produto Interno Bruto por dois trimestres). Esse retrocesso econômico gera desdobramentos diretos na sociedade, como o aumento do desemprego e a redução da renda, o que frequentemente resulta em instabilidade social e tensões políticas.",
+        "source_reference": null
+      },
+      "source_content_hash": "1d047ee00d6205b492902115e81eb88d7a42ba01c9c568c11e3388bf08ffadff"
+    },
+    {
+      "external_id": "pdf:cargo30:035",
+      "source_id": "cargo30:35",
+      "question_type": "true_false",
+      "statement_markdown": "Guerras, guerrilhas, terrorismo, ditaduras, massacres, recessão, violência urbana, corrupção, miséria — nos últimos 50 anos, raras vezes tivemos um panorama mundial tão melancólico como o atual. Se antes luziam frestas de esperança, a atual galeria de pedestais vazios só agrava o desânimo. A mentira, mãe de todas as desgraças, esconde-se atrás de cada conflito, móvel de todos os confrontos. Na história das guerras, sempre houve uma falsidade primal, impostura nuclear. Por isso, a tarefa dos pacifistas não se resume a tapar trincheiras, travar gatilhos ou destruir armas. Antes de silenciar os tambores marciais, impõe-se desvendar as fraudes que os motivaram.\n\nAlberto Dines. A era da mentira, hora de verdades. In: Jornal do Brasil, 29/5/2004, p. A9 (com adaptações).\n\nTendo o texto acima como referência inicial, julgue os itens seguintes, relativos ao mundo contemporâneo.\n\nO nome Al-Qaeda está associado ao terrorismo islâmico, que responde por ações violentas no Oriente Médio e em outras partes do mundo na defesa radical de suas causas.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 35",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "0050489acc33a05438484e16cdde7cecf823466ea1e706d0029b7e0396c1c283",
+        "original_numeric_id": 35,
+        "original_source_content_hash": "ad218b853a7bc79e8ce68eb62fd129edad99f0a07267b1fab87827c9a370eade",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A Al-Qaeda é uma organização fundamentalista islâmica transnacional fundada no final da década de 1980. O grupo é amplamente reconhecido pela realização de atentados terroristas de grande impacto em escala global — como os ataques de 11 de setembro de 2001 nos Estados Unidos — bem como por operações violentas no Oriente Médio, pautadas por uma interpretação extremista e radical de preceitos religiosos.",
+        "source_reference": null
+      },
+      "source_content_hash": "e0e604b0155dd9d8c6008f865108ff404391628fda105fe867341f1e6db75c5d"
+    },
+    {
+      "external_id": "pdf:cargo30:036",
+      "source_id": "cargo30:36",
+      "question_type": "true_false",
+      "statement_markdown": "O brasileiro que quiser parar de fumar terá acesso a tratamento e remédios custeados pelo governo federal. No Dia Internacional de Combate ao Tabagismo, o Ministério da Saúde publicou uma portaria incluindo no Sistema Único de Saúde (SUS) o suporte completo para o dependente de cigarros abandonar o vício: adesivos e gomas de mascar de nicotina para substituir a dose mínima da substância em quadros de crise de abstinência e um antidepressivo que auxilia no abandono do fumo. Nos postos de saúde, também estará à disposição do fumante um programa de psicoterapia em grupo, coordenado por profissionais treinados pelo Instituto Nacional do Câncer (INCA), no Rio de Janeiro.\n\nO Globo, 1.º/6/2004, p. A3 (com adaptações).\n\nTendo o texto acima como referência inicial e considerando os diversos aspectos concernentes ao tema nele abordado, julgue os itens que se seguem.\n\nInfere-se do texto que o tabagismo, além de criar dependência química, envolve aspectos emocionais e psicológicos, o que explica a decisão ministerial de oferecer programa de psicoterapia em grupo para atendimento àqueles que se dispuserem a abandonar o vício.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 36",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "d20e7bddf919c9b368b39759de7829dc63603f8d3c54bf435640222f4b260b41",
+        "original_numeric_id": 36,
+        "original_source_content_hash": "2478af941b56579575a30837646ab55b660e163a7f7c0685ed1e4c1e9bc7de7c",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A inferência é sustentada diretamente pelas medidas descritas no texto. Ao apontar que o Ministério da Saúde disponibilizará tanto tratamentos farmacológicos (adesivos, gomas de nicotina e antidepressivos) para combater a dependência química e a abstinência, quanto um \"programa de psicoterapia em grupo\", o texto evidencia que o combate ao tabagismo exige uma abordagem multidisciplinar. Essa abordagem reconhece que o vício possui componentes comportamentais, emocionais e psicológicos que necessitam de suporte terapêutico.",
+        "source_reference": null
+      },
+      "source_content_hash": "e21c3629862355bf060caf1f421e302bc7ee8c5ed31ea63e95d563bbc480dd24"
+    },
+    {
+      "external_id": "pdf:cargo30:037",
+      "source_id": "cargo30:37",
+      "question_type": "true_false",
+      "statement_markdown": "O brasileiro que quiser parar de fumar terá acesso a tratamento e remédios custeados pelo governo federal. No Dia Internacional de Combate ao Tabagismo, o Ministério da Saúde publicou uma portaria incluindo no Sistema Único de Saúde (SUS) o suporte completo para o dependente de cigarros abandonar o vício: adesivos e gomas de mascar de nicotina para substituir a dose mínima da substância em quadros de crise de abstinência e um antidepressivo que auxilia no abandono do fumo. Nos postos de saúde, também estará à disposição do fumante um programa de psicoterapia em grupo, coordenado por profissionais treinados pelo Instituto Nacional do Câncer (INCA), no Rio de Janeiro.\n\nO Globo, 1.º/6/2004, p. A3 (com adaptações).\n\nTendo o texto acima como referência inicial e considerando os diversos aspectos concernentes ao tema nele abordado, julgue os itens que se seguem.\n\nComo os impostos que incidem sobre a produção e a comercialização de cigarros são muito reduzidos, o governo brasileiro pouco arrecada com a venda desse produto.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 37",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "98ab505d7a5e632266862804e7a2930d4f23b705d7741f9a0946e9fd15c5cc8d",
+        "original_numeric_id": 37,
+        "original_source_content_hash": "bb35190b9adfb488899f80335b8c3c35e17271616728b008ec995a6b6ade21e4",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. No Brasil, a carga tributária incidente sobre a produção e a comercialização de cigarros e derivados do tabaco está entre as mais elevadas do sistema tributário nacional. Impostos como o Imposto sobre Produtos Industrializados (IPI) e o Imposto sobre Circulação de Mercadorias e Serviços (ICMS) são historicamente elevados como instrumento de política fiscal e de desestímulo ao consumo (extra-fiscalidade), gerando uma arrecadação expressiva para os cofres públicos.",
+        "source_reference": null
+      },
+      "source_content_hash": "89c6b0457a0f87de4585ff5ac11bb7368099a2c1b4d76b6074c7867376229fa8"
+    },
+    {
+      "external_id": "pdf:cargo30:038",
+      "source_id": "cargo30:38",
+      "question_type": "true_false",
+      "statement_markdown": "O brasileiro que quiser parar de fumar terá acesso a tratamento e remédios custeados pelo governo federal. No Dia Internacional de Combate ao Tabagismo, o Ministério da Saúde publicou uma portaria incluindo no Sistema Único de Saúde (SUS) o suporte completo para o dependente de cigarros abandonar o vício: adesivos e gomas de mascar de nicotina para substituir a dose mínima da substância em quadros de crise de abstinência e um antidepressivo que auxilia no abandono do fumo. Nos postos de saúde, também estará à disposição do fumante um programa de psicoterapia em grupo, coordenado por profissionais treinados pelo Instituto Nacional do Câncer (INCA), no Rio de Janeiro.\n\nO Globo, 1.º/6/2004, p. A3 (com adaptações).\n\nTendo o texto acima como referência inicial e considerando os diversos aspectos concernentes ao tema nele abordado, julgue os itens que se seguem.\n\nA decisão do governo brasileiro pressupõe que o tabagismo é uma doença, o que justifica o gasto de recursos federais com o tratamento de fumantes.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 38",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "98b157d9385d2cd74897af3c5b05a07aa256b9ec71c584f6fd9a4fe6083cc0cd",
+        "original_numeric_id": 38,
+        "original_source_content_hash": "6de9c153bbca7912252876a66a3db7741efd28a0751be8bd6cc5ce65aaf502f1",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O tabagismo é classificado pela Organização Mundial da Saúde (OMS) na Classificação Internacional de Doenças (CID-10) sob o código F17 (transtornos mentais e comportamentais devidos ao uso de tabaco), sendo reconhecido como uma doença crônica e epidêmica. Essa caracterização patológica fundamenta legal e tecnicamente a atuação do Sistema Único de Saúde (SUS) e a destinação de recursos públicos federais para o custeio de tratamentos médicos e psicológicos voltados à cessação do vício.",
+        "source_reference": null
+      },
+      "source_content_hash": "8b7d9e8eb568f18ab690b2e93c025647d4b3fe93d2b7983c87b3d95a688436bd"
+    },
+    {
+      "external_id": "pdf:cargo30:039",
+      "source_id": "cargo30:39",
+      "question_type": "true_false",
+      "statement_markdown": "O brasileiro que quiser parar de fumar terá acesso a tratamento e remédios custeados pelo governo federal. No Dia Internacional de Combate ao Tabagismo, o Ministério da Saúde publicou uma portaria incluindo no Sistema Único de Saúde (SUS) o suporte completo para o dependente de cigarros abandonar o vício: adesivos e gomas de mascar de nicotina para substituir a dose mínima da substância em quadros de crise de abstinência e um antidepressivo que auxilia no abandono do fumo. Nos postos de saúde, também estará à disposição do fumante um programa de psicoterapia em grupo, coordenado por profissionais treinados pelo Instituto Nacional do Câncer (INCA), no Rio de Janeiro.\n\nO Globo, 1.º/6/2004, p. A3 (com adaptações).\n\nTendo o texto acima como referência inicial e considerando os diversos aspectos concernentes ao tema nele abordado, julgue os itens que se seguem.\n\nAo contrário do que ocorria no passado, atualmente amplia-se a tendência de destacar os malefícios causados pelo tabaco à saúde humana.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 39",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geopolítica e Relações Internacionais",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades",
+        "source_content_hash": "59df88b69ff53502d2fd8b6c5ecec6cd2f5784ef5d40c89af0d3d3a40dc397d2",
+        "original_numeric_id": 39,
+        "original_source_content_hash": "82ca4e636cce32af735c8a87ac6b423169772afe62b8d78192380b49a7bac3c6",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "geopolitica-e-relacoes-internacionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. Historicamente, em meados do século XX, o hábito de fumar era associado ao status social, elegância e até mesmo recomendado em peças publicitárias. Com o avanço dos estudos científicos que comprovaram a relação direta entre o tabaco e diversas patologias graves (como câncer e doenças cardiovasculares), consolidou-se uma tendência global e nacional de restrição à publicidade, aplicação de advertências sanitárias rigorosas e ampla divulgação dos malefícios do tabagismo.",
+        "source_reference": null
+      },
+      "source_content_hash": "85d3fe905302bddaaf85bc249d137940a8234b34d53428836ebf04a9628430e8"
+    }
+  ]
+}

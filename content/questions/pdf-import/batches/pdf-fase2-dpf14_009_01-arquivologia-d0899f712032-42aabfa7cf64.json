@@ -1,0 +1,230 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-dpf14_009_01-arquivologia-d0899f712032-42aabfa7cf64",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "d0899f712032d803deb1ff38fb2396f1dd37d1ffb65c7f61503d0bd058c669c4",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "9a60cb42fbada4944e3fe1d0564604111314b54b0d72e1bd9ebc2e3a33818aef",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "42aabfa7cf64a5f434eb92d5001e3049e580e6ab67e7decf6679fdf5a0a72dc2",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "arquivologia",
+    "name": "Arquivologia"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:103",
+      "source_id": "dpf14_009_01:103",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos conceitos fundamentais de arquivologia, julgue os seguintes itens.\n\nA função de prova do documento de arquivo evidencia-se não só pelo fato de o documento poder ser levado a juízo para comprovar determinada informação, mas, também, pela capacidade desse material de testemunhar as atividades que lhe deram origem.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 103; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Arquivo Permanente",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "9abb0e90b8b0f02ae4f61c217b9f2c0fa94ddc68362b083ec0ae10be0b5e66aa",
+        "original_numeric_id": 103,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "arquivo-permanente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O documento de arquivo possui uma dupla dimensão probatória. Por um lado, atua como prova em sentido estrito (jurídico), podendo ser utilizado em juízo ou perante terceiros para comprovar direitos, obrigações ou fatos. Por outro lado, possui valor de prova orgânica (ou testemunhal), pois reflete e registra de forma fidedigna as funções, transações e atividades da entidade produtora que lhe deram origem, servindo como testemunho histórico e administrativo de sua atuação.",
+        "source_reference": null
+      },
+      "source_content_hash": "eed9ad4715172ac8b763330d5774dc965ca0b41bee98b9db06bff3f645e8858a"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:105",
+      "source_id": "dpf14_009_01:105",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere ao gerenciamento da informação e à gestão de documentos, julgue os itens subsecutivos.\n\nA primeira ação a ser tomada pelo setor de protocolo, ao receber um documento, é distribuí-lo.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 105; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Classificação dos Documentos de Arquivo",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "212603897fe3fd7a3992018d759d70fa7ce4b1599ab50410dfdc4ede634db549",
+        "original_numeric_id": 105,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-dos-documentos-de-arquivo",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O erro da afirmação está em indicar a **distribuição** como a primeira ação do setor de protocolo.\n\nAs atividades de protocolo seguem uma sequência lógica e cronológica para garantir o controle e a integridade dos documentos. O fluxo básico de atividades de um setor de protocolo compreende:\n\n1. **Recebimento**: Ato de acolher os documentos, verificar o destinatário, conferir a integridade física dos envelopes e separar a correspondência oficial da particular.\n2. **Abertura e Triagem**: Abertura dos envelopes (exceto os de caráter sigiloso ou particular) e leitura para identificação do assunto.\n3. **Classificação**: Atribuição de um código ou categoria ao documento com base no plano de classificação da instituição.\n4. **Registro**: Cadastro dos dados básicos do documento (remetente, destinatário, assunto, data, número) em sistema próprio para controle.\n5. **Autuação**: Transformação de documento em processo (quando aplicável).\n6. **Distribuição/Tramitação**: Envio do documento ou processo ao setor destinatário interno.\n\nPortanto, a distribuição é uma das etapas finais do fluxo de entrada de documentos no protocolo, e não a primeira.",
+        "source_reference": null
+      },
+      "source_content_hash": "ee67ab53895498d8536a496c9657549fe05b5d8f088e1baccea0913c57c51a5c"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:108",
+      "source_id": "dpf14_009_01:108",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as tipologias documentais e a preservação de documentos, julgue os próximos itens.\n\nO documento microfilmado tem valor de prova legal, de acordo com a legislação brasileira.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 108; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Acondicionamento e Armazenamento",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "dd1a90cffbf15b0bc7bb7407ca6d0b887f16f96ccfba4f72a1781f30baaebfde",
+        "original_numeric_id": 108,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "acondicionamento-e-armazenamento",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O documento microfilmado possui pleno valor de prova legal no ordenamento jurídico brasileiro. De acordo com a Lei nº 5.433/1968, os microfilmes, bem como as certidões, os traslados e as cópias fotográficas obtidas diretamente dos filmes, produzem os mesmos efeitos legais dos documentos originais, em juízo ou fora dele. Portanto, a legislação brasileira equipara o valor probatório do microfilme ao do documento original, desde que observados os requisitos legais de produção e autenticação.\n\n### Dispositivo legal\n\n* **Lei nº 5.433/1968, Art. 1º, § 1º** (Disponível em: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l5433.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "fda639d7b1dca5c1ce30b29ba63f383d7ea51475a5f06fa74aa4c58e9652a4e0"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:109",
+      "source_id": "dpf14_009_01:109",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as tipologias documentais e a preservação de documentos, julgue os próximos itens.\n\nProduzir documentos de arquivo em papel cujo pH seja neutro é uma forma de preservá-los.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 109; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Acondicionamento e Armazenamento",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "7a6bb044efce72be315b67dbea5e390d87291414fb40e3722b78fd793dc26bb1",
+        "original_numeric_id": 109,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "acondicionamento-e-armazenamento",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A acidez é um dos principais fatores químicos internos de degradação do papel, pois acelera a hidrólise ácida das fibras de celulose, tornando o suporte quebradiço e amarelado ao longo do tempo. Produzir documentos de arquivo em papel com pH neutro (pH igual a 7) ou alcalino (pH superior a 7) é uma medida preventiva de preservação física extremamente eficaz, pois impede a deterioração precoce do suporte e garante maior durabilidade e longevidade aos registros documentais.",
+        "source_reference": null
+      },
+      "source_content_hash": "fdc1d35f8b8304f1dfec1d5ee3afb76a1435a4b511ee09f80c31a8b0dc9070cc"
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-analista_administrativo-portugues-d1088d0556a6-92dc4394919b",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "d1088d0556a634bc0e47cc4b0194b18b7b11b50a2faaa9a150b68e740a974fa1",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "7b0e6efd1cd4387fd3b4024c7d594aa5aad8ca3c4f2146f6ddc96ab3d4597e20",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "92dc4394919bf9741a9178a3d6a14425699d92cface4358c0a3187fea51dfa59",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:004",
+      "source_id": "analista_administrativo:4",
+      "question_type": "true_false",
+      "statement_markdown": "Texto CB2A1-I\n\nAssim como cidadania e cultura formam um par integrado de significações, cultura e territorialidade são, de certo modo, sinônimos. A cultura, forma de comunicação do indivíduo e do grupo com o universo, é herança, mas também um reaprendizado das relações profundas entre o ser humano e o seu meio, um resultado obtido por intermédio do próprio processo de viver. Incluindo o processo produtivo e as práticas sociais, a cultura é o que nos dá a consciência de pertencer a um grupo, do qual é o cimento. É por isso que as migrações agridem o indivíduo, roubando-lhe parte do ser, obrigando-o a uma nova e dura adaptação em seu novo lugar. Desterritorialização é frequentemente outra palavra para significar alienação, estranhamento, que são, também, desculturização.\nEsse processo é, também, o que comanda as migrações, que são, por si sós, processos de desterritorialização e, paralelamente, processos de desculturização. O novo ambiente opera como uma espécie de denotador. Sua relação com o novo morador se manifesta dialeticamente como territorialidade nova e cultura nova, que interferem reciprocamente, mudando paralelamente territorialidade e cultura, e mudando o ser humano.\n\nMilton Santos. O espaço do Cidadão. 7.ª ed. São Paulo: Editora da Universidade de São Paulo, 2020, p. 81-83 (com adaptações).\n\nConsiderando as ideias, os sentidos e os aspectos linguísticos do texto CB2A1-I, julgue os seguintes itens.\n\nOs sentidos do texto permitem afirmar que o termo “desculturização” foi empregado com o sentido de aculturação.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 4; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Semântica e Significação das Palavras",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "e85928ffaec920fb32171c6d97dbe5761cde15be38a48f1b7bd2b02368481ebd",
+        "original_numeric_id": 4,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNo contexto da discussão do texto sobre a preservação e valorização das culturas tradicionais e manifestações identitárias, o vocábulo *\"desculturização\"* (formado pelo prefixo de negação/privação *des-* associado a *cultura*) é empregado para denotar o processo sociológico de perda, esvaziamento, erosão ou descaracterização sistemática dos traços e valores culturais autênticos de uma comunidade.",
+        "source_reference": null
+      },
+      "source_content_hash": "46fe8052e4abe6775205fbed2956ac2858da199e134f007a34de0b0cb006b3bf"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:006",
+      "source_id": "analista_administrativo:6",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação aos aspectos linguísticos do texto CB2A1-I, julgue os itens que se seguem.\n\nSeria mantida a coerência do texto se a oração “Incluindo o processo produtivo e as práticas sociais” (terceiro período do primeiro parágrafo) fosse substituída tanto por Por incluir o processo produtivo e as práticas sociais quanto por Como inclui o processo produtivo e as práticas sociais.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 6; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Português",
+        "source_content_hash": "ec70ccd8ec7418f20401398aacc395723e32e11efe2ea700ea9bcf7c4c704763",
+        "original_numeric_id": 6,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA oração reduzida de gerúndio *\"Incluindo o processo produtivo...\"* desempenha papel sintático-aditivo e explicativo no desenvolvimento argumentativo do texto. Sua inserção ou reordenação no trecho mantém plenamente a coerência textual e a inteligibilidade semântica da tese apresentada pelo autor.",
+        "source_reference": null
+      },
+      "source_content_hash": "4cf7e2334ccb66568f9803e89666bd2db4e50d7472e7dd717bb4b967b392c45a"
+    }
+  ]
+}

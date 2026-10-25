@@ -1,0 +1,245 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-cargo30-portugues-8e6bc2f8d2e8-4e9d3319c5b0",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "8e6bc2f8d2e83e7156ca5868dd4df7cecb47126d15cc93486bec48bb47d5821f",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "ade70669f0c96aa17db7bd4f2a5081dabefc8b060fd23fdfaaa31934743bc23f",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "4e9d3319c5b09c982000446e990d689b903cc1ca9f54c397216cbd28bf11206f",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:051",
+      "source_id": "cargo30:51",
+      "question_type": "true_false",
+      "statement_markdown": "CONHECIMENTOS ESPECÍFICOS\n\nPaulo, agente administrativo lotado na Diretoria de Combate ao Crime Organizado (DCOR) do Departamento de Polícia Federal (DPF), foi incumbido, por seu superior, de redigir um ofício a ser enviado pela DCOR ao Procurador-Geral da República.\n\nEm face da situação hipotética acima, julgue os itens que se seguem.\n\nCaso o ofício trate de um problema cuja solução dependa de providências por parte do destinatário do expediente, Paulo poderá optar por um dos seguintes fechos:\n- Atenciosamente, aguarda solução para o caso.\n- Respeitosamente, contando com vossa prestimosa colaboração para a solução do caso.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 51",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "aa01805dec48b3ec46babf8432954dd8c758c2d6001e692414d6b63336d4bcb7",
+        "original_numeric_id": 51,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nDe acordo com o Manual de Redação da Presidência da República (MRPR), os fechos para correspondências oficiais foram estritamente padronizados com o objetivo de simplificar e uniformizar as comunicações do serviço público, admitindo-se apenas duas fórmulas de encerramento:\n\na) **\"Respeitosamente,\"** para autoridades superiores às do remetente (incluindo o Presidente da República);\nb) **\"Atenciosamente,\"** para autoridades de mesma hierarquia ou de hierarquia inferior.\n\nSão expressamente vedados fechos prolixos, adjetivados ou que incluam saudações, pedidos de providências ou votos de consideração como *\"aguarda solução para o caso\"* ou *\"contando com vossa prestimosa colaboração\"*.",
+        "source_reference": null
+      },
+      "source_content_hash": "b9d44d20f9ef9ec8e8c206d7fd961aed73a8dac5ac6002c7181edaead37e8e48"
+    },
+    {
+      "external_id": "pdf:cargo30:052",
+      "source_id": "cargo30:52",
+      "question_type": "true_false",
+      "statement_markdown": "CONHECIMENTOS ESPECÍFICOS\n\nPaulo, agente administrativo lotado na Diretoria de Combate ao Crime Organizado (DCOR) do Departamento de Polícia Federal (DPF), foi incumbido, por seu superior, de redigir um ofício a ser enviado pela DCOR ao Procurador-Geral da República.\n\nEm face da situação hipotética acima, julgue os itens que se seguem.\n\nO documento deve conter, entre outros elementos, a identificação do local e da data em que foi expedido, a assinatura de Paulo e o nome do signatário.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 52",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "77d791ca064ac9a0c184f1c77c10743b42f1cf517daa27878fce86e74b3ddf75",
+        "original_numeric_id": 52,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNa situação hipotética descrita, Paulo é o agente administrativo encarregado da redação material do expediente. No entanto, em documentos oficiais (como o ofício), o **signatário** é a autoridade pública competente que subscreve o ato e assume a responsabilidade institucional pelo seu teor (neste caso, o Diretor da DCOR ou autoridade titular do órgão).\n\nO documento oficial deve conter a identificação do signatário (nome e cargo) e sua respectiva assinatura. O nome ou assinatura do redator operacional (Paulo) não figura no fecho ou validação do expediente expedido perante terceiros.",
+        "source_reference": null
+      },
+      "source_content_hash": "daca070b9fd6d4d96a1cfd4b35474a9f660569627e57a1990b5fc6feb6052c52"
+    },
+    {
+      "external_id": "pdf:cargo30:053",
+      "source_id": "cargo30:53",
+      "question_type": "true_false",
+      "statement_markdown": "CONHECIMENTOS ESPECÍFICOS\n\nPaulo, agente administrativo lotado na Diretoria de Combate ao Crime Organizado (DCOR) do Departamento de Polícia Federal (DPF), foi incumbido, por seu superior, de redigir um ofício a ser enviado pela DCOR ao Procurador-Geral da República.\n\nEm face da situação hipotética acima, julgue os itens que se seguem.\n\nAo redigir o ofício, Paulo deve empregar o pronome de tratamento Vossa Excelência para dirigir-se ao destinatário.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 53",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "877a3d0cff65230986fc16d5b09b90f13bc03ca7a999e3ecb6ddc4a74e46f403",
+        "original_numeric_id": 53,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/decreto/d9758.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nConforme as regras do Manual de Redação da Presidência da República (MRPR), o pronome de tratamento **Vossa Excelência** (abreviado no corpo do texto como *V. Exa.*) é obrigatório para chefes dos Três Poderes, Ministros de Estado e autoridades de mesmo nível hierárquico.\n\nO **Procurador-Geral da República** é o Chefe do Ministério Público da União e autoridade de envergadura constitucional, sendo-lhe reservado por prerrogativa de função o tratamento de *Vossa Excelência* e o vocativo cerimonial *Excelentíssimo Senhor Procurador-Geral da República*.",
+        "source_reference": null
+      },
+      "source_content_hash": "6a46166cc757d4160ff1003274828b504603d9e0d13d4191ec0e7e05b425cf04"
+    },
+    {
+      "external_id": "pdf:cargo30:055",
+      "source_id": "cargo30:55",
+      "question_type": "true_false",
+      "statement_markdown": "O chefe de uma seção do DPF solicitou a um funcionário que transcrevesse uma conversa gravada. Recomendou que o diálogo fosse apresentado em forma de relato e que fossem respeitadas as regras da norma padrão da língua escrita. A seguir, são apresentados duas falas do diálogo e os respectivos relatos escritos pelo funcionário.\n\nFala 1\nIndivíduo X: Você tem certeza de que tinha dois carros aqui?\nIndivíduo Y: Tenho. Dois carros e uma bicicleta.\n\nFala 2\nIndivíduo X: O que você vai dizer se te chamarem para testemunhar?\nIndivíduo Y: Eu falo que estava escuro e que não vi nada. Além do mais, eu tava só de passagem.\n\nRelato 1\nO indivíduo X perguntou para o indivíduo Y se ele tinha certeza de que tinha dois carros no local onde estavam, e o indivíduo Y respondeu que tinha certeza, e que havia dois carros e uma bicicleta.\n\nRelato 2\nIndagado pelo indivíduo X sobre o que diria se o chamassem para testemunhar, o indivíduo Y respondeu que falaria que estava escuro, que não tinha visto nada e que, além do mais, estava só de passagem.\n\nJulgue os itens subseqüentes, relativos à redação de expedientes e à situação hipotética apresentada acima.\n\nPara atender a recomendações dos manuais de redação de expedientes, depois de completar a tarefa, o funcionário precisaria redigir um ofício encaminhando a seu chefe os relatos escritos.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 55",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "313867987ad168da90b050c40abfd16c866ab83c16309e863387cebb820ffe46",
+        "original_numeric_id": 55,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nNo âmbito da administração pública, o **ofício** é o expediente destinado prioritariamente à comunicação externa, isto é, endereçado a outros órgãos, entidades públicas ou cidadãos.\n\nPara a comunicação estritamente interna entre setores de um mesmo órgão ou entre um subordinado e sua chefia imediata, o expediente normativo adequado previsto nas normas de correspondência era o **memorando** (no padrão original do MRPR) ou documento interno de tramitação de processo/relatório. Não cabe a expedição de ofício para prestar contas ou encaminhar tarefas internas ao próprio chefe de seção.",
+        "source_reference": null
+      },
+      "source_content_hash": "3b955045a9a79bec3111633a92a6f9fa20ea5cfb03ab45ddbaa26d35d8f6da5a"
+    }
+  ]
+}

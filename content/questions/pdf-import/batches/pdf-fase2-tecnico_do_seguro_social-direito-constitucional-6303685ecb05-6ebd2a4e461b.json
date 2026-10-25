@@ -1,0 +1,332 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-tecnico_do_seguro_social-direito-constitucional-6303685ecb05-6ebd2a4e461b",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "6303685ecb05a17026689ea714434eb749b136afd9838f8455367497b631cc0f",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "4eaf0e6930a8700363f76961716af089a527cb11e4282c667f45b06f21532285",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "6ebd2a4e461bd602fc9032d5f23896eaee74b3dcda211f052fd9563dbae4d43c",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:021",
+      "source_id": "tecnico_do_seguro_social:21",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos direitos e garantias fundamentais, julgue os itens a seguir.\n\nA obtenção de certidões em repartições públicas, para esclarecimento de situação de interesse pessoal, é direito assegurado a todos e independe do pagamento de taxa.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 21; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "9582d56a7d59c86acabe87c529120e890eaa505d84c7e1839fa96fe35e058266",
+        "original_numeric_id": 21,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A Constituição Federal de 1988 assegura expressamente a gratuidade na obtenção de certidões em repartições públicas, desde que destinadas à defesa de direitos e ao esclarecimento de situações de interesse pessoal. Essa garantia constitucional é classificada como um direito de natureza instrumental e de eficácia plena, o qual independe do pagamento de qualquer taxa ou emolumento para o seu exercício.\n\nA redação do dispositivo constitucional afasta a possibilidade de cobrança de taxas pela administração pública para a emissão de tais documentos, visando viabilizar o acesso à informação e a proteção de direitos individuais perante o Estado.\n\n**Dispositivo legal:**\nArtigo 5º, inciso XXXIV, alínea \"b\", da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "4d6b4114e329dbbe0f68d4610cc59e4b4862c15b26a2960d9ea4e608648f8a60"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:023",
+      "source_id": "tecnico_do_seguro_social:23",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos direitos sociais, da nacionalidade e da garantia dos direitos políticos, julgue os itens a seguir.\n\nO Fundo de Garantia do Tempo de Serviço é direito tanto dos trabalhadores urbanos quanto dos trabalhadores rurais.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 23; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "7ae02902a5e6f3046a86793d985b0d57ac7bfa40a75ab987c9492102b6dfd4dd",
+        "original_numeric_id": 23,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O Fundo de Garantia do Tempo de Serviço (FGTS) é um direito social expressamente assegurado pela Constituição Federal de 1988 tanto aos trabalhadores urbanos quanto aos rurais. O caput do artigo 7º estabelece a igualdade de direitos entre essas duas categorias de trabalhadores, e o inciso III do mesmo artigo prevê o FGTS como um desses direitos fundamentais de caráter trabalhista.\n\nHistoricamente, antes da Constituição de 1988, havia distinções significativas entre os direitos dos trabalhadores urbanos e rurais, mas a atual Carta Magna unificou o rol de direitos sociais aplicáveis a ambos.\n\n**Dispositivo legal:**\nArtigo 7º, inciso III, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "c2e2646f4f443151633d6e8d49f408f7db19d58be7d7287f1c8cc305f2d5f261"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:024",
+      "source_id": "tecnico_do_seguro_social:24",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos direitos sociais, da nacionalidade e da garantia dos direitos políticos, julgue os itens a seguir.\n\nA participação dos sindicatos nas negociações coletivas de trabalho pode ser dispensada mediante manifestação da maioria dos filiados.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 24; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "823a560c2b58e417f9c153d2d56f94dcdb4cfe665c682bc909ee5328dd1fb5f8",
+        "original_numeric_id": 24,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está errado. A participação dos sindicatos nas negociações coletivas de trabalho é obrigatória, conforme estabelece expressamente o artigo 8º, inciso VI, da Constituição Federal de 1988. Trata-se de uma norma de ordem pública e de caráter cogente, o que significa que essa participação não pode ser dispensada, mitigada ou afastada por deliberação ou manifestação de vontade dos filiados ou de qualquer assembleia da categoria.\n\nA obrigatoriedade visa garantir a representatividade e a força de negociação da categoria profissional perante a categoria econômica, resguardando os direitos dos trabalhadores por meio de convenções ou acordos coletivos.\n\n**Dispositivo legal:**\nArtigo 8º, inciso VI, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "bb5dc6e99b07b3b4682149a5af6d074da0108b9a74a4f8249d95f2cf0838d384"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:026",
+      "source_id": "tecnico_do_seguro_social:26",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos direitos sociais, da nacionalidade e da garantia dos direitos políticos, julgue os itens a seguir.\n\nA nacionalidade brasileira será concedida de ofício aos estrangeiros de qualquer nacionalidade que residam no Brasil há mais de quinze anos e que não possuam condenação penal.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 26; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "39c9826b98a7f6dea5b4599f75e6ddf9493da994cdf06c2429c1edca50271e1f",
+        "original_numeric_id": 26,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque a nacionalidade brasileira, na modalidade de naturalização extraordinária, não é concedida de ofício (por iniciativa automática da administração pública). A Constituição Federal exige expressamente que o interessado requeira a nacionalidade. Assim, mesmo preenchidos os requisitos de residência ininterrupta por mais de quinze anos e ausência de condenação penal, o ato depende de manifestação de vontade do estrangeiro.\n\n### Dispositivo legal\n* **Artigo:** Art. 12, II, \"b\", da Constituição Federal de 1988.\n* **Link oficial:** [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "d7e12b07d2a04ddef9a75d8f6a12da7787135963a77f4c421f0be1ce2ca1d76b"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:027",
+      "source_id": "tecnico_do_seguro_social:27",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as disposições da Constituição Federal de 1988 (CF) quanto à administração pública, julgue os itens a seguir.\n\nÉ vedado a estrangeiros o acesso a cargos públicos.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 27; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Da Administração Pública",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "e4214c01a8380b150ad3d7f2eeac10fb848c36c343c64d042474d69101c6a68d",
+        "original_numeric_id": 27,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "administracao-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque a Constituição Federal de 1988 não veda o acesso de estrangeiros a cargos públicos de forma absoluta. Pelo contrário, o texto constitucional prevê expressamente que os cargos, empregos e funções públicas são acessíveis tanto aos brasileiros que preencham os requisitos legais quanto aos estrangeiros, na forma da lei.\n\n### Dispositivo legal\n* **Artigo:** Art. 37, I, da Constituição Federal de 1988.\n* **Link oficial:** [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "e4e6119bb4825d47351aaf38b755d152abf82ed05f8a6b6f28a51a9c6deffc10"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:030",
+      "source_id": "tecnico_do_seguro_social:30",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando as disposições da Constituição Federal de 1988 (CF) quanto à administração pública, julgue os itens a seguir.\n\nAgente público ocupante de cargo temporário não está submetido ao Regime Geral de Previdência Social.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 30; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Da Administração Pública",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "a94a5bd04e37935aaec47419d2237a9b0ab2c468b3508eef31e7d84a679cc2ac",
+        "original_numeric_id": 30,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "administracao-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. O agente público ocupante exclusivamente de cargo temporário (assim como os ocupantes de cargo em comissão de livre nomeação e exoneração ou de mandato eletivo) está obrigatoriamente submetido ao Regime Geral de Previdência Social (RGPS), e não a regime próprio de previdência social (RPPS).\n\n### Dispositivo legal\n* **Artigo:** Art. 40, § 13, da Constituição Federal de 1988.\n* **Link oficial:** [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "d94712a3879591a0e66de32d8def6fd5042692b56a941ca16b73fa7ed0df6645"
+    }
+  ]
+}

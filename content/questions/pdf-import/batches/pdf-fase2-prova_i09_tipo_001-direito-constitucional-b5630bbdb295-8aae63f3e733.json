@@ -1,0 +1,356 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-prova_i09_tipo_001-direito-constitucional-b5630bbdb295-8aae63f3e733",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "b5630bbdb295671178518a6a56da47afa49d6b19ff3b0347fbe6974f5ac03394",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "8a1d40d330f3a1f0c9c5c49977037cbc600422d057f7b497ba1fcf422d8196bb",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "8aae63f3e733cb7a5e750335f415eb7620d09d08bfcd525b902259e8ef4175e8",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:034",
+      "source_id": "prova_i09_tipo_001:34",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com a Constituição Federal brasileira, em Municípios de até dez mil habitantes, o subsídio máximo dos Vereadores corresponderá a",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 34; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "trinta por cento do subsídio dos Deputados Federais.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "trinta por cento do subsídio dos Deputados Estaduais.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "vinte por cento do subsídio dos Deputados Federais.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "vinte por cento do subsídio dos Deputados Estaduais.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "quinze por cento do subsídio dos Deputados Estaduais.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Da organização do Estado",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Constitucional",
+        "source_content_hash": "75f22045e6b08e3fd6b2beeb5365606c5f215ed6c9610ad7c59a5b8e6ef53243",
+        "original_numeric_id": 34,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao-do-estado",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A fixação dos subsídios dos vereadores segue regras estritas de limites máximos baseados na população do município e no subsídio dos deputados estaduais:\n\n* **Alternativa D (Correta):** Conforme o art. 29, inciso VI, alínea \"a\", da Constituição Federal, em Municípios de até dez mil habitantes, o subsídio máximo dos Vereadores corresponderá a vinte por cento do subsídio dos Deputados Estaduais.\n* **Alternativas A, B, C e E (Incorretas):**\n  * A alternativa A cita incorretamente o percentual de trinta por cento e o parâmetro de comparação (Deputados Federais).\n  * A alternativa B cita trinta por cento do subsídio dos Deputados Estaduais, limite que se aplica aos Municípios de dez mil e um a cinquenta mil habitantes (art. 29, inciso VI, alínea \"b\").\n  * A alternativa C erra o parâmetro de comparação ao citar Deputados Federais.\n  * A alternativa E cita quinze por cento, percentual que não consta no rol de limites estabelecidos pelas alíneas do inciso VI do art. 29.\n\n**Detalhe importante:** O parâmetro de comparação para o subsídio dos vereadores é sempre o subsídio dos **Deputados Estaduais**, e não dos Deputados Federais. Os percentuais iniciam em 20% (para municípios de até 10 mil habitantes) e progridem até 75% (para municípios com mais de 500 mil habitantes).\n\n### Dispositivo legal\n\n* **Constituição Federal de 1988, Art. 29, inciso VI, alínea \"a\"**: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art29)",
+        "source_reference": null
+      },
+      "source_content_hash": "a0b3cc5be4d44697bc69e9b5190e2825200aa3f20c030cd4ef822ac1749453b9"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:035",
+      "source_id": "prova_i09_tipo_001:35",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Os Estados poderão, para integrar a organização, o planejamento e a execução de funções públicas de interesse comum, instituir, mediante",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 35; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "lei complementar, apenas aglomerações urbanas, constituídas por agrupamentos de Municípios limítrofes.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "lei complementar, apenas regiões metropolitanas constituídas por agrupamentos de Municípios limítrofes.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "lei complementar, regiões metropolitanas, aglomerações urbanas e microrregiões, constituídas por agrupamentos de Municípios limítrofes.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "lei ordinária, regiões metropolitanas, aglomerações urbanas e microrregiões, constituídas por agrupamentos de Municípios limítrofes.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "decreto, regiões metropolitanas, aglomerações urbanas e microrregiões, constituídas por agrupamentos de Municípios limítrofes.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Da organização do Estado",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Constitucional",
+        "source_content_hash": "547673a8519999c01447ae49d3804c8c0ac4ef7cc95360b54ad5c2bf325a8802",
+        "original_numeric_id": 35,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao-do-estado",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A instituição de regiões metropolitanas, aglomerações urbanas e microrregiões é uma competência dos Estados regulada pela Constituição Federal:\n\n* **Alternativa C (Correta):** De acordo com o art. 25, § 3º, da Constituição Federal, os Estados poderão, mediante **lei complementar**, instituir regiões metropolitanas, aglomerações urbanas e microrregiões, constituídas por agrupamentos de Municípios limítrofes, para integrar a organização, o planejamento e a execução de funções públicas de interesse comum.\n* **Alternativas A e B (Incorretas):** Estão incorretas ao restringir a instituição a \"apenas aglomerações urbanas\" ou \"apenas regiões metropolitanas\", omitindo as demais figuras previstas no texto constitucional.\n* **Alternativas D e E (Incorretas):** Erram ao indicar \"lei ordinária\" ou \"decreto\" como instrumentos viáveis. A Constituição Federal exige expressamente a edição de **lei complementar** para essa finalidade.\n\n**Detalhe importante:** A exigência de lei complementar e a necessidade de que os municípios sejam limítrofes são os requisitos formais mais cobrados em provas sobre este dispositivo.\n\n### Dispositivo legal\n\n* **Constituição Federal de 1988, Art. 25, § 3º**: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art25)",
+        "source_reference": null
+      },
+      "source_content_hash": "cffd3897ad870eda3ad436bd438d2ac61ff27e847ab4fc26b19a3c604b96e8b4"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:036",
+      "source_id": "prova_i09_tipo_001:36",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Julgar, mediante recurso extraordinário, as causas decididas em única ou última instância, quando a decisão recorrida julgar válida lei ou ato de governo local contestado em face da Constituição Federal e julgar válida lei local contestada em face de lei federal é competência do",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 36; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Superior Tribunal de Justiça.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Supremo Tribunal Federal.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Supremo Tribunal Federal e Superior Tribunal de Justiça, respectivamente.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Superior Tribunal de Justiça e Supremo Tribunal Federal, respectivamente.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Supremo Tribunal Federal e Tribunal de Justiça do Estado, respectivamente.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Do Poder Judiciário",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Constitucional",
+        "source_content_hash": "470e147b13e319eb50b55ecde4473e6f579634d0589fccf67e5615c5eaace153",
+        "original_numeric_id": 36,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "poder-judiciario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A definição de competências recursais dos tribunais superiores é delimitada pela Constituição Federal:\n\n* **Alternativa B (Correta):** A competência para julgar, mediante recurso extraordinário, as causas decididas em única ou última instância, quando a decisão recorrida julgar válida lei ou ato de governo local contestado em face da Constituição Federal (alínea \"c\") ou julgar válida lei local contestada em face de lei federal (alínea \"d\"), pertence exclusivamente ao Supremo Tribunal Federal (STF), conforme estabelece o art. 102, inciso III, da Constituição Federal.\n* **Alternativas A, C, D e E (Incorretas):**\n  * O Superior Tribunal de Justiça (STJ) possui competência para julgar, mediante recurso *especial* (e não extraordinário), as causas decididas em única ou última instância pelos Tribunais Regionais Federais ou pelos tribunais dos Estados, do Distrito Federal e Territórios, nas hipóteses do art. 105, inciso III, da Constituição Federal. No STJ, cabe julgar válido ato de governo local contestado em face de lei federal (art. 105, inciso III, alínea \"b\"), o que não se confunde com a competência do STF para julgar válida *lei local* contestada em face de lei federal (art. 102, inciso III, alínea \"d\").\n  * Os Tribunais de Justiça dos Estados (TJ) não possuem competência para julgar recurso extraordinário, que é de atribuição exclusiva do STF.\n\n**Detalhe importante:** A alínea \"d\" do inciso III do art. 102 foi incluída pela Emenda Constitucional nº 45/2004. Antes dessa emenda, a competência para julgar válida lei local contestada em face de lei federal pertencia ao STJ via recurso especial. Com a reforma do Judiciário, essa hipótese foi deslocada para a competência do STF via recurso extraordinário.\n\n### Dispositivo legal\n\n* **Constituição Federal de 1988, Art. 102, inciso III, alíneas \"c\" e \"d\"**: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art102)",
+        "source_reference": null
+      },
+      "source_content_hash": "17d7c835a5d2378954a2afd8ef61d689b582f889bae817efe440eae2c6b9c672"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:037",
+      "source_id": "prova_i09_tipo_001:37",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Os Tribunais Regionais Eleitorais compor-se-ão mediante eleição, pelo voto secreto, dentre outros, de dois juízes, dentre juízes de direito, escolhidos pelo",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 37; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Tribunal Superior Eleitoral.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Tribunal Regional Federal com sede na Capital do Estado.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Tribunal de Justiça do respectivo Estado.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Supremo Tribunal Federal.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Presidente da República.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Do Poder Judiciário",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Constitucional",
+        "source_content_hash": "7b1bca827f4641030a45516dd74523e33842671ae91db0392723e103fd1b52e9",
+        "original_numeric_id": 37,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "poder-judiciario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige o conhecimento da composição dos Tribunais Regionais Eleitorais (TREs), especificamente no que tange à escolha dos juízes de direito que integram o órgão.\n\nA alternativa correta é a **C**, pois, nos termos da Constituição Federal, dois juízes do TRE serão escolhidos, mediante eleição pelo voto secreto, dentre juízes de direito, pelo Tribunal de Justiça do respectivo Estado.\n\n**Análise das alternativas incorretas:**\n* **A, B, D e E:** Estão incorretas porque a indicação e escolha dos dois juízes de direito para compor o TRE competem exclusivamente ao Tribunal de Justiça do respectivo Estado, e não ao Tribunal Superior Eleitoral (A), ao Tribunal Regional Federal (B), ao Supremo Tribunal Federal (D) ou ao Presidente da República (E). Cabe destacar que o Tribunal Regional Federal escolhe o juiz federal que integrará o TRE (Art. 120, § 1º, II), e o Presidente da República nomeia os dois advogados indicados pelo Tribunal de Justiça (Art. 120, § 1º, III).\n\n**Pegadinha:** A banca costuma confundir o candidato misturando as competências de escolha de cada classe de membros do TRE (desembargadores, juízes de direito, juízes federais e advogados) e os órgãos responsáveis por sua indicação ou escolha. Os juízes de direito e os desembargadores são sempre escolhidos pelo Tribunal de Justiça local.\n\n### Dispositivo legal\n* **Artigo 120, § 1º, inciso I, alínea \"b\" da Constituição Federal de 1988**",
+        "source_reference": null
+      },
+      "source_content_hash": "5d8e12be657d1b746dd77a727a832c75510b8c1e4c97eef79c0cd3e450513917"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:040",
+      "source_id": "prova_i09_tipo_001:40",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Os juízes gozam da garantia da vitaliciedade, que,",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": null,
+      "source_reference": "prova_i09_tipo_001.pdf, questão 40; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "no primeiro grau, só será adquirida após três anos de exercício.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "no primeiro grau, só será adquirida após dois anos de exercício.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "será sempre adquirida após cinco anos de exercício, independente do grau.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "será sempre adquirida após três anos de exercício, independente do grau.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "no primeiro grau, só será adquirida após cinco anos de exercício.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Do Poder Judiciário",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Constitucional",
+        "source_content_hash": "efb50a98f71a7d1a275f7ab8b5b46d630a2f3a3d3efd590d61cea862251ab953",
+        "original_numeric_id": 40,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "poder-judiciario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige o conhecimento das garantias asseguradas aos membros da magistratura pela Constituição Federal, especificamente em relação à vitaliciedade.\n\nA alternativa correta é a **B**. De acordo com a Constituição Federal, a garantia da vitaliciedade, para os juízes que ingressam na carreira no primeiro grau de jurisdição, só é adquirida após dois anos de efetivo exercício. Durante esse período de estágio probatório, a perda do cargo depende de deliberação do tribunal ao qual o juiz estiver vinculado. Após a aquisição da vitaliciedade, a perda do cargo somente pode ocorrer por sentença judicial transitada em julgado.\n\n**Análise das alternativas incorretas:**\n* **A e D:** Estão incorretas porque mencionam o prazo de três anos. O prazo de três anos refere-se à aquisição da estabilidade pelos servidores públicos civis ocupantes de cargo de provimento efetivo (Art. 41 da CF), e não à vitaliciedade dos magistrados de primeiro grau.\n* **C e E:** Estão incorretas porque mencionam o prazo de cinco anos, que não possui amparo constitucional para a aquisição de vitaliciedade ou estabilidade.\n\n**Pegadinha:** A vitaliciedade não exige o prazo de dois anos em todos os casos. Para os magistrados que ingressam diretamente nos tribunais (como pelo quinto constitucional ou nomeação para tribunais superiores), a vitaliciedade é adquirida imediatamente na posse, sem a necessidade do interstício de dois anos. A exigência de dois anos de exercício aplica-se estritamente ao ingresso no primeiro grau de jurisdição.\n\n### Dispositivo legal\n* **Artigo 95, inciso I da Constituição Federal de 1988**",
+        "source_reference": null
+      },
+      "source_content_hash": "7a271e888f2129af3367f38b02906a2ed5d0d6bf07c03b94069e6525a34fffdb"
+    }
+  ]
+}

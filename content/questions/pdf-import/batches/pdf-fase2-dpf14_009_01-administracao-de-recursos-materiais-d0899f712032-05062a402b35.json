@@ -1,0 +1,332 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-dpf14_009_01-administracao-de-recursos-materiais-d0899f712032-05062a402b35",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "d0899f712032d803deb1ff38fb2396f1dd37d1ffb65c7f61503d0bd058c669c4",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "9a60cb42fbada4944e3fe1d0564604111314b54b0d72e1bd9ebc2e3a33818aef",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "05062a402b350fec4326a33d53e2f2662a2a2255cef5965e6ef35d7daf6770c3",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-de-recursos-materiais",
+    "name": "Administração de Recursos Materiais"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:091",
+      "source_id": "dpf14_009_01:91",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da administração de materiais, julgue os itens que se seguem.\n\nUm produto perecível deve ser classificado como material não estocável.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 91; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Classificação de Materiais",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Recursos Materiais",
+        "source_content_hash": "373edeba154fe2eef2b807eefe0c1e42f31146d43f2948ab04befbe5da98c87d",
+        "original_numeric_id": 91,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-de-materiais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A perecibilidade de um material não impede que ele seja estocado; na verdade, quase todos os produtos perecíveis são estocados (como alimentos refrigerados ou medicamentos), exigindo apenas cuidados especiais de armazenagem e controle de validade, ou sendo mantidos como estoques de transbordo. Por outro lado, os materiais classificados como **não estocáveis** são aqueles cujo consumo é imprevisível, de difícil criação de parâmetros de ressuprimento automático, ou adquiridos para aplicação imediata, independentemente de sua perecibilidade.",
+        "source_reference": null
+      },
+      "source_content_hash": "007f62f52574377128bab2b441372d475a9e0c8d306ca275d9e06f7b88f6211c"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:092",
+      "source_id": "dpf14_009_01:92",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da administração de materiais, julgue os itens que se seguem.\n\nClassificam-se como materiais perigosos o muito venenoso, o espontaneamente inflamável, o aerodispersoide pesado, o tóxico e o corrosivo, devendo-se definir, a partir de suas peculiaridades, as instruções para o almoxarife, os cuidados durante a movimentação e o sistema de transporte apropriado.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 92; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Classificação de Materiais",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Recursos Materiais",
+        "source_content_hash": "81fc1b154142db410d30bcee78862d6481e7932fbee1328e0061180f39ceb577",
+        "original_numeric_id": 92,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-de-materiais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A classificação de materiais perigosos envolve categorias consagradas na literatura e em normas técnicas (como inflamáveis, corrosivos, tóxicos, radioativos, explosivos, entre outros). O termo 'aerodispersoide pesado' não existe na classificação técnica de materiais perigosos adotada na literatura de administração de recursos materiais. Embora 'aerodispersoide' seja um termo físico-químico para descrever partículas suspensas no ar (como poeira ou fumaça), a expressão 'aerodispersoide pesado' foi inventada pela banca para induzir o candidato ao erro.",
+        "source_reference": null
+      },
+      "source_content_hash": "8112f306f680ddd9da3c4448bc18971ece07f8608a1928546766c36d41ba1dcd"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:093",
+      "source_id": "dpf14_009_01:93",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da administração de materiais, julgue os itens que se seguem.\n\nOrdenados os materiais, que devem ser agrupados conforme a semelhança, segue-se a sua codificação, comumente realizada por meio dos sistemas alfabético, alfanumérico ou decimal.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 93; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Classificação de Materiais",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Recursos Materiais",
+        "source_content_hash": "44566658fa410ee2676bde0f5b69984a16fd06d080d95d902e032b00838078fd",
+        "original_numeric_id": 93,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-de-materiais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A classificação de materiais é o processo de agrupar os itens de acordo com suas semelhanças, facilitando a gestão e o controle de estoques. Após essa ordenação e agrupamento, realiza-se a codificação, que consiste em atribuir um código representativo a cada item. Os sistemas de codificação mais comuns e amplamente adotados na administração de materiais são o alfabético (letras), o alfanumérico (combinação de letras e números) e o decimal ou numérico (algarismos decimais). Portanto, a afirmação está correta ao descrever a sequência lógica e os sistemas de codificação usuais.",
+        "source_reference": null
+      },
+      "source_content_hash": "1b87fc9b318a54defe835e7b4993d06a6b8370472491ef064834b5a3a5fd5672"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:094",
+      "source_id": "dpf14_009_01:94",
+      "question_type": "true_false",
+      "statement_markdown": "Os objetivos da classificação de materiais são a catalogação, a simplificação, a especificação, a normalização, a padronização e a codificação de todos os materiais componentes do estoque da organização.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 94; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Classificação de Materiais",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Recursos Materiais",
+        "source_content_hash": "4494afbe8726fb647e643b098dab48004ab0e010421530700accceb7686f55e6",
+        "original_numeric_id": 94,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-de-materiais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A classificação de materiais é um processo estruturado que visa organizar e controlar os itens de estoque de forma eficiente. A literatura clássica de administração de materiais estabelece que o processo de classificação é composto por seis etapas ou objetivos fundamentais, que ocorrem em sequência lógica: catalogação, simplificação, especificação (ou identificação), normalização, padronização e codificação. Portanto, a afirmação está correta ao listar esses elementos como os objetivos do processo.",
+        "source_reference": null
+      },
+      "source_content_hash": "330f1272db617b44d061cfed71d983e2d75105d21263029564156057d7f4ba72"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:095",
+      "source_id": "dpf14_009_01:95",
+      "question_type": "true_false",
+      "statement_markdown": "Por meio do JIT (just in time) garante-se a eliminação dos estoques em todo o canal de suprimentos pela mera transferência aos fornecedores dos encargos da manutenção dos estoques.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 95; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Gestão de Estoques",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Recursos Materiais",
+        "source_content_hash": "ec8b9ff2ac8806115aff8987c2f945277761ebe4ea871d97247614ef82abf1d7",
+        "original_numeric_id": 95,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-estoques",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A filosofia *Just in Time* (JIT) busca a eliminação de desperdícios e a redução de estoques ao longo de todo o canal de suprimentos por meio da sincronização entre a produção e a demanda real. O erro da afirmação reside em alegar que essa eliminação ocorre pela \"mera transferência aos fornecedores dos encargos da manutenção dos estoques\". Se houvesse apenas essa transferência, o estoque não seria eliminado da cadeia de suprimentos, mas apenas deslocado de um elo (fabricante) para outro (fornecedor). No JIT real, busca-se a redução efetiva dos níveis de estoque em todos os parceiros da cadeia por meio de parcerias de longo prazo, entregas frequentes em lotes menores e alta confiabilidade nos processos.",
+        "source_reference": null
+      },
+      "source_content_hash": "92707fe06f0f610c80da177d84932e6219ce4876f79043c477d59fa840b0737f"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:097",
+      "source_id": "dpf14_009_01:97",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens subsequentes, relativos à gestão de inventários.\n\nA classificação de equipamentos de movimentação e transporte abrange os dispositivos de carga, de descarga e de manuseio, que, mesmo não sendo máquinas, servem de apoio a vários sistemas modernos.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 97; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Classificação de Materiais",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Recursos Materiais",
+        "source_content_hash": "2c4f84ba34b8c1cf8eab6786c96a7fb3f0c9daa4f0f892021b0b3d82883b32ca",
+        "original_numeric_id": 97,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-de-materiais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Na gestão de materiais e logística, os equipamentos de movimentação e transporte não se limitam a maquinários complexos ou motorizados (como empilhadeiras, pontes rolantes e esteiras). A classificação desses recursos engloba também dispositivos de apoio manuais ou estáticos destinados à carga, descarga e manuseio de materiais. Exemplos clássicos desses dispositivos são os paletes, contentores, estrados, rampas niveladoras e carrinhos manuais. Embora não sejam classificados como máquinas propriamente ditas, esses itens desempenham um papel fundamental de suporte e integração nos sistemas modernos de armazenagem e distribuição física.",
+        "source_reference": null
+      },
+      "source_content_hash": "cd1cd616985ebd9a4e58ae1bb23da337f56d030931256fcec369dcac386d3f83"
+    }
+  ]
+}

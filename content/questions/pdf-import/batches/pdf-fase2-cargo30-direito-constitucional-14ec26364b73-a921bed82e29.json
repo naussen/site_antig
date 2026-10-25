@@ -1,0 +1,281 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-cargo30-direito-constitucional-14ec26364b73-a921bed82e29",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "14ec26364b73e9d47b2c5581aa9242bbae266f9dece6cf292f0206e67204b603",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "4cf2583924232a76b401cdfc24313fb757e305aad1b2fdad61bd5c3798ffc63b",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "a921bed82e29d65516834170450e9a6bd8b66f39d7b4f515d8c81295b9a1da06",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:106",
+      "source_id": "cargo30:106",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nAgentes de polícia federal prenderam o brasileiro Rodrigo, em flagrante delito, pela prática do crime inafiançável de tráfico de entorpecentes.\n\nCom referência a essa situação hipotética, julgue os seguintes itens, considerando o que estabelece a Constituição da República.\n\nConsidere que Rodrigo solicitou ao DPF a identificação do delegado que coordenou o interrogatório a que foi submetido logo após sua prisão. Nessa situação, com o objetivo de proteger o referido delegado de eventuais retaliações por parte do preso ou de seus comparsas, o DPF poderá negar-se a prestar essa informação.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 106",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Da defesa do Estado e das instituições democráticas",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "1ecf2c35140e52a11dcad77dfba4a3b7bb875392c86ccad483c8f45ff5012916",
+        "original_numeric_id": 106,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "defesa-do-estado-e-das-instituicoes-democraticas",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O direito à identificação dos responsáveis pela prisão ou pelo interrogatório policial é uma garantia fundamental expressa na Constituição Federal. Essa garantia visa assegurar a transparência dos atos estatais, prevenir abusos de autoridade e viabilizar a eventual responsabilização civil, penal ou administrativa por excessos cometidos por agentes públicos.\n\nPortanto, a administração pública não pode recusar-se a fornecer essa informação sob a justificativa de segurança ou proteção do agente, pois o direito constitucional do preso prevalece nesse cenário.\n\n### Dispositivo legal\nArt. 5º, LXIV, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "55ac7991781f429e76f0bf4b839027bd2418f81ac7674c3568e7bd785ec1984e"
+    },
+    {
+      "external_id": "pdf:cargo30:109",
+      "source_id": "cargo30:109",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nBeatriz foi condenada e presa pela prática do crime de estelionato. Após sua prisão, foi aprovada e publicada uma lei que não fere a Constituição da República e que aumentou em 20% os limites mínimo e máximo da pena privativa de liberdade previstos para o crime de estelionato.\n\nCom base nessa situação hipotética, julgue os itens que se seguem.\n\nA referida lei somente poderia ser uma lei federal, pois os estados e os municípios não têm competência para legislar sobre direito penal.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 109",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Da organização do Estado",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "05011e0d36a120595c6e22db723d1552c47893998f7c49c1c4b0ba45afea92be",
+        "original_numeric_id": 109,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "organizacao-do-estado",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. No modelo federativo brasileiro, a repartição de competências legislativas é definida pela própria Constituição Federal. \n\nO artigo 22, inciso I, da Constituição Federal de 1988 estabelece que compete privativamente à União legislar sobre direito penal. Consequentemente, estados e municípios carecem de competência para criar tipos penais ou alterar as penas cominadas a crimes existentes, como o estelionato. Qualquer alteração nos limites das penas deve ser veiculada necessariamente por meio de lei federal de iniciativa do Congresso Nacional.\n\n### Dispositivo legal\n* **Artigo 22, inciso I, da Constituição Federal de 1988**: [Constituição Federal](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "d4d598caf44486960e265c71076291db1eacf8b8a072c9ad8d54856c1dd61eeb"
+    },
+    {
+      "external_id": "pdf:cargo30:115",
+      "source_id": "cargo30:115",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nEm cada um dos itens subseqüentes, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada.\n\nFoi apresentado projeto de lei federal determinando a conversão de todos os cargos de agente de polícia federal em cargos comissionados. Nessa situação, a proposta do projeto de lei viola a Constituição da República.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 115",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Da Administração Pública",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "7e56925a72f31902c5c63620d30670f204dd1f90137455ee42dbf957193a4b01",
+        "original_numeric_id": 115,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "administracao-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. A proposta de conversão de todos os cargos de agente de polícia federal em cargos comissionados viola frontalmente a Constituição Federal por duas razões principais:\n\n1. O art. 37, inciso II, da Constituição Federal estabelece que a investidura em cargo ou emprego público depende de aprovação prévia em concurso público de provas ou de provas e títulos, ressalvadas as nomeações para cargo em comissão declarado em lei de livre nomeação e exoneração.\n2. O art. 37, inciso V, da Constituição Federal restringe a destinação dos cargos em comissão exclusivamente às atribuições de direção, chefia e assessoramento. As atividades típicas de Estado e de caráter permanente, como as da carreira policial federal, devem ser desempenhadas por servidores ocupantes de cargos de provimento efetivo, providos mediante concurso público.\n\n### Dispositivo legal\nArtigo 37, incisos II e V, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "3aa82d88cb6f18166dd4fa208424bc35ffa0281855380022586cd8a091c3a36e"
+    },
+    {
+      "external_id": "pdf:cargo30:117",
+      "source_id": "cargo30:117",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nEm cada um dos itens subseqüentes, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada.\n\nAntônio ocupa cargo de psicólogo clínico no DPF. Nesse caso, Antônio pode acumular esse cargo com o de professor universitário em uma fundação pública federal, desde que haja compatibilidade de horários de trabalho.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 117",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Da Administração Pública",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "e6e18ce6e371017e7812da41e704741adf2dcd49732be4d2f5a9b64ae8a54237",
+        "original_numeric_id": 117,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "administracao-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. A Constituição Federal, no art. 37, inciso XVI, alínea \"b\", autoriza a acumulação remunerada de um cargo de professor com outro técnico ou científico, desde que haja compatibilidade de horários e seja observado o teto remuneratório (art. 37, inciso XI). O cargo de psicólogo clínico no Departamento de Polícia Federal (DPF) exige habilitação profissional específica e conhecimentos técnicos de nível superior, enquadrando-se perfeitamente no conceito de \"cargo técnico ou científico\". Além disso, a vedação de acumulação estende-se a empregos e funções e abrange autarquias, fundações, empresas públicas, sociedades de economia mista, suas subsidiárias, e sociedades controladas, direta ou indiretamente, pelo poder público (art. 37, inciso XVII), o que valida a acumulação com o cargo de professor em fundação pública federal.\n\n### Dispositivo legal\nArtigo 37, incisos XVI, alínea \"b\", e XVII, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "290b9446761a6d4389a2792d50777dca5ca89d455d02eca369c194d8e7a99615"
+    },
+    {
+      "external_id": "pdf:cargo30:120",
+      "source_id": "cargo30:120",
+      "question_type": "true_false",
+      "statement_markdown": "Nos itens de 106 a 120, considere que os agentes de polícia federal e os delegados de polícia federal são servidores públicos, ocupantes de cargos de provimento efetivo, que integram a carreira policial federal e são lotados no DPF, órgão da administração pública federal direta.\n\nEm cada um dos itens subseqüentes, é apresentada uma situação hipotética, seguida de uma assertiva a ser julgada.\n\nUm delegado de polícia federal está respondendo a processo criminal em que ele é acusado de prática de homicídio. Nessa situação, o processo deve correr na justiça federal, pois a ela compete o julgamento dos servidores públicos federais.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 120",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Do Poder Judiciário",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "f841a5d6903eaed0f1b53b455ff11739671889b9a4bd6478f072b6f30619f82e",
+        "original_numeric_id": 120,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_legal_basis"
+      },
+      "topics": [
+        {
+          "topic_id": "poder-judiciario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta. Não existe na Constituição Federal uma regra geral de competência da Justiça Federal para julgar servidores públicos federais em razão de sua simples condição de servidor (inexiste foro por prerrogativa de função na Justiça Federal para servidores públicos federais comuns).\n\nA competência da Justiça Federal criminal, prevista no artigo 109, inciso IV, da CF/88, restringe-se a infrações penais praticadas em detrimento de bens, serviços ou interesse da União, de suas autarquias ou empresas públicas. No caso de homicídio (crime doloso contra a vida), a competência é do Tribunal do Júri (Art. 5º, XXXVIII, 'd', da CF/88), que será da Justiça Estadual comum, a menos que fique demonstrado que o crime foi praticado em detrimento de bens, serviços ou interesse da União (hipótese em que seria do Tribunal do Júri Federal), mas nunca pela mera justificativa de que 'a ela compete o julgamento dos servidores públicos federais'.\n\n**Dispositivo legal**\n\n[Artigo 5º, inciso XXXVIII, alínea 'd', e Artigo 109, inciso IV, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art109)",
+        "source_reference": null
+      },
+      "source_content_hash": "cdb7289d9ab4aef130f400f9fd35e39fa4dccd95f58aed30dc52552aff400658"
+    }
+  ]
+}

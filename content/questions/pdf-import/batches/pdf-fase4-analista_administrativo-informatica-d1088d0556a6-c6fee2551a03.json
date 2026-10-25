@@ -1,0 +1,245 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-analista_administrativo-informatica-d1088d0556a6-c6fee2551a03",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "d1088d0556a634bc0e47cc4b0194b18b7b11b50a2faaa9a150b68e740a974fa1",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "7b0e6efd1cd4387fd3b4024c7d594aa5aad8ca3c4f2146f6ddc96ab3d4597e20",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "c6fee2551a034e29fe97849373967274c2df1f6210e9b455945601ed6685978d",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:011",
+      "source_id": "analista_administrativo:11",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à tecnologia da informação, julgue os próximos itens.\n\nBancos de dados do modelo NoSQL são considerados orientados a objetos, pois armazenam os dados em formatos distintos dos utilizados em bancos de dados relacionais.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 11; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Banco de Dados",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Tecnologia da Informação",
+        "source_content_hash": "0c8be654d03dc6f7f5315e1e5c27550515edc48509608954ea3505a3fd060f15",
+        "original_numeric_id": 11,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "banco-de-dados",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNo ecossistema de bancos de dados **NoSQL**, os bancos orientados a documentos (como MongoDB) e bancos de grafos representam e manipulam estruturas de dados complexas como objetos nativos (JSON/BSON), permitindo que entidades da camada de aplicação sejam persistidas diretamente sem a necessidade de mapeamento objeto-relacional complexo (ORM), alinhando-se aos paradigmas da orientação a objetos.",
+        "source_reference": null
+      },
+      "source_content_hash": "59cac2ff3b6e562e705a5a56fbaf060fa5edc78161f5e5a2c1eeca75b015d957"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:013",
+      "source_id": "analista_administrativo:13",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à tecnologia da informação, julgue os próximos itens.\n\nEm uma planilha Excel, a divisão de qualquer número por ZERO apresentará o erro #VALOR!, o que indica que um dos operandos está inválido.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 13; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ferramentas de Escritório (Microsoft Office e LibreOffice)",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Tecnologia da Informação",
+        "source_content_hash": "e41fcac6ed1a1ff51e6382213ea4806e03494413367e320e236195c3a920aeae",
+        "original_numeric_id": 13,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. No Microsoft Excel, a tentativa de realizar a divisão de qualquer número por zero (0) ou por uma célula vazia resulta no erro `#DIV/0!`, e não no erro `#VALOR!`.\n\nO erro `#VALOR!` é exibido quando a fórmula contém tipos de dados incompatíveis, como a tentativa de realizar operações matemáticas padrão utilizando células que contêm texto em vez de números, ou quando há argumentos incorretos em uma função.\n\n**Detalhe da pegadinha:** O examinador inverteu a associação dos erros clássicos do Excel, atribuindo a divisão por zero ao erro de tipo de dado inválido (`#VALOR!`).",
+        "source_reference": null
+      },
+      "source_content_hash": "007bcc3ce1374437f02bc6178ca8d8d31253f57bd00cf80b6e0816ba0d4015a3"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:014",
+      "source_id": "analista_administrativo:14",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à tecnologia da informação, julgue os próximos itens.\n\nDado com identificação genética ou biométrica de pessoas naturais é definido como dado pessoal sensível pela Lei n.º 13.709/2018.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 14; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Conceitos de Internet, Navegadores e Pesquisa Avançada",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Tecnologia da Informação",
+        "source_content_hash": "83620de7a014a8fab4a90eb77b6e33ffb8682b29c0dc73ed8f3bd8cd9e14793f",
+        "original_numeric_id": 14,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/_ato2018-2022/2018/lei/l13709.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. De acordo com a Lei Geral de Proteção de Dados Pessoais (LGPD) — Lei nº 13.709/2018 —, os dados genéticos ou biométricos, quando vinculados a uma pessoa natural, são expressamente classificados como dados pessoais sensíveis.\n\nO art. 5º, inciso II, da referida lei define dado pessoal sensível como aquele que versa sobre origem racial ou étnica, convicção religiosa, opinião política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, bem como dado genético ou biométrico, quando vinculado a uma pessoa natural.\n\n### Dispositivo legal\nArt. 5º, inciso II, da Lei nº 13.709/2018.",
+        "source_reference": null
+      },
+      "source_content_hash": "68c36e8fb4bcb4b921a45bea2fd277dea839c8ae750d3f8a176f08c86c79dfc3"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:015",
+      "source_id": "analista_administrativo:15",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à tecnologia da informação, julgue os próximos itens.\n\nSegundo a Lei n.º 12.527/2011, pedido de acesso a informações de órgãos e entidades públicos deve ser acompanhado do motivo que levou à solicitação.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 15; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos de Internet, Navegadores e Pesquisa Avançada",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Tecnologia da Informação",
+        "source_content_hash": "cb0464ef96187ca5b3a914bcafa68949599cafaead4f5188d28adcfdd8607451",
+        "original_numeric_id": 15,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. De acordo com a Lei de Acesso à Informação (LAI) — Lei nº 12.527/2011 —, o cidadão não precisa justificar o motivo de sua solicitação para obter acesso a informações públicas.\n\nO art. 10, § 3º, da referida lei proíbe expressamente quaisquer exigências relativas aos motivos determinantes da solicitação de informações de interesse público.\n\n**Detalhe da pegadinha:** O examinador inverteu a regra da transparência pública ao afirmar que o pedido deve ser acompanhado do motivo, o que contraria o princípio de que a informação sob a guarda do Estado é pública e o seu acesso é a regra, dispensando justificativas.\n\n### Dispositivo legal\nArt. 10, § 3º, da Lei nº 12.527/2011.",
+        "source_reference": null
+      },
+      "source_content_hash": "650baa6f5de2f79dc04b99ab955b7ab28fde83d53dd65f4933e9b54c9e4e8f0a"
+    }
+  ]
+}

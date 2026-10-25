@@ -1,0 +1,795 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_do_seguro_social-direito-previdenciario-8356184f677b-38e68f16654e",
+  "source": {
+    "file_name": "tecnico_do_seguro_social_ATUALIZADO.json",
+    "sha256": "8356184f677b1f67db7c2ca11e127e96c825e8169801c0b8b25dcfb5ffc09cf5",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_do_seguro_social.json",
+      "original_source_sha256": "de5b10d2a1ac5bee023c723ca65187afb7622a283e7467ef7e8b4dd19094f663",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "38e68f16654e009c65a23fe4727f481b2512e574aaaf111eb198f469235f03c5",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-previdenciario",
+    "name": "Direito Previdenciário"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:076",
+      "source_id": "tecnico_do_seguro_social:76",
+      "question_type": "true_false",
+      "statement_markdown": "Paulo aposentou-se por invalidez em 5 de dezembro de 2015.\n\nJoaquim obteve, fraudulentamente, benefício previdenciário em 5 de dezembro de 2015.\n\nMatias sofreu acidente de trabalho em 5 de dezembro de 2015.\n\nJonas encontra-se impossibilitado de trabalhar por haver adquirido doença incapacitante.\n\nConsiderando esses dados hipotéticos, julgue os itens que se seguem.\n\nJonas deve solicitar o benefício previdenciário em até cinco anos, contados da data em que ele foi acometido pela doença incapacitante.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 76; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Benefícios do Regime Geral de Previdência Social (RGPS)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "4eeb90ea0b49f12bbe30fd0b1bfd28775969cdff11979744e5e07df0edcbe869",
+        "original_numeric_id": 76,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "beneficios-previdenciarios-regime-geral-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O direito fundamental à obtenção de benefício previdenciário (fundo do direito) é **imprescritível**. \n\nO prazo de 5 (cinco) anos mencionado na legislação previdenciária refere-se exclusivamente à **prescrição das parcelas mensais vencidas e não reclamadas** (prescrição quinquenal), conforme o parágrafo único do art. 103 da Lei nº 8.213/1991. \n\nIsso significa que Jonas pode solicitar o benefício a qualquer tempo após o acometimento da doença incapacitante, mas somente receberá as parcelas retroativas referentes aos últimos 5 anos contados retroativamente a partir da data do seu requerimento.\n\n### Dispositivo legal\n* **Lei nº 8.213/1991, art. 103, parágrafo único**\n* Disponível em: [Portal do Planalto - Lei nº 8.213/1991](https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "a6ddcc7164aaa97728b5474f74a0e2314fbbe51cb39d6a2d02fe90d76e72e3ed"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:079",
+      "source_id": "tecnico_do_seguro_social:79",
+      "question_type": "true_false",
+      "statement_markdown": "A empresa W descontou a contribuição previdenciária devida pelos trabalhadores e não a repassou à previdência social.\n\nA empresa X deixou de recolher as contribuições previdenciárias devidas, por estar passando por dificuldades financeiras.\n\nA empresa Y declarou salário de trabalhador inferior ao efetivamente pago, para reduzir contribuição previdenciária devida.\n\nA empresa Z pagou quantia anteriormente devida e subtraída à previdência social antes da prolação de sentença de primeiro grau.\n\nNo que se refere a essas situações hipotéticas, julgue os seguintes itens.\n\nA empresa W cometeu apropriação indébita previdenciária.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 79; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Regime Geral de Previdência Social – RGPS",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "0846a5c7dce82220b425d76dfa85f39c5bb096cbbfa417a3398e7a01dd3fed29",
+        "original_numeric_id": 79,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-geral-de-previdencia-social-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nO crime de **apropriação indébita previdenciária** (Art. 168-A do Código Penal) consiste em *\"deixar de repassar à previdência social as contribuições recolhidas dos contribuintes, no prazo e forma legal ou convencional\"* (ou seja, valores que foram formalmente descontados da remuneração de empregados ou terceiros, mas retidos indevidamente pela empresa).\n\nNa situação da empresa W, a conduta envolveu a omissão, prestação de declarações falsas ou inserção de dados inexatos em folha de pagamento ou guias oficiais para reduzir ou suprimir o montante do tributo devido, conduta que tipifica o crime de **sonegação de contribuição previdenciária** (Art. 337-A do CP), e não apropriação indébita.",
+        "source_reference": null
+      },
+      "source_content_hash": "25c8e06a9989ab3b603237319ec79009e249a63bc67e0cfdf757832da697caec"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:080",
+      "source_id": "tecnico_do_seguro_social:80",
+      "question_type": "true_false",
+      "statement_markdown": "A empresa W descontou a contribuição previdenciária devida pelos trabalhadores e não a repassou à previdência social.\n\nA empresa X deixou de recolher as contribuições previdenciárias devidas, por estar passando por dificuldades financeiras.\n\nA empresa Y declarou salário de trabalhador inferior ao efetivamente pago, para reduzir contribuição previdenciária devida.\n\nA empresa Z pagou quantia anteriormente devida e subtraída à previdência social antes da prolação de sentença de primeiro grau.\n\nNo que se refere a essas situações hipotéticas, julgue os seguintes itens.\n\nA empresa X praticou o delito de sonegação previdenciária.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 80; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Regime Geral de Previdência Social – RGPS",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "70f6536cde794e73da79c629d142e3880353aa45fa49d4555e8b912850a9ac3c",
+        "original_numeric_id": 80,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del2848compilado.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-geral-de-previdencia-social-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nO crime de **sonegação de contribuição previdenciária** está tipificado no Artigo 337-A do Código Penal:\n\n*\"Art. 337-A. Suprimir ou reduzir contribuição social previdenciária e qualquer acessório, mediante as seguintes condutas:*  \n*I - omitir de folha de pagamento da empresa ou de documento de informações previsto pela legislação previdenciária segurados empregado, empresário, trabalhador avulso ou trabalhador autônomo ou a este equiparado que lhe prestem serviços;*  \n*II - deixar de lançar mensalmente nos títulos próprios da contabilidade da empresa as quantias descontadas dos segurados ou as devidas pelo empregador...;*  \n*III - omitir, total ou parcialmente, receitas ou lucros auferidos, remunerações pagas ou creditadas e demais fatos geradores...\"*.\n\nA conduta da empresa X amolda-se perfeitamente aos núcleos do tipo do Art. 337-A do CP.",
+        "source_reference": null
+      },
+      "source_content_hash": "a206c129774e1bea40c1d73c6774cdd6ccf65f0ecd1768a3dcb6cb954c76f5a9"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:083",
+      "source_id": "tecnico_do_seguro_social:83",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação aos recursos das decisões administrativas no âmbito do procedimento previdenciário, julgue os itens subsequentes.\n\nCompete ao Conselho de Recursos da Previdência Social julgar os recursos de ofício interpostos contra decisões que tenham anulado lançamento de crédito previdenciário.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 83; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Regime Geral de Previdência Social – RGPS",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "01d990268418a517511f85faa1ac4d4add106164762498fd788f6f5f0e0a1c11",
+        "original_numeric_id": 83,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11457.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-geral-de-previdencia-social-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA fiscalização, lançamento, cobrança e o contencioso administrativo relativo a **créditos e contribuições tributárias previdenciárias** foram transferidos e unificados no âmbito da Secretaria Especial da Receita Federal do Brasil (RFB) pela Lei nº 11.457/2007.\n\nPortanto, os recursos de ofício contra decisões que anulam lançamentos tributários previdenciários são de competência dos órgãos do contencioso fiscal da Receita Federal e do Conselho Administrativo de Recursos Fiscais (CARF), e não do Conselho de Recursos da Previdência Social (CRPS), cuja atribuição jurisdicional administrativa versa essencialmente sobre o reconhecimento de direitos a benefícios previdenciários e assistenciais geridos pelo INSS.",
+        "source_reference": null
+      },
+      "source_content_hash": "95c5d53d576da9a7bc45b228f030241bcf971da19498d835d70cba7cd2d1c795"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:084",
+      "source_id": "tecnico_do_seguro_social:84",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação aos recursos das decisões administrativas no âmbito do procedimento previdenciário, julgue os itens subsequentes.\n\nCompete ao Conselho de Recursos da Previdência Social julgar os recursos interpostos contra decisões proferidas em processos de supervisão e de fiscalização de regimes próprios de previdência social.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 84; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Regime Geral de Previdência Social – RGPS",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "b6e617cb084afcf6e97e60c3ee4e39ebece9cbb91edf7ebbb2b03234dcfa133c",
+        "original_numeric_id": 84,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "regime-geral-de-previdencia-social-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nCom as alterações estruturais promovidas no âmbito da previdência e consolidadas no Regimento Interno do Conselho de Recursos da Previdência Social (CRPS), passou a integrar o rol de atribuições do Conselho julgar os recursos decorrentes de processos administrativos sancionadores, fiscalizatórios e de supervisão dos **Regimes Próprios de Previdência Social (RPPS)** aplicados pelo órgão central de regulação e supervisão previdenciária da União.",
+        "source_reference": null
+      },
+      "source_content_hash": "8d4549192d3800c5bb11bc7ad825f87c340697b84ec2f700bbb86520607cbfe1"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:087",
+      "source_id": "tecnico_do_seguro_social:87",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito ao plano de benefícios da previdência social, julgue os itens a seguir.\n\nÉ constitucional o reconhecimento do direito previdenciário à pensão por morte para a pessoa que tenha mantido, durante longo período e com aparência familiar, união com pessoa casada, porquanto o concubinato se equipara, para fins de proteção estatal, às uniões afetivas resultantes do casamento e da união estável.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 87; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Benefícios do Regime Geral de Previdência Social (RGPS)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "cc940d9790f44a12741775d2169a1e08bf2dcff117add9713289a05fde1bd2d9",
+        "original_numeric_id": 87,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://portal.stf.jus.br"
+      },
+      "topics": [
+        {
+          "topic_id": "beneficios-previdenciarios-regime-geral-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nO Supremo Tribunal Federal, ao julgar com repercussão geral o **Tema 529** (RE 1.045.273/SE), fixou a seguinte tese constitucional vinculante:\n\n*\"A preexistência de casamento ou de união estável de um dos conviventes, ressalvada a exceção do artigo 1.723, § 1º, do Código Civil, impede o reconhecimento de novo vínculo referente ao mesmo período, inclusive para fins previdenciários, em virtude da consagração do dever de fidelidade e do princípio da monogamia pelo ordenamento jurídico constitucional brasileiro.\"*\n\nPortanto, o ordenamento jurídico não confere proteção previdenciária a uniões simultâneas/paralelas ou concubinato adulterino para rateio de pensão por morte.",
+        "source_reference": null
+      },
+      "source_content_hash": "9be46a19d15860c2504a0956aa20cbf9bd7a9d8bc6670df3248a2471c5e94c81"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:096",
+      "source_id": "tecnico_do_seguro_social:96",
+      "question_type": "true_false",
+      "statement_markdown": "Em relação aos serviços previdenciários, julgue os itens seguintes.\n\nNa hipótese de habilitação e reabilitação profissional, é vedada a concessão de auxílio para tratamento ou exame fora do domicílio do beneficiário.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 96; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Benefícios do Regime Geral de Previdência Social (RGPS)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "792b884d7b186cd7fb9b04f033897e0bd6f773ff377739df1ba90dfc50153dfd",
+        "original_numeric_id": 96,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8213cons.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "beneficios-previdenciarios-regime-geral-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. Ao contrário do que afirma a assertiva, a legislação previdenciária prevê expressamente a concessão de auxílio para tratamento ou exame fora do domicílio do beneficiário quando necessário para o processo de habilitação e reabilitação profissional. O objetivo é garantir que o segurado tenha condições materiais de se deslocar e realizar os procedimentos necessários para sua reinserção no mercado de trabalho, caso os recursos não estejam disponíveis em sua localidade de residência.\n\n**Dispositivo legal:**\n\nArt. 91 da Lei nº 8.213/1991.",
+        "source_reference": null
+      },
+      "source_content_hash": "aa4574e9340286e44111b166925948efe0b0589ba196564a3e2444a3493b7578"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:099",
+      "source_id": "tecnico_do_seguro_social:99",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos benefícios decorrentes de legislações especiais e do seguro defeso, julgue os próximos itens.\n\nA pensão especial devida aos ex-combatentes da Segunda Guerra Mundial e a seus dependentes corresponde à pensão militar deixada por segundo-tenente das Forças Armadas.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 99; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Benefícios do Regime Geral de Previdência Social (RGPS)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "6e9d97319aebca21a1a42c490bbea14795f29c1988e7e874526c650686d63e75",
+        "original_numeric_id": 99,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "beneficios-previdenciarios-regime-geral-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nConforme estabelece o Artigo 53, inciso II, do Ato das Disposições Constitucionais Transitórias (ADCT) da CF/88, regulamentado pela Lei nº 8.059/1990:\n\n*\"Art. 53. Ao ex-combatente da Segunda Guerra Mundial, da Força Expedicionária Brasileira, da Força Aérea Brasileira, da Marinha de Guerra e da Marinha Mercante... são assegurados os seguintes direitos:*  \n*...*  \n*II - **pensão especial correspondente à deixada por segundo-tenente das Forças Armadas**, que poderá ser requerida a qualquer tempo, sendo inacumulável com quaisquer rendimentos percebidos dos cofres públicos, exceto os benefícios previdenciários...\"*.\n\nA assertiva transcreve exatamente a previsão constitucional e legal de regência.",
+        "source_reference": null
+      },
+      "source_content_hash": "3bc21603435c60b2a7e9cd786fc73fed1aeba568f320ab6a26ba84dc5d002279"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:100",
+      "source_id": "tecnico_do_seguro_social:100",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos benefícios decorrentes de legislações especiais e do seguro defeso, julgue os próximos itens.\n\nA pensão especial concedida às vítimas de hemodiálise de Caruaru não será transmitida aos seus sucessores.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 100; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Benefícios do Regime Geral de Previdência Social (RGPS)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "e2a057b5451a371eafffc51894b37a1c24afe2ba2d9a5205fd3a913985a4f334",
+        "original_numeric_id": 100,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l9422.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "beneficios-previdenciarios-regime-geral-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A pensão especial instituída em favor dos dependentes das vítimas fatais do evento conhecido como \"tragédia da hemodiálise de Caruaru\" possui caráter personalíssimo em relação ao grupo de beneficiários originais. \n\nConforme a legislação de regência (Lei nº 9.422/1996), o benefício não se transmite aos sucessores dos beneficiários e extingue-se definitivamente com a morte do último dependente elegível, sendo vedada qualquer forma de reversão ou transmissão hereditária.\n\n**Dispositivo legal**\n\n[Artigo 4º da Lei nº 9.422, de 24 de dezembro de 1996.](https://www.planalto.gov.br/ccivil_03/leis/l9422.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "8a15bdf3f18f3c10dbd70eb8a635b28a92f1424c857b430816bf1f0df0e7c4e0"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:103",
+      "source_id": "tecnico_do_seguro_social:103",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos benefícios decorrentes de legislações especiais e do seguro defeso, julgue os próximos itens.\n\nA pensão especial concedida às pessoas atingidas pela hanseníase, ressalvado o direito à opção, não é acumulável com indenizações que a União venha a pagar em decorrência de responsabilização civil sobre os mesmos fatos, bem como não impede a fruição de qualquer benefício previdenciário.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 103; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Benefícios do Regime Geral de Previdência Social (RGPS)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "88e003efa508ca4c092ba0d12c712fcff4be7a2723e9c4911b46a4ae47011b43",
+        "original_numeric_id": 103,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2007/lei/l11520.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "beneficios-previdenciarios-regime-geral-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A pensão especial concedida às pessoas atingidas pela hanseníase que foram submetidas a isolamento e internação compulsórios possui regras específicas de acumulação estabelecidas pela Lei nº 11.520/2007.\n\nDe acordo com a legislação, essa pensão especial:\n1. **Não é acumulável** com indenizações que a União venha a pagar em decorrência de responsabilização civil sobre os mesmos fatos, ressalvado o direito de opção do beneficiário.\n2. **Não impede** a fruição de qualquer benefício previdenciário, ou seja, o beneficiário pode receber a pensão especial cumulativamente com aposentadorias, pensões por morte ou outros benefícios do Regime Geral de Previdência Social (RGPS).\n\n### Dispositivo legal\n* **Lei nº 11.520/2007, Art. 3º**:\n  > \"Art. 3º A pensão especial de que trata esta Lei é mensal, vitalícia e intransferível, e não poderá ser acumulada com indenizações que a União venha a pagar em decorrência de responsabilização civil sobre os mesmos fatos, ressalvado o direito de opção.\n  > Parágrafo único. O recebimento da pensão especial não impede a fruição de qualquer benefício previdenciário.\"",
+        "source_reference": null
+      },
+      "source_content_hash": "36bcd0aa887009015990f514b1ba72ec55b652116b78105082ec09f35cb9f552"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:105",
+      "source_id": "tecnico_do_seguro_social:105",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos benefícios decorrentes de legislações especiais e do seguro defeso, julgue os próximos itens.\n\nO seguro-desemprego concedido, durante o período de defeso, ao pescador profissional que exerce a atividade pesqueira de forma artesanal é transferível a outrem.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 105; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Benefícios do Regime Geral de Previdência Social (RGPS)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "1c4fa538a31cbdcd86740d910d1d6f41fa256a67727d0470a6d5d24beab86055",
+        "original_numeric_id": 105,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l10779.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "beneficios-previdenciarios-regime-geral-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nO seguro-desemprego concedido ao pescador profissional artesanal durante o período de defeso da atividade pesqueira (conhecido como **seguro-defeso**, regulamentado pela Lei nº 10.779/2003) é um benefício de natureza estritamente **pessoal e intransferível**.\n\nO Artigo 2º da Lei nº 10.779/2003 veda expressamente qualquer hipótese de cessão, transferência a terceiros ou substituição por outrem, tendo o benefício caráter alimentar vinculado unicamente ao próprio pescador artesanal que preenche os requisitos e fica temporariamente impedido de exercer seu ofício.",
+        "source_reference": null
+      },
+      "source_content_hash": "308a826481d0e74fd192629c16b08fd7f069a74bace41800a95bcb46120b2fcd"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:107",
+      "source_id": "tecnico_do_seguro_social:107",
+      "question_type": "true_false",
+      "statement_markdown": "A seguridade social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade, destinado a assegurar o direito relativo à saúde, à previdência e à assistência social. A esse respeito, julgue os itens a seguir.\n\nO direito à saúde deve ser garantido mediante políticas sociais e econômicas que assegurem o acesso universal e igualitário às ações e aos serviços voltados para sua promoção, proteção e recuperação, promovidos por meio de rede regionalizada e hierarquizada e integrados em sistema único.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 107; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Evolução Histórica e Princípios da Seguridade Social",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "d519af92f8b34952efff2a945503583b3bb153ea19b513a29983e21dbf0a8d30",
+        "original_numeric_id": 107,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "seguridade-social-principios-e-diretrizes-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA assertiva distorce a estrutura conceitual estabelecida pelo Artigo 196 e pelo Artigo 198 da Constituição Federal de 1988 (reproduzidos no Art. 2º da Lei nº 8.212/1991):\n\n1. Conforme a CF/88 (Art. 196), as políticas sociais e econômicas do Estado visam primariamente à **\"redução do risco de doença e de outros agravos\"** (núcleo finalístico omitido pela assertiva);\n2. O acesso universal e igualitário destina-se às ações e serviços de promoção, proteção e recuperação da saúde;\n3. O Art. 198 da CF/88 estabelece que são as **ações e serviços públicos de saúde** que integram uma rede regionalizada e hierarquizada e constituem um sistema único (SUS), e não a generalidade de políticas econômicas.\n\nA fusão e descaracterização dos conceitos literais da seguridade social tornam a assertiva incorreta perante a banca examinadora.",
+        "source_reference": null
+      },
+      "source_content_hash": "5283367dd430e38ecf87c91adea0cc61153bd08f5cb98046e506376af57a724c"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:108",
+      "source_id": "tecnico_do_seguro_social:108",
+      "question_type": "true_false",
+      "statement_markdown": "A seguridade social compreende um conjunto integrado de ações de iniciativa dos poderes públicos e da sociedade, destinado a assegurar o direito relativo à saúde, à previdência e à assistência social. A esse respeito, julgue os itens a seguir.\n\nA previdência social tem a finalidade de assegurar aos seus contribuintes a proteção em face de eventos como incapacidade, idade avançada, desemprego voluntário e reclusão ou morte daqueles de quem dependam economicamente.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 108; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Evolução Histórica e Princípios da Seguridade Social",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "3bbecb1d99b23a866c62db0c7da42e50f789c8246e97c4c6497eb97df17025cd",
+        "original_numeric_id": 108,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "seguridade-social-principios-e-diretrizes-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nO Artigo 201, inciso II, da Constituição Federal de 1988 e o Artigo 1º, inciso II, da Lei nº 8.213/1991 estabelecem com precisão:\n\n*\"Art. 201. A previdência social será organizada sob a forma do Regime Geral de Previdência Social, de caráter contributivo e de filiação obrigatória... e atenderá, nos termos da lei, a:*  \n*...*  \n*II - proteção ao trabalhador em situação de **desemprego involuntário**;\"*.\n\nA previdência social não protege nem concede amparo financeiro a quem se encontra em desemprego voluntário (quem pede demissão ou se afasta voluntariamente do mercado de trabalho).",
+        "source_reference": null
+      },
+      "source_content_hash": "9940881a55ff167c8d9c7e8fe06cace2e623f4faa19d1c29c14604a66929033a"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:119",
+      "source_id": "tecnico_do_seguro_social:119",
+      "question_type": "true_false",
+      "statement_markdown": "Em relação à certidão de tempo de contribuição, à contagem recíproca e à compensação previdenciária, julgue os itens a seguir.\n\nÉ vedada a emissão de certidão de tempo de contribuição referente a períodos de contribuição posteriores à data da aposentadoria no RGPS.",
+      "exam_board": "CEBRASPE",
+      "institution": "INSS",
+      "position_name": "Técnico do Seguro Social",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_seguro_social.pdf, questão 119; tecnico_do_seguro_social_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Benefícios do Regime Geral de Previdência Social (RGPS)",
+      "source_metadata": {
+        "source_file": "tecnico_do_seguro_social.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Previdenciário",
+        "source_content_hash": "2da6c723158798df6accef3e5f29f2547f437ff569b5a31cd131eb0613adcd87",
+        "original_numeric_id": 119,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/decreto/d3048.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "beneficios-previdenciarios-regime-geral-rgps",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A legislação previdenciária expressamente autoriza a emissão de Certidão de Tempo de Contribuição (CTC) para períodos de contribuição posteriores à data da aposentadoria no Regime Geral de Previdência Social (RGPS). Essa possibilidade existe para que o segurado possa averbar esse tempo em outro regime de previdência (Regime Próprio de Previdência Social - RPPS), desde que esse período posterior não tenha sido utilizado para a concessão da própria aposentadoria no RGPS.\n\n**Dispositivo legal**\n\n[Decreto nº 3.048/1999, Art. 125, § 3º](https://www.planalto.gov.br/ccivil_03/decreto/d3048.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "7265bfef0c25e7526f38aebe97fa8a96fb895fcb11dad6a81b68a7faecffa7e9"
+    }
+  ]
+}

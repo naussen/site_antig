@@ -1,0 +1,135 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-cargo30-portugues-ddedf305b20e-093abc7bf858",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "ddedf305b20e0a7dfd48e2ef1da2d3823dc4e437478b3edd7e62ad4a771ae524",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "ade70669f0c96aa17db7bd4f2a5081dabefc8b060fd23fdfaaa31934743bc23f",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "093abc7bf858e29ee67ff46ce09f095b7b754507cb03acaddbae8f7111ad3212",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:019",
+      "source_id": "cargo30:19",
+      "question_type": "true_false",
+      "statement_markdown": "A proximidade não nos tem tornado mais solidários e amigos. À luz da crescente mercantilização das relações humanas, quase tudo é encarado em termos de lucro e benefício. Não importa que guerras fratricidas ameacem a existência de nações africanas. Os países metropolitanos continuarão fabricando e exportando armas — que a África não produz — e permanecerão insensíveis ao genocídio se, no palco das operações, não houver diamantes, petróleo ou qualquer outra riqueza que justifique a intervenção das tropas globocolonizadas, como ocorreu no Iraque e na Iugoslávia.\n\nIdem, ibidem.\n\nTendo o texto acima como referência e considerando o cenário mundial contemporâneo, julgue os itens que se seguem.\n\nNo texto, a substituição de “À luz” (l.2) por Sob a luz prejudicaria a coerência e a correção gramatical do período.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 19",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "b8e7bded3fab098df311a8b80a65c686d64421b87a9a9d69d2d4c8593967638a",
+        "original_numeric_id": 19,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA locução prepositiva \"à luz de\" possui valor conotativo/figurado equivalente a \"em virtude de\", \"sob o prisma de\", \"considerando-se\". No período: *\"À luz da crescente mercantilização das relações humanas, quase tudo é encarado em termos de lucro e benefício\"*, a substituição por *\"Sob a luz da crescente mercantilização...\"* mantém a correção gramatical e preserva integralmente a coerência textual e a relação semântica do enunciado.\n\nDessa forma, a afirmação de que a troca *prejudicaria* a coerência e a correção gramatical é incorreta.",
+        "source_reference": null
+      },
+      "source_content_hash": "d0ab59c16bf8bf0537b69c33518bca8eb78168eee034ed5731507d294c138a86"
+    },
+    {
+      "external_id": "pdf:cargo30:054",
+      "source_id": "cargo30:54",
+      "question_type": "true_false",
+      "statement_markdown": "O chefe de uma seção do DPF solicitou a um funcionário que transcrevesse uma conversa gravada. Recomendou que o diálogo fosse apresentado em forma de relato e que fossem respeitadas as regras da norma padrão da língua escrita. A seguir, são apresentados duas falas do diálogo e os respectivos relatos escritos pelo funcionário.\n\nFala 1\nIndivíduo X: Você tem certeza de que tinha dois carros aqui?\nIndivíduo Y: Tenho. Dois carros e uma bicicleta.\n\nFala 2\nIndivíduo X: O que você vai dizer se te chamarem para testemunhar?\nIndivíduo Y: Eu falo que estava escuro e que não vi nada. Além do mais, eu tava só de passagem.\n\nRelato 1\nO indivíduo X perguntou para o indivíduo Y se ele tinha certeza de que tinha dois carros no local onde estavam, e o indivíduo Y respondeu que tinha certeza, e que havia dois carros e uma bicicleta.\n\nRelato 2\nIndagado pelo indivíduo X sobre o que diria se o chamassem para testemunhar, o indivíduo Y respondeu que falaria que estava escuro, que não tinha visto nada e que, além do mais, estava só de passagem.\n\nJulgue os itens subseqüentes, relativos à redação de expedientes e à situação hipotética apresentada acima.\n\nO funcionário atenderia com objetividade ao que lhe foi solicitado se finalizasse o texto da seguinte maneira: Esperando estar cumprindo com meu dever, com todo respeito, alerto V.S.ª de que o indivíduo Y parece falsear os fatos, como concluí ao ouvir várias vezes e com bastante atenção, esta fita.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": "medium",
+      "source_reference": "cargo30.pdf, questão 54",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "f966a956a01125ab944d6042ac41b3763996df02adc0906ed1feb2df0fdfc813",
+        "original_numeric_id": 54,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA redação oficial rege-se estritamente pelos princípios da **impessoalidade**, **clareza** e **objetividade**.\n\nO funcionário recebeu a incumbência puramente técnica e funcional de transcrever e relatar com fidelidade à norma-padrão as falas gravadas. Ao encerrar o relato emitindo opiniões pessoais, impressões subjetivas e juízos de valor sobre o depoente (*\"Esperando estar cumprindo com meu dever... alerto V.S.ª de que o indivíduo Y parece falsear os fatos...\"*), o redator quebra a impessoalidade do expediente público e desvirtua o caráter objetivo do relatório solicitado.",
+        "source_reference": null
+      },
+      "source_content_hash": "4db55fa63c3937e919cd74b1eef09a5dbd9f0275de052ce066e4ac6a982630dc"
+    }
+  ]
+}

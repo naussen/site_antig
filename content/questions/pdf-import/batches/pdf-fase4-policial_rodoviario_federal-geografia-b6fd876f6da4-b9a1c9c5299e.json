@@ -1,0 +1,253 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-policial_rodoviario_federal-geografia-b6fd876f6da4-b9a1c9c5299e",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "b6fd876f6da47bfc670b5edf47a194cb0192c6a872db7d5acf3f5352d639cba7",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "d0a1c5718064db035e156dbeb8982317019ea8dde6c8349e0a1cc8366d1342df",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "b9a1c9c5299ed834a0c21297a67c4c748e6de6ba9a969b4cd7c8805c66c0140c",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "geografia",
+    "name": "Geografia"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:051",
+      "source_id": "policial_rodoviario_federal:51",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à rede de transportes no Brasil, julgue os itens que se seguem.\n\nA duplicação dos principais eixos rodoviários, a restruturação do modelo de investimento e de exploração das ferrovias e a expansão e o aumento da capacidade da malha ferroviária são considerados condições para o desenvolvimento das regiões brasileiras no que diz respeito às redes de transporte.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 51; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geografia Econômica e Matriz de Transportes no Brasil",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Geografia",
+        "source_content_hash": "64cc2c2aaa0f55f2266858a7aec876ea06cddfb73a25bb316648dc3bd91891bf",
+        "original_numeric_id": 51,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "infraestrutura-transportes-e-energia-no-brasil",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A infraestrutura de transportes no Brasil é historicamente marcada pela forte dependência do modal rodoviário e por gargalos logísticos que encarecem o escoamento de mercadorias. Nesse contexto, a duplicação dos principais eixos rodoviários, a reestruturação do modelo de investimentos e concessões ferroviárias, bem como a expansão e o aumento da capacidade das ferrovias, são apontados por planejadores e geógrafos como condições indispensáveis para integrar os mercados regionais, reduzir o \"Custo Brasil\" e promover o desenvolvimento socioeconômico equilibrado das diversas regiões brasileiras.",
+        "source_reference": null
+      },
+      "source_content_hash": "9790976139b3607cb92437ce104b1e63924e9e0d488abb731d97beb53cb99663"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:052",
+      "source_id": "policial_rodoviario_federal:52",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere à rede de transportes no Brasil, julgue os itens que se seguem.\n\nNa escala interurbana, o Brasil apresenta uma rede de transportes integrada, diversa e eficiente, o que resulta em integração regional e competitividade no contexto da economia nacional.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 52; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Geografia Econômica e Matriz de Transportes no Brasil",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Geografia",
+        "source_content_hash": "98f8a98a5f7f3e8c763aeacab746db413db92a6eb9f03421fb25e2ec809c3ba0",
+        "original_numeric_id": 52,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "infraestrutura-transportes-e-energia-no-brasil",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Ao contrário do que afirma a assertiva, a rede de transportes interurbana no Brasil não é integrada, diversa e eficiente. Historicamente, o sistema de transportes nacional apresenta uma forte concentração no modal rodoviário (rodoviarismo) e uma acentuada carência de integração intermodal (com ferrovias e hidrovias). Essa falta de diversidade e os constantes gargalos de infraestrutura geram custos logísticos elevados, o que compromete a eficiência, a integração regional plena e a competitividade da economia brasileira no cenário nacional e internacional.",
+        "source_reference": null
+      },
+      "source_content_hash": "905f5cd497b293c21ccb61810509a92662318d8a1c133bb8f5c19912e2a021e9"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:054",
+      "source_id": "policial_rodoviario_federal:54",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à estrutura urbana brasileira e às grandes metrópoles, julgue os itens subsecutivos.\n\nAs metrópoles brasileiras são arranjos populacionais acima de um milhão de habitantes que exercem influência direta sobre os demais níveis de cidades na rede urbana.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 54; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Geografia Urbana, Hierarquia e Rede de Cidades no Brasil",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Geografia",
+        "source_content_hash": "0efa3d65b5959cd2322aa06cb1159fa3e167c2ebf9042a9e5da37260ae6b4cc3",
+        "original_numeric_id": 54,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "populacao-urbanizacao-e-demografia-brasileira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nNo estudo Regiões de Influência das Cidades (REGIC), conduzido pelo Instituto Brasileiro de Geografia e Estatística (IBGE), as metrópoles situam-se no topo da hierarquia urbana brasileira: são grandes arranjos populacionais (geralmente com população superior a um milhão de habitantes) dotados de forte densidade funcional, serviços avançados e capacidade de polarização e comando direto sobre os demais centros e níveis urbanos da rede nacional.",
+        "source_reference": null
+      },
+      "source_content_hash": "6fc476110c455e916877cff75440aae33146101d46c50d2e98880e7616b679e5"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:055",
+      "source_id": "policial_rodoviario_federal:55",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à estrutura urbana brasileira e às grandes metrópoles, julgue os itens subsecutivos.\n\nOs arranjos populacionais de Campinas e Ribeirão Preto, no estado de São Paulo, e de Uberlândia, em Minas Gerais, configuram-se como metrópoles em ascensão na rede urbana brasileira e encontram-se no primeiro nível da hierarquia urbana.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 55; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Geografia Urbana, Hierarquia e Rede de Cidades no Brasil",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Geografia",
+        "source_content_hash": "3cdad86eeb7b6feaed9606dbdb8df65a8b7c321741c6d37872ddf709dcdd5f43",
+        "original_numeric_id": 55,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "populacao-urbanizacao-e-demografia-brasileira",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "De acordo com o estudo Regiões de Influência das Cidades (REGIC 2018), publicado pelo IBGE em 2020, a rede urbana brasileira é estruturada em cinco níveis hierárquicos principais: Metrópoles, Capitais Regionais, Centros Sub-regionais, Centros de Zona e Centros Locais. No primeiro nível (Metrópoles), o arranjo populacional de Campinas (SP) é classificado como Metrópole, sendo a única cidade que não é capital de estado a figurar nessa categoria. Por outro lado, os arranjos populacionais de Ribeirão Preto (SP) e Uberlândia (MG) pertencem ao segundo nível da hierarquia urbana, sendo classificados, respectivamente, como Capital Regional A e Capital Regional B. Portanto, a afirmação de que todos esses municípios encontram-se no primeiro nível da hierarquia urbana está incorreta.",
+        "source_reference": null
+      },
+      "source_content_hash": "ef9a0e8cd34a2ca836ffcb932863b606074b9cbccfe52e952c803ad644d7b749"
+    }
+  ]
+}

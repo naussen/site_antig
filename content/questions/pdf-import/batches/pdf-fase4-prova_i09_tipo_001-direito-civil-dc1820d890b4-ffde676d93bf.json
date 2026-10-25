@@ -1,0 +1,463 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_i09_tipo_001-direito-civil-dc1820d890b4-ffde676d93bf",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "dc1820d890b4f456f6a21dcfb093157696cf06a42b0374997d10a8cfc971f2a7",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "0b163a9271f0d9d81933ba55370885fc8591ac83624df1b1bb86251a689ef012",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ffde676d93bf950991b9e5998f4757217657c35939f00012203cb30c7a277c7d",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-civil",
+    "name": "Direito Civil"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:041",
+      "source_id": "prova_i09_tipo_001:41",
+      "question_type": "multiple_choice",
+      "statement_markdown": "João, casado com Dora, possui quatro filhos: Ana, Fábio, Douglas e Mônica. Ana possui dezesseis anos e cinco meses; Fábio possui dezenove anos, mas é pródigo; Douglas possui vinte anos, mas é excepcional, sem desenvolvimento mental completo e Mônica possui vinte e cinco anos, mas, em razão de causa transitória, não pode exprimir a sua vontade. Nesta família, são incapazes, relativamente a certos atos, ou à maneira de os exercer",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 41; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Ana, Fábio e Douglas.",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "Ana e Douglas.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Ana, Fábio e Mônica.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Fábio, Douglas e Mônica.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Ana, apenas.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Dos Bens",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Civil",
+        "source_content_hash": "dc5e7d0d8a6660c4c98eaba9c0872b4c90e93b89ccfcea0231e28cf6830bab83",
+        "original_numeric_id": 41,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-doutrinaria",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A**.\n\nA ordem de vocação hereditária na sucessão legítima é disciplinada pelo art. 1.829 do Código Civil. Os descendentes herdam em primeiro lugar, em concorrência com o cônjuge sobrevivente, a depender do regime de bens do casamento.\n\nHavendo quatro filhos, todos herdam em partes iguais por cabeça (art. 1.835 do Código Civil). Se algum dos herdeiros for menor de idade (relativamente incapaz), a representação legal caberá ao genitor sobrevivente no exercício do poder familiar, sem prejuízo da preservação integral de seu quinhão hereditário legítimo.\n\nA alternativa A reflete precisamente as regras legais sucessórias aplicáveis à hipótese narrada.\n\n### Dispositivo legal\n[Código Civil, Art. 1.829 e Art. 1.835](https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "27130b487d8fa5f285d8ed5b9d105b4f6feddfd7e38dfc5dd85ccca5a6b59739"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:042",
+      "source_id": "prova_i09_tipo_001:42",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Murilo desapareceu em alto mar. Considerando que Murilo era casado e convivia maritalmente com Gabriela, que possui um filho maior, Carlos, e que seus pais, Marta e Manoel são vivos, declarada a sua ausência será nomeado seu curador",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 42; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Manoel, apenas.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Carlos, apenas.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Marta, apenas.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Gabriela, apenas.",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Marta ou Manoel.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Dos Bens",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Civil",
+        "source_content_hash": "596580102f580a3d9023a019cd938f5f2e747a75b584bce9f25a98db0eb55d82",
+        "original_numeric_id": 42,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-doutrinaria",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A nomeação de curador do ausente segue uma ordem de preferência legal estabelecida pelo Código Civil. \n\nO cônjuge do ausente é o curador legítimo prioritário, desde que não esteja separado judicialmente ou de fato por mais de dois anos antes da declaração da ausência. Como o enunciado informa que Murilo era casado e convivia maritalmente com Gabriela, ela preenche todos os requisitos legais para assumir a curatela de forma exclusiva, afastando os demais parentes.\n\n**Análise das alternativas incorretas:**\n* **A, C e E:** Os pais de Murilo (Manoel e Marta) só seriam chamados para exercer a curatela na falta do cônjuge, conforme a ordem de vocação estabelecida na legislação.\n* **B:** O filho Carlos, sendo descendente, também possui vocação subsidiária, sendo preterido pela presença do cônjuge habilitado.\n\n### Dispositivo legal\nArtigo 25, *caput* e § 1º, da Lei nº 10.406/2002 (Código Civil).\nURL oficial: https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "27a0c5a48e1c122d7ec4ed0bc6a08759455b34cee5b829a761388065cd61415d"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:044",
+      "source_id": "prova_i09_tipo_001:44",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Quando insuficientes para constituir a fundação, os bens a ela destinados serão, se de outro modo não dispuser o instituidor,",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 44; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "destinados à União.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "incorporados em outra fundação que se proponha a fim igual ou semelhante.",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "destinados ao Estado onde estiverem localizados.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "destinados ao Município onde estiverem localizados.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "a família deverá dar a destinação adequada.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Dos Bens",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Civil",
+        "source_content_hash": "7ef53d16144d71cb078af4853b3ebddef717679df942cb3e0eac5a2708079ff6",
+        "original_numeric_id": 44,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-doutrinaria",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Na instituição de uma fundação, pode ocorrer de os bens destinados pelo instituidor se mostrarem insuficientes para a sua criação. \n\nPara solucionar essa situação, a legislação civil determina que, caso o instituidor não tenha previsto outra destinação no ato de instituição, os referidos bens devem ser incorporados a outra fundação que possua finalidade igual ou semelhante.\n\n**Análise das alternativas incorretas:**\n* **A, C e D:** A transferência direta dos bens para entes federativos (União, Estado ou Município) não é a regra legal supletiva, ocorrendo apenas se expressamente disposto pelo instituidor.\n* **E:** A família do instituidor não detém a prerrogativa legal de decidir a destinação dos bens na hipótese de insuficiência, salvo disposição em contrário do próprio instituidor.\n\n### Dispositivo legal\nArtigo 63 da Lei nº 10.406/2002 (Código Civil).\nURL oficial: https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "8f17682114e77ced723d013bf34f0a641ba4852c9f3bd4a228244b640040689e"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:045",
+      "source_id": "prova_i09_tipo_001:45",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Tobias é agente diplomático do Brasil. Citado no estrangeiro, alegou extraterritorialidade sem designar onde tem, no país, o seu domicílio. Neste caso, Tobias",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 45; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "poderá ser demandado no domicílio de seus ascendentes ou no Distrito Federal.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "deverá ser demandado obrigatoriamente no Distrito Federal.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "deverá ser demandado obrigatoriamente no último ponto do território brasileiro onde teve domicílio.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "deverá ser demandado obrigatoriamente no domicílio de seus ascendentes e, na falta deles, no último ponto do território brasileiro onde o teve.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "poderá ser demandado no Distrito Federal ou no último ponto do território brasileiro onde teve domicílio.",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Dos Bens",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Civil",
+        "source_content_hash": "aa4ef5b3f733d92672094e0d7718d895fd1431f556047c28c50e128243df453d",
+        "original_numeric_id": 45,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-doutrinaria",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O domicílio do agente diplomático do Brasil que, citado no estrangeiro, alega extraterritorialidade sem indicar onde possui domicílio no território nacional, é determinado por regra especial de domicílio legal ou necessário.\n\nNessa situação específica, a legislação civil estabelece uma alternativa dupla para a propositura da ação: o agente poderá ser demandado no Distrito Federal ou no último ponto do território brasileiro onde teve domicílio.\n\n**Análise das alternativas incorretas:**\n* **A e D:** Incorretas ao incluírem o domicílio dos ascendentes como critério de fixação de competência, hipótese não prevista na legislação civil para este caso.\n* **B e C:** Incorretas ao utilizarem o termo \"obrigatoriamente\", limitando a indicação a apenas uma das localidades, quando a lei confere uma faculdade de escolha entre o Distrito Federal e o último domicílio no país.\n\n### Dispositivo legal\nArtigo 77 da Lei nº 10.406/2002 (Código Civil).\nURL oficial: https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "0a97785e3159442774595e2f6e30e8685cf565031231a34858356fb349a9c531"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:047",
+      "source_id": "prova_i09_tipo_001:47",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Quando, simultaneamente à determinada proposta de contrato, chegar ao conhecimento da outra parte a retratação do proponente, esta",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 47; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "deixa de ser obrigatória.",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "continua sendo obrigatória tendo em vista que a retratação deve chegar ao conhecimento do proponente antes da proposta.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "continua sendo obrigatória, mas a retratação pode gerar efeitos dependendo do seu conteúdo jurídico.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "passa a não existir, mas o proponente responderá pelas perdas e danos provenientes da retratação.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "passa a não existir, mas o proponente arcará com a multa prevista no Código Civil brasileiro de 10% sobre o valor da proposta.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Dos Bens",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Civil",
+        "source_content_hash": "14fcbeb825c780e59949e22e78afce404ed36cab8ba2b7a6eb5ba4a88d07d7f2",
+        "original_numeric_id": 47,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-doutrinaria",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda a perda da força obrigatória da proposta de contrato em razão da retratação tempestiva do proponente. Em regra, a proposta de contrato vincula o proponente, conforme o artigo 427 do Código Civil. Contudo, o artigo 428 do mesmo diploma legal estabelece hipóteses excepcionais em que a proposta deixa de ser obrigatória. Dentre essas hipóteses, o inciso IV prevê que a proposta perde sua obrigatoriedade se, antes dela ou simultaneamente, chegar ao conhecimento da outra parte a retratação do proponente. Como a retratação e a proposta chegaram ao mesmo tempo ao conhecimento do destinatário, a proposta perdeu sua força vinculante, deixando de ser obrigatória.\n\nAnálise das alternativas incorretas:\n- **B e C:** Estão incorretas porque afirmam que a proposta continuaria sendo obrigatória, contrariando o disposto no inciso IV do artigo 428.\n- **D e E:** Estão incorretas ao afirmar que a proposta \"passa a não existir\" e ao imputar dever de indenizar ou aplicação de multa de 10% sobre o valor da proposta, consequências que não possuem previsão no Código Civil para a hipótese de retratação tempestiva.\n\n**Dispositivo legal**\n\n[Artigo 428, inciso IV, da Lei nº 10.406/2002 (Código Civil)](https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "b3be1f488cb76a4e990f26a63a517828421d0625350a3e0c43e3bec3d187fd50"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:049",
+      "source_id": "prova_i09_tipo_001:49",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Com relação à Evicção, considere:\n\nI. As benfeitorias necessárias ou úteis, não abonadas ao que sofreu a evicção, serão pagas pelo alienante.\n\nII. Salvo estipulação em contrário, tem direito o evicto, além da restituição integral do preço ou das quantias que pagou, às custas judiciais e aos honorários do advogado por ele constituído.\n\nIII. Pode o adquirente demandar pela evicção, se sabia que a coisa era litigiosa, em razão da soberania do direito de demandar judicialmente.\n\nIV. Podem as partes, por cláusula expressa, reforçar, diminuir ou excluir a responsabilidade pela evicção.\n\nEstá correto o que se afirma APENAS em",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 49; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "II e IV.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "II, III e IV.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "I e IV.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "I, II e IV.",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "I, II e III.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Dos Bens",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Civil",
+        "source_content_hash": "2559a06cc4f959091994c97ff593ed264a265e8469e8ec21da548994a4c4ccaa",
+        "original_numeric_id": 49,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-doutrinaria",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a análise de assertivas sobre o instituto da evicção, que consiste na perda da coisa adquirida em virtude de decisão judicial ou ato administrativo que reconhece o direito anterior de um terceiro.\n\nAnálise das assertivas:\n- **Assertiva I (Correta):** De acordo com o artigo 453 do Código Civil, o alienante deve pagar ao evicto as benfeitorias necessárias ou úteis que não lhe forem abonadas por quem demandou a coisa.\n- **Assertiva II (Correta):** Conforme o artigo 450, inciso III, do Código Civil, salvo estipulação em contrário, o evicto tem direito, além da restituição integral do preço ou das quantias pagas, às custas judiciais e aos honorários do advogado por ele constituído.\n- **Assertiva III (Incorreta):** O artigo 457 do Código Civil veda expressamente que o adquirente demande pela evicção se sabia que a coisa era alheia ou litigiosa, pois a ciência prévia afasta a boa-fé necessária para a garantia.\n- **Assertiva IV (Correta):** O artigo 448 do Código Civil autoriza as partes, por meio de cláusula expressa, a reforçar, diminuir ou excluir a responsabilidade pela evicção.\n\nEstão corretas apenas as assertivas I, II e IV, o que fundamenta a escolha da alternativa D.\n\nAnálise das alternativas incorretas:\n- **A, B, C e E:** Estão incorretas porque incluem a assertiva III (que é falsa) ou deixam de contemplar alguma das assertivas verdadeiras (I, II ou IV).\n\n**Dispositivo legal**\n\n[Artigos 448, 450, inciso III, 453 e 457 da Lei nº 10.406/2002 (Código Civil)](https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "30586d8b81b592c325398f35fefa3943b6d894aa9dad5313eb8ee836925bdfd6"
+    }
+  ]
+}

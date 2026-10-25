@@ -1,0 +1,77 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-dpf14_009_01-informatica-d0899f712032-5522e9f42fd6",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "d0899f712032d803deb1ff38fb2396f1dd37d1ffb65c7f61503d0bd058c669c4",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "9a60cb42fbada4944e3fe1d0564604111314b54b0d72e1bd9ebc2e3a33818aef",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "5522e9f42fd6c5fb091b591e178fa02d47a1fc9eed6325828ae91997d395a5d5",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:018",
+      "source_id": "dpf14_009_01:18",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens subsequentes, relativos aos programas de navegação Microsoft Internet Explorer e Mozilla Firefox.\n\nNas versões recentes do Mozilla Firefox, há um recurso que mantém o histórico de atualizações instaladas, no qual são mostrados detalhes como a data da instalação e o usuário que executou a operação.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 18; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "48725199123b4bfefb09614fad45857cda714d41c3885f499b0353d82ab28850",
+        "original_numeric_id": 18,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O navegador Mozilla Firefox possui uma funcionalidade que registra o histórico de atualizações instaladas (acessível nas configurações do navegador). Esse histórico exibe informações como o nome da atualização, o tipo (se foi uma atualização de segurança ou de recursos), o status (se foi instalada com sucesso) e a data da instalação. No entanto, o recurso **não** registra nem exibe a identidade do usuário do sistema operacional que executou a operação. A inclusão desse detalhe invalida a afirmativa.",
+        "source_reference": null
+      },
+      "source_content_hash": "a3dc888fb7e8a6e2f72034e8a4f154d89053b7c6b10117068bc67bf513226d01"
+    }
+  ]
+}

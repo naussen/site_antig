@@ -1,0 +1,230 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-policial_rodoviario_federal-direito-processual-penal-108c80d4738c-ffb7a857e8b4",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "108c80d4738c4cf75248804f8f7a4e59a8ebc98742dd2b686f8053a30677b861",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "a311442a41cf96895e3ab6bc25877186df1354aab6cde616c4af291da4f66fd9",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "ffb7a857e8b401b34a9a4052b25016b47fe865c991ec95afe4ab0f78abeaa1d4",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-processual-penal",
+    "name": "Direito Processual Penal"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:105",
+      "source_id": "policial_rodoviario_federal:105",
+      "question_type": "true_false",
+      "statement_markdown": "Durante uma abordagem em via pública, tendo suspeitado do comportamento de determinado condutor e constatado rasura na carteira nacional de habilitação (CNH) por ele apresentada, o policial rodoviário, após efetuar busca no veículo e apreender mercadoria proibida, deu-lhe voz de prisão, em razão da prática de crime de ação penal pública.\nCom referência a essa situação hipotética, julgue os itens seguintes.\n\nA busca e a apreensão no veículo foram ilícitas, já que o policial as realizou sem autorização judicial.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 105; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ação Penal (AP)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Processual Penal",
+        "source_content_hash": "5d8589045802425e1f8926cd29507a2958265dc65ae344d97f83b34dcd04ad32",
+        "original_numeric_id": 105,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "acao-penal-ap",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A busca veicular realizada por agentes policiais prescinde de prévia autorização judicial quando houver fundada suspeita de que o veículo oculte armas, substâncias entorpecentes, instrumentos ou produtos de crime, ou objetos proibidos. No caso em tela, a fundada suspeita restou devidamente caracterizada pelo comportamento suspeito do condutor e pela constatação de rasura física na Carteira Nacional de Habilitação (CNH) apresentada aos policiais. Assim, a busca no veículo e a consequente apreensão da mercadoria proibida foram plenamente lícitas, amparadas pelas normas processuais penais vigentes.\n\n### Dispositivo legal\n* **Art. 240, § 2º, e Art. 244 do Código de Processo Penal (Decreto-Lei nº 3.689/1941)**\n* URL oficial: https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "a3a96d451b951c623eee0de9b1289c169b01f3082109a54ee39d1df2412a4229"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:106",
+      "source_id": "policial_rodoviario_federal:106",
+      "question_type": "true_false",
+      "statement_markdown": "Durante uma abordagem em via pública, tendo suspeitado do comportamento de determinado condutor e constatado rasura na carteira nacional de habilitação (CNH) por ele apresentada, o policial rodoviário, após efetuar busca no veículo e apreender mercadoria proibida, deu-lhe voz de prisão, em razão da prática de crime de ação penal pública.\nCom referência a essa situação hipotética, julgue os itens seguintes.\n\nA situação caracteriza flagrante próprio e, em até vinte e quatro horas após a realização da prisão, deverá ser entregue a nota de culpa ao preso.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 106; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Ação Penal (AP)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Processual Penal",
+        "source_content_hash": "1d986ac8e61bf941d3ca49b5756229567bd71b86b8b781e4dd8a657c3731a10c",
+        "original_numeric_id": 106,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "acao-penal-ap",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A situação descrita configura flagrante próprio (também denominado real ou perfeito), uma vez que o condutor foi surpreendido no momento exato em que cometia as infrações penais (uso de documento falso ao apresentar a CNH rasurada e transporte de mercadoria proibida), enquadrando-se no art. 302, inciso I, do Código de Processo Penal. Adicionalmente, a legislação processual penal determina que, no prazo máximo de 24 horas após a realização da prisão, deve ser entregue ao preso a nota de culpa, assinada pela autoridade, contendo o motivo da prisão, o nome do condutor e os das testemunhas.\n\n### Dispositivo legal\n* **Art. 302, I, e Art. 306, § 2º, do Código de Processo Penal (Decreto-Lei nº 3.689/1941)**\n* URL oficial: https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689compilado.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "0b64d7c7e7246c136c28a78457b2be0f0a4f06177f3ccf2f436d926401f27dde"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:107",
+      "source_id": "policial_rodoviario_federal:107",
+      "question_type": "true_false",
+      "statement_markdown": "Durante uma abordagem em via pública, tendo suspeitado do comportamento de determinado condutor e constatado rasura na carteira nacional de habilitação (CNH) por ele apresentada, o policial rodoviário, após efetuar busca no veículo e apreender mercadoria proibida, deu-lhe voz de prisão, em razão da prática de crime de ação penal pública.\nCom referência a essa situação hipotética, julgue os itens seguintes.\n\nA identificação criminal do condutor não poderá ser feita, uma vez que ele foi identificado civilmente pela CNH.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 107; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ação Penal (AP)",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Processual Penal",
+        "source_content_hash": "96b3d77ff79f7599e771a61b9a57145f7663dd036b05f57dcb95b1491fba2b1b",
+        "original_numeric_id": 107,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "acao-penal-ap",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Embora a Constituição Federal estabeleça como regra que o civilmente identificado não será submetido a identificação criminal (art. 5º, LVIII), a própria Carta Magna ressalva as hipóteses previstas em lei. A Lei nº 12.037/2009, que regulamenta esse dispositivo constitucional, prevê expressamente em seu art. 3º, inciso I, que a identificação criminal poderá ocorrer, mesmo com a apresentação de documento de identificação civil, se este apresentar rasura ou tiver indício de falsificação. Como o condutor apresentou uma CNH com rasura constatada pelo policial, a realização de sua identificação criminal é plenamente autorizada por lei.\n\n### Dispositivo legal\n* **Art. 5º, LVIII, da Constituição Federal de 1988 e Art. 3º, I, da Lei nº 12.037/2009**\n* URL oficial: https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm e https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2009/lei/l12037.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "6aa46c673fb8099792f1c9e3efc008605ecc6a55a49f2e08b8637ece3b4fca31"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:108",
+      "source_id": "policial_rodoviario_federal:108",
+      "question_type": "true_false",
+      "statement_markdown": "Durante uma abordagem em via pública, tendo suspeitado do comportamento de determinado condutor e constatado rasura na carteira nacional de habilitação (CNH) por ele apresentada, o policial rodoviário, após efetuar busca no veículo e apreender mercadoria proibida, deu-lhe voz de prisão, em razão da prática de crime de ação penal pública.\nCom referência a essa situação hipotética, julgue os itens seguintes.\n\nO policial poderá ser arrolado como testemunha, caso em que seu depoimento terá valor probatório superior ao do interrogatório do condutor.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "policial_rodoviario_federal.pdf, questão 108; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Da Prova",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Processual Penal",
+        "source_content_hash": "253ceb5ea0921236b6641e6ab3189ec1940f4aa0631b76c5194a74dea2e9d28d",
+        "original_numeric_id": 108,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "da-prova",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. No ordenamento processual penal brasileiro, vigora o princípio do livre convencimento motivado (ou da persuasão racional), consagrado no artigo 155 do Código de Processo Penal. Por força desse princípio, inexiste hierarquia rígida entre os meios de prova, cabendo ao magistrado avaliar livremente todo o conjunto probatório produzido sob o crivo do contraditório e da ampla defesa, desde que fundamente sua decisão.\n\nEmbora o policial possa ser legitimamente arrolado como testemunha (conforme o artigo 202 do Código de Processo Penal, que estabelece que toda pessoa poderá ser testemunha) e seu depoimento possua presunção de veracidade e fé pública, essa declaração não goza de valor probatório abstratamente superior ao interrogatório do acusado ou a qualquer outro meio de prova. O interrogatório do réu, além de meio de prova, é primordialmente um meio de autodefesa, devendo ser sopesado pelo julgador em igualdade de condições com os demais elementos constantes dos autos.\n\n**Pegadinha:** A primeira parte da assertiva está correta (o policial pode ser arrolado como testemunha), mas o erro reside em afirmar a existência de uma primazia ou superioridade hierárquica preestabelecida de seu depoimento sobre o interrogatório do condutor.\n\n**Dispositivo legal**\n\n[Artigos 155 e 202 do Decreto-Lei nº 3.689/1941 (Código de Processo Penal)](https://www.planalto.gov.br/ccivil_03/decreto-lei/del3689.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "f3057921848249ad2421c5e5225a013ec6dca37238d9d15870a6c6441819407a"
+    }
+  ]
+}

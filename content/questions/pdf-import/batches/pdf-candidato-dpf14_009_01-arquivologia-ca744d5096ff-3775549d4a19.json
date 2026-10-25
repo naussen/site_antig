@@ -1,0 +1,185 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-dpf14_009_01-arquivologia-ca744d5096ff-3775549d4a19",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "ca744d5096ff5e394ded91af7cac3b914f6eebb00f4d317b5e902839773db969",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "9a60cb42fbada4944e3fe1d0564604111314b54b0d72e1bd9ebc2e3a33818aef",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "3775549d4a19b32fed9a8f4e3af8759a892ecb071b1eb52d09a6eef1dadbc7d9",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "arquivologia",
+    "name": "Arquivologia"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:101",
+      "source_id": "dpf14_009_01:101",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos conceitos fundamentais de arquivologia, julgue os seguintes itens.\n\nOs documentos frequentemente utilizados devem compor o arquivo intermediário.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 101; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Arquivo Intermediário",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "13948f830de9d54838226b65981610e635e03e92535494f97c2faf7a4a7b61c2",
+        "original_numeric_id": 101,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "official_item_number": 101
+      },
+      "topics": [
+        {
+          "topic_id": "arquivo-intermediario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "De acordo com a teoria das três idades (ciclo vital dos documentos), os documentos frequentemente consultados ou utilizados para fins administrativos e operacionais pertencem à **fase corrente** (arquivo corrente). O **arquivo intermediário** (segunda idade) destina-se a abrigar documentos que, embora não sejam mais de uso frequente, ainda aguardam prazos de guarda ou destinação final devido a razões administrativas, fiscais ou jurídicas.\n\n### Dispositivo legal\n\n* **Lei nº 8.159/1991, art. 8º, §§ 1º e 2º**",
+        "source_reference": null
+      },
+      "source_content_hash": "ec32bf0e1a2561ba860d35dcfe350d45a51e049fdd79395f65edffb45095ce2e"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:102",
+      "source_id": "dpf14_009_01:102",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca dos conceitos fundamentais de arquivologia, julgue os seguintes itens.\n\nA fase arquivística em que esteja o documento é indicada pela tabela de temporalidade.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 102; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gerenciamento da Informação e a Gestão de Documentos",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "ea542a9674755b9a753d8bf7777905d7486ecf872faa4a502155f106b688be0b",
+        "original_numeric_id": 102,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "official_item_number": 102
+      },
+      "topics": [
+        {
+          "topic_id": "gerenciamento-da-informacao-e-a-gestao-de-documentos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A tabela de temporalidade é o instrumento arquivístico resultante do processo de avaliação de documentos. Ela define os prazos de guarda dos documentos nas fases corrente e intermediária, bem como sua destinação final (eliminação ou recolhimento para guarda permanente). Dessa forma, é por meio da tabela de temporalidade que se identifica e se controla a fase arquivística (corrente, intermediária ou permanente) em que o documento se encontra ou para a qual deve ser transferido.",
+        "source_reference": null
+      },
+      "source_content_hash": "10cf58f403b43070ea4ff125e44f5254b8de1185ddcdc484c84a1539149e737a"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:106",
+      "source_id": "dpf14_009_01:106",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere ao gerenciamento da informação e à gestão de documentos, julgue os itens subsecutivos.\n\nOs documentos do arquivo permanente têm valor probatório e(ou) informativo.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 106; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Arquivo Permanente",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Arquivologia",
+        "source_content_hash": "f969faaedfa5efb4e18e2967909f416eaad71f5eb4bec16b7f2cf898b0dbbda1",
+        "original_numeric_id": 106,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "official_item_number": 106
+      },
+      "topics": [
+        {
+          "topic_id": "arquivo-permanente",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. Os documentos de arquivo permanente são aqueles que perderam o valor administrativo, fiscal ou jurídico (valor primário), mas que devem ser preservados em razão de seu valor secundário.\n\nO valor secundário, conforme a teoria arquivística clássica formulada por T. R. Schellenberg, subdivide-se em:\n\n* **Valor Probatório (ou Evidencial):** Refere-se à capacidade do documento de comprovar a origem, a estrutura, as funções e o funcionamento da instituição que o produziu.\n* **Valor Informativo:** Refere-se às informações contidas no documento sobre pessoas, lugares, fatos, fenômenos ou coisas, servindo como fonte de pesquisa para terceiros e para a história.\n\nA conjunção \"e(ou)\" valida a questão, pois um documento permanente pode apresentar ambos os valores ou apenas um deles de forma predominante.\n\n**Dispositivo legal**\n\n[Lei nº 8.159/1991, Art. 8º, § 3º](https://www.planalto.gov.br/ccivil_03/leis/l8159.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "e58f9e8ef4b25d4d3ec0c2765dd8adf95b42e3d627703e412748356b05ee1e34"
+    }
+  ]
+}

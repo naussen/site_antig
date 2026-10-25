@@ -1,0 +1,383 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_administrativo-portugues-9275da7d075c-cb0cb0e3fb59",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "9275da7d075c14f6aecd067cee72adc350eb98cd976b0bad8b9bd014f4eb1edf",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "5da32b0a57792e090ef9d4c38cee7bda12a08609929c945e59e21312dccdc01a",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "cb0cb0e3fb59c99b1404cf41d2288f3c123a62b7004921ca11a3b6c6054b33d6",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:001",
+      "source_id": "agente_administrativo:1",
+      "question_type": "true_false",
+      "statement_markdown": "Abre-se uma janela do Centro Operário. Será a aula de Dona Palmira em 1920 ou há reunião para discutir os estatutos? Durante toda a minha infância, eles discutiram os estatutos. Eu não podia entender nada, mas havia pontos terrivelmente sérios. Era “Centro Operário de Proteção Mútua” ou “Centro Operário E de Proteção Mútua”? Pela noite afora, ano após ano, um mulato meio velho e magro, de óculos, o dedo em riste, a voz rascante, atacava com extraordinária ferocidade aquele E. Não conseguiu derrubá-lo; os operários talvez se sentissem fracos, sozinhos, precisavam daquele E que os conjugava com outras camadas sociais. Ficou o E, meu pai foi diretor e, quando morreu, teve auxílio no enterro, tudo sem ser operário, tudo graças àquele E. Sem o E eu talvez não tivesse estudado ali, não me sentaria no comprido banco, onde o último da esquerda era o preto Bernardino, e à direita, o rosto lindo de Lélia, com seus cabelos doces e uma covinha quando sorria. Quando não estavam discutindo os estatutos, ou providenciando um enterro de sócio, com a bandeira do Centro em cima do caixão, os operários E todos que queriam proteção mútua estavam dançando; sons de pistom atravessam meu sono infantil; eu achava estranho e ao mesmo tempo alegre e feliz haver baile na mesma sala onde eu tinha aulas.\n\nRubem Braga. Em Cachoeiro. 200 crônicas escolhidas. Rio de Janeiro: Record, 2003, p.55 (com adaptações).\n\nConsiderando os sentidos e aspectos linguísticos do texto precedente, julgue os itens a seguir.\n\nNo trecho “Será a aula de Dona Palmira” (segundo período), a forma verbal “Será” projeta o acontecimento em questão (a aula) para o futuro.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 1; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "7545b3a871b959e71327e9e1345a58ca53f7687e9e60fef0fb83bb48163c7db3",
+        "original_numeric_id": 1,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O emprego do futuro do presente do indicativo (\"Será\") no trecho em questão não indica uma ação a se realizar no tempo futuro. No contexto (\"Será a aula de Dona Palmira em 1920 ou...\"), o tempo verbal é utilizado com valor de probabilidade, dúvida ou conjectura a respeito de um fato situado no passado (o ano de 1920). Trata-se de um recurso estilístico comum para expressar incerteza sobre acontecimentos pretéritos. Portanto, a afirmação de que o verbo projeta o acontecimento para o futuro está incorreta.",
+        "source_reference": null
+      },
+      "source_content_hash": "e4f0d81284dcfb73db0e39525e011b0a544e0a569426d9d4ef3330795be8f14f"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:004",
+      "source_id": "agente_administrativo:4",
+      "question_type": "true_false",
+      "statement_markdown": "Abre-se uma janela do Centro Operário. Será a aula de Dona Palmira em 1920 ou há reunião para discutir os estatutos? Durante toda a minha infância, eles discutiram os estatutos. Eu não podia entender nada, mas havia pontos terrivelmente sérios. Era “Centro Operário de Proteção Mútua” ou “Centro Operário E de Proteção Mútua”? Pela noite afora, ano após ano, um mulato meio velho e magro, de óculos, o dedo em riste, a voz rascante, atacava com extraordinária ferocidade aquele E. Não conseguiu derrubá-lo; os operários talvez se sentissem fracos, sozinhos, precisavam daquele E que os conjugava com outras camadas sociais. Ficou o E, meu pai foi diretor e, quando morreu, teve auxílio no enterro, tudo sem ser operário, tudo graças àquele E. Sem o E eu talvez não tivesse estudado ali, não me sentaria no comprido banco, onde o último da esquerda era o preto Bernardino, e à direita, o rosto lindo de Lélia, com seus cabelos doces e uma covinha quando sorria. Quando não estavam discutindo os estatutos, ou providenciando um enterro de sócio, com a bandeira do Centro em cima do caixão, os operários E todos que queriam proteção mútua estavam dançando; sons de pistom atravessam meu sono infantil; eu achava estranho e ao mesmo tempo alegre e feliz haver baile na mesma sala onde eu tinha aulas.\n\nRubem Braga. Em Cachoeiro. 200 crônicas escolhidas. Rio de Janeiro: Record, 2003, p.55 (com adaptações).\n\nConsiderando os sentidos e aspectos linguísticos do texto precedente, julgue os itens a seguir.\n\nNo sexto período do texto, os vocábulos “velho”, “magro” e “rascante” são adjetivos que qualificam o citado “mulato”.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 4; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "cbcee661a22423eee7cb6aaa663588ba7ddd06bdc6bb102d8a0f869f5a095211",
+        "original_numeric_id": 4,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No sexto período do texto (\"...um mulato meio velho e magro, de óculos, o dedo em riste, a voz rascante...\"), os adjetivos \"velho\" e \"magro\" de fato qualificam o substantivo \"mulato\". No entanto, o adjetivo \"rascante\" qualifica diretamente o substantivo feminino \"voz\" (\"a voz rascante\"), e não o termo \"mulato\". Portanto, a afirmação de que todos os três vocábulos qualificam o \"mulato\" está incorreta.",
+        "source_reference": null
+      },
+      "source_content_hash": "7d98db39786ad9d9152e6d5f70283837ee8afe509f063255f875bbde7b7b6cc3"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:009",
+      "source_id": "agente_administrativo:9",
+      "question_type": "true_false",
+      "statement_markdown": "Abre-se uma janela do Centro Operário. Será a aula de Dona Palmira em 1920 ou há reunião para discutir os estatutos? Durante toda a minha infância, eles discutiram os estatutos. Eu não podia entender nada, mas havia pontos terrivelmente sérios. Era “Centro Operário de Proteção Mútua” ou “Centro Operário E de Proteção Mútua”? Pela noite afora, ano após ano, um mulato meio velho e magro, de óculos, o dedo em riste, a voz rascante, atacava com extraordinária ferocidade aquele E. Não conseguiu derrubá-lo; os operários talvez se sentissem fracos, sozinhos, precisavam daquele E que os conjugava com outras camadas sociais. Ficou o E, meu pai foi diretor e, quando morreu, teve auxílio no enterro, tudo sem ser operário, tudo graças àquele E. Sem o E eu talvez não tivesse estudado ali, não me sentaria no comprido banco, onde o último da esquerda era o preto Bernardino, e à direita, o rosto lindo de Lélia, com seus cabelos doces e uma covinha quando sorria. Quando não estavam discutindo os estatutos, ou providenciando um enterro de sócio, com a bandeira do Centro em cima do caixão, os operários E todos que queriam proteção mútua estavam dançando; sons de pistom atravessam meu sono infantil; eu achava estranho e ao mesmo tempo alegre e feliz haver baile na mesma sala onde eu tinha aulas.\n\nRubem Braga. Em Cachoeiro. 200 crônicas escolhidas. Rio de Janeiro: Record, 2003, p.55 (com adaptações).\n\nConsiderando os sentidos e aspectos linguísticos do texto precedente, julgue os itens a seguir.\n\nA forma pronominal “lo”, em “derrubá-lo” (sétimo período), refere-se ao mulato citado no sexto período do texto.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 9; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "bfa0c3359a7f289587e73f2903d68db5b5223326878455714330f5190c8d403c",
+        "original_numeric_id": 9,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O pronome oblíquo enclítico \"-lo\" em \"derrubá-lo\" funciona como objeto direto do verbo \"derrubar\" e refere-se ao termo \"aquele E\", mencionado imediatamente antes (\"atacava com extraordinária ferocidade aquele E. Não conseguiu derrubá-lo\"). O \"mulato\" é o sujeito implícito da ação de tentar derrubar, e não o objeto que seria derrubado.",
+        "source_reference": null
+      },
+      "source_content_hash": "23d008db23bc40a711bf787d3b0e233e59062658179ed4c76b7c855d1a77e31c"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:010",
+      "source_id": "agente_administrativo:10",
+      "question_type": "true_false",
+      "statement_markdown": "Abre-se uma janela do Centro Operário. Será a aula de Dona Palmira em 1920 ou há reunião para discutir os estatutos? Durante toda a minha infância, eles discutiram os estatutos. Eu não podia entender nada, mas havia pontos terrivelmente sérios. Era “Centro Operário de Proteção Mútua” ou “Centro Operário E de Proteção Mútua”? Pela noite afora, ano após ano, um mulato meio velho e magro, de óculos, o dedo em riste, a voz rascante, atacava com extraordinária ferocidade aquele E. Não conseguiu derrubá-lo; os operários talvez se sentissem fracos, sozinhos, precisavam daquele E que os conjugava com outras camadas sociais. Ficou o E, meu pai foi diretor e, quando morreu, teve auxílio no enterro, tudo sem ser operário, tudo graças àquele E. Sem o E eu talvez não tivesse estudado ali, não me sentaria no comprido banco, onde o último da esquerda era o preto Bernardino, e à direita, o rosto lindo de Lélia, com seus cabelos doces e uma covinha quando sorria. Quando não estavam discutindo os estatutos, ou providenciando um enterro de sócio, com a bandeira do Centro em cima do caixão, os operários E todos que queriam proteção mútua estavam dançando; sons de pistom atravessam meu sono infantil; eu achava estranho e ao mesmo tempo alegre e feliz haver baile na mesma sala onde eu tinha aulas.\n\nRubem Braga. Em Cachoeiro. 200 crônicas escolhidas. Rio de Janeiro: Record, 2003, p.55 (com adaptações).\n\nConsiderando os sentidos e aspectos linguísticos do texto precedente, julgue os itens a seguir.\n\nEntende-se do texto que era minoritário o posicionamento contrário ao uso do “E” no nome do centro operário.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 10; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "8e3d71f4779f2607cb1753afd1a98cb57fbc2449e8a82b489b480ae7c0f8a143",
+        "original_numeric_id": 10,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A interpretação do texto confirma que a oposição à presença da conjunção \"E\" no nome do centro era uma postura minoritária. O autor descreve que apenas um indivíduo específico (\"um mulato meio velho e magro\") atacava a letra com ferocidade ao longo dos anos. Em contrapartida, a coletividade (\"os operários\") defendia a manutenção do \"E\" por se sentirem fracos e necessitarem da união com outras camadas sociais que a conjunção simbolizava (\"precisavam daquele E que os conjugava...\").",
+        "source_reference": null
+      },
+      "source_content_hash": "e84fc0b45de76b6edf998f512ba30cf30e8f801150459730428d0c9468219f11"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:012",
+      "source_id": "agente_administrativo:12",
+      "question_type": "true_false",
+      "statement_markdown": "Se houvesse um concurso para eleger a cidade brasileira com mais filhos ilustres, a pequena Cachoeiro de Itapemirim, no Espírito Santo, levaria com folga. Entre os 5.570 municípios brasileiros, difícil encontrar outro interiorano (capital é covardia, ora) que tenha gerado tantas figuras notórias para o país. Talvez Sobral, no Ceará, se aproxime em quantidade (terra do cantor Belchior, do humorista Renato Aragão, do artista plástico Zenon Barreto e do cineasta Luiz Carlos Barreto, o “Barretão”). Mas somente a pacata cidade capixaba viu nascer elenco tão sortido do folclore nacional, a ponto de receber de Vinicius de Moraes o epíteto de “capital secreta”. São cachoeirenses: o cantor e compositor Roberto Carlos; o mais importante cronista brasileiro, Rubem Braga; o compositor Sergio Sampaio; a atriz naturista Luz del Fuego; o produtor musical e diretor Carlos Imperial; o ator Jece Valadão (que foi criado lá, apesar de ter nascido no distrito de Muqui); e a atriz Darlene Glória. Também viveram por lá as irmãs Danuza e Nara Leão.\n\nInternet: <https://oglobo.globo.com/cultura> (com adaptações).\n\nEm relação aos sentidos e aspectos linguísticos do texto precedente, julgue os itens que se seguem.\n\nNo primeiro período do texto, a forma verbal “levaria” poderia ser substituída por ganharia, sem prejuízo dos sentidos do texto.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 12; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "2fbae9fee61fec204d8e2ec89b5d6062082bc1e9673e9f53b0845ddefd6dd8c7",
+        "original_numeric_id": 12,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No trecho \"levaria com folga\", o verbo \"levar\" é empregado no sentido de obter vitória ou conquistar o prêmio em uma disputa (o concurso hipotético mencionado). A substituição por \"ganharia\" preserva a correção gramatical e a semântica original do período, mantendo a ideia de que a cidade seria a vencedora da competição.",
+        "source_reference": null
+      },
+      "source_content_hash": "aecaf4c0e20b7220baf1f6e6c7e7ba28dced2d633a78705c6d3e2c58d75996e3"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:014",
+      "source_id": "agente_administrativo:14",
+      "question_type": "true_false",
+      "statement_markdown": "Se houvesse um concurso para eleger a cidade brasileira com mais filhos ilustres, a pequena Cachoeiro de Itapemirim, no Espírito Santo, levaria com folga. Entre os 5.570 municípios brasileiros, difícil encontrar outro interiorano (capital é covardia, ora) que tenha gerado tantas figuras notórias para o país. Talvez Sobral, no Ceará, se aproxime em quantidade (terra do cantor Belchior, do humorista Renato Aragão, do artista plástico Zenon Barreto e do cineasta Luiz Carlos Barreto, o “Barretão”). Mas somente a pacata cidade capixaba viu nascer elenco tão sortido do folclore nacional, a ponto de receber de Vinicius de Moraes o epíteto de “capital secreta”. São cachoeirenses: o cantor e compositor Roberto Carlos; o mais importante cronista brasileiro, Rubem Braga; o compositor Sergio Sampaio; a atriz naturista Luz del Fuego; o produtor musical e diretor Carlos Imperial; o ator Jece Valadão (que foi criado lá, apesar de ter nascido no distrito de Muqui); e a atriz Darlene Glória. Também viveram por lá as irmãs Danuza e Nara Leão.\n\nInternet: <https://oglobo.globo.com/cultura> (com adaptações).\n\nEm relação aos sentidos e aspectos linguísticos do texto precedente, julgue os itens que se seguem.\n\nA retirada dos parênteses que isolam o trecho “que foi criado lá, apesar de ter nascido no distrito de Muqui” (penúltimo período) alteraria as relações coesivas e os sentidos estabelecidos originalmente no texto.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 14; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "a337fbb32310dc3dc483c06350cc2b8de659957a32aa9a83fbdbe4d514546dbe",
+        "original_numeric_id": 14,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Os parênteses isolam uma informação de caráter explicativo e acessório sobre o ator Jece Valadão. A simples supressão desses sinais, sem a inserção de outra pontuação adequada (como vírgulas), alteraria a classificação da oração adjetiva de explicativa para restritiva, modificando o sentido original. Além disso, comprometeria a coesão da lista de nomes, que é estruturada por pontos e vírgulas.",
+        "source_reference": null
+      },
+      "source_content_hash": "06fe2b8a49148196b726614790338ac5eef25843cecec4d0f3e1578808180b49"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:015",
+      "source_id": "agente_administrativo:15",
+      "question_type": "true_false",
+      "statement_markdown": "Se houvesse um concurso para eleger a cidade brasileira com mais filhos ilustres, a pequena Cachoeiro de Itapemirim, no Espírito Santo, levaria com folga. Entre os 5.570 municípios brasileiros, difícil encontrar outro interiorano (capital é covardia, ora) que tenha gerado tantas figuras notórias para o país. Talvez Sobral, no Ceará, se aproxime em quantidade (terra do cantor Belchior, do humorista Renato Aragão, do artista plástico Zenon Barreto e do cineasta Luiz Carlos Barreto, o “Barretão”). Mas somente a pacata cidade capixaba viu nascer elenco tão sortido do folclore nacional, a ponto de receber de Vinicius de Moraes o epíteto of “capital secreta”. São cachoeirenses: o cantor e compositor Roberto Carlos; o mais importante cronista brasileiro, Rubem Braga; o compositor Sergio Sampaio; a atriz naturista Luz del Fuego; o produtor musical e diretor Carlos Imperial; o ator Jece Valadão (que foi criado lá, apesar de ter nascido no distrito de Muqui); e a atriz Darlene Glória. Também viveram por lá as irmãs Danuza e Nara Leão.\n\nInternet: <https://oglobo.globo.com/cultura> (com adaptações).\n\nEm relação aos sentidos e aspectos linguísticos do texto precedente, julgue os itens que se seguem.\n\nDe acordo com o texto, o epíteto ‘capital secreta’ atribuído por Vinicius de Moraes a Cachoeiro de Itapemirim deve-se à variedade de celebridades nascidas nesse município.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 15; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "87b3f092bd726acb526d52ad418a4dae73c67fd3603b3922a59a53e45294b7e0",
+        "original_numeric_id": 15,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O texto estabelece uma relação direta de causa e efeito por meio da locução consecutiva \"a ponto de\". A causa é o fato de a cidade ter visto nascer um \"elenco tão sortido do folclore nacional\" (referindo-se à variedade de celebridades e figuras notórias), e a consequência é o recebimento do epíteto \"capital secreta\" concedido por Vinicius de Moraes. Portanto, a afirmação está correta e amparada no texto.",
+        "source_reference": null
+      },
+      "source_content_hash": "9a626ce74c835e11f9d9c08d54bbd78f6345f2955ab285eeb5212b2c6af51792"
+    }
+  ]
+}

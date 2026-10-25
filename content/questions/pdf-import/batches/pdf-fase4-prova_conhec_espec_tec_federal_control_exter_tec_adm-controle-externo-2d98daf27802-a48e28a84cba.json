@@ -1,0 +1,709 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_conhec_espec_tec_federal_control_exter_tec_adm-controle-externo-2d98daf27802-a48e28a84cba",
+  "source": {
+    "file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "2d98daf27802e405fca85477918bdf8251233e40cf39d87c93c75911b4f2d217",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "614ffeecc3c93f4cc8340b9f894f63a12d0a60896d888641786ae1cca7abe548",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "a48e28a84cbab4f93ee7e59cb9adf559a190377d7a9407b6d243b29053fd9d98",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "controle-externo",
+    "name": "Controle Externo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:076",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:76",
+      "question_type": "true_false",
+      "statement_markdown": "Quanto à natureza, à competência e à jurisdição do TCU, julgue os itens a seguir.\n\nA jurisdição do TCU engloba todo o território nacional e abrange qualquer pessoa responsável por haveres públicos, inclusive seus sucessores, de forma ilimitada.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 76; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "859f726e0968f0dd353a01dd443dee6240060f76575e7b0a7a25ac4bb8c76c6d",
+        "original_numeric_id": 76,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A jurisdição do Tribunal de Contas da União (TCU) de fato abrange todo o território nacional e alcança os responsáveis pela guarda e administração de bens e valores públicos, estendendo-se aos seus sucessores. \n\nNo entanto, o erro da assertiva reside na expressão **\"de forma ilimitada\"**. A responsabilidade dos sucessores e herdeiros pela reparação do dano ao erário não é irrestrita; ela é limitada ao valor do patrimônio que lhes foi transferido por herança (princípio da intranscendência da pena, adaptado à obrigação de reparar o dano).\n\n**Dispositivo legal**\n\n[Constituição Federal de 1988, Art. 5º, XLV; Lei nº 8.443/1992, Art. 5º, VIII](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "9dbdbb23246cb9f8424832ef15fa1f0354c91e1d1ccdf454d335f4737e525068"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:077",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:77",
+      "question_type": "true_false",
+      "statement_markdown": "Quanto à natureza, à competência e à jurisdição do TCU, julgue os itens a seguir.\n\nO TCU é órgão vinculado e subordinado ao Poder Legislativo.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 77; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "1810561cd0f8a57696c0d55767b80eee9ba12579365d2bd2c31abe8b269cc5ac",
+        "original_numeric_id": 77,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O Tribunal de Contas da União (TCU) é um órgão de extração constitucional que goza de **autonomia administrativa, financeira e organizacional**. \n\nEmbora a Constituição Federal estabeleça que o controle externo seja exercido pelo Congresso Nacional com o *auxílio* do TCU, não há relação de subordinação hierárquica ou vinculação administrativa entre o Tribunal e o Poder Legislativo. O TCU possui competências próprias e exclusivas delineadas diretamente pelo texto constitucional, operando de forma independente.\n\n**Dispositivo legal**\n\n[Constituição Federal de 1988, Art. 71](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "8d12bce0eff8b2abedcace5b6d6cde6a3afc51985a0c6d2899ea8683f55997cb"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:078",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:78",
+      "question_type": "true_false",
+      "statement_markdown": "Quanto à natureza, à competência e à jurisdição do TCU, julgue os itens a seguir.\n\nCom o objetivo de viabilizar a ação fiscalizadora do TCU e impedir ingerências políticas no tribunal, foi-lhe atribuída autonomia na gestão de seu pessoal, o que inclui autonomia para criação, transformação e extinção de cargos e funções de seu quadro de pessoal.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 78; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "208012aa02302065c344c0e878dbfc44d6e16922cd81bc203b51089a47e97fa9",
+        "original_numeric_id": 78,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O Tribunal de Contas da União possui, de fato, autonomia administrativa e financeira, o que lhe garante a **iniciativa de lei** para propor a criação, transformação e extinção de cargos, empregos e funções de seu quadro de pessoal, bem como a fixação de seus respectivos vencimentos.\n\nContudo, o TCU não pode realizar a criação, transformação ou extinção de cargos diretamente por meio de ato administrativo próprio (como resoluções ou portarias). Tais medidas exigem a edição de **lei em sentido formal**, a ser deliberada e votada pelo Congresso Nacional e sancionada pelo Presidente da República.\n\n**Dispositivo legal**\n\n[Constituição Federal de 1988, Art. 48, X, Art. 73 e Art. 96, II, 'b'](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "ee849604843bef4b9aa058fdf26b43af3ba10951aa1e88247232fadfc070ba7b"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:079",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:79",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da forma de organização e funcionamento do TCU, julgue os itens subsecutivos.\n\nA reeleição do presidente do TCU é permitida apenas por um período.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 79; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "f8a609ddb53c24aeb193d626620f5c85438951c21319a3a8285aa52bca9eda57",
+        "original_numeric_id": 79,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nDe acordo com o Artigo 12 do Regimento Interno do Tribunal de Contas da União (RITCU), o Presidente e o Vice-Presidente do TCU são eleitos por seus pares para um mandato de **1 (um) ano**, sendo permitida a reeleição apenas para **um período sucessivo** imediato.",
+        "source_reference": null
+      },
+      "source_content_hash": "04019380f69f91413c57caa19980a1e578711d4cae1e2b82ea067fd5cf6b60ed"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:080",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:80",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da forma de organização e funcionamento do TCU, julgue os itens subsecutivos.\n\nA escolha dos quatro ministros que compõem cada uma das duas câmaras do TCU é realizada por votação majoritária entre seus pares.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 80; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "8ce16d9b646392b43ec21d92b20d206860ca8458cc11241387d20d1bcd83f189",
+        "original_numeric_id": 80,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA composição das duas Câmaras do Tribunal de Contas da União não decorre de escolha discricionária e unilateral do Presidente do TCU.\n\nNos termos do Artigo 16 do RITCU, a lotação dos quatro Ministros em cada Câmara obedece a critérios formais e objetivos estabelecidos no próprio Regimento Interno (baseados em antiguidade, paridade e rodízio bienal mediante sorteio ou deliberação do Plenário), preservando-se a impessoalidade e independência interna dos órgãos colegiados fracionários.",
+        "source_reference": null
+      },
+      "source_content_hash": "f4825b2506527da8808ae84fae7a34040cb95852477b4c5aeaa9b39b61395dd0"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:081",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:81",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da forma de organização e funcionamento do TCU, julgue os itens subsecutivos.\n\nNa ausência do presidente do TCU, a presidência do tribunal poderá ser exercida pelo ministro mais antigo em exercício no cargo.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 81; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "77ef4958dbcb04639f3bd64bc8ab2ad2384a5eaa92cf09f34c26045bd4c976da",
+        "original_numeric_id": 81,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nConforme estabelecem a Lei Orgânica do TCU (Lei nº 8.443/1992, Art. 73) e o Artigo 13 do RITCU, o **Vice-Presidente** substitui o Presidente em suas faltas, ausências, impedimentos e licenças, e o sucede interinamente em caso de vacância até nova eleição.",
+        "source_reference": null
+      },
+      "source_content_hash": "b497ad40f52641cb759727244a099a7416810fca4b3bea3ea29e943665f8a544"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:082",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:82",
+      "question_type": "true_false",
+      "statement_markdown": "Relativamente aos instrumentos utilizados nos processos de fiscalização desenvolvidos pelo TCU, julgue os próximos itens.\n\nA verificação do cumprimento, pelos entes fiscalizados, das deliberações do TCU é realizada por meio de monitoramento.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 82; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "63be2ee2b5b754ab1167ff9f7fbe423cb4996f35626f3115926cfbef902f27e8",
+        "original_numeric_id": 82,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNos termos do Artigo 243 do Regimento Interno do TCU, o **monitoramento** é exatamente o instrumento de fiscalização empregado pelo Tribunal para verificar o cumprimento e o impacto prático de suas deliberações (determinações e recomendações) pelos órgãos e entidades jurisdicionados fiscalizados.",
+        "source_reference": null
+      },
+      "source_content_hash": "46baca704cc3a0176e9166f80fbe802e362e4a998f91212a61f7574e410673a8"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:083",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:83",
+      "question_type": "true_false",
+      "statement_markdown": "Relativamente aos instrumentos utilizados nos processos de fiscalização desenvolvidos pelo TCU, julgue os próximos itens.\n\nPara avaliar se a execução de uma fiscalização será viável, o TCU realiza levantamentos.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 83; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "820360e99677965ecc7b490344eb58cc4c01ed985e5468c543a0d2b1bd876a69",
+        "original_numeric_id": 83,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nO Artigo 238 do Regimento Interno do TCU define o **levantamento** como o instrumento fiscalizatório utilizado para:\n\nI - conhecer a organização e o funcionamento dos órgãos e entidades da administração pública;\nII - identificar objetos e instrumentos de fiscalização;\nIII - **avaliar a viabilidade da realização de fiscalizações**.\n\nA assertiva reproduz fielmente a finalidade regulamentar do instrumento de levantamento.",
+        "source_reference": null
+      },
+      "source_content_hash": "b6f40b23735cbbd3466599701801956d3b397521a7d40d7cc5994d9308582088"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:084",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:84",
+      "question_type": "true_false",
+      "statement_markdown": "Relativamente aos instrumentos utilizados nos processos de fiscalização desenvolvidos pelo TCU, julgue os próximos itens.\n\nA inspeção é o instrumento de fiscalização destinado a avaliar aspectos relativos à economicidade, efetividade e eficácia dos atos praticados no exercício das atividades governamentais.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 84; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "fad82877d941add0d04197d878ae87a61337b563eef9bc4f3ecbb341302f6bc3",
+        "original_numeric_id": 84,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nO enunciado inverteu os conceitos dos instrumentos de fiscalização do TCU previstos no RITCU:\n\n* A **inspeção** (Art. 240) é o instrumento destinado a suprir omissões, esclarecer dúvidas ou apurar denúncias e representações quanto à legalidade, legitimidade e economicidade de fatos específicos.\n* Por sua vez, a avaliação ampla, sistemática e programada de aspectos contábeis, financeiros, orçamentários, operacionais e patrimoniais constitui a definição própria de **auditoria** (Art. 239 do RITCU).",
+        "source_reference": null
+      },
+      "source_content_hash": "61e4c5c7e732c4b90d0e22829527288c00de7d428dc990a4c4bd1714d5c906f2"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:085",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:85",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, referentes às deliberações do TCU e aos recursos previstos em lei.\n\nA interposição de recurso, independentemente de este ser conhecido pelo relator designado, gera preclusão consumativa.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 85; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "4af36379ff2403ba16763808f608d257e4131cfc1bf73052e042a8edbf7038fb",
+        "original_numeric_id": 85,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A interposição de recurso no âmbito do processo de controle externo submete-se ao princípio da preclusão consumativa.\n\nA preclusão consumativa ocorre no exato momento em que o ato processual (no caso, a interposição do recurso) é praticado. Uma vez protocolada a peça recursal, extingue-se a faculdade de recorrer ou de aditar o recurso já apresentado, independentemente de o relator vir a conhecer (admitir) ou não o recurso em seu juízo de admissibilidade posterior.\n\n### Dispositivo legal\n* Lei nº 8.443/1992 (Lei Orgânica do TCU) e Regimento Interno do TCU.",
+        "source_reference": null
+      },
+      "source_content_hash": "b7c60505889668a513cb6afdeb3120025f49d4f9f4709a5d74cba66010e64c97"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:086",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:86",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, referentes às deliberações do TCU e aos recursos previstos em lei.\n\nPor maioria absoluta de seus membros, o TCU poderá determinar que o responsável por infração considerada grave seja inabilitado para o exercício de cargo em comissão ou função de confiança no âmbito da administração pública federal.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 86; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "5416f33caddef329874ae5154d87dfe30ff1f5069b01c50e9020a04189886162",
+        "original_numeric_id": 86,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A aplicação da sanção de inabilitação para o exercício de cargo em comissão ou função de confiança exige o quórum de maioria absoluta dos membros do Tribunal de Contas da União.\n\nEssa penalidade é aplicada ao responsável por infração considerada grave, limitando-se ao âmbito da administração pública federal e pelo prazo de cinco a oito anos, conforme a legislação de regência.\n\n### Dispositivo legal\n* Lei nº 8.443/1992, Art. 60.\n* Regimento Interno do TCU, Art. 270.",
+        "source_reference": null
+      },
+      "source_content_hash": "0561d797d0665050eca7c384e3074d107f00f8c333b03f64ea45a1d78e02adf6"
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:087",
+      "source_id": "prova_conhec_espec_tec_federal_control_exter_tec_adm:87",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, referentes às deliberações do TCU e aos recursos previstos em lei.\n\nÉ requisito obrigatório a audiência do Ministério Público em todos os recursos interpostos contra decisões do TCU.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "Técnico Federal de Controle Externo",
+      "exam_year": 2015,
+      "difficulty": "medium",
+      "source_reference": "prova_conhec_espec_tec_federal_control_exter_tec_adm.pdf, questão 87; prova_conhec_espec_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Controle da Administração Pública e Tribunais de Contas",
+      "source_metadata": {
+        "source_file": "prova_conhec_espec_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Controle Externo",
+        "source_content_hash": "a8fb9604392e28440de8871327efe8c1dbfd03dc683a4f998260a85d546f2ede",
+        "original_numeric_id": 87,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/tcu_15_tfce/arquivos/gab_definitivo_174tcutefc_001_01.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "tribunais-de-contas-funcoes-e-competencias-constitucionais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA audiência prévia do Ministério Público junto ao TCU (MPTCU) **não é obrigatória em todos os recursos** indistintamente.\n\nNos termos do Artigo 62, inciso III, do RITCU, a intervenção do MPTCU é dispensada em determinadas espécies recursais de rito sumário, a exemplo dos **embargos de declaração** que não possuam efeitos modificativos/infringentes, bem como em agravos regimentais simples contra despachos de relator.",
+        "source_reference": null
+      },
+      "source_content_hash": "6a97854eb1244d5a8d54773033ca7ddfa02797629ead7dd6eef9648c51e9bef5"
+    }
+  ]
+}

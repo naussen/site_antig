@@ -1,0 +1,80 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-analista_administrativo-direito-tributario-d1088d0556a6-fac47dfd25e0",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "d1088d0556a634bc0e47cc4b0194b18b7b11b50a2faaa9a150b68e740a974fa1",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "7b0e6efd1cd4387fd3b4024c7d594aa5aad8ca3c4f2146f6ddc96ab3d4597e20",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "fac47dfd25e056c12eb65ee79f4f461d85966f651263b86b646adce08093dcef",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-tributario",
+    "name": "Direito Tributário"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:086",
+      "source_id": "analista_administrativo:86",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito do processo administrativo fiscal, julgue o seguinte item.\n\nTal processo deve ser pautado nos princípios da economia processual, da impessoalidade e da verdade formal.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "analista_administrativo.pdf, questão 86; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Conceitos Fundamentais do Direito Tributário",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Processo Administrativo Fiscal",
+        "source_content_hash": "4c2d54473850fd9bb06e151a40be1797dfab6ad2e04790b343b974dca76cb7b5",
+        "original_numeric_id": 86,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/decreto/d70235_original.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "direito-tributario-conceitos-fundamentais-direito-tributario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nO Processo Administrativo Fiscal (PAF), regulamentado pelo Decreto nº 70.235/1972 e pelas normas gerais da Lei nº 9.784/1999, rege-se pelos princípios da **verdade material**, da ampla defesa, do contraditório e da legalidade estrita.\n\nA autoridade julgadora não pode sobrepor a mera \"economia processual\" ou informalidade quando isso implicar cerceamento de defesa ou desrespeito ao contraditório e à instrução probatória do contribuinte.",
+        "source_reference": null
+      },
+      "source_content_hash": "e278e345423d882f9ea5c588bca449284c6e7be93db0964d73afcab39f121c17"
+    }
+  ]
+}

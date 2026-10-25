@@ -1,0 +1,224 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-assistente_administrativo-informatica-cb9d8e50ce30-58ab05d29f64",
+  "source": {
+    "file_name": "assistente_administrativo_ATUALIZADO.json",
+    "sha256": "cb9d8e50ce300d4a5bd8877a14ccc4602e3d9ce9389c4e35c2e017d8ceeb29bb",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "assistente_administrativo.json",
+      "original_source_sha256": "076507bac3393262fd875a9487f40c6baf0b9380bc7894d096c4f07a503c5610",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "58ab05d29f648dadb4845e5486f5dd641f6679c914b498fe40b90d0f97e489d3",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:assistente_administrativo:016",
+      "source_id": "assistente_administrativo:16",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Para o envio e recebimento de e-mails, são utilizados protocolos para esta comunicação, assim como qualquer comunicação de dados na rede. Referente ao envio e recebimento de e-mails, assinale a alternativa que apresenta quais são os protocolos utilizados.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "assistente_administrativo.pdf, questão 16; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "HTTP, POP",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "POP, SMTP",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "HTTP, SMTP",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "FTP, HTTP",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "JPG, POP",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Redes de Computadores",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "9f9b06a7c9a7f837fb447fcc7febca9b51ead0f7d993369562265eba8b2761ea",
+        "original_numeric_id": 16,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "redes-de-computadores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige o conhecimento dos protocolos de rede utilizados no serviço de correio eletrônico (e-mail).\n\n* **SMTP (Simple Mail Transfer Protocol):** É o protocolo padrão utilizado para o **envio** (saída) de mensagens de e-mail entre servidores ou do cliente para o servidor.\n* **POP (Post Office Protocol):** É um protocolo utilizado para o **recebimento** (entrada) de mensagens, que baixa os e-mails do servidor para o dispositivo local do usuário (geralmente apagando-os do servidor após o download, dependendo da configuração).\n\n**Análise das alternativas incorretas:**\n* **A) Incorreta.** O HTTP (Hypertext Transfer Protocol) é o protocolo de transferência de hipertexto utilizado para a navegação em páginas web, não sendo um protocolo específico de correio eletrônico (embora o Webmail seja acessado via navegador usando HTTP/HTTPS, a comunicação de e-mail subjacente utiliza SMTP/POP/IMAP).\n* **C) Incorreta.** Contém o HTTP, que é voltado para navegação web.\n* **D) Incorreta.** O FTP (File Transfer Protocol) é utilizado para a transferência de arquivos, e o HTTP para navegação web.\n* **E) Incorreta.** JPG é um formato de compressão de imagem (extensão de arquivo), não um protocolo de comunicação.",
+        "source_reference": null
+      },
+      "source_content_hash": "7d1153aaceb6db03468045367cdde490cfdc630f7b769fc0e71c0ab9108b7533"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:017",
+      "source_id": "assistente_administrativo:17",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Com o avanço das páginas web, empresas constantemente buscam melhorar a sua imagem de maneira digital, e assim conquistar novos visitantes, porém, para que esta página tenha boa classificação é importante realizar um trabalho de SEO (Search Engine Optimization), assinale a alternativa que representa o que é SEO.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "assistente_administrativo.pdf, questão 17; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Um conjunto de práticas para otimizar um site ou conteúdo, a fim de melhorar sua classificação nos mecanismos de busca",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Um serviço de armazenamento em nuvem da página web",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Uma técnica para bloquear outros sites nos mecanismos de busca, e consequentemente priorizar o seu",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Um protocolo de comunicação utilizados pelos navegadores",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Um vírus implementado na página web",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "c2a2d175268d710a298240857bc162384843a1202f4194800b10ea0ccbe71bfc",
+        "original_numeric_id": 17,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda o conceito de SEO (*Search Engine Optimization* - Otimização para Motores de Busca).\n\nSEO consiste em um conjunto de estratégias, técnicas e práticas aplicadas em páginas web (como otimização de palavras-chave, velocidade de carregamento, qualidade do conteúdo e estrutura de links) com o objetivo de melhorar o posicionamento orgânico (não pago) do site nos resultados de busca de ferramentas como Google, Bing e Yahoo, gerando assim mais tráfego de visitantes.\n\n**Análise das alternativas incorretas:**\n* **B) Incorreta.** O armazenamento em nuvem refere-se a serviços de hospedagem e salvamento de arquivos na internet (como Google Drive, OneDrive, AWS), não se confundindo com SEO.\n* **C) Incorreta.** O SEO visa otimizar o próprio site para que ele seja melhor indexado e compreendido pelos buscadores. Não se trata de uma técnica para \"bloquear\" concorrentes.\n* **D) Incorreta.** SEO não é um protocolo de comunicação (exemplos de protocolos: HTTP, HTTPS, FTP).\n* **E) Incorreta.** SEO é uma prática legítima de desenvolvimento e marketing digital, não possuindo qualquer relação com vírus ou códigos maliciosos (*malware*).",
+        "source_reference": null
+      },
+      "source_content_hash": "010d24ba2b0d2c3b78cf09f5f7cda8d56409565168f8f65d62e5dd566f2a00d8"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:018",
+      "source_id": "assistente_administrativo:18",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Navegadores (browsers) são utilizados constantemente para que o usuário opere sistemas na web, desta forma, cada sistema operacional fornece um navegador padrão de uso. O navegador padrão para o sistema operacional MacOS da Apple:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "assistente_administrativo.pdf, questão 18; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Mozilla Firefox",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Chrome",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Edge",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Safari",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Opera",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "ac48c44f96a0c96cafbb1cfa37bb04423fd9c82f6e38151ae5874f113b6c20bb",
+        "original_numeric_id": 18,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a identificação do navegador de internet (*browser*) padrão do sistema operacional macOS, desenvolvido pela Apple.\n\nO **Safari** é o navegador oficial e nativo desenvolvido pela Apple para seus sistemas operacionais, incluindo o macOS (computadores) e o iOS/iPadOS (dispositivos móveis).\n\n**Análise das alternativas incorretas:**\n* **A) Incorreta.** O Mozilla Firefox é um navegador multiplataforma de código aberto desenvolvido pela Mozilla Foundation.\n* **B) Incorreta.** O Google Chrome é desenvolvido pela Google.\n* **C) Incorreta.** O Microsoft Edge é o navegador padrão do sistema operacional Windows, desenvolvido pela Microsoft.\n* **E) Incorreta.** O Opera é um navegador multiplataforma desenvolvido pela Opera Software.",
+        "source_reference": null
+      },
+      "source_content_hash": "ed6726eb1f84dc166a3746c7804345ed89b9aa560d4f9556df59fc371b7ba4c7"
+    }
+  ]
+}

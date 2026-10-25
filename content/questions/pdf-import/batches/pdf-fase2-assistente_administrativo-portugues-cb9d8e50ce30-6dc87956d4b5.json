@@ -1,0 +1,290 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-assistente_administrativo-portugues-cb9d8e50ce30-6dc87956d4b5",
+  "source": {
+    "file_name": "assistente_administrativo_ATUALIZADO.json",
+    "sha256": "cb9d8e50ce300d4a5bd8877a14ccc4602e3d9ce9389c4e35c2e017d8ceeb29bb",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "assistente_administrativo.json",
+      "original_source_sha256": "076507bac3393262fd875a9487f40c6baf0b9380bc7894d096c4f07a503c5610",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "6dc87956d4b5f5bb0fd69f71131f7437c05bf71010910f83be633fe3b785a2b4",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:assistente_administrativo:001",
+      "source_id": "assistente_administrativo:1",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Automóvel: Sociedade Anônima\n(Paulo Mendes Campos)\n\nSe você quiser, compre um carro; é um conforto admirável. Mas não o faça sem conhecimento de causa, a fim de evitar desilusões futuras. Saiba que está praticando um gesto essencialmente econômico; não para a sua economia, mas para a economia coletiva. Isso quer dizer que, do ponto de vista comunitário, o automóvel que você adquire não é um ponto de chegada, uma conquista final em sua vida, mas, pelo contrário, um ponto de partida para os outros. Desde que o compre, o carro passa a interessar aos outros, muito mais que a você mesmo.\nCom o carro, você está ampliando seriamente a economia de milhares de pessoas. É uma espécie de indústria às avessas, na qual você monta um engenho não para obter lucros, mas para distribuir seu dinheiro para toda classe de pessoas: industriais europeus, biliardários do Texas, empresários brasileiros, comerciantes, operários especializados, proletários, vagabundos, etc.\nJá na compra do carro, você contribui para uma infinidade de setores produtivos, que podemos encolher ao máximo nos seguintes itens: a indústria automobilística propriamente dita, localizada no Brasil, mas sem qualquer inibição no que toca à remessa de lucros para o exterior; os vendedores de automóveis; a siderurgia; a petroquímica; as fábricas de pneus e as de artefatos de borracha; as fábricas de plásticos, couros, tintas, etc.; as fábricas de rolamentos e outras autopeças; as fábricas de relógios, rádios, etc.; as indústrias de petróleo [...]\nVocê já pode ir vendo a gravidade do seu gesto: ao comprar um carro, você entrou na órbita de toda essa gente, até ontem, você estava fora do alcance deles; hoje, seu transporte passou a ser, do ponto de vista econômico, simplesmente transcendental. Você é um homem economicamente importante – para os outros. Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você.\nMas não fica só nisso; você estará ainda girando numa constelação menor, miúda mas nada desprezível: a dos recauchutadores, eletricistas, garagistas, lavadores, olheiros, guardas de trânsito, mecânicos de esquina. Você pode ainda querer um motorista ou participar de alguma das várias modalidades de seguros para automóveis. Em outros termos, você continua entrando pelo cano. No fim deste, há ainda uma outra classe: a dos ladrões, seja organizada em sindicatos, seja a espécie de franco-puxadores. [...]\n\nA partir da leitura atenta do texto, conclui-se que seu título cumpre um papel irônico uma vez que:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "assistente_administrativo.pdf, questão 1; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "faz referência documentação exigida no ato da compra de um automóvel.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "são listados, detalhadamente, os interesses de vários membros da sociedade.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "o proprietário do automóvel passa a ser ignorado pelas pessoas que o cercam.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "se destaca o fato de que outros lucram com o automóvel, mas não o proprietário.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "revela o resultado de uma conquista pessoal anônima no sistema capitalista.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "51bd4183883cbcc09ca4afe70d6adc0d894c4b650d3f664aef652f09f71a5b98",
+        "original_numeric_id": 1,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **D**.\n\nO título do texto, \"Automóvel: Sociedade Anônima\", utiliza a ironia ao comparar a posse de um veículo a uma sociedade por ações (S.A.). Em uma S.A. convencional, os acionistas buscam obter lucros com o empreendimento. No caso do automóvel, contudo, o autor demonstra que se trata de uma \"indústria às avessas\": todos os setores econômicos e profissionais ao redor (siderurgia, mecânicos, seguradoras, lavadores e até ladrões) lucram com a existência do carro, enquanto o proprietário é o único que acumula despesas e prejuízos financeiros.\n\n**Análise das alternativas incorretas:**\n* **A** está incorreta porque o texto não aborda trâmites burocráticos ou documentação exigida na compra.\n* **B** está incorreta porque, embora os interesses de vários membros sejam listados, a ironia do título reside especificamente no fato de o dono ser excluído dos lucros dessa \"sociedade\".\n* **C** está incorreta porque o proprietário não é ignorado; pelo contrário, ele passa a ser o centro das atenções econômicas de diversos setores.\n* **E** está incorreta porque a posse do carro não é tratada como uma conquista anônima, mas sim como um ato que perde o caráter individual para se tornar um evento de relevância econômica coletiva.",
+        "source_reference": null
+      },
+      "source_content_hash": "82f39577e920764c3961b7089ea6cc8f49b5bd4eb83f9699e90ce189e27c2d0e"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:003",
+      "source_id": "assistente_administrativo:3",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Automóvel: Sociedade Anônima\n(Paulo Mendes Campos)\n\nSe você quiser, compre um carro; é um conforto admirável. Mas não o faça sem conhecimento de causa, a fim de evitar desilusões futuras. Saiba que está praticando um gesto essencialmente econômico; não para a sua economia, mas para a economia coletiva. Isso quer dizer que, do ponto de vista comunitário, o automóvel que você adquire não é um ponto de chegada, uma conquista final em sua vida, mas, pelo contrário, um ponto de partida para os outros. Desde que o compre, o carro passa a interessar aos outros, muito mais que a você mesmo.\nCom o carro, você está ampliando seriamente a economia de milhares de pessoas. É uma espécie de indústria às avessas, na qual você monta um engenho não para obter lucros, mas para distribuir seu dinheiro para toda classe de pessoas: industriais europeus, biliardários do Texas, empresários brasileiros, comerciantes, operários especializados, proletários, vagabundos, etc.\nJá na compra do carro, você contribui para uma infinidade de setores produtivos, que podemos encolher ao máximo nos seguintes itens: a indústria automobilística propriamente dita, localizada no Brasil, mas sem qualquer inibição no que toca à remessa de lucros para o exterior; os vendedores de automóveis; a siderurgia; a petroquímica; as fábricas de pneus e as de artefatos de borracha; as fábricas de plásticos, couros, tintas, etc.; as fábricas de rolamentos e outras autopeças; as fábricas de relógios, rádios, etc.; as indústrias de petróleo [...]\nVocê já pode ir vendo a gravidade do seu gesto: ao comprar um carro, você entrou na órbita de toda essa gente, até ontem, você estava fora do alcance deles; hoje, seu transporte passou a ser, do ponto de vista econômico, simplesmente transcendental. Você é um homem economicamente importante – para os outros. Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você.\nMas não fica só nisso; você estará ainda girando numa constelação menor, miúda mas nada desprezível: a dos recauchutadores, eletricistas, garagistas, lavadores, olheiros, guardas de trânsito, mecânicos de esquina. Você pode ainda querer um motorista ou participar de alguma das várias modalidades de seguros para automóveis. Em outros termos, você continua entrando pelo cano. No fim deste, há ainda uma outra classe: a dos ladrões, seja organizada em sindicatos, seja a espécie de franco-puxadores. [...]\n\nEntre as orações “compre um carro; é um conforto admirável” (1º§), há um ponto e vírgula. Sem prejuízo de sentido para o enunciado, esse sinal de pontuação poderia ser substituído por um conectivo de valor:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "assistente_administrativo.pdf, questão 3; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "explicativo.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "adversativo.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "aditivo.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "comparativo.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "conclusivo.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "e6e005704a860f4fe11d93416a9ea8181d68214b00c6f0d911e8ebee2ba6e7bc",
+        "original_numeric_id": 3,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A**.\n\nNo trecho \"compre um carro; é um conforto admirável\", a segunda oração apresenta a razão ou justificativa para a recomendação feita na primeira oração. O ponto e vírgula, nesse contexto, separa orações coordenadas assindéticas em que a segunda possui valor explicativo. Esse sinal de pontuação poderia ser perfeitamente substituído por conectivos explicativos como *pois*, *porque* ou *que* (\"compre um carro, pois é um conforto admirável\"), mantendo a coerência e o sentido original.\n\n**Análise das alternativas incorretas:**\n* **B** está incorreta porque não há relação de oposição ou contraste (adversativa) entre comprar o carro e ele ser um conforto.\n* **C** está incorreta porque a segunda oração não é uma mera adição de informação independente, mas sim a causa/justificativa da primeira.\n* **D** está incorreta porque não se estabelece comparação entre os termos.\n* **E** está incorreta porque a segunda oração não funciona como conclusão da primeira (o conforto não é uma consequência lógica gerada pelo ato de comprar, mas a explicação do porquê comprar).",
+        "source_reference": null
+      },
+      "source_content_hash": "71615e37eea37dff6844eae088c93608d60998d814b148688c8da0ee2665f262"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:005",
+      "source_id": "assistente_administrativo:5",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Automóvel: Sociedade Anônima\n(Paulo Mendes Campos)\n\nSe você quiser, compre um carro; é um conforto admirável. Mas não o faça sem conhecimento de causa, a fim de evitar desilusões futuras. Saiba que está praticando um gesto essencialmente econômico; não para a sua economia, mas para a economia coletiva. Isso quer dizer que, do ponto de vista comunitário, o automóvel que você adquire não é um ponto de chegada, uma conquista final em sua vida, mas, pelo contrário, um ponto de partida para os outros. Desde que o compre, o carro passa a interessar aos outros, muito mais que a você mesmo.\nCom o carro, você está ampliando seriamente a economia de milhares de pessoas. É uma espécie de indústria às avessas, na qual você monta um engenho não para obter lucros, mas para distribuir seu dinheiro para toda classe de pessoas: industriais europeus, biliardários do Texas, empresários brasileiros, comerciantes, operários especializados, proletários, vagabundos, etc.\nJá na compra do carro, você contribui para uma infinidade de setores produtivos, que podemos encolher ao máximo nos seguintes itens: a indústria automobilística propriamente dita, localizada no Brasil, mas sem qualquer inibição no que toca à remessa de lucros para o exterior; os vendedores de automóveis; a siderurgia; a petroquímica; as fábricas de pneus e as de artefatos de borracha; as fábricas de plásticos, couros, tintas, etc.; as fábricas de rolamentos e outras autopeças; as fábricas de relógios, rádios, etc.; as indústrias de petróleo [...]\nVocê já pode ir vendo a gravidade do seu gesto: ao comprar um carro, você entrou na órbita de toda essa gente, até ontem, você estava fora do alcance deles; hoje, seu transporte passou a ser, do ponto de vista econômico, simplesmente transcendental. Você é um homem economicamente importante – para os outros. Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você.\nMas não fica só nisso; você estará ainda girando numa constelação menor, miúda mas nada desprezível: a dos recauchutadores, eletricistas, garagistas, lavadores, olheiros, guardas de trânsito, mecânicos de esquina. Você pode ainda querer um motorista ou participar de alguma das várias modalidades de seguros para automóveis. Em outros termos, você continua entrando pelo cano. No fim deste, há ainda uma outra classe: a dos ladrões, seja organizada em sindicatos, seja a espécie de franco-puxadores. [...]\n\nO texto é uma crônica que tem sua estrutura organizada, predominantemente, pela tipologia:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "assistente_administrativo.pdf, questão 5; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "descritiva.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "injuntiva.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "narrativa.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "inventiva.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "dissertativa.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "d1261f7d88157d3d1d3b2d47413c30aafadbb7ab4c0ffaef98f30d6abdac2cb3",
+        "original_numeric_id": 5,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **E**.\n\nEmbora a crônica seja um gênero híbrido que frequentemente utiliza a narração, o texto em análise estrutura-se predominantemente em torno da tipologia **dissertativa** (especificamente dissertativo-argumentativa). O autor apresenta uma tese clara no primeiro parágrafo: a aquisição de um carro é um gesto de relevância para a economia coletiva, e não para a economia pessoal do proprietário. Ao longo do texto, ele desenvolve essa ideia por meio de argumentos, análises econômicas e exemplificações de setores beneficiados, visando convencer o leitor de seu ponto de vista.\n\n**Análise das alternativas incorretas:**\n* **A** está incorreta porque a descrição aparece apenas de forma acessória (como na listagem de indústrias e profissionais), não sendo a tipologia predominante.\n* **B** está incorreta porque a tipologia injuntiva (instrucional) limita-se a poucas passagens com verbos no imperativo no início, sem estruturar o texto como um manual ou receita.\n* **C** está incorreta porque o texto não desenvolve um enredo com personagens, tempo e espaço definidos em uma sequência de ações (narrativa).\n* **D** está incorreta porque \"inventiva\" não constitui uma tipologia textual reconhecida pelos estudos linguísticos.",
+        "source_reference": null
+      },
+      "source_content_hash": "bd72eacb30066b97008676602bc7ef5685c86a88a86f1ee2d8d47312efe51dd3"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:009",
+      "source_id": "assistente_administrativo:9",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Automóvel: Sociedade Anônima\n(Paulo Mendes Campos)\n\nSe você quiser, compre um carro; é um conforto admirável. Mas não o faça sem conhecimento de causa, a fim de evitar desilusões futuras. Saiba que está praticando um gesto essencialmente econômico; não para a sua economia, mas para a economia coletiva. Isso quer dizer que, do ponto de vista comunitário, o automóvel que você adquire não é um ponto de chegada, uma conquista final em sua vida, mas, pelo contrário, um ponto de partida para os outros. Desde que o compre, o carro passa a interessar aos outros, muito mais que a você mesmo.\nCom o carro, você está ampliando seriamente a economia de milhares de pessoas. É uma espécie de indústria às avessas, na qual você monta um engenho não para obter lucros, mas para distribuir seu dinheiro para toda classe de pessoas: industriais europeus, biliardários do Texas, empresários brasileiros, comerciantes, operários especializados, proletários, vagabundos, etc.\nJá na compra do carro, você contribui para uma infinidade de setores produtivos, que podemos encolher ao máximo nos seguintes itens: a indústria automobilística propriamente dita, localizada no Brasil, mas sem qualquer inibição no que toca à remessa de lucros para o exterior; os vendedores de automóveis; a siderurgia; a petroquímica; as fábricas de pneus e as de artefatos de borracha; as fábricas de plásticos, couros, tintas, etc.; as fábricas de rolamentos e outras autopeças; as fábricas de relógios, rádios, etc.; as indústrias de petróleo [...]\nVocê já pode ir vendo a gravidade do seu gesto: ao comprar um carro, você entrou na órbita de toda essa gente, até ontem, você estava fora do alcance deles; hoje, seu transporte passou a ser, do ponto de vista econômico, simplesmente transcendental. Você é um homem economicamente importante – para os outros. Seu automóvel é de fato uma sociedade anônima, da qual todos lucram, menos você.\nMas não fica só nisso; você estará ainda girando numa constelação menor, miúda mas nada desprezível: a dos recauchutadores, eletricistas, garagistas, lavadores, olheiros, guardas de trânsito, mecânicos de esquina. Você pode ainda querer um motorista ou participar de alguma das várias modalidades de seguros para automóveis. Em outros termos, você continua entrando pelo cano. No fim deste, há ainda uma outra classe: a dos ladrões, seja organizada em sindicatos, seja a espécie de franco-puxadores. [...]\n\nNo último parágrafo, a expressão destacada em “Em outros termos, você continua entrando pelo cano.” cumpre o seguinte efeito linguístico:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": null,
+      "source_reference": "assistente_administrativo.pdf, questão 9; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "revela uma inadequação em relação à fala do interlocutor.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "aponta que será feita uma retificação da informação apresentada.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "sinaliza ao leitor a introdução de um registro mais informal.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "introduz uma oração de caráter concessivo.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "indica uma ressalva em relação ao conteúdo anterior.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "6fbaf0b87e89925928bb2e589cf95d5b37b9fbcbe79f2bafc92d6434baf5e09d",
+        "original_numeric_id": 9,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A expressão popular **\"entrando pelo cano\"** é um exemplo clássico de linguagem coloquial (gíria), utilizada no cotidiano para indicar que alguém está se dando mal ou sofrendo prejuízo. Ao empregar essa expressão, o autor introduz intencionalmente um registro de linguagem mais informal e próximo do leitor, quebrando momentaneamente a formalidade do texto.\n\n**Análise das alternativas incorretas:**\n* **A** está incorreta porque o uso da gíria é um recurso estilístico planejado pelo autor, e não uma inadequação ou erro de comunicação com o interlocutor.\n* **B** está incorreta porque a expressão não retifica (corrigir) nenhuma informação anterior, mas sim sintetiza a ideia de que o comprador de automóveis acumula prejuízos.\n* **D** está incorreta porque a expressão não possui natureza de conjunção ou locução concessiva (como \"embora\" ou \"ainda que\").\n* **E** está incorreta porque a expressão não estabelece uma ressalva (oposição parcial), mas sim reforça e ilustra a conclusão de que o consumidor continua sendo prejudicado financeiramente.",
+        "source_reference": null
+      },
+      "source_content_hash": "1ce3f40db5f42e4f9479290f070b04ebd8db61cdc9f1cb632ecbb4fe22d2d989"
+    }
+  ]
+}

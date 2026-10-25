@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-prova_conhec_basicos_tec_federal_control_exter_tec_adm-direito-administrativo-d95945dd181f-bee9b8ff81db",
+  "source": {
+    "file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm_ATUALIZADO.json",
+    "sha256": "d95945dd181f1eb45ac1925bc608c39c59502ec921ff6088fd7fa8ea452ebe47",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+      "original_source_sha256": "cb0421eefe790fc8619534a2a1f0aa7b54af0ff8abce22779b8e91d6cb714a78",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "bee9b8ff81db6f1c43c10023d8209f674eddfba088e04ceff35479e8efebb979",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:029",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:29",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere aos princípios e conceitos da administração pública e aos servidores públicos, julgue os próximos itens.\n\nA vedação ao acúmulo remunerado de cargos, empregos ou funções públicas não se estende aos empregados das sociedades de economia mista.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 29; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "9e9beae41b5b3b234d854b55a39acec44112b95c4a0abb625f815dd3d447420b",
+        "original_numeric_id": 29,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta. A proibição constitucional de acumulação remunerada de cargos, empregos ou funções públicas não se limita à administração pública direta. Ela se estende expressamente a toda a administração indireta, o que abrange autarquias, fundações públicas, empresas públicas e sociedades de economia mista, bem como suas subsidiárias e sociedades controladas, direta ou indiretamente, pelo poder público.\n\nAssim, os empregados de sociedades de economia mista (que se submetem ao regime celetista) também estão sujeitos à regra de vedação de acúmulo de cargos públicos.\n\n### Dispositivo legal\nArt. 37, inciso XVII, da Constituição Federal de 1988.",
+        "source_reference": null
+      },
+      "source_content_hash": "500f9ecf9a7788b3d4c71868c1333743f56620a1d803f4fbaa7df3a5735772cb"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:031",
+      "source_id": "prova_conhec_basicos_tec_federal_control_exter_tec_adm:31",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere aos princípios e conceitos da administração pública e aos servidores públicos, julgue os próximos itens.\n\nSe for imprescindível à segurança da sociedade e do Estado, será permitido o sigilo dos atos administrativos.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "TCU",
+      "position_name": "TEFC",
+      "exam_year": 2015,
+      "difficulty": null,
+      "source_reference": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.pdf, questão 31; prova_conhec_basicos_tec_federal_control_exter_tec_adm_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Acesso à Informação",
+      "source_metadata": {
+        "source_file": "prova_conhec_basicos_tec_federal_control_exter_tec_adm.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "7ad84817655d265260abcdfe225159982b5a2e22b27a8054e68d594676ecda4b",
+        "original_numeric_id": 31,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "abrangencia-arts-1-e-2",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O princípio da publicidade, regente da Administração Pública, não possui caráter absoluto. A própria Constituição Federal de 1988 prevê exceções em que o sigilo de atos e informações administrativas é admitido. Conforme o texto constitucional, o direito de acesso a informações de interesse particular, coletivo ou geral é ressalvado nas hipóteses em que o sigilo seja imprescindível à segurança da sociedade e do Estado. Portanto, a afirmação está correta ao apontar essa possibilidade excepcional de sigilo.\n\n### Dispositivo legal\n* [Art. 5º, inciso XXXIII, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "0081615fab83973cfc13ab7ed61a0ed737ffa769c9e803a689d97906cca80c87"
+    }
+  ]
+}

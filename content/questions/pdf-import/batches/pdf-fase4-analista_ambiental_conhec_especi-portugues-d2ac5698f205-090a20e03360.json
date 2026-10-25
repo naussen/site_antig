@@ -1,0 +1,2170 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-analista_ambiental_conhec_especi-portugues-d2ac5698f205-090a20e03360",
+  "source": {
+    "file_name": "analista_ambiental_conhec_especi_ATUALIZADO.json",
+    "sha256": "d2ac5698f205a2638f1eaf79d0aedfc74d2cf54a6c2e1dadb69fe6ad34e8b6c4",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "analista_ambiental_conhec_especi.json",
+      "original_source_sha256": "df2e94ac9bbd67e22ac3acfaa869525b68daefee34c5d89f472cafa6b27243d5",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "090a20e033601448ebccf22907171a911280b0ca59ef886945f6182221746e98",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:056",
+      "source_id": "analista_ambiental_conhec_especi:56",
+      "question_type": "true_false",
+      "statement_markdown": "O IBAMA realizou, em janeiro de 2014, a primeira fase da operação Uçá, que consiste na fiscalização do defeso do caranguejo-uçá (Ucides cordatus) no litoral do Rio Grande do Norte. A operação foi realizada em seis dias, tendo sido visitados 22 estabelecimentos e apreendidos 862 caranguejos vivos e 152 abatidos. Embora o caranguejo-uçá ainda não esteja ameaçado de extinção, vem sofrendo capturas acima do recomendável para a recomposição dos estoques naturais.\n\nInternet: <www.ibama.org.br> (com adaptações).\n\nJulgue os próximos itens, relativos ao caranguejo-uçá, com base na legislação de regência.\n\nA apresentação de declaração de estoques e valores aos órgãos fiscalizadores é exigência que contribui para a fiscalização das pessoas física e jurídica que comercializam ou armazenam esse tipo de pescado.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 56; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "dd3b0c66810e651e46ab3f989a109a9f2ede5ac78f8e511a59d2265fde1ac26a",
+        "original_numeric_id": 56,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/ibama/pt-br"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nDurante o período de defeso reprodutivo do caranguejo-uçá (*Ucides cordatus*), as normas expedidas pelo Ministério do Meio Ambiente e pelo IBAMA (a exemplo da Instrução Normativa Interministerial MPA/MMA nº 9/2012 e atos normativos correlatos) impõem a todas as pessoas físicas ou jurídicas que atuam na guarda, transporte, estocagem, beneficiamento ou comercialização da espécie a obrigatoriedade de apresentar a **Declaração de Estoque** aos órgãos ambientais fiscalizadores até o último dia útil que antecede o início de cada período de defeso.\n\nEssa exigência documental é indispensável para comprovar a origem lícita dos estoques acumulados antes da proibição e coibir a captura clandestina.",
+        "source_reference": null
+      },
+      "source_content_hash": "64198fb121a40de79e11726b173fbd129e0477194fa2e0c0dbccacb9a03c1988"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:067",
+      "source_id": "analista_ambiental_conhec_especi:67",
+      "question_type": "true_false",
+      "statement_markdown": "A compreensão da dimensão da diversidade genética e da história evolutiva dos organismos vivos é crucial para estudos de biodiversidade geral, contribuindo na criação de programas para a conservação dessa biodiversidade. A respeito desse assunto, julgue os itens subsequentes, considerando a região neotropical.\n\nO agrupamento de peixes neotropicais em um clado monofilético evidencia a atual compreensão da evolução filogenética dos vertebrados da América do Sul.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 67; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "5a72568e9cb71b5b7d02f67cd4bf46ca45af3044170d96f0508a934818521c6e",
+        "original_numeric_id": 67,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque os peixes não constituem um grupo monofilético (clado). \n\nNa sistemática filogenética moderna, um grupo monofilético deve incluir um ancestral comum e todos os seus descendentes. O termo tradicional \"peixes\" refere-se a um agrupamento parafilético, pois exclui os tetrápodes (anfíbios, répteis, aves e mamíferos), que compartilham um ancestral comum mais recente com os peixes sarcopterígios do que estes compartilham com os peixes actinopterígios.\n\nAlém disso, agrupar os peixes da região neotropical sob um único clado monofilético ignora que eles pertencem a linhagens evolutivas amplamente distintas e independentes, cuja história evolutiva se conecta a táxons globais e não exclusivamente sul-americanos.",
+        "source_reference": null
+      },
+      "source_content_hash": "da590e6cc8f14ca1d64762831b82fab84acb16d9ff3eb3831337c990fe33241c"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:071",
+      "source_id": "analista_ambiental_conhec_especi:71",
+      "question_type": "true_false",
+      "statement_markdown": "Com base no disposto nas Leis n.º 12.651/2012 e n.º 12.727/2012 bem como nas Resoluções do Conselho Nacional do Meio Ambiente (CONAMA) n.º 378/2006 e n.º 379/2006, julgue os itens a seguir.\n\nEm todo imóvel rural, deve-se manter, a título de reserva legal, uma área dotada de cobertura de vegetação nativa, independentemente da existência de vegetação. Caso haja cobertura de vegetação nativa, essa área deve ser mantida e, caso não haja, deve ser recomposta.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 71; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "a393b73e03094600adf29b5dbd5cbf37440e3eb98ca527a2bd2065fe79f6bce4",
+        "original_numeric_id": 71,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque generaliza a obrigação de recomposição da Reserva Legal para todos os imóveis rurais, ignorando as exceções consolidadas na legislação ambiental.\n\nO Código Florestal (Lei nº 12.651/2012) prevê regras de transição e consolidação para pequenas propriedades ou posses rurais familiares. Especificamente, nos imóveis que detinham, em 22 de julho de 2008, área de até 4 módulos fiscais com remanescente de vegetação nativa em percentuais inferiores aos exigidos por lei, a Reserva Legal será constituída apenas pela área ocupada pela vegetação nativa existente naquela data. Nesses casos, o proprietário ou possuidor fica dispensado de promover a recomposição, compensação ou regeneração para atingir os percentuais padrão.\n\n### Dispositivo legal\nArtigo 67 da Lei nº 12.651, de 25 de maio de 2012.\nDisponível em: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "df939816bc92d8ad017fe5daf9eb41b0c1f1926b9de92e827c9cbc84c84e1b8c"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:072",
+      "source_id": "analista_ambiental_conhec_especi:72",
+      "question_type": "true_false",
+      "statement_markdown": "Com base no disposto nas Leis n.º 12.651/2012 e n.º 12.727/2012 bem como nas Resoluções do Conselho Nacional do Meio Ambiente (CONAMA) n.º 378/2006 e n.º 379/2006, julgue os itens a seguir.\n\nO Sistema Nacional do Meio Ambiente (SISNAMA), um registro eletrônico de realização obrigatória em relação a todos os imóveis rurais, tem por finalidade integrar as informações ambientais referentes à situação das áreas de preservação permanente, das áreas de reserva legal, das florestas, dos remanescentes de vegetação nativa, das áreas de uso restrito e das áreas consolidadas das propriedades e posses rurais do país.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 72; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "b4ac5364cf897414f91fda1b5faa293a9483a59f0a316939242c6fa9380d5f5e",
+        "original_numeric_id": 72,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto pois confunde dois conceitos distintos da legislação ambiental brasileira:\n\n1. **Cadastro Ambiental Rural (CAR):** É o registro público eletrônico de âmbito nacional, obrigatório para todos os imóveis rurais, que tem a finalidade de integrar as informações ambientais das propriedades e posses rurais, compondo base de dados para controle, monitoramento, planejamento ambiental e econômico e combate ao desmatamento.\n2. **Sistema Nacional do Meio Ambiente (SISNAMA):** É a estrutura constituída pelos órgãos e entidades da União, dos Estados, do Distrito Federal, dos Territórios e dos Municípios, bem como pelas fundações instituídas pelo Poder Público, responsáveis pela proteção e melhoria da qualidade ambiental.\n\nPortanto, a definição apresentada no enunciado refere-se ao CAR, e não ao SISNAMA.\n\n### Dispositivo legal\n\n* **Lei nº 12.651/2012, Art. 29:** [Planalto](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm)\n* **Lei nº 6.938/1981, Art. 6º:** [Planalto](https://www.planalto.gov.br/ccivil_03/leis/l6938.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "f971109800b72fec64557df9eb7615ee4d0078def7ec039194199738c280b621"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:073",
+      "source_id": "analista_ambiental_conhec_especi:73",
+      "question_type": "true_false",
+      "statement_markdown": "Com base no disposto nas Leis n.º 12.651/2012 e n.º 12.727/2012 bem como nas Resoluções do Conselho Nacional do Meio Ambiente (CONAMA) n.º 378/2006 e n.º 379/2006, julgue os itens a seguir.\n\nA supressão de florestas e outras formas de vegetação nativa em imóveis rurais dotados de área superior a mil hectares, localizados em qualquer região do país, deve ser autorizada pelo IBAMA.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 73; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "e9c9eed044c9e4f0ca192eb0d20b11e422dcbd37dde9010d6f31888858864d44",
+        "original_numeric_id": 73,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA Lei nº 12.651/2012 (Novo Código Florestal, Art. 26) estabelece que a supressão de vegetação nativa para uso alternativo do solo em imóveis rurais privados depende de autorização do **órgão ambiental estadual integrante do SISNAMA** (ou municipal competente), e não do IBAMA.\n\nConforme a Lei Complementar nº 140/2011, a competência do IBAMA para autorizar supressão de vegetação é de caráter excepcional, restringindo-se às atividades e empreendimentos licenciados originariamente pela União (como obras em terras indígenas, unidades de conservação federais ou que envolvam mais de um estado federado), não se aplicando indistintamente a imóveis particulares apenas pelo tamanho superior a mil hectares.",
+        "source_reference": null
+      },
+      "source_content_hash": "6a7ad4af4bf78f6908d45e47065e4801473aa723e3dfeee6594a7fe4a5cb1e3b"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:074",
+      "source_id": "analista_ambiental_conhec_especi:74",
+      "question_type": "true_false",
+      "statement_markdown": "Com base no disposto nas Leis n.º 12.651/2012 e n.º 12.727/2012 bem como nas Resoluções do Conselho Nacional do Meio Ambiente (CONAMA) n.º 378/2006 e n.º 379/2006, julgue os itens a seguir.\n\nA intervenção ou a supressão de vegetação nativa, como a exploração de agroflorestas, em área de preservação permanente (APP) podem ser realizadas apenas em casos de utilidade pública, interesse social ou acarretamento de baixo impacto ambiental.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 74; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "fa4fe64aa8f75414e850eab5eabab2101ddb80d124a119d1f48aaf36e17abbd3",
+        "original_numeric_id": 74,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A regra geral estabelecida pela Lei nº 12.651/2012 é a de que a vegetação em Área de Preservação Permanente (APP) deve ser mantida. No entanto, o art. 8º prevê exceções taxativas, permitindo a intervenção ou a supressão de vegetação nativa em APP exclusivamente nas hipóteses de:\n\n1. **Utilidade pública**;\n2. **Interesse social**;\n3. **Atividades de baixo impacto ambiental**.\n\nA exploração de sistemas agroflorestais é expressamente classificada pela lei como atividade de baixo impacto ambiental (art. 3º, inciso X, alínea \"i\") ou, em contextos de agricultura familiar e pequenas propriedades, pode ser enquadrada como de interesse social (art. 3º, inciso IX, alíneas \"c\" e \"g\"), viabilizando a intervenção sob condições específicas.\n\n### Dispositivo legal\n\n* **Lei nº 12.651/2012, Art. 3º, incisos IX e X, e Art. 8º:** [Planalto](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "3966b5ccaf72d116bc496a0ef2545a240bdc2e31ba0527ed91152e84c48af50f"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:075",
+      "source_id": "analista_ambiental_conhec_especi:75",
+      "question_type": "true_false",
+      "statement_markdown": "Com base no disposto nas Leis n.º 12.651/2012 e n.º 12.727/2012 bem como nas Resoluções do Conselho Nacional do Meio Ambiente (CONAMA) n.º 378/2006 e n.º 379/2006, julgue os itens a seguir.\n\nOs valores de largura de área de preservação permanente (APP) não foram alterados pelo Novo Código Florestal Brasileiro: a largura do curso d’água permaneceu como medida preponderante para se definir a largura de APP. Essa lei alterou apenas o ponto a partir do qual se devem delimitar essas áreas, que passou a ser a partir do nível mais alto do leito do curso d’água.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 75; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "560bdd7e7c713c27dc473556d381c6c0e4447bb4c10bac87fce707148c3eb234",
+        "original_numeric_id": 75,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto porque inverteu a alteração promovida pelo Novo Código Florestal (Lei nº 12.651/2012) em relação ao marco inicial de medição das Áreas de Preservação Permanente (APP) ao longo dos cursos d'água:\n\n* **Código Florestal de 1965 (Lei nº 4.771/1965):** A medição iniciava-se a partir do **nível mais alto** (leito maior sazonal) do curso d'água.\n* **Novo Código Florestal de 2012 (Lei nº 12.651/2012):** A medição passou a ser feita a partir da **borda da calha do leito regular**.\n\nEssa alteração legislativa reduziu, na prática, a extensão real das áreas protegidas em muitos casos, uma vez que desconsidera as cheias sazonais (leito maior) como ponto de partida para a delimitação da APP.\n\n### Dispositivo legal\n\n* **Lei nº 12.651/2012, Art. 4º, inciso I:** [Planalto](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "dd5a930ec2d281b85170e909c81dbb866956f63b6b942358cfae35b6fb7efe83"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:077",
+      "source_id": "analista_ambiental_conhec_especi:77",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere a recursos florestais, julgue os próximos itens.\n\nAs modalidades de gestão de florestas no Brasil são três: gestão direta governamental, destinação de florestas a comunidades locais e concessão florestal, sendo esta última caracterizada pelo uso da floresta pelo setor privado.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 77; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "20f7ba459dca9c8764f94de7162afa669b2f4918b08325086afbe75cb520bd77",
+        "original_numeric_id": 77,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11284.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva aborda corretamente as modalidades de gestão de florestas públicas no Brasil, conforme estabelecido pela Lei de Gestão de Florestas Públicas (Lei nº 11.284/2006). \n\nDe acordo com a legislação, a gestão de florestas públicas para a produção sustentável compreende três modalidades:\n\n1. **Gestão direta:** realizada pelo próprio poder público (União, Estados, Distrito Federal ou Municípios);\n2. **Destinação de florestas públicas a comunidades locais:** voltada para assentamentos de reforma agrária, comunidades tradicionais e populações locais, de forma gratuita;\n3. **Concessão florestal:** delegação onerosa do direito de praticar o manejo florestal sustentável a pessoas jurídicas (setor privado), mediante processo licitatório.\n\nPortanto, a caracterização da concessão florestal como o uso da floresta pelo setor privado está correta e em perfeita consonância com a norma vigente.\n\n**Dispositivo legal**\n\n[Lei nº 11.284/2006, Art. 4º](https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11284.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "8d7ed2e9ca44f396c771d2236cc0d0d0ec919fcf6c21ae48ceae1885e619ec85"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:078",
+      "source_id": "analista_ambiental_conhec_especi:78",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere a recursos florestais, julgue os próximos itens.\n\nDiversos modelos de concessão florestal permitem a omissão da variável ambiental, o que favorece a exploração de forma irracional das florestas e, consequentemente, o esgotamento de seus recursos.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 78; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "02543d2134078bd7179c67b0b40b7b101dad860c4fffa31308332c6ce17720b6",
+        "original_numeric_id": 78,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2006/lei/l11284.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nHistoricamente, em diversas experiências internacionais de exploração florestal e modelos arcaicos de concessões baseados exclusivamente no volume de extração comercial de madeira, a dimensão da sustentabilidade ecológica e a reposição florestal foram relegadas ou omitidas.\n\nEssa omissão da variável ambiental incentivou a exploração predatória de curto prazo (\"mineração florestal\"), acarretando o rápido esgotamento das espécies de maior valor econômico e a degradação dos ecossistemas nativos, o que motivou a formulação de novos marcos legais de manejo florestal sustentável.",
+        "source_reference": null
+      },
+      "source_content_hash": "043941d0d7ec95647d475740e2665d3d7a62b618193ed89c8af35acef5f6ef88"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:079",
+      "source_id": "analista_ambiental_conhec_especi:79",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere a recursos florestais, julgue os próximos itens.\n\nDiâmetro e circunferência são variáveis básicas mensuráveis em um povoamento florestal, sendo empregadas amplamente no cálculo da área transversal, da área basal, do volume, do crescimento e dos quocientes de forma da floresta.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 79; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "261eed700821544ea0b10b2335d39e8404863e6862130aefa6d9a7848328f9cd",
+        "original_numeric_id": 79,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_analista_ambiental_conhec_especi_079.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. Na dendrometria e no inventário florestal, o diâmetro (geralmente medido à altura do peito - DAP, a 1,30 m do solo) e a circunferência (CAP) são as variáveis dendrométricas básicas de medição direta mais comuns em campo.\n\nA partir dessas variáveis básicas, realizam-se diversos cálculos fundamentais para o manejo florestal:\n* **Área transversal ($g$):** área da seção transversal do tronco a 1,30 m de altura, calculada diretamente a partir do diâmetro.\n* **Área basal ($G$):** soma das áreas transversais de todas as árvores por unidade de área (geralmente expressa em m²/ha).\n* **Volume ($V$):** estimado por meio de equações volumétricas que utilizam o diâmetro (ou área transversal), a altura e o fator de forma.\n* **Crescimento:** avaliado pela variação do diâmetro e das variáveis derivadas ao longo do tempo.\n* **Quocientes de forma:** obtidos pela razão entre diâmetros medidos em diferentes alturas do tronco para caracterizar a conicidade da árvore.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_analista_ambiental_conhec_especi_079.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "811558b8049edafbb7e1638ad1ecdf74009bbb3f4d3eb8d24db75c66fdde9121"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:082",
+      "source_id": "analista_ambiental_conhec_especi:82",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos incêndios florestais, julgue os itens seguintes.\n\nDe acordo com a legislação vigente, é proibido o uso de fogo em vegetação, excetuando-se, entre outras práticas, a queima controlada em unidades de conservação, desde que a área esteja em conformidade com o plano de manejo e a queima tenha sido aprovada pelo órgão gestor.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 82; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "b19132f3d534eefd37f00bc04ed44e43e7d2cb538f567407e7e7c2d90a467c4a",
+        "original_numeric_id": 82,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta e reflete as disposições do Código Florestal Brasileiro (Lei nº 12.651/2012). \n\nA regra geral estabelecida pela legislação é a proibição do uso de fogo na vegetação. No entanto, o artigo 38 da referida lei prevê exceções específicas nas quais o emprego do fogo é permitido mediante prévia autorização ou sob condições determinadas. \n\nUma dessas exceções (inciso II do art. 38) é justamente o emprego da queima controlada em Unidades de Conservação, com o objetivo de prevenir incêndios maiores ou para fins de manejo de ecossistemas associados ao fogo, desde que a atividade esteja expressamente prevista no plano de manejo da unidade e seja devidamente aprovada pelo respectivo órgão gestor.\n\n**Dispositivo legal**\n\n[Lei nº 12.651/2012, Art. 38, II](https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "b9a67956314a80e3ac3bba2f7c0fb96e6086991c961585a55555516a3cc2533a"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:083",
+      "source_id": "analista_ambiental_conhec_especi:83",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito dos incêndios florestais, julgue os itens seguintes.\n\nO conceito de incêndio florestal refere-se à presença de fogo em áreas de formação florestal. Caso o fogo ocorra em formações naturais campestres e savânicas, esse evento deve ser designado por queimada descontrolada.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 83; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "39e45645fa23e5f857836571a0b872f0150745a4623abec12b3e1238e1da5d1f",
+        "original_numeric_id": 83,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta. O conceito de **incêndio florestal** não se restringe exclusivamente a áreas de florestas densas ou fechadas. \n\nTanto na literatura técnica quanto nas diretrizes de órgãos ambientais (como o Prevfogo/IBAMA), o termo \"incêndio florestal\" (ou incêndio em vegetação) refere-se a **todo fogo sem controle que incide sobre qualquer forma de vegetação**, seja ela florestal, savânica (como o Cerrado) ou campestre (como os Campos Sulinos), de caráter nativo ou plantado.\n\nPortanto, é incorreto afirmar que o fogo sem controle em formações campestres e savânicas deve ser obrigatoriamente designado por \"queimada descontrolada\" para se diferenciar de incêndio florestal. O termo \"queimada\" geralmente refere-se ao uso do fogo de forma controlada e autorizada para fins agrossilvipastoris, enquanto o fogo sem controle, independentemente da fisionomia vegetal afetada, caracteriza um incêndio.",
+        "source_reference": null
+      },
+      "source_content_hash": "91b37ff273ab2d7be051ddce52888f9cf4e2477ebbc63d73247289df9a014c02"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:084",
+      "source_id": "analista_ambiental_conhec_especi:84",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de cartografia, de sistemas de informação geográfica e sensoriamento remoto, julgue os próximos itens.\n\nTratando-se do modo de imageamento de sensores imageadores de radar, as terminologias C e V correspondem, respectivamente, ao comprimento de onda e à polarização da radiação eletromagnética emitida ou recebida pela antena.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 84; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "382c3202aef211533caeabe584d78dac3001a65868a112cd01d2ae798b00cc0d",
+        "original_numeric_id": 84,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. No contexto do sensoriamento remoto por radar (como o Radar de Abertura Sintética - SAR), as letras maiúsculas são utilizadas para designar diferentes bandas do espectro eletromagnético, as quais possuem comprimentos de onda específicos. A letra **C**, por exemplo, representa a Banda C, cujo comprimento de onda varia aproximadamente entre 3,75 cm e 7,5 cm.\n\nPor sua vez, as letras **H** (horizontal) e **V** (vertical) referem-se ao estado de polarização da radiação eletromagnética emitida ou recebida pela antena do sensor. Assim, as terminologias C e V correspondem, respectivamente, ao comprimento de onda (banda) e à polarização.",
+        "source_reference": null
+      },
+      "source_content_hash": "a17d9c22968121a3f512981b1d136af025433c8c2c980450b5aade8f518edcca"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:085",
+      "source_id": "analista_ambiental_conhec_especi:85",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de cartografia, de sistemas de informação geográfica e sensoriamento remoto, julgue os próximos itens.\n\nO componente espacial de um dado geográfico pode ser armazenado em um pacote computacional de sistema de informações geográficas em estrutura matricial ou vetorial. Caso seja armazenado em uma estrutura, o dado não poderá ser convertido para outra.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 85; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "35eff79a292d5c0fe54b3300a15c3a16a5825ae17fae4929f05711ddcc5b6ee6",
+        "original_numeric_id": 85,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta na sua parte final. Embora o componente espacial de um dado geográfico possa ser armazenado tanto em estrutura matricial (*raster*) quanto em estrutura vetorial (*vetor*), é perfeitamente possível realizar a conversão de um formato para o outro dentro de qualquer Sistema de Informação Geográfica (SIG).\n\n*   **Vetorização:** Processo de conversão de dados matriciais para vetoriais.\n*   **Rasterização:** Processo de conversão de dados vetoriais para matriciais.\n\nPortanto, a alegação de que o dado não poderá ser convertido para outra estrutura após o armazenamento inicial é falsa.",
+        "source_reference": null
+      },
+      "source_content_hash": "b100d2dbfca5e357edc746f0660ba0e724459cac0dc8a4de63b341afbb14cee6"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:086",
+      "source_id": "analista_ambiental_conhec_especi:86",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de cartografia, de sistemas de informação geográfica e sensoriamento remoto, julgue os próximos itens.\n\nOs sistemas relacionados a referenciais geodésicos incluem WGS84 (World Geodetic System, de 1984), SIRGAS2000 (sistema de referência geocêntrico para as Américas, de 2000) e UTM (universal transversa de Mercator).",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 86; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "072c9499c6e70f07b2f444233768ada369adeba9fe51fb48cac8d473f913b135",
+        "original_numeric_id": 86,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está incorreta porque confunde conceitos distintos da cartografia:\n\n1.  **Sistemas de Referência Geodésicos (Datums):** Definem a forma e o tamanho do elipsoide de referência, bem como a sua posição em relação à Terra. O **WGS84** (World Geodetic System 1984) e o **SIRGAS2000** (Sistema de Referência Geocêntrico para as Américas) são, de fato, referenciais geodésicos.\n2.  **Sistema de Projeção Cartográfica:** O **UTM** (Universal Transversa de Mercator) não é um referencial geodésico, mas sim um sistema de projeção cilíndrica transversa e conforme, utilizado para projetar as coordenadas tridimensionais da Terra em um plano bidimensional.\n\nComo o UTM foi classificado incorretamente como um referencial geodésico, o item é considerado errado.",
+        "source_reference": null
+      },
+      "source_content_hash": "46c3c0e4bdc3cf1ab8bd71ca6664083def381874aa8c09b8e2a8ab4319aba554"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:087",
+      "source_id": "analista_ambiental_conhec_especi:87",
+      "question_type": "true_false",
+      "statement_markdown": "Com base na Lei n.º 9.605/1998, julgue o item abaixo, relativo a destinos de produtos apreendidos.\n\nAs madeiras apreendidas são entregues ao IBAMA ou às secretarias estaduais de meio ambiente, órgãos responsáveis por avaliá-las.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 87; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "0bd793aed24a17c24633a3f040289a00e230db527a4bbbae61d28877569fc7bb",
+        "original_numeric_id": 87,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l9605.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nDe acordo com a Lei de Crimes Ambientais (Lei nº 9.605/1998, Art. 25, § 2º) e o Decreto nº 6.514/2008:\n\nOs produtos da flora apreendidos pela fiscalização (como madeiras em tora ou serradas obtidas ilegalmente) são confiados à guarda e avaliação dos órgãos integrantes do SISNAMA (IBAMA, ICMBio ou órgãos ambientais estaduais competentes), a quem cabe proceder à mensuração volumétrica, avaliação técnica de mercado e posterior destinação legal (doação a instituições públicas/beneficentes ou leilão).",
+        "source_reference": null
+      },
+      "source_content_hash": "81e49ebcc22d68fbbd6df2a6757d5895240d5f787e17bebdc8dcbeb2901c1f09"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:088",
+      "source_id": "analista_ambiental_conhec_especi:88",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando o Decreto n.º 6.514/2008, que dispõe sobre infrações ao meio ambiente e suas correspondentes sanções administrativas, julgue os itens que se seguem.\n\nO agente que autuar áreas irregularmente desmatadas ou queimadas deve embargar todas as obras e atividades nelas localizadas ou desenvolvidas, desde que não estejam relacionadas a atividades de subsistência.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 88; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "a47bf3797e77257e4457809e2e2e4b557c4ba3da9ae2ed8fe8a4d2157e0a2c9c",
+        "original_numeric_id": 88,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6514.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNos termos do Artigo 18 do Decreto nº 6.514/2008:\n\n*\"Art. 18. O embargo de obra ou atividade restringe-se aos locais onde efetivamente se caracterizou a infração ambiental, não alcançando as demais atividades realizadas em outras áreas do imóvel não embargadas ou que **não estejam relacionadas à subsistência**.\"*\n\nAo constatar o desmatamento ou a queimada ilícita, o agente de fiscalização ambiental tem o dever de embargar de imediato as obras e atividades produtivas que deram causa ao dano, ressalvando-se expressamente aquelas estritamente indispensáveis à subsistência da família do autuado.",
+        "source_reference": null
+      },
+      "source_content_hash": "85e5a23f9fc4ab8bf22ce69a198f27c304317c1e3792398f986b6e47ec78f846"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:089",
+      "source_id": "analista_ambiental_conhec_especi:89",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando o Decreto n.º 6.514/2008, que dispõe sobre infrações ao meio ambiente e suas correspondentes sanções administrativas, julgue os itens que se seguem.\n\nA advertência aplica-se aos casos em que a multa máxima cominada não ultrapassar o valor de R$ 1.000,00.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 89; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "8264b803d9abca25bfe85846855f87f1c9ede717ab8e3adbff64f49c43be70d1",
+        "original_numeric_id": 89,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/decreto/d6514.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nConforme estabelece o Artigo 5º do Decreto nº 6.514/2008:\n\n*\"Art. 5º A sanção de advertência poderá ser aplicada, pela inobservância das disposições deste Decreto e da legislação em vigor, quando o valor da **multa máxima cominada não ultrapassar o valor de R$ 1.000,00 (mil reais)**, ou para infrações de menor gravidade, mediante a fixação de prazo para que o infrator sane a irregularidade.\"*\n\nA assertiva transcreve com exatidão a hipótese objetiva de cabimento da penalidade administrativa de advertência.",
+        "source_reference": null
+      },
+      "source_content_hash": "e418f973044106f67da27c0f0ea279cfa3710de2b0b0f64c2c07290541f0744d"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:090",
+      "source_id": "analista_ambiental_conhec_especi:90",
+      "question_type": "true_false",
+      "statement_markdown": "Com base na regulamentação legal do licenciamento ambiental, julgue o item abaixo.\n\nOs licenciamentos ambientais de empreendimentos situados em terras indígenas e localizados integralmente em determinado estado da Federação são de competência desse mesmo estado.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 90; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "cdff196d5720b307ca2715cdb18a179e3febb7ccb4b4dad1fb86ecbc98f12fd6",
+        "original_numeric_id": 90,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp140.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nDe acordo com a Lei Complementar nº 140/2011 (Art. 7º, inciso XIV, alínea 'e'), compete originariamente ao **IBAMA (União)** promover o licenciamento ambiental de empreendimentos ou atividades localizados ou desenvolvidos em **terras indígenas**.\n\nPor serem as terras indígenas bens de domínio e proteção da União (Art. 20, XI e Art. 231 da CF/88), a competência para o licenciamento ambiental é exclusivamente federal, sendo vedada a atribuição ao órgão ambiental do estado da Federação onde a terra indígena se situe.",
+        "source_reference": null
+      },
+      "source_content_hash": "67d87339c65d15c7dad017f89805f102c326d9f2b42e62c88b06605e4eb26b7e"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:091",
+      "source_id": "analista_ambiental_conhec_especi:91",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito à gestão e ao manejo de unidades de conservação (UCs), julgue os itens subsequentes.\n\nA elaboração e a utilização do plano de manejo de área protegida são facultativas.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 91; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "78ed37817285d6336905c032476e4c4101ee2728e147da87eb3cf18555f9454b",
+        "original_numeric_id": 91,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/leis/l9985.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta. A elaboração e a utilização do plano de manejo não são facultativas, mas sim obrigatórias para todas as unidades de conservação integrantes do Sistema Nacional de Unidades de Conservação (SNUC).\n\nDe acordo com a Lei nº 9.985/2000, a unidade de conservação deve dispor de um plano de manejo, o qual deve abranger a área da unidade de conservação, sua zona de amortecimento e os corredores ecológicos, devendo ser elaborado no prazo de cinco anos a partir da data de sua criação.",
+        "source_reference": null
+      },
+      "source_content_hash": "82583e917e1819dcc046d43d710896e594e31add1086b88ef64ed7015dfe2718"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:093",
+      "source_id": "analista_ambiental_conhec_especi:93",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito à gestão e ao manejo de unidades de conservação (UCs), julgue os itens subsequentes.\n\nCaso se adote gestão compartilhada, as UCs podem ser geridas por organizações da sociedade civil de interesse público com objetivos afins ao da unidade, mediante instrumento a ser firmado com o órgão responsável por sua gestão.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 93; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "5dffa988b059507d87b2a1261d73172e120cdcd0c4cc7adec97bbf42ca897889",
+        "original_numeric_id": 93,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l9985.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA Lei nº 9.985/2000 (Lei do Sistema Nacional de Unidades de Conservação - SNUC, Art. 30) estabelece expressamente:\n\n*\"Art. 30. As Unidades de Conservação podem ser geridas por organizações da sociedade civil de interesse público com objetivos afins aos da unidade, mediante instrumento a ser firmado com o órgão responsável por sua gestão.\"*\n\nA celebração de termo de parceria para a gestão compartilhada de Unidades de Conservação com OSCIPs é prerrogativa legal consagrada no SNUC.",
+        "source_reference": null
+      },
+      "source_content_hash": "aa3273fe88c12d910a3e480b9ec50289b8ce9250d41d3c87c0fb575f96b6b4dc"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:094",
+      "source_id": "analista_ambiental_conhec_especi:94",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito à gestão e ao manejo de unidades de conservação (UCs), julgue os itens subsequentes.\n\nO licenciamento de empreendimento de significativo impacto ambiental localizado em uma faixa de três mil metros, a partir do limite da unidade de conservação, e cuja zona de amortecimento não esteja estabelecida sujeita-se à autorização do órgão responsável pela administração da respectiva unidade de conservação. Reservas particulares de patrimônio natural, áreas de proteção ambiental e áreas urbanas consolidadas são empreendimentos aos quais se aplica essa regra.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 94; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Semântica e Significação das Palavras",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "c3bf3fe2432ea0635a7757b59febde8231035904ad0da472598a7aa6774a4f25",
+        "original_numeric_id": 94,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/mma/pt-br"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA Resolução CONAMA nº 428/2010 (que alterou a Resolução nº 13/1990) disciplina que o licenciamento de empreendimentos de significativo impacto em área circundante a Unidades de Conservação (raio de 3.000 metros quando não fixada zona de amortecimento) sujeita-se à manifestação/autorização do órgão gestor da UC.\n\nContudo, o próprio normativo estabelece **exceções expressas**, determinando que essa exigência **não se aplica** a Áreas de Proteção Ambiental (APA), nem a Reservas Particulares do Patrimônio Natural (RPPN) e a áreas urbanas consolidadas. Portanto, o item erra ao afirmar que a regra se aplica a tais áreas.",
+        "source_reference": null
+      },
+      "source_content_hash": "93220ff896c0ff792c79b23c24bfe3cd15a5c0eb3a73bce1ddc2f748aeec8dd3"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:098",
+      "source_id": "analista_ambiental_conhec_especi:98",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de solos e da hidrologia da bacia amazônica, julgue os itens a seguir.\n\nEmbora se localize, em sua totalidade, no território brasileiro, a bacia hidrográfica do Amazonas, a mais extensa rede hidrográfica do globo terrestre, é considerada uma bacia hidrográfica internacional, formada por um eixo fluvial de primeira ordem, o rio Amazonas e as bacias hidrográficas individuais que afluem para esse rio principal.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 98; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "07ee50354be5ca2dcbb9916c6ca31f7a4fbf3bbde5eed3c041fd1dc86eca2a51",
+        "original_numeric_id": 98,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta. A bacia hidrográfica do Amazonas não se localiza em sua totalidade no território brasileiro.\n\nTrata-se de uma bacia transfronteiriça (internacional) que abrange territórios de diversos outros países da América do Sul, como Peru, Colômbia, Bolívia, Equador, Venezuela, Guiana e Suriname, embora a maior porção de sua área e de sua rede de drenagem esteja situada dentro das fronteiras do Brasil.",
+        "source_reference": null
+      },
+      "source_content_hash": "328d917d1fd54b80d743e517afce831c5086115b07f78cab23ef733f85ad95a1"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:099",
+      "source_id": "analista_ambiental_conhec_especi:99",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de solos e da hidrologia da bacia amazônica, julgue os itens a seguir.\n\nSolo é um corpo natural com fases sólida, líquida e gasosa que ocupa espaço na superfície terrestre e que se distingue do material de origem por horizontes e camadas formados a partir da adição, da perda, da transferência e da transformação de matéria e energia, ou que seja capaz de suportar o desenvolvimento de sistemas radiculares.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 99; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "440152f91bf7c88de22a1e05f80d397db7d64057026bec9a7ddaa680d2470291",
+        "original_numeric_id": 99,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item apresenta a definição conceitual de solo adotada oficialmente pelo Sistema Brasileiro de Classificação de Solos (SiBCS), desenvolvido pela Embrapa. \n\nO solo é caracterizado como um corpo natural trifásico (composto por frações sólidas, líquidas e gasosas) que ocupa a superfície terrestre. Sua diferenciação em relação ao material de origem (rocha ou sedimento) ocorre por meio de processos pedogenéticos fundamentais: adições, perdas, transposições (ou transferências) e transformações de matéria e energia. Alternativamente, a definição engloba corpos que, mesmo sem horizontes plenamente desenvolvidos, sejam capazes de sustentar o desenvolvimento de sistemas radiculares de plantas. Portanto, a afirmação está correta.",
+        "source_reference": null
+      },
+      "source_content_hash": "e2408b98337ee6f0e6f2070ca1a6d5f479f7bc5361e1400ef1b6f3892f3ebeff"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:100",
+      "source_id": "analista_ambiental_conhec_especi:100",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito de solos e da hidrologia da bacia amazônica, julgue os itens a seguir.\n\nA capacidade do solo de armazenar e liberar gradativamente elementos químicos provém do conjunto de cargas elétricas que possui. Dessa forma, o solo é capaz de manter um equilíbrio dinâmico entre a proporção de elementos retida na fase sólida e a proporção prontamente disponível em solução.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 100; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "35a8ccf0fbc243e0646d869dd3639a76d5d21ba430dcccc6a3c7a0b8aa1e8c52",
+        "original_numeric_id": 100,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A capacidade do solo de reter e liberar elementos químicos (nutrientes) está diretamente relacionada ao seu complexo de troca, composto por cargas elétricas líquidas (positivas e negativas) presentes na superfície dos coloides (argilas e matéria orgânica).\n\nEsse fenômeno, conhecido como capacidade de troca catiônica (CTC) e aniônica (CTA), estabelece um equilíbrio dinâmico entre a fase sólida (onde os íons estão adsorvidos) e a fase líquida ou solução do solo (onde os nutrientes estão dissolvidos e prontamente disponíveis para absorção pelas raízes). À medida que as plantas absorvem os nutrientes da solução, ocorre a liberação gradual dos elementos retidos na fase sólida para restabelecer o equilíbrio químico. Portanto, a afirmação está correta.",
+        "source_reference": null
+      },
+      "source_content_hash": "e7129b16ef42466d15191850dfedc1f5265ea21e279ee0216141058bdd1ea632"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:101",
+      "source_id": "analista_ambiental_conhec_especi:101",
+      "question_type": "true_false",
+      "statement_markdown": "O levantamento do potencial energético na região amazônica data no mínimo da década de 80 do século passado, quando as áreas de exploração na região sudeste se esgotaram. Mais especificamente na região do Rio Tapajós, todo um complexo de hidrelétricas está programado para ser construído: o governo federal anunciou que, até o final de 2014, sairá a licença de operação e instalação da usina de São Luiz do Tapajós, próxima à cidade de Itaituba e com potencial energético comparável à Usina de Belo Monte.\n\nInternet: <www.valor.com.br> (com adaptações).\n\nTendo o texto acima como referência, julgue os itens de 101 a 103 acerca de aspectos a ele relacionados.\n\nApesar de os impactos geofísicos, biológicos e ambientais provocados por uma usina hidrelétrica começarem no início do empreendimento, os socioeconômicos e demográficos, nas comunidades indígenas, começam a ser percebidos logo que se iniciam os estudos e as sondagens da viabilidade do empreendimento na região.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 101; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "bfc595effc63126a19bc0d7e6c1b4053c7557730da9ea81e47633f1a2b051cdd",
+        "original_numeric_id": 101,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Os impactos socioeconômicos e demográficos de grandes empreendimentos de infraestrutura, como usinas hidrelétricas, frequentemente antecedem as intervenções físicas no meio ambiente. \n\nA simples presença de equipes técnicas para a realização de estudos de viabilidade, sondagens geológicas e levantamentos de campo gera expectativas, especulação imobiliária, atração de fluxos migratórios espontâneos em busca de emprego e alterações na dinâmica social e cultural das comunidades locais, incluindo terras indígenas. \n\nEm contrapartida, os impactos geofísicos e biológicos diretos (como supressão de vegetação, alteração do regime hidrológico e perda de habitats) manifestam-se de forma mais expressiva a partir do início efetivo das obras e do barramento do rio. Portanto, a afirmação está correta.",
+        "source_reference": null
+      },
+      "source_content_hash": "5d40620beaaf6f9b4a9ab5f2b38c6fac68b8631ad787a99a5e209ef23d8d93d2"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:102",
+      "source_id": "analista_ambiental_conhec_especi:102",
+      "question_type": "true_false",
+      "statement_markdown": "O levantamento do potencial energético na região amazônica data no mínimo da década de 80 do século passado, quando as áreas de exploração na região sudeste se esgotaram. Mais especificamente na região do Rio Tapajós, todo um complexo de hidrelétricas está programado para ser construído: o governo federal anunciou que, até o final de 2014, sairá a licença de operação e instalação da usina de São Luiz do Tapajós, próxima à cidade de Itaituba e com potencial energético comparável à Usina de Belo Monte.\n\nInternet: <www.valor.com.br> (com adaptações).\n\nTendo o texto acima como referência, julgue os itens de 101 a 103 acerca de aspectos a ele relacionados.\n\nA usina hidrelétrica de São Luiz do Tapajós foi concebida para atuar como usina-plataforma e a energia produzida por ela será exclusivamente destinada às populações da região Norte.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 102; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "1a14022cc969416c15d6eaf377f3e35a5db0774e1531b3c15ad0ab3a67644012",
+        "original_numeric_id": 102,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O erro da afirmação reside na destinação exclusiva da energia gerada.\n\nEmbora o projeto da Usina Hidrelétrica (UHE) de São Luiz do Tapajós tenha sido concebido sob o conceito de \"usina-plataforma\" — modelo inspirado nas plataformas de petróleo *offshore*, que visa reduzir o impacto socioambiental na floresta ao evitar a criação de núcleos urbanos permanentes —, a energia elétrica produzida por grandes empreendimentos hidrelétricos na Amazônia é direcionada ao Sistema Interligado Nacional (SIN). \n\nDessa forma, a eletricidade gerada destina-se ao abastecimento de diversas regiões do país, e não exclusivamente à população da região Norte.",
+        "source_reference": null
+      },
+      "source_content_hash": "126263a6d2677b198609ed46f4bc68d9cdf7cdd52a3969c6a014fc17b52ac659"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:103",
+      "source_id": "analista_ambiental_conhec_especi:103",
+      "question_type": "true_false",
+      "statement_markdown": "O levantamento do potencial energético na região amazônica data no mínimo da década de 80 do século passado, quando as áreas de exploração na região sudeste se esgotaram. Mais especificamente na região do Rio Tapajós, todo um complexo de hidrelétricas está programado para ser construído: o governo federal anunciou que, até o final de 2014, sairá a licença de operação e instalação da usina de São Luiz do Tapajós, próxima à cidade de Itaituba e com potencial energético comparável à Usina de Belo Monte.\n\nInternet: <www.valor.com.br> (com adaptações).\n\nTendo o texto acima como referência, julgue os itens de 101 a 103 acerca de aspectos a ele relacionados.\n\nAlvo de críticas de ambientalistas e indigenistas, a usina de São Luiz do Tapajós reduzirá grande parte da biodiversidade da área com a alteração da rota migratória de peixes ornamentais e impedindo novas demarcações de terras indígenas na área.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 103; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "92585912652548f52e461ae5d0faf54e79fc816fbd2401d395629dda9aaf166c",
+        "original_numeric_id": 103,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nOs estudos de impacto ambiental e os relatórios técnicos de órgãos socioambientais e indigenistas sobre o projeto hidrelétrico de São Luiz do Tapajós apontaram severas repercussões ecológicas e sociais:\n\nA formação do reservatório inundaria extensas áreas de várzea e corredeiras do Rio Tapajós, alterando criticamente o habitat e a rota de peixes (inclusive de espécies ornamentais de alto valor endêmico) e provocando o alagamento irreversível de territórios tradicionais dos povos indígenas Munduruku (como a Terra Indígena Sawré Muybu), inviabilizando a conclusão dos seus processos de demarcação e motivando posterior cancelamento do licenciamento pelo IBAMA.",
+        "source_reference": null
+      },
+      "source_content_hash": "ed40033cd6fa7aebd40f7246a481eed717d0fde0c5470b0ccd3855be4649f110"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:104",
+      "source_id": "analista_ambiental_conhec_especi:104",
+      "question_type": "true_false",
+      "statement_markdown": "Sem falar dos primeiros aldeamentos religiosos, a bacia do Tapajós foi ocupada pelo homem branco a partir do final do século XVIII. Essa presença foi gradualmente efetivada nas sucessivas viagens com o objetivo de reconhecer o território e abrir caminho para a colonização, que se completou na segunda metade do século XX. Com relação a esse assunto e a aspectos a ele relacionados, julgue os itens que se seguem.\n\nTrata-se de uma região que possuía alta densidade demográfica e perigos decorrentes do grande número de cachoeiras e corredeiras no Tapajós, o que postergou sua ocupação para o século XVIII, quando foi explorada pelos comerciantes neobrasileiros.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 104; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "09dc2428178fafd4201b1d40d2da4090e84ae96e9066f1b1a830f80c6a22b86d",
+        "original_numeric_id": 104,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nA historiografia da ocupação da Amazônia registra que a bacia do Rio Tapajós abrigava populações indígenas numerosas e organizadas (como a nação Munduruku e os Tapajós), caracterizando-se por densidade demográfica expressiva no contexto ameríndio pré-colonial.\n\nAlém da resistência indígena, a presença de uma sucessão de cachoeiras e corredeiras perigosas e intransponíveis na calha do Tapajós dificultou a navegação dos colonizadores portugueses, postergando a penetração de comerciantes luso-brasileiros para o final do século XVIII com as expedições fluviais.",
+        "source_reference": null
+      },
+      "source_content_hash": "5b4c474568e94fddb78c86ae39f8801ba3e048a54c2a9c44a780ebfe40348221"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:105",
+      "source_id": "analista_ambiental_conhec_especi:105",
+      "question_type": "true_false",
+      "statement_markdown": "Sem falar dos primeiros aldeamentos religiosos, a bacia do Tapajós foi ocupada pelo homem branco a partir do final do século XVIII. Essa presença foi gradualmente efetivada nas sucessivas viagens com o objetivo de reconhecer o território e abrir caminho para a colonização, que se completou na segunda metade do século XX. Com relação a esse assunto e a aspectos a ele relacionados, julgue os itens que se seguem.\n\nO rio Tapajós ganhou importância maior quando as minas de Santa Isabel, no rio Arinos, foram exploradas pelos povoadores de Cuiabá; foi a partir daí que as tentativas de exploração desse rio se intensificaram. Até essa época, só o baixo curso do Tapajós era ocupado, nas proximidades da cidade de Santarém.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 105; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "b8db0419c735119c91d561f8ae5771554cbb9aeb494e0963e8a28fc8b55bb563",
+        "original_numeric_id": 105,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Historicamente, a ocupação colonial europeia na bacia do Tapajós limitava-se, até meados do século XVIII, ao seu baixo curso, concentrada na região da Aldeia dos Tapajós (atual cidade de Santarém), fundada por jesuítas.\n\nA descoberta e a exploração de ouro nas minas de Santa Isabel, situadas no rio Arinos (afluente do rio Juruena, que por sua vez forma o rio Tapajós), por sertanistas oriundos de Cuiabá, impulsionaram a necessidade de estabelecer uma rota de navegação fluvial que interligasse a província de Mato Grosso ao Grão-Pará. Esse fato histórico intensificou as expedições de exploração e mapeamento de todo o curso do rio Tapajós, visando viabilizar o comércio e o escoamento de riquezas. Portanto, a afirmação está correta.",
+        "source_reference": null
+      },
+      "source_content_hash": "a4c6421db6cd21e58aa261f7dcf43a08bc3f832225254d09b9e1d3b4a1bcd54a"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:106",
+      "source_id": "analista_ambiental_conhec_especi:106",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à agropecuária, à indústria e ao comércio na região do rio Tapajós a partir da segunda metade do século XIX, julgue os próximos itens.\n\nA maioria dos trabalhadores que veio para suprir a mão de obra na região, nessa época, era do estado do Ceará.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 106; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "05d7a6512f06ff4614322610f5e29f61c44b001b5903462353f8d010a3a87917",
+        "original_numeric_id": 106,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **correto**.\n\nA partir da segunda metade do século XIX, a região amazônica, incluindo a bacia do Rio Tapajós, viveu a expansão do Ciclo da Borracha. A crescente demanda internacional por látex gerou uma necessidade urgente de mão de obra para a extração nos seringais.\n\nEsse período coincidiu com graves crises climáticas no Nordeste brasileiro, com destaque para a Grande Seca de 1877–1879 que assolou a província do Ceará. Diante do colapso econômico e social local, ocorreu um intenso fluxo migratório de cearenses em direção à região Norte, consolidando-os como o principal contingente demográfico e de força de trabalho na atividade gomífera da bacia do Tapajós.",
+        "source_reference": null
+      },
+      "source_content_hash": "7eb42d9c07d86d074c4819edf73cfddfbb24f57c50b4cef5b4053e93c51ebfdc"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:107",
+      "source_id": "analista_ambiental_conhec_especi:107",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à agropecuária, à indústria e ao comércio na região do rio Tapajós a partir da segunda metade do século XIX, julgue os próximos itens.\n\nQuando comparada a outras partes do Brasil, é correto afirmar que a agropecuária nunca teve expressividade na região do rio Tapajós.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 107; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "af29c11bbafc01ab9349c036e15138c5e72779a49067a8dfd35e3c05459f0604",
+        "original_numeric_id": 107,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nHistoricamente, a economia da bacia do Rio Tapajós e do oeste paraense estruturou-se em torno do extrativismo vegetal e mineral (ciclo da borracha, especiarias da floresta e, no século XX, os garimpos auríferos ao longo do Rio Crepori e Itaituba).\n\nEm comparação com outras regiões pioneiras do Centro-Sul e do Brasil litorâneo, a atividade agropecuária tradicional nunca atingiu relevância produtiva nem expressividade econômica histórica na região do Tapajós ao longo da segunda metade do século XIX e da maior parte do século XX.",
+        "source_reference": null
+      },
+      "source_content_hash": "ce8e6c9418a82b126e740315aa92183ae076e120a0939a035011313b430ea5d6"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:108",
+      "source_id": "analista_ambiental_conhec_especi:108",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à agropecuária, à indústria e ao comércio na região do rio Tapajós a partir da segunda metade do século XIX, julgue os próximos itens.\n\nNessa época, o ciclo da borracha na região era pouco expressivo; toda atenção estava voltada para a exploração do ouro.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 108; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "de4b1e636dc0df08e1bb109885320a527ef274f6b0da49cadba61563be36dcf2",
+        "original_numeric_id": 108,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": null
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA proposição inverte a relevância histórica e a cronologia das atividades econômicas na região do Tapajós:\n\n* **Ciclo da Borracha:** Longe de ser pouco expressivo, o comércio da borracha era o motor econômico absoluto da região amazônica na segunda metade do século XIX, responsável por atrair investimentos internacionais e grandes massas migratórias.\n* **Exploração do Ouro:** A atividade garimpeira de ouro na bacia do Tapajós só ganhou relevância econômica e projeção nacional a partir de meados do século XX, especificamente após a descoberta de jazidas no final da década de 1950, atingindo o ápice entre as décadas de 1970 e 1980.",
+        "source_reference": null
+      },
+      "source_content_hash": "865cfcd883daf50adb37ea9e91656f9b323483b5f2ec48b6108cc2f11b70318e"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:109",
+      "source_id": "analista_ambiental_conhec_especi:109",
+      "question_type": "true_false",
+      "statement_markdown": "As glebas inicialmente federalizadas na década de 70 do século passado foram destinadas a ações discriminatórias ou mesmo à arrecadação sumária no final da década seguinte. Acerca desse assunto, julgue os itens subsecutivos.\n\nGlebas discriminadas são áreas que passaram por ação discriminatória resultantes em áreas livres, remanescentes de ocupação particular, ainda aguardando matrícula, em nome da União.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 109; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "1c48844a7081166cb6cd634be3e27aaa691d0dfaab60fc17a355ac4099d574a0",
+        "original_numeric_id": 109,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l6383.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA assertiva inverteu a conceituação técnica do direito fundiário e agrário brasileiro estabelecida pela Lei nº 6.383/1976:\n\nA **ação discriminatória** tem por finalidade separar as terras de domínio público (terras devolutas) das áreas de legítimo domínio privado. As **glebas discriminadas** correspondem às terras públicas devolutas que foram legalmente delimitadas, arrecadadas e já registradas em matrícula imobiliária definitiva perante o Cartório de Registro de Imóveis em nome da União ou do Estado, não se tratando de áreas pendentes de matrícula.",
+        "source_reference": null
+      },
+      "source_content_hash": "ed940254d7193102011de56971fc545199d3efa775c15f843177abb373425462"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:110",
+      "source_id": "analista_ambiental_conhec_especi:110",
+      "question_type": "true_false",
+      "statement_markdown": "As glebas inicialmente federalizadas na década de 70 do século passado foram destinadas a ações discriminatórias ou mesmo à arrecadação sumária no final da década seguinte. Acerca desse assunto, julgue os itens subsecutivos.\n\nGlebas arrecadadas sumariamente correspondem às áreas arrecadadas pelo poder público, após levantamento cartorial, com comprovação de domínio privado, discriminadas pelo INCRA.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 110; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "cfa2ca181a620f25e17df04677b39ec3865a2fd8e6c1f6c13038463c302e8022",
+        "original_numeric_id": 110,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l6383.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA **arrecadação sumária** de terras pelo poder público (disciplinada no Decreto-Lei nº 1.164/1971 e na Lei nº 6.383/1976) incide exatamente sobre as áreas devolutas onde **NÃO há comprovação de domínio privado** legítimo e que não se acham na posse contínua e pacífica de terceiros.\n\nQuando existe prova cartorial válida de domínio particular devidamente destacado do patrimônio público, a área não é passível de arrecadação sumária, mas sim objeto de desapropriação mediante indenização.",
+        "source_reference": null
+      },
+      "source_content_hash": "9797e234e8d225f361361e2bf13eb76e1c23f96db992ead5ae56f48cf17214f2"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:111",
+      "source_id": "analista_ambiental_conhec_especi:111",
+      "question_type": "true_false",
+      "statement_markdown": "Foi concedido a uma empresa privada o direito de explorar energia hidráulica em determinada área no estado do Pará. A empresa apresentou o devido estudo de impacto ambiental para obter a licença prévia do empreendimento. A área de utilização, discriminada no projeto, inclui propriedades privadas, terras indígenas devidamente demarcadas e áreas habitadas por remanescentes de comunidades quilombolas que já obtiveram a certificação de seus direitos emitida pela Fundação Cultural Palmares, mas ainda não obtiveram resposta quanto ao pedido de titularidade coletiva da terra feito ao INCRA.\n\nConsiderando a situação hipotética acima, julgue os itens a seguir a respeito dos direitos envolvidos e das normas aplicáveis a essa situação.\n\nDe acordo com a Lei n.º 12.188/2010, os povos indígenas não são beneficiários da Política Nacional de Assistência Técnica e Extensão Rural para a Agricultura Familiar e Reforma Agrária (PNATER).",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 111; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "1704798f81cd6afb72c562c327c25fc74ab1542037a9d252deda37e80cd8789f",
+        "original_numeric_id": 111,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2010/lei/l12188.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**.\n\nA Lei nº 12.188/2010 (que institui a Política Nacional de Assistência Técnica e Extensão Rural para a Agricultura Familiar e Reforma Agrária - PNATER) inclui expressamente em seu Artigo 5º, parágrafo único, os **povos indígenas**, remanescentes de quilombos e comunidades tradicionais como **beneficiários prioritários** dos serviços de assistência técnica e extensão rural (ATER).\n\nPortanto, afirmar que os povos indígenas não são beneficiários da referida política é frontalmente contrário ao texto legal.",
+        "source_reference": null
+      },
+      "source_content_hash": "5493eb151755526048491a90dd2d5e2ab44beb9aaf95cc4833065730cbc4b860"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:112",
+      "source_id": "analista_ambiental_conhec_especi:112",
+      "question_type": "true_false",
+      "statement_markdown": "Foi concedido a uma empresa privada o direito de explorar energia hidráulica em determinada área no estado do Pará. A empresa apresentou o devido estudo de impacto ambiental para obter a licença prévia do empreendimento. A área de utilização, discriminada no projeto, inclui propriedades privadas, terras indígenas devidamente demarcadas e áreas habitadas por remanescentes de comunidades quilombolas que já obtiveram a certificação de seus direitos emitida pela Fundação Cultural Palmares, mas ainda não obtiveram resposta quanto ao pedido de titularidade coletiva da terra feito ao INCRA.\n\nConsiderando a situação hipotética acima, julgue os itens a seguir a respeito dos direitos envolvidos e das normas aplicáveis a essa situação.\n\nA empresa exploradora do potencial de energia hidráulica deverá participar no desenvolvimento de programas de educação ambiental para populações que habitam a região.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 112; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "be4990e8f1d4023453c2a16aa835c0a881107cf5eb8dab3a665cbf3d8e3b2f24",
+        "original_numeric_id": 112,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l9985.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nNos termos do Artigo 36 da Lei nº 9.985/2000 (SNUC) e da legislação do setor elétrico:\n\nNos casos de licenciamento ambiental de empreendimentos de significativo impacto ambiental, especialmente usinas hidrelétricas com reservatórios, o empreendedor é obrigado a apoiar a implantação e manutenção de Unidades de Conservação do Grupo de Proteção Integral (compensação ambiental).\n\nAdemais, os concessionários de energia hidrelétrica são legalmente obrigados a destinar recursos para a compensação financeira aos municípios e estados pelo uso dos recursos hídricos e para programas de mitigação dos impactos socioambientais na bacia hidrográfica afetada.",
+        "source_reference": null
+      },
+      "source_content_hash": "247cc2d1dbce7770b725d03495a2ccdfb6f4b768c29258b233e32aae323f9154"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:113",
+      "source_id": "analista_ambiental_conhec_especi:113",
+      "question_type": "true_false",
+      "statement_markdown": "Foi concedido a uma empresa privada o direito de explorar energia hidráulica em determinada área no estado do Pará. A empresa apresentou o devido estudo de impacto ambiental para obter a licença prévia do empreendimento. A área de utilização, discriminada no projeto, inclui propriedades privadas, terras indígenas devidamente demarcadas e áreas habitadas por remanescentes de comunidades quilombolas que já obtiveram a certificação de seus direitos emitida pela Fundação Cultural Palmares, mas ainda não obtiveram resposta quanto ao pedido de titularidade coletiva da terra feito ao INCRA.\n\nConsiderando a situação hipotética acima, julgue os itens a seguir a respeito dos direitos envolvidos e das normas aplicáveis a essa situação.\n\nPara a obtenção de certificação da Fundação Cultural Palmares, de acordo com disposição do Decreto n.º 4.887/2003, é exigido que os remanescentes das comunidades quilombolas se autodefinam como tal.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 113; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "ca45a4cf0b9f1c3a7e7e44c2c681f47c9795d662866354c587e5fbd2011bcc70",
+        "original_numeric_id": 113,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/decreto/2003/d4887.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **certo**.\n\nConforme estabelece o Artigo 2º do Decreto nº 4.887/2003 (que regulamenta o procedimento para identificação, reconhecimento, delimitação, demarcação e titulação das terras quilombolas):\n\n*\"Art. 2º Consideram-se remanescentes das comunidades dos quilombos, para os fins deste Decreto, os grupos étnico-raciais, segundo critérios de **autoatribuição**, com trajetória histórica própria, dotados de relações territoriais específicas, com presunção de ancestralidade negra relacionada com a resistência à opressão histórica sofrida.\"*\n\nA emissão da certidão pela Fundação Cultural Palmares rege-se pelo princípio da **autodefinição/autoidentificação** da própria comunidade, em conformidade com a Convenção nº 169 da OIT.",
+        "source_reference": null
+      },
+      "source_content_hash": "cbf189a68e1c2eb0265cd0c5cec0323be6303935db1c2988d5430a3b4294186d"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:115",
+      "source_id": "analista_ambiental_conhec_especi:115",
+      "question_type": "true_false",
+      "statement_markdown": "Foi concedido a uma empresa privada o direito de explorar energia hidráulica em determinada área no estado do Pará. A empresa apresentou o devido estudo de impacto ambiental para obter a licença prévia do empreendimento. A área de utilização, discriminada no projeto, inclui propriedades privadas, terras indígenas devidamente demarcadas e áreas habitadas por remanescentes de comunidades quilombolas que já obtiveram a certificação de seus direitos emitida pela Fundação Cultural Palmares, mas ainda não obtiveram resposta quanto ao pedido de titularidade coletiva da terra feito ao INCRA.\n\nConsiderando a situação hipotética acima, julgue os itens a seguir a respeito dos direitos envolvidos e das normas aplicáveis a essa situação.\n\nCaso as terras ocupadas pelos remanescentes das comunidades quilombolas estejam sobrepostas à parte das terras ocupadas pelos indígenas, os órgãos competentes deverão dar preferência à demarcação das terras indígenas.",
+      "exam_board": "CESPE/UnB",
+      "institution": "ICMBio",
+      "position_name": "Analista Ambiental",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "analista_ambiental_conhec_especi.pdf, questão 115; analista_ambiental_conhec_especi_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Compreensão e Interpretação de Textos",
+      "source_metadata": {
+        "source_file": "analista_ambiental_conhec_especi.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "A classificar",
+        "source_content_hash": "260d83964b84a7ed96bf0735340057a25e732f8c69229ff4e3a5a0d858754a6e",
+        "original_numeric_id": 115,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "http://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está **errado**. Não existe hierarquia ou preferência legal ou constitucional preestabelecida para a demarcação de terras indígenas em detrimento de terras ocupadas por remanescentes de comunidades quilombolas. Ambos os direitos possuem assento constitucional (Art. 231 da CF/88 para os povos indígenas e Art. 68 do ADCT para os quilombolas). Diante de eventuais sobreposições territoriais, os órgãos federais competentes (FUNAI e INCRA) devem buscar soluções de conciliação, dupla afetação ou gestão compartilhada, respeitando a identidade e a subsistência de ambos os grupos protegidos, sem a exclusão automática de um em favor do outro.\n\n### Dispositivo legal\n* **Constituição Federal de 1988**, Art. 231.\n* **Ato das Disposições Constitucionais Transitórias (ADCT)**, Art. 68.",
+        "source_reference": null
+      },
+      "source_content_hash": "60d3d60c2a3b7fafed021d310254022effced283016d57b155a7925ded261ae2"
+    }
+  ]
+}

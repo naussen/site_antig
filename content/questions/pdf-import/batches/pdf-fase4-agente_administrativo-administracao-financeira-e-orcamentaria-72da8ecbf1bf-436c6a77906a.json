@@ -1,0 +1,300 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-agente_administrativo-administracao-financeira-e-orcamentaria-72da8ecbf1bf-436c6a77906a",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "72da8ecbf1bf79542f78432b7acf5090277b9b279eb96815d2ab269bda90cd23",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "95f70efef6886dec632debbde86efe1189f22da6fd35c7aba8deaf2afc4b8a3c",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "436c6a77906ab3e2fb8700418a5c99338f3b0c7ab0780c932bd2ec9877836944",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-financeira-e-orcamentaria",
+    "name": "Administração Financeira e Orçamentária"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:071",
+      "source_id": "agente_administrativo:71",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de orçamento público, julgue os itens que se seguem.\n\nAs despesas públicas municipais referem-se aos gastos realizados pelos municípios no cumprimento de suas atribuições e na provisão de bens e serviços públicos.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 71; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Despesa Pública: Etapas e Estágios da Execução",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "de696b04e10888a09a3ac882260b14f095f5d149dd0ab9f51773cf4fe86950f0",
+        "original_numeric_id": 71,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l4320.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "despesa-publica-etapas-e-estagios",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nAs despesas públicas municipais correspondem ao conjunto dos dispêndios executados pela administração direta e indireta do Município para o atendimento das demandas da coletividade local, manutenção da máquina pública, fornecimento de serviços essenciais (saúde, educação, saneamento, iluminação) e execução de obras de interesse local, nos moldes da Lei nº 4.320/1964.",
+        "source_reference": null
+      },
+      "source_content_hash": "710cd3f3fe047179e21fc1b44ebb433c57f77b8821f0c6d5e30457dd86483339"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:072",
+      "source_id": "agente_administrativo:72",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de orçamento público, julgue os itens que se seguem.\n\nAs despesas correntes são aquelas relacionadas aos gastos rotineiros, como com pessoal, material de consumo e serviços, enquanto as despesas de capital envolvem investimentos em infraestrutura, equipamentos e outros ativos duradouros.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 72; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Despesa Pública: Etapas e Estágios da Execução",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "59abe6910614e8b9ca1e5348514124c1b2a266e8c9610a7419a5f54c969a008c",
+        "original_numeric_id": 72,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l4320.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "despesa-publica-etapas-e-estagios",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nConforme estabelece o art. 12 da Lei nº 4.320/1964:\n- **Despesas Correntes**: destinam-se à manutenção e ao funcionamento regular dos serviços públicos (pessoal civil/militar, material de consumo, serviços de terceiros e encargos diversos);\n- **Despesas de Capital**: concorrem diretamente para a formação ou aquisição de bens duradouros e ampliação do patrimônio público (investimentos, obras, equipamentos, material permanente e amortização da dívida).",
+        "source_reference": null
+      },
+      "source_content_hash": "4085e3ce77ed4b5c58124014972af0b73d9358c9cb27ab94fcc9be0fb9891175"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:073",
+      "source_id": "agente_administrativo:73",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de orçamento público, julgue os itens que se seguem.\n\nO princípio da unidade ou totalidade determina a existência de orçamento único para cada um dos entes federados, com a finalidade de evitar múltiplos orçamentos paralelos dentro de um mesmo órgão.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 73; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Princípios Orçamentários",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "ece303bc5c6487b08c31dee249803682c9b438e29ca984752b8f319a36b869a8",
+        "original_numeric_id": 73,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l4320.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nO **princípio da unidade (ou totalidade)** orçamentária (art. 165, § 5º da CF/88 e art. 2º da Lei nº 4.320/1964) prescreve que todas as receitas e despesas de cada ente da Federação devem integrar um único documento orçamentário anual, assegurando visão global das finanças públicas e impedindo a coexistência de orçamentos paralelos ou fragmentados dentro do governo.",
+        "source_reference": null
+      },
+      "source_content_hash": "88ed784555ac06371ab9720856a946763556d0b6bad8e2dd6a2da06881952760"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:074",
+      "source_id": "agente_administrativo:74",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de orçamento público, julgue os itens que se seguem.\n\nO princípio da exclusividade preconiza que todas as parcelas de receita e de despesa apareçam no orçamento com seus valores brutos, sem qualquer tipo de dedução.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 74; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Princípios Orçamentários",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "3f7c06a463cd102e91d11ea0c6d4483408adad571985f6f9b3d59a52ef518584",
+        "original_numeric_id": 74,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l4320.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nA assertiva confundiu dois princípios orçamentários fundamentais:\n- A exigência de que todas as receitas e despesas constem no orçamento com seus valores brutos, sem qualquer dedução, decorre do **Princípio do Orçamento Bruto** (art. 6º da Lei nº 4.320/1964);\n- O **Princípio da Exclusividade** (art. 165, § 8º da CF/88) determina que a lei orçamentária anual não conterá matéria estranha à previsão da receita e à fixação da despesa (ressalvadas a autorização para abertura de créditos suplementares e contratação de operações de crédito).",
+        "source_reference": null
+      },
+      "source_content_hash": "df05bf3febbaa22356926e9bea36367bc3b8863fa25057719c536698d315ed60"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:075",
+      "source_id": "agente_administrativo:75",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de orçamento público, julgue os itens que se seguem.\n\nO imposto sobre serviços de qualquer natureza é de competência estadual.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 75; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Orçamento Público – Constituição Federal e Lei 4.320",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "f8b584b8ac564f5b305dbbd3e4ea1d949a78646ee38458e024ee4e180426dc2b",
+        "original_numeric_id": 75,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nO Imposto Sobre Serviços de Qualquer Natureza (ISSQN ou ISS) é tributo de competência expressa dos **Municípios** e do Distrito Federal (CF/88, art. 156, inciso III). Os tributos estaduais sobre circulação são o ICMS, o IPVA e o ITCMD (art. 155 da CF/88).",
+        "source_reference": null
+      },
+      "source_content_hash": "c12681df1fbd2af0b86535c6f1045e6fb3a24046dd3d129e15af6ef9bf608441"
+    }
+  ]
+}

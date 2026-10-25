@@ -1,0 +1,244 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-prova_i09_tipo_001-direito-constitucional-dc1820d890b4-4fbd74ecf36e",
+  "source": {
+    "file_name": "prova_i09_tipo_001_ATUALIZADO.json",
+    "sha256": "dc1820d890b4f456f6a21dcfb093157696cf06a42b0374997d10a8cfc971f2a7",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "prova_i09_tipo_001.json",
+      "original_source_sha256": "0b163a9271f0d9d81933ba55370885fc8591ac83624df1b1bb86251a689ef012",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "4fbd74ecf36e9085d18faa8aa16b375160821d21f9f7e872d7f2035c9abbb187",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:prova_i09_tipo_001:031",
+      "source_id": "prova_i09_tipo_001:31",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Considere as assertivas abaixo a respeito dos direitos e deveres individuais e coletivos.\n\nI. A criação de associações e, na forma da lei, de cooperativas independem de autorização, sendo lícita a interferência estatal em seu funcionamento.\n\nII. As associações só poderão ser compulsoriamente dissolvidas por decisão administrativa, desde que devidamente fundamentada.\n\nIII. A lei regulará a individualização da pena e adotará, entre outras, a suspensão ou interdição de direitos.\n\nIV. Conceder-se-á mandado de injunção sempre que a falta de norma regulamentadora torne inviável o exercício dos direitos e liberdades constitucionais e das prerrogativas inerentes à nacionalidade, à soberania e à cidadania.\n\nDe acordo com a Constituição Federal brasileira, está correto o que se afirma APENAS em",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 31; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "I e IV.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "I, III e IV.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "II, III e IV.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "I, II e III.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "III e IV.",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Constitucional",
+        "source_content_hash": "a5d5e09b48e21a260c4707f7084719e4831a4252d3df822c989cfa91359c69b4",
+        "original_numeric_id": 31,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **E**.\n\nNo âmbito dos Direitos e Garantias Fundamentais da Constituição Federal de 1988:\nI. Homens e mulheres são iguais em direitos e obrigações, nos termos da Constituição (art. 5º, I).\nII. Ninguém será submetido a tortura nem a tratamento desumano ou degradante (art. 5º, III).\nIII. É plena a liberdade de associação para fins lícitos, vedada a de caráter paramilitar (art. 5º, XVII).\n\nAo analisar as assertivas propostas, constata-se que a conjugação de itens assinalada na alternativa **E** reúne exclusivamente as proposições que encontram sustentação literal e harmônica no texto constitucional.\n\n### Dispositivo legal\n[Constituição Federal de 1988, Art. 5º](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "fb11303cac4153a36285fc1781d92f6337ced2571f402ec1b45319c7b15992aa"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:032",
+      "source_id": "prova_i09_tipo_001:32",
+      "question_type": "multiple_choice",
+      "statement_markdown": "NÃO é assegurado à categoria dos trabalhadores domésticos",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 32; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "seguro contra acidentes de trabalho, a cargo do empregador, sem excluir a indenização a que este está obrigado, quando incorrer em dolo ou culpa.",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "aposentadoria.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "décimo terceiro salário com base na remuneração integral.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "repouso semanal remunerado, preferencialmente aos domingos.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "licença-paternidade, nos termos fixados em lei.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Aspectos introdutórios do Direito Constitucional",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Constitucional",
+        "source_content_hash": "831f6fdd1d6a03746130f3087715389f6e5c1b03820c7ce5c9f4398e2aa19914",
+        "original_numeric_id": 32,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "aspectos-introdutorios-do-direito-constitucional",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A**.\n\nO art. 7º, parágrafo único, da Constituição Federal (com a redação dada pela Emenda Constitucional nº 72/2013) estabelece o rol de direitos trabalhistas estendidos à categoria dos trabalhadores domésticos.\n\nEntre os direitos garantidos aos trabalhadores urbanos e rurais no caput do art. 7º, o **piso salarial proporcional à extensão e à complexidade do trabalho** (art. 7º, inciso V) **NÃO** foi expressamente estendido aos trabalhadores domésticos pelo parágrafo único.\n\nOs domésticos fazem jus ao salário mínimo fixado em lei (inciso IV), mas não ao piso salarial proporcional (inciso V). Portanto, a alternativa A identifica a prerrogativa não assegurada à categoria.\n\n### Dispositivo legal\n[Constituição Federal de 1988, Art. 7º, parágrafo único](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "e899a5a354ede309f4d6f7b57fddef0e19a1471ad108dfd1ef2240c09c0ec527"
+    },
+    {
+      "external_id": "pdf:prova_i09_tipo_001:033",
+      "source_id": "prova_i09_tipo_001:33",
+      "question_type": "multiple_choice",
+      "statement_markdown": "De acordo com a Constituição Federal é crime inafiançável e imprescritível",
+      "exam_board": "Fundação Carlos Chagas",
+      "institution": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+      "position_name": "Técnico Judiciário",
+      "exam_year": 2011,
+      "difficulty": "medium",
+      "source_reference": "prova_i09_tipo_001.pdf, questão 33; prova_i09_tipo_001_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "a ação de grupos armados, civis ou militares, contra a ordem constitucional e o Estado Democrático.",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "o terrorismo, apenas.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "os definidos como crimes hediondos.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "a tortura, apenas.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "o terrorismo e a tortura.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Funções Essenciais à Justiça",
+      "source_metadata": {
+        "source_file": "prova_i09_tipo_001.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Direito Constitucional",
+        "source_content_hash": "e6fbc92b6cfa9aa4a6d8d14e52ba78042e8a4d0a10a03c79852c00b0f056fc75",
+        "original_numeric_id": 33,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art5"
+      },
+      "topics": [
+        {
+          "topic_id": "funcoes-essenciais-a-justica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A distinção entre os crimes inafiançáveis, imprescritíveis e insuscetíveis de graça ou anistia na Constituição Federal fundamenta a resolução da questão:\n\n* **Alternativa A (Correta):** De acordo com o art. 5º, inciso XLIV, da Constituição Federal, constitui crime inafiançável e imprescritível a ação de grupos armados, civis ou militares, contra a ordem constitucional e o Estado Democrático.\n* **Alternativas B, C, D e E (Incorretas):** O terrorismo, a tortura e os crimes hediondos (juntamente com o tráfico ilícito de entorpecentes e drogas afins) são classificados pelo art. 5º, inciso XLIII, da Constituição Federal como crimes inafiançáveis e insuscetíveis de graça ou anistia, mas eles são prescritíveis. Os únicos crimes que a Constituição Federal define expressamente como inafiançáveis e imprescritíveis são a prática do racismo (art. 5º, inciso XLII) e a ação de grupos armados (art. 5º, inciso XLIV).\n\n**Macete de resolução:** Para memorizar os crimes imprescritíveis na Constituição Federal, utiliza-se a sigla **RA-ÇÃO**:\n* **RA** - Racismo (art. 5º, XLII)\n* **ÇÃO** - Ação de grupos armados (art. 5º, XLIV)\nTodos os demais crimes graves mencionados no art. 5º (tráfico, tortura, terrorismo e hediondos - conhecidos como \"3T + H\") são inafiançáveis e insuscetíveis de graça ou anistia, mas prescrevem.\n\n### Dispositivo legal\n\n* **Constituição Federal de 1988, Art. 5º, incisos XLII, XLIII e XLIV**: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art5)",
+        "source_reference": null
+      },
+      "source_content_hash": "9659ed70298134f6380b4b67a194d347d4f18a063b8736e0bb9d252be05c0858"
+    }
+  ]
+}

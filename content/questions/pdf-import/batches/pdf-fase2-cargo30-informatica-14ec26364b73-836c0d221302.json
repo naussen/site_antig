@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-cargo30-informatica-14ec26364b73-836c0d221302",
+  "source": {
+    "file_name": "cargo30_ATUALIZADO.json",
+    "sha256": "14ec26364b73e9d47b2c5581aa9242bbae266f9dece6cf292f0206e67204b603",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "cargo30.json",
+      "original_source_sha256": "4cf2583924232a76b401cdfc24313fb757e305aad1b2fdad61bd5c3798ffc63b",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "836c0d2213029f665515e5c529c436f6364dc5a46915f23d1e6c275425388c7c",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:cargo30:042",
+      "source_id": "cargo30:42",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando a figura acima, que ilustra uma janela do Word 2002 em execução em um computador do tipo PC, julgue os itens a seguir.\n\nCaso se deseje modificar o estilo de formatação de apenas um dos parágrafos do documento, é possível fazê-lo por meio do seguinte procedimento: clicar sobre o parágrafo que terá o estilo alterado; na lista de opções existente no campo Normal, aplicar um clique duplo sobre Estilo; na janela que será aberta em decorrência dessa ação, definir a nova formatação para o parágrafo; clicar OK.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 42",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Banco de Dados",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "4364dcf50b5e24a92ea92c28f1d6510d68a024e03048d6c0af88575b7a20a28a",
+        "original_numeric_id": 42,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "banco-de-dados",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O procedimento descrito está incorreto por dois motivos principais. Primeiro, dar um duplo clique sobre o nome do estilo no campo de seleção da barra de ferramentas não abre uma janela de edição de estilo no Word 2002. Segundo, caso um estilo existente (como o \"Normal\") fosse de fato modificado, a alteração seria aplicada a todos os parágrafos do documento que utilizam esse estilo, e não a apenas um parágrafo isolado. Para alterar a formatação de apenas um parágrafo mantendo os demais inalterados, deve-se aplicar formatação direta (como negrito, alinhamento, etc.) ou criar e aplicar um novo estilo específico para ele.",
+        "source_reference": null
+      },
+      "source_content_hash": "db0dc88c2c573ef0c4adae0397dcc139d6cccab5de62120acc42dd21a9085117"
+    },
+    {
+      "external_id": "pdf:cargo30:043",
+      "source_id": "cargo30:43",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando a figura acima, que illustrates uma janela do Word 2002 em execução em um computador do tipo PC, julgue os itens a seguir.\n\nPor meio da opção Abrir, existente no menu Arquivo, pode-se abrir um arquivo com extensão .pdf (portable document format) armazenado em disquete. Esse arquivo será automaticamente convertido em um documento do tipo Word 2002, desde que este aplicativo esteja devidamente configurado.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 43",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Hardware",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "d4cd70a28dd24071ab05a523e2834b7b7cba3afd49f34dc9fa0c9eda1d3bdc87",
+        "original_numeric_id": 43,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O Microsoft Word 2002 não possui suporte nativo para abrir e converter diretamente arquivos no formato PDF (`.pdf`) em documentos editáveis do Word. A funcionalidade de conversão direta de arquivos PDF (conhecida como *PDF Reflow*) só foi introduzida na suíte do Microsoft Office a partir da versão Word 2013. Na versão 2002, para editar o conteúdo de um PDF, era necessário utilizar softwares de terceiros ou conversores específicos antes de abrir o arquivo no processador de textos.",
+        "source_reference": null
+      },
+      "source_content_hash": "cf715258c6dd4c56d2a2f1d789d47a6143ebd931128c8d93da492d4adce339e7"
+    },
+    {
+      "external_id": "pdf:cargo30:049",
+      "source_id": "cargo30:49",
+      "question_type": "true_false",
+      "statement_markdown": "A figura acima mostra uma janela do Excel 2002 que contém uma planilha de dados relativos a apreensão de drogas. Com relação a essa janela e ao Excel 2002, julgue os itens que se seguem.\n\nConsiderando que todas as células estejam formatadas com fonte de tamanho igual a 10, para se aplicar negrito e se alterar para 12 o tamanho da fonte nas células da linha 1 da planilha, é suficiente realizar a seguinte seqüência de ações: clicar 1; pressionar e manter pressionada a tecla Ctrl; teclar N; liberar a tecla Ctrl; alterar o número em 10 para 12.",
+      "exam_board": "CESPE",
+      "institution": "Departamento de Polícia Federal",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2004,
+      "difficulty": null,
+      "source_reference": "cargo30.pdf, questão 49",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Hardware",
+      "source_metadata": {
+        "source_file": "cargo30.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "a615380b89a09ddddd26f749fdfa730635066bd3e1af035b7d436f7bee4a1e9a",
+        "original_numeric_id": 49,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A sequência de ações descrita realiza com sucesso a formatação desejada:\n\n1. **Selecionar a linha**: Clicar sobre o número `1` (cabeçalho da linha) seleciona todas as células pertencentes à linha 1.\n2. **Aplicar Negrito**: O atalho de teclado `Ctrl + N` é o comando padrão no Microsoft Excel (versão em português) para aplicar ou remover a formatação em negrito no intervalo selecionado.\n3. **Alterar o tamanho da fonte**: Modificar o valor de `10` para `12` na caixa de tamanho da fonte da barra de ferramentas aplica a nova dimensão a todas as células que estão selecionadas.",
+        "source_reference": null
+      },
+      "source_content_hash": "62467ca41afeb4e5811024d3fd0900aacff399631b8a5d263abdcce6568aa7a8"
+    }
+  ]
+}

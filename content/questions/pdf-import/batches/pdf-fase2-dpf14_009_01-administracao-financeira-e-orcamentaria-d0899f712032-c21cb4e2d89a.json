@@ -1,0 +1,740 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-dpf14_009_01-administracao-financeira-e-orcamentaria-d0899f712032-c21cb4e2d89a",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "d0899f712032d803deb1ff38fb2396f1dd37d1ffb65c7f61503d0bd058c669c4",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "9a60cb42fbada4944e3fe1d0564604111314b54b0d72e1bd9ebc2e3a33818aef",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "c21cb4e2d89ad76b1289838f5dfdc2e014304f32cb8ec2d6c28efb0bf3ad3b8f",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-financeira-e-orcamentaria",
+    "name": "Administração Financeira e Orçamentária"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:066",
+      "source_id": "dpf14_009_01:66",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere ao funcionamento e às normas que regem a elaboração do orçamento público, julgue os próximos itens.\n\nA Secretaria do Tesouro Nacional pode determinar, mediante portaria, a desconsideração das operações de crédito vinculadas ao saldo dos créditos adicionais, para a apuração do superávit financeiro.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 66; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Orçamento Público – Constituição Federal e Lei 4.320",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "2d9d2417234499b9ea06758f268209ff22bb5c2e24f9ea773d5953e61092b1aa",
+        "original_numeric_id": 66,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O superávit financeiro é uma das fontes de recursos para a abertura de créditos adicionais, conforme estabelecido na Lei nº 4.320/1964. A referida lei define expressamente que o superávit financeiro corresponde à diferença positiva entre o ativo financeiro e o passivo financeiro, conjugando-se, ainda, os saldos dos créditos adicionais transferidos e as operações de crédito a eles vinculadas.\n\nPor se tratar de uma definição e de uma regra estabelecidas em lei de caráter nacional (com status de lei complementar no que tange às normas gerais de direito financeiro), a Secretaria do Tesouro Nacional (STN) não possui competência legal para, mediante portaria (ato administrativo infralegal), determinar a desconsideração de operações de crédito vinculadas para fins de apuração do superávit financeiro, sob pena de violação direta ao princípio da legalidade.\n\n### Dispositivo legal\nArt. 43, § 2º, da Lei nº 4.320/1964.",
+        "source_reference": null
+      },
+      "source_content_hash": "0784ec2d8f957532600c735d6716f2d595c4b170e441c82b97bfba223c789124"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:067",
+      "source_id": "dpf14_009_01:67",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere ao funcionamento e às normas que regem a elaboração do orçamento público, julgue os próximos itens.\n\nConsidere que a prefeitura de determinado município brasileiro tenha planejado, para 2014, uma sequência de operações para originarem receitas classificadas, segundo a lei, como receita de capital. Nessa situação, essas receitas deverão ser consideradas na apuração da receita orçamentária do município.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 67; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Receita Pública",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "00d747e20858870206b0701d1a65d4ef05fdfe752bf267f5a9e9c2542d42594d",
+        "original_numeric_id": 67,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "receita-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "As receitas públicas são classificadas, quanto à categoria econômica, em receitas correntes e receitas de capital. Ambas as categorias constituem receitas orçamentárias por definição legal, integrando a previsão de receitas da Lei Orçamentária Anual (LOA) para fazer frente às despesas públicas.\n\nAs receitas de capital (como operações de crédito, alienação de bens, amortização de empréstimos e transferências de capital) representam ingressos de recursos que alteram o patrimônio líquido do ente ou constituem dívidas, mas que devem ser obrigatoriamente consideradas na apuração da receita orçamentária do município. Apenas os ingressos de natureza extraorçamentária (como cauções, depósitos em garantia e consignações) não são computados na receita orçamentária, o que não é o caso das receitas de capital planejadas.\n\n### Dispositivo legal\nArt. 11 da Lei nº 4.320/1964.",
+        "source_reference": null
+      },
+      "source_content_hash": "73d4a89caaaecdd34ff65ec038c8158b55b455378b82b0f767dd253e213e9a0f"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:068",
+      "source_id": "dpf14_009_01:68",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere ao funcionamento e às normas que regem a elaboração do orçamento público, julgue os próximos itens.\n\nO orçamento público constitui norma legal a ser aplicada integralmente e contém a previsão de receitas e a estimativa de despesas a serem realizadas pelo governo em determinado exercício financeiro, sendo objeto de estudo tanto do direito financeiro quanto do direito tributário.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 68; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Orçamento Público – Constituição Federal e Lei 4.320",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "181c6eaf4529515c0170943be26f257bf5d8d31603933c26118aaacb96171636",
+        "original_numeric_id": 68,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação apresenta múltiplos erros conceituais sobre o orçamento público:\n\n1. **Previsão vs. Fixação**: No orçamento público, as receitas são previstas (estimadas), enquanto as despesas são **fixadas** (limitadas por lei). Dizer que o orçamento contém a \"estimativa de despesas\" inverte a lógica técnica orçamentária, na qual a despesa é fixada como um limite máximo de gastos autorizados.\n2. **Caráter Autorizativo**: O orçamento público brasileiro possui caráter predominantemente autorizativo, e não impositivo absoluto. Portanto, não se trata de uma norma legal a ser \"aplicada integralmente\" de forma obrigatória em todas as suas dotações.\n3. **Ramo do Direito**: O orçamento público é o objeto central de estudo do **Direito Financeiro**, que disciplina a atividade financeira do Estado (receita, despesa, orçamento e crédito público). O Direito Tributário, por sua vez, estuda a instituição, fiscalização e arrecadação de tributos, não se confundindo com a gestão orçamentária.\n\n### Dispositivo legal\n* **Lei nº 4.320/1964, Art. 2º**: estabelece que a Lei de Orçamento conterá a discriminação da receita e despesa.\n* **Constituição Federal de 1988, Art. 165**: dispõe sobre as leis de iniciativa do Poder Executivo (PPA, LDO e LOA).",
+        "source_reference": null
+      },
+      "source_content_hash": "6489b6e41dfd7c497b2a31c3b10832b2a7365ee2d169a8b4da366c20abc3d439"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:070",
+      "source_id": "dpf14_009_01:70",
+      "question_type": "true_false",
+      "statement_markdown": "No que se refere ao funcionamento e às normas que regem a elaboração do orçamento público, julgue os próximos itens.\n\nDe acordo com o princípio da unidade, ou da totalidade orçamentária, todos os entes federados devem reunir seus diferentes orçamentos em uma única lei orçamentária, que consolidará todas as receitas e despesas públicas do Estado.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 70; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Orçamento Público – Constituição Federal e Lei 4.320",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "86f677009636c4f1c0bef916a7d0b5faf6a9e25de021b02243bc8f35633fd2d5",
+        "original_numeric_id": 70,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O erro da afirmação está na escala de aplicação do princípio da unidade (ou totalidade).\n\nO **princípio da unidade** determina que cada ente da Federação (União, cada um dos Estados, o Distrito Federal e cada um dos Municípios) deve possuir **um único orçamento** para cada exercício financeiro. \n\nA assertiva incorre em erro ao afirmar que \"todos os entes federados devem reunir seus diferentes orçamentos em uma única lei orçamentária\". Se isso ocorresse, haveria uma centralização orçamentária nacional incompatível com a autonomia política, administrativa e financeira dos entes federados assegurada pela Constituição Federal.\n\n### Dispositivo legal\n* **Lei nº 4.320/1964, Art. 2º**: \"A Lei do Orçamento conterá a discriminação da receita e despesa de forma a evidenciar a política econômica financeira e o programa de trabalho do Governo, obedecidos os princípios de unidade, universalidade e anualidade.\"",
+        "source_reference": null
+      },
+      "source_content_hash": "a879b34280c1a430b215528f30414c1227484cf521e579b0ebc0b0f8d76d26b5"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:071",
+      "source_id": "dpf14_009_01:71",
+      "question_type": "true_false",
+      "statement_markdown": "Tendo em vista as normas que regem o orçamento público, julgue os itens que se seguem. Nesse sentido, considere que PPA se refere ao plano plurianual; LDO, à lei de diretrizes orçamentárias; e LOA, à lei orçamentária anual.\n\nNo Brasil, a LOA é, de fato, composta por três orçamentos: o fiscal, o da seguridade social e o de investimento das empresas estatais.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 71; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Orçamento Público – Constituição Federal e Lei 4.320",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "50afb5a2a0ba911457379b83d4686c80fbac589f73b472bda95de9ab15b016af",
+        "original_numeric_id": 71,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. No ordenamento jurídico brasileiro, a Lei Orçamentária Anual (LOA) é um documento único, mas estruturado internamente em três esferas ou sub-orçamentos:\n\n1. **Orçamento Fiscal**: referente aos Poderes da União, seus fundos, órgãos e entidades da administração direta e indireta, inclusive fundações instituídas e mantidas pelo Poder Público;\n2. **Orçamento de Investimento**: das empresas em que a União, direta ou indiretamente, detenha a maioria do capital social com direito a voto;\n3. **Orçamento da Seguridade Social**: abrangendo todas as entidades e órgãos a ela vinculados, da administração direta ou indireta, bem como os fundos e fundações instituídos e mantidos pelo Poder Público (saúde, previdência e assistência social).\n\n### Dispositivo legal\n* **Constituição Federal de 1988, Art. 165, § 5º**: \"A lei orçamentária anual compreenderá: I - o orçamento fiscal (...); II - o orçamento de investimento das empresas (...); III - o orçamento da seguridade social (...).\"",
+        "source_reference": null
+      },
+      "source_content_hash": "f09838e700088d967fc207b72d046b2ca56ffc614c05b6b2dcb839e34e8ebdec"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:072",
+      "source_id": "dpf14_009_01:72",
+      "question_type": "true_false",
+      "statement_markdown": "Tendo em vista as normas que regem o orçamento público, julgue os itens que se seguem. Nesse sentido, considere que PPA se refere ao plano plurianual; LDO, à lei de diretrizes orçamentárias; e LOA, à lei orçamentária anual.\n\nConsidere que uma universidade pública seja proprietária de uma fazenda de criação de gado e realize a venda de animais para abate, auferindo, na operação, receita tipicamente classificada como de atividade agropecuária. Nessa situação, tal receita, do ponto de vista orçamentário, deverá ser classificada como receita corrente.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 72; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Receita Pública",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "253e78b6345589264235fdde48edfd765246cd7d1b020a3142750fdc7c78496a",
+        "original_numeric_id": 72,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "receita-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A classificação da receita pública por categoria econômica divide-se em Receitas Correntes e Receitas de Capital.\n\nAs **Receitas Correntes** são aquelas que aumentam o patrimônio líquido do Estado sem contrapartida direta em alienação de bens de capital ou assunção de dívidas de longo prazo. Elas decorrem do poder impositivo do Estado ou de suas atividades operacionais (tributária, de contribuições, patrimonial, agropecuária, industrial, de serviços, etc.).\n\nA receita decorrente da venda de gado para abate por uma universidade pública configura exploração econômica de atividade agropecuária. Portanto, enquadra-se perfeitamente na subcategoria de **Receita Agropecuária**, que integra o rol das **Receitas Correntes**.\n\n### Dispositivo legal\n* **Lei nº 4.320/1964, Art. 11, § 1º**: \"São Receitas Correntes as receitas tributária, de contribuições, patrimonial, agropecuária, industrial, de serviços e outras (...)\".",
+        "source_reference": null
+      },
+      "source_content_hash": "d9bfcdf8c565f81fd5cf664b9ef346879067b9cc26d1dbe2470b91b389f82db4"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:073",
+      "source_id": "dpf14_009_01:73",
+      "question_type": "true_false",
+      "statement_markdown": "Tendo em vista as normas que regem o orçamento público, julgue os itens que se seguem. Nesse sentido, considere que PPA se refere ao plano plurianual; LDO, à lei de diretrizes orçamentárias; e LOA, à lei orçamentária anual.\n\nConsidere que, na fronteira entre Brasil e Bolívia, incidentes envolvendo membros das forças de segurança brasileira e traficantes tenham demandado operações extras da Polícia Federal na região e que, apesar de o orçamento prever recursos para essas operações, eles não sejam suficientes para financiá-las. Nessa situação, os recursos adicionais necessários devem ser providos por meio da abertura de créditos extraordinários.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 73; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Orçamento Público – Constituição Federal e Lei 4.320",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "d8d98c1032e71f0c92fbab46c91014208366cacd794147c00e21aec4045af808",
+        "original_numeric_id": 73,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão apresenta uma situação em que há previsão orçamentária para a realização de operações da Polícia Federal, porém os recursos mostram-se insuficientes. \n\nDe acordo com a legislação financeira nacional, os créditos adicionais são classificados em:\n1. **Suplementares:** destinados ao reforço de dotação orçamentária já existente;\n2. **Especiais:** destinados a despesas para as quais não haja dotação orçamentária específica;\n3. **Extraordinários:** destinados a despesas urgentes e imprevistas, em caso de guerra, comoção interna ou calamidade pública.\n\nComo a despesa já estava prevista no orçamento e necessitava apenas de reforço devido à insuficiência de saldo, o instrumento correto a ser utilizado é o **crédito suplementar**, e não o crédito extraordinário. A existência de dotação prévia descaracteriza a imprevisibilidade necessária para a abertura de crédito extraordinário.\n\n**Dispositivo legal**\n\n[Artigo 41, incisos I e III, da Lei nº 4.320/1964; Artigo 167, § 3º, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/leis/l4320.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "830468d2b5a8281416fc90b7dc03e9bc2e8d302aef71adde8e1fc5018021eabd"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:074",
+      "source_id": "dpf14_009_01:74",
+      "question_type": "true_false",
+      "statement_markdown": "Tendo em vista as normas que regem o orçamento público, julgue os itens que se seguem. Nesse sentido, considere que PPA se refere ao plano plurianual; LDO, à lei de diretrizes orçamentárias; e LOA, à lei orçamentária anual.\n\nSe uma operação emergencial demandar o deslocamento de agentes da Polícia Federal para uma região de fronteira internacional, o financiamento dessa viagem deverá ser feito por meio de suprimento de fundos e o pagamento deverá ocorrer antes da liquidação.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 74; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Despesa Pública",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "d2cb5cd3da401c4bfe1745529417f001799ab68903dc8ce3272732a419447f41",
+        "original_numeric_id": 74,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "despesa-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva apresenta dois erros conceituais importantes:\n\n1. **Obrigatoriedade do Suprimento de Fundos:** O suprimento de fundos consiste em um regime excepcional de adiantamento de numerário a servidor para a realização de despesas que, por sua natureza ou urgência, não possam subordinar-se ao processo normal de aplicação. O deslocamento de agentes para operações pode ser custeado por meios ordinários, como a concessão regular de diárias e passagens, não sendo obrigatório (\"deverá\") o uso do suprimento de fundos.\n\n2. **Momento do Pagamento e da Liquidação:** No regime de suprimento de fundos, a entrega do numerário ao servidor (o pagamento do adiantamento) é precedida de empenho e liquidação em nome do servidor suprido. Portanto, o pagamento do adiantamento ocorre após a regular liquidação dessa despesa de adiantamento, respeitando os estágios da despesa pública previstos na Lei nº 4.320/1964. O que ocorre de forma diferida é a prestação de contas dos gastos realizados pelo servidor, que constitui a comprovação da aplicação do recurso.\n\n**Dispositivo legal**\n\n[Artigo 68 da Lei nº 4.320/1964; Artigo 45 do Decreto nº 93.872/1986](https://www.planalto.gov.br/ccivil_03/decreto/d93872.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "46188263fe3086ac834599b18f3586783154cbb89d3eb85cf6e28353a991a39e"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:075",
+      "source_id": "dpf14_009_01:75",
+      "question_type": "true_false",
+      "statement_markdown": "Tendo em vista as normas que regem o orçamento público, julgue os itens que se seguem. Nesse sentido, considere que PPA se refere ao plano plurianual; LDO, à lei de diretrizes orçamentárias; e LOA, à lei orçamentária anual.\n\nNa CF, é prevista, para áreas específicas, a elaboração de planos nacionais de desenvolvimento, que, por sua importância, seguem uma dinâmica própria, independentemente de adequação ao PPA.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 75; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Orçamento Público – Constituição Federal e Lei 4.320",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "140bd1bb1df9699228c7ce53738d62fbb303261833681ac8f8caa3ce9587d309",
+        "original_numeric_id": 75,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O erro da assertiva está na afirmação de que os planos nacionais de desenvolvimento seguem uma dinâmica própria, \"independentemente de adequação ao PPA\".\n\nA Constituição Federal de 1988 estabelece uma hierarquia e uma necessidade de integração no planejamento público. Conforme o texto constitucional, todos os planos e programas nacionais, regionais e setoriais previstos na Constituição devem ser elaborados em estrita consonância com o Plano Plurianual (PPA). O PPA funciona como a moldura orientadora de médio prazo para as políticas públicas, impedindo que planos setoriais sejam criados de forma isolada ou sem compatibilidade orçamentária.\n\n**Dispositivo legal**\n\n[Artigo 165, § 4º, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "b231649f5b7bf2932b88c58176a3f36bfa9133337c8b970724797fb0ee512261"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:076",
+      "source_id": "dpf14_009_01:76",
+      "question_type": "true_false",
+      "statement_markdown": "Tendo em vista as normas que regem o orçamento público, julgue os itens que se seguem. Nesse sentido, considere que PPA se refere ao plano plurianual; LDO, à lei de diretrizes orçamentárias; e LOA, à lei orçamentária anual.\n\nA LDO orienta a elaboração da LOA e auxilia na coerência entre o PPA e a LOA.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 76; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Orçamento Público – Constituição Federal e Lei 4.320",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "4e35a7fe57af2ef9742fe4ab4f92a7def72e6182b10706dbb836f77ae3623015",
+        "original_numeric_id": 76,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta ao descrever o papel de integração desempenhado pela Lei de Diretrizes Orçamentárias (LDO).\n\nNo modelo orçamentário brasileiro, a LDO atua como uma ponte de ligação entre o planejamento estratégico de médio prazo (Plano Plurianual - PPA) e a operacionalização anual (Lei Orçamentária Anual - LOA). Cabe à LDO selecionar, a cada ano, as metas e prioridades do PPA que deverão ser perseguidas no exercício seguinte, orientando diretamente a elaboração da LOA e garantindo a coerência e a consistência entre o planejamento e a execução orçamentária.\n\n**Dispositivo legal**\n\n[Artigo 165, § 2º, da Constituição Federal de 1988](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm)",
+        "source_reference": null
+      },
+      "source_content_hash": "38622211244fceeb5b877dade0c2792ceb880be2a12a3fdee8c34d1bf975af39"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:078",
+      "source_id": "dpf14_009_01:78",
+      "question_type": "true_false",
+      "statement_markdown": "Sabendo que a organização dos programas governamentais por meio de instrumentos orçamentários tem a dupla função de controlar politicamente o poder e garantir uma administração eficiente e eficaz, julgue os itens subsequentes.\n\nDada a importância da integração entre planejamento e orçamento para o bom funcionamento da administração pública, é previsto na CF um ciclo de planejamento e execução do plano orçamentário integralmente constituído pelo PPA e pela LDO.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 78; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Orçamento Público – Constituição Federal e Lei 4.320",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "50aaad099c39cff7adfff6845df694905464102ca2cd305a218f5e76892709bd",
+        "original_numeric_id": 78,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O erro da afirmação reside na palavra \"integralmente\", ao limitar o ciclo de planejamento e execução orçamentária apenas ao Plano Plurianual (PPA) e à Lei de Diretrizes Orçamentárias (LDO). A Constituição Federal de 1988 estabelece um modelo integrado composto por três leis de iniciativa do Poder Executivo: o PPA, a LDO e a Lei Orçamentária Anual (LOA). A LOA é indispensável para a execução física e financeira das ações governamentais, não podendo ser excluída desse ciclo.\n\n### Dispositivo legal\n* **Constituição Federal de 1988, Art. 165**",
+        "source_reference": null
+      },
+      "source_content_hash": "4debc9e829aa2864c9f666e1ce7a042f504828fec11e5aecd7adc60e30839c2f"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:079",
+      "source_id": "dpf14_009_01:79",
+      "question_type": "true_false",
+      "statement_markdown": "Sabendo que a organização dos programas governamentais por meio de instrumentos orçamentários tem a dupla função de controlar politicamente o poder e garantir uma administração eficiente e eficaz, julgue os itens subsequentes.\n\nRecursos provenientes de caução não devem ser considerados receita orçamentária, pois representam apenas movimentação de fundos.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 79; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Receita Pública",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "fc7c5e6aa583b377b40315ff46c6b681bfb4114b872ce881da3371991602faec",
+        "original_numeric_id": 79,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "receita-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. Os recursos provenientes de caução (depósitos em garantia) constituem ingressos extraorçamentários. Trata-se de valores de terceiros sob a guarda temporária do Estado, os quais geram uma obrigação de devolução futura (passivo financeiro). Como não integram o patrimônio público de forma definitiva e não alteram a situação líquida patrimonial, não passam pelo processo de execução orçamentária, caracterizando-se meramente como movimentação financeira (fluxo de caixa).\n\n### Dispositivo legal\n* **Lei nº 4.320/1964, Art. 3º**",
+        "source_reference": null
+      },
+      "source_content_hash": "cf5e91eaf56ed7a09ce03913b27b8a91e269f7175d3c9dd0cc08e4ea2d502a07"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:081",
+      "source_id": "dpf14_009_01:81",
+      "question_type": "true_false",
+      "statement_markdown": "Em relação a créditos adicionais, receita, despesa pública, restos a pagar e despesas de exercícios anteriores, julgue os itens seguintes.\n\nÉ possível que determinada despesa de pessoal relativa ao exercício de 2012, cujo pagamento tenha sido exigido por um servidor em 2013, exercício no qual tenha sido empenhada, seja considerada restos a pagar de 2012 e despesa orçamentária de 2013.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 81; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Despesa Pública",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "bf9403a16b9e6a9f192c8b07baff8d00d1d60fe992d327ea868d78dd1a20d165",
+        "original_numeric_id": 81,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "despesa-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O erro da questão está na classificação da despesa como \"restos a pagar de 2012\". Por definição legal, Restos a Pagar são as despesas empenhadas mas não pagas até o dia 31 de dezembro do próprio exercício financeiro. Se a despesa relativa a 2012 não foi empenhada naquele ano, vindo a sê-lo apenas em 2013, ela não pode configurar restos a pagar de 2012. Trata-se, na verdade, de Despesas de Exercícios Anteriores (DEA), que serão empenhadas e pagas à conta do orçamento de 2013.\n\n### Dispositivo legal\n* **Lei nº 4.320/1964, Art. 36 e Art. 37**",
+        "source_reference": null
+      },
+      "source_content_hash": "cf9bdc4927b757c0a98df95e37941946d1ee3b17e2436f79f0d2c71ffe65f881"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:082",
+      "source_id": "dpf14_009_01:82",
+      "question_type": "true_false",
+      "statement_markdown": "Na execução do orçamento, as dotações inicialmente aprovadas na LOA podem revelar-se insuficiente para a realização dos programas de trabalho, caso em que poderá haver a abertura de créditos especiais destinados à conclusão dos programas, após autorização legislativa.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 82; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Orçamento Público – Constituição Federal e Lei 4.320",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração Financeira e Orçamentária",
+        "source_content_hash": "99969d46cbea029e09c84b816c082a5548da2275c3d5a82d6469258e38c2b295",
+        "original_numeric_id": 82,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "orcamento-publico-constituicao-federal-e-lei-4-320",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O erro da questão reside na indicação de \"créditos especiais\" para suprir a insuficiência de dotações já existentes. De acordo com a Lei nº 4.320/1964, os créditos adicionais dividem-se em: suplementares (destinados ao reforço de dotação orçamentária já existente); especiais (destinados a despesas para as quais não haja dotação orçamentária específica); e extraordinários (destinados a despesas urgentes e imprevistas). Portanto, para dotações insuficientes, o instrumento correto é o crédito suplementar.\n\n### Dispositivo legal\n* **Lei nº 4.320/1964, Art. 41, incisos I e II**",
+        "source_reference": null
+      },
+      "source_content_hash": "be8db7a3379263b814afd638924c2300f1ee3dce361dc5a0ddd2b5f2449e9d9d"
+    }
+  ]
+}

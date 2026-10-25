@@ -1,0 +1,556 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-agente_de_policia_federal-informatica-8684f5c98b51-501848ab586c",
+  "source": {
+    "file_name": "agente_de_policia_federal_ATUALIZADO.json",
+    "sha256": "8684f5c98b5104f7efe1d71e306dea21ce1a8e63e9a46565a984c87d36331352",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "agente_de_policia_federal.json",
+      "original_source_sha256": "9bf5415c207ff2dee6f1b513f48cc1f4b3e00a224421906182f247e816e0b8ed",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "501848ab586cc36f13675efc2a33adb1ff1b2d064a12b3df37b55e90d68c9048",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_de_policia_federal:061",
+      "source_id": "agente_de_policia_federal:61",
+      "question_type": "true_false",
+      "statement_markdown": "Bloco II\nMarta utiliza uma estação de trabalho que executa o sistema operacional Windows 10 e está conectada à rede local da empresa em que ela trabalha. Ela acessa usualmente os sítios da intranet da empresa e também sítios da Internet pública. Após navegar por vários sítios, Marta verificou o histórico de navegação e identificou que um dos sítios acessados com sucesso por meio do protocolo HTTP tinha o endereço 172.20.1.1.\nTendo como referência essa situação hipotética, julgue os itens a seguir.\n\nO endereço 172.20.1.1 identificado por Marta é o endereço IPv4 de um servidor web na Internet pública.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 61; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redes de Computadores",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "1a0227557011518a81530254c19ae0cc330cf9da7fcf031a169d8957f6952691",
+        "original_numeric_id": 61,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 61
+      },
+      "topics": [
+        {
+          "topic_id": "redes-de-computadores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O endereço IP `172.20.1.1` pertence à faixa de endereços IPv4 privados reservada para redes locais (intranets), conforme definido pela norma RFC 1918. \n\nA faixa de classe B para uso privado estende-se de `172.16.0.0` a `172.31.255.255`. Endereços contidos nesse intervalo não são roteados na Internet pública, servindo apenas para comunicação interna dentro de uma rede corporativa ou doméstica. Portanto, o servidor web acessado por Marta está localizado na intranet da empresa, e não na Internet pública.",
+        "source_reference": null
+      },
+      "source_content_hash": "e81c5ff237cdbd6031adba390fa6391634c920a0b91d95de3256f191da8cac5b"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:062",
+      "source_id": "agente_de_policia_federal:62",
+      "question_type": "true_false",
+      "statement_markdown": "Bloco II\nMarta utiliza uma estação de trabalho que executa o sistema operacional Windows 10 e está conectada à rede local da empresa em que ela trabalha. Ela acessa usualmente os sítios da intranet da empresa e também sítios da Internet pública. Após navegar por vários sítios, Marta verificou o histórico de navegação e identificou que um dos sítios acessados com sucesso por meio do protocolo HTTP tinha o endereço 172.20.1.1.\nTendo como referência essa situação hipotética, julgue os itens a seguir.\n\nPor meio do serviço de proxy para rede local, Marta poderá acessar, a partir da sua estação de trabalho, tanto os sítios da intranet quanto os sítios da Internet pública.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 62; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "31087de4cc54bcfb5b253c9f5895ad4af4da57198303e4b67d89aeeb377ce55d",
+        "original_numeric_id": 62,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 62
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Um servidor proxy de rede local funciona como um intermediário para as requisições de clientes que buscam recursos em outros servidores. \n\nEle pode ser configurado para gerenciar, filtrar e otimizar o tráfego direcionado tanto para servidores internos da própria organização (sítios da intranet) quanto para servidores externos localizados na rede mundial de computadores (sítios da Internet pública). Portanto, a partir de sua estação de trabalho, Marta conseguirá realizar ambos os acessos por meio do proxy.",
+        "source_reference": null
+      },
+      "source_content_hash": "5de2ac0ce6f785ea4f4a7bf4e5655c40c06d8b877f620f4d75ce888ce89b4156"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:064",
+      "source_id": "agente_de_policia_federal:64",
+      "question_type": "true_false",
+      "statement_markdown": "Bloco II\nMarta utiliza uma estação de trabalho que executa o sistema operacional Windows 10 e está conectada à rede local da empresa em que ela trabalha. Ela acessa usualmente os sítios da intranet da empresa e também sítios da Internet pública. Após navegar por vários sítios, Marta verificou o histórico de navegação e identificou que um dos sítios acessados com sucesso por meio do protocolo HTTP tinha o endereço 172.20.1.1.\nTendo como referência essa situação hipotética, julgue os itens a seguir.\n\nWHOIS é o serviço que permite a consulta direta dos endereços IPv4 dos sítios visitados por Marta, a partir das URLs contidas no seu histórico de navegação.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 64; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redes de Computadores",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "c9ec8de856d0f1718160fc1d6f4435572c5980db3ffe85fe2d6922104d1c30b3",
+        "original_numeric_id": 64,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 64
+      },
+      "topics": [
+        {
+          "topic_id": "redes-de-computadores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O serviço responsável por traduzir ou resolver nomes de domínio (URLs) em endereços IP (como o IPv4) para viabilizar a navegação é o DNS (*Domain Name System*).\n\nO **WHOIS**, por sua vez, é um protocolo de consulta utilizado para obter informações de registro e propriedade sobre domínios de internet, blocos de endereços IP e sistemas autônomos. Ele permite identificar, por exemplo, quem é o proprietário de um domínio ou qual entidade é responsável por determinado bloco de IPs, mas não atua na resolução direta de nomes para a navegação do usuário.",
+        "source_reference": null
+      },
+      "source_content_hash": "35639f75042215e579c2ecd7c63abe13c722b5dc1d777e86ddc388562e351e66"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:068",
+      "source_id": "agente_de_policia_federal:68",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, a respeito de proteção e segurança, e noções de vírus, worms e pragas virtuais.\n\nNa autenticação em dois fatores, necessariamente, o primeiro fator de autenticação será algo que o usuário possui — por exemplo, um token gerador de senhas — e o segundo, alguma informação biométrica, como, por exemplo, impressão digital ou geometria da face reconhecida.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 68; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Segurança da Informação",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "6d69b807c59f23de4237dba7d5b27f44534de1a201015e9dd268edb39df43fd1",
+        "original_numeric_id": 68,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 68
+      },
+      "topics": [
+        {
+          "topic_id": "seguranca-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O erro da afirmação reside no uso do termo \"necessariamente\". \n\nA autenticação em múltiplos fatores baseia-se na combinação de fatores de categorias distintas, que são:\n1. **Algo que você sabe:** Senha, PIN, pergunta de segurança.\n2. **Algo que você tem:** Token físico, smartphone, cartão inteligente.\n3. **Algo que você é:** Biometria (impressão digital, reconhecimento facial, íris).\n\nNão existe uma ordem obrigatória de apresentação desses fatores, tampouco a exigência de que o primeiro seja obrigatoriamente algo que se possui e o segundo, biometria. O arranjo mais comum no mercado, por exemplo, inicia-se com algo que o usuário sabe (senha) seguido por algo que possui (código gerado por aplicativo ou enviado por SMS).",
+        "source_reference": null
+      },
+      "source_content_hash": "ba497f5d43a2fd6dca5e3a5ad4bcf71a8a3cfe734a5e2a09640e77fcae44704a"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:070",
+      "source_id": "agente_de_policia_federal:70",
+      "question_type": "true_false",
+      "statement_markdown": "Os gestores de determinado órgão público decidiram adotar a computação em nuvem como solução para algumas dificuldades de gerenciamento dos recursos de tecnologia da informação. Assim, para cada contexto, análises devem ser realizadas a fim de compatibilizar os recursos de gerenciamento e segurança com os modelos técnicos de contratação.\nConsiderando essas informações, julgue os seguintes itens.\n\nSe, para enviar e receber emails sem precisar gerenciar recursos adicionais voltados ao software de email e sem precisar manter os servidores e sistemas operacionais nos quais o software de email estiver sendo executado, os gestores optarem por um serviço de email em nuvem embasado em webmail, eles deverão contratar, para esse serviço, um modelo de computação em nuvem do tipo plataforma como um serviço (PaaS).",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 70; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Computação na Nuvem (Cloud Computing)",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "b528339b638fdcaf765efd9a6eab09764df8a3e3c47321798466221d4877e153",
+        "original_numeric_id": 70,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 70
+      },
+      "topics": [
+        {
+          "topic_id": "computacao-na-nuvem-cloud-computing",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O cenário descrito — em que o usuário final consome um serviço de e-mail pronto (baseado em *webmail*) sem a necessidade de gerenciar, instalar ou manter o software, o sistema operacional ou a infraestrutura de servidores — caracteriza o modelo de serviço conhecido como **SaaS** (*Software as a Service* ou Software como Serviço).\n\nO modelo **PaaS** (*Platform as a Service* ou Plataforma como Serviço) destina-se ao desenvolvimento, teste e implantação de aplicações próprias, fornecendo ferramentas, bibliotecas e ambientes de execução para programadores. No PaaS, os gestores ainda precisariam gerenciar a aplicação desenvolvida, o que contraria a premissa de não gerenciar recursos adicionais voltados ao software de e-mail.",
+        "source_reference": null
+      },
+      "source_content_hash": "15b37dc92894b38cec8d081ac115befa5c8ff9d780b0bb41ecfaf4ec7b787156"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:074",
+      "source_id": "agente_de_policia_federal:74",
+      "question_type": "true_false",
+      "statement_markdown": "A respeito da utilização de tecnologias, ferramentas, aplicativos e procedimentos associados a Internet/intranet, julgue os itens seguintes.\n\nNas ferramentas de busca, o indexador é o programa que navega autonomamente pela Internet, localizando e varrendo os documentos em busca de palavras-chaves para compor a base de dados da pesquisa.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 74; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Internet e Intranet",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "7b798189f67aef47e280ee59112bf2b23ddcbb58357ef10170d1f367fd849078",
+        "original_numeric_id": 74,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 74
+      },
+      "topics": [
+        {
+          "topic_id": "internet-e-intranet",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item inverte os conceitos de componentes de um mecanismo de busca.\n\nO programa que navega de forma autônoma pela internet, localizando e coletando documentos, é o **crawler** (também conhecido como *spider* ou *robô*).\n\nO **indexador**, por sua vez, é o componente responsável por processar os documentos coletados pelo crawler, extrair as palavras-chaves e organizá-las em uma base de dados estruturada (índice) para viabilizar pesquisas rápidas e eficientes.",
+        "source_reference": null
+      },
+      "source_content_hash": "b1efb98f3310b49addbf92acb9c2e381c9740f0a217ac0eb08c38040cdcd88ff"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:080",
+      "source_id": "agente_de_policia_federal:80",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, a respeito da teoria da informação e de sistemas de informação.\n\nNo desenvolvimento de um sistema de informação, a fase de levantamento de requisitos consiste em compreender o problema, dando aos desenvolvedores e usuários a mesma visão do que deve ser construído para resolvê-lo, e a fase de projeto consiste na realização da descrição computacional, incluindo a arquitetura do sistema, a linguagem de programação utilizada e o sistema gerenciador de banco de dados (SGBD) utilizado.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 80; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Banco de Dados",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "1b5fcaab6cc1d9079fc9342e75e760b18d1dfdb66f89b681c8ba87b71300c736",
+        "original_numeric_id": 80,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 80
+      },
+      "topics": [
+        {
+          "topic_id": "banco-de-dados",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto ao descrever as duas fases do ciclo de vida de desenvolvimento de sistemas:\n\n- **Levantamento de Requisitos:** Fase focada em compreender o problema de negócio e alinhar a visão entre desenvolvedores e usuários sobre o que o sistema deve fazer.\n- **Fase de Projeto (Design):** Fase técnica em que se define \"como\" o sistema será construído, especificando a arquitetura de software, as linguagens de programação, os padrões de projeto e o Sistema Gerenciador de Banco de Dados (SGBD) a ser utilizado.",
+        "source_reference": null
+      },
+      "source_content_hash": "f1b1bc856b8c9b0899f6b2949cc8e7a1826288f425d2acb0d322a07305812b21"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:083",
+      "source_id": "agente_de_policia_federal:83",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando o modelo entidade-relacionamento (ER) precedente, julgue os seguintes itens, relativos a banco de dados.\n\nSituação hipotética: Ao analisar o modelo ER em questão, Paulo verificou que há duas chaves identificadas com o mesmo nome: código — em tipo de produto e em produto. Paulo sabe que o conceito de chaves é básico para estabelecer relações entre linhas de tabelas de um banco de dados relacional e que as chaves primárias devem ser únicas. Assertiva: Nessa situação, Paulo deve invalidar o modelo ER em questão, pois ele está semanticamente errado, já que não pode haver chaves primárias com nomes iguais, ainda que em entidades distintas.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 83; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Banco de Dados",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "2c51ca5963d6308b0fafca10ee40335741bcac2bece925f7640cbe68341efabd",
+        "original_numeric_id": 83,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 83
+      },
+      "topics": [
+        {
+          "topic_id": "banco-de-dados",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto.\n\nNo modelo Entidade-Relacionamento, é perfeitamente válido que atributos identificadores (chaves) de entidades distintas possuam o mesmo nome (como o atributo \"código\" presente tanto em \"Produto\" quanto em \"Tipo de Produto\").\n\nA restrição de unicidade das chaves primárias aplica-se ao escopo de cada tabela individualmente no banco de dados relacional, não havendo impedimento para a repetição de nomes de colunas em tabelas diferentes.",
+        "source_reference": null
+      },
+      "source_content_hash": "32adfc0a6d357fd387e91dcc0af7e78544b6ff307d638e70c943868836ec4c19"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:087",
+      "source_id": "agente_de_policia_federal:87",
+      "question_type": "true_false",
+      "statement_markdown": "Acerca de redes de comunicação, julgue os itens a seguir.\n\nA conexão de sistemas como TVs, laptops e telefones celulares à Internet, e também entre si, pode ser realizada com o uso de comutadores (switches) de pacotes, os quais têm como função encaminhar a um de seus enlaces de saída o pacote que está chegando a um de seus enlaces de entrada.",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 87; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redes de Computadores",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "9835f979c911a9c8e1bce25076107b1e1ceedd6ba659da4fe978736eb843efa0",
+        "original_numeric_id": 87,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 87
+      },
+      "topics": [
+        {
+          "topic_id": "redes-de-computadores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. \n\nOs **comutadores de pacotes** (*packet switches*), que englobam dispositivos como *switches* (comutadores de camada de enlace) e roteadores (comutadores de camada de rede), têm como função primordial receber pacotes de dados por meio de suas interfaces de entrada, analisar as informações de endereçamento contidas no cabeçalho do pacote e encaminhá-los para a interface ou enlace de saída apropriado.\n\nEsse mecanismo permite a interconexão e a comunicação eficiente entre diversos tipos de dispositivos finais (*hosts*), tais como televisores inteligentes, computadores portáteis e telefones celulares, tanto localmente quanto na rede mundial de computadores (Internet).",
+        "source_reference": null
+      },
+      "source_content_hash": "bd673e02fdc5210f9a87a49a1e1cd95123fad241e187f11d5ad16b4abfafcb3b"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:089",
+      "source_id": "agente_de_policia_federal:89",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens subsequentes, relativos a redes de computadores.\n\nAs redes de computadores podem ser classificadas, pela sua abrangência, em LAN (local area network), MAN (metropolitan area network), e WAN (wide area network).",
+      "exam_board": "CESPE | CEBRASPE",
+      "institution": "DGP/PF",
+      "position_name": "Agente de Polícia Federal",
+      "exam_year": 2018,
+      "difficulty": null,
+      "source_reference": "agente_de_policia_federal.pdf, questão 89; agente_de_policia_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redes de Computadores",
+      "source_metadata": {
+        "source_file": "agente_de_policia_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "518bdf613e3c6d806155c6cd0065a3553961df4804cae6f3ab79bc03378d515e",
+        "original_numeric_id": 89,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+        "official_item_number": 89
+      },
+      "topics": [
+        {
+          "topic_id": "redes-de-computadores",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. \n\nUma das classificações mais tradicionais das redes de computadores baseia-se na sua **abrangência geográfica** (extensão territorial ocupada pela rede):\n\n* **LAN (*Local Area Network* - Rede Local):** Restrita a um espaço físico limitado, como uma residência, escritório ou edifício.\n* **MAN (*Metropolitan Area Network* - Rede Metropolitana):** Abrange uma área maior, como uma cidade ou região metropolitana, interconectando diversas LANs.\n* **WAN (*Wide Area Network* - Rede de Longa Distância):** Possui cobertura de grande escala geográfica, interligando países ou continentes (a Internet é o maior exemplo de WAN).",
+        "source_reference": null
+      },
+      "source_content_hash": "14e4fc85300292b92f6f1ec0823dafe15dd64ca5a6c859021ff48fd35d38f64c"
+    }
+  ]
+}

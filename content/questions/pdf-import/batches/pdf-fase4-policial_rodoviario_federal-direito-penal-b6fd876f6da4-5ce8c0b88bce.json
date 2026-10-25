@@ -1,0 +1,82 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-policial_rodoviario_federal-direito-penal-b6fd876f6da4-5ce8c0b88bce",
+  "source": {
+    "file_name": "policial_rodoviario_federal_ATUALIZADO.json",
+    "sha256": "b6fd876f6da47bfc670b5edf47a194cb0192c6a872db7d5acf3f5352d639cba7",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "policial_rodoviario_federal.json",
+      "original_source_sha256": "d0a1c5718064db035e156dbeb8982317019ea8dde6c8349e0a1cc8366d1342df",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "5ce8c0b88bcefe1ec6a27dd72b1a742234e40dcbf8591a7495ff00d7529e02d2",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "direito-penal",
+    "name": "Direito Penal"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:policial_rodoviario_federal:102",
+      "source_id": "policial_rodoviario_federal:102",
+      "question_type": "true_false",
+      "statement_markdown": "Em uma abordagem durante blitz de rotina em rodovia federal, o policial constatou alteração no chassi do veículo que estava sendo fiscalizado. Questionado pelo policial, o condutor ofereceu-lhe grande quantia em dinheiro para que fosse liberado de imediato.\nConsiderando a situação hipotética apresentada, julgue os itens a seguir.\n\nA remarcação do chassi com o mesmo número original do veículo caracteriza crime contra a fé pública e infração administrativa de trânsito.",
+      "exam_board": "CEBRASPE",
+      "institution": "Polícia Rodoviária Federal (PRF)",
+      "position_name": "Policial Rodoviário Federal",
+      "exam_year": 2021,
+      "difficulty": "medium",
+      "source_reference": "policial_rodoviario_federal.pdf, questão 102; policial_rodoviario_federal_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Crimes contra a Fé Pública",
+      "source_metadata": {
+        "source_file": "policial_rodoviario_federal.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Penal",
+        "source_content_hash": "95e9ac54e9a0b1dd9aa2f11c335f29c25e616a1ffb20e9b958e208558cae070e",
+        "original_numeric_id": 102,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "pareamento_textual_entre_cadernos"
+      },
+      "topics": [
+        {
+          "topic_id": "crimes-contra-a-fe-publica",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nConforme orientação jurisprudencial consolidada do STJ e doutrina penal predominante, a remarcação de chassi mantendo a numeração original do veículo (ex.: com intuito de restauração ou regravação por desgaste, ainda que sem autorização administrativa prévia) não altera a autenticidade cadastral do bem nem gera lesão à fé pública, afastando a tipicidade penal do art. 311 do Código Penal. A conduta configura estritamente infração administrativa de trânsito perante o órgão de registro.",
+        "source_reference": null
+      },
+      "source_content_hash": "eaab0f24558e9d0859c8af6293be4850bfb3969d430031cbb64cfa17983da5e8"
+    }
+  ]
+}

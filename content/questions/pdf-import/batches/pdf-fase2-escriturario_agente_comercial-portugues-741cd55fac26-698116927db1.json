@@ -1,0 +1,422 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-escriturario_agente_comercial-portugues-741cd55fac26-698116927db1",
+  "source": {
+    "file_name": "escriturario_agente_comercial_ATUALIZADO.json",
+    "sha256": "741cd55fac263d8edfe29869bc66425509b93453fb35dfdbbecc4deea8b18568",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "escriturario_agente_comercial.json",
+      "original_source_sha256": "712ee07d18b6c6f75b8792c6bf5ca6ea068b2c5f60c13f6565f4cab1c39926d7",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "698116927db1a5c08cc8108055a356e118d24f81444c2e401dc78485fc6aedce",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:001",
+      "source_id": "escriturario_agente_comercial:1",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A história do método braile\n\nLer no escuro. Quem já tentou sabe que é impossível. Mas foi exatamente a isso que um francês chamado Louis Braille dedicou a vida. Nascido em Coupvray, uma pequena aldeia nos arredores de Paris, em 1809, desde cedo ele mostrou muito interesse pelo trabalho do pai. Seus olhos azuis brilhavam da admiração de vê-lo cortar, com extrema perícia, selas e arreios. Pouco depois de completar 3 anos, o menino começou a brincar na selaria do pai, cortando pequenas tiras de couro. Uma tarde, uma sovela, instrumento usado para perfurar o couro, escapou-lhe da mão e atingiu o seu olho esquerdo. O resultado foi uma infecção que, seis meses depois, afetaria também o olho direito. Aos 5 anos, o garoto estava completamente cego.\n\nA tragédia não o impediu, porém, de frequentar a escola por dois anos e de se tornar ainda um aluno brilhante. Por essa razão, ele ganhou uma bolsa de estudos no Instituto Nacional para Jovens Cegos, em Paris, um colégio interno fundado por Valentin Haüy (1745-1822). Além do currículo normal, Haüy introduzira um sistema especial de alfabetização, no qual letras de forma impressas em relevo, em papelão, eram reconhecidas pelos contornos. Desde o início do curso, Braille destacou-se como o melhor aluno da turma e logo começou a ajudar os colegas. Em 1821, aos 12 anos, conheceu um método inventado pouco antes por Charles Barbier de La Serre, oficial do Exército francês.\n\nO método Barbier, também chamado escrita noturna, era um código de pontos e traços em relevo impressos também em papelão. Destinava-se a enviar ordens cifradas a sentinelas em postos avançados. Estes decodificariam a mensagem até no escuro. Mas, como a ideia não pegou na tropa, Barbier adaptou o método para a leitura de cegos, com o nome de grafia sonora. O sistema permitia a comunicação entre os cegos, pois com ele era possível escrever, algo que o método de Haüy não possibilitava. O de Barbier era fonético: registrava sons e não letras. Dessa forma, as palavras não podiam ser soletradas. Além disso, o fato de um grande número de sinais ser usado para uma única palavra tornava o sistema muito complicado. Apesar dos inconvenientes, foi adotado como método auxiliar por Haüy.\n\nPesquisando a fundo a grafia sonora, Braille percebeu suas limitações e pôs-se a aperfeiçoá-la. Em 1824, seu método estava pronto. Primeiro, eliminou os traços, para evitar erros de leitura: em seguida, criou uma célula de seis pontos, divididos em duas colunas de três pontos cada, que podem ser combinados de 63 maneiras diferentes. A posição dos pontos na célula está ao lado.\n\nEm 1826, aos 17 anos, ainda estudante, Braille começou a dar aulas. Embora seu método fizesse sucesso entre os alunos, não podia ensiná-lo na sala de aula, pois ainda não era reconhecido oficialmente. Por isso, Braille dava aulas do revolucionário sistema escondido no quarto, que logo se transformou numa segunda sala de aula.\n\nO braile é lido passando-se a ponta dos dedos sobre os sinais de relevo. Normalmente se usa a mão direita com um ou mais dedos, conforme a habilidade do leitor, enquanto a mão esquerda procura o início da outra linha. Aplica-se a qualquer língua, sem exceção, e também à estenografia, à música – Braille, por sinal, era ainda exímio pianista – e às notações científicas em geral. A escrita é feita mediante o uso da reglete, também idealizada por Braille: trata-se de uma régua especial, de duas linhas, com uma série de janelas de seis furos cada, correspondentes às células braile.\n\nLouis Braille morreu de tuberculose em 1852, com apenas 43 anos. Temia que seu método desaparecesse com ele, mas, finalmente, em 1854 foi oficializado pelo governo francês. No ano seguinte, foi apresentado ao mundo, na Exposição Internacional de Paris, por ordem do imperador Napoleão III (1808-1873), que programou ainda uma série de concertos de piano com ex-alunos de Braille. O sucesso foi imediato, e o sistema se espalhou pelo mundo. Em 1952, o governo francês transferiu os restos mortais de Braille para o Panthéon, em Paris, onde estão sepultados os heróis nacionais.\n\nA partir da leitura do texto, constata-se que Braille",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 1; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "queria seguir o ofício do pai.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "estudou com bolsa de estudos.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "trabalhava em selarias quando criança.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "foi adotado por Valentin Haüy depois da tragédia.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "começou a dar aulas quando atingiu a maioridade.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "3ccdb0d74fdd1d16026824ac2dead3dac177236d9008dfc1a35e619fb45a7e55",
+        "original_numeric_id": 1,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A resolução da questão baseia-se na localização de informações explícitas no texto.\n\n* **Correta (B):** O segundo parágrafo do texto afirma diretamente: *\"Por essa razão, ele ganhou uma bolsa de estudos no Instituto Nacional para Jovens Cegos, em Paris...\"*.\n\n* **Incorreta (A):** O texto menciona que Braille mostrava muito interesse pelo trabalho do pai e brincava na selaria, mas não afirma que ele desejava seguir essa profissão.\n* **Incorreta (C):** O texto relata que o menino *\"começou a brincar na selaria do pai\"*, e não que trabalhava nela de forma profissional.\n* **Incorreta (D):** Valentin Haüy foi o fundador do colégio interno onde Braille estudou, e não seu pai adotivo.\n* **Incorreta (E):** O texto indica que Braille começou a dar aulas em 1826, aos 17 anos (*\"Em 1826, aos 17 anos, ainda estudante, Braille começou a dar aulas\"*), idade anterior à maioridade civil.",
+        "source_reference": null
+      },
+      "source_content_hash": "adfcfb380c91c28c279c1435b005496fe033f0f16a5065de580140c554b69dfa"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:002",
+      "source_id": "escriturario_agente_comercial:2",
+      "question_type": "multiple_choice",
+      "statement_markdown": "A história do método braile\n\nLer no escuro. Quem já tentou sabe que é impossível. Mas foi exatamente a isso que um francês chamado Louis Braille dedicou a vida. Nascido em Coupvray, uma pequena aldeia nos arredores de Paris, em 1809, desde cedo ele mostrou muito interesse pelo trabalho do pai. Seus olhos azuis brilhavam da admiração de vê-lo cortar, com extrema perícia, selas e arreios. Pouco depois de completar 3 anos, o menino começou a brincar na selaria do pai, cortando pequenas tiras de couro. Uma tarde, uma sovela, instrumento usado para perfurar o couro, escapou-lhe da mão e atingiu o seu olho esquerdo. O resultado foi uma infecção que, seis meses depois, afetaria também o olho direito. Aos 5 anos, o garoto estava completamente cego.\n\nA tragédia não o impediu, porém, de frequentar a escola por dois anos e de se tornar ainda um aluno brilhante. Por essa razão, ele ganhou uma bolsa de estudos no Instituto Nacional para Jovens Cegos, em Paris, um colégio interno fundado por Valentin Haüy (1745-1822). Além do currículo normal, Haüy introduzira um sistema especial de alfabetização, no qual letras de forma impressas em relevo, em papelão, eram reconhecidas pelos contornos. Desde o início do curso, Braille destacou-se como o melhor aluno da turma e logo começou a ajudar os colegas. Em 1821, aos 12 anos, conheceu um método inventado pouco antes por Charles Barbier de La Serre, oficial do Exército francês.\n\nO método Barbier, também chamado escrita noturna, era um código de pontos e traços em relevo impressos também em papelão. Destinava-se a enviar ordens cifradas a sentinelas em postos avançados. Estes decodificariam a mensagem até no escuro. Mas, como a ideia não pegou na tropa, Barbier adaptou o método para a leitura de cegos, com o nome de grafia sonora. O sistema permitia a comunicação entre os cegos, pois com ele era possível escrever, algo que o método de Haüy não possibilitava. O de Barbier era fonético: registrava sons e não letras. Dessa forma, as palavras não podiam ser soletradas. Além disso, o fato de um grande número de sinais ser usado para uma única palavra tornava o sistema muito complicado. Apesar dos inconvenientes, foi adotado como método auxiliar por Haüy.\n\nPesquisando a fundo a grafia sonora, Braille percebeu suas limitações e pôs-se a aperfeiçoá-la. Em 1824, seu método estava pronto. Primeiro, eliminou os traços, para evitar erros de leitura: em seguida, criou uma célula de seis pontos, divididos em duas colunas de três pontos cada, que podem ser combinados de 63 maneiras diferentes. A posição dos pontos na célula está ao lado.\n\nEm 1826, aos 17 anos, ainda estudante, Braille começou a dar aulas. Embora seu método fizesse sucesso entre os alunos, não podia ensiná-lo na sala de aula, pois ainda não era reconhecido oficialmente. Por isso, Braille dava aulas do revolucionário sistema escondido no quarto, que logo se transformou numa segunda sala de aula.\n\nO braile é lido passando-se a ponta dos dedos sobre os sinais de relevo. Normalmente se usa a mão direita com um ou mais dedos, conforme a habilidade do leitor, enquanto a mão esquerda procura o início da outra linha. Aplica-se a qualquer língua, sem exceção, e também à estenografia, à música – Braille, por sinal, era ainda exímio pianista – e às notações científicas em geral. A escrita é feita mediante o uso da reglete, também idealizada por Braille: trata-se de uma régua especial, de duas linhas, com uma série de janelas de seis furos cada, correspondentes às células braile.\n\nLouis Braille morreu de tuberculose em 1852, com apenas 43 anos. Temia que seu método desaparecesse com ele, mas, finalmente, em 1854 foi oficializado pelo governo francês. No ano seguinte, foi apresentado ao mundo, na Exposição Internacional de Paris, por ordem do imperador Napoleão III (1808-1873), que programou ainda uma série de concertos de piano com ex-alunos de Braille. O sucesso foi imediato, e o sistema se espalhou pelo mundo. Em 1952, o governo francês transferiu os restos mortais de Braille para o Panthéon, em Paris, onde estão sepultados os heróis nacionais.\n\nDiferentemente do método de Barbier, o método de Haüy",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 2; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "possibilitava a escrita.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "usava letras em relevo.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "apresentava pontos e traços.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "impossibilitava soletrar palavras.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "era conhecido como grafia sonora.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "a356253bc87010788c3651e9b372c22d4aa67802533c3cb83ff75c8cb5e4c052",
+        "original_numeric_id": 2,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a comparação entre as características do método de Valentin Haüy e as do método de Charles Barbier, conforme descritas no texto.\n\n* **Correta (B):** O segundo parágrafo descreve o método de Haüy como um sistema no qual *\"letras de forma impressas em relevo, em papelão, eram reconhecidas pelos contornos\"*. Já o terceiro parágrafo define o método Barbier como *\"um código de pontos e traços em relevo\"*. Portanto, o uso de letras em relevo é o diferencial do método de Haüy.\n\n* **Incorreta (A):** O terceiro parágrafo esclarece que o método de Barbier permitia escrever, *\"algo que o método de Haüy não possibilitava\"*.\n* **Incorreta (C):** O uso de pontos e traços era a característica do método de Barbier, e não do de Haüy.\n* **Incorreta (D):** A impossibilidade de soletrar palavras era uma limitação do método de Barbier por ser fonético (*\"O de Barbier era fonético: registrava sons e não letras. Dessa forma, as palavras não podiam ser soletradas\"*).\n* **Incorreta (E):** \"Grafia sonora\" foi o nome dado à adaptação do método de Barbier para cegos, e não ao método de Haüy.",
+        "source_reference": null
+      },
+      "source_content_hash": "a64c9822a511a7057c3d822a18778f266f8461114fe82c4a2266df44d2b38791"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:004",
+      "source_id": "escriturario_agente_comercial:4",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O trecho do parágrafo 4 “Pesquisando a fundo a grafia sonora, Braille percebeu suas limitações e pôs-se a aperfeiçoá-la” pode ser reescrito, sem alterar o sentido que apresenta no texto, como:",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 4; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Para pesquisar a fundo a grafia sonora, Braille percebeu suas limitações e pôs-se a aperfeiçoá-la.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Embora pesquisasse a fundo a grafia sonora, Braille percebeu suas limitações e pôs-se a aperfeiçoá-la.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "Quando pesquisava a fundo a grafia sonora, Braille percebeu suas limitações e pôs-se a aperfeiçoá-la.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Apesar de pesquisar a fundo a grafia sonora, Braille percebia suas limitações e punha-se a aperfeiçoá-la.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "Se pesquisasse a fundo a grafia sonora, Braille perceberia suas limitações e pôr-se-ia a aperfeiçoá-la.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "607cc3bb6a12245de55b52ef197ac4936b2331419082f1ce82c0a05bb389e1db",
+        "original_numeric_id": 4,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão trabalha com a reescrita de orações reduzidas de gerúndio e a manutenção do valor semântico original.\n\n* **Correta (C):** A oração reduzida de gerúndio *\"Pesquisando a fundo a grafia sonora\"* expressa uma circunstância de tempo (simultaneidade ou processo em curso no momento em que a ação principal ocorre). A conjunção temporal \"Quando\" associada ao pretérito imperfeito do indicativo (*\"Quando pesquisava...\"*) preserva com exatidão essa relação cronológica e o sentido original do período.\n\n* **Incorreta (A):** A preposição \"Para\" introduz uma ideia de finalidade (objetivo), alterando o sentido original.\n* **Incorretas (B) e (D):** As conjunções \"Embora\" e \"Apesar de\" introduzem valor de concessão (contraste), inexistente no trecho original.\n* **Incorreta (E):** A conjunção \"Se\" projeta uma hipótese (condição), descaracterizando o fato consumado relatado no texto.",
+        "source_reference": null
+      },
+      "source_content_hash": "9d35fecc9211ac5ee39d6fca11183bd24fdf9c7bbe2581ef177c828df2f7688d"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:005",
+      "source_id": "escriturario_agente_comercial:5",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Em “No ano seguinte, foi apresentado ao mundo, na Exposição Internacional de Paris, por ordem do imperador Napoleão III (1808-1873), que programou **ainda** uma série de concertos de piano com ex-alunos de Braille” (parágrafo 7), a palavra em destaque apresenta o mesmo sentido que em:",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 5; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Louis Braille criou um método revolucionário e ainda era excelente pianista.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Vencer barreiras relacionadas à acessibilidade ainda é um desafio.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "O método Braille ainda era desconhecido por muitas pessoas.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Os restos mortais de Braille ainda estão no Panthéon.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "A reglete ainda é usada por deficientes visuais.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Outros Tópicos",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "1e170edfb6961789337a7c9c2828c785da89eded4be177cfdbed360d44daafc8",
+        "original_numeric_id": 5,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_compreensao_texto"
+      },
+      "topics": [
+        {
+          "topic_id": "outros-topicos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a identificação do valor semântico do vocábulo \"ainda\" no contexto apresentado.\n\n* **Correta (A):** No trecho do texto, o termo \"ainda\" funciona como um operador argumentativo de inclusão ou adição, equivalendo a \"também\" ou \"além disso\" (*\"programou também/além disso uma série de concertos\"*). Na alternativa A, o termo desempenha exatamente o mesmo papel aditivo: *\"criou um método revolucionário e também/além disso era excelente pianista\"*.\n\n* **Incorretas (B), (C), (D) e (E):** Nessas alternativas, a palavra \"ainda\" possui valor estritamente temporal, indicando a continuidade de um estado ou ação no tempo (equivalente a \"até o momento presente\" ou \"até aquela época\").",
+        "source_reference": null
+      },
+      "source_content_hash": "bc0be2a20e20e523d17015b2264a6fd3f24afd2643568b49133cfae6ab540747"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:006",
+      "source_id": "escriturario_agente_comercial:6",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No trecho do parágrafo 2, “conheceu um método inventado pouco antes por Charles Barbier de La Serre, oficial do Exército francês”, a vírgula está empregada com a mesma função que em:",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 6; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "A cegueira não o impediu, no entanto, de estudar.",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "Perspicaz, Braille percebeu falhas no método de Barbier.",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "A infecção, seis meses depois, afetou o segundo olho de Braille.",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "Escrita noturna, método de Barbier, não teve sucesso quando criado.",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "No Instituto Nacional para Jovens Cegos, Braille desenvolveu seus estudos.",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "910250913b44b3c12e5663cb28527a916863036d2c5925079e4483911779f6f5",
+        "original_numeric_id": 6,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda as regras de pontuação, especificamente o uso da vírgula para isolar termos explicativos.\n\n* **Correta (D):** No trecho original, a vírgula isola o termo *\"oficial do Exército francês\"*, que funciona como um aposto explicativo do substantivo próprio \"Charles Barbier de La Serre\". Na alternativa D, as vírgulas isolam a expressão *\"método de Barbier\"*, que também desempenha a função sintática de aposto explicativo em relação ao termo anterior \"Escrita noturna\".\n\n* **Incorreta (A):** As vírgulas isolam a conjunção coordenativa adversativa intercalada \"no entanto\".\n* **Incorreta (B):** A vírgula isola o adjetivo \"Perspicaz\", que funciona como um predicativo do sujeito deslocado para o início da oração.\n* **Incorreta (C):** As vírgulas isolam um adjunto adverbial de tempo intercalado (*\"seis meses depois\"*).\n* **Incorreta (E):** A vírgula isola um adjunto adverbial de lugar de longa extensão anteposto (*\"No Instituto Nacional para Jovens Cegos\"*).",
+        "source_reference": null
+      },
+      "source_content_hash": "c36b5d1a441a9e70a64fd9e9f0a503059f2e7dca3bffc1f0d76733da685a4170"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:007",
+      "source_id": "escriturario_agente_comercial:7",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Em “Mas, **como a ideia não pegou na tropa**, Barbier adaptou o método para a leitura de cegos” (parágrafo 3), a oração destacada apresenta o valor semântico de",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": null,
+      "source_reference": "escriturario_agente_comercial.pdf, questão 7; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "fim",
+          "sort_order": 0
+        },
+        {
+          "label": "B",
+          "body_markdown": "causa",
+          "sort_order": 1
+        },
+        {
+          "label": "C",
+          "body_markdown": "tempo",
+          "sort_order": 2
+        },
+        {
+          "label": "D",
+          "body_markdown": "proporção",
+          "sort_order": 3
+        },
+        {
+          "label": "E",
+          "body_markdown": "consequência",
+          "sort_order": 4
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "e6e46c09feffd2a57e30c2d11199a601716df6bbb72f46dfeefaf151d1e5a13c",
+        "original_numeric_id": 7,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_grammar"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão analisa o valor semântico das conjunções subordinativas, especificamente o conectivo \"como\".\n\n* **Correta (B):** A conjunção \"como\", quando introduz uma oração subordinada que antecede a oração principal, possui valor causal. No contexto, a oração *\"como a ideia não pegou na tropa\"* apresenta o motivo ou a causa que levou Barbier a adaptar o método para a leitura de cegos. Pode ser substituída por \"já que\", \"visto que\" ou \"porque\".\n\n* **Incorretas (A), (C), (D) e (E):** A relação estabelecida não é de finalidade (fim), tempo, proporção ou consequência, uma vez que o fato de a ideia não ter funcionado com a tropa é a origem direta (causa) da decisão de adaptar o sistema.",
+        "source_reference": null
+      },
+      "source_content_hash": "9debe3a5b9356d1eb54681f402940135e4101c59c8274ec00c72376f1441a051"
+    }
+  ]
+}

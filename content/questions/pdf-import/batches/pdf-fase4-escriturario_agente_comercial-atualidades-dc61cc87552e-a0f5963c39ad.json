@@ -1,0 +1,400 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-escriturario_agente_comercial-atualidades-dc61cc87552e-a0f5963c39ad",
+  "source": {
+    "file_name": "escriturario_agente_comercial_ATUALIZADO.json",
+    "sha256": "dc61cc87552e5a02d8b0d8976fda4c03f634e0152f65f5267f98ed067ff73cc6",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "escriturario_agente_comercial.json",
+      "original_source_sha256": "01019f640948f2ffd55374ea21a7a82a58f3fdae926a71a27cc21c32ba8bbf9d",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "a0f5963c39ad0680fd871015edd2b4f870d8f2b308f1f16aa42f9c14dec04985",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "atualidades",
+    "name": "Atualidades"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:021",
+      "source_id": "escriturario_agente_comercial:21",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No Brasil, uma característica do modelo de negócios dos bancos na era digital é a",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 21; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "maior proximidade física com os clientes nas agências bancárias.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "dispensa de regulação por parte do Banco Central do Brasil.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "disseminação das plataformas on-line.",
+          "sort_order": 2,
+          "is_correct": true
+        },
+        {
+          "label": "D",
+          "body_markdown": "lentidão dos canais de comunicação.",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "menor oferta de produtos e serviços aos clientes.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Mercado Financeiro, Tecnologia e Inovação",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades do Mercado Financeiro",
+        "source_content_hash": "fcaeff9918334d6855a833d2e57054fba67ec2a977663c9c905993fbee5a9bca",
+        "original_numeric_id": 21,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "C",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnologia-inovacao-e-sociedade-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O modelo de negócios bancário na era digital é caracterizado pela migração dos serviços e do relacionamento com o cliente para o ambiente virtual. A disseminação de plataformas on-line (como aplicativos de celular e *internet banking*) viabiliza o autoatendimento, reduz custos operacionais e expande o alcance geográfico das instituições financeiras sem a necessidade de infraestrutura física correspondente.\n\n**Análise das alternativas incorretas:**\n* **A) Incorreta.** A era digital promove a redução da dependência de agências físicas, resultando em menor proximidade física presencial.\n* **B) Incorreta.** As instituições financeiras digitais (como *fintechs* e bancos digitais) estão sujeitas à regulação e supervisão do Banco Central do Brasil.\n* **D) Incorreta.** A digitalização visa à agilidade e à instantaneidade na comunicação e nas transações.\n* **E) Incorreta.** O ambiente digital possibilita uma maior e mais diversificada oferta de produtos e serviços financeiros de forma personalizada.",
+        "source_reference": null
+      },
+      "source_content_hash": "dad889baf38839c5843e33da281ec94785c1701460002b33b0e75bb72eb8fc7f"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:022",
+      "source_id": "escriturario_agente_comercial:22",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Quando um indivíduo, ao comprar um produto em uma loja, efetua o pagamento utilizando papel-moeda (cash), a moeda estará cumprindo, nessa operação, a função de",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 22; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "meio de troca",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "unidade de medida de valor",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "reserva de valor",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "financiamento",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "precaução",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Mercado Financeiro, Tecnologia e Inovação",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades do Mercado Financeiro",
+        "source_content_hash": "548bea28d740307fcb84fad060565d995306ae8281d9960a194dc7666ec8695f",
+        "original_numeric_id": 22,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnologia-inovacao-e-sociedade-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A moeda desempenha três funções clássicas na economia: meio de troca, unidade de conta (ou medida de valor) e reserva de valor. No ato de realizar um pagamento direto para adquirir um bem ou serviço, a moeda atua especificamente como **meio de troca** (ou intermediário de troca), pois viabiliza a transação comercial de forma direta, eliminando a necessidade de escambo.\n\n**Análise das alternativas incorretas:**\n* **B) Incorreta.** A unidade de medida de valor (ou unidade de conta) refere-se à função da moeda de servir como padrão para cotar preços e expressar o valor dos bens.\n* **C) Incorreta.** A reserva de valor é a capacidade da moeda de conservar o poder de compra ao longo do tempo para uso futuro.\n* **D) e E) Incorretas.** Financiamento e precaução não são funções clássicas da moeda, mas sim motivos para a demanda por moeda ou modalidades de operações financeiras.",
+        "source_reference": null
+      },
+      "source_content_hash": "3fccbce4d41d697c96c52debad573b862f107d980d88c9f3fd787b04470bf999"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:023",
+      "source_id": "escriturario_agente_comercial:23",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O Internet banking facilita a realização de transações bancárias, mas também oferece risco para usuários finais que são pessoas naturais. Para minimizar os riscos, o Banco Central do Brasil determina que os participantes provedores de conta transacional do Pix devem estabelecer limites máximos de valor para iniciação de um Pix com finalidade de compra ou de transferência, por conta transacional, e possibilidade de diferenciação do limite estabelecido para o período diurno e para o período noturno.\n\nOs participantes poderão, a seu critério, ofertar funcionalidade para que o usuário final possa solicitar que o período noturno compreenda o período entre",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 23; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "21 horas e 6 horas",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "22 horas e 6 horas",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "23 horas e 6 horas",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "0 hora e 7 horas",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "1 hora e 7 horas",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Mercado Financeiro, Tecnologia e Inovação",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades do Mercado Financeiro",
+        "source_content_hash": "8420c0fce34a64ad2afe0e4e18b90a4b63cece2ced31dfc175b015adc4cb2942",
+        "original_numeric_id": 23,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnologia-inovacao-e-sociedade-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "De acordo com a regulamentação do Pix estabelecida pelo Banco Central do Brasil para mitigar riscos de segurança (como sequestros-relâmpago e fraudes), o período noturno padrão compreende o intervalo entre as 20 horas e as 6 horas do dia seguinte. No entanto, as instituições financeiras podem, a seu critério, oferecer uma funcionalidade para que o próprio usuário solicite a alteração do início do período noturno para as **22 horas**, estendendo-se até as **6 horas**.\n\n**Análise das alternativas incorretas:**\nAs alternativas **A**, **C**, **D** e **E** apresentam faixas de horários que não correspondem à previsão regulamentar estabelecida pelo Banco Central para a flexibilização do período noturno do Pix.\n\n**Dispositivo legal**\n\n[Resolução BCB nº 142, de 23 de setembro de 2021, Art. 2º](https://www.bcb.gov.br/estabilidadefinanceira/exibirdoc?path=artigos%2Fbcb%2Fresolucoes%2FResolucao_BCB_142_v1_O.xml)",
+        "source_reference": null
+      },
+      "source_content_hash": "6ca6eef6cb90f3b50e832a99c512793a11226acf961d4475559140d8c5c338dd"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:024",
+      "source_id": "escriturario_agente_comercial:24",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Existem grupos que trabalham cooperativamente para validar as transações na Blockchain, por meio da solução de cálculos complexos, e que concordam em dividir, proporcionalmente, recompensas de bloco entre eles, de acordo com sua contribuição nesse trabalho.\n\nTais grupos são denominados",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 24; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "grupos de data lake",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "redes de extração",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "cooperativas de blocos",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "pools de mineração",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "pools de distribuição",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Sociedade, Educação, Segurança e Cidadania",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades do Mercado Financeiro",
+        "source_content_hash": "007acdeac7d99d1f5162be5e9d994cd513f5fd2c0d9a2b5d407c336dcd588536",
+        "original_numeric_id": 24,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "D",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "sociedade-seguranca-publica-e-cidadania",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No contexto de criptoativos e redes *blockchain* que utilizam o consenso de Prova de Trabalho (*Proof of Work*), a dificuldade para minerar um bloco individualmente é extremamente elevada. Para contornar isso, mineradores unem seu poder de processamento computacional em grupos cooperativos chamados **pools de mineração** (*mining pools*). Quando o grupo consegue validar um bloco, a recompensa financeira gerada é distribuída entre os participantes de forma proporcional ao poder computacional que cada um forneceu.\n\n**Análise das alternativas incorretas:**\n* **A) Incorreta.** *Data lake* é um repositório de armazenamento que guarda uma grande quantidade de dados brutos em seu formato nativo.\n* **B), C) e E) Incorretas.** Os termos \"redes de extração\", \"cooperativas de blocos\" e \"pools de distribuição\" não são nomenclaturas técnicas utilizadas para designar esses grupos de validação cooperativa em *blockchain*.",
+        "source_reference": null
+      },
+      "source_content_hash": "e80a283bca05fdfcff66535d709feaf2d5b2dc690a13732cd7bb9b8deb567153"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:025",
+      "source_id": "escriturario_agente_comercial:25",
+      "question_type": "multiple_choice",
+      "statement_markdown": "O Banco Central tem dedicado atenção às entidades identificadas como shadow banking (bancos sombra).\n\nEssas entidades já se encontram sob alguma regulação e supervisão, feita por autoridades com jurisdição nacional, como a(o)",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 25; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Banco Caixa Econômica",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Banco do Brasil",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Banco SICRED",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Open finance",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "CVM",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Mercado Financeiro, Tecnologia e Inovação",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Atualidades do Mercado Financeiro",
+        "source_content_hash": "7c20bd606b53eb7a45cb9d6138d3525e0547380090981e3e1f237701ed5d1811",
+        "original_numeric_id": 25,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "tecnologia-inovacao-e-sociedade-da-informacao",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O conceito de *shadow banking* (sistema financeiro sombra) abrange intermediários financeiros que realizam funções típicas de bancos (como intermediação de crédito, liquidez e transformação de prazos), mas operam fora do sistema bancário tradicional regulado pelo Banco Central. No Brasil, grande parte dessas atividades e entidades (como fundos de investimento, companhias securitizadoras e emissores de títulos de dívida) está sujeita à regulação e à fiscalização da **Comissão de Valores Mobiliários (CVM)**, que atua no mercado de capitais.\n\n**Análise das alternativas incorretas:**\n* **A), B) e C) Incorretas.** Caixa Econômica Federal, Banco do Brasil e Sicredi são instituições financeiras bancárias tradicionais (bancos comerciais, múltiplos ou cooperativas de crédito) plenamente reguladas e supervisionadas pelo Banco Central do Brasil, não se enquadrando no conceito de *shadow banking*.\n* **D) Incorreta.** *Open Finance* (sistema financeiro aberto) é um ecossistema de compartilhamento de dados e serviços financeiros, e não uma autoridade reguladora ou supervisora.",
+        "source_reference": null
+      },
+      "source_content_hash": "10c0177f271c9813809c576df43507b46a606fa41dec20ad6fabb4a4c515412b"
+    }
+  ]
+}

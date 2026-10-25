@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_administrativo-administracao-de-recursos-materiais-9275da7d075c-d80b5944a6e8",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "9275da7d075c14f6aecd067cee72adc350eb98cd976b0bad8b9bd014f4eb1edf",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "5da32b0a57792e090ef9d4c38cee7bda12a08609929c945e59e21312dccdc01a",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "d80b5944a6e83b8689435a7ef337bb361de12a70418adbd7d884f2e641321dce",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "administracao-de-recursos-materiais",
+    "name": "Administração de Recursos Materiais"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:092",
+      "source_id": "agente_administrativo:92",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, relativos à administração de patrimônio, materiais e logística.\n\nNa classificação XYZ, os itens de classe X são poucos, mas com grande importância no valor global dos estoques.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 92; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Classificação de Materiais",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Recursos Materiais",
+        "source_content_hash": "0b321749c537026ca03eaefc0181359b723128cfbf42d20dc3bcd49ef7daf0f9",
+        "original_numeric_id": 92,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "classificacao-de-materiais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação confunde duas metodologias distintas de classificação de estoques: a classificação ABC e a classificação XYZ.\n\n* **Classificação ABC**: Baseia-se no valor financeiro e na representatividade monetária dos itens em estoque. A descrição apresentada no enunciado (\"poucos itens, mas com grande importância no valor global\") refere-se especificamente à **Classe A** dessa metodologia.\n* **Classificação XYZ**: Avalia a **criticidade** ou a imprescindibilidade do item para a continuidade das operações da organização, independentemente do seu valor financeiro. Ela divide os itens em:\n  * **Classe X**: Itens de baixa criticidade, cuja falta não interrompe a operação e que possuem fácil substituição.\n  * **Classe Y**: Itens de criticidade média.\n  * **Classe Z**: Itens de alta criticidade, cuja falta paralisa a operação e que não possuem substitutos fáceis.\n\nPortanto, a associação entre a classe X e a importância no valor global está incorreta.",
+        "source_reference": null
+      },
+      "source_content_hash": "b4db5aa662df8edb60bb0a3b049da14280713389e1d634978a7ab9d689fd9291"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:093",
+      "source_id": "agente_administrativo:93",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, relativos à administração de patrimônio, materiais e logística.\n\nSão métodos para avaliação financeira dos estoques: primeiro que entra, primeiro que sai; último que entra, primeiro que sai; e custo médio.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 93; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Gestão de Estoques",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Recursos Materiais",
+        "source_content_hash": "3f4c4f49eb2b6a922bd9de54071f4034e429961a02e7c2eadae206bfa9c18b49",
+        "original_numeric_id": 93,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "gestao-de-estoques",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta ao listar os três métodos clássicos e mais utilizados para a avaliação financeira e controle de estoques:\n\n* **PEPS (Primeiro que Entra, Primeiro que Sai / FIFO)**: Os itens que entraram primeiro no estoque são os primeiros a serem baixados (vendidos ou consumidos). O estoque final fica valorado pelos preços mais recentes.\n* **UEPS (Último que Entra, Primeiro que Sai / LIFO)**: Os itens mais recentes são os primeiros a serem baixados. O estoque final fica valorado pelos preços mais antigos (método não aceito pelo Fisco brasileiro para fins de apuração de impostos de renda, mas conceitualmente existente e aplicável para fins gerenciais).\n* **Custo Médio (ou Média Ponderada Móvel/Fixa)**: O valor do estoque é atualizado a cada entrada pela média ponderada dos custos dos itens disponíveis.\n\nTodos eles são amplamente consagrados na literatura de administração de materiais e contabilidade.",
+        "source_reference": null
+      },
+      "source_content_hash": "ba02d253491fbff5c6d377c474d32714fe4a037a59a33fc691bfb45132a98f5c"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:095",
+      "source_id": "agente_administrativo:95",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os próximos itens, relativos à administração de patrimônio, materiais e logística.\n\nEm um almoxarifado, deve-se buscar a menor quebra de espaço possível.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 95; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Almoxarifado",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Administração de Recursos Materiais",
+        "source_content_hash": "71135d82325e35b5ef80a7f68a417c2ef2cc8841e089fd2f7653ac8a9e816d0a",
+        "original_numeric_id": 95,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "almoxarifado",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A afirmação está correta. No contexto de gestão de almoxarifados e armazenagem, o termo **\"quebra de espaço\"** (ou perda de espaço) refere-se à fração de espaço volumétrico que não pode ser efetivamente aproveitada para estocagem devido a limitações físicas, leiaute inadequado, incompatibilidade de dimensões das embalagens ou necessidade de corredores de circulação.\n\nUm dos objetivos fundamentais do arranjo físico (layout) e da organização de um almoxarifado é a otimização do espaço disponível. Portanto, deve-se buscar **minimizar a quebra de espaço** para garantir a máxima eficiência volumétrica e reduzir custos operacionais de armazenagem.",
+        "source_reference": null
+      },
+      "source_content_hash": "cc7e641b30c573c5348a4e235fff26ea6bc5eda0f1373f5b45457c446a13384d"
+    }
+  ]
+}

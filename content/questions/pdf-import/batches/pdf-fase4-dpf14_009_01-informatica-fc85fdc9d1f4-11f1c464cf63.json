@@ -1,0 +1,139 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-dpf14_009_01-informatica-fc85fdc9d1f4-11f1c464cf63",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "fc85fdc9d1f45a7a9beaed6c728368f3364cad59fba26e5bca2aa08fbac5e46f",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "7c65334d658e76f507a006465e38351432ef043be4c6cf520c4cf664a9007aba",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "11f1c464cf63335b17904a9e37255f693543e7092020d29a42846daaf5909309",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:016",
+      "source_id": "dpf14_009_01:16",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito aos sistemas operacionais Windows e Linux, julgue os próximos itens.\n\nNo ambiente Linux, é possível utilizar comandos para copiar arquivos de um diretório para um pen drive.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 16; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sistemas Operacionais (Windows e Linux)",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "0473ab0c2bc7814bf5af1556153a088d4206fc2e7e19bbbc0d9bfc872335a1ee",
+        "original_numeric_id": 16,
+        "original_source_content_hash": "b68f747464bf889dd27afd6b4d472db1a6d18b9daa02f5f97eae506781523c28",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "C",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No sistema operacional Linux, a interface de linha de comando (CLI) permite a execução de diversas tarefas de manipulação de arquivos. O comando `cp` (copy) é utilizado para copiar arquivos e diretórios de uma origem para um destino. Para realizar a cópia para um dispositivo de armazenamento externo, como um pen drive, basta que o dispositivo esteja montado no sistema de arquivos (geralmente em diretórios como `/media` ou `/mnt`) e que o usuário possua as permissões de escrita necessárias.\n\n*Exemplo de comando*:\n`cp arquivo.txt /media/usuario/pendrive/`",
+        "source_reference": null
+      },
+      "source_content_hash": "b0df37f91e96ebdb5ff2d6c7c340818ad4a9c9881263604e281483e16d1b281c"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:017",
+      "source_id": "dpf14_009_01:17",
+      "question_type": "true_false",
+      "statement_markdown": "No que diz respeito aos sistemas operacionais Windows e Linux, julgue os próximos itens.\n\nNo Windows, não há possibilidade de o usuário interagir com o sistema operacional por meio de uma tela de computador sensível ao toque.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": "medium",
+      "source_reference": "dpf14_009_01.pdf, questão 17; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sistemas Operacionais (Windows e Linux)",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Informática",
+        "source_content_hash": "303f9d20278dc26bc8797d6f05836cf8a086361c2988f5481a21e7bd47bd856d",
+        "original_numeric_id": 17,
+        "original_source_content_hash": "8b760bc7cae21ea3adca15fc2436de32cb453dc2fc9cbedf6935eb7d5f3e6d11",
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "definitive_answer": "E",
+        "reconciliation_method": "mesmo_codigo_de_caderno"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O sistema operacional Windows possui suporte nativo a telas sensíveis ao toque (*touchscreen*). Essa funcionalidade foi introduzida em edições específicas do Windows XP e consolidada com recursos multi-toque a partir do Windows 7. Com o lançamento do Windows 8 em 2012, a interface gráfica foi redesenhada especificamente para priorizar a interação tátil em dispositivos híbridos e *tablets*. Portanto, a afirmação de que não há possibilidade de interação por meio de tela sensível ao toque está incorreta.",
+        "source_reference": null
+      },
+      "source_content_hash": "4bc61e03e58454615fb89f0131cb0f53a25044536c9d1c5d442a89d8f051b620"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-agente_administrativo-direito-constitucional-9275da7d075c-56d107398596",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "9275da7d075c14f6aecd067cee72adc350eb98cd976b0bad8b9bd014f4eb1edf",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "5da32b0a57792e090ef9d4c38cee7bda12a08609929c945e59e21312dccdc01a",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "56d1073985961f321d6e1bff606c1553e6169f2334aeda11a386bc21e2f88c8e",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-constitucional",
+    "name": "Direito Constitucional"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:053",
+      "source_id": "agente_administrativo:53",
+      "question_type": "true_false",
+      "statement_markdown": "De acordo com a Constituição Federal de 1988 (CF) e o entendimento do STF, julgue os itens que se seguem, a respeito dos direitos e garantias fundamentais.\n\nCom o intuito de proteger a sociedade, é permitido, em situações excepcionais, que agentes policiais utilizem a força física contra o investigado, para o fim de obter confissão quanto à prática de crime grave.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 53; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "1c8a64f2085311eeedec771dbe1692fa48e3f94a3fffb74506b78595e7e5a47c",
+        "original_numeric_id": 53,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_frequency_dominant"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está incorreto. A proibição da tortura e do tratamento desumano ou degradante é um direito fundamental de caráter absoluto no ordenamento jurídico brasileiro, não admitindo qualquer exceção ou relativização, mesmo sob o pretexto de proteção da sociedade ou gravidade do crime investigado.\n\nO art. 5º, III, da Constituição Federal estabelece expressamente que ninguém será submetido a tortura nem a tratamento desumano ou degradante. Além disso, o inciso LXIII do mesmo artigo assegura ao preso o direito de permanecer calado, sendo inadmissível qualquer forma de coação física ou psicológica para a obtenção de confissão.\n\n**Detalhe:** No direito constitucional brasileiro, embora a maioria dos direitos fundamentais seja relativa, a vedação à tortura e à escravidão são consideradas absolutas, não havendo ponderação de interesses que justifique sua violação por agentes do Estado.\n\n### Dispositivo legal\n\n* **Art. 5º, incisos III e LXIII, da Constituição Federal de 1988** (Disponível em: [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "289d765ca698a7fa5841ea6dcb81c3cec250c704559ab0634496642f85060e10"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:054",
+      "source_id": "agente_administrativo:54",
+      "question_type": "true_false",
+      "statement_markdown": "De acordo com a Constituição Federal de 1988 (CF) e o entendimento do STF, julgue os itens que se seguem, a respeito dos direitos e garantias fundamentais.\n\nA inviolabilidade domiciliar abrange os escritórios profissionais.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": null,
+      "source_reference": "agente_administrativo.pdf, questão 54; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Dos direitos e garantias fundamentais",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Constitucional",
+        "source_content_hash": "9cdf34facf6cf2d7f362953ba60d89daa75b2ae9a02647a01cbb5528ad59230e",
+        "original_numeric_id": 54,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "direitos-e-garantias-fundamentais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. O Supremo Tribunal Federal (STF) adota um conceito amplo e abrangente para o termo \"casa\" constante no art. 5º, XI, da Constituição Federal de 1988.\n\nSegundo a jurisprudência pacificada da Suprema Corte, a proteção à inviolabilidade domiciliar estende-se a qualquer compartimento privado não aberto ao público, onde alguém exerça profissão ou atividade pessoal, o que inclui expressamente os escritórios profissionais, consultórios médicos, escritórios de advocacia e quartos de hotel ocupados. Portanto, a entrada nesses locais sem o consentimento do titular exige determinação judicial (durante o dia) ou a ocorrência de flagrante delito, desastre ou prestação de socorro.\n\n### Dispositivo legal\n\n* **Art. 5º, inciso XI, da Constituição Federal de 1988** (Disponível em: [Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm))",
+        "source_reference": null
+      },
+      "source_content_hash": "f25d69fbb5e6019eef7afe5cbe60f46106896a930238f0623befde4bfc981467"
+    }
+  ]
+}

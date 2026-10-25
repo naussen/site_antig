@@ -1,0 +1,325 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-tecnico_do_ministerio_publico_area_administrativa-informatica-74df7af44d59-7790a10e462b",
+  "source": {
+    "file_name": "tecnico_do_ministerio_publico_area_administrativa_ATUALIZADO.json",
+    "sha256": "74df7af44d59dc5b630984a8e5e7fe40fed758894220a278014b288dd482883c",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "tecnico_do_ministerio_publico_area_administrativa.json",
+      "original_source_sha256": "4f108d6745e5642f8962285fd7010db5f1562dfc6f07780d46a281f2e454b6aa",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "7790a10e462b3792bd1393f841bfb0ac9ceffbc89ad84c512f0c1758bba15298",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:051",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:51",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No Windows, a extensão de um arquivo indica a forma pela qual ele deve ser tratado pelo sistema. Observe a lista de extensões a seguir.\nCSV DOCX EXE GIF HTML JPG PDF PNG TXT\nNessa lista, o número de extensões normalmente associadas a imagens é:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 51; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "2;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "3;",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "4;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "5;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "6.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Sistemas Operacionais (Windows e Linux)",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "9faf68d73e9a6e3ad32223cc18ebafaf03d6711689cb3eddd7cc88fe08f756a6",
+        "original_numeric_id": 51,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_051.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Para resolver a questão, é necessário identificar a função de cada uma das extensões de arquivo listadas no enunciado:\n\n*   **CSV** (*Comma-Separated Values*): Arquivo de texto contendo dados tabulares separados por delimitadores (geralmente ponto e vírgula ou vírgula).\n*   **DOCX**: Documento de texto do Microsoft Word.\n*   **EXE**: Arquivo executável do Windows (aplicativo/programa).\n*   **GIF** (*Graphics Interchange Format*): Formato de **imagem** digital, muito conhecido por suportar animações.\n*   **HTML** (*HyperText Markup Language*): Página de internet.\n*   **JPG** (*Joint Photographic Experts Group*): Formato de **imagem** estática amplamente utilizado em fotografias digitais.\n*   **PDF** (*Portable Document Format*): Formato de documento portátil da Adobe.\n*   **PNG** (*Portable Network Graphics*): Formato de **imagem** digital que suporta fundo transparente.\n*   **TXT**: Arquivo de texto simples, sem formatação.\n\nPortanto, as extensões associadas a imagens são **GIF, JPG e PNG**, totalizando **3** extensões.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_tecnico_do_ministerio_publico_area_administrativa_051.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "42ca9addf408438a69f1a57c0f83b1dbe5472dc3c71f11df85b7354700816f3d"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:052",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:52",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No contexto da formatação de um documento MS Word 2010 BR em colunas, é correto afirmar que:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 52; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "o número máximo de colunas é 4 na orientação “retrato” e 6 na orientação “paisagem”;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "todas as colunas devem ter a mesma largura;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "todos os espaços entre as colunas devem ser iguais;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "a hifenização automática não é possível quando há mais de uma coluna;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "é possível exibir uma linha vertical entre as colunas automaticamente.",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Ferramentas de Escritório (Microsoft Office e LibreOffice)",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "0a93222e91dd588d8bf5963e62a94585b977dd42f2615b1f2722816f8d07a44c",
+        "original_numeric_id": 52,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A formatação de colunas no Microsoft Word 2010 oferece flexibilidade para ajustar o layout do documento. \n\n*   **Alternativa A incorreta:** O número máximo de colunas não é fixado rigidamente em 4 ou 6. O Word permite configurar até 45 colunas, dependendo da largura da página e das margens definidas.\n*   **Alternativa B incorreta:** Não há obrigatoriedade de que todas as colunas tenham a mesma largura. Na janela de configuração de colunas, é possível desmarcar a opção 'Colunas de mesma largura' e definir larguras personalizadas para cada uma.\n*   **Alternativa C incorreta:** O espaçamento entre as colunas também pode ser personalizado individualmente, não precisando ser igual para todos os intervalos.\n*   **Alternativa D incorreta:** A hifenização automática funciona normalmente em textos estruturados em colunas, auxiliando no alinhamento e na distribuição do texto.\n*   **Alternativa E correta:** Na guia 'Layout da Página', ao clicar em 'Colunas' e selecionar 'Mais Colunas...', o usuário encontra a opção 'Linha entre'. Ao marcá-la, o Word insere automaticamente uma linha vertical divisória entre as colunas de texto.",
+        "source_reference": null
+      },
+      "source_content_hash": "01d5fefa75d2abcab99ab391b80e607a3e956fa1cef7db5580b6b0113617c860"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:056",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:56",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Um professor precisa carregar as notas dos seus setenta alunos numa planilha MS Excel 2010 BR, de modo que ele possa calcular a média dos alunos e imprimir uma lista alfabética com os resultados. Para cada aluno, o professor dispõe do nome e das notas numéricas de quatro avaliações.\nConsidere os extratos do conteúdo de três arquivos com extensão “txt” exibidos a seguir.\nI.\nNome;Nota1;Nota2;Nota3;Nota4\nMaria;9;10;8;9,8\nJoão;10;7;8;9,5\nII.\nMaria|9;10;8;9,8|\nJoão|10;7;8;9|\nIII.\nNome, Nota1, Nota2, Nota3, Nota4\nMaria,9,10,8,9,8\nJoão,10,7,8,9,5\nDesses arquivos, seria(m) adequado(s) para carga de dados no Excel:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 56; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "somente I;",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "somente II;",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "somente I e III;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "somente II e III;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "I, II e III.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Ferramentas de Escritório (Microsoft Office e LibreOffice)",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "53c010afbc8fe966407d486eabe667292aa82990ee537580f0915ee51cbeb079",
+        "original_numeric_id": 56,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão aborda a importação de arquivos de texto delimitados para o Microsoft Excel, considerando as configurações regionais padrão do Brasil (onde a **vírgula** é utilizada como separador decimal).\n\n*   **Análise do Arquivo I (Adequado):** Utiliza o **ponto e vírgula (;)** como separador de campos (colunas). Isso permite que o Excel identifique perfeitamente os números decimais que utilizam a vírgula (como `9,8` e `9,5`), mantendo cada dado em sua respectiva coluna.\n*   **Análise do Arquivo II (Inadequado):** Apresenta uma estrutura irregular e não padronizada, misturando barras verticais (`|`) e pontos e vírgulas (`;`) sem cabeçalho correspondente para todas as linhas, o que impede uma importação direta e limpa.\n*   **Análise do Arquivo III (Inadequado):** Utiliza a **vírgula (,)** como separador de campos. Como o sistema em português utiliza a vírgula para decimais, ocorre um conflito de interpretação: o valor `9,8` (nota decimal) é interpretado como dois campos distintos (`9` e `8`), deslocando os dados e quebrando o alinhamento das colunas da planilha.\n\nPortanto, apenas o arquivo **I** é adequado para a carga correta dos dados.",
+        "source_reference": null
+      },
+      "source_content_hash": "531e7e1f371c44f1d880464a822b9e74b6356c07c93fa841c5692c33cdd56973"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:058",
+      "source_id": "tecnico_do_ministerio_publico_area_administrativa:58",
+      "question_type": "multiple_choice",
+      "statement_markdown": "No Windows, é possível identificar os aplicativos e os processos em segundo plano, correntemente ativos, por meio do:",
+      "exam_board": "FGV",
+      "institution": "Ministério Público do Estado do Rio de Janeiro",
+      "position_name": "Técnico do Ministério Público",
+      "exam_year": 2019,
+      "difficulty": "medium",
+      "source_reference": "tecnico_do_ministerio_publico_area_administrativa.pdf, questão 58; tecnico_do_ministerio_publico_area_administrativa_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Explorador de Arquivos;",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Gerenciador de Tarefas;",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "Internet Explorer;",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Microsoft Visio;",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Windows Firewall.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Sistemas Operacionais (Windows e Linux)",
+      "source_metadata": {
+        "source_file": "tecnico_do_ministerio_publico_area_administrativa.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Noções de Informática",
+        "source_content_hash": "c805358b7b14cc131f9b43486d75cbb3ad3b6cca671e596773f03204d7f75f93",
+        "original_numeric_id": 58,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://netstorage.fgv.br/mprj2019/mprj2019_gabarito_definitivo.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "pagina_oficial_mais_espelho_integral"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "No sistema operacional Windows, a ferramenta nativa utilizada para monitorar o desempenho do sistema, visualizar os aplicativos em execução e identificar processos ativos em segundo plano é o **Gerenciador de Tarefas** (que pode ser aberto pelos atalhos `Ctrl + Shift + Esc` ou `Ctrl + Alt + Del`).\n\nAnálise das demais alternativas:\n*   **A) Explorador de Arquivos:** Destina-se ao gerenciamento de arquivos e pastas (copiar, mover, excluir).\n*   **C) Internet Explorer:** É um navegador de internet antigo da Microsoft.\n*   **D) Microsoft Visio:** É um aplicativo de criação de diagramas e vetores, pertencente ao pacote Microsoft Office.\n*   **E) Windows Firewall:** É um mecanismo de segurança que monitora e filtra o tráfego de rede de entrada e saída.",
+        "source_reference": null
+      },
+      "source_content_hash": "8ab042383695f2365b0c5e455d22d99fa88a760008d5c0106f499ab5f5e0a5ea"
+    }
+  ]
+}

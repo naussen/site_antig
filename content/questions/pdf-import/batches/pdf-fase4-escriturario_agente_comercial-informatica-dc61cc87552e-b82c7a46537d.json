@@ -1,0 +1,325 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-escriturario_agente_comercial-informatica-dc61cc87552e-b82c7a46537d",
+  "source": {
+    "file_name": "escriturario_agente_comercial_ATUALIZADO.json",
+    "sha256": "dc61cc87552e5a02d8b0d8976fda4c03f634e0152f65f5267f98ed067ff73cc6",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "escriturario_agente_comercial.json",
+      "original_source_sha256": "01019f640948f2ffd55374ea21a7a82a58f3fdae926a71a27cc21c32ba8bbf9d",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "b82c7a46537d05c6cd0a1a06cb8e734d48b3d898fe622a655e227da4ecdae392",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "informatica",
+    "name": "Informática"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:041",
+      "source_id": "escriturario_agente_comercial:41",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sejam os seguintes dados de uma planilha confeccionada no Excel 365:\n\n| | A | B |\n|---|---|---|\n| 1 | CODPECA | VALOR |\n| 2 | P101 | R$ 5,00 |\n| 3 | P102 | R$ 13,00 |\n| 4 | P103 | R$ 2,00 |\n| 5 | P104 | R$ 26,00 |\n| 6 | P105 | R$ 7,00 |\n| 7 | P106 | R$ 10,00 |\n\nNa célula C10 dessa planilha, está inserida a seguinte fórmula:\n\n`=CONT.SE(B2:B6;\"<=R$ 10,00\")`\n\nAo executar essa fórmula, o valor que aparecerá na célula C10 é",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 41; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "2",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "3",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "4",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "5",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "6",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Ferramentas de Escritório (Microsoft Office e LibreOffice)",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "d497cd34a88eedb2db06afc8160cf49d6d87911212dbdd692152574ee18d969c",
+        "original_numeric_id": 41,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": "/resumos/questions/calculations/pdf_escriturario_agente_comercial_041.png",
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "B",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige a análise do funcionamento da função `CONT.SE` no Microsoft Excel.\n\nA sintaxe da função é `CONT.SE(intervalo; critérios)`. \n\nNo caso proposto:\n*   **Intervalo:** `B2:B6` (compreende as células B2, B3, B4, B5 e B6).\n*   **Critério:** `\"<=R$ 10,00\"` (valores menores ou iguais a 10).\n\nAnálise das células do intervalo:\n*   Célula B2: `R$ 5,00` (Atende ao critério: $5 \\le 10$)\n*   Célula B3: `R$ 13,00` (Não atende ao critério: $13 > 10$)\n*   Célula B4: `R$ 2,00` (Atende ao critério: $2 \\le 10$)\n*   Célula B5: `R$ 26,00` (Não atende ao critério: $26 > 10$)\n*   Célula B6: `R$ 7,00` (Atende ao critério: $7 \\le 10$)\n\n**Atenção à pegadinha:** A célula B7 possui o valor `R$ 10,00`, que atende ao critério numérico, porém ela **não** faz parte do intervalo de busca definido na fórmula (`B2:B6`). Portanto, ela é desconsiderada na contagem.\n\nO total de células que atendem ao critério dentro do intervalo é 3.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_escriturario_agente_comercial_041.png)",
+        "source_reference": null
+      },
+      "source_content_hash": "ff12f6c9eb7e11d442e287d73189c7e270c9f084f0a259ba64c22de7cecf3760"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:042",
+      "source_id": "escriturario_agente_comercial:42",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Uma equipe está utilizando o Microsoft Teams e deseja-se agrupar as conversas dessa equipe por assunto, formando um tópico de discussão.\n\nPara isso, é necessário criar, para essa equipe, um(a)",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 42; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Canal",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "Grupo",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Reunião",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Atividade",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Sub-equipe",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Redes de Computadores e Conectividade",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "6cb32c0f8c95357610ea37609fb02125efaeb3cdf26120f77dde435633365444",
+        "original_numeric_id": 42,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "A",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **A**.\n\nNo Microsoft Teams, as **equipes** são grupos de pessoas que colaboram juntas. Para organizar as conversas, arquivos e ferramentas dessas equipes por assuntos ou projetos específicos, utilizam-se os **Canais** (Channels). Cada canal funciona como um tópico de discussão dedicado.\n\n**Análise das alternativas incorretas:**\n* **B) Grupo:** No ecossistema Microsoft 365, um grupo define a associação de membros e o acesso a recursos compartilhados, mas não é a ferramenta interna do Teams usada para segmentar conversas por assunto.\n* **C) Reunião:** Refere-se a transmissões de áudio e vídeo em tempo real, não a uma estrutura de agrupamento de tópicos de texto.\n* **D) Atividade:** É o feed de notificações do usuário, onde constam menções, respostas e outras interações.\n* **E) Sub-equipe:** Não é uma nomenclatura ou recurso oficial do Microsoft Teams para essa finalidade; a subdivisão de uma equipe é feita por meio de canais.",
+        "source_reference": null
+      },
+      "source_content_hash": "b275758f32c242d39746d1bdec1a398384945ddf7905df638e105b25ee226395"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:047",
+      "source_id": "escriturario_agente_comercial:47",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Os sistemas de arquivos permitem a organização dos dados em arquivos e pastas nos dispositivos de armazenamento. A quantidade máxima de dados armazenados por cada arquivo e a quantidade máxima de pastas variam entre os diversos sistemas de arquivos.\n\nO sistema de arquivos nativo do Windows 10 que permite o armazenamento de um arquivo com mais de 8GB de dados é o",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 47; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "ReiserFS",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "EXT4",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "FAT16",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "FAT32",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "NTFS",
+          "sort_order": 4,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sistemas Operacionais (Windows e Linux)",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "378327f15c601743e5a7fc14730e131d22a87629339c3d892b373788fc7fad3c",
+        "original_numeric_id": 47,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "E",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "hardware",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **E**.\n\nO sistema de arquivos nativo do Windows 10 capaz de armazenar arquivos individuais com tamanho superior a 4 GB é o **NTFS** (*New Technology File System*).\n\nEm contrapartida, sistemas de arquivos legados baseados em **FAT32** possuem uma limitação técnica intrínseca: o tamanho máximo suportado para um único arquivo é de 4 GB menos 1 byte (4.294.967.295 bytes). Tentativas de gravar um arquivo maior em volumes FAT32 resultam em erro de sistema.\n\nPortanto, para arquivos grandes, como imagens ISO ou vídeos de alta definição, o NTFS é o padrão obrigatório do ambiente Windows (alternativa E).",
+        "source_reference": null
+      },
+      "source_content_hash": "b5b3049cf5c0dbfea983df8351b15559ce33b1bd0c3b7ef1a35343589894a150"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:052",
+      "source_id": "escriturario_agente_comercial:52",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Uma prática comum e recomendada para proteção de estações de trabalho é que programas do tipo antivírus e antimalware sejam mantidos atualizados nessas estações e computadores em geral.\n\nEssas atualizações são necessárias principalmente para que esses programas",
+      "exam_board": "Fundação Cesgranrio",
+      "institution": "Banco do Brasil",
+      "position_name": "Escriturário",
+      "exam_year": 2022,
+      "difficulty": "medium",
+      "source_reference": "escriturario_agente_comercial.pdf, questão 52; escriturario_agente_comercial_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "possuam uma interface moderna com o usuário.",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "ocupem o menor espaço possível em disco.",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "funcionem, porque versões desatualizadas não funcionam.",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "possam identificar vírus e problemas mais recentes.",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "sejam executados de forma mais rápida e eficiente.",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Ameaças Virtuais",
+      "source_metadata": {
+        "source_file": "escriturario_agente_comercial.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos de Informática",
+        "source_content_hash": "805620ffb61c3320e86f23b457a3aa76b24f008c0d0c72b4b9c916825500a87f",
+        "original_numeric_id": 52,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.novaconcursos.com.br/portal/wp-content/uploads/2025/03/PROVA-A-ESCRITURARIO-AGENTE-COMERCIAL-Alterada-em-12-maio-23.pdf",
+        "definitive_answer": "D",
+        "reconciliation_method": "documento_da_banca_espelhos_concordantes_12_05_2023"
+      },
+      "topics": [
+        {
+          "topic_id": "ameacas-virtuais",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A segurança da informação em estações de trabalho depende diretamente da atualização constante de softwares de proteção, como antivírus e antimalware. O principal motivo para essa necessidade é o surgimento contínuo de novas ameaças virtuais (malwares, vírus, ransomware). Os desenvolvedores desses softwares atualizam constantemente suas bases de assinaturas e algoritmos de detecção heurística para que o programa consiga identificar e neutralizar as ameaças mais recentes.\n\n**Análise das alternativas:**\n* **A) Incorreta.** A atualização visa à segurança e eficácia de detecção, não a mudanças estéticas ou modernização da interface de usuário.\n* **B) Incorreta.** Atualizações frequentemente aumentam o tamanho do software ou mantêm o espaço ocupado, não sendo este o objetivo principal.\n* **C) Incorreta.** Versões desatualizadas continuam funcionando, porém tornam-se ineficazes contra novas ameaças por não possuírem as assinaturas mais recentes.\n* **D) Correta.** É a finalidade primordial das atualizações: capacitar o sistema a reconhecer novos padrões de códigos maliciosos.\n* **E) Incorreta.** Embora correções de bugs possam otimizar o desempenho, o foco principal da atualização de segurança é a eficácia da detecção, e não a velocidade de execução.",
+        "source_reference": null
+      },
+      "source_content_hash": "7fc7563e5fb4df6dd58873fc5f7853cca60346e15b1d6ecb4b0569fca3344ce3"
+    }
+  ]
+}

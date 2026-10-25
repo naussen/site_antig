@@ -1,0 +1,300 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase3-agente_administrativo-portugues-fcfa6b700b0d-a8558fc939ed",
+  "source": {
+    "file_name": "agente_administrativo_ATUALIZADO.json",
+    "sha256": "fcfa6b700b0d7af66de15ad5ae7dcd0691da76a4b338ccb8eb37ccf7eeb46d06",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 3 2026-10-24",
+      "original_file_name": "agente_administrativo.json",
+      "original_source_sha256": "95f70efef6886dec632debbde86efe1189f22da6fd35c7aba8deaf2afc4b8a3c",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "a8558fc939edafa0a291287d94772348d32522db5e99479b966750ac540efcd9",
+      "classification": "saneamento comentarios Fase 3",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "portugues",
+    "name": "Português"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:agente_administrativo:005",
+      "source_id": "agente_administrativo:5",
+      "question_type": "true_false",
+      "statement_markdown": "Abre-se uma janela do Centro Operário. Será a aula de Dona Palmira em 1920 ou há reunião para discutir os estatutos? Durante toda a minha infância, eles discutiram os estatutos. Eu não podia entender nada, mas havia pontos terrivelmente sérios. Era “Centro Operário de Proteção Mútua” ou “Centro Operário E de Proteção Mútua”? Pela noite afora, ano após ano, um mulato meio velho e magro, de óculos, o dedo em riste, a voz rascante, atacava com extraordinária ferocidade aquele E. Não conseguiu derrubá-lo; os operários talvez se sentissem fracos, sozinhos, precisavam daquele E que os conjugava com outras camadas sociais. Ficou o E, meu pai foi diretor e, quando morreu, teve auxílio no enterro, tudo sem ser operário, tudo graças àquele E. Sem o E eu talvez não tivesse estudado ali, não me sentaria no comprido banco, onde o último da esquerda era o preto Bernardino, e à direita, o rosto lindo de Lélia, com seus cabelos doces e uma covinha quando sorria. Quando não estavam discutindo os estatutos, ou providenciando um enterro de sócio, com a bandeira do Centro em cima do caixão, os operários E todos que queriam proteção mútua estavam dançando; sons de pistom atravessam meu sono infantil; eu achava estranho e ao mesmo tempo alegre e feliz haver baile na mesma sala onde eu tinha aulas.\n\nRubem Braga. Em Cachoeiro. 200 crônicas escolhidas. Rio de Janeiro: Record, 2003, p.55 (com adaptações).\n\nConsiderando os sentidos e aspectos linguísticos do texto precedente, julgue os itens a seguir.\n\nEnquanto, no trecho “precisavam daquele E que os conjugava com outras camadas sociais” (sétimo período), o vocábulo “E” se comporta como um substantivo, no trecho “os operários E todos que queriam proteção mútua estavam dançando” (último período), o mesmo vocábulo está empregado como conjunção aditiva.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 5; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Morfologia",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "c02efd62bca4e99625e6bfb054c1cc6ecb77d8616023a825079126f45d773c85",
+        "original_numeric_id": 5,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "morfologia",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nAnálise morfológica e contextual dos dois empregos do vocábulo \"E\":\n1. No trecho \"precisavam daquele E que os conjugava...\", o vocábulo \"E\" é antecedido pelo pronome demonstrativo \"aquele\", exercendo função substantiva (substantivação da letra/conjunção como símbolo central da disputa estatutária);\n2. No trecho \"os operários E todos que queriam proteção mútua estavam dançando\", o vocábulo \"E\" atua genuinamente como conjunção coordenativa aditiva, ligando os núcleos do sujeito composto (\"os operários\" + \"todos que queriam...\").",
+        "source_reference": null
+      },
+      "source_content_hash": "7edf6bdc0be4a9cf06bf3f2326b4ae0480078b3e52ee334dcce50187ac87b489"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:007",
+      "source_id": "agente_administrativo:7",
+      "question_type": "true_false",
+      "statement_markdown": "Abre-se uma janela do Centro Operário. Será a aula de Dona Palmira em 1920 ou há reunião para discutir os estatutos? Durante toda a minha infância, eles discutiram os estatutos. Eu não podia entender nada, mas havia pontos terrivelmente sérios. Era “Centro Operário de Proteção Mútua” ou “Centro Operário E de Proteção Mútua”? Pela noite afora, ano após ano, um mulato meio velho e magro, de óculos, o dedo em riste, a voz rascante, atacava com extraordinária ferocidade aquele E. Não conseguiu derrubá-lo; os operários talvez se sentissem fracos, sozinhos, precisavam daquele E que os conjugava com outras camadas sociais. Ficou o E, meu pai foi diretor e, quando morreu, teve auxílio no enterro, tudo sem ser operário, tudo graças àquele E. Sem o E eu talvez não tivesse estudado ali, não me sentaria no comprido banco, onde o último da esquerda era o preto Bernardino, e à direita, o rosto lindo de Lélia, com seus cabelos doces e uma covinha quando sorria. Quando não estavam discutindo os estatutos, ou providenciando um enterro de sócio, com a bandeira do Centro em cima do caixão, os operários E todos que queriam proteção mútua estavam dançando; sons de pistom atravessam meu sono infantil; eu achava estranho e ao mesmo tempo alegre e feliz haver baile na mesma sala onde eu tinha aulas.\n\nRubem Braga. Em Cachoeiro. 200 crônicas escolhidas. Rio de Janeiro: Record, 2003, p.55 (com adaptações).\n\nConsiderando os sentidos e aspectos linguísticos do texto precedente, julgue os itens a seguir.\n\nEm “à direita, o rosto lindo de Lélia” (penúltimo período), o emprego do sinal indicativo de crase é obrigatório.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 7; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "a9336eb9dd8a6b090ccf6fb3819ab5548ba84ff06d3ca1439da87cc5295eea18",
+        "original_numeric_id": 7,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nNo trecho \"...e à direita, o rosto lindo de Lélia...\", a expressão \"à direita\" constitui uma locução adverbial de lugar formada por núcleo substantivo feminino (\"direita\"). De acordo com a norma-padrão da língua portuguesa, o uso do sinal indicativo de crase em locuções adverbiais, prepositivas ou conjuntivas femininas (ex.: à direita, à esquerda, às pressas, à noite) é obrigatório.",
+        "source_reference": null
+      },
+      "source_content_hash": "34ac277fa750b5ba513e9a2ff6318bda4cc49fc0f7b280ab11713971c5350fa5"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:008",
+      "source_id": "agente_administrativo:8",
+      "question_type": "true_false",
+      "statement_markdown": "Abre-se uma janela do Centro Operário. Será a aula de Dona Palmira em 1920 ou há reunião para discutir os estatutos? Durante toda a minha infância, eles discutiram os estatutos. Eu não podia entender nada, mas havia pontos terrivelmente sérios. Era “Centro Operário de Proteção Mútua” ou “Centro Operário E de Proteção Mútua”? Pela noite afora, ano após ano, um mulato meio velho e magro, de óculos, o dedo em riste, a voz rascante, atacava com extraordinária ferocidade aquele E. Não conseguiu derrubá-lo; os operários talvez se sentissem fracos, sozinhos, precisavam daquele E que os conjugava com outras camadas sociais. Ficou o E, meu pai foi diretor e, quando morreu, teve auxílio no enterro, tudo sem ser operário, tudo graças àquele E. Sem o E eu talvez não tivesse estudado ali, não me sentaria no comprido banco, onde o último da esquerda era o preto Bernardino, e à direita, o rosto lindo de Lélia, com seus cabelos doces e uma covinha quando sorria. Quando não estavam discutindo os estatutos, ou providenciando um enterro de sócio, com a bandeira do Centro em cima do caixão, os operários E todos que queriam proteção mútua estavam dançando; sons de pistom atravessam meu sono infantil; eu achava estranho e ao mesmo tempo alegre e feliz haver baile na mesma sala onde eu tinha aulas.\n\nRubem Braga. Em Cachoeiro. 200 crônicas escolhidas. Rio de Janeiro: Record, 2003, p.55 (com adaptações).\n\nConsiderando os sentidos e aspectos linguísticos do texto precedente, julgue os itens a seguir.\n\nNa oração “Quando não estavam discutindo os estatutos” (último período), o sujeito está oculto, mas, pela organização dos períodos do texto, conclui-se que ele corresponde a Bernardino e Lélia, mencionados no período imediatamente anterior.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 8; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Sintaxe",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Língua Portuguesa",
+        "source_content_hash": "c2dadfb78492f864ea64f533fe3965081c0b091899759543bd0753b561744e0c",
+        "original_numeric_id": 8,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "sintaxe",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nNa oração \"Quando não estavam discutindo os estatutos...\", o sujeito oculto/elíptico é determinado contextualmente e remete aos membros, associados e operários do Centro Operário, que eram os protagonistas das assembleias noturnas referidas ao longo de toda a crônica (\"eles discutiram os estatutos\"). Bernardino e Lélia foram introduzidos no período anterior apenas como crianças e colegas de escola do narrador sentados no comprido banco de aula, não guardando qualquer relação com as reuniões institucionais do Centro Operário.",
+        "source_reference": null
+      },
+      "source_content_hash": "31c000f55cca7ce9ba3a4f687e42c6152f691e0bde5c05d653f5ba6e8b30a0c7"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:097",
+      "source_id": "agente_administrativo:97",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, sobre redação oficial, com base no Manual de Redação da Presidência da República.\n\nEstão entre as características esperadas de uma redação oficial a clareza, a pessoalidade e o uso da norma padrão da língua portuguesa.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 97; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": true
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "67bf0904b1bc890cdd50b4c4be8ff2d10993fc5c83dff5f6a87d62877943c8a8",
+        "original_numeric_id": 97,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Errado.**\n\nSegundo o Manual de Redação da Presidência da República (3ª edição, item 1.2), a redação oficial deve caracterizar-se obrigatoriamente por: clareza e precisão; objetividade; concisão; coesão e coerência; **impessoalidade**; e uso da norma-padrão da língua portuguesa. A assertiva está errada ao incluir a \"pessoalidade\", característica frontalmente vedada aos atos administrativos.",
+        "source_reference": null
+      },
+      "source_content_hash": "960e567af81744ca56b3b440301b8f5a3097a069f1310bab38981d57c531b7f7"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:099",
+      "source_id": "agente_administrativo:99",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, sobre redação oficial, com base no Manual de Redação da Presidência da República.\n\nO termo ofício designa um tipo de documento oficial que abarca todos os expedientes cuja diagramação é feita por meio da estrutura denominada padrão ofício.",
+      "exam_board": "CEBRASPE",
+      "institution": "Prefeitura de Cachoeiro de Itapemirim",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2024,
+      "difficulty": "medium",
+      "source_reference": "agente_administrativo.pdf, questão 99; agente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Redação Oficial",
+      "source_metadata": {
+        "source_file": "agente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Redação Oficial",
+        "source_content_hash": "9cee41274dbd1e0eba10d9e8a38e20b120bcfacfa4b0b75799880c27b26825ad",
+        "original_numeric_id": 99,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "fixed_subject",
+        "official_url": "https://www.gov.br/planalto/pt-br/acompanhe-o-planalto/manual-de-redacao-da-presidencia-da-republica"
+      },
+      "topics": [
+        {
+          "topic_id": "redacao-oficial",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "**Gabarito: Certo.**\n\nA partir da 3ª edição do Manual de Redação da Presidência da República (item 2.1), foi uniformizada a correspondência oficial: os antigos formatos \"aviso\", \"memorando\" e \"ofício\" foram aglutinados sob o termo e documento único denominado **Ofício**, o qual segue diagramação padronizada uniforme designada por estrutura de **padrão ofício**.",
+        "source_reference": null
+      },
+      "source_content_hash": "697bbd631d67724310a910a74e2924adba76730b36ab4815454c944a9d80c8b0"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase4-assistente_administrativo-arquivologia-f1373a7ee0a9-6b3b774d3cb0",
+  "source": {
+    "file_name": "assistente_administrativo_ATUALIZADO.json",
+    "sha256": "f1373a7ee0a9857ac3a9d86f7ca54ddd97760222dd5a046ee20c6ecfbab8577b",
+    "metadata": {
+      "generator": "PDF extraction saneamento Fase 4 2026-10-25",
+      "original_file_name": "assistente_administrativo.json",
+      "original_source_sha256": "a57c1a78597d9f629a7137c90f84d7f96492a8d5fd0eb5590acdcfffc87a6bcc",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "6b3b774d3cb041ebe87942d5847e0d11c80f76a0c90a2f744dbd74e084107c94",
+      "classification": "saneamento consolidado Fase 4",
+      "review_status": "reviewed_by_model"
+    }
+  },
+  "discipline": {
+    "slug": "arquivologia",
+    "name": "Arquivologia"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:assistente_administrativo:031",
+      "source_id": "assistente_administrativo:31",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Documentos são classificados como ______ quando são documentos manuscritos, datilografados ou impressos.\nAssinale a alternativa que preencha corretamente a lacuna.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 31; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Textuais",
+          "sort_order": 0,
+          "is_correct": true
+        },
+        {
+          "label": "B",
+          "body_markdown": "Informáticos",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "Iconográficos",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Infográfico",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Histograma",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "A",
+      "subject": "Gerenciamento da Informação e a Gestão de Documentos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "f8896fcbc4897102a19793b75fba2df6b7d5cf62be51c7f6cb343d707f6086b5",
+        "original_numeric_id": 31,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.gov.br/arquivonacional/pt-br"
+      },
+      "topics": [
+        {
+          "topic_id": "gerenciamento-da-informacao-e-a-gestao-de-documentos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A arquivologia classifica os documentos segundo diversos critérios, entre eles o gênero, que se refere ao aspecto de sua representação nos diferentes suportes e à forma como a informação é registrada.\n\nDe acordo com o Dicionário Brasileiro de Terminologia Arquivística do Arquivo Nacional, os documentos **textuais** (ou escritos) são definidos como o gênero documental integrado por documentos manuscritos, datilografados ou impressos. Exemplos comuns incluem atas, cartas, relatórios e decretos. Portanto, a Alternativa A preenche corretamente a lacuna.\n\n**Análise das alternativas incorretas:**\n* **B) Informáticos:** Refere-se a documentos produzidos, tratados e armazenados em meio digital (computadores, servidores).\n* **C) Iconográficos:** Refere-se a documentos que contêm imagens estáticas, como fotografias, desenhos, gravuras e diapositivos.\n* **D) Infográfico:** É uma forma de representação visual de informações e dados, não constituindo um gênero arquivístico tradicional.\n* **E) Histograma:** É uma representação gráfica estatística de distribuição de frequências, sem relação com a classificação de gêneros documentais.",
+        "source_reference": null
+      },
+      "source_content_hash": "c5177a8dcc9f6c3681855cf492255b0599dc17ec0171a93e3841c112ca25ec89"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:033",
+      "source_id": "assistente_administrativo:33",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Sobre a Lei 12.527/2011 Lei de Acesso à informação, analise as afirmativas abaixo a respeito do acesso a informações públicas que será assegurado.\nI. Criação de serviço de informações ao cidadão, nos órgãos e entidades do poder público, em local com condições apropriadas para: atender e orientar o público quanto ao acesso a informações; informar sobre a tramitação de documentos nas suas respectivas unidades; protocolizar documentos e requerimentos de acesso a informações.\nII. Realização de audiências ou consultas públicas, incentivo à participação popular ou a outras formas de divulgação.\nIII. Para o acesso a informações de interesse público, a identificação do requerente não pode conter exigências que inviabilizem a solicitação.\nEstão corretas as afirmativas:",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 33; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "I apenas",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "II apenas",
+          "sort_order": 1,
+          "is_correct": false
+        },
+        {
+          "label": "C",
+          "body_markdown": "III apenas",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "I e II apenas",
+          "sort_order": 3,
+          "is_correct": true
+        },
+        {
+          "label": "E",
+          "body_markdown": "I e III apenas",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "D",
+      "subject": "Gerenciamento da Informação e a Gestão de Documentos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "fe37412990d8a25a62cf519951770ae85698db7ba7ccc1c4171459ce8b13cb26",
+        "original_numeric_id": 33,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "gerenciamento-da-informacao-e-a-gestao-de-documentos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A questão exige atenção ao comando do enunciado, que delimita a análise às afirmativas \"a respeito do acesso a informações públicas que será assegurado\". Esse tema específico é regulado pelo artigo 9º da Lei de Acesso à Informação (Lei nº 12.527/2011).\n\nO artigo 9º dispõe que o acesso a informações públicas será assegurado mediante:\n1. Criação de serviço de informações ao cidadão (SIC), em local apropriado para atender, orientar, informar sobre tramitação e protocolizar requerimentos (descrito na afirmativa I);\n2. Realização de audiências ou consultas públicas, incentivo à participação popular ou a outras formas de divulgação (descrito na afirmativa II).\n\nPor sua vez, a afirmativa III (\"a identificação do requerente não pode conter exigências que inviabilizem a solicitação\") reproduz o teor do artigo 10, § 1º, da mesma lei. Contudo, esse dispositivo trata do \"Procedimento de Pedido de Acesso\" (Capítulo III, Seção I), e não das formas estruturais pelas quais o acesso será assegurado previstas no artigo 9º. \n\nDesse modo, apenas as afirmativas I e II estão corretas em relação ao objeto específico delimitado pela questão, o que fundamenta a Alternativa D como gabarito.",
+        "source_reference": null
+      },
+      "source_content_hash": "24a240867815c2c652e17ca0a227f4bcdb3bd82ba2e9abbdca60c618ec07beeb"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:039",
+      "source_id": "assistente_administrativo:39",
+      "question_type": "multiple_choice",
+      "statement_markdown": "Arquivos ______ são arquivos constituídos de documentos em curso, de utilização constante, para a tomada de decisões das administrações.\nAssinale a alternativa que preencha corretamente a lacuna.",
+      "exam_board": "IBFC",
+      "institution": "Empresa Brasileira de Serviços Hospitalares",
+      "position_name": "Assistente Administrativo",
+      "exam_year": 2023,
+      "difficulty": "medium",
+      "source_reference": "assistente_administrativo.pdf, questão 39; assistente_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "A",
+          "body_markdown": "Mortos",
+          "sort_order": 0,
+          "is_correct": false
+        },
+        {
+          "label": "B",
+          "body_markdown": "Corrente",
+          "sort_order": 1,
+          "is_correct": true
+        },
+        {
+          "label": "C",
+          "body_markdown": "Intermediário",
+          "sort_order": 2,
+          "is_correct": false
+        },
+        {
+          "label": "D",
+          "body_markdown": "Fixo",
+          "sort_order": 3,
+          "is_correct": false
+        },
+        {
+          "label": "E",
+          "body_markdown": "Móvel",
+          "sort_order": 4,
+          "is_correct": false
+        }
+      ],
+      "correct_option_label": "B",
+      "subject": "Gerenciamento da Informação e a Gestão de Documentos",
+      "source_metadata": {
+        "source_file": "assistente_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Conhecimentos Específicos",
+        "source_content_hash": "a726ed678a6e1814d3851759fc55c94b02429dfd7587489ab576a84d434a30b0",
+        "original_numeric_id": 39,
+        "original_source_content_hash": null,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento consolidado Fase 4",
+        "official_url": "https://www.planalto.gov.br/ccivil_03/leis/l8159.htm"
+      },
+      "topics": [
+        {
+          "topic_id": "gerenciamento-da-informacao-e-a-gestao-de-documentos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A alternativa correta é a **B**.\n\nO enunciado descreve o conceito de **arquivo corrente** (também conhecido como de primeira idade ou de gestão). De acordo com a arquivologia, os arquivos correntes são aqueles constituídos por documentos em curso ou que, mesmo sem movimentação ativa, são consultados com frequência em razão de suas funções administrativas, legais ou fiscais imediatas.\n\n**Análise das alternativas incorretas:**\n* **A) Mortos:** É um termo considerado obsoleto e tecnicamente incorreto na arquivologia moderna, pois pressupõe que o documento perdeu totalmente sua utilidade, o que contraria a dinâmica dos arquivos.\n* **C) Intermediário:** Refere-se aos documentos que não são mais de uso corrente, mas que ainda aguardam a destinação final (eliminação ou recolhimento ao arquivo permanente) devido a prazos de precaução.\n* **D) Fixo e E) Móvel:** São termos relacionados ao mobiliário físico de armazenamento de documentos, e não às fases do ciclo de vida documental.\n\n### Dispositivo legal\n\nO conceito está fundamentado na Lei de Arquivos:\n\n* **Lei nº 8.159, de 8 de janeiro de 1991, Art. 8º, § 1º**",
+        "source_reference": null
+      },
+      "source_content_hash": "f5eb7de173da6a28e19d30bf7be6e102c8f6ac37f0f6f8e3e5ca00c50b24caaa"
+    }
+  ]
+}

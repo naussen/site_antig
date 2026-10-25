@@ -1,0 +1,132 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-candidato-dpf14_009_01-direito-administrativo-ca744d5096ff-6769ad14654a",
+  "source": {
+    "file_name": "dpf14_009_01_ATUALIZADO.json",
+    "sha256": "ca744d5096ff5e394ded91af7cac3b914f6eebb00f4d317b5e902839773db969",
+    "metadata": {
+      "generator": "PDF extraction saneamento 2026-10-24",
+      "original_file_name": "dpf14_009_01.json",
+      "original_source_sha256": "9a60cb42fbada4944e3fe1d0564604111314b54b0d72e1bd9ebc2e3a33818aef",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "6769ad14654a5d9154261b18cd41e4129b4005f5d10d6e82134d32e60a9399db",
+      "classification": "saneamento gabarito e termos especificos",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:dpf14_009_01:041",
+      "source_id": "dpf14_009_01:41",
+      "question_type": "true_false",
+      "statement_markdown": "Julgue os itens que se seguem, relativos aos atos administrativos e poderes da administração.\n\nO poder para a instauração de processo administrativo disciplinar e aplicação da respectiva penalidade decorre do poder de polícia da administração.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 41; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Poderes e Deveres da Administração Pública",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "baf69e04486a245c6151bcb337cba56ed9b3e34f4b19d847fdf2258c1127455a",
+        "original_numeric_id": 41,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_CBNM01_01.PDF",
+        "official_item_number": 41
+      },
+      "topics": [
+        {
+          "topic_id": "deveres",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A instauração de processo administrativo disciplinar (PAD) e a aplicação de penalidades a servidores públicos decorrem do **Poder Disciplinar** da Administração Pública, frequentemente exercido de forma conjunta com o **Poder Hierárquico**.\n\nO Poder Disciplinar consiste na prerrogativa da Administração de apurar infrações e aplicar penalidades aos seus servidores e a particulares que possuam um vínculo jurídico específico de subordinação com o Estado (como concessionários ou estudantes de escolas públicas).\n\nPor outro lado, o **Poder de Polícia** destina-se a restringir, condicionar ou limitar o exercício de direitos, liberdades ou propriedade de particulares em geral, em benefício do interesse público, sem que haja uma relação de subordinação funcional ou especial com a Administração. Portanto, a assertiva erra ao fundamentar a atividade disciplinar interna no poder de polícia.\n\n### Dispositivo legal\n* **Artigo 37, caput, da Constituição Federal de 1988**: fundamenta os princípios da Administração Pública, dos quais decorrem os poderes administrativos implícitos (hierárquico e disciplinar).",
+        "source_reference": null
+      },
+      "source_content_hash": "04460a9257f93c3d63644003fdbe697eaf0019da70ea6f92181fafe6ccb6270c"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:053",
+      "source_id": "dpf14_009_01:53",
+      "question_type": "true_false",
+      "statement_markdown": "No que concerne à organização administrativa, julgue os itens seguintes.\n\nConsidere que determinado município tenha extinguido órgão de sua estrutura administrativa e que o serviço público correspondente tenha sido delegado a pessoa jurídica de direito privado. Nessa situação, ocorreu descentralização da atividade administrativa, com ruptura do liame hierárquico e exclusão da relação de subordinação com o município.",
+      "exam_board": "CESPE/UnB",
+      "institution": "Departamento de Polícia Federal (DPF)",
+      "position_name": "Agente Administrativo",
+      "exam_year": 2014,
+      "difficulty": null,
+      "source_reference": "dpf14_009_01.pdf, questão 53; dpf14_009_01_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Serviços Públicos",
+      "source_metadata": {
+        "source_file": "dpf14_009_01.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "3769870b15f492de98b0067402dda949c0133254a59d34d73a5b1c6bc797bfdb",
+        "original_numeric_id": 53,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "specific_statement_term",
+        "official_url": "https://cdn.cebraspe.org.br/concursos/DPF_13_ADMINISTRATIVO/arquivos/Gab_Definitivo_DPF14_009_20.PDF",
+        "official_item_number": 53
+      },
+      "topics": [
+        {
+          "topic_id": "criterio-de-servico-publico-doutrinario",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "O item está correto. A transferência da execução de um serviço público para uma pessoa jurídica de direito privado (como por meio de concessão ou permissão) configura a chamada descentralização por delegação ou colaboração. Diferentemente da desconcentração, que ocorre dentro de uma mesma pessoa jurídica e mantém a relação de subordinação, a descentralização pressupõe a criação de uma nova relação jurídica com entidade distinta. Como consequência, não há hierarquia ou subordinação entre o ente delegante (o Município) e a pessoa jurídica de direito privado delegatária, ocorrendo a ruptura do liame hierárquico. O controle exercido pelo ente político sobre a delegatária é meramente finalístico e de fiscalização contratual, sem caráter de subordinação hierárquica.\n\n### Dispositivo legal\n* **Constituição Federal de 1988, Art. 175**: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm#art175)",
+        "source_reference": null
+      },
+      "source_content_hash": "cb9e13e56f38e66f7be0427e3bd24eb9c2e2d5dc340e513a87a699a8e7ecc95e"
+    }
+  ]
+}

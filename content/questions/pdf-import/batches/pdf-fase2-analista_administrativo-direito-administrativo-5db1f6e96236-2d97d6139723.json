@@ -1,0 +1,179 @@
+{
+  "schema_version": "pro-questions/v1",
+  "batch_key": "pdf-fase2-analista_administrativo-direito-administrativo-5db1f6e96236-2d97d6139723",
+  "source": {
+    "file_name": "analista_administrativo_ATUALIZADO.json",
+    "sha256": "5db1f6e962369b1d7913fb92dbdb0da8daeda71ce6c9d495931ad2d14292df2c",
+    "metadata": {
+      "generator": "PDF extraction saneamento fase 2 taxonomia",
+      "original_file_name": "analista_administrativo.json",
+      "original_source_sha256": "0fc614916228bfa45383f0df7c8e33baaccace7bb05b812e4da6dc6bb1c76217",
+      "original_schema_version": "pro-questions/extracted-pdf/v1",
+      "prepared_source_schema_version": "pro-questions/pdf-selected-source/v1",
+      "transient_grounding_urls_removed": true,
+      "transformation_sha256": "2d97d6139723bac5a5f0206387a343803a351480d86eb9ad3eacb0d107dbe372",
+      "classification": "saneamento taxonomia expandida e legal_basis",
+      "review_status": "reviewed_by_model",
+      "catalog_captured_at": "2026-10-24T23:49:14.359Z"
+    }
+  },
+  "discipline": {
+    "slug": "direito-administrativo",
+    "name": "Direito Administrativo"
+  },
+  "questions": [
+    {
+      "external_id": "pdf:analista_administrativo:024",
+      "source_id": "analista_administrativo:24",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à administração pública e sua organização, julgue os itens a seguir.\n\nQuando da apuração de responsabilidade por infração ambiental administrativa, estará configurada a infração administrativa se a conduta (ação ou omissão) for considerada ilícita, por sua própria natureza, ou gerar um resultado considerado ilícito pela legislação ambiental, ainda que o agente não o tenha visado deliberadamente.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 24; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Responsabilidade Civil do Estado",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "732c15a11161794355b3d83c4ce83740d0607d7720abf541f519b595db946e87",
+        "original_numeric_id": 24,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "civil",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está incorreta porque a responsabilidade administrativa por infração ambiental possui natureza subjetiva, e não objetiva.\n\nSegundo o entendimento consolidado do Superior Tribunal de Justiça (STJ), a aplicação de sanções administrativas ambientais exige a demonstração do elemento subjetivo (dolo ou culpa) do agente, além do nexo de causalidade entre a conduta e o resultado lesivo. Não basta a mera ocorrência de uma conduta ilícita ou de um resultado lesivo para configurar a infração administrativa se não restar demonstrada a culpabilidade do suposto infrator.\n\n**Pegadinha:** É comum confundir a responsabilidade civil por danos ambientais (que é objetiva, baseada no risco integral, bastando o dano e o nexo causal) com a responsabilidade administrativa ambiental (que é subjetiva, exigindo dolo ou culpa).\n\n### Dispositivo legal\n- **Referência:** Lei nº 9.605/1998, Art. 70; Jurisprudência consolidada do STJ (REsp 1.251.697/PR).\n- **URL oficial:** https://www.planalto.gov.br/ccivil_03/leis/l9605.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "2298fba49f50d6f74befe3f3c1ba2bedf69c3c21d69a37c481cc8895da8d39d9"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:025",
+      "source_id": "analista_administrativo:25",
+      "question_type": "true_false",
+      "statement_markdown": "Com relação à administração pública e sua organização, julgue os itens a seguir.\n\nPara a contratação de obras, serviços e compras, o IBAMA pode adotar a modalidade de licitação denominada diálogo competitivo, realizando, nessa hipótese, diálogos com os licitantes previamente selecionados mediante critérios objetivos, com o intuito de desenvolver uma ou mais alternativas capazes de atender às suas necessidades, devendo os licitantes apresentar proposta final após o encerramento dos diálogos.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 25; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "C",
+      "subject": "Organização da Administração Pública",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "f2152981dba0270e8fc31209b1586f8712c552cb911af9f836f5e9656b30acc1",
+        "original_numeric_id": 25,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_full_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "desconcentracao-administracao-direta-orgaos",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A assertiva está correta. Ela reproduz fielmente a definição legal da modalidade de licitação \"diálogo competitivo\" prevista na Nova Lei de Licitações e Contratos Administrativos.\n\nSendo o IBAMA uma autarquia federal, ele se submete ao regime da referida lei, podendo utilizar essa modalidade licitatória para a contratação de obras, serviços e compras quando presentes as hipóteses de cabimento legais (como a necessidade de desenvolver soluções inovadoras ou complexas que o órgão não consegue definir com precisão por si só).\n\nO procedimento inverte a lógica tradicional: primeiro a Administração realiza diálogos com licitantes previamente selecionados por critérios objetivos para desenvolver alternativas e, somente após o encerramento dos diálogos, os licitantes apresentam suas propostas finais.\n\n### Dispositivo legal\n- **Referência:** Lei nº 14.133/2021, Art. 1º, inciso I, Art. 6º, inciso XLII, e Art. 32.\n- **URL oficial:** https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2021/lei/l14133.htm",
+        "source_reference": null
+      },
+      "source_content_hash": "27820d667d1a2355e12a74bd396f273e05bda0060b9b77a4e4a0059d53f6150f"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:049",
+      "source_id": "analista_administrativo:49",
+      "question_type": "true_false",
+      "statement_markdown": "Considerando a situação hipotética de que determinado servidor público, sem prévia autorização da chefia imediata, tenha-se ausentado do serviço durante o expediente, para comprar presentes para sua família, julgue os itens a seguir, com base na Lei n.º 8.112/1990.\n\nTal conduta poderá acarretar penalidade de demissão ao servidor.",
+      "exam_board": "CEBRASPE",
+      "institution": "IBAMA",
+      "position_name": "Analista Administrativo",
+      "exam_year": 2021,
+      "difficulty": null,
+      "source_reference": "analista_administrativo.pdf, questão 49; analista_administrativo_gabarito.pdf",
+      "options": [
+        {
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "correct_option_label": "E",
+      "subject": "Agentes Públicos",
+      "source_metadata": {
+        "source_file": "analista_administrativo.json",
+        "source_schema_version": "pro-questions/extracted-pdf/v1",
+        "source_subject": "Direito Administrativo",
+        "source_content_hash": "1f95f57e42d4592d989fbabfdf9572489dafb98cad312949e7075ddd997a9c0a",
+        "original_numeric_id": 49,
+        "answer_status": "definitivo",
+        "commentary_review_status": "revisada_por_modelo",
+        "outdated_notice": null,
+        "calculation_image_url": null,
+        "classification": "saneamento_taxonomia_command_pattern"
+      },
+      "topics": [
+        {
+          "topic_id": "conceito-e-especies",
+          "relation_type": "primary",
+          "relevance": 100,
+          "sort_order": 0
+        }
+      ],
+      "explanation": {
+        "body_markdown": "A conduta do servidor que se ausenta do serviço durante o expediente, sem prévia autorização da chefia imediata, para realizar atividades de interesse particular (como comprar presentes para a família), configura infração disciplinar de natureza leve.\n\nDe acordo com o art. 117, inciso I, da Lei nº 8.112/1990, é expressamente proibido ao servidor \"ausentar-se do serviço durante o expediente, sem prévia autorização do chefe imediato\". \n\nO regime disciplinar da referida lei prevê, no art. 129, que a violação dessa proibição específica enseja a aplicação da penalidade de **advertência**, por escrito. Em caso de reincidência em faltas punidas com advertência, aplica-se a penalidade de **suspensão** (art. 130). A penalidade de **demissão**, por sua vez, é reservada para as infrações graves taxativamente listadas no art. 132 da Lei nº 8.112/1990, rol no qual não se enquadra a conduta descrita.\n\nPortanto, a conduta descrita não poderá acarretar a penalidade de demissão, tornando a afirmativa incorreta.\n\n### Dispositivo legal\n\n* **Lei nº 8.112/1990**, Art. 117, inciso I, Art. 129, Art. 130 e Art. 132 (disponível em: [Portal do Planalto](https://www.planalto.gov.br/ccivil_03/leis/l8112cons.htm)).",
+        "source_reference": null
+      },
+      "source_content_hash": "9c9edb2d3f10b201f810130711f2a1928f11e84e1d087a1e4a8b093e37e00d30"
+    }
+  ]
+}
