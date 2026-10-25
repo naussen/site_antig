@@ -154,7 +154,7 @@ export default async function DashboardPage({
       console.error("Erro ao buscar tópicos:", error);
       loadErrors.push("Não foi possível carregar a biblioteca de tópicos.");
     } else if (data) {
-      topics = [...data].sort(compareTopics);
+      topics = data.filter((topic) => topic.sections.length > 0).sort(compareTopics);
     }
 
     const hasSections = topics.some((topic) => topic.sections.length > 0);

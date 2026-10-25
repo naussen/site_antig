@@ -19,6 +19,7 @@ A migration 039 verifica os 95 estados anteriores, os alvos ativos e o resultado
 ## Banco e dependências
 
 - As migrations 037 e 038 foram reaplicadas de forma idempotente por `supabase db push`; ambas constam no histórico remoto. A 037 criou os 67 tópicos previstos que ainda faltavam. A 038 manteve as funções e o índice já presentes.
+- A biblioteca de resumos consultava também tópicos ativos sem seções (175 após a 037). A listagem foi ajustada para mostrar somente tópicos com conteúdo, sem retirar os tópicos do catálogo usado pelas questões.
 - A atualização de Next.js, DOMPurify, Zod e KaTeX é independente da correção editorial. O `overrides.katex` força a versão corrigida também nas dependências de Mermaid e da renderização matemática.
 - Lint, tipos, 198 testes, build webpack e `npm audit --omit=dev` passaram. O deploy Netlify de `3a3f95a` foi publicado; a página autenticada de Macroeconomia mostrou mapas navegáveis e fórmulas sem erro no console.
 

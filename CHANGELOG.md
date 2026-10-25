@@ -1,5 +1,9 @@
 # Changelog
 
+## Não publicado — biblioteca sem tópicos vazios (25/10/2026)
+
+- a biblioteca de resumos exibe apenas tópicos com seções ativas; os tópicos criados para classificar questões permanecem ativos no banco.
+
 ## Publicado — atualização de dependências de segurança (25/10/2026)
 
 - atualizados Next.js 16.4.3, DOMPurify 3.4.17 e Zod 4.6.7;
