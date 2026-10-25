@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — plano de importação integral do acervo PDF
+
+- auditado o handoff de 1.187 candidatas em 227 lotes e criado plano de gates para gabarito, revisão editorial, taxonomia, mídia, deploy e importação progressiva;
+- identificadas 272 candidatas sem status definitivo, divergências de contagem no relatório e conflitos da migration 037 com dois tópicos existentes; nenhuma migration ou questão foi aplicada nesta etapa.
+
 ## Não publicado — execução do saneamento das questões de PDF pendentes
 
 - executado o saneamento dos 1.251 itens pendentes com congelamento do inventário e criação de registro individual rastreável de decisões para 100% dos IDs;
