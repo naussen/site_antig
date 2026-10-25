@@ -20,7 +20,8 @@ A migration 039 verifica os 95 estados anteriores, os alvos ativos e o resultado
 
 - As migrations 037 e 038 foram reaplicadas de forma idempotente por `supabase db push`; ambas constam no histórico remoto. A 037 criou os 67 tópicos previstos que ainda faltavam. A 038 manteve as funções e o índice já presentes.
 - A atualização de Next.js, DOMPurify, Zod e KaTeX é independente da correção editorial. O `overrides.katex` força a versão corrigida também nas dependências de Mermaid e da renderização matemática.
+- Lint, tipos, 198 testes, build webpack e `npm audit --omit=dev` passaram. O deploy Netlify de `3a3f95a` foi publicado; a página autenticada de Macroeconomia mostrou mapas navegáveis e fórmulas sem erro no console.
 
-## Validação necessária
+## Validação realizada e pendências
 
-Após aplicar a 039, conferir o total de 1.301 questões publicadas, os 47 vínculos corrigidos, as 48 retenções e os filtros autenticados. Antes de republicar qualquer item retido, definir disciplina e tópico ativos com revisão do enunciado e do comentário.
+A migration 039 consta no histórico remoto. O banco confirmou 1.301 questões publicadas, 48 arquivadas e 70 itens ainda em Português > Outros Tópicos. Os 47 vínculos e os 48 estados finais foram conferidos dentro da própria migration. No site autenticado, a questão de sequência de letras passou a apontar para Raciocínio Lógico; a conta de teste vê 1.299 itens porque ocultou dois. Antes de republicar qualquer item retido, definir disciplina e tópico ativos com revisão do enunciado e do comentário.

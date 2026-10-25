@@ -1,6 +1,6 @@
 # Changelog
 
-## Não publicado — atualização de dependências de segurança (25/10/2026)
+## Publicado — atualização de dependências de segurança (25/10/2026)
 
 - atualizados Next.js 16.4.3, DOMPurify 3.4.17 e Zod 4.6.7;
 - unificado KaTeX 0.18.10 também nas dependências transitivas de Mermaid e Markdown matemático, sem atualização de versão principal do Mermaid;
