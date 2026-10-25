@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — plano de prontidão das questões PDF
+
+- definido plano de saneamento por ID para gabaritos, comentários, taxonomia, migration 037, imagens e lotes finais, separado da importação em produção;
+- identificadas contradições no registro mestre: 1.059 candidatas sem tópico nele, 1.031 com categoria de retenção e 272 payloads sem status definitivo; nenhuma questão ou migration foi aplicada.
+
 ## Não publicado — plano de importação integral do acervo PDF
 
 - auditado o handoff de 1.187 candidatas em 227 lotes e criado plano de gates para gabarito, revisão editorial, taxonomia, mídia, deploy e importação progressiva;
