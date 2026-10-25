@@ -488,6 +488,13 @@ export interface QuestionFilterDiscipline {
   name: string;
 }
 
+export interface QuestionFilterOptions {
+  disciplines: QuestionFilterDiscipline[];
+  topics: Array<{ topic_id: string; title: string; discipline_slug: string }>;
+  boards: string[];
+  years: number[];
+}
+
 export interface QuestionListTopic {
   topic_id: string;
   title: string;
@@ -523,6 +530,7 @@ export interface QuestionListItem {
 export interface QuestionListResult {
   items: QuestionListItem[];
   next_cursor: string | null;
+  total_count: number;
 }
 
 export interface QuestionAnswerResult {

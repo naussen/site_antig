@@ -21,10 +21,10 @@ test("rota de questões exige acesso ao conteúdo e carrega uma questão", async
   const source = await read("src/app/dashboard/questoes/page.tsx");
 
   assert.match(source, /requireContentAccess\(\)/);
-  assert.match(source, /rpc\("list_questions"/);
+  assert.match(source, /rpc\("list_questions_filtered"/);
   assert.match(source, /p_limit:\s*1/);
   assert.match(source, /rpc\("get_question_stats"\)/);
-  assert.match(source, /rpc\("list_question_disciplines"\)/);
+  assert.match(source, /rpc\("list_question_filters"\)/);
   assert.doesNotMatch(source, /from\("disciplines"\)/);
   assert.match(source, /initialError=/);
 });
@@ -32,7 +32,7 @@ test("rota de questões exige acesso ao conteúdo e carrega uma questão", async
 test("interface usa RPCs seguras e não consulta gabarito diretamente", async () => {
   const source = await read("src/app/dashboard/questoes/questions-client.tsx");
 
-  assert.match(source, /rpc\("list_questions"/);
+  assert.match(source, /rpc\("list_questions_filtered"/);
   assert.match(source, /"submit_question_answer"/);
   assert.match(source, /"set_question_preference"/);
   assert.match(source, /"get_question_stats"/);
@@ -48,6 +48,10 @@ test("interface usa RPCs seguras e não consulta gabarito diretamente", async ()
   assert.match(source, /aria-label="Próxima questão"/);
   assert.match(source, /setQuestionHistory\(\(history\) => \[\.\.\.history, question\]\)/);
   assert.match(source, /preserveCurrentOnEmpty:\s*true/);
+  assert.match(source, /p_topic_id:\s*filters\.topic/);
+  assert.match(source, /p_exam_board:\s*filters\.board/);
+  assert.match(source, /p_exam_year:\s*filters\.year/);
+  assert.match(source, /replaceFilters:\s*true/);
 });
 
 test("área do aluno e landing expõem PROQuestões", async () => {

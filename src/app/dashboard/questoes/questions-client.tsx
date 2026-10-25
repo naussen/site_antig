@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import {
   BarChart3,
@@ -18,10 +18,13 @@ import {
 } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 import { ProQuestionsLogo } from "@/components/brand/pro-questions-logo";
 import { createClient } from "@/lib/supabase/client";
 import type {
   QuestionAnswerResult,
+  QuestionFilterOptions,
   QuestionListItem,
   QuestionListResult,
   QuestionStatsResult,
@@ -30,9 +33,25 @@ import type {
 interface QuestionsClientProps {
   initialResult: QuestionListResult;
   initialStats: QuestionStatsResult;
-  disciplines: Array<{ slug: string; name: string }>;
+  filterOptions: QuestionFilterOptions;
   initialError?: string | null;
 }
+
+interface QuestionFilters {
+  search: string;
+  discipline: string;
+  topic: string;
+  board: string;
+  year: string;
+}
+
+const EMPTY_FILTERS: QuestionFilters = {
+  search: "",
+  discipline: "",
+  topic: "",
+  board: "",
+  year: "",
+};
 
 interface QuestionPreferenceResult {
   hidden: boolean;
@@ -47,8 +66,18 @@ function QuestionMarkdown({
   compact?: boolean;
 }) {
   return (
-    <div className={`markdown-content ${compact ? "question-option-markdown" : "question-statement-markdown"} [&_a]:break-words [&_a]:[overflow-wrap:anywhere]`}>
-      <ReactMarkdown remarkPlugins={[remarkGfm]}>{children}</ReactMarkdown>
+    <div className={`markdown-content ${compact ? "question-option-markdown" : "question-statement-markdown"} [&_a]:break-words [&_a]:[overflow-wrap:anywhere] [&_.katex-display]:max-w-full [&_.katex-display]:overflow-x-auto`}>
+      <ReactMarkdown
+        remarkPlugins={[remarkGfm, remarkMath]}
+        rehypePlugins={[[rehypeKatex, { strict: "ignore", trust: false }]]}
+        components={{
+          img: ({ src, alt }) => typeof src === "string" && /^\/resumos\/questions\/calculations\/pdf_[a-z0-9_]+\.png$/iu.test(src)
+            ? <img src={src} alt={alt ?? "Memória de cálculo"} loading="lazy" className="my-3 max-w-full rounded-lg" />
+            : <span>{alt ?? "Imagem indisponível"}</span>,
+        }}
+      >
+        {children}
+      </ReactMarkdown>
     </div>
   );
 }
@@ -60,15 +89,17 @@ function accuracy(correct: number, total: number) {
 export function QuestionsClient({
   initialResult,
   initialStats,
-  disciplines,
+  filterOptions,
   initialError = null,
 }: QuestionsClientProps) {
   const [question, setQuestion] = useState<QuestionListItem | null>(
     initialResult.items[0] ?? null,
   );
   const [stats, setStats] = useState(initialStats);
-  const [search, setSearch] = useState("");
-  const [discipline, setDiscipline] = useState("");
+  const [draftFilters, setDraftFilters] = useState<QuestionFilters>(EMPTY_FILTERS);
+  const [activeFilters, setActiveFilters] = useState<QuestionFilters>(EMPTY_FILTERS);
+  const [resultCount, setResultCount] = useState(initialResult.total_count);
+  const requestId = useRef(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [answer, setAnswer] = useState<QuestionAnswerResult | null>(null);
   const [markedForReview, setMarkedForReview] = useState(
@@ -77,53 +108,63 @@ export function QuestionsClient({
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(initialError);
   const [questionHistory, setQuestionHistory] = useState<QuestionListItem[]>([]);
-  const [reachedEnd, setReachedEnd] = useState(false);
+  const [reachedEnd, setReachedEnd] = useState(initialResult.next_cursor === null);
 
-  const showQuestion = (nextQuestion: QuestionListItem) => {
+  const showQuestion = (nextQuestion: QuestionListItem, hasMore: boolean) => {
     setQuestion(nextQuestion);
     setSelectedOptionId(null);
     setAnswer(null);
     setMarkedForReview(nextQuestion.preference?.marked_for_review ?? false);
-    setReachedEnd(false);
+    setReachedEnd(!hasMore);
   };
 
   const loadQuestion = async ({
     afterId = null,
-    searchValue = search,
-    disciplineValue = discipline,
+    filters = activeFilters,
+    replaceFilters = false,
     rememberCurrent = false,
     preserveCurrentOnEmpty = false,
   }: {
     afterId?: string | null;
-    searchValue?: string;
-    disciplineValue?: string;
+    filters?: QuestionFilters;
+    replaceFilters?: boolean;
     rememberCurrent?: boolean;
     preserveCurrentOnEmpty?: boolean;
   } = {}) => {
+    const currentRequest = ++requestId.current;
     setLoading(true);
     setError(null);
 
     try {
       const supabase = createClient();
-      const { data, error: requestError } = await supabase.rpc("list_questions", {
+      const { data, error: requestError } = await supabase.rpc("list_questions_filtered", {
         p_limit: 1,
         p_after_id: afterId,
-        p_search: searchValue.trim() || null,
-        p_discipline_slug: disciplineValue || null,
-        p_topic_id: null,
+        p_search: filters.search || null,
+        p_discipline_slug: filters.discipline || null,
+        p_topic_id: filters.topic || null,
+        p_exam_board: filters.board || null,
+        p_exam_year: filters.year ? Number(filters.year) : null,
         p_include_hidden: false,
       });
 
       if (requestError) throw requestError;
+      if (currentRequest !== requestId.current) return undefined;
 
       const result = data as QuestionListResult;
       const nextQuestion = result.items[0] ?? null;
+      setResultCount(result.total_count);
+
+      if (replaceFilters) {
+        setActiveFilters(filters);
+        setQuestionHistory([]);
+      }
 
       if (nextQuestion) {
         if (rememberCurrent && question) {
           setQuestionHistory((history) => [...history, question]);
         }
-        showQuestion(nextQuestion);
+        showQuestion(nextQuestion, result.next_cursor !== null);
       } else if (preserveCurrentOnEmpty) {
         setReachedEnd(true);
       } else {
@@ -136,10 +177,12 @@ export function QuestionsClient({
 
       return nextQuestion;
     } catch {
-      setError("Não foi possível carregar a questão. Tente novamente.");
+      if (currentRequest === requestId.current) {
+        setError("Não foi possível carregar as questões. Os filtros anteriores continuam ativos.");
+      }
       return undefined;
     } finally {
-      setLoading(false);
+      if (currentRequest === requestId.current) setLoading(false);
     }
   };
 
@@ -220,9 +263,10 @@ export function QuestionsClient({
 
   const applyFilters = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setQuestionHistory([]);
-    setReachedEnd(false);
-    await loadQuestion();
+    await loadQuestion({
+      filters: { ...draftFilters, search: draftFilters.search.trim() },
+      replaceFilters: true,
+    });
   };
 
   const showPreviousQuestion = () => {
@@ -231,7 +275,7 @@ export function QuestionsClient({
 
     setQuestionHistory((history) => history.slice(0, -1));
     setError(null);
-    showQuestion(previousQuestion);
+    showQuestion(previousQuestion, true);
   };
 
   const showNextQuestion = async () => {
@@ -282,42 +326,101 @@ export function QuestionsClient({
 
         <form
           onSubmit={applyFilters}
-          className="mt-4 grid gap-2.5 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-3 shadow-[var(--shadow)] sm:p-4 md:grid-cols-[minmax(0,1fr)_minmax(180px,0.45fr)_auto]"
+          className="mt-4 grid gap-3 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-3 shadow-[var(--shadow)] sm:grid-cols-2 sm:p-4 xl:grid-cols-4"
           aria-label="Filtros de questões"
         >
-          <label className="relative block">
-            <span className="sr-only">Buscar no enunciado</span>
-            <Search className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)]" size={17} />
-            <input
-              value={search}
-              onChange={(event) => setSearch(event.target.value)}
-              maxLength={200}
-              placeholder="Buscar por assunto ou termo"
-              className="h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] pl-10 pr-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)]"
-            />
+          <label className="block sm:col-span-2 xl:col-span-2">
+            <span className="text-xs font-semibold text-[var(--text-secondary)]">Buscar</span>
+            <span className="relative mt-1 block">
+              <Search className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)]" size={17} />
+              <input
+                value={draftFilters.search}
+                onChange={(event) => setDraftFilters((current) => ({ ...current, search: event.target.value }))}
+                disabled={loading}
+                maxLength={200}
+                placeholder="Enunciado, assunto, órgão ou cargo"
+                className="h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] pl-10 pr-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)]"
+              />
+            </span>
           </label>
-          <label>
-            <span className="sr-only">Disciplina</span>
+          <label className="block">
+            <span className="text-xs font-semibold text-[var(--text-secondary)]">Disciplina</span>
             <select
-              value={discipline}
-              onChange={(event) => setDiscipline(event.target.value)}
-              className="h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)]"
+              value={draftFilters.discipline}
+              onChange={(event) => setDraftFilters((current) => ({ ...current, discipline: event.target.value, topic: "" }))}
+              disabled={loading}
+              className="mt-1 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)]"
             >
               <option value="">Todas as disciplinas</option>
-              {disciplines.map((item) => (
+              {filterOptions.disciplines.map((item) => (
                 <option key={item.slug} value={item.slug}>{item.name}</option>
               ))}
             </select>
           </label>
-          <button
-            type="submit"
-            disabled={loading}
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-xl bg-[var(--accent)] px-5 text-sm font-bold text-white transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-60"
-          >
-            {loading ? <Loader2 size={17} className="animate-spin" /> : <Filter size={17} />}
-            Filtrar
-          </button>
+          <label className="block">
+            <span className="text-xs font-semibold text-[var(--text-secondary)]">Tópico</span>
+            <select
+              value={draftFilters.topic}
+              onChange={(event) => setDraftFilters((current) => ({ ...current, topic: event.target.value }))}
+              disabled={loading || !draftFilters.discipline}
+              className="mt-1 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)] disabled:opacity-60"
+            >
+              <option value="">{draftFilters.discipline ? "Todos os tópicos" : "Selecione a disciplina"}</option>
+              {filterOptions.topics.filter((item) => item.discipline_slug === draftFilters.discipline).map((item) => (
+                <option key={item.topic_id} value={item.topic_id}>{item.title}</option>
+              ))}
+            </select>
+          </label>
+          <label className="block">
+            <span className="text-xs font-semibold text-[var(--text-secondary)]">Banca</span>
+            <select
+              value={draftFilters.board}
+              onChange={(event) => setDraftFilters((current) => ({ ...current, board: event.target.value }))}
+              disabled={loading}
+              className="mt-1 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)]"
+            >
+              <option value="">Todas as bancas</option>
+              {filterOptions.boards.map((board) => <option key={board} value={board}>{board}</option>)}
+            </select>
+          </label>
+          <label className="block">
+            <span className="text-xs font-semibold text-[var(--text-secondary)]">Ano</span>
+            <select
+              value={draftFilters.year}
+              onChange={(event) => setDraftFilters((current) => ({ ...current, year: event.target.value }))}
+              disabled={loading}
+              className="mt-1 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)]"
+            >
+              <option value="">Todos os anos</option>
+              {filterOptions.years.map((year) => <option key={year} value={year}>{year}</option>)}
+            </select>
+          </label>
+          <div className="flex items-end gap-2 sm:col-span-2">
+            <button
+              type="submit"
+              disabled={loading}
+              className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-[var(--accent)] px-5 text-sm font-bold text-white transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-60"
+            >
+              {loading ? <Loader2 size={17} className="animate-spin" /> : <Filter size={17} />}
+              Filtrar
+            </button>
+            <button
+              type="button"
+              disabled={loading}
+              onClick={() => {
+                setDraftFilters(EMPTY_FILTERS);
+                void loadQuestion({ filters: EMPTY_FILTERS, replaceFilters: true });
+              }}
+              className="inline-flex h-11 items-center justify-center gap-1.5 rounded-xl border border-[var(--border)] px-3 text-sm font-semibold text-[var(--text-secondary)] hover:border-[var(--accent)] disabled:opacity-60"
+            >
+              <RotateCcw size={16} /> Limpar
+            </button>
+          </div>
         </form>
+
+        <p className="mt-2 text-sm text-[var(--text-secondary)]" aria-live="polite">
+          {resultCount === 1 ? "1 questão encontrada" : `${resultCount} questões encontradas`}
+        </p>
 
         {error && (
           <p role="alert" className="mt-4 rounded-xl border border-red-400/30 bg-red-500/10 p-4 text-sm text-[var(--text-primary)]">
@@ -330,16 +433,13 @@ export function QuestionsClient({
             <ProQuestionsLogo className="justify-center" />
             <h2 className="mt-6 text-xl font-black text-[var(--text-primary)]">Nenhuma questão encontrada</h2>
             <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-[var(--text-secondary)]">
-              Ajuste os filtros ou aguarde a publicação do primeiro lote revisado.
+              Tente outros termos ou limpe os filtros para explorar o acervo.
             </p>
             <button
               type="button"
               onClick={() => {
-                setSearch("");
-                setDiscipline("");
-                setQuestionHistory([]);
-                setReachedEnd(false);
-                void loadQuestion({ searchValue: "", disciplineValue: "" });
+                setDraftFilters(EMPTY_FILTERS);
+                void loadQuestion({ filters: EMPTY_FILTERS, replaceFilters: true });
               }}
               className="mt-6 inline-flex items-center gap-2 rounded-xl border border-[var(--border)] px-4 py-2.5 text-sm font-bold text-[var(--text-primary)]"
             >

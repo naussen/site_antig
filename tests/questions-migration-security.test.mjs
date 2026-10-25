@@ -11,10 +11,15 @@ const filterMigrationUrl = new URL(
   "../supabase/migrations/030_add_question_filter_catalog_rpc.sql",
   import.meta.url,
 );
+const improvedFilterMigrationUrl = new URL(
+  "../supabase/migrations/038_improve_question_search_filters.sql",
+  import.meta.url,
+);
 
-const [migration, filterMigration, databaseTypes] = await Promise.all([
+const [migration, filterMigration, improvedFilterMigration, databaseTypes] = await Promise.all([
   readFile(migrationUrl, "utf8"),
   readFile(filterMigrationUrl, "utf8"),
+  readFile(improvedFilterMigrationUrl, "utf8"),
   readFile(databaseTypesUrl, "utf8"),
 ]);
 
@@ -64,6 +69,21 @@ test("catálogo de filtros preserva menor privilégio", () => {
     filterMigration,
     /GRANT\s+SELECT[\s\S]*public\.disciplines[\s\S]*TO\s+authenticated/iu,
   );
+});
+
+test("busca expandida mantém acesso autenticado e não revela gabarito", () => {
+  for (const name of ["list_questions_filtered", "list_question_filters"]) {
+    assert.match(
+      improvedFilterMigration,
+      new RegExp(`CREATE OR REPLACE FUNCTION public\\.${name}\\([\\s\\S]*?SECURITY DEFINER[\\s\\S]*?SET search_path = ''`, "u"),
+    );
+    assert.match(improvedFilterMigration, new RegExp(`GRANT EXECUTE ON FUNCTION public\\.${name}\\([\\s\\S]*?TO authenticated;`, "u"));
+  }
+  assert.equal((improvedFilterMigration.match(/private\.has_active_content_access\(\)/gu) ?? []).length, 2);
+  assert.doesNotMatch(improvedFilterMigration, /question_answer_keys|question_explanations/u);
+  assert.match(improvedFilterMigration, /p_exam_board IS NULL OR question\.exam_board = p_exam_board/u);
+  assert.match(improvedFilterMigration, /p_exam_year IS NULL OR question\.exam_year = p_exam_year/u);
+  assert.match(improvedFilterMigration, /preference\.user_id = current_user_id/u);
 });
 
 test("não concede leitura direta do gabarito ou de dados pessoais", () => {

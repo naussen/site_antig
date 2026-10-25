@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { requireContentAccess } from "@/lib/content-access";
 import type {
-  QuestionFilterDiscipline,
+  QuestionFilterOptions,
   QuestionListResult,
   QuestionStatsResult,
 } from "@/types/database";
@@ -15,6 +15,14 @@ export const metadata: Metadata = {
 const EMPTY_RESULT: QuestionListResult = {
   items: [],
   next_cursor: null,
+  total_count: 0,
+};
+
+const EMPTY_FILTERS: QuestionFilterOptions = {
+  disciplines: [],
+  topics: [],
+  boards: [],
+  years: [],
 };
 
 const EMPTY_STATS: QuestionStatsResult = {
@@ -33,22 +41,24 @@ const EMPTY_STATS: QuestionStatsResult = {
 
 export default async function QuestionsPage() {
   const { supabase } = await requireContentAccess();
-  const [questionsResponse, statsResponse, disciplinesResponse] = await Promise.all([
-    supabase.rpc("list_questions", {
+  const [questionsResponse, statsResponse, filtersResponse] = await Promise.all([
+    supabase.rpc("list_questions_filtered", {
       p_limit: 1,
       p_after_id: null,
       p_search: null,
       p_discipline_slug: null,
       p_topic_id: null,
+      p_exam_board: null,
+      p_exam_year: null,
       p_include_hidden: false,
     }),
     supabase.rpc("get_question_stats"),
-    supabase.rpc("list_question_disciplines"),
+    supabase.rpc("list_question_filters"),
   ]);
 
   const initialError = questionsResponse.error
     ? "Não foi possível carregar as questões. Atualize a página para tentar novamente."
-    : statsResponse.error || disciplinesResponse.error
+    : statsResponse.error || filtersResponse.error
       ? "Alguns dados auxiliares não foram carregados. A resolução de questões continua disponível."
       : null;
 
@@ -56,7 +66,7 @@ export default async function QuestionsPage() {
     <QuestionsClient
       initialResult={(questionsResponse.data as QuestionListResult | null) ?? EMPTY_RESULT}
       initialStats={(statsResponse.data as QuestionStatsResult | null) ?? EMPTY_STATS}
-      disciplines={(disciplinesResponse.data as QuestionFilterDiscipline[] | null) ?? []}
+      filterOptions={(filtersResponse.data as QuestionFilterOptions | null) ?? EMPTY_FILTERS}
       initialError={initialError}
     />
   );

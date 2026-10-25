@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — busca e filtros do PRO Questões
+
+- acrescentados filtros por tópico, banca e ano a partir do acervo publicado, com contagem de resultados e busca por enunciado, assunto, órgão, cargo e referência;
+- corrigida a aplicação dos filtros durante a navegação e protegida a interface contra respostas de busca fora de ordem;
+- ajustada a renderização de fórmulas e imagens internas nas questões, mantendo a leitura de respostas e preferências.
+
 ## Não publicado — plano de prontidão das questões PDF
 
 - definido plano de saneamento por ID para gabaritos, comentários, taxonomia, migration 037, imagens e lotes finais, separado da importação em produção;
