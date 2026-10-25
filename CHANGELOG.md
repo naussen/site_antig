@@ -1,6 +1,6 @@
 # Changelog
 
-## Não publicado — biblioteca sem tópicos vazios (25/10/2026)
+## Publicado — biblioteca sem tópicos vazios (25/10/2026)
 
 - a biblioteca de resumos exibe apenas tópicos com seções ativas; os tópicos criados para classificar questões permanecem ativos no banco.
 
