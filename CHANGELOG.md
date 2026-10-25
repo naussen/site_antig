@@ -1,5 +1,10 @@
 # Changelog
 
+## Aplicado no banco — revisão editorial das questões (25/10/2026)
+
+- auditadas 1.349 questões publicadas e registradas decisões por ID para 47 correções taxonômicas e 48 retenções editoriais sem perda de histórico;
+- conciliado o histórico remoto das migrations 037/038, com criação dos 67 tópicos que faltavam na 037;
+
 ## Publicado — busca e filtros do PRO Questões (25/10/2026)
 
 - acrescentados filtros por tópico, banca e ano a partir do acervo publicado, com contagem de resultados e busca por enunciado, assunto, órgão, cargo e referência;

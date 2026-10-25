@@ -1,0 +1,722 @@
+{
+  "reviewed_at": "2026-10-25",
+  "published_snapshot_count": 1349,
+  "snapshot_sha256": "11fa64cf7e32d11d98ba960f3a95e21a93ebbc644f5ba7757881c40db596bf5e",
+  "source_decisions_sha256": "63f1f373735ce1e1f602f54b35e155afb3976578d697afbbf59da7472a158901",
+  "reclassifications": [
+    {
+      "external_id": "pdf:agente_administrativo:028",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "matematica",
+      "reason": "razão, crescimento e trigonometria"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:029",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "matematica",
+      "reason": "razão, crescimento e trigonometria"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:030",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "matematica",
+      "reason": "razão, crescimento e trigonometria"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:055",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "raciocinio-logico",
+      "reason": "equivalência de proposições"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:059",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "matematica",
+      "reason": "contagem e conjuntos"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:060",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "matematica",
+      "reason": "contagem e conjuntos"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:116",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "matematica",
+      "reason": "porcentagem de população"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:071",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "direito-ambiental",
+      "to_topic": "codigo-florestal-lei-12651",
+      "reason": "reserva legal, CAR e APP"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:072",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "direito-ambiental",
+      "to_topic": "codigo-florestal-lei-12651",
+      "reason": "reserva legal, CAR e APP"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:075",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "direito-ambiental",
+      "to_topic": "codigo-florestal-lei-12651",
+      "reason": "reserva legal, CAR e APP"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:087",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "direito-ambiental",
+      "to_topic": "crimes-ambientais-lei-9605",
+      "reason": "Lei nº 9.605/1998"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:090",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "direito-ambiental",
+      "to_topic": "licenciamento-ambiental-e-responsabilidade-ambiental",
+      "reason": "competência para licenciamento"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:093",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "direito-ambiental",
+      "to_topic": "sistema-nacional-de-unidades-de-conservacao-snuc",
+      "reason": "gestão e zona de amortecimento de UCs"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:094",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "direito-ambiental",
+      "to_topic": "sistema-nacional-de-unidades-de-conservacao-snuc",
+      "reason": "gestão e zona de amortecimento de UCs"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:011",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "raciocinio-logico",
+      "reason": "sequência e ordenação lógica"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:013",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "raciocinio-logico",
+      "reason": "sequência e ordenação lógica"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:032",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "direito-administrativo",
+      "to_topic": "lei-de-acesso-a-informacao-lai-lei-12527",
+      "reason": "Lei de Acesso à Informação"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:037",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "administracao-geral",
+      "to_topic": "teorias-da-administracao-e-das-organizacoes",
+      "reason": "teoria burocrática e sistemas"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:038",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "administracao-geral",
+      "to_topic": "teorias-da-administracao-e-das-organizacoes",
+      "reason": "teoria burocrática e sistemas"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:040",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "administracao-geral",
+      "to_topic": "organizacao",
+      "reason": "estrutura organizacional"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:041",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "administracao-geral",
+      "to_topic": "gestao-de-pessoas-e-desenvolvimento-organizacional",
+      "reason": "recursos humanos"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:042",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "administracao-geral",
+      "to_topic": "gestao-do-desempenho",
+      "reason": "avaliação de desempenho"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:043",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "administracao-geral",
+      "to_topic": "gestao-da-qualidade",
+      "reason": "qualidade e PDCA"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:044",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "administracao-geral",
+      "to_topic": "gestao-da-qualidade",
+      "reason": "qualidade e PDCA"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:045",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "administracao-geral",
+      "to_topic": "gestao-da-qualidade",
+      "reason": "qualidade e PDCA"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:046",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "direito-administrativo",
+      "to_topic": "disposicoes-gerais",
+      "reason": "princípios e conceito de administração pública"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:047",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "direito-administrativo",
+      "to_topic": "disposicoes-gerais",
+      "reason": "princípios e conceito de administração pública"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:048",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "administracao-geral",
+      "to_topic": "gestao-por-processos",
+      "reason": "mapeamento e gestão de processos"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:049",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "administracao-geral",
+      "to_topic": "gestao-por-processos",
+      "reason": "mapeamento e gestão de processos"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:050",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "administracao-geral",
+      "to_topic": "gestao-por-processos",
+      "reason": "mapeamento e gestão de processos"
+    },
+    {
+      "external_id": "pdf:cargo30:054",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "portugues",
+      "to_topic": "redacao-oficial",
+      "reason": "assunto de origem específico: Redação Oficial"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:044",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "direito-administrativo",
+      "to_topic": "regime-juridico-dos-servidores-lei-8112",
+      "reason": "regime de servidores federais"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:047",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "direito-administrativo",
+      "to_topic": "lei-de-acesso-a-informacao-lai-lei-12527",
+      "reason": "Lei de Acesso à Informação"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:027",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "matematica",
+      "reason": "modelagem e sequência numérica"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:028",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "matematica",
+      "reason": "modelagem e sequência numérica"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:030",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "matematica",
+      "reason": "modelagem e sequência numérica"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:031",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "matematica",
+      "reason": "modelagem e sequência numérica"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:012",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "portugues",
+      "to_topic": "compreensao-e-interpretacao-de-textos",
+      "reason": "assunto de origem específico: Compreensão e Interpretação de Textos"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:013",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "portugues",
+      "to_topic": "compreensao-e-interpretacao-de-textos",
+      "reason": "assunto de origem específico: Compreensão e Interpretação de Textos"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:018",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "portugues",
+      "to_topic": "semantica-e-significacao-das-palavras",
+      "reason": "assunto de origem específico: Significação das Palavras"
+    },
+    {
+      "external_id": "pdf:prova_conhec_basicos_tec_federal_control_exter_tec_adm:020",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "to_discipline": "portugues",
+      "to_topic": "semantica-e-significacao-das-palavras",
+      "reason": "assunto de origem específico: Significação das Palavras"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:034",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "matematica",
+      "reason": "aritmética e combinatória"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:036",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "matematica",
+      "reason": "aritmética e combinatória"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:038",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "raciocinio-logico",
+      "reason": "dedução e negação de proposição"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:040",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "raciocinio-logico",
+      "reason": "dedução e negação de proposição"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:011",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "raciocinio-logico",
+      "reason": "sequência e ordenação lógica"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:013",
+      "from_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "from_topic": "estatistica",
+      "to_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+      "to_topic": "raciocinio-logico",
+      "reason": "sequência e ordenação lógica"
+    }
+  ],
+  "holds": [
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:067",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:073",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:077",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:079",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:082",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:083",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:084",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:085",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:086",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:088",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:089",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:098",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:099",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:100",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:104",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:106",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:107",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:109",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:110",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:111",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:112",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:113",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:analista_ambiental_conhec_especi:115",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "A classificar",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:034",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:035",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:036",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:042",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Legislação",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:043",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Legislação",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:conheci_basicos_superior:050",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Legislação",
+      "reason": "sem correspondência segura com tópico ativo"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:041",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:042",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:043",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:044",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:045",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:046",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:047",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:048",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:049",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:050",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:051",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:053",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:054",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:055",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:056",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:057",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:058",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:059",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:060",
+      "from_discipline": "portugues",
+      "from_topic": "outros-topicos",
+      "source_subject": "Conhecimentos Específicos",
+      "reason": "Enfermagem sem disciplina e tópico ativos"
+    }
+  ]
+}
