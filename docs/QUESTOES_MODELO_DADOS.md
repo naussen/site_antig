@@ -1,5 +1,7 @@
 # Modelo de dados de questões
 
+> Documento histórico do primeiro lote QPYGEM. A regra vigente para **todas as novas questões**, inclusive pendências, gabaritos anulados/alterados, comentários e publicação, é [REGRA_ELABORACAO_QUESTOES_PROQUESTOES.md](REGRA_ELABORACAO_QUESTOES_PROQUESTOES.md). Os números e o fluxo `prepare` abaixo descrevem a amostra de 28/09/2026, não o acervo atual.
+
 ## Diagnóstico da fonte revisada
 
 Fonte admitida: somente `*_ATUALIZADO.json`. Na versão de 28/09/2026, o arquivo de Direito Administrativo possui 802 questões (607 `VALIDA` e 195 `ADAPTADA`). Para o lote de 100 questões, a auditoria encontrou 438 candidatas importáveis nos tópicos já mapeados, após excluir as 12 publicadas anteriormente, e rejeitou 94 candidatas estruturalmente incompletas. O campo `id_alfanumerico` é a identidade externa estável.

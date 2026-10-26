@@ -1,5 +1,10 @@
 # Changelog
 
+## Documentação — regra para novas questões (26/10/2026)
+
+- definida a ficha editorial mestre com evidências, comentários, pendências e histórico de gabarito, separada do lote publicável `pro-questions/v1`;
+- documentados o esquema relacional vigente, o formato JSON, os gates de aprovação, o tratamento de anulação/alteração e a verificação nos filtros do site.
+
 ## Aplicado no banco — fechamento de 13 questões retidas (25/10/2026)
 
 - conferidos gabaritos e comentários de 13 questões técnicas contra fontes oficiais, criadas as disciplinas Engenharia Florestal e Enfermagem e nove tópicos específicos;
