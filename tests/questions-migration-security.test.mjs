@@ -15,6 +15,14 @@ const improvedFilterMigrationUrl = new URL(
   "../supabase/migrations/038_improve_question_search_filters.sql",
   import.meta.url,
 );
+const reviewedQuestionsMigrationUrl = new URL(
+  "../supabase/migrations/040_review_retained_questions.sql",
+  import.meta.url,
+);
+const taxonomyReviewUrl = new URL(
+  "../content/questions/taxonomy-review-20261025.json",
+  import.meta.url,
+);
 
 const [migration, filterMigration, improvedFilterMigration, databaseTypes] = await Promise.all([
   readFile(migrationUrl, "utf8"),
@@ -22,6 +30,25 @@ const [migration, filterMigration, improvedFilterMigration, databaseTypes] = awa
   readFile(improvedFilterMigrationUrl, "utf8"),
   readFile(databaseTypesUrl, "utf8"),
 ]);
+const [reviewedQuestionsMigration, taxonomyReview] = await Promise.all([
+  readFile(reviewedQuestionsMigrationUrl, "utf8"),
+  readFile(taxonomyReviewUrl, "utf8").then(JSON.parse),
+]);
+
+test("republicação auditada usa somente IDs retidos e preserva acesso da busca", () => {
+  const approvedIds = [...reviewedQuestionsMigration.matchAll(/^  \('(pdf:[^']+)', '[^']+', '[^']+'\)[,;]$/gmu)]
+    .map((match) => match[1]);
+  const heldIds = new Set(taxonomyReview.holds.map((item) => item.external_id));
+
+  assert.equal(approvedIds.length, 13);
+  assert.equal(new Set(approvedIds).size, 13);
+  for (const id of approvedIds) assert.ok(heldIds.has(id), `${id} não estava retida`);
+  assert.match(reviewedQuestionsMigration, /q\.status='archived' AND q\.source_metadata->>'answer_status'='definitivo'/u);
+  assert.match(reviewedQuestionsMigration, /private\.has_active_content_access\(\)/u);
+  assert.match(reviewedQuestionsMigration, /SECURITY DEFINER\s+SET search_path = ''/u);
+  assert.match(reviewedQuestionsMigration, /'is_navigable', topic\.archived_at IS NULL AND EXISTS \([\s\S]*?public\.sections/u);
+  assert.match(reviewedQuestionsMigration, /GRANT EXECUTE ON FUNCTION public\.list_questions_filtered\([\s\S]*?TO authenticated;/u);
+});
 
 const moduleTables = [
   "disciplines",

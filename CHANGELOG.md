@@ -1,5 +1,12 @@
 # Changelog
 
+## Aplicado no banco — fechamento de 13 questões retidas (25/10/2026)
+
+- conferidos gabaritos e comentários de 13 questões técnicas contra fontes oficiais, criadas as disciplinas Engenharia Florestal e Enfermagem e nove tópicos específicos;
+- publicadas as 13 pela migration 040, com total de 1.314 publicadas e 35 ainda arquivadas; os novos tópicos participam dos filtros sem apontar para resumos vazios;
+- confirmadas em produção as duas imagens 079/054, já existentes e acessíveis; corrigido o registro anterior que as tratava como pendentes;
+- identificados erros materiais nos comentários ambientais 088, 089 e 112, mantidos arquivados.
+
 ## Revisão editorial — 48 questões retidas (25/10/2026)
 
 - Registrada análise individual dos 48 itens arquivados pela migration 039, com classificação proposta e bloqueio concreto para republicação;
