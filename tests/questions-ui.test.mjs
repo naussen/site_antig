@@ -30,32 +30,43 @@ test("rota de questões exige acesso ao conteúdo e carrega uma questão", async
 });
 
 test("interface usa RPCs seguras e não consulta gabarito diretamente", async () => {
-  const source = await read("src/app/dashboard/questoes/questions-client.tsx");
+  const [source, card] = await Promise.all([
+    read("src/app/dashboard/questoes/questions-client.tsx"),
+    read("src/app/dashboard/questoes/question-card.tsx"),
+  ]);
 
   assert.match(source, /rpc\("list_questions_filtered"/);
-  assert.match(source, /"submit_question_answer"/);
-  assert.match(source, /rpc\("get_question_answer"/);
-  assert.match(source, /Ver resposta/);
-  assert.match(source, /Gabarito — sem resposta registrada/);
-  assert.match(source, /!answer && !revealedAnswer/);
-  assert.match(source, /"set_question_preference"/);
+  assert.match(card, /"submit_question_answer"/);
+  assert.match(card, /rpc\("get_question_answer"/);
+  assert.match(card, /Ver resposta/);
+  assert.match(card, /Gabarito — sem resposta registrada/);
+  assert.match(card, /!answer && !revealedAnswer/);
+  assert.match(card, /"set_question_preference"/);
   assert.match(source, /"get_question_stats"/);
-  assert.doesNotMatch(source, /from\(["']question_answer_keys["']\)/);
-  assert.doesNotMatch(source, /dangerouslySetInnerHTML|rehype-raw|innerHTML/);
+  assert.doesNotMatch(source + card, /from\(["']question_answer_keys["']\)/);
+  assert.doesNotMatch(source + card, /dangerouslySetInnerHTML|rehype-raw|innerHTML/);
   assert.match(source, /pro-questions-shell/);
   assert.match(source, /max-w-6xl xl:max-w-\[1500px\]/);
   assert.match(source, /px-3 py-6[\s\S]*sm:py-8[\s\S]*lg:py-8/);
   assert.doesNotMatch(source, /pt-20/);
-  assert.match(source, /question-option-markdown/);
-  assert.match(source, /question\.question_type === "true_false"/);
-  assert.match(source, /aria-label="Questão anterior"/);
-  assert.match(source, /aria-label="Próxima questão"/);
-  assert.match(source, /setQuestionHistory\(\(history\) => \[\.\.\.history, question\]\)/);
-  assert.match(source, /preserveCurrentOnEmpty:\s*true/);
+  assert.match(card, /question-option-markdown/);
+  assert.match(card, /question\.question_type === "true_false"/);
+  assert.match(card, /name=\{`answer-\$\{question\.id\}`\}/);
+  assert.match(source, /"Questão anterior"/);
+  assert.match(source, /"Próxima questão"/);
+  assert.match(source, /setHistory\(\(current\) => \[\.\.\.current, \{ result, start: pageStart \}\]\)/);
+  assert.match(source, /p_limit:\s*pageSize/);
+  assert.match(source, /pageSize: 5, reset: true/);
+  assert.match(source, /pageStart \+ index \+ 1/);
+  assert.match(source, /Questões \$\{pageStart \+ 1\}–\$\{pageStart \+ result\.items\.length\} de \$\{result\.total_count\}/);
+  assert.match(source, /motion-safe:animate-\[question-enter-next/);
+  assert.match(source, /aria-pressed=\{mode === 5\}/);
+  assert.match(source, /sm:grid sm:grid-cols-2/);
+  assert.match(card, /Expandir texto|Recolher texto/);
   assert.match(source, /p_topic_id:\s*filters\.topic/);
   assert.match(source, /p_exam_board:\s*filters\.board/);
   assert.match(source, /p_exam_year:\s*filters\.year/);
-  assert.match(source, /replaceFilters:\s*true/);
+  assert.match(source, /reset: true/);
 });
 
 test("área do aluno e landing expõem PROQuestões", async () => {

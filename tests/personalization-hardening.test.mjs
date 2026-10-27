@@ -68,7 +68,7 @@ test("navegação e ações principais mantêm alvo tátil no mobile", async () 
     read("src/components/navigation/dashboard-back-link.tsx"),
     read("src/components/navigation/dashboard-navigation.tsx"),
     read("src/components/theme-switcher.tsx"),
-    read("src/app/dashboard/questoes/questions-client.tsx"),
+    read("src/app/dashboard/questoes/question-card.tsx"),
     read("src/components/landing/landing-page-content.tsx"),
     read("src/app/(institutional)/layout.tsx"),
     read("src/app/(institutional)/suporte/page.tsx"),

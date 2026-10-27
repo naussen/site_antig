@@ -1,5 +1,11 @@
 # Changelog
 
+## Interface — modos de leitura no PRO Questões (27/10/2026)
+
+- cabeçalho compacto e filtros recolhíveis no celular aproximam as questões do topo;
+- textos-base longos podem ser recolhidos sem ocultar título ou fonte;
+- alternância entre uma questão com transição de carrossel e cinco questões resolvíveis por página, com posição no conjunto filtrado e navegação anterior/próxima.
+
 ## Interface — gabarito sob demanda no PRO Questões (27/10/2026)
 
 - adicionado **Ver resposta** antes do envio; a ação mostra alternativa correta e comentário sem criar tentativa ou alterar estatísticas;

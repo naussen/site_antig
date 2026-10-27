@@ -449,6 +449,16 @@
   position: relative;
 }
 
+@keyframes question-enter-next {
+  from { opacity: 0.55; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes question-enter-previous {
+  from { opacity: 0.55; transform: translateX(-24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
 .question-card::before {
   position: absolute;
   z-index: 1;
