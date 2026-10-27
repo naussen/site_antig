@@ -39,7 +39,11 @@ test("interface usa RPCs seguras e não consulta gabarito diretamente", async ()
   assert.match(card, /"submit_question_answer"/);
   assert.match(card, /rpc\("get_question_answer"/);
   assert.match(card, /Ver resposta/);
-  assert.match(card, /Gabarito — sem resposta registrada/);
+  assert.match(card, /aria-label="Fechar resposta"/);
+  assert.match(card, /setRevealedAnswer\(null\)/);
+  assert.match(card, /Alternativa correta: \{revealedOption\.label\}/);
+  assert.match(card, /const correct = answer\?\.correct_option_id === option\.id/);
+  assert.doesNotMatch(card, /Gabarito — sem resposta registrada/);
   assert.match(card, /!answer && !revealedAnswer/);
   assert.match(card, /"set_question_preference"/);
   assert.match(source, /"get_question_stats"/);

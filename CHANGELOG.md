@@ -1,5 +1,10 @@
 # Changelog
 
+## Interface — resposta recolhível no PRO Questões (27/10/2026)
+
+- o painel aberto por **Ver resposta** agora pode ser fechado, permitindo selecionar e responder a questão depois;
+- a consulta do gabarito mostra a letra correta no painel, sem marcar alternativas como resolvidas nem exibir a mensagem anterior de resposta não registrada.
+
 ## Interface — modos de leitura no PRO Questões (27/10/2026)
 
 - cabeçalho compacto e filtros recolhíveis no celular aproximam as questões do topo;

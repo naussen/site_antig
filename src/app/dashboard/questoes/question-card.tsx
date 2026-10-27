@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Bookmark, CheckCircle2, ChevronDown, ChevronUp, EyeOff, Loader2, XCircle } from "lucide-react";
+import { Bookmark, CheckCircle2, ChevronDown, ChevronUp, EyeOff, Loader2, X, XCircle } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
@@ -86,6 +86,7 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const explanationMarkdown = answer?.explanation_markdown ?? revealedAnswer?.explanation_markdown;
+  const revealedOption = revealedAnswer ? question.options.find((option) => option.id === revealedAnswer.correct_option_id) : null;
 
   const submitAnswer = async () => {
     if (!selectedOptionId || answer || revealedAnswer || loading) return;
@@ -173,7 +174,7 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
         <legend className="sr-only">Alternativas da questão {position}</legend>
         {question.options.map((option) => {
           const selected = selectedOptionId === option.id;
-          const correct = (answer?.correct_option_id ?? revealedAnswer?.correct_option_id) === option.id;
+          const correct = answer?.correct_option_id === option.id;
           const wrongSelection = Boolean(answer) && selected && !correct;
           return <label key={option.id} className={`question-option flex min-h-11 cursor-pointer items-start gap-2.5 rounded-xl border px-3 py-2.5 transition sm:px-3.5 ${correct ? "border-emerald-500 bg-emerald-500/10" : wrongSelection ? "border-red-500 bg-red-500/10" : selected ? "border-[var(--accent)] bg-[var(--accent-soft)]" : "border-[var(--border)] hover:border-[var(--border-strong)]"}`}>
             <input type="radio" name={`answer-${question.id}`} value={option.id} checked={selected} onChange={() => setSelectedOptionId(option.id)} className="mt-1 accent-[var(--accent)]" />
@@ -186,16 +187,20 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
       </fieldset>
 
       {(answer || revealedAnswer) && <section className="mx-3 mb-3 rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] p-4 sm:mx-5 sm:mb-5" aria-labelledby={`question-explanation-${question.id}`}>
-        <div className="flex items-center gap-2">
-          {revealedAnswer || answer?.is_correct ? <CheckCircle2 className="text-emerald-500" size={21} /> : <XCircle className="text-red-500" size={21} />}
-          <h2 id={`question-explanation-${question.id}`} className="font-bold text-[var(--text-primary)]">{revealedAnswer ? "Gabarito — sem resposta registrada" : answer?.is_correct ? "Resposta correta" : "Resposta incorreta"}</h2>
+        <div className="flex items-center justify-between gap-3">
+          <div className="flex items-center gap-2">
+            {answer && (answer.is_correct ? <CheckCircle2 className="text-emerald-500" size={21} /> : <XCircle className="text-red-500" size={21} />)}
+            <h2 id={`question-explanation-${question.id}`} className="font-bold text-[var(--text-primary)]">{revealedAnswer ? "Resposta" : answer?.is_correct ? "Resposta correta" : "Resposta incorreta"}</h2>
+          </div>
+          {revealedAnswer && <button type="button" onClick={() => setRevealedAnswer(null)} aria-label="Fechar resposta" className="inline-flex min-h-10 items-center gap-1 rounded-lg border border-[var(--border)] px-3 text-sm font-semibold text-[var(--text-secondary)] hover:border-[var(--accent)] hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-[var(--accent)]"><X size={16} /> Fechar</button>}
         </div>
+        {revealedOption && <p className="mt-3 text-sm font-semibold text-[var(--text-primary)]">Alternativa correta: {revealedOption.label}</p>}
         <p className="mt-4 text-xs font-semibold text-[var(--accent)]">Comentário didático</p>
         <div className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">{explanationMarkdown ? <QuestionMarkdown>{explanationMarkdown}</QuestionMarkdown> : <p>O comentário editorial desta questão ainda não foi publicado.</p>}</div>
       </section>}
 
       <footer className="flex flex-col gap-3 border-t border-[var(--border)] bg-[var(--bg-primary)] p-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
-        <span className="text-xs text-[var(--text-muted)]">{revealedAnswer ? "Gabarito exibido sem alterar seu resultado." : "Seu resultado é atualizado após cada resposta."}</span>
+        <span className="text-xs text-[var(--text-muted)]">Seu resultado é atualizado após cada resposta.</span>
         <div className="flex flex-wrap gap-2">
           {!answer && !revealedAnswer && <button type="button" disabled={loading} onClick={() => void revealAnswer()} className="inline-flex min-h-11 flex-1 items-center justify-center rounded-xl border border-[var(--border)] px-3 text-sm font-semibold text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)] disabled:opacity-50 sm:flex-none">Ver resposta</button>}
           {!answer && !revealedAnswer && <button type="button" disabled={!selectedOptionId || loading} onClick={() => void submitAnswer()} className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-[var(--accent)] px-5 text-sm font-bold text-white transition hover:-translate-y-0.5 disabled:opacity-50 sm:flex-none">{loading && <Loader2 size={17} className="animate-spin" />} Responder</button>}
