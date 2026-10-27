@@ -1,5 +1,10 @@
 # Changelog
 
+## Interface — seções de leitura no PRO Questões (27/10/2026)
+
+- o enunciado passou a exibir separadamente título do texto, texto-base, fonte, comando e assertiva quando identificáveis no Markdown, sem alterar questões importadas;
+- a regra editorial descreve cabeçalhos opcionais para estruturar novas questões no contrato vigente.
+
 ## Documentação — regra para novas questões (26/10/2026)
 
 - definida a ficha editorial mestre com evidências, comentários, pendências e histórico de gabarito, separada do lote publicável `pro-questions/v1`;

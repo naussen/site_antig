@@ -125,6 +125,34 @@ Para `definitivo_alterado`, o comentário declara a alteração e o fundamento o
 
 ## 5. Taxonomia, mídia e formatação
 
+### Estrutura visual do enunciado
+
+Para questões novas, organize `statement_markdown` com parágrafos separados por linha em branco. Quando houver texto de apoio, use cabeçalhos Markdown simples, nesta ordem: `## Texto-base`, o texto fiel à fonte; `## Fonte`, a atribuição tal como comprovada na prova (autor, obra, artigo, revista, jornal, URL e indicação de adaptação, se existirem); `## Enunciado`, a chamada/comando; e, para C/E, `## Assertiva`, o item a julgar. Se o texto tiver nome próprio, como `Texto 2` ou `Texto CB1A1-I`, coloque-o em linha isolada antes do corpo do texto. Não invente autor ou publicação quando a fonte não os trouxer.
+
+Exemplo de `statement_markdown` (o conteúdo é apenas ilustrativo):
+
+```markdown
+Texto 2
+
+## Texto-base
+
+Trecho fiel ao caderno de prova.
+
+## Fonte
+
+Autora Exemplo. Obra Exemplo, 2020 (com adaptações).
+
+## Enunciado
+
+Com base no texto, julgue o item abaixo.
+
+## Assertiva
+
+O item a ser julgado aparece aqui.
+```
+
+Em múltipla escolha, não use `## Assertiva`: as alternativas A–E continuam no array `options`, sem duplicação no enunciado. Em questão sem texto de apoio, omita `## Texto-base`, `## Fonte` e título. A formatação não altera o contrato `pro-questions/v1`, o gabarito, os hashes ou os registros já importados. Confira o texto exibido após validar/importar, sobretudo quebras de parágrafo de PDF e fontes bibliográficas.
+
 - Consultar o catálogo real do site. Disciplina ativa, tópico ativo e relação tópico–disciplina compatível são pré-condições. `subject` é rótulo curto do assunto, coerente com o tópico primário; guardar o assunto literal da fonte separadamente em `source_metadata.source_subject` quando divergir. Relações secundárias só quando semanticamente justificadas. Não criar tópicos artificiais apenas para passar o validador.
 - Usar Markdown UTF-8 sem HTML bruto, scripts, `data:`, `javascript:` ou Base64. Preservar a redação original do enunciado; identificar claramente qualquer adaptação. Campos textuais não admitem byte nulo nem U+FFFD. Fórmulas devem seguir o renderizador atual.
 - Imagens devem estar no diretório público servido pelo site e usar URL interna no padrão efetivamente aceito pela interface, hoje `/resumos/questions/calculations/pdf_<identificador>.png`. Conferir arquivo, bytes, dimensões, legibilidade e HTTP 200 no site antes de aprovar. Na ficha, `assets` registra URL, arquivo, SHA-256, origem e estado de entrega. Nunca usar caminho `C:\...`/`file://` no enunciado ou comentário.

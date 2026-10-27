@@ -22,6 +22,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import { ProQuestionsLogo } from "@/components/brand/pro-questions-logo";
 import { createClient } from "@/lib/supabase/client";
+import { parseStatementSections } from "@/lib/questions/statement-sections.mjs";
 import type {
   QuestionAnswerResult,
   QuestionFilterOptions,
@@ -78,6 +79,34 @@ function QuestionMarkdown({
       >
         {children}
       </ReactMarkdown>
+    </div>
+  );
+}
+
+function QuestionStatement({ markdown, questionType }: { markdown: string; questionType: string }) {
+  const sections = parseStatementSections(markdown, questionType);
+  return (
+    <div className="mx-auto max-w-4xl space-y-4">
+      {sections.map((section, index) => {
+        if (section.kind === "title") {
+          return <h3 key={index} className="text-sm font-semibold tracking-wide text-[var(--accent)]">{section.content}</h3>;
+        }
+        if (section.kind === "source") {
+          return <div key={index} aria-label="Fonte do texto" className="border-l-2 border-[var(--border-strong)] pl-3 text-sm text-[var(--text-muted)]"><QuestionMarkdown>{section.content}</QuestionMarkdown></div>;
+        }
+        const label = section.kind === "base" ? "Texto-base" : section.kind === "assertion" ? "Assertiva" : "Enunciado";
+        const style = section.kind === "base"
+          ? "rounded-r-lg border-l-2 border-[var(--border-strong)] bg-[var(--bg-primary)] px-4 py-3"
+          : section.kind === "assertion"
+            ? "border-l-2 border-[var(--accent)] bg-[var(--accent-soft)] px-4 py-3"
+            : "border-t border-[var(--border)] pt-4";
+        return (
+          <section key={index} aria-label={label} className={style}>
+            <p className="mb-2 text-xs font-semibold text-[var(--text-muted)]">{label}</p>
+            <QuestionMarkdown>{section.content}</QuestionMarkdown>
+          </section>
+        );
+      })}
     </div>
   );
 }
@@ -485,7 +514,7 @@ export function QuestionsClient({
               </div>
 
               <div className="mt-5 text-base text-[var(--text-primary)] sm:text-[1.05rem]">
-                <QuestionMarkdown>{question.statement_markdown}</QuestionMarkdown>
+                <QuestionStatement markdown={question.statement_markdown} questionType={question.question_type} />
               </div>
               {question.topics.length > 0 && (
                 <div className="mt-4 flex flex-wrap gap-2 text-xs text-[var(--text-muted)]">
