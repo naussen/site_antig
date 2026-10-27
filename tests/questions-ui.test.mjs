@@ -34,6 +34,10 @@ test("interface usa RPCs seguras e não consulta gabarito diretamente", async ()
 
   assert.match(source, /rpc\("list_questions_filtered"/);
   assert.match(source, /"submit_question_answer"/);
+  assert.match(source, /rpc\("get_question_answer"/);
+  assert.match(source, /Ver resposta/);
+  assert.match(source, /Gabarito — sem resposta registrada/);
+  assert.match(source, /!answer && !revealedAnswer/);
   assert.match(source, /"set_question_preference"/);
   assert.match(source, /"get_question_stats"/);
   assert.doesNotMatch(source, /from\(["']question_answer_keys["']\)/);

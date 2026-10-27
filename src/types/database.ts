@@ -542,6 +542,11 @@ export interface QuestionAnswerResult {
   replayed: boolean;
 }
 
+export interface QuestionRevealResult {
+  correct_option_id: string;
+  explanation_markdown: string;
+}
+
 export interface QuestionDisciplineStats {
   slug: string;
   name: string;

@@ -28,6 +28,7 @@ import type {
   QuestionFilterOptions,
   QuestionListItem,
   QuestionListResult,
+  QuestionRevealResult,
   QuestionStatsResult,
 } from "@/types/database";
 
@@ -131,6 +132,7 @@ export function QuestionsClient({
   const requestId = useRef(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [answer, setAnswer] = useState<QuestionAnswerResult | null>(null);
+  const [revealedAnswer, setRevealedAnswer] = useState<QuestionRevealResult | null>(null);
   const [markedForReview, setMarkedForReview] = useState(
     initialResult.items[0]?.preference?.marked_for_review ?? false,
   );
@@ -143,6 +145,7 @@ export function QuestionsClient({
     setQuestion(nextQuestion);
     setSelectedOptionId(null);
     setAnswer(null);
+    setRevealedAnswer(null);
     setMarkedForReview(nextQuestion.preference?.marked_for_review ?? false);
     setReachedEnd(!hasMore);
   };
@@ -200,6 +203,7 @@ export function QuestionsClient({
         setQuestion(null);
         setSelectedOptionId(null);
         setAnswer(null);
+        setRevealedAnswer(null);
         setMarkedForReview(false);
         setReachedEnd(false);
       }
@@ -222,7 +226,7 @@ export function QuestionsClient({
   };
 
   const submitAnswer = async () => {
-    if (!question || !selectedOptionId || answer) return;
+    if (!question || !selectedOptionId || answer || revealedAnswer) return;
     setLoading(true);
     setError(null);
 
@@ -243,6 +247,26 @@ export function QuestionsClient({
       await refreshStats();
     } catch {
       setError("Não foi possível registrar sua resposta. Tente novamente.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const revealAnswer = async () => {
+    if (!question || answer || revealedAnswer) return;
+    setLoading(true);
+    setError(null);
+
+    try {
+      const supabase = createClient();
+      const { data, error: requestError } = await supabase.rpc("get_question_answer", {
+        p_question_id: question.id,
+      });
+      if (requestError) throw requestError;
+      setSelectedOptionId(null);
+      setRevealedAnswer(data as QuestionRevealResult);
+    } catch {
+      setError("Não foi possível mostrar o gabarito. Tente novamente.");
     } finally {
       setLoading(false);
     }
@@ -318,6 +342,7 @@ export function QuestionsClient({
   };
 
   const latestAccuracy = accuracy(stats.latest_correct, stats.answered_questions);
+  const explanationMarkdown = answer?.explanation_markdown ?? revealedAnswer?.explanation_markdown;
 
   return (
     <main className="pro-questions-shell min-h-screen bg-[var(--bg-primary)] px-3 py-6 sm:px-6 sm:py-8 md:px-10 lg:py-8">
@@ -527,11 +552,11 @@ export function QuestionsClient({
               )}
             </div>
 
-            <fieldset className={`${question.question_type === "true_false" ? "grid gap-2 sm:grid-cols-2" : "space-y-2"} p-3 sm:p-5`} disabled={Boolean(answer) || loading}>
+            <fieldset className={`${question.question_type === "true_false" ? "grid gap-2 sm:grid-cols-2" : "space-y-2"} p-3 sm:p-5`} disabled={Boolean(answer || revealedAnswer) || loading}>
               <legend className="sr-only">Alternativas</legend>
               {question.options.map((option) => {
                 const selected = selectedOptionId === option.id;
-                const correct = answer?.correct_option_id === option.id;
+                const correct = (answer?.correct_option_id ?? revealedAnswer?.correct_option_id) === option.id;
                 const wrongSelection = Boolean(answer) && selected && !correct;
 
                 return (
@@ -560,18 +585,18 @@ export function QuestionsClient({
               })}
             </fieldset>
 
-            {answer && (
+            {(answer || revealedAnswer) && (
               <section className="mx-3 mb-3 rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] p-4 sm:mx-5 sm:mb-5" aria-labelledby="question-explanation-title">
                 <div className="flex items-center gap-2">
-                  {answer.is_correct ? <CheckCircle2 className="text-emerald-500" size={21} /> : <XCircle className="text-red-500" size={21} />}
+                  {revealedAnswer || answer?.is_correct ? <CheckCircle2 className="text-emerald-500" size={21} /> : <XCircle className="text-red-500" size={21} />}
                   <h2 id="question-explanation-title" className="font-black text-[var(--text-primary)]">
-                    {answer.is_correct ? "Resposta correta" : "Resposta incorreta"}
+                    {revealedAnswer ? "Gabarito — sem resposta registrada" : answer?.is_correct ? "Resposta correta" : "Resposta incorreta"}
                   </h2>
                 </div>
                 <p className="mt-4 text-xs font-black uppercase tracking-[0.16em] text-[var(--accent)]">Comentário didático</p>
                 <div className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
-                  {answer.explanation_markdown ? (
-                    <QuestionMarkdown>{answer.explanation_markdown}</QuestionMarkdown>
+                  {explanationMarkdown ? (
+                    <QuestionMarkdown>{explanationMarkdown}</QuestionMarkdown>
                   ) : (
                     <p>O comentário editorial desta questão ainda não foi publicado.</p>
                   )}
@@ -582,9 +607,9 @@ export function QuestionsClient({
             <footer className="flex flex-col gap-3 border-t border-[var(--border)] bg-[var(--bg-primary)] p-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
               <span className="inline-flex items-center gap-2 text-xs text-[var(--text-muted)]">
                 <BarChart3 size={15} />
-                {reachedEnd ? "Você chegou ao fim das questões deste filtro." : "Seu resultado é atualizado após cada resposta."}
+                {revealedAnswer ? "Gabarito exibido sem alterar seu resultado." : reachedEnd ? "Você chegou ao fim das questões deste filtro." : "Seu resultado é atualizado após cada resposta."}
               </span>
-              <div className="flex w-full flex-wrap gap-2 sm:w-auto sm:flex-nowrap">
+              <div className="grid w-full grid-cols-2 gap-2 sm:flex sm:w-auto sm:flex-wrap">
                 <button
                   type="button"
                   disabled={questionHistory.length === 0 || loading}
@@ -594,7 +619,17 @@ export function QuestionsClient({
                 >
                   <ChevronLeft size={17} /> Anterior
                 </button>
-                {!answer && (
+                {!answer && !revealedAnswer && (
+                  <button
+                    type="button"
+                    disabled={loading}
+                    onClick={() => void revealAnswer()}
+                    className="inline-flex min-h-11 items-center justify-center rounded-xl border border-[var(--border)] px-3 text-sm font-semibold text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)] disabled:opacity-50"
+                  >
+                    Ver resposta
+                  </button>
+                )}
+                {!answer && !revealedAnswer && (
                   <button
                     type="button"
                     disabled={!selectedOptionId || loading}
@@ -610,7 +645,7 @@ export function QuestionsClient({
                   disabled={loading || reachedEnd}
                   onClick={() => void showNextQuestion()}
                   aria-label="Próxima questão"
-                  className={`inline-flex min-h-11 flex-1 items-center justify-center gap-1.5 rounded-xl px-3 text-sm font-bold transition disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none ${answer ? "bg-[var(--accent)] text-white hover:-translate-y-0.5" : "border border-[var(--border)] text-[var(--text-primary)] hover:border-[var(--accent)] hover:text-[var(--accent)]"}`}
+                  className={`inline-flex min-h-11 flex-1 items-center justify-center gap-1.5 rounded-xl px-3 text-sm font-bold transition disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none ${answer || revealedAnswer ? "bg-[var(--accent)] text-white hover:-translate-y-0.5" : "border border-[var(--border)] text-[var(--text-primary)] hover:border-[var(--accent)] hover:text-[var(--accent)]"}`}
                 >
                   Próxima <ChevronRight size={17} />
                 </button>

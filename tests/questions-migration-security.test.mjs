@@ -158,6 +158,17 @@ test("resposta é idempotente e calcula correção no servidor", () => {
   );
 });
 
+test("gabarito sob demanda exige acesso e não cria tentativa", async () => {
+  const reveal = await readFile(new URL("../supabase/migrations/041_reveal_question_answer.sql", import.meta.url), "utf8");
+  assert.match(reveal, /SECURITY DEFINER\s+SET search_path = ''/u);
+  assert.match(reveal, /auth\.uid\(\) IS NULL OR NOT private\.has_active_content_access\(\)/u);
+  assert.match(reveal, /question\.status = 'published'/u);
+  assert.match(reveal, /explanation\.status = 'published'/u);
+  assert.match(reveal, /REVOKE ALL ON FUNCTION public\.get_question_answer\(UUID\) FROM PUBLIC, anon, authenticated;/u);
+  assert.match(reveal, /GRANT EXECUTE ON FUNCTION public\.get_question_answer\(UUID\) TO authenticated;/u);
+  assert.doesNotMatch(reveal, /INSERT INTO public\.user_question_attempts|GRANT SELECT ON public\.question_answer_keys/iu);
+});
+
 test("metadados relacionam questões, tópicos e disciplinas por chaves", () => {
   assert.match(
     migration,

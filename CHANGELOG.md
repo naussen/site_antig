@@ -1,5 +1,10 @@
 # Changelog
 
+## Interface — gabarito sob demanda no PRO Questões (27/10/2026)
+
+- adicionado **Ver resposta** antes do envio; a ação mostra alternativa correta e comentário sem criar tentativa ou alterar estatísticas;
+- a RPC autenticada lê somente questões e comentários publicados após validar acesso ao conteúdo; o rodapé acomoda quatro ações em duas colunas no celular.
+
 ## Interface — seções de leitura no PRO Questões (27/10/2026)
 
 - o enunciado passou a exibir separadamente título do texto, texto-base, fonte, comando e assertiva quando identificáveis no Markdown, sem alterar questões importadas;
