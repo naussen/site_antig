@@ -34,7 +34,7 @@ SUBJECT_DISCIPLINES = {
     "direito previdenciario": "direito-previdenciario",
     "direito processual penal": "direito-processual-penal",
     "direito tributario": "direito-tributario",
-    "estatistica": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "estatistica": "estatistica",
     "etica": "etica-no-servico-publico",
     "etica e cidadania": "etica-no-servico-publico",
     "etica no setor publico": "etica-no-servico-publico",
@@ -48,11 +48,11 @@ SUBJECT_DISCIPLINES = {
     "lingua portuguesa": "portugues",
     "portugues": "portugues",
     "redacao oficial": "portugues",
-    "matematica": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
-    "matematica financeira": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
-    "raciocinio logico": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
-    "raciocinio logico e matematica": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
-    "raciocinio logico matematico": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+    "matematica": "matematica",
+    "matematica financeira": "matematica-financeira",
+    "raciocinio logico": "raciocinio-logico",
+    "raciocinio logico e matematica": "raciocinio-logico",
+    "raciocinio logico matematico": "raciocinio-logico",
     "nocoes de direito administrativo": "direito-administrativo",
     "nocoes de direito constitucional": "direito-constitucional",
     "nocoes de direito civil": "direito-civil",
@@ -94,7 +94,7 @@ FIXED_TOPIC_EVIDENCE = {
 
 # Specific terms only. Broad labels deliberately stay in the review queue.
 TOPIC_PATTERNS = {
-    "raciocinio-logico-matematica-estatistica-e-matematica-financeira": {
+    "raciocinio-logico": {
         "raciocinio-logico": r"\b(proposi[cç][aã]o|l[oó]gica sentencial|nega[cç][aã]o l[oó]gica|tabela.verdade|argumento l[oó]gico)\b",
     },
     "portugues": {

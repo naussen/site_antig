@@ -1,5 +1,18 @@
 # Changelog
 
+## Aplicado no banco — separação das disciplinas quantitativas (30/10/2026)
+
+- executada a separação definitiva da disciplina agrupada `raciocinio-logico-matematica-estatistica-e-matematica-financeira` em quatro disciplinas canônicas independentes no banco e no catálogo:
+  - Matemática (`matematica`): 39 questões publicadas;
+  - Raciocínio Lógico (`raciocinio-logico`): 20 questões publicadas;
+  - Estatística (`estatistica`): 10 questões publicadas;
+  - Matemática Financeira (`matematica-financeira`): 13 questões publicadas;
+- aplicada a migration `042_separate_quantitative_disciplines.sql` via Supabase CLI com verificação de pré-condições, compatibilidade relacional nos tópicos e arquivamento seguro da disciplina agrupada legada;
+- preservados integralmente: UUIDs e external_ids das 82 questões, 269 alternativas e suas chaves, 82 gabaritos, comentários editoriais, tentativas e preferências de usuários, e hashes de integridade (`source_content_hash`);
+- gerado backup verificável pré-migração com SHA-256 `0be2c7b2d3d4fe61f29849230cf6ac73f8668bedb884e2bd410a132a5957eeb8`;
+- corrigido o gerador `scripts/prepare-pdf-questions.py` eliminando o mapeamento composto para subjects quantitativos e atualizado `tests/test_prepare_pdf_questions.py` com testes anti-regressão dedicados;
+- validados testes de unidade (Python 9/9 aprovados, Node 31/31 aprovados, TypeScript check 0 erros) e verificadas as consultas de filtros e listagem no banco.
+
 ## Pipeline — diagnóstico e fluxo auditável de questões (30/10/2026)
 
 - confrontados o catálogo de produção, os estágios anteriores e 14 PDFs novos; documentados o agrupamento indevido de 82 questões quantitativas, uma prova duplicada e a ausência de vínculos tópico–fragmento legal;

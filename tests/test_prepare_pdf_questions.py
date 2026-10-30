@@ -55,10 +55,32 @@ class PreparePdfQuestionsTests(unittest.TestCase):
     def test_specific_subject_requires_real_topic_relation(self):
         question = {"subject": "Matemática Financeira", "statement_markdown": "Taxa de juros."}
         self.assertEqual(
-            prepare.select_topic(question, "raciocinio-logico-matematica-estatistica-e-matematica-financeira", {"matematica-financeira"})[0],
+            prepare.select_topic(question, "matematica-financeira", {"matematica-financeira"})[0],
             "matematica-financeira",
         )
         self.assertEqual(prepare.select_topic(question, "portugues", {"sintaxe"})[1], "fixed_topic_missing")
+
+    def test_quantitative_disciplines_remain_separated(self):
+        subject_cases = {
+            "matematica": "matematica",
+            "matematica financeira": "matematica-financeira",
+            "raciocinio logico": "raciocinio-logico",
+            "raciocinio logico e matematica": "raciocinio-logico",
+            "raciocinio logico matematico": "raciocinio-logico",
+            "estatistica": "estatistica",
+        }
+        for subj, expected_slug in subject_cases.items():
+            slug = prepare.SUBJECT_DISCIPLINES.get(subj)
+            self.assertEqual(slug, expected_slug, f"Subject '{subj}' deve mapear para '{expected_slug}', obteve '{slug}'")
+
+        # Garante que nenhum subject aponte para o slug composto obsoleto
+        obsolete_slug = "raciocinio-logico-matematica-estatistica-e-matematica-financeira"
+        for subj, slug in prepare.SUBJECT_DISCIPLINES.items():
+            self.assertNotEqual(slug, obsolete_slug, f"Subject '{subj}' não pode mapear para o slug composto obsoleto")
+
+        # Garante que TOPIC_PATTERNS não use mais o slug obsoleto
+        self.assertNotIn(obsolete_slug, prepare.TOPIC_PATTERNS)
+        self.assertIn("raciocinio-logico", prepare.TOPIC_PATTERNS)
 
     def test_duplicate_fingerprint_ignores_different_shared_introductions(self):
         item = "A concordância verbal está correta na frase apresentada, considerando as regras da norma padrão da língua portuguesa."
