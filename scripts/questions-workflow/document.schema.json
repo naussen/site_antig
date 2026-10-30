@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "document_kind": {"type": "string", "enum": ["exam", "answer_key", "mixed", "unknown"]},
+    "literal_heading": {"type": "string"},
+    "blocks": {"type": "array", "items": {"type": "object", "properties": {
+      "exam_code": {"type": ["string", "null"]},
+      "institution": {"type": ["string", "null"]},
+      "position": {"type": ["string", "null"]},
+      "application_date": {"type": ["string", "null"]},
+      "booklet": {"type": ["string", "null"]},
+      "status": {"type": "string", "enum": ["definitive", "preliminary", "unspecified", "not_applicable"]},
+      "pages": {"type": "array", "items": {"type": "integer"}},
+      "first_item": {"type": ["integer", "null"]},
+      "last_item": {"type": ["integer", "null"]}
+    }, "required": ["exam_code", "institution", "position", "application_date", "booklet", "status", "pages", "first_item", "last_item"], "additionalProperties": false}},
+    "warnings": {"type": "array", "items": {"type": "string"}}
+  },
+  "required": ["document_kind", "literal_heading", "blocks", "warnings"],
+  "additionalProperties": false
+}

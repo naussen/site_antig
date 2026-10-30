@@ -1,0 +1,23 @@
+{
+  "normalization": "pdfplumber extract_text; remove PCI watermark lines; collapse whitespace; diagnostic only, not identity",
+  "comparisons": [
+    {
+      "new": "conheci_basicos_superior (1).pdf",
+      "previous": "conheci_basicos_superior.pdf",
+      "normalized_text_equal": true,
+      "new_normalized_sha256": "0e7943f394853333e1af6179eb1538b7a22884a959fc94f4b31d1be734ddd0dc",
+      "previous_normalized_sha256": "0e7943f394853333e1af6179eb1538b7a22884a959fc94f4b31d1be734ddd0dc",
+      "new_characters": 18503,
+      "previous_characters": 18503
+    },
+    {
+      "new": "escriturario_agente_comercial (1).pdf",
+      "previous": "escriturario_agente_comercial.pdf",
+      "normalized_text_equal": false,
+      "new_normalized_sha256": "909ba935e89a682e7490770a07a0a8a361507185bb66bf6332afb859b16fd661",
+      "previous_normalized_sha256": "9d612ef58c70d43aa0f817a96307bdecd62c894d6159cfd59aa3a0053cf264ce",
+      "new_characters": 65261,
+      "previous_characters": 58051
+    }
+  ]
+}

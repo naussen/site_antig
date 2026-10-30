@@ -1,0 +1,591 @@
+{
+  "status": "proposed_not_applied",
+  "captured_at": "2026-10-30T19:44:05.709Z",
+  "source_discipline": "raciocinio-logico-matematica-estatistica-e-matematica-financeira",
+  "preserve": [
+    "questions.id",
+    "questions.external_id",
+    "question_options.id",
+    "question_answer_keys",
+    "user_question_attempts",
+    "user_question_preferences",
+    "source_content_hash"
+  ],
+  "classification_basis": "preserve_existing_primary_topic_requires_semantic_review",
+  "questions": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:029",
+      "topic_id": "matematica-financeira",
+      "subject": "Matemática Financeira",
+      "target_discipline_slug": "matematica-financeira",
+      "target_discipline_name": "Matemática Financeira"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:119",
+      "topic_id": "matematica-financeira",
+      "subject": "Matemática Financeira",
+      "target_discipline_slug": "matematica-financeira",
+      "target_discipline_name": "Matemática Financeira"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:040",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:019",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:037",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:025",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:015",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:013",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:115",
+      "topic_id": "matematica-financeira",
+      "subject": "Matemática Financeira",
+      "target_discipline_slug": "matematica-financeira",
+      "target_discipline_name": "Matemática Financeira"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:049",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:012",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:046",
+      "topic_id": "estatistica",
+      "subject": "Estatística",
+      "target_discipline_slug": "estatistica",
+      "target_discipline_name": "Estatística"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:050",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:047",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:017",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:016",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:026",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:042",
+      "topic_id": "estatistica",
+      "subject": "Estatística",
+      "target_discipline_slug": "estatistica",
+      "target_discipline_name": "Estatística"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:112",
+      "topic_id": "matematica-financeira",
+      "subject": "Matemática Financeira",
+      "target_discipline_slug": "matematica-financeira",
+      "target_discipline_name": "Matemática Financeira"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:019",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:114",
+      "topic_id": "matematica-financeira",
+      "subject": "Matemática Financeira",
+      "target_discipline_slug": "matematica-financeira",
+      "target_discipline_name": "Matemática Financeira"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:047",
+      "topic_id": "estatistica",
+      "subject": "Estatística",
+      "target_discipline_slug": "estatistica",
+      "target_discipline_name": "Estatística"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:030",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:031",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:014",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:053",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:030",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:028",
+      "topic_id": "matematica-financeira",
+      "subject": "Matemática Financeira",
+      "target_discipline_slug": "matematica-financeira",
+      "target_discipline_name": "Matemática Financeira"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:030",
+      "topic_id": "matematica-financeira",
+      "subject": "Matemática Financeira",
+      "target_discipline_slug": "matematica-financeira",
+      "target_discipline_name": "Matemática Financeira"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:031",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:018",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:013",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:049",
+      "topic_id": "estatistica",
+      "subject": "Estatística",
+      "target_discipline_slug": "estatistica",
+      "target_discipline_name": "Estatística"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:054",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:027",
+      "topic_id": "matematica-financeira",
+      "subject": "Matemática Financeira",
+      "target_discipline_slug": "matematica-financeira",
+      "target_discipline_name": "Matemática Financeira"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:050",
+      "topic_id": "estatistica",
+      "subject": "Estatística",
+      "target_discipline_slug": "estatistica",
+      "target_discipline_name": "Estatística"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:023",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:012",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:020",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:032",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:120",
+      "topic_id": "matematica-financeira",
+      "subject": "Matemática Financeira",
+      "target_discipline_slug": "matematica-financeira",
+      "target_discipline_name": "Matemática Financeira"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:118",
+      "topic_id": "matematica-financeira",
+      "subject": "Matemática Financeira",
+      "target_discipline_slug": "matematica-financeira",
+      "target_discipline_name": "Matemática Financeira"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:027",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:113",
+      "topic_id": "matematica-financeira",
+      "subject": "Matemática Financeira",
+      "target_discipline_slug": "matematica-financeira",
+      "target_discipline_name": "Matemática Financeira"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:018",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:026",
+      "topic_id": "matematica-financeira",
+      "subject": "Matemática Financeira",
+      "target_discipline_slug": "matematica-financeira",
+      "target_discipline_name": "Matemática Financeira"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:048",
+      "topic_id": "estatistica",
+      "subject": "Estatística",
+      "target_discipline_slug": "estatistica",
+      "target_discipline_name": "Estatística"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:020",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:024",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:060",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:059",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:057",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:045",
+      "topic_id": "estatistica",
+      "subject": "Estatística",
+      "target_discipline_slug": "estatistica",
+      "target_discipline_name": "Estatística"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:029",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:033",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:048",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:011",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:017",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:055",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:044",
+      "topic_id": "estatistica",
+      "subject": "Estatística",
+      "target_discipline_slug": "estatistica",
+      "target_discipline_name": "Estatística"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:111",
+      "topic_id": "matematica-financeira",
+      "subject": "Matemática Financeira",
+      "target_discipline_slug": "matematica-financeira",
+      "target_discipline_name": "Matemática Financeira"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:036",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:043",
+      "topic_id": "estatistica",
+      "subject": "Estatística",
+      "target_discipline_slug": "estatistica",
+      "target_discipline_name": "Estatística"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:035",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:027",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:028",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:046",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:016",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:052",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:056",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:034",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:058",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:agente_administrativo:028",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:011",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:039",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:014",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:041",
+      "topic_id": "estatistica",
+      "subject": "Estatística",
+      "target_discipline_slug": "estatistica",
+      "target_discipline_name": "Estatística"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:022",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:analista_administrativo:116",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:027",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:038",
+      "topic_id": "raciocinio-logico",
+      "subject": "Raciocínio Lógico",
+      "target_discipline_slug": "raciocinio-logico",
+      "target_discipline_name": "Raciocínio Lógico"
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:015",
+      "topic_id": "matematica",
+      "subject": "Matemática",
+      "target_discipline_slug": "matematica",
+      "target_discipline_name": "Matemática"
+    }
+  ]
+}

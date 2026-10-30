@@ -1,5 +1,13 @@
 # Changelog
 
+## Pipeline — diagnóstico e fluxo auditável de questões (30/10/2026)
+
+- confrontados o catálogo de produção, os estágios anteriores e 14 PDFs novos; documentados o agrupamento indevido de 82 questões quantitativas, uma prova duplicada e a ausência de vínculos tópico–fragmento legal;
+- adicionados inventário imutável, snapshot editorial paginado, comparação por ID, executor Vertex/ADC com checkpoint e gate de evidências compatível com `pro-questions/v1`, sem novas dependências do site;
+- entregue prompt de entrada para Antigravity e seis funções de agentes, com campos padronizados, propostas de taxonomia e roteiro de integração dos três módulos;
+- localizado o definitivo oficial PM/SP com anulação do item 19 e alteração do item 53 no tipo 1, preservando os arquivos originais; nenhuma migration ou importação executada;
+- registrados limites de atomicidade por prova, revisão semântica, saldo de créditos e governança editorial; a entrega é um kit operacional, não um serviço autônomo publicado.
+
 ## Interface — resposta recolhível no PRO Questões (27/10/2026)
 
 - o painel aberto por **Ver resposta** agora pode ser fechado, permitindo selecionar e responder a questão depois;
