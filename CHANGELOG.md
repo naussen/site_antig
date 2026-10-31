@@ -1,5 +1,12 @@
 # Changelog
 
+## Documentação — auditoria integral dos comentários (31/10/2026)
+
+- realizada consulta editorial somente de leitura: 1.771 publicadas, triagem global com 170 ocorrências de dois templates genéricos e exame dirigido de 28 questões em 15 disciplinas;
+- identificados os três exemplos compatíveis com os filtros informados, comentários que não respondem ao comando, alternativa explicada diferente e perda de contexto/gráficos nos campos consultados;
+- entregue prompt autocontido para Antigravity/Vertex com censo semântico, resolução anterior à consulta da chave, didática para iniciantes, revisão independente, controles estatísticos adicionais e atualização reversível;
+- validados documentos, evidências e cálculos; nenhuma questão ou comentário de produção foi alterado, e a correção dos geradores e do acervo permanece etapa de execução.
+
 ## Documentação — memória de cálculo para iniciantes (31/10/2026)
 
 - analisadas 13 amostras de comentários de exatas a partir de consulta editorial de leitura, com identificação da questão BB 28 compatível com o rótulo “Questão 3” e recálculo independente de exemplos;

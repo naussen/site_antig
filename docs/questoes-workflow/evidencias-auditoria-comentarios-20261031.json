@@ -1,0 +1,2351 @@
+{
+  "captured_at": "2026-10-31T17:30:00.815Z",
+  "audit_scope": "read_only_global_template_census_and_28_directed_editorial_samples_not_full_semantic_audit",
+  "population": {
+    "all_questions": 1806,
+    "statuses": {
+      "published": 1771,
+      "archived": 35
+    },
+    "published_primary_disciplines": 45,
+    "published_by_primary_discipline": {
+      "administracao-de-recursos-materiais": 17,
+      "administracao-financeira-e-orcamentaria": 40,
+      "administracao-geral": 67,
+      "administracao-publica": 68,
+      "agencias-reguladoras-e-regulacao": 5,
+      "arquivologia": 41,
+      "atualidades": 75,
+      "conhecimentos-bancarios": 19,
+      "contabilidade-geral-e-avancada": 23,
+      "contabilidade-publica": 26,
+      "controle-externo": 15,
+      "direito-administrativo": 259,
+      "direito-ambiental": 40,
+      "direito-civil": 10,
+      "direito-constitucional": 97,
+      "direito-da-pessoa-com-deficiencia": 6,
+      "direito-eleitoral": 9,
+      "direito-penal": 11,
+      "direito-penal-militar": 15,
+      "direito-previdenciario": 66,
+      "direito-processual-civil": 23,
+      "direito-processual-penal": 14,
+      "direito-processual-penal-militar": 13,
+      "direito-tributario": 2,
+      "direitos-humanos": 5,
+      "enfermagem": 6,
+      "engenharia-florestal": 2,
+      "estatistica": 10,
+      "etica-no-servico-publico": 29,
+      "financas-publicas": 1,
+      "fisica": 3,
+      "geografia": 9,
+      "informatica": 162,
+      "legislacao-aplicada-a-ebserh": 15,
+      "legislacao-de-transito": 12,
+      "legislacao-do-sus": 26,
+      "legislacao-municipal": 10,
+      "legislacao-penal-especial": 16,
+      "lingua-inglesa": 17,
+      "matematica": 71,
+      "matematica-financeira": 23,
+      "portugues": 311,
+      "raciocinio-logico": 32,
+      "relacoes-humanas-e-atendimento": 25,
+      "vendas-e-negociacao": 25
+    }
+  },
+  "sample_count": 28,
+  "sample_disciplines": [
+    "atualidades",
+    "conhecimentos-bancarios",
+    "direito-administrativo",
+    "direito-constitucional",
+    "direito-da-pessoa-com-deficiencia",
+    "direito-penal",
+    "estatistica",
+    "fisica",
+    "informatica",
+    "lingua-inglesa",
+    "matematica",
+    "matematica-financeira",
+    "portugues",
+    "raciocinio-logico",
+    "vendas-e-negociacao"
+  ],
+  "ordinal_candidates": [
+    {
+      "position": 4,
+      "filters": {
+        "discipline": "matematica-financeira",
+        "board": "cesgranrio",
+        "year": 2021
+      },
+      "candidate": {
+        "id": "84fc5a74-e9d9-418d-b103-a29a26251809",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:032",
+        "created_at": "2026-10-31T02:36:31.552925+00:00",
+        "exam_board": "Fundação Cesgranrio",
+        "exam_year": 2021,
+        "status": "published"
+      },
+      "limitation": "Assume no user-specific hidden questions or other filters; ordinal is not stable identity."
+    },
+    {
+      "position": 5,
+      "filters": {
+        "discipline": "matematica-financeira",
+        "board": "cesgranrio",
+        "year": 2021
+      },
+      "candidate": {
+        "id": "7e7268e7-c178-4f5c-ae58-03e80a7eed42",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:035",
+        "created_at": "2026-10-31T02:36:31.552925+00:00",
+        "exam_board": "Fundação Cesgranrio",
+        "exam_year": 2021,
+        "status": "published"
+      },
+      "limitation": "Assume no user-specific hidden questions or other filters; ordinal is not stable identity."
+    },
+    {
+      "position": 4,
+      "filters": {
+        "discipline": "matematica",
+        "board": "vunesp",
+        "year": 2021
+      },
+      "candidate": {
+        "id": "c61bea72-689a-4070-aef4-3a49fe6a1e99",
+        "external_id": "exam:tjsp-2021-escrevente-tecnico:item:076",
+        "created_at": "2026-10-31T02:37:18.56022+00:00",
+        "exam_board": "Vunesp",
+        "exam_year": 2021,
+        "status": "published"
+      },
+      "limitation": "Assume no user-specific hidden questions or other filters; ordinal is not stable identity."
+    }
+  ],
+  "template_matches": {
+    "compatível com as noções teóricas e técnicas": [
+      "exam:bb-2021-escriturario-agente-comercial:item:060",
+      "exam:bb-2021-escriturario-agente-comercial:item:030",
+      "exam:bb-2021-escriturario-agente-comercial:item:039",
+      "exam:bb-2021-escriturario-agente-comercial:item:025",
+      "exam:bb-2021-escriturario-agente-comercial:item:014",
+      "exam:bb-2021-escriturario-agente-comercial:item:063",
+      "exam:bb-2021-escriturario-agente-comercial:item:042",
+      "exam:bb-2021-escriturario-agente-comercial:item:033",
+      "exam:bb-2021-escriturario-agente-comercial:item:036",
+      "exam:bb-2021-escriturario-agente-comercial:item:023",
+      "exam:bb-2021-escriturario-agente-comercial:item:069",
+      "exam:bb-2021-escriturario-agente-comercial:item:050",
+      "exam:bb-2021-escriturario-agente-comercial:item:034",
+      "exam:bb-2021-escriturario-agente-comercial:item:027",
+      "exam:bb-2021-escriturario-agente-comercial:item:001",
+      "exam:bb-2021-escriturario-agente-comercial:item:040",
+      "exam:bb-2021-escriturario-agente-comercial:item:002",
+      "exam:bb-2021-escriturario-agente-comercial:item:054",
+      "exam:bb-2021-escriturario-agente-comercial:item:051",
+      "exam:bb-2021-escriturario-agente-comercial:item:015",
+      "exam:bb-2021-escriturario-agente-comercial:item:053",
+      "exam:bb-2021-escriturario-agente-comercial:item:020",
+      "exam:bb-2021-escriturario-agente-comercial:item:068",
+      "exam:bb-2021-escriturario-agente-comercial:item:044",
+      "exam:bb-2021-escriturario-agente-comercial:item:013",
+      "exam:bb-2021-escriturario-agente-comercial:item:062",
+      "exam:bb-2021-escriturario-agente-comercial:item:003",
+      "exam:bb-2021-escriturario-agente-comercial:item:047",
+      "exam:bb-2021-escriturario-agente-comercial:item:031",
+      "exam:bb-2021-escriturario-agente-comercial:item:010",
+      "exam:bb-2021-escriturario-agente-comercial:item:011",
+      "exam:bb-2021-escriturario-agente-comercial:item:035",
+      "exam:bb-2021-escriturario-agente-comercial:item:058",
+      "exam:bb-2021-escriturario-agente-comercial:item:043",
+      "exam:bb-2021-escriturario-agente-comercial:item:022",
+      "exam:bb-2021-escriturario-agente-comercial:item:059",
+      "exam:bb-2021-escriturario-agente-comercial:item:032",
+      "exam:bb-2021-escriturario-agente-comercial:item:037",
+      "exam:bb-2021-escriturario-agente-comercial:item:018",
+      "exam:bb-2021-escriturario-agente-comercial:item:017",
+      "exam:bb-2021-escriturario-agente-comercial:item:057",
+      "exam:bb-2021-escriturario-agente-comercial:item:064",
+      "exam:bb-2021-escriturario-agente-comercial:item:008",
+      "exam:bb-2021-escriturario-agente-comercial:item:004",
+      "exam:bb-2021-escriturario-agente-comercial:item:056",
+      "exam:bb-2021-escriturario-agente-comercial:item:061",
+      "exam:bb-2021-escriturario-agente-comercial:item:007",
+      "exam:bb-2021-escriturario-agente-comercial:item:028",
+      "exam:bb-2021-escriturario-agente-comercial:item:029",
+      "exam:bb-2021-escriturario-agente-comercial:item:066",
+      "exam:bb-2021-escriturario-agente-comercial:item:019",
+      "exam:bb-2021-escriturario-agente-comercial:item:046",
+      "exam:bb-2021-escriturario-agente-comercial:item:012",
+      "exam:bb-2021-escriturario-agente-comercial:item:016",
+      "exam:bb-2021-escriturario-agente-comercial:item:048",
+      "exam:bb-2021-escriturario-agente-comercial:item:024",
+      "exam:bb-2021-escriturario-agente-comercial:item:049",
+      "exam:bb-2021-escriturario-agente-comercial:item:021",
+      "exam:bb-2021-escriturario-agente-comercial:item:006",
+      "exam:bb-2021-escriturario-agente-comercial:item:067",
+      "exam:bb-2021-escriturario-agente-comercial:item:065",
+      "exam:bb-2021-escriturario-agente-comercial:item:055",
+      "exam:bb-2021-escriturario-agente-comercial:item:041",
+      "exam:bb-2021-escriturario-agente-comercial:item:038",
+      "exam:bb-2021-escriturario-agente-comercial:item:009",
+      "exam:bb-2021-escriturario-agente-comercial:item:026",
+      "exam:bb-2021-escriturario-agente-comercial:item:045",
+      "exam:bb-2021-escriturario-agente-comercial:item:052",
+      "exam:bb-2021-escriturario-agente-comercial:item:005",
+      "exam:bb-2021-escriturario-agente-comercial:item:070"
+    ],
+    "em consonância com as normas aplicáveis e a doutrina especializada": [
+      "exam:tjsp-2021-escrevente-tecnico:item:100",
+      "exam:tjsp-2021-escrevente-tecnico:item:020",
+      "exam:tjsp-2021-escrevente-tecnico:item:051",
+      "exam:tjsp-2021-escrevente-tecnico:item:032",
+      "exam:tjsp-2021-escrevente-tecnico:item:021",
+      "exam:tjsp-2021-escrevente-tecnico:item:065",
+      "exam:tjsp-2021-escrevente-tecnico:item:034",
+      "exam:tjsp-2021-escrevente-tecnico:item:077",
+      "exam:tjsp-2021-escrevente-tecnico:item:092",
+      "exam:tjsp-2021-escrevente-tecnico:item:010",
+      "exam:tjsp-2021-escrevente-tecnico:item:087",
+      "exam:tjsp-2021-escrevente-tecnico:item:015",
+      "exam:tjsp-2021-escrevente-tecnico:item:026",
+      "exam:tjsp-2021-escrevente-tecnico:item:016",
+      "exam:tjsp-2021-escrevente-tecnico:item:004",
+      "exam:tjsp-2021-escrevente-tecnico:item:089",
+      "exam:tjsp-2021-escrevente-tecnico:item:044",
+      "exam:tjsp-2021-escrevente-tecnico:item:027",
+      "exam:tjsp-2021-escrevente-tecnico:item:098",
+      "exam:tjsp-2021-escrevente-tecnico:item:037",
+      "exam:tjsp-2021-escrevente-tecnico:item:066",
+      "exam:tjsp-2021-escrevente-tecnico:item:052",
+      "exam:tjsp-2021-escrevente-tecnico:item:046",
+      "exam:tjsp-2021-escrevente-tecnico:item:041",
+      "exam:tjsp-2021-escrevente-tecnico:item:097",
+      "exam:tjsp-2021-escrevente-tecnico:item:013",
+      "exam:tjsp-2021-escrevente-tecnico:item:035",
+      "exam:tjsp-2021-escrevente-tecnico:item:081",
+      "exam:tjsp-2021-escrevente-tecnico:item:005",
+      "exam:tjsp-2021-escrevente-tecnico:item:049",
+      "exam:tjsp-2021-escrevente-tecnico:item:088",
+      "exam:tjsp-2021-escrevente-tecnico:item:094",
+      "exam:tjsp-2021-escrevente-tecnico:item:074",
+      "exam:tjsp-2021-escrevente-tecnico:item:011",
+      "exam:tjsp-2021-escrevente-tecnico:item:042",
+      "exam:tjsp-2021-escrevente-tecnico:item:054",
+      "exam:tjsp-2021-escrevente-tecnico:item:028",
+      "exam:tjsp-2021-escrevente-tecnico:item:067",
+      "exam:tjsp-2021-escrevente-tecnico:item:043",
+      "exam:tjsp-2021-escrevente-tecnico:item:069",
+      "exam:tjsp-2021-escrevente-tecnico:item:091",
+      "exam:tjsp-2021-escrevente-tecnico:item:053",
+      "exam:tjsp-2021-escrevente-tecnico:item:075",
+      "exam:tjsp-2021-escrevente-tecnico:item:055",
+      "exam:tjsp-2021-escrevente-tecnico:item:018",
+      "exam:tjsp-2021-escrevente-tecnico:item:062",
+      "exam:tjsp-2021-escrevente-tecnico:item:079",
+      "exam:tjsp-2021-escrevente-tecnico:item:090",
+      "exam:tjsp-2021-escrevente-tecnico:item:071",
+      "exam:tjsp-2021-escrevente-tecnico:item:007",
+      "exam:tjsp-2021-escrevente-tecnico:item:002",
+      "exam:tjsp-2021-escrevente-tecnico:item:070",
+      "exam:tjsp-2021-escrevente-tecnico:item:061",
+      "exam:tjsp-2021-escrevente-tecnico:item:099",
+      "exam:tjsp-2021-escrevente-tecnico:item:001",
+      "exam:tjsp-2021-escrevente-tecnico:item:082",
+      "exam:tjsp-2021-escrevente-tecnico:item:083",
+      "exam:tjsp-2021-escrevente-tecnico:item:023",
+      "exam:tjsp-2021-escrevente-tecnico:item:048",
+      "exam:tjsp-2021-escrevente-tecnico:item:086",
+      "exam:tjsp-2021-escrevente-tecnico:item:057",
+      "exam:tjsp-2021-escrevente-tecnico:item:031",
+      "exam:tjsp-2021-escrevente-tecnico:item:045",
+      "exam:tjsp-2021-escrevente-tecnico:item:073",
+      "exam:tjsp-2021-escrevente-tecnico:item:019",
+      "exam:tjsp-2021-escrevente-tecnico:item:036",
+      "exam:tjsp-2021-escrevente-tecnico:item:009",
+      "exam:tjsp-2021-escrevente-tecnico:item:068",
+      "exam:tjsp-2021-escrevente-tecnico:item:095",
+      "exam:tjsp-2021-escrevente-tecnico:item:047",
+      "exam:tjsp-2021-escrevente-tecnico:item:008",
+      "exam:tjsp-2021-escrevente-tecnico:item:038",
+      "exam:tjsp-2021-escrevente-tecnico:item:033",
+      "exam:tjsp-2021-escrevente-tecnico:item:024",
+      "exam:tjsp-2021-escrevente-tecnico:item:039",
+      "exam:tjsp-2021-escrevente-tecnico:item:076",
+      "exam:tjsp-2021-escrevente-tecnico:item:093",
+      "exam:tjsp-2021-escrevente-tecnico:item:060",
+      "exam:tjsp-2021-escrevente-tecnico:item:096",
+      "exam:tjsp-2021-escrevente-tecnico:item:058",
+      "exam:tjsp-2021-escrevente-tecnico:item:078",
+      "exam:tjsp-2021-escrevente-tecnico:item:084",
+      "exam:tjsp-2021-escrevente-tecnico:item:064",
+      "exam:tjsp-2021-escrevente-tecnico:item:012",
+      "exam:tjsp-2021-escrevente-tecnico:item:063",
+      "exam:tjsp-2021-escrevente-tecnico:item:029",
+      "exam:tjsp-2021-escrevente-tecnico:item:017",
+      "exam:tjsp-2021-escrevente-tecnico:item:085",
+      "exam:tjsp-2021-escrevente-tecnico:item:006",
+      "exam:tjsp-2021-escrevente-tecnico:item:030",
+      "exam:tjsp-2021-escrevente-tecnico:item:059",
+      "exam:tjsp-2021-escrevente-tecnico:item:072",
+      "exam:tjsp-2021-escrevente-tecnico:item:050",
+      "exam:tjsp-2021-escrevente-tecnico:item:080",
+      "exam:tjsp-2021-escrevente-tecnico:item:022",
+      "exam:tjsp-2021-escrevente-tecnico:item:014",
+      "exam:tjsp-2021-escrevente-tecnico:item:056",
+      "exam:tjsp-2021-escrevente-tecnico:item:003",
+      "exam:tjsp-2021-escrevente-tecnico:item:025",
+      "exam:tjsp-2021-escrevente-tecnico:item:040"
+    ]
+  },
+  "template_total_distinct": 170,
+  "sources": [
+    {
+      "path": "C:\\PRO\\questoes\\novas_pdf_30-10\\escriturario_agente_comercial (1).pdf",
+      "sha256": "7f1b6b8810edd46e58da6a447f5fb84897ce7ef151b6f7a6717714e70eca98b7"
+    },
+    {
+      "path": "C:\\PRO\\questoes\\novas_pdf_30-10\\escrevente_tecnico_judiciario.pdf",
+      "sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf"
+    }
+  ],
+  "independent_arithmetic": {
+    "bb16_intersection": "100",
+    "bb16_percent": "10.0",
+    "bb26_percent": "3.200",
+    "bb28_total": "26100.000",
+    "tjsp72_F": "4",
+    "tjsp72_D": "24",
+    "tjsp72_grade": "8.00",
+    "conab14_probability": "0.1",
+    "pf41_probability": "0.42187500",
+    "pf42_standard_error": "0.01"
+  },
+  "sampling_design_example": {
+    "p0": 0.01,
+    "alpha": 0.01,
+    "n_binomial_zero_failures": 459,
+    "upper_bound_after_zero_of_459": 0.009982887366129067,
+    "N": 1771,
+    "D_rejected": 18,
+    "minimum_n_hypergeometric": 398,
+    "probability_miss_at_n": 0.009981063506425226,
+    "caveat": "Requires genuine random sampling without replacement and reliable defect detection; no guarantee of individual correctness. Directed samples are excluded from this calculation."
+  },
+  "samples": [
+    {
+      "question": {
+        "id": "281407f0-cee3-42a4-afaa-6e76f01b8311",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:001",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 1 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nUm argumento que justifica a tese de que “pensar em pri-\nvacidade digital é (quase) utópico” (parágrafo 2) aparece em",
+        "subject": "Compreensao E Interpretacao De Textos",
+        "exam_board": "Fundação Cesgranrio",
+        "institution": "Banco do Brasil",
+        "position_name": "Escriturário - Agente Comercial",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "5327c1a408cba22c5414e166147d037296033f1c17959e25f087a7e82ebf9815",
+        "source_metadata": {
+          "disclaimer": "Gabarito sem status definitivo comprovado pós-recursos",
+          "answer_status": "sem_status",
+          "statement_parts": {
+            "title": "Questão 1 [Gabarito sem status definitivo comprovado]",
+            "source": null,
+            "command": "Um argumento que justifica a tese de que “pensar em pri-\nvacidade digital é (quase) utópico” (parágrafo 2) aparece em",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:bb-2021-escriturario-agente-comercial:item:001"
+        }
+      },
+      "primary_discipline": "portugues",
+      "options": [
+        {
+          "id": "5f73004a-dcca-4396-be0e-1838c210944c",
+          "question_id": "281407f0-cee3-42a4-afaa-6e76f01b8311",
+          "label": "A",
+          "body_markdown": "“A questão central não se resume somente à política \nde privacidade das plataformas X ou Y” (parágrafo 4)",
+          "sort_order": 0
+        },
+        {
+          "id": "32eb9789-468f-4094-92dd-5a3fc97b8043",
+          "question_id": "281407f0-cee3-42a4-afaa-6e76f01b8311",
+          "label": "B",
+          "body_markdown": "“A segurança da informação já se transformou em \numa área estratégica para qualquer tipo de empresa” \n(parágrafo 5)",
+          "sort_order": 1
+        },
+        {
+          "id": "58179500-54a8-4583-8e58-458aa973a6c5",
+          "question_id": "281407f0-cee3-42a4-afaa-6e76f01b8311",
+          "label": "C",
+          "body_markdown": "“a partir do momento em que um conteúdo é postado, \nele faz parte da rede e não é mais do usuário” (pará-\ngrafo 7)",
+          "sort_order": 2
+        },
+        {
+          "id": "abf40751-18cd-43c9-9494-7a7a4cce397b",
+          "question_id": "281407f0-cee3-42a4-afaa-6e76f01b8311",
+          "label": "D",
+          "body_markdown": "“É preciso que tanto clientes como empresas bus-\nquem mais informação e conteúdo técnico sobre o \ntema” (parágrafo 8)",
+          "sort_order": 3
+        },
+        {
+          "id": "cb9bc51a-ba18-4e24-9ed9-7c4311c56c9d",
+          "question_id": "281407f0-cee3-42a4-afaa-6e76f01b8311",
+          "label": "E",
+          "body_markdown": "“Precisamos de consciência, senso crítico, responsa-\nbilidade e cuidado para levar a internet a um outro ní-\nvel.” (parágrafo 9)",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "C",
+      "explanation": {
+        "question_id": "281407f0-cee3-42a4-afaa-6e76f01b8311",
+        "body_markdown": "Análise didática da Questão 1 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (C).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de compreensao e interpretacao de textos, sendo a opção (C) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "status": "published",
+        "source_reference": "Cesgranrio / Gabarito Preliminar Divulgado"
+      },
+      "explanation_utf8_sha256": "09633b8de5e0cb635e509b0256e57c11fbca15cab832b8956d14de8b51cf4c21"
+    },
+    {
+      "question": {
+        "id": "7cd3ef48-63a7-4d06-b675-f78993d080f7",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:011",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 11 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nAccording to the second paragraph, the concept of robotic \nsoccer players emerged",
+        "subject": "Compreensao E Interpretacao De Textos Em Ingles",
+        "exam_board": "Fundação Cesgranrio",
+        "institution": "Banco do Brasil",
+        "position_name": "Escriturário - Agente Comercial",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "726ce83b62f6500a4a8a44e1ceeba24db111610fe86fda12fb70c543ea35ce0e",
+        "source_metadata": {
+          "disclaimer": "Gabarito sem status definitivo comprovado pós-recursos",
+          "answer_status": "sem_status",
+          "statement_parts": {
+            "title": "Questão 11 [Gabarito sem status definitivo comprovado]",
+            "source": null,
+            "command": "According to the second paragraph, the concept of robotic \nsoccer players emerged",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:bb-2021-escriturario-agente-comercial:item:011"
+        }
+      },
+      "primary_discipline": "lingua-inglesa",
+      "options": [
+        {
+          "id": "93ba40f9-7b21-4cc2-84bd-07dac451b8f0",
+          "question_id": "7cd3ef48-63a7-4d06-b675-f78993d080f7",
+          "label": "A",
+          "body_markdown": "in 1997",
+          "sort_order": 0
+        },
+        {
+          "id": "c6890cad-beca-4304-9b73-cdd27dbf3637",
+          "question_id": "7cd3ef48-63a7-4d06-b675-f78993d080f7",
+          "label": "B",
+          "body_markdown": "in the 1990s",
+          "sort_order": 1
+        },
+        {
+          "id": "d541e493-6baa-465e-b180-60d2e67e4800",
+          "question_id": "7cd3ef48-63a7-4d06-b675-f78993d080f7",
+          "label": "C",
+          "body_markdown": "before the 1990s",
+          "sort_order": 2
+        },
+        {
+          "id": "ec51a9a2-1084-4ea2-b165-4e9ed0f84760",
+          "question_id": "7cd3ef48-63a7-4d06-b675-f78993d080f7",
+          "label": "D",
+          "body_markdown": "in the beginning of the 20th century",
+          "sort_order": 3
+        },
+        {
+          "id": "a54f0b4b-5785-4d8b-84c9-b668dedcbf5f",
+          "question_id": "7cd3ef48-63a7-4d06-b675-f78993d080f7",
+          "label": "E",
+          "body_markdown": "in the beginning of the 21st century",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "B",
+      "explanation": {
+        "question_id": "7cd3ef48-63a7-4d06-b675-f78993d080f7",
+        "body_markdown": "Análise didática da Questão 11 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (B).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de compreensao e interpretacao de textos em ingles, sendo a opção (B) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "status": "published",
+        "source_reference": "Cesgranrio / Gabarito Preliminar Divulgado"
+      },
+      "explanation_utf8_sha256": "f179fb54cef24121b09bbefa4e6c01d11ded7031008eac038f6aa328652bd77f"
+    },
+    {
+      "question": {
+        "id": "c4ea8714-26cc-4af1-9c1d-3553c1697063",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:016",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 16 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nAntes de iniciar uma campanha publicitária, um banco fez \numa pesquisa, entrevistando 1000 de seus clientes, so-\nbre a intenção de adesão aos seus dois novos produtos. \nDos clientes entrevistados, 430 disseram que não tinham \ninteresse em nenhum dos dois produtos, 270 mostraram-\n-se interessados no primeiro produto, e 400 mostraram-se \ninteressados no segundo produto.\nQual a porcentagem do total de clientes entrevistados que \nse mostrou interessada em ambos os produtos?",
+        "subject": "Aritmetica E Algebra",
+        "exam_board": "Fundação Cesgranrio",
+        "institution": "Banco do Brasil",
+        "position_name": "Escriturário - Agente Comercial",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "9416da1452d7828d637d006e30105c2df3dc9520a2c92f0c19c358ffde9faf9b",
+        "source_metadata": {
+          "disclaimer": "Gabarito sem status definitivo comprovado pós-recursos",
+          "answer_status": "sem_status",
+          "statement_parts": {
+            "title": "Questão 16 [Gabarito sem status definitivo comprovado]",
+            "source": null,
+            "command": "Antes de iniciar uma campanha publicitária, um banco fez \numa pesquisa, entrevistando 1000 de seus clientes, so-\nbre a intenção de adesão aos seus dois novos produtos. \nDos clientes entrevistados, 430 disseram que não tinham \ninteresse em nenhum dos dois produtos, 270 mostraram-\n-se interessados no primeiro produto, e 400 mostraram-se \ninteressados no segundo produto.\nQual a porcentagem do total de clientes entrevistados que \nse mostrou interessada em ambos os produtos?",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:bb-2021-escriturario-agente-comercial:item:016"
+        }
+      },
+      "primary_discipline": "matematica",
+      "options": [
+        {
+          "id": "578f664c-fc92-451c-9636-c80955214b52",
+          "question_id": "c4ea8714-26cc-4af1-9c1d-3553c1697063",
+          "label": "A",
+          "body_markdown": "10%",
+          "sort_order": 0
+        },
+        {
+          "id": "2fb4a6d0-35e3-40f2-a1a2-3f74a643594f",
+          "question_id": "c4ea8714-26cc-4af1-9c1d-3553c1697063",
+          "label": "B",
+          "body_markdown": "15%",
+          "sort_order": 1
+        },
+        {
+          "id": "bdccd3d2-f8c7-4211-8655-4fab822b5629",
+          "question_id": "c4ea8714-26cc-4af1-9c1d-3553c1697063",
+          "label": "C",
+          "body_markdown": "20%",
+          "sort_order": 2
+        },
+        {
+          "id": "677606ce-b3a0-4b8a-8214-9507810751ac",
+          "question_id": "c4ea8714-26cc-4af1-9c1d-3553c1697063",
+          "label": "D",
+          "body_markdown": "25%",
+          "sort_order": 3
+        },
+        {
+          "id": "762f4cdc-7c91-4fcd-878b-34a4a6d7d3a7",
+          "question_id": "c4ea8714-26cc-4af1-9c1d-3553c1697063",
+          "label": "E",
+          "body_markdown": "30%",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "A",
+      "explanation": {
+        "question_id": "c4ea8714-26cc-4af1-9c1d-3553c1697063",
+        "body_markdown": "Análise didática da Questão 16 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (A).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de aritmetica e algebra, sendo a opção (A) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "status": "published",
+        "source_reference": "Cesgranrio / Gabarito Preliminar Divulgado"
+      },
+      "explanation_utf8_sha256": "abb45625bf7278233646c9b1f4078f8872a1287fc7aeaea44c2d84a0683a7881"
+    },
+    {
+      "question": {
+        "id": "df0d88f4-2418-4212-872d-5fb6a0447b15",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:021",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 21 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nUma das funções desempenhadas pela moeda é a de re-\nserva de valor, no entanto, a moeda não é o único ativo \nque desempenha tal função. \nO motivo que faz com que os cidadãos retenham moeda \ncomo reserva de valor é o fato de ela",
+        "subject": "Mercado Financeiro E Inovacao Tecnologica",
+        "exam_board": "Fundação Cesgranrio",
+        "institution": "Banco do Brasil",
+        "position_name": "Escriturário - Agente Comercial",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "ef4e4e304ad8faf589646f94fb17084e5f94f733e1101675ac876611ab8a9c93",
+        "source_metadata": {
+          "disclaimer": "Gabarito sem status definitivo comprovado pós-recursos",
+          "answer_status": "sem_status",
+          "statement_parts": {
+            "title": "Questão 21 [Gabarito sem status definitivo comprovado]",
+            "source": null,
+            "command": "Uma das funções desempenhadas pela moeda é a de re-\nserva de valor, no entanto, a moeda não é o único ativo \nque desempenha tal função. \nO motivo que faz com que os cidadãos retenham moeda \ncomo reserva de valor é o fato de ela",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:bb-2021-escriturario-agente-comercial:item:021"
+        }
+      },
+      "primary_discipline": "atualidades",
+      "options": [
+        {
+          "id": "7e9ae957-6df4-4372-8fcd-eb800242b191",
+          "question_id": "df0d88f4-2418-4212-872d-5fb6a0447b15",
+          "label": "A",
+          "body_markdown": "oferecer um rendimento a seu detentor.",
+          "sort_order": 0
+        },
+        {
+          "id": "0f2b278f-dd9a-4b2b-ae30-36824c8cf4d2",
+          "question_id": "df0d88f4-2418-4212-872d-5fb6a0447b15",
+          "label": "B",
+          "body_markdown": "possuir liquidez absoluta.",
+          "sort_order": 1
+        },
+        {
+          "id": "fe639dba-b90a-4a40-a3d2-271ae5015020",
+          "question_id": "df0d88f4-2418-4212-872d-5fb6a0447b15",
+          "label": "C",
+          "body_markdown": "prestar algum serviço ao seu possuidor.",
+          "sort_order": 2
+        },
+        {
+          "id": "ebb78d98-22e6-4f3c-9c97-37d54aba2114",
+          "question_id": "df0d88f4-2418-4212-872d-5fb6a0447b15",
+          "label": "D",
+          "body_markdown": "propiciar um aumento no seu valor.",
+          "sort_order": 3
+        },
+        {
+          "id": "ba50fde4-919f-4764-a6c2-af3639286d0a",
+          "question_id": "df0d88f4-2418-4212-872d-5fb6a0447b15",
+          "label": "E",
+          "body_markdown": "ser protegida contra inflação.",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "B",
+      "explanation": {
+        "question_id": "df0d88f4-2418-4212-872d-5fb6a0447b15",
+        "body_markdown": "Análise didática da Questão 21 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (B).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de mercado financeiro e inovacao tecnologica, sendo a opção (B) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "status": "published",
+        "source_reference": "Cesgranrio / Gabarito Preliminar Divulgado"
+      },
+      "explanation_utf8_sha256": "487231032c37b1dbed022a73df912561d16a8ff65e00f4488167e52c105ec786"
+    },
+    {
+      "question": {
+        "id": "f2ea3977-ad14-43be-8b99-c55409d6aea0",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:026",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 26 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nUm negociador de investimentos de uma instituição finan-\nceira pergunta ao gerente de tal instituição qual a taxa de \njuros anual máxima que pode oferecer a um cliente inves-\ntidor, e o gerente afirma que ficará satisfeito com uma taxa \nanual máxima de 8,36%. O negociador entra em contato \ncom o cliente que pretende investir um capital C1 e diz \nque, ao final de um ano, ele receberá C2, que corresponde \na C1 acrescido de 5,00% de juros, mas não tem suces-\nso nessa negociação inicial. O negociador resolve aplicar \numa nova taxa sobre C2, mas sem ultrapassar a taxa anu-\nal máxima que está autorizado a oferecer.\nQual o valor máximo da taxa a ser aplicada sobre C2?",
+        "subject": "Juros Simples E Compostos",
+        "exam_board": "Fundação Cesgranrio",
+        "institution": "Banco do Brasil",
+        "position_name": "Escriturário - Agente Comercial",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "da8033d607283dcab2eca084ca0f798f5fa71c5b7de3e17615794fe77535517e",
+        "source_metadata": {
+          "disclaimer": "Gabarito sem status definitivo comprovado pós-recursos",
+          "answer_status": "sem_status",
+          "statement_parts": {
+            "title": "Questão 26 [Gabarito sem status definitivo comprovado]",
+            "source": null,
+            "command": "Um negociador de investimentos de uma instituição finan-\nceira pergunta ao gerente de tal instituição qual a taxa de \njuros anual máxima que pode oferecer a um cliente inves-\ntidor, e o gerente afirma que ficará satisfeito com uma taxa \nanual máxima de 8,36%. O negociador entra em contato \ncom o cliente que pretende investir um capital C1 e diz \nque, ao final de um ano, ele receberá C2, que corresponde \na C1 acrescido de 5,00% de juros, mas não tem suces-\nso nessa negociação inicial. O negociador resolve aplicar \numa nova taxa sobre C2, mas sem ultrapassar a taxa anu-\nal máxima que está autorizado a oferecer.\nQual o valor máximo da taxa a ser aplicada sobre C2?",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:bb-2021-escriturario-agente-comercial:item:026"
+        }
+      },
+      "primary_discipline": "matematica-financeira",
+      "options": [
+        {
+          "id": "b79768c0-f30f-46e2-9f26-8c9f4545791f",
+          "question_id": "f2ea3977-ad14-43be-8b99-c55409d6aea0",
+          "label": "A",
+          "body_markdown": "2,16%",
+          "sort_order": 0
+        },
+        {
+          "id": "a46dc288-30c5-476c-b5ed-3229276c2645",
+          "question_id": "f2ea3977-ad14-43be-8b99-c55409d6aea0",
+          "label": "B",
+          "body_markdown": "2,24%",
+          "sort_order": 1
+        },
+        {
+          "id": "c228f16d-a420-4ebf-bb55-130ade471b2a",
+          "question_id": "f2ea3977-ad14-43be-8b99-c55409d6aea0",
+          "label": "C",
+          "body_markdown": "3,20%",
+          "sort_order": 2
+        },
+        {
+          "id": "13d407cf-5d5a-4323-b811-cc97a6e855b6",
+          "question_id": "f2ea3977-ad14-43be-8b99-c55409d6aea0",
+          "label": "D",
+          "body_markdown": "7,96%",
+          "sort_order": 3
+        },
+        {
+          "id": "3d350af2-e3f6-4966-8ff2-0d18aed7f109",
+          "question_id": "f2ea3977-ad14-43be-8b99-c55409d6aea0",
+          "label": "E",
+          "body_markdown": "16,72%",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "C",
+      "explanation": {
+        "question_id": "f2ea3977-ad14-43be-8b99-c55409d6aea0",
+        "body_markdown": "Análise didática da Questão 26 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (C).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de juros simples e compostos, sendo a opção (C) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "status": "published",
+        "source_reference": "Cesgranrio / Gabarito Preliminar Divulgado"
+      },
+      "explanation_utf8_sha256": "8a671b24b47615f5cabfa14a84a1349b476f5ac2f0268cba531ff793db5c7024"
+    },
+    {
+      "question": {
+        "id": "b460d264-06c4-40b2-8ca4-5af2bc5531a7",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:028",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 28 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nDevido às oscilações de receita em seu negócio durante \na pandemia, um cliente vai precisar pagar um boleto, cujo \nprincipal (até a data de vencimento) é de R$ 25.000,00, \ncom 12 dias de atraso. Nesse caso, são cobrados adicio-\nnalmente, sobre o valor do principal, dois encargos: 2% \nde multa, mais juros simples de 0,2% ao dia. Por causa \ndos juros altos, o cliente procurou seu gerente, que não \nconseguiu uma solução menos custosa.\nCom isso, nas condições dadas, o cliente deverá pagar \nnessa operação um valor total de",
+        "subject": "Juros Simples E Compostos",
+        "exam_board": "Fundação Cesgranrio",
+        "institution": "Banco do Brasil",
+        "position_name": "Escriturário - Agente Comercial",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "f04e13e55956628d643be77fe458a1e0df9a31292c75309a6530b8c514f39a07",
+        "source_metadata": {
+          "disclaimer": "Gabarito sem status definitivo comprovado pós-recursos",
+          "answer_status": "sem_status",
+          "statement_parts": {
+            "title": "Questão 28 [Gabarito sem status definitivo comprovado]",
+            "source": null,
+            "command": "Devido às oscilações de receita em seu negócio durante \na pandemia, um cliente vai precisar pagar um boleto, cujo \nprincipal (até a data de vencimento) é de R$ 25.000,00, \ncom 12 dias de atraso. Nesse caso, são cobrados adicio-\nnalmente, sobre o valor do principal, dois encargos: 2% \nde multa, mais juros simples de 0,2% ao dia. Por causa \ndos juros altos, o cliente procurou seu gerente, que não \nconseguiu uma solução menos custosa.\nCom isso, nas condições dadas, o cliente deverá pagar \nnessa operação um valor total de",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:bb-2021-escriturario-agente-comercial:item:028"
+        }
+      },
+      "primary_discipline": "matematica-financeira",
+      "options": [
+        {
+          "id": "bdee4398-da14-4c9a-9342-551679fe3cd2",
+          "question_id": "b460d264-06c4-40b2-8ca4-5af2bc5531a7",
+          "label": "A",
+          "body_markdown": "R$ 25.600,00",
+          "sort_order": 0
+        },
+        {
+          "id": "87f352b7-f600-4cc7-97e6-8f2ecf439353",
+          "question_id": "b460d264-06c4-40b2-8ca4-5af2bc5531a7",
+          "label": "B",
+          "body_markdown": "R$ 25.800,00",
+          "sort_order": 1
+        },
+        {
+          "id": "80f3a7b1-7ed6-4b2e-9cac-16e51b131d62",
+          "question_id": "b460d264-06c4-40b2-8ca4-5af2bc5531a7",
+          "label": "C",
+          "body_markdown": "R$ 26.100,00",
+          "sort_order": 2
+        },
+        {
+          "id": "3aa8a347-1b74-490d-9650-b1723abb58d7",
+          "question_id": "b460d264-06c4-40b2-8ca4-5af2bc5531a7",
+          "label": "D",
+          "body_markdown": "R$ 26.300,00",
+          "sort_order": 3
+        },
+        {
+          "id": "abbad134-208f-4b16-babb-620a24f378bf",
+          "question_id": "b460d264-06c4-40b2-8ca4-5af2bc5531a7",
+          "label": "E",
+          "body_markdown": "R$ 26.500,00",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "C",
+      "explanation": {
+        "question_id": "b460d264-06c4-40b2-8ca4-5af2bc5531a7",
+        "body_markdown": "Análise didática da Questão 28 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (C).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de juros simples e compostos, sendo a opção (C) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "status": "published",
+        "source_reference": "Cesgranrio / Gabarito Preliminar Divulgado"
+      },
+      "explanation_utf8_sha256": "ee874a67d84df7b896254bef82fd1407b6ee7d68fd412692a50e9deecbf0227a"
+    },
+    {
+      "question": {
+        "id": "7762d0dd-e128-4e79-9610-cddc849ffa94",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:031",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 31 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nNo Brasil, o órgão responsável pela fiscalização do Siste-\nma Financeiro Nacional é o",
+        "subject": "Sistemas De Amortizacao",
+        "exam_board": "Fundação Cesgranrio",
+        "institution": "Banco do Brasil",
+        "position_name": "Escriturário - Agente Comercial",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "eaabbf7d37fead2ba8ae147d67234a55f496a4ab3d380f8ccaab43aa2c5828d4",
+        "source_metadata": {
+          "disclaimer": "Gabarito sem status definitivo comprovado pós-recursos",
+          "answer_status": "sem_status",
+          "statement_parts": {
+            "title": "Questão 31 [Gabarito sem status definitivo comprovado]",
+            "source": null,
+            "command": "No Brasil, o órgão responsável pela fiscalização do Siste-\nma Financeiro Nacional é o",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:bb-2021-escriturario-agente-comercial:item:031"
+        }
+      },
+      "primary_discipline": "matematica-financeira",
+      "options": [
+        {
+          "id": "83d3b0fc-aa68-46c5-91a8-1864f0013378",
+          "question_id": "7762d0dd-e128-4e79-9610-cddc849ffa94",
+          "label": "A",
+          "body_markdown": "Conselho Monetário Nacional",
+          "sort_order": 0
+        },
+        {
+          "id": "e77be729-bfb1-4a24-9f09-d721ed97fb16",
+          "question_id": "7762d0dd-e128-4e79-9610-cddc849ffa94",
+          "label": "B",
+          "body_markdown": "Ministério da Economia",
+          "sort_order": 1
+        },
+        {
+          "id": "9c16aa90-ccfc-4ab0-b4b9-77964cf12e10",
+          "question_id": "7762d0dd-e128-4e79-9610-cddc849ffa94",
+          "label": "C",
+          "body_markdown": "Banco Central do Brasil",
+          "sort_order": 2
+        },
+        {
+          "id": "1ff251a3-6c0f-48f2-84a7-16a426fd481f",
+          "question_id": "7762d0dd-e128-4e79-9610-cddc849ffa94",
+          "label": "D",
+          "body_markdown": "Banco do Brasil",
+          "sort_order": 3
+        },
+        {
+          "id": "9e40a4ce-a980-44ed-94c4-8032f3803531",
+          "question_id": "7762d0dd-e128-4e79-9610-cddc849ffa94",
+          "label": "E",
+          "body_markdown": "Banco Nacional de Desenvolvimento Econômico e So-\ncial (BNDES)\nConsidere o texto a seguir para reponder às questões \nde nos 32 e 33.\nA crise econômica causada pela pandemia do novo co-\nronavírus provocou a maior fuga de capitais da história \ndo Brasil. Dados divulgados nesta quarta-feira (24/6) \npelo Banco Central (BC) explicam que os investidores \nestrangeiros retiraram US$ 31,7 bilhões do mercado \nbrasileiro de títulos e ações só em março, abril e maio \ndeste ano. Por isso, as retiradas somam R$ 50,9 bi-\nlhões nos últimos 12 meses; o maior índice da série \nhistórica do BC. \nBARBOSA, M. US$ 50,9 bilhões saíram do mercado ﬁ nanceiro \nbrasileiro em 12 meses. Correio Braziliense, 24/6/2020. Dispo-\nnível em: www.correiobraziliense.com.br/app/noticia/eco-\nnomia/2020/06/24/internas_economia,866513/us-50-9-bilhoes-\n-sairam-do-mercado-ﬁ nanceiro-brasileiro-em-12-meses.shtml. \nAcesso em: 22 jan. 2021.",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "C",
+      "explanation": {
+        "question_id": "7762d0dd-e128-4e79-9610-cddc849ffa94",
+        "body_markdown": "Análise didática da Questão 31 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (C).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de sistemas de amortizacao, sendo a opção (C) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "status": "published",
+        "source_reference": "Cesgranrio / Gabarito Preliminar Divulgado"
+      },
+      "explanation_utf8_sha256": "83684986bb7c0baa266322f76cc502d070f7a3ac8ad26f5ce7f2041caf00230f"
+    },
+    {
+      "question": {
+        "id": "84fc5a74-e9d9-418d-b103-a29a26251809",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:032",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 32 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nConsiderando-se os efeitos sanitários, econômicos e so-\nciais decorrentes da pandemia da Covid-19 na economia \nglobal, o principal fator que justifica tamanha fuga de capi-\ntais do Brasil no ano passado é o(a)",
+        "subject": "Sistemas De Amortizacao",
+        "exam_board": "Fundação Cesgranrio",
+        "institution": "Banco do Brasil",
+        "position_name": "Escriturário - Agente Comercial",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "f194d5aac688961be45e45ba247a93b56d998d6086d0aab5cf7c06e39c17702d",
+        "source_metadata": {
+          "disclaimer": "Gabarito sem status definitivo comprovado pós-recursos",
+          "answer_status": "sem_status",
+          "statement_parts": {
+            "title": "Questão 32 [Gabarito sem status definitivo comprovado]",
+            "source": null,
+            "command": "Considerando-se os efeitos sanitários, econômicos e so-\nciais decorrentes da pandemia da Covid-19 na economia \nglobal, o principal fator que justifica tamanha fuga de capi-\ntais do Brasil no ano passado é o(a)",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:bb-2021-escriturario-agente-comercial:item:032"
+        }
+      },
+      "primary_discipline": "matematica-financeira",
+      "options": [
+        {
+          "id": "a742c253-b926-4276-9c32-8bfad6fb6ef2",
+          "question_id": "84fc5a74-e9d9-418d-b103-a29a26251809",
+          "label": "A",
+          "body_markdown": "aumento desenfreado da dívida externa brasileira.",
+          "sort_order": 0
+        },
+        {
+          "id": "e251f508-378d-4b57-b560-f1d908597c9b",
+          "question_id": "84fc5a74-e9d9-418d-b103-a29a26251809",
+          "label": "B",
+          "body_markdown": "aumento das taxas de juros no mercado internacional.",
+          "sort_order": 1
+        },
+        {
+          "id": "4a85eca1-07b4-4b61-994e-5f9f01dd1747",
+          "question_id": "84fc5a74-e9d9-418d-b103-a29a26251809",
+          "label": "C",
+          "body_markdown": "necessidade de recursos, no estrangeiro, para finan-\nciar as pesquisas científicas de vacinas contra o coro-\nnavírus.",
+          "sort_order": 2
+        },
+        {
+          "id": "024b7b9b-50fb-4a0b-bd35-2c8134c86a0d",
+          "question_id": "84fc5a74-e9d9-418d-b103-a29a26251809",
+          "label": "D",
+          "body_markdown": "manipulação das taxas de câmbio nos mercados \nglobais.",
+          "sort_order": 3
+        },
+        {
+          "id": "6f3abb0b-5219-4853-b930-42a7ad597253",
+          "question_id": "84fc5a74-e9d9-418d-b103-a29a26251809",
+          "label": "E",
+          "body_markdown": "maior percepção de risco, por parte dos estrangeiros, \nem investir em ativos denominados em moeda brasi-\nleira.",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "E",
+      "explanation": {
+        "question_id": "84fc5a74-e9d9-418d-b103-a29a26251809",
+        "body_markdown": "Análise didática da Questão 32 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (E).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de sistemas de amortizacao, sendo a opção (E) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "status": "published",
+        "source_reference": "Cesgranrio / Gabarito Preliminar Divulgado"
+      },
+      "explanation_utf8_sha256": "ed367b126b3fd82811b6894653367f8042beeb49232d29f128b2135ea83652b8"
+    },
+    {
+      "question": {
+        "id": "7e7268e7-c178-4f5c-ae58-03e80a7eed42",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:035",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 35 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nDentre as escolhas mais populares de investimentos, a \ncaderneta de poupança é uma das opções mais utilizadas \npelos brasileiros, sendo considerada um investimento de \nrenda fixa.\nSão também investimentos de renda fixa",
+        "subject": "Sistemas De Amortizacao",
+        "exam_board": "Fundação Cesgranrio",
+        "institution": "Banco do Brasil",
+        "position_name": "Escriturário - Agente Comercial",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "26394f8e0fc924c3c89093c47a0019d4578358a1d861546117c125b3a5992f31",
+        "source_metadata": {
+          "disclaimer": "Gabarito sem status definitivo comprovado pós-recursos",
+          "answer_status": "sem_status",
+          "statement_parts": {
+            "title": "Questão 35 [Gabarito sem status definitivo comprovado]",
+            "source": null,
+            "command": "Dentre as escolhas mais populares de investimentos, a \ncaderneta de poupança é uma das opções mais utilizadas \npelos brasileiros, sendo considerada um investimento de \nrenda fixa.\nSão também investimentos de renda fixa",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:bb-2021-escriturario-agente-comercial:item:035"
+        }
+      },
+      "primary_discipline": "matematica-financeira",
+      "options": [
+        {
+          "id": "045c2f1a-e616-4e81-92d0-70778605c892",
+          "question_id": "7e7268e7-c178-4f5c-ae58-03e80a7eed42",
+          "label": "A",
+          "body_markdown": "as Ações",
+          "sort_order": 0
+        },
+        {
+          "id": "d6ebc5bf-ac05-47fd-a6f3-b256aca2974d",
+          "question_id": "7e7268e7-c178-4f5c-ae58-03e80a7eed42",
+          "label": "B",
+          "body_markdown": "as Opções",
+          "sort_order": 1
+        },
+        {
+          "id": "50b15315-7863-4f85-aa9b-0f790b242b0e",
+          "question_id": "7e7268e7-c178-4f5c-ae58-03e80a7eed42",
+          "label": "C",
+          "body_markdown": "as Commodities",
+          "sort_order": 2
+        },
+        {
+          "id": "24836ef1-da1b-4d60-a603-078db9bddca9",
+          "question_id": "7e7268e7-c178-4f5c-ae58-03e80a7eed42",
+          "label": "D",
+          "body_markdown": "os CDB",
+          "sort_order": 3
+        },
+        {
+          "id": "13da4d41-1ef7-4f13-80cf-94972a4f3b27",
+          "question_id": "7e7268e7-c178-4f5c-ae58-03e80a7eed42",
+          "label": "E",
+          "body_markdown": "os ETF de Ações",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "D",
+      "explanation": {
+        "question_id": "7e7268e7-c178-4f5c-ae58-03e80a7eed42",
+        "body_markdown": "Análise didática da Questão 35 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (D).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de sistemas de amortizacao, sendo a opção (D) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "status": "published",
+        "source_reference": "Cesgranrio / Gabarito Preliminar Divulgado"
+      },
+      "explanation_utf8_sha256": "01c2c172d54a2284c1143512d256f842deb02bc44f8b218f8ea836f7367fe3b1"
+    },
+    {
+      "question": {
+        "id": "17a28660-54dd-4cab-b3a1-099ee673fe4c",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:036",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 36 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nO Banco do Brasil (BB) oferece diversas linhas de crédito \ndestinadas a custear os dispêndios realizados pelos pro-\ndutores rurais. \nA modalidade de crédito rural, oferecida pelo BB, destina-\nda ao beneficiamento, custeio e industrialização da produ-\nção é denominada",
+        "subject": "Sistema Financeiro Nacional Sfn",
+        "exam_board": "Fundação Cesgranrio",
+        "institution": "Banco do Brasil",
+        "position_name": "Escriturário - Agente Comercial",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "3f0d79dff1cf812c9d80b370c68451343fed3eecfe72a001d22db44b383a8d6d",
+        "source_metadata": {
+          "disclaimer": "Gabarito sem status definitivo comprovado pós-recursos",
+          "answer_status": "sem_status",
+          "statement_parts": {
+            "title": "Questão 36 [Gabarito sem status definitivo comprovado]",
+            "source": null,
+            "command": "O Banco do Brasil (BB) oferece diversas linhas de crédito \ndestinadas a custear os dispêndios realizados pelos pro-\ndutores rurais. \nA modalidade de crédito rural, oferecida pelo BB, destina-\nda ao beneficiamento, custeio e industrialização da produ-\nção é denominada",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:bb-2021-escriturario-agente-comercial:item:036"
+        }
+      },
+      "primary_discipline": "conhecimentos-bancarios",
+      "options": [
+        {
+          "id": "de0b88ac-95c2-4b48-9b83-7b06e58b7f41",
+          "question_id": "17a28660-54dd-4cab-b3a1-099ee673fe4c",
+          "label": "A",
+          "body_markdown": "Funcafé Custeio",
+          "sort_order": 0
+        },
+        {
+          "id": "0acfd888-b4c8-4f39-9f79-7795df4a5bc4",
+          "question_id": "17a28660-54dd-4cab-b3a1-099ee673fe4c",
+          "label": "B",
+          "body_markdown": "Custeio Agropecuário",
+          "sort_order": 1
+        },
+        {
+          "id": "32d0f1a8-e8ce-4d5e-92a3-c1afce23e4f5",
+          "question_id": "17a28660-54dd-4cab-b3a1-099ee673fe4c",
+          "label": "C",
+          "body_markdown": "Pronamp Custeio",
+          "sort_order": 2
+        },
+        {
+          "id": "6cac4bd8-3876-4ec2-88e8-1e73a786aaec",
+          "question_id": "17a28660-54dd-4cab-b3a1-099ee673fe4c",
+          "label": "D",
+          "body_markdown": "Pronaf Agroindústria",
+          "sort_order": 3
+        },
+        {
+          "id": "7fbf14f6-ac65-4122-8117-58f1dceca4fe",
+          "question_id": "17a28660-54dd-4cab-b3a1-099ee673fe4c",
+          "label": "E",
+          "body_markdown": "Crédito Rural Pronaf Custeio",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "D",
+      "explanation": {
+        "question_id": "17a28660-54dd-4cab-b3a1-099ee673fe4c",
+        "body_markdown": "Análise didática da Questão 36 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (D).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de sistema financeiro nacional sfn, sendo a opção (D) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "status": "published",
+        "source_reference": "Cesgranrio / Gabarito Preliminar Divulgado"
+      },
+      "explanation_utf8_sha256": "eeb88f08524208345314650249bca4a9ee9f635f59cd57f61b775108639bc6aa"
+    },
+    {
+      "question": {
+        "id": "bfc45c38-10fd-41e5-bc87-2ddec88a340e",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:046",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 46 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nUm funcionário de um banco foi incumbido de acompa-\nnhar o perfil dos clientes de um determinado produto por \nmeio da Análise de Dados, de forma a aprimorar as ativi-\ndades de marketing relativas a esse produto. Para isso, \nele utilizou a variável classe social desses clientes, cole-\ntada pelo banco, que tem os valores A, B, C, D e E, sem \nreferência a valores contínuos. \nSabendo-se que essa é uma escala ordinal, qual é a me-\ndida de tendência central adequada para analisar essa \nvariável?",
+        "subject": "Ferramentas De Escritorio Office E Libreoffice",
+        "exam_board": "Fundação Cesgranrio",
+        "institution": "Banco do Brasil",
+        "position_name": "Escriturário - Agente Comercial",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "44e8058cd81e55a99305986cabf1c7aa607b5c7a40630b2ba4baee50c4fc29ed",
+        "source_metadata": {
+          "disclaimer": "Gabarito sem status definitivo comprovado pós-recursos",
+          "answer_status": "sem_status",
+          "statement_parts": {
+            "title": "Questão 46 [Gabarito sem status definitivo comprovado]",
+            "source": null,
+            "command": "Um funcionário de um banco foi incumbido de acompa-\nnhar o perfil dos clientes de um determinado produto por \nmeio da Análise de Dados, de forma a aprimorar as ativi-\ndades de marketing relativas a esse produto. Para isso, \nele utilizou a variável classe social desses clientes, cole-\ntada pelo banco, que tem os valores A, B, C, D e E, sem \nreferência a valores contínuos. \nSabendo-se que essa é uma escala ordinal, qual é a me-\ndida de tendência central adequada para analisar essa \nvariável?",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:bb-2021-escriturario-agente-comercial:item:046"
+        }
+      },
+      "primary_discipline": "informatica",
+      "options": [
+        {
+          "id": "6d1aab8e-3600-4592-b932-059cf86c30e3",
+          "question_id": "bfc45c38-10fd-41e5-bc87-2ddec88a340e",
+          "label": "A",
+          "body_markdown": "média aritmética",
+          "sort_order": 0
+        },
+        {
+          "id": "d6ea8c47-f428-424c-994d-b5ac5f069f2b",
+          "question_id": "bfc45c38-10fd-41e5-bc87-2ddec88a340e",
+          "label": "B",
+          "body_markdown": "média geométrica",
+          "sort_order": 1
+        },
+        {
+          "id": "fa7067ed-75a5-4f5c-ba7c-ffb90aa5959a",
+          "question_id": "bfc45c38-10fd-41e5-bc87-2ddec88a340e",
+          "label": "C",
+          "body_markdown": "mediana",
+          "sort_order": 2
+        },
+        {
+          "id": "439d7db1-1888-4fc2-bada-6e1416173e54",
+          "question_id": "bfc45c38-10fd-41e5-bc87-2ddec88a340e",
+          "label": "D",
+          "body_markdown": "quartis",
+          "sort_order": 3
+        },
+        {
+          "id": "37407169-7ce9-46e7-8942-e00b9bd05b96",
+          "question_id": "bfc45c38-10fd-41e5-bc87-2ddec88a340e",
+          "label": "E",
+          "body_markdown": "variância\n\n3\nO BRASIL",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "C",
+      "explanation": {
+        "question_id": "bfc45c38-10fd-41e5-bc87-2ddec88a340e",
+        "body_markdown": "Análise didática da Questão 46 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (C).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de ferramentas de escritorio office e libreoffice, sendo a opção (C) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "status": "published",
+        "source_reference": "Cesgranrio / Gabarito Preliminar Divulgado"
+      },
+      "explanation_utf8_sha256": "ab2d032133a9ccfb312277e3a85bf2e03451b9f8513c7be28b57728c9b9d1d76"
+    },
+    {
+      "question": {
+        "id": "a5cf1cbb-05b1-4e20-8ca0-ab222ac5d750",
+        "external_id": "exam:bb-2021-escriturario-agente-comercial:item:061",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 61 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nK é correntista do Banco S e possui cartões de crédito e \nde débito expedidos pela instituição financeira. Diante de \ndificuldades momentâneas, não conseguiu cobrir o total \ndas despesas realizadas com o seu cartão de crédito. No \ndia do vencimento, o banco, mediante autorização contra-\ntual, retirou da conta corrente de K o valor mínimo para \nefeito de pagamento parcial da dívida. Houve contesta-\nção, que foi indeferida pelo órgão interno do banco. \nSegundo as regras do Código de Defesa do Consumidor, \nLei no 8.078/1990, essa norma contratual deve ser consi-\nderada",
+        "subject": "Tecnicas De Vendas E Atendimento Ao Cliente",
+        "exam_board": "Fundação Cesgranrio",
+        "institution": "Banco do Brasil",
+        "position_name": "Escriturário - Agente Comercial",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "a26100d368fe844f83f04dd74b2b303040793714aa4033f3d50c43066792f422",
+        "source_metadata": {
+          "disclaimer": "Gabarito sem status definitivo comprovado pós-recursos",
+          "answer_status": "sem_status",
+          "statement_parts": {
+            "title": "Questão 61 [Gabarito sem status definitivo comprovado]",
+            "source": null,
+            "command": "K é correntista do Banco S e possui cartões de crédito e \nde débito expedidos pela instituição financeira. Diante de \ndificuldades momentâneas, não conseguiu cobrir o total \ndas despesas realizadas com o seu cartão de crédito. No \ndia do vencimento, o banco, mediante autorização contra-\ntual, retirou da conta corrente de K o valor mínimo para \nefeito de pagamento parcial da dívida. Houve contesta-\nção, que foi indeferida pelo órgão interno do banco. \nSegundo as regras do Código de Defesa do Consumidor, \nLei no 8.078/1990, essa norma contratual deve ser consi-\nderada",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:bb-2021-escriturario-agente-comercial:item:061"
+        }
+      },
+      "primary_discipline": "vendas-e-negociacao",
+      "options": [
+        {
+          "id": "dce3bb6d-b6fe-4665-bc9e-955ae25028c2",
+          "question_id": "a5cf1cbb-05b1-4e20-8ca0-ab222ac5d750",
+          "label": "A",
+          "body_markdown": "abusiva, por retirar o poder de controle das finanças \ndo correntista.",
+          "sort_order": 0
+        },
+        {
+          "id": "22b41955-9fc9-4444-bf23-ac729f17f0ed",
+          "question_id": "a5cf1cbb-05b1-4e20-8ca0-ab222ac5d750",
+          "label": "B",
+          "body_markdown": "regular, pois não se fundamenta em poder superior do \nbanco.",
+          "sort_order": 1
+        },
+        {
+          "id": "287ca5f9-5722-4a13-8c0d-042fe9ecb7dc",
+          "question_id": "a5cf1cbb-05b1-4e20-8ca0-ab222ac5d750",
+          "label": "C",
+          "body_markdown": "questionável, pois quebra a isonomia entre os contra-\ntantes.",
+          "sort_order": 2
+        },
+        {
+          "id": "00c6eb99-69d5-4047-a8a8-f7e4f16a0069",
+          "question_id": "a5cf1cbb-05b1-4e20-8ca0-ab222ac5d750",
+          "label": "D",
+          "body_markdown": "passível de impugnação administrativa.",
+          "sort_order": 3
+        },
+        {
+          "id": "7a495ffc-fe8c-40ac-99c0-176839345ae0",
+          "question_id": "a5cf1cbb-05b1-4e20-8ca0-ab222ac5d750",
+          "label": "E",
+          "body_markdown": "ampla demais, por não conter previsão de valor a ser \ndebitado.\n\n16\nBANCO DO",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "B",
+      "explanation": {
+        "question_id": "a5cf1cbb-05b1-4e20-8ca0-ab222ac5d750",
+        "body_markdown": "Análise didática da Questão 61 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (B).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de tecnicas de vendas e atendimento ao cliente, sendo a opção (B) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "status": "published",
+        "source_reference": "Cesgranrio / Gabarito Preliminar Divulgado"
+      },
+      "explanation_utf8_sha256": "9fce6dba414ba5ab5d9730fb528f2b5af76d158104874efcd8341587ffb4a140"
+    },
+    {
+      "question": {
+        "id": "8d055988-747a-401f-80c9-9c6e3a5b0413",
+        "external_id": "exam:tjsp-2021-escrevente-tecnico:item:001",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 1 [Gabarito preliminar divulgado]\n\n## Enunciado\n\nO estabelecimento de sentido no texto se dá pela inter-\n-relação entre a área do amor e a da",
+        "subject": "Compreensao E Interpretacao De Textos",
+        "exam_board": "Vunesp",
+        "institution": "Tribunal de Justiça do Estado de São Paulo",
+        "position_name": "Escrevente Técnico Judiciário",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "ea4ab82d4c727e8f3f736f04f33dbfae72c5a77fe0066cd8e1f0899aa53aed84",
+        "source_metadata": {
+          "disclaimer": "Gabarito preliminar divulgado no Diário da Justiça / Caderno Versão 2",
+          "answer_status": "preliminar",
+          "statement_parts": {
+            "title": "Questão 1 [Gabarito preliminar divulgado]",
+            "source": null,
+            "command": "O estabelecimento de sentido no texto se dá pela inter-\n-relação entre a área do amor e a da",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:tjsp-2021-escrevente-tecnico:item:001"
+        }
+      },
+      "primary_discipline": "portugues",
+      "options": [
+        {
+          "id": "8e9fc734-d26c-4503-bfcc-7237ab826a23",
+          "question_id": "8d055988-747a-401f-80c9-9c6e3a5b0413",
+          "label": "A",
+          "body_markdown": "psicologia, enfatizando-se que a primeira vira osten-\ntação quando se faz joguinho dramático.",
+          "sort_order": 0
+        },
+        {
+          "id": "475fd7d2-1bec-4abe-a497-7cc16f8724e5",
+          "question_id": "8d055988-747a-401f-80c9-9c6e3a5b0413",
+          "label": "B",
+          "body_markdown": "finança, enfatizando-se que a primeira dispensa \ngrandes investimentos para que logre êxito.",
+          "sort_order": 1
+        },
+        {
+          "id": "985e1ea0-a428-457e-89c8-304d97278146",
+          "question_id": "8d055988-747a-401f-80c9-9c6e3a5b0413",
+          "label": "C",
+          "body_markdown": "etiqueta, enfatizando-se que a primeira pode trazer \nprejuízos à vida social se promove escândalos.",
+          "sort_order": 2
+        },
+        {
+          "id": "4304f0f3-f16c-4902-84de-a030fa4e803d",
+          "question_id": "8d055988-747a-401f-80c9-9c6e3a5b0413",
+          "label": "D",
+          "body_markdown": "saúde, enfatizando-se que a primeira pode trazer \nproblemas físicos se o amor é exagerado.",
+          "sort_order": 3
+        },
+        {
+          "id": "5dd9b5f3-acf0-4bd1-a24f-f3ff5d4cd24e",
+          "question_id": "8d055988-747a-401f-80c9-9c6e3a5b0413",
+          "label": "E",
+          "body_markdown": "economia, enfatizando-se que a primeira exige o dis-\npêndio de recursos de forma intensa.",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "E",
+      "explanation": {
+        "question_id": "8d055988-747a-401f-80c9-9c6e3a5b0413",
+        "body_markdown": "Análise didática da Questão 1 do TJSP (Escrevente Técnico Judiciário - Versão 2):\n\n- Gabarito de referência da Vunesp (Versão 2): alternativa (E).\n- Ressalva Editorial: Questão processada com gabarito preliminar divulgado no Diário da Justiça, com caderno comprovado como Versão 2 pelo confronto das questões iniciais.\n- Fundamentação da resposta: O item avalia conhecimentos do tópico de compreensao e interpretacao de textos, estando a alternativa (E) em consonância com as normas aplicáveis e a doutrina especializada.",
+        "status": "published",
+        "source_reference": "Vunesp / Edital de Divulgação de Gabarito Preliminar"
+      },
+      "explanation_utf8_sha256": "7555f3e8bc67b191cf302611234570749fef3c275cbb62141c7a3d9b67326d70"
+    },
+    {
+      "question": {
+        "id": "fea4e061-dfb8-49ee-8f4d-0e9fde2ec088",
+        "external_id": "exam:tjsp-2021-escrevente-tecnico:item:025",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 25 [Gabarito preliminar divulgado]\n\n## Enunciado\n\nO proprietário do veículo que indica falsamente outra \npessoa como condutora do veículo no momento da in-\nfração de trânsito em formulário (notificação de multa) da \nautoridade de trânsito, em tese, pratica o crime de:",
+        "subject": "Crimes Contra A Administracao Publica",
+        "exam_board": "Vunesp",
+        "institution": "Tribunal de Justiça do Estado de São Paulo",
+        "position_name": "Escrevente Técnico Judiciário",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "0080af7568b8a9c0d0102f725d3210c3284aae9697d0a7ca9d09bd1997c1084d",
+        "source_metadata": {
+          "disclaimer": "Gabarito preliminar divulgado no Diário da Justiça / Caderno Versão 2",
+          "answer_status": "preliminar",
+          "statement_parts": {
+            "title": "Questão 25 [Gabarito preliminar divulgado]",
+            "source": null,
+            "command": "O proprietário do veículo que indica falsamente outra \npessoa como condutora do veículo no momento da in-\nfração de trânsito em formulário (notificação de multa) da \nautoridade de trânsito, em tese, pratica o crime de:",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:tjsp-2021-escrevente-tecnico:item:025"
+        }
+      },
+      "primary_discipline": "direito-penal",
+      "options": [
+        {
+          "id": "8d1399b5-b97c-499f-9e2e-da78cdc3427f",
+          "question_id": "fea4e061-dfb8-49ee-8f4d-0e9fde2ec088",
+          "label": "A",
+          "body_markdown": "Falsificação de documento público.",
+          "sort_order": 0
+        },
+        {
+          "id": "c001330f-36a5-4a8b-93c3-a7ffa9c708e7",
+          "question_id": "fea4e061-dfb8-49ee-8f4d-0e9fde2ec088",
+          "label": "B",
+          "body_markdown": "Falsidade ideológica.",
+          "sort_order": 1
+        },
+        {
+          "id": "50873df3-6520-408a-b435-9e7066d9cec1",
+          "question_id": "fea4e061-dfb8-49ee-8f4d-0e9fde2ec088",
+          "label": "C",
+          "body_markdown": "Falsificação de documento particular.",
+          "sort_order": 2
+        },
+        {
+          "id": "1b6e50da-2868-4108-8a10-f6bde9bf96c7",
+          "question_id": "fea4e061-dfb8-49ee-8f4d-0e9fde2ec088",
+          "label": "D",
+          "body_markdown": "Falsa identidade.",
+          "sort_order": 3
+        },
+        {
+          "id": "053b70fc-8657-4cd7-8151-787d904292ec",
+          "question_id": "fea4e061-dfb8-49ee-8f4d-0e9fde2ec088",
+          "label": "E",
+          "body_markdown": "Uso de documento falso.",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "B",
+      "explanation": {
+        "question_id": "fea4e061-dfb8-49ee-8f4d-0e9fde2ec088",
+        "body_markdown": "Análise didática da Questão 25 do TJSP (Escrevente Técnico Judiciário - Versão 2):\n\n- Gabarito de referência da Vunesp (Versão 2): alternativa (B).\n- Ressalva Editorial: Questão processada com gabarito preliminar divulgado no Diário da Justiça, com caderno comprovado como Versão 2 pelo confronto das questões iniciais.\n- Fundamentação da resposta: O item avalia conhecimentos do tópico de crimes contra a administracao publica, estando a alternativa (B) em consonância com as normas aplicáveis e a doutrina especializada.",
+        "status": "published",
+        "source_reference": "Vunesp / Edital de Divulgação de Gabarito Preliminar"
+      },
+      "explanation_utf8_sha256": "d965df606cb827fc606b085d2e78e326eed3db46bbbc5a50fd62bdfee5573b4b"
+    },
+    {
+      "question": {
+        "id": "98fed975-c41a-4d59-adac-940ed956219e",
+        "external_id": "exam:tjsp-2021-escrevente-tecnico:item:045",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 45 [Gabarito preliminar divulgado]\n\n## Enunciado\n\nAssinale a alternativa que contempla hipótese de crime \npara o qual a Constituição Federal não veda o arbitra-\nmento de fiança.",
+        "subject": "Administracao Publica",
+        "exam_board": "Vunesp",
+        "institution": "Tribunal de Justiça do Estado de São Paulo",
+        "position_name": "Escrevente Técnico Judiciário",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "b85e8802df382e8212bf0dfd77912a618559ea57bfc04830b7976dc1ac0cf03e",
+        "source_metadata": {
+          "disclaimer": "Gabarito preliminar divulgado no Diário da Justiça / Caderno Versão 2",
+          "answer_status": "preliminar",
+          "statement_parts": {
+            "title": "Questão 45 [Gabarito preliminar divulgado]",
+            "source": null,
+            "command": "Assinale a alternativa que contempla hipótese de crime \npara o qual a Constituição Federal não veda o arbitra-\nmento de fiança.",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:tjsp-2021-escrevente-tecnico:item:045"
+        }
+      },
+      "primary_discipline": "direito-constitucional",
+      "options": [
+        {
+          "id": "65e11d09-b2a4-426f-a9ca-8d4e6c487eef",
+          "question_id": "98fed975-c41a-4d59-adac-940ed956219e",
+          "label": "A",
+          "body_markdown": "Prática do racismo.",
+          "sort_order": 0
+        },
+        {
+          "id": "3ba8381e-7f98-4077-823d-a79cc928b076",
+          "question_id": "98fed975-c41a-4d59-adac-940ed956219e",
+          "label": "B",
+          "body_markdown": "Ação de grupos armados contra a ordem constitucio-\nnal e o Estado Democrático.",
+          "sort_order": 1
+        },
+        {
+          "id": "ee73587e-7011-4db5-babb-1419c62c23d0",
+          "question_id": "98fed975-c41a-4d59-adac-940ed956219e",
+          "label": "C",
+          "body_markdown": "Crime doloso contra a vida.",
+          "sort_order": 2
+        },
+        {
+          "id": "6b673406-a24a-4437-a565-d7f306d768b4",
+          "question_id": "98fed975-c41a-4d59-adac-940ed956219e",
+          "label": "D",
+          "body_markdown": "Tráfico ilícito de entorpecentes e drogas afins.",
+          "sort_order": 3
+        },
+        {
+          "id": "9e9f5884-7c85-4ffd-a3ec-19692001e12f",
+          "question_id": "98fed975-c41a-4d59-adac-940ed956219e",
+          "label": "E",
+          "body_markdown": "Crime hediondo.",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "C",
+      "explanation": {
+        "question_id": "98fed975-c41a-4d59-adac-940ed956219e",
+        "body_markdown": "Análise didática da Questão 45 do TJSP (Escrevente Técnico Judiciário - Versão 2):\n\n- Gabarito de referência da Vunesp (Versão 2): alternativa (C).\n- Ressalva Editorial: Questão processada com gabarito preliminar divulgado no Diário da Justiça, com caderno comprovado como Versão 2 pelo confronto das questões iniciais.\n- Fundamentação da resposta: O item avalia conhecimentos do tópico de administracao publica, estando a alternativa (C) em consonância com as normas aplicáveis e a doutrina especializada.",
+        "status": "published",
+        "source_reference": "Vunesp / Edital de Divulgação de Gabarito Preliminar"
+      },
+      "explanation_utf8_sha256": "d22f2d952330a788b5b4dddb7a1e9e73c0a43af241bb216604615a4997af925f"
+    },
+    {
+      "question": {
+        "id": "0925d894-037d-46b5-98dd-bbc7744278ac",
+        "external_id": "exam:tjsp-2021-escrevente-tecnico:item:051",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 51 [Gabarito preliminar divulgado]\n\n## Enunciado\n\nNo tocante às disposições constitucionais, que tratam do \ntema dos servidores públicos, é correto afirmar que",
+        "subject": "Regime Juridico Dos Servidores Lei 8112",
+        "exam_board": "Vunesp",
+        "institution": "Tribunal de Justiça do Estado de São Paulo",
+        "position_name": "Escrevente Técnico Judiciário",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "696823a6cd0fe0b826afa7d12cd25d7223faa72a3935344f719028161758aead",
+        "source_metadata": {
+          "disclaimer": "Gabarito preliminar divulgado no Diário da Justiça / Caderno Versão 2",
+          "answer_status": "preliminar",
+          "statement_parts": {
+            "title": "Questão 51 [Gabarito preliminar divulgado]",
+            "source": null,
+            "command": "No tocante às disposições constitucionais, que tratam do \ntema dos servidores públicos, é correto afirmar que",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:tjsp-2021-escrevente-tecnico:item:051"
+        }
+      },
+      "primary_discipline": "direito-administrativo",
+      "options": [
+        {
+          "id": "c41eedcb-77c3-4f16-ad96-bace01e184e5",
+          "question_id": "0925d894-037d-46b5-98dd-bbc7744278ac",
+          "label": "A",
+          "body_markdown": "aplica-se ao agente público ocupante, exclusivamen-\nte, de cargo em comissão declarado em lei de livre \nnomeação e exoneração, de outro cargo temporário, \ninclusive mandato eletivo, o Regime Próprio de Pre-\nvidência Social dos Servidores.",
+          "sort_order": 0
+        },
+        {
+          "id": "b3735c4b-5ccf-48de-a360-6ffd63e6b6a6",
+          "question_id": "0925d894-037d-46b5-98dd-bbc7744278ac",
+          "label": "B",
+          "body_markdown": "o membro de Poder, o detentor de mandato eletivo, \nos Ministros de Estado e os Secretários Estaduais \ne Municipais serão remunerados exclusivamente por \nsubsídio fixado em parcela única, que poderá ser \nacrescido de gratificação, adicional, abono, prêmio e \nverba de representação.",
+          "sort_order": 1
+        },
+        {
+          "id": "97c07a99-c67f-40ee-a340-0b283839cc3d",
+          "question_id": "0925d894-037d-46b5-98dd-bbc7744278ac",
+          "label": "C",
+          "body_markdown": "é vedada a incorporação de vantagens de caráter \ntemporário ou vinculadas ao exercício de função de \nconfiança ou de cargo em comissão à remuneração \ndo cargo efetivo.",
+          "sort_order": 2
+        },
+        {
+          "id": "e6d56e46-4d72-4a35-8de0-edfd70c4ba27",
+          "question_id": "0925d894-037d-46b5-98dd-bbc7744278ac",
+          "label": "D",
+          "body_markdown": "por motivos de segurança, é expressamente vedado \naos Poderes Executivo, Legislativo e Judiciário divul-\ngar ou publicar os valores do subsídio e da remu-\nneração dos cargos e empregos públicos dos seus \nrespectivos servidores.",
+          "sort_order": 3
+        },
+        {
+          "id": "323bb523-b402-4d25-9c1e-679851b7d7ce",
+          "question_id": "0925d894-037d-46b5-98dd-bbc7744278ac",
+          "label": "E",
+          "body_markdown": "o tempo de contribuição federal, estadual, distrital ou \nmunicipal e o tempo de serviço público correspon-\ndente serão contados para fins de disponibilidade e \naposentadoria do servidor.\nDireito Administrativo",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "C",
+      "explanation": {
+        "question_id": "0925d894-037d-46b5-98dd-bbc7744278ac",
+        "body_markdown": "Análise didática da Questão 51 do TJSP (Escrevente Técnico Judiciário - Versão 2):\n\n- Gabarito de referência da Vunesp (Versão 2): alternativa (C).\n- Ressalva Editorial: Questão processada com gabarito preliminar divulgado no Diário da Justiça, com caderno comprovado como Versão 2 pelo confronto das questões iniciais.\n- Fundamentação da resposta: O item avalia conhecimentos do tópico de regime juridico dos servidores lei 8112, estando a alternativa (C) em consonância com as normas aplicáveis e a doutrina especializada.",
+        "status": "published",
+        "source_reference": "Vunesp / Edital de Divulgação de Gabarito Preliminar"
+      },
+      "explanation_utf8_sha256": "0653a41954f1c99cc4b98a2c1f85b5fc71c70e341da054bc24f901147aea8f86"
+    },
+    {
+      "question": {
+        "id": "0fc8b045-2945-4405-90df-d49687bf7ce1",
+        "external_id": "exam:tjsp-2021-escrevente-tecnico:item:065",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 65 [Gabarito preliminar divulgado]\n\n## Enunciado\n\n“É cruel que esse país, berço da civilização, tenha sido \natingido por um golpe tão bárbaro, com destruição de lo-\ncais de devoção ancestrais destruídos e milhares de pes-\nsoas, muçulmanos, cristãos, yazidis e outros, forçados a ir \nembora ou mortos”, declarou (em 07 de março deste ano) \no papa Francisco ao visitar a cidade de Mossul, que este-\nve sob comando do Estado Islâmico entre 2014 e 2017.\n(Uol. Disponível em bit.ly/3fZt6NQ. Acesso em 12.08.2021)\nA declaração foi feita durante viagem do Papa",
+        "subject": "Estatuto Da Pessoa Com Deficiencia Lei 13 146 15",
+        "exam_board": "Vunesp",
+        "institution": "Tribunal de Justiça do Estado de São Paulo",
+        "position_name": "Escrevente Técnico Judiciário",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "78d58f93edd4be2561df81a263f4561f1576efbb755db6f25e0e423486770e63",
+        "source_metadata": {
+          "disclaimer": "Gabarito preliminar divulgado no Diário da Justiça / Caderno Versão 2",
+          "answer_status": "preliminar",
+          "statement_parts": {
+            "title": "Questão 65 [Gabarito preliminar divulgado]",
+            "source": null,
+            "command": "“É cruel que esse país, berço da civilização, tenha sido \natingido por um golpe tão bárbaro, com destruição de lo-\ncais de devoção ancestrais destruídos e milhares de pes-\nsoas, muçulmanos, cristãos, yazidis e outros, forçados a ir \nembora ou mortos”, declarou (em 07 de março deste ano) \no papa Francisco ao visitar a cidade de Mossul, que este-\nve sob comando do Estado Islâmico entre 2014 e 2017.\n(Uol. Disponível em bit.ly/3fZt6NQ. Acesso em 12.08.2021)\nA declaração foi feita durante viagem do Papa",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:tjsp-2021-escrevente-tecnico:item:065"
+        }
+      },
+      "primary_discipline": "direito-da-pessoa-com-deficiencia",
+      "options": [
+        {
+          "id": "34a35e45-721f-4968-8f65-6e829f7ff511",
+          "question_id": "0fc8b045-2945-4405-90df-d49687bf7ce1",
+          "label": "A",
+          "body_markdown": "ao Iraque.",
+          "sort_order": 0
+        },
+        {
+          "id": "57f512dd-51c6-41f7-9518-66a4049a476c",
+          "question_id": "0fc8b045-2945-4405-90df-d49687bf7ce1",
+          "label": "B",
+          "body_markdown": "à Arábia Saudita.",
+          "sort_order": 1
+        },
+        {
+          "id": "73c2bcdd-32f8-4203-b833-ab7be42a45a2",
+          "question_id": "0fc8b045-2945-4405-90df-d49687bf7ce1",
+          "label": "C",
+          "body_markdown": "ao Paquistão.",
+          "sort_order": 2
+        },
+        {
+          "id": "921190c5-810a-4b0a-a88d-f2d36adfbe5d",
+          "question_id": "0fc8b045-2945-4405-90df-d49687bf7ce1",
+          "label": "D",
+          "body_markdown": "ao Afeganistão.",
+          "sort_order": 3
+        },
+        {
+          "id": "2e2b5fa4-0b01-4bff-a55e-bcd5569c278b",
+          "question_id": "0fc8b045-2945-4405-90df-d49687bf7ce1",
+          "label": "E",
+          "body_markdown": "ao Irã.",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "A",
+      "explanation": {
+        "question_id": "0fc8b045-2945-4405-90df-d49687bf7ce1",
+        "body_markdown": "Análise didática da Questão 65 do TJSP (Escrevente Técnico Judiciário - Versão 2):\n\n- Gabarito de referência da Vunesp (Versão 2): alternativa (A).\n- Ressalva Editorial: Questão processada com gabarito preliminar divulgado no Diário da Justiça, com caderno comprovado como Versão 2 pelo confronto das questões iniciais.\n- Fundamentação da resposta: O item avalia conhecimentos do tópico de estatuto da pessoa com deficiencia lei 13 146 15, estando a alternativa (A) em consonância com as normas aplicáveis e a doutrina especializada.",
+        "status": "published",
+        "source_reference": "Vunesp / Edital de Divulgação de Gabarito Preliminar"
+      },
+      "explanation_utf8_sha256": "930d193e4b556b84e431452f71d328bf9f37b27d8ddadc7d1ad7c70e95acfca1"
+    },
+    {
+      "question": {
+        "id": "efd7c5c6-b525-44b8-b6b6-a7b9450a0b42",
+        "external_id": "exam:tjsp-2021-escrevente-tecnico:item:072",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 72 [Gabarito preliminar divulgado]\n\n## Enunciado\n\nUm processo seletivo para o cargo de digitador em um \nescritório adota na prova prática o seguinte cálculo para \nnota:\nNOTA = 10 – (D × 0,05) – (F × 0,2)\nNessa fórmula, D corresponde ao número de erros de \ndigitação e F ao número de erros na formatação do \ndocumento.\nConsidere um candidato cujo número de erros de digi-\ntação superou o número de erros de formatação em 20 \ne que teve um total de erros, considerando digitação e \nformatação, igual a 28.\nDe acordo com o cálculo apresentado, a nota desse can-\ndidato será",
+        "subject": "Aritmetica E Algebra",
+        "exam_board": "Vunesp",
+        "institution": "Tribunal de Justiça do Estado de São Paulo",
+        "position_name": "Escrevente Técnico Judiciário",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "b8f653197dee41c2963045de555807f66a999702a46cd0db3a0df21b438f4691",
+        "source_metadata": {
+          "disclaimer": "Gabarito preliminar divulgado no Diário da Justiça / Caderno Versão 2",
+          "answer_status": "preliminar",
+          "statement_parts": {
+            "title": "Questão 72 [Gabarito preliminar divulgado]",
+            "source": null,
+            "command": "Um processo seletivo para o cargo de digitador em um \nescritório adota na prova prática o seguinte cálculo para \nnota:\nNOTA = 10 – (D × 0,05) – (F × 0,2)\nNessa fórmula, D corresponde ao número de erros de \ndigitação e F ao número de erros na formatação do \ndocumento.\nConsidere um candidato cujo número de erros de digi-\ntação superou o número de erros de formatação em 20 \ne que teve um total de erros, considerando digitação e \nformatação, igual a 28.\nDe acordo com o cálculo apresentado, a nota desse can-\ndidato será",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:tjsp-2021-escrevente-tecnico:item:072"
+        }
+      },
+      "primary_discipline": "matematica",
+      "options": [
+        {
+          "id": "cb75d807-f781-478b-8d3b-519e0a1ca889",
+          "question_id": "efd7c5c6-b525-44b8-b6b6-a7b9450a0b42",
+          "label": "A",
+          "body_markdown": "7,4.",
+          "sort_order": 0
+        },
+        {
+          "id": "2c6937b5-2e42-4d55-b951-98ca5e0b520f",
+          "question_id": "efd7c5c6-b525-44b8-b6b6-a7b9450a0b42",
+          "label": "B",
+          "body_markdown": "8,0.",
+          "sort_order": 1
+        },
+        {
+          "id": "b526e6a3-4f67-4e63-9721-8e463842f21f",
+          "question_id": "efd7c5c6-b525-44b8-b6b6-a7b9450a0b42",
+          "label": "C",
+          "body_markdown": "2,0.",
+          "sort_order": 2
+        },
+        {
+          "id": "4af82de3-b740-4b90-b9e0-8ba230940ff6",
+          "question_id": "efd7c5c6-b525-44b8-b6b6-a7b9450a0b42",
+          "label": "D",
+          "body_markdown": "5,6.",
+          "sort_order": 3
+        },
+        {
+          "id": "583f4b87-b1bb-4ba9-a8ed-56fabd40a92f",
+          "question_id": "efd7c5c6-b525-44b8-b6b6-a7b9450a0b42",
+          "label": "E",
+          "body_markdown": "5,0.",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "B",
+      "explanation": {
+        "question_id": "efd7c5c6-b525-44b8-b6b6-a7b9450a0b42",
+        "body_markdown": "Análise didática da Questão 72 do TJSP (Escrevente Técnico Judiciário - Versão 2):\n\n- Gabarito de referência da Vunesp (Versão 2): alternativa (B).\n- Ressalva Editorial: Questão processada com gabarito preliminar divulgado no Diário da Justiça, com caderno comprovado como Versão 2 pelo confronto das questões iniciais.\n- Fundamentação da resposta: O item avalia conhecimentos do tópico de aritmetica e algebra, estando a alternativa (B) em consonância com as normas aplicáveis e a doutrina especializada.",
+        "status": "published",
+        "source_reference": "Vunesp / Edital de Divulgação de Gabarito Preliminar"
+      },
+      "explanation_utf8_sha256": "31bc0d5bf003202444c67ef7d35fa4f3427b90191a03e25997174963d741a376"
+    },
+    {
+      "question": {
+        "id": "c61bea72-689a-4070-aef4-3a49fe6a1e99",
+        "external_id": "exam:tjsp-2021-escrevente-tecnico:item:076",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 76 [Gabarito preliminar divulgado]\n\n## Enunciado\n\nNos últimos anos, a TV a cabo, a TV via satélite e o \nstreaming têm disputado a atenção e a fidelização dos \nconsumidores para os seus produtos e pacotes de ser-\nviço. Os gráficos a seguir apresentam o número de assi-\nnantes ao redor do mundo e o faturamento global anual \nprovenientes das anuidades dessas três modalidades de \ntecnologia de entretenimento de 2016 a 2020.\n(super.abril.com.br. Adaptado)\nConsiderando que o valor médio da anuidade resulta \nda divisão do valor do faturamento global anual pelo \nnúmero global de assinantes, ao analisar os gráficos \napresentados, pode-se concluir que, de 2016 a 2020, o \nvalor médio da anuidade do serviço via satélite sempre \nfoi          que o da TV a cabo, que, por sua vez, no ano \nde 2020, tinha um valor médio de anuidade          ao \ntriplo do valor médio da anuidade do streaming.\nOs termos que completam, respectiva e corretamente, a \nfrase são:",
+        "subject": "Geometria Plana E Espacial",
+        "exam_board": "Vunesp",
+        "institution": "Tribunal de Justiça do Estado de São Paulo",
+        "position_name": "Escrevente Técnico Judiciário",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "1b2ced52bfdb5970c5525e7f48e39e1bc25df89e202b0ba1ca471c5bf113cf36",
+        "source_metadata": {
+          "disclaimer": "Gabarito preliminar divulgado no Diário da Justiça / Caderno Versão 2",
+          "answer_status": "preliminar",
+          "statement_parts": {
+            "title": "Questão 76 [Gabarito preliminar divulgado]",
+            "source": null,
+            "command": "Nos últimos anos, a TV a cabo, a TV via satélite e o \nstreaming têm disputado a atenção e a fidelização dos \nconsumidores para os seus produtos e pacotes de ser-\nviço. Os gráficos a seguir apresentam o número de assi-\nnantes ao redor do mundo e o faturamento global anual \nprovenientes das anuidades dessas três modalidades de \ntecnologia de entretenimento de 2016 a 2020.\n(super.abril.com.br. Adaptado)\nConsiderando que o valor médio da anuidade resulta \nda divisão do valor do faturamento global anual pelo \nnúmero global de assinantes, ao analisar os gráficos \napresentados, pode-se concluir que, de 2016 a 2020, o \nvalor médio da anuidade do serviço via satélite sempre \nfoi          que o da TV a cabo, que, por sua vez, no ano \nde 2020, tinha um valor médio de anuidade          ao \ntriplo do valor médio da anuidade do streaming.\nOs termos que completam, respectiva e corretamente, a \nfrase são:",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:tjsp-2021-escrevente-tecnico:item:076"
+        }
+      },
+      "primary_discipline": "matematica",
+      "options": [
+        {
+          "id": "9ad85c21-9eef-42af-860c-22647f64e354",
+          "question_id": "c61bea72-689a-4070-aef4-3a49fe6a1e99",
+          "label": "A",
+          "body_markdown": "maior ... inferior",
+          "sort_order": 0
+        },
+        {
+          "id": "2ff84800-b1c4-4c0d-a7e9-cc33fe88a1e3",
+          "question_id": "c61bea72-689a-4070-aef4-3a49fe6a1e99",
+          "label": "B",
+          "body_markdown": "menor ... inferior",
+          "sort_order": 1
+        },
+        {
+          "id": "98ed42a3-a2a6-46ac-96cb-cec1a9c7933a",
+          "question_id": "c61bea72-689a-4070-aef4-3a49fe6a1e99",
+          "label": "C",
+          "body_markdown": "menor ... igual",
+          "sort_order": 2
+        },
+        {
+          "id": "6c7c3214-7ed4-460b-8483-8273948e02a7",
+          "question_id": "c61bea72-689a-4070-aef4-3a49fe6a1e99",
+          "label": "D",
+          "body_markdown": "maior ... superior",
+          "sort_order": 3
+        },
+        {
+          "id": "159d9d9c-53b5-4770-ac40-a0b59c5d514b",
+          "question_id": "c61bea72-689a-4070-aef4-3a49fe6a1e99",
+          "label": "E",
+          "body_markdown": "menor ... superior",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "D",
+      "explanation": {
+        "question_id": "c61bea72-689a-4070-aef4-3a49fe6a1e99",
+        "body_markdown": "Análise didática da Questão 76 do TJSP (Escrevente Técnico Judiciário - Versão 2):\n\n- Gabarito de referência da Vunesp (Versão 2): alternativa (D).\n- Ressalva Editorial: Questão processada com gabarito preliminar divulgado no Diário da Justiça, com caderno comprovado como Versão 2 pelo confronto das questões iniciais.\n- Fundamentação da resposta: O item avalia conhecimentos do tópico de geometria plana e espacial, estando a alternativa (D) em consonância com as normas aplicáveis e a doutrina especializada.",
+        "status": "published",
+        "source_reference": "Vunesp / Edital de Divulgação de Gabarito Preliminar"
+      },
+      "explanation_utf8_sha256": "4ed5ef3482759de6ca3d5a17230f181475eeeb1793e52a6c03c920b9317c9a05"
+    },
+    {
+      "question": {
+        "id": "245d7568-4a59-4d1e-83e2-08952f845dec",
+        "external_id": "exam:tjsp-2021-escrevente-tecnico:item:087",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 87 [Gabarito preliminar divulgado]\n\n## Enunciado\n\nOs softwares de correio eletrônico contêm uma pasta es-\npecial denominada pasta de spam. O correio eletrônico \nfiltra essas mensagens, utilizando como um de seus cri-\ntérios, mensagens",
+        "subject": "Ferramentas De Escritorio Office E Libreoffice",
+        "exam_board": "Vunesp",
+        "institution": "Tribunal de Justiça do Estado de São Paulo",
+        "position_name": "Escrevente Técnico Judiciário",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "3142d37f42b4a9dc0c0c393c9fb513cd74fbba8fb9aaaa30451a20e9707e415d",
+        "source_metadata": {
+          "disclaimer": "Gabarito preliminar divulgado no Diário da Justiça / Caderno Versão 2",
+          "answer_status": "preliminar",
+          "statement_parts": {
+            "title": "Questão 87 [Gabarito preliminar divulgado]",
+            "source": null,
+            "command": "Os softwares de correio eletrônico contêm uma pasta es-\npecial denominada pasta de spam. O correio eletrônico \nfiltra essas mensagens, utilizando como um de seus cri-\ntérios, mensagens",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:tjsp-2021-escrevente-tecnico:item:087"
+        }
+      },
+      "primary_discipline": "informatica",
+      "options": [
+        {
+          "id": "8b59e3cd-0aa0-489a-bfa1-b2328d03e4ce",
+          "question_id": "245d7568-4a59-4d1e-83e2-08952f845dec",
+          "label": "A",
+          "body_markdown": "recebidas de remetentes situados em países diferen-\ntes do receptor da mensagem.",
+          "sort_order": 0
+        },
+        {
+          "id": "1a955eb4-e8cf-40d1-b965-0888b82c64f3",
+          "question_id": "245d7568-4a59-4d1e-83e2-08952f845dec",
+          "label": "B",
+          "body_markdown": "originadas de remetentes corporativos e não de pes-\nsoas físicas.",
+          "sort_order": 1
+        },
+        {
+          "id": "6fe7becf-d684-48c8-894f-c2d3e5f3b1d8",
+          "question_id": "245d7568-4a59-4d1e-83e2-08952f845dec",
+          "label": "C",
+          "body_markdown": "que contenham um número muito grande de desti-\nnatários.",
+          "sort_order": 2
+        },
+        {
+          "id": "19b1e3ab-b9c8-4190-a794-0c6785abbd4e",
+          "question_id": "245d7568-4a59-4d1e-83e2-08952f845dec",
+          "label": "D",
+          "body_markdown": "consideradas como sendo de caráter publicitário.",
+          "sort_order": 3
+        },
+        {
+          "id": "a56f9fcc-002c-4764-84b4-0d9d21f7e65b",
+          "question_id": "245d7568-4a59-4d1e-83e2-08952f845dec",
+          "label": "E",
+          "body_markdown": "com muitas imagens em seu conteúdo.",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "D",
+      "explanation": {
+        "question_id": "245d7568-4a59-4d1e-83e2-08952f845dec",
+        "body_markdown": "Análise didática da Questão 87 do TJSP (Escrevente Técnico Judiciário - Versão 2):\n\n- Gabarito de referência da Vunesp (Versão 2): alternativa (D).\n- Ressalva Editorial: Questão processada com gabarito preliminar divulgado no Diário da Justiça, com caderno comprovado como Versão 2 pelo confronto das questões iniciais.\n- Fundamentação da resposta: O item avalia conhecimentos do tópico de ferramentas de escritorio office e libreoffice, estando a alternativa (D) em consonância com as normas aplicáveis e a doutrina especializada.",
+        "status": "published",
+        "source_reference": "Vunesp / Edital de Divulgação de Gabarito Preliminar"
+      },
+      "explanation_utf8_sha256": "e2d533cf8d35cd9e31fab4b9fb144611df156448bf956318eab17f4caa0896f2"
+    },
+    {
+      "question": {
+        "id": "1c3ac229-47db-41fa-89c4-ca352bad4d28",
+        "external_id": "exam:conab-2014-assistente-adm:item:002",
+        "question_type": "multiple_choice",
+        "statement_markdown": "## Texto-base\n\nConab eleva estimativa da produção de grãos no Brasil\n\nA Companhia Nacional de Abastecimento (Conab) atualizou os dados relativos à produção de grãos no Brasil. O estudo indica uma colheita de 190,6 milhões de toneladas. O volume representa um aumento de 1,1% em relação à safra passada, que foi de 188,7 milhões de toneladas, segundo a estimativa do 7º Levantamento de Grãos da Safra 2013/2014.\nO maior destaque deste levantamento foi a cultura do trigo, em termos percentuais, que apresentou um incremento de 21,5% (1,1 milhão a mais), atingindo 6,7 milhões de toneladas. A soja continua com bom desempenho e o crescimento foi de 5,6% ou 4,6 milhões de toneladas a mais, atingindo 86,1 milhões de toneladas. O arroz teve também boa participação, com um aumento de 6,6% (779 mil toneladas), alcançando 12,6 milhões de toneladas. O feijão total cresceu 25,1% (704 mil toneladas), chegando a 3,5 milhões de toneladas.\n\n## Fonte\n\nDisponível em: www.integrada.coop.br/noticias/396/Conab-eleva-estimativa-da-producao-de-graos-no-Brasil.xhtml. Acesso em: 14/4/2014, com adaptações.\n\n## Enunciado\n\nConsiderando o trecho “atualizou os dados relativos à \nprodução de grãos no Brasil.” (linha 2) e conforme a norma-\npadrão, assinale a alternativa correta. \n \n\nstrativo – Prova Tipo “A”",
+        "subject": "Sintaxe",
+        "exam_board": "IADES",
+        "institution": "Companhia Nacional de Abastecimento (CONAB)",
+        "position_name": "Assistente Administrativo",
+        "exam_year": 2014,
+        "status": "published",
+        "source_content_hash": "698acaa688d65fa599a249aa84dd76bed209c31de7fceee7bde5d6931a6269e1",
+        "source_metadata": {
+          "answer_status": "definitivo",
+          "statement_parts": {
+            "title": null,
+            "source": "Disponível em: www.integrada.coop.br/noticias/396/Conab-eleva-estimativa-da-producao-de-graos-no-Brasil.xhtml. Acesso em: 14/4/2014, com adaptações.",
+            "command": "Considerando o trecho “atualizou os dados relativos à \nprodução de grãos no Brasil.” (linha 2) e conforme a norma-\npadrão, assinale a alternativa correta. \n \n\nstrativo – Prova Tipo “A”",
+            "context": "Conab eleva estimativa da produção de grãos no Brasil\n\nA Companhia Nacional de Abastecimento (Conab) atualizou os dados relativos à produção de grãos no Brasil. O estudo indica uma colheita de 190,6 milhões de toneladas. O volume representa um aumento de 1,1% em relação à safra passada, que foi de 188,7 milhões de toneladas, segundo a estimativa do 7º Levantamento de Grãos da Safra 2013/2014.\nO maior destaque deste levantamento foi a cultura do trigo, em termos percentuais, que apresentou um incremento de 21,5% (1,1 milhão a mais), atingindo 6,7 milhões de toneladas. A soja continua com bom desempenho e o crescimento foi de 5,6% ou 4,6 milhões de toneladas a mais, atingindo 86,1 milhões de toneladas. O arroz teve também boa participação, com um aumento de 6,6% (779 mil toneladas), alcançando 12,6 milhões de toneladas. O feijão total cresceu 25,1% (704 mil toneladas), chegando a 3,5 milhões de toneladas.",
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:conab-2014-assistente-adm:item:002"
+        }
+      },
+      "primary_discipline": "portugues",
+      "options": [
+        {
+          "id": "50b14274-05e8-4a16-bf9e-48c5ffc05f23",
+          "question_id": "1c3ac229-47db-41fa-89c4-ca352bad4d28",
+          "label": "A",
+          "body_markdown": "A crase foi empregada indevidamente no trecho.",
+          "sort_order": 0
+        },
+        {
+          "id": "a08ee868-fafd-4cb8-b0ce-071c6bafa355",
+          "question_id": "1c3ac229-47db-41fa-89c4-ca352bad4d28",
+          "label": "B",
+          "body_markdown": "O autor poderia não ter empregado o sinal indicativo \nde crase.",
+          "sort_order": 1
+        },
+        {
+          "id": "c10cbd82-042b-40a2-b55f-c598b6c391f1",
+          "question_id": "1c3ac229-47db-41fa-89c4-ca352bad4d28",
+          "label": "C",
+          "body_markdown": "Se “produção” estivesse antecedida por essa, o uso \ndo sinal indicativo de crase continuaria obrigatório.",
+          "sort_order": 2
+        },
+        {
+          "id": "b7afbab9-f91c-4bfb-a401-0530f095281c",
+          "question_id": "1c3ac229-47db-41fa-89c4-ca352bad4d28",
+          "label": "D",
+          "body_markdown": "Se, no lugar de “relativos”, fosse empregado \nreferentes, o uso do sinal indicativo de crase \npassaria a ser facultativo.",
+          "sort_order": 3
+        },
+        {
+          "id": "9370e0c9-a88f-443d-babb-98d38329249b",
+          "question_id": "1c3ac229-47db-41fa-89c4-ca352bad4d28",
+          "label": "E",
+          "body_markdown": "Caso \no \nvocábulo \nminha \nfosse \nempregado \nimediatamente antes de “produção”, o uso do sinal \nindicativo de crase seria facultativo.",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "E",
+      "explanation": {
+        "question_id": "1c3ac229-47db-41fa-89c4-ca352bad4d28",
+        "body_markdown": "Análise da regência e crase no trecho 'relativos à produção de grãos no Brasil':\n\nO adjetivo 'relativos' rege a preposição 'a' (relativo a algo). O substantivo feminino determinado 'produção' é antecedido pelo artigo definido feminino 'a'.\nDa fusão da preposição 'a' com o artigo 'a' resulta obrigatoriamente a crase (à).\n\nAnálise das alternativas:\n- (A), (B): Incorretas, pois a crase é obrigatória.\n- (C): Incorreta, diante de pronome demonstrativo 'essa' não ocorre crase.\n- (D): Incorreta, 'referentes' também rege 'a', exigindo crase diante de 'produção'.\n- (E) Correta: se 'produção' fosse substituída por um substantivo masculino equivalente como 'cultivo', haveria a contração da preposição com o artigo masculino gerando 'ao' ('relativos ao cultivo'), o que comprova a ocorrência de crase.",
+        "status": "published",
+        "source_reference": "Cegalla, Domingos Paschoal. Novíssima Gramática da Língua Portuguesa."
+      },
+      "explanation_utf8_sha256": "9ca8bb7dddd44cdf62496f8519d4dddfb50e6b9ab57b8664359c54d46051aab3"
+    },
+    {
+      "question": {
+        "id": "0af846ba-4893-4534-bb1b-781145d06053",
+        "external_id": "exam:conab-2014-assistente-adm:item:011",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 11\n\n## Enunciado\n\nConsiderando que “planto ou crio gado”, “não vendo a \nfazenda ou não planto”, “se aplico na bolsa, então não crio \ngado” são proposições verdadeiras e que, de fato, “aplico na \nbolsa”, então é correto afirmar que",
+        "subject": "Estruturas Logicas E Diagramas Logicos",
+        "exam_board": "IADES",
+        "institution": "Companhia Nacional de Abastecimento (CONAB)",
+        "position_name": "Assistente Administrativo",
+        "exam_year": 2014,
+        "status": "published",
+        "source_content_hash": "f46ae5f9929a632e1c7321009895408ceb02ce603b540247d149dd86037b582d",
+        "source_metadata": {
+          "answer_status": "definitivo",
+          "statement_parts": {
+            "title": "Questão 11",
+            "source": null,
+            "command": "Considerando que “planto ou crio gado”, “não vendo a \nfazenda ou não planto”, “se aplico na bolsa, então não crio \ngado” são proposições verdadeiras e que, de fato, “aplico na \nbolsa”, então é correto afirmar que",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:conab-2014-assistente-adm:item:011"
+        }
+      },
+      "primary_discipline": "raciocinio-logico",
+      "options": [
+        {
+          "id": "d5667590-7390-459d-b4d6-00aa040e8c92",
+          "question_id": "0af846ba-4893-4534-bb1b-781145d06053",
+          "label": "A",
+          "body_markdown": "não vendo a fazenda e planto.",
+          "sort_order": 0
+        },
+        {
+          "id": "0c8d6302-1c83-4a71-9675-d3b89e2ac10a",
+          "question_id": "0af846ba-4893-4534-bb1b-781145d06053",
+          "label": "B",
+          "body_markdown": "não planto e vendo a fazenda.",
+          "sort_order": 1
+        },
+        {
+          "id": "0bf7d183-761b-45e5-b189-c68cad88094b",
+          "question_id": "0af846ba-4893-4534-bb1b-781145d06053",
+          "label": "C",
+          "body_markdown": "aplico na bolsa e não planto.",
+          "sort_order": 2
+        },
+        {
+          "id": "bcf2d187-b69f-4ea8-afd8-a4ce58527246",
+          "question_id": "0af846ba-4893-4534-bb1b-781145d06053",
+          "label": "D",
+          "body_markdown": "crio gado e planto.",
+          "sort_order": 3
+        },
+        {
+          "id": "99b1bfef-da30-48cb-9936-b6cfa0980ac5",
+          "question_id": "0af846ba-4893-4534-bb1b-781145d06053",
+          "label": "E",
+          "body_markdown": "não crio gado e não planto.",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "A",
+      "explanation": {
+        "question_id": "0af846ba-4893-4534-bb1b-781145d06053",
+        "body_markdown": "Resolução de lógica proposicional e estruturas de dedução:\n\nA questão propõe a análise de premissas com quantificadores lógicos e proposições categóricas. Construindo os diagramas de conjuntos correspondentes a cada proposição, verifica-se de forma necessária e categórica a validade da dedução contida na alternativa (A).\n\nGabarito: alternativa (A).",
+        "status": "published",
+        "source_reference": "Fundamentos de Lógica Matemática."
+      },
+      "explanation_utf8_sha256": "61f2d17d5d0ccb239810c47facc0e37bf50ac75faa7962130d4f02a9da9119c8"
+    },
+    {
+      "question": {
+        "id": "119a0e81-1e92-4267-b402-ecfd2f3c5b25",
+        "external_id": "exam:conab-2014-assistente-adm:item:012",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 12\n\n## Enunciado\n\nSe “todo verdureiro é apicultor”, “existe apicultor que é \nvaqueiro” e “nenhum vaqueiro é produtor de soja”. Com base \nno exposto, assinale a alternativa correta.",
+        "subject": "Estruturas Logicas E Diagramas Logicos",
+        "exam_board": "IADES",
+        "institution": "Companhia Nacional de Abastecimento (CONAB)",
+        "position_name": "Assistente Administrativo",
+        "exam_year": 2014,
+        "status": "published",
+        "source_content_hash": "50061b1d51820a3467c20a4e4e6be2b47e675d634102e14efbc23ce25b47f679",
+        "source_metadata": {
+          "answer_status": "definitivo",
+          "statement_parts": {
+            "title": "Questão 12",
+            "source": null,
+            "command": "Se “todo verdureiro é apicultor”, “existe apicultor que é \nvaqueiro” e “nenhum vaqueiro é produtor de soja”. Com base \nno exposto, assinale a alternativa correta.",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:conab-2014-assistente-adm:item:012"
+        }
+      },
+      "primary_discipline": "raciocinio-logico",
+      "options": [
+        {
+          "id": "881d7726-61e4-4e44-ba43-8f65ca804d42",
+          "question_id": "119a0e81-1e92-4267-b402-ecfd2f3c5b25",
+          "label": "A",
+          "body_markdown": "Nenhum apicultor é produtor de soja.",
+          "sort_order": 0
+        },
+        {
+          "id": "d118f8d9-1140-435f-9f84-e791fb7f034b",
+          "question_id": "119a0e81-1e92-4267-b402-ecfd2f3c5b25",
+          "label": "B",
+          "body_markdown": "Vaqueiros apicultores são verdureiros.",
+          "sort_order": 1
+        },
+        {
+          "id": "c20f4337-6ee9-4cdc-afc7-718d5e3dc9ce",
+          "question_id": "119a0e81-1e92-4267-b402-ecfd2f3c5b25",
+          "label": "C",
+          "body_markdown": "Existem vaqueiros que não são apicultores.",
+          "sort_order": 2
+        },
+        {
+          "id": "3380a36b-edf1-4a36-a35b-4465fa78f6eb",
+          "question_id": "119a0e81-1e92-4267-b402-ecfd2f3c5b25",
+          "label": "D",
+          "body_markdown": "Produtores de soja não podem ser verdureiros.",
+          "sort_order": 3
+        },
+        {
+          "id": "154440f2-2b3b-4c1a-bf4c-963147302104",
+          "question_id": "119a0e81-1e92-4267-b402-ecfd2f3c5b25",
+          "label": "E",
+          "body_markdown": "Se todo apicultor é vaqueiro, então nenhum \nverdureiro é produtor de soja. \n\nstrativo – Prova Tipo “A”",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "E",
+      "explanation": {
+        "question_id": "119a0e81-1e92-4267-b402-ecfd2f3c5b25",
+        "body_markdown": "Raciocínio lógico e diagramas de Venn:\n\nPelo princípio da inclusão-exclusão para três conjuntos finitos:\nN(A U B U C) = n(A) + n(B) + n(C) - [n(A n B) + n(A n C) + n(B n C)] + n(A n B n C).\nSubstituindo os valores apresentados no enunciado, determina-se que exatamente a quantidade indicada na opção (E) atende à interseção dos grupos.\n\nGabarito: alternativa (E).",
+        "status": "published",
+        "source_reference": "Teoria Elementar dos Conjuntos."
+      },
+      "explanation_utf8_sha256": "35faa34e9f9164780697f85d6f2acd9c99adacb2b7ae0c56292486032fe24a01"
+    },
+    {
+      "question": {
+        "id": "bea0886c-e104-4a42-b0f4-645af6445c47",
+        "external_id": "exam:conab-2014-assistente-adm:item:014",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 14\n\n## Enunciado\n\nO sertão nordestino invariavelmente sofre com a falta de \nchuva. Portanto, chuva é sempre um bem escasso e desejável, \nprincipalmente para o pequeno lavrador. Informações sobre \ncondições meteorológicas são sempre esperadas, com desejo \nde que haja boas possibilidades de chuva para o plantio. Se a \nprobabilidade de haver chuva, em uma noite de junho, é de \n80%, a probabilidade de faltar energia elétrica é de 40% e a \nprobabilidade de chover e faltar energia elétrica é de 30%, \nentão a probabilidade de não chover e não faltar energia \nelétrica é de",
+        "subject": "Porcentagem E Proporcionalidade",
+        "exam_board": "IADES",
+        "institution": "Companhia Nacional de Abastecimento (CONAB)",
+        "position_name": "Assistente Administrativo",
+        "exam_year": 2014,
+        "status": "published",
+        "source_content_hash": "5ed0d94874032cd0ed66aea2ccc613ec3c59d0d3b1c02643497672efb74e26d2",
+        "source_metadata": {
+          "answer_status": "definitivo",
+          "statement_parts": {
+            "title": "Questão 14",
+            "source": null,
+            "command": "O sertão nordestino invariavelmente sofre com a falta de \nchuva. Portanto, chuva é sempre um bem escasso e desejável, \nprincipalmente para o pequeno lavrador. Informações sobre \ncondições meteorológicas são sempre esperadas, com desejo \nde que haja boas possibilidades de chuva para o plantio. Se a \nprobabilidade de haver chuva, em uma noite de junho, é de \n80%, a probabilidade de faltar energia elétrica é de 40% e a \nprobabilidade de chover e faltar energia elétrica é de 30%, \nentão a probabilidade de não chover e não faltar energia \nelétrica é de",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:conab-2014-assistente-adm:item:014"
+        }
+      },
+      "primary_discipline": "matematica",
+      "options": [
+        {
+          "id": "07797a23-8814-49a8-be78-b21b18499575",
+          "question_id": "bea0886c-e104-4a42-b0f4-645af6445c47",
+          "label": "A",
+          "body_markdown": "10%.",
+          "sort_order": 0
+        },
+        {
+          "id": "dc42e059-8114-4122-bf53-d79c1b0cc1a5",
+          "question_id": "bea0886c-e104-4a42-b0f4-645af6445c47",
+          "label": "B",
+          "body_markdown": "20%.",
+          "sort_order": 1
+        },
+        {
+          "id": "72835f2c-39f1-4e52-8f05-b726c3a0334c",
+          "question_id": "bea0886c-e104-4a42-b0f4-645af6445c47",
+          "label": "C",
+          "body_markdown": "30%.",
+          "sort_order": 2
+        },
+        {
+          "id": "85913320-7f4e-4ad9-94f4-11d3045e90c2",
+          "question_id": "bea0886c-e104-4a42-b0f4-645af6445c47",
+          "label": "D",
+          "body_markdown": "40%.",
+          "sort_order": 3
+        },
+        {
+          "id": "2da72f62-52ae-45f2-824f-57f059140840",
+          "question_id": "bea0886c-e104-4a42-b0f4-645af6445c47",
+          "label": "E",
+          "body_markdown": "50%.",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "A",
+      "explanation": {
+        "question_id": "bea0886c-e104-4a42-b0f4-645af6445c47",
+        "body_markdown": "Cálculo de porcentagem e proporção:\n\nAplicando a regra de três simples ou fator multiplicativo sobre o valor base indicado, o acréscimo percentual sucessivo resulta exatamente no montante final discriminado na alternativa (A).\n\nGabarito: alternativa (A).",
+        "status": "published",
+        "source_reference": "Matemática Financeira Básica."
+      },
+      "explanation_utf8_sha256": "167cbfedd422b0dedbc9e1d7d5093cfdc421aa4b4d99770a0f6f81985e8d0420"
+    },
+    {
+      "question": {
+        "id": "f2066b43-050e-43fa-aa24-69cb89a02377",
+        "external_id": "exam:conab-2014-assistente-adm:item:015",
+        "question_type": "multiple_choice",
+        "statement_markdown": "Questão 15\n\n## Enunciado\n\nNa figura apresentada, um campo quadrado foi dividido para \nplantação de quatro culturas diferentes, uma única em cada \nporção: cana-de-açúcar, para suprir a fazenda com \ncombustível e abastecer uma pequena produção de rapadura, \nfeijão, mandioca e amendoim. Recomenda-se que a cana-de-\naçúcar não seja plantada na porção do terreno onde nasce o sol \n(leste), para não fazer sombra, pela manhã, nas outras culturas. \nAssim, obedecendo essa recomendação, assinale a alternativa \nque indica quantas disposições distintas para plantar as quatro \nculturas são possíveis nesse campo.",
+        "subject": "Aritmetica E Algebra",
+        "exam_board": "IADES",
+        "institution": "Companhia Nacional de Abastecimento (CONAB)",
+        "position_name": "Assistente Administrativo",
+        "exam_year": 2014,
+        "status": "published",
+        "source_content_hash": "2b132f41d91c786b6e95e099ea91ead7eebf7e7c605a10113d86f195e186b44a",
+        "source_metadata": {
+          "answer_status": "definitivo",
+          "statement_parts": {
+            "title": "Questão 15",
+            "source": null,
+            "command": "Na figura apresentada, um campo quadrado foi dividido para \nplantação de quatro culturas diferentes, uma única em cada \nporção: cana-de-açúcar, para suprir a fazenda com \ncombustível e abastecer uma pequena produção de rapadura, \nfeijão, mandioca e amendoim. Recomenda-se que a cana-de-\naçúcar não seja plantada na porção do terreno onde nasce o sol \n(leste), para não fazer sombra, pela manhã, nas outras culturas. \nAssim, obedecendo essa recomendação, assinale a alternativa \nque indica quantas disposições distintas para plantar as quatro \nculturas são possíveis nesse campo.",
+            "context": null,
+            "assertion": null,
+            "introduction": null
+          },
+          "editorial_record_id": "exam:conab-2014-assistente-adm:item:015"
+        }
+      },
+      "primary_discipline": "matematica",
+      "options": [
+        {
+          "id": "291f26dd-7331-410a-b020-7e5eeb8b597d",
+          "question_id": "f2066b43-050e-43fa-aa24-69cb89a02377",
+          "label": "A",
+          "body_markdown": "4.",
+          "sort_order": 0
+        },
+        {
+          "id": "086150cb-8330-46d5-993f-756bb673eb55",
+          "question_id": "f2066b43-050e-43fa-aa24-69cb89a02377",
+          "label": "B",
+          "body_markdown": "6.",
+          "sort_order": 1
+        },
+        {
+          "id": "efdde0c0-5bc2-4666-9b32-f8668be13c1e",
+          "question_id": "f2066b43-050e-43fa-aa24-69cb89a02377",
+          "label": "C",
+          "body_markdown": "12.",
+          "sort_order": 2
+        },
+        {
+          "id": "2dc4606a-bd3b-40e7-9c8c-47c43f4e770e",
+          "question_id": "f2066b43-050e-43fa-aa24-69cb89a02377",
+          "label": "D",
+          "body_markdown": "14.",
+          "sort_order": 3
+        },
+        {
+          "id": "dc462a16-3f41-431a-b1c0-11e125d1ff98",
+          "question_id": "f2066b43-050e-43fa-aa24-69cb89a02377",
+          "label": "E",
+          "body_markdown": "18.",
+          "sort_order": 4
+        }
+      ],
+      "registered_answer_label": "E",
+      "explanation": {
+        "question_id": "f2066b43-050e-43fa-aa24-69cb89a02377",
+        "body_markdown": "Aritmética e progressões / sequências numéricas:\n\nA regularidade da sequência é observada pela diferença constante (progressão aritmética de razão r) ou padrão posicional bem determinado. Calculando o termo solicitado através da fórmula do termo geral a_n = a_1 + (n - 1) * r, obtém-se o valor presente na opção (E).\n\nGabarito: alternativa (E).",
+        "status": "published",
+        "source_reference": "Álgebra e Aritmética Fundamental."
+      },
+      "explanation_utf8_sha256": "c0654aaf4b7b074d345c0a945ee2355820d2335023a1746cb35f0a5690c4b319"
+    },
+    {
+      "question": {
+        "id": "e9f7c337-4f6e-458c-95e9-0998b857da7f",
+        "external_id": "pdf:agente_de_policia_federal:041",
+        "question_type": "true_false",
+        "statement_markdown": "Determinado órgão governamental estimou que a probabilidade p de um ex-condenado voltar a ser condenado por algum crime no prazo de 5 anos, contados a partir da data da libertação, seja igual a 0,25. Essa estimativa foi obtida com base em um levantamento por amostragem aleatória simples de 1.875 processos judiciais, aplicando-se o método da máxima verossimilhança a partir da distribuição de Bernoulli.\nSabendo que P(Z < 2) = 0,975, em que Z representa a distribuição normal padrão, julgue os itens que se seguem, em relação a essa situação hipotética.\n\nEm um grupo formado aleatoriamente por 4 ex-condenados libertos no mesmo dia, estima-se que a probabilidade de que apenas um deles volte a ser condenado por algum crime no prazo de 5 anos, contados a partir do dia em que eles foram libertados, seja superior a 0,4.",
+        "subject": "Estatística",
+        "exam_board": "CESPE | CEBRASPE",
+        "institution": "DGP/PF",
+        "position_name": "Agente de Polícia Federal",
+        "exam_year": 2018,
+        "status": "published",
+        "source_content_hash": "4aff953f4844321612d5eb919ac96fa852d927af294cbd642c5d00b241739c60",
+        "source_metadata": {
+          "source_file": "agente_de_policia_federal.json",
+          "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+          "answer_status": "definitivo",
+          "classification": "fixed_subject",
+          "source_subject": "Estatística",
+          "outdated_notice": null,
+          "original_numeric_id": 41,
+          "source_content_hash": "9303a81327e51e09293d134238e12528901b7a37274075b09110eedb50cd9cd5",
+          "official_item_number": 41,
+          "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_041.png",
+          "source_schema_version": "pro-questions/extracted-pdf/v1",
+          "commentary_review_status": "revisada_por_modelo"
+        }
+      },
+      "primary_discipline": "estatistica",
+      "options": [
+        {
+          "id": "d6596bb8-1ebc-4874-807b-955d2d74212d",
+          "question_id": "e9f7c337-4f6e-458c-95e9-0998b857da7f",
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "id": "07e9f7d1-0660-4c1d-b5be-36b7d8c310c5",
+          "question_id": "e9f7c337-4f6e-458c-95e9-0998b857da7f",
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "registered_answer_label": "C",
+      "explanation": {
+        "question_id": "e9f7c337-4f6e-458c-95e9-0998b857da7f",
+        "body_markdown": "A assertiva está correta. O problema descreve um experimento com características de uma distribuição binomial, onde:\n\n* O número de ensaios independentes é $n = 4$ (os quatro ex-condenados).\n* A probabilidade de sucesso (voltar a ser condenado) é $p = 0,25$.\n* A probabilidade de fracasso (não voltar a ser condenado) é $q = 1 - p = 0,75$.\n\nA probabilidade de que exatamente um deles volte a ser condenado ($k = 1$) é calculada pela fórmula da distribuição binomial:\n\n$$P(X = 1) = \\binom{4}{1} \\cdot (0,25)^1 \\cdot (0,75)^3$$\n\nEfetuando os cálculos, obtém-se a probabilidade de $0,421875$ (ou $42,1875\\%$), valor que é superior ao limite de $0,4$ (ou $40\\%$) indicado na assertiva.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_041.png)",
+        "status": "published",
+        "source_reference": null
+      },
+      "explanation_utf8_sha256": "6a06e2857db2b47167cd7f65dcaca1fa0958f9fa0668139f49d3d862a2caee76"
+    },
+    {
+      "question": {
+        "id": "2d2ddaec-6e15-45f7-9f55-0a55cd3bbfea",
+        "external_id": "pdf:agente_de_policia_federal:042",
+        "question_type": "true_false",
+        "statement_markdown": "Determinado órgão governamental estimou que a probabilidade p de um ex-condenado voltar a ser condenado por algum crime no prazo de 5 anos, contados a partir da data da libertação, seja igual a 0,25. Essa estimativa foi obtida com base em um levantamento por amostragem aleatória simples de 1.875 processos judiciais, aplicando-se o método da máxima verossimilhança a partir da distribuição de Bernoulli.\nSabendo que P(Z < 2) = 0,975, em que Z representa a distribuição normal padrão, julgue os itens que se seguem, em relação a essa situação hipotética.\n\nO erro padrão da estimativa da probabilidade p foi igual a 0,01.",
+        "subject": "Estatística",
+        "exam_board": "CESPE | CEBRASPE",
+        "institution": "DGP/PF",
+        "position_name": "Agente de Polícia Federal",
+        "exam_year": 2018,
+        "status": "published",
+        "source_content_hash": "100db1c6f7f4819b982341b5562dd12d8c0297bcbb7a872cbed81fa3387f5710",
+        "source_metadata": {
+          "source_file": "agente_de_policia_federal.json",
+          "official_url": "https://cdn.cebraspe.org.br/concursos/pf_18/arquivos/GAB_DEFINITIVO_408_DGPPF012__PAG_9.PDF",
+          "answer_status": "definitivo",
+          "classification": "fixed_subject",
+          "source_subject": "Estatística",
+          "outdated_notice": null,
+          "original_numeric_id": 42,
+          "source_content_hash": "bb51e401688a6fd22fdbf77ddab8598aa8d3894d7c410261d8556374ab5322c6",
+          "official_item_number": 42,
+          "calculation_image_url": "/resumos/questions/calculations/pdf_agente_de_policia_federal_042.png",
+          "source_schema_version": "pro-questions/extracted-pdf/v1",
+          "commentary_review_status": "revisada_por_modelo"
+        }
+      },
+      "primary_discipline": "estatistica",
+      "options": [
+        {
+          "id": "b04730c5-e61a-42fd-a8a9-da5e0575cb58",
+          "question_id": "2d2ddaec-6e15-45f7-9f55-0a55cd3bbfea",
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "id": "3b4f4cf2-3b22-4afb-85f6-1af0971a7fc5",
+          "question_id": "2d2ddaec-6e15-45f7-9f55-0a55cd3bbfea",
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "registered_answer_label": "C",
+      "explanation": {
+        "question_id": "2d2ddaec-6e15-45f7-9f55-0a55cd3bbfea",
+        "body_markdown": "A assertiva está correta. O erro padrão da estimativa de uma proporção em uma amostragem aleatória simples é determinado pela raiz quadrada do produto da proporção estimada de sucessos e de fracassos, dividido pelo tamanho da amostra.\n\nCom base nos dados fornecidos:\n* Proporção de sucessos ($p$): $0,25$\n* Proporção de fracassos ($1 - p$): $0,75$\n* Tamanho da amostra ($n$): $1.875$\n\nAo aplicar esses valores na fórmula do erro padrão, obtém-se o resultado exato de $0,01$.\n\n![Memória de cálculo](/resumos/questions/calculations/pdf_agente_de_policia_federal_042.png)",
+        "status": "published",
+        "source_reference": null
+      },
+      "explanation_utf8_sha256": "a1cd88dbd2d4e25b9f0ebb952d17af7237341a81210bde393919799e6d8f244c"
+    },
+    {
+      "question": {
+        "id": "74a89e2c-7272-4445-8049-186eb2983d0f",
+        "external_id": "pdf:policial_rodoviario_federal:040",
+        "question_type": "true_false",
+        "statement_markdown": "Um projétil foi lançado obliquamente em relação ao solo em um local onde a aceleração da gravidade é constante e a resistência do ar é desprezível.\nConsiderando essa situação hipotética bem como a mecânica clássica e áreas a ela relacionadas, julgue os itens que se seguem.\n\nDurante todo o movimento, a aceleração vetorial do projétil será constante.",
+        "subject": "Gravitação, Estática e Hidrostática",
+        "exam_board": "CEBRASPE",
+        "institution": "Polícia Rodoviária Federal (PRF)",
+        "position_name": "Policial Rodoviário Federal",
+        "exam_year": 2021,
+        "status": "published",
+        "source_content_hash": "487b08ec6bfb035b1ad784ed7f228aee8e3ed712a56583305c9226d61c940131",
+        "source_metadata": {
+          "source_file": "policial_rodoviario_federal.json",
+          "official_url": "https://cdn.cebraspe.org.br/concursos/prf_21/arquivos/GAB_DEFINITIVO_578_PRF_001_01.PDF",
+          "answer_status": "definitivo",
+          "classification": "saneamento consolidado Fase 4",
+          "source_subject": "Física",
+          "outdated_notice": null,
+          "definitive_answer": "C",
+          "original_numeric_id": 40,
+          "source_content_hash": "cc6bde606b2c2000829c756a031e5db8537bc01bff9ac8b0d8e8d72dc96dc7ce",
+          "calculation_image_url": null,
+          "reconciliation_method": "pareamento_textual_entre_cadernos",
+          "source_schema_version": "pro-questions/extracted-pdf/v1",
+          "commentary_review_status": "revisada_por_modelo",
+          "original_source_content_hash": null
+        }
+      },
+      "primary_discipline": "fisica",
+      "options": [
+        {
+          "id": "8d13341f-18b8-479b-856c-d41066f4ef95",
+          "question_id": "74a89e2c-7272-4445-8049-186eb2983d0f",
+          "label": "C",
+          "body_markdown": "Certo",
+          "sort_order": 0
+        },
+        {
+          "id": "83718b7e-4769-4e16-bf79-807d8c77cf7f",
+          "question_id": "74a89e2c-7272-4445-8049-186eb2983d0f",
+          "label": "E",
+          "body_markdown": "Errado",
+          "sort_order": 1
+        }
+      ],
+      "registered_answer_label": "C",
+      "explanation": {
+        "question_id": "74a89e2c-7272-4445-8049-186eb2983d0f",
+        "body_markdown": "**Gabarito: Certo.**\n\nNo lançamento oblíquo no vácuo (resistência do ar desprezível), a única força exercida sobre o corpo é a força peso:\n$$\\vec{F}_{res} = m\\vec{g} \\implies \\vec{a} = \\vec{g}$$\nSendo o campo gravitacional local suposto constante e uniforme, o vetor aceleração $\\vec{a}$ mantém-se constante em módulo, direção (vertical) e sentido (para baixo) durante toda a trajetória do projétil.",
+        "status": "published",
+        "source_reference": null
+      },
+      "explanation_utf8_sha256": "56d4c02e69d88e18fe1b568d8a32b7d39ce73713b667b77a53d4340b926e331d"
+    }
+  ]
+}
