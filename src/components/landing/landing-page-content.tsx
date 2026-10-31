@@ -355,6 +355,12 @@ export function LandingPageContent() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#181820] text-white">
       <SiteStructuredData />
+      <aside aria-label="Aviso de lançamento" className="pointer-events-none fixed inset-0 z-[60] overflow-hidden">
+        <div className="absolute -left-[20%] top-1/2 flex h-[30svh] w-[140%] -translate-y-1/2 -rotate-12 flex-col items-center justify-center gap-3 border-y-4 border-current bg-[var(--action)] px-6 text-center text-[var(--dashboard-sidebar)] shadow-2xl">
+          <p className="whitespace-nowrap text-[clamp(2.75rem,8vw,7rem)] font-black leading-none tracking-[0.12em]">EM BREVE</p>
+          <p className="text-[clamp(0.875rem,2vw,1.5rem)] font-semibold">Site ainda não disponível</p>
+        </div>
+      </aside>
       <nav aria-label="Navegação principal" className="sticky top-0 z-50 border-b border-white/10 bg-[#181820]/90 px-3 py-3 backdrop-blur-xl sm:px-8 lg:px-12">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 sm:gap-4">
           <Link href="https://proconcursos.com.br/" aria-label="PRO Concursos — página inicial"><BrandLogo preload /></Link>

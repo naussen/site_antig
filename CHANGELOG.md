@@ -1,5 +1,11 @@
 # Changelog
 
+## Landing — aviso de lançamento (31/10/2026)
+
+- Adicionada faixa diagonal fixa com “EM BREVE” e “Site ainda não disponível”, com altura de 30% da área visível e tipografia responsiva.
+- O aviso acompanha a rolagem apenas na landing, usa os tokens de cor existentes e preserva os links, a autenticação e o conteúdo da página.
+- Validação: lint sem erros (sete avisos preexistentes), build Webpack com TypeScript, 226 testes de release e revisão visual em desktop/mobile (320 e 390 px), temas claro/escuro/sépia e navegação por âncora, sem overflow horizontal.
+
 ## Aplicado no banco — Importação oficial da Campanha 30/10/2026 (31/10/2026)
 
 - **Importação atômica oficial e verificação pós-gravação** concluídas para 457 questões em 49 lotes através do `scripts/questions-admin.mjs import --apply` e `verify`:
