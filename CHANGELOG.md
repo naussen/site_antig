@@ -1,5 +1,12 @@
 # Changelog
 
+## Documentação — memória de cálculo para iniciantes (31/10/2026)
+
+- analisadas 13 amostras de comentários de exatas a partir de consulta editorial de leitura, com identificação da questão BB 28 compatível com o rótulo “Questão 3” e recálculo independente de exemplos;
+- documentados comentários genéricos, fundamentações incompatíveis e casos com memória apenas em imagem; o diagnóstico não altera gabaritos nem dados do banco;
+- entregue prompt de auditoria/correção para Antigravity e reforçada nos prompts de autoria/revisão a obrigatoriedade de memória textual com dados, conversões, fórmula, substituição, contas e interpretação para leigos;
+- validação documental e aritmética; atualização dos comentários, correção dos geradores e smoke autenticado permanecem tarefas de execução do prompt.
+
 ## Landing — aviso de lançamento (31/10/2026)
 
 - Adicionada faixa diagonal fixa com “EM BREVE” e “Site ainda não disponível”, com altura de 30% da área visível e tipografia responsiva.
