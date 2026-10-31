@@ -1,5 +1,11 @@
 # Changelog
 
+## Auditoria — validação independente do saneamento de questões (31/10/2026)
+
+- confirmadas por leitura as sete atualizações de comentários e a correspondência dos 12 itens saneados com o payload aplicado, com recálculo das amostras prioritárias;
+- documentadas pendências editoriais, falsos positivos/negativos do validador, backup cadastral incompleto, censo e partes de enunciado obsoletos, falhas de verificação e risco de testes sobre questões reais;
+- emitido parecer de validação parcial com evidências e ordem de fechamento; 242 testes offline aprovados e quatro de integração pulados, sem qualquer escrita no banco pela auditoria.
+
 ## Questões — saneamento de pendências técnicas e controle editorial transacional (31/10/2026)
 
 - **Proteção Transacional e Reversão Segura (Migration 045)**:

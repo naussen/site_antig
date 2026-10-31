@@ -1,0 +1,2743 @@
+{
+  "captured_at": "2026-10-31T20:14:51.919Z",
+  "audit_scope": "read_only_database_and_offline_tests",
+  "code_origin_main": "ad8cd4a",
+  "code_latest_reviewed": "65d8b3e",
+  "live_status_counts": {
+    "published": 1771,
+    "archived": 35
+  },
+  "receipt_7_hash_matches": [
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:016",
+      "matches": true
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:026",
+      "matches": true
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:028",
+      "matches": true
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:029",
+      "matches": true
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:014",
+      "matches": true
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:041",
+      "matches": true
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:042",
+      "matches": true
+    }
+  ],
+  "saneamento_12_matches": [
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:017",
+      "question_id": "8e151698-7c6c-4000-a34b-23366f3997bb",
+      "statement_exact_match": true,
+      "explanation_exact_match": true,
+      "options_exact_match": true,
+      "status": "published",
+      "discipline": "matematica",
+      "statement_sha256": "69776ceae2471767aa1c974f96d82b5bd3f93c41c6d28fa16be5fe3078d6b9b1",
+      "explanation_sha256": "9681596fb136e62e63aa397e25b7dcf56bd9b8c7ab2dc936681d574acf6e100d"
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:018",
+      "question_id": "8d5faf08-4b83-4d95-bb00-8f9a28c142e6",
+      "statement_exact_match": true,
+      "explanation_exact_match": true,
+      "options_exact_match": true,
+      "status": "published",
+      "discipline": "matematica",
+      "statement_sha256": "db107cee57f8706b6ccc38cecc0394bcd384346e9ee4be19b3b7b6600f77931d",
+      "explanation_sha256": "3246c8eb9a54b084cae5203b5e997483db2a5bd67fed2951e8f308fb1d3e0d7e"
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:019",
+      "question_id": "bfc0008a-9ea8-47d2-bd14-ba2103e5c6c2",
+      "statement_exact_match": true,
+      "explanation_exact_match": true,
+      "options_exact_match": true,
+      "status": "published",
+      "discipline": "matematica",
+      "statement_sha256": "0d357befd75bc5d7424b291cf794220e98a7a8aa4afc42ca8d7165734b703c58",
+      "explanation_sha256": "0a458559aef9a7bff10d164e7be098b1098c5665b2f7e6670ff8dea7de7dcc77"
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:020",
+      "question_id": "4f690cab-d3aa-4f95-b9c2-a072cc7e0c2c",
+      "statement_exact_match": true,
+      "explanation_exact_match": true,
+      "options_exact_match": true,
+      "status": "published",
+      "discipline": "matematica",
+      "statement_sha256": "ae8683fe715c7861fe6374bd73ecfecfd3e3c4bbb08fa95da1c34d07873982c7",
+      "explanation_sha256": "2d96141b7502bcb2cd3b9e05c02aef09ba379b93e22a3c06b7ccbc25b574ae26"
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:027",
+      "question_id": "20ad8b7b-a3c7-4167-923f-b583db20ddae",
+      "statement_exact_match": true,
+      "explanation_exact_match": true,
+      "options_exact_match": true,
+      "status": "published",
+      "discipline": "matematica-financeira",
+      "statement_sha256": "eb5f8c4e1d9147b6e2657e77713aaf7ebfd2d3ea9c4c6399f448d70eeafaa585",
+      "explanation_sha256": "920a5041e6c1cff20ce2097fd7928aa1893cef6577b2d704cc6bda9b72963e79"
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:030",
+      "question_id": "0768ca99-1dc3-44c2-b482-3b955e0a18dd",
+      "statement_exact_match": true,
+      "explanation_exact_match": true,
+      "options_exact_match": true,
+      "status": "published",
+      "discipline": "matematica-financeira",
+      "statement_sha256": "c724f88c7f22c55c81422aa1cdcd06aa3f59307e6e64ff3ba34b26c443b43db9",
+      "explanation_sha256": "c4b8d8155e845e3353a148053dd1522c66636e291af7b876fe26ff981f20a51f"
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:031",
+      "question_id": "7762d0dd-e128-4e79-9610-cddc849ffa94",
+      "statement_exact_match": true,
+      "explanation_exact_match": true,
+      "options_exact_match": true,
+      "status": "published",
+      "discipline": "conhecimentos-bancarios",
+      "statement_sha256": "df80d2953c79e7bb8c907768e6de4f7b42c77ed0756027bd0e516b6b67418083",
+      "explanation_sha256": "603a7846033592a38ed7172b2f055ee787625998b1183dc06d88a230f3f45d23"
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:032",
+      "question_id": "84fc5a74-e9d9-418d-b103-a29a26251809",
+      "statement_exact_match": true,
+      "explanation_exact_match": true,
+      "options_exact_match": true,
+      "status": "published",
+      "discipline": "conhecimentos-bancarios",
+      "statement_sha256": "ddc1f1a678a580978c1a2dce38c7585231306f2527d477aa657d1c7b0962b598",
+      "explanation_sha256": "103376bc47d36ee6336c3e6ad337fe5b848154ee32ac63656b8bdeaf98433d08"
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:033",
+      "question_id": "14fb7a26-012f-43ba-8c4b-fd3837b61b03",
+      "statement_exact_match": true,
+      "explanation_exact_match": true,
+      "options_exact_match": true,
+      "status": "published",
+      "discipline": "conhecimentos-bancarios",
+      "statement_sha256": "74f0f609fa4aef76cd1b9fece83e5082ab20f890b96ebcfa8c03574bdc0dc04e",
+      "explanation_sha256": "27ab874c0da390c21e1d094f97dbc724119cb0bbce0be51808462649fc748313"
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:034",
+      "question_id": "1fb31ed3-b586-49b6-bb9e-85e0aff2ca9e",
+      "statement_exact_match": true,
+      "explanation_exact_match": true,
+      "options_exact_match": true,
+      "status": "published",
+      "discipline": "conhecimentos-bancarios",
+      "statement_sha256": "d7b032b3ce0786d8163508c62ed41e6a99f5ebb64d273da73bd2aaf998e8060e",
+      "explanation_sha256": "426a1300ff7a602e941b9589462e37f5aef964b47a224035754c5ea03f047b03"
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:035",
+      "question_id": "7e7268e7-c178-4f5c-ae58-03e80a7eed42",
+      "statement_exact_match": true,
+      "explanation_exact_match": true,
+      "options_exact_match": true,
+      "status": "published",
+      "discipline": "conhecimentos-bancarios",
+      "statement_sha256": "c22cbc723b1631594564f76e092f620848b3520c5e768b1a37843eef25082268",
+      "explanation_sha256": "d7e8c877384f218b7d353da768c48dc0c95e5df5ff780683f2fad90bd8a4a320"
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:012",
+      "question_id": "119a0e81-1e92-4267-b402-ecfd2f3c5b25",
+      "statement_exact_match": true,
+      "explanation_exact_match": true,
+      "options_exact_match": true,
+      "status": "published",
+      "discipline": "raciocinio-logico",
+      "statement_sha256": "efb4708223d81e7529fe3f65802371576ce6d88aef3417c2acc21e78d0704425",
+      "explanation_sha256": "bb5becba6d131839960c1060c7f15de8ec1599a5130466aec9e7e8b8a9b36495"
+    }
+  ],
+  "backup_12_incompleteness": {
+    "null_subjects": 12,
+    "null_topic_records": 12,
+    "option_ids_preserved": true
+  },
+  "census_total": 192,
+  "census_stale": [
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:030",
+      "census_state": "corrigir",
+      "statement_hash_matches": false,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:011",
+      "census_state": "mantida",
+      "statement_hash_matches": true,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:012",
+      "census_state": "mantida",
+      "statement_hash_matches": false,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:033",
+      "census_state": "corrigir",
+      "statement_hash_matches": false,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:034",
+      "census_state": "corrigir",
+      "statement_hash_matches": false,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:027",
+      "census_state": "corrigir",
+      "statement_hash_matches": false,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:042",
+      "census_state": "mantida",
+      "statement_hash_matches": true,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:020",
+      "census_state": "corrigir",
+      "statement_hash_matches": false,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:031",
+      "census_state": "corrigir",
+      "statement_hash_matches": false,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:035",
+      "census_state": "corrigir",
+      "statement_hash_matches": false,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:032",
+      "census_state": "corrigir",
+      "statement_hash_matches": false,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:018",
+      "census_state": "corrigir",
+      "statement_hash_matches": false,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:017",
+      "census_state": "corrigir",
+      "statement_hash_matches": false,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:028",
+      "census_state": "corrigir",
+      "statement_hash_matches": true,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:029",
+      "census_state": "corrigir",
+      "statement_hash_matches": true,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:014",
+      "census_state": "mantida",
+      "statement_hash_matches": true,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:019",
+      "census_state": "corrigir",
+      "statement_hash_matches": false,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:016",
+      "census_state": "corrigir",
+      "statement_hash_matches": true,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:041",
+      "census_state": "mantida",
+      "statement_hash_matches": true,
+      "explanation_hash_matches": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:026",
+      "census_state": "corrigir",
+      "statement_hash_matches": true,
+      "explanation_hash_matches": false
+    }
+  ],
+  "independent_arithmetic": {
+    "bb16_percent": "10.0",
+    "bb19_interval_after_11": "0.001953125",
+    "bb19_interval_after_12": "0.0009765625",
+    "bb20_double_price": "18",
+    "bb20_single_price": "10",
+    "bb26_percent": "3.200",
+    "bb27_rounded_source_deposit": "8036.363636363636363636363636363636363636",
+    "bb28_total": "26100.000",
+    "bb29_percent": "54.00",
+    "bb30_pmt_with_source_factor": "1219.80",
+    "conab14_probability": "0.1",
+    "conab15_arrangements": "18",
+    "pf41_binomial": "0.42187500",
+    "pf42_standard_error": "0.01"
+  },
+  "live_validator": [
+    {
+      "external_id": "pdf:escriturario_agente_comercial:029",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:027",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:113",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:030",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:094",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:030",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:119",
+      "discipline": "matematica-financeira",
+      "valid": false,
+      "errors": [
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: (1,20)^2 = 5.000 (calculado: 1.44, informado: 5000)."
+        },
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: (1,20)^1 = 6.000,00 (calculado: 1.2, informado: 6000)."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:011",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:040",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:019",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:037",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:029",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:118",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:035",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:025",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:012",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:081",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:015",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:077",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:013",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:115",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:120",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:049",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: 65% = 0,30 (calculado: 0.65, informado: 0.3)."
+        },
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: 65% = 19,5% (calculado: 0.65, informado: 0.195)."
+        },
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: 100% = 65% (calculado: 1, informado: 0.65)."
+        },
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: 100% = 45,5% (calculado: 1, informado: 0.455)."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:012",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:046",
+      "discipline": "estatistica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:025",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:050",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: 65% = 0,30 (calculado: 0.65, informado: 0.3)."
+        },
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: 65% = 19,5% (calculado: 0.65, informado: 0.195)."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:027",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:047",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:017",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:016",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_administrativo:026",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: (12 + 15) = 54 (calculado: 27, informado: 54)."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:041",
+      "discipline": "fisica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:042",
+      "discipline": "estatistica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:112",
+      "discipline": "matematica-financeira",
+      "valid": false,
+      "errors": [
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: (1,1)^2 = 100.000 (calculado: 1.2100000000000002, informado: 100000)."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:analista_administrativo:100",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:095",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:019",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:063",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:114",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:047",
+      "discipline": "estatistica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:030",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "malformed_arithmetic_expression",
+          "message": "Expressão matemática malformada detectada: '+ 0,16' (Token inesperado: +)."
+        },
+        {
+          "code": "malformed_arithmetic_expression",
+          "message": "Expressão matemática malformada detectada: '(-1)^2 - 4(1)(0,16)' (Token residual inesperado: ()."
+        },
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: - 0,64 = 0,36 (calculado: -0.64, informado: 0.36)."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:031",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:014",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:114",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:024",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:053",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_administrativo:030",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:028",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:030",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:020",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:031",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:stm-2011-analista-jud:item:026",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:028",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:075",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:111",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:081",
+      "discipline": "raciocinio-logico",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:070",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:089",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:018",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:098",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:097",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:013",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:049",
+      "discipline": "estatistica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:112",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:054",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:027",
+      "discipline": "matematica-financeira",
+      "valid": false,
+      "errors": [
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: - 1 = 1,01 (calculado: -1, informado: 1.01)."
+        },
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: - 1 = 1,04 (calculado: -1, informado: 1.04)."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:050",
+      "discipline": "estatistica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:074",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:026",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:023",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:stm-2011-analista-jud:item:028",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:090",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:012",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:097",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:020",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:032",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:108",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:116",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:120",
+      "discipline": "matematica-financeira",
+      "valid": false,
+      "errors": [
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: (1 + 0,30)^3 = 1,3 (calculado: 2.197, informado: 1.3)."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:040",
+      "discipline": "fisica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:099",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:118",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:101",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:109",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:027",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: (1 - 0,5) = 0,25 (calculado: 0.5, informado: 0.25)."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:075",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:analista_administrativo:113",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:079",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:066",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:071",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        },
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:018",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:026",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:082",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:048",
+      "discipline": "estatistica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:020",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:024",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:060",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:082",
+      "discipline": "raciocinio-logico",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:018",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:083",
+      "discipline": "raciocinio-logico",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:017",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:059",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:086",
+      "discipline": "raciocinio-logico",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:057",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:045",
+      "discipline": "estatistica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:091",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_administrativo:029",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: (1 + 0,20) = 23.956,00 (calculado: 1.2, informado: 23956)."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:072",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:104",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "incomplete_calculation_memory",
+          "message": "A resolução qualitativa não apresenta os números e grandezas informados no enunciado."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:033",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:073",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        },
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:048",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:011",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:043",
+      "discipline": "fisica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:escriturario_agente_comercial:017",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:055",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:044",
+      "discipline": "estatistica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:111",
+      "discipline": "matematica-financeira",
+      "valid": false,
+      "errors": [
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: (1,1)^9 = (1,1) (calculado: 2.357947691000002, informado: 1.1)."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:036",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:107",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:106",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:110",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:043",
+      "discipline": "estatistica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:099",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:023",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:028",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:029",
+      "discipline": "matematica-financeira",
+      "valid": false,
+      "errors": [
+        {
+          "code": "malformed_arithmetic_expression",
+          "message": "Expressão matemática malformada detectada: ')^2' (Token inesperado: ))."
+        },
+        {
+          "code": "malformed_arithmetic_expression",
+          "message": "Expressão matemática malformada detectada: ') / 2' (Token inesperado: ))."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:071",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:035",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "malformed_arithmetic_expression",
+          "message": "Expressão matemática malformada detectada: '+ 1' (Token inesperado: +)."
+        },
+        {
+          "code": "malformed_arithmetic_expression",
+          "message": "Expressão matemática malformada detectada: '+ 1' (Token inesperado: +)."
+        },
+        {
+          "code": "malformed_arithmetic_expression",
+          "message": "Expressão matemática malformada detectada: '+ 1' (Token inesperado: +)."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:031",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:087",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:064",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:022",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:014",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_administrativo:027",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "malformed_arithmetic_expression",
+          "message": "Expressão matemática malformada detectada: '- 0,25(50)^2' (Token residual inesperado: ()."
+        },
+        {
+          "code": "malformed_arithmetic_expression",
+          "message": "Expressão matemática malformada detectada: '- 0,25(2500)' (Token residual inesperado: ()."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:019",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:083",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:policial_rodoviario_federal:028",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:115",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:016",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:076",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:tecnico_do_seguro_social:046",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:078",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:084",
+      "discipline": "raciocinio-logico",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:016",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:034",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:stm-2011-analista-jud:item:025",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:105",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "incomplete_calculation_memory",
+          "message": "A resolução qualitativa não apresenta os números e grandezas informados no enunciado."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:052",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:021",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:056",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:033",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:034",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:058",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:085",
+      "discipline": "raciocinio-logico",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:stm-2011-analista-jud:item:027",
+      "discipline": "raciocinio-logico",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:074",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:pmsp-2024-soldado-pbm:item:032",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_administrativo:028",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:102",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:011",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:prova_conhec_espec_tec_federal_control_exter_tec_adm:065",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:039",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:119",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:084",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:assistente_administrativo:014",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:041",
+      "discipline": "estatistica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "arithmetic_error_or_calculation_mismatch",
+          "message": "Erro aritmético detectado na operação: (0,75)^3 = 0,75 (calculado: 0.421875, informado: 0.75)."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:022",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:072",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:analista_administrativo:098",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:116",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "malformed_arithmetic_expression",
+          "message": "Expressão matemática malformada detectada: '+ 2' (Token inesperado: +)."
+        },
+        {
+          "code": "malformed_arithmetic_expression",
+          "message": "Expressão matemática malformada detectada: '+ 6)' (Token inesperado: +)."
+        },
+        {
+          "code": "malformed_arithmetic_expression",
+          "message": "Expressão matemática malformada detectada: '+ 2)' (Token inesperado: +)."
+        },
+        {
+          "code": "malformed_arithmetic_expression",
+          "message": "Expressão matemática malformada detectada: '+ 20' (Token inesperado: +)."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:analista_administrativo:088",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:dpf14_009_01:027",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:080",
+      "discipline": "matematica",
+      "valid": false,
+      "errors": [
+        {
+          "code": "generic_template_explanation",
+          "message": "O comentário utiliza template genérico sem fundamentação específica da resolução."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:015",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:026",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:103",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    },
+    {
+      "external_id": "pdf:tecnico_do_ministerio_publico_area_administrativa:038",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:093",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:analista_administrativo:092",
+      "discipline": "contabilidade-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:tecnico_em_enfermagem:015",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "pdf:agente_de_policia_federal:100",
+      "discipline": "contabilidade-geral-e-avancada",
+      "valid": false,
+      "errors": [
+        {
+          "code": "calculation_memory_header_missing",
+          "message": "Questão com cálculo exige a seção textual 'Memória de cálculo — passo a passo'."
+        },
+        {
+          "code": "formula_without_substitution",
+          "message": "A fórmula foi apresentada sem a substituição dos dados reais do problema e operações intermediárias."
+        },
+        {
+          "code": "conclusion_option_missing",
+          "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+        }
+      ]
+    }
+  ],
+  "counterexamples": {
+    "outputs": [
+      {
+        "name": "header_only",
+        "body": "Memória de cálculo — passo a passo.",
+        "valid": false,
+        "errors": [
+          {
+            "code": "incomplete_calculation_memory",
+            "message": "A resolução qualitativa não apresenta os números e grandezas informados no enunciado."
+          },
+          {
+            "code": "conclusion_option_missing",
+            "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+          }
+        ]
+      },
+      {
+        "name": "correct_operations_wrong_option",
+        "body": "Memória de cálculo — passo a passo: 25.000 × 0,02 = 500. Portanto, alternativa A.",
+        "valid": true,
+        "errors": []
+      },
+      {
+        "name": "ignores_interest_and_penalty",
+        "body": "Memória de cálculo — passo a passo: 25.000 + 1 = 25.001. Portanto, alternativa C.",
+        "valid": false,
+        "errors": [
+          {
+            "code": "arithmetic_error_or_calculation_mismatch",
+            "message": "Erro aritmético detectado na operação: 25.000 + 1 = 25.001. (calculado: 25001, informado: 25.001)."
+          }
+        ]
+      },
+      {
+        "name": "image_bypass",
+        "body": "Memória de cálculo — passo a passo: 900 + 900 = 1800. Portanto, alternativa C.\n![apoio](/resumos/questions/calculations/pdf_teste.png)",
+        "valid": false,
+        "errors": [
+          {
+            "code": "solution_only_in_image",
+            "message": "A explicação reside exclusivamente na imagem, sem memória de cálculo textual acessível para o usuário."
+          }
+        ]
+      },
+      {
+        "name": "wrong_bold_expression",
+        "body": "Memória de cálculo — passo a passo. **25.000 + 1 = 0**. Portanto, alternativa C.",
+        "valid": true,
+        "errors": []
+      }
+    ],
+    "arithmetic": [
+      {
+        "input": "-2^2",
+        "valid": true,
+        "value": 4
+      },
+      {
+        "input": "1,2,3 + 1",
+        "valid": true,
+        "value": 2.2
+      },
+      {
+        "input": "2..3 + 1",
+        "valid": true,
+        "value": 3
+      },
+      {
+        "input": "2^(3^2)",
+        "valid": true,
+        "value": 512
+      },
+      {
+        "input": "2 + 2",
+        "valid": true,
+        "value": 4
+      }
+    ]
+  },
+  "counterexamples_extended": [
+    {
+      "body": "Memória de cálculo — passo a passo: 25.000 + 1 = 25001\nPortanto, alternativa C.",
+      "current": {
+        "valid": true,
+        "errors": []
+      },
+      "origin_main": {
+        "valid": false,
+        "errors": [
+          {
+            "code": "arithmetic_error_or_calculation_mismatch",
+            "message": "Erro aritmético detectado na operação: 25.000 + 1 = 25001 (resultado real esperado: 26)."
+          }
+        ]
+      }
+    },
+    {
+      "body": "Memória de cálculo — passo a passo: 900 + 900 = 1800. A resolução considera todos os dados fornecidos e explica o resultado com cuidado. Portanto, alternativa C.\n![apoio](/resumos/questions/calculations/pdf_teste.png)",
+      "current": {
+        "valid": true,
+        "errors": []
+      },
+      "origin_main": {
+        "valid": true,
+        "errors": []
+      }
+    },
+    {
+      "body": "Memória de cálculo — passo a passo: 2 + 2 = 0",
+      "current": {
+        "valid": false,
+        "errors": [
+          {
+            "code": "arithmetic_error_or_calculation_mismatch",
+            "message": "Erro aritmético detectado na operação: 2 + 2 = 0 (calculado: 4, informado: 0)."
+          },
+          {
+            "code": "unrelated_data_or_unsupported_model",
+            "message": "As operações da memória de cálculo não utilizam os dados numéricos fundamentais do enunciado."
+          },
+          {
+            "code": "conclusion_option_missing",
+            "message": "A explicação não conclui qual é a alternativa correta correspondente ao resultado."
+          }
+        ]
+      },
+      "origin_main": {
+        "valid": true,
+        "errors": []
+      }
+    }
+  ],
+  "statement_parts": [
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:017",
+      "statement_parts_match": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:018",
+      "statement_parts_match": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:019",
+      "statement_parts_match": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:020",
+      "statement_parts_match": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:027",
+      "statement_parts_match": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:030",
+      "statement_parts_match": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:031",
+      "statement_parts_match": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:032",
+      "statement_parts_match": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:033",
+      "statement_parts_match": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:034",
+      "statement_parts_match": false
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:035",
+      "statement_parts_match": false
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:012",
+      "statement_parts_match": false
+    }
+  ],
+  "postcheck_query_errors": [
+    {
+      "table": "question_answer_keys",
+      "requested_columns": "answer_value",
+      "error_code": "42703"
+    },
+    {
+      "table": "topics",
+      "requested_columns": "id,name,slug",
+      "error_code": "42703"
+    }
+  ],
+  "remote_function_privileges": {
+    "functions": [
+      {
+        "anon_execute": false,
+        "authenticated_execute": false,
+        "name": "apply_atomic_explanation_patches",
+        "search_path": [
+          "search_path=\"\""
+        ],
+        "security_definer": true,
+        "service_execute": true
+      },
+      {
+        "anon_execute": false,
+        "authenticated_execute": false,
+        "name": "rollback_atomic_explanation_patches",
+        "search_path": [
+          "search_path=\"\""
+        ],
+        "security_definer": true,
+        "service_execute": true
+      }
+    ],
+    "migration_045_history": 0
+  },
+  "rebuilt_validation": [
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:001",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:002",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:003",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:004",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:005",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:006",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:007",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:008",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:009",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:010",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:011",
+      "discipline": "lingua-inglesa",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:012",
+      "discipline": "lingua-inglesa",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:013",
+      "discipline": "lingua-inglesa",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:014",
+      "discipline": "lingua-inglesa",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:015",
+      "discipline": "lingua-inglesa",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:016",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:017",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:018",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:019",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:020",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:021",
+      "discipline": "atualidades",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:022",
+      "discipline": "atualidades",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:023",
+      "discipline": "atualidades",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:024",
+      "discipline": "atualidades",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:025",
+      "discipline": "atualidades",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:026",
+      "discipline": "matematica-financeira",
+      "valid": false,
+      "errors": [
+        {
+          "code": "unrelated_data_or_unsupported_model",
+          "message": "As operações da memória de cálculo não utilizam os dados numéricos fundamentais do enunciado."
+        }
+      ]
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:027",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:028",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:029",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:030",
+      "discipline": "matematica-financeira",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:031",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:032",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:033",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:034",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:035",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:036",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:037",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:038",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:039",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:040",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:041",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:042",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:043",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:044",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:045",
+      "discipline": "conhecimentos-bancarios",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:046",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:047",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:048",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:049",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:050",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:051",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:052",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:053",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:054",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:055",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:056",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:057",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:058",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:059",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:060",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:061",
+      "discipline": "vendas-e-negociacao",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:062",
+      "discipline": "vendas-e-negociacao",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:063",
+      "discipline": "vendas-e-negociacao",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:064",
+      "discipline": "vendas-e-negociacao",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:065",
+      "discipline": "vendas-e-negociacao",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:066",
+      "discipline": "vendas-e-negociacao",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:067",
+      "discipline": "vendas-e-negociacao",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:068",
+      "discipline": "vendas-e-negociacao",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:069",
+      "discipline": "vendas-e-negociacao",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:070",
+      "discipline": "vendas-e-negociacao",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:001",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:002",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:003",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:004",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:005",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:006",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:007",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:008",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:010",
+      "discipline": "portugues",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:011",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:012",
+      "discipline": "raciocinio-logico",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:014",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:015",
+      "discipline": "matematica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:016",
+      "discipline": "administracao-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:017",
+      "discipline": "administracao-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:018",
+      "discipline": "administracao-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:019",
+      "discipline": "administracao-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:020",
+      "discipline": "administracao-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:021",
+      "discipline": "atualidades",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:022",
+      "discipline": "atualidades",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:023",
+      "discipline": "atualidades",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:024",
+      "discipline": "atualidades",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:025",
+      "discipline": "atualidades",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:026",
+      "discipline": "administracao-geral",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:027",
+      "discipline": "administracao-geral",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:028",
+      "discipline": "administracao-geral",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:029",
+      "discipline": "administracao-geral",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:030",
+      "discipline": "administracao-geral",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:031",
+      "discipline": "administracao-geral",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:032",
+      "discipline": "administracao-geral",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:033",
+      "discipline": "administracao-publica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:034",
+      "discipline": "administracao-geral",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:035",
+      "discipline": "administracao-geral",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:036",
+      "discipline": "arquivologia",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:037",
+      "discipline": "arquivologia",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:038",
+      "discipline": "arquivologia",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:039",
+      "discipline": "arquivologia",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:040",
+      "discipline": "arquivologia",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:041",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:042",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:043",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:044",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:045",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:046",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:047",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:048",
+      "discipline": "informatica",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:049",
+      "discipline": "direito-administrativo",
+      "valid": true,
+      "errors": []
+    },
+    {
+      "external_id": "exam:conab-2014-assistente-adm:item:050",
+      "discipline": "direito-administrativo",
+      "valid": true,
+      "errors": []
+    }
+  ],
+  "tests": {
+    "total": 246,
+    "passed": 242,
+    "skipped_integration": 4,
+    "failed": 0,
+    "integration_executed": false
+  },
+  "database_writes": false,
+  "authenticated_ui_smoke": false
+}
