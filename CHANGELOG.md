@@ -1,5 +1,26 @@
 # Changelog
 
+## Questões — saneamento de pendências técnicas e controle editorial transacional (31/10/2026)
+
+- **Proteção Transacional e Reversão Segura (Migration 045)**:
+  - Implementada a função PostgreSQL `apply_atomic_explanation_patches(p_payload JSONB)` com bloqueio server-side (`FOR UPDATE`) e conferência atômica simultânea de pré-condições de hash SHA-256 da explicação e do enunciado, eliminando vulnerabilidades de race condition decorrentes de SELECT seguido de UPDATE.
+  - Implementada a função PostgreSQL `rollback_atomic_explanation_patches(p_payload JSONB)` estritamente condicionada à igualdade entre o hash atual e a versão aplicada (`applied_sha256`), abortando caso haja alterações posteriores legítimas para prevenir sobrescrita destrutiva.
+  - Refatorados `apply_explanation_patches.mjs` e `rollback_explanations.mjs` para invocar os RPCs transacionais canônicos.
+  - Criada e aprovada a suite de integração `tests/atomic-explanation-patch.test.mjs`.
+- **Controle Editorial Semântico e Parser Aritmético Determinístico**:
+  - Incorporados os contraexemplos do Parecer Técnico como regressões obrigatórias em `tests/explanation-quality.test.mjs`:
+    - Contraexemplo (a) `2 + 2 = 0` rejeitado por erro aritmético no parser determinístico.
+    - Contraexemplo (b) `900 + 900 = 1800` rejeitado por ausência de relacionamento dos operandos com os dados e hipóteses do enunciado.
+  - Desenvolvido `ArithmeticParser` determinístico (sem `eval`/`Function`), com suporte a zero, negativos, decimais e milhares no padrão brasileiro, porcentagens, operadores aritméticos, precedência e parênteses.
+  - Validação em 3 camadas: integridade de operações, correspondência aos dados do enunciado e aderência à alternativa gabaritada.
+- **Reconciliação e Auditoria Individual da População**:
+  - Snapshot paginado recente do banco de dados auditado: 1.806 questões totais (1.771 publicadas, 35 arquivadas, 0 drafts).
+  - Censo individual exaustivo das 192 questões da população quantitativa gerado em `docs/questoes-workflow/censo_individual_populacao_quantitativa_20261031.json` (157 mantidas, 35 a corrigir, 0 bloqueadas).
+  - Builders `bb_builder.py` e `conab_builder.py` sincronizados e testados com saída em `scratch/candidates/`, com 100% de aprovação no gate de qualidade semântica.
+- **Relatório e Errata**:
+  - Adicionada errata formal ao relatório `RELATORIO_EXECUCAO_MEMORIAS_CALCULO_2026-10-31.md`, corrigindo contagens anteriores e delimitando honestamente os controles auditados.
+
+
 ## Documentação — retomada após parecer e regras do Antigravity (31/10/2026)
 
 - entregue prompt para sanar lacunas de verificação semântica, concorrência, atomicidade, rollback, cobertura e comprovação visual;
