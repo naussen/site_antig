@@ -1,0 +1,750 @@
+{
+  "timestamp": "2026-10-31T18:32:24.109Z",
+  "target_count": 12,
+  "items": [
+    {
+      "question_id": "8e151698-7c6c-4000-a34b-23366f3997bb",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:017",
+      "statement": {
+        "markdown": "Questão 17 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nA sequência de Fibonacci é bastante utilizada para exem-\nplificar sequências definidas por recorrência, ou seja, se-\nquências em que se pode determinar um termo a partir do \nconhecimento de termos anteriores. No caso da sequên-\ncia de Fibonacci, escreve-se que Tn+2 = Tn+1 + Tn e, desse \nmodo, pode-se obter um termo qualquer conhecendo-se \nos dois termos anteriores. \nConsiderando o exposto acima, determine o termo T2021 \nda sequência de Fibonacci, sabendo que T2018 = m e \nT2020 = p.",
+        "sha256": "c3c8c74bbbfba767f61c3284aa0a0c3ba1a006c72a1075aafcf57eb735d492a3"
+      },
+      "subject": null,
+      "taxonomy": {
+        "disciplines": [
+          {
+            "id": "38ad7d20-4667-4350-a996-df751f9c2e82",
+            "name": "Matemática",
+            "slug": "matematica"
+          }
+        ],
+        "topics": [
+          null
+        ]
+      },
+      "options": [
+        {
+          "id": "b0c1ea2d-58ca-4c77-a30b-13b33394b17c",
+          "label": "A",
+          "sort_order": 0,
+          "body_markdown": "p\nm\n2\n",
+          "body_sha256": "3f8969fad7346e09aaef04c2bb3a94f4ca99ccb042d923391942b96e2318863a"
+        },
+        {
+          "id": "b62d3529-1a33-451c-9605-8a94c1ad514a",
+          "label": "B",
+          "sort_order": 1,
+          "body_markdown": "p\nm\n2\n",
+          "body_sha256": "45356d988b8be6d40d969ed49a3dc598511f37862e845f179d65fa916c423922"
+        },
+        {
+          "id": "db79c861-b581-40a3-b057-4269008d36b8",
+          "label": "C",
+          "sort_order": 2,
+          "body_markdown": "\np\n2m",
+          "body_sha256": "4f9a6b37fec553edc1da285d06964a4361696dca8d395aaf59fcd4697bb5743e"
+        },
+        {
+          "id": "57be284e-2130-44c6-8469-8ab551277387",
+          "label": "D",
+          "sort_order": 3,
+          "body_markdown": "\n2p\nm",
+          "body_sha256": "d9590770ae6b234d45998d3428cff5a73c409256857b7cb93eb85c67ab82cec4"
+        },
+        {
+          "id": "6a1a1277-fdc0-4d9a-97a8-47afbbfd5264",
+          "label": "E",
+          "sort_order": 4,
+          "body_markdown": "\n2m\n2p",
+          "body_sha256": "6e816c36ef0024a42647e10e594c4d8aabecc8dc2b49e09d33f58427c84c43e5"
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise didática da Questão 17 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (D).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de aritmetica e algebra, sendo a opção (D) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "body_sha256": "4934e45c4f5ef43d0e09a8d1ed96f8c2498a96ab7442a567fc5ee129403c94bd"
+      }
+    },
+    {
+      "question_id": "8d5faf08-4b83-4d95-bb00-8f9a28c142e6",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:018",
+      "statement": {
+        "markdown": "Questão 18 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nJ modelou um problema de matemática por uma função \nexponencial do tipo a(x)=1000 ekx, e L, trabalhando no \nmesmo problema, chegou à modelagem b(x)=102x+3. \nConsiderando-se que ambos modelaram o problema cor-\nretamente, e que ln x = logex, qual o valor de k?",
+        "sha256": "b9861db34473f02f3740210fa8a1674a071fa51322b3fc79e04320a233796800"
+      },
+      "subject": null,
+      "taxonomy": {
+        "disciplines": [
+          {
+            "id": "38ad7d20-4667-4350-a996-df751f9c2e82",
+            "name": "Matemática",
+            "slug": "matematica"
+          }
+        ],
+        "topics": [
+          null
+        ]
+      },
+      "options": [
+        {
+          "id": "5309544c-be51-46df-b8f2-5173eea5ccfe",
+          "label": "A",
+          "sort_order": 0,
+          "body_markdown": "ln 2",
+          "body_sha256": "ddbedcd07a7d4789d6f0c528b85eb4a4c8b1cc171a28036dabd14b2dfd1d3214"
+        },
+        {
+          "id": "a784ca11-cba8-4b1e-bb93-7919e8cd5269",
+          "label": "B",
+          "sort_order": 1,
+          "body_markdown": "ln 3",
+          "body_sha256": "fb40658d0f4c47976f701498a3fa39f3aca25b7855453bfc0bcde21ff1a49bc7"
+        },
+        {
+          "id": "fff3bb65-8e2c-4f61-9678-eb22896612dd",
+          "label": "C",
+          "sort_order": 2,
+          "body_markdown": "ln 10",
+          "body_sha256": "c254c697bab0227e8e45f5532997f10a4f49a6ef0da4d52147836d0d5daee9f7"
+        },
+        {
+          "id": "ba9aef89-2002-46d6-a5d5-18d282ff2e4c",
+          "label": "D",
+          "sort_order": 3,
+          "body_markdown": "ln 30",
+          "body_sha256": "d215ab3670ed06c1f0c1a5b31f6b65358749b4e52ae2676e86ece625e4cfb5f8"
+        },
+        {
+          "id": "c03385ec-38e8-47dd-96be-8fb6b5691a77",
+          "label": "E",
+          "sort_order": 4,
+          "body_markdown": "ln 100\n\n7\nO BRASIL\nRASCUNHO\n\n8\nBANCO DO",
+          "body_sha256": "907357d3bc8e0a0ce985fcfee9bbd09ed3073f0abcd61580bdd43e3fcb17065e"
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise didática da Questão 18 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (E).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de aritmetica e algebra, sendo a opção (E) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "body_sha256": "8becbd4bbee7352fc7d10d2f84461333d575ccd4d4510f3b9c2a793994b02006"
+      }
+    },
+    {
+      "question_id": "bfc0008a-9ea8-47d2-bd14-ba2103e5c6c2",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:019",
+      "statement": {
+        "markdown": "Questão 19 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nO método da bisseção é um algoritmo usado para encon-\ntrar aproximações das raízes de uma equação.  Começa-\n-se com um intervalo [a,b], que contém uma raiz, e, em \ncada passo do algoritmo, reduz-se o intervalo pela me-\ntade, usando-se um teorema para determinar se a raiz \nestá à esquerda ou à direita do ponto médio do intervalo \nanterior.  Ou seja, após o passo 1, obtém-se um intervalo \nde comprimento b\na\n2\n\n; após o passo 2, obtém-se um in-\ntervalo de comprimento b\na\n4\n\n; e após o passo n, obtém-\n-se um intervalo de comprimento \nn\nb\na\n2\n\n.  Esse processo \ncontinua até que o intervalo obtido tenha comprimento \nmenor que o erro máximo desejado para a aproximação.\nPara aplicar esse método no intervalo [1,5], quantos pas-\nsos serão necessários para obter-se um intervalo de com-\nprimento menor que 103?",
+        "sha256": "5abd52a50d81184177eeeb7fe04e26137fe2f4bed7b360b87d145907d930f8fe"
+      },
+      "subject": null,
+      "taxonomy": {
+        "disciplines": [
+          {
+            "id": "38ad7d20-4667-4350-a996-df751f9c2e82",
+            "name": "Matemática",
+            "slug": "matematica"
+          }
+        ],
+        "topics": [
+          null
+        ]
+      },
+      "options": [
+        {
+          "id": "45a35004-d378-48d5-9c7d-9c4706f721fb",
+          "label": "A",
+          "sort_order": 0,
+          "body_markdown": "9",
+          "body_sha256": "19581e27de7ced00ff1ce50b2047e7a567c76b1cbaebabe5ef03f7c3017bb5b7"
+        },
+        {
+          "id": "05176dfa-3db7-462f-8f72-8d8db624a2d8",
+          "label": "B",
+          "sort_order": 1,
+          "body_markdown": "10",
+          "body_sha256": "4a44dc15364204a80fe80e9039455cc1608281820fe2b24f1e5233ade6af1dd5"
+        },
+        {
+          "id": "7a44d231-846d-496b-8737-757f1456ea44",
+          "label": "C",
+          "sort_order": 2,
+          "body_markdown": "11",
+          "body_sha256": "4fc82b26aecb47d2868c4efbe3581732a3e7cbcc6c2efb32062c08170a05eeb8"
+        },
+        {
+          "id": "5a56cd33-ccf5-4f8f-ae45-93d9891b7dfd",
+          "label": "D",
+          "sort_order": 3,
+          "body_markdown": "12",
+          "body_sha256": "6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918"
+        },
+        {
+          "id": "4284788d-d3d8-475b-b66b-13f1f9ed6a80",
+          "label": "E",
+          "sort_order": 4,
+          "body_markdown": "13",
+          "body_sha256": "3fdba35f04dc8c462986c992bcf875546257113072a909c162f7e470e581e278"
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise didática da Questão 19 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (D).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de porcentagem e proporcionalidade, sendo a opção (D) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "body_sha256": "02c2bebabc3cfdac54d3a7c82b8637f9cb35e4f16b9bb76abbc714c013127464"
+      }
+    },
+    {
+      "question_id": "4f690cab-d3aa-4f95-b9c2-a072cc7e0c2c",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:020",
+      "statement": {
+        "markdown": "Questão 20 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nUma loja vende um produto em dois tipos de embalagem: \nunitária (com uma unidade do produto) e dupla (com duas \nunidades do produto).  Em certo mês, foram vendidas 16 \nembalagens duplas e 20 unitárias, gerando uma receita \npara a loja de R$ 488,00.  No mês seguinte, foram ven-\ndidas 30 embalagens duplas e 25 unitárias, gerando uma \nreceita de R$ 790,00.\nQual foi a porcentagem do desconto dado em cada unida-\nde do produto ao se comprar a embalagem dupla?",
+        "sha256": "35cda55dce500f7e2f5315de109144e140bbc63f2d7c806457e155c0bc6d5de1"
+      },
+      "subject": null,
+      "taxonomy": {
+        "disciplines": [
+          {
+            "id": "38ad7d20-4667-4350-a996-df751f9c2e82",
+            "name": "Matemática",
+            "slug": "matematica"
+          }
+        ],
+        "topics": [
+          null
+        ]
+      },
+      "options": [
+        {
+          "id": "b1a46299-7b60-4e1f-8105-30db48bd9547",
+          "label": "A",
+          "sort_order": 0,
+          "body_markdown": "5%",
+          "body_sha256": "d1ce334b6a7f364b1e97ebb9e661f6d4cf6e20aa741aba4b8f198417aea18326"
+        },
+        {
+          "id": "27a84df2-aecd-43b3-bb49-32b86a0aba8c",
+          "label": "B",
+          "sort_order": 1,
+          "body_markdown": "8%",
+          "body_sha256": "23ec5e7f20a2bcc3fca42ac6f74643066b90a0458cf4f309bc2dc517869c7f39"
+        },
+        {
+          "id": "a1445fce-7baf-4b9f-a209-69fb44fd3a94",
+          "label": "C",
+          "sort_order": 2,
+          "body_markdown": "10%",
+          "body_sha256": "3ccce1f4da948035fd36a399576a50a5248ddc02dd008f3c3668df57c0aa75b5"
+        },
+        {
+          "id": "a93fa274-1175-42ca-9850-66b9030b1c8a",
+          "label": "D",
+          "sort_order": 3,
+          "body_markdown": "12%",
+          "body_sha256": "234d0e73855ae7bf477734cbd4c1e50d56d5d00af3edb4bc8ddbdf44e8d5c8de"
+        },
+        {
+          "id": "6dae889a-1133-479b-8d2e-6e15ff757dac",
+          "label": "E",
+          "sort_order": 4,
+          "body_markdown": "15%\nRASCUNHO\n\n8\nO BRASIL\nATUALIDADES\nDO MERCADO FINANCEIRO",
+          "body_sha256": "cbbb0c8d0b5a72ca3c4e11e6565d2b72b732d429cba8f71acffa4f32bc2499db"
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise didática da Questão 20 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (C).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de porcentagem e proporcionalidade, sendo a opção (C) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "body_sha256": "71de3bf3d88cbdd95cccc42b2a3a79e27bc2f6005668fe3c0cbcbe35cab065e5"
+      }
+    },
+    {
+      "question_id": "20ad8b7b-a3c7-4167-923f-b583db20ddae",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:027",
+      "statement": {
+        "markdown": "Questão 27 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nUm cliente montou uma estratégia financeira, aplicando \nparte de seu décimo terceiro salário, sempre no início de \njaneiro, de 2018 a 2021, conforme mostrado na Tabela a \nseguir.\njan/2018\njan/2019\njan/2020\njan/2021\nR$ 10.000,00\nR$ 10.000,00\nR$ 10.000,00\nR$ 10.000,00\nA partir da orientação financeira de um especialista, ele \nconseguiu obter nesse período, com essas aplicações, \numa taxa de retorno de 10% ao ano, sempre na compara-\nção com o ano anterior. Ele pretende atingir o valor total \nacumulado de 65 mil reais no início de jan/2023.\nConsiderando-se que essa taxa de retorno se mantenha, \no valor mínimo, em reais, que esse cliente precisará de-\npositar em Jan/2022, para atingir a meta em Jan/2023, a \npartir das aproximações dadas, pertence ao intervalo:",
+        "sha256": "7ef067f7324bb4a25eac1ecdcb90babb095796cb18d6429d2956c79418bfb26f"
+      },
+      "subject": null,
+      "taxonomy": {
+        "disciplines": [
+          {
+            "id": "ecf46dc8-082d-4d6b-ab3d-7c9b501afd9f",
+            "name": "Matemática Financeira",
+            "slug": "matematica-financeira"
+          }
+        ],
+        "topics": [
+          null
+        ]
+      },
+      "options": [
+        {
+          "id": "0ad63b8b-8a7b-435e-a0b9-b783d3d234f9",
+          "label": "A",
+          "sort_order": 0,
+          "body_markdown": "R$ 8.000,00 a R$ 8.199,00",
+          "body_sha256": "d4a37c2c782fe9c5149f39650dac6e7ea34163f06ba81b8bfb8ad01de68d3ed5"
+        },
+        {
+          "id": "6c3f7998-a7dd-40ef-99d6-0b350609ecef",
+          "label": "B",
+          "sort_order": 1,
+          "body_markdown": "R$ 8.200,00 a R$ 8.399,00",
+          "body_sha256": "4b02b9279101ee6bff34acaeecbda8bef4811a6a38e1a63419ca49120dcf585a"
+        },
+        {
+          "id": "d79e46a8-5f3d-43bd-89f2-24362cee6d96",
+          "label": "C",
+          "sort_order": 2,
+          "body_markdown": "R$ 8.400,00 a R$ 8.599,00",
+          "body_sha256": "47175a607f3b979354ce3c8629704086cfe8e3b52871c47089732ff374aa9758"
+        },
+        {
+          "id": "a02c8a91-fe47-4b4a-8db5-a82d4aca2616",
+          "label": "D",
+          "sort_order": 3,
+          "body_markdown": "R$ 8.600,00 a R$ 8.799,00",
+          "body_sha256": "882b92435e5fc2d670f3cfd9e685678b5d3ccf0954075e193ae055a985fb459a"
+        },
+        {
+          "id": "673c652d-f3f0-42a4-9d19-b04f1bb060ff",
+          "label": "E",
+          "sort_order": 4,
+          "body_markdown": "R$ 8.800,00 a R$ 8.999,00\nDados: \n1,15 = 1,611; \n1,14 = 1,464; \n1,13 = 1,331.\nRASCUNHO\n\n10\nBANCO DO",
+          "body_sha256": "f89933870fc834511d087f18b3cc26fda65e97bd34ce3a03f915fc693e0494d1"
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise didática da Questão 27 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (A).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de juros simples e compostos, sendo a opção (A) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "body_sha256": "f2e4b24c218ab347ecc066ffd0f6df09cd3bd914b7a737592acca9effbfa3003"
+      }
+    },
+    {
+      "question_id": "0768ca99-1dc3-44c2-b482-3b955e0a18dd",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:030",
+      "statement": {
+        "markdown": "Questão 30 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nDevido à pandemia, um microempreendedor precisou \ntomar um empréstimo no valor de R$ 20.000,00, em \ndez/2020, a ser pago em 24 prestações mensais iguais e \npostecipadas no sistema PRICE, de modo que a primeira \nfosse paga em jan/21, e a última, em dez/22. Considere \nque o Banco cobre R$ 660,00 de taxas, que serão finan-\nciadas juntamente com o valor do empréstimo, por esco-\nlha do cliente, e que a taxa de juros cobrada, devido ao \nrisco da operação, seja de 3% ao mês.\nDesconsiderando-se o IOF na operação e supondo-se \nque a primeira prestação foi paga na data de vencimento, \no valor da segunda prestação, em sua respectiva data de \nvencimento será de, aproximadamente,",
+        "sha256": "1ceae8ba013152bd4d0c92a242b53b89fcd8bee30c1edb80e5f0b81f9c968e80"
+      },
+      "subject": null,
+      "taxonomy": {
+        "disciplines": [
+          {
+            "id": "ecf46dc8-082d-4d6b-ab3d-7c9b501afd9f",
+            "name": "Matemática Financeira",
+            "slug": "matematica-financeira"
+          }
+        ],
+        "topics": [
+          null
+        ]
+      },
+      "options": [
+        {
+          "id": "79d3c365-e582-4e57-b0ec-6f7d5bd4c158",
+          "label": "A",
+          "sort_order": 0,
+          "body_markdown": "R$ 1.120,00",
+          "body_sha256": "14d3dd474a9d979132159295b1c5657721c821c53e7e626314f172e8b61d81d6"
+        },
+        {
+          "id": "b2d97b3f-a0b5-418b-8859-b127f321c41d",
+          "label": "B",
+          "sort_order": 1,
+          "body_markdown": "R$ 1.220,00",
+          "body_sha256": "e3e3b93c108a6e74254b7fcf9c5cc461052c083d2d5d158cde5aa537399f8624"
+        },
+        {
+          "id": "787f4a9e-70e8-4e90-aaf2-773f02f9eacf",
+          "label": "C",
+          "sort_order": 2,
+          "body_markdown": "R$ 1.320,00",
+          "body_sha256": "b8eff7ff1f9a65c655fbcb934340e98572a3b102e45f3366c7b73eaf139d5ea4"
+        },
+        {
+          "id": "24a0baaf-0267-40ec-99d4-8c23c3d3334a",
+          "label": "D",
+          "sort_order": 3,
+          "body_markdown": "R$ 1.420,00",
+          "body_sha256": "64a1501dbbf5720851dfe8457e03f437d5f496f8d3073f986f07fe3a07acb827"
+        },
+        {
+          "id": "50e4506d-a8bf-4d9b-94a3-8ca4e80b5a47",
+          "label": "E",
+          "sort_order": 4,
+          "body_markdown": "R$ 1.520,00\nDados: 1,0324 = 2,033.\n\n0\nO BRASIL\nCONHECIMENTOS BANCÁRIOS",
+          "body_sha256": "c527110eb5cd4ca58b46d768fee4c296677806232a0bfa559958a9a72611fa29"
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise didática da Questão 30 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (B).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de juros simples e compostos, sendo a opção (B) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "body_sha256": "0f2ce68fd5d9b1927861bcb43291f9119c55719b0961d19d86897b99804f5f01"
+      }
+    },
+    {
+      "question_id": "7762d0dd-e128-4e79-9610-cddc849ffa94",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:031",
+      "statement": {
+        "markdown": "Questão 31 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nNo Brasil, o órgão responsável pela fiscalização do Siste-\nma Financeiro Nacional é o",
+        "sha256": "5c57218f3c7bf15d71256ab641295e410dabfd36729e3b0923c34a6a5f74e46e"
+      },
+      "subject": null,
+      "taxonomy": {
+        "disciplines": [
+          {
+            "id": "ecf46dc8-082d-4d6b-ab3d-7c9b501afd9f",
+            "name": "Matemática Financeira",
+            "slug": "matematica-financeira"
+          }
+        ],
+        "topics": [
+          null
+        ]
+      },
+      "options": [
+        {
+          "id": "83d3b0fc-aa68-46c5-91a8-1864f0013378",
+          "label": "A",
+          "sort_order": 0,
+          "body_markdown": "Conselho Monetário Nacional",
+          "body_sha256": "94649b2be4da35c32db8007246ac9af185f78b8bbc786c91d107215628f7dfb4"
+        },
+        {
+          "id": "e77be729-bfb1-4a24-9f09-d721ed97fb16",
+          "label": "B",
+          "sort_order": 1,
+          "body_markdown": "Ministério da Economia",
+          "body_sha256": "8103cbe93d756f3a1add519e8f2389ff1cf48c1206a449492e61835a67349958"
+        },
+        {
+          "id": "9c16aa90-ccfc-4ab0-b4b9-77964cf12e10",
+          "label": "C",
+          "sort_order": 2,
+          "body_markdown": "Banco Central do Brasil",
+          "body_sha256": "ce71d5b8bcbe5a3f7d7892302810516885d860109e96e6a05fa68dc4452e0492"
+        },
+        {
+          "id": "1ff251a3-6c0f-48f2-84a7-16a426fd481f",
+          "label": "D",
+          "sort_order": 3,
+          "body_markdown": "Banco do Brasil",
+          "body_sha256": "f8982a2d8054f5f56d058f2a634618023e2841e277d1da8463b38ac2d8cbb43b"
+        },
+        {
+          "id": "9e40a4ce-a980-44ed-94c4-8032f3803531",
+          "label": "E",
+          "sort_order": 4,
+          "body_markdown": "Banco Nacional de Desenvolvimento Econômico e So-\ncial (BNDES)\nConsidere o texto a seguir para reponder às questões \nde nos 32 e 33.\nA crise econômica causada pela pandemia do novo co-\nronavírus provocou a maior fuga de capitais da história \ndo Brasil. Dados divulgados nesta quarta-feira (24/6) \npelo Banco Central (BC) explicam que os investidores \nestrangeiros retiraram US$ 31,7 bilhões do mercado \nbrasileiro de títulos e ações só em março, abril e maio \ndeste ano. Por isso, as retiradas somam R$ 50,9 bi-\nlhões nos últimos 12 meses; o maior índice da série \nhistórica do BC. \nBARBOSA, M. US$ 50,9 bilhões saíram do mercado ﬁ nanceiro \nbrasileiro em 12 meses. Correio Braziliense, 24/6/2020. Dispo-\nnível em: www.correiobraziliense.com.br/app/noticia/eco-\nnomia/2020/06/24/internas_economia,866513/us-50-9-bilhoes-\n-sairam-do-mercado-ﬁ nanceiro-brasileiro-em-12-meses.shtml. \nAcesso em: 22 jan. 2021.",
+          "body_sha256": "0223324a04380edc18b4f3d9b5d4d62835c1513e31773526bc219baaf0e555b1"
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise didática da Questão 31 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (C).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de sistemas de amortizacao, sendo a opção (C) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "body_sha256": "83684986bb7c0baa266322f76cc502d070f7a3ac8ad26f5ce7f2041caf00230f"
+      }
+    },
+    {
+      "question_id": "84fc5a74-e9d9-418d-b103-a29a26251809",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:032",
+      "statement": {
+        "markdown": "Questão 32 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nConsiderando-se os efeitos sanitários, econômicos e so-\nciais decorrentes da pandemia da Covid-19 na economia \nglobal, o principal fator que justifica tamanha fuga de capi-\ntais do Brasil no ano passado é o(a)",
+        "sha256": "8ea0fc9b955715be9d7c07176e85a96dfae4eaec6c42b25c28fcc3819ebb0818"
+      },
+      "subject": null,
+      "taxonomy": {
+        "disciplines": [
+          {
+            "id": "ecf46dc8-082d-4d6b-ab3d-7c9b501afd9f",
+            "name": "Matemática Financeira",
+            "slug": "matematica-financeira"
+          }
+        ],
+        "topics": [
+          null
+        ]
+      },
+      "options": [
+        {
+          "id": "a742c253-b926-4276-9c32-8bfad6fb6ef2",
+          "label": "A",
+          "sort_order": 0,
+          "body_markdown": "aumento desenfreado da dívida externa brasileira.",
+          "body_sha256": "fda71d5ca835e3d658f575221161e45859565c1b60075f6e23b12da064fdef41"
+        },
+        {
+          "id": "e251f508-378d-4b57-b560-f1d908597c9b",
+          "label": "B",
+          "sort_order": 1,
+          "body_markdown": "aumento das taxas de juros no mercado internacional.",
+          "body_sha256": "f37159df61dacc9c6f5923b67f6f03688dfc89e3d351438b9d154cb21f739284"
+        },
+        {
+          "id": "4a85eca1-07b4-4b61-994e-5f9f01dd1747",
+          "label": "C",
+          "sort_order": 2,
+          "body_markdown": "necessidade de recursos, no estrangeiro, para finan-\nciar as pesquisas científicas de vacinas contra o coro-\nnavírus.",
+          "body_sha256": "fe12d11ecb9b9876d26de8112750230e896971a37d0713d2fbf710ef78a0ebe0"
+        },
+        {
+          "id": "024b7b9b-50fb-4a0b-bd35-2c8134c86a0d",
+          "label": "D",
+          "sort_order": 3,
+          "body_markdown": "manipulação das taxas de câmbio nos mercados \nglobais.",
+          "body_sha256": "4ac8780d2f676c98871a558b2f686d9740071693c83ca3f6bd245fc1f02e79c9"
+        },
+        {
+          "id": "6f3abb0b-5219-4853-b930-42a7ad597253",
+          "label": "E",
+          "sort_order": 4,
+          "body_markdown": "maior percepção de risco, por parte dos estrangeiros, \nem investir em ativos denominados em moeda brasi-\nleira.",
+          "body_sha256": "132073b9fcccf16e12826b2be721038726c4ccab8eede8228a38b15d7f14539f"
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise didática da Questão 32 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (E).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de sistemas de amortizacao, sendo a opção (E) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "body_sha256": "ed367b126b3fd82811b6894653367f8042beeb49232d29f128b2135ea83652b8"
+      }
+    },
+    {
+      "question_id": "14fb7a26-012f-43ba-8c4b-fd3837b61b03",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:033",
+      "statement": {
+        "markdown": "Questão 33 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nO principal impacto decorrente da enorme fuga de capi-\ntais do Brasil em 2020, descrita na reportagem menciona-\nda anteriormente, foi o(a)",
+        "sha256": "bb39f5bc192908febf986469d45bfa72ed5c730d049c9e7dc9debcaaf3fcb16d"
+      },
+      "subject": null,
+      "taxonomy": {
+        "disciplines": [
+          {
+            "id": "ecf46dc8-082d-4d6b-ab3d-7c9b501afd9f",
+            "name": "Matemática Financeira",
+            "slug": "matematica-financeira"
+          }
+        ],
+        "topics": [
+          null
+        ]
+      },
+      "options": [
+        {
+          "id": "07e94507-70aa-47c5-84e7-1cc0a57b76e4",
+          "label": "A",
+          "sort_order": 0,
+          "body_markdown": "expressiva desvalorização do real brasileiro",
+          "body_sha256": "71ca09d1816980dbd348fd01b37d807e04f07d4ac4f88a61e36718ed08cbe8e2"
+        },
+        {
+          "id": "ab55ace0-7d50-4a9f-a23c-387ed1a15f22",
+          "label": "B",
+          "sort_order": 1,
+          "body_markdown": "queda das taxas de juros internas",
+          "body_sha256": "84f9167b63c5ed341c89f976747363bbb8931195adad228894f76b70002a19ad"
+        },
+        {
+          "id": "2b589443-cd58-4e8f-9bef-2a5af39b08e9",
+          "label": "C",
+          "sort_order": 2,
+          "body_markdown": "aumento do preço das ações na Bovespa",
+          "body_sha256": "2d54fdedfd22e1d8bb7462e7e6a48ad2b5c922c16d048b6d17a4aece74ddd870"
+        },
+        {
+          "id": "12b86caf-01fd-4aac-95c9-bc25557b7faa",
+          "label": "D",
+          "sort_order": 3,
+          "body_markdown": "valorização dos ativos brasileiros",
+          "body_sha256": "cbc6ac0f06aa78220f2734f36c5d0b4fca7d994eb74f6971d2d2bf95b8c18204"
+        },
+        {
+          "id": "2b42f8d0-09a7-44d3-80fc-a28bc572a2e1",
+          "label": "E",
+          "sort_order": 4,
+          "body_markdown": "aumento da dívida interna do Tesouro\n\n1\nBANCO DO",
+          "body_sha256": "d70b4e762247d277318c042c24c16ee94998d06dc098d7be145da4071e80a748"
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise didática da Questão 33 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (A).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de sistemas de amortizacao, sendo a opção (A) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "body_sha256": "9cf3ecb7ea8869b46249e028bb2fa786d77cadf24c586dc462ebd894851368b5"
+      }
+    },
+    {
+      "question_id": "1fb31ed3-b586-49b6-bb9e-85e0aff2ca9e",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:034",
+      "statement": {
+        "markdown": "Questão 34 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nCom evidências do enorme descolamento entre as taxas \nde juros de curto e de longo prazo no Brasil, o texto abai-\nxo reproduz matéria jornalística, publicada no início de \nagosto de 2020, dando conta da enorme incerteza futura \nassociada aos impactos adversos decorrentes da crise \npandêmica da Covid-19 sobre a economia brasileira. \nOs juros futuros encerraram os negócios desta segun-\nda-feira em alta firme, afetados por um movimento de \nmaior incorporação de prêmio de risco ao longo da \ncurva a termo, especialmente nos trechos mais longos \n(com vencimento no longo prazo). No fim da sessão \nregular, a taxa do contrato de Depósito Interfinanceiro \n(DI) para janeiro de 2021 passava de 1,87% no ajuste \nanterior para 1,88%; a do DI para janeiro de 2022 ia de \n2,65% para 2,67%; a do contrato para janeiro de 2023 \nsubia de 3,76% para 3,79%; a do DI para janeiro de \n2025 escalava de 5,40% para 5,47%; e a do contrato \npara janeiro de 2027 saltava de 6,35% para 6,43%. \nREZENDE, V. Risco ﬁ scal leva a alta das taxas de juros futuros e \ncurva tem maior inclinação desde ﬁ m de junho. Valor Econômi-\nco, 10/08/2020. Disponível em: valorinveste.globo.com/\nprodutos/renda-fixa/noticia/2020/08/10/risco-fiscal-leva-a-alta-\n-das-taxas-de-juros-futuro-e-curva-tem-maior-inclinacao-desde-\n-ﬁ m-de-junho.ghtml. Acesso em: 7 fev. 2021. Adaptado.\nPara minorar os impactos da crise, a Emenda Constitu-\ncional no 106, de 7 de maio de 2020, conhecida como \no “Orçamento de Guerra”, instituiu uma diversidade de \nmedidas nos âmbitos fiscal, financeiro e de contratações \npara enfrentamento da calamidade pública nacional, de-\ncorrente da pandemia da Covid-19. Dentre as medidas \naprovadas, o Banco Central do Brasil ficou autorizado, \ntemporariamente, a operar com instrumentos de política \nmonetária considerados não convencionais. \nA medida de política monetária não convencional, por par-\nte do Banco Central do Brasil, que poderia ter estimulado \na redução das taxas de juros de longo prazo no ano pas-\nsado é a",
+        "sha256": "51057b845bea44103704c097e4a706fbd9636f2d19c2847f7e9eea1d4b9749fc"
+      },
+      "subject": null,
+      "taxonomy": {
+        "disciplines": [
+          {
+            "id": "ecf46dc8-082d-4d6b-ab3d-7c9b501afd9f",
+            "name": "Matemática Financeira",
+            "slug": "matematica-financeira"
+          }
+        ],
+        "topics": [
+          null
+        ]
+      },
+      "options": [
+        {
+          "id": "e5aacec6-570d-4384-87a0-4ab9cbc83679",
+          "label": "A",
+          "sort_order": 0,
+          "body_markdown": "redução da taxa de juros básica de curto prazo (Selic)",
+          "body_sha256": "956a37cbf228f999986bc4c5484eb2348bd087f1921bd11a5e197e8c978ba145"
+        },
+        {
+          "id": "4504b16c-e6ee-4d06-a154-2a59307ae83b",
+          "label": "B",
+          "sort_order": 1,
+          "body_markdown": "venda de títulos públicos e privados no mercado se-\ncundário",
+          "body_sha256": "95f6b62e25e9ad5fba8f69f0f4b283a56f9ade7a8db892ac1b5859df09de45db"
+        },
+        {
+          "id": "521de0de-dfae-4e74-a43b-077d9e686ff5",
+          "label": "C",
+          "sort_order": 2,
+          "body_markdown": "compra de títulos públicos e privados no mercado se-\ncundário",
+          "body_sha256": "e8a7ac0d0c01c6b9fd5b77caf94355fcbe0a9a1a08e5e33a393756ddcada7cb7"
+        },
+        {
+          "id": "401b2983-211c-4421-aaf9-a54e25961933",
+          "label": "D",
+          "sort_order": 3,
+          "body_markdown": "redução do percentual dos depósitos compulsórios",
+          "body_sha256": "84edcd3d5b9774d644f7c6440ac56be579aeb888f8f444bfe9cb562639bb2797"
+        },
+        {
+          "id": "eec5c4fb-07f6-49ec-94d5-6aa194834d79",
+          "label": "E",
+          "sort_order": 4,
+          "body_markdown": "venda de títulos mediante operações compromissadas\nRASCUNHO\n\n1\nO BRASIL",
+          "body_sha256": "01e233b482b21498315e98d0021262e70066cd8b27cbbc8210809c7cd0545363"
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise didática da Questão 34 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (C).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de sistemas de amortizacao, sendo a opção (C) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "body_sha256": "b6417ef2ab4e406a1b52394fe08f1e09743f8ac329217cc199d6d08e4b0d481a"
+      }
+    },
+    {
+      "question_id": "7e7268e7-c178-4f5c-ae58-03e80a7eed42",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:035",
+      "statement": {
+        "markdown": "Questão 35 [Gabarito sem status definitivo comprovado]\n\n## Enunciado\n\nDentre as escolhas mais populares de investimentos, a \ncaderneta de poupança é uma das opções mais utilizadas \npelos brasileiros, sendo considerada um investimento de \nrenda fixa.\nSão também investimentos de renda fixa",
+        "sha256": "a856f51ac0fb4feeb4ccd2900512e820f77f94d8fd4b8b9fe7644d982b16c23a"
+      },
+      "subject": null,
+      "taxonomy": {
+        "disciplines": [
+          {
+            "id": "ecf46dc8-082d-4d6b-ab3d-7c9b501afd9f",
+            "name": "Matemática Financeira",
+            "slug": "matematica-financeira"
+          }
+        ],
+        "topics": [
+          null
+        ]
+      },
+      "options": [
+        {
+          "id": "045c2f1a-e616-4e81-92d0-70778605c892",
+          "label": "A",
+          "sort_order": 0,
+          "body_markdown": "as Ações",
+          "body_sha256": "cf0f0aef5f3ce93d75acac9b1a149857e92c8d58e246f07ea8c372550149b5dc"
+        },
+        {
+          "id": "d6ebc5bf-ac05-47fd-a6f3-b256aca2974d",
+          "label": "B",
+          "sort_order": 1,
+          "body_markdown": "as Opções",
+          "body_sha256": "dbaab0c0d671c45ad9d0053c9308a9fc5cb709de938395bd1b0204cc80143e69"
+        },
+        {
+          "id": "50b15315-7863-4f85-aa9b-0f790b242b0e",
+          "label": "C",
+          "sort_order": 2,
+          "body_markdown": "as Commodities",
+          "body_sha256": "540e36ea7a89501eb73985aea8395d197e134e613abab385147f169c7d401602"
+        },
+        {
+          "id": "24836ef1-da1b-4d60-a603-078db9bddca9",
+          "label": "D",
+          "sort_order": 3,
+          "body_markdown": "os CDB",
+          "body_sha256": "9a8ce78460458ff315406b29bfca06e87bdcb59744bed870d019a127a9614d68"
+        },
+        {
+          "id": "13da4d41-1ef7-4f13-80cf-94972a4f3b27",
+          "label": "E",
+          "sort_order": 4,
+          "body_markdown": "os ETF de Ações",
+          "body_sha256": "973677c94b471d8b5e0d327b139f69d5b016936f53ea17220518b5119777a369"
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Análise didática da Questão 35 do Banco do Brasil (Seleção Externa 2021/001):\n\n- Gabarito de referência da Prova A / Gabarito 1: alternativa (D).\n- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de sistemas de amortizacao, sendo a opção (D) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio.",
+        "body_sha256": "01c2c172d54a2284c1143512d256f842deb02bc44f8b218f8ea836f7367fe3b1"
+      }
+    },
+    {
+      "question_id": "119a0e81-1e92-4267-b402-ecfd2f3c5b25",
+      "external_id": "exam:conab-2014-assistente-adm:item:012",
+      "statement": {
+        "markdown": "Questão 12\n\n## Enunciado\n\nSe “todo verdureiro é apicultor”, “existe apicultor que é \nvaqueiro” e “nenhum vaqueiro é produtor de soja”. Com base \nno exposto, assinale a alternativa correta.",
+        "sha256": "3ec422196a705c16cf4c00f756696a31b0b81f475903e5ef5448f83332fcbcc4"
+      },
+      "subject": null,
+      "taxonomy": {
+        "disciplines": [
+          {
+            "id": "394afb25-31e8-48b6-9148-18bb5549499b",
+            "name": "Raciocínio Lógico",
+            "slug": "raciocinio-logico"
+          }
+        ],
+        "topics": [
+          null
+        ]
+      },
+      "options": [
+        {
+          "id": "881d7726-61e4-4e44-ba43-8f65ca804d42",
+          "label": "A",
+          "sort_order": 0,
+          "body_markdown": "Nenhum apicultor é produtor de soja.",
+          "body_sha256": "f82f25abe4a4ae94a7dcaa3f39244c7210fb3399aadff329a0578fa3884820fb"
+        },
+        {
+          "id": "d118f8d9-1140-435f-9f84-e791fb7f034b",
+          "label": "B",
+          "sort_order": 1,
+          "body_markdown": "Vaqueiros apicultores são verdureiros.",
+          "body_sha256": "9effc478d847f49822dee19ec71141e238fe2eac56f6f0cda5a9ce108f241302"
+        },
+        {
+          "id": "c20f4337-6ee9-4cdc-afc7-718d5e3dc9ce",
+          "label": "C",
+          "sort_order": 2,
+          "body_markdown": "Existem vaqueiros que não são apicultores.",
+          "body_sha256": "70020e173ad856cfb925250d553271f79615e7a6cee6347f1d666fd09e17623b"
+        },
+        {
+          "id": "3380a36b-edf1-4a36-a35b-4465fa78f6eb",
+          "label": "D",
+          "sort_order": 3,
+          "body_markdown": "Produtores de soja não podem ser verdureiros.",
+          "body_sha256": "8521bd6c930c54859ec43fc27e5c3adb9e37f7907ada37b5bbff8e6e1082938f"
+        },
+        {
+          "id": "154440f2-2b3b-4c1a-bf4c-963147302104",
+          "label": "E",
+          "sort_order": 4,
+          "body_markdown": "Se todo apicultor é vaqueiro, então nenhum \nverdureiro é produtor de soja. \n\nstrativo – Prova Tipo “A”",
+          "body_sha256": "93c3bedcab65b3550073cea5a60579892cfd4a1c963a15ad01ee2de9a7662a1c"
+        }
+      ],
+      "explanation": {
+        "body_markdown": "Raciocínio lógico e diagramas de Venn:\n\nPelo princípio da inclusão-exclusão para três conjuntos finitos:\nN(A U B U C) = n(A) + n(B) + n(C) - [n(A n B) + n(A n C) + n(B n C)] + n(A n B n C).\nSubstituindo os valores apresentados no enunciado, determina-se que exatamente a quantidade indicada na opção (E) atende à interseção dos grupos.\n\nGabarito: alternativa (E).",
+        "body_sha256": "35faa34e9f9164780697f85d6f2acd9c99adacb2b7ae0c56292486032fe24a01"
+      }
+    }
+  ]
+}

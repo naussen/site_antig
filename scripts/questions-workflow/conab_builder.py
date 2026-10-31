@@ -535,7 +535,7 @@ def build_conab_questions() -> tuple[list[dict], list[dict]]:
         opts = [sanitize_text(opt_match.group(j).strip()) for j in range(1, 6)]
         
         # Limpar rodapés ou chamadas da próxima página no final da opção E
-        opts[4] = re.sub(r"\n+(?:Texto \d+|Disponível em:|<http|www\.pciconc|QUESTÃO).*$", "", opts[4], flags=re.DOTALL).strip()
+        opts[4] = re.sub(r"\n+(?:Texto \d+|Disponível em:|<http|www\.pciconc|QUESTÃO|strativo|Prova Tipo|Assistente Administrativo).*$", "", opts[4], flags=re.DOTALL).strip()
         
         # Inserir texto-base para questões 1 a 4
         parts = {
