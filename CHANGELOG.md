@@ -1,5 +1,11 @@
 # Changelog
 
+## Documentação — retomada após parecer e regras do Antigravity (31/10/2026)
+
+- entregue prompt para sanar lacunas de verificação semântica, concorrência, atomicidade, rollback, cobertura e comprovação visual;
+- preparadas regras globais para critérios de aceite, evidências, revisão independente, execução retomável e relato honesto de pendências;
+- entrega documental: não executadas novas correções, chamadas ao Vertex, mudanças de banco ou configuração da conta do Antigravity.
+
 ## Documentação — memória de cálculo para iniciantes (31/10/2026)
 
 - analisadas 13 amostras de comentários de exatas a partir de consulta editorial de leitura, com identificação da questão BB 28 compatível com o rótulo “Questão 3” e recálculo independente de exemplos;
