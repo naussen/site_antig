@@ -146,14 +146,76 @@ def build_bb_questions() -> tuple[list[dict], list[dict]]:
 
         correct_label = official_keys[item_num]
 
-        exp_body = (
-            f"Análise didática da Questão {item_num} do Banco do Brasil (Seleção Externa 2021/001):\n\n"
-            f"- Gabarito de referência da Prova A / Gabarito 1: alternativa ({correct_label}).\n"
-            "- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, "
-            "sem documento oficial comprobatório de status definitivo pós-recursos.\n"
-            f"- Fundamentação da resposta: O conteúdo cobrado no item desenvolve o tema de {topic_id.replace('-', ' ')}, "
-            f"sendo a opção ({correct_label}) compatível com as noções teóricas e técnicas exigidas no edital da Fundação Cesgranrio."
-        )
+        # Resoluções detalhadas e auditadas com memória de cálculo para itens matemáticos
+        SPECIFIC_BB_EXPLANATIONS = {
+            16: (
+                "Análise didática da Questão 16 do Banco do Brasil (Seleção Externa 2021/001):\n\n"
+                "- Gabarito de referência da Prova A / Gabarito 1: alternativa (A).\n"
+                "- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n\n"
+                "### Memória de cálculo — passo a passo\n\n"
+                "1. **O que a questão quer descobrir:** A porcentagem de clientes interessados em ambos os produtos.\n"
+                "2. **Dados do enunciado:** Total $1.000$; indiferentes $430$; interessados no produto 1: $270$; produto 2: $400$.\n"
+                "3. **Conversões:** $100$ de $1.000$ equivale a $100 / 1.000 = 10\%$.\n"
+                "4. **Fórmula:** $n(A \\cup B) = n(A) + n(B) - n(A \\cap B)$.\n"
+                "5. **Substituição e operações:**\n"
+                "   - Total com interesse em algum produto: $1.000 - 430 = 570$.\n"
+                "   - $570 = 270 + 400 - n(A \\cap B) \\implies n(A \\cap B) = 670 - 570 = 100$.\n"
+                "   - Porcentagem: $100 / 1.000 = 10\%$.\n"
+                "6. **Resultado:** 10%, correspondente à alternativa (A)."
+            ),
+            26: (
+                "Análise didática da Questão 26 do Banco do Brasil (Seleção Externa 2021/001):\n\n"
+                "- Gabarito de referência da Prova A / Gabarito 1: alternativa (C).\n"
+                "- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n\n"
+                "### Memória de cálculo — passo a passo\n\n"
+                "1. **O que a questão quer descobrir:** A taxa máxima adicional $i_2$ aplicável sobre $C_2$ sem ultrapassar o teto anual de $8,36\%$.\n"
+                "2. **Dados do enunciado:** Taxa máxima anual $8,36\%$ ($1,0836$); primeira taxa $5,00\%$ ($1,05$).\n"
+                "3. **Fórmula:** $(1 + i_1) \\times (1 + i_2) \\le 1 + i_{\\text{máx}}$.\n"
+                "4. **Substituição e operações:**\n"
+                "   - $1,05 \\times (1 + i_2) = 1,0836 \\implies 1 + i_2 = 1,0836 / 1,05 = 1,032$.\n"
+                "   - $i_2 = 1,032 - 1 = 0,032 = 3,20\%$.\n"
+                "5. **Resultado:** 3,20%, correspondente à alternativa (C)."
+            ),
+            28: (
+                "Análise didática da Questão 28 do Banco do Brasil (Seleção Externa 2021/001):\n\n"
+                "- Gabarito de referência da Prova A / Gabarito 1: alternativa (C).\n"
+                "- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n\n"
+                "### Memória de cálculo — passo a passo\n\n"
+                "1. **O que a questão quer descobrir:** O total a pagar no boleto vencido com juros simples e multa.\n"
+                "2. **Dados do enunciado:** Principal R\\$ 25.000,00; atraso de 12 dias; multa de 2%; juros simples de 0,2% ao dia.\n"
+                "3. **Conversões:** Multa $2\% = 0,02$; Juros $0,2\% = 0,002$.\n"
+                "4. **Fórmula:** Total = Principal + Multa + Juros.\n"
+                "5. **Substituição e operações:**\n"
+                "   - Multa: $25.000 \\times 0,02 = \\text{R\\$} 500,00$.\n"
+                "   - Juros: $25.000 \\times 0,002 \\times 12 = \\text{R\\$} 600,00$.\n"
+                "   - Total: $25.000 + 500 + 600 = \\text{R\\$} 26.100,00$.\n"
+                "6. **Resultado:** R\\$ 26.100,00, correspondente à alternativa (C)."
+            ),
+            29: (
+                "Análise didática da Questão 29 do Banco do Brasil (Seleção Externa 2021/001):\n\n"
+                "- Gabarito de referência da Prova A / Gabarito 1: alternativa (A).\n"
+                "- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, sem documento oficial comprobatório de status definitivo pós-recursos.\n\n"
+                "### Memória de cálculo — passo a passo\n\n"
+                "1. **O que a questão quer descobrir:** A taxa anual equivalente $i_{\\text{eq}}$ a rendimentos de 21% e 96% em juros compostos.\n"
+                "2. **Dados do enunciado:** Ano 1: $21\%$ (fator $1,21$); Ano 2: $96\%$ (fator $1,96$).\n"
+                "3. **Fórmula:** $(1 + i_{\\text{eq}})^2 = (1 + i_1) \\times (1 + i_2)$.\n"
+                "4. **Substituição e operações:**\n"
+                "   - $1 + i_{\\text{eq}} = \\sqrt{1,21 \\times 1,96} = 1,10 \\times 1,40 = 1,54$.\n"
+                "   - $i_{\\text{eq}} = 1,54 - 1 = 0,54 = 54\%$.\n"
+                "5. **Resultado:** 54% ao ano, correspondente à alternativa (A)."
+            )
+        }
+        if item_num in SPECIFIC_BB_EXPLANATIONS:
+            exp_body = SPECIFIC_BB_EXPLANATIONS[item_num]
+        else:
+            exp_body = (
+                f"Análise didática da Questão {item_num} do Banco do Brasil (Seleção Externa 2021/001):\n\n"
+                f"- Gabarito de referência da Prova A / Gabarito 1: alternativa ({correct_label}).\n"
+                "- Ressalva Editorial: Questão processada com gabarito divulgado na folha de respostas, "
+                "sem documento oficial comprobatório de status definitivo pós-recursos.\n"
+                f"- Tópico examinado: {topic_id.replace('-', ' ').title()}.\n"
+                f"- Resposta: Alternativa ({correct_label})."
+            )
 
         question = {
             "external_id": ext_id,

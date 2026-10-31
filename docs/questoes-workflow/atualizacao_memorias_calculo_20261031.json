@@ -1,0 +1,70 @@
+{
+  "captured_at": "2026-10-31T17:51:07.143Z",
+  "operation": "apply_explanation_patches",
+  "item_count": 7,
+  "items": [
+    {
+      "question_id": "c4ea8714-26cc-4af1-9c1d-3553c1697063",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:016",
+      "discipline_slug": "matematica",
+      "previous_sha256": "abb45625bf7278233646c9b1f4078f8872a1287fc7aeaea44c2d84a0683a7881",
+      "new_sha256": "638b85ee66350f2afdfc6b59a75cbff8f2bb372ff140992a81b77983a3960838",
+      "reason": "Substituição de comentário genérico de template por memória de cálculo completa de conjuntos e porcentagem, com passos detalhados para leigos.",
+      "applied_at": "2026-10-31T17:51:06.366Z"
+    },
+    {
+      "question_id": "f2ea3977-ad14-43be-8b99-c55409d6aea0",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:026",
+      "discipline_slug": "matematica-financeira",
+      "previous_sha256": "8a671b24b47615f5cabfa14a84a1349b476f5ac2f0268cba531ff793db5c7024",
+      "new_sha256": "dd12fc3810e559e03533627f0612b40a884ff3318800c746983fdd7b1d5b7e4f",
+      "reason": "Substituição de comentário genérico de template por memória de cálculo completa de taxas acumuladas e multiplicativas, com passos detalhados para leigos.",
+      "applied_at": "2026-10-31T17:51:06.526Z"
+    },
+    {
+      "question_id": "b460d264-06c4-40b2-8ca4-5af2bc5531a7",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:028",
+      "discipline_slug": "matematica-financeira",
+      "previous_sha256": "ee874a67d84df7b896254bef82fd1407b6ee7d68fd412692a50e9deecbf0227a",
+      "new_sha256": "9de5d3bf3d20db072f88422bc7540161de1cbf9ab8e96d82892bd4e836cb4f4b",
+      "reason": "Substituição de comentário genérico de template por memória de cálculo completa de juros simples diários e multa única, com passos detalhados para leigos.",
+      "applied_at": "2026-10-31T17:51:06.706Z"
+    },
+    {
+      "question_id": "b55d96d1-19dc-40df-aa04-7c34fa965a51",
+      "external_id": "exam:bb-2021-escriturario-agente-comercial:item:029",
+      "discipline_slug": "matematica-financeira",
+      "previous_sha256": "9d1e4333956e3c8d5a7ad12e853584575c0fda38316e0cdb62f86120474a63ae",
+      "new_sha256": "82069ef4587b08db8eb7bdc9c8dbfdb928123492da86399eb485d67ea6f8ebd0",
+      "reason": "Substituição de comentário genérico de template por memória de cálculo completa de taxa anual equivalente em juros compostos, com passos detalhados para leigos.",
+      "applied_at": "2026-10-31T17:51:06.813Z"
+    },
+    {
+      "question_id": "bea0886c-e104-4a42-b0f4-645af6445c47",
+      "external_id": "exam:conab-2014-assistente-adm:item:014",
+      "discipline_slug": "matematica",
+      "previous_sha256": "167cbfedd422b0dedbc9e1d7d5093cfdc421aa4b4d99770a0f6f81985e8d0420",
+      "new_sha256": "ea003ad810b8ccc663d84ead3de00474c152c828a9c036f2ec6301dc4fca8a54",
+      "reason": "Substituição de fundamentação incorreta (regra de três / acréscimos sucessivos) por memória de cálculo precisa de probabilidade da união e eventos complementares.",
+      "applied_at": "2026-10-31T17:51:06.885Z"
+    },
+    {
+      "question_id": "e9f7c337-4f6e-458c-95e9-0998b857da7f",
+      "external_id": "pdf:agente_de_policia_federal:041",
+      "discipline_slug": "estatistica",
+      "previous_sha256": "6a06e2857db2b47167cd7f65dcaca1fa0958f9fa0668139f49d3d862a2caee76",
+      "new_sha256": "30313e45fb583d59333c6dcd32dd258a3bd334a25070cbf957dd83c7d33c9afc",
+      "reason": "Enriquecimento com memória de cálculo passo a passo no texto para leigos, mantendo a imagem de apoio complementar.",
+      "applied_at": "2026-10-31T17:51:06.952Z"
+    },
+    {
+      "question_id": "2d2ddaec-6e15-45f7-9f55-0a55cd3bbfea",
+      "external_id": "pdf:agente_de_policia_federal:042",
+      "discipline_slug": "estatistica",
+      "previous_sha256": "a1cd88dbd2d4e25b9f0ebb952d17af7237341a81210bde393919799e6d8f244c",
+      "new_sha256": "e6e395c1a8bb9be7a63dbd5c41e2fb46358bef9a040d7cf9fb5cc156f2f43367",
+      "reason": "Incorporação no texto dos passos intermediários da conta do erro padrão para leigos, sem depender exclusivamente da imagem PNG.",
+      "applied_at": "2026-10-31T17:51:07.022Z"
+    }
+  ]
+}

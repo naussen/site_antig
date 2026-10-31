@@ -213,18 +213,47 @@ def build_conab_questions() -> tuple[list[dict], list[dict]]:
             "Fundamentos de Lógica Matemática."
         ),
         12: (
-            "Raciocínio lógico e diagramas de Venn:\n\n"
-            "Pelo princípio da inclusão-exclusão para três conjuntos finitos:\n"
-            "N(A U B U C) = n(A) + n(B) + n(C) - [n(A n B) + n(A n C) + n(B n C)] + n(A n B n C).\n"
-            "Substituindo os valores apresentados no enunciado, determina-se que exatamente a quantidade indicada na opção (E) atende à interseção dos grupos.\n\n"
-            "Gabarito: alternativa (E).",
-            "Teoria Elementar dos Conjuntos."
+            "Análise didática da Questão 12 da CONAB (Concurso 2014 — Assistente Administrativo — Prova Tipo A):\n\n"
+            "- Gabarito oficial definitivo: alternativa (E).\n\n"
+            "### Demonstração passo a passo\n\n"
+            "1. **O que a questão quer descobrir:**\n"
+            "   A conclusão logicamente válida a partir de três premissas com quantificadores lógicos (\"todo\", \"existe\" e \"nenhum\").\n\n"
+            "2. **Premissas do enunciado:**\n"
+            "   - Premissa 1: \"Todo verdureiro é apicultor\" ($V \\subseteq A$). O conjunto de verdureiros está contido no de apicultores.\n"
+            "   - Premissa 2: \"Existe apicultor que é vaqueiro\" ($A \\cap Q \\ne \\emptyset$). Há pelo menos um elemento comum entre apicultores e vaqueiros.\n"
+            "   - Premissa 3: \"Nenhum vaqueiro é produtor de soja\" ($Q \\cap S = \\emptyset$). Os conjuntos de vaqueiros e de produtores de soja são disjuntos.\n\n"
+            "3. **Dedução da alternativa (E):**\n"
+            "   - A alternativa (E) estabelece uma condicional: \"Se todo apicultor é vaqueiro, então nenhum verdureiro é produtor de soja\".\n"
+            "   - Assumindo a hipótese \"todo apicultor é vaqueiro\" ($A \\subseteq Q$):\n"
+            "     Como todo verdureiro é apicultor ($V \\subseteq A$), pela transitividade da inclusão de conjuntos, todo verdureiro será necessariamente vaqueiro ($V \\subseteq A \\subseteq Q \\implies V \\subseteq Q$).\n"
+            "     Como nenhum vaqueiro é produtor de soja ($Q \\cap S = \\emptyset$) e todos os verdureiros estão dentro do conjunto dos vaqueiros, conclui-se com rigor absoluto que nenhum verdureiro pode ser produtor de soja ($V \\cap S = \\emptyset$).\n\n"
+            "4. **Conclusão:**\n"
+            "   A proposição condicional é formalmente válida. Gabarito: alternativa (E).",
+            "Estruturas Lógicas e Diagramas de Venn."
         ),
         14: (
-            "Cálculo de porcentagem e proporção:\n\n"
-            "Aplicando a regra de três simples ou fator multiplicativo sobre o valor base indicado, o acréscimo percentual sucessivo resulta exatamente no montante final discriminado na alternativa (A).\n\n"
-            "Gabarito: alternativa (A).",
-            "Matemática Financeira Básica."
+            "Análise didática da Questão 14 da CONAB (Concurso 2014 — Assistente Administrativo — Prova Tipo A):\n\n"
+            "- Gabarito oficial definitivo: alternativa (A).\n\n"
+            "### Memória de cálculo — passo a passo\n\n"
+            "1. **O que a questão quer descobrir:**\n"
+            "   A probabilidade conjunta de dois eventos negativos simultâneos: a probabilidade de não chover e não faltar energia elétrica em uma noite de junho.\n\n"
+            "2. **Dados do enunciado:**\n"
+            "   - Probabilidade de chuva ($C$): $P(C) = 80\\% = 0,80$.\n"
+            "   - Probabilidade de falta de energia ($F$): $P(F) = 40\\% = 0,40$.\n"
+            "   - Probabilidade de chover e faltar energia ($C \\cap F$): $P(C \\cap F) = 30\\% = 0,30$.\n\n"
+            "3. **Regra aplicada e significado dos símbolos:**\n"
+            "   - Probabilidade da união (chover OU faltar energia):\n"
+            "     $$P(C \\cup F) = P(C) + P(F) - P(C \\cap F)$$\n"
+            "   - Pela Lei de De Morgan, o evento \"não chover E não faltar energia\" ($\\bar{C} \\cap \\bar{F}$) é o evento complementar da união:\n"
+            "     $$P(\\bar{C} \\cap \\bar{F}) = 1 - P(C \\cup F)$$\n\n"
+            "4. **Substituição e operações intermediárias:**\n"
+            "   - Passo 1 (união): $P(C \\cup F) = 0,80 + 0,40 - 0,30 = 0,90$ ($90\\%$).\n"
+            "   - Passo 2 (complementar): $1 - 0,90 = 0,10$ ($10\\%$).\n\n"
+            "5. **Resultado e interpretação:**\n"
+            "   A probabilidade de não chover e não faltar energia elétrica é de **10%**.\n\n"
+            "6. **Correspondência:**\n"
+            "   O resultado corresponde à **alternativa (A)**. Não se deve multiplicar $0,20 \\times 0,60$, pois os eventos não são independentes.",
+            "Teoria das Probabilidades e Conjuntos."
         ),
         15: (
             "Aritmética e progressões / sequências numéricas:\n\n"

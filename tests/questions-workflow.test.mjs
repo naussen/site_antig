@@ -55,6 +55,7 @@ for (const [description, mutate, code] of [
   ["HTML ativo", (f) => { f.batch.questions[0].explanation.body_markdown = '<img src="x" onerror="alert(1)">'; }, "unsafe_markup_or_local_resource"],
   ["imagem local", (f) => { f.batch.questions[0].explanation.body_markdown = "![figura](C:/privado/img.png)"; }, "unsafe_markup_or_local_resource"],
   ["trecho ilegível", (f) => { f.batch.questions[0].statement_markdown = "Texto [ilegível]."; }, "incomplete_transcription"],
+  ["template genérico de comentário", (f) => { f.batch.questions[0].explanation.body_markdown = "sendo a opção (A) compatível com as noções teóricas e técnicas exigidas no edital"; }, "generic_template_explanation"],
 ]) {
   test(`retém ${description}`, () => {
     const data = fixture(); mutate(data);

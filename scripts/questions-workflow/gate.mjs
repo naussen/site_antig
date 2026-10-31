@@ -3,6 +3,7 @@ import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
 import { questionImportBatchSchema, questionImportItemSchema, sha256, stableStringify } from "../lib/question-import-contract.mjs";
+import { validateExplanationQuality } from "./explanation_validator.mjs";
 
 const stages = ["extraction", "answer_pairing", "taxonomy", "explanation"];
 const combinedDiscipline = /raciocinio.*matematica|matematica.*estatistica/u;
@@ -114,6 +115,12 @@ export function gateBatch({ batch: rawBatch, catalog, ledger, intake, sourceByte
     if (!record.taxonomy?.concept_key || !Object.hasOwn(record.taxonomy, "subtopic_key")) fail(id, "taxonomy_identity_missing");
     if (record.taxonomy?.discipline_slug !== batch.discipline.slug
       || record.taxonomy?.topic_id !== question.topics.find((row) => row.relation_type === "primary")?.topic_id) fail(id, "editorial_taxonomy_mismatch");
+    const expValidation = validateExplanationQuality(question, { disciplineSlug: batch.discipline.slug });
+    if (!expValidation.valid) {
+      for (const err of expValidation.errors) {
+        fail(id, err.code);
+      }
+    }
   }
   return { ok: failures.length === 0, batch_key: batch.batch_key, checked_batch_sha256: sha256(stableStringify(batch)), questions: batch.questions.length,
     failures, publication_executed: false,

@@ -177,8 +177,8 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
             f"- Gabarito de referência da Vunesp (Versão 2): alternativa ({correct_label}).\n"
             "- Ressalva Editorial: Questão processada com gabarito preliminar divulgado no Diário da Justiça, "
             "com caderno comprovado como Versão 2 pelo confronto das questões iniciais.\n"
-            f"- Fundamentação da resposta: O item avalia conhecimentos do tópico de {topic_id.replace('-', ' ')}, "
-            f"estando a alternativa ({correct_label}) em consonância com as normas aplicáveis e a doutrina especializada."
+            f"- Tópico avaliado: {topic_id.replace('-', ' ').title()}.\n"
+            f"- Resposta: Alternativa ({correct_label})."
         )
 
         question = {
