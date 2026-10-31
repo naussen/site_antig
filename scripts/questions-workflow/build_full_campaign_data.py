@@ -14,7 +14,7 @@ from pathlib import Path
 import subprocess
 import sys
 
-BASE_DIR = Path(r"C:\PRO\worktrees\questoes-fluxo-20261030")
+BASE_DIR = Path(__file__).resolve().parents[2]
 SCRATCH_DIR = BASE_DIR / "scratch" / "workflow-campanha-20261030"
 SOURCES_DIR = SCRATCH_DIR / "sources"
 BATCHES_DIR = SCRATCH_DIR / "batches"
@@ -56,8 +56,8 @@ def main():
     tjsp_ready, tjsp_manifest = build_tjsp_questions()
     held_manifest = build_held_and_duplicate_manifest_records()
 
-    total_ready = len(conab_ready) + len(pmsp_ready) + len(icmbio_ready) + len(stm_ready) + len(bb_ready) + len(tjsp_ready)
     all_manifest_records = conab_manifest + pmsp_manifest + icmbio_manifest + stm_manifest + bb_manifest + tjsp_manifest + held_manifest
+    total_ready = sum(record["disposition"] == "ready" for record in all_manifest_records)
 
     print(f"Total de questões prontas para importação: {total_ready}")
     print(f"Total reconciliado no manifesto: {len(all_manifest_records)}")
@@ -89,6 +89,8 @@ def main():
     manifest_path = SCRATCH_DIR / "editorial-manifest.json"
     manifest_path.write_text(json.dumps(manifest_doc, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Manifesto editorial gravado com sucesso: {manifest_path} ({len(all_manifest_records)} registros)")
+    if total_ready == 0:
+        raise RuntimeError("Nenhum item possui revisão independente real. Extração preservada; publicação bloqueada.")
 
     # 5. Agrupar questões prontas em lotes por prova e disciplina
     exam_groups = [

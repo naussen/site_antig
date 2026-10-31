@@ -1,5 +1,12 @@
 # Changelog
 
+## Checkpoint parcial — retomada de comentários no Antigravity (31/10/2026)
+
+- interrompida a execução Vertex desta conversa por orientação do usuário, com 307 pareceres automatizados em 18 disciplinas e 1.464 questões ainda sem parecer final; os estados 24 `correct` e 283 `hold` são provisórios;
+- aplicada e relida somente a correção da CONAB 2014, questão original 11, com backup, dry-run, transação com pré-condições e rollback preparado; sete alterações concorrentes observadas foram preservadas e não atribuídas a esta execução;
+- preservados executor retomável, preparador de patch, retenção preventiva dos builders, testes e artefatos locais; registrados os ajustes necessários antes de reaproveitar pareceres ou gravar novas propostas;
+- entregues relatório parcial, índice com IDs/hashes e prompt atualizado para o Antigravity; nenhuma promoção para main, deploy ou certificação integral do acervo.
+
 ## Documentação — auditoria integral dos comentários (31/10/2026)
 
 - realizada consulta editorial somente de leitura: 1.771 publicadas, triagem global com 170 ocorrências de dois templates genéricos e exame dirigido de 28 questões em 15 disciplinas;

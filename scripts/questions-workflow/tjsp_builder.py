@@ -286,4 +286,5 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
             "reasons": ["gabarito_preliminar_divulgado_autorizado_com_ressalva"]
         })
 
-    return ready_questions, manifest_records
+    from editorial_guard import hold_unreviewed
+    return hold_unreviewed(ready_questions, manifest_records)

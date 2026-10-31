@@ -1,8 +1,38 @@
 # Prompt para o Antigravity: auditoria e correção integral dos comentários
 
-Abra `C:\PRO\worktrees\questoes-revisao-comentarios-20261031` no Antigravity e copie **todo o bloco** abaixo. Esta entrega preparou o diagnóstico e as instruções; os comentários publicados ainda não foram corrigidos. O prompt abrange todas as disciplinas e incorpora a exigência anterior de memória de cálculo para iniciantes.
+Abra `C:\PRO\worktrees\questoes-revisao-comentarios-20261031` no Antigravity, branch `fix/questoes-comentarios-20261031`, e copie **todo o bloco** abaixo. Atualizado após interrupção da execução parcial em 31/10/2026: há 307 pareceres automatizados e uma correção aplicada por esta conversa. Leia o [relatório parcial](RELATORIO_PARCIAL_COMENTARIOS_2026-10-31.md) antes de retomar. O prompt abrange todas as disciplinas e incorpora a exigência anterior de memória de cálculo para iniciantes.
 
 ```text
+RETOMADA PELO ANTIGRAVITY — EXECUÇÃO PARCIAL JÁ EXISTENTE
+Você é o executor desta retomada. O Codex interrompeu suas chamadas ao Vertex por orientação do usuário em 31/10/2026, às 15h05 de Brasília. Continue no Antigravity; não presuma campanha concluída nem reinicie o acervo do zero.
+
+Antes de chamadas pagas ou novas gravações, leia:
+- docs/questoes-workflow/RELATORIO_PARCIAL_COMENTARIOS_2026-10-31.md;
+- docs/questoes-workflow/PROGRESSO_PARCIAL_COMENTARIOS_2026-10-31.json;
+- scratch/revisao-execucao-20261031/handoff-summary.json;
+- o código atual de review_comments.py, comment_patch.py e editorial_guard.py.
+
+Estado na parada: 1.771 publicadas; 307 IDs com parecer automatizado (24 correct, 283 hold), 1.464 sem parecer final; 341 checkpoints concluídos. São resultados provisórios: 24 correct NÃO significam 24 comentários gravados/aprovados. Os pareceres podem conter falsos bloqueios do validador antigo e falhas que exigem nova revisão. Consulte o índice congelado; summary.json pode ter ficado defasado na interrupção.
+
+Uma única correção foi gravada pelo Codex: CONAB 2014, original 11, external_id exam:conab-2014-assistente-adm:item:011, UUID 0af846ba-4893-4534-bb1b-781145d06053. SHA-256 do comentário aplicado: fa72b770ee66f88674448558b58a0e8ff6bab35a6a84ed0c7ab2d7ed762ce37e. Recibo, backup e rollback estão em scratch/revisao-execucao-20261031/patch-002; releitura em applied-verification.json. NÃO reaplique esse patch nem execute rollback na retomada normal. applied:false nos registros do modelo não é recibo e não desfaz essa gravação.
+
+Houve sete alterações concorrentes conhecidas em BB 16/26/28/29, CONAB 14 e PF 2018 41/42. Não atribua essas mudanças ao Codex nem as sobrescreva. Compare o trabalho de C:\PRO\worktrees\questoes-memoria-calculo-20261031, commit observado 89756c7, antes de consolidar builders/gates ou migrations. Essa outra branch inclui a migration 044; não a reaplique nem copie mudanças indiscriminadamente. Não faça checkout, reset ou alteração da worktree concorrente sem necessidade e autorização.
+
+O diretório scratch/revisao-execucao-20261031 contém dados LOCAIS ignorados pelo Git: inventory.json, snapshots, calls, records, record-history, fontes HTTP, errors, patches, candidato e evidência suplementar da BB 35. Preserve-o. Se os arquivos não estiverem nesta máquina, não finja reaproveitamento: recupere a cópia com hashes antes de prosseguir.
+
+PRIMEIRO, AJUSTES OFFLINE E RECONCILIAÇÃO:
+1. Confira processos ativos para impedir dois executores sobre a mesma campanha. Atualize o snapshot; confronte questões/opções/chaves/relações/comentários com a versão congelada e com os recibos. Mudança concorrente invalida a revisão antiga; não substitua simplesmente o hash esperado pelo atual.
+2. Reavalie os gates locais preservando o histórico: o processo longo carregou regex antiga que confundia HTTPS com unidade Windows. A função unsafe_comment atual tem a correção e teste, mas os 307 registros não foram todos reprocessados. Não remova bloqueios sem verificar a causa e não faça nova chamada paga só para corrigir esse erro local.
+3. Confira problemas de extração mesmo nos correct. BB 19/20 e CONAB 12 são exemplos que não devem ser publicados automaticamente. O preparador de patch recusa padrões conhecidos, mas isso não substitui conferência semântica. Fonte HTTP recuperada não prova apoio à afirmação; shells JavaScript, URL genérica e referência inventada não são fonte validada.
+4. Se o revisor alterou o comentário, submeta o texto FINAL a outra revisão independente vinculada ao novo hash. Confirme que as contas modelam a pergunta; o avaliador Decimal só confere as expressões fornecidas. Conserve ressalvas preliminar/sem_status e a distinção entre aprovação técnica e situação documental.
+5. Reaproveite calls compatíveis por estágio/modelo/prompt/hash real. Houve mudança de namespace do fingerprint e nem todo checkpoint antigo tem request_payload/hash individual. Faça migração verificada do índice quando possível, sem renomear arquivos ou falsificar compatibilidade. Preserve respostas inválidas, filas e histórico dos retries; não transforme falha em aprovação.
+6. Revise os scripts como implementação em andamento. Os seis builders estão preventivamente retidos por editorial_guard; isso não significa que já gerem comentários bons ou que uma regeneração integral foi validada. Compatibilize a prevenção de regressão com o outro commit e só reabilite saída publicável com autoria e revisão reais. Não execute build_full_campaign_data.py para sobrescrever a campanha antiga.
+7. Recalcule uso/orçamento antes de continuar: a estimativa bruta dos 341 checkpoints foi US$ 49,799838, contando conservadoramente todas as queries de grounding, sem descontos/franquia/créditos e sem toda resposta falhada. NÃO é faturamento confirmado. Melhore a contabilidade de tentativas e a recuperação de 429/JSON truncado; mantenha limites explícitos de chamadas, concorrência, tokens e custo. A indisponibilidade de fonte deve gerar pendência específica, não referências inventadas.
+
+Depois desses ajustes, retome os 1.464 sem parecer final e os demais que precisarem de reavaliação. Priorize reaproveitamento confiável, fontes acessíveis e correções comprovadas. A BB 35 tem candidato final com fonte primária e revisão, ainda NÃO aplicado; confira novamente seu estado atual e os artefatos antes de preparar o patch. BB 32 e TJSP 76 continuam retidos por contexto/gráficos e outras pendências.
+
+Execute autonomamente o que já estiver autorizado e tecnicamente verificável, sem pedir confirmação repetida. Não trate essa autonomia como revisão humana realizada nem como autorização para reescrever enunciado/chave ou encobrir defeitos. Se faltar decisão editorial indispensável, termine primeiro a preparação concreta e apresente as pendências consolidadas, seguindo os critérios abaixo.
+
 Execute a auditoria e a correção editorial integral dos comentários oficiais das questões do PROQuestões. A finalidade é que cada comentário responda exatamente ao comando e ensine um iniciante a chegar à conclusão. Não encerre apenas com planejamento, triagem por regex ou geração de textos: produza diagnósticos individuais, soluções verificadas, correções propostas, revisões e resultado comprovado das etapas efetivamente executadas.
 
 CONTEXTO E LEITURA INICIAL
@@ -11,6 +41,8 @@ Aplicação: repositório C:\PRO\site; diretório de fontes: C:\PRO\questoes.
 Leia AGENTS.md aplicável e:
 - docs/questoes-workflow/AUDITORIA_COMENTARIOS_2026-10-31.md;
 - docs/questoes-workflow/evidencias-auditoria-comentarios-20261031.json;
+- docs/questoes-workflow/RELATORIO_PARCIAL_COMENTARIOS_2026-10-31.md;
+- docs/questoes-workflow/PROGRESSO_PARCIAL_COMENTARIOS_2026-10-31.json;
 - docs/REGRA_ELABORACAO_QUESTOES_PROQUESTOES.md;
 - docs/questoes-workflow/FLUXO.md;
 - docs/questoes-workflow/prompts/04-comentarios.md e 05-revisao-independente.md;

@@ -258,4 +258,5 @@ def build_bb_questions() -> tuple[list[dict], list[dict]]:
             "reasons": ["gabarito_sem_status_definitivo_comprovado_autorizado_com_ressalva"]
         })
 
-    return ready_questions, manifest_records
+    from editorial_guard import hold_unreviewed
+    return hold_unreviewed(ready_questions, manifest_records)

@@ -383,4 +383,5 @@ def build_pmsp_questions() -> tuple[list[dict], list[dict]]:
             "reasons": []
         })
 
-    return ready_questions, manifest_records
+    from editorial_guard import hold_unreviewed
+    return hold_unreviewed(ready_questions, manifest_records)
