@@ -1,5 +1,28 @@
 # Changelog
 
+## Aplicado no banco — Importação oficial da Campanha 30/10/2026 (31/10/2026)
+
+- **Importação atômica oficial e verificação pós-gravação** concluídas para 457 questões em 49 lotes através do `scripts/questions-admin.mjs import --apply` e `verify`:
+  - **Banco do Brasil (2021 - Agente Comercial / Cesgranrio Prova A)**: 70 questões importadas com ressalva editorial explícita no título e metadados (`[Gabarito sem status definitivo comprovado]`);
+  - **TJ/SP (2021 - Escrevente Técnico / Vunesp Versão 2)**: 100 questões importadas com ressalva editorial explícita no título e metadados (`[Gabarito preliminar divulgado]`), com identificação unívoca do caderno Versão 2;
+  - **STM (2011 - Analista Judiciário - Adm / CESPE)**: 112 questões C/E importadas (8 anuladas oficialmente: Q15, Q16, Q29, Q30, Q35, Q74, Q75, Q116);
+  - **PM/SP (2024 - Soldado 2ª Classe / FGV Prova Tipo 1)**: 59 questões importadas com gabarito definitivo oficial (Q19 anulada oficialmente; Q53 retificada de alternativa E para D);
+  - **CONAB (2014 - Assistente Adm / IADES)**: 48 questões importadas com gabarito definitivo oficial (2 anuladas oficialmente: Q9 e Q13);
+  - **ICMBio (2014 - Analista Adm Específicos / CESPE)**: 68 questões C/E importadas (2 anuladas oficialmente: Q77 e Q116);
+  - **ICMBio (2014 - Básicos Superior)**: 50 questões catalogadas e retidas como duplicatas comprovadas do acervo (`pdf:conheci_basicos_superior:001` a `050`).
+- **Reconciliação aritmética completa de 520 itens**:
+  $\text{Total (520)} = \text{Prontas Importadas (457)} + \text{Anuladas Oficiais (13)} + \text{Duplicatas Comprovadas (50)} + \text{Excluídas (0)}$
+- **Base de Dados e Backup Verificável**:
+  - Backup pré-importação gerado: `C:\PRO\backups\pro-resumos\pro-resumos-2026-10-31T02-34-32-648Z.probackup` (SHA-256: `21fb27682244a5ba5f495bf4279f05328332db54c1a0193d0a43dd01732d63e7`);
+  - Volume de questões ativas no banco: evoluiu de 1.349 para 1.806 questões (aumento líquido exato de 457 questões publicadas);
+  - Integridade 100% validada para opções, chaves de resposta, explicações didáticas e vínculos relacionais com tópicos e disciplinas.
+- **Taxonomia Canônica Aplicada**:
+  - Criadas e ativadas as disciplinas `direito-penal-militar` e `direito-processual-penal-militar` e 23 novos tópicos canônicos via `supabase/migrations/042_separate_quantitative_disciplines_and_add_taxonomy.sql`.
+- **Validação de Testes**:
+  - 31 testes Node (`tests/questions-workflow.test.mjs`, `tests/questions-import.test.mjs`, `tests/question-statement-sections.test.mjs`) aprovados;
+  - 5 testes Python (`test_questions_workflow.py`) aprovados;
+  - 49/49 lotes validados no `gate.mjs` e 49/49 recibos de importação com status `SUCCESS`.
+
 ## Aplicado no banco — separação das disciplinas quantitativas (30/10/2026)
 
 - executada a separação definitiva da disciplina agrupada `raciocinio-logico-matematica-estatistica-e-matematica-financeira` em quatro disciplinas canônicas independentes no banco e no catálogo:

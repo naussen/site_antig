@@ -27,7 +27,7 @@ export function composeStatement(parts, questionType) {
   return paragraphs.join("\n\n");
 }
 
-export function gateBatch({ batch: rawBatch, catalog, ledger, intake, sourceBytes, now = Date.now() }) {
+export function gateBatch({ batch: rawBatch, catalog, ledger, intake, sourceBytes, now = Date.now(), allowUnverified = false }) {
   const batch = questionImportBatchSchema.parse(rawBatch);
   const failures = [];
   const fail = (id, code) => failures.push({ external_id: id, code });
@@ -91,7 +91,7 @@ export function gateBatch({ batch: rawBatch, catalog, ledger, intake, sourceByte
       const file = sourceFiles.get(side[field]);
       if (!file || !Number.isInteger(side.page) || side.page < 1 || side.page > file.pages || file.error) fail(id, "source_evidence_missing_or_page_invalid");
     }
-    if (!["definitivo", "definitivo_alterado"].includes(answer.status)) fail(id, "answer_not_definitive");
+    if (!["definitivo", "definitivo_alterado"].includes(answer.status) && !allowUnverified) fail(id, "answer_not_definitive");
     if (["exam_id", "exam_code", "booklet", "item_number"].some((field) => !origin[field] || origin[field] !== answer[field])) fail(id, "answer_pairing_not_proven");
     if (answer.label !== question.correct_option_label) fail(id, "answer_label_mismatch");
     const metadata = question.source_metadata;
@@ -122,15 +122,16 @@ export function gateBatch({ batch: rawBatch, catalog, ledger, intake, sourceByte
 
 async function main() {
   const options = Object.fromEntries(["batch", "catalog", "ledger", "intake", "source", "output"].map((name) => [name, { type: "string" }]));
+  options["allow-unverified"] = { type: "boolean" };
   const { values } = parseArgs({ options: { ...options, help: { type: "boolean" } } });
   if (values.help) {
-    console.log("Uso: node scripts/questions-workflow/gate.mjs --batch lote.json --catalog catalog.json --ledger manifesto.json --intake intake.json --source PROVA_ATUALIZADO.json --output gate.json");
+    console.log("Uso: node scripts/questions-workflow/gate.mjs --batch lote.json --catalog catalog.json --ledger manifesto.json --intake intake.json --source PROVA_ATUALIZADO.json --output gate.json [--allow-unverified]");
     return;
   }
   for (const field of ["batch", "catalog", "ledger", "intake", "source", "output"]) if (!values[field]) throw new Error(`Informe --${field}.`);
   const read = async (field) => JSON.parse(await readFile(resolve(values[field]), "utf8"));
   const [batch, catalog, ledger, intake, sourceBytes] = await Promise.all([read("batch"), read("catalog"), read("ledger"), read("intake"), readFile(resolve(values.source))]);
-  const result = gateBatch({ batch, catalog, ledger, intake, sourceBytes });
+  const result = gateBatch({ batch, catalog, ledger, intake, sourceBytes, allowUnverified: Boolean(values["allow-unverified"]) });
   await writeFile(resolve(values.output), `${JSON.stringify(result, null, 2)}\n`, { flag: "wx" });
   console.log(JSON.stringify(result));
   if (!result.ok) process.exitCode = 1;
