@@ -1,5 +1,12 @@
 # Changelog
 
+## Documentação — taxonomia e cabeçalho de questões (31/10/2026)
+
+- conferidas estruturalmente as 1.771 publicadas, com análise temática dirigida de 61 questões em nove disciplinas; vínculo válido não foi tratado como classificação correta;
+- identificados Windows em Matemática/Geometria, institutos civis em Dos Bens, assuntos contábeis concentrados em Ativo e dez questões de Estatística no tópico genérico;
+- diferenciados catálogo, vínculos usados e opções dos filtros: Tributário tem 21 tópicos ativos disponíveis, Civil 12 e Contabilidade Geral e Avançada 32, com somente 2/3/3 usados;
+- entregue prompt para execução no Antigravity com censo semântico, hierarquia compatível, atualização reversível e caminho Disciplina → Tópico → Subtópico no cabeçalho; nenhuma alteração de classificação, schema, interface ou chamada ao Vertex nesta entrega.
+
 ## Documentação — memória de cálculo para iniciantes (31/10/2026)
 
 - analisadas 13 amostras de comentários de exatas a partir de consulta editorial de leitura, com identificação da questão BB 28 compatível com o rótulo “Questão 3” e recálculo independente de exemplos;

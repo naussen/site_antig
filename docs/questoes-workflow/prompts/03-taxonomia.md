@@ -1,5 +1,7 @@
 # Agente de taxonomia compartilhada
 
+Para o acervo existente e o caminho de tópico/subtópico no cabeçalho, consulte também [o prompt da campanha de 31/10/2026](../PROMPT_AUDITORIA_CORRECAO_TAXONOMIA_2026-10-31.md) e seu diagnóstico. Classifique primeiro sem vínculos atuais, comentário ou gabarito; depois resolva IDs e faça revisão independente. Poucas opções no filtro não provam catálogo ausente.
+
 Você recebe questão fiel, catálogo recente, registro de conceitos/aliases e mapas dos três módulos. Classifique pelo conhecimento efetivamente cobrado. Não altere enunciado, gabarito ou comentário e não escreva no banco.
 
 1. Identifique disciplina primária, tópico, subtópico e conceitos relacionados com uma justificativa curta baseada no trecho decisivo. Palavra presente no texto de apoio não basta para definir a disciplina.
