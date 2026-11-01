@@ -34,11 +34,20 @@ def build_bb_questions() -> tuple[list[dict], list[dict]]:
         taxonomy_map[i] = ("matematica", "aritmetica-e-algebra" if i <= 18 else "porcentagem-e-proporcionalidade")
     for i in range(21, 26):
         taxonomy_map[i] = ("atualidades", "mercado-financeiro-e-inovacao-tecnologica")
-    for i in range(26, 36):
-        taxonomy_map[i] = ("matematica-financeira", "juros-simples-e-compostos" if i <= 30 else "sistemas-de-amortizacao")
+    # Questoes 26 a 35: Matematica Financeira e Conhecimentos Bancarios
+    for i in range(26, 31):
+        taxonomy_map[i] = ("matematica-financeira", "juros-simples-e-compostos")
+    taxonomy_map[31] = ("conhecimentos-bancarios", "sistema-financeiro-nacional-sfn")
+    taxonomy_map[32] = ("conhecimentos-bancarios", "mercado-de-cambio-e-capitais")
+    taxonomy_map[33] = ("matematica-financeira", "sistemas-de-amortizacao")
+    taxonomy_map[34] = ("matematica-financeira", "sistemas-de-amortizacao")
+    taxonomy_map[35] = ("conhecimentos-bancarios", "produtos-e-servicos-bancarios")
+    # Questoes 36 a 45: Conhecimentos Bancarios
     for i in range(36, 46):
         taxonomy_map[i] = ("conhecimentos-bancarios", "sistema-financeiro-nacional-sfn" if i <= 40 else "produtos-e-servicos-bancarios")
-    for i in range(46, 61):
+    # Questoes 46 a 60: 46 e Estatistica Descritiva; 47-60 Informatica
+    taxonomy_map[46] = ("estatistica", "estatistica-descritiva")
+    for i in range(47, 61):
         taxonomy_map[i] = ("informatica", "ferramentas-de-escritorio-office-e-libreoffice" if i <= 52 else "seguranca-da-informacao")
     for i in range(61, 71):
         taxonomy_map[i] = ("vendas-e-negociacao", "tecnicas-de-vendas-e-atendimento-ao-cliente" if i <= 65 else "marketing-de-relacionamento-e-crm")

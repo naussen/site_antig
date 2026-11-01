@@ -60,7 +60,9 @@ GRANT SELECT ON public.question_subtopic_relations TO authenticated;
 GRANT ALL ON public.question_subtopic_relations TO service_role;
 
 -- 4. Atualização das RPCs com suporte a subtópico
--- 4.1. list_questions_filtered com p_subtopic_id
+-- Descarta a assinatura anterior para permitir a versão estendida com defaults completos
+DROP FUNCTION IF EXISTS public.list_questions_filtered(INTEGER, UUID, TEXT, TEXT, TEXT, TEXT, INTEGER, BOOLEAN);
+
 CREATE OR REPLACE FUNCTION public.list_questions_filtered(
   p_limit INTEGER DEFAULT 1,
   p_after_id UUID DEFAULT NULL,
@@ -248,37 +250,9 @@ BEGIN
 END;
 $$;
 
--- Wrapper de 8 parâmetros para callers legados
-CREATE OR REPLACE FUNCTION public.list_questions_filtered(
-  p_limit INTEGER,
-  p_after_id UUID,
-  p_search TEXT,
-  p_discipline_slug TEXT,
-  p_topic_id TEXT,
-  p_exam_board TEXT,
-  p_exam_year INTEGER,
-  p_include_hidden BOOLEAN
-)
-RETURNS JSONB
-LANGUAGE sql
-STABLE
-SECURITY DEFINER
-SET search_path = ''
-AS $$
-  SELECT public.list_questions_filtered(
-    p_limit, p_after_id, p_search, p_discipline_slug, p_topic_id,
-    p_exam_board, p_exam_year, p_include_hidden, NULL
-  );
-$$;
-
 REVOKE ALL ON FUNCTION public.list_questions_filtered(INTEGER, UUID, TEXT, TEXT, TEXT, TEXT, INTEGER, BOOLEAN, TEXT)
   FROM PUBLIC, anon;
 GRANT EXECUTE ON FUNCTION public.list_questions_filtered(INTEGER, UUID, TEXT, TEXT, TEXT, TEXT, INTEGER, BOOLEAN, TEXT)
-  TO authenticated;
-
-REVOKE ALL ON FUNCTION public.list_questions_filtered(INTEGER, UUID, TEXT, TEXT, TEXT, TEXT, INTEGER, BOOLEAN)
-  FROM PUBLIC, anon;
-GRANT EXECUTE ON FUNCTION public.list_questions_filtered(INTEGER, UUID, TEXT, TEXT, TEXT, TEXT, INTEGER, BOOLEAN)
   TO authenticated;
 
 -- 4.2. list_question_filters atualizada para incluir subtopics

@@ -1,13 +1,38 @@
 # Changelog
 
-## Questões — modelo hierárquico de subtópicos e caminho taxonômico no cabeçalho (31/10/2026)
+## Questões — modelo hierárquico de subtópicos, reclassificação semântica e saneamento de builders (31/10/2026)
 
-- Criada a migration canônica `045_create_question_subtopics_and_hierarchy.sql` com tabelas `public.subtopics` e `public.question_subtopic_relations`, índices, restrição de subtópico primário único e RLS, sem impactar rotas e estrutura de Resumos.
-- Atualizadas as RPCs `list_questions_filtered` (com suporte ao parâmetro `p_subtopic_id` e wrapper para callers legados) e `list_question_filters` (com agregação de subtópicos vinculados a questões publicadas).
-- Atualizados os contratos TypeScript em `src/types/database.ts` (`QuestionFilterSubtopic`, `QuestionListSubtopic`).
-- Implementado caminho taxonômico canônico no cabeçalho do `QuestionCard` antes do texto-base/enunciado, legível em desktop e mobile (320 e 390 px) nos temas Claro, Escuro e Sépia, com tópicos secundários listados como assuntos relacionados.
-- Implementado seletor de subtópico dependente e reativo em cascata (Disciplina → Tópico → Subtópico) no `questions-client.tsx`.
-- Validação: 24 testes unitários de questões aprovados (`npm run test:questions`), lint sem erros nos componentes e testes de interface incluídos.
+- **Migration 045 (`045_create_question_subtopics_and_hierarchy.sql`)**:
+  - Criadas as tabelas `public.subtopics` e `public.question_subtopic_relations` com integridade referencial por chaves e chave primária única para subtópico primário por questão.
+  - Habilitadas políticas RLS com função `private.has_active_content_access()`.
+  - Atualizadas as RPCs `list_questions_filtered` (com suporte ao parâmetro `p_subtopic_id` e retorno de subtópicos agregados) e `list_question_filters` (com agregação de subtópicos vinculados a questões publicadas).
+- **Migration 046 (`046_reclassify_priority_questions_and_subtopics.sql`)**:
+  - Inseridos 46 subtópicos canônicos em `public.subtopics`.
+  - Reclassificação semântica atômica de 61 questões prioritárias no banco remoto Supabase:
+    - TJSP Q77 a Q80 (Windows 10) reclassificadas de Matemática/Geometria para Informática / Sistemas Operacionais.
+    - TJSP Q65 reclassificada para Atualidades e TJSP Q85 (Excel) para Informática.
+    - BB Q31, Q32, Q35 reclassificadas de Matemática Financeira para Conhecimentos Bancários.
+    - BB Q46 reclassificada para Estatística / Estatística Descritiva.
+    - 10 questões da PF de Estatística distribuídas entre Probabilidade e Distribuições e Amostragem e Inferência Estatística.
+    - 10 questões FCC de Direito Civil distribuídas entre Pessoas Naturais, Pessoas Jurídicas e Contratos.
+    - Questões de Direito Tributário vinculadas ao tópico específico de Crédito Tributário e Lançamento.
+    - Questões de Contabilidade Geral e Avançada distribuídas entre tópicos pertinentes (Escrituração, Balanço Patrimonial, etc.).
+  - Validação pós-gravação atômica: assertiva `v_fixed = 61` comprovada em transação no banco remoto.
+- **Interface e Cabeçalho de Questões**:
+  - Implementado caminho taxonômico canônico `{disciplina} › {tópico} › {subtópico}` no cabeçalho de `QuestionCard` antes do texto-base/enunciado, legível em desktop e mobile nos três temas (Claro, Escuro e Sépia).
+  - Assuntos secundários devidamente renderizados no rodapé como tags navegáveis.
+  - Implementado seletor de subtópico em cascata reativo em `questions-client.tsx`.
+- **Saneamento dos Geradores / Builders**:
+  - `scripts/questions-workflow/tjsp_builder.py`: mapa taxonômico corrigido para refletir divisões de Atualidades, Informática e Raciocínio Lógico (questões 59–98).
+  - `scripts/questions-workflow/bb_builder.py`: mapa taxonômico corrigido para separar Matemática Financeira de Conhecimentos Bancários (questões 26–35) e Estatística de Informática (questão 46).
+  - `scripts/prepare-pdf-questions.py`: remoção dos atalhos genéricos em `FIXED_TOPICS` para Estatística e Matemática Financeira e inclusão de regras específicas em `TOPIC_PATTERNS`.
+- **Scripts de Rollback e Segurança**:
+  - Criados `scripts/questions-workflow/rollback_045.sql` e `rollback_046.sql` para reversão controlada e delimitada.
+  - Backup prévio verificado em `scratch/backup_pre_045.json`.
+- **Validação e Testes**:
+  - 24/24 testes em `test:questions` aprovados.
+  - 5/5 testes em `test:questions-import` aprovados.
+  - ESLint sem erros nos componentes modificados.
 
 ## Documentação — taxonomia e cabeçalho de questões (31/10/2026)
 
