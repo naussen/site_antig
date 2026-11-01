@@ -395,6 +395,10 @@
     var(--bg-primary);
 }
 
+.pro-questions-shell {
+  --accent-contrast: #FFFFFF;
+}
+
 [data-theme="dark"] .pro-questions-shell {
   --questions-brand-from: #6D52E8;
   --questions-brand-to: #9B87F5;
@@ -403,9 +407,20 @@
   --accent: #AB99FF;
   --accent-hover: #C8BDFF;
   --accent-soft: rgba(171, 153, 255, 0.14);
+  --accent-contrast: #111323;
 }
 
 [data-theme="sepia"] .pro-questions-shell {
+  --bg-primary: #F3EAD7;
+  --bg-secondary: #EADFC8;
+  --bg-card: #F8F0DF;
+  --dashboard-bg: #F3EAD7;
+  --dashboard-card: #F8F0DF;
+  --text-primary: #342F29;
+  --text-secondary: #62594D;
+  --text-muted: #6F665B;
+  --border: #DDD1BC;
+  --border-strong: #C4B69E;
   --questions-brand-from: #57458F;
   --questions-brand-to: #7A659F;
   --questions-signal: #9FD8D1;
@@ -413,6 +428,7 @@
   --accent: #655487;
   --accent-hover: #51416F;
   --accent-soft: rgba(101, 84, 135, 0.12);
+  --accent-contrast: #FFFFFF;
 }
 
 .pro-questions-logo__dark {

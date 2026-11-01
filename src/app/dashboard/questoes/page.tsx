@@ -60,7 +60,7 @@ export default async function QuestionsPage({ searchParams }: PageProps) {
   const { supabase } = await requireContentAccess();
   const [questionsResponse, statsResponse, filtersResponse] = await Promise.all([
     supabase.rpc("list_questions_filtered", {
-      p_limit: mode,
+      p_limit: mode, // p_limit: 1
       p_after_id: null,
       p_search: search,
       p_discipline_slug: discipline,

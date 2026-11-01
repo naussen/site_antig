@@ -1,7 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-html-link-for-pages -- navegação entre zonas exige recarga completa */
-import { useState, useSyncExternalStore } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
@@ -120,6 +120,17 @@ export function DashboardNavigation({
   const toggleMobileNavigation = () => {
     setMobileOpen((current) => !current);
   };
+
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMobileOpen(false);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [mobileOpen]);
 
   const renderNavigationItem = (
     { href, label, icon, exact }: NavigationItem,

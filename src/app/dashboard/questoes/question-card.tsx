@@ -44,7 +44,7 @@ function QuestionStatement({ question }: { question: QuestionListItem }) {
   const firstBaseIndex = sections.findIndex((section) => section.kind === "base");
 
   return (
-    <div className="mx-auto max-w-4xl space-y-4">
+    <div className="space-y-4">
       {sections.map((section, index) => {
         if (section.kind === "title") {
           return <h3 key={index} className="text-sm font-semibold tracking-wide text-[var(--accent)]">{section.content}</h3>;
@@ -170,13 +170,13 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
         {question.topics.length > 0 && <div className="mt-4 flex flex-wrap gap-2 text-xs text-[var(--text-muted)]">{question.topics.map((topic) => topic.is_navigable ? <Link key={topic.topic_id} href={`/${topic.topic_id}`} className="font-semibold text-[var(--accent)] hover:underline">{topic.title}</Link> : <span key={topic.topic_id}>{topic.title}</span>)}</div>}
       </div>
 
-      <fieldset className={`${question.question_type === "true_false" ? "grid gap-2 sm:grid-cols-2" : "space-y-2"} p-3 sm:p-5`} disabled={Boolean(answer || revealedAnswer) || loading}>
+      <fieldset className={`${question.question_type === "true_false" ? "grid gap-2 sm:grid-cols-2" : "space-y-2.5"} p-3 sm:p-5`} disabled={Boolean(answer || revealedAnswer) || loading}>
         <legend className="sr-only">Alternativas da questão {position}</legend>
         {question.options.map((option) => {
           const selected = selectedOptionId === option.id;
           const correct = answer?.correct_option_id === option.id;
           const wrongSelection = Boolean(answer) && selected && !correct;
-          return <label key={option.id} className={`question-option flex min-h-11 cursor-pointer items-start gap-2.5 rounded-xl border px-3 py-2.5 transition sm:px-3.5 ${correct ? "border-emerald-500 bg-emerald-500/10" : wrongSelection ? "border-red-500 bg-red-500/10" : selected ? "border-[var(--accent)] bg-[var(--accent-soft)]" : "border-[var(--border)] hover:border-[var(--border-strong)]"}`}>
+          return <label key={option.id} className={`question-option flex min-h-11 cursor-pointer items-start gap-3 rounded-xl border px-3 py-2.5 transition sm:px-4 ${correct ? "border-emerald-500 bg-emerald-500/10" : wrongSelection ? "border-red-500 bg-red-500/10" : selected ? "border-[var(--accent)] bg-[var(--accent-soft)]" : "border-[var(--border)] hover:border-[var(--border-strong)]"}`}>
             <input type="radio" name={`answer-${question.id}`} value={option.id} checked={selected} onChange={() => setSelectedOptionId(option.id)} className="mt-1 accent-[var(--accent)]" />
             <span className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-[var(--bg-primary)] text-[11px] font-black text-[var(--text-primary)]">{option.label}</span>
             <div className="min-w-0 flex-1 text-sm text-[var(--text-primary)]"><QuestionMarkdown compact>{option.body_markdown}</QuestionMarkdown></div>
@@ -203,7 +203,7 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
         <span className="text-xs text-[var(--text-muted)]">Seu resultado é atualizado após cada resposta.</span>
         <div className="flex flex-wrap gap-2">
           {!answer && !revealedAnswer && <button type="button" disabled={loading} onClick={() => void revealAnswer()} className="inline-flex min-h-11 flex-1 items-center justify-center rounded-xl border border-[var(--border)] px-3 text-sm font-semibold text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)] disabled:opacity-50 sm:flex-none">Ver resposta</button>}
-          {!answer && !revealedAnswer && <button type="button" disabled={!selectedOptionId || loading} onClick={() => void submitAnswer()} className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-[var(--accent)] px-5 text-sm font-bold text-white transition hover:-translate-y-0.5 disabled:opacity-50 sm:flex-none">{loading && <Loader2 size={17} className="animate-spin" />} Responder</button>}
+          {!answer && !revealedAnswer && <button type="button" disabled={!selectedOptionId || loading} onClick={() => void submitAnswer()} className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-[var(--accent)] px-5 text-sm font-bold text-[var(--accent-contrast)] transition hover:-translate-y-0.5 disabled:opacity-50 sm:flex-none">{loading && <Loader2 size={17} className="animate-spin" />} Responder</button>}
         </div>
         {error && <p role="alert" className="w-full text-sm text-red-600">{error}</p>}
       </footer>
