@@ -14,6 +14,7 @@ interface QuestionsClientProps {
   initialError?: string | null;
 }
 interface QuestionFilters {
+  identifier: string;
   search: string;
   discipline: string;
   topic: string;
@@ -24,7 +25,7 @@ interface PageSnapshot {
   result: QuestionListResult;
   start: number;
 }
-const EMPTY_FILTERS: QuestionFilters = { search: "", discipline: "", topic: "", board: "", year: "" };
+const EMPTY_FILTERS: QuestionFilters = { identifier: "", search: "", discipline: "", topic: "", board: "", year: "" };
 function accuracy(correct: number, total: number) {
   return total > 0 ? Math.round((correct / total) * 100) : 0;
 }
@@ -87,7 +88,8 @@ export function QuestionsClient({
     setLoading(true);
     setError(null);
     try {
-      const { data, error: requestError } = await createClient().rpc("list_questions_filtered", {
+      const { data, error: requestError } = await createClient().rpc("list_questions_filtered_v2", {
+        p_question_identifier: filters.identifier || null,
         p_limit: pageSize,
         p_after_id: cursor,
         p_search: filters.search || null,
@@ -148,7 +150,7 @@ export function QuestionsClient({
 
   const applyFilters = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const loaded = await fetchPage({ filters: { ...draftFilters, search: draftFilters.search.trim() }, reset: true });
+    const loaded = await fetchPage({ filters: { ...draftFilters, identifier: draftFilters.identifier.trim(), search: draftFilters.search.trim() }, reset: true });
     if (loaded) setFiltersOpen(false);
   };
 
@@ -211,6 +213,10 @@ export function QuestionsClient({
           className={`${filtersOpen ? "grid" : "hidden"} mt-3 gap-3 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-3 shadow-[var(--shadow)] sm:grid sm:grid-cols-2 sm:p-4 xl:grid-cols-4`}
           aria-label="Filtros de questões"
         >
+          <label className="block sm:col-span-2">
+            <span className="text-xs font-semibold text-[var(--text-secondary)]">ID da questão</span>
+            <input value={draftFilters.identifier} onChange={(event) => setDraftFilters((current) => ({ ...current, identifier: event.target.value }))} disabled={busy} maxLength={160} placeholder="Cole o ID completo exibido na questão ou seu UUID" autoCapitalize="none" spellCheck={false} className="mt-1 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)]" />
+          </label>
           <label className="block sm:col-span-2 xl:col-span-2">
             <span className="text-xs font-semibold text-[var(--text-secondary)]">Buscar</span>
             <span className="relative mt-1 block">

@@ -1,5 +1,15 @@
 # Changelog
 
+## Questões — leitura, identificação e metadados no cabeçalho (31/10/2026)
+
+- Retirados os rótulos Enunciado/Texto-base e os painéis artificiais; textos de apoio e fontes legítimos permanecem na leitura. Parágrafos e alternativas passam a ocupar a largura disponível apenas em Questões, com alternativas em 16 px.
+- ID externo permanente no canto superior esquerdo; posição na lista independente. Cabeçalho com banca/ano, órgão/cargo, tópico e assunto específico sem inventar uma hierarquia de subtópicos. Ações empilhadas no mobile preservam a largura dos metadados.
+- Número/aviso preliminar no início do texto são movidos visualmente ao cabeçalho por regra conservadora, preservando conteúdo persistido e hashes. Aviso na fonte e status atual informado pelo cadastro são identificados separadamente.
+- Migration `046_question_identifier_filter.sql`: nova RPC `list_questions_filtered_v2`, com correspondência exata por `external_id` ou UUID, filtros cumulativos e status de gabarito por allowlist. Preservadas a RPC anterior, autorização, paginação e separação de dados pessoais. Nenhuma alteração de tabela ou contrato de importação.
+- Entregues [registro técnico](docs/questoes-workflow/APRESENTACAO_ID_2026-10-31.md) e [prompt completo para Antigravity](docs/questoes-workflow/PROMPT_SANEAMENTO_ENUNCIADOS_CABECALHO_2026-10-31.md), incluindo revisão de classificação, rodapés, hifenização e status de gabarito em todo o acervo, com evidência por ID e aplicação reversível.
+- Validação: 248 testes Node aprovados, quatro testes remotos preexistentes ignorados por falta de credenciais no runner; 11 verificações em PostgreSQL isolado com sessão/entitlement simulados; 11 testes Playwright, com temas claro/escuro/sépia, larguras 320/390/1440, largura efetiva dos parágrafos, filtro e revelação reversível. Lint sem erros (12 avisos preexistentes), typecheck e build Webpack aprovados; `npm audit --omit=dev` sem vulnerabilidades.
+- Entrega em branch de trabalho. Migration não aplicada ao Supabase, alterações não implantadas e questões de produção não modificadas. Banco deve receber a migration antes do novo cliente. Smoke autenticado e aplicação editorial do prompt permanecem pendentes.
+
 ## Questões — saneamento de pendências técnicas e controle editorial transacional (31/10/2026)
 
 - **Proteção Transacional e Reversão Segura (Migration 045)**:

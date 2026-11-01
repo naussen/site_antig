@@ -42,7 +42,8 @@ const EMPTY_STATS: QuestionStatsResult = {
 export default async function QuestionsPage() {
   const { supabase } = await requireContentAccess();
   const [questionsResponse, statsResponse, filtersResponse] = await Promise.all([
-    supabase.rpc("list_questions_filtered", {
+    supabase.rpc("list_questions_filtered_v2", {
+      p_question_identifier: null,
       p_limit: 1,
       p_after_id: null,
       p_search: null,

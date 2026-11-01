@@ -2,13 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Bookmark, CheckCircle2, ChevronDown, ChevronUp, EyeOff, Loader2, X, XCircle } from "lucide-react";
+import { Bookmark, CheckCircle2, EyeOff, Loader2, X, XCircle } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import { createClient } from "@/lib/supabase/client";
-import { parseStatementSections } from "@/lib/questions/statement-sections.mjs";
+import { getAnswerStatusLabel, getQuestionPresentation } from "@/lib/questions/presentation.mjs";
 import type { QuestionAnswerResult, QuestionListItem, QuestionRevealResult } from "@/types/database";
 
 interface QuestionCardProps {
@@ -21,7 +21,7 @@ interface QuestionCardProps {
 
 function QuestionMarkdown({ children, compact = false }: { children: string; compact?: boolean }) {
   return (
-    <div className={`markdown-content ${compact ? "question-option-markdown" : "question-statement-markdown"} [&_a]:break-words [&_a]:[overflow-wrap:anywhere] [&_.katex-display]:max-w-full [&_.katex-display]:overflow-x-auto`}>
+    <div className={`markdown-content w-full min-w-0 ${compact ? "question-option-markdown text-base! [&_p]:leading-relaxed! [&_li]:leading-relaxed!" : "question-statement-markdown"} [&>:where(h1,h2,h3,h4,h5,p,ul,ol,blockquote,pre)]:mx-0! [&>:where(h1,h2,h3,h4,h5,p,ul,ol,blockquote,pre)]:w-full! [&_a]:break-words [&_a]:[overflow-wrap:anywhere] [&_p]:break-words [&_.katex-display]:max-w-full [&_.katex-display]:overflow-x-auto`}>
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
         rehypePlugins={[[rehypeKatex, { strict: "ignore", trust: false }]]}
@@ -37,14 +37,9 @@ function QuestionMarkdown({ children, compact = false }: { children: string; com
   );
 }
 
-function QuestionStatement({ question }: { question: QuestionListItem }) {
-  const [baseCollapsed, setBaseCollapsed] = useState(false);
-  const sections = parseStatementSections(question.statement_markdown, question.question_type);
-  const hasLongBase = sections.filter((section) => section.kind === "base").reduce((length, section) => length + section.content.length, 0) > 700;
-  const firstBaseIndex = sections.findIndex((section) => section.kind === "base");
-
+function QuestionStatement({ sections }: { sections: ReturnType<typeof getQuestionPresentation>["sections"] }) {
   return (
-    <div className="mx-auto max-w-4xl space-y-4">
+    <div className="w-full min-w-0 space-y-4">
       {sections.map((section, index) => {
         if (section.kind === "title") {
           return <h3 key={index} className="text-sm font-semibold tracking-wide text-[var(--accent)]">{section.content}</h3>;
@@ -52,26 +47,8 @@ function QuestionStatement({ question }: { question: QuestionListItem }) {
         if (section.kind === "source") {
           return <div key={index} aria-label="Fonte do texto" className="border-l-2 border-[var(--border-strong)] pl-3 text-sm text-[var(--text-muted)]"><QuestionMarkdown>{section.content}</QuestionMarkdown></div>;
         }
-        const label = section.kind === "base" ? "Texto-base" : section.kind === "assertion" ? "Assertiva" : "Enunciado";
-        const style = section.kind === "base"
-          ? "rounded-r-lg border-l-2 border-[var(--border-strong)] bg-[var(--bg-primary)] px-4 py-3"
-          : section.kind === "assertion"
-            ? "border-l-2 border-[var(--accent)] bg-[var(--accent-soft)] px-4 py-3"
-            : "border-t border-[var(--border)] pt-4";
-        const showToggle = index === firstBaseIndex && hasLongBase;
         return (
-          <section key={index} aria-label={label} className={style}>
-            <div className="mb-2 flex items-center justify-between gap-2">
-              <p className="text-xs font-semibold text-[var(--text-muted)]">{label}</p>
-              {showToggle && (
-                <button type="button" onClick={() => setBaseCollapsed((value) => !value)} aria-expanded={!baseCollapsed} className="inline-flex min-h-9 items-center gap-1 rounded-lg px-2 text-xs font-semibold text-[var(--accent)] hover:bg-[var(--accent-soft)] focus-visible:outline-2 focus-visible:outline-[var(--accent)]">
-                  {baseCollapsed ? <ChevronDown size={15} /> : <ChevronUp size={15} />}
-                  {baseCollapsed ? "Expandir texto" : "Recolher texto"}
-                </button>
-              )}
-            </div>
-            {section.kind === "base" && baseCollapsed ? <p className="text-sm text-[var(--text-muted)]">Texto-base recolhido.</p> : <QuestionMarkdown>{section.content}</QuestionMarkdown>}
-          </section>
+          <QuestionMarkdown key={index}>{section.content}</QuestionMarkdown>
         );
       })}
     </div>
@@ -79,6 +56,8 @@ function QuestionStatement({ question }: { question: QuestionListItem }) {
 }
 
 export function QuestionCard({ question, position, onAnswered, onHidden, onBusyChange }: QuestionCardProps) {
+  const presentation = getQuestionPresentation(question.statement_markdown, question.question_type);
+  const answerStatusLabel = getAnswerStatusLabel(question.answer_status);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [answer, setAnswer] = useState<QuestionAnswerResult | null>(null);
   const [revealedAnswer, setRevealedAnswer] = useState<QuestionRevealResult | null>(null);
@@ -155,19 +134,27 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
   return (
     <article aria-label={`Questão ${position}`} className="question-card overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] shadow-[var(--shadow-lg)] sm:rounded-3xl">
       <div className="border-b border-[var(--border)] p-4 sm:p-5">
-        <div className="flex flex-wrap items-start justify-between gap-3">
-          <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+          <div className="min-w-0 flex-1 space-y-2">
+            <p className="break-words text-sm font-bold text-[var(--text-primary)] [overflow-wrap:anywhere]">ID: {question.external_id}</p>
+            <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full bg-[var(--bg-primary)] px-3 py-1 text-xs font-semibold text-[var(--text-secondary)]">Questão {position}</span>
             {question.disciplines.map((item) => <span key={item.slug} className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--accent)]">{item.name}</span>)}
-            {question.exam_board && <span className="rounded-full border border-[var(--border)] px-3 py-1 text-xs font-semibold text-[var(--text-secondary)]">{question.exam_board}{question.exam_year ? ` · ${question.exam_year}` : ""}</span>}
+            {(question.exam_board || question.exam_year) && <span className="rounded-full border border-[var(--border)] px-3 py-1 text-xs font-semibold text-[var(--text-secondary)]">{[question.exam_board, question.exam_year].filter(Boolean).join(" · ")}</span>}
+            {presentation.sourceNumber && <span className="text-xs text-[var(--text-muted)]">Nº na prova: {presentation.sourceNumber}</span>}
+            {answerStatusLabel && <span className="rounded-full border border-[var(--border)] px-3 py-1 text-xs font-semibold text-[var(--text-secondary)]">{answerStatusLabel}</span>}
+            {presentation.sourceNotice && <span className="text-xs font-semibold text-[var(--text-secondary)]">Aviso na fonte: {presentation.sourceNotice}</span>}
+            </div>
+            {(question.institution || question.position_name) && <p className="break-words text-xs text-[var(--text-secondary)]">{[question.institution, question.position_name].filter(Boolean).join(" · ")}</p>}
+            {question.topics.length > 0 && <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-[var(--text-secondary)]">{question.topics.map((topic) => <span key={topic.topic_id} className="min-w-0 break-words"><span className="font-semibold">{topic.relation_type === "primary" ? "Tópico" : topic.relation_type === "related" ? "Relacionado" : "Referência"}: </span>{topic.is_navigable ? <Link href={`/${topic.topic_id}`} className="text-[var(--accent)] hover:underline">{topic.title}</Link> : topic.title}</span>)}</div>}
+            {question.subject && !question.topics.some((topic) => topic.title.trim().toLocaleLowerCase("pt-BR") === question.subject.trim().toLocaleLowerCase("pt-BR")) && <p className="break-words text-xs text-[var(--text-secondary)]"><span className="font-semibold">Assunto: </span>{question.subject}</p>}
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex shrink-0 items-center gap-2">
             <button type="button" disabled={loading} onClick={() => void updatePreference("review")} aria-label={markedForReview ? "Remover da revisão" : "Marcar para revisão"} title={markedForReview ? "Remover da revisão" : "Marcar para revisão"} className={`grid h-11 w-11 place-items-center rounded-xl border transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:h-10 sm:w-10 ${markedForReview ? "border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)]" : "border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--accent)]"}`}><Bookmark size={18} fill={markedForReview ? "currentColor" : "none"} /></button>
             <button type="button" disabled={loading} onClick={() => void updatePreference("hide")} className="inline-flex h-11 items-center gap-2 rounded-xl border border-[var(--border)] px-3 text-xs font-bold text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:h-10"><EyeOff size={17} /> Não mostrar mais</button>
           </div>
         </div>
-        <div className="mt-5 text-base text-[var(--text-primary)] sm:text-[1.05rem]"><QuestionStatement question={question} /></div>
-        {question.topics.length > 0 && <div className="mt-4 flex flex-wrap gap-2 text-xs text-[var(--text-muted)]">{question.topics.map((topic) => topic.is_navigable ? <Link key={topic.topic_id} href={`/${topic.topic_id}`} className="font-semibold text-[var(--accent)] hover:underline">{topic.title}</Link> : <span key={topic.topic_id}>{topic.title}</span>)}</div>}
+        <div className="mt-5 text-base text-[var(--text-primary)] sm:text-[1.05rem]"><QuestionStatement sections={presentation.sections} /></div>
       </div>
 
       <fieldset className={`${question.question_type === "true_false" ? "grid gap-2 sm:grid-cols-2" : "space-y-2"} p-3 sm:p-5`} disabled={Boolean(answer || revealedAnswer) || loading}>
@@ -179,7 +166,7 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
           return <label key={option.id} className={`question-option flex min-h-11 cursor-pointer items-start gap-2.5 rounded-xl border px-3 py-2.5 transition sm:px-3.5 ${correct ? "border-emerald-500 bg-emerald-500/10" : wrongSelection ? "border-red-500 bg-red-500/10" : selected ? "border-[var(--accent)] bg-[var(--accent-soft)]" : "border-[var(--border)] hover:border-[var(--border-strong)]"}`}>
             <input type="radio" name={`answer-${question.id}`} value={option.id} checked={selected} onChange={() => setSelectedOptionId(option.id)} className="mt-1 accent-[var(--accent)]" />
             <span className="grid h-6 w-6 shrink-0 place-items-center rounded-md bg-[var(--bg-primary)] text-[11px] font-black text-[var(--text-primary)]">{option.label}</span>
-            <div className="min-w-0 flex-1 text-sm text-[var(--text-primary)]"><QuestionMarkdown compact>{option.body_markdown}</QuestionMarkdown></div>
+            <div className="min-w-0 flex-1 text-base text-[var(--text-primary)]"><QuestionMarkdown compact>{option.body_markdown}</QuestionMarkdown></div>
             {correct && <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-emerald-500" />}
             {wrongSelection && <XCircle size={18} className="mt-0.5 shrink-0 text-red-500" />}
           </label>;

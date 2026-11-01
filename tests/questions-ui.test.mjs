@@ -21,7 +21,7 @@ test("rota de questões exige acesso ao conteúdo e carrega uma questão", async
   const source = await read("src/app/dashboard/questoes/page.tsx");
 
   assert.match(source, /requireContentAccess\(\)/);
-  assert.match(source, /rpc\("list_questions_filtered"/);
+  assert.match(source, /rpc\("list_questions_filtered_v2"/);
   assert.match(source, /p_limit:\s*1/);
   assert.match(source, /rpc\("get_question_stats"\)/);
   assert.match(source, /rpc\("list_question_filters"\)/);
@@ -35,7 +35,7 @@ test("interface usa RPCs seguras e não consulta gabarito diretamente", async ()
     read("src/app/dashboard/questoes/question-card.tsx"),
   ]);
 
-  assert.match(source, /rpc\("list_questions_filtered"/);
+  assert.match(source, /rpc\("list_questions_filtered_v2"/);
   assert.match(card, /"submit_question_answer"/);
   assert.match(card, /rpc\("get_question_answer"/);
   assert.match(card, /Ver resposta/);
@@ -66,7 +66,7 @@ test("interface usa RPCs seguras e não consulta gabarito diretamente", async ()
   assert.match(source, /motion-safe:animate-\[question-enter-next/);
   assert.match(source, /aria-pressed=\{mode === 5\}/);
   assert.match(source, /sm:grid sm:grid-cols-2/);
-  assert.match(card, /Expandir texto|Recolher texto/);
+  assert.doesNotMatch(card, /Texto-base|Recolher texto|Expandir texto/);
   assert.match(source, /p_topic_id:\s*filters\.topic/);
   assert.match(source, /p_exam_board:\s*filters\.board/);
   assert.match(source, /p_exam_year:\s*filters\.year/);

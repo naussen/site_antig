@@ -505,6 +505,7 @@ export interface QuestionListTopic {
 export interface QuestionListItem {
   id: string;
   external_id: string;
+  answer_status?: "definitivo" | "definitivo_alterado" | "preliminar" | "sem_status" | "anulada" | "conflitante" | null;
   question_type: QuestionType;
   statement_markdown: string;
   subject: string;
