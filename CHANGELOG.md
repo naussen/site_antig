@@ -1,5 +1,14 @@
 # Changelog
 
+## Questões — modelo hierárquico de subtópicos e caminho taxonômico no cabeçalho (31/10/2026)
+
+- Criada a migration canônica `045_create_question_subtopics_and_hierarchy.sql` com tabelas `public.subtopics` e `public.question_subtopic_relations`, índices, restrição de subtópico primário único e RLS, sem impactar rotas e estrutura de Resumos.
+- Atualizadas as RPCs `list_questions_filtered` (com suporte ao parâmetro `p_subtopic_id` e wrapper para callers legados) e `list_question_filters` (com agregação de subtópicos vinculados a questões publicadas).
+- Atualizados os contratos TypeScript em `src/types/database.ts` (`QuestionFilterSubtopic`, `QuestionListSubtopic`).
+- Implementado caminho taxonômico canônico no cabeçalho do `QuestionCard` antes do texto-base/enunciado, legível em desktop e mobile (320 e 390 px) nos temas Claro, Escuro e Sépia, com tópicos secundários listados como assuntos relacionados.
+- Implementado seletor de subtópico dependente e reativo em cascata (Disciplina → Tópico → Subtópico) no `questions-client.tsx`.
+- Validação: 24 testes unitários de questões aprovados (`npm run test:questions`), lint sem erros nos componentes e testes de interface incluídos.
+
 ## Documentação — taxonomia e cabeçalho de questões (31/10/2026)
 
 - conferidas estruturalmente as 1.771 publicadas, com análise temática dirigida de 61 questões em nove disciplinas; vínculo válido não foi tratado como classificação correta;

@@ -488,9 +488,17 @@ export interface QuestionFilterDiscipline {
   name: string;
 }
 
+export interface QuestionFilterSubtopic {
+  id: string;
+  title: string;
+  topic_id: string;
+  discipline_slug: string;
+}
+
 export interface QuestionFilterOptions {
   disciplines: QuestionFilterDiscipline[];
   topics: Array<{ topic_id: string; title: string; discipline_slug: string }>;
+  subtopics?: QuestionFilterSubtopic[];
   boards: string[];
   years: number[];
 }
@@ -500,6 +508,13 @@ export interface QuestionListTopic {
   title: string;
   relation_type: QuestionTopicRelationType;
   is_navigable: boolean;
+}
+
+export interface QuestionListSubtopic {
+  id: string;
+  title: string;
+  topic_id: string;
+  is_primary: boolean;
 }
 
 export interface QuestionListItem {
@@ -517,6 +532,7 @@ export interface QuestionListItem {
   options: QuestionListOption[];
   disciplines: QuestionListDiscipline[];
   topics: QuestionListTopic[];
+  subtopics?: QuestionListSubtopic[];
   latest_attempt: {
     is_correct: boolean;
     answered_at: string;

@@ -152,13 +152,17 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
     }
   };
 
+  const primaryDiscipline = question.disciplines.find((d) => d.is_primary) ?? question.disciplines[0];
+  const primaryTopic = question.topics.find((t) => t.relation_type === "primary") ?? question.topics[0];
+  const primarySubtopic = question.subtopics?.find((s) => s.is_primary) ?? question.subtopics?.[0];
+  const relatedTopics = question.topics.filter((t) => t !== primaryTopic);
+
   return (
     <article aria-label={`Questão ${position}`} className="question-card overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] shadow-[var(--shadow-lg)] sm:rounded-3xl">
       <div className="border-b border-[var(--border)] p-4 sm:p-5">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full bg-[var(--bg-primary)] px-3 py-1 text-xs font-semibold text-[var(--text-secondary)]">Questão {position}</span>
-            {question.disciplines.map((item) => <span key={item.slug} className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--accent)]">{item.name}</span>)}
             {question.exam_board && <span className="rounded-full border border-[var(--border)] px-3 py-1 text-xs font-semibold text-[var(--text-secondary)]">{question.exam_board}{question.exam_year ? ` · ${question.exam_year}` : ""}</span>}
           </div>
           <div className="flex items-center gap-2">
@@ -166,8 +170,45 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
             <button type="button" disabled={loading} onClick={() => void updatePreference("hide")} className="inline-flex h-11 items-center gap-2 rounded-xl border border-[var(--border)] px-3 text-xs font-bold text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:h-10"><EyeOff size={17} /> Não mostrar mais</button>
           </div>
         </div>
+
+        {/* Caminho taxonômico no cabeçalho antes do enunciado */}
+        {(primaryDiscipline || primaryTopic) && (
+          <nav aria-label="Caminho taxonômico da questão" className="mt-3 flex flex-wrap items-center gap-1.5 text-xs sm:text-sm font-medium text-[var(--text-secondary)] leading-relaxed">
+            {primaryDiscipline && (
+              <span className="font-bold text-[var(--accent)]">{primaryDiscipline.name}</span>
+            )}
+            {primaryTopic && (
+              <>
+                <span className="text-[var(--text-muted)] select-none" aria-hidden="true">›</span>
+                {primaryTopic.is_navigable ? (
+                  <Link href={`/${primaryTopic.topic_id}`} className="font-semibold text-[var(--text-primary)] hover:text-[var(--accent)] hover:underline">
+                    {primaryTopic.title}
+                  </Link>
+                ) : (
+                  <span className="font-semibold text-[var(--text-primary)]">{primaryTopic.title}</span>
+                )}
+              </>
+            )}
+            {primarySubtopic && (
+              <>
+                <span className="text-[var(--text-muted)] select-none" aria-hidden="true">›</span>
+                <span className="font-medium text-[var(--text-secondary)]">{primarySubtopic.title}</span>
+              </>
+            )}
+          </nav>
+        )}
+
         <div className="mt-5 text-base text-[var(--text-primary)] sm:text-[1.05rem]"><QuestionStatement question={question} /></div>
-        {question.topics.length > 0 && <div className="mt-4 flex flex-wrap gap-2 text-xs text-[var(--text-muted)]">{question.topics.map((topic) => topic.is_navigable ? <Link key={topic.topic_id} href={`/${topic.topic_id}`} className="font-semibold text-[var(--accent)] hover:underline">{topic.title}</Link> : <span key={topic.topic_id}>{topic.title}</span>)}</div>}
+        {relatedTopics.length > 0 && (
+          <div className="mt-4 flex flex-wrap items-center gap-2 text-xs text-[var(--text-muted)]">
+            <span className="font-semibold">Assuntos relacionados:</span>
+            {relatedTopics.map((topic) => topic.is_navigable ? (
+              <Link key={topic.topic_id} href={`/${topic.topic_id}`} className="font-semibold text-[var(--accent)] hover:underline">{topic.title}</Link>
+            ) : (
+              <span key={topic.topic_id}>{topic.title}</span>
+            ))}
+          </div>
+        )}
       </div>
 
       <fieldset className={`${question.question_type === "true_false" ? "grid gap-2 sm:grid-cols-2" : "space-y-2"} p-3 sm:p-5`} disabled={Boolean(answer || revealedAnswer) || loading}>

@@ -1,0 +1,359 @@
+-- Migration 045: Criação do modelo hierárquico de subtópicos de questões
+-- Permite taxonomia canônica: Disciplina -> Tópico -> Subtópico com integridade referencial.
+-- Preserva compatibilidade integral com o catálogo topics de Resumos.
+
+-- 1. Tabela public.subtopics
+CREATE TABLE IF NOT EXISTS public.subtopics (
+  id           TEXT PRIMARY KEY,
+  topic_id     TEXT NOT NULL REFERENCES public.topics(topic_id) ON DELETE RESTRICT,
+  title        TEXT NOT NULL,
+  slug         TEXT NOT NULL,
+  description  TEXT,
+  sort_order   INTEGER NOT NULL DEFAULT 0,
+  archived_at  TIMESTAMPTZ DEFAULT NULL,
+  created_at   TIMESTAMPTZ NOT NULL DEFAULT timezone('utc'::text, now())
+);
+
+CREATE INDEX IF NOT EXISTS idx_subtopics_topic_id
+  ON public.subtopics (topic_id, sort_order)
+  WHERE archived_at IS NULL;
+
+CREATE INDEX IF NOT EXISTS idx_subtopics_slug
+  ON public.subtopics (slug)
+  WHERE archived_at IS NULL;
+
+-- 2. Tabela public.question_subtopic_relations
+CREATE TABLE IF NOT EXISTS public.question_subtopic_relations (
+  question_id  UUID NOT NULL REFERENCES public.questions(id) ON DELETE CASCADE,
+  subtopic_id  TEXT NOT NULL REFERENCES public.subtopics(id) ON DELETE RESTRICT,
+  is_primary   BOOLEAN NOT NULL DEFAULT true,
+  sort_order   SMALLINT NOT NULL DEFAULT 0 CHECK (sort_order >= 0),
+  created_at   TIMESTAMPTZ NOT NULL DEFAULT timezone('utc'::text, now()),
+  PRIMARY KEY (question_id, subtopic_id)
+);
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_question_subtopic_single_primary
+  ON public.question_subtopic_relations (question_id)
+  WHERE is_primary = true;
+
+CREATE INDEX IF NOT EXISTS idx_question_subtopic_by_subtopic
+  ON public.question_subtopic_relations (subtopic_id, question_id);
+
+-- 3. Habilitação de RLS e Políticas
+ALTER TABLE public.subtopics ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.question_subtopic_relations ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS subtopics_select_entitled ON public.subtopics;
+CREATE POLICY subtopics_select_entitled
+  ON public.subtopics FOR SELECT TO authenticated
+  USING ((SELECT private.has_active_content_access()));
+
+DROP POLICY IF EXISTS question_subtopic_relations_select_entitled ON public.question_subtopic_relations;
+CREATE POLICY question_subtopic_relations_select_entitled
+  ON public.question_subtopic_relations FOR SELECT TO authenticated
+  USING ((SELECT private.has_active_content_access()));
+
+GRANT SELECT ON public.subtopics TO authenticated;
+GRANT ALL ON public.subtopics TO service_role;
+
+GRANT SELECT ON public.question_subtopic_relations TO authenticated;
+GRANT ALL ON public.question_subtopic_relations TO service_role;
+
+-- 4. Atualização das RPCs com suporte a subtópico
+-- 4.1. list_questions_filtered com p_subtopic_id
+CREATE OR REPLACE FUNCTION public.list_questions_filtered(
+  p_limit INTEGER DEFAULT 1,
+  p_after_id UUID DEFAULT NULL,
+  p_search TEXT DEFAULT NULL,
+  p_discipline_slug TEXT DEFAULT NULL,
+  p_topic_id TEXT DEFAULT NULL,
+  p_exam_board TEXT DEFAULT NULL,
+  p_exam_year INTEGER DEFAULT NULL,
+  p_include_hidden BOOLEAN DEFAULT false,
+  p_subtopic_id TEXT DEFAULT NULL
+)
+RETURNS JSONB
+LANGUAGE plpgsql
+STABLE
+SECURITY DEFINER
+SET search_path = ''
+AS $$
+DECLARE
+  current_user_id UUID := auth.uid();
+  result JSONB;
+BEGIN
+  IF current_user_id IS NULL OR NOT private.has_active_content_access() THEN
+    RAISE EXCEPTION 'active content access required' USING ERRCODE = '42501';
+  END IF;
+
+  IF p_limit NOT BETWEEN 1 AND 20
+     OR (p_search IS NOT NULL AND char_length(p_search) > 200)
+     OR (p_discipline_slug IS NOT NULL AND char_length(p_discipline_slug) > 120)
+     OR (p_topic_id IS NOT NULL AND char_length(p_topic_id) > 200)
+     OR (p_subtopic_id IS NOT NULL AND char_length(p_subtopic_id) > 200)
+     OR (p_exam_board IS NOT NULL AND char_length(p_exam_board) > 120)
+     OR (p_exam_year IS NOT NULL AND p_exam_year NOT BETWEEN 1900 AND 2200) THEN
+    RAISE EXCEPTION 'invalid question search parameters' USING ERRCODE = '22023';
+  END IF;
+
+  WITH filtered AS MATERIALIZED (
+    SELECT question.*
+    FROM public.questions AS question
+    WHERE question.status = 'published'
+      AND (
+        p_search IS NULL OR btrim(p_search) = ''
+        OR question.search_document @@ websearch_to_tsquery('portuguese'::regconfig, btrim(p_search))
+        OR position(lower(btrim(p_search)) IN lower(
+          question.statement_markdown || ' ' || question.subject || ' ' ||
+          coalesce(question.exam_board, '') || ' ' || coalesce(question.institution, '') || ' ' ||
+          coalesce(question.position_name, '') || ' ' || coalesce(question.source_reference, '')
+        )) > 0
+      )
+      AND (
+        p_discipline_slug IS NULL
+        OR EXISTS (
+          SELECT 1
+          FROM public.question_discipline_relations AS relation
+          JOIN public.disciplines AS discipline ON discipline.id = relation.discipline_id
+          WHERE relation.question_id = question.id
+            AND discipline.slug = p_discipline_slug
+            AND discipline.status = 'active'
+        )
+      )
+      AND (
+        p_topic_id IS NULL
+        OR EXISTS (
+          SELECT 1
+          FROM public.question_topic_relations AS relation
+          JOIN public.topics AS topic ON topic.topic_id = relation.topic_id
+          WHERE relation.question_id = question.id
+            AND relation.topic_id = p_topic_id
+            AND topic.archived_at IS NULL
+        )
+      )
+      AND (
+        p_subtopic_id IS NULL
+        OR EXISTS (
+          SELECT 1
+          FROM public.question_subtopic_relations AS sub_relation
+          JOIN public.subtopics AS subtopic ON subtopic.id = sub_relation.subtopic_id
+          WHERE sub_relation.question_id = question.id
+            AND sub_relation.subtopic_id = p_subtopic_id
+            AND subtopic.archived_at IS NULL
+        )
+      )
+      AND (p_exam_board IS NULL OR question.exam_board = p_exam_board)
+      AND (p_exam_year IS NULL OR question.exam_year = p_exam_year)
+      AND (
+        p_include_hidden
+        OR NOT EXISTS (
+          SELECT 1 FROM public.user_question_preferences AS preference
+          WHERE preference.user_id = current_user_id
+            AND preference.question_id = question.id
+            AND preference.hidden_at IS NOT NULL
+        )
+      )
+  ), page AS (
+    SELECT question.*
+    FROM filtered AS question
+    WHERE p_after_id IS NULL OR (question.created_at, question.id) < (
+      SELECT anchor.created_at, anchor.id
+      FROM public.questions AS anchor
+      WHERE anchor.id = p_after_id
+    )
+    ORDER BY question.created_at DESC, question.id DESC
+    LIMIT p_limit + 1
+  ), selected AS (
+    SELECT * FROM page
+    ORDER BY created_at DESC, id DESC
+    LIMIT p_limit
+  ), items AS (
+    SELECT question.id, question.created_at,
+      jsonb_build_object(
+        'id', question.id,
+        'external_id', question.external_id,
+        'question_type', question.question_type,
+        'statement_markdown', question.statement_markdown,
+        'subject', question.subject,
+        'exam_board', question.exam_board,
+        'institution', question.institution,
+        'position_name', question.position_name,
+        'exam_year', question.exam_year,
+        'difficulty', question.difficulty,
+        'source_reference', question.source_reference,
+        'options', coalesce((
+          SELECT jsonb_agg(jsonb_build_object(
+            'id', option.id, 'label', option.label,
+            'body_markdown', option.body_markdown, 'sort_order', option.sort_order
+          ) ORDER BY option.sort_order)
+          FROM public.question_options AS option WHERE option.question_id = question.id
+        ), '[]'::jsonb),
+        'disciplines', coalesce((
+          SELECT jsonb_agg(jsonb_build_object(
+            'slug', discipline.slug, 'name', discipline.name, 'is_primary', relation.is_primary
+          ) ORDER BY relation.sort_order, discipline.name)
+          FROM public.question_discipline_relations AS relation
+          JOIN public.disciplines AS discipline ON discipline.id = relation.discipline_id
+          WHERE relation.question_id = question.id
+        ), '[]'::jsonb),
+        'topics', coalesce((
+          SELECT jsonb_agg(jsonb_build_object(
+            'topic_id', topic.topic_id, 'title', topic.title,
+            'relation_type', relation.relation_type,
+            'is_navigable', topic.archived_at IS NULL
+          ) ORDER BY relation.sort_order, topic.title)
+          FROM public.question_topic_relations AS relation
+          JOIN public.topics AS topic ON topic.topic_id = relation.topic_id
+          WHERE relation.question_id = question.id
+        ), '[]'::jsonb),
+        'subtopics', coalesce((
+          SELECT jsonb_agg(jsonb_build_object(
+            'id', subtopic.id,
+            'title', subtopic.title,
+            'topic_id', subtopic.topic_id,
+            'is_primary', sub_relation.is_primary
+          ) ORDER BY sub_relation.sort_order, subtopic.title)
+          FROM public.question_subtopic_relations AS sub_relation
+          JOIN public.subtopics AS subtopic ON subtopic.id = sub_relation.subtopic_id
+          WHERE sub_relation.question_id = question.id
+        ), '[]'::jsonb),
+        'latest_attempt', (
+          SELECT jsonb_build_object('is_correct', attempt.is_correct, 'answered_at', attempt.answered_at)
+          FROM public.user_question_attempts AS attempt
+          WHERE attempt.user_id = current_user_id AND attempt.question_id = question.id
+          ORDER BY attempt.answered_at DESC, attempt.id DESC LIMIT 1
+        ),
+        'preference', (
+          SELECT jsonb_build_object(
+            'hidden', preference.hidden_at IS NOT NULL,
+            'marked_for_review', preference.marked_for_review_at IS NOT NULL
+          )
+          FROM public.user_question_preferences AS preference
+          WHERE preference.user_id = current_user_id AND preference.question_id = question.id
+        )
+      ) AS item
+    FROM selected AS question
+  )
+  SELECT jsonb_build_object(
+    'items', coalesce((
+      SELECT jsonb_agg(item ORDER BY created_at DESC, id DESC) FROM items
+    ), '[]'::jsonb),
+    'next_cursor', CASE WHEN (SELECT count(*) FROM page) > p_limit
+      THEN (SELECT id::text FROM selected ORDER BY created_at, id LIMIT 1)
+      ELSE NULL END,
+    'total_count', (SELECT count(*) FROM filtered)
+  ) INTO result;
+
+  RETURN result;
+END;
+$$;
+
+-- Wrapper de 8 parâmetros para callers legados
+CREATE OR REPLACE FUNCTION public.list_questions_filtered(
+  p_limit INTEGER,
+  p_after_id UUID,
+  p_search TEXT,
+  p_discipline_slug TEXT,
+  p_topic_id TEXT,
+  p_exam_board TEXT,
+  p_exam_year INTEGER,
+  p_include_hidden BOOLEAN
+)
+RETURNS JSONB
+LANGUAGE sql
+STABLE
+SECURITY DEFINER
+SET search_path = ''
+AS $$
+  SELECT public.list_questions_filtered(
+    p_limit, p_after_id, p_search, p_discipline_slug, p_topic_id,
+    p_exam_board, p_exam_year, p_include_hidden, NULL
+  );
+$$;
+
+REVOKE ALL ON FUNCTION public.list_questions_filtered(INTEGER, UUID, TEXT, TEXT, TEXT, TEXT, INTEGER, BOOLEAN, TEXT)
+  FROM PUBLIC, anon;
+GRANT EXECUTE ON FUNCTION public.list_questions_filtered(INTEGER, UUID, TEXT, TEXT, TEXT, TEXT, INTEGER, BOOLEAN, TEXT)
+  TO authenticated;
+
+REVOKE ALL ON FUNCTION public.list_questions_filtered(INTEGER, UUID, TEXT, TEXT, TEXT, TEXT, INTEGER, BOOLEAN)
+  FROM PUBLIC, anon;
+GRANT EXECUTE ON FUNCTION public.list_questions_filtered(INTEGER, UUID, TEXT, TEXT, TEXT, TEXT, INTEGER, BOOLEAN)
+  TO authenticated;
+
+-- 4.2. list_question_filters atualizada para incluir subtopics
+CREATE OR REPLACE FUNCTION public.list_question_filters()
+RETURNS JSONB
+LANGUAGE plpgsql
+STABLE
+SECURITY DEFINER
+SET search_path = ''
+AS $$
+DECLARE
+  result JSONB;
+BEGIN
+  IF auth.uid() IS NULL OR NOT private.has_active_content_access() THEN
+    RAISE EXCEPTION 'active content access required' USING ERRCODE = '42501';
+  END IF;
+
+  SELECT jsonb_build_object(
+    'disciplines', coalesce((
+      SELECT jsonb_agg(jsonb_build_object('slug', item.slug, 'name', item.name) ORDER BY item.name)
+      FROM (
+        SELECT DISTINCT discipline.slug, discipline.name
+        FROM public.questions AS question
+        JOIN public.question_discipline_relations AS relation ON relation.question_id = question.id
+        JOIN public.disciplines AS discipline ON discipline.id = relation.discipline_id
+        WHERE question.status = 'published' AND discipline.status = 'active'
+      ) AS item
+    ), '[]'::jsonb),
+    'topics', coalesce((
+      SELECT jsonb_agg(jsonb_build_object(
+        'topic_id', item.topic_id, 'title', item.title, 'discipline_slug', item.discipline_slug
+      ) ORDER BY item.discipline_slug, item.title)
+      FROM (
+        SELECT DISTINCT topic.topic_id, topic.title, discipline.slug AS discipline_slug
+        FROM public.questions AS question
+        JOIN public.question_topic_relations AS topic_relation ON topic_relation.question_id = question.id
+        JOIN public.topics AS topic ON topic.topic_id = topic_relation.topic_id
+        JOIN public.question_discipline_relations AS discipline_relation ON discipline_relation.question_id = question.id
+        JOIN public.disciplines AS discipline ON discipline.id = discipline_relation.discipline_id
+        JOIN public.topic_discipline_relations AS topic_discipline
+          ON topic_discipline.topic_id = topic.topic_id AND topic_discipline.discipline_id = discipline.id
+        WHERE question.status = 'published' AND topic.archived_at IS NULL AND discipline.status = 'active'
+      ) AS item
+    ), '[]'::jsonb),
+    'subtopics', coalesce((
+      SELECT jsonb_agg(jsonb_build_object(
+        'id', item.id, 'title', item.title, 'topic_id', item.topic_id, 'discipline_slug', item.discipline_slug
+      ) ORDER BY item.discipline_slug, item.topic_id, item.title)
+      FROM (
+        SELECT DISTINCT subtopic.id, subtopic.title, subtopic.topic_id, discipline.slug AS discipline_slug
+        FROM public.questions AS question
+        JOIN public.question_subtopic_relations AS sub_relation ON sub_relation.question_id = question.id
+        JOIN public.subtopics AS subtopic ON subtopic.id = sub_relation.subtopic_id
+        JOIN public.topics AS topic ON topic.topic_id = subtopic.topic_id
+        JOIN public.question_discipline_relations AS discipline_relation ON discipline_relation.question_id = question.id
+        JOIN public.disciplines AS discipline ON discipline.id = discipline_relation.discipline_id
+        JOIN public.topic_discipline_relations AS topic_discipline
+          ON topic_discipline.topic_id = topic.topic_id AND topic_discipline.discipline_id = discipline.id
+        WHERE question.status = 'published' AND subtopic.archived_at IS NULL AND topic.archived_at IS NULL AND discipline.status = 'active'
+      ) AS item
+    ), '[]'::jsonb),
+    'boards', coalesce((
+      SELECT jsonb_agg(item.exam_board ORDER BY item.exam_board)
+      FROM (SELECT DISTINCT exam_board FROM public.questions
+            WHERE status = 'published' AND exam_board IS NOT NULL AND exam_board <> '') AS item
+    ), '[]'::jsonb),
+    'years', coalesce((
+      SELECT jsonb_agg(item.exam_year ORDER BY item.exam_year DESC)
+      FROM (SELECT DISTINCT exam_year FROM public.questions
+            WHERE status = 'published' AND exam_year IS NOT NULL) AS item
+    ), '[]'::jsonb)
+  ) INTO result;
+  RETURN result;
+END;
+$$;
+
+REVOKE ALL ON FUNCTION public.list_question_filters() FROM PUBLIC, anon;
+GRANT EXECUTE ON FUNCTION public.list_question_filters() TO authenticated;

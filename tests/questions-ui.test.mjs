@@ -106,3 +106,31 @@ test("área do aluno e landing expõem PROQuestões", async () => {
     /from = "\/favicon\.ico"[\s\S]*to = "\/resumos\/brand\/pro-resumos-favicon\.png"[\s\S]*status = 200/u,
   );
 });
+
+
+test("cabeçalho de questão exibe caminho taxonômico e client suporta filtro por subtópico", async () => {
+  const [source, card, types] = await Promise.all([
+    read("src/app/dashboard/questoes/questions-client.tsx"),
+    read("src/app/dashboard/questoes/question-card.tsx"),
+    read("src/types/database.ts"),
+  ]);
+
+  // Cabeçalho de QuestionCard com hierarquia antes do enunciado
+  assert.match(card, /aria-label="Caminho taxonômico/);
+  assert.match(card, /primaryDiscipline.name/);
+  assert.match(card, /primaryTopic.title/);
+  assert.match(card, /primarySubtopic.title/);
+  assert.match(card, /Assuntos relacionados/);
+
+  // questions-client com suporte a subtópico
+  assert.match(source, /p_subtopic_id:\s*filters\.subtopic/);
+  assert.match(source, /draftFilters.subtopic/);
+  assert.match(source, /filterOptions.subtopics/);
+  assert.match(source, /Todos os subtópicos/);
+
+  // Tipos TypeScript compatíveis
+  assert.match(types, /interface QuestionListSubtopic/);
+  assert.match(types, /interface QuestionFilterSubtopic/);
+  assert.match(types, /subtopics\?:\s*QuestionListSubtopic\[\]/);
+  assert.match(types, /subtopics\?:\s*QuestionFilterSubtopic\[\]/);
+});
