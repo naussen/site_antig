@@ -49,6 +49,7 @@ export default async function QuestionsPage() {
       p_search: null,
       p_discipline_slug: null,
       p_topic_id: null,
+      p_subtopic_id: null,
       p_exam_board: null,
       p_exam_year: null,
       p_include_hidden: false,

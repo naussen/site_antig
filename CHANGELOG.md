@@ -1,5 +1,15 @@
 # Changelog
 
+## Questões — reparo da consulta ausente em produção (01/11/2026)
+
+- Confirmado erro autenticado `PGRST202`: `list_questions_filtered_v2` inexistente, embora o histórico remoto marcasse versões até 049. As versões remotas 046/047 tinham nomes diferentes dos arquivos locais; histórico preservado, sem reexecução de migrações de conteúdo.
+- Aplicada a migration `050_restore_question_practice_rpc.sql`: restaura uma única assinatura com dez parâmetros opcionais, compatível com clientes de nove argumentos e com filtro de subtópico, mantendo autorização, separação por usuário, allowlist de status, ordenação das opções e links somente para resumos existentes. Não modifica questões, alternativas, gabaritos, tentativas ou preferências.
+- Consulta inicial server-side passa explicitamente `p_subtopic_id: null`; regressão de interface e teste PostgreSQL ampliados para RPC ausente, atualização da 046, reexecução, subtópicos e clientes anteriores.
+- Verificação remota: dry-run sem pendências após aplicação; lint do banco sem erros; uma RPC com dez argumentos e execução negada a anon. Mantidas contagens de 1.806 questões, 5.507 alternativas, sete tentativas e três preferências.
+- Smoke autenticado real: carregamento, ID externo/UUID, filtros em cascata, limpar, uma/cinco questões, próxima/anterior e revelar/fechar sem seleção de alternativa. Verificados temas e ausência de overflow em desktop e celular de 390 px; tema original sépia restaurado. Acesso anônimo redireciona a login.
+- Validação local: 249 testes Node aprovados, quatro integrações preexistentes ignoradas por credenciais ausentes no runner; 13 verificações PostgreSQL isoladas aprovadas; lint sem erros (12 avisos existentes), build Webpack com TypeScript aprovado e auditoria de dependências sem vulnerabilidades.
+- A correção do cadastro/conteúdo continua separada: itens TJSP 082/083/084/086 ainda exibem classificação ou resíduos de transcrição a revisar com as fontes no fluxo do Antigravity.
+
 ## Questões — modelo hierárquico de subtópicos, caminho taxonômico e censo expandido (31/10/2026)
 
 - **Hierarquia e Banco de Dados (Migrations 047, 048 e 049)**:

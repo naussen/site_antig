@@ -23,6 +23,7 @@ test("rota de questões exige acesso ao conteúdo e carrega uma questão", async
   assert.match(source, /requireContentAccess\(\)/);
   assert.match(source, /rpc\("list_questions_filtered_v2"/);
   assert.match(source, /p_limit:\s*1/);
+  assert.match(source, /p_subtopic_id:\s*null/);
   assert.match(source, /rpc\("get_question_stats"\)/);
   assert.match(source, /rpc\("list_question_filters"\)/);
   assert.doesNotMatch(source, /from\("disciplines"\)/);

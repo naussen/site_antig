@@ -24,7 +24,7 @@ async function list(identifier = null, extra = "", parameters = []) {
 
 try {
   await db.exec(`
-    CREATE ROLE anon; CREATE ROLE authenticated;
+    CREATE ROLE anon; CREATE ROLE authenticated; CREATE ROLE service_role;
     CREATE SCHEMA auth; CREATE SCHEMA private;
     CREATE FUNCTION auth.uid() RETURNS uuid LANGUAGE sql STABLE AS
       $$ SELECT nullif(current_setting('request.jwt.claim.sub', true), '')::uuid $$;
@@ -67,11 +67,34 @@ try {
   const migration = await readFile(new URL("../../supabase/migrations/046_question_identifier_filter.sql", import.meta.url), "utf8");
   await db.exec(migration);
   await db.exec(migration);
+  // Reproduce the subtopic tables found in production, without assuming its
+  // recorded 047 function definitions were actually installed.
+  const hierarchy = await readFile(new URL("../../supabase/migrations/047_create_question_subtopics_and_hierarchy.sql", import.meta.url), "utf8");
+  await db.exec(hierarchy.slice(0, hierarchy.indexOf("CREATE OR REPLACE FUNCTION public.list_questions_filtered_v2(")));
+  const repair = await readFile(new URL("../../supabase/migrations/050_restore_question_practice_rpc.sql", import.meta.url), "utf8");
+  // Upgrade from existing 046, repair the missing-function state, then repeat.
+  await db.exec(repair);
+  await db.exec("DROP FUNCTION public.list_questions_filtered_v2(integer, uuid, text, text, text, text, integer, boolean, text, text)");
+  await db.exec(repair);
+  await db.exec(repair);
+  await db.exec("INSERT INTO public.subtopics(id, topic_id, title, slug) VALUES ('inserir-colunas', 'planilhas', 'Inserir colunas', 'inserir-colunas')");
+  await db.query("INSERT INTO public.question_subtopic_relations(question_id, subtopic_id) VALUES ($1, 'inserir-colunas')", [id(1)]);
+  await check("reparo restaura RPC ausente com uma só assinatura e suporta subtópico", async () => {
+    const functions = await db.query("SELECT count(*)::integer AS total FROM pg_proc p JOIN pg_namespace n ON n.oid=p.pronamespace WHERE n.nspname='public' AND p.proname='list_questions_filtered_v2'");
+    assert.equal(functions.rows[0].total, 1);
+  });
   await check("migration executa e reexecuta sem alterar a RPC anterior", async () => {
     assert.deepEqual((await db.query("SELECT public.list_questions_filtered() AS result")).rows[0].result, { legacy: true });
   });
   await db.exec("SET ROLE authenticated");
   await claims(userA);
+  await check("assinatura antiga por nomes e assinatura completa consultam a mesma questão", async () => {
+    const legacyArgs = await db.query("SELECT public.list_questions_filtered_v2(p_limit=>1, p_after_id=>NULL, p_search=>NULL, p_discipline_slug=>NULL, p_topic_id=>NULL, p_exam_board=>NULL, p_exam_year=>NULL, p_include_hidden=>false, p_question_identifier=>'pdf:prova:1') AS result");
+    assert.equal(legacyArgs.rows[0].result.items[0].id, id(1));
+    assert.equal((await list('pdf:prova:1', ", p_subtopic_id => 'inserir-colunas'")).items[0].subtopics[0].id, 'inserir-colunas');
+    assert.equal((await list('pdf:prova:1', ", p_subtopic_id => 'inexistente'")).total_count, 0);
+    await assert.rejects(list(null, ", p_subtopic_id => $2", ['x'.repeat(201)]), { code: '22023' });
+  });
   await check("ID externo exato e UUID encontram o mesmo registro, com trim", async () => {
     assert.equal((await list("  pdf:prova:1  ")).items[0].id, id(1));
     assert.equal((await list(id(1))).items[0].external_id, "pdf:prova:1");
@@ -139,6 +162,9 @@ try {
     await assert.rejects(list("pdf:prova:1"), { code: "42501" });
   });
   console.log(`${checks} verificações PostgreSQL aprovadas (auth/entitlement simulados; sem Supabase remoto).`);
+} catch (error) {
+  console.error(`${error.code ?? "error"}: ${error.message}`);
+  process.exitCode = 1;
 } finally {
   await db.close();
 }
