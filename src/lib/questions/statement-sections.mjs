@@ -1,4 +1,5 @@
 const TEXT_TITLE = /^((?:Texto|TEXTO)\s+(?:\d+[A-Za-z]?|[A-Z]{1,4}\d[A-Z0-9-]*))(?:[ \t]+|$)/u;
+const EDITORIAL_TITLE = /^(?:Quest[ãa]o\s+\d+(?:\s*\[.*?\])?)$/iu;
 const SOURCE = /^(?:(?:[^\n]{1,100}\.\s+)?(?:Fonte|Internet):|Disponível em:|Adaptad[oa]s? de:|Extraíd[oa]s? de:)/iu;
 const COMMAND_START = /^(?:Em relação|No que se refere|Tendo (?:o|a)|Com base|A partir|Sobre|Acerca|De acordo|À luz|Leia|Analise|Assinale|Julgue|Identifique|Considerando)/iu;
 const COMMAND_END = /(?:assinale|julgue|identifique|indique|marque|responda|é:|são:|\?)\s*$/iu;
@@ -40,11 +41,21 @@ export function parseStatementSections(markdown, questionType) {
       first.content = first.content.slice(match[0].length).trim();
       if (!first.content) sections.splice(1, 1);
       else first.kind = "base";
+    } else if (EDITORIAL_TITLE.test(first.content)) {
+      first.kind = "title";
     }
   }
 
   for (const section of sections) {
     if (section.kind === null && section.content.length <= 400 && SOURCE.test(section.content)) section.kind = "source";
+  }
+
+  const hasAuthenticBase = sections.some((section) => section.kind === "base" || section.kind === "source");
+  if (!hasAuthenticBase && questionType === "multiple_choice") {
+    const titleSections = sections.filter((section) => section.kind === "title");
+    const bodySections = sections.filter((section) => section.kind !== "title");
+    const combinedContent = bodySections.map((section) => section.content).join("\n\n");
+    return [...titleSections, { kind: "command", content: combinedContent }];
   }
 
   const untyped = sections.filter((section) => section.kind === null);

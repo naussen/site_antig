@@ -45,3 +45,28 @@ test("reconhece autor com fonte na mesma linha e separação por quebra simples"
   assert.deepEqual(kinds(sections), ["base", "source", "command", "assertion"]);
   assert.equal(sections[1].content, "Frei Betto. Internet: <www.exemplo.org.br>.");
 });
+
+test("F09: questão de múltipla escolha com PORQUE não gera falso texto-base nem múltiplos comandos", () => {
+  const input = `Analise as afirmativas a seguir.
+
+Os bens de uso comum do povo, desde que suscetíveis de valoração patrimonial e desafetados, podem ser alienados
+
+PORQUE
+
+tanto uma rua quanto uma praça, uma praia ou as margens de um rio navegável são suscetíveis de valoração patrimonial e de desafetação.
+
+Assinale a alternativa correta.`;
+
+  const sections = parseStatementSections(input, "multiple_choice");
+  assert.deepEqual(kinds(sections), ["command"]);
+  assert.ok(sections[0].content.includes("PORQUE"));
+  assert.ok(sections[0].content.includes("Assinale a alternativa correta."));
+});
+
+test("F09: título editorial com [Gabarito preliminar divulgado] é tratado como title e não como base", () => {
+  const input = "Questão 6 [Gabarito preliminar divulgado]\n\n## Enunciado\n\nEm conformidade com a norma-padrão, as lacunas do texto devem ser preenchidas com:";
+  const sections = parseStatementSections(input, "multiple_choice");
+  assert.deepEqual(kinds(sections), ["title", "command"]);
+  assert.equal(sections[0].content, "Questão 6 [Gabarito preliminar divulgado]");
+  assert.equal(sections[1].content, "Em conformidade com a norma-padrão, as lacunas do texto devem ser preenchidas com:");
+});
