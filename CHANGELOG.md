@@ -2,6 +2,13 @@
 
 ## Questões — modelo hierárquico de subtópicos, reclassificação semântica e saneamento de builders (31/10/2026)
 
+- **Migration 047 (`047_reclassify_census_expanded.sql`)**:
+  - Concluído o **Censo Expandido** para todas as 105 questões restantes das disciplinas auditadas (Contabilidade Pública: 26, Matemática Financeira: 18, Matemática: 61).
+  - Inseridos 38 novos subtópicos canônicos em `public.subtopics`.
+  - Reclassificação semântica e atribuição de subtópicos primários com verificação pós-gravação atômica (`v_fixed = 105` processado com sucesso em transação única no banco remoto).
+  - Zera pendências taxonômicas nas disciplinas auditadas: 146/146 questões de Direito Civil, Contabilidade Geral e Avançada, Contabilidade Pública, Direito Tributário, Matemática e Matemática Financeira agora contam com subtópicos primários canônicos ativos e navegáveis.
+  - Criado script de rollback correspondente em `scripts/questions-workflow/rollback_047.sql`.
+
 - **Migration 045 (`045_create_question_subtopics_and_hierarchy.sql`)**:
   - Criadas as tabelas `public.subtopics` e `public.question_subtopic_relations` com integridade referencial por chaves e chave primária única para subtópico primário por questão.
   - Habilitadas políticas RLS com função `private.has_active_content_access()`.
