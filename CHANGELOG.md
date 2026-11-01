@@ -1,5 +1,30 @@
 # Changelog
 
+## Questões — modelo hierárquico de subtópicos, caminho taxonômico e censo expandido (31/10/2026)
+
+- **Hierarquia e Banco de Dados (Migrations 047, 048 e 049)**:
+  - **Migration 047 (`047_create_question_subtopics_and_hierarchy.sql`)**: Criadas as tabelas `public.subtopics` e `public.question_subtopic_relations` com integridade referencial por chaves e índice único para 1 subtópico primário por questão. Políticas RLS ativas com `private.has_active_content_access()`. Atualizadas as RPCs `list_questions_filtered_v2` (com suporte a `p_subtopic_id` e retorno de subtópicos agregados) e `list_question_filters` (com agregação de subtópicos por disciplina/tópico).
+  - **Migration 048 (`048_reclassify_priority_questions_and_subtopics.sql`)**: 46 subtópicos cadastrados e 61 questões prioritárias reclassificadas atomicamente (TJSP 77–80 de Windows 10 em Informática / Sistemas Operacionais; TJSP 65 em Atualidades; TJSP 85 em Informática; BB 31, 32, 35 em Conhecimentos Bancários; BB 46 em Estatística Descritiva; 10 da PF de Estatística distribuídas entre Probabilidade e Inferência; 10 FCC de Direito Civil em Pessoas Naturais/Jurídicas/Contratos; Tributário e Contabilidade).
+  - **Migration 049 (`049_reclassify_census_expanded.sql`)**: 38 novos subtópicos cadastrados e **Censo Expandido** de 105 questões concluído com assertiva de reconciliação atômica (`v_fixed = 105`):
+    - Contabilidade Pública (26 itens): DCASP, Balanço Financeiro, PCASP, SIAFI, Restos a Pagar, MCASP.
+    - Matemática Financeira (18 itens): Juros simples e compostos, SAC, Tabela Price, taxas equivalentes/nominais e análise de investimentos (VPL/TIR/Payback).
+    - Matemática (61 itens): Aritmética e Álgebra, Porcentagem e Proporcionalidade, Geometria Plana e Espacial.
+  - Zera pendências taxonômicas nas disciplinas auditadas: 146/146 questões com subtópicos canônicos ativos e navegáveis.
+- **Interface e Navegação do Aluno**:
+  - Implementado caminho taxonômico canônico `{disciplina} › {tópico} › {subtópico}` no cabeçalho de `QuestionCard` antes do texto-base/enunciado, em contraste nos três temas (Claro, Escuro e Sépia) e responsivo para mobile e desktop.
+  - Assuntos relacionados/secundários exibidos separadamente no rodapé.
+  - Implementado filtro em cascata reativo por Subtópico em `questions-client.tsx` (resetando dependentemente quando disciplina ou tópico são alterados).
+- **Saneamento dos Geradores / Builders**:
+  - `scripts/questions-workflow/tjsp_builder.py`: mapa taxonômico corrigido para refletir divisões de Atualidades, Informática e Raciocínio Lógico (questões 59–98).
+  - `scripts/questions-workflow/bb_builder.py`: mapa taxonômico corrigido para separar Matemática Financeira de Conhecimentos Bancários (questões 26–35) e Estatística de Informática (questão 46).
+  - `scripts/prepare-pdf-questions.py`: remoção dos atalhos genéricos em `FIXED_TOPICS` para Estatística e Matemática Financeira e inclusão de regras específicas em `TOPIC_PATTERNS`.
+- **Scripts de Rollback e Segurança**:
+  - Criados `scripts/questions-workflow/rollback_047.sql`, `rollback_048.sql` e `rollback_049.sql` para reversão controlada e delimitada.
+- **Validação e Testes**:
+  - 30/30 testes em `test:questions` aprovados.
+  - 5/5 testes em `test:questions-import` aprovados.
+  - ESLint sem erros nos componentes modificados.
+
 ## Questões — leitura, identificação e metadados no cabeçalho (31/10/2026)
 
 - Retirados os rótulos Enunciado/Texto-base e os painéis artificiais; textos de apoio e fontes legítimos permanecem na leitura. Parágrafos e alternativas passam a ocupar a largura disponível apenas em Questões, com alternativas em 16 px.

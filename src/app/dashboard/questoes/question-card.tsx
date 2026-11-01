@@ -58,6 +58,10 @@ function QuestionStatement({ sections }: { sections: ReturnType<typeof getQuesti
 export function QuestionCard({ question, position, onAnswered, onHidden, onBusyChange }: QuestionCardProps) {
   const presentation = getQuestionPresentation(question.statement_markdown, question.question_type);
   const answerStatusLabel = getAnswerStatusLabel(question.answer_status);
+  const primaryDiscipline = question.disciplines.find((item) => item.is_primary) ?? question.disciplines[0];
+  const primaryTopic = question.topics.find((topic) => topic.relation_type === "primary") ?? question.topics[0];
+  const primarySubtopic = question.subtopics?.find((subtopic) => subtopic.is_primary) ?? question.subtopics?.[0];
+  const relatedTopics = question.topics.filter((topic) => topic.topic_id !== primaryTopic?.topic_id);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [answer, setAnswer] = useState<QuestionAnswerResult | null>(null);
   const [revealedAnswer, setRevealedAnswer] = useState<QuestionRevealResult | null>(null);
@@ -146,7 +150,41 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
             {presentation.sourceNotice && <span className="text-xs font-semibold text-[var(--text-secondary)]">Aviso na fonte: {presentation.sourceNotice}</span>}
             </div>
             {(question.institution || question.position_name) && <p className="break-words text-xs text-[var(--text-secondary)]">{[question.institution, question.position_name].filter(Boolean).join(" · ")}</p>}
-            {question.topics.length > 0 && <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-[var(--text-secondary)]">{question.topics.map((topic) => <span key={topic.topic_id} className="min-w-0 break-words"><span className="font-semibold">{topic.relation_type === "primary" ? "Tópico" : topic.relation_type === "related" ? "Relacionado" : "Referência"}: </span>{topic.is_navigable ? <Link href={`/${topic.topic_id}`} className="text-[var(--accent)] hover:underline">{topic.title}</Link> : topic.title}</span>)}</div>}
+            {(primaryDiscipline || primaryTopic) && (
+              <nav aria-label="Caminho taxonômico da questão" className="flex flex-wrap items-center gap-1.5 text-xs sm:text-sm font-medium text-[var(--text-secondary)] leading-relaxed">
+                {primaryDiscipline && (
+                  <span className="font-bold text-[var(--accent)]">{primaryDiscipline.name}</span>
+                )}
+                {primaryTopic && (
+                  <>
+                    <span className="text-[var(--text-muted)] select-none" aria-hidden="true">›</span>
+                    {primaryTopic.is_navigable ? (
+                      <Link href={`/${primaryTopic.topic_id}`} className="font-semibold text-[var(--text-primary)] hover:text-[var(--accent)] hover:underline">
+                        {primaryTopic.title}
+                      </Link>
+                    ) : (
+                      <span className="font-semibold text-[var(--text-primary)]">{primaryTopic.title}</span>
+                    )}
+                  </>
+                )}
+                {primarySubtopic && (
+                  <>
+                    <span className="text-[var(--text-muted)] select-none" aria-hidden="true">›</span>
+                    <span className="font-medium text-[var(--text-secondary)]">{primarySubtopic.title}</span>
+                  </>
+                )}
+              </nav>
+            )}
+            {relatedTopics.length > 0 && (
+              <div className="flex flex-wrap items-center gap-2 text-xs text-[var(--text-muted)]">
+                <span className="font-semibold">Assuntos relacionados:</span>
+                {relatedTopics.map((topic) => topic.is_navigable ? (
+                  <Link key={topic.topic_id} href={`/${topic.topic_id}`} className="font-semibold text-[var(--accent)] hover:underline">{topic.title}</Link>
+                ) : (
+                  <span key={topic.topic_id}>{topic.title}</span>
+                ))}
+              </div>
+            )}
             {question.subject && !question.topics.some((topic) => topic.title.trim().toLocaleLowerCase("pt-BR") === question.subject.trim().toLocaleLowerCase("pt-BR")) && <p className="break-words text-xs text-[var(--text-secondary)]"><span className="font-semibold">Assunto: </span>{question.subject}</p>}
           </div>
           <div className="flex shrink-0 items-center gap-2">

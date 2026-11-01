@@ -18,6 +18,7 @@ interface QuestionFilters {
   search: string;
   discipline: string;
   topic: string;
+  subtopic: string;
   board: string;
   year: string;
 }
@@ -25,7 +26,7 @@ interface PageSnapshot {
   result: QuestionListResult;
   start: number;
 }
-const EMPTY_FILTERS: QuestionFilters = { identifier: "", search: "", discipline: "", topic: "", board: "", year: "" };
+const EMPTY_FILTERS: QuestionFilters = { identifier: "", search: "", discipline: "", topic: "", subtopic: "", board: "", year: "" };
 function accuracy(correct: number, total: number) {
   return total > 0 ? Math.round((correct / total) * 100) : 0;
 }
@@ -95,6 +96,7 @@ export function QuestionsClient({
         p_search: filters.search || null,
         p_discipline_slug: filters.discipline || null,
         p_topic_id: filters.topic || null,
+        p_subtopic_id: filters.subtopic || null,
         p_exam_board: filters.board || null,
         p_exam_year: filters.year ? Number(filters.year) : null,
         p_include_hidden: false,
@@ -235,7 +237,7 @@ export function QuestionsClient({
             <span className="text-xs font-semibold text-[var(--text-secondary)]">Disciplina</span>
             <select
               value={draftFilters.discipline}
-              onChange={(event) => setDraftFilters((current) => ({ ...current, discipline: event.target.value, topic: "" }))}
+              onChange={(event) => setDraftFilters((current) => ({ ...current, discipline: event.target.value, topic: "", subtopic: "" }))}
               disabled={busy}
               className="mt-1 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)]"
             >
@@ -249,7 +251,7 @@ export function QuestionsClient({
             <span className="text-xs font-semibold text-[var(--text-secondary)]">Tópico</span>
             <select
               value={draftFilters.topic}
-              onChange={(event) => setDraftFilters((current) => ({ ...current, topic: event.target.value }))}
+              onChange={(event) => setDraftFilters((current) => ({ ...current, topic: event.target.value, subtopic: "" }))}
               disabled={busy || !draftFilters.discipline}
               className="mt-1 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)] disabled:opacity-60"
             >
@@ -257,6 +259,22 @@ export function QuestionsClient({
               {filterOptions.topics.filter((item) => item.discipline_slug === draftFilters.discipline).map((item) => (
                 <option key={item.topic_id} value={item.topic_id}>{item.title}</option>
               ))}
+            </select>
+          </label>
+          <label className="block">
+            <span className="text-xs font-semibold text-[var(--text-secondary)]">Subtópico</span>
+            <select
+              value={draftFilters.subtopic}
+              onChange={(event) => setDraftFilters((current) => ({ ...current, subtopic: event.target.value }))}
+              disabled={busy || !draftFilters.topic}
+              className="mt-1 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)] disabled:opacity-60"
+            >
+              <option value="">{draftFilters.topic ? "Todos os subtópicos" : "Selecione o tópico"}</option>
+              {(filterOptions.subtopics ?? [])
+                .filter((item) => item.topic_id === draftFilters.topic)
+                .map((item) => (
+                  <option key={item.id} value={item.id}>{item.title}</option>
+                ))}
             </select>
           </label>
           <label className="block">

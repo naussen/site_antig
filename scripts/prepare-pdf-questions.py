@@ -78,9 +78,6 @@ FIXED_TOPICS = {
     "funcoes do se": "sintaxe",
     "conjuncoes e conectivos": "morfologia",
     "significacao das palavras": "outros-topicos",
-    "matematica": "matematica",
-    "matematica financeira": "matematica-financeira",
-    "estatistica": "estatistica",
     "financas publicas": "financas-publicas",
     "politicas publicas": "politicas-publicas",
     "gestao de pessoas": "gestao-de-pessoas",
@@ -88,7 +85,6 @@ FIXED_TOPICS = {
 
 FIXED_TOPIC_EVIDENCE = {
     "redacao oficial": r"\b(reda[cç][aã]o oficial|textos? oficiais|vocativo|documento|of[ií]cio|requerimento|despacho|pronome de tratamento|comunica[cç][aã]o oficial)\b",
-    "matematica financeira": r"\b(juros?|capitaliza[cç][aã]o|investimento|financiamento|taxa efetiva|amortiza[cç][aã]o|parcelas?|presta[cç][aã]o|rentabilidade|valor presente|valor futuro|dep[oó]sito)\b",
     "politicas publicas": r"\b(pol[ií]tica(?:s)? p[uú]blica(?:s)?|pol[ií]ticas implementadas)\b",
 }
 
@@ -96,6 +92,16 @@ FIXED_TOPIC_EVIDENCE = {
 TOPIC_PATTERNS = {
     "raciocinio-logico": {
         "raciocinio-logico": r"\b(proposi[cç][aã]o|l[oó]gica sentencial|nega[cç][aã]o l[oó]gica|tabela.verdade|argumento l[oó]gico)\b",
+    },
+    "estatistica": {
+        "probabilidade-e-distribuicoes": r"\b(probabilidade|distribui[cç][aã]o normal|binomial|poisson|vari[aá]vel aleat[oó]ria)\b",
+        "amostragem-e-inferencia-estatistica": r"\b(amostragem|intervalo de confian[cç]a|teste de hip[oó]tese(?:s)?|estima[cç][aã]o|erro padr[aã]o|p-valor)\b",
+        "estatistica-descritiva": r"\b(m[eé]dia|mediana|moda|desvio padr[aã]o|vari[aâ]ncia|coeficiente de varia[cç][aã]o|quartil|frequ[eê]ncia)\b",
+    },
+    "matematica-financeira": {
+        "juros-simples-e-compostos": r"\b(juros? simples|juros? compostos?|montante|capitaliza[cç][aã]o simples|capitaliza[cç][aã]o composta|taxa nominal|taxa efetiva)\b",
+        "sistemas-de-amortizacao": r"\b(tabela price|sistema de amortiza[cç][aã]o constante|sac|amortiza[cç][aã]o mista|presta[cç][aã]o constante)\b",
+        "taxas-de-juros-e-inflacao": r"\b(infla[cç][aã]o|taxa real|taxa aparente|corre[cç][aã]o monet[aá]ria)\b",
     },
     "portugues": {
         "fonetica": r"\b(acentua[cç][aã]o|divis[aã]o sil[aá]bica|s[ií]laba t[oô]nica|h[ií]fen)\b",

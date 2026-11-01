@@ -106,3 +106,17 @@ test("área do aluno e landing expõem PROQuestões", async () => {
     /from = "\/favicon\.ico"[\s\S]*to = "\/resumos\/brand\/pro-resumos-favicon\.png"[\s\S]*status = 200/u,
   );
 });
+
+test("cabeçalho de questão exibe caminho taxonômico e client suporta filtro por subtópico", async () => {
+  const [source, card] = await Promise.all([
+    read("src/app/dashboard/questoes/questions-client.tsx"),
+    read("src/app/dashboard/questoes/question-card.tsx"),
+  ]);
+
+  assert.match(card, /Caminho taxonômico da questão/);
+  assert.match(card, /primaryDiscipline/);
+  assert.match(card, /primaryTopic/);
+  assert.match(card, /primarySubtopic/);
+  assert.match(source, /p_subtopic_id:\s*filters\.subtopic/);
+  assert.match(source, /Subtópico/);
+});

@@ -42,14 +42,29 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
         taxonomy_map[i] = ("direito-constitucional", "administracao-publica" if i <= 48 else "poder-judiciario")
     for i in range(51, 59):
         taxonomy_map[i] = ("direito-administrativo", "regime-juridico-dos-servidores-lei-8112" if i <= 55 else "improbidade-administrativa")
-    for i in range(59, 65):
+    # Questoes 59 a 65: Atualidades (65 e noticia da viagem do Papa)
+    for i in range(59, 66):
         taxonomy_map[i] = ("atualidades", "sociedade-seguranca-publica-e-cidadania")
-    for i in range(65, 71):
+    # Questoes 66 a 70: Estatuto da Pessoa com Deficiencia
+    for i in range(66, 71):
         taxonomy_map[i] = ("direito-da-pessoa-com-deficiencia", "estatuto-da-pessoa-com-deficiencia-lei-13-146-15")
-    for i in range(71, 81):
-        taxonomy_map[i] = ("matematica", "aritmetica-e-algebra" if i <= 75 else "geometria-plana-e-espacial")
-    for i in range(81, 87):
+    # Questoes 71 a 76: Matematica e Matematica Financeira (73)
+    taxonomy_map[71] = ("matematica", "porcentagem-e-proporcionalidade")
+    taxonomy_map[72] = ("matematica", "aritmetica-e-algebra")
+    taxonomy_map[73] = ("matematica-financeira", "juros-simples-e-compostos")
+    taxonomy_map[74] = ("matematica", "porcentagem-e-proporcionalidade")
+    taxonomy_map[75] = ("matematica", "geometria-plana-e-espacial")
+    taxonomy_map[76] = ("matematica", "porcentagem-e-proporcionalidade")
+    # Questoes 77 a 80: Informatica (77 Office; 78-80 Windows 10)
+    taxonomy_map[77] = ("informatica", "ferramentas-de-escritorio-office-e-libreoffice")
+    taxonomy_map[78] = ("informatica", "sistemas-operacionais-windows-e-linux")
+    taxonomy_map[79] = ("informatica", "sistemas-operacionais-windows-e-linux")
+    taxonomy_map[80] = ("informatica", "sistemas-operacionais-windows-e-linux")
+    # Questoes 81 a 86: Raciocinio Logico (exceto 85 que e Excel/Informatica)
+    for i in [81, 82, 83, 84, 86]:
         taxonomy_map[i] = ("raciocinio-logico", "estruturas-logicas-e-diagramas-logicos")
+    taxonomy_map[85] = ("informatica", "ferramentas-de-escritorio-office-e-libreoffice")
+    # Questoes 87 a 98: Informatica (Office e Internet)
     for i in range(87, 99):
         taxonomy_map[i] = ("informatica", "ferramentas-de-escritorio-office-e-libreoffice" if i <= 92 else "conceitos-de-internet-navegadores-e-pesquisa")
     for i in range(99, 101):
