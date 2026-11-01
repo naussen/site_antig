@@ -1,0 +1,3209 @@
+{
+  "schema_version": "pro-questions/editorial-manifest/v1",
+  "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+  "total_items": 100,
+  "ready_items": 96,
+  "held_items": 4,
+  "questions": [
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:001",
+      "artifact_sha256": "0d91789422c42f95611ae9e812a55cbd9f81f7305a3e042840e9f162ded77a6a",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 1,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 1,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:compreensao-e-interpretacao-de-textos",
+        "discipline_slug": "portugues",
+        "topic_id": "compreensao-e-interpretacao-de-textos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:002",
+      "artifact_sha256": "3e6380fc1a5a75442c13d350cc70528c7f96955fabb54d426273b72de2508b10",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 2,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 2,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:compreensao-e-interpretacao-de-textos",
+        "discipline_slug": "portugues",
+        "topic_id": "compreensao-e-interpretacao-de-textos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:003",
+      "artifact_sha256": "4e625b8c7ed64a00ba34add3c800aa1babd4bdbd5c76e68fa2c6e0e76d2fe02e",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 3,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 3,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:sintaxe",
+        "discipline_slug": "portugues",
+        "topic_id": "sintaxe",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:004",
+      "artifact_sha256": "7550dcdb205ed7b876785535982767222a5f59f8117f8f29f18bcbffd40d120b",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 4,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 4,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:sintaxe",
+        "discipline_slug": "portugues",
+        "topic_id": "sintaxe",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:005",
+      "artifact_sha256": "45dd874440d12aafc875dccbde79caee54859cfa835189d05b1092e05ce54529",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 5,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 5,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:semantica-e-significacao-das-palavras",
+        "discipline_slug": "portugues",
+        "topic_id": "semantica-e-significacao-das-palavras",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:006",
+      "artifact_sha256": "acd5fc24e533b388887c0f514caf0ac8975442f40d828b731dd4b14e8e26c791",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 6,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 6,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:sintaxe",
+        "discipline_slug": "portugues",
+        "topic_id": "sintaxe",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:007",
+      "artifact_sha256": "0fbfac04fc6af594b27bc6348f7e6639c26c23b169790ef65d6d7f8c0f20817a",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 7,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 7,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:compreensao-e-interpretacao-de-textos",
+        "discipline_slug": "portugues",
+        "topic_id": "compreensao-e-interpretacao-de-textos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:008",
+      "artifact_sha256": "5f85e70b4d7ec2a9b929d3fe2753fa15a3c253446c99e6e69e5cbf7260d78c30",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 8,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 8,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:morfologia",
+        "discipline_slug": "portugues",
+        "topic_id": "morfologia",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:009",
+      "artifact_sha256": "1941679972f3447c795009a12ce8acc40e90d6c7b3cee3020b59e02518f777ef",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 9,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 9,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:sintaxe",
+        "discipline_slug": "portugues",
+        "topic_id": "sintaxe",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:010",
+      "artifact_sha256": "49cb324c3e713cd0da36c00d2f958ba240af0a3c576f1107cbde3409e2a57e43",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 10,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 10,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:semantica-e-significacao-das-palavras",
+        "discipline_slug": "portugues",
+        "topic_id": "semantica-e-significacao-das-palavras",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:011",
+      "artifact_sha256": "a11eae77f43ae4d1f52a9684f18d6baa47b7641d0226d54d5d405fd4e7778e54",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 11,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 11,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:compreensao-e-interpretacao-de-textos",
+        "discipline_slug": "portugues",
+        "topic_id": "compreensao-e-interpretacao-de-textos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:012",
+      "artifact_sha256": "cf70e1d6c1c08bda02436b77b1435e3e5e439417e21555cde6b7114e6c673d0c",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 12,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 12,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:semantica-e-significacao-das-palavras",
+        "discipline_slug": "portugues",
+        "topic_id": "semantica-e-significacao-das-palavras",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:013",
+      "artifact_sha256": "9ab08ec3a543def9cbf3c4ded2e7ea5e6a3d17dddac20b443ad383bdf6bd14af",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 13,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 13,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:compreensao-e-interpretacao-de-textos",
+        "discipline_slug": "portugues",
+        "topic_id": "compreensao-e-interpretacao-de-textos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:014",
+      "artifact_sha256": "d1c21e8b80714b1325c6f808077f960a5f337340f6862f65734629d20f2f6377",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 14,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 14,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:semantica-e-significacao-das-palavras",
+        "discipline_slug": "portugues",
+        "topic_id": "semantica-e-significacao-das-palavras",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:015",
+      "artifact_sha256": "6acbb76134573e3a4e1a1a0bb74e312d9e32116a4bbffa9103e8c52e4d1e2bae",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 15,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 15,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:semantica-e-significacao-das-palavras",
+        "discipline_slug": "portugues",
+        "topic_id": "semantica-e-significacao-das-palavras",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:016",
+      "artifact_sha256": "9223faebcfb89c0e62fc7479f9de4cb3901a562f22311b3383654b1f5513d989",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 16,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 16,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:sintaxe",
+        "discipline_slug": "portugues",
+        "topic_id": "sintaxe",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:017",
+      "artifact_sha256": "d845927c95207f7d273bf63b872c6e9c031985b20733cbbd9d8c4059286ceb5c",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 17,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 17,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:sintaxe",
+        "discipline_slug": "portugues",
+        "topic_id": "sintaxe",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:018",
+      "artifact_sha256": "d0a285ad0f9a1e4389e9e5d4f604a781d43bfe40d4c4773318a6859c4c3a19e8",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 18,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 18,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:ortografia-e-acentuacao-grafica",
+        "discipline_slug": "portugues",
+        "topic_id": "ortografia-e-acentuacao-grafica",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:019",
+      "artifact_sha256": "351e6900357fda02be0a5a882c3ad4e3d20b161fc4457d59ea068392c7a4e320",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 19,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 19,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:compreensao-e-interpretacao-de-textos",
+        "discipline_slug": "portugues",
+        "topic_id": "compreensao-e-interpretacao-de-textos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:020",
+      "artifact_sha256": "e1279bfa785b87c95c50779d748ebf7ee0296ba9dd07fb378bfaa554a339f961",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 20,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 20,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:compreensao-e-interpretacao-de-textos",
+        "discipline_slug": "portugues",
+        "topic_id": "compreensao-e-interpretacao-de-textos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:021",
+      "artifact_sha256": "12f3e41dfcb53de28975055507b9859bae007754b940fcf0be1c177b4b22c190",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 21,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 21,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:compreensao-e-interpretacao-de-textos",
+        "discipline_slug": "portugues",
+        "topic_id": "compreensao-e-interpretacao-de-textos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:022",
+      "artifact_sha256": "ddcfa0ec827d38bb303f0289faf9e28ed1e493042500b8fe8962e6b29f7ea7b3",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 22,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 22,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:morfologia",
+        "discipline_slug": "portugues",
+        "topic_id": "morfologia",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:023",
+      "artifact_sha256": "511b9cf820f0693f41230e61eebd464b4046b47e7c2f3c39d6c2b25b12e7e8b5",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 23,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 23,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:sintaxe",
+        "discipline_slug": "portugues",
+        "topic_id": "sintaxe",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:024",
+      "artifact_sha256": "50fbbf9f1788f26d138ebd42ea798429f806c0daa4e2af37a7c7b328904fab3f",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 24,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 24,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:portugues:morfologia",
+        "discipline_slug": "portugues",
+        "topic_id": "morfologia",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:025",
+      "artifact_sha256": "47aa6f27ffa3eeee57bf0cca369144ab9ec1c53b9a12bb4c6d11fd5b0dfd4a7f",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 25,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 25,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-penal:crimes-contra-a-administracao-publica",
+        "discipline_slug": "direito-penal",
+        "topic_id": "crimes-contra-a-administracao-publica",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:026",
+      "artifact_sha256": "d60ea86eacbbcf7c8d5a6f488ef0f1ffb93e1312979964ae756625e16869b768",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 26,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 26,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-penal:crimes-contra-a-administracao-publica",
+        "discipline_slug": "direito-penal",
+        "topic_id": "crimes-contra-a-administracao-publica",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:027",
+      "artifact_sha256": "8718c3620b8b92efdefac5d39b05b6e877e509122f659dc1d25dbef5c3a6bcd1",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 27,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 27,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-penal:crimes-contra-a-administracao-publica",
+        "discipline_slug": "direito-penal",
+        "topic_id": "crimes-contra-a-administracao-publica",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:028",
+      "artifact_sha256": "83c6dc841a90b23d8f01ba1034b39cac78ed8615632795be4f3e8c269ba138c7",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 28,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 28,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-penal:crimes-contra-a-administracao-publica",
+        "discipline_slug": "direito-penal",
+        "topic_id": "crimes-contra-a-administracao-publica",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:029",
+      "artifact_sha256": "e404f394b57f922afe45be03c0da8541ae5c14ef2daeb7c67e72eae9343d5af9",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 29,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 29,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-penal:crimes-contra-a-administracao-publica",
+        "discipline_slug": "direito-penal",
+        "topic_id": "crimes-contra-a-administracao-publica",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:030",
+      "artifact_sha256": "8fae7302bdc3518757172f2e693d8e972fca43ba0fe974bdf7265960fe40db15",
+      "disposition": "held",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 30,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 30,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "anulada",
+        "label": "N",
+        "previous_label": null,
+        "change_evidence": "Anulada no gabarito oficial definitivo pós-recursos"
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-penal:crimes-contra-a-administracao-publica",
+        "discipline_slug": "direito-penal",
+        "topic_id": "crimes-contra-a-administracao-publica",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:031",
+      "artifact_sha256": "242f46e256a377da032ef96874880070ac1671d077974afeccb97f1da98f1e4e",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 31,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 31,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-penal:inquerito-policial",
+        "discipline_slug": "direito-processual-penal",
+        "topic_id": "inquerito-policial",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:032",
+      "artifact_sha256": "5454ac3704744c6c55b311de293ab8773da5653aebf54a88df81644c842e04e4",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 32,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 32,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-penal:inquerito-policial",
+        "discipline_slug": "direito-processual-penal",
+        "topic_id": "inquerito-policial",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:033",
+      "artifact_sha256": "a127404edbc7e21f052c6a041f71320d272823b3ee75e893ba4bbe6b481cb0ad",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 33,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 33,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-penal:inquerito-policial",
+        "discipline_slug": "direito-processual-penal",
+        "topic_id": "inquerito-policial",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:034",
+      "artifact_sha256": "397d9e9cd57e50e88ac0efda9b40ae746d0f70397746f83e9a3ed7f7c9b66c63",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 34,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 34,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-penal:acao-penal-ap",
+        "discipline_slug": "direito-processual-penal",
+        "topic_id": "acao-penal-ap",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:035",
+      "artifact_sha256": "402b8f89ae7705cd49065d6ed495d4674f7690089fe3c77ff4d26672adc265c2",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 35,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 35,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-penal:acao-penal-ap",
+        "discipline_slug": "direito-processual-penal",
+        "topic_id": "acao-penal-ap",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:036",
+      "artifact_sha256": "0de742453f25076a275a448159269d5c1cd4928c7cd28630c7f401683aaa74ff",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 36,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 36,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-penal:acao-penal-ap",
+        "discipline_slug": "direito-processual-penal",
+        "topic_id": "acao-penal-ap",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:037",
+      "artifact_sha256": "4dd81c6575c1a2620ed82ea3187d8bc78e3090faf06f5a5d357de857b9f48c72",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 37,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 37,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-penal:acao-penal-ap",
+        "discipline_slug": "direito-processual-penal",
+        "topic_id": "acao-penal-ap",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:038",
+      "artifact_sha256": "ab38a075d745219d5be387ba3ab8886e4d8747869b2b846783f65f1d2622b48d",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 38,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 38,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-civil:atos-processuais",
+        "discipline_slug": "direito-processual-civil",
+        "topic_id": "atos-processuais",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:039",
+      "artifact_sha256": "cd8a80386e0908bfe20be6e9e2b112e14c480f5832683051d5375ee0605f107e",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 39,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 39,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-civil:atos-processuais",
+        "discipline_slug": "direito-processual-civil",
+        "topic_id": "atos-processuais",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:040",
+      "artifact_sha256": "4e611b3cef6792dd15ba8cf035cafaca8580fb5fcd8355ee6bea3b6fffc1d311",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 40,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 40,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-civil:atos-processuais",
+        "discipline_slug": "direito-processual-civil",
+        "topic_id": "atos-processuais",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:041",
+      "artifact_sha256": "43ff0d7b22bd66b0f2ff422f2a4590f733fbfe99abaf001948e94761cf689a54",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 41,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 41,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-civil:atos-processuais",
+        "discipline_slug": "direito-processual-civil",
+        "topic_id": "atos-processuais",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:042",
+      "artifact_sha256": "fa081ce71ced49d4620c766ef7f5b32c6b3d39b06ed86b3642b7927f1d5920bf",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 42,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 42,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-civil:procedimento-comum",
+        "discipline_slug": "direito-processual-civil",
+        "topic_id": "procedimento-comum",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:043",
+      "artifact_sha256": "d23a4b431bd36230aa26298a6b8791446976a451d27ce745d9b4eec4ff00ef24",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 43,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 43,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-civil:procedimento-comum",
+        "discipline_slug": "direito-processual-civil",
+        "topic_id": "procedimento-comum",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:044",
+      "artifact_sha256": "6fe40967e3861fefa83d191add9cab437bf79a87050372b131e76f415fce712e",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 44,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 44,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-processual-civil:procedimento-comum",
+        "discipline_slug": "direito-processual-civil",
+        "topic_id": "procedimento-comum",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:045",
+      "artifact_sha256": "e42155cc1fb6a3681885045134466f72526ef92e51b8c8bd593b2b70032a4e0c",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 45,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 45,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-constitucional:administracao-publica",
+        "discipline_slug": "direito-constitucional",
+        "topic_id": "administracao-publica",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:046",
+      "artifact_sha256": "eb36720e9a257e188748325d57d7b6199010d39176b19b0cd2894db6134e0685",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 46,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 46,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-constitucional:administracao-publica",
+        "discipline_slug": "direito-constitucional",
+        "topic_id": "administracao-publica",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:047",
+      "artifact_sha256": "6ae9c7a31e4b9a543bbcb888d49459974922da346ea25dfc7c4507a191e5168a",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 47,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 47,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-constitucional:direitos-e-garantias-fundamentais",
+        "discipline_slug": "direito-constitucional",
+        "topic_id": "direitos-e-garantias-fundamentais",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:048",
+      "artifact_sha256": "7484fd0c4beabc28605074620b75468ba856b65bb9385673bd6247c3f7971b5b",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 48,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 48,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-constitucional:nacionalidade-e-direitos-politicos",
+        "discipline_slug": "direito-constitucional",
+        "topic_id": "nacionalidade-e-direitos-politicos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:049",
+      "artifact_sha256": "b515349227f5ad67e81058fcb03d2b1d45c1796caf790140a8cdce6e7bf13913",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 49,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 49,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-constitucional:poder-judiciario",
+        "discipline_slug": "direito-constitucional",
+        "topic_id": "poder-judiciario",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:050",
+      "artifact_sha256": "63d18d6218d8d057b43cd1e2f36a7010570e4f468122ad51825630cced032b1e",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 50,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 50,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 1,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-constitucional:administracao-publica",
+        "discipline_slug": "direito-constitucional",
+        "topic_id": "administracao-publica",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:051",
+      "artifact_sha256": "012b3365391caca1d892b15c70e0b79fd985ab03147f2f837e6cf7ce1a720687",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 51,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 51,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:regime-juridico-dos-servidores-lei-8112",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "regime-juridico-dos-servidores-lei-8112",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:052",
+      "artifact_sha256": "f530bf34f1d2454f2a887fdbd672152dd61c36ae4b3a50f549b89134e413b6f9",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 52,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 52,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:regime-juridico-dos-servidores-lei-8112",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "regime-juridico-dos-servidores-lei-8112",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:053",
+      "artifact_sha256": "9fece21b4f1bab03bacea43b1c96590549d3c03960b4b4383349b517bbc10768",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 53,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 53,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:regime-juridico-dos-servidores-lei-8112",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "regime-juridico-dos-servidores-lei-8112",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:054",
+      "artifact_sha256": "76fc57838875cf1244a233dc88fbdf3c214043323a4b7c765c3f28a4e4f3d54a",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 54,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 54,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:regime-juridico-dos-servidores-lei-8112",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "regime-juridico-dos-servidores-lei-8112",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:055",
+      "artifact_sha256": "3838b88f75e5b2d0de7d6cedef30d139d0258ab57a751c7dddcd3dbd0afe2515",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 55,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 55,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:improbidade-administrativa",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "improbidade-administrativa",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:056",
+      "artifact_sha256": "adb0d1b33124d816cde2d6c870bb29cc5d392f5f104278f99a09f381840806bd",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 56,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 56,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:improbidade-administrativa",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "improbidade-administrativa",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:057",
+      "artifact_sha256": "9b0067293900a1d76e365d2cbe1be2e3aec99bc61e4e87b867ff5c5c86c5ed7e",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 57,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 57,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:improbidade-administrativa",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "improbidade-administrativa",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:058",
+      "artifact_sha256": "179722d2afae016582836afc2283bf7e0918a3444c1164b5c9ae9ddd4c5fffe3",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 58,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 58,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:improbidade-administrativa",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "improbidade-administrativa",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:059",
+      "artifact_sha256": "5a2bcf7f50f43d9ea217795e9e73dda2a1ab06293c6312510906f4ef51ceee2d",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 59,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 59,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:atos-administrativos",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "atos-administrativos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:060",
+      "artifact_sha256": "b35397710b01cf72cb6bf8dc70147c0c9d95f57318f07c75a03347137213c4a1",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 60,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 60,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:atos-administrativos",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "atos-administrativos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:061",
+      "artifact_sha256": "f97a97d4eadfe377a857ac2a4cc0de8acbc845de4a90c873e3d2c2c1824cd235",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 61,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 61,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:atos-administrativos",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "atos-administrativos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:062",
+      "artifact_sha256": "0041d8d6ca3347e963626a7483928d73cad0a9322cbd989e6769f538495db1ae",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 62,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 62,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:atos-administrativos",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "atos-administrativos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:063",
+      "artifact_sha256": "5ce04116a6a14ec7f3e587e4a137b24be5b26df78c3f0038b6cef6304b223973",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 63,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 63,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:atos-administrativos",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "atos-administrativos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:064",
+      "artifact_sha256": "d2bbe88d974ff4b3981dedc9193467c593ca8ab5c7deb0fca1a8943742527992",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 64,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 64,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-administrativo:atos-administrativos",
+        "discipline_slug": "direito-administrativo",
+        "topic_id": "atos-administrativos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:065",
+      "artifact_sha256": "71ad52488040593f69c78e05a6d19925c53c269f279134182ee32fbf44bb534d",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 65,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 65,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:atualidades:atualidades",
+        "discipline_slug": "atualidades",
+        "topic_id": "atualidades",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:066",
+      "artifact_sha256": "5318a7e757beb90b794780faa587d193b6b65dcad84d338d368d7054ff9fc735",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 66,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 66,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:atualidades:atualidades",
+        "discipline_slug": "atualidades",
+        "topic_id": "atualidades",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:067",
+      "artifact_sha256": "c7d0111010a389e3e1cdff933203cb72e87cf89f21bdf7968676c97563f976cc",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 67,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 67,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:atualidades:atualidades",
+        "discipline_slug": "atualidades",
+        "topic_id": "atualidades",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:068",
+      "artifact_sha256": "7f564c7683822bc088621f1b92e89771e4f9a6763e502c08f41dddbbf8f3d8b4",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 68,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 68,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:atualidades:atualidades",
+        "discipline_slug": "atualidades",
+        "topic_id": "atualidades",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:069",
+      "artifact_sha256": "0f93cfd9e2c742752c2b5e64a9dd4a38e66ac576dab370cbddaf516247c2d8f4",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 69,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 69,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-da-pessoa-com-deficiencia:estatuto-da-pessoa-com-deficiencia-lei-13-146-15",
+        "discipline_slug": "direito-da-pessoa-com-deficiencia",
+        "topic_id": "estatuto-da-pessoa-com-deficiencia-lei-13-146-15",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:070",
+      "artifact_sha256": "612e856dd7a48d39daa985ee4d585f3a83b0f9e8f76fea7118bb60e895909de0",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 70,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 70,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:direito-da-pessoa-com-deficiencia:estatuto-da-pessoa-com-deficiencia-lei-13-146-15",
+        "discipline_slug": "direito-da-pessoa-com-deficiencia",
+        "topic_id": "estatuto-da-pessoa-com-deficiencia-lei-13-146-15",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:071",
+      "artifact_sha256": "8cd5fb83fa2d68dd284725659fc3ce64eb762cc36ff4e4c3428b4a30cd7ea4ad",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 71,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 71,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:matematica:aritmetica-e-algebra",
+        "discipline_slug": "matematica",
+        "topic_id": "aritmetica-e-algebra",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:072",
+      "artifact_sha256": "80e729d11cbe791c71a4a435de085cca71ac6e4da64839b2db977165f3350489",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 72,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 72,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:matematica:aritmetica-e-algebra",
+        "discipline_slug": "matematica",
+        "topic_id": "aritmetica-e-algebra",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:073",
+      "artifact_sha256": "5877e19e2f5c9934cd42bc5eb0f1aff8c393256755d4f6b6f315ddff73aa835d",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 73,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 73,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:matematica:aritmetica-e-algebra",
+        "discipline_slug": "matematica",
+        "topic_id": "aritmetica-e-algebra",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:074",
+      "artifact_sha256": "959b05836761888d800455f3f9525a639a02abad5e1a460da4d27287e9b27a93",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 74,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 74,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:matematica:geometria-plana-e-espacial",
+        "discipline_slug": "matematica",
+        "topic_id": "geometria-plana-e-espacial",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:075",
+      "artifact_sha256": "7eb94761e4543f6f49b0aa52b6a55bb76db0ba0ae4a8e5682a2488f5c8001216",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 75,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 75,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:matematica:geometria-plana-e-espacial",
+        "discipline_slug": "matematica",
+        "topic_id": "geometria-plana-e-espacial",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:076",
+      "artifact_sha256": "d2b9f60fb1082edc60b32d47e95633f19de5d8092c77f71df8a74c78a77f0628",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 76,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 76,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:matematica:geometria-plana-e-espacial",
+        "discipline_slug": "matematica",
+        "topic_id": "geometria-plana-e-espacial",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:077",
+      "artifact_sha256": "2dc44b6b699442a924fb7ff6933cefc434cdfffc1f9215ace6e40a84d791be02",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 77,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 77,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:sistemas-operacionais-windows-e-linux",
+        "discipline_slug": "informatica",
+        "topic_id": "sistemas-operacionais-windows-e-linux",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:078",
+      "artifact_sha256": "5ab1c91206fec263d70e1d2f5ea513237e767996deb4690db3d4c07c353ffbb8",
+      "disposition": "held",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 78,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 78,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "anulada",
+        "label": "N",
+        "previous_label": null,
+        "change_evidence": "Anulada no gabarito oficial definitivo pós-recursos"
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:sistemas-operacionais-windows-e-linux",
+        "discipline_slug": "informatica",
+        "topic_id": "sistemas-operacionais-windows-e-linux",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:079",
+      "artifact_sha256": "7904e64e16732c8e9f175e6d0a1f164626c896b6f2fea43ec756fec91a6a9cf4",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 79,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 79,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:sistemas-operacionais-windows-e-linux",
+        "discipline_slug": "informatica",
+        "topic_id": "sistemas-operacionais-windows-e-linux",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:080",
+      "artifact_sha256": "01603f43b59ce4d5e32cea41e4237fc3ea4cb671aed4368ac5c76f451d3218a8",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 80,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 80,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:sistemas-operacionais-windows-e-linux",
+        "discipline_slug": "informatica",
+        "topic_id": "sistemas-operacionais-windows-e-linux",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:081",
+      "artifact_sha256": "23688f673d17a9f393ddea483c1213d3be44851e2af98990f34638edd507619c",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 81,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 81,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:ferramentas-de-escritorio-office-e-libreoffice",
+        "discipline_slug": "informatica",
+        "topic_id": "ferramentas-de-escritorio-office-e-libreoffice",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:082",
+      "artifact_sha256": "4cc329ce6587dd9578b532ae774a933ef753916d65217f1c046e22ccd6c86414",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 82,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 82,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:ferramentas-de-escritorio-office-e-libreoffice",
+        "discipline_slug": "informatica",
+        "topic_id": "ferramentas-de-escritorio-office-e-libreoffice",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:083",
+      "artifact_sha256": "611478e21f5c7b2bc37604a8b5748bb5e95ad63e2509dc3ed86be7c494dd735f",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 83,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 83,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:ferramentas-de-escritorio-office-e-libreoffice",
+        "discipline_slug": "informatica",
+        "topic_id": "ferramentas-de-escritorio-office-e-libreoffice",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:084",
+      "artifact_sha256": "502d4dbb716c5034fbaab45e3376bb74306470554ab072fd5e51343fceac7f90",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 84,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 84,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:ferramentas-de-escritorio-office-e-libreoffice",
+        "discipline_slug": "informatica",
+        "topic_id": "ferramentas-de-escritorio-office-e-libreoffice",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:085",
+      "artifact_sha256": "d2593a39488bceb45705d9a59ffd35e0d184f3238067334a4f4dbe0f115d439d",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 85,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 85,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:ferramentas-de-escritorio-office-e-libreoffice",
+        "discipline_slug": "informatica",
+        "topic_id": "ferramentas-de-escritorio-office-e-libreoffice",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:086",
+      "artifact_sha256": "24e9504a504ff194096d592591d75148689280b86a16e29277741eecf7936d4a",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 86,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 86,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:conceitos-de-internet-navegadores-e-pesquisa",
+        "discipline_slug": "informatica",
+        "topic_id": "conceitos-de-internet-navegadores-e-pesquisa",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:087",
+      "artifact_sha256": "f47df7f728a96c08a683b4b91f50fad72e673048970ab537c255eb8cda2f9146",
+      "disposition": "held",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 87,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 87,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "anulada",
+        "label": "N",
+        "previous_label": null,
+        "change_evidence": "Anulada no gabarito oficial definitivo pós-recursos"
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:conceitos-de-internet-navegadores-e-pesquisa",
+        "discipline_slug": "informatica",
+        "topic_id": "conceitos-de-internet-navegadores-e-pesquisa",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:088",
+      "artifact_sha256": "e16401a013178c5435dcaa18e06d10cbe2baeb3e052862508eedba3e934b288d",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 88,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 88,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:conceitos-de-internet-navegadores-e-pesquisa",
+        "discipline_slug": "informatica",
+        "topic_id": "conceitos-de-internet-navegadores-e-pesquisa",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:089",
+      "artifact_sha256": "8b0074b8dd60659a2731a965bda1aeb589811ef659760f2d089bd96f770b72b1",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 89,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 89,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:conceitos-de-internet-navegadores-e-pesquisa",
+        "discipline_slug": "informatica",
+        "topic_id": "conceitos-de-internet-navegadores-e-pesquisa",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:090",
+      "artifact_sha256": "ce86c9d17c37ef71494bfcb4a71cccd7f6403e2258f16046ccb0910902df8e5f",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 90,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 90,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "C",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:informatica:seguranca-da-informacao",
+        "discipline_slug": "informatica",
+        "topic_id": "seguranca-da-informacao",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:091",
+      "artifact_sha256": "27c37078fc984012f9d6b5c7f0952b339db841abd7f2fdf3c28be7ac7ced1516",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 91,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 91,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:raciocinio-logico:proposicoes-e-conectivos-logicos",
+        "discipline_slug": "raciocinio-logico",
+        "topic_id": "proposicoes-e-conectivos-logicos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:092",
+      "artifact_sha256": "3a399304ae99a7d1d2c522cf3b625acbcf6db0bd04550f6ad4e314c6f2bba09d",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 92,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 92,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:raciocinio-logico:proposicoes-e-conectivos-logicos",
+        "discipline_slug": "raciocinio-logico",
+        "topic_id": "proposicoes-e-conectivos-logicos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:093",
+      "artifact_sha256": "dd75c5d0ca2e90f187175fd38d27b13f45cfa7d2e5ed4a8b9e5e25d8ac8d98f7",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 93,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 93,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:raciocinio-logico:proposicoes-e-conectivos-logicos",
+        "discipline_slug": "raciocinio-logico",
+        "topic_id": "proposicoes-e-conectivos-logicos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:094",
+      "artifact_sha256": "4d71dc851a3cde4b21a3e11ff771824ecac1fc7ccdb9549088cb4241ca06dfca",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 94,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 94,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:raciocinio-logico:proposicoes-e-conectivos-logicos",
+        "discipline_slug": "raciocinio-logico",
+        "topic_id": "proposicoes-e-conectivos-logicos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:095",
+      "artifact_sha256": "174acb65a62d2715be25fee9945ecaab9240e84bb835461ee5499917a299fbac",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 95,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 95,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "D",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:raciocinio-logico:proposicoes-e-conectivos-logicos",
+        "discipline_slug": "raciocinio-logico",
+        "topic_id": "proposicoes-e-conectivos-logicos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:096",
+      "artifact_sha256": "a5771f7197f6598afeb49915297ac9eac5df1c8695ae664ef91138cf85955623",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 96,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 96,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "A",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:raciocinio-logico:proposicoes-e-conectivos-logicos",
+        "discipline_slug": "raciocinio-logico",
+        "topic_id": "proposicoes-e-conectivos-logicos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:097",
+      "artifact_sha256": "c818d8728d10e89dd0630c002d982bc98d690a670b391b19b95f7333fdbffc81",
+      "disposition": "held",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 97,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 97,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "anulada",
+        "label": "N",
+        "previous_label": null,
+        "change_evidence": "Anulada no gabarito oficial definitivo pós-recursos"
+      },
+      "taxonomy": {
+        "concept_key": "pro:raciocinio-logico:estruturas-logicas-e-diagramas-logicos",
+        "discipline_slug": "raciocinio-logico",
+        "topic_id": "estruturas-logicas-e-diagramas-logicos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:098",
+      "artifact_sha256": "8cded60be0d759cf7d57c892549d1e6bbfc1a86ed56822848dc9ee0ce82374e9",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 98,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 98,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:raciocinio-logico:estruturas-logicas-e-diagramas-logicos",
+        "discipline_slug": "raciocinio-logico",
+        "topic_id": "estruturas-logicas-e-diagramas-logicos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:099",
+      "artifact_sha256": "3716944d82d683f63802572f8187266fe91ffa2c7610625a073cb6d63f4c728e",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 99,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 99,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "E",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:raciocinio-logico:estruturas-logicas-e-diagramas-logicos",
+        "discipline_slug": "raciocinio-logico",
+        "topic_id": "estruturas-logicas-e-diagramas-logicos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    },
+    {
+      "external_id": "exam:tjsp-2021-escrevente-tecnico:item:100",
+      "artifact_sha256": "e208ebac2793a1a34d1a9424f9405d408eec21d8782b2599c0ac6ccfdc4bfd97",
+      "disposition": "ready",
+      "origin": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 100,
+        "exam_sha256": "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf",
+        "page": 3
+      },
+      "answer": {
+        "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
+        "exam_code": "Escrevente-SP",
+        "booklet": "Versao-2",
+        "item_number": 100,
+        "answer_sha256": "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da",
+        "page": 2,
+        "status": "definitivo",
+        "label": "B",
+        "previous_label": null,
+        "change_evidence": null
+      },
+      "taxonomy": {
+        "concept_key": "pro:raciocinio-logico:estruturas-logicas-e-diagramas-logicos",
+        "discipline_slug": "raciocinio-logico",
+        "topic_id": "estruturas-logicas-e-diagramas-logicos",
+        "classification_origin": "edital_oficial_tjsp_2021",
+        "catalog_resolved": true
+      }
+    }
+  ]
+}
