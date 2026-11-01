@@ -496,6 +496,8 @@ export interface QuestionFilterSubtopic {
   discipline_slug: string;
 }
 
+export type QuestionReviewFilter = 'all' | 'errors' | 'marked' | 'answered' | 'unanswered';
+
 export interface QuestionFilterOptions {
   disciplines: QuestionFilterDiscipline[];
   topics: Array<{ topic_id: string; title: string; discipline_slug: string }>;
