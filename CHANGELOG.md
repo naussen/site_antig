@@ -1,5 +1,32 @@
 # Changelog
 
+## Questões — Correção Integral dos Achados Funcionais e Editoriais F01–F09 da Auditoria (31/10/2026)
+
+- **F01 & F02 & F09 — Integridade de Conteúdo, Textos-base e Segmentação**:
+  - `tjsp_builder.py`: Implementada extração ordenada em duas colunas (`get_ordered_text`) que recuperou integralmente os 5 blocos de textos-base compartilhados de Língua Portuguesa (Q01–Q05, Q06–Q10, Q11–Q17, Q19–Q22, Q23–Q24) e associou-os a seus enunciados.
+  - Questão 06 (Português): Recuperado o texto editorial "Perto do apagão" com as lacunas devidamente preservadas com `______`, sanando o bloqueio de resolução (F01).
+  - Questão 83 (Excel): Inserida no enunciado a tabela Markdown completa da planilha, permitindo a resolução autônoma da fórmula `=CONCATENAR(B2;"-";C2)` (F01).
+  - Questão 22 (Português): Delimitação rigorosa da alternativa E, eliminando a contaminação do texto de apoio das questões 23 e 24 (F02).
+  - Normalização de PDF: Eliminadas translineações com hífens quebrados em fim de linha (`clean_pdf_text`) e suprimidos resíduos de paginação nas opções (F09).
+  - `statement-sections.mjs`: Refatorado o parser de seções do enunciado para não fragmentar questões de múltipla escolha com comando introdutório + afirmativas com "PORQUE" + comando de resposta, eliminando blocos espúrios de texto-base e títulos duplicados (F09).
+- **F03 & F06 — Taxonomia e Unificação de Bancas**:
+  - `tjsp_builder.py`: Corrigido o mapa taxonômico das 100 questões do caderno Versão 2 conforme o edital oficial: Informática devidamente mapeada nas questões 77 a 90 (eliminando o erro que classificou Windows em Geometria e Excel/Word em Raciocínio Lógico) e tópicos de Direito Constitucional e Administrativo ajustados aos conceitos canônicos (F03).
+  - Migration 046 (`046_audit_corrections_and_filters.sql`): Normalização de aliases de bancas nas consultas e no catálogo de filtros (`VUNESP`/`Vunesp` -> `Vunesp`, `CEBRASPE`/`Cespe` -> `Cebraspe`, `Fundação Carlos Chagas`/`FCC` -> `FCC`), reunindo acervos fragmentados sem perda de procedência (F06).
+- **F04 & F05 — Gabaritos Oficiais Definitivos e Comentários Didáticos**:
+  - Confrontação oficial com o Gabarito Definitivo pós-recursos da Fundação Vunesp (Versão 2): comprovada a anulação oficial de 4 questões (30, 78, 87 e 97), que receberam status editorial `anulada` e destinação `held` no manifesto, enquanto as outras 96 questões tiveram seus gabaritos confirmados como definitivos (F05).
+  - Remoção dos rótulos de metadado provisório `[Gabarito preliminar divulgado]` de dentro dos enunciados e textos-base.
+  - Elaborados comentários didáticos específicos, fundamentados e demonstrativos para as questões auditadas (Q06 regência/lacunas, Q14 sentido figurado, Q22 regras de plural e sobrecomum, Q47 direitos sociais, Q48 naturalização, Q50 readaptação de servidor art. 37 § 13 CF, Q80 atributos de pastas Windows 10, Q83 CONCATENAR no Excel, Q85 menu de contexto de planilha) (F04).
+- **F07 & F08 — Continuidade de Estudo, Filtros e Acesso a Erros/Marcadas**:
+  - `page.tsx`: Integração de leitura assíncrona de `searchParams: Promise<{ ... }>` no Server Component (Next.js 16), validando e repassando filtros iniciais, modo e cursor.
+  - `questions-client.tsx`: Sincronização em tempo real do estado de busca com a URL via `history.replaceState`, garantindo preservação de contexto ao recarregar a página (F07).
+  - Migration 046 & `questions-client.tsx`: Implementado o parâmetro `p_review_filter` em `list_questions_filtered` (`'all'`, `'errors'`, `'marked'`, `'answered'`, `'unanswered'`) com total isolamento por `auth.uid()`.
+  - Tornado o cartão "Caderno de erros" clicável e acionável com teclado/mouse, e adicionado seletor de "Modo de estudo" no formulário de filtros com tratamento de estados vazios explicativos (F08).
+- **Verificações e Testes**:
+  - Testes de regressão criados e aprovados: `tests/question-statement-sections.test.mjs`, `tests/question-filters.test.mjs` e `tests/tjsp-builder.test.mjs`.
+  - Build de produção do Next.js 16 aprovado com 39 rotas geradas. Lint e typecheck (`tsc --noEmit`) com 0 erros.
+  - Lotes auditados, manifestos e recibo gerados em `docs/questoes-workflow/` com dry-run seguro comprovado.
+
+
 ## Questões — saneamento de pendências técnicas e controle editorial transacional (31/10/2026)
 
 - **Proteção Transacional e Reversão Segura (Migration 045)**:
