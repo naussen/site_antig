@@ -305,7 +305,7 @@ export function QuestionsClient({
             <button
               type="submit"
               disabled={busy}
-              className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-[var(--accent)] px-5 text-sm font-bold text-white transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-60"
+              className="inline-flex h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-[var(--accent)] px-5 text-sm font-bold text-[var(--accent-contrast)] transition hover:-translate-y-0.5 disabled:cursor-wait disabled:opacity-60"
             >
               {loading ? <Loader2 size={17} className="animate-spin" /> : <Filter size={17} />}
               Filtrar
@@ -323,8 +323,8 @@ export function QuestionsClient({
 
         <div className="mt-3 flex flex-col gap-3 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-3 sm:flex-row sm:items-center sm:justify-between">
           <div role="group" aria-label="Modo de visualização" className="inline-flex w-full rounded-xl border border-[var(--border)] p-1 sm:w-auto">
-            <button type="button" aria-pressed={mode === 1} disabled={busy} onClick={() => void fetchPage({ pageSize: 1, reset: true })} className={`min-h-10 flex-1 rounded-lg px-3 text-sm font-semibold transition sm:flex-none ${mode === 1 ? "bg-[var(--accent)] text-white" : "text-[var(--text-secondary)] hover:bg-[var(--accent-soft)]"}`}>Uma por vez</button>
-            <button type="button" aria-pressed={mode === 5} disabled={busy} onClick={() => void fetchPage({ pageSize: 5, reset: true })} className={`min-h-10 flex-1 rounded-lg px-3 text-sm font-semibold transition sm:flex-none ${mode === 5 ? "bg-[var(--accent)] text-white" : "text-[var(--text-secondary)] hover:bg-[var(--accent-soft)]"}`}>5 por página</button>
+            <button type="button" aria-pressed={mode === 1} disabled={busy} onClick={() => void fetchPage({ pageSize: 1, reset: true })} className={`min-h-10 flex-1 rounded-lg px-3 text-sm font-semibold transition sm:flex-none ${mode === 1 ? "bg-[var(--accent)] text-[var(--accent-contrast)]" : "text-[var(--text-secondary)] hover:bg-[var(--accent-soft)]"}`}>Uma por vez</button>
+            <button type="button" aria-pressed={mode === 5} disabled={busy} onClick={() => void fetchPage({ pageSize: 5, reset: true })} className={`min-h-10 flex-1 rounded-lg px-3 text-sm font-semibold transition sm:flex-none ${mode === 5 ? "bg-[var(--accent)] text-[var(--accent-contrast)]" : "text-[var(--text-secondary)] hover:bg-[var(--accent-soft)]"}`}>5 por página</button>
           </div>
           <p aria-live="polite" className="text-sm font-semibold text-[var(--text-secondary)]">{positionLabel}</p>
           {navigation}
