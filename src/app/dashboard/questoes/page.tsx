@@ -5,7 +5,7 @@ import type {
   QuestionListResult,
   QuestionStatsResult,
 } from "@/types/database";
-import { QuestionsClient } from "./questions-client";
+import { QuestionsClient, type QuestionFilters } from "./questions-client";
 
 export const metadata: Metadata = {
   title: "PROQuestões",
@@ -39,18 +39,36 @@ const EMPTY_STATS: QuestionStatsResult = {
   by_discipline: [],
 };
 
-export default async function QuestionsPage() {
+interface PageProps {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+export default async function QuestionsPage({ searchParams }: PageProps) {
+  const params = await searchParams;
+
+  const search = typeof params.busca === "string" ? params.busca.slice(0, 200) : null;
+  const discipline = typeof params.disciplina === "string" ? params.disciplina.slice(0, 120) : null;
+  const topic = typeof params.topico === "string" ? params.topico.slice(0, 200) : null;
+  const board = typeof params.banca === "string" ? params.banca.slice(0, 120) : null;
+  const year = typeof params.ano === "string" && /^\d{4}$/.test(params.ano) ? Number(params.ano) : null;
+  const mode: 1 | 5 = params.modo === "5" ? 5 : 1;
+  const rawReview = typeof params.caderno === "string" ? params.caderno : "all";
+  const reviewFilter: QuestionFilters["review"] = ["all", "errors", "marked", "answered", "unanswered"].includes(rawReview)
+    ? (rawReview as QuestionFilters["review"])
+    : "all";
+
   const { supabase } = await requireContentAccess();
   const [questionsResponse, statsResponse, filtersResponse] = await Promise.all([
     supabase.rpc("list_questions_filtered", {
-      p_limit: 1,
+      p_limit: mode,
       p_after_id: null,
-      p_search: null,
-      p_discipline_slug: null,
-      p_topic_id: null,
-      p_exam_board: null,
-      p_exam_year: null,
+      p_search: search,
+      p_discipline_slug: discipline,
+      p_topic_id: topic,
+      p_exam_board: board,
+      p_exam_year: year,
       p_include_hidden: false,
+      p_review_filter: reviewFilter,
     }),
     supabase.rpc("get_question_stats"),
     supabase.rpc("list_question_filters"),
@@ -68,6 +86,15 @@ export default async function QuestionsPage() {
       initialStats={(statsResponse.data as QuestionStatsResult | null) ?? EMPTY_STATS}
       filterOptions={(filtersResponse.data as QuestionFilterOptions | null) ?? EMPTY_FILTERS}
       initialError={initialError}
+      initialFilters={{
+        search: search ?? "",
+        discipline: discipline ?? "",
+        topic: topic ?? "",
+        board: board ?? "",
+        year: year ? String(year) : "",
+        review: reviewFilter,
+      }}
+      initialMode={mode}
     />
   );
 }

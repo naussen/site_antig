@@ -7,26 +7,57 @@ import { createClient } from "@/lib/supabase/client";
 import type { QuestionFilterOptions, QuestionListResult, QuestionStatsResult } from "@/types/database";
 import { QuestionCard } from "./question-card";
 
-interface QuestionsClientProps {
-  initialResult: QuestionListResult;
-  initialStats: QuestionStatsResult;
-  filterOptions: QuestionFilterOptions;
-  initialError?: string | null;
-}
-interface QuestionFilters {
+export interface QuestionFilters {
   search: string;
   discipline: string;
   topic: string;
   board: string;
   year: string;
+  review: "all" | "errors" | "marked" | "answered" | "unanswered";
 }
+
+interface QuestionsClientProps {
+  initialResult: QuestionListResult;
+  initialStats: QuestionStatsResult;
+  filterOptions: QuestionFilterOptions;
+  initialError?: string | null;
+  initialFilters?: QuestionFilters;
+  initialMode?: 1 | 5;
+}
+
 interface PageSnapshot {
   result: QuestionListResult;
   start: number;
 }
-const EMPTY_FILTERS: QuestionFilters = { search: "", discipline: "", topic: "", board: "", year: "" };
+
+const EMPTY_FILTERS: QuestionFilters = {
+  search: "",
+  discipline: "",
+  topic: "",
+  board: "",
+  year: "",
+  review: "all",
+};
+
 function accuracy(correct: number, total: number) {
   return total > 0 ? Math.round((correct / total) * 100) : 0;
+}
+
+function updateUrl(filters: QuestionFilters, currentMode: 1 | 5, currentStart: number) {
+  if (typeof window === "undefined") return;
+  const params = new URLSearchParams();
+  if (filters.search) params.set("busca", filters.search);
+  if (filters.discipline) params.set("disciplina", filters.discipline);
+  if (filters.topic) params.set("topico", filters.topic);
+  if (filters.board) params.set("banca", filters.board);
+  if (filters.year) params.set("ano", filters.year);
+  if (filters.review && filters.review !== "all") params.set("caderno", filters.review);
+  if (currentMode === 5) params.set("modo", "5");
+  if (currentStart > 0) params.set("pos", String(currentStart + 1));
+
+  const query = params.toString();
+  const nextUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
+  window.history.replaceState(null, "", nextUrl);
 }
 
 export function QuestionsClient({
@@ -34,13 +65,15 @@ export function QuestionsClient({
   initialStats,
   filterOptions,
   initialError = null,
+  initialFilters = EMPTY_FILTERS,
+  initialMode = 1,
 }: QuestionsClientProps) {
   const [result, setResult] = useState(initialResult);
   const [stats, setStats] = useState(initialStats);
-  const [draftFilters, setDraftFilters] = useState<QuestionFilters>(EMPTY_FILTERS);
+  const [draftFilters, setDraftFilters] = useState<QuestionFilters>(initialFilters);
   const [filtersOpen, setFiltersOpen] = useState(false);
-  const [activeFilters, setActiveFilters] = useState<QuestionFilters>(EMPTY_FILTERS);
-  const [mode, setMode] = useState<1 | 5>(1);
+  const [activeFilters, setActiveFilters] = useState<QuestionFilters>(initialFilters);
+  const [mode, setMode] = useState<1 | 5>(initialMode);
   const [pageStart, setPageStart] = useState(0);
   const [history, setHistory] = useState<PageSnapshot[]>([]);
   const [direction, setDirection] = useState<"next" | "previous">("next");
@@ -96,6 +129,7 @@ export function QuestionsClient({
         p_exam_board: filters.board || null,
         p_exam_year: filters.year ? Number(filters.year) : null,
         p_include_hidden: false,
+        p_review_filter: filters.review || "all",
       });
       if (requestError) throw requestError;
       if (currentRequest !== requestId.current) return null;
@@ -113,6 +147,7 @@ export function QuestionsClient({
       setPageStart(start);
       setMode(pageSize);
       setDirection(slide);
+      updateUrl(filters, pageSize, start);
       return nextResult;
     } catch {
       if (currentRequest === requestId.current) setError("Não foi possível carregar as questões. Tente novamente.");
@@ -130,6 +165,7 @@ export function QuestionsClient({
     setPageStart(previous.start);
     setDirection("previous");
     setError(null);
+    updateUrl(activeFilters, mode, previous.start);
   };
 
   const showNext = async () => {
@@ -158,13 +194,21 @@ export function QuestionsClient({
     void fetchPage({ filters: EMPTY_FILTERS, reset: true });
   };
 
+  const toggleReviewFilter = async (target: "errors" | "marked") => {
+    const nextReview = activeFilters.review === target ? "all" : target;
+    const newFilters: QuestionFilters = { ...draftFilters, review: nextReview };
+    setDraftFilters(newFilters);
+    await fetchPage({ filters: newFilters, reset: true });
+  };
+
   const latestAccuracy = accuracy(stats.latest_correct, stats.answered_questions);
-  const activeFilterCount = Object.values(activeFilters).filter(Boolean).length;
+  const activeFilterCount = Object.entries(activeFilters).filter(([k, v]) => Boolean(v) && (k !== "review" || v !== "all")).length;
   const positionLabel = result.items.length === 0
     ? "Nenhuma questão neste filtro"
     : mode === 1
       ? `Questão ${pageStart + 1} de ${result.total_count}`
       : `Questões ${pageStart + 1}–${pageStart + result.items.length} de ${result.total_count}`;
+
   const navigation = (
     <nav aria-label="Navegação entre questões" className="flex items-center gap-2">
       <button type="button" disabled={history.length === 0 || busy} onClick={showPrevious} aria-label={mode === 1 ? "Questão anterior" : "Página anterior"} className="inline-flex min-h-11 items-center justify-center gap-1 rounded-xl border border-[var(--border)] px-3 text-sm font-semibold text-[var(--text-primary)] transition hover:border-[var(--accent)] disabled:opacity-40"><ChevronLeft size={17} /> Anterior</button>
@@ -186,17 +230,31 @@ export function QuestionsClient({
               </div>
             </div>
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-              {[
-                ["Respondidas", stats.answered_questions],
-                ["Aproveitamento", `${latestAccuracy}%`],
-                ["Caderno de erros", stats.error_notebook_count],
-                ["Últimos 7 dias", stats.attempts_7d],
-              ].map(([label, value]) => (
-                <div key={label} className="questions-stat rounded-lg border px-2.5 py-1.5">
-                  <strong className="block text-sm text-white">{value}</strong>
-                  <span className="block text-[11px] leading-tight text-white/70">{label}</span>
+              <div className="questions-stat rounded-lg border px-2.5 py-1.5">
+                <strong className="block text-sm text-white">{stats.answered_questions}</strong>
+                <span className="block text-[11px] leading-tight text-white/70">Respondidas</span>
+              </div>
+              <div className="questions-stat rounded-lg border px-2.5 py-1.5">
+                <strong className="block text-sm text-white">{latestAccuracy}%</strong>
+                <span className="block text-[11px] leading-tight text-white/70">Aproveitamento</span>
+              </div>
+              <button
+                type="button"
+                onClick={() => void toggleReviewFilter("errors")}
+                aria-pressed={activeFilters.review === "errors"}
+                title="Clique para filtrar apenas questões do Caderno de Erros"
+                className={`questions-stat rounded-lg border px-2.5 py-1.5 text-left transition hover:border-white focus-visible:outline-2 focus-visible:outline-white ${activeFilters.review === "errors" ? "border-amber-400 bg-amber-500/20 ring-2 ring-amber-400/50" : ""}`}
+              >
+                <div className="flex items-center justify-between">
+                  <strong className="block text-sm text-white">{stats.error_notebook_count}</strong>
+                  {activeFilters.review === "errors" && <span className="rounded bg-amber-400 px-1 text-[9px] font-bold text-black">Ativo</span>}
                 </div>
-              ))}
+                <span className="block text-[11px] leading-tight text-white/70 underline decoration-dotted">Caderno de erros</span>
+              </button>
+              <div className="questions-stat rounded-lg border px-2.5 py-1.5">
+                <strong className="block text-sm text-white">{stats.attempts_7d}</strong>
+                <span className="block text-[11px] leading-tight text-white/70">Últimos 7 dias</span>
+              </div>
             </div>
           </div>
         </header>
@@ -224,6 +282,21 @@ export function QuestionsClient({
                 className="h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] pl-10 pr-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)]"
               />
             </span>
+          </label>
+          <label className="block">
+            <span className="text-xs font-semibold text-[var(--text-secondary)]">Modo de estudo</span>
+            <select
+              value={draftFilters.review}
+              onChange={(event) => setDraftFilters((current) => ({ ...current, review: event.target.value as QuestionFilters["review"] }))}
+              disabled={busy}
+              className="mt-1 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)]"
+            >
+              <option value="all">Todas as questões</option>
+              <option value="errors">Caderno de erros (errei recentemente)</option>
+              <option value="marked">Marcadas para revisão</option>
+              <option value="unanswered">Ainda não respondidas</option>
+              <option value="answered">Já respondidas</option>
+            </select>
           </label>
           <label className="block">
             <span className="text-xs font-semibold text-[var(--text-secondary)]">Disciplina</span>
@@ -277,7 +350,7 @@ export function QuestionsClient({
               {filterOptions.years.map((year) => <option key={year} value={year}>{year}</option>)}
             </select>
           </label>
-          <div className="flex items-end gap-2 sm:col-span-2">
+          <div className="flex items-end gap-2 sm:col-span-2 xl:col-span-1">
             <button
               type="submit"
               disabled={busy}
@@ -310,12 +383,24 @@ export function QuestionsClient({
 
         {result.items.length === 0 ? (
           <section className="mt-4 rounded-3xl border border-dashed border-[var(--border)] bg-[var(--bg-card)] px-6 py-12 text-center">
-            <h2 className="text-xl font-semibold text-[var(--text-primary)]">Nenhuma questão encontrada</h2>
-            <p className="mx-auto mt-2 max-w-md text-sm text-[var(--text-secondary)]">Tente outros termos ou limpe os filtros para explorar o acervo.</p>
+            <h2 className="text-xl font-semibold text-[var(--text-primary)]">
+              {activeFilters.review === "errors"
+                ? "Nenhuma questão no seu Caderno de erros"
+                : activeFilters.review === "marked"
+                  ? "Nenhuma questão marcada para revisão"
+                  : "Nenhuma questão encontrada"}
+            </h2>
+            <p className="mx-auto mt-2 max-w-md text-sm text-[var(--text-secondary)]">
+              {activeFilters.review === "errors"
+                ? "Questões que você errar em suas tentativas aparecerão automaticamente aqui para revisão direcionada."
+                : activeFilters.review === "marked"
+                  ? "Para agrupar questões nesta lista, clique no ícone de marcador presente no topo de qualquer questão."
+                  : "Tente outros termos ou limpe os filtros para explorar o acervo."}
+            </p>
             <button type="button" onClick={clearFilters} className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-xl border border-[var(--border)] px-4 text-sm font-semibold text-[var(--text-primary)]"><RotateCcw size={16} /> Limpar filtros</button>
           </section>
         ) : (
-          <div ref={contentRef} key={mode === 1 ? `${result.items[0].id}-${direction}` : "five-mode"} className={`mt-4 space-y-5 scroll-mt-4 ${mode === 1 ? direction === "next" ? "motion-safe:animate-[question-enter-next_220ms_ease-out_both]" : "motion-safe:animate-[question-enter-previous_220ms_ease-out_both]" : ""}`}>
+          <div ref={contentRef} key={mode === 1 ? `${result.items[0]?.id}-${direction}` : "five-mode"} className={`mt-4 space-y-5 scroll-mt-4 ${mode === 1 ? direction === "next" ? "motion-safe:animate-[question-enter-next_220ms_ease-out_both]" : "motion-safe:animate-[question-enter-previous_220ms_ease-out_both]" : ""}`}>
             {result.items.map((question, index) => (
               <QuestionCard key={question.id} question={question} position={pageStart + index + 1} onAnswered={() => void refreshStats()} onHidden={refreshAfterHide} onBusyChange={(isBusy) => setCardOperations((count) => Math.max(0, count + (isBusy ? 1 : -1)))} />
             ))}
