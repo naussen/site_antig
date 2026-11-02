@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { PGlite } from "file:///C:/PRO/worktrees/questoes-apresentacao-id-20261031/tmp/pg-validation/node_modules/%40electric-sql/pglite/dist/index.js";
+
+const pgliteUrl = new URL("../../tmp/pg-validation/node_modules/@electric-sql/pglite/dist/index.js", import.meta.url).href;
+const { PGlite } = await import(pgliteUrl);
 
 const db = new PGlite();
 const userA = "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa";
