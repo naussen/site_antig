@@ -1,5 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, writeFile, readdir } from "node:fs/promises";
 import { parseArgs } from "node:util";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -13,14 +13,13 @@ const { values } = parseArgs({
       type: "string",
     },
     "dry-run": { type: "boolean", default: false },
-    force: { type: "boolean", default: false },
   },
 });
 
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
 if (!url || !key) {
-  console.error("Variáveis de ambiente do Supabase ausentes.");
+  console.error("Variáveis de ambiente do Supabase ausentes (NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY).");
   process.exit(1);
 }
 
@@ -32,18 +31,29 @@ function safeTimestamp() {
   return new Date().toISOString().replace(/[:.]/g, "-");
 }
 
+async function findLatestBackup() {
+  const workflowDir = path.join(ROOT, "docs/questoes-workflow");
+  const files = await readdir(workflowDir);
+  const backups = files.filter((f) => f.startsWith("backup_tjsp_pre_audit_") && f.endsWith(".json")).sort();
+  if (backups.length === 0) return null;
+  return path.join(workflowDir, backups[backups.length - 1]);
+}
+
 async function main() {
   const isDryRun = Boolean(values["dry-run"]);
-  const isForce = Boolean(values.force);
+  console.log("=== Rollback Atômico Condicionado TJSP 2021 (Transação plpgsql) ===");
+  console.log(`Modo: ${isDryRun ? "DRY-RUN (Simulação)" : "REVERSÃO ATÔMICA EFETIVA"}`);
 
-  console.log("=== Rollback Seguro das Correções Editoriais TJSP 2021 ===");
-  console.log(`Modo: ${isDryRun ? "DRY-RUN (Simulação)" : "REVERSÃO EFETIVA"}`);
-
-  if (!values.backup) {
-    throw new Error("Parâmetro obrigatório: --backup <caminho_do_arquivo_de_backup>");
+  let backupFilePath = values.backup;
+  if (!backupFilePath) {
+    backupFilePath = await findLatestBackup();
+    if (!backupFilePath) {
+      throw new Error("Nenhum backup encontrado. Especifique com --backup <caminho_do_arquivo>.");
+    }
+    console.log(`Backup selecionado automaticamente: ${backupFilePath}`);
   }
 
-  const backupRaw = await readFile(values.backup, "utf8");
+  const backupRaw = await readFile(backupFilePath, "utf8");
   const backup = JSON.parse(backupRaw);
 
   if (backup.schema_version !== "pro-questions/audit-backup/v1") {
@@ -51,55 +61,14 @@ async function main() {
   }
 
   const snapshotQuestions = backup.questions || [];
-  console.log(`Itens no backup: ${snapshotQuestions.length} (Gerado em: ${backup.timestamp})`);
-
-  const externalIds = snapshotQuestions.map((q) => q.external_id);
-
-  // 1. Carregar estado atual no banco para verificação de pré-condição anti-concorrência
-  const { data: currentDbQuestions, error: qErr } = await supabase
-    .from("questions")
-    .select("id, external_id, statement_markdown, status, source_metadata, updated_at")
-    .in("external_id", externalIds);
-
-  if (qErr) throw new Error(`Falha ao ler questões atuais no banco: ${qErr.message}`);
-
-  const currentMap = new Map((currentDbQuestions || []).map((q) => [q.external_id, q]));
-
-  // 2. Validação da pré-condição de permanência do estado aplicado
-  // Impede que edições posteriores legítimas sejam destruídas cegamente por um rollback atrasado
-  const concurrentModifications = [];
-  for (const snapQ of snapshotQuestions) {
-    const curr = currentMap.get(snapQ.external_id);
-    if (!curr) {
-      concurrentModifications.push({
-        external_id: snapQ.external_id,
-        reason: "Item não existe mais no banco de dados.",
-      });
-      continue;
-    }
-
-    // Se o item foi editado posteriormente sem a marcação da auditoria
-    const auditAppliedAt = curr.source_metadata?.audit_applied_at;
-    if (!auditAppliedAt && !isForce) {
-      concurrentModifications.push({
-        external_id: snapQ.external_id,
-        reason: "Item não possui metadados da aplicação da auditoria (possível alteração concorrente ou não aplicado).",
-      });
-    }
+  if (snapshotQuestions.length !== 100) {
+    throw new Error(`Backup deve conter exatamente 100 questões. Encontradas: ${snapshotQuestions.length}`);
   }
 
-  if (concurrentModifications.length > 0 && !isForce) {
-    console.error("ERRO DE PRÉ-CONDIÇÃO: Foram detectadas discrepâncias que impedem o rollback automático:");
-    for (const mod of concurrentModifications.slice(0, 5)) {
-      console.error(`- ${mod.external_id}: ${mod.reason}`);
-    }
-    if (concurrentModifications.length > 5) {
-      console.error(`... e mais ${concurrentModifications.length - 5} discrepâncias.`);
-    }
-    throw new Error("Rollback abortado para proteger integridade contra edições concorrentes. Use --force se tiver certeza.");
-  }
+  const appliedPlan = backup.applied_verification_plan || [];
+  const planMap = new Map(appliedPlan.map((p) => [p.external_id, p]));
 
-  // 3. Mapeamentos do snapshot para restauração fiel
+  // Indexar relacionamentos originais do backup
   const optionsByQuestion = new Map();
   for (const opt of backup.options || []) {
     if (!optionsByQuestion.has(opt.question_id)) optionsByQuestion.set(opt.question_id, []);
@@ -128,145 +97,71 @@ async function main() {
     topicRelsByQuestion.get(tRel.question_id).push(tRel);
   }
 
-  let restoredCount = 0;
-  const rollbackReceiptItems = [];
+  // Montar payload para RPC de rollback no servidor
+  const rollbackItems = [];
 
-  for (const snapQ of snapshotQuestions) {
-    const qId = snapQ.id;
+  for (const origQ of snapshotQuestions) {
+    const qId = origQ.id;
+    const plan = planMap.get(origQ.external_id);
 
-    if (!isDryRun) {
-      // A. Restaurar questions
-      const { error: rQErr } = await supabase
-        .from("questions")
-        .update({
-          statement_markdown: snapQ.statement_markdown,
-          subject: snapQ.subject,
-          exam_board: snapQ.exam_board,
-          institution: snapQ.institution,
-          position_name: snapQ.position_name,
-          exam_year: snapQ.exam_year,
-          difficulty: snapQ.difficulty,
-          source_reference: snapQ.source_reference,
-          status: snapQ.status,
-          source_metadata: snapQ.source_metadata,
-          updated_at: new Date().toISOString(),
-        })
-        .eq("id", qId);
-      if (rQErr) throw new Error(`[ROLLBACK ABORT] Falha ao restaurar questão ${snapQ.external_id}: ${rQErr.message}`);
+    rollbackItems.push({
+      question_id: qId,
+      external_id: origQ.external_id,
+      expected_applied_statement_sha256: plan ? plan.statement_sha256 : null,
+      expected_applied_explanation_sha256: plan ? plan.explanation_sha256 : null,
+      expected_applied_status: plan ? plan.status_after : origQ.status,
+      expected_applied_topic_id: plan ? plan.topic_id : null,
+      expected_applied_correct_option_label: plan ? plan.correct_option_label : null,
+      expected_applied_options_sha256: plan ? plan.options_sha256 : null,
 
-      // B. Restaurar opções
-      const prevOpts = optionsByQuestion.get(qId) || [];
-      for (const opt of prevOpts) {
-        const { error: rOptErr } = await supabase
-          .from("question_options")
-          .update({ body_markdown: opt.body_markdown })
-          .eq("question_id", qId)
-          .eq("label", opt.label);
-        if (rOptErr) throw new Error(`[ROLLBACK ABORT] Falha ao restaurar opção ${opt.label} de ${snapQ.external_id}: ${rOptErr.message}`);
-      }
-
-      // C. Restaurar explicação
-      const prevExp = explanationsByQuestion.get(qId);
-      if (prevExp) {
-        const { error: rExpErr } = await supabase
-          .from("question_explanations")
-          .upsert(
-            {
-              question_id: qId,
-              body_markdown: prevExp.body_markdown,
-              source_reference: prevExp.source_reference,
-              status: prevExp.status,
-              reviewed_by: prevExp.reviewed_by,
-              reviewed_at: prevExp.reviewed_at,
-              updated_at: new Date().toISOString(),
-            },
-            { onConflict: "question_id" }
-          );
-        if (rExpErr) throw new Error(`[ROLLBACK ABORT] Falha ao restaurar explicação de ${snapQ.external_id}: ${rExpErr.message}`);
-      }
-
-      // D. Restaurar question_answer_keys
-      const prevKey = answerKeysByQuestion.get(qId);
-      if (prevKey && prevKey.correct_option_id) {
-        const { error: rKeyErr } = await supabase
-          .from("question_answer_keys")
-          .upsert(
-            {
-              question_id: qId,
-              correct_option_id: prevKey.correct_option_id,
-              updated_at: new Date().toISOString(),
-            },
-            { onConflict: "question_id" }
-          );
-        if (rKeyErr) throw new Error(`[ROLLBACK ABORT] Falha ao restaurar gabarito de ${snapQ.external_id}: ${rKeyErr.message}`);
-      } else {
-        await supabase.from("question_answer_keys").delete().eq("question_id", qId);
-      }
-
-      // E. Restaurar question_discipline_relations
-      const prevDiscRels = discRelsByQuestion.get(qId) || [];
-      await supabase.from("question_discipline_relations").delete().eq("question_id", qId);
-      if (prevDiscRels.length > 0) {
-        const { error: rDiscErr } = await supabase
-          .from("question_discipline_relations")
-          .insert(
-            prevDiscRels.map((d) => ({
-              question_id: qId,
-              discipline_id: d.discipline_id,
-              is_primary: d.is_primary,
-            }))
-          );
-        if (rDiscErr) throw new Error(`[ROLLBACK ABORT] Falha ao restaurar disciplinas de ${snapQ.external_id}: ${rDiscErr.message}`);
-      }
-
-      // F. Restaurar question_topic_relations
-      const prevTopicRels = topicRelsByQuestion.get(qId) || [];
-      await supabase.from("question_topic_relations").delete().eq("question_id", qId);
-      if (prevTopicRels.length > 0) {
-        const { error: rTopicErr } = await supabase
-          .from("question_topic_relations")
-          .insert(
-            prevTopicRels.map((t) => ({
-              question_id: qId,
-              topic_id: t.topic_id,
-              relation_type: t.relation_type,
-              relevance: t.relevance,
-              sort_order: t.sort_order,
-            }))
-          );
-        if (rTopicErr) throw new Error(`[ROLLBACK ABORT] Falha ao restaurar tópicos de ${snapQ.external_id}: ${rTopicErr.message}`);
-      }
-    }
-
-    restoredCount++;
-    rollbackReceiptItems.push({
-      external_id: snapQ.external_id,
-      id: qId,
-      status_restored: snapQ.status,
+      original_question: origQ,
+      original_options: optionsByQuestion.get(qId) || [],
+      original_explanation: explanationsByQuestion.get(qId) || null,
+      original_answer_key: answerKeysByQuestion.get(qId) || null,
+      original_discipline_relations: discRelsByQuestion.get(qId) || [],
+      original_topic_relations: topicRelsByQuestion.get(qId) || [],
     });
   }
 
-  // 4. Salvar recibo de reversão
+  console.log(`Itens montados para validação e restauração transacional: ${rollbackItems.length}`);
+
+  if (isDryRun) {
+    console.log("\n[DRY-RUN] Simulação de rollback concluída com sucesso. Nenhuma alteração foi persistida.");
+    return;
+  }
+
+  console.log("\nInvocando RPC public.rollback_atomic_audit_fixes no PostgreSQL...");
+  const { data: rollbackResult, error: rpcErr } = await supabase.rpc("rollback_atomic_audit_fixes", {
+    p_payload: { items: rollbackItems },
+  });
+
+  if (rpcErr) {
+    console.error(`\n[ABORT] Rollback abortado pelo servidor: ${rpcErr.message}`);
+    console.error("Motivo: Alteração posterior ou concorrente detectada (ou falha de integridade).");
+    console.error("Nenhuma tabela foi alterada parcialmente. Integridade preservada.");
+    throw new Error(`Falha no rollback: ${rpcErr.message}`);
+  }
+
+  console.log("Rollback atômico concluído com sucesso!");
+  console.log(`- Itens restaurados ao estado original: ${rollbackResult.items_restored}`);
+
+  // Persistir recibo atômico de rollback
   const timestamp = safeTimestamp();
   const receiptFileName = `recibo_rollback_editorial_${timestamp}.json`;
   const receiptPath = path.join(ROOT, "docs/questoes-workflow", receiptFileName);
 
-  const rollbackReceipt = {
+  const receipt = {
     schema_version: "pro-questions/rollback-receipt/v1",
-    reverted_at: new Date().toISOString(),
-    is_dry_run: isDryRun,
-    backup_file_used: values.backup,
-    items_restored: restoredCount,
-    items: rollbackReceiptItems,
+    reverted_at: rollbackResult.reverted_at || new Date().toISOString(),
+    backup_file_used: path.basename(backupFilePath),
+    items_restored: rollbackResult.items_restored,
   };
 
-  await writeFile(receiptPath, JSON.stringify(rollbackReceipt, null, 2), "utf8");
-  console.log(`\nRecibo de rollback gravado em: ${receiptPath}`);
-  console.log(`Total de itens restaurados: ${restoredCount}`);
-  console.log(isDryRun ? "DRY-RUN concluído: Nenhuma alteração gravada." : "ROLLBACK CONCLUÍDO com sucesso.");
+  await writeFile(receiptPath, JSON.stringify(receipt, null, 2), "utf8");
+  console.log(`Recibo de reversão gravado em: ${receiptPath}`);
 }
 
 main().catch((err) => {
-  console.error("ERRO no rollback:", err);
+  console.error(err);
   process.exit(1);
 });

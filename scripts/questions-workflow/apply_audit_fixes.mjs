@@ -41,12 +41,17 @@ function safeTimestamp() {
   return new Date().toISOString().replace(/[:.]/g, "-");
 }
 
+function computeOptionsHash(options) {
+  const sorted = [...options].sort((a, b) => a.label.localeCompare(b.label));
+  return sha256(sorted.map((o) => `${o.label}:${o.body_markdown}`).join("|"));
+}
+
 async function main() {
   const isDryRun = Boolean(values["dry-run"]);
-  console.log("=== Aplicação Editorial Segura e Reconciliação Taxonômica TJSP 2021 ===");
-  console.log(`Modo: ${isDryRun ? "DRY-RUN (Simulação)" : "APLICAÇÃO EFETIVA"}`);
+  console.log("=== Aplicação Editorial Atômica Transacional TJSP 2021 ===");
+  console.log(`Modo: ${isDryRun ? "DRY-RUN (Simulação)" : "APLICAÇÃO EFETIVA (Transação plpgsql)"}`);
 
-  // 1. Leitura e validação dos arquivos de entrada
+  // 1. Leitura e validação dos arquivos canônicos
   const batchRaw = await readFile(values.batch, "utf8");
   const batchQuestions = JSON.parse(batchRaw);
   const manifestRaw = await readFile(values.manifest, "utf8");
@@ -67,16 +72,19 @@ async function main() {
   const readyRecords = manifestRecords.filter((m) => m.disposition === "ready");
 
   if (heldRecords.length !== 4 || readyRecords.length !== 96) {
-    throw new Error(`Esperadas 4 questões anuladas (held) e 96 prontas (ready). Encontradas: ${heldRecords.length} held, ${readyRecords.length} ready.`);
+    throw new Error(
+      `Esperadas 4 questões anuladas (held) e 96 prontas (ready). Encontradas: ${heldRecords.length} held, ${readyRecords.length} ready.`
+    );
   }
 
-  // Mapa de todas as 100 questões por external_id
   const allExternalIds = manifestRecords.map((m) => m.external_id);
 
-  // 2. Carregar estado completo do banco para as 100 questões (para backup e pré-condições)
+  // 2. Carregar estado completo do banco para as 100 questões (para backup e integridade)
   const { data: dbQuestions, error: qErr } = await supabase
     .from("questions")
-    .select("id, external_id, statement_markdown, subject, exam_board, institution, position_name, exam_year, difficulty, source_reference, status, source_metadata, updated_at")
+    .select(
+      "id, external_id, question_type, statement_markdown, subject, exam_board, institution, position_name, exam_year, difficulty, source_reference, status, published_at, source_content_hash, source_metadata, created_at, updated_at"
+    )
     .in("external_id", allExternalIds);
 
   if (qErr) throw new Error(`Falha ao buscar questões no banco: ${qErr.message}`);
@@ -106,7 +114,7 @@ async function main() {
 
   const { data: dbDiscRelations, error: discRelErr } = await supabase
     .from("question_discipline_relations")
-    .select("question_id, discipline_id, is_primary")
+    .select("question_id, discipline_id, is_primary, sort_order")
     .in("question_id", dbQuestionIds);
   if (discRelErr) throw new Error(`Falha ao buscar relações de disciplina: ${discRelErr.message}`);
 
@@ -116,31 +124,7 @@ async function main() {
     .in("question_id", dbQuestionIds);
   if (topicRelErr) throw new Error(`Falha ao buscar relações de tópico: ${topicRelErr.message}`);
 
-  // 3. Gerar Backup Completo e Imutável com carimbo de tempo único
-  const timestamp = safeTimestamp();
-  const backupFileName = `backup_tjsp_pre_audit_${timestamp}.json`;
-  const backupPath = path.join(ROOT, "docs/questoes-workflow", backupFileName);
-
-  const fullSnapshot = {
-    schema_version: "pro-questions/audit-backup/v1",
-    timestamp: new Date().toISOString(),
-    batch_sha256: batchHash,
-    manifest_sha256: manifestHash,
-    item_count: dbQuestions.length,
-    questions: dbQuestions,
-    options: dbOptions || [],
-    explanations: dbExplanations || [],
-    answer_keys: dbAnswerKeys || [],
-    discipline_relations: dbDiscRelations || [],
-    topic_relations: dbTopicRelations || [],
-  };
-
-  const backupBytes = JSON.stringify(fullSnapshot, null, 2);
-  const backupSha256 = sha256(backupBytes);
-  await writeFile(backupPath, backupBytes, "utf8");
-  console.log(`Backup de segurança COMPLETO gravado em: ${backupPath} (SHA-256: ${backupSha256.slice(0, 16)}...)`);
-
-  // 4. Carregar catálogo de disciplinas e tópicos para validação taxonômica
+  // 3. Carregar catálogo para validação taxonômica
   const { error: cDiscErr } = await supabase
     .from("disciplines")
     .select("id, slug, name, status");
@@ -163,12 +147,12 @@ async function main() {
     }
   }
 
-  // 5. Planejar alterações e validar integridade taxonômica
+  // 4. Montar o payload transacional atômico e calcular hashes de pré-condição
   const questionMap = new Map(dbQuestions.map((q) => [q.external_id, q]));
   const batchMap = new Map(batchQuestions.map((q) => [q.external_id, q]));
 
-  const plannedUpdates = [];
-  const annulledUpdates = [];
+  const payloadItems = [];
+  const plannedReceiptItems = [];
 
   for (const manifestRec of manifestRecords) {
     const existing = questionMap.get(manifestRec.external_id);
@@ -177,11 +161,39 @@ async function main() {
     }
 
     if (manifestRec.disposition === "held") {
-      annulledUpdates.push({
-        external_id: manifestRec.external_id,
+      const expBody = `QUESTÃO ANULADA PELA BANCA EXAMINADORA (Fundação Vunesp).
+
+Razão oficial: ${manifestRec.reason || "Critério da banca examinadora após fase recursal oficial."}
+
+Conforme o edital e o gabarito oficial definitivo, os pontos desta questão foram atribuídos a todos os candidatos.`;
+
+      const appliedMetadata = {
+        ...existing.source_metadata,
+        annulled: true,
+        annulment_reason: manifestRec.reason || "Anulação oficial Vunesp",
+        audit_applied_at: new Date().toISOString(),
+        manifest_origin: manifestRec.origin,
+      };
+
+      payloadItems.push({
         id: existing.id,
-        manifest: manifestRec,
-        existing,
+        external_id: manifestRec.external_id,
+        disposition: "archived",
+        source_metadata: appliedMetadata,
+        explanation_body: expBody,
+        explanation_source: "Fundação Vunesp - Gabarito Oficial Definitivo pós-recursos",
+      });
+
+      plannedReceiptItems.push({
+        id: existing.id,
+        external_id: manifestRec.external_id,
+        disposition: "archived",
+        status_before: existing.status,
+        status_after: "archived",
+        statement_sha256: sha256(existing.statement_markdown),
+        explanation_sha256: sha256(expBody),
+        correct_option_label: null,
+        topic_id: null,
       });
     } else {
       const batchItem = batchMap.get(manifestRec.external_id);
@@ -196,285 +208,132 @@ async function main() {
 
       const targetDisciplineId = topicToDisciplineMap.get(primaryTopic.topic_id);
       if (!targetDisciplineId) {
-        throw new Error(`Tópico ${primaryTopic.topic_id} da questão ${batchItem.external_id} não possui disciplina primária mapeada no catálogo.`);
+        throw new Error(
+          `Tópico ${primaryTopic.topic_id} da questão ${batchItem.external_id} não possui disciplina primária mapeada no catálogo.`
+        );
       }
 
-      plannedUpdates.push({
-        external_id: manifestRec.external_id,
+      const appliedMetadata = {
+        ...existing.source_metadata,
+        ...batchItem.source_metadata,
+        audit_applied_at: new Date().toISOString(),
+        manifest_origin: manifestRec.origin,
+        manifest_answer: manifestRec.answer,
+      };
+
+      const expBody = batchItem.explanation?.body_markdown;
+      if (!expBody) {
+        throw new Error(`Questão pronta ${batchItem.external_id} sem comentário didático.`);
+      }
+
+      payloadItems.push({
         id: existing.id,
-        batchItem,
-        manifest: manifestRec,
-        targetTopicId: primaryTopic.topic_id,
-        targetDisciplineId,
-        existing,
+        external_id: manifestRec.external_id,
+        disposition: "published",
+        statement_markdown: batchItem.statement_markdown,
+        subject: batchItem.subject,
+        exam_board: batchItem.exam_board,
+        exam_year: batchItem.exam_year,
+        source_content_hash: batchItem.source_content_hash,
+        source_metadata: appliedMetadata,
+        options: batchItem.options,
+        correct_option_label: batchItem.correct_option_label,
+        target_topic_id: primaryTopic.topic_id,
+        target_discipline_id: targetDisciplineId,
+        explanation_body: expBody,
+        explanation_source: batchItem.explanation.source_reference || "Fundação Vunesp - Gabarito Oficial Definitivo",
+      });
+
+      plannedReceiptItems.push({
+        id: existing.id,
+        external_id: manifestRec.external_id,
+        disposition: "published",
+        status_before: existing.status,
+        status_after: "published",
+        statement_sha256: sha256(batchItem.statement_markdown),
+        options_sha256: computeOptionsHash(batchItem.options),
+        explanation_sha256: sha256(expBody),
+        correct_option_label: batchItem.correct_option_label,
+        topic_id: primaryTopic.topic_id,
+        discipline_id: targetDisciplineId,
       });
     }
   }
 
-  console.log(`\nPlano de Execução:`);
-  console.log(`- Questões a publicar com revisão integral: ${plannedUpdates.length}`);
-  console.log(`- Questões a arquivar/anular oficialmente: ${annulledUpdates.length}`);
+  // 5. Gerar Backup Completo e Imutável antes de qualquer alteração
+  const timestamp = safeTimestamp();
+  const backupFileName = `backup_tjsp_pre_audit_${timestamp}.json`;
+  const backupPath = path.join(ROOT, "docs/questoes-workflow", backupFileName);
 
-  // 6. Execução atômica por item com verificação estrita de erros
-  const receiptItems = [];
+  const fullSnapshot = {
+    schema_version: "pro-questions/audit-backup/v1",
+    timestamp: new Date().toISOString(),
+    batch_sha256: batchHash,
+    manifest_sha256: manifestHash,
+    item_count: dbQuestions.length,
+    questions: dbQuestions,
+    options: dbOptions || [],
+    explanations: dbExplanations || [],
+    answer_keys: dbAnswerKeys || [],
+    discipline_relations: dbDiscRelations || [],
+    topic_relations: dbTopicRelations || [],
+    applied_verification_plan: plannedReceiptItems,
+  };
 
-  // A. Processamento das 96 questões prontas
-  for (const plan of plannedUpdates) {
-    const q = plan.batchItem;
-    const existingId = plan.id;
+  const backupBytes = JSON.stringify(fullSnapshot, null, 2);
+  const backupSha256 = sha256(backupBytes);
+  await writeFile(backupPath, backupBytes, "utf8");
+  console.log(`Backup de segurança COMPLETO gravado em: ${backupPath} (SHA-256: ${backupSha256.slice(0, 16)}...)`);
 
-    const beforeHash = sha256(plan.existing.statement_markdown);
-    const afterHash = sha256(q.statement_markdown);
+  console.log(`\nResumo do Plano Transacional:`);
+  console.log(`- Total de itens na transação: ${payloadItems.length}`);
+  console.log(`- Prontas para publicação com revisão integral: ${plannedReceiptItems.filter((i) => i.disposition === "published").length}`);
+  console.log(`- Anuladas oficialmente (arquivamento + explicação): ${plannedReceiptItems.filter((i) => i.disposition === "archived").length}`);
 
-    if (!isDryRun) {
-      // 1. Atualizar questions
-      const { error: updQErr } = await supabase
-        .from("questions")
-        .update({
-          statement_markdown: q.statement_markdown,
-          subject: q.subject,
-          exam_board: q.exam_board,
-          institution: q.institution,
-          position_name: q.position_name,
-          exam_year: q.exam_year,
-          status: "published",
-          source_metadata: {
-            ...plan.existing.source_metadata,
-            ...q.source_metadata,
-            audit_applied_at: new Date().toISOString(),
-            manifest_origin: plan.manifest.origin,
-            manifest_answer: plan.manifest.answer,
-          },
-          updated_at: new Date().toISOString(),
-        })
-        .eq("id", existingId);
-
-      if (updQErr) {
-        throw new Error(`[ABORT] Falha ao atualizar questão ${q.external_id} (${existingId}): ${updQErr.message}`);
-      }
-
-      // 2. Atualizar opções
-      for (const opt of q.options) {
-        const { error: updOptErr } = await supabase
-          .from("question_options")
-          .update({ body_markdown: opt.body_markdown })
-          .eq("question_id", existingId)
-          .eq("label", opt.label);
-
-        if (updOptErr) {
-          throw new Error(`[ABORT] Falha ao atualizar opção ${opt.label} da questão ${q.external_id}: ${updOptErr.message}`);
-        }
-      }
-
-      // 3. Atualizar/Inserir explicação didática
-      if (q.explanation?.body_markdown) {
-        const { error: updExpErr } = await supabase
-          .from("question_explanations")
-          .upsert(
-            {
-              question_id: existingId,
-              body_markdown: q.explanation.body_markdown,
-              source_reference: q.explanation.source_reference || "Fundação Vunesp - Gabarito Oficial Definitivo",
-              status: "published",
-              reviewed_at: new Date().toISOString(),
-              updated_at: new Date().toISOString(),
-            },
-            { onConflict: "question_id" }
-          );
-
-        if (updExpErr) {
-          throw new Error(`[ABORT] Falha ao gravar explicação da questão ${q.external_id}: ${updExpErr.message}`);
-        }
-      }
-
-      // 4. Garantir gabarito em question_answer_keys
-      const { data: correctOpt, error: findOptErr } = await supabase
-        .from("question_options")
-        .select("id")
-        .eq("question_id", existingId)
-        .eq("label", q.correct_option_label)
-        .single();
-
-      if (findOptErr || !correctOpt) {
-        throw new Error(`[ABORT] Opção correta ${q.correct_option_label} não encontrada para questão ${q.external_id}`);
-      }
-
-      const { error: updKeyErr } = await supabase
-        .from("question_answer_keys")
-        .upsert(
-          {
-            question_id: existingId,
-            correct_option_id: correctOpt.id,
-            updated_at: new Date().toISOString(),
-          },
-          { onConflict: "question_id" }
-        );
-
-      if (updKeyErr) {
-        throw new Error(`[ABORT] Falha ao atualizar question_answer_keys da questão ${q.external_id}: ${updKeyErr.message}`);
-      }
-
-      // 5. Reconciliar question_topic_relations (primário)
-      // Remover relações existentes para garantir unicidade e integridade
-      const { error: delTopicRelErr } = await supabase
-        .from("question_topic_relations")
-        .delete()
-        .eq("question_id", existingId);
-      if (delTopicRelErr) {
-        throw new Error(`[ABORT] Falha ao limpar tópicos da questão ${q.external_id}: ${delTopicRelErr.message}`);
-      }
-
-      const { error: insTopicRelErr } = await supabase
-        .from("question_topic_relations")
-        .insert({
-          question_id: existingId,
-          topic_id: plan.targetTopicId,
-          relation_type: "primary",
-          relevance: 100,
-          sort_order: 0,
-        });
-      if (insTopicRelErr) {
-        throw new Error(`[ABORT] Falha ao associar tópico ${plan.targetTopicId} à questão ${q.external_id}: ${insTopicRelErr.message}`);
-      }
-
-      // 6. Reconciliar question_discipline_relations (primário)
-      const { error: delDiscRelErr } = await supabase
-        .from("question_discipline_relations")
-        .delete()
-        .eq("question_id", existingId);
-      if (delDiscRelErr) {
-        throw new Error(`[ABORT] Falha ao limpar disciplinas da questão ${q.external_id}: ${delDiscRelErr.message}`);
-      }
-
-      const { error: insDiscRelErr } = await supabase
-        .from("question_discipline_relations")
-        .insert({
-          question_id: existingId,
-          discipline_id: plan.targetDisciplineId,
-          is_primary: true,
-        });
-      if (insDiscRelErr) {
-        throw new Error(`[ABORT] Falha ao associar disciplina ${plan.targetDisciplineId} à questão ${q.external_id}: ${insDiscRelErr.message}`);
-      }
-    }
-
-    receiptItems.push({
-      external_id: q.external_id,
-      id: existingId,
-      disposition: "published",
-      before_statement_sha256: beforeHash,
-      after_statement_sha256: afterHash,
-      topic_id: plan.targetTopicId,
-      discipline_id: plan.targetDisciplineId,
-    });
+  if (isDryRun) {
+    console.log("\n[DRY-RUN] Simulação concluída com sucesso. Nenhuma alteração foi persistida no banco.");
+    return;
   }
 
-  // B. Processamento das 4 questões anuladas (Q30, Q78, Q87, Q97)
-  for (const ann of annulledUpdates) {
-    const existingId = ann.id;
-    const beforeHash = sha256(ann.existing.statement_markdown);
+  // 6. Execução atômica no servidor via RPC plpgsql
+  console.log("\nInvocando RPC public.apply_atomic_audit_fixes no PostgreSQL...");
+  const { data: rpcResult, error: rpcErr } = await supabase.rpc("apply_atomic_audit_fixes", {
+    p_payload: { items: payloadItems },
+  });
 
-    const explanationBody = (
-      `Questão do TJSP (Escrevente Técnico Judiciário - Caderno Versão 2):\n\n` +
-      `- **Status Oficial:** Questão ANULADA pela Fundação Vunesp no Gabarito Oficial Definitivo pós-recursos.\n` +
-      `- Motivo da anulação: Decisão da banca examinadora publicada no Diário da Justiça Eletrônico de SP. ` +
-      `A pontuação foi atribuída a todos os candidatos.\n` +
-      `- Esta questão está arquivada no sistema e não aceita novas resoluções.`
-    );
-
-    if (!isDryRun) {
-      // 1. Atualizar status para archived e gravar metadata com answer_status = 'anulada'
-      const { error: updQErr } = await supabase
-        .from("questions")
-        .update({
-          status: "archived",
-          source_metadata: {
-            ...ann.existing.source_metadata,
-            answer_status: "anulada",
-            disclaimer: "Questão anulada pela banca",
-            official_annulment: true,
-            publication: "DJE SP - Gabarito Oficial Definitivo pós-recursos",
-            audit_applied_at: new Date().toISOString(),
-            manifest_origin: ann.manifest.origin,
-            manifest_answer: ann.manifest.answer,
-          },
-          updated_at: new Date().toISOString(),
-        })
-        .eq("id", existingId);
-
-      if (updQErr) {
-        throw new Error(`[ABORT] Falha ao arquivar questão anulada ${ann.external_id}: ${updQErr.message}`);
-      }
-
-      // 2. Remover chave de gabarito para não permitir envio de respostas válidas
-      const { error: delKeyErr } = await supabase
-        .from("question_answer_keys")
-        .delete()
-        .eq("question_id", existingId);
-
-      if (delKeyErr) {
-        throw new Error(`[ABORT] Falha ao remover gabarito da questão anulada ${ann.external_id}: ${delKeyErr.message}`);
-      }
-
-      // 3. Cadastrar explicação didática registrando a anulação
-      const { error: updExpErr } = await supabase
-        .from("question_explanations")
-        .upsert(
-          {
-            question_id: existingId,
-            body_markdown: explanationBody,
-            source_reference: "Fundação Vunesp - Gabarito Oficial Definitivo pós-recursos (DJE SP)",
-            status: "published",
-            reviewed_at: new Date().toISOString(),
-            updated_at: new Date().toISOString(),
-          },
-          { onConflict: "question_id" }
-        );
-
-      if (updExpErr) {
-        throw new Error(`[ABORT] Falha ao gravar explicação de anulação da questão ${ann.external_id}: ${updExpErr.message}`);
-      }
-    }
-
-    receiptItems.push({
-      external_id: ann.external_id,
-      id: existingId,
-      disposition: "archived",
-      before_statement_sha256: beforeHash,
-      after_statement_sha256: beforeHash,
-      reason: ann.manifest.reason,
-    });
+  if (rpcErr) {
+    console.error(`\n[ABORT] Falha na aplicação atômica: ${rpcErr.message}`);
+    console.error("A transação plpgsql garantiu ROLLBACK IMEDIATO de 100% das alterações. Banco permanece no estado original.");
+    throw new Error(`Falha transacional: ${rpcErr.message}`);
   }
 
-  // 7. Persistência do recibo detalhado da operação
+  console.log("Aplicação atômica no servidor concluída com sucesso!");
+  console.log(`- Processados: ${rpcResult.total_processed}`);
+  console.log(`- Publicadas: ${rpcResult.ready_published}`);
+  console.log(`- Arquivadas: ${rpcResult.held_archived}`);
+
+  // 7. Persistir recibo atômico de aplicação com hashes antes/depois
   const receiptFileName = `recibo_aplicacao_editorial_${timestamp}.json`;
   const receiptPath = path.join(ROOT, "docs/questoes-workflow", receiptFileName);
 
   const receipt = {
     schema_version: "pro-questions/audit-receipt/v1",
-    applied_at: new Date().toISOString(),
-    is_dry_run: isDryRun,
-    batch_file: values.batch,
-    batch_sha256: batchHash,
-    manifest_file: values.manifest,
-    manifest_sha256: manifestHash,
+    applied_at: rpcResult.applied_at || new Date().toISOString(),
     backup_file: backupFileName,
     backup_sha256: backupSha256,
-    summary: {
-      total_items: receiptItems.length,
-      published_ready: plannedUpdates.length,
-      archived_annulled: annulledUpdates.length,
-    },
-    items: receiptItems,
+    batch_sha256: batchHash,
+    manifest_sha256: manifestHash,
+    total_processed: rpcResult.total_processed,
+    ready_published: rpcResult.ready_published,
+    held_archived: rpcResult.held_archived,
+    items: plannedReceiptItems,
   };
 
   await writeFile(receiptPath, JSON.stringify(receipt, null, 2), "utf8");
-  console.log(`\nRecibo de auditoria persistido em: ${receiptPath}`);
-  console.log(`Itens processados: ${receiptItems.length} (Publicadas: ${plannedUpdates.length}, Arquivadas/Anuladas: ${annulledUpdates.length})`);
-  console.log(isDryRun ? "DRY-RUN concluído com sucesso." : "APLICAÇÃO EFETIVADA com sucesso no banco de dados.");
+  console.log(`Recibo atômico gravado em: ${receiptPath}`);
 }
 
 main().catch((err) => {
-  console.error("ERRO CRÍTICO na aplicação editorial:", err);
+  console.error(err);
   process.exit(1);
 });
