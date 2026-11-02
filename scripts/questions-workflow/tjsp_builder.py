@@ -1,13 +1,14 @@
 """Construtor oficial das 100 questões do TJSP 2021 (Escrevente Técnico Judiciário - Versão 2).
-Confrontado com o Gabarito Oficial Definitivo da Fundação Vunesp:
-- 96 questões com gabarito definitivo confirmado.
-- 4 questões anuladas oficialmente pela banca (30, 78, 87 e 97).
-- Textos-base compartilhados recuperados e vinculados integralmente (F01).
+Confrontado com o Gabarito Oficial Definitivo da Fundação Vunesp (DJE / Vunesp 2021-2022):
+- 96 questões com gabarito definitivo confirmado e comentários individualizados aprofundados.
+- 4 questões anuladas oficialmente pela banca (30, 78, 87 e 97), mantidas com disposition held.
+- 23 questões dependentes de contexto com todos os 5 textos-base recuperados integralmente (F01).
 - Alternativa E da Questão 22 devidamente delimitada sem contaminação (F02).
 - Tabela da planilha Markdown integrada à Questão 83 de Excel (F01).
-- Taxonomia corrigida e mapeada nos tópicos canônicos (F03).
-- Comentários explicativos, didáticos e fundamentados (F04 e F05).
-- Resíduos de diagramação de PDF tratados (F09).
+- Taxonomia corrigida e mapeada nos tópicos canônicos (F03), incluindo Q49 em nacionalidade.
+- Comentários explicativos, didáticos e fundamentados para todos os 96 itens publicáveis (F04).
+- Mapeamento determinístico da página física real no caderno de prova e no gabarito (F05/R09).
+- Des-hifenização conservadora preservando clíticos e compostos (F09/R11).
 """
 from __future__ import annotations
 
@@ -17,126 +18,43 @@ import hashlib
 import re
 from typing import Any
 
+from tjsp_explanations import TJSP_DETAILED_EXPLANATIONS
+
+CLITICS = {'me', 'te', 'se', 'nos', 'vos', 'o', 'a', 'os', 'as', 'lhe', 'lhes', 'lo', 'la', 'los', 'las', 'no', 'na', 'nos', 'nas'}
+PREFIXES = {'pré', 'pós', 'pró', 'recém', 'vice', 'ex', 'auto', 'semi', 'super', 'anti', 'sub'}
+
 def clean_pdf_text(text: str | None) -> str | None:
     if not text:
         return None
-    # Desfaz hifenizações de translineação artificiais
-    t = re.sub(r'(\b[a-zA-ZáéíóúâêôãõçÁÉÍÓÚÂÊÔÃÕÇ]+)-\s*\n\s*([a-zA-ZáéíóúâêôãõçÁÉÍÓÚÂÊÔÃÕÇ]+\b)', r'\1\2', text)
-    t = re.sub(r'(\b[a-zA-ZáéíóúâêôãõçÁÉÍÓÚÂÊÔÃÕÇ]+)-\s+([a-zA-ZáéíóúâêôãõçÁÉÍÓÚÂÊÔÃÕÇ]+\b)', r'\1\2', t)
-    # Remove marcas de URL malformadas
+
+    def replace_hyphen(m: re.Match) -> str:
+        w1, w2 = m.group(1), m.group(2)
+        lower1 = w1.lower()
+        lower2 = w2.lower()
+        # Se a segunda palavra é um pronome clítico (ex: aplica-se, prendê-la), preserva hífen
+        if lower2 in CLITICS:
+            return f"{w1}-{w2}"
+        # Se a primeira palavra é um prefixo que exige hífen (ex: pré-escola), preserva hífen
+        if lower1 in PREFIXES:
+            return f"{w1}-{w2}"
+        # Translineação artificial em palavra simples (ex: remune-ração -> remuneração)
+        return f"{w1}{w2}"
+
+    # Desfaz hifenizações de translineação artificiais conservadoramente
+    t = re.sub(r'(\b[a-zA-ZáéíóúâêôãõçÁÉÍÓÚÂÊÔÃÕÇ]+)-\s*\n\s*([a-zA-ZáéíóúâêôãõçÁÉÍÓÚÂÊÔÃÕÇ]+\b)', replace_hyphen, text)
+    # Remove marcas de URL malformadas preservando o conteúdo
     t = re.sub(r'<\s*https?://([^>]+)>', r'\1', t)
-    t = re.sub(r'https?://', '', t)
     t = re.sub(r'<[^>]+>', '', t)
     # Remove eventuais cabeçalhos residuais
     t = re.sub(r'\b\d+\s+Raciocínio Lógico\b', '', t, flags=re.IGNORECASE)
     t = re.sub(r'\b\d+\s+LÍNGUA PORTUGUESA\b', '', t, flags=re.IGNORECASE)
+    t = re.sub(r'\b\d+\s+Direito Processual Penal\b', '', t, flags=re.IGNORECASE)
     # Espaçamento normalizado
     t = re.sub(r'[ \t]+', ' ', t)
     t = re.sub(r'\n\s*\n+', '\n\n', t)
     return t.strip()
 
-# Comentários didáticos específicos e detalhados para as questões auditadas
-DETAILED_EXPLANATIONS = {
-    6: (
-        "Análise detalhada do preenchimento das lacunas do texto 'Perto do apagão':\n\n"
-        "1. Primeira lacuna: **'Com'** a falta de chuvas nos últimos dois meses... A preposição 'Com' introduz "
-        "uma circunstância causal/motivadora de modo adequado. 'Sobre' ou 'Perante' não exprimem a relação "
-        "de causa exigida, e 'Devido' exigiria a preposição 'a' ('Devido à falta').\n\n"
-        "2. Segunda lacuna: ...ficou mais evidente a ameaça **'de que'** a geração de energia se mostre insuficiente... "
-        "O substantivo 'ameaça' rege complemento nominal introduzido pela preposição 'de' ('ameaça de algo' ou 'ameaça de que').\n\n"
-        "3. Terceira lacuna: ...o país chegaria **'a'** novembro praticamente sem sobra de potência... "
-        "O verbo 'chegar' rege a preposição 'a' para indicar limite ou marco temporal de destino ('chegar a novembro').\n\n"
-        "4. Quarta lacuna: ...no contexto da alta demanda **'a que'** o sistema será submetido. "
-        "O verbo 'submeter' exige a preposição 'a' ('submeter a algo'). Como o termo antecedente 'alta demanda' "
-        "é o objeto indireto oracional regido pela forma passiva 'será submetido', a preposição 'a' deve anteceder "
-        "obrigatoriamente o pronome relativo 'que'.\n\n"
-        "- Gabarito Oficial Definitivo da Vunesp (Versão 2): Alternativa (C) (Com ... de que ... a ... a que)."
-    ),
-    14: (
-        "Análise de sentido figurado (linguagem conotativa):\n\n"
-        "- Na alternativa (B): 'O fogo aceso pisca para ela e para o homem.' O verbo 'piscar' foi empregado "
-        "em sentido figurado (personificação ou prosopopeia), atribuindo uma ação humana (piscar) a um elemento "
-        "inanimado (o fogo), que oscila ou crepita na lareira.\n"
-        "- Nas demais alternativas, os termos estão empregados em seu sentido literal/denotativo (lareira como local da casa, "
-        "atiçar o fogo como ato físico, desejar a mão do outro, achar a lenha).\n\n"
-        "- Gabarito Oficial Definitivo da Vunesp (Versão 2): Alternativa (B)."
-    ),
-    22: (
-        "Análise gramatical de flexão de substantivos e gênero:\n\n"
-        "1. Plural em '-ãos': o enunciado destaca que 'cidadão' faz plural em 'cidadãos' (e não '-ões' ou '-ães'). "
-        "Dentre os vocábulos listados, 'sacristão' faz plural exclusivamente com a terminação '-ãos' (sacristãos). "
-        "Compare-se com 'patrão' (patrões), 'confissão' (confissões) e 'tabelião' (tabeliães).\n\n"
-        "2. Gênero sobrecomum: o substantivo 'criança' possui um só gênero gramatical (feminino) que se refere "
-        "indistintamente a indivíduos de ambos os sexos (a criança menino / a criança menina). O vocábulo 'vítima' "
-        "possui exatamente a mesma classificação (substantivo sobrecomum: a vítima homem / a vítima mulher).\n\n"
-        "- Na alternativa (C), temos 'sacristão' (plural em -ãos) e 'vítima' (substantivo sobrecomum), "
-        "atendendo correta e respectivamente às propriedades solicitadas.\n\n"
-        "- Gabarito Oficial Definitivo da Vunesp (Versão 2): Alternativa (C)."
-    ),
-    47: (
-        "Direito Constitucional — Direitos Sociais dos Trabalhadores (CF/88, art. 7º):\n\n"
-        "- A questão avalia os direitos sociais assegurados aos trabalhadores urbanos e rurais previstos "
-        "no art. 7º da Constituição Federal de 1988.\n"
-        "- O art. 7º, inciso XX, assegura expressamente a 'proteção do mercado de trabalho da mulher, "
-        "mediante incentivos específicos, nos termos da lei', e o inciso XXII estabelece a 'redução dos riscos "
-        "inerentes ao trabalho, por meio de normas de saúde, higiene e segurança'.\n\n"
-        "- Gabarito Oficial Definitivo da Vunesp (Versão 2): Alternativa (D)."
-    ),
-    48: (
-        "Direito Constitucional — Nacionalidade (CF/88, art. 12):\n\n"
-        "- A questão versa sobre as hipóteses de naturalização e direitos dos brasileiros naturalizados.\n"
-        "- Conforme o art. 12, II, 'b' da CF/88, são brasileiros naturalizados os estrangeiros de qualquer nacionalidade, "
-        "residentes na República Federativa do Brasil há mais de quinze anos ininterruptos e sem condenação penal, "
-        "desde que requeiram a nacionalidade brasileira (naturalização extraordinária ou quinzenária).\n"
-        "- A Constituição veda distinção entre brasileiros natos e naturalizados, salvo nos casos expressamente nela previstos.\n\n"
-        "- Gabarito Oficial Definitivo da Vunesp (Versão 2): Alternativa (D)."
-    ),
-    50: (
-        "Direito Constitucional — Administração Pública e Servidores Públicos (CF/88, art. 37, § 13):\n\n"
-        "- A Emenda Constitucional nº 103/2019 introduziu o § 13 ao art. 37 da Constituição Federal:\n"
-        "'O servidor público titular de cargo efetivo poderá ser readaptado para exercício de cargo cujas atribuições e "
-        "responsabilidades sejam compatíveis com a limitação que tenha sofrido em sua capacidade física ou mental, "
-        "enquanto permanecer nessa condição, desde que possua a habilitação e o nível de escolaridade exigidos para o "
-        "cargo de destino, mantida a remuneração do cargo de origem.'\n\n"
-        "- A alternativa correta reproduz fielmente as exigências constitucionais para a readaptação (compatibilidade "
-        "de atribuições com a limitação, manutenção da condição limitadora, atendimento ao nível de escolaridade/habilitação "
-        "do destino e garantia de irredutibilidade remuneratória vinculada ao cargo originário).\n\n"
-        "- Gabarito Oficial Definitivo da Vunesp (Versão 2): Alternativa (E)."
-    ),
-    80: (
-        "Informática — Sistema Operacional Windows 10 (Explorador de Arquivos e Atributos de Pastas):\n\n"
-        "- No Windows 10, ao abrir as Propriedades de uma pasta no Explorador de Arquivos (guia Geral), na seção 'Atributos', "
-        "estão disponíveis nativamente as opções de atributo: 'Somente leitura' (aplica-se apenas a arquivos da pasta) e 'Oculto'.\n"
-        "- Esses atributos controlam a visibilidade e proteção contra alteração direta pelo usuário comum.\n\n"
-        "- Gabarito Oficial Definitivo da Vunesp (Versão 2): Alternativa (A)."
-    ),
-    83: (
-        "Informática — MS-Excel 2016 (Função CONCATENAR e Junção de Células):\n\n"
-        "- O enunciado solicita uma fórmula na célula D2 que junte o conteúdo de B2 ('Planejamento') e C2 ('André'), "
-        "separados pelo caractere traço '-', produzindo o resultado exato: 'Planejamento-André'.\n\n"
-        "Demonstração técnica da fórmula:\n"
-        "- No MS-Excel em português, a função nativa de junção de textos é `=CONCATENAR(texto1; [texto2]; ...)`.\n"
-        "- O separador de argumentos no padrão brasileiro do Excel é o ponto e vírgula (`;`).\n"
-        "- Textos literais devem estar obrigatoriamente delimitados por aspas duplas (`\"-\"`).\n"
-        "- Portanto, a fórmula correta é `=CONCATENAR(B2;\"-\";C2)`.\n\n"
-        "Análise dos distratores:\n"
-        "- (A) e (B) SOMASE: é função aritmética condicional de soma de números, não manipulando cadeias de caracteres.\n"
-        "- (C) `=CONCATENAR(B2,-,C2)`: erro de sintaxe por ausência de aspas no caractere traço (interpretado como operador matemático inválido).\n"
-        "- (E) `=CONCATENAR(B2-C2)`: tenta subtrair o valor de C2 de B2, resultando no erro de tipo `#VALOR!`.\n\n"
-        "- Gabarito Oficial Definitivo da Vunesp (Versão 2): Alternativa (D)."
-    ),
-    85: (
-        "Informática — MS-Excel 2016 (Menu de Contexto de Guia de Planilha):\n\n"
-        "- Ao clicar com o botão direito do mouse sobre o nome da guia de uma planilha (na barra inferior do Excel), "
-        "o menu de contexto apresenta as opções: Inserir..., Excluir, Renomear, Mover ou Copiar..., Exibir Código, "
-        "Proteger Planilha..., Cor da Guia, Ocultar e Reexibir...\n"
-        "- Dentre as opções apresentadas na questão, a única disponível diretamente nesse menu é 'mudar a cor da guia de P1'.\n"
-        "- Linhas de grade, envio por e-mail e impressão são controlados pelas guias Exibir, Compartilhar/Arquivo e Arquivo > Imprimir.\n\n"
-        "- Gabarito Oficial Definitivo da Vunesp (Versão 2): Alternativa (B)."
-    ),
-}
-
-# Gabarito Oficial Definitivo Vunesp - Versão 2
+# Gabarito Oficial Definitivo Vunesp - Versão 2 (Caderno 100 questões)
 OFFICIAL_KEYS = {
     1: "E", 2: "B", 3: "D", 4: "A", 5: "A", 6: "C", 7: "B", 8: "D", 9: "E", 10: "B",
     11: "C", 12: "C", 13: "A", 14: "B", 15: "E", 16: "D", 17: "C", 18: "A", 19: "C", 20: "B",
@@ -150,7 +68,7 @@ OFFICIAL_KEYS = {
     91: "E", 92: "B", 93: "B", 94: "A", 95: "D", 96: "A", 97: "ANULADA", 98: "E", 99: "E", 100: "B"
 }
 
-# Matriz Taxonômica Oficial
+# Matriz Taxonômica Oficial Canônica (coerente com question_discipline_relations e question_topic_relations)
 TAXONOMY_MAP = {
     # Língua Portuguesa (1 a 24)
     1: ("portugues", "compreensao-e-interpretacao-de-textos"),
@@ -205,7 +123,7 @@ TAXONOMY_MAP = {
     46: ("direito-constitucional", "administracao-publica"),
     47: ("direito-constitucional", "direitos-e-garantias-fundamentais"),
     48: ("direito-constitucional", "nacionalidade-e-direitos-politicos"),
-    49: ("direito-constitucional", "poder-judiciario"),
+    49: ("direito-constitucional", "nacionalidade-e-direitos-politicos"), # F03/R03: cargos privativos de brasileiro nato em Nacionalidade
     50: ("direito-constitucional", "administracao-publica"),
     # Direito Administrativo (51 a 58)
     51: ("direito-administrativo", "regime-juridico-dos-servidores-lei-8112"),
@@ -284,10 +202,25 @@ def get_ordered_text(doc: fitz.Document) -> str:
     return "\n\n".join(pages_text)
 
 def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
-    """Retorna (lista_questoes_prontas, lista_registros_manifesto_todos_100)."""
+    """Retorna (lista_questoes_prontas_96, lista_registros_manifesto_todos_100)."""
     doc = fitz.open(r"C:\PRO\questoes\novas_pdf_30-10\escrevente_tecnico_judiciario.pdf")
     exam_sha = "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf"
     ans_sha = "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da"
+
+    # Mapear determinísticamente a página física real (1-based, 1 a 28) de cada uma das 100 questões no PDF da prova
+    item_physical_pages = {}
+    for p_idx in range(len(doc)):
+        txt = doc[p_idx].get_text()
+        for q in range(1, 101):
+            if q in item_physical_pages:
+                continue
+            pat = rf'(?:^|\n)\s*{q:02d}\.\s+' if q < 100 else rf'(?:^|\n)\s*{q}\.\s+'
+            if re.search(pat, txt):
+                item_physical_pages[q] = p_idx + 1
+
+    if len(item_physical_pages) != 100:
+        missing = [q for q in range(1, 101) if q not in item_physical_pages]
+        raise RuntimeError(f"Falha ao localizar páginas físicas de todas as questões: {missing}")
 
     full_text = get_ordered_text(doc)
 
@@ -295,34 +228,36 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
     # Texto 1 (Q01 a Q05)
     t1_m = re.search(r"(Amor é para gastar.*?\([^\)]*Xico Sá[^\)]*\))", full_text, re.DOTALL)
     texto_1 = clean_pdf_text(t1_m.group(1)) if t1_m else None
+    if not texto_1:
+        raise RuntimeError("Texto-base 1 (Q01-Q05, 'Amor é para gastar') não foi extraído.")
 
-    # Texto 2 (Q06 a Q10) com lacunas
+    # Texto 2 (Q06 a Q10) com as 4 lacunas
     t2_m = re.search(r"(Perto do apagão.*?\([^\)]*Folha de S\.Paulo[^\)]*\))", full_text, re.DOTALL)
-    if t2_m:
-        raw_t2 = t2_m.group(1)
-        raw_t2 = re.sub(r'[\u2000-\u200f\s]{3,}', ' ______ ', raw_t2)
-        texto_2 = clean_pdf_text(raw_t2)
-    else:
-        texto_2 = None
+    if not t2_m:
+        raise RuntimeError("Texto-base 2 (Q06-Q10, 'Perto do apagão') não foi extraído.")
+    raw_t2 = re.sub(r'[\u2000-\u200f\s]{3,}', ' ______ ', t2_m.group(1))
+    texto_2 = clean_pdf_text(raw_t2)
 
-    # Texto 3 (Q11 a Q17)
-    t3_m = re.search(r"(Leia o texto para responder às questões de números 11 a 17\..*?011\.)", full_text, re.DOTALL)
-    texto_3 = clean_pdf_text(t3_m.group(1).replace("011.", "")) if t3_m else None
+    # Texto 3 (Q11 a Q17) - "Vida ao natural" (Clarice Lispector) na página física 5
+    t3_m = re.search(r"(Vida ao natural\b.*?\([^\)]*Clarice Lispector[^\)]*\)\s*\*\s*pequeno pedaço de madeira usado para lenha)", full_text, re.DOTALL)
+    if not t3_m:
+        raise RuntimeError("Texto-base 3 (Q11-Q17, 'Vida ao natural') não foi extraído.")
+    texto_3 = clean_pdf_text(t3_m.group(1))
 
-    # Texto 4 (Q19 a Q22)
-    t4_m = re.search(r"(Cringe: Para os integrantes.*?\([^\)]*Ministério da Saúde[^\)]*\))", full_text, re.DOTALL)
-    texto_4 = clean_pdf_text(t4_m.group(1)) if t4_m else None
+    # Texto 4 (Q19 a Q22) - Campanha antitabagista e nota explicativa de Cringe na página física 6
+    t4_m = re.search(r"(O Dia Nacional de Combate ao Fumo.*?\(https://g1\.globo\.com\))", full_text, re.DOTALL)
+    if not t4_m:
+        raise RuntimeError("Texto-base 4 (Q19-Q22, Dia Nacional de Combate ao Fumo + Cringe) não foi extraído.")
+    texto_4 = clean_pdf_text(t4_m.group(1))
 
-    # Texto 5 (Q23 e Q24)
+    # Texto 5 (Q23 e Q24) - Motivação (Cameron Walker)
     t5_m = re.search(r"(Motivação é a energia.*?\([^\)]*Cameron Walker[^\)]*\))", full_text, re.DOTALL)
-    if t5_m:
-        raw_t5 = t5_m.group(1)
-        raw_t5 = re.sub(r'[\u2000-\u200f\s]{3,}', ' ______ ', raw_t5)
-        texto_5 = clean_pdf_text(raw_t5)
-    else:
-        texto_5 = None
+    if not t5_m:
+        raise RuntimeError("Texto-base 5 (Q23-Q24, 'Motivação') não foi extraído.")
+    raw_t5 = re.sub(r'[\u2000-\u200f\s]{3,}', ' ______ ', t5_m.group(1))
+    texto_5 = clean_pdf_text(raw_t5)
 
-    # Mapeamento de texto-base por questão
+    # Mapeamento estrito dos 23 itens que exigem texto-base
     question_base_text = {}
     for i in range(1, 6):
         question_base_text[i] = texto_1
@@ -335,7 +270,7 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
     for i in range(23, 25):
         question_base_text[i] = texto_5
 
-    # 2. Localizar posições das 100 questões
+    # 2. Localizar posições das 100 questões no texto ordenado
     positions = []
     for q in range(1, 101):
         pat = rf"(?:^|\n)\s*{q:02d}\.\s+" if q < 100 else rf"(?:^|\n)\s*{q}\.\s+"
@@ -344,15 +279,14 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
             positions.append((q, m.start(), m.end()))
 
     sorted_pos = sorted(positions, key=lambda x: x[1])
+    if len(sorted_pos) != 100:
+        raise RuntimeError(f"Esperadas 100 posições de questões, encontradas {len(sorted_pos)}")
 
     extracted_raw = {}
     for i in range(len(sorted_pos)):
         q_num, s, e = sorted_pos[i]
-        if i + 1 < len(sorted_pos):
-            next_s = sorted_pos[i+1][1]
-            content = full_text[e:next_s].strip()
-        else:
-            content = full_text[e:].strip()
+        next_s = sorted_pos[i+1][1] if i + 1 < len(sorted_pos) else len(full_text)
+        content = full_text[e:next_s].strip()
         extracted_raw[q_num] = content
 
     ready_questions = []
@@ -378,11 +312,25 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
             command = clean_pdf_text(raw_content[:opt_match.start()].strip())
             opts = [clean_pdf_text(opt_match.group(j).strip()) for j in range(1, 5)]
             raw_e = opt_match.group(5)
-            # Corta antes do texto de apoio de 23 e 24
-            cut_idx = raw_e.find("Leia o texto para responder")
-            if cut_idx != -1:
-                raw_e = raw_e[:cut_idx]
+            # Corta rigorosamente antes de qualquer chamada para a questão 23/24
+            for cut_marker in ["Leia o texto para responder", "Motivação é a energia"]:
+                cut_idx = raw_e.find(cut_marker)
+                if cut_idx != -1:
+                    raw_e = raw_e[:cut_idx]
             opts.append(clean_pdf_text(raw_e.strip()))
+        elif item_num == 30:
+            # Limpeza cirúrgica de resíduo de cabeçalho da Questão 30 na alternativa E
+            opt_match = re.search(
+                r"\n?\s*\(A\)\s+(.*?)\n?\s*\(B\)\s+(.*?)\n?\s*\(C\)\s+(.*?)\n?\s*\(D\)\s+(.*?)\n?\s*\(E\)\s+(.*)$",
+                raw_content,
+                re.DOTALL
+            )
+            command = clean_pdf_text(raw_content[:opt_match.start()].strip())
+            opts = [clean_pdf_text(opt_match.group(j).strip()) for j in range(1, 5)]
+            raw_e = opt_match.group(5)
+            # Remove cabeçalho residual "Direito Processual Penal"
+            raw_e = re.sub(r'Direito Processual Penal\s*$', '', raw_e, flags=re.IGNORECASE).strip()
+            opts.append(clean_pdf_text(raw_e))
         elif item_num == 74:
             opt_idx = raw_content.find("(A)")
             command = clean_pdf_text(raw_content[:opt_idx].strip()) if opt_idx != -1 else clean_pdf_text(raw_content)
@@ -403,7 +351,6 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
                 "| **3** | AT2 | Projeto | Manoel | |\n"
                 "| **4** | AT3 | Teste | João | |\n\n"
             )
-            # Insere a tabela após a introdução da planilha
             cut_pt = raw_cmd.find("Deseja-se inserir")
             if cut_pt != -1:
                 cmd_p1 = clean_pdf_text(raw_cmd[:cut_pt].strip())
@@ -447,8 +394,11 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
             command = clean_pdf_text(opt_match.group(0) and raw_content[:opt_match.start()].strip())
             opts = [clean_pdf_text(opt_match.group(j).strip()) for j in range(1, 6)]
 
-        # Montagem semântica do Markdown (sem poluir o texto-base com títulos provisórios)
+        # Montagem do Markdown e validação de contexto obrigatório
         base_text = question_base_text.get(item_num)
+        if item_num in question_base_text and not base_text:
+            raise RuntimeError(f"Questão {item_num} declaradamente dependente de texto-base não possui contexto válido.")
+
         if base_text:
             statement_md = f"## Texto-base\n\n{base_text}\n\n## Enunciado\n\n{command}"
             parts_context = base_text
@@ -473,24 +423,18 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
             {"label": "E", "body_markdown": opts[4], "sort_order": 4},
         ]
 
-        # Comentário explicativo
-        if item_num in DETAILED_EXPLANATIONS:
-            exp_body = DETAILED_EXPLANATIONS[item_num]
-        elif is_anulada:
+        # Comentário explicativo individualizado e fundamentado
+        if is_anulada:
             exp_body = (
                 f"Questão {item_num} do TJSP (Escrevente Técnico Judiciário - Versão 2):\n\n"
                 f"- **Status Oficial:** Questão ANULADA pela Fundação Vunesp no Gabarito Oficial Definitivo pós-recursos.\n"
-                "- Conforme as normas do concurso e da banca examinadora, a pontuação referente a esta questão "
-                "foi atribuída a todos os candidatos que prestaram o certame."
+                "- Conforme as normas do edital e da banca examinadora, a pontuação referente a esta questão "
+                "foi atribuída a todos os candidatos que prestaram o certame no Diário da Justiça Eletrônico de SP."
             )
+        elif item_num in TJSP_DETAILED_EXPLANATIONS:
+            exp_body = TJSP_DETAILED_EXPLANATIONS[item_num]
         else:
-            exp_body = (
-                f"Resolução da Questão {item_num} do TJSP (Escrevente Técnico Judiciário - Versão 2):\n\n"
-                f"- **Gabarito Oficial Definitivo:** Alternativa ({key_label}).\n"
-                f"- **Matéria/Tópico:** {topic_id.replace('-', ' ').title()}.\n"
-                "- Fundamentação: Análise em estrita conformidade com o edital, a legislação de regência "
-                "e o gabarito oficial homologado pela Fundação Vunesp."
-            )
+            raise RuntimeError(f"Questão {item_num} sem comentário didático específico em TJSP_DETAILED_EXPLANATIONS.")
 
         question = {
             "external_id": ext_id,
@@ -522,7 +466,7 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
             "correct_option_label": "N" if is_anulada else key_label,
             "explanation": {
                 "body_markdown": exp_body,
-                "source_reference": "Fundação Vunesp - Gabarito Oficial Definitivo",
+                "source_reference": "Fundação Vunesp - Gabarito Oficial Definitivo pós-recursos (DJE SP)",
             }
         }
 
@@ -530,12 +474,14 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
         item_hash = hashlib.sha256(item_str.encode('utf-8')).hexdigest()
         question["source_content_hash"] = item_hash
 
-        # Só adiciona a ready_questions se não estiver anulada (anuladas ficam retidas no manifesto)
         disposition = "held" if is_anulada else "ready"
         if not is_anulada:
             ready_questions.append(question)
 
-        ans_page = 1 if item_num <= 50 else 2
+        # Na tabela da Versão 2 de gabarito (5).pdf, todas as 100 questões estão na Página 1
+        ans_page = 1
+        # Página física real no caderno de prova (1 a 28)
+        exam_real_page = item_physical_pages[item_num]
 
         manifest_records.append({
             "external_id": ext_id,
@@ -547,7 +493,7 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
                 "booklet": "Versao-2",
                 "item_number": item_num,
                 "exam_sha256": exam_sha,
-                "page": 3,
+                "page": exam_real_page,
             },
             "answer": {
                 "exam_id": "tjsp-2021-escrevente-tecnico-judiciario",
@@ -559,7 +505,7 @@ def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
                 "status": ans_status,
                 "label": "N" if is_anulada else key_label,
                 "previous_label": None,
-                "change_evidence": "Anulada no gabarito oficial definitivo pós-recursos" if is_anulada else None,
+                "change_evidence": "Anulada oficialmente no gabarito definitivo pós-recursos pela Fundação Vunesp (DJE SP)" if is_anulada else "Gabarito definitivo confirmado pós-recursos",
             },
             "taxonomy": {
                 "concept_key": f"pro:{disc_slug}:{topic_id}",
