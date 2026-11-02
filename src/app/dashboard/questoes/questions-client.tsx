@@ -52,10 +52,16 @@ function accuracy(correct: number, total: number) {
   return total > 0 ? Math.round((correct / total) * 100) : 0;
 }
 
-function syncUrlWithFilters(filters: QuestionFilters, currentMode: 1 | 5) {
+function syncUrlWithFilters(
+  filters: QuestionFilters,
+  currentMode: 1 | 5,
+  currentQuestionId?: string | null,
+  action: "replace" | "push" = "replace"
+) {
   if (typeof window === "undefined") return;
   const params = new URLSearchParams();
-  if (filters.identifier) params.set("id", filters.identifier);
+  const idToSet = currentQuestionId || filters.identifier;
+  if (idToSet) params.set("id", idToSet);
   if (filters.search) params.set("busca", filters.search);
   if (filters.discipline) params.set("disciplina", filters.discipline);
   if (filters.topic) params.set("topico", filters.topic);
@@ -67,7 +73,11 @@ function syncUrlWithFilters(filters: QuestionFilters, currentMode: 1 | 5) {
 
   const query = params.toString();
   const nextUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
-  window.history.replaceState(null, "", nextUrl);
+  if (action === "push") {
+    window.history.pushState(null, "", nextUrl);
+  } else {
+    window.history.replaceState(null, "", nextUrl);
+  }
 }
 
 export function QuestionsClient({
@@ -94,15 +104,6 @@ export function QuestionsClient({
   const contentRef = useRef<HTMLDivElement>(null);
   const initialPage = useRef(true);
   const busy = loading || cardOperations > 0;
-
-  useEffect(() => {
-    if (initialPage.current) {
-      initialPage.current = false;
-      return;
-    }
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    contentRef.current?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
-  }, [pageStart, mode, direction]);
 
   const refreshStats = async () => {
     const { data, error: statsError } = await createClient().rpc("get_question_stats");
@@ -155,6 +156,12 @@ export function QuestionsClient({
         setHistory([]);
         setActiveFilters(filters);
         syncUrlWithFilters(filters, pageSize);
+        if (nextResult.items.length > 0) {
+          const currentId = nextResult.items[0]?.external_id || nextResult.items[0]?.id;
+          if (currentId && currentId !== filters.identifier) {
+            syncUrlWithFilters(filters, pageSize, currentId, "replace");
+          }
+        }
       }
       setResult(nextResult);
       setPageStart(start);
@@ -169,6 +176,56 @@ export function QuestionsClient({
     }
   };
 
+  useEffect(() => {
+    // Sincroniza a URL inicial com a questão sendo exibida
+    const firstId =
+      initialResult.items[0]?.external_id ||
+      initialResult.items[0]?.id ||
+      initialFilters.identifier ||
+      null;
+    syncUrlWithFilters(initialFilters, initialMode, firstId, "replace");
+
+    const handlePopState = () => {
+      const url = new URL(window.location.href);
+      const pId = url.searchParams.get("id") || "";
+      const pSearch = url.searchParams.get("busca") || "";
+      const pDisc = url.searchParams.get("disciplina") || "";
+      const pTopic = url.searchParams.get("topico") || "";
+      const pSubtopic = url.searchParams.get("subtopico") || "";
+      const pBoard = url.searchParams.get("banca") || "";
+      const pYear = url.searchParams.get("ano") || "";
+      const pRev = (url.searchParams.get("revisao") as QuestionReviewFilter) || "all";
+      const pMode = url.searchParams.get("modo") === "5" ? 5 : 1;
+
+      const newFilters: QuestionFilters = {
+        identifier: pId,
+        search: pSearch,
+        discipline: pDisc,
+        topic: pTopic,
+        subtopic: pSubtopic,
+        board: pBoard,
+        year: pYear,
+        review: pRev,
+      };
+      setDraftFilters(newFilters);
+      setActiveFilters(newFilters);
+      setMode(pMode);
+      void fetchPage({ filters: newFilters, pageSize: pMode, reset: true });
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  useEffect(() => {
+    if (initialPage.current) {
+      initialPage.current = false;
+      return;
+    }
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    contentRef.current?.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth", block: "start" });
+  }, [pageStart, mode, direction]);
+
   const showPrevious = () => {
     const previous = history.at(-1);
     if (!previous || busy) return;
@@ -177,11 +234,27 @@ export function QuestionsClient({
     setPageStart(previous.start);
     setDirection("previous");
     setError(null);
+    const prevId =
+      previous.result.items[0]?.external_id ||
+      previous.result.items[0]?.id ||
+      null;
+    syncUrlWithFilters(activeFilters, mode, prevId, "replace");
   };
 
   const showNext = async () => {
     if (busy || !result.next_cursor) return;
-    await fetchPage({ cursor: result.next_cursor, start: pageStart + result.items.length, remember: true });
+    const nextResult = await fetchPage({
+      cursor: result.next_cursor,
+      start: pageStart + result.items.length,
+      remember: true,
+    });
+    if (nextResult && nextResult.items.length > 0) {
+      const nextId =
+        nextResult.items[0]?.external_id ||
+        nextResult.items[0]?.id ||
+        null;
+      syncUrlWithFilters(activeFilters, mode, nextId, "push");
+    }
   };
 
   const refreshAfterHide = async () => {

@@ -97,9 +97,11 @@ export default async function QuestionsPage(props: PageProps) {
 
   const initialError = questionsResponse.error
     ? "Não foi possível carregar as questões. Atualize a página para tentar novamente."
-    : statsResponse.error || filtersResponse.error
-      ? "Alguns dados auxiliares não foram carregados. A resolução de questões continua disponível."
-      : null;
+    : initialIdentifier && (questionsResponse.data as QuestionListResult | null)?.total_count === 0
+      ? `A questão solicitada ("${initialIdentifier}") não foi encontrada ou não está disponível com os filtros atuais.`
+      : statsResponse.error || filtersResponse.error
+        ? "Alguns dados auxiliares não foram carregados. A resolução de questões continua disponível."
+        : null;
 
   return (
     <QuestionsClient
