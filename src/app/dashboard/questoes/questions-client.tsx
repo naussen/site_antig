@@ -19,6 +19,8 @@ interface QuestionsClientProps {
   initialError?: string | null;
   initialFilters?: QuestionFilters;
   initialMode?: 1 | 5;
+  initialPageStart?: number;
+  initialHistory?: PageSnapshot[];
 }
 
 export interface QuestionFilters {
@@ -55,13 +57,12 @@ function accuracy(correct: number, total: number) {
 function syncUrlWithFilters(
   filters: QuestionFilters,
   currentMode: 1 | 5,
-  currentQuestionId?: string | null,
+  currentPos: number = 1,
   action: "replace" | "push" = "replace"
 ) {
   if (typeof window === "undefined") return;
   const params = new URLSearchParams();
-  const idToSet = currentQuestionId || filters.identifier;
-  if (idToSet) params.set("id", idToSet);
+  if (filters.identifier) params.set("id", filters.identifier);
   if (filters.search) params.set("busca", filters.search);
   if (filters.discipline) params.set("disciplina", filters.discipline);
   if (filters.topic) params.set("topico", filters.topic);
@@ -70,6 +71,7 @@ function syncUrlWithFilters(
   if (filters.year) params.set("ano", filters.year);
   if (filters.review && filters.review !== "all") params.set("revisao", filters.review);
   if (currentMode === 5) params.set("modo", "5");
+  if (currentPos > 1) params.set("pos", String(currentPos));
 
   const query = params.toString();
   const nextUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
@@ -87,6 +89,8 @@ export function QuestionsClient({
   initialError = null,
   initialFilters = EMPTY_FILTERS,
   initialMode = 1,
+  initialPageStart = 0,
+  initialHistory = [],
 }: QuestionsClientProps) {
   const [result, setResult] = useState(initialResult);
   const [stats, setStats] = useState(initialStats);
@@ -94,8 +98,8 @@ export function QuestionsClient({
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [activeFilters, setActiveFilters] = useState<QuestionFilters>(initialFilters);
   const [mode, setMode] = useState<1 | 5>(initialMode);
-  const [pageStart, setPageStart] = useState(0);
-  const [history, setHistory] = useState<PageSnapshot[]>([]);
+  const [pageStart, setPageStart] = useState(initialPageStart);
+  const [history, setHistory] = useState<PageSnapshot[]>(initialHistory);
   const [direction, setDirection] = useState<"next" | "previous">("next");
   const [loading, setLoading] = useState(false);
   const [cardOperations, setCardOperations] = useState(0);
@@ -156,11 +160,8 @@ export function QuestionsClient({
         setHistory([]);
         setActiveFilters(filters);
         syncUrlWithFilters(filters, pageSize);
-        if (nextResult.items.length > 0) {
-          const currentId = nextResult.items[0]?.external_id || nextResult.items[0]?.id;
-          if (currentId && currentId !== filters.identifier) {
-            syncUrlWithFilters(filters, pageSize, currentId, "replace");
-          }
+        if (start > 0) {
+          syncUrlWithFilters(filters, pageSize, start + 1, "replace");
         }
       }
       setResult(nextResult);
@@ -177,13 +178,8 @@ export function QuestionsClient({
   };
 
   useEffect(() => {
-    // Sincroniza a URL inicial com a questão sendo exibida
-    const firstId =
-      initialResult.items[0]?.external_id ||
-      initialResult.items[0]?.id ||
-      initialFilters.identifier ||
-      null;
-    syncUrlWithFilters(initialFilters, initialMode, firstId, "replace");
+    // Sincroniza a URL inicial com a posição inicial
+    syncUrlWithFilters(initialFilters, initialMode, initialPageStart + 1, "replace");
 
     const handlePopState = () => {
       const url = new URL(window.location.href);
@@ -196,6 +192,7 @@ export function QuestionsClient({
       const pYear = url.searchParams.get("ano") || "";
       const pRev = (url.searchParams.get("revisao") as QuestionReviewFilter) || "all";
       const pMode = url.searchParams.get("modo") === "5" ? 5 : 1;
+      const pPos = Number(url.searchParams.get("pos")) || 1;
 
       const newFilters: QuestionFilters = {
         identifier: pId,
@@ -210,7 +207,7 @@ export function QuestionsClient({
       setDraftFilters(newFilters);
       setActiveFilters(newFilters);
       setMode(pMode);
-      void fetchPage({ filters: newFilters, pageSize: pMode, reset: true });
+      void fetchPage({ filters: newFilters, pageSize: pMode, reset: true, start: Math.max(0, pPos - 1) });
     };
 
     window.addEventListener("popstate", handlePopState);
@@ -234,26 +231,19 @@ export function QuestionsClient({
     setPageStart(previous.start);
     setDirection("previous");
     setError(null);
-    const prevId =
-      previous.result.items[0]?.external_id ||
-      previous.result.items[0]?.id ||
-      null;
-    syncUrlWithFilters(activeFilters, mode, prevId, "replace");
+    syncUrlWithFilters(activeFilters, mode, previous.start + 1, "replace");
   };
 
   const showNext = async () => {
     if (busy || !result.next_cursor) return;
+    const nextStart = pageStart + result.items.length;
     const nextResult = await fetchPage({
       cursor: result.next_cursor,
-      start: pageStart + result.items.length,
+      start: nextStart,
       remember: true,
     });
     if (nextResult && nextResult.items.length > 0) {
-      const nextId =
-        nextResult.items[0]?.external_id ||
-        nextResult.items[0]?.id ||
-        null;
-      syncUrlWithFilters(activeFilters, mode, nextId, "push");
+      syncUrlWithFilters(activeFilters, mode, nextStart + 1, "push");
     }
   };
 
@@ -276,6 +266,7 @@ export function QuestionsClient({
     const loaded = await fetchPage({
       filters: cleanFilters,
       reset: true,
+      start: 0,
     });
     if (loaded) setFiltersOpen(false);
   };
@@ -283,7 +274,7 @@ export function QuestionsClient({
   const clearFilters = () => {
     setDraftFilters(EMPTY_FILTERS);
     setFiltersOpen(false);
-    void fetchPage({ filters: EMPTY_FILTERS, reset: true });
+    void fetchPage({ filters: EMPTY_FILTERS, reset: true, start: 0 });
   };
 
   const toggleErrorNotebook = () => {
@@ -294,7 +285,7 @@ export function QuestionsClient({
       review: nextReview,
     };
     setDraftFilters(nextFilters);
-    void fetchPage({ filters: nextFilters, reset: true });
+    void fetchPage({ filters: nextFilters, reset: true, start: 0 });
   };
 
   const latestAccuracy = accuracy(stats.latest_correct, stats.answered_questions);
@@ -531,7 +522,7 @@ export function QuestionsClient({
               type="button"
               aria-pressed={mode === 1}
               disabled={busy}
-              onClick={() => void fetchPage({ pageSize: 1, reset: true })}
+              onClick={() => void fetchPage({ pageSize: 1, reset: true, start: 0 })}
               className={`min-h-10 flex-1 rounded-lg px-3 text-sm font-semibold transition sm:flex-none ${mode === 1 ? "bg-[var(--accent)] text-[var(--accent-contrast)]" : "text-[var(--text-secondary)] hover:bg-[var(--accent-soft)]"}`}
             >
               Uma por vez
@@ -540,7 +531,7 @@ export function QuestionsClient({
               type="button"
               aria-pressed={mode === 5}
               disabled={busy}
-              onClick={() => void fetchPage({ pageSize: 5, reset: true })}
+              onClick={() => void fetchPage({ pageSize: 5, reset: true, start: 0 })}
               className={`min-h-10 flex-1 rounded-lg px-3 text-sm font-semibold transition sm:flex-none ${mode === 5 ? "bg-[var(--accent)] text-[var(--accent-contrast)]" : "text-[var(--text-secondary)] hover:bg-[var(--accent-soft)]"}`}
             >
               5 por página
@@ -565,7 +556,7 @@ export function QuestionsClient({
                   onClick={() => {
                     const nextFilters = { ...activeFilters, review: "all" as const };
                     setDraftFilters(nextFilters);
-                    void fetchPage({ filters: nextFilters, reset: true });
+                    void fetchPage({ filters: nextFilters, reset: true, start: 0 });
                   }}
                   className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-xl bg-[var(--accent)] px-4 text-sm font-bold text-[var(--accent-contrast)]"
                 >

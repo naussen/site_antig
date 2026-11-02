@@ -75,11 +75,23 @@ export default async function QuestionsPage(props: PageProps) {
       ? rawReview
       : "all";
 
+  const parsedPos = Number(paramVal("pos"));
+  const requestedPos = Number.isInteger(parsedPos) && parsedPos >= 1 && parsedPos <= 20 ? parsedPos : 1;
+
+  // Se não houver filtro explícito por ID, p_limit carrega até a posição solicitada
+  // para permitir que o histórico de navegação (anterior/próxima) seja reconstruído
+  // sem colapsar o conjunto filtrado para um único item.
+  const limitToFetch = initialIdentifier
+    ? initialMode === 5 ? 5 : 1
+    : initialMode === 1
+      ? Math.max(1, requestedPos)
+      : 5;
+
   const [questionsResponse, statsResponse, filtersResponse] = await Promise.all([
     supabase.rpc("list_questions_filtered_v2", {
       p_question_identifier: initialIdentifier,
       // Contrato: p_limit: 1 (modo individual) ou 5 (modo compacto)
-      p_limit: initialMode === 5 ? 5 : 1,
+      p_limit: limitToFetch,
       p_after_id: null,
       p_search: initialSearch,
       p_discipline_slug: initialDiscipline,
@@ -95,9 +107,36 @@ export default async function QuestionsPage(props: PageProps) {
     supabase.rpc("list_question_filters"),
   ]);
 
+  const rawData = questionsResponse.data as QuestionListResult | null;
+  let finalResult: QuestionListResult = rawData ?? EMPTY_RESULT;
+  let finalPageStart = 0;
+  const reconstructedHistory: Array<{ result: QuestionListResult; start: number }> = [];
+
+  // Se navegando no modo individual sem filtro por ID e requestedPos > 1:
+  // reconstrói a pilha de histórico com as questões anteriores para que o botão 'Anterior' funcione
+  if (!initialIdentifier && initialMode === 1 && rawData && rawData.items.length > 1) {
+    const targetIdx = Math.min(requestedPos - 1, rawData.items.length - 1);
+    for (let i = 0; i < targetIdx; i++) {
+      reconstructedHistory.push({
+        result: {
+          items: [rawData.items[i]],
+          next_cursor: rawData.items[i].id,
+          total_count: rawData.total_count,
+        },
+        start: i,
+      });
+    }
+    finalPageStart = targetIdx;
+    finalResult = {
+      items: [rawData.items[targetIdx]],
+      next_cursor: rawData.next_cursor,
+      total_count: rawData.total_count,
+    };
+  }
+
   const initialError = questionsResponse.error
     ? "Não foi possível carregar as questões. Atualize a página para tentar novamente."
-    : initialIdentifier && (questionsResponse.data as QuestionListResult | null)?.total_count === 0
+    : initialIdentifier && rawData?.total_count === 0
       ? `A questão solicitada ("${initialIdentifier}") não foi encontrada ou não está disponível com os filtros atuais.`
       : statsResponse.error || filtersResponse.error
         ? "Alguns dados auxiliares não foram carregados. A resolução de questões continua disponível."
@@ -105,7 +144,7 @@ export default async function QuestionsPage(props: PageProps) {
 
   return (
     <QuestionsClient
-      initialResult={(questionsResponse.data as QuestionListResult | null) ?? EMPTY_RESULT}
+      initialResult={finalResult}
       initialStats={(statsResponse.data as QuestionStatsResult | null) ?? EMPTY_STATS}
       filterOptions={(filtersResponse.data as QuestionFilterOptions | null) ?? EMPTY_FILTERS}
       initialError={initialError}
@@ -120,6 +159,8 @@ export default async function QuestionsPage(props: PageProps) {
         review: initialReview,
       }}
       initialMode={initialMode}
+      initialPageStart={finalPageStart}
+      initialHistory={reconstructedHistory}
     />
   );
 }
