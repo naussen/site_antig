@@ -167,10 +167,15 @@ BEGIN
         v_review_filter = 'all'
         OR (v_review_filter = 'errors' AND EXISTS (
           SELECT 1
-          FROM public.user_question_attempts AS attempt
-          WHERE attempt.user_id = current_user_id
-            AND attempt.question_id = question.id
-            AND attempt.is_correct = false
+          FROM (
+            SELECT attempt.is_correct
+            FROM public.user_question_attempts AS attempt
+            WHERE attempt.user_id = current_user_id
+              AND attempt.question_id = question.id
+            ORDER BY attempt.answered_at DESC, attempt.id DESC
+            LIMIT 1
+          ) AS latest_attempt
+          WHERE latest_attempt.is_correct = false
         ))
         OR (v_review_filter = 'marked' AND EXISTS (
           SELECT 1

@@ -7,7 +7,7 @@ const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 test("migration 051 normaliza bancas (F06) e implementa filtro de revisão (F08)", async () => {
   const [migration051, rollback051] = await Promise.all([
     read("supabase/migrations/051_normalize_boards_and_review_filter.sql"),
-    read("supabase/migrations/051_rollback.sql"),
+    read("scripts/questions-workflow/rollback_051.sql"),
   ]);
 
   // F06 - Normalização atômica de bancas
