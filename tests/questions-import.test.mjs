@@ -131,3 +131,17 @@ test("migration mantém importação privada, transacional e sem sobrescrita", (
   assert.match(migration, /GRANT EXECUTE ON FUNCTION public\.import_questions_batch\(JSONB\)[\s\S]*TO service_role/u);
   assert.doesNotMatch(migration, /GRANT EXECUTE[\s\S]*TO authenticated/u);
 });
+
+test("normaliza canonicamente aliases de bancas na importação e preserva origem", () => {
+  const vunespRaw = { ...rawQuestion, id_alfanumerico: "vun01", banca: "VUNESP" };
+  const batch = buildQuestionBatch({
+    rawText: JSON.stringify([vunespRaw]),
+    sourceFile: "01_DIREITO_ADMINISTRATIVO_ATUALIZADO.json",
+    rawQuestions: [vunespRaw],
+    mapping,
+    selectedIds: ["vun01"],
+  });
+
+  assert.equal(batch.questions[0].exam_board, "Vunesp");
+  assert.equal(batch.questions[0].source_metadata.original_exam_board, "VUNESP");
+});

@@ -2,6 +2,18 @@ import { createHash } from "node:crypto";
 
 import { z } from "zod";
 
+export function normalizeCanonicalExamBoard(rawBoard) {
+  if (!rawBoard || typeof rawBoard !== "string") return null;
+  const trimmed = rawBoard.trim();
+  if (!trimmed) return null;
+  const lower = trimmed.toLowerCase();
+  if (lower === "vunesp") return "Vunesp";
+  if (["fcc", "fundação carlos chagas", "fundacao carlos chagas"].includes(lower)) return "FCC";
+  if (["cebraspe", "cespe", "cespe/unb", "cespe | cebraspe", "cespe / cebraspe"].includes(lower)) return "CEBRASPE";
+  return trimmed;
+}
+
+
 const trimmedText = (maximum) =>
   z
     .string()
@@ -35,7 +47,7 @@ export const questionImportItemSchema = z
     question_type: z.enum(["multiple_choice", "true_false"]),
     statement_markdown: trimmedText(20_000),
     subject: trimmedText(200),
-    exam_board: nullableTrimmedText(120),
+    exam_board: nullableTrimmedText(120).transform((val) => normalizeCanonicalExamBoard(val)),
     institution: nullableTrimmedText(200),
     position_name: nullableTrimmedText(200),
     exam_year: z.number().int().min(1900).max(2200).nullable(),
@@ -176,7 +188,7 @@ export function transformReviewedQuestion(rawQuestion, mapping) {
     question_type: rawQuestion.tipo === "certo_errado" ? "true_false" : "multiple_choice",
     statement_markdown: requiredString(rawQuestion.enunciado, "enunciado", sourceId),
     subject: requiredString(rawQuestion.assunto, "assunto", sourceId),
-    exam_board: rawQuestion.banca.trim(),
+    exam_board: normalizeCanonicalExamBoard(rawQuestion.banca),
     institution: typeof rawQuestion.orgao === "string" && rawQuestion.orgao.trim() ? rawQuestion.orgao.trim() : null,
     position_name: typeof rawQuestion.cargo === "string" && rawQuestion.cargo.trim() ? rawQuestion.cargo.trim() : null,
     exam_year: rawQuestion.ano,
@@ -188,6 +200,7 @@ export function transformReviewedQuestion(rawQuestion, mapping) {
       review_reason: rawQuestion.justificativa_revisao ?? null,
       state: rawQuestion.estado ?? null,
       source_topic: sourceTopic,
+      original_exam_board: typeof rawQuestion.banca === 'string' ? rawQuestion.banca.trim() : null,
     },
     topics: [{ topic_id: topicId, relation_type: "primary", relevance: 100, sort_order: 0 }],
     options,
