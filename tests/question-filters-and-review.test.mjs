@@ -53,7 +53,7 @@ test("page.tsx lê searchParams assíncronos e propaga filtros para o servidor e
   assert.match(pageSource, /initialBoard/);
   assert.match(pageSource, /initialYear/);
   assert.match(pageSource, /initialReview/);
-  assert.match(pageSource, /p_review_filter:\s*initialReview/);
+  assert.match(pageSource, /initialReview !== "all" && \{ p_review_filter: initialReview \}/);
   assert.match(pageSource, /initialFilters=\{\{\s*identifier:/);
   assert.match(pageSource, /initialMode=\{initialMode\}/);
 });
@@ -65,6 +65,7 @@ test("questions-client.tsx sincroniza URL (F07) e possui card interativo de Cade
   assert.match(clientSource, /function syncUrlWithFilters/);
   assert.match(clientSource, /window\.history\.replaceState/);
   assert.match(clientSource, /syncUrlWithFilters\(filters, pageSize\)/);
+  assert.match(clientSource, /filters\.review !== "all" && \{ p_review_filter: filters\.review \}/);
 
   // F08 - Card interativo com a11y
   assert.match(clientSource, /toggleErrorNotebook/);

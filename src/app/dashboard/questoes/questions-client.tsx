@@ -141,7 +141,7 @@ export function QuestionsClient({
         p_exam_board: filters.board || null,
         p_exam_year: filters.year ? Number(filters.year) : null,
         p_include_hidden: false,
-        p_review_filter: filters.review || "all",
+        ...(filters.review && filters.review !== "all" && { p_review_filter: filters.review }),
       });
       if (requestError) throw requestError;
       if (currentRequest !== requestId.current) return null;

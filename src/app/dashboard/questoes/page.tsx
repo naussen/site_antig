@@ -89,7 +89,8 @@ export default async function QuestionsPage(props: PageProps) {
       p_exam_board: initialBoard,
       p_exam_year: initialYear,
       p_include_hidden: false,
-      p_review_filter: initialReview,
+      // A listagem comum também funciona com a assinatura da migration 050.
+      ...(initialReview !== "all" && { p_review_filter: initialReview }),
     }),
     supabase.rpc("get_question_stats"),
     supabase.rpc("list_question_filters"),
