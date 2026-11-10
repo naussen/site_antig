@@ -33,7 +33,7 @@ async function reconcileRow(row: ReconciliationRow, checkedAt: string) {
       throw new Error("unexpected_mercado_pago_user");
     }
     if (invoice && (
-      invoice.preapproval_id !== row.provider_subscription_id || !isExpectedMercadoPagoInvoice(invoice)
+      invoice.preapproval_id !== row.provider_subscription_id || !isExpectedMercadoPagoInvoice(invoice, subscription)
     )) throw new Error("unexpected_mercado_pago_invoice");
 
     if (invoice?.payment?.id !== undefined) {

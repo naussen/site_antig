@@ -57,10 +57,9 @@ async function processSubscriptionEvent(type: string, resourceId: string, receiv
   const invoice = type === "subscription_authorized_payment"
     ? await getMercadoPagoInvoice(resourceId)
     : null;
-  if (invoice && !isExpectedMercadoPagoInvoice(invoice)) throw new Error("unexpected_invoice");
-
   const subscriptionId = invoice?.preapproval_id ?? resourceId;
   const { subscription, userId } = await assertExpectedSubscription(subscriptionId);
+  if (invoice && !isExpectedMercadoPagoInvoice(invoice, subscription)) throw new Error("unexpected_invoice");
   if (invoice?.payment?.id !== undefined) {
     await recordProviderTransaction({
       provider: "mercado_pago",

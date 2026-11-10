@@ -6,6 +6,7 @@ import {
   calculateAccessUntil,
   classifyProviderErrorDetail,
   isAllowedCheckoutUrl,
+  isExpectedPayPalCheckoutPlan,
   mapMercadoPagoStatus,
   mapPayPalStatus,
   resolveMercadoPagoPayerEmail,
@@ -21,6 +22,22 @@ test("PayPal exige ambiente explícito e não assume sandbox silenciosamente", (
   assert.equal(resolvePayPalEnvironment("live"), "live");
   assert.throws(() => resolvePayPalEnvironment(undefined), /deve ser sandbox ou live/);
   assert.throws(() => resolvePayPalEnvironment("production"), /deve ser sandbox ou live/);
+});
+
+test("PayPal aceita apenas o plano mensal compatível com a oferta de lançamento", () => {
+  const cycle = {
+    tenure_type: "REGULAR",
+    total_cycles: 0,
+    frequency: { interval_unit: "MONTH", interval_count: 1 },
+    pricing_scheme: { fixed_price: { currency_code: "BRL", value: "19.90" } },
+  };
+  const plan = { status: "ACTIVE", billing_cycles: [cycle] };
+  assert.equal(isExpectedPayPalCheckoutPlan(plan, 19.9), true);
+  assert.equal(isExpectedPayPalCheckoutPlan(plan, 9.9), false);
+  assert.equal(isExpectedPayPalCheckoutPlan({ ...plan, status: "INACTIVE" }, 19.9), false);
+  assert.equal(isExpectedPayPalCheckoutPlan({ ...plan, billing_cycles: [cycle, { tenure_type: "TRIAL" }] }, 19.9), false);
+  assert.equal(isExpectedPayPalCheckoutPlan({ ...plan, taxes: { percentage: "10", inclusive: false } }, 19.9), false);
+  assert.equal(isExpectedPayPalCheckoutPlan({ ...plan, payment_preferences: { setup_fee: { value: "1" } } }, 19.9), false);
 });
 
 test("impede nova assinatura enquanto o vínculo anterior está ativo ou sem resolução", () => {
@@ -81,13 +98,13 @@ test("cria assinatura mensal automática sem campos de Checkout Pro", () => {
     userId: "b8ca932b-5e14-4c48-8717-79e5557d6d4f",
     email: "assinante@example.com",
     appUrl: "https://proconcursos.com.br/resumos",
-    amount: 9.9,
+    amount: 19.9,
   });
 
   assert.equal(payload.external_reference, "b8ca932b-5e14-4c48-8717-79e5557d6d4f");
   assert.equal(payload.auto_recurring.frequency, 1);
   assert.equal(payload.auto_recurring.frequency_type, "months");
-  assert.equal(payload.auto_recurring.transaction_amount, 9.9);
+  assert.equal(payload.auto_recurring.transaction_amount, 19.9);
   assert.equal(
     payload.back_url,
     "https://proconcursos.com.br/resumos/api/payments/return/mercado-pago",

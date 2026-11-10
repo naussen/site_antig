@@ -402,6 +402,12 @@ export interface PrivacyRequest {
   updated_at: string;
 }
 
+export interface LaunchInterest {
+  email: string;
+  consent_version: string;
+  consented_at: string;
+}
+
 export type QuestionHiddenReason =
   | 'not_relevant'
   | 'outdated'

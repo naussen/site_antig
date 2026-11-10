@@ -7,6 +7,19 @@ export function resolveMercadoPagoPayerEmail(input: {
   testPayerEmail?: string;
 }): string;
 export function resolvePayPalEnvironment(environment: string | undefined): "sandbox" | "live";
+export type PayPalCheckoutPlan = {
+  id?: string;
+  status?: string;
+  billing_cycles?: Array<{
+    tenure_type?: string;
+    total_cycles?: number;
+    frequency?: { interval_unit?: string; interval_count?: number };
+    pricing_scheme?: { fixed_price?: { currency_code?: string; value?: string } };
+  }>;
+  payment_preferences?: { setup_fee?: { value?: string } };
+  taxes?: { inclusive?: boolean; percentage?: string };
+};
+export function isExpectedPayPalCheckoutPlan(plan: PayPalCheckoutPlan, amount: number): boolean;
 export function buildMercadoPagoSubscriptionPayload(input: { userId: string; email: string; appUrl: string; amount: number }): {
   reason: string;
   external_reference: string;

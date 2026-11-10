@@ -1,5 +1,11 @@
 # Changelog
 
+## Lista de interesse e oferta de lançamento (09/11/2026)
+
+- A página inicial recebe cadastros para o aviso de lançamento com e-mail e aceite explícito do termo. O Supabase guarda a data e a versão do consentimento em uma tabela privada, com um registro por endereço.
+- O preço de lançamento é de R$ 19,90 por mês na página inicial, nos termos de uso e na assinatura. O checkout aplica a oferta no Mercado Pago e confere o plano do PayPal antes de criar a assinatura.
+- O procedimento de exportação, revogação e encerramento está em [Lista de lançamento](docs/LISTA_LANCAMENTO.md).
+
 ## Questões — Correção Integral dos Achados Funcionais e Editoriais F01–F09 da Auditoria (31/10/2026)
 
 - **F01 & F02 & F09 — Integridade de Conteúdo, Textos-base e Segmentação**:

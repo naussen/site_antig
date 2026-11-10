@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight,
   BarChart3,
   BookOpen,
   Check,
@@ -20,10 +19,11 @@ import {
 } from "lucide-react";
 import { ProQuestionsLogo } from "@/components/brand/pro-questions-logo";
 import { SiteStructuredData } from "@/components/seo/site-structured-data";
+import { LAUNCH_MONTHLY_PRICE_LABEL } from "@/lib/payments/launch-price";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
+import { LaunchInterestForm } from "./launch-interest-form";
 
 const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo-dark.png");
-const SUBSCRIBE_HREF = "/login?next=/resumos/dashboard/assinatura";
 
 function BrandLogo({
   className = "",
@@ -61,7 +61,7 @@ function WindowFrame({ label, children }: { label: string; children: React.React
 function HeroProductPreview() {
   return (
     <figure
-      className="relative mx-auto min-w-0 w-full max-w-[680px] lg:mx-0"
+      className="relative mx-auto min-w-0 w-full max-w-[680px] lg:mx-0 lg:mt-20"
       aria-label="Prévia do ambiente de estudos do PRO Concursos"
     >
       <div
@@ -355,12 +355,6 @@ export function LandingPageContent() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#181820] text-white">
       <SiteStructuredData />
-      <aside aria-label="Aviso de lançamento" className="pointer-events-none fixed inset-0 z-[60] overflow-hidden">
-        <div className="absolute -left-[20%] top-1/2 flex h-[30svh] w-[140%] -translate-y-1/2 -rotate-12 flex-col items-center justify-center gap-3 border-y-4 border-current bg-[var(--action)] px-6 text-center text-[var(--dashboard-sidebar)] shadow-2xl">
-          <p className="whitespace-nowrap text-[clamp(2.75rem,8vw,7rem)] font-black leading-none tracking-[0.12em]">EM BREVE</p>
-          <p className="text-[clamp(0.875rem,2vw,1.5rem)] font-semibold">Site ainda não disponível</p>
-        </div>
-      </aside>
       <nav aria-label="Navegação principal" className="sticky top-0 z-50 border-b border-white/10 bg-[#181820]/90 px-3 py-3 backdrop-blur-xl sm:px-8 lg:px-12">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-2 sm:gap-4">
           <Link href="https://proconcursos.com.br/" aria-label="PRO Concursos — página inicial"><BrandLogo preload /></Link>
@@ -368,24 +362,29 @@ export function LandingPageContent() {
             <a href="#modulos" className="rounded-lg px-3 py-2 text-sm font-semibold text-white/70 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826]">Módulos</a>
             <a href="#ferramentas" className="rounded-lg px-3 py-2 text-sm font-semibold text-white/70 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826]">Funcionalidades</a>
           </div>
-          <div className="flex shrink-0 items-center gap-1.5 sm:gap-3"><Link href="/login" className="inline-flex min-h-11 items-center rounded-xl px-2 text-xs font-semibold text-white/80 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-4 sm:text-sm">Entrar</Link><Link href={SUBSCRIBE_HREF} className="inline-flex min-h-11 items-center rounded-xl bg-[#f9a826] px-3 text-xs font-extrabold uppercase tracking-wide text-[#121212] shadow-lg shadow-[#f9a826]/15 transition hover:-translate-y-0.5 hover:bg-[#ffc15c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-5 sm:text-sm">Assinar</Link></div>
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
+            <Link href="/login" className="inline-flex min-h-11 items-center rounded-xl px-2 text-xs font-semibold text-white/80 transition hover:bg-white/5 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-4 sm:text-sm">Entrar</Link>
+            <a href="#aviso-lancamento" className="inline-flex min-h-11 items-center rounded-xl bg-[#f9a826] px-3 text-xs font-extrabold text-[#121212] transition hover:bg-[#ffc15c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:px-5 sm:text-sm">Avise-me</a>
+          </div>
         </div>
       </nav>
 
-      <header className="relative px-5 pb-20 pt-12 sm:px-8 sm:pb-24 sm:pt-16 lg:px-12 lg:py-20">
+      <header className="relative px-5 pb-16 pt-8 sm:px-8 sm:pb-24 sm:pt-12 lg:px-12">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_55%_at_35%_0%,rgba(108,92,231,0.32),transparent_70%)]" />
         <div className="pointer-events-none absolute -left-32 top-32 h-80 w-80 rounded-full bg-[#7c3aed]/15 blur-3xl" /><div className="pointer-events-none absolute -right-32 top-16 h-80 w-80 rounded-full bg-[#f9a826]/10 blur-3xl" />
-        <div className="relative mx-auto grid min-w-0 max-w-7xl items-center gap-14 lg:grid-cols-[minmax(0,0.88fr)_minmax(520px,1.12fr)] lg:gap-10 xl:gap-16">
+        <div className="relative mx-auto grid min-w-0 max-w-7xl items-start gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] lg:gap-10 xl:gap-16">
           <div className="min-w-0 text-center lg:text-left">
-            <span className="mb-7 inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/35 bg-[#a78bfa]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#c4b5fd]"><Sparkles size={13} /> Oferta especial de lançamento</span>
-            <h1 className="text-balance text-4xl font-black leading-[1.02] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl">Resumos, questões e legislação oficial <span className="bg-gradient-to-r from-[#a78bfa] to-[#f9a826] bg-clip-text text-transparent">no mesmo ambiente.</span></h1>
-            <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-7 text-[#b4b1c3] sm:text-lg sm:leading-8 lg:mx-0">Estude com conteúdo estruturado, questões comentadas, texto legal versionado, anotações e ferramentas de leitura em uma única assinatura mensal.</p>
+            <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#a78bfa]/35 bg-[#a78bfa]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#c4b5fd]"><Sparkles size={13} aria-hidden="true" /> Lançamento em breve</span>
+            <h1 className="text-balance text-4xl font-black leading-[1.02] tracking-[-0.04em] text-white sm:text-5xl xl:text-[3.375rem]">Resumos, questões e legislação oficial <span className="bg-gradient-to-r from-[#a78bfa] to-[#f9a826] bg-clip-text text-transparent">no mesmo ambiente.</span></h1>
+            <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-7 text-[#b4b1c3] sm:text-lg sm:leading-8 lg:mx-0">Estude com conteúdo estruturado, questões comentadas, texto legal versionado, anotações e ferramentas de leitura em uma única assinatura mensal.</p>
+            <p className="mt-4 text-sm text-white/80">Preço de lançamento <strong className="ml-1 text-xl font-black text-[#f9a826]">{LAUNCH_MONTHLY_PRICE_LABEL} por mês</strong></p>
+            <LaunchInterestForm />
             <ul className="mx-auto mt-6 grid max-w-xl gap-2 text-left text-sm text-white/80 sm:grid-cols-3 lg:mx-0 lg:grid-cols-1 xl:grid-cols-3" aria-label="Principais benefícios">
               {["Conteúdo organizado", "Lei seca integrada", "Progresso salvo"].map((benefit) => (
                 <li key={benefit} className="flex items-center gap-2"><CheckCircle2 size={16} className="shrink-0 text-[#f9a826]" aria-hidden="true" />{benefit}</li>
               ))}
             </ul>
-            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row lg:justify-start"><Link href={SUBSCRIBE_HREF} className="inline-flex w-full min-w-0 items-center justify-center gap-2 rounded-2xl bg-[#f9a826] px-5 py-4 text-center text-sm font-extrabold text-[#121212] shadow-2xl shadow-[#f9a826]/20 transition hover:-translate-y-1 hover:bg-[#ffc15c] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:w-auto sm:px-7 sm:text-base">Assinar com oferta de lançamento <ArrowRight size={19} className="shrink-0" /></Link><a href="#modulos" className="inline-flex w-full min-w-0 items-center justify-center rounded-2xl border border-white/30 bg-white/[0.06] px-5 py-4 text-center text-sm font-bold text-white transition hover:border-[#a78bfa]/70 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826] sm:w-auto sm:px-7">Conhecer a plataforma</a></div>
+            <a href="#modulos" className="mt-5 inline-flex min-h-11 items-center rounded-xl px-3 text-sm font-bold text-white underline underline-offset-4 hover:text-[#c4b5fd] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f9a826]">Conhecer a plataforma</a>
             <div className="mx-auto mt-5 flex max-w-xl items-start gap-3 rounded-2xl border border-emerald-300/20 bg-emerald-300/[0.07] p-4 text-left lg:mx-0">
               <ShieldCheck size={20} className="mt-0.5 shrink-0 text-emerald-300" aria-hidden="true" />
               <p className="text-xs leading-5 text-white/75"><strong className="text-white">Acesso e pagamento seguros.</strong> Ao escolher Google, sua senha permanece no Google. No pagamento, os dados completos do cartão são informados diretamente ao Mercado Pago e não passam pelo PRO Concursos.</p>

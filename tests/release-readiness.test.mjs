@@ -13,7 +13,6 @@ const readyEnvironment = {
   SUPABASE_SERVICE_ROLE_KEY: "private-admin-test-value",
   CONTENT_ADMIN_TOKEN: "private-content-test-value",
   PAYMENTS_APP_URL: "https://example.com/resumos",
-  PAYMENTS_MONTHLY_PRICE_BRL: "9.90",
   PAYMENTS_RECONCILIATION_TOKEN: "private-reconciliation-test-value",
   MERCADO_PAGO_ENVIRONMENT: "production",
   MERCADO_PAGO_ACCESS_TOKEN: "private-mercado-pago-test-value",

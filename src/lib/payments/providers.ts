@@ -4,12 +4,16 @@ import {
   buildMercadoPagoSubscriptionPayload,
   classifyProviderErrorDetail,
   isAllowedCheckoutUrl,
+  isExpectedPayPalCheckoutPlan,
   resolveMercadoPagoPayerEmail,
   resolvePayPalEnvironment,
+  type PayPalCheckoutPlan,
 } from "./core.mjs";
+import { LAUNCH_MONTHLY_PRICE_BRL } from "./launch-price";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 
 const MERCADO_PAGO_API = "https://api.mercadopago.com";
+const LEGACY_MERCADO_PAGO_PRICE_BRL = 9.90;
 
 function requiredEnv(name: string) {
   const value = process.env[name]?.trim();
@@ -17,9 +21,9 @@ function requiredEnv(name: string) {
   return value;
 }
 
-function checkoutIdempotencyKey(userId: string, provider: string) {
+function checkoutIdempotencyKey(userId: string, provider: string, offer: string | number) {
   const tenMinuteBucket = Math.floor(Date.now() / 600_000);
-  const hex = createHash("sha256").update(`${provider}:${userId}:${tenMinuteBucket}`).digest("hex").slice(0, 32);
+  const hex = createHash("sha256").update(`${provider}:${offer}:${userId}:${tenMinuteBucket}`).digest("hex").slice(0, 32);
   return `${hex.slice(0, 8)}-${hex.slice(8, 12)}-${hex.slice(12, 16)}-${hex.slice(16, 20)}-${hex.slice(20)}`;
 }
 
@@ -45,14 +49,11 @@ export function getPaymentsInternalUrl(path: string) {
 }
 
 export function getMercadoPagoConfig() {
-  const amount = Number(requiredEnv("PAYMENTS_MONTHLY_PRICE_BRL"));
-  if (!Number.isFinite(amount) || amount <= 0) throw new Error("Preço mensal do Mercado Pago inválido.");
   return {
     accessToken: requiredEnv("MERCADO_PAGO_ACCESS_TOKEN"),
     webhookSecret: requiredEnv("MERCADO_PAGO_WEBHOOK_SECRET"),
     environment: requiredEnv("MERCADO_PAGO_ENVIRONMENT"),
     testPayerEmail: process.env.MERCADO_PAGO_TEST_PAYER_EMAIL,
-    amount,
   };
 }
 
@@ -62,6 +63,7 @@ function getPayPalConfig() {
     clientId: requiredEnv("PAYPAL_CLIENT_ID"),
     clientSecret: requiredEnv("PAYPAL_CLIENT_SECRET"),
     planId: requiredEnv("PAYPAL_PLAN_ID"),
+    legacyPlanId: process.env.PAYPAL_LEGACY_PLAN_ID?.trim(),
     webhookId: requiredEnv("PAYPAL_WEBHOOK_ID"),
     apiBase: environment === "live" ? "https://api-m.paypal.com" : "https://api-m.sandbox.paypal.com",
   };
@@ -122,13 +124,13 @@ export async function createMercadoPagoSubscription(userId: string, email: strin
     userEmail: email,
     testPayerEmail: config.testPayerEmail,
   });
-  const payload = buildMercadoPagoSubscriptionPayload({ userId, email: payerEmail, appUrl, amount: config.amount });
+  const payload = buildMercadoPagoSubscriptionPayload({ userId, email: payerEmail, appUrl, amount: LAUNCH_MONTHLY_PRICE_BRL });
   const response = await fetch(`${MERCADO_PAGO_API}/preapproval`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${config.accessToken}`,
       "Content-Type": "application/json",
-      "X-Idempotency-Key": checkoutIdempotencyKey(userId, "mercado_pago"),
+      "X-Idempotency-Key": checkoutIdempotencyKey(userId, "mercado_pago", LAUNCH_MONTHLY_PRICE_BRL),
     },
     body: JSON.stringify(payload),
     cache: "no-store",
@@ -159,12 +161,22 @@ async function getPayPalAccessToken() {
 export async function createPayPalSubscription(userId: string) {
   const { config, accessToken } = await getPayPalAccessToken();
   const appUrl = getPaymentsInternalUrl("/");
+  const planResponse = await fetch(`${config.apiBase}/v1/billing/plans/${encodeURIComponent(config.planId)}`, {
+    headers: { Authorization: `Bearer ${accessToken}` },
+    cache: "no-store",
+    signal: AbortSignal.timeout(10_000),
+  });
+  const plan = await providerJson<PayPalCheckoutPlan | null>(planResponse, "PayPal");
+  if (plan?.id !== config.planId || !isExpectedPayPalCheckoutPlan(plan, LAUNCH_MONTHLY_PRICE_BRL)) {
+    throw new Error("O plano do PayPal diverge da oferta de lançamento.");
+  }
+
   const response = await fetch(`${config.apiBase}/v1/billing/subscriptions`, {
     method: "POST",
     headers: {
       Authorization: `Bearer ${accessToken}`,
       "Content-Type": "application/json",
-      "PayPal-Request-Id": checkoutIdempotencyKey(userId, "paypal"),
+      "PayPal-Request-Id": checkoutIdempotencyKey(userId, "paypal", config.planId),
     },
     body: JSON.stringify({
       plan_id: config.planId,
@@ -219,9 +231,14 @@ export async function cancelMercadoPagoSubscription(subscriptionId: string) {
 export function isExpectedMercadoPagoSubscription(subscription: {
   auto_recurring?: { transaction_amount?: number; currency_id?: string };
 }) {
-  const { amount } = getMercadoPagoConfig();
+  const amount = subscription.auto_recurring?.transaction_amount;
+  const previousConfiguredAmount = Number(process.env.PAYMENTS_MONTHLY_PRICE_BRL);
   return subscription.auto_recurring?.currency_id === "BRL"
-    && subscription.auto_recurring.transaction_amount === amount;
+    && (
+      amount === LAUNCH_MONTHLY_PRICE_BRL
+      || amount === LEGACY_MERCADO_PAGO_PRICE_BRL
+      || (Number.isFinite(previousConfiguredAmount) && previousConfiguredAmount > 0 && amount === previousConfiguredAmount)
+    );
 }
 
 export async function getMercadoPagoInvoice(invoiceId: string) {
@@ -274,9 +291,12 @@ export async function getMercadoPagoChargeback(chargebackId: string) {
   }>(response, "Mercado Pago");
 }
 
-export function isExpectedMercadoPagoInvoice(invoice: { currency_id?: string; transaction_amount?: string | number }) {
-  const { amount } = getMercadoPagoConfig();
-  return invoice.currency_id === "BRL" && Number(invoice.transaction_amount) === amount;
+export function isExpectedMercadoPagoInvoice(
+  invoice: { currency_id?: string; transaction_amount?: string | number },
+  subscription: { auto_recurring?: { transaction_amount?: number } },
+) {
+  return invoice.currency_id === "BRL"
+    && Number(invoice.transaction_amount) === subscription.auto_recurring?.transaction_amount;
 }
 
 export async function verifyPayPalWebhook(headers: Headers, event: unknown) {
@@ -344,5 +364,6 @@ export async function getLatestMercadoPagoInvoice(subscriptionId: string) {
 }
 
 export function isExpectedPayPalSubscription(subscription: { plan_id?: string }) {
-  return subscription.plan_id === getPayPalConfig().planId;
+  const { planId, legacyPlanId } = getPayPalConfig();
+  return subscription.plan_id === planId || Boolean(legacyPlanId && subscription.plan_id === legacyPlanId);
 }

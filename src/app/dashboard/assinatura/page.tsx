@@ -3,6 +3,7 @@ import { Check, CreditCard, RefreshCw, ShieldCheck, Sparkles, WalletCards } from
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import type { UserEntitlement } from "@/types/database";
+import { LAUNCH_MONTHLY_PRICE_LABEL } from "@/lib/payments/launch-price";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import { PaymentSubmitButton } from "./payment-submit-button";
 import { CancelSubscriptionButton } from "./cancel-subscription-button";
@@ -50,7 +51,6 @@ export default async function SubscriptionPage({
       process.env.MERCADO_PAGO_ENVIRONMENT === "test" &&
       process.env.MERCADO_PAGO_TEST_PAYER_EMAIL
     )) &&
-    process.env.PAYMENTS_MONTHLY_PRICE_BRL &&
     process.env.PAYMENTS_APP_URL
   );
   const payPalEnabled = Boolean(
@@ -59,13 +59,8 @@ export default async function SubscriptionPage({
     process.env.PAYPAL_PLAN_ID &&
     process.env.PAYPAL_WEBHOOK_ID &&
     (process.env.PAYPAL_ENVIRONMENT === "sandbox" || process.env.PAYPAL_ENVIRONMENT === "live") &&
-    process.env.PAYMENTS_MONTHLY_PRICE_BRL &&
     process.env.PAYMENTS_APP_URL
   );
-  const monthlyPrice = Number(process.env.PAYMENTS_MONTHLY_PRICE_BRL);
-  const formattedMonthlyPrice = Number.isFinite(monthlyPrice) && monthlyPrice > 0
-    ? monthlyPrice.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
-    : null;
   const checkoutMessage = ({
     retorno: "Recebemos seu retorno do provedor. O acesso será liberado após a confirmação segura do pagamento.",
     cancelado: "O checkout foi cancelado e nenhuma assinatura foi ativada.",
@@ -142,7 +137,7 @@ export default async function SubscriptionPage({
               <div className="rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] p-6 shadow-lg sm:p-7">
                 <p className="text-xs font-extrabold uppercase tracking-[0.16em] text-[var(--accent)]">Plano mensal</p>
                 <div className="mt-3 flex items-end gap-2 text-[var(--text-primary)]">
-                  <strong className="text-5xl font-black tracking-tight">{formattedMonthlyPrice ?? "R$ 9,90"}</strong>
+                  <strong className="text-5xl font-black tracking-tight">{LAUNCH_MONTHLY_PRICE_LABEL}</strong>
                   <span className="pb-1 text-sm font-semibold text-[var(--text-secondary)]">/mês</span>
                 </div>
                 <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">
@@ -200,7 +195,7 @@ export default async function SubscriptionPage({
               <RefreshCw size={28} className="text-[var(--accent)]" aria-hidden="true" />
               <h2 className="mt-4 text-xl font-extrabold text-[var(--text-primary)]">Renovação realmente automática</h2>
               <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">
-                Depois da primeira autorização, o Mercado Pago agenda a cobrança de {formattedMonthlyPrice ?? "R$ 9,90"} todos os meses no meio de pagamento escolhido.
+                Depois da primeira autorização, o Mercado Pago agenda a cobrança de {LAUNCH_MONTHLY_PRICE_LABEL} todos os meses no meio de pagamento escolhido.
               </p>
               <p className="mt-4 rounded-2xl bg-[var(--accent-soft)] p-4 text-xs leading-5 text-[var(--text-secondary)]">
                 Você não precisará voltar ao site para fazer um novo pagamento a cada mês.
@@ -289,8 +284,7 @@ export default async function SubscriptionPage({
             {!hasContentAccess && !isAdmin && (
               <div className="mt-5 space-y-3">
                 <p className="text-xs leading-5" style={{ color: "var(--text-muted)" }}>
-                  {formattedMonthlyPrice ? `${formattedMonthlyPrice}/mês. ` : "Assinatura mensal recorrente. "}
-                  A cobrança e os dados completos do cartão ficam no ambiente seguro do provedor escolhido; o PRO Concursos mantém somente a identificação da assinatura e seu estado de acesso.
+                  A assinatura mensal custa {LAUNCH_MONTHLY_PRICE_LABEL}. A cobrança e os dados completos do cartão ficam no ambiente seguro do provedor escolhido. O PRO Concursos mantém somente a identificação da assinatura e seu estado de acesso.
                 </p>
                 {mercadoPagoEnabled && (
                   <form action={withSiteBasePath("/api/payments/checkout/mercado-pago")} method="post">

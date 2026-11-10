@@ -50,6 +50,24 @@ export function resolvePayPalEnvironment(environment) {
   return environment;
 }
 
+export function isExpectedPayPalCheckoutPlan(plan, amount) {
+  const cycle = plan.billing_cycles?.[0];
+  const price = cycle?.pricing_scheme?.fixed_price;
+  const setupFee = plan.payment_preferences?.setup_fee;
+  const taxes = plan.taxes;
+
+  return plan.status === "ACTIVE"
+    && plan.billing_cycles?.length === 1
+    && cycle?.tenure_type === "REGULAR"
+    && cycle.total_cycles === 0
+    && cycle.frequency?.interval_unit === "MONTH"
+    && cycle.frequency.interval_count === 1
+    && price?.currency_code === "BRL"
+    && Number(price.value) === amount
+    && (!setupFee || Number(setupFee.value) === 0)
+    && (!taxes || taxes.inclusive === true || Number(taxes.percentage) === 0);
+}
+
 export function buildMercadoPagoSubscriptionPayload({ userId, email, appUrl, amount }) {
   return {
     reason: "PRO Concursos — assinatura mensal",

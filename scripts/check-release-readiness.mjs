@@ -5,7 +5,7 @@ const checks = {
     && (required("NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY") || required("NEXT_PUBLIC_SUPABASE_ANON_KEY")),
   supabase_admin: required("SUPABASE_SERVICE_ROLE_KEY"),
   content_admin: required("CONTENT_ADMIN_TOKEN"),
-  payments_base: required("PAYMENTS_APP_URL") && required("PAYMENTS_MONTHLY_PRICE_BRL"),
+  payments_base: required("PAYMENTS_APP_URL"),
   reconciliation: required("PAYMENTS_RECONCILIATION_TOKEN"),
   mercado_pago_live: process.env.MERCADO_PAGO_ENVIRONMENT === "production"
     && required("MERCADO_PAGO_ACCESS_TOKEN")
