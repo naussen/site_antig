@@ -5,6 +5,7 @@
 - A página inicial recebe cadastros para o aviso de lançamento com e-mail e aceite explícito do termo. O Supabase guarda a data e a versão do consentimento em uma tabela privada, com um registro por endereço.
 - O preço de lançamento é de R$ 19,90 por mês na página inicial, nos termos de uso e na assinatura. O checkout aplica a oferta no Mercado Pago e confere o plano do PayPal antes de criar a assinatura.
 - O procedimento de exportação, revogação e encerramento está em [Lista de lançamento](docs/LISTA_LANCAMENTO.md).
+- O teste de integração do TJSP informa quando o PDF local está ausente. Em ambientes com Python e PyMuPDF, é possível indicar o arquivo com `TJSP_EXAM_PDF`.
 
 ## Questões — Correção Integral dos Achados Funcionais e Editoriais F01–F09 da Auditoria (31/10/2026)
 

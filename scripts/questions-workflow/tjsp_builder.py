@@ -11,11 +11,20 @@ Confrontado com o Gabarito Oficial Definitivo da Fundação Vunesp:
 """
 from __future__ import annotations
 
-import fitz
 import json
 import hashlib
+import os
 import re
-from typing import Any
+from pathlib import Path
+from typing import TYPE_CHECKING, Any
+
+if TYPE_CHECKING:
+    import fitz
+
+EXAM_PDF_PATH = Path(
+    os.environ.get("TJSP_EXAM_PDF")
+    or r"C:\PRO\questoes\novas_pdf_30-10\escrevente_tecnico_judiciario.pdf"
+)
 
 def clean_pdf_text(text: str | None) -> str | None:
     if not text:
@@ -285,7 +294,9 @@ def get_ordered_text(doc: fitz.Document) -> str:
 
 def build_tjsp_questions() -> tuple[list[dict], list[dict]]:
     """Retorna (lista_questoes_prontas, lista_registros_manifesto_todos_100)."""
-    doc = fitz.open(r"C:\PRO\questoes\novas_pdf_30-10\escrevente_tecnico_judiciario.pdf")
+    import fitz
+
+    doc = fitz.open(EXAM_PDF_PATH)
     exam_sha = "47c322cfecd1da0c00de8fad61f05c85d6fbf26ff05b294a89812fb1cae551bf"
     ans_sha = "6802c8ee31f4015b277652acddb8ae088e06489b554259a5fb413a1f587b70da"
 

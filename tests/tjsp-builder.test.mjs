@@ -6,10 +6,15 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-test("tjsp_builder: gera 100 itens com textos-base, alternativas limpas, gabarito definitivo e taxonomia canônica", () => {
+test("tjsp_builder: gera 100 itens com textos-base, alternativas limpas, gabarito definitivo e taxonomia canônica", (context) => {
   const script = `
-import json
-from tjsp_builder import build_tjsp_questions
+import os
+from tjsp_builder import EXAM_PDF_PATH, build_tjsp_questions
+
+if not EXAM_PDF_PATH.is_file():
+    if os.environ.get("TJSP_EXAM_PDF"):
+        raise FileNotFoundError("O PDF configurado em TJSP_EXAM_PDF não foi encontrado")
+    raise SystemExit(77)
 
 ready, manifest = build_tjsp_questions()
 
@@ -64,7 +69,12 @@ print("SUCCESS")
 `;
 
   const cwd = path.resolve(__dirname, "../scripts/questions-workflow");
-  const res = spawnSync("python", ["-c", script], { cwd, encoding: "utf-8" });
+  const res = spawnSync("python", ["-X", "utf8", "-c", script], { cwd, encoding: "utf-8" });
+  if (res.status === 77 || (res.error?.code === "ENOENT" && !process.env.TJSP_EXAM_PDF)) {
+    context.skip("Teste de integração local. Disponibilize Python, PyMuPDF e o PDF da prova em TJSP_EXAM_PDF para executá-lo.");
+    return;
+  }
+  if (res.error) throw res.error;
   assert.equal(res.status, 0, `Script falhou com erro:\n${res.stderr}`);
   assert.ok(res.stdout.includes("SUCCESS"));
 });
