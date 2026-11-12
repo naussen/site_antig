@@ -3,7 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { DashboardNavigation } from "@/components/navigation/dashboard-navigation";
-import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
+import { hasMemberSession } from "@/lib/auth/member-session.mjs";
 import { NoteImageReconciler } from "@/components/note-image-reconciler";
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export default async function DashboardLayout({
   }
 
   const { data: claimsData, error: claimsError } = await supabase.auth.getClaims();
-  if (claimsError || !hasGoogleSession(user, claimsData?.claims)) {
+  if (claimsError || !hasMemberSession(user, claimsData?.claims)) {
     await supabase.auth.signOut();
     redirect("/login?error=google_required");
   }

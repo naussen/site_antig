@@ -1,7 +1,7 @@
 import "server-only";
 
 import { redirect } from "next/navigation";
-import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
+import { hasMemberSession } from "@/lib/auth/member-session.mjs";
 import { createClient } from "@/lib/supabase/server";
 
 export async function requireContentAccess() {
@@ -16,7 +16,7 @@ export async function requireContentAccess() {
   }
 
   const { data: claimsData, error: claimsError } = await supabase.auth.getClaims();
-  if (claimsError || !hasGoogleSession(user, claimsData?.claims)) {
+  if (claimsError || !hasMemberSession(user, claimsData?.claims)) {
     await supabase.auth.signOut();
     redirect("/login?error=google_required");
   }

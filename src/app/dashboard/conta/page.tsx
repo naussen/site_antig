@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { isSharedAccount } from "@/lib/auth/shared-account.mjs";
 import { CreditCard, LockKeyhole, ShieldCheck, SlidersHorizontal, UserRound } from "lucide-react";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
@@ -19,6 +20,7 @@ export default async function AccountPage() {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) redirect("/login");
+  const shared = isSharedAccount(user);
 
   const { data: privacyRequests, error } = await supabase
     .from("privacy_requests")
@@ -48,14 +50,14 @@ export default async function AccountPage() {
             <dl className="mt-4 space-y-3 text-sm">
               <div><dt className="font-bold text-[var(--text-muted)]">E-mail</dt><dd className="mt-1 break-all text-[var(--text-primary)]">{user.email}</dd></div>
               <div><dt className="font-bold text-[var(--text-muted)]">Conta criada em</dt><dd className="mt-1 text-[var(--text-primary)]">{createdAt}</dd></div>
-              <div><dt className="font-bold text-[var(--text-muted)]">Método de acesso</dt><dd className="mt-1 text-[var(--text-primary)]">Google</dd></div>
+              <div><dt className="font-bold text-[var(--text-muted)]">Método de acesso</dt><dd className="mt-1 text-[var(--text-primary)]">{shared ? "Senha compartilhada (sem segundo fator)" : "Google"}</dd></div>
             </dl>
           </article>
           <article className="rounded-3xl border border-[var(--border)] bg-[var(--bg-card)] p-6">
             <LockKeyhole size={24} className="text-[var(--accent)]" />
             <h2 className="mt-4 text-xl font-extrabold text-[var(--text-primary)]">Segurança da conta</h2>
-            <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">O acesso é protegido pelo Google. Senha, recuperação de acesso e verificações adicionais são administradas diretamente na sua Conta Google.</p>
-            <a href="https://myaccount.google.com/security" target="_blank" rel="noreferrer" className="mt-5 inline-flex min-h-11 items-center rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-3 text-sm font-bold text-[var(--text-primary)] hover:bg-[var(--accent-soft)]">Revisar segurança no Google</a>
+            <p className="mt-3 text-sm leading-6 text-[var(--text-secondary)]">{shared ? "A senha é gerenciada pelo administrador e renovada a cada 15 dias. Notas e progresso são compartilhados." : <>O acesso é protegido pelo Google. Senha, recuperação de acesso e verificações adicionais são administradas diretamente na sua Conta Google.</>}</p>
+            {!shared && <a href="https://myaccount.google.com/security" target="_blank" rel="noreferrer" className="mt-5 inline-flex min-h-11 items-center rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-4 py-3 text-sm font-bold text-[var(--text-primary)] hover:bg-[var(--accent-soft)]">Revisar segurança no Google</a>}
           </article>
         </section>
 

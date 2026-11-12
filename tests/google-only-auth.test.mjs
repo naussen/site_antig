@@ -40,7 +40,7 @@ test("login público e administrativo usam somente Google OAuth", () => {
   );
 });
 
-test("callback, proxy e guardas rejeitam sessões sem identidade Google", () => {
+test("callback mantém Google e guardas aceitam apenas sessões autorizadas", () => {
   for (const path of [
     "../src/app/auth/callback/route.ts",
     "../src/proxy.ts",
@@ -48,7 +48,7 @@ test("callback, proxy e guardas rejeitam sessões sem identidade Google", () => 
     "../src/lib/content-access.ts",
     "../src/lib/note-image-access.ts",
   ]) {
-    assert.match(read(path), /hasGoogleSession/);
+    assert.match(read(path), /hasGoogleSession|hasMemberSession/);
   }
 });
 

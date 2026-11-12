@@ -1,6 +1,6 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
-import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
+import { hasMemberSession } from "@/lib/auth/member-session.mjs";
 import { sanitizeOAuthCallbackUrl } from "@/lib/auth/oauth-callback-url.mjs";
 import {
   isPublicPageRequest,
@@ -97,7 +97,7 @@ export async function proxy(request: NextRequest) {
   if (
     user &&
     !claimsError &&
-    hasGoogleSession(user, claimsData?.claims) &&
+    hasMemberSession(user, claimsData?.claims) &&
     localPath !== "/auth/callback"
   ) {
     const cleanUrl = sanitizeOAuthCallbackUrl(request.nextUrl);
@@ -111,7 +111,7 @@ export async function proxy(request: NextRequest) {
     }
   }
 
-  if (user && (claimsError || !hasGoogleSession(user, claimsData?.claims))) {
+  if (user && (claimsError || !hasMemberSession(user, claimsData?.claims))) {
     await supabase.auth.signOut();
 
     if (localPath === "/login" || localPath === "/auth/callback") {

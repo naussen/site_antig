@@ -769,3 +769,13 @@ export interface SectionWithUserData extends SectionRow {
 
 /** Tema visual da aplicação */
 export type Theme = 'light' | 'dark' | 'sepia';
+
+/** Controle operacional restrito à service role; não contém a senha. */
+export interface SharedFriendAccountRow {
+  singleton: true;
+  user_id: string | null;
+  rotation_id: string;
+  rotated_at: string | null;
+  delivered_at: string | null;
+  lease_until: string | null;
+}

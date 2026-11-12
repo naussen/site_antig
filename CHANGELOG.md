@@ -1,5 +1,12 @@
 # Changelog
 
+## Conta compartilhada Amigos (11/11/2026 — ativação pendente)
+
+- Entrada dedicada por senha, sem MFA, limitada a uma identidade comum; Google e MFA administrativo preservados.
+- Rotação a cada 15 dias e envio a nvpezat@gmail.com por função agendada, com controle de concorrência e repetição de entrega.
+- Migration 053 protege credenciais e impede cadastro de MFA; notas e progresso seguem o isolamento existente por usuário.
+- Ativação exige migration, configuração privada de envio e validação real. Procedimento e limitações em [Conta Amigos](docs/CONTA_AMIGOS.md).
+
 ## Lista de interesse e oferta de lançamento (09/11/2026)
 
 - A página inicial recebe cadastros para o aviso de lançamento com e-mail e aceite explícito do termo. O Supabase guarda a data e a versão do consentimento em uma tabela privada, com um registro por endereço.

@@ -1,7 +1,7 @@
 import "server-only";
 
 import { NextResponse } from "next/server";
-import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
+import { hasMemberSession } from "@/lib/auth/member-session.mjs";
 import { createClient } from "@/lib/supabase/server";
 
 export async function authorizeNoteImageRequest() {
@@ -16,7 +16,7 @@ export async function authorizeNoteImageRequest() {
   }
 
   const { data: claimsData, error: claimsError } = await supabase.auth.getClaims();
-  if (claimsError || !hasGoogleSession(user, claimsData?.claims)) {
+  if (claimsError || !hasMemberSession(user, claimsData?.claims)) {
     await supabase.auth.signOut();
     return { response: NextResponse.json({ error: "Autenticação Google necessária." }, { status: 401 }) } as const;
   }

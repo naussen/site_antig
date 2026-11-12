@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Loader2, ShieldCheck } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
@@ -69,6 +70,8 @@ export function LoginForm({ returnTo, errorCode = null }: LoginFormProps) {
         <span>{loading ? "Redirecionando..." : "Continuar com Google"}</span>
       </button>
 
+      <Link href="/login/amigos" className="text-center text-sm font-semibold text-[var(--accent)] hover:underline">Entrar com a conta Amigos</Link>
+
       {errorMessage && (
         <p role="alert" className="rounded-lg border border-[var(--callout-warning-border)] bg-[var(--callout-warning-bg)] px-3 py-2 text-sm text-[var(--text-primary)]">
           {errorMessage}
@@ -78,7 +81,7 @@ export function LoginForm({ returnTo, errorCode = null }: LoginFormProps) {
       <div className="flex items-start gap-3 rounded-xl border border-[var(--border)] bg-[var(--accent-soft)] p-3">
         <ShieldCheck className="mt-0.5 shrink-0 text-[var(--accent)]" size={18} aria-hidden="true" />
         <p className="text-xs leading-5 text-[var(--text-secondary)]">
-          <strong className="text-[var(--text-primary)]">Acesso exclusivo pelo Google.</strong>{" "}
+          <strong className="text-[var(--text-primary)]">Acesso pessoal pelo Google.</strong>{" "}
           O PRO Concursos não recebe nem armazena sua senha Google. Recebemos somente os dados básicos autorizados para criar a conta e manter a sessão.
         </p>
       </div>
