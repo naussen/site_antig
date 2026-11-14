@@ -194,3 +194,62 @@ test("cada dia conta no máximo uma vez por semana, permite exceder a meta e ign
   assert.equal(summary.daysOfWeek[0].sessionsCount, 2);
   assert.equal(addCalendarDays("2026-11-09", 6), "2026-11-15");
 });
+
+test("atualização parcial preserva agendamento pendente e ocultação pré-onboarding não ativa plano", () => {
+  const thursdaySp = new Date("2026-11-12T15:00:00.000Z");
+
+  // Pré-onboarding: ocultar sem concluir onboarding não deve preencher onboardingCompletedAt
+  const hiddenBeforeOnboarding = planPreferenceUpdate({
+    currentPreferences: null,
+    currentWeeklyPlan: null,
+    nextTargetDays: undefined,
+    nextTimezoneIana: undefined,
+    activateOnboarding: false,
+    nowUtc: thursdaySp,
+  });
+  assert.equal(hiddenBeforeOnboarding.onboardingCompletedAt, null);
+  assert.equal(hiddenBeforeOnboarding.isFirstActivation, false);
+
+  // Com agendamento pendente (meta 5 dias, fuso Europe/Lisbon), omitir meta/fuso preserva pendência
+  const withScheduledChange = {
+    target_days: 3,
+    timezone_iana: "America/Sao_Paulo",
+    pending_target_days: 5,
+    pending_timezone_iana: "Europe/Lisbon",
+    pending_effective_week_start: "2026-11-16",
+    onboarding_completed_at: "2026-11-10T12:00:00.000Z",
+  };
+  const weeklyPlan = {
+    id: "plan-w1",
+    week_start_date: "2026-11-09",
+    week_end_date: "2026-11-15",
+    target_days: 3,
+    timezone_iana: "America/Sao_Paulo",
+    is_partial_first_week: true,
+  };
+
+  const partialToggle = planPreferenceUpdate({
+    currentPreferences: withScheduledChange,
+    currentWeeklyPlan: weeklyPlan,
+    nextTargetDays: undefined,
+    nextTimezoneIana: undefined,
+    activateOnboarding: true,
+    nowUtc: thursdaySp,
+  });
+  assert.equal(partialToggle.pendingTargetDays, 5);
+  assert.equal(partialToggle.pendingTimezoneIana, "Europe/Lisbon");
+  assert.equal(partialToggle.pendingEffectiveWeekStart, "2026-11-16");
+
+  // Reenvio explícito igual ao ativo cancela o agendamento anterior
+  const explicitCancel = planPreferenceUpdate({
+    currentPreferences: withScheduledChange,
+    currentWeeklyPlan: weeklyPlan,
+    nextTargetDays: 3,
+    nextTimezoneIana: "America/Sao_Paulo",
+    activateOnboarding: true,
+    nowUtc: thursdaySp,
+  });
+  assert.equal(explicitCancel.pendingTargetDays, null);
+  assert.equal(explicitCancel.pendingTimezoneIana, null);
+  assert.equal(explicitCancel.pendingEffectiveWeekStart, null);
+});

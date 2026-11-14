@@ -3,17 +3,10 @@ import "server-only";
 import { hasGoogleSession } from "@/lib/auth/google-only.mjs";
 import { createClient } from "@/lib/supabase/server";
 import {
-  getSafeSupabaseErrorCode,
   isMissingColumnError,
   isMissingTableError,
 } from "@/lib/supabase/errors";
 import { compareTopicsByOrigin } from "@/lib/topic-order";
-import type {
-  StudyRoutineSessionActivityRow,
-  StudyRoutineSessionRow,
-  StudyRoutineWeeklyPlanRow,
-  UserStudyRoutinePreferencesRow,
-} from "@/types/database";
 import {
   DEFAULT_BUDGET_MINUTES,
   DEFAULT_TARGET_DAYS,
@@ -34,32 +27,28 @@ import type {
   RoutineRepository,
   RoutineSnapshot,
   RoutineTopicInput,
-  StudyRoutineActivityRecord,
   StudyRoutinePreferencesRecord,
   StudyRoutineSessionRecord,
   StudyRoutineWeeklyPlanRecord,
 } from "./session.d.mts";
+import {
+  RoutineSchemaUnavailableError,
+  createSupabaseRoutineRepository,
+  getRoutineErrorLike,
+  isRoutineSchemaError,
+  logRoutineServerError,
+  normalizeBudgetValue,
+  throwMappedDatabaseError,
+} from "./repository.mjs";
+
+export {
+  RoutineSchemaUnavailableError,
+  createSupabaseRoutineRepository,
+  isRoutineSchemaError,
+  logRoutineServerError,
+};
 
 type SupabaseServerClient = Awaited<ReturnType<typeof createClient>>;
-
-const ROUTINE_TABLES = [
-  "user_study_routine_preferences",
-  "study_routine_weekly_plans",
-  "study_routine_sessions",
-  "study_routine_session_activities",
-] as const;
-
-const MISSING_FUNCTION_CODES = new Set(["42883", "PGRST202"]);
-
-export class RoutineSchemaUnavailableError extends Error {
-  readonly code: string;
-
-  constructor(code = "SCHEMA_UNAVAILABLE") {
-    super("A persistência da rotina semanal ainda não está disponível neste ambiente.");
-    this.name = "RoutineSchemaUnavailableError";
-    this.code = code;
-  }
-}
 
 export interface DashboardRoutineTopicOption {
   topic_id: string;
@@ -83,165 +72,6 @@ export interface StudyTopicRoutineState {
   operationalEnabled: boolean;
   persistenceAvailable: boolean;
   snapshot: RoutineSnapshot | null;
-}
-
-function getSupabaseErrorLike(error: unknown): { code?: string; message?: string } | null {
-  if (!error || typeof error !== "object") return null;
-  const record = error as Record<string, unknown>;
-  return {
-    code: typeof record.code === "string" ? record.code : undefined,
-    message: typeof record.message === "string" ? record.message : undefined,
-  };
-}
-
-export function isRoutineSchemaError(error: unknown): boolean {
-  if (error instanceof RoutineSchemaUnavailableError) return true;
-  const err = getSupabaseErrorLike(error);
-  if (!err) return false;
-
-  if (ROUTINE_TABLES.some((table) => isMissingTableError(err, table))) {
-    return true;
-  }
-
-  if (err.code && MISSING_FUNCTION_CODES.has(err.code)) {
-    return true;
-  }
-
-  const message = (err.message ?? "").toLowerCase();
-  return (
-    message.includes("complete_study_routine_session")
-    && (message.includes("does not exist") || message.includes("could not find the function"))
-  );
-}
-
-export function logRoutineServerError(
-  context: string,
-  error: unknown,
-  schemaUnavailable = isRoutineSchemaError(error),
-): void {
-  const err = getSupabaseErrorLike(error);
-  console.error(context, {
-    code: getSafeSupabaseErrorCode(err),
-    category: schemaUnavailable ? "schema_unavailable" : "query_failed",
-  });
-}
-
-function normalizeBudgetValue(value: unknown): 5 | 15 | 30 {
-  if (value === 5 || value === 30) return value;
-  return 15;
-}
-
-function mapPreferencesRow(row: UserStudyRoutinePreferencesRow): StudyRoutinePreferencesRecord {
-  return {
-    user_id: row.user_id,
-    target_days: row.target_days,
-    timezone_iana: row.timezone_iana,
-    default_budget_minutes: normalizeBudgetValue(row.default_budget_minutes),
-    preferred_discipline: row.preferred_discipline,
-    hide_gamification: row.hide_gamification,
-    pending_target_days: row.pending_target_days,
-    pending_timezone_iana: row.pending_timezone_iana,
-    pending_effective_week_start: row.pending_effective_week_start,
-    onboarding_completed_at: row.onboarding_completed_at,
-  };
-}
-
-function mapWeeklyPlanRow(row: StudyRoutineWeeklyPlanRow): StudyRoutineWeeklyPlanRecord {
-  return {
-    id: row.id,
-    user_id: row.user_id,
-    week_start_date: row.week_start_date,
-    week_end_date: row.week_end_date,
-    target_days: row.target_days,
-    timezone_iana: row.timezone_iana,
-    is_partial_first_week: row.is_partial_first_week,
-  };
-}
-
-function mapActivityRow(row: StudyRoutineSessionActivityRow): StudyRoutineActivityRecord {
-  return {
-    id: row.id,
-    session_id: row.session_id,
-    user_id: row.user_id,
-    order_index: row.order_index,
-    activity_type: row.activity_type,
-    status: row.status,
-    topic_id: row.topic_id,
-    topic_title: row.topic_title,
-    discipline: row.discipline,
-    section_id: row.section_id,
-    content_unit_id: row.content_unit_id,
-    activity_title: row.activity_title,
-    estimated_minutes: row.estimated_minutes,
-    evidence_kind: row.evidence_kind,
-    completed_at: row.completed_at,
-    created_at: row.created_at,
-    updated_at: row.updated_at,
-  };
-}
-
-function mapSessionRow(
-  row: StudyRoutineSessionRow,
-  activities: StudyRoutineActivityRecord[],
-): StudyRoutineSessionRecord {
-  return {
-    id: row.id,
-    user_id: row.user_id,
-    weekly_plan_id: row.weekly_plan_id,
-    status: row.status,
-    budget_minutes: normalizeBudgetValue(row.budget_minutes),
-    estimated_minutes: row.estimated_minutes,
-    selection_mode: row.selection_mode,
-    idempotency_key: row.idempotency_key,
-    completion_idempotency_key: row.completion_idempotency_key,
-    started_at: row.started_at,
-    last_activity_at: row.last_activity_at,
-    completed_at: row.completed_at,
-    completed_local_date: row.completed_local_date,
-    completed_week_start_date: row.completed_week_start_date,
-    completed_timezone_iana: row.completed_timezone_iana,
-    activities,
-  };
-}
-
-function throwMappedDatabaseError(context: string, error: unknown): never {
-  if (isRoutineSchemaError(error)) {
-    logRoutineServerError(context, error, true);
-    throw new RoutineSchemaUnavailableError(getSafeSupabaseErrorCode(getSupabaseErrorLike(error)));
-  }
-
-  logRoutineServerError(context, error, false);
-  const err = getSupabaseErrorLike(error);
-  if (err?.code === "42501") {
-    throw new RoutineDomainError(
-      "Assinatura ativa ou permissão válida necessária.",
-      403,
-      "forbidden",
-    );
-  }
-  if (err?.code === "P0002") {
-    throw new RoutineDomainError("Registro da rotina não encontrado.", 404, "not_found");
-  }
-  if (err?.code === "23503") {
-    throw new RoutineDomainError(
-      "Conteúdo selecionado está arquivado ou indisponível.",
-      409,
-      "content_unavailable",
-    );
-  }
-  if (err?.code === "23514") {
-    throw new RoutineDomainError(
-      "Estado inválido para esta operação na sessão.",
-      409,
-      "invalid_transition",
-    );
-  }
-
-  throw new RoutineDomainError(
-    "Não foi possível processar a solicitação da rotina agora.",
-    500,
-    "routine_persistence_error",
-  );
 }
 
 export async function getApiContentAccess(): Promise<
@@ -305,377 +135,6 @@ export async function getApiContentAccess(): Promise<
   }
 
   return { ok: true, supabase, user };
-}
-
-export function createSupabaseRoutineRepository(supabase: SupabaseServerClient): RoutineRepository {
-  async function hydrateSessions(
-    userId: string,
-    sessionRows: StudyRoutineSessionRow[],
-  ): Promise<StudyRoutineSessionRecord[]> {
-    if (sessionRows.length === 0) return [];
-    const sessionIds = sessionRows.map((row) => row.id);
-    const { data, error } = await supabase
-      .from("study_routine_session_activities")
-      .select("*")
-      .eq("user_id", userId)
-      .in("session_id", sessionIds)
-      .order("order_index", { ascending: true });
-
-    if (error) {
-      throwMappedDatabaseError("Falha ao carregar atividades das sessões de rotina.", error);
-    }
-
-    const bySession = new Map<string, StudyRoutineActivityRecord[]>();
-    for (const row of (data ?? []) as StudyRoutineSessionActivityRow[]) {
-      const mapped = mapActivityRow(row);
-      const list = bySession.get(mapped.session_id) ?? [];
-      list.push(mapped);
-      bySession.set(mapped.session_id, list);
-    }
-
-    return sessionRows.map((row) => mapSessionRow(row, bySession.get(row.id) ?? []));
-  }
-
-  return {
-    async getPreferences(userId) {
-      const { data, error } = await supabase
-        .from("user_study_routine_preferences")
-        .select("*")
-        .eq("user_id", userId)
-        .maybeSingle();
-
-      if (error) {
-        throwMappedDatabaseError("Falha ao ler preferências da rotina semanal.", error);
-      }
-
-      return data ? mapPreferencesRow(data as UserStudyRoutinePreferencesRow) : null;
-    },
-
-    async upsertPreferences(userId, record) {
-      const payload = {
-        user_id: userId,
-        target_days: record.target_days,
-        timezone_iana: record.timezone_iana,
-        default_budget_minutes: record.default_budget_minutes,
-        preferred_discipline: record.preferred_discipline ?? null,
-        hide_gamification: Boolean(record.hide_gamification),
-        pending_target_days: record.pending_target_days ?? null,
-        pending_timezone_iana: record.pending_timezone_iana ?? null,
-        pending_effective_week_start: record.pending_effective_week_start ?? null,
-        onboarding_completed_at: record.onboarding_completed_at ?? null,
-      };
-
-      const { data, error } = await supabase
-        .from("user_study_routine_preferences")
-        .upsert(payload, { onConflict: "user_id" })
-        .select("*")
-        .single();
-
-      if (error || !data) {
-        throwMappedDatabaseError("Falha ao salvar preferências da rotina semanal.", error);
-      }
-
-      return mapPreferencesRow(data as UserStudyRoutinePreferencesRow);
-    },
-
-    async listWeeklyPlans(userId) {
-      const { data, error } = await supabase
-        .from("study_routine_weekly_plans")
-        .select("*")
-        .eq("user_id", userId)
-        .order("week_start_date", { ascending: false })
-        .limit(26);
-
-      if (error) {
-        throwMappedDatabaseError("Falha ao listar planos semanais de rotina.", error);
-      }
-
-      return ((data ?? []) as StudyRoutineWeeklyPlanRow[]).map(mapWeeklyPlanRow);
-    },
-
-    async createWeeklyPlan(userId, plan) {
-      const { data, error } = await supabase
-        .from("study_routine_weekly_plans")
-        .insert({
-          user_id: userId,
-          week_start_date: plan.week_start_date,
-          week_end_date: plan.week_end_date,
-          target_days: plan.target_days,
-          timezone_iana: plan.timezone_iana,
-          is_partial_first_week: Boolean(plan.is_partial_first_week),
-        })
-        .select("*")
-        .single();
-
-      if (error) {
-        const errLike = getSupabaseErrorLike(error);
-        if (errLike?.code === "23505") {
-          const { data: existing, error: fetchError } = await supabase
-            .from("study_routine_weekly_plans")
-            .select("*")
-            .eq("user_id", userId)
-            .eq("week_start_date", String(plan.week_start_date))
-            .single();
-          if (fetchError || !existing) {
-            throwMappedDatabaseError("Falha ao recuperar plano semanal existente.", fetchError ?? error);
-          }
-          return mapWeeklyPlanRow(existing as StudyRoutineWeeklyPlanRow);
-        }
-        throwMappedDatabaseError("Falha ao criar plano semanal de rotina.", error);
-      }
-
-      return mapWeeklyPlanRow(data as StudyRoutineWeeklyPlanRow);
-    },
-
-    async listSessionsForWeek(userId, weekStartDate, weekEndDate) {
-      const { data, error } = await supabase
-        .from("study_routine_sessions")
-        .select("*")
-        .eq("user_id", userId)
-        .eq("status", "completed")
-        .gte("completed_local_date", weekStartDate)
-        .lte("completed_local_date", weekEndDate)
-        .order("completed_at", { ascending: false });
-
-      if (error) {
-        throwMappedDatabaseError("Falha ao listar sessões concluídas da semana.", error);
-      }
-
-      return hydrateSessions(userId, (data ?? []) as StudyRoutineSessionRow[]);
-    },
-
-    async listRecentSessions(userId, limit) {
-      const safeLimit = Math.max(1, Math.min(30, limit));
-      const { data, error } = await supabase
-        .from("study_routine_sessions")
-        .select("*")
-        .eq("user_id", userId)
-        .order("started_at", { ascending: false })
-        .limit(safeLimit);
-
-      if (error) {
-        throwMappedDatabaseError("Falha ao listar sessões recentes de rotina.", error);
-      }
-
-      return hydrateSessions(userId, (data ?? []) as StudyRoutineSessionRow[]);
-    },
-
-    async findActiveSession(userId) {
-      const { data, error } = await supabase
-        .from("study_routine_sessions")
-        .select("*")
-        .eq("user_id", userId)
-        .in("status", ["planned", "in_progress", "interrupted"])
-        .order("last_activity_at", { ascending: false })
-        .limit(1)
-        .maybeSingle();
-
-      if (error) {
-        throwMappedDatabaseError("Falha ao consultar sessão ativa de rotina.", error);
-      }
-
-      if (!data) return null;
-      const [hydrated] = await hydrateSessions(userId, [data as StudyRoutineSessionRow]);
-      return hydrated ?? null;
-    },
-
-    async findSessionByIdempotencyKey(userId, key) {
-      const { data, error } = await supabase
-        .from("study_routine_sessions")
-        .select("*")
-        .eq("user_id", userId)
-        .eq("idempotency_key", key)
-        .maybeSingle();
-
-      if (error) {
-        throwMappedDatabaseError("Falha ao verificar idempotência da sessão.", error);
-      }
-
-      if (!data) return null;
-      const [hydrated] = await hydrateSessions(userId, [data as StudyRoutineSessionRow]);
-      return hydrated ?? null;
-    },
-
-    async findSessionByCompletionKey(userId, key) {
-      const { data, error } = await supabase
-        .from("study_routine_sessions")
-        .select("*")
-        .eq("user_id", userId)
-        .eq("completion_idempotency_key", key)
-        .maybeSingle();
-
-      if (error) {
-        throwMappedDatabaseError("Falha ao verificar idempotência da conclusão.", error);
-      }
-
-      if (!data) return null;
-      const [hydrated] = await hydrateSessions(userId, [data as StudyRoutineSessionRow]);
-      return hydrated ?? null;
-    },
-
-    async getSessionById(userId, sessionId) {
-      const { data, error } = await supabase
-        .from("study_routine_sessions")
-        .select("*")
-        .eq("user_id", userId)
-        .eq("id", sessionId)
-        .maybeSingle();
-
-      if (error) {
-        throwMappedDatabaseError("Falha ao consultar sessão de rotina.", error);
-      }
-
-      if (!data) return null;
-      const [hydrated] = await hydrateSessions(userId, [data as StudyRoutineSessionRow]);
-      return hydrated ?? null;
-    },
-
-    async createSessionWithActivities(userId, session, activities) {
-      const { data: createdRow, error: insertError } = await supabase
-        .from("study_routine_sessions")
-        .insert({
-          user_id: userId,
-          weekly_plan_id: session.weekly_plan_id,
-          status: session.status,
-          budget_minutes: session.budget_minutes,
-          estimated_minutes: session.estimated_minutes,
-          selection_mode: session.selection_mode,
-          idempotency_key: session.idempotency_key,
-          started_at: session.started_at,
-          last_activity_at: session.last_activity_at,
-        })
-        .select("*")
-        .single();
-
-      if (insertError) {
-        const errLike = getSupabaseErrorLike(insertError);
-        if (errLike?.code === "23505") {
-          const byKey = await this.findSessionByIdempotencyKey(
-            userId,
-            String(session.idempotency_key),
-          );
-          if (byKey) {
-            if (byKey.activities.length === 0 && activities.length > 0) {
-              await new Promise((resolve) => setTimeout(resolve, 75));
-              const retried = await this.findSessionByIdempotencyKey(
-                userId,
-                String(session.idempotency_key),
-              );
-              if (retried) return retried;
-            }
-            return byKey;
-          }
-
-          const existingActive = await this.findActiveSession(userId);
-          if (existingActive) {
-            return existingActive;
-          }
-        }
-        throwMappedDatabaseError("Falha ao iniciar sessão de rotina.", insertError);
-      }
-
-      const createdSession = createdRow as StudyRoutineSessionRow;
-      const activityPayloads = activities.map((activity) => ({
-        session_id: createdSession.id,
-        user_id: userId,
-        order_index: activity.order_index,
-        activity_type: activity.activity_type,
-        status: activity.status,
-        topic_id: activity.topic_id ?? null,
-        topic_title: activity.topic_title,
-        discipline: activity.discipline,
-        section_id: activity.section_id ?? null,
-        content_unit_id: activity.content_unit_id ?? null,
-        activity_title: activity.activity_title,
-        estimated_minutes: activity.estimated_minutes,
-        evidence_kind: activity.evidence_kind ?? "self_declared",
-      }));
-
-      const { data: insertedActivities, error: activityError } = await supabase
-        .from("study_routine_session_activities")
-        .insert(activityPayloads)
-        .select("*")
-        .order("order_index", { ascending: true });
-
-      if (activityError) {
-        await supabase
-          .from("study_routine_sessions")
-          .delete()
-          .eq("user_id", userId)
-          .eq("id", createdSession.id);
-        throwMappedDatabaseError("Falha ao registrar atividades da sessão.", activityError);
-      }
-
-      return mapSessionRow(
-        createdSession,
-        ((insertedActivities ?? []) as StudyRoutineSessionActivityRow[]).map(mapActivityRow),
-      );
-    },
-
-    async updateSession(userId, sessionId, patch) {
-      const { data, error } = await supabase
-        .from("study_routine_sessions")
-        .update(patch)
-        .eq("user_id", userId)
-        .eq("id", sessionId)
-        .select("*")
-        .single();
-
-      if (error || !data) {
-        throwMappedDatabaseError("Falha ao atualizar sessão de rotina.", error);
-      }
-
-      const [hydrated] = await hydrateSessions(userId, [data as StudyRoutineSessionRow]);
-      if (!hydrated) {
-        throw new RoutineDomainError("Sessão não encontrada.", 404, "session_not_found");
-      }
-      return hydrated;
-    },
-
-    async updateSessionActivity(userId, sessionId, activityId, patch) {
-      const { data, error } = await supabase
-        .from("study_routine_session_activities")
-        .update(patch)
-        .eq("user_id", userId)
-        .eq("session_id", sessionId)
-        .eq("id", activityId)
-        .select("*")
-        .single();
-
-      if (error || !data) {
-        throwMappedDatabaseError("Falha ao atualizar atividade da sessão.", error);
-      }
-
-      return mapActivityRow(data as StudyRoutineSessionActivityRow);
-    },
-
-    async completeSessionAtomically({
-      userId,
-      sessionId,
-      weeklyPlanId,
-      completedActivityIds,
-      completionIdempotencyKey,
-    }) {
-      const { data, error } = await supabase.rpc("complete_study_routine_session", {
-        p_session_id: sessionId,
-        p_completed_activity_ids: completedActivityIds,
-        p_completion_idempotency_key: completionIdempotencyKey,
-        p_weekly_plan_id: weeklyPlanId,
-      });
-
-      if (error || !data) {
-        throwMappedDatabaseError("Falha ao concluir sessão de rotina.", error);
-      }
-
-      const completedRow = data as StudyRoutineSessionRow;
-      const hydrated = await this.getSessionById(userId, completedRow.id);
-      return hydrated ?? mapSessionRow(completedRow, []);
-    },
-
-    async markLegacyProgressCompleted() {
-      // A RPC complete_study_routine_session já sincroniza user_progress na mesma transação.
-    },
-  };
 }
 
 const devFallbackGlobal = globalThis as typeof globalThis & {
@@ -1015,8 +474,8 @@ export async function loadUserVisibleDisciplines(
 
   if (error) {
     if (
-      !isMissingTableError(getSupabaseErrorLike(error), "user_dashboard_preferences")
-      && !isMissingColumnError(getSupabaseErrorLike(error), "visible_disciplines")
+      !isMissingTableError(getRoutineErrorLike(error), "user_dashboard_preferences")
+      && !isMissingColumnError(getRoutineErrorLike(error), "visible_disciplines")
     ) {
       logRoutineServerError("Falha ao consultar disciplinas visíveis na rotina.", error, false);
     }

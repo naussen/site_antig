@@ -142,6 +142,45 @@ export interface RoutineTopicInput {
 }
 
 export interface RoutineRepository {
+  usesTransactionalRpcs?: boolean;
+  syncWeeklyPlan?(
+    userId: string,
+    autoActivateIfMissing: boolean,
+    nowUtc?: Date | string | number,
+  ): Promise<{
+    preferences: StudyRoutinePreferencesRecord | null;
+    currentPlan: StudyRoutineWeeklyPlanRecord | null;
+  }>;
+  savePreferencesAtomically?(
+    userId: string,
+    input: {
+      targetDays?: number;
+      timezoneIana?: string;
+      defaultBudgetMinutes?: 5 | 15 | 30;
+      preferredDiscipline?: string;
+      clearPreferredDiscipline?: boolean;
+      hideGamification?: boolean;
+      nowUtc?: Date | string | number;
+    },
+  ): Promise<{
+    preferences: StudyRoutinePreferencesRecord;
+    currentPlan: StudyRoutineWeeklyPlanRecord | null;
+    updatePlan: PlannedPreferenceUpdate;
+  }>;
+  replaceSessionActivityAtomically?(
+    userId: string,
+    sessionId: string,
+    activityId: string,
+    replacement: {
+      topic_id: string | null;
+      topic_title: string;
+      discipline: string;
+      section_id: string | null;
+      content_unit_id: string | null;
+      activity_title: string;
+      estimated_minutes: number;
+    },
+  ): Promise<StudyRoutineSessionRecord>;
   getPreferences(userId: string): Promise<StudyRoutinePreferencesRecord | null>;
   upsertPreferences(
     userId: string,
@@ -172,7 +211,11 @@ export interface RoutineRepository {
     userId: string,
     session: Record<string, unknown>,
     activities: Array<Record<string, unknown>>,
-  ): Promise<StudyRoutineSessionRecord>;
+    options?: { replaceActive?: boolean },
+  ): Promise<
+    | StudyRoutineSessionRecord
+    | { session: StudyRoutineSessionRecord; resumed: boolean; idempotent: boolean }
+  >;
   updateSession(
     userId: string,
     sessionId: string,

@@ -594,3 +594,78 @@ test("buildStudyRecommendation prioriza revisão apenas quando tudo visível foi
   assert.equal(rec?.isReview, true);
   assert.equal(rec?.primaryTarget?.content_unit_id, "11111111-1111-4111-8111-111111111111");
 });
+
+test("savePreferences parcial preserva meta e fuso agendados e ocultar pré-onboarding não cria plano", async () => {
+  const repo = createInMemoryRoutineRepo();
+  const service = createRoutineService(repo);
+  const topics = makeTopicsFixture();
+
+  // 1. Ocultar antes do onboarding preserva needsOnboarding e não cria plano semanal
+  const hiddenFirst = await service.savePreferences({
+    userId: "user-partial",
+    hideGamification: true,
+    nowUtc: new Date("2026-11-12T12:00:00.000Z"),
+  });
+  assert.equal(hiddenFirst.preferences.hide_gamification, true);
+  assert.equal(hiddenFirst.preferences.onboarding_completed_at, null);
+  const preOnboardingSnap = await service.getSnapshot({
+    userId: "user-partial",
+    topics,
+    completedContentUnitIds: new Set(),
+    nowUtc: new Date("2026-11-12T12:01:00.000Z"),
+  });
+  assert.equal(preOnboardingSnap.needsOnboarding, true);
+  assert.equal(preOnboardingSnap.currentPlan, null);
+
+  // 2. Configura meta inicial (3 dias) e depois agenda alteração para 5 dias + Europe/Lisbon
+  await service.savePreferences({
+    userId: "user-partial",
+    targetDays: 3,
+    timezoneIana: "America/Sao_Paulo",
+    defaultBudgetMinutes: 15,
+    hideGamification: false,
+    nowUtc: new Date("2026-11-12T12:02:00.000Z"),
+  });
+  const scheduled = await service.savePreferences({
+    userId: "user-partial",
+    targetDays: 5,
+    timezoneIana: "Europe/Lisbon",
+    defaultBudgetMinutes: 15,
+    hideGamification: false,
+    nowUtc: new Date("2026-11-12T12:03:00.000Z"),
+  });
+  assert.equal(scheduled.preferences.pending_target_days, 5);
+  assert.equal(scheduled.preferences.pending_timezone_iana, "Europe/Lisbon");
+  assert.equal(scheduled.preferences.pending_effective_week_start, "2026-11-16");
+
+  // 3. Ocultar gamificação e alterar apenas orçamento devem manter o agendamento pendente
+  const hiddenAfterSchedule = await service.savePreferences({
+    userId: "user-partial",
+    hideGamification: true,
+    nowUtc: new Date("2026-11-12T12:04:00.000Z"),
+  });
+  assert.equal(hiddenAfterSchedule.preferences.hide_gamification, true);
+  assert.equal(hiddenAfterSchedule.preferences.pending_target_days, 5);
+  assert.equal(hiddenAfterSchedule.preferences.pending_timezone_iana, "Europe/Lisbon");
+  assert.equal(hiddenAfterSchedule.preferences.pending_effective_week_start, "2026-11-16");
+
+  const budgetOnly = await service.savePreferences({
+    userId: "user-partial",
+    defaultBudgetMinutes: 30,
+    nowUtc: new Date("2026-11-12T12:05:00.000Z"),
+  });
+  assert.equal(budgetOnly.preferences.default_budget_minutes, 30);
+  assert.equal(budgetOnly.preferences.pending_target_days, 5);
+  assert.equal(budgetOnly.preferences.pending_timezone_iana, "Europe/Lisbon");
+  assert.equal(budgetOnly.preferences.pending_effective_week_start, "2026-11-16");
+
+  const unhidden = await service.savePreferences({
+    userId: "user-partial",
+    hideGamification: false,
+    nowUtc: new Date("2026-11-12T12:06:00.000Z"),
+  });
+  assert.equal(unhidden.preferences.hide_gamification, false);
+  assert.equal(unhidden.preferences.pending_target_days, 5);
+  assert.equal(unhidden.preferences.pending_timezone_iana, "Europe/Lisbon");
+  assert.equal(unhidden.preferences.pending_effective_week_start, "2026-11-16");
+});

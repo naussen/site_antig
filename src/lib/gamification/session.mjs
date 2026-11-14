@@ -6,6 +6,7 @@ import {
   DEFAULT_TIMEZONE_IANA,
 } from "./config.mjs";
 import {
+  addCalendarDays,
   getWeekBoundsForInstant,
   normalizeIanaTimeZone,
   normalizeTargetDays,
@@ -416,6 +417,19 @@ export function createRoutineService(repository) {
   }
 
   async function ensureCurrentWeeklyPlan(userId, nowUtc, autoActivateIfMissing = false) {
+    if (typeof repository.syncWeeklyPlan === "function") {
+      const synced = await repository.syncWeeklyPlan(userId, autoActivateIfMissing, nowUtc);
+      const preferences = synced?.preferences ?? null;
+      const currentPlan = synced?.currentPlan ?? null;
+      const resolution = resolveEffectiveWeeklyPlan({
+        preferences,
+        existingPlanForCurrentWeek: currentPlan,
+        hasPriorWeeklyPlans: Boolean(currentPlan),
+        nowUtc,
+      });
+      return { preferences, currentPlan, resolution };
+    }
+
     let preferences = await repository.getPreferences(userId);
     const weeklyPlans = await repository.listWeeklyPlans(userId);
     const hasPriorWeeklyPlans = weeklyPlans.length > 0;
@@ -592,33 +606,58 @@ export function createRoutineService(repository) {
       const instant = parseValidInstant(nowUtc);
 
       return withLock(`user:${uid}`, async () => {
+        const hasTargetDays = targetDays !== undefined;
+        const hasTimezone = timezoneIana !== undefined;
+        const normalizedTargetDays = hasTargetDays ? normalizeTargetDays(targetDays) : undefined;
+        const normalizedTimezone = hasTimezone ? normalizeIanaTimeZone(timezoneIana) : undefined;
+        const normalizedBudget = defaultBudgetMinutes !== undefined
+          ? normalizeBudgetMinutes(defaultBudgetMinutes)
+          : undefined;
+        const normalizedHide = hideGamification !== undefined
+          ? Boolean(hideGamification)
+          : undefined;
+        const hasPreferredDisciplinePatch = preferredDiscipline !== undefined;
+        const normalizedDiscipline = hasPreferredDisciplinePatch
+          ? (preferredDiscipline ? String(preferredDiscipline).trim().slice(0, 120) : null)
+          : undefined;
+
+        const activateOnboarding = hasTargetDays
+          || hasTimezone
+          || normalizedBudget !== undefined
+          || hasPreferredDisciplinePatch;
+
+        if (typeof repository.savePreferencesAtomically === "function") {
+          return repository.savePreferencesAtomically(uid, {
+            targetDays: normalizedTargetDays,
+            timezoneIana: normalizedTimezone,
+            defaultBudgetMinutes: normalizedBudget,
+            preferredDiscipline: normalizedDiscipline ?? undefined,
+            clearPreferredDiscipline: hasPreferredDisciplinePatch && normalizedDiscipline === null,
+            hideGamification: normalizedHide,
+            nowUtc: instant,
+          });
+        }
+
         const { preferences: currentPreferences, currentPlan } = await ensureCurrentWeeklyPlan(
           uid,
           instant,
           false,
         );
 
-        const nextTargetDays = targetDays !== undefined
-          ? normalizeTargetDays(targetDays)
-          : (currentPreferences?.target_days ?? DEFAULT_TARGET_DAYS);
-        const nextTimezoneIana = timezoneIana !== undefined
-          ? normalizeIanaTimeZone(timezoneIana)
-          : normalizeIanaTimeZone(currentPreferences?.timezone_iana);
-        const nextBudget = defaultBudgetMinutes !== undefined
-          ? normalizeBudgetMinutes(defaultBudgetMinutes)
-          : (currentPreferences?.default_budget_minutes ?? DEFAULT_BUDGET_MINUTES);
-        const nextHide = hideGamification !== undefined
-          ? Boolean(hideGamification)
-          : Boolean(currentPreferences?.hide_gamification);
-        const nextPreferredDiscipline = preferredDiscipline !== undefined
-          ? (preferredDiscipline ? String(preferredDiscipline).trim().slice(0, 120) : null)
+        const nextBudget = normalizedBudget
+          ?? (currentPreferences?.default_budget_minutes ?? DEFAULT_BUDGET_MINUTES);
+        const nextHide = normalizedHide
+          ?? Boolean(currentPreferences?.hide_gamification);
+        const nextPreferredDiscipline = hasPreferredDisciplinePatch
+          ? (normalizedDiscipline ?? null)
           : (currentPreferences?.preferred_discipline ?? null);
 
         const updatePlan = planPreferenceUpdate({
           currentPreferences,
           currentWeeklyPlan: currentPlan,
-          nextTargetDays,
-          nextTimezoneIana,
+          nextTargetDays: normalizedTargetDays,
+          nextTimezoneIana: normalizedTimezone,
+          activateOnboarding,
           nowUtc: instant,
         });
 
@@ -636,7 +675,7 @@ export function createRoutineService(repository) {
         });
 
         let activePlan = currentPlan;
-        if (updatePlan.isFirstActivation && !activePlan) {
+        if (updatePlan.shouldPersistPlan && updatePlan.isFirstActivation && !activePlan) {
           activePlan = await repository.createWeeklyPlan(uid, {
             user_id: uid,
             week_start_date: updatePlan.effectiveWeekStartDate,
@@ -707,16 +746,18 @@ export function createRoutineService(repository) {
             return { session: resumed, resumed: true, idempotent: false };
           }
 
-          await repository.updateSession(uid, existingActive.id, {
-            status: "discarded",
-            last_activity_at: instant.toISOString(),
-          });
+          if (!repository.usesTransactionalRpcs) {
+            await repository.updateSession(uid, existingActive.id, {
+              status: "discarded",
+              last_activity_at: instant.toISOString(),
+            });
+          }
         }
 
         const { preferences, currentPlan, resolution } = await ensureCurrentWeeklyPlan(
           uid,
           instant,
-          true,
+          !repository.usesTransactionalRpcs,
         );
 
         let plannedSections = [];
@@ -772,7 +813,7 @@ export function createRoutineService(repository) {
           0,
         );
 
-        const created = await repository.createSessionWithActivities(
+        const createdResult = await repository.createSessionWithActivities(
           uid,
           {
             user_id: uid,
@@ -799,9 +840,18 @@ export function createRoutineService(repository) {
             estimated_minutes: section.estimated_minutes,
             evidence_kind: "self_declared",
           })),
+          { replaceActive: Boolean(replaceActive) },
         );
 
-        return { session: created, resumed: false, idempotent: false };
+        if (createdResult && typeof createdResult === "object" && "session" in createdResult && createdResult.session) {
+          return {
+            session: createdResult.session,
+            resumed: Boolean(createdResult.resumed),
+            idempotent: Boolean(createdResult.idempotent),
+          };
+        }
+
+        return { session: createdResult, resumed: false, idempotent: false };
       });
     },
 
@@ -890,6 +940,18 @@ export function createRoutineService(repository) {
             404,
             "no_replacement_available",
           );
+        }
+
+        if (typeof repository.replaceSessionActivityAtomically === "function") {
+          return repository.replaceSessionActivityAtomically(uid, sessionId, activityId, {
+            topic_id: nextSection.topic_id,
+            topic_title: nextSection.topic_title,
+            discipline: nextSection.discipline,
+            section_id: nextSection.section_id,
+            content_unit_id: nextSection.content_unit_id,
+            activity_title: nextSection.title,
+            estimated_minutes: nextSection.estimated_minutes,
+          });
         }
 
         await repository.updateSessionActivity(uid, sessionId, activityId, {
@@ -1025,14 +1087,18 @@ export function createRoutineService(repository) {
           }
         }
 
-        const { currentPlan, resolution } = await ensureCurrentWeeklyPlan(uid, instant, true);
+        const { currentPlan, resolution } = await ensureCurrentWeeklyPlan(
+          uid,
+          instant,
+          !repository.usesTransactionalRpcs,
+        );
         const completionTimezone = currentPlan?.timezone_iana ?? resolution.timezoneIana;
         const completionBounds = getWeekBoundsForInstant(instant, completionTimezone);
 
         const completedSession = await repository.completeSessionAtomically({
           userId: uid,
           sessionId,
-          weeklyPlanId: currentPlan?.id ?? resolution.planId,
+          weeklyPlanId: currentPlan?.id ?? resolution.planId ?? null,
           completedActivityIds: selectedActivities.map((item) => item.id),
           completionIdempotencyKey: safeCompletionKey,
           completedAt: instant.toISOString(),
@@ -1051,10 +1117,16 @@ export function createRoutineService(repository) {
             })),
         );
 
+        const effectiveWeekStart = completedSession.completed_week_start_date ?? completionBounds.weekStartDate;
+        const effectiveWeekEnd = completedSession.completed_week_start_date
+          ? addCalendarDays(completedSession.completed_week_start_date, 6)
+          : completionBounds.weekEndDate;
+
         const weeklyProgress = await buildWeeklyProgressSnapshot(uid, currentPlan, {
           ...resolution,
-          weekStartDate: completionBounds.weekStartDate,
-          weekEndDate: completionBounds.weekEndDate,
+          timezoneIana: completedSession.completed_timezone_iana ?? resolution.timezoneIana,
+          weekStartDate: effectiveWeekStart,
+          weekEndDate: effectiveWeekEnd,
         });
 
         return {

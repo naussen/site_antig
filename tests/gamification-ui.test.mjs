@@ -16,6 +16,7 @@ const GAMIFICATION_SOURCE_FILES = [
   "src/lib/gamification/config.mjs",
   "src/lib/gamification/calendar.mjs",
   "src/lib/gamification/session.mjs",
+  "src/lib/gamification/repository.mjs",
   "src/lib/gamification/server.ts",
   "src/app/api/study-routine/route.ts",
   "src/components/gamification/today-study-card.tsx",
@@ -124,4 +125,28 @@ test("páginas de Dashboard, Estudo e Configurações integram a rotina e mantê
   );
   assert.equal(isGamificationOperationalEnabled({ NEXT_PUBLIC_DISABLE_GAMIFICATION: "true" }), false);
   assert.equal(isGamificationOperationalEnabled({ NEXT_PUBLIC_DISABLE_GAMIFICATION: "false" }), true);
+});
+
+test("migration 053 reconciliada, repositório usa RPCs transacionais e sem escrita direta", () => {
+  assert.equal(
+    fs.existsSync(path.join(ROOT, "supabase/migrations/052_create_study_routine_gamification.sql")),
+    false,
+    "Migration 052 colidia com main e não deve existir",
+  );
+  const migration053 = readWorkspaceFile("supabase/migrations/053_create_study_routine_gamification.sql");
+  const repository = readWorkspaceFile("src/lib/gamification/repository.mjs");
+
+  assert.ok(
+    migration053.includes("REVOKE ALL PRIVILEGES ON TABLE")
+      && migration053.includes("FROM PUBLIC, anon, authenticated;"),
+    "Migration 053 deve revogar escrita direta nas tabelas de rotina",
+  );
+  assert.ok(
+    migration053.includes("trigger_enforce_session_has_activities"),
+    "Migration 053 deve exigir ao menos uma atividade no COMMIT da sessão",
+  );
+  assert.ok(repository.includes('rpc("create_study_routine_session"'));
+  assert.ok(repository.includes('rpc("save_study_routine_preferences"'));
+  assert.ok(repository.includes('rpc("complete_study_routine_session"'));
+  assert.equal(repository.includes("setTimeout"), false);
 });

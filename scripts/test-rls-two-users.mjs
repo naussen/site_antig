@@ -14,7 +14,7 @@ const createdUserIds = [];
 const privacyRequestIds = [];
 const paymentBlockIds = [];
 let assertionsPassed = false;
-let routineVerificationStatus = "ignorada (migration 052 ausente)";
+let routineVerificationStatus = "ignorada (migration 053 ausente)";
 
 function isMissingTableCode(error) {
   return Boolean(error && (error.code === "42P01" || error.code === "PGRST205"));
@@ -120,119 +120,164 @@ try {
     }
   } else {
     routineTablesAvailable = true;
-    await mustInsert("user_study_routine_preferences", {
-      user_id: userA.id,
-      target_days: 3,
-      timezone_iana: "America/Sao_Paulo",
-      default_budget_minutes: 15,
-    });
-    await mustInsert("user_study_routine_preferences", {
-      user_id: userB.id,
-      target_days: 4,
-      timezone_iana: "America/Manaus",
-      default_budget_minutes: 5,
-    });
-    const [planA, planB] = await Promise.all([
-      mustInsert("study_routine_weekly_plans", {
-        user_id: userA.id,
-        week_start_date: "2026-11-09",
-        week_end_date: "2026-11-15",
-        target_days: 3,
-        timezone_iana: "America/Sao_Paulo",
-        is_partial_first_week: false,
-      }),
-      mustInsert("study_routine_weekly_plans", {
-        user_id: userB.id,
-        week_start_date: "2026-11-09",
-        week_end_date: "2026-11-15",
-        target_days: 4,
-        timezone_iana: "America/Manaus",
-        is_partial_first_week: false,
-      }),
-    ]);
-    const [sessionA, sessionB] = await Promise.all([
-      mustInsert("study_routine_sessions", {
-        user_id: userA.id,
-        weekly_plan_id: planA.id,
+    const { data: savedPrefs, error: savePrefsError } = await userA.client.rpc(
+      "save_study_routine_preferences",
+      {
+        p_target_days: 3,
+        p_timezone_iana: "America/Sao_Paulo",
+        p_default_budget_minutes: 15,
+        p_preferred_discipline: null,
+        p_clear_preferred_discipline: false,
+        p_hide_gamification: false,
+      },
+    );
+    assert.equal(savePrefsError, null, "usuário A com assinatura ativa deve salvar rotina via RPC");
+    const planAId = savedPrefs?.current_plan?.id;
+    assert.ok(planAId, "RPC save_study_routine_preferences deve criar plano semanal inicial");
+
+    const { data: createdSessionPayload, error: createSessionError } = await userA.client.rpc(
+      "create_study_routine_session",
+      {
+        p_budget_minutes: 15,
+        p_selection_mode: "recommended",
+        p_idempotency_key: `rls-routine-${runId}-a`,
+        p_activities: [
+          {
+            activity_type: "summary",
+            topic_id: section.topic_id,
+            topic_title: topicMeta?.title ?? "Tópico de teste",
+            discipline: topicMeta?.discipline ?? "Disciplina de teste",
+            section_id: section.section_id,
+            content_unit_id: section.content_unit_id,
+            activity_title: section.title ?? "Seção de teste",
+            estimated_minutes: 10,
+          },
+        ],
+        p_replace_active: false,
+      },
+    );
+    assert.equal(createSessionError, null, "usuário A deve criar sessão e atividade transacionalmente via RPC");
+    routineSessionAId = createdSessionPayload?.session?.id ?? null;
+    routineActivityAId = createdSessionPayload?.session?.activities?.[0]?.id ?? null;
+    assert.ok(routineSessionAId && routineActivityAId, "sessão criada pela RPC deve retornar IDs hidratados");
+
+    const routineTables = [
+      "user_study_routine_preferences",
+      "study_routine_weekly_plans",
+      "study_routine_sessions",
+      "study_routine_session_activities",
+    ];
+
+    for (const table of routineTables) {
+      await assertOwnRows(userA.client, table, userA.id);
+      const { data: rowsB, error: errB } = await userB.client.from(table).select("user_id");
+      assert.equal(errB, null, `${table}: SELECT vazio por RLS não deve gerar erro para usuário B`);
+      assert.equal((rowsB ?? []).length, 0, `${table}: usuário B não deve enxergar registros de usuário A`);
+    }
+
+    for (const actor of [userA, userB]) {
+      const { error: directPrefInsertErr } = await actor.client.from("user_study_routine_preferences").insert({
+        user_id: actor.id,
+        target_days: 7,
+        timezone_iana: "UTC",
+        default_budget_minutes: 30,
+      });
+      assert.equal(directPrefInsertErr?.code, "42501", "INSERT direto em user_study_routine_preferences deve ser bloqueado");
+
+      const { error: directPrefUpdateErr } = await actor.client
+        .from("user_study_routine_preferences")
+        .update({ target_days: 7 })
+        .eq("user_id", userA.id);
+      assert.equal(directPrefUpdateErr?.code, "42501", "UPDATE direto em user_study_routine_preferences deve ser bloqueado");
+
+      const { error: directPrefDeleteErr } = await actor.client
+        .from("user_study_routine_preferences")
+        .delete()
+        .eq("user_id", userA.id);
+      assert.equal(directPrefDeleteErr?.code, "42501", "DELETE direto em user_study_routine_preferences deve ser bloqueado");
+
+      const { error: directPlanInsertErr } = await actor.client.from("study_routine_weekly_plans").insert({
+        user_id: actor.id,
+        week_start_date: "2020-01-06",
+        week_end_date: "2020-01-12",
+        target_days: 1,
+        timezone_iana: "UTC",
+      });
+      assert.equal(directPlanInsertErr?.code, "42501", "INSERT direto em study_routine_weekly_plans deve ser bloqueado");
+
+      const { error: directPlanUpdateErr } = await actor.client
+        .from("study_routine_weekly_plans")
+        .update({ target_days: 1 })
+        .eq("id", planAId);
+      assert.equal(directPlanUpdateErr?.code, "42501", "UPDATE direto em study_routine_weekly_plans deve ser bloqueado");
+
+      const { error: directPlanDeleteErr } = await actor.client
+        .from("study_routine_weekly_plans")
+        .delete()
+        .eq("id", planAId);
+      assert.equal(directPlanDeleteErr?.code, "42501", "DELETE direto em study_routine_weekly_plans deve ser bloqueado");
+
+      const { error: directSessionInsertErr } = await actor.client.from("study_routine_sessions").insert({
+        user_id: actor.id,
+        weekly_plan_id: planAId,
         status: "in_progress",
         budget_minutes: 15,
         estimated_minutes: 10,
         selection_mode: "recommended",
-        idempotency_key: `rls-routine-${runId}-a`,
-      }),
-      mustInsert("study_routine_sessions", {
-        user_id: userB.id,
-        weekly_plan_id: planB.id,
-        status: "in_progress",
-        budget_minutes: 5,
-        estimated_minutes: 5,
-        selection_mode: "recommended",
-        idempotency_key: `rls-routine-${runId}-b`,
-      }),
-    ]);
-    const [activityA, activityB] = await Promise.all([
-      mustInsert("study_routine_session_activities", {
-        session_id: sessionA.id,
-        user_id: userA.id,
-        order_index: 0,
-        activity_type: "summary",
-        status: "pending",
-        topic_id: section.topic_id,
-        topic_title: topicMeta?.title ?? "Tópico de teste",
-        discipline: topicMeta?.discipline ?? "Disciplina de teste",
-        section_id: section.section_id,
-        content_unit_id: section.content_unit_id,
-        activity_title: section.title ?? "Seção de teste",
-        estimated_minutes: 10,
-      }),
-      mustInsert("study_routine_session_activities", {
-        session_id: sessionB.id,
-        user_id: userB.id,
-        order_index: 0,
-        activity_type: "summary",
-        status: "pending",
-        topic_id: section.topic_id,
-        topic_title: topicMeta?.title ?? "Tópico de teste",
-        discipline: topicMeta?.discipline ?? "Disciplina de teste",
-        section_id: section.section_id,
-        content_unit_id: section.content_unit_id,
-        activity_title: section.title ?? "Seção de teste",
-        estimated_minutes: 5,
-      }),
-    ]);
-    routineSessionAId = sessionA.id;
-    routineActivityAId = activityA.id;
+        idempotency_key: `rls-routine-forged-${runId}-${actor.id}`,
+      });
+      assert.equal(directSessionInsertErr?.code, "42501", "INSERT direto em study_routine_sessions deve ser bloqueado");
 
-    for (const user of [userA, userB]) {
-      await assertOwnRows(user.client, "user_study_routine_preferences", user.id);
-      await assertOwnRows(user.client, "study_routine_weekly_plans", user.id);
-      await assertOwnRows(user.client, "study_routine_sessions", user.id);
-      await assertOwnRows(user.client, "study_routine_session_activities", user.id);
+      const { error: directSessionUpdateErr } = await actor.client
+        .from("study_routine_sessions")
+        .update({ completed_at: "2025-01-01T12:00:00Z" })
+        .eq("id", routineSessionAId);
+      assert.equal(directSessionUpdateErr?.code, "42501", "UPDATE direto em study_routine_sessions deve ser bloqueado");
+
+      const { error: directSessionDeleteErr } = await actor.client
+        .from("study_routine_sessions")
+        .delete()
+        .eq("id", routineSessionAId);
+      assert.equal(directSessionDeleteErr?.code, "42501", "DELETE direto em study_routine_sessions deve ser bloqueado");
+
+      const { error: directActivityInsertErr } = await actor.client.from("study_routine_session_activities").insert({
+        session_id: routineSessionAId,
+        user_id: actor.id,
+        order_index: 9,
+        activity_type: "summary",
+        status: "completed",
+        topic_title: "Forjado",
+        discipline: "Forjada",
+        activity_title: "Forjado",
+        estimated_minutes: 5,
+      });
+      assert.equal(directActivityInsertErr?.code, "42501", "INSERT direto em study_routine_session_activities deve ser bloqueado");
+
+      const { error: directActivityUpdateErr } = await actor.client
+        .from("study_routine_session_activities")
+        .update({ status: "completed" })
+        .eq("id", routineActivityAId);
+      assert.equal(directActivityUpdateErr?.code, "42501", "UPDATE direto em study_routine_session_activities deve ser bloqueado");
+
+      const { error: directActivityDeleteErr } = await actor.client
+        .from("study_routine_session_activities")
+        .delete()
+        .eq("id", routineActivityAId);
+      assert.equal(directActivityDeleteErr?.code, "42501", "DELETE direto em study_routine_session_activities deve ser bloqueado");
     }
 
-    const { data: foreignRoutineUpdate, error: foreignRoutineUpdateError } = await userA.client
-      .from("user_study_routine_preferences").update({ target_days: 7 }).eq("user_id", userB.id).select("user_id");
-    assert.equal(foreignRoutineUpdateError, null, "UPDATE filtrado por RLS na rotina não deve vazar existência alheia");
-    assert.equal(foreignRoutineUpdate?.length, 0, "usuário A não deve alterar preferência de rotina de B");
-
-    const { error: forgedRoutineInsertError } = await userA.client.from("study_routine_sessions").insert({
-      user_id: userB.id,
-      weekly_plan_id: planB.id,
-      status: "in_progress",
-      budget_minutes: 15,
-      estimated_minutes: 10,
-      selection_mode: "recommended",
-      idempotency_key: `rls-routine-forged-${runId}`,
+    const { error: unentitledPrefRpcError } = await userB.client.rpc("save_study_routine_preferences", {
+      p_target_days: 5,
     });
-    assert.equal(forgedRoutineInsertError?.code, "42501", "usuário A não deve criar sessão de rotina para B");
+    assert.equal(unentitledPrefRpcError?.code, "42501", "usuário B sem acesso ativo não deve gravar preferências via RPC");
 
-    const { error: foreignRpcError } = await userA.client.rpc("complete_study_routine_session", {
-      p_session_id: sessionB.id,
-      p_completed_activity_ids: [activityB.id],
+    const { error: foreignRpcError } = await userB.client.rpc("complete_study_routine_session", {
+      p_session_id: routineSessionAId,
+      p_completed_activity_ids: [routineActivityAId],
       p_completion_idempotency_key: `rls-complete-forged-${runId}`,
     });
-    assert.ok(foreignRpcError, "usuário A não deve concluir sessão de B via RPC");
-    routineVerificationStatus = "verificada nas 4 tabelas e RPC";
+    assert.equal(foreignRpcError?.code, "42501", "usuário B não deve concluir sessão de A via RPC");
+    routineVerificationStatus = "verificada nas 4 tabelas (SELECT RLS + bloqueio DML 42501) e RPCs";
   }
 
   const { data: accessBeforeBlock, error: accessBeforeBlockError } = await userA.client.rpc("has_active_content_access");
@@ -295,7 +340,12 @@ try {
   if (routineTablesAvailable && routineSessionAId && routineActivityAId) {
     const { error: blockedPrefError } = await userA.client
       .from("user_study_routine_preferences").update({ target_days: 5 }).eq("user_id", userA.id);
-    assert.equal(blockedPrefError?.code, "42501", "usuário bloqueado não deve alterar preferências de rotina");
+    assert.equal(blockedPrefError?.code, "42501", "usuário bloqueado não deve alterar preferências diretamente");
+
+    const { error: blockedSaveRpcError } = await userA.client.rpc("save_study_routine_preferences", {
+      p_target_days: 5,
+    });
+    assert.equal(blockedSaveRpcError?.code, "42501", "usuário bloqueado não deve alterar preferências via RPC");
 
     const { error: blockedCompleteError } = await userA.client.rpc("complete_study_routine_session", {
       p_session_id: routineSessionAId,

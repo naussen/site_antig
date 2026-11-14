@@ -58,16 +58,17 @@ export interface EffectiveWeeklyPlanResolution {
 
 export interface PlannedPreferenceUpdate {
   isFirstActivation: boolean;
+  shouldPersistPlan?: boolean;
   effectiveImmediately: boolean;
-  effectiveWeekStartDate: string;
-  weekEndDate: string;
+  effectiveWeekStartDate: string | null;
+  weekEndDate: string | null;
   isPartialFirstWeek: boolean;
   appliedTargetDays: number;
   appliedTimezoneIana: string;
   pendingTargetDays: number | null;
   pendingTimezoneIana: string | null;
   pendingEffectiveWeekStart: string | null;
-  onboardingCompletedAt: string;
+  onboardingCompletedAt: string | null;
 }
 
 export interface TimezoneChangePreview {
@@ -134,6 +135,7 @@ export function planPreferenceUpdate(input: {
   } | null;
   nextTargetDays?: number;
   nextTimezoneIana?: string;
+  activateOnboarding?: boolean;
   nowUtc?: Date | string | number;
 }): PlannedPreferenceUpdate;
 export function previewTimezoneChange(input: {

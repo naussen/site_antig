@@ -325,6 +325,7 @@ export function resolveEffectiveWeeklyPlan(input) {
  *   } | null;
  *   nextTargetDays?: number;
  *   nextTimezoneIana?: string;
+ *   activateOnboarding?: boolean;
  *   nowUtc?: Date | string | number;
  * }} input
  */
@@ -334,6 +335,7 @@ export function planPreferenceUpdate(input) {
     currentWeeklyPlan = null,
     nextTargetDays,
     nextTimezoneIana,
+    activateOnboarding = true,
     nowUtc = new Date(),
   } = input ?? {};
 
@@ -344,19 +346,39 @@ export function planPreferenceUpdate(input) {
   const currentTargetDays = currentWeeklyPlan?.target_days
     ?? (currentPreferences?.target_days ? normalizeTargetDays(currentPreferences.target_days) : DEFAULT_TARGET_DAYS);
 
-  const normalizedTargetDays = nextTargetDays !== undefined
+  const hasExplicitTarget = nextTargetDays !== undefined;
+  const hasExplicitTimezone = nextTimezoneIana !== undefined;
+  const normalizedTargetDays = hasExplicitTarget
     ? normalizeTargetDays(nextTargetDays)
     : currentTargetDays;
-  const normalizedTimezone = nextTimezoneIana !== undefined
+  const normalizedTimezone = hasExplicitTimezone
     ? normalizeIanaTimeZone(nextTimezoneIana)
     : currentTimezone;
 
-  const isFirstActivation = !currentPreferences?.onboarding_completed_at && !currentWeeklyPlan;
+  const isOnboarded = Boolean(currentPreferences?.onboarding_completed_at || currentWeeklyPlan);
 
-  if (isFirstActivation) {
+  if (!isOnboarded) {
+    if (!activateOnboarding) {
+      return {
+        isFirstActivation: false,
+        shouldPersistPlan: false,
+        effectiveImmediately: false,
+        effectiveWeekStartDate: null,
+        weekEndDate: null,
+        isPartialFirstWeek: false,
+        appliedTargetDays: currentTargetDays,
+        appliedTimezoneIana: currentTimezone,
+        pendingTargetDays: currentPreferences?.pending_target_days ?? null,
+        pendingTimezoneIana: currentPreferences?.pending_timezone_iana ?? null,
+        pendingEffectiveWeekStart: currentPreferences?.pending_effective_week_start ?? null,
+        onboardingCompletedAt: null,
+      };
+    }
+
     const bounds = getWeekBoundsForInstant(instant, normalizedTimezone);
     return {
       isFirstActivation: true,
+      shouldPersistPlan: true,
       effectiveImmediately: true,
       effectiveWeekStartDate: bounds.weekStartDate,
       weekEndDate: bounds.weekEndDate,
@@ -371,36 +393,42 @@ export function planPreferenceUpdate(input) {
   }
 
   const currentBounds = getWeekBoundsForInstant(instant, currentTimezone);
-  const targetChanged = normalizedTargetDays !== currentTargetDays;
-  const timezoneChanged = normalizedTimezone !== currentTimezone;
 
-  if (!targetChanged && !timezoneChanged) {
-    return {
-      isFirstActivation: false,
-      effectiveImmediately: true,
-      effectiveWeekStartDate: currentWeeklyPlan?.week_start_date ?? currentBounds.weekStartDate,
-      weekEndDate: currentWeeklyPlan?.week_end_date ?? currentBounds.weekEndDate,
-      isPartialFirstWeek: Boolean(currentWeeklyPlan?.is_partial_first_week),
-      appliedTargetDays: currentTargetDays,
-      appliedTimezoneIana: currentTimezone,
-      pendingTargetDays: null,
-      pendingTimezoneIana: null,
-      pendingEffectiveWeekStart: null,
-      onboardingCompletedAt: currentPreferences?.onboarding_completed_at ?? instant.toISOString(),
-    };
-  }
+  const pendingTargetDays = hasExplicitTarget
+    ? (normalizedTargetDays !== currentTargetDays ? normalizedTargetDays : null)
+    : (currentPreferences?.pending_target_days ?? null);
+
+  const pendingTimezoneIana = hasExplicitTimezone
+    ? (normalizedTimezone !== currentTimezone ? normalizedTimezone : null)
+    : (currentPreferences?.pending_timezone_iana ?? null);
+
+  const targetModified = hasExplicitTarget && pendingTargetDays !== null;
+  const timezoneModified = hasExplicitTimezone && pendingTimezoneIana !== null;
+
+  const pendingEffectiveWeekStart = pendingTargetDays === null && pendingTimezoneIana === null
+    ? null
+    : (
+        targetModified || timezoneModified
+          ? currentBounds.nextWeekStartDate
+          : (currentPreferences?.pending_effective_week_start ?? currentBounds.nextWeekStartDate)
+      );
+
+  const scheduledForNextWeek = targetModified || timezoneModified;
 
   return {
     isFirstActivation: false,
-    effectiveImmediately: false,
-    effectiveWeekStartDate: currentBounds.nextWeekStartDate,
+    shouldPersistPlan: false,
+    effectiveImmediately: !scheduledForNextWeek,
+    effectiveWeekStartDate: scheduledForNextWeek
+      ? pendingEffectiveWeekStart
+      : (currentWeeklyPlan?.week_start_date ?? currentBounds.weekStartDate),
     weekEndDate: currentWeeklyPlan?.week_end_date ?? currentBounds.weekEndDate,
     isPartialFirstWeek: Boolean(currentWeeklyPlan?.is_partial_first_week),
     appliedTargetDays: currentTargetDays,
     appliedTimezoneIana: currentTimezone,
-    pendingTargetDays: targetChanged ? normalizedTargetDays : null,
-    pendingTimezoneIana: timezoneChanged ? normalizedTimezone : null,
-    pendingEffectiveWeekStart: currentBounds.nextWeekStartDate,
+    pendingTargetDays,
+    pendingTimezoneIana,
+    pendingEffectiveWeekStart,
     onboardingCompletedAt: currentPreferences?.onboarding_completed_at ?? instant.toISOString(),
   };
 }

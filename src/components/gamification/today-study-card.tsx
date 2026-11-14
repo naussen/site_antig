@@ -160,7 +160,7 @@ export function TodayStudyCard({
       session?: RoutineSnapshot["activeSession"];
       updatePlan?: {
         effectiveImmediately?: boolean;
-        effectiveWeekStartDate?: string;
+        effectiveWeekStartDate?: string | null;
       };
     } | null;
 
@@ -173,6 +173,16 @@ export function TodayStudyCard({
     if (data.snapshot) {
       setSnapshot(data.snapshot);
       setSelectedBudget(data.snapshot.preferences.default_budget_minutes);
+      setDraftTargetDays(
+        data.snapshot.preferences.pending_target_days ??
+          data.snapshot.preferences.target_days,
+      );
+      setDraftTimezone(
+        data.snapshot.preferences.pending_timezone_iana ??
+          data.snapshot.preferences.timezone_iana,
+      );
+      setDraftBudget(data.snapshot.preferences.default_budget_minutes);
+      setDraftDiscipline(data.snapshot.preferences.preferred_discipline ?? "");
     }
 
     return data;
