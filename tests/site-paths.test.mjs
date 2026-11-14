@@ -30,6 +30,8 @@ test("reconhece somente páginas raiz de tópicos como rotas de estudo", () => {
   for (const pathname of [
     "/resumos",
     "/resumos/",
+    "/amostra",
+    "/resumos/amostra",
     "/resumos/login",
     "/resumos/dashboard",
     "/resumos/api/import",

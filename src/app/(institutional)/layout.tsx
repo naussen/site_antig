@@ -1,7 +1,12 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { SITE_HOME_URL } from "@/lib/seo.mjs";
 import { withSiteBasePath } from "@/lib/site-paths.mjs";
+
+export const metadata: Metadata = {
+  title: { default: "PRO Concursos", template: "%s | PRO Concursos" },
+};
 
 const LOGO_SRC = withSiteBasePath("/brand/pro-concursos-logo-transparent.png");
 
@@ -21,6 +26,7 @@ export default function InstitutionalLayout({ children }: Readonly<{ children: R
         <div className="mx-auto flex max-w-5xl flex-col gap-4 text-sm text-[var(--text-muted)] sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 PRO Concursos · proconcursos.com.br</p>
           <nav className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Links institucionais">
+            <Link href="/amostra" className="inline-flex min-h-11 items-center hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">Amostra</Link>
             <Link href="/guias" className="inline-flex min-h-11 items-center hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">Guias</Link>
             <Link href="/sobre" className="inline-flex min-h-11 items-center hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">Sobre</Link>
             <Link href="/metodologia-editorial" className="inline-flex min-h-11 items-center hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)]">Metodologia</Link>

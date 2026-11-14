@@ -24,6 +24,7 @@ test("gera somente URLs públicas canônicas", () => {
   assert.equal(BRAND_LOGO_URL, "https://proconcursos.com.br/resumos/brand/pro-concursos-logo-dark.png");
   assert.equal(SOCIAL_IMAGE_URL, "https://proconcursos.com.br/resumos/brand/pro-concursos-social.png");
   assert.deepEqual(INDEXABLE_PUBLIC_PATHS, [
+    "/amostra",
     "/sobre",
     "/metodologia-editorial",
     "/politica-de-ia",
@@ -150,6 +151,7 @@ test("mantém contraste mínimo nos textos pequenos da landing", async () => {
 
 test("ignora Supabase somente em páginas públicas e métodos seguros", async () => {
   for (const path of [
+    "/amostra",
     "/landing",
     "/landing/",
     "/sobre",

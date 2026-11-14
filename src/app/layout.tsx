@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   publisher: SITE_NAME,
   category: "education",
   title: {
-    default: "PRO Resumos — Plataforma de Estudos para Concursos",
-    template: "%s | PRO Resumos",
+    default: "PRO Concursos — Plataforma de Estudos para Concursos",
+    template: "%s | PRO Concursos",
   },
   description:
     "Plataforma interativa para estudo de concursos com resumos estruturados, flashcards, mnemônicos e mapas mentais.",

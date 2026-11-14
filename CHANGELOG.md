@@ -1,5 +1,12 @@
 # Changelog
 
+## Amostra pública e clareza do lançamento (14/11/2026)
+
+- Amostra gratuita de Constitucional com fonte oficial, leitura e questão autoral C/E interativa, sem login ou gravação de dados. Conferência automatizada identificada, sem atribuir revisão humana.
+- Landing esclarece público, disciplinas presentes, limites de cobertura, recursos previstos, recorrência e ausência de data de abertura definida.
+- Títulos institucionais usam PRO Concursos; amostra incluída no sitemap e nas rotas públicas explícitas, preservando a proteção dos tópicos privados.
+
+
 ## Lista de interesse e oferta de lançamento (09/11/2026)
 
 - A página inicial recebe cadastros para o aviso de lançamento com e-mail e aceite explícito do termo. O Supabase guarda a data e a versão do consentimento em uma tabela privada, com um registro por endereço.

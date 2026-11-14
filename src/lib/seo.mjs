@@ -5,6 +5,7 @@ export const SITE_HOME_URL = `${SITE_ORIGIN}/`;
 export const SITE_NAME = "PRO Concursos";
 
 export const INDEXABLE_PUBLIC_PATHS = [
+  "/amostra",
   "/sobre",
   "/metodologia-editorial",
   "/politica-de-ia",

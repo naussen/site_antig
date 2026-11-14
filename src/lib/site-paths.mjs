@@ -1,6 +1,7 @@
 export const SITE_BASE_PATH = "/resumos";
 
 const NON_STUDY_ROOT_SEGMENTS = new Set([
+  "amostra",
   "admin",
   "api",
   "auth",

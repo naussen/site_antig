@@ -378,6 +378,9 @@ export function LandingPageContent() {
             <h1 className="text-balance text-4xl font-black leading-[1.02] tracking-[-0.04em] text-white sm:text-5xl xl:text-[3.375rem]">Resumos, questões e legislação oficial <span className="bg-gradient-to-r from-[#a78bfa] to-[#f9a826] bg-clip-text text-transparent">no mesmo ambiente.</span></h1>
             <p className="mx-auto mt-4 max-w-2xl text-pretty text-base leading-7 text-[#b4b1c3] sm:text-lg sm:leading-8 lg:mx-0">Estude com conteúdo estruturado, questões comentadas, texto legal versionado, anotações e ferramentas de leitura em uma única assinatura mensal.</p>
             <p className="mt-4 text-sm text-white/80">Preço de lançamento <strong className="ml-1 text-xl font-black text-[#f9a826]">{LAUNCH_MONTHLY_PRICE_LABEL} por mês</strong></p>
+            <p className="mt-3 text-sm leading-6 text-white/80">Para quem está começando ou retomando os estudos e busca organizar a base jurídica para concursos.</p>
+            <Link href="/amostra" className="mt-5 inline-flex min-h-11 items-center rounded-xl border border-current px-5 text-sm font-bold focus-visible:outline-2 focus-visible:outline-offset-2">Experimentar amostra gratuita</Link>
+            <p className="mt-2 text-xs text-white/80">Leia e responda uma questão sem cadastro.</p>
             <LaunchInterestForm />
             <ul className="mx-auto mt-6 grid max-w-xl gap-2 text-left text-sm text-white/80 sm:grid-cols-3 lg:mx-0 lg:grid-cols-1 xl:grid-cols-3" aria-label="Principais benefícios">
               {["Conteúdo organizado", "Lei seca integrada", "Progresso salvo"].map((benefit) => (
@@ -393,6 +396,33 @@ export function LandingPageContent() {
           <HeroProductPreview />
         </div>
       </header>
+
+      <section id="lancamento" aria-labelledby="lancamento-titulo" className="scroll-mt-36 bg-[var(--bg-primary)] px-5 py-16 text-[var(--text-primary)] sm:px-8">
+        <div className="mx-auto max-w-6xl">
+          <h2 id="lancamento-titulo" className="text-3xl font-extrabold tracking-tight">Sua preparação, desde a base</h2>
+          <p className="mt-4 max-w-3xl leading-7 text-[var(--text-secondary)]">Para concurseiros iniciantes e intermediários que querem combinar compreensão, leitura da lei e prática. O foco é apoiar o estudo das matérias; a plataforma não substitui o edital nem promete cobrir integralmente um concurso específico.</p>
+          <div className="mt-8 grid gap-8 md:grid-cols-2">
+            <div>
+              <h3 className="text-xl font-bold">Acervo em preparação para a abertura</h3>
+              <p className="mt-3 leading-7 text-[var(--text-secondary)]">O acervo atual inclui tópicos de Direito Constitucional, Administrativo, Tributário e Civil, além de Português, Informática, Administração e Contabilidade. A cobertura varia por disciplina e não equivale a um edital completo. A seleção disponível na abertura será confirmada após a conferência do conteúdo.</p>
+              <p className="mt-3 leading-7 text-[var(--text-secondary)]">Você já pode experimentar uma amostra de Direito Constitucional: soberania popular, com leitura e questão C/E baseadas no art. 1º, parágrafo único, da Constituição.</p>
+              <Link href="/amostra" className="mt-4 inline-flex min-h-11 items-center font-bold text-[var(--accent)] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2">Abrir a amostra de Constitucional</Link>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold">O que está previsto na assinatura</h3>
+              <ul className="mt-3 list-disc space-y-2 pl-5 leading-7 text-[var(--text-secondary)]">
+                <li>Acesso ao acervo publicado de PRO Resumos, PROQuestões e PRO Legis.</li>
+                <li>Flashcards, anotações, realces e acompanhamento de progresso nos recursos disponíveis.</li>
+                <li>Uma assinatura mensal, com o conteúdo disponível identificado antes da contratação.</li>
+              </ul>
+              <p className="mt-4 font-bold">Preço de lançamento: {LAUNCH_MONTHLY_PRICE_LABEL} por mês.</p>
+              <p className="mt-3 leading-7 text-[var(--text-secondary)]">Cobrança mensal recorrente, sem período gratuito de assinatura. O cancelamento interrompe a renovação e preserva o período já pago, conforme os termos de uso.</p>
+              <p className="mt-3 leading-7 text-[var(--text-secondary)]">A data de abertura ainda não foi definida. A duração da oferta de lançamento será informada antes da contratação; não há garantia de preço vitalício. Cadastrar o e-mail é gratuito e não inicia uma assinatura nem gera cobrança.</p>
+              <Link href="/termos" className="mt-4 inline-flex min-h-11 items-center font-bold text-[var(--accent)] underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-2">Consultar os termos de uso</Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="modulos" className="scroll-mt-36 border-y border-[#e5e5ef] bg-white px-5 py-16 sm:px-8 sm:py-24">
         <SectionHeading eyebrow="Módulos" title="Do resumo à prática, sem trocar de plataforma." description="Três ambientes complementares para compreender a matéria, consultar a literalidade e testar seu conhecimento." tone="light" />
@@ -419,6 +449,7 @@ export function LandingPageContent() {
           <nav aria-label="Links institucionais">
             <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#f9a826]">Institucional</p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-white/75">
+              <Link href="/amostra" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Amostra gratuita</Link>
               <Link href="/guias" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Guias de estudo</Link>
               <Link href="/sobre" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Sobre</Link>
               <Link href="/metodologia-editorial" className="inline-flex min-h-11 w-fit items-center transition-colors hover:text-white">Metodologia editorial</Link>

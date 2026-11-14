@@ -3,6 +3,7 @@ const SAFE_PUBLIC_METHODS = new Set(["GET", "HEAD"]);
 export const SESSION_AWARE_REQUEST_HEADER = "x-pro-session-aware";
 
 const PUBLIC_PAGE_PATHS = new Set([
+  "/amostra",
   "/landing",
   "/sobre",
   "/metodologia-editorial",
