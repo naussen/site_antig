@@ -36,9 +36,16 @@ import {
 } from "@/lib/supabase/errors";
 import { compareTopicsByOrigin } from "@/lib/topic-order";
 import { requireContentAccess } from "@/lib/content-access";
+import { TodayStudyCard } from "@/components/gamification/today-study-card";
+import { loadDashboardRoutineState } from "@/lib/gamification/server";
 
 type DashboardTopic = TopicRow & {
-  sections: { section_id: string; content_unit_id: string }[];
+  sections: {
+    section_id: string;
+    content_unit_id: string;
+    title: string;
+    sort_order: number;
+  }[];
 };
 
 type TopicProgress = {
@@ -145,7 +152,7 @@ export default async function DashboardPage({
   try {
     const { data, error } = await supabase
       .from("topics")
-      .select("topic_id, discipline, title, sort_order, created_at, archived_at, archived_by, archived_reason, sections(section_id, content_unit_id, archived_at)")
+      .select("topic_id, discipline, title, sort_order, created_at, archived_at, archived_by, archived_reason, sections(section_id, content_unit_id, title, sort_order, archived_at)")
       .is("archived_at", null)
       .is("sections.archived_at", null)
       .order("created_at", { ascending: false });
@@ -260,6 +267,14 @@ export default async function DashboardPage({
   const overallPercent = totalSections > 0
     ? Math.round((completedSections / totalSections) * 100)
     : 0;
+  const routineState = await loadDashboardRoutineState({
+    supabase,
+    userId: user.id,
+    topics,
+    completedContentUnitIds,
+    visibleDisciplines: preferredDisciplines,
+  });
+
   const suggestedTopic =
     displayedTopics.find((topic) => {
       const percent = progressByTopic[topic.topic_id]?.percent ?? 0;
@@ -360,7 +375,22 @@ export default async function DashboardPage({
           </div>
         )}
 
-        {suggestedTopic && suggestedProgress && (
+        {routineState.operationalEnabled && routineState.snapshot && (
+          <TodayStudyCard
+            initialSnapshot={routineState.snapshot}
+            persistenceAvailable={routineState.persistenceAvailable}
+            topicOptions={routineState.topicOptions}
+            availableDisciplines={allDisciplines}
+          />
+        )}
+
+        {suggestedTopic &&
+          suggestedProgress &&
+          (!routineState.operationalEnabled ||
+            !routineState.persistenceAvailable ||
+            !routineState.snapshot ||
+            routineState.snapshot.needsOnboarding ||
+            routineState.snapshot.preferences.hide_gamification) && (
           <section
             className="dashboard-study-suggestion mt-6 flex flex-col justify-between gap-5 rounded-2xl border p-5 sm:flex-row sm:items-center sm:p-6"
             aria-labelledby="suggested-study-title"

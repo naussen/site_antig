@@ -22,6 +22,8 @@ import { MnemonicList } from "@/components/study/mnemonic-card";
 import { FlashcardDeck } from "@/components/study/flashcard-deck";
 import { NotesPanel } from "@/components/study/notes-panel";
 import { TextHighlighter } from "@/components/study/text-highlighter";
+import { StudySessionBar } from "@/components/gamification/study-session-bar";
+import type { StudyTopicRoutineState } from "@/lib/gamification/server";
 
 // Mermaid: import dinâmico com ssr: false para evitar hydration errors
 const MermaidViewer = dynamic(
@@ -44,6 +46,7 @@ interface StudyPageClientProps {
   userEmail: string | null;
   previousTopic: Pick<TopicRow, "topic_id" | "title"> | null;
   nextTopic: Pick<TopicRow, "topic_id" | "title"> | null;
+  routineState?: StudyTopicRoutineState;
 }
 
 /**
@@ -57,6 +60,7 @@ export function StudyPageClient({
   userEmail,
   previousTopic,
   nextTopic,
+  routineState,
 }: StudyPageClientProps) {
   const [activeSectionId, setActiveSectionId] = useState<string | null>(
     sections[0]?.section_id ?? null
@@ -81,6 +85,7 @@ export function StudyPageClient({
   const {
     progressMap,
     toggleProgress,
+    markSectionsCompletedLocally,
     completedCount,
     totalCount,
     progressPercent,
@@ -208,6 +213,21 @@ export function StudyPageClient({
         </header>
 
         <div className="study-content-shell mx-auto px-4 py-8 pb-20 sm:px-8 lg:px-12">
+          {routineState?.operationalEnabled && routineState.snapshot && (
+            <StudySessionBar
+              initialSnapshot={routineState.snapshot}
+              persistenceAvailable={routineState.persistenceAvailable}
+              topicId={topic.topic_id}
+              topicTitle={topic.title}
+              topicDiscipline={topic.discipline || "Geral"}
+              topicSections={sections.map((section) => ({
+                section_id: section.section_id,
+                content_unit_id: section.content_unit_id,
+                title: section.title,
+              }))}
+              onSectionsCompleted={markSectionsCompletedLocally}
+            />
+          )}
           {/* Título do tópico */}
           <section
             className="study-module-hero mb-12"

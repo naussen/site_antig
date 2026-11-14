@@ -8,6 +8,12 @@ import {
   isMissingTableError,
 } from "@/lib/supabase/errors";
 import { requireContentAccess } from "@/lib/content-access";
+import { isGamificationOperationalEnabled } from "@/lib/gamification/config.mjs";
+import {
+  createSupabaseRoutineRepository,
+  isRoutineSchemaError,
+  logRoutineServerError,
+} from "@/lib/gamification/server";
 import { START_PAGE_LEGIS, START_PAGE_NOTES, START_PAGE_RESUMOS, START_PAGE_SETTINGS } from "@/lib/user-start-page.mjs";
 
 export default async function DashboardSettingsPage() {
@@ -64,6 +70,48 @@ export default async function DashboardSettingsPage() {
   ].includes(savedStartPage ?? "")
     ? savedStartPage
     : START_PAGE_RESUMOS;
+
+  let routineStatus: {
+    operationalEnabled: boolean;
+    persistenceAvailable: boolean;
+    hideGamification: boolean;
+    needsOnboarding: boolean;
+    targetDays: number;
+    timezoneIana: string;
+  } = {
+    operationalEnabled: isGamificationOperationalEnabled(),
+    persistenceAvailable: true,
+    hideGamification: false,
+    needsOnboarding: true,
+    targetDays: 3,
+    timezoneIana: "America/Sao_Paulo",
+  };
+
+  if (routineStatus.operationalEnabled) {
+    try {
+      const prefs = await createSupabaseRoutineRepository(supabase).getPreferences(
+        user.id,
+      );
+      if (prefs) {
+        routineStatus = {
+          operationalEnabled: true,
+          persistenceAvailable: true,
+          hideGamification: prefs.hide_gamification,
+          needsOnboarding: !prefs.onboarding_completed_at,
+          targetDays: prefs.target_days,
+          timezoneIana: prefs.timezone_iana,
+        };
+      }
+    } catch (error) {
+      const schemaMissing = isRoutineSchemaError(error);
+      logRoutineServerError(
+        "Rotina semanal indisponível nas configurações.",
+        error,
+        schemaMissing,
+      );
+      routineStatus.persistenceAvailable = false;
+    }
+  }
 
   return (
     <main className="min-h-screen px-4 py-6 sm:px-6 md:px-10 md:py-10" style={{ background: "var(--bg-primary)" }}>
@@ -196,6 +244,46 @@ export default async function DashboardSettingsPage() {
             </SavePreferencesButton>
           </div>
         </PreferencesForm>
+
+        {routineStatus.operationalEnabled && (
+          <section
+            aria-labelledby="config-rotina-titulo"
+            className="mt-6 rounded-3xl border p-5 sm:p-6"
+            style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
+          >
+            <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+              <div>
+                <h2
+                  id="config-rotina-titulo"
+                  className="text-base font-bold"
+                  style={{ color: "var(--text-primary)" }}
+                >
+                  Rotina semanal e estímulos
+                </h2>
+                <p className="mt-1 text-xs leading-5" style={{ color: "var(--text-secondary)" }}>
+                  {!routineStatus.persistenceAvailable
+                    ? "Status atual: temporariamente indisponível neste ambiente."
+                    : routineStatus.hideGamification
+                      ? "Status atual: estímulos ocultos no Dashboard e nas páginas de estudo (histórico preservado)."
+                      : routineStatus.needsOnboarding
+                        ? "Status atual: aguardando configuração inicial no Dashboard."
+                        : `Status atual: ativa no Dashboard (${routineStatus.targetDays} dia(s)/semana · fuso ${routineStatus.timezoneIana}).`}
+                </p>
+              </div>
+              <Link
+                href="/dashboard#rotina-semanal"
+                className="inline-flex shrink-0 items-center justify-center rounded-xl border px-4 py-2.5 text-xs font-bold transition-colors hover:border-[var(--accent)]"
+                style={{
+                  borderColor: "var(--border)",
+                  background: "var(--bg-secondary)",
+                  color: "var(--text-primary)",
+                }}
+              >
+                Gerenciar rotina no Dashboard
+              </Link>
+            </div>
+          </section>
+        )}
       </div>
     </main>
   );

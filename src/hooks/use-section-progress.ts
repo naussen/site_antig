@@ -201,6 +201,25 @@ export function useSectionProgress(
     [contextKey, progressMap, sections, userId]
   );
 
+  const markSectionsCompletedLocally = useCallback(
+    (completedIds: string[]) => {
+      if (!contextKey || completedIds.length === 0) return;
+      setProgressState((previous) => {
+        const baseMap = previous.contextKey === contextKey ? previous.progressMap : {};
+        const nextMap = { ...baseMap };
+        let changed = false;
+        for (const id of completedIds) {
+          if (sectionIds.includes(id) && !nextMap[id]) {
+            nextMap[id] = true;
+            changed = true;
+          }
+        }
+        return changed ? { contextKey, progressMap: nextMap } : previous;
+      });
+    },
+    [contextKey, sectionIds]
+  );
+
   const completedCount = Object.values(progressMap).filter(Boolean).length;
   const totalCount = sectionIds.length;
   const progressPercent =
@@ -209,6 +228,7 @@ export function useSectionProgress(
   return {
     progressMap,
     toggleProgress,
+    markSectionsCompletedLocally,
     completedCount,
     totalCount,
     progressPercent,

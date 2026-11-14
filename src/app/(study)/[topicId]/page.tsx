@@ -2,6 +2,10 @@ import { notFound, permanentRedirect } from "next/navigation";
 import type { SectionRow, TopicRow } from "@/types/database";
 import { compareTopicsByOrigin } from "@/lib/topic-order";
 import { requireContentAccess } from "@/lib/content-access";
+import {
+  loadStudyTopicRoutineState,
+  loadUserCompletedContentUnitIds,
+} from "@/lib/gamification/server";
 import { StudyPageClient } from "./study-page-client";
 
 interface TopicPageProps {
@@ -108,8 +112,20 @@ export default async function TopicPage({ params }: TopicPageProps) {
     notFound();
   }
 
+  const completedContentUnitIds = await loadUserCompletedContentUnitIds(supabase, userId);
+  const routineState = await loadStudyTopicRoutineState({
+    supabase,
+    userId,
+    topic: {
+      ...topic,
+      sections,
+    },
+    completedContentUnitIds,
+  });
+
   return (
     <StudyPageClient
+      routineState={routineState}
       topic={topic}
       sections={sections}
       userId={userId}

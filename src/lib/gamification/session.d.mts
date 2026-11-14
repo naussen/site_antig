@@ -125,6 +125,7 @@ export interface RoutineTopicInput {
   topic_id: string;
   title: string;
   discipline?: string | null;
+  sort_order?: number | null;
   archived_at?: string | null;
   sections?: Array<{
     section_id: string;
