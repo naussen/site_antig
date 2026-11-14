@@ -234,7 +234,7 @@ export async function POST(request: Request) {
 
   const executeWithService = async (useDevFallback: boolean) => {
     const service = useDevFallback
-      ? createRoutineServiceForDevFallback()
+      ? createRoutineServiceForDevFallback(access.supabase)
       : createRoutineServiceForSupabase(access.supabase);
 
     const [topics, completedContentUnitIds, visibleDisciplines] = await Promise.all([

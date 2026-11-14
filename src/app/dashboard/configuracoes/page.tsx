@@ -8,12 +8,7 @@ import {
   isMissingTableError,
 } from "@/lib/supabase/errors";
 import { requireContentAccess } from "@/lib/content-access";
-import { isGamificationOperationalEnabled } from "@/lib/gamification/config.mjs";
-import {
-  createSupabaseRoutineRepository,
-  isRoutineSchemaError,
-  logRoutineServerError,
-} from "@/lib/gamification/server";
+import { loadSettingsRoutineStatus } from "@/lib/gamification/server";
 import { START_PAGE_LEGIS, START_PAGE_NOTES, START_PAGE_RESUMOS, START_PAGE_SETTINGS } from "@/lib/user-start-page.mjs";
 
 export default async function DashboardSettingsPage() {
@@ -71,47 +66,10 @@ export default async function DashboardSettingsPage() {
     ? savedStartPage
     : START_PAGE_RESUMOS;
 
-  let routineStatus: {
-    operationalEnabled: boolean;
-    persistenceAvailable: boolean;
-    hideGamification: boolean;
-    needsOnboarding: boolean;
-    targetDays: number;
-    timezoneIana: string;
-  } = {
-    operationalEnabled: isGamificationOperationalEnabled(),
-    persistenceAvailable: true,
-    hideGamification: false,
-    needsOnboarding: true,
-    targetDays: 3,
-    timezoneIana: "America/Sao_Paulo",
-  };
-
-  if (routineStatus.operationalEnabled) {
-    try {
-      const prefs = await createSupabaseRoutineRepository(supabase).getPreferences(
-        user.id,
-      );
-      if (prefs) {
-        routineStatus = {
-          operationalEnabled: true,
-          persistenceAvailable: true,
-          hideGamification: prefs.hide_gamification,
-          needsOnboarding: !prefs.onboarding_completed_at,
-          targetDays: prefs.target_days,
-          timezoneIana: prefs.timezone_iana,
-        };
-      }
-    } catch (error) {
-      const schemaMissing = isRoutineSchemaError(error);
-      logRoutineServerError(
-        "Rotina semanal indisponível nas configurações.",
-        error,
-        schemaMissing,
-      );
-      routineStatus.persistenceAvailable = false;
-    }
-  }
+  const routineStatus = await loadSettingsRoutineStatus({
+    supabase,
+    userId: user.id,
+  });
 
   return (
     <main className="min-h-screen px-4 py-6 sm:px-6 md:px-10 md:py-10" style={{ background: "var(--bg-primary)" }}>

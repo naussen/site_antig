@@ -54,10 +54,21 @@ export function StudySessionBar({
   onSectionsCompleted,
 }: StudySessionBarProps) {
   const router = useRouter();
-  const [snapshot, setSnapshot] = useState<RoutineSnapshot>(initialSnapshot);
-  const [selectedBudget, setSelectedBudget] = useState<5 | 15 | 30>(
-    initialSnapshot.preferences.default_budget_minutes,
-  );
+  const [snapshotOverride, setSnapshotOverride] = useState<{
+    source: RoutineSnapshot;
+    current: RoutineSnapshot;
+  } | null>(null);
+  const snapshot =
+    snapshotOverride?.source === initialSnapshot ? snapshotOverride.current : initialSnapshot;
+
+  const [budgetOverride, setBudgetOverride] = useState<{
+    source: RoutineSnapshot;
+    value: 5 | 15 | 30;
+  } | null>(null);
+  const selectedBudget =
+    budgetOverride?.source === initialSnapshot
+      ? budgetOverride.value
+      : snapshot.preferences.default_budget_minutes;
   const [checkedIdsBySession, setCheckedIdsBySession] = useState<Record<string, string[]>>({});
   const [busyAction, setBusyAction] = useState<string | null>(null);
   const [statusMessage, setStatusMessage] = useState<string | null>(null);
@@ -129,7 +140,8 @@ export function StudySessionBar({
     }
 
     if (data.snapshot) {
-      setSnapshot(data.snapshot);
+      setSnapshotOverride({ source: initialSnapshot, current: data.snapshot });
+      setBudgetOverride(null);
     }
     return data;
   }
@@ -170,10 +182,15 @@ export function StudySessionBar({
     }
   }
 
-  async function handlePauseSession() {
+  async function updateActiveSessionStatus(
+    status: "interrupted" | "in_progress",
+    actionKey: string,
+    successText: string,
+    failureText: string,
+  ) {
     if (!activeSession || !persistenceAvailable || busyAction) return;
 
-    setBusyAction("pause_session");
+    setBusyAction(actionKey);
     setErrorMessage(null);
     setStatusMessage(null);
 
@@ -181,19 +198,35 @@ export function StudySessionBar({
       await callRoutineApi({
         action: "update_session_status",
         sessionId: activeSession.id,
-        status: "interrupted",
+        status,
       });
-      setStatusMessage("Sessão pausada. Você pode retomá-la no Dashboard quando quiser.");
+      setStatusMessage(successText);
       router.refresh();
     } catch (error) {
       setErrorMessage(
-        error instanceof Error
-          ? error.message
-          : "Não foi possível pausar a sessão agora.",
+        error instanceof Error ? error.message : failureText,
       );
     } finally {
       setBusyAction(null);
     }
+  }
+
+  function handlePauseSession() {
+    return updateActiveSessionStatus(
+      "interrupted",
+      "pause_session",
+      "Sessão pausada. Você pode retomá-la aqui ou no Dashboard quando quiser.",
+      "Não foi possível pausar a sessão agora.",
+    );
+  }
+
+  function handleResumeSession() {
+    return updateActiveSessionStatus(
+      "in_progress",
+      "resume_session",
+      "Sessão retomada. Marque as seções estudadas para concluir.",
+      "Não foi possível retomar a sessão agora.",
+    );
   }
 
   async function handleReplaceUnavailable(activityId: string) {
@@ -348,7 +381,10 @@ export function StudySessionBar({
             <div className="flex flex-wrap items-center gap-2">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--accent-soft)] px-2.5 py-0.5 text-xs font-bold text-[var(--accent)]">
                 <CalendarDays size={12} aria-hidden="true" />
-                Sessão ativa ({snapshot.weeklyProgress.completedDaysCount} de{" "}
+                {activeSession.status === "interrupted"
+                  ? "Sessão pausada"
+                  : "Sessão ativa"}{" "}
+                ({snapshot.weeklyProgress.completedDaysCount} de{" "}
                 {snapshot.weeklyProgress.targetDays} dias)
               </span>
               <span className="inline-flex items-center gap-1 text-xs font-semibold text-[var(--text-secondary)]">
@@ -357,19 +393,43 @@ export function StudySessionBar({
               </span>
             </div>
 
-            <button
-              type="button"
-              onClick={handlePauseSession}
-              disabled={!persistenceAvailable || Boolean(busyAction)}
-              className="inline-flex items-center gap-1.5 self-start rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] px-3 py-1.5 text-xs font-bold text-[var(--text-secondary)] hover:border-[var(--accent)] hover:text-[var(--text-primary)] disabled:opacity-50"
-            >
-              {busyAction === "pause_session" ? (
-                <Loader2 size={13} className="animate-spin motion-reduce:animate-none" aria-hidden="true" />
-              ) : (
-                <Pause size={13} aria-hidden="true" />
-              )}
-              Pausar para retomar depois
-            </button>
+            {activeSession.status === "interrupted" ? (
+              <div className="flex flex-wrap items-center gap-2 self-start">
+                <button
+                  type="button"
+                  onClick={handleResumeSession}
+                  disabled={!persistenceAvailable || Boolean(busyAction)}
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-[var(--accent)] px-3 py-1.5 text-xs font-bold text-white disabled:opacity-50"
+                >
+                  {busyAction === "resume_session" ? (
+                    <Loader2 size={13} className="animate-spin motion-reduce:animate-none" aria-hidden="true" />
+                  ) : (
+                    <Play size={13} aria-hidden="true" />
+                  )}
+                  Retomar sessão
+                </button>
+                <Link
+                  href="/dashboard"
+                  className="inline-flex items-center gap-1 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] px-3 py-1.5 text-xs font-bold text-[var(--text-secondary)] hover:border-[var(--accent)] hover:text-[var(--text-primary)]"
+                >
+                  Dashboard
+                </Link>
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={handlePauseSession}
+                disabled={!persistenceAvailable || Boolean(busyAction)}
+                className="inline-flex items-center gap-1.5 self-start rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] px-3 py-1.5 text-xs font-bold text-[var(--text-secondary)] hover:border-[var(--accent)] hover:text-[var(--text-primary)] disabled:opacity-50"
+              >
+                {busyAction === "pause_session" ? (
+                  <Loader2 size={13} className="animate-spin motion-reduce:animate-none" aria-hidden="true" />
+                ) : (
+                  <Pause size={13} aria-hidden="true" />
+                )}
+                Pausar para retomar depois
+              </button>
+            )}
           </div>
 
           <p className="mt-3 text-xs font-semibold text-[var(--text-secondary)]">
@@ -517,7 +577,9 @@ export function StudySessionBar({
                   key={minutes}
                   type="button"
                   aria-pressed={selectedBudget === minutes}
-                  onClick={() => setSelectedBudget(minutes)}
+                  onClick={() =>
+                    setBudgetOverride({ source: initialSnapshot, value: minutes })
+                  }
                   className={`rounded-lg border px-2.5 py-1 text-xs font-bold ${
                     selectedBudget === minutes
                       ? "border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)]"

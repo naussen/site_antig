@@ -764,3 +764,57 @@ test("transição para fuso a oeste na segunda (SP -> Manaus) aplica nova meta n
   assert.equal(historicalSession.completed_at, historicalCompletedAt);
   assert.equal(historicalSession.completed_local_date, historicalLocalDate);
 });
+
+test("buildStudyRecommendation calcula optionsByBudget dinâmico para 5, 15 e 30 minutos", () => {
+  const mkMarkdown = (words) => "estudo ".repeat(words);
+  const topics = [
+    {
+      topic_id: "topico-orcamentos",
+      title: "Orçamentos em sequência",
+      discipline: "Direito Administrativo",
+      archived_at: null,
+      sections: [
+        {
+          section_id: "s1",
+          content_unit_id: "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa1",
+          title: "Seção 1 (~5 min)",
+          content_markdown: mkMarkdown(650),
+          sort_order: 1,
+          archived_at: null,
+        },
+        {
+          section_id: "s2",
+          content_unit_id: "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa2",
+          title: "Seção 2 (~6 min)",
+          content_markdown: mkMarkdown(780),
+          sort_order: 2,
+          archived_at: null,
+        },
+        {
+          section_id: "s3",
+          content_unit_id: "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaa3",
+          title: "Seção 3 (~7 min)",
+          content_markdown: mkMarkdown(910),
+          sort_order: 3,
+          archived_at: null,
+        },
+      ],
+    },
+  ];
+
+  const rec = buildStudyRecommendation({
+    topics,
+    completedContentUnitIds: new Set(),
+    budgetMinutes: 15,
+  });
+
+  assert.equal(rec?.kind, "start");
+  assert.ok(rec?.optionsByBudget);
+  assert.equal(rec.optionsByBudget[5].plannedActivities.length, 1);
+  assert.equal(rec.optionsByBudget[5].estimatedMinutes, 5);
+  assert.equal(rec.optionsByBudget[15].plannedActivities.length, 2);
+  assert.equal(rec.optionsByBudget[15].estimatedMinutes, 11);
+  assert.equal(rec.optionsByBudget[30].plannedActivities.length, 3);
+  assert.equal(rec.optionsByBudget[30].estimatedMinutes, 18);
+  assert.equal(rec.plannedActivities.length, 2);
+});

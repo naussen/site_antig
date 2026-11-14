@@ -77,28 +77,54 @@ export function TodayStudyCard({
   availableDisciplines,
 }: TodayStudyCardProps) {
   const router = useRouter();
-  const [snapshot, setSnapshot] = useState<RoutineSnapshot>(initialSnapshot);
-  const [selectedBudget, setSelectedBudget] = useState<5 | 15 | 30>(
-    initialSnapshot.preferences.default_budget_minutes,
-  );
+  const [snapshotOverride, setSnapshotOverride] = useState<{
+    source: RoutineSnapshot;
+    current: RoutineSnapshot;
+  } | null>(null);
+  const snapshot =
+    snapshotOverride?.source === initialSnapshot ? snapshotOverride.current : initialSnapshot;
+
+  const [budgetOverride, setBudgetOverride] = useState<{
+    source: RoutineSnapshot;
+    value: 5 | 15 | 30;
+  } | null>(null);
+  const selectedBudget =
+    budgetOverride?.source === initialSnapshot
+      ? budgetOverride.value
+      : snapshot.preferences.default_budget_minutes;
+
   const [configOpen, setConfigOpen] = useState(initialSnapshot.needsOnboarding);
   const [pickerOpen, setPickerOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
 
-  const [draftTargetDays, setDraftTargetDays] = useState<number>(
-    initialSnapshot.preferences.pending_target_days ??
-      initialSnapshot.preferences.target_days,
-  );
-  const [draftTimezone, setDraftTimezone] = useState<string>(
-    initialSnapshot.preferences.pending_timezone_iana ??
-      initialSnapshot.preferences.timezone_iana,
-  );
-  const [draftBudget, setDraftBudget] = useState<5 | 15 | 30>(
-    initialSnapshot.preferences.default_budget_minutes,
-  );
-  const [draftDiscipline, setDraftDiscipline] = useState<string>(
-    initialSnapshot.preferences.preferred_discipline ?? "",
-  );
+  const defaultDraft = {
+    targetDays:
+      snapshot.preferences.pending_target_days ?? snapshot.preferences.target_days,
+    timezone:
+      snapshot.preferences.pending_timezone_iana ?? snapshot.preferences.timezone_iana,
+    budget: snapshot.preferences.default_budget_minutes,
+    discipline: snapshot.preferences.preferred_discipline ?? "",
+  };
+  const [draftOverride, setDraftOverride] = useState<{
+    source: RoutineSnapshot;
+    value: typeof defaultDraft;
+  } | null>(null);
+  const activeDraft =
+    draftOverride?.source === initialSnapshot ? draftOverride.value : defaultDraft;
+  const draftTargetDays = activeDraft.targetDays;
+  const draftTimezone = activeDraft.timezone;
+  const draftBudget = activeDraft.budget;
+  const draftDiscipline = activeDraft.discipline;
+
+  function updateDraft(patch: Partial<typeof defaultDraft>) {
+    setDraftOverride({
+      source: initialSnapshot,
+      value: {
+        ...activeDraft,
+        ...patch,
+      },
+    });
+  }
 
   const [topicSearch, setTopicSearch] = useState("");
   const [disciplineFilter, setDisciplineFilter] = useState("");
@@ -112,6 +138,12 @@ export function TodayStudyCard({
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const inFlightStartKeyRef = useRef<string | null>(null);
+
+  function applySnapshotState(nextSnapshot: RoutineSnapshot) {
+    setSnapshotOverride({ source: initialSnapshot, current: nextSnapshot });
+    setBudgetOverride(null);
+    setDraftOverride(null);
+  }
 
   const timezonePreview = useMemo(
     () =>
@@ -171,18 +203,7 @@ export function TodayStudyCard({
     }
 
     if (data.snapshot) {
-      setSnapshot(data.snapshot);
-      setSelectedBudget(data.snapshot.preferences.default_budget_minutes);
-      setDraftTargetDays(
-        data.snapshot.preferences.pending_target_days ??
-          data.snapshot.preferences.target_days,
-      );
-      setDraftTimezone(
-        data.snapshot.preferences.pending_timezone_iana ??
-          data.snapshot.preferences.timezone_iana,
-      );
-      setDraftBudget(data.snapshot.preferences.default_budget_minutes);
-      setDraftDiscipline(data.snapshot.preferences.preferred_discipline ?? "");
+      applySnapshotState(data.snapshot);
     }
 
     return data;
@@ -447,7 +468,13 @@ export function TodayStudyCard({
       : `/${valid.topic_id}`;
   })();
 
-  const recommendedSections = recommendation?.plannedActivities ?? [];
+  const activeBudgetOption = recommendation?.optionsByBudget?.[selectedBudget] ?? null;
+  const recommendedSections =
+    activeBudgetOption?.plannedActivities ?? recommendation?.plannedActivities ?? [];
+  const recommendedEstimatedMinutes =
+    activeBudgetOption?.estimatedMinutes ??
+    recommendation?.estimatedMinutes ??
+    selectedBudget;
 
   return (
     <section
@@ -647,7 +674,7 @@ export function TodayStudyCard({
                     key={days}
                     type="button"
                     aria-pressed={draftTargetDays === days}
-                    onClick={() => setDraftTargetDays(days)}
+                    onClick={() => updateDraft({ targetDays: days })}
                     className={`grid h-9 w-9 place-items-center rounded-lg border text-sm font-bold transition-colors motion-reduce:transition-none ${
                       draftTargetDays === days
                         ? "border-[var(--accent)] bg-[var(--accent)] text-white"
@@ -676,7 +703,7 @@ export function TodayStudyCard({
                     key={minutes}
                     type="button"
                     aria-pressed={draftBudget === minutes}
-                    onClick={() => setDraftBudget(minutes)}
+                    onClick={() => updateDraft({ budget: minutes })}
                     className={`rounded-lg border px-3 py-2 text-xs font-bold transition-colors motion-reduce:transition-none ${
                       draftBudget === minutes
                         ? "border-[var(--accent)] bg-[var(--accent)] text-white"
@@ -699,7 +726,7 @@ export function TodayStudyCard({
               <select
                 id="routine-timezone"
                 value={draftTimezone}
-                onChange={(event) => setDraftTimezone(event.target.value)}
+                onChange={(event) => updateDraft({ timezone: event.target.value })}
                 className="mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-card)] px-3 py-2.5 text-sm text-[var(--text-primary)]"
               >
                 {SUPPORTED_TIMEZONE_OPTIONS.map((option) => (
@@ -733,7 +760,7 @@ export function TodayStudyCard({
               <select
                 id="routine-preferred-discipline"
                 value={draftDiscipline}
-                onChange={(event) => setDraftDiscipline(event.target.value)}
+                onChange={(event) => updateDraft({ discipline: event.target.value })}
                 className="mt-2 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-card)] px-3 py-2.5 text-sm text-[var(--text-primary)]"
               >
                 <option value="">Seguir ordem geral do acervo</option>
@@ -876,7 +903,7 @@ export function TodayStudyCard({
                     </span>
                     <span className="inline-flex items-center gap-1 text-xs font-semibold text-[var(--text-secondary)]">
                       <Clock size={13} aria-hidden="true" />
-                      aproximadamente {recommendation.estimatedMinutes} min
+                      aproximadamente {recommendedEstimatedMinutes} min
                     </span>
                   </div>
 
@@ -906,9 +933,9 @@ export function TodayStudyCard({
                     </ul>
                   )}
 
-                  {recommendation.estimatedMinutes > selectedBudget && (
+                  {recommendedEstimatedMinutes > selectedBudget && (
                     <p className="mt-2 text-xs text-[var(--text-muted)]">
-                      A primeira seção completa leva cerca de {recommendation.estimatedMinutes} min e foi preservada na íntegra.
+                      A primeira seção completa leva cerca de {recommendedEstimatedMinutes} min e foi preservada na íntegra.
                     </p>
                   )}
                 </div>
@@ -924,7 +951,9 @@ export function TodayStudyCard({
                         key={minutes}
                         type="button"
                         aria-pressed={selectedBudget === minutes}
-                        onClick={() => setSelectedBudget(minutes)}
+                        onClick={() =>
+                          setBudgetOverride({ source: initialSnapshot, value: minutes })
+                        }
                         className={`rounded-xl border px-3 py-1.5 text-xs font-bold transition-colors motion-reduce:transition-none ${
                           selectedBudget === minutes
                             ? "border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)]"
@@ -1048,11 +1077,15 @@ export function TodayStudyCard({
                     }}
                     className="mt-1 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-card)] px-3 py-2 text-sm text-[var(--text-primary)]"
                   >
-                    {filteredTopics.map((topic) => (
-                      <option key={topic.topic_id} value={topic.topic_id}>
-                        {topic.discipline} — {topic.title}
-                      </option>
-                    ))}
+                    {filteredTopics.length === 0 ? (
+                      <option value="">Nenhum tópico encontrado para o filtro</option>
+                    ) : (
+                      filteredTopics.map((topic) => (
+                        <option key={topic.topic_id} value={topic.topic_id}>
+                          {topic.discipline} — {topic.title}
+                        </option>
+                      ))
+                    )}
                   </select>
                 </div>
 

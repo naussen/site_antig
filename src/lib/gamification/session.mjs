@@ -335,32 +335,49 @@ export function buildStudyRecommendation(input) {
         : null,
       primaryTarget: firstAvailableTarget,
       plannedActivities: activities,
+      optionsByBudget: null,
       isReview: false,
     };
   }
 
   const chosen = pickNextSection(excludeContentUnitIds);
-  const plannedSections = selectSessionActivitiesForBudget(
-    chosen.topic.sections,
-    chosen.startIndex,
-    budgetMinutes,
+  const buildPlanForBudget = (targetBudget) => {
+    const plannedActivities = selectSessionActivitiesForBudget(
+      chosen.topic.sections,
+      chosen.startIndex,
+      targetBudget,
+    );
+    const estimatedMinutes = plannedActivities.reduce(
+      (sum, item) => sum + item.estimated_minutes,
+      0,
+    );
+    return {
+      budgetMinutes: targetBudget,
+      estimatedMinutes,
+      plannedActivities,
+    };
+  };
+
+  const optionsByBudget = Object.fromEntries(
+    BUDGET_MINUTES_OPTIONS.map((optionMinutes) => [
+      optionMinutes,
+      buildPlanForBudget(optionMinutes),
+    ]),
   );
-  const estimatedMinutes = plannedSections.reduce(
-    (sum, item) => sum + item.estimated_minutes,
-    0,
-  );
+  const selectedPlan = optionsByBudget[budgetMinutes] ?? buildPlanForBudget(budgetMinutes);
 
   return {
     kind: "start",
     sessionId: null,
     sessionStatus: null,
     budgetMinutes,
-    estimatedMinutes,
+    estimatedMinutes: selectedPlan.estimatedMinutes,
     hasUnavailableContent: false,
     unavailableActivityIds: [],
     replacementCandidate: null,
-    primaryTarget: plannedSections[0] ?? null,
-    plannedActivities: plannedSections,
+    primaryTarget: selectedPlan.plannedActivities[0] ?? null,
+    plannedActivities: selectedPlan.plannedActivities,
+    optionsByBudget,
     isReview: chosen.isReview,
   };
 }

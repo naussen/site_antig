@@ -89,6 +89,12 @@ export interface StudyRoutineWeeklyPlanRecord {
   is_partial_first_week: boolean;
 }
 
+export interface BudgetRecommendationPreview {
+  budgetMinutes: 5 | 15 | 30;
+  estimatedMinutes: number;
+  plannedActivities: ActiveTopicSectionCandidate[];
+}
+
 export interface StudyRecommendation {
   kind: "start" | "resume";
   sessionId: string | null;
@@ -100,6 +106,7 @@ export interface StudyRecommendation {
   replacementCandidate: ActiveTopicSectionCandidate | null;
   primaryTarget: ActiveTopicSectionCandidate | null;
   plannedActivities: Array<ActiveTopicSectionCandidate | StudyRoutineActivityRecord>;
+  optionsByBudget?: Record<5 | 15 | 30, BudgetRecommendationPreview> | null;
   isReview: boolean;
 }
 

@@ -114,14 +114,35 @@ test("páginas de Dashboard, Estudo e Configurações integram a rotina e mantê
   const studyClient = readWorkspaceFile("src/app/(study)/[topicId]/study-page-client.tsx");
   const settings = readWorkspaceFile("src/app/dashboard/configuracoes/page.tsx");
   const server = readWorkspaceFile("src/lib/gamification/server.ts");
+  const todayCard = readWorkspaceFile("src/components/gamification/today-study-card.tsx");
+  const sessionBar = readWorkspaceFile("src/components/gamification/study-session-bar.tsx");
 
   assert.ok(dashboard.includes("<TodayStudyCard"), "Dashboard deve renderizar TodayStudyCard");
   assert.ok(studyClient.includes("<StudySessionBar"), "Estudo deve renderizar StudySessionBar");
   assert.ok(settings.includes("config-rotina-titulo"), "Configurações deve exibir estado da rotina");
   assert.ok(
+    settings.includes("loadSettingsRoutineStatus"),
+    "Configurações deve carregar estado da rotina via loadSettingsRoutineStatus",
+  );
+  assert.ok(
     server.includes('process.env.NODE_ENV !== "production"') &&
       server.includes('process.env.STUDY_ROUTINE_DEV_FALLBACK === "1"'),
     "Fallback em memória nunca pode atuar em produção",
+  );
+  assert.ok(
+    server.includes("getDevFallbackCompletedUnitIds") &&
+      server.includes("hydrateDashboardRecommendationIfNeeded"),
+    "Fallback dev deve hidratar recomendação e refletir conclusão em memória/progresso",
+  );
+  assert.ok(
+    todayCard.includes("optionsByBudget?.[selectedBudget]"),
+    "TodayStudyCard deve atualizar prévia ao trocar orçamento (5, 15, 30 min)",
+  );
+  assert.ok(
+    sessionBar.includes('activeSession.status === "interrupted"') &&
+      sessionBar.includes("handleResumeSession") &&
+      sessionBar.includes("Sessão pausada"),
+    "StudySessionBar deve exibir estado pausado e retomada direta na barra",
   );
   assert.equal(isGamificationOperationalEnabled({ NEXT_PUBLIC_DISABLE_GAMIFICATION: "true" }), false);
   assert.equal(isGamificationOperationalEnabled({ NEXT_PUBLIC_DISABLE_GAMIFICATION: "false" }), true);

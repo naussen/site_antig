@@ -144,6 +144,7 @@ const devFallbackGlobal = globalThis as typeof globalThis & {
       preferences: StudyRoutinePreferencesRecord | null;
       weeklyPlans: StudyRoutineWeeklyPlanRecord[];
       sessions: StudyRoutineSessionRecord[];
+      completedContentUnitIds: Set<string>;
     }
   >;
 };
@@ -155,7 +156,11 @@ export function isExplicitDevFallbackAllowed(): boolean {
   );
 }
 
-function createDevFallbackRepository(): RoutineRepository {
+function getDevFallbackCompletedUnitIds(userId: string): Set<string> | null {
+  return devFallbackGlobal.__studyRoutineDevFallbackStore?.get(userId)?.completedContentUnitIds ?? null;
+}
+
+function createDevFallbackRepository(supabase?: SupabaseServerClient): RoutineRepository {
   if (!devFallbackGlobal.__studyRoutineDevFallbackStore) {
     devFallbackGlobal.__studyRoutineDevFallbackStore = new Map();
   }
@@ -164,8 +169,15 @@ function createDevFallbackRepository(): RoutineRepository {
   const ensureUserStore = (userId: string) => {
     let entry = store.get(userId);
     if (!entry) {
-      entry = { preferences: null, weeklyPlans: [], sessions: [] };
+      entry = {
+        preferences: null,
+        weeklyPlans: [],
+        sessions: [],
+        completedContentUnitIds: new Set<string>(),
+      };
       store.set(userId, entry);
+    } else if (!entry.completedContentUnitIds) {
+      entry.completedContentUnitIds = new Set<string>();
     }
     return entry;
   };
@@ -344,7 +356,33 @@ function createDevFallbackRepository(): RoutineRepository {
       target.last_activity_at = completedAt;
       return target;
     },
-    async markLegacyProgressCompleted() {},
+    async markLegacyProgressCompleted(userId, items) {
+      const entry = ensureUserStore(userId);
+      const validItems = items.filter(
+        (item) => Boolean(item.content_unit_id && item.section_id),
+      );
+      for (const item of validItems) {
+        entry.completedContentUnitIds.add(item.content_unit_id);
+      }
+
+      if (!supabase || validItems.length === 0) return;
+
+      const updatedAt = new Date().toISOString();
+      try {
+        await supabase.from("user_progress").upsert(
+          validItems.map((item) => ({
+            user_id: userId,
+            section_id: item.section_id,
+            content_unit_id: item.content_unit_id,
+            completed: true,
+            updated_at: updatedAt,
+          })),
+          { onConflict: "user_id,content_unit_id" },
+        );
+      } catch {
+        // Em fallback dev, o registro em memória garante continuidade mesmo se user_progress falhar.
+      }
+    },
   };
 }
 
@@ -352,8 +390,8 @@ export function createRoutineServiceForSupabase(supabase: SupabaseServerClient) 
   return createRoutineService(createSupabaseRoutineRepository(supabase));
 }
 
-export function createRoutineServiceForDevFallback() {
-  return createRoutineService(createDevFallbackRepository());
+export function createRoutineServiceForDevFallback(supabase?: SupabaseServerClient) {
+  return createRoutineService(createDevFallbackRepository(supabase));
 }
 
 export function sortRoutineTopics(topics: RoutineTopicInput[]): RoutineTopicInput[] {
@@ -450,16 +488,27 @@ export async function loadUserCompletedContentUnitIds(
     .eq("user_id", userId)
     .eq("completed", true);
 
+  const mergedIds = new Set<string>();
   if (error) {
     logRoutineServerError("Falha ao consultar progresso para recomendação da rotina.", error, false);
-    return new Set<string>();
+  } else {
+    for (const row of data ?? []) {
+      if (typeof row.content_unit_id === "string" && row.content_unit_id.length > 0) {
+        mergedIds.add(row.content_unit_id);
+      }
+    }
   }
 
-  return new Set(
-    (data ?? [])
-      .map((row) => row.content_unit_id)
-      .filter((id): id is string => typeof id === "string" && id.length > 0),
-  );
+  if (isExplicitDevFallbackAllowed()) {
+    const devCompleted = getDevFallbackCompletedUnitIds(userId);
+    if (devCompleted) {
+      for (const contentUnitId of devCompleted) {
+        mergedIds.add(contentUnitId);
+      }
+    }
+  }
+
+  return mergedIds;
 }
 
 export async function loadUserVisibleDisciplines(
@@ -561,6 +610,42 @@ function buildReadOnlyFallbackSnapshot(userId: string): RoutineSnapshot {
   };
 }
 
+async function hydrateDashboardRecommendationIfNeeded(input: {
+  supabase: SupabaseServerClient;
+  orderedTopics: RoutineTopicInput[];
+  snapshot: RoutineSnapshot;
+  completedContentUnitIds: Set<string>;
+  visibleDisciplines: string[] | null;
+}) {
+  const { supabase, orderedTopics, snapshot, completedContentUnitIds, visibleDisciplines } = input;
+  const targetIds = new Set<string>();
+  if (snapshot.recommendation?.primaryTarget?.topic_id) {
+    targetIds.add(snapshot.recommendation.primaryTarget.topic_id);
+  }
+  if (snapshot.recommendation?.replacementCandidate?.topic_id) {
+    targetIds.add(snapshot.recommendation.replacementCandidate.topic_id);
+  }
+
+  if (snapshot.activeSession || targetIds.size === 0) {
+    return snapshot;
+  }
+
+  const hydratedTopics = await hydrateRoutineTopicsByIds(
+    supabase,
+    orderedTopics,
+    Array.from(targetIds),
+  );
+  snapshot.recommendation = buildStudyRecommendation({
+    topics: hydratedTopics,
+    completedContentUnitIds,
+    activeSession: null,
+    preferredDiscipline: snapshot.preferences.preferred_discipline,
+    visibleDisciplines,
+    budgetMinutes: snapshot.preferences.default_budget_minutes,
+  });
+  return snapshot;
+}
+
 export async function loadDashboardRoutineState(input: {
   supabase: SupabaseServerClient;
   userId: string;
@@ -589,29 +674,13 @@ export async function loadDashboardRoutineState(input: {
       visibleDisciplines: input.visibleDisciplines,
     });
 
-    const targetIds = new Set<string>();
-    if (snapshot.recommendation?.primaryTarget?.topic_id) {
-      targetIds.add(snapshot.recommendation.primaryTarget.topic_id);
-    }
-    if (snapshot.recommendation?.replacementCandidate?.topic_id) {
-      targetIds.add(snapshot.recommendation.replacementCandidate.topic_id);
-    }
-
-    if (!snapshot.activeSession && targetIds.size > 0) {
-      const hydratedTopics = await hydrateRoutineTopicsByIds(
-        input.supabase,
-        orderedTopics,
-        Array.from(targetIds),
-      );
-      snapshot.recommendation = buildStudyRecommendation({
-        topics: hydratedTopics,
-        completedContentUnitIds: input.completedContentUnitIds,
-        activeSession: null,
-        preferredDiscipline: snapshot.preferences.preferred_discipline,
-        visibleDisciplines: input.visibleDisciplines,
-        budgetMinutes: snapshot.preferences.default_budget_minutes,
-      });
-    }
+    await hydrateDashboardRecommendationIfNeeded({
+      supabase: input.supabase,
+      orderedTopics,
+      snapshot,
+      completedContentUnitIds: input.completedContentUnitIds,
+      visibleDisciplines: input.visibleDisciplines,
+    });
 
     return {
       operationalEnabled: true,
@@ -622,10 +691,25 @@ export async function loadDashboardRoutineState(input: {
   } catch (error) {
     if (error instanceof RoutineSchemaUnavailableError) {
       if (isExplicitDevFallbackAllowed()) {
-        const devSnapshot = await createRoutineServiceForDevFallback().getSnapshot({
+        const mergedCompleted = new Set(input.completedContentUnitIds);
+        const devCompleted = getDevFallbackCompletedUnitIds(input.userId);
+        if (devCompleted) {
+          for (const contentUnitId of devCompleted) {
+            mergedCompleted.add(contentUnitId);
+          }
+        }
+
+        const devSnapshot = await createRoutineServiceForDevFallback(input.supabase).getSnapshot({
           userId: input.userId,
           topics: orderedTopics,
-          completedContentUnitIds: input.completedContentUnitIds,
+          completedContentUnitIds: mergedCompleted,
+          visibleDisciplines: input.visibleDisciplines,
+        });
+        await hydrateDashboardRecommendationIfNeeded({
+          supabase: input.supabase,
+          orderedTopics,
+          snapshot: devSnapshot,
+          completedContentUnitIds: mergedCompleted,
           visibleDisciplines: input.visibleDisciplines,
         });
         return {
@@ -650,6 +734,71 @@ export async function loadDashboardRoutineState(input: {
       persistenceAvailable: false,
       snapshot: buildReadOnlyFallbackSnapshot(input.userId),
       topicOptions,
+    };
+  }
+}
+
+export interface SettingsRoutineStatus {
+  operationalEnabled: boolean;
+  persistenceAvailable: boolean;
+  hideGamification: boolean;
+  needsOnboarding: boolean;
+  targetDays: number;
+  timezoneIana: string;
+}
+
+export async function loadSettingsRoutineStatus(input: {
+  supabase: SupabaseServerClient;
+  userId: string;
+}): Promise<SettingsRoutineStatus> {
+  const baseStatus: SettingsRoutineStatus = {
+    operationalEnabled: isGamificationOperationalEnabled(),
+    persistenceAvailable: true,
+    hideGamification: false,
+    needsOnboarding: true,
+    targetDays: DEFAULT_TARGET_DAYS,
+    timezoneIana: DEFAULT_TIMEZONE_IANA,
+  };
+
+  if (!baseStatus.operationalEnabled) {
+    baseStatus.persistenceAvailable = false;
+    return baseStatus;
+  }
+
+  const mapPrefsToStatus = (prefs: StudyRoutinePreferencesRecord | null): SettingsRoutineStatus =>
+    prefs
+      ? {
+          operationalEnabled: true,
+          persistenceAvailable: true,
+          hideGamification: prefs.hide_gamification,
+          needsOnboarding: !prefs.onboarding_completed_at,
+          targetDays: prefs.target_days,
+          timezoneIana: prefs.timezone_iana,
+        }
+      : baseStatus;
+
+  try {
+    const prefs = await createSupabaseRoutineRepository(input.supabase).getPreferences(
+      input.userId,
+    );
+    return mapPrefsToStatus(prefs);
+  } catch (error) {
+    const schemaMissing = isRoutineSchemaError(error);
+    if (schemaMissing && isExplicitDevFallbackAllowed()) {
+      const devPrefs = await createDevFallbackRepository(input.supabase).getPreferences(
+        input.userId,
+      );
+      return mapPrefsToStatus(devPrefs);
+    }
+
+    logRoutineServerError(
+      "Rotina semanal indisponível nas configurações.",
+      error,
+      schemaMissing,
+    );
+    return {
+      ...baseStatus,
+      persistenceAvailable: false,
     };
   }
 }
@@ -715,7 +864,7 @@ export async function loadStudyTopicRoutineState(input: {
   } catch (error) {
     if (error instanceof RoutineSchemaUnavailableError) {
       if (isExplicitDevFallbackAllowed()) {
-        const devSnapshot = await createRoutineServiceForDevFallback().getSnapshot({
+        const devSnapshot = await createRoutineServiceForDevFallback(input.supabase).getSnapshot({
           userId: input.userId,
           topics: [input.topic],
           completedContentUnitIds: input.completedContentUnitIds,
