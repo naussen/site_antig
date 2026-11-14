@@ -669,3 +669,98 @@ test("savePreferences parcial preserva meta e fuso agendados e ocultar pré-onbo
   assert.equal(unhidden.preferences.pending_timezone_iana, "Europe/Lisbon");
   assert.equal(unhidden.preferences.pending_effective_week_start, "2026-11-16");
 });
+
+test("transição para fuso a oeste na segunda (SP -> Manaus) aplica nova meta na mesma semana sem reescrever histórico", async () => {
+  const repo = createInMemoryRoutineRepo();
+  const service = createRoutineService(repo);
+  const topics = makeTopicsFixture();
+
+  await service.savePreferences({
+    userId: "user-westward",
+    targetDays: 3,
+    timezoneIana: "America/Sao_Paulo",
+    defaultBudgetMinutes: 15,
+    nowUtc: new Date("2026-11-10T15:00:00.000Z"),
+  });
+
+  // Conclui uma sessão na semana 2026-11-09..2026-11-15
+  const week1Start = await service.startOrResumeSession({
+    userId: "user-westward",
+    topics,
+    completedContentUnitIds: new Set(),
+    budgetMinutes: 5,
+    contentUnitId: "11111111-1111-4111-8111-111111111111",
+    idempotencyKey: "west-w1-start",
+    nowUtc: new Date("2026-11-14T15:00:00.000Z"),
+  });
+  const week1Complete = await service.completeSession({
+    userId: "user-westward",
+    sessionId: week1Start.session.id,
+    completedActivityIds: [week1Start.session.activities[0].id],
+    completionIdempotencyKey: "west-w1-complete",
+    topics,
+    nowUtc: new Date("2026-11-14T15:06:00.000Z"),
+  });
+  const historicalCompletedAt = week1Complete.session.completed_at;
+  const historicalLocalDate = week1Complete.session.completed_local_date;
+
+  // Agenda mudança: meta 3 -> 5 e fuso America/Sao_Paulo -> America/Manaus
+  const scheduled = await service.savePreferences({
+    userId: "user-westward",
+    targetDays: 5,
+    timezoneIana: "America/Manaus",
+    nowUtc: new Date("2026-11-14T16:00:00.000Z"),
+  });
+  assert.equal(scheduled.preferences.pending_effective_week_start, "2026-11-16");
+
+  // Acesso às 00:30 de segunda em SP (03:30 UTC), quando ainda é domingo 23:30 em Manaus:
+  // não cria plano prematuro de 2026-11-16 e preserva pendência.
+  const gapSnapshot = await service.getSnapshot({
+    userId: "user-westward",
+    topics,
+    completedContentUnitIds: new Set(["11111111-1111-4111-8111-111111111111"]),
+    nowUtc: new Date("2026-11-16T03:30:00.000Z"),
+  });
+  assert.equal(gapSnapshot.currentPlan?.week_start_date, "2026-11-09");
+  assert.equal(gapSnapshot.preferences.pending_target_days, 5);
+  assert.equal(gapSnapshot.preferences.pending_timezone_iana, "America/Manaus");
+  assert.equal(gapSnapshot.preferences.pending_effective_week_start, "2026-11-16");
+
+  // Ocultar gamificação na janela de transição de 1h preserva a troca agendada para 2026-11-16
+  const gapHide = await service.savePreferences({
+    userId: "user-westward",
+    hideGamification: true,
+    nowUtc: new Date("2026-11-16T03:31:00.000Z"),
+  });
+  assert.equal(gapHide.preferences.hide_gamification, true);
+  assert.equal(gapHide.preferences.pending_target_days, 5);
+  assert.equal(gapHide.preferences.pending_timezone_iana, "America/Manaus");
+  assert.equal(gapHide.preferences.pending_effective_week_start, "2026-11-16");
+
+  // Acesso após ambos entrarem na segunda 2026-11-16 (00:30 em Manaus / 04:30 UTC):
+  // promove meta 5 e fuso America/Manaus para 2026-11-16 e mantém histórico intacto.
+  const promotedSnapshot = await service.getSnapshot({
+    userId: "user-westward",
+    topics,
+    completedContentUnitIds: new Set(["11111111-1111-4111-8111-111111111111"]),
+    nowUtc: new Date("2026-11-16T04:30:00.000Z"),
+  });
+  assert.equal(promotedSnapshot.currentPlan?.week_start_date, "2026-11-16");
+  assert.equal(promotedSnapshot.currentPlan?.target_days, 5);
+  assert.equal(promotedSnapshot.currentPlan?.timezone_iana, "America/Manaus");
+  assert.equal(promotedSnapshot.preferences.target_days, 5);
+  assert.equal(promotedSnapshot.preferences.timezone_iana, "America/Manaus");
+  assert.equal(promotedSnapshot.preferences.pending_target_days, null);
+  assert.equal(promotedSnapshot.preferences.pending_timezone_iana, null);
+  assert.equal(promotedSnapshot.preferences.pending_effective_week_start, null);
+
+  const plans = await repo.listWeeklyPlans("user-westward");
+  assert.equal(plans.length, 2);
+  assert.equal(plans[1].week_start_date, "2026-11-09");
+  assert.equal(plans[1].target_days, 3);
+  assert.equal(plans[1].timezone_iana, "America/Sao_Paulo");
+
+  const historicalSession = await repo.getSessionById("user-westward", week1Complete.session.id);
+  assert.equal(historicalSession.completed_at, historicalCompletedAt);
+  assert.equal(historicalSession.completed_local_date, historicalLocalDate);
+});

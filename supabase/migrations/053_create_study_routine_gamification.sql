@@ -639,6 +639,8 @@ DECLARE
   v_week_start DATE;
   v_due_in_current BOOLEAN;
   v_due_in_pending BOOLEAN;
+  v_has_pending_change BOOLEAN;
+  v_waiting_pending_tz BOOLEAN;
   v_should_promote BOOLEAN;
   v_eff_target SMALLINT;
   v_eff_tz TEXT;
@@ -712,53 +714,75 @@ BEGIN
       ELSE v_due_in_current
     END;
 
-    v_should_promote := v_has_prior_plans
-      AND v_prefs.pending_effective_week_start IS NOT NULL
-      AND (v_prefs.pending_target_days IS NOT NULL OR v_prefs.pending_timezone_iana IS NOT NULL)
-      AND v_due_in_current
-      AND v_due_in_pending;
+    v_has_pending_change := v_prefs.pending_effective_week_start IS NOT NULL
+      AND (v_prefs.pending_target_days IS NOT NULL OR v_prefs.pending_timezone_iana IS NOT NULL);
 
-    IF v_should_promote THEN
-      v_eff_target := COALESCE(v_prefs.pending_target_days, v_prefs.target_days);
-      v_eff_tz := COALESCE(v_prefs.pending_timezone_iana, v_prefs.timezone_iana);
-      v_eff_local_date := (p_now AT TIME ZONE v_eff_tz)::DATE;
-      v_eff_week_start := date_trunc('week', v_eff_local_date::TIMESTAMP)::DATE;
-      v_eff_week_end := v_eff_week_start + 6;
-      v_is_partial := false;
-    ELSE
-      v_eff_target := v_prefs.target_days;
-      v_eff_tz := v_prefs.timezone_iana;
-      v_eff_local_date := v_local_date;
-      v_eff_week_start := v_week_start;
-      v_eff_week_end := v_week_start + 6;
-      v_is_partial := (NOT v_has_prior_plans) AND (EXTRACT(ISODOW FROM v_eff_local_date) > 1);
+    v_waiting_pending_tz := v_has_prior_plans
+      AND v_has_pending_change
+      AND v_due_in_current
+      AND NOT v_due_in_pending;
+
+    IF v_waiting_pending_tz THEN
+      -- Enquanto o novo fuso a oeste ainda está no domingo anterior, preserva o plano
+      -- anterior sem criar um plano prematuro da nova semana com preferências antigas.
+      SELECT plan.*
+      INTO v_plan
+      FROM public.study_routine_weekly_plans AS plan
+      WHERE plan.user_id = p_user_id
+        AND plan.week_start_date < v_prefs.pending_effective_week_start
+      ORDER BY plan.week_start_date DESC
+      LIMIT 1;
+      v_has_plan := FOUND;
     END IF;
 
-    INSERT INTO public.study_routine_weekly_plans (
-      user_id, week_start_date, week_end_date, target_days, timezone_iana, is_partial_first_week
-    )
-    VALUES (
-      p_user_id, v_eff_week_start, v_eff_week_end, v_eff_target, v_eff_tz, v_is_partial
-    )
-    ON CONFLICT (user_id, week_start_date) DO NOTHING;
+    IF NOT v_has_plan AND NOT v_waiting_pending_tz THEN
+      v_should_promote := v_has_prior_plans
+        AND v_has_pending_change
+        AND v_due_in_current
+        AND v_due_in_pending;
 
-    SELECT *
-    INTO v_plan
-    FROM public.study_routine_weekly_plans
-    WHERE user_id = p_user_id
-      AND week_start_date = v_eff_week_start
-    LIMIT 1;
-    v_has_plan := FOUND;
+      IF v_should_promote THEN
+        v_eff_target := COALESCE(v_prefs.pending_target_days, v_prefs.target_days);
+        v_eff_tz := COALESCE(v_prefs.pending_timezone_iana, v_prefs.timezone_iana);
+        v_eff_local_date := (p_now AT TIME ZONE v_eff_tz)::DATE;
+        v_eff_week_start := date_trunc('week', v_eff_local_date::TIMESTAMP)::DATE;
+        v_eff_week_end := v_eff_week_start + 6;
+        v_is_partial := false;
+      ELSE
+        v_eff_target := v_prefs.target_days;
+        v_eff_tz := v_prefs.timezone_iana;
+        v_eff_local_date := v_local_date;
+        v_eff_week_start := v_week_start;
+        v_eff_week_end := v_week_start + 6;
+        v_is_partial := (NOT v_has_prior_plans) AND (EXTRACT(ISODOW FROM v_eff_local_date) > 1);
+      END IF;
 
-    IF v_should_promote THEN
-      UPDATE public.user_study_routine_preferences
-      SET target_days = v_eff_target,
-          timezone_iana = v_eff_tz,
-          pending_target_days = NULL,
-          pending_timezone_iana = NULL,
-          pending_effective_week_start = NULL
+      INSERT INTO public.study_routine_weekly_plans (
+        user_id, week_start_date, week_end_date, target_days, timezone_iana, is_partial_first_week
+      )
+      VALUES (
+        p_user_id, v_eff_week_start, v_eff_week_end, v_eff_target, v_eff_tz, v_is_partial
+      )
+      ON CONFLICT (user_id, week_start_date) DO NOTHING;
+
+      SELECT *
+      INTO v_plan
+      FROM public.study_routine_weekly_plans
       WHERE user_id = p_user_id
-      RETURNING * INTO v_prefs;
+        AND week_start_date = v_eff_week_start
+      LIMIT 1;
+      v_has_plan := FOUND;
+
+      IF v_should_promote THEN
+        UPDATE public.user_study_routine_preferences
+        SET target_days = v_eff_target,
+            timezone_iana = v_eff_tz,
+            pending_target_days = NULL,
+            pending_timezone_iana = NULL,
+            pending_effective_week_start = NULL
+        WHERE user_id = p_user_id
+        RETURNING * INTO v_prefs;
+      END IF;
     END IF;
   END IF;
 
@@ -992,7 +1016,10 @@ BEGIN
   v_active_target := CASE WHEN v_has_plan THEN v_plan.target_days ELSE v_prefs.target_days END;
   v_active_tz := CASE WHEN v_has_plan THEN v_plan.timezone_iana ELSE v_prefs.timezone_iana END;
   v_local_date := (v_now AT TIME ZONE v_active_tz)::DATE;
-  v_week_start := date_trunc('week', v_local_date::TIMESTAMP)::DATE;
+  v_week_start := CASE
+    WHEN v_has_plan THEN v_plan.week_start_date
+    ELSE date_trunc('week', v_local_date::TIMESTAMP)::DATE
+  END;
   v_next_week_start := v_week_start + 7;
 
   IF p_target_days IS NULL THEN
@@ -1040,6 +1067,19 @@ BEGIN
       onboarding_completed_at = COALESCE(onboarding_completed_at, v_now)
   WHERE user_id = v_user_id
   RETURNING * INTO v_prefs;
+
+  IF v_has_plan AND v_pending_effective IS NULL AND (v_now AT TIME ZONE v_active_tz)::DATE > v_plan.week_end_date THEN
+    v_sync := private.sync_user_study_routine_week(v_user_id, false, v_now);
+    IF (v_sync->'current_plan') IS NOT NULL AND (v_sync->'current_plan') <> 'null'::jsonb THEN
+      SELECT *
+      INTO v_plan
+      FROM public.study_routine_weekly_plans
+      WHERE id = ((v_sync->'current_plan'->>'id')::UUID)
+        AND user_id = v_user_id;
+      v_has_plan := FOUND;
+    END IF;
+    v_effective_week_start := CASE WHEN v_has_plan THEN v_plan.week_start_date ELSE v_week_start END;
+  END IF;
 
   RETURN jsonb_build_object(
     'preferences', to_jsonb(v_prefs),

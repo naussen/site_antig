@@ -237,6 +237,7 @@ export function resolveEffectiveWeeklyPlan(input) {
       needsOnboarding: !preferences?.onboarding_completed_at,
       shouldPersistPlan: false,
       shouldPromotePending: false,
+      waitingForPendingTimezone: false,
     };
   }
 
@@ -259,16 +260,22 @@ export function resolveEffectiveWeeklyPlan(input) {
       needsOnboarding: true,
       shouldPersistPlan: false,
       shouldPromotePending: false,
+      waitingForPendingTimezone: false,
     };
   }
 
   const pendingEffectiveWeekStart = preferences.pending_effective_week_start ?? null;
+  const hasPendingChange = Boolean(
+    pendingEffectiveWeekStart
+    && (preferences.pending_target_days != null || preferences.pending_timezone_iana != null),
+  );
   let effectiveTimezone = baseTimezone;
   let effectiveTargetDays = baseTargetDays;
   let effectiveBounds = baseBounds;
   let shouldPromotePending = false;
+  let waitingForPendingTimezone = false;
 
-  if (pendingEffectiveWeekStart && baseBounds.weekStartDate >= pendingEffectiveWeekStart) {
+  if (pendingEffectiveWeekStart && hasPendingChange && baseBounds.weekStartDate >= pendingEffectiveWeekStart) {
     const candidateTimezone = preferences.pending_timezone_iana
       ? normalizeIanaTimeZone(preferences.pending_timezone_iana)
       : baseTimezone;
@@ -283,6 +290,10 @@ export function resolveEffectiveWeeklyPlan(input) {
         : baseTargetDays;
       effectiveBounds = candidateBounds;
       shouldPromotePending = true;
+    } else if (hasPriorWeeklyPlans) {
+      // Enquanto o novo fuso a oeste ainda está no domingo anterior, preserva o plano
+      // anterior sem congelar a nova semana com preferências antigas.
+      waitingForPendingTimezone = true;
     }
   }
 
@@ -296,8 +307,9 @@ export function resolveEffectiveWeeklyPlan(input) {
     timezoneIana: effectiveTimezone,
     isPartialFirstWeek: !hasPriorWeeklyPlans && effectiveBounds.isPartialStart,
     needsOnboarding: false,
-    shouldPersistPlan: true,
+    shouldPersistPlan: !waitingForPendingTimezone,
     shouldPromotePending,
+    waitingForPendingTimezone,
   };
 }
 
@@ -393,6 +405,9 @@ export function planPreferenceUpdate(input) {
   }
 
   const currentBounds = getWeekBoundsForInstant(instant, currentTimezone);
+  const currentWeekNextStart = currentWeeklyPlan?.week_start_date
+    ? addCalendarDays(currentWeeklyPlan.week_start_date, 7)
+    : currentBounds.nextWeekStartDate;
 
   const pendingTargetDays = hasExplicitTarget
     ? (normalizedTargetDays !== currentTargetDays ? normalizedTargetDays : null)
@@ -409,8 +424,8 @@ export function planPreferenceUpdate(input) {
     ? null
     : (
         targetModified || timezoneModified
-          ? currentBounds.nextWeekStartDate
-          : (currentPreferences?.pending_effective_week_start ?? currentBounds.nextWeekStartDate)
+          ? currentWeekNextStart
+          : (currentPreferences?.pending_effective_week_start ?? currentWeekNextStart)
       );
 
   const scheduledForNextWeek = targetModified || timezoneModified;

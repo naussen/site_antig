@@ -478,23 +478,39 @@ export function createRoutineService(repository) {
     });
 
     let currentPlan = existingPlanForCurrentWeek;
+    let effectiveResolution = resolution;
 
-    if (!resolution.needsOnboarding && resolution.shouldPersistPlan && !currentPlan) {
+    if (!currentPlan && resolution.waitingForPendingTimezone && preferences?.pending_effective_week_start) {
+      const priorPlan = weeklyPlans.find(
+        (plan) => plan.week_start_date < preferences.pending_effective_week_start,
+      ) ?? null;
+      if (priorPlan) {
+        currentPlan = priorPlan;
+        effectiveResolution = resolveEffectiveWeeklyPlan({
+          preferences,
+          existingPlanForCurrentWeek: priorPlan,
+          hasPriorWeeklyPlans,
+          nowUtc,
+        });
+      }
+    }
+
+    if (!effectiveResolution.needsOnboarding && effectiveResolution.shouldPersistPlan && !currentPlan) {
       currentPlan = await repository.createWeeklyPlan(userId, {
         user_id: userId,
-        week_start_date: resolution.weekStartDate,
-        week_end_date: resolution.weekEndDate,
-        target_days: resolution.targetDays,
-        timezone_iana: resolution.timezoneIana,
-        is_partial_first_week: resolution.isPartialFirstWeek,
+        week_start_date: effectiveResolution.weekStartDate,
+        week_end_date: effectiveResolution.weekEndDate,
+        target_days: effectiveResolution.targetDays,
+        timezone_iana: effectiveResolution.timezoneIana,
+        is_partial_first_week: effectiveResolution.isPartialFirstWeek,
       });
 
-      if (resolution.shouldPromotePending && preferences) {
+      if (effectiveResolution.shouldPromotePending && preferences) {
         preferences = await repository.upsertPreferences(userId, {
           ...preferences,
           user_id: userId,
-          target_days: resolution.targetDays,
-          timezone_iana: resolution.timezoneIana,
+          target_days: effectiveResolution.targetDays,
+          timezone_iana: effectiveResolution.timezoneIana,
           pending_target_days: null,
           pending_timezone_iana: null,
           pending_effective_week_start: null,
@@ -502,7 +518,7 @@ export function createRoutineService(repository) {
       }
     }
 
-    return { preferences, currentPlan, resolution };
+    return { preferences, currentPlan, resolution: effectiveResolution };
   }
 
   async function buildWeeklyProgressSnapshot(userId, currentPlan, resolution) {
@@ -512,12 +528,18 @@ export function createRoutineService(repository) {
       resolution.weekEndDate,
     );
 
+    const matchesCurrentPlanWeek = Boolean(
+      currentPlan && currentPlan.week_start_date === resolution.weekStartDate,
+    );
+
     return summarizeWeeklyProgress({
-      weekStartDate: currentPlan?.week_start_date ?? resolution.weekStartDate,
-      weekEndDate: currentPlan?.week_end_date ?? resolution.weekEndDate,
-      targetDays: currentPlan?.target_days ?? resolution.targetDays,
-      timezoneIana: currentPlan?.timezone_iana ?? resolution.timezoneIana,
-      isPartialFirstWeek: currentPlan?.is_partial_first_week ?? resolution.isPartialFirstWeek,
+      weekStartDate: resolution.weekStartDate,
+      weekEndDate: resolution.weekEndDate,
+      targetDays: matchesCurrentPlanWeek ? currentPlan.target_days : resolution.targetDays,
+      timezoneIana: matchesCurrentPlanWeek ? currentPlan.timezone_iana : resolution.timezoneIana,
+      isPartialFirstWeek: matchesCurrentPlanWeek
+        ? currentPlan.is_partial_first_week
+        : resolution.isPartialFirstWeek,
       sessions: weekSessions,
     });
   }
@@ -1013,6 +1035,9 @@ export function createRoutineService(repository) {
             {
               ...resolution,
               weekStartDate: existingByCompletionKey.completed_week_start_date ?? resolution.weekStartDate,
+              weekEndDate: existingByCompletionKey.completed_week_start_date
+                ? addCalendarDays(existingByCompletionKey.completed_week_start_date, 6)
+                : resolution.weekEndDate,
             },
           );
           return {
@@ -1035,6 +1060,9 @@ export function createRoutineService(repository) {
             {
               ...resolution,
               weekStartDate: session.completed_week_start_date ?? resolution.weekStartDate,
+              weekEndDate: session.completed_week_start_date
+                ? addCalendarDays(session.completed_week_start_date, 6)
+                : resolution.weekEndDate,
             },
           );
           return { session, idempotent: true, weeklyProgress };

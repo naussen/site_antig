@@ -54,6 +54,7 @@ export interface EffectiveWeeklyPlanResolution {
   needsOnboarding: boolean;
   shouldPersistPlan: boolean;
   shouldPromotePending: boolean;
+  waitingForPendingTimezone: boolean;
 }
 
 export interface PlannedPreferenceUpdate {

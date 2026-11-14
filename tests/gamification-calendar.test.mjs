@@ -159,8 +159,44 @@ test("prévia de mudança de fuso preserva histórico e bloqueia deslocamento re
   });
 
   assert.equal(prematureWestward.shouldPromotePending, false);
+  assert.equal(prematureWestward.shouldPersistPlan, false);
+  assert.equal(prematureWestward.waitingForPendingTimezone, true);
   assert.equal(prematureWestward.timezoneIana, "Europe/Lisbon");
   assert.equal(prematureWestward.weekStartDate, "2026-11-16");
+
+  // Reprodução exata: meta 3 -> 5 dias, America/Sao_Paulo -> America/Manaus na segunda 2026-11-16
+  // 00:30 de segunda em SP (03:30 UTC) ainda é 23:30 de domingo em Manaus (UTC-4).
+  const spToManausPrefs = {
+    target_days: 3,
+    timezone_iana: "America/Sao_Paulo",
+    pending_target_days: 5,
+    pending_timezone_iana: "America/Manaus",
+    pending_effective_week_start: "2026-11-16",
+    onboarding_completed_at: "2026-11-09T12:00:00.000Z",
+  };
+  const atSpMondayEarly = resolveEffectiveWeeklyPlan({
+    preferences: spToManausPrefs,
+    existingPlanForCurrentWeek: null,
+    hasPriorWeeklyPlans: true,
+    nowUtc: new Date("2026-11-16T03:30:00.000Z"),
+  });
+  assert.equal(atSpMondayEarly.shouldPromotePending, false);
+  assert.equal(atSpMondayEarly.shouldPersistPlan, false);
+  assert.equal(atSpMondayEarly.waitingForPendingTimezone, true);
+
+  // 01:30 de segunda em SP (04:30 UTC) já é 00:30 de segunda em Manaus: promove na própria semana 2026-11-16.
+  const atManausMonday = resolveEffectiveWeeklyPlan({
+    preferences: spToManausPrefs,
+    existingPlanForCurrentWeek: null,
+    hasPriorWeeklyPlans: true,
+    nowUtc: new Date("2026-11-16T04:30:00.000Z"),
+  });
+  assert.equal(atManausMonday.shouldPromotePending, true);
+  assert.equal(atManausMonday.shouldPersistPlan, true);
+  assert.equal(atManausMonday.waitingForPendingTimezone, false);
+  assert.equal(atManausMonday.weekStartDate, "2026-11-16");
+  assert.equal(atManausMonday.targetDays, 5);
+  assert.equal(atManausMonday.timezoneIana, "America/Manaus");
 });
 
 test("cada dia conta no máximo uma vez por semana, permite exceder a meta e ignora sessões não concluídas", () => {

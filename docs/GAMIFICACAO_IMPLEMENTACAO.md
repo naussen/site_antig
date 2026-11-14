@@ -15,11 +15,11 @@ O MVP implementa uma rotina semanal flexível (1 a 7 dias por semana) e sessões
 
 - **Domínio puro e calendário (`src/lib/gamification/*`)**:
   - `src/lib/gamification/config.mjs` e `src/lib/gamification/config.d.mts`: constantes, limites e chave operacional `isGamificationOperationalEnabled` controlada por `NEXT_PUBLIC_DISABLE_GAMIFICATION !== "true"`.
-  - `src/lib/gamification/calendar.mjs` e `src/lib/gamification/calendar.d.mts`: validação estrita de fuso horário IANA, fronteira semanal segunda-feira `00:00` → segunda seguinte no fuso do aluno, `resolveEffectiveWeeklyPlan` (semana parcial inicial no primeiro acesso e alterações futuras apenas na próxima segunda-feira), `planPreferenceUpdate` (preservando agendamentos `pending_*` em atualizações parciais e não ativando plano quando oculta pré-onboarding) e `previewTimezoneChange`.
+  - `src/lib/gamification/calendar.mjs` e `src/lib/gamification/calendar.d.mts`: validação estrita de fuso horário IANA, fronteira semanal segunda-feira `00:00` → segunda seguinte no fuso do aluno, `resolveEffectiveWeeklyPlan` (semana parcial inicial no primeiro acesso, alterações futuras apenas na próxima segunda-feira e preservação da semana anterior na janela de transição para fusos a oeste via `waitingForPendingTimezone`), `planPreferenceUpdate` (preservando agendamentos `pending_*` em atualizações parciais e não ativando plano quando oculta pré-onboarding) e `previewTimezoneChange`.
   - `src/lib/gamification/session.mjs` e `src/lib/gamification/session.d.mts`: estimativa conservadora sem cortar seção longa, máquina de estados (`in_progress`, `interrupted`, `completed`, `discarded`), idempotência de início/conclusão, `buildStudyRecommendation` restrito a Resumos ativos visíveis e delegação transacional para RPCs quando suportado pelo repositório.
   - `src/lib/gamification/repository.mjs` e `src/lib/gamification/repository.d.mts`: repositório ESM puro conectado exclusivamente a consultas `SELECT` protegidas por RLS e às 6 RPCs transacionais `SECURITY DEFINER`, reutilizado tanto pelo servidor Next.js quanto pela suíte de integração PostgreSQL.
 - **Banco de dados reconciliado e endurecido (`053_create_study_routine_gamification.sql`)**:
-  - `supabase/migrations/053_create_study_routine_gamification.sql`: reconciliada para `053` após constatação de `052_create_launch_interests.sql` na `origin/main` (`7395ebb`). Define as 4 tabelas (`user_study_routine_preferences`, `study_routine_weekly_plans`, `study_routine_sessions`, `study_routine_session_activities`), revoga `INSERT`, `UPDATE` e `DELETE` diretos de `PUBLIC`, `anon` e `authenticated`, mantém políticas `FOR SELECT` com `(SELECT auth.uid()) = user_id`, adiciona `trigger_01_rpc_mutation_guard`, triggers de imutabilidade/invariantes de histórico e `CONSTRAINT TRIGGER ... DEFERRABLE INITIALLY DEFERRED` (`trigger_enforce_session_has_activities` / `trigger_enforce_activity_delete_keeps_session_nonempty`), e expõe 6 RPCs `SECURITY DEFINER SET search_path = ''` (`ensure_study_routine_weekly_plan`, `save_study_routine_preferences`, `create_study_routine_session`, `update_study_routine_session_status`, `replace_study_routine_session_activity`, `complete_study_routine_session`).
+  - `supabase/migrations/053_create_study_routine_gamification.sql`: reconciliada para `053` após constatação de `052_create_launch_interests.sql` na `origin/main` (`7395ebb`). Define as 4 tabelas (`user_study_routine_preferences`, `study_routine_weekly_plans`, `study_routine_sessions`, `study_routine_session_activities`), revoga `INSERT`, `UPDATE` e `DELETE` diretos de `PUBLIC`, `anon` e `authenticated`, mantém políticas `FOR SELECT` com `(SELECT auth.uid()) = user_id`, adiciona `trigger_01_rpc_mutation_guard`, triggers de imutabilidade/invariantes de histórico e `CONSTRAINT TRIGGER ... DEFERRABLE INITIALLY DEFERRED` (`trigger_enforce_session_has_activities` / `trigger_enforce_activity_delete_keeps_session_nonempty`), e expõe 6 RPCs `SECURITY DEFINER SET search_path = ''` (`ensure_study_routine_weekly_plan`, `save_study_routine_preferences`, `create_study_routine_session`, `update_study_routine_session_status`, `replace_study_routine_session_activity`, `complete_study_routine_session`), incluindo sincronização semanal (`private.sync_user_study_routine_week`) sem congelamento prematuro durante transições para fusos mais a oeste.
   - `src/types/database.ts`: interfaces e uniões tipadas para as tabelas e status da rotina.
   - `scripts/test-rls-two-users.mjs`: checagens opcionais atualizadas para `053` validando leitura isolada por RLS, rejeição `42501` de DML direto nas 4 tabelas, criação transacional via RPC autenticada, bloqueio por `chargeback`/entitlement e negativa cruzada entre dois usuários.
 - **Adaptador servidor, API e UI**:
@@ -55,13 +55,23 @@ O MVP implementa uma rotina semanal flexível (1 a 7 dias por semana) e sessões
 
 ---
 
+## 3A. Dependências de Teste Versionadas (`devDependencies`)
+
+- **Motivo**: tornar reproduzível via `npm ci` / `npm install` a execução real da migration `053`, dos triggers/RLS em PGlite (`@electric-sql/pglite@^0.5.16`) e da validação de contenção real de locks em PostgreSQL multi-conexão (`pg@^8.13.1`, sem fila sequencial em JS), eliminando a dependência temporária não versionada anteriormente em `tmp/pg-validation`.
+- **Alternativa sem dependência**: depender apenas de mocks em memória (incapaz de validar PL/pgSQL, `pg_advisory_xact_lock`, `CONSTRAINT TRIGGER DEFERRABLE` e RLS real) ou de invocação externa via shell ao `psql` (frágil para `Promise.all` concorrente e observação em `pg_locks`).
+- **Impacto no bundle**: zero no código de produção (`dependencies` inalterado; pacotes adicionados exclusivamente em `devDependencies` e importados apenas por `tests/gamification-postgres.test.mjs`).
+- **Comando de instalação utilizado**: `npm.cmd install --save-dev @electric-sql/pglite@^0.5.16 pg@^8.13.1`
+- **Arquivos afetados**: `package.json`, `package-lock.json` e `tests/gamification-postgres.test.mjs`.
+
+---
+
 ## 4. Evidências de Verificação Local (2026-11-14)
 
 Todas as checagens abaixo foram executadas após a última edição da entrega na branch `docs/plano-gamificacao-antigravity`:
 
 | Verificação | Resultado observado | Escopo e observações |
 | --- | --- | --- |
-| `npm.cmd run test:gamification` | 27/27 aprovados, 0 falhas, 0 ignorados | `gamification-calendar.test.mjs`, `gamification-session.test.mjs`, `gamification-ui.test.mjs` e suíte PostgreSQL real `gamification-postgres.test.mjs` em PGlite local com aplicação dupla/idempotente da migration `053` |
+| `npm.cmd run test:gamification` | 30/30 aprovados, 0 falhas, 0 ignorados | `gamification-calendar.test.mjs`, `gamification-session.test.mjs`, `gamification-ui.test.mjs` e suíte PostgreSQL `gamification-postgres.test.mjs` em PGlite + PostgreSQL 18.7 real multi-conexão (`PgPoolHarness` sem fila, `pg_locks`, transição SP -> Manaus e aplicação dupla da migration `053`) |
 | `npm.cmd run test:content` | 44/44 aprovados, 0 falhas, 0 ignorados | Contrato editorial e importação preservados |
 | `npm.cmd run test:api-auth` | 3/3 aprovados, 0 falhas, 0 ignorados | Autenticação admin |
 | `npm.cmd run test:auth` | 9/9 aprovados, 0 falhas, 0 ignorados | OAuth Google e guardas |

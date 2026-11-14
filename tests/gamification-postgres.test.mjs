@@ -1,34 +1,47 @@
 import assert from "node:assert/strict";
+import { spawn } from "node:child_process";
 import fs from "node:fs";
-import { createRequire } from "node:module";
+import net from "node:net";
+import os from "node:os";
 import path from "node:path";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
+
+import { PGlite } from "@electric-sql/pglite";
+import pg from "pg";
 
 import { addCalendarDays, getWeekBoundsForInstant } from "../src/lib/gamification/calendar.mjs";
 import { createSupabaseRoutineRepository } from "../src/lib/gamification/repository.mjs";
 import { RoutineDomainError, createRoutineService } from "../src/lib/gamification/session.mjs";
 
+function runCommandNoPipes(binPath, args) {
+  return new Promise((resolve, reject) => {
+    const child = spawn(binPath, args, {
+      stdio: "ignore",
+      windowsHide: true,
+    });
+    child.on("error", reject);
+    child.on("exit", (code, signal) => {
+      if (code === 0) {
+        resolve();
+        return;
+      }
+      reject(
+        new Error(
+          `Comando ${path.basename(binPath)} falhou (code=${code ?? "null"}, signal=${signal ?? "none"}).`,
+        ),
+      );
+    });
+  });
+}
+
+// Ajusta parsers globais do node-postgres para alinhar DATE (1082) e TIMESTAMPTZ (1184)
+// ao formato ISO retornado pelo PostgREST/Supabase (e pelo PGlite no harness de teste).
+pg.types.setTypeParser(1082, (val) => val);
+pg.types.setTypeParser(1184, (val) => (val ? new Date(val).toISOString() : null));
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
-const PGLITE_ENTRY = path.join(
-  ROOT,
-  "tmp",
-  "pg-validation",
-  "node_modules",
-  "@electric-sql",
-  "pglite",
-  "dist",
-  "index.js",
-);
-
-const require = createRequire(import.meta.url);
-if (!fs.existsSync(PGLITE_ENTRY)) {
-  throw new Error(
-    "Dependência local @electric-sql/pglite não encontrada em tmp/pg-validation. Instale em tmp/pg-validation antes de rodar os testes PostgreSQL.",
-  );
-}
-const { PGlite } = require(PGLITE_ENTRY);
 
 const MIGRATION_053_SQL = fs.readFileSync(
   path.join(ROOT, "supabase", "migrations", "053_create_study_routine_gamification.sql"),
@@ -294,6 +307,228 @@ function encodePgArg(value, sqlType) {
   return value;
 }
 
+function createSupabaseClientAdapter(runAsRole) {
+  return {
+    async rpc(fnName, params = {}) {
+      const def = RPC_DEFS[fnName];
+      if (!def) {
+        return {
+          data: null,
+          error: { code: "PGRST202", message: `Unknown RPC ${fnName}` },
+        };
+      }
+
+      try {
+        const data = await runAsRole(async (db) => {
+          const values = [];
+          const placeholders = [];
+          for (const [paramName, sqlType, fallback] of def.args) {
+            const raw =
+              Object.prototype.hasOwnProperty.call(params, paramName) &&
+              params[paramName] !== undefined
+                ? params[paramName]
+                : fallback;
+            values.push(encodePgArg(raw, sqlType));
+            placeholders.push(`${paramName} := $${values.length}::${sqlType}`);
+          }
+
+          if (def.returnsRow) {
+            const res = await db.query(
+              `SELECT * FROM public.${assertIdent(fnName)}(${placeholders.join(", ")})`,
+              values,
+            );
+            return res.rows[0] ?? null;
+          }
+
+          const res = await db.query(
+            `SELECT public.${assertIdent(fnName)}(${placeholders.join(", ")}) AS result`,
+            values,
+          );
+          return res.rows[0]?.result ?? null;
+        });
+        return { data, error: null };
+      } catch (error) {
+        return { data: null, error: mapPgError(error) };
+      }
+    },
+
+    from(table) {
+      const safeTable = assertIdent(table);
+      const state = {
+        op: "select",
+        columns: "*",
+        payload: null,
+        filters: [],
+        orders: [],
+        limitCount: null,
+        expectation: "many",
+      };
+
+      async function execute() {
+        try {
+          const rows = await runAsRole(async (db) => {
+            const values = [];
+            const whereParts = [];
+            for (const filter of state.filters) {
+              const col = assertIdent(filter.col);
+              if (filter.kind === "eq") {
+                values.push(filter.val);
+                whereParts.push(`${col} = $${values.length}`);
+              } else if (filter.kind === "gte") {
+                values.push(filter.val);
+                whereParts.push(`${col} >= $${values.length}`);
+              } else if (filter.kind === "lte") {
+                values.push(filter.val);
+                whereParts.push(`${col} <= $${values.length}`);
+              } else if (filter.kind === "in") {
+                const arr = Array.isArray(filter.val) ? filter.val : [];
+                if (arr.length === 0) {
+                  whereParts.push("FALSE");
+                } else {
+                  const isUuid = arr.every((v) => typeof v === "string" && UUID_RE.test(v));
+                  values.push(`{${arr.map((v) => String(v)).join(",")}}`);
+                  whereParts.push(`${col} = ANY($${values.length}::${isUuid ? "uuid[]" : "text[]"})`);
+                }
+              }
+            }
+
+            const whereSql = whereParts.length > 0 ? ` WHERE ${whereParts.join(" AND ")}` : "";
+
+            if (state.op === "select") {
+              const orderSql =
+                state.orders.length > 0
+                  ? ` ORDER BY ${state.orders
+                      .map((o) => `${assertIdent(o.col)} ${o.ascending ? "ASC" : "DESC"}`)
+                      .join(", ")}`
+                  : "";
+              const limitSql =
+                typeof state.limitCount === "number" ? ` LIMIT ${Math.max(0, state.limitCount)}` : "";
+              const res = await db.query(
+                `SELECT ${state.columns} FROM public.${safeTable}${whereSql}${orderSql}${limitSql}`,
+                values,
+              );
+              return res.rows;
+            }
+
+            if (state.op === "insert") {
+              const row = Array.isArray(state.payload) ? state.payload[0] : state.payload;
+              const keys = Object.keys(row).map(assertIdent);
+              const placeholders = keys.map((k) => {
+                values.push(row[k]);
+                return `$${values.length}`;
+              });
+              const res = await db.query(
+                `INSERT INTO public.${safeTable} (${keys.join(", ")}) VALUES (${placeholders.join(", ")}) RETURNING *`,
+                values,
+              );
+              return res.rows;
+            }
+
+            if (state.op === "update") {
+              const keys = Object.keys(state.payload).map(assertIdent);
+              const sets = keys.map((k) => {
+                values.push(state.payload[k]);
+                return `${k} = $${values.length}`;
+              });
+              const res = await db.query(
+                `UPDATE public.${safeTable} SET ${sets.join(", ")}${whereSql} RETURNING *`,
+                values,
+              );
+              return res.rows;
+            }
+
+            if (state.op === "delete") {
+              const res = await db.query(
+                `DELETE FROM public.${safeTable}${whereSql} RETURNING *`,
+                values,
+              );
+              return res.rows;
+            }
+
+            return [];
+          });
+
+          if (state.expectation === "maybeSingle") {
+            if (rows.length > 1) {
+              return { data: null, error: { code: "PGRST116", message: "multiple rows" } };
+            }
+            return { data: rows[0] ?? null, error: null };
+          }
+          if (state.expectation === "single") {
+            if (rows.length !== 1) {
+              return { data: null, error: { code: "PGRST116", message: "row not unique" } };
+            }
+            return { data: rows[0], error: null };
+          }
+          return { data: rows, error: null };
+        } catch (error) {
+          return { data: null, error: mapPgError(error) };
+        }
+      }
+
+      const builder = {
+        select(columns = "*") {
+          state.columns = columns;
+          return builder;
+        },
+        insert(payload) {
+          state.op = "insert";
+          state.payload = payload;
+          return builder;
+        },
+        update(payload) {
+          state.op = "update";
+          state.payload = payload;
+          return builder;
+        },
+        delete() {
+          state.op = "delete";
+          return builder;
+        },
+        eq(col, val) {
+          state.filters.push({ kind: "eq", col, val });
+          return builder;
+        },
+        gte(col, val) {
+          state.filters.push({ kind: "gte", col, val });
+          return builder;
+        },
+        lte(col, val) {
+          state.filters.push({ kind: "lte", col, val });
+          return builder;
+        },
+        in(col, val) {
+          state.filters.push({ kind: "in", col, val });
+          return builder;
+        },
+        order(col, options = {}) {
+          state.orders.push({ col, ascending: options.ascending !== false });
+          return builder;
+        },
+        limit(count) {
+          state.limitCount = count;
+          return builder;
+        },
+        maybeSingle() {
+          state.expectation = "maybeSingle";
+          return execute();
+        },
+        single() {
+          state.expectation = "single";
+          return execute();
+        },
+        then(onFulfilled, onRejected) {
+          return execute().then(onFulfilled, onRejected);
+        },
+      };
+
+      return builder;
+    },
+  };
+}
+
+// Instância única PGlite WASM serializada em fila (usada para invariantes SQL/triggers/fuso;
+// contenção real entre transações simultâneas é testada no PgPoolHarness com PostgreSQL nativo).
 class PgliteHarness {
   constructor(db) {
     this.db = db;
@@ -306,9 +541,27 @@ class PgliteHarness {
     return run;
   }
 
+  async withAdminTx(callback) {
+    return this.runSerialized(async () => {
+      await this.db.exec("BEGIN");
+      try {
+        const result = await callback(this.db);
+        await this.db.exec("COMMIT");
+        return result;
+      } catch (error) {
+        try {
+          await this.db.exec("ROLLBACK");
+        } catch {
+          // noop
+        }
+        throw error;
+      }
+    });
+  }
+
   asUser(userId, role = "authenticated") {
-    const runAsRole = async (callback) => {
-      return this.runSerialized(async () => {
+    const runAsRole = async (callback) =>
+      this.runSerialized(async () => {
         await this.db.exec("BEGIN");
         try {
           await this.db.exec(`SET LOCAL ROLE ${assertIdent(role)}`);
@@ -327,237 +580,83 @@ class PgliteHarness {
           throw error;
         }
       });
-    };
 
-    return {
-      async rpc(fnName, params = {}) {
-        const def = RPC_DEFS[fnName];
-        if (!def) {
-          return {
-            data: null,
-            error: { code: "PGRST202", message: `Unknown RPC ${fnName}` },
-          };
-        }
-
-        try {
-          const data = await runAsRole(async (db) => {
-            const values = [];
-            const placeholders = [];
-            for (const [paramName, sqlType, fallback] of def.args) {
-              const raw =
-                Object.prototype.hasOwnProperty.call(params, paramName) &&
-                params[paramName] !== undefined
-                  ? params[paramName]
-                  : fallback;
-              values.push(encodePgArg(raw, sqlType));
-              placeholders.push(`${paramName} := $${values.length}::${sqlType}`);
-            }
-
-            if (def.returnsRow) {
-              const res = await db.query(
-                `SELECT * FROM public.${assertIdent(fnName)}(${placeholders.join(", ")})`,
-                values,
-              );
-              return res.rows[0] ?? null;
-            }
-
-            const res = await db.query(
-              `SELECT public.${assertIdent(fnName)}(${placeholders.join(", ")}) AS result`,
-              values,
-            );
-            return res.rows[0]?.result ?? null;
-          });
-          return { data, error: null };
-        } catch (error) {
-          return { data: null, error: mapPgError(error) };
-        }
-      },
-
-      from(table) {
-        const safeTable = assertIdent(table);
-        const state = {
-          op: "select",
-          columns: "*",
-          payload: null,
-          filters: [],
-          orders: [],
-          limitCount: null,
-          expectation: "many",
-        };
-
-        async function execute() {
-          try {
-            const rows = await runAsRole(async (db) => {
-              const values = [];
-              const whereParts = [];
-              for (const filter of state.filters) {
-                const col = assertIdent(filter.col);
-                if (filter.kind === "eq") {
-                  values.push(filter.val);
-                  whereParts.push(`${col} = $${values.length}`);
-                } else if (filter.kind === "gte") {
-                  values.push(filter.val);
-                  whereParts.push(`${col} >= $${values.length}`);
-                } else if (filter.kind === "lte") {
-                  values.push(filter.val);
-                  whereParts.push(`${col} <= $${values.length}`);
-                } else if (filter.kind === "in") {
-                  const arr = Array.isArray(filter.val) ? filter.val : [];
-                  if (arr.length === 0) {
-                    whereParts.push("FALSE");
-                  } else {
-                    const isUuid = arr.every((v) => typeof v === "string" && UUID_RE.test(v));
-                    values.push(`{${arr.map((v) => String(v)).join(",")}}`);
-                    whereParts.push(`${col} = ANY($${values.length}::${isUuid ? "uuid[]" : "text[]"})`);
-                  }
-                }
-              }
-
-              const whereSql = whereParts.length > 0 ? ` WHERE ${whereParts.join(" AND ")}` : "";
-
-              if (state.op === "select") {
-                const orderSql =
-                  state.orders.length > 0
-                    ? ` ORDER BY ${state.orders
-                        .map((o) => `${assertIdent(o.col)} ${o.ascending ? "ASC" : "DESC"}`)
-                        .join(", ")}`
-                    : "";
-                const limitSql =
-                  typeof state.limitCount === "number" ? ` LIMIT ${Math.max(0, state.limitCount)}` : "";
-                const res = await db.query(
-                  `SELECT ${state.columns} FROM public.${safeTable}${whereSql}${orderSql}${limitSql}`,
-                  values,
-                );
-                return res.rows;
-              }
-
-              if (state.op === "insert") {
-                const row = Array.isArray(state.payload) ? state.payload[0] : state.payload;
-                const keys = Object.keys(row).map(assertIdent);
-                const placeholders = keys.map((k) => {
-                  values.push(row[k]);
-                  return `$${values.length}`;
-                });
-                const res = await db.query(
-                  `INSERT INTO public.${safeTable} (${keys.join(", ")}) VALUES (${placeholders.join(", ")}) RETURNING *`,
-                  values,
-                );
-                return res.rows;
-              }
-
-              if (state.op === "update") {
-                const keys = Object.keys(state.payload).map(assertIdent);
-                const sets = keys.map((k) => {
-                  values.push(state.payload[k]);
-                  return `${k} = $${values.length}`;
-                });
-                const res = await db.query(
-                  `UPDATE public.${safeTable} SET ${sets.join(", ")}${whereSql} RETURNING *`,
-                  values,
-                );
-                return res.rows;
-              }
-
-              if (state.op === "delete") {
-                const res = await db.query(
-                  `DELETE FROM public.${safeTable}${whereSql} RETURNING *`,
-                  values,
-                );
-                return res.rows;
-              }
-
-              return [];
-            });
-
-            if (state.expectation === "maybeSingle") {
-              if (rows.length > 1) {
-                return { data: null, error: { code: "PGRST116", message: "multiple rows" } };
-              }
-              return { data: rows[0] ?? null, error: null };
-            }
-            if (state.expectation === "single") {
-              if (rows.length !== 1) {
-                return { data: null, error: { code: "PGRST116", message: "row not unique" } };
-              }
-              return { data: rows[0], error: null };
-            }
-            return { data: rows, error: null };
-          } catch (error) {
-            return { data: null, error: mapPgError(error) };
-          }
-        }
-
-        const builder = {
-          select(columns = "*") {
-            state.columns = columns;
-            return builder;
-          },
-          insert(payload) {
-            state.op = "insert";
-            state.payload = payload;
-            return builder;
-          },
-          update(payload) {
-            state.op = "update";
-            state.payload = payload;
-            return builder;
-          },
-          delete() {
-            state.op = "delete";
-            return builder;
-          },
-          eq(col, val) {
-            state.filters.push({ kind: "eq", col, val });
-            return builder;
-          },
-          gte(col, val) {
-            state.filters.push({ kind: "gte", col, val });
-            return builder;
-          },
-          lte(col, val) {
-            state.filters.push({ kind: "lte", col, val });
-            return builder;
-          },
-          in(col, val) {
-            state.filters.push({ kind: "in", col, val });
-            return builder;
-          },
-          order(col, options = {}) {
-            state.orders.push({ col, ascending: options.ascending !== false });
-            return builder;
-          },
-          limit(count) {
-            state.limitCount = count;
-            return builder;
-          },
-          maybeSingle() {
-            state.expectation = "maybeSingle";
-            return execute();
-          },
-          single() {
-            state.expectation = "single";
-            return execute();
-          },
-          then(onFulfilled, onRejected) {
-            return execute().then(onFulfilled, onRejected);
-          },
-        };
-
-        return builder;
-      },
-    };
+    return createSupabaseClientAdapter(runAsRole);
   }
 }
 
-async function createSeededPostgres() {
-  const db = new PGlite();
-  await db.exec(BOOTSTRAP_SQL);
+// Pool real multi-conexão sobre pg.Pool SEM fila sequencial em JS: cada operação
+// adquire sua própria conexão TCP e disputa locks reais no PostgreSQL.
+class PgPoolHarness {
+  constructor(pool, stopCluster) {
+    this.pool = pool;
+    this.stopCluster = stopCluster;
+    this.db = {
+      query: (sql, params) => this.pool.query(sql, params),
+      close: async () => {
+        await this.pool.end();
+        if (this.stopCluster) {
+          await this.stopCluster();
+        }
+      },
+    };
+  }
+
+  async withAdminTx(callback) {
+    const client = await this.pool.connect();
+    try {
+      await client.query("BEGIN");
+      const result = await callback(client);
+      await client.query("COMMIT");
+      return result;
+    } catch (error) {
+      try {
+        await client.query("ROLLBACK");
+      } catch {
+        // noop
+      }
+      throw error;
+    } finally {
+      client.release();
+    }
+  }
+
+  asUser(userId, role = "authenticated") {
+    const runAsRole = async (callback) => {
+      const client = await this.pool.connect();
+      try {
+        await client.query("BEGIN");
+        await client.query(`SET LOCAL ROLE ${assertIdent(role)}`);
+        await client.query("SELECT set_config('request.jwt.claim.sub', $1, true)", [
+          userId ?? "",
+        ]);
+        const result = await callback(client);
+        await client.query("COMMIT");
+        return result;
+      } catch (error) {
+        try {
+          await client.query("ROLLBACK");
+        } catch {
+          // noop
+        }
+        throw error;
+      } finally {
+        client.release();
+      }
+    };
+
+    return createSupabaseClientAdapter(runAsRole);
+  }
+}
+
+async function bootstrapAndSeed(execSql, querySql) {
+  await execSql(BOOTSTRAP_SQL);
 
   // Executa a migration 053 duas vezes para comprovar idempotência no PostgreSQL.
-  await db.exec(MIGRATION_053_SQL);
-  await db.exec(MIGRATION_053_SQL);
+  await execSql(MIGRATION_053_SQL);
+  await execSql(MIGRATION_053_SQL);
 
-  await db.query(
+  await querySql(
     `INSERT INTO auth.users (id, email) VALUES ($1, $2), ($3, $4), ($5, $6)`,
     [
       USER_A,
@@ -568,19 +667,19 @@ async function createSeededPostgres() {
       "bloqueado@example.com",
     ],
   );
-  await db.query(
+  await querySql(
     `INSERT INTO private.test_entitlements (user_id, active) VALUES ($1, true), ($2, true), ($3, false)`,
     [USER_A, USER_B, USER_BLOCKED],
   );
 
-  await db.query(
+  await querySql(
     `INSERT INTO public.topics (topic_id, discipline, title, sort_order, archived_at) VALUES
       ('const-art5', 'Direito Constitucional', 'Direitos Fundamentais - Artigo 5º', 1, NULL),
       ('adm-principios', 'Direito Administrativo', 'Princípios da Administração Pública', 2, NULL),
       ('archived-topic', 'Direito Tributário', 'Tópico Arquivado', 3, now())`,
   );
 
-  await db.query(
+  await querySql(
     `INSERT INTO public.sections (section_id, topic_id, content_unit_id, title, sort_order, archived_at) VALUES
       ('const-art5-sec-01', 'const-art5', $1, 'Caput e igualdade', 1, NULL),
       ('const-art5-sec-02', 'const-art5', $2, 'Legalidade e intimidade', 2, NULL),
@@ -588,8 +687,196 @@ async function createSeededPostgres() {
       ('archived-sec-01', 'archived-topic', $4, 'Seção Arquivada', 1, now())`,
     [UNIT_CONST_1, UNIT_CONST_2, UNIT_ADM_1, UNIT_ARCHIVED],
   );
+}
 
+async function createSeededPostgres() {
+  const db = new PGlite();
+  await bootstrapAndSeed(
+    (sql) => db.exec(sql),
+    (sql, params) => db.query(sql, params),
+  );
   return new PgliteHarness(db);
+}
+
+function findPostgresBinDir() {
+  const ext = process.platform === "win32" ? ".exe" : "";
+  const candidates = [];
+  if (process.env.PG_BIN_DIR) {
+    candidates.push(process.env.PG_BIN_DIR);
+  }
+  const pathEntries = (process.env.PATH ?? "").split(path.delimiter).filter(Boolean);
+  candidates.push(...pathEntries);
+  if (process.platform === "win32") {
+    candidates.push(
+      path.join(os.homedir(), "scoop", "apps", "postgresql", "current", "bin"),
+      "C:\\Program Files\\PostgreSQL\\18\\bin",
+      "C:\\Program Files\\PostgreSQL\\17\\bin",
+      "C:\\Program Files\\PostgreSQL\\16\\bin",
+    );
+  } else {
+    candidates.push("/usr/lib/postgresql/17/bin", "/usr/lib/postgresql/16/bin", "/usr/local/bin");
+  }
+
+  for (const dir of candidates) {
+    const initdbPath = path.join(dir, `initdb${ext}`);
+    const pgCtlPath = path.join(dir, `pg_ctl${ext}`);
+    if (fs.existsSync(initdbPath) && fs.existsSync(pgCtlPath)) {
+      return { dir, initdbPath, pgCtlPath };
+    }
+  }
+  return null;
+}
+
+function getFreeTcpPort() {
+  return new Promise((resolve, reject) => {
+    const srv = net.createServer();
+    srv.unref();
+    srv.on("error", reject);
+    srv.listen(0, "127.0.0.1", () => {
+      const address = srv.address();
+      if (!address || typeof address === "string") {
+        srv.close(() => reject(new Error("Falha ao reservar porta TCP livre para PostgreSQL.")));
+        return;
+      }
+      const { port } = address;
+      srv.close(() => resolve(port));
+    });
+  });
+}
+
+async function removeDirWithRetry(dirPath) {
+  for (let attempt = 0; attempt < 6; attempt += 1) {
+    try {
+      fs.rmSync(dirPath, { recursive: true, force: true });
+      return;
+    } catch {
+      await new Promise((r) => setTimeout(r, 150));
+    }
+  }
+}
+
+async function createRealPostgresHarness() {
+  if (process.env.TEST_DATABASE_URL) {
+    const dbName = `gamif_test_${Date.now()}_${Math.floor(Math.random() * 10000)}`;
+    const adminClient = new pg.Client({ connectionString: process.env.TEST_DATABASE_URL });
+    await adminClient.connect();
+    await adminClient.query(`CREATE DATABASE ${assertIdent(dbName)}`);
+    await adminClient.end();
+
+    const parsed = new URL(process.env.TEST_DATABASE_URL);
+    parsed.pathname = `/${dbName}`;
+    const testConnectionString = parsed.toString();
+    const pool = new pg.Pool({ connectionString: testConnectionString, max: 16 });
+    const seedClient = await pool.connect();
+    try {
+      await bootstrapAndSeed(
+        (sql) => seedClient.query(sql),
+        (sql, params) => seedClient.query(sql, params),
+      );
+    } finally {
+      seedClient.release();
+    }
+
+    const cleanup = async () => {
+      const cleanupClient = new pg.Client({ connectionString: process.env.TEST_DATABASE_URL });
+      await cleanupClient.connect();
+      await cleanupClient.query(
+        `SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = $1 AND pid <> pg_backend_pid()`,
+        [dbName],
+      );
+      await cleanupClient.query(`DROP DATABASE IF EXISTS ${assertIdent(dbName)}`);
+      await cleanupClient.end();
+    };
+
+    return {
+      harness: new PgPoolHarness(pool, cleanup),
+      connectionConfig: { connectionString: testConnectionString },
+    };
+  }
+
+  const bins = findPostgresBinDir();
+  if (!bins) {
+    return null;
+  }
+
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "pro-gamif-pg-"));
+  const dataDir = path.join(tempDir, "data");
+  const logFile = path.join(tempDir, "postgres.log");
+  const port = await getFreeTcpPort();
+  let started = false;
+
+  const stopCluster = async () => {
+    if (started) {
+      await runCommandNoPipes(bins.pgCtlPath, ["-D", dataDir, "-m", "immediate", "-w", "stop"]).catch(
+        () => {},
+      );
+      started = false;
+    }
+    await removeDirWithRetry(tempDir);
+  };
+
+  try {
+    await runCommandNoPipes(bins.initdbPath, [
+      "-D",
+      dataDir,
+      "-U",
+      "postgres",
+      "-A",
+      "trust",
+      "-E",
+      "UTF8",
+      "--locale=C",
+      "--no-sync",
+    ]);
+
+    await runCommandNoPipes(bins.pgCtlPath, [
+      "-D",
+      dataDir,
+      "-l",
+      logFile,
+      "-w",
+      "-o",
+      `-p ${port} -h 127.0.0.1`,
+      "start",
+    ]);
+    started = true;
+
+    const adminConfig = {
+      host: "127.0.0.1",
+      port,
+      user: "postgres",
+      database: "postgres",
+    };
+    const adminClient = new pg.Client(adminConfig);
+    await adminClient.connect();
+    await adminClient.query("CREATE DATABASE gamification_test");
+    await adminClient.end();
+
+    const connectionConfig = {
+      host: "127.0.0.1",
+      port,
+      user: "postgres",
+      database: "gamification_test",
+    };
+    const pool = new pg.Pool({ ...connectionConfig, max: 16 });
+    const seedClient = await pool.connect();
+    try {
+      await bootstrapAndSeed(
+        (sql) => seedClient.query(sql),
+        (sql, params) => seedClient.query(sql, params),
+      );
+    } finally {
+      seedClient.release();
+    }
+
+    return {
+      harness: new PgPoolHarness(pool, stopCluster),
+      connectionConfig,
+    };
+  } catch (error) {
+    await stopCluster();
+    throw error;
+  }
 }
 
 test("PostgreSQL [P2 #4]: bloqueia DML direto para authenticated, aplica invariantes via trigger e faz cascade", async (t) => {
@@ -1193,4 +1480,371 @@ test("PostgreSQL RLS e RPCs: isolamento entre Usuário A e Usuário B e bloqueio
   // Confirma cálculo local de semana consistente no teste
   const weekBounds = getWeekBoundsForInstant(new Date(), "America/Sao_Paulo");
   assert.equal(addCalendarDays(weekBounds.weekStartDate, 6), weekBounds.weekEndDate);
+});
+
+async function assertWestwardTimezoneTransitionInDb(harness, userOne = USER_A, userTwo = USER_B) {
+  // 1. Semana 1 (2026-11-02..2026-11-08): ativa meta 3 em America/Sao_Paulo e grava sessão concluída real
+  await harness.db.query(
+    `INSERT INTO public.user_study_routine_preferences (
+       user_id, target_days, timezone_iana, default_budget_minutes,
+       hide_gamification, pending_target_days, pending_timezone_iana,
+       pending_effective_week_start, onboarding_completed_at
+     ) VALUES (
+       $1, 3, 'America/Sao_Paulo', 15, false, 5, 'America/Manaus', '2026-11-09', '2026-11-04T15:00:00Z'
+     )`,
+    [userOne],
+  );
+  const w1Insert = await harness.db.query(
+    `INSERT INTO public.study_routine_weekly_plans (
+       user_id, week_start_date, week_end_date, target_days, timezone_iana, is_partial_first_week
+     ) VALUES ($1, '2026-11-02', '2026-11-08', 3, 'America/Sao_Paulo', true)
+     RETURNING id`,
+    [userOne],
+  );
+  const w1PlanId = w1Insert.rows[0].id;
+
+  const historicalSession = await harness.withAdminTx(async (tx) => {
+    const sessRes = await tx.query(
+      `INSERT INTO public.study_routine_sessions (
+         user_id, weekly_plan_id, status, budget_minutes, estimated_minutes,
+         selection_mode, idempotency_key, started_at, last_activity_at
+       ) VALUES (
+         $1, $2, 'in_progress', 5, 5,
+         'manual', 'west-hist-start', '2026-11-06T14:00:00Z', '2026-11-06T14:00:00Z'
+       )
+       RETURNING id`,
+      [userOne, w1PlanId],
+    );
+    const sessionId = sessRes.rows[0].id;
+    await tx.query(
+      `INSERT INTO public.study_routine_session_activities (
+         session_id, user_id, order_index, activity_type, status,
+         topic_id, topic_title, discipline, section_id, content_unit_id,
+         activity_title, estimated_minutes, evidence_kind, completed_at
+       ) VALUES (
+         $1, $2, 0, 'summary', 'completed',
+         'const-art5', 'Direitos Fundamentais', 'Direito Constitucional',
+         'const-art5-sec-01', $3, 'Caput e igualdade', 5, 'self_declared', '2026-11-06T14:05:00Z'
+       )`,
+      [sessionId, userOne, UNIT_CONST_1],
+    );
+    const completedRes = await tx.query(
+      `UPDATE public.study_routine_sessions
+       SET status = 'completed',
+           completion_idempotency_key = 'west-hist-complete',
+           last_activity_at = '2026-11-06T14:05:00Z',
+           completed_at = '2026-11-06T14:05:00Z',
+           completed_local_date = '2026-11-06',
+           completed_week_start_date = '2026-11-02',
+           completed_timezone_iana = 'America/Sao_Paulo'
+       WHERE id = $1
+       RETURNING id, completed_local_date::TEXT AS completed_local_date, completed_timezone_iana`,
+      [sessionId],
+    );
+    return completedRes.rows[0];
+  });
+  assert.equal(historicalSession.completed_local_date, "2026-11-06");
+
+  // 2. Segunda 2026-11-09 00:30 em São Paulo (03:30 UTC), ainda domingo 23:30 em Manaus:
+  //    NÃO deve congelar plano 2026-11-09 com meta 3 / America/Sao_Paulo.
+  const atSpMonday = await harness.db.query(
+    `SELECT private.sync_user_study_routine_week($1::uuid, true, '2026-11-09T03:30:00Z'::timestamptz) AS sync`,
+    [userOne],
+  );
+  const gapSync = atSpMonday.rows[0].sync;
+  assert.equal(gapSync.current_plan.week_start_date, "2026-11-02");
+  assert.equal(gapSync.preferences.pending_target_days, 5);
+  assert.equal(gapSync.preferences.pending_timezone_iana, "America/Manaus");
+  assert.equal(gapSync.preferences.pending_effective_week_start, "2026-11-09");
+
+  const plansDuringGap = await harness.db.query(
+    `SELECT week_start_date::TEXT AS week_start_date FROM public.study_routine_weekly_plans WHERE user_id = $1`,
+    [userOne],
+  );
+  assert.deepEqual(
+    plansDuringGap.rows.map((r) => r.week_start_date),
+    ["2026-11-02"],
+  );
+
+  // 3. Segunda 2026-11-09 01:30 em SP / 00:30 em Manaus (04:30 UTC):
+  //    Agora ambos os fusos entraram em 2026-11-09 e a meta 5 + America/Manaus entra na própria semana.
+  const atManausMonday = await harness.db.query(
+    `SELECT private.sync_user_study_routine_week($1::uuid, true, '2026-11-09T04:30:00Z'::timestamptz) AS sync`,
+    [userOne],
+  );
+  const promotedSync = atManausMonday.rows[0].sync;
+  assert.equal(promotedSync.current_plan.week_start_date, "2026-11-09");
+  assert.equal(promotedSync.current_plan.target_days, 5);
+  assert.equal(promotedSync.current_plan.timezone_iana, "America/Manaus");
+  assert.equal(promotedSync.preferences.target_days, 5);
+  assert.equal(promotedSync.preferences.timezone_iana, "America/Manaus");
+  assert.equal(promotedSync.preferences.pending_target_days, null);
+  assert.equal(promotedSync.preferences.pending_timezone_iana, null);
+  assert.equal(promotedSync.preferences.pending_effective_week_start, null);
+
+  // Histórico da semana anterior e sessão concluída permanecem intactos
+  const plansAfter = await harness.db.query(
+    `SELECT week_start_date::TEXT AS week_start_date, target_days, timezone_iana
+     FROM public.study_routine_weekly_plans
+     WHERE user_id = $1
+     ORDER BY week_start_date ASC`,
+    [userOne],
+  );
+  assert.deepEqual(
+    plansAfter.rows.map((r) => ({
+      week_start_date: r.week_start_date,
+      target_days: r.target_days,
+      timezone_iana: r.timezone_iana,
+    })),
+    [
+      { week_start_date: "2026-11-02", target_days: 3, timezone_iana: "America/Sao_Paulo" },
+      { week_start_date: "2026-11-09", target_days: 5, timezone_iana: "America/Manaus" },
+    ],
+  );
+
+  const histCheck = await harness.db.query(
+    `SELECT completed_local_date::TEXT AS completed_local_date, completed_timezone_iana
+     FROM public.study_routine_sessions
+     WHERE id = $1`,
+    [historicalSession.id],
+  );
+  assert.equal(histCheck.rows[0].completed_local_date, "2026-11-06");
+  assert.equal(histCheck.rows[0].completed_timezone_iana, "America/Sao_Paulo");
+
+  // 4. Também valida exatamente as datas da semana 2026-11-09 -> 2026-11-16 em userTwo
+  await harness.db.query(
+    `INSERT INTO public.user_study_routine_preferences (
+       user_id, target_days, timezone_iana, default_budget_minutes,
+       hide_gamification, pending_target_days, pending_timezone_iana,
+       pending_effective_week_start, onboarding_completed_at
+     ) VALUES (
+       $1, 3, 'America/Sao_Paulo', 15, false, 5, 'America/Manaus', '2026-11-16', '2026-11-10T12:00:00Z'
+     )`,
+    [userTwo],
+  );
+  await harness.db.query(
+    `INSERT INTO public.study_routine_weekly_plans (
+       user_id, week_start_date, week_end_date, target_days, timezone_iana, is_partial_first_week
+     ) VALUES ($1, '2026-11-09', '2026-11-15', 3, 'America/Sao_Paulo', true)`,
+    [userTwo],
+  );
+  const bGap = await harness.db.query(
+    `SELECT private.sync_user_study_routine_week($1::uuid, true, '2026-11-16T03:30:00Z'::timestamptz) AS sync`,
+    [userTwo],
+  );
+  assert.equal(bGap.rows[0].sync.current_plan.week_start_date, "2026-11-09");
+  assert.equal(bGap.rows[0].sync.preferences.pending_effective_week_start, "2026-11-16");
+
+  const bPromoted = await harness.db.query(
+    `SELECT private.sync_user_study_routine_week($1::uuid, true, '2026-11-16T04:30:00Z'::timestamptz) AS sync`,
+    [userTwo],
+  );
+  assert.equal(bPromoted.rows[0].sync.current_plan.week_start_date, "2026-11-16");
+  assert.equal(bPromoted.rows[0].sync.current_plan.target_days, 5);
+  assert.equal(bPromoted.rows[0].sync.current_plan.timezone_iana, "America/Manaus");
+}
+
+test("PostgreSQL [P2 #1]: transição de fuso para oeste (SP -> Manaus) aplica nova meta na segunda sem atrasar 1 semana nem reescrever histórico", async (t) => {
+  const harness = await createSeededPostgres();
+  t.after(async () => {
+    await harness.db.close();
+  });
+
+  await assertWestwardTimezoneTransitionInDb(harness);
+});
+
+test("PostgreSQL real multi-conexão [P2 #3] & [P2 #1]: contenção real em pg_locks, Promise.all sem fila e transição SP -> Manaus", async (t) => {
+  const realPg = await createRealPostgresHarness();
+  if (!realPg) {
+    t.skip("Binários PostgreSQL (initdb/pg_ctl) ou TEST_DATABASE_URL ausentes neste ambiente.");
+    return;
+  }
+
+  const { harness, connectionConfig } = realPg;
+  const conn1 = new pg.Client(connectionConfig);
+  const conn2 = new pg.Client(connectionConfig);
+  const observer = new pg.Client(connectionConfig);
+
+  t.after(async () => {
+    await Promise.all([
+      conn1.end().catch(() => {}),
+      conn2.end().catch(() => {}),
+      observer.end().catch(() => {}),
+    ]);
+    await harness.db.close();
+  });
+
+  // 1. Prova real de contenção de lock em pg_locks entre 2 conexões TCP simultâneas
+  await Promise.all([conn1.connect(), conn2.connect(), observer.connect()]);
+
+  const lockActivities = JSON.stringify([
+    {
+      activity_type: "summary",
+      topic_id: "const-art5",
+      topic_title: "Direitos Fundamentais - Artigo 5º",
+      discipline: "Direito Constitucional",
+      section_id: "const-art5-sec-01",
+      content_unit_id: UNIT_CONST_1,
+      activity_title: "Caput e igualdade",
+      estimated_minutes: 5,
+      evidence_kind: "self_declared",
+    },
+  ]);
+
+  await conn1.query("BEGIN");
+  await conn1.query("SET LOCAL ROLE authenticated");
+  await conn1.query("SELECT set_config('request.jwt.claim.sub', $1, true)", [USER_A]);
+  const conn1Rpc = await conn1.query(
+    `SELECT public.create_study_routine_session(
+       p_budget_minutes := 15::smallint,
+       p_selection_mode := 'manual'::text,
+       p_idempotency_key := 'real-lock-conn-1'::text,
+       p_activities := $1::jsonb,
+       p_replace_active := false
+     ) AS result`,
+    [lockActivities],
+  );
+  const conn1SessionId = conn1Rpc.rows[0].result.session.id;
+
+  // Conexão 2 dispara transação simultânea na mesma conta enquanto conn1 segura o advisory lock
+  await conn2.query("BEGIN");
+  await conn2.query("SET LOCAL ROLE authenticated");
+  await conn2.query("SELECT set_config('request.jwt.claim.sub', $1, true)", [USER_A]);
+  const conn2Promise = conn2.query(
+    `SELECT public.create_study_routine_session(
+       p_budget_minutes := 15::smallint,
+       p_selection_mode := 'manual'::text,
+       p_idempotency_key := 'real-lock-conn-2'::text,
+       p_activities := $1::jsonb,
+       p_replace_active := false
+     ) AS result`,
+    [lockActivities],
+  );
+
+  // Observa em pg_locks: 1 lock concedido (conn1) e 1 aguardando na fila do PostgreSQL (conn2)
+  let observedContention = false;
+  for (let attempt = 0; attempt < 150; attempt += 1) {
+    const lockRes = await observer.query(
+      `SELECT
+         COUNT(*) FILTER (WHERE granted)::INT AS granted_locks,
+         COUNT(*) FILTER (WHERE NOT granted)::INT AS waiting_locks
+       FROM pg_locks
+       WHERE locktype = 'advisory'`,
+    );
+    const { granted_locks: grantedLocks, waiting_locks: waitingLocks } = lockRes.rows[0];
+    if (grantedLocks >= 1 && waitingLocks >= 1) {
+      observedContention = true;
+      break;
+    }
+    await new Promise((r) => setTimeout(r, 15));
+  }
+  assert.equal(
+    observedContention,
+    true,
+    "Esperava observar contenção real de advisory lock em pg_locks entre conn1 e conn2.",
+  );
+
+  await conn1.query("COMMIT");
+  const conn2Rpc = await conn2Promise;
+  await conn2.query("COMMIT");
+
+  assert.equal(conn2Rpc.rows[0].result.resumed, true);
+  assert.equal(conn2Rpc.rows[0].result.session.id, conn1SessionId);
+  assert.equal(conn2Rpc.rows[0].result.session.activities.length, 1);
+
+  // 2. Rajadas concorrentes Promise.all usando PgPoolHarness (pool TCP real sem fila JS)
+  const poolServiceOne = createRoutineService(
+    createSupabaseRoutineRepository(harness.asUser(USER_A, "authenticated")),
+  );
+  const poolServiceTwo = createRoutineService(
+    createSupabaseRoutineRepository(harness.asUser(USER_A, "authenticated")),
+  );
+
+  const [concurrentCompleteOne, concurrentCompleteTwo] = await Promise.all([
+    poolServiceOne.completeSession({
+      userId: USER_A,
+      sessionId: conn1SessionId,
+      completedActivityIds: [conn1Rpc.rows[0].result.session.activities[0].id],
+      completionIdempotencyKey: "real-pool-complete-1",
+      topics: makeTopicsFixture(),
+    }),
+    poolServiceTwo.completeSession({
+      userId: USER_A,
+      sessionId: conn1SessionId,
+      completedActivityIds: [conn1Rpc.rows[0].result.session.activities[0].id],
+      completionIdempotencyKey: "real-pool-complete-2",
+      topics: makeTopicsFixture(),
+    }),
+  ]);
+  assert.equal(concurrentCompleteOne.session.id, conn1SessionId);
+  assert.equal(concurrentCompleteTwo.session.id, conn1SessionId);
+  assert.equal(concurrentCompleteOne.session.status, "completed");
+  assert.equal(concurrentCompleteTwo.session.status, "completed");
+
+  const [burstDiffOne, burstDiffTwo] = await Promise.all([
+    poolServiceOne.startOrResumeSession({
+      userId: USER_A,
+      topics: makeTopicsFixture(),
+      completedContentUnitIds: new Set([UNIT_CONST_1]),
+      topicId: "const-art5",
+      idempotencyKey: "real-pool-diff-1",
+    }),
+    poolServiceTwo.startOrResumeSession({
+      userId: USER_A,
+      topics: makeTopicsFixture(),
+      completedContentUnitIds: new Set([UNIT_CONST_1]),
+      topicId: "const-art5",
+      idempotencyKey: "real-pool-diff-2",
+    }),
+  ]);
+  assert.equal(burstDiffOne.session.id, burstDiffTwo.session.id);
+  assert.ok(burstDiffOne.session.activities.length > 0);
+  assert.ok(burstDiffTwo.session.activities.length > 0);
+
+  await poolServiceOne.completeSession({
+    userId: USER_A,
+    sessionId: burstDiffOne.session.id,
+    completedActivityIds: [burstDiffOne.session.activities[0].id],
+    completionIdempotencyKey: "real-pool-finish-diff",
+    topics: makeTopicsFixture(),
+  });
+
+  const [burstSameOne, burstSameTwo] = await Promise.all([
+    poolServiceOne.startOrResumeSession({
+      userId: USER_A,
+      topics: makeTopicsFixture(),
+      completedContentUnitIds: new Set(),
+      topicId: "adm-principios",
+      idempotencyKey: "real-pool-same-key",
+    }),
+    poolServiceTwo.startOrResumeSession({
+      userId: USER_A,
+      topics: makeTopicsFixture(),
+      completedContentUnitIds: new Set(),
+      topicId: "adm-principios",
+      idempotencyKey: "real-pool-same-key",
+    }),
+  ]);
+  assert.equal(burstSameOne.session.id, burstSameTwo.session.id);
+  assert.equal(burstSameOne.session.activities.length, 1);
+
+  const activeCountRes = await harness.db.query(
+    `SELECT COUNT(*)::INT AS c FROM public.study_routine_sessions
+     WHERE user_id = $1 AND status IN ('planned', 'in_progress', 'interrupted')`,
+    [USER_A],
+  );
+  assert.equal(activeCountRes.rows[0].c, 1);
+
+  // 3. Semeia dois usuários dedicados e valida também [P2 #1] diretamente no PostgreSQL 18 nativo
+  const userWestOne = "dddddddd-dddd-4ddd-8ddd-dddddddddddd";
+  const userWestTwo = "eeeeeeee-eeee-4eee-8eee-eeeeeeeeeeee";
+  await harness.db.query(
+    `INSERT INTO auth.users (id, email) VALUES ($1, $2), ($3, $4)`,
+    [userWestOne, "west1@example.com", userWestTwo, "west2@example.com"],
+  );
+  await harness.db.query(
+    `INSERT INTO private.test_entitlements (user_id, active) VALUES ($1, true), ($2, true)`,
+    [userWestOne, userWestTwo],
+  );
+  await assertWestwardTimezoneTransitionInDb(harness, userWestOne, userWestTwo);
 });
