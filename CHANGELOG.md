@@ -1,5 +1,10 @@
 # Changelog
 
+## Não publicado — plano de gamificação para o Antigravity
+
+- documentados MVP de sessões curtas e metas semanais flexíveis, regras de calendário e conclusão, arquitetura, segurança, fases, critérios de aceite e testes;
+- mantidas implementação, migrations remotas e publicação fora desta entrega documental.
+
 ## Não publicado — retorno seguro do Mercado Pago
 
 - substituído o callback com query preexistente por uma rota intermediária que remove os parâmetros adicionados pelo provedor antes de redirecionar para a página de assinatura;
