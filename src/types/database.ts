@@ -226,6 +226,96 @@ export interface PrivacyRequest {
   updated_at: string;
 }
 
+// =============================================================================
+// Rotina semanal e sessões curtas de estudo (Gamificação MVP)
+// =============================================================================
+
+export type StudyRoutineSessionStatus =
+  | 'planned'
+  | 'in_progress'
+  | 'interrupted'
+  | 'completed'
+  | 'discarded';
+
+export type StudyRoutineActivityType =
+  | 'summary'
+  | 'law'
+  | 'question'
+  | 'flashcard';
+
+export type StudyRoutineActivityStatus =
+  | 'pending'
+  | 'completed'
+  | 'skipped'
+  | 'unavailable';
+
+export interface UserStudyRoutinePreferencesRow {
+  user_id: string;
+  target_days: number;
+  timezone_iana: string;
+  default_budget_minutes: 5 | 15 | 30;
+  preferred_discipline: string | null;
+  hide_gamification: boolean;
+  pending_target_days: number | null;
+  pending_timezone_iana: string | null;
+  pending_effective_week_start: string | null;
+  onboarding_completed_at: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface StudyRoutineWeeklyPlanRow {
+  id: string;
+  user_id: string;
+  week_start_date: string;
+  week_end_date: string;
+  target_days: number;
+  timezone_iana: string;
+  is_partial_first_week: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface StudyRoutineSessionRow {
+  id: string;
+  user_id: string;
+  weekly_plan_id: string;
+  status: StudyRoutineSessionStatus;
+  budget_minutes: 5 | 15 | 30;
+  estimated_minutes: number;
+  selection_mode: 'recommended' | 'manual' | 'resumed';
+  idempotency_key: string;
+  completion_idempotency_key: string | null;
+  started_at: string;
+  last_activity_at: string;
+  completed_at: string | null;
+  completed_local_date: string | null;
+  completed_week_start_date: string | null;
+  completed_timezone_iana: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface StudyRoutineSessionActivityRow {
+  id: string;
+  session_id: string;
+  user_id: string;
+  order_index: number;
+  activity_type: StudyRoutineActivityType;
+  status: StudyRoutineActivityStatus;
+  topic_id: string | null;
+  topic_title: string;
+  discipline: string;
+  section_id: string | null;
+  content_unit_id: string | null;
+  activity_title: string;
+  estimated_minutes: number;
+  evidence_kind: 'self_declared' | 'server_verified';
+  completed_at: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
 export type TextHighlightColor =
   | 'yellow'
   | 'orange'
