@@ -19,9 +19,9 @@ Branch principal de produção/referência no repositório: `main` (`f6febbd` lo
 | **Flashcards** | Nos Resumos: JSONB em `sections.flashcards` renderizado por `src/components/study/flashcard-deck.tsx` (estado puramente local em React, sem ID persistente por cartão e sem tabela de respostas). Para Leis: tabela `law_flashcards` e RPC `answer_law_flashcard` na migration `010`. | Leitor de flashcards de leis em `C:\PRO\legis/src/app/api/flashcards/answer/route.ts`. | `law_flashcards`: 5 totais (`0` com `status = 'published'`); `user_law_flashcard_answers`: 0 linhas. Flashcards de Resumos permanecem sem histórico individual no banco. | Flashcards de Resumos são exibidos inline dentro da seção; `law_flashcards` publicados: `0`. | **Não contabilizar virar ou responder flashcard embutido como conclusão automática no MVP.** Manter tipo `flashcard` apenas previsto no domínio para evolução futura. |
 | **Relações entre módulos** | Schema `topic_legal_fragment_relations` na migration `010` e tipos em `src/types/database.ts`. | Relações `topic_discipline_relations`, `question_discipline_relations` e `question_topic_relations` criadas nas migrations `029`+ da branch `main`. | `topic_legal_fragment_relations`: `0` linhas; `topic_discipline_relations`: 547; `question_discipline_relations`: 2.085; `question_topic_relations`: 2.085. | Vínculos Resumo–Lei vazios (`0`). Vínculos de Questões existem no banco, porém sem módulo consumidor nesta branch. | Não associar módulos por título. Manter o MVP determinístico restrito às unidades ativas de Resumos (`sections.content_unit_id` e `topics.topic_id`). |
 | **Conta e acesso** | `src/lib/content-access.ts` (`requireContentAccess`), `src/lib/auth/google-only.mjs`, `src/app/dashboard/layout.tsx`, `src/app/dashboard/conta/page.tsx`, `src/app/api/privacy-requests/route.ts`, `supabase/migrations/009`, `024`, `025`. | Mesmo sistema compartilhado de autenticação Google OAuth, MFA AAL2 admin e entitlement. | `user_entitlements` + `payment_access_blocks` com guarda `private.has_active_content_access()`. | Ativo em produção conforme `CHANGELOG.md` e `scripts/test-rls-two-users.mjs`. | Todo dado de rotina pertence a `auth.uid()` (derivado no servidor), protegido por RLS + `has_active_content_access()`. Em contas compartilhadas, métricas são explicitamente identificadas como **da conta**. |
-| **Infraestrutura** | Next.js `16.3.4`, React `19.2.4`, Zod `4.4.3`, Tailwind v4 (`src/app/globals.css`), `lucide-react`, `node --test` (`test:*` em `package.json`), `scripts/test-rls-two-users.mjs`, migrations `001`–`025`. | Na `main`, migrations vão até `051` (incluindo `026_create_study_planner.sql` com `study_plans` e `study_plan_items`, que também existem no banco remoto: `1` plano e `7` itens). | Tabelas do planner `study_plans` (`1`) e `study_plan_items` (`7`) presentes no banco remoto; tabelas de rotina/gamificação ainda não existem. | Build/CI e deploy Netlify configurados para `C:\PRO\site`. | **Prevenção obrigatória de colisão:** numerar a nova migration como `052_create_study_routine_gamification.sql` e evitar os nomes `study_plans` / `study_plan_items`, adotando `user_study_routine_preferences`, `study_routine_weekly_plans`, `study_routine_sessions` e `study_routine_session_activities`. |
+| **Infraestrutura** | Next.js `16.3.4`, React `19.2.4`, Zod `4.4.3`, Tailwind v4 (`src/app/globals.css`), `lucide-react`, `node --test` (`test:*` em `package.json`), `scripts/test-rls-two-users.mjs`, migrations `001`–`025`. | Na `origin/main` (`7395ebb`), migrations canônicas vão até `052` (incluindo `026_create_study_planner.sql` com `study_plans`/`study_plan_items` e `052_create_launch_interests.sql`). | Tabelas do planner `study_plans` (`1`) e `study_plan_items` (`7`) presentes no banco remoto; tabelas de rotina/gamificação ainda não existem. | Build/CI e deploy Netlify configurados para `C:\PRO\site`. | **Prevenção obrigatória de colisão:** reconciliar a nova migration para `053_create_study_routine_gamification.sql` (acima de `052_create_launch_interests.sql` na `origin/main`) e adotar `user_study_routine_preferences`, `study_routine_weekly_plans`, `study_routine_sessions` e `study_routine_session_activities`. |
 
-> Nota sobre ambiente remoto de produção web: os testes locais de código e a consulta somente-leitura ao banco confirmaram os contratos e contagens acima em `14/11/2026`. Não foi executado deploy nem smoke autenticado no domínio de produção HTTP neste diagnóstico, pois a implementação do MVP e a aplicação remota da migration `052` ocorrem separadamente.
+> Nota sobre ambiente remoto de produção web: os testes locais de código e a consulta somente-leitura ao banco confirmaram os contratos e contagens acima em `14/11/2026`. Não foi executado deploy nem smoke autenticado no domínio de produção HTTP neste diagnóstico, pois a implementação do MVP e a aplicação remota da migration `053` ocorrem separadamente.
 
 ---
 
@@ -36,14 +36,14 @@ Alterações preexistentes do usuário preservadas integralmente (não modificad
 ## 3. Adaptações justificadas do plano para este incremento
 
 1. **Escopo operacional do MVP sobre Resumos**: como `topic_legal_fragment_relations` tem `0` vínculos, `law_flashcards` publicados são `0`, o leitor de Leis reside em `C:\PRO\legis` e o módulo de Questões pertence à branch `main`, o MVP nesta branch recomenda e conclui exclusivamente **seções ativas de Resumos** (`sections.content_unit_id` com `archived_at IS NULL` em tópicos com `archived_at IS NULL`). A limitação será comunicada de forma transparente na interface, sem botões mortos nem missões impossíveis.
-2. **Namespace e numeração da migration (`052`)**: embora esta branch contenha localmente apenas `001`–`025`, o banco compartilhado já possui as migrations `026`–`051` vindas de `main` (incluindo `026_create_study_planner.sql`, que cria `study_plans` e `study_plan_items`, e `037`–`051` do módulo de Questões). Portanto, a migration da rotina recebe o número `052_create_study_routine_gamification.sql` e tabelas próprias (`user_study_routine_preferences`, `study_routine_weekly_plans`, `study_routine_sessions`, `study_routine_session_activities`), evitando conflitos no merge futuro com `main`.
-3. **Resiliência pré-migration remota (`schema_unavailable`)**: como a migration `052` não deve ser aplicada remotamente de forma unilateral antes da revisão/autorização, os pontos de leitura e escrita server-side tratam ausência das novas tabelas (`42P01` / `PGRST205` via `isMissingTableError`) sem derrubar `/dashboard` ou `/[topicId]`, exibindo aviso neutro e preservando 100% do estudo convencional.
+2. **Namespace e numeração da migration (`053` após reconciliação com `origin/main`)**: embora esta branch contenha localmente apenas `001`–`025`, o histórico canônico atual de `origin/main` (`7395ebb`) contém as migrations `026`–`052` (incluindo `026_create_study_planner.sql` e `052_create_launch_interests.sql`). O diagnóstico inicial registrou `052` antes da entrada de `052_create_launch_interests.sql` na `origin/main`; por isso a migration da rotina foi reconciliada para `053_create_study_routine_gamification.sql` com tabelas próprias (`user_study_routine_preferences`, `study_routine_weekly_plans`, `study_routine_sessions`, `study_routine_session_activities`).
+3. **Resiliência pré-migration remota (`schema_unavailable`)**: como a migration `053` não deve ser aplicada remotamente de forma unilateral antes da revisão/autorização, os pontos de leitura e escrita server-side tratam ausência das novas tabelas/RPCs (`42P01`, `PGRST205`, `42883`, `PGRST202`) sem derrubar `/dashboard` ou `/[topicId]`, exibindo aviso neutro e preservando 100% do estudo convencional.
 
 ---
 
-## 4. Modelo de dados proposto (`052_create_study_routine_gamification.sql`)
+## 4. Modelo de dados proposto (`053_create_study_routine_gamification.sql`)
 
-Todas as tabelas pertencem ao **Grupo A (dados pessoais por usuário)**, com `user_id NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE`, RLS habilitada, privilégios revogados de `anon` e restrição a `authenticated` com `(SELECT auth.uid()) = user_id`:
+Todas as tabelas pertencem ao **Grupo A (dados pessoais por usuário)**, com `user_id NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE`, RLS habilitada, privilégios revogados de `anon` e escrita direta revogada de `authenticated` (`SELECT` por `(SELECT auth.uid()) = user_id` e mutações exclusivas por RPCs `SECURITY DEFINER SET search_path = ''`):
 
 1. `public.user_study_routine_preferences`
    - `user_id` (PK, FK `auth.users(id) ON DELETE CASCADE`)
@@ -103,10 +103,11 @@ Todas as tabelas pertencem ao **Grupo A (dados pessoais por usuário)**, com `us
    - `completed_at` (`TIMESTAMPTZ NULL`)
    - `created_at`, `updated_at`
 
-Triggers no banco (`SECURITY DEFINER`, `SET search_path = ''`):
-- Impede alteração retroativa de `target_days` / `timezone_iana` em `study_routine_weekly_plans` após a criação da semana (exceto se explicitamente inicializada antes da primeira conclusão e ainda na janela inicial);
-- Valida transições de `status` em `study_routine_sessions` (`completed` e `discarded` são terminais) e exige `completed_at`, `completed_local_date`, `completed_week_start_date` e `completed_timezone_iana` preenchidos quando `status = 'completed'`;
-- Impede conclusão da sessão sem ao menos uma atividade elegível com `status = 'completed'`.
+Triggers e restrições no banco (`SECURITY DEFINER`, `SET search_path = ''`):
+- Revogação de `INSERT`, `UPDATE` e `DELETE` diretos para `PUBLIC`, `anon` e `authenticated`, combinada a `trigger_01_rpc_mutation_guard` para exigir escrita via RPCs autorizadas;
+- Imutabilidade dos planos semanais (`study_routine_weekly_plans`) e proteção contra exclusão enquanto o usuário existir;
+- Validação de transições de `status` em `study_routine_sessions` (`completed` e `discarded` são terminais), validação de `completed_at`, `completed_local_date`, `completed_week_start_date` e `completed_timezone_iana` coerentes com o plano e o fuso, e verificação de atividade de resumo elegível;
+- `CONSTRAINT TRIGGER ... DEFERRABLE INITIALLY DEFERRED` garantindo que nenhuma sessão seja persistida sem ao menos uma atividade no `COMMIT`.
 
 ---
 
@@ -114,11 +115,11 @@ Triggers no banco (`SECURITY DEFINER`, `SET search_path = ''`):
 
 | Risco | Impacto | Mitigação |
 | --- | --- | --- |
-| Migration `052` ainda não aplicada no Supabase remoto | Erro de consulta/gravação em `/dashboard`, `/[topicId]` e `/api/study-routine` | Detecção explícita via `isMissingTableError(..., ...)` com degradação graciosa (aviso discreto sem quebrar estudo convencional) e modo fallback local explícito para testes se configurado. |
-| Colisão de merge futuro com `main` (migrations `026`–`051`) | Conflito de numeração ou nomes de tabela | Migration nomeada `052_create_study_routine_gamification.sql` e tabelas com prefixo `study_routine_` / `user_study_routine_`. |
-| Duplo clique, múltiplas abas ou resposta perdida após commit | Duplicação de sessão ou de conclusão no mesmo dia | Chaves de idempotência (`idempotency_key` e `completion_idempotency_key`) com índices únicos no banco + trava por chave no serviço + regra de 1 contagem diária por `completed_local_date`. |
-| Conteúdo arquivado/removido ou perda de entitlement | Erro ou vazamento de conteúdo restrito ao retomar sessão | Validação server-side via `requireContentAccess()` + verificação de `archived_at IS NULL` antes de iniciar/concluir + troca segura para conteúdo elegível preservando histórico. |
-| Troca de fuso horário ou estudo atravessando meia-noite | Deslocamento retroativo de histórico ou perda de meta da semana | Persistência imutável de `completed_at` (UTC), `completed_local_date` e `completed_timezone_iana` na sessão; mudanças de meta/fuso entram como `pending_*` para a próxima segunda-feira. |
+| Migration `053` ainda não aplicada no Supabase remoto | Erro de consulta/gravação em `/dashboard`, `/[topicId]` e `/api/study-routine` | Detecção explícita via `isRoutineSchemaError` com degradação graciosa (`503` controlado na API e aviso discreto sem quebrar estudo convencional) e fallback local apenas em dev explícito. |
+| Colisão de merge futuro com `main` (migrations `026`–`052`) | Conflito de numeração ou nomes de tabela | Migration reconciliada para `053_create_study_routine_gamification.sql` (após `052_create_launch_interests.sql` na `origin/main`) e tabelas com prefixo `study_routine_` / `user_study_routine_`. |
+| Duplo clique, múltiplas abas ou resposta perdida após commit | Duplicação de sessão ou de conclusão no mesmo dia | Chaves de idempotência (`idempotency_key` e `completion_idempotency_key`), trava transacional `pg_advisory_xact_lock`, criação atômica via `create_study_routine_session` + índice único de 1 sessão ativa por usuário. |
+| Conteúdo arquivado/removido ou perda de entitlement | Erro ou vazamento de conteúdo restrito ao retomar sessão | Validação server-side via `requireContentAccess()`, guarda `has_active_content_access()` nas RPCs e verificação de `archived_at IS NULL` antes de iniciar/substituir/concluir. |
+| Troca de fuso horário ou estudo atravessando meia-noite | Deslocamento retroativo de histórico ou perda de meta da semana | Persistência imutável de `completed_at` (`now()` do servidor), `completed_local_date` e `completed_timezone_iana` na sessão; mudanças de meta/fuso entram como `pending_*` e são preservadas em atualizações parciais. |
 
 ---
 
@@ -129,12 +130,13 @@ Triggers no banco (`SECURITY DEFINER`, `SET search_path = ''`):
   - `docs/GAMIFICACAO_IMPLEMENTACAO.md`
   - `CHANGELOG.md`
 - Banco de dados e tipos:
-  - `supabase/migrations/052_create_study_routine_gamification.sql`
+  - `supabase/migrations/053_create_study_routine_gamification.sql`
   - `src/types/database.ts`
 - Domínio puro e adaptador server-side:
   - `src/lib/gamification/config.mjs` e `src/lib/gamification/config.d.mts`
   - `src/lib/gamification/calendar.mjs` e `src/lib/gamification/calendar.d.mts`
   - `src/lib/gamification/session.mjs` e `src/lib/gamification/session.d.mts`
+  - `src/lib/gamification/repository.mjs` e `src/lib/gamification/repository.d.mts`
   - `src/lib/gamification/server.ts`
 - API e UI:
   - `src/app/api/study-routine/route.ts`
@@ -148,6 +150,7 @@ Triggers no banco (`SECURITY DEFINER`, `SET search_path = ''`):
   - `tests/gamification-calendar.test.mjs`
   - `tests/gamification-session.test.mjs`
   - `tests/gamification-ui.test.mjs`
+  - `tests/gamification-postgres.test.mjs`
   - `scripts/test-rls-two-users.mjs`
   - `package.json`
 

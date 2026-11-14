@@ -2,9 +2,10 @@
 
 ## Não publicado — MVP de rotina semanal e sessões curtas de estudo (Fases 1 e 2)
 
-- executado e registrado o diagnóstico da Fase 0 em `docs/GAMIFICACAO_DIAGNOSTICO.md`, definindo a numeração `052` da migration e o escopo restrito a Resumos ativos no MVP;
-- implementados domínio puro, calendário IANA com semana de segunda a domingo e primeira semana parcial (`src/lib/gamification/{config,calendar,session}.{mjs,d.mts}`), tipos de banco (`src/types/database.ts`), migration `supabase/migrations/052_create_study_routine_gamification.sql` (não aplicada remotamente) e checagens opcionais em `scripts/test-rls-two-users.mjs`;
-- implementados adaptador servidor (`src/lib/gamification/server.ts`), rota autenticada `/api/study-routine`, componentes `TodayStudyCard` e `StudySessionBar`, extensão aditiva em `use-section-progress.ts`, integrações em `/dashboard`, `/[topicId]` e `/dashboard/configuracoes`, guia operacional em `docs/GAMIFICACAO_IMPLEMENTACAO.md` e suíte `npm run test:gamification`.
+- executado e registrado o diagnóstico da Fase 0 em `docs/GAMIFICACAO_DIAGNOSTICO.md` e reconciliada a numeração da migration para `053_create_study_routine_gamification.sql` (após constatação de `052_create_launch_interests.sql` na `origin/main`), mantendo o escopo restrito a Resumos ativos no MVP;
+- implementados domínio puro, calendário IANA com semana de segunda a domingo e primeira semana parcial (`src/lib/gamification/{config,calendar,session}.{mjs,d.mts}`), preservação de agendamentos `pending_*` em atualizações parciais (`hideGamification`, orçamento/disciplina) e ocultação pré-onboarding sem ativação indevida de plano;
+- implementados tipos de banco (`src/types/database.ts`), migration `supabase/migrations/053_create_study_routine_gamification.sql` (não aplicada remotamente) com revogação de DML direto para `authenticated`/`anon`, `SELECT` via RLS, triggers de invariantes/imutabilidade, `CONSTRAINT TRIGGER` deferida contra sessões vazias e 6 RPCs transacionais `SECURITY DEFINER`, além do repositório ESM `src/lib/gamification/repository.{mjs,d.mts}` e atualização de `scripts/test-rls-two-users.mjs`;
+- implementados adaptador servidor (`src/lib/gamification/server.ts`), rota autenticada `/api/study-routine`, componentes `TodayStudyCard` (com sincronização de estado rascunho) e `StudySessionBar`, extensão aditiva em `src/hooks/use-section-progress.ts`, integrações em `/dashboard`, `/[topicId]` e `/dashboard/configuracoes`, guia operacional em `docs/GAMIFICACAO_IMPLEMENTACAO.md` e suíte `npm run test:gamification` incluindo testes reais em PostgreSQL via PGlite (`tests/gamification-postgres.test.mjs`).
 
 ## Não publicado — plano de gamificação para o Antigravity
 
