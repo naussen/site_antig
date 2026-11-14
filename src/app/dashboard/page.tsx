@@ -379,6 +379,7 @@ export default async function DashboardPage({
           <TodayStudyCard
             initialSnapshot={routineState.snapshot}
             persistenceAvailable={routineState.persistenceAvailable}
+            demoFallbackActive={routineState.demoFallbackActive}
             topicOptions={routineState.topicOptions}
             availableDisciplines={allDisciplines}
           />

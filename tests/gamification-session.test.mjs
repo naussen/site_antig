@@ -9,6 +9,11 @@ import {
   RoutineDomainError,
   selectSessionActivitiesForBudget,
 } from "../src/lib/gamification/session.mjs";
+import {
+  createDevFallbackRepository,
+  mergeDevFallbackCompletedUnitIds,
+  resetDevFallbackStore,
+} from "../src/lib/gamification/repository.mjs";
 
 function makeTopicsFixture() {
   return [
@@ -817,4 +822,126 @@ test("buildStudyRecommendation calcula optionsByBudget dinâmico para 5, 15 e 30
   assert.equal(rec.optionsByBudget[30].plannedActivities.length, 3);
   assert.equal(rec.optionsByBudget[30].estimatedMinutes, 18);
   assert.equal(rec.plannedActivities.length, 2);
+});
+
+test("fallback em memória conclui sessão sem mutações no Supabase e avança recomendação em memória", async () => {
+  const userId = "dev-fallback-user-1";
+  const preexistingDbUnitId = "99999999-9999-4999-8999-999999999999";
+  resetDevFallbackStore();
+
+  const mutations = [];
+  const supabaseSpy = {
+    from(table) {
+      return {
+        select() {
+          return {
+            eq() {
+              return this;
+            },
+            async then(resolve) {
+              if (table === "user_progress") {
+                return resolve({
+                  data: [{ content_unit_id: preexistingDbUnitId, section_id: "legacy-sec", completed: true }],
+                  error: null,
+                });
+              }
+              return resolve({ data: [], error: null });
+            },
+          };
+        },
+        insert(payload) {
+          mutations.push({ op: "insert", table, payload });
+          throw new Error(`Mutação remota proibida em fallback dev: insert em ${table}`);
+        },
+        update(payload) {
+          mutations.push({ op: "update", table, payload });
+          throw new Error(`Mutação remota proibida em fallback dev: update em ${table}`);
+        },
+        upsert(payload) {
+          mutations.push({ op: "upsert", table, payload });
+          throw new Error(`Mutação remota proibida em fallback dev: upsert em ${table}`);
+        },
+        delete() {
+          mutations.push({ op: "delete", table });
+          throw new Error(`Mutação remota proibida em fallback dev: delete em ${table}`);
+        },
+      };
+    },
+    async rpc(fn, args) {
+      mutations.push({ op: "rpc", fn, args });
+      throw new Error(`RPC de mutação proibida em fallback dev: ${fn}`);
+    },
+  };
+
+  try {
+    const topics = makeTopicsFixture();
+    const { data: initialProgressRows } = await supabaseSpy
+      .from("user_progress")
+      .select("content_unit_id, section_id, completed")
+      .eq("user_id", userId)
+      .eq("completed", true);
+    const dbCompletedIds = new Set(
+      (initialProgressRows ?? []).map((row) => row.content_unit_id),
+    );
+
+    const devRepository = createDevFallbackRepository();
+    const service = createRoutineService(devRepository, {
+      now: () => new Date("2026-11-12T15:00:00.000Z"),
+    });
+
+    await service.savePreferences({
+      userId,
+      targetDays: 3,
+      timezoneIana: "America/Sao_Paulo",
+      defaultBudgetMinutes: 5,
+      hideGamification: false,
+    });
+
+    const completedBefore = mergeDevFallbackCompletedUnitIds(dbCompletedIds, userId);
+    const snapshotBefore = await service.getSnapshot({
+      userId,
+      topics,
+      completedContentUnitIds: completedBefore,
+    });
+    assert.equal(snapshotBefore.recommendation?.primaryTarget?.section_id, "sec-01");
+
+    const started = await service.startOrResumeSession({
+      userId,
+      topics,
+      completedContentUnitIds: completedBefore,
+      budgetMinutes: 5,
+      idempotencyKey: "dev-fallback-start-1",
+    });
+    assert.equal(started.session.activities.length, 1);
+    assert.equal(started.session.activities[0].section_id, "sec-01");
+
+    const completed = await service.completeSession({
+      userId,
+      sessionId: started.session.id,
+      completedActivityIds: [started.session.activities[0].id],
+      completionIdempotencyKey: "dev-fallback-complete-1",
+      topics,
+    });
+
+    assert.equal(completed.session.status, "completed");
+    assert.equal(completed.weeklyProgress.completedDaysCount, 1);
+    assert.equal(mutations.length, 0, "Nenhuma mutação pode atingir o Supabase durante fallback dev");
+
+    // Progresso prévio no banco continua intacto e somado ao progresso em memória
+    const completedAfter = mergeDevFallbackCompletedUnitIds(dbCompletedIds, userId);
+    assert.equal(dbCompletedIds.size, 1);
+    assert.equal(dbCompletedIds.has(preexistingDbUnitId), true);
+    assert.equal(completedAfter.has(preexistingDbUnitId), true);
+    assert.equal(completedAfter.has("11111111-1111-4111-8111-111111111111"), true);
+
+    const snapshotAfter = await service.getSnapshot({
+      userId,
+      topics,
+      completedContentUnitIds: completedAfter,
+    });
+    assert.equal(snapshotAfter.weeklyProgress.completedDaysCount, 1);
+    assert.equal(snapshotAfter.recommendation?.primaryTarget?.section_id, "sec-02");
+  } finally {
+    resetDevFallbackStore();
+  }
 });

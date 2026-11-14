@@ -89,17 +89,31 @@ O MVP implementa uma rotina semanal flexível (1 a 7 dias por semana) e sessões
 ### Rollback operacional preservando 100% dos dados (sem `DROP TABLE`)
 
 - **Nível 1 — Desativação imediata de UI e API:** definir `NEXT_PUBLIC_DISABLE_GAMIFICATION="true"` no deploy; a interface deixa de exibir os blocos de rotina e `/api/study-routine` responde HTTP `503` controlado sem tocar nas tabelas.
-- **Nível 2 — Bloqueio de mutações no banco preservando histórico:** revogar `EXECUTE` das 6 RPCs para `authenticated`:
-  ```sql
-  REVOKE EXECUTE ON FUNCTION
-    public.ensure_study_routine_weekly_plan(BOOLEAN),
-    public.save_study_routine_preferences(SMALLINT, TEXT, SMALLINT, TEXT, BOOLEAN, BOOLEAN),
-    public.create_study_routine_session(SMALLINT, TEXT, TEXT, JSONB, BOOLEAN),
-    public.update_study_routine_session_status(UUID, TEXT),
-    public.replace_study_routine_session_activity(UUID, UUID, UUID, TEXT, TEXT, TEXT, TEXT, SMALLINT),
-    public.complete_study_routine_session(UUID, UUID[], TEXT, UUID)
-  FROM authenticated;
-  ```
+- **Nível 2 — Bloqueio de mutações no banco preservando histórico:** revogar `EXECUTE` das 6 RPCs para `authenticated` (as 4 tabelas e o progresso existente em `user_progress` permanecem intactos, e o papel `authenticated` mantém apenas `SELECT`):
+
+```sql
+REVOKE EXECUTE ON FUNCTION
+  public.ensure_study_routine_weekly_plan(BOOLEAN),
+  public.save_study_routine_preferences(SMALLINT, TEXT, SMALLINT, TEXT, BOOLEAN, BOOLEAN),
+  public.create_study_routine_session(SMALLINT, TEXT, TEXT, JSONB, BOOLEAN),
+  public.update_study_routine_session_status(UUID, TEXT),
+  public.replace_study_routine_session_activity(UUID, UUID, UUID, TEXT, TEXT, TEXT, TEXT, TEXT, SMALLINT),
+  public.complete_study_routine_session(UUID, UUID[], TEXT, UUID)
+FROM authenticated;
+```
+
+- **Restauração das permissões previstas pela migration `053`:** quando o incidente operacional estiver resolvido, restaurar os privilégios exatos da migration para `authenticated` e `service_role`:
+
+```sql
+GRANT EXECUTE ON FUNCTION
+  public.ensure_study_routine_weekly_plan(BOOLEAN),
+  public.save_study_routine_preferences(SMALLINT, TEXT, SMALLINT, TEXT, BOOLEAN, BOOLEAN),
+  public.create_study_routine_session(SMALLINT, TEXT, TEXT, JSONB, BOOLEAN),
+  public.update_study_routine_session_status(UUID, TEXT),
+  public.replace_study_routine_session_activity(UUID, UUID, UUID, TEXT, TEXT, TEXT, TEXT, TEXT, SMALLINT),
+  public.complete_study_routine_session(UUID, UUID[], TEXT, UUID)
+TO authenticated, service_role;
+```
 
 ---
 
@@ -109,7 +123,7 @@ Todas as checagens abaixo foram executadas após a última edição da entrega n
 
 | Verificação | Resultado observado | Escopo e observações |
 | --- | --- | --- |
-| `npm.cmd run test:gamification` | 31/31 aprovados, 0 falhas, 0 ignorados | `gamification-calendar.test.mjs`, `gamification-session.test.mjs` (inclui `optionsByBudget` dinâmico), `gamification-ui.test.mjs` e `gamification-postgres.test.mjs` (PGlite + PostgreSQL 18.7 multi-conexão) |
+| `npm.cmd run test:gamification` | 33/33 aprovados, 0 falhas, 0 ignorados | `gamification-calendar.test.mjs`, `gamification-session.test.mjs` (inclui isolamento em memória do fallback sem mutações Supabase), `gamification-ui.test.mjs` e `gamification-postgres.test.mjs` (PGlite + PostgreSQL 18 multi-conexão + execução real dos blocos `REVOKE`/`GRANT`) |
 | `npm.cmd run test:content` | 44/44 aprovados, 0 falhas, 0 ignorados | Contrato editorial e importação preservados |
 | `npm.cmd run test:api-auth` | 3/3 aprovados, 0 falhas, 0 ignorados | Autenticação admin |
 | `npm.cmd run test:auth` | 9/9 aprovados, 0 falhas, 0 ignorados | OAuth Google e guardas |
@@ -117,12 +131,12 @@ Todas as checagens abaixo foram executadas após a última edição da entrega n
 | `npm.cmd run test:highlights` | 9/9 aprovados, 0 falhas, 0 ignorados | Realces e same-origin |
 | `npm.cmd run test:payments` | 14/14 aprovados, 0 falhas, 0 ignorados | Webhooks e cancelamento |
 | Demais 14 suítes em `tests/*.test.mjs` | 37/37 aprovados, 0 falhas, 0 ignorados | `content-import-governance`, `dashboard-navigation-a11y`, `dashboard-preferences-ux`, `gateway-rules`, `import-route-security`, `markdown-mermaid`, `mermaid-render-queue`, `mermaid-transition-labels`, `note-images`, `payment-logging`, `return-paths`, `security-headers`, `user-start-page`, `webhook-body-limit` |
-| Varredura estática de sinks inseguros e `service_role` | Limpa | Módulos `src/lib/gamification/*`, `src/app/api/study-routine/*`, `src/components/gamification/*` |
+| Varredura estática / contratos em `gamification-ui.test.mjs` | Aprovada | Módulos `src/lib/gamification/*`, `src/app/api/study-routine/*`, `src/components/gamification/*` sem sinks inseguros ou escrita remota em fallback |
 | `npx.cmd eslint src scripts tests` | Exit 0 (0 erros, 1 warning preexistente) | Warning preexistente em `scripts/content-admin.mjs:266:31` |
 | `npx.cmd tsc --noEmit` | Exit 0 | Tipagem global sem erros |
 | `npm.cmd run build -- --webpack` | Exit 0 | Build de produção concluído, `27/27` páginas estáticas e rota `ƒ /api/study-routine` |
 | `node --check scripts/test-rls-two-users.mjs` | Exit 0 | Sintaxe validada; execução contra Supabase remoto pendente da aplicação da `053` |
-| Inspeção em navegador (`http://127.0.0.1:3000`) | Parcial (rotas públicas e guarda 401 OK; rotas autenticadas bloqueadas por OAuth) | `/resumos/dashboard` redirecionou para `/resumos/login` (desktop `1280x800` e mobile `360x780` sem overflow; Tab no teclado alcançou logo e botão Google); `/resumos` e `/resumos/landing` sem overflow; `GET /resumos/api/study-routine` sem sessão retornou HTTP 401 |
+| Inspeção em navegador (`http://127.0.0.1:3000`) | Parcial / Bloqueada para rotas autenticadas (`AUTH_REQUIRED`) | Nova checagem em `http://127.0.0.1:3000/resumos/dashboard` redirecionou para `/resumos/login` (HTTP 200); sem sessão Google OAuth ativa, os fluxos autenticados não foram executados |
 
 ### Pendente de ambiente remoto e inspeção manual autenticada
 

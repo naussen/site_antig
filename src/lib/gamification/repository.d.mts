@@ -50,3 +50,14 @@ export function createSupabaseRoutineRepository(supabase: {
   from: (relation: string) => unknown;
   rpc: (fn: string, args?: Record<string, unknown>) => unknown;
 }): RoutineRepository;
+
+export function getDevFallbackCompletedUnitIds(userId: string): Set<string> | null;
+
+export function mergeDevFallbackCompletedUnitIds(
+  baseCompletedIds: Iterable<string>,
+  userId: string,
+): Set<string>;
+
+export function resetDevFallbackStore(userId?: string): void;
+
+export function createDevFallbackRepository(): RoutineRepository;

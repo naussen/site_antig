@@ -19,33 +19,32 @@ import {
   summarizeWeeklyProgress,
 } from "./calendar.mjs";
 import {
-  RoutineDomainError,
   buildStudyRecommendation,
   createRoutineService,
 } from "./session.mjs";
 import type {
-  RoutineRepository,
   RoutineSnapshot,
   RoutineTopicInput,
   StudyRoutinePreferencesRecord,
-  StudyRoutineSessionRecord,
-  StudyRoutineWeeklyPlanRecord,
 } from "./session.d.mts";
 import {
   RoutineSchemaUnavailableError,
+  createDevFallbackRepository,
   createSupabaseRoutineRepository,
   getRoutineErrorLike,
   isRoutineSchemaError,
   logRoutineServerError,
-  normalizeBudgetValue,
+  mergeDevFallbackCompletedUnitIds,
   throwMappedDatabaseError,
 } from "./repository.mjs";
 
 export {
   RoutineSchemaUnavailableError,
+  createDevFallbackRepository,
   createSupabaseRoutineRepository,
   isRoutineSchemaError,
   logRoutineServerError,
+  mergeDevFallbackCompletedUnitIds,
 };
 
 type SupabaseServerClient = Awaited<ReturnType<typeof createClient>>;
@@ -64,6 +63,7 @@ export interface DashboardRoutineTopicOption {
 export interface DashboardRoutineState {
   operationalEnabled: boolean;
   persistenceAvailable: boolean;
+  demoFallbackActive: boolean;
   snapshot: RoutineSnapshot | null;
   topicOptions: DashboardRoutineTopicOption[];
 }
@@ -71,6 +71,7 @@ export interface DashboardRoutineState {
 export interface StudyTopicRoutineState {
   operationalEnabled: boolean;
   persistenceAvailable: boolean;
+  demoFallbackActive: boolean;
   snapshot: RoutineSnapshot | null;
 }
 
@@ -137,18 +138,6 @@ export async function getApiContentAccess(): Promise<
   return { ok: true, supabase, user };
 }
 
-const devFallbackGlobal = globalThis as typeof globalThis & {
-  __studyRoutineDevFallbackStore?: Map<
-    string,
-    {
-      preferences: StudyRoutinePreferencesRecord | null;
-      weeklyPlans: StudyRoutineWeeklyPlanRecord[];
-      sessions: StudyRoutineSessionRecord[];
-      completedContentUnitIds: Set<string>;
-    }
-  >;
-};
-
 export function isExplicitDevFallbackAllowed(): boolean {
   return (
     process.env.NODE_ENV !== "production"
@@ -156,242 +145,12 @@ export function isExplicitDevFallbackAllowed(): boolean {
   );
 }
 
-function getDevFallbackCompletedUnitIds(userId: string): Set<string> | null {
-  return devFallbackGlobal.__studyRoutineDevFallbackStore?.get(userId)?.completedContentUnitIds ?? null;
-}
-
-function createDevFallbackRepository(supabase?: SupabaseServerClient): RoutineRepository {
-  if (!devFallbackGlobal.__studyRoutineDevFallbackStore) {
-    devFallbackGlobal.__studyRoutineDevFallbackStore = new Map();
-  }
-  const store = devFallbackGlobal.__studyRoutineDevFallbackStore;
-
-  const ensureUserStore = (userId: string) => {
-    let entry = store.get(userId);
-    if (!entry) {
-      entry = {
-        preferences: null,
-        weeklyPlans: [],
-        sessions: [],
-        completedContentUnitIds: new Set<string>(),
-      };
-      store.set(userId, entry);
-    } else if (!entry.completedContentUnitIds) {
-      entry.completedContentUnitIds = new Set<string>();
-    }
-    return entry;
-  };
-
-  return {
-    async getPreferences(userId) {
-      return ensureUserStore(userId).preferences;
-    },
-    async upsertPreferences(userId, record) {
-      const entry = ensureUserStore(userId);
-      const next: StudyRoutinePreferencesRecord = {
-        user_id: userId,
-        target_days: Number(record.target_days ?? DEFAULT_TARGET_DAYS),
-        timezone_iana: String(record.timezone_iana ?? DEFAULT_TIMEZONE_IANA),
-        default_budget_minutes: normalizeBudgetValue(record.default_budget_minutes),
-        preferred_discipline:
-          typeof record.preferred_discipline === "string" ? record.preferred_discipline : null,
-        hide_gamification: Boolean(record.hide_gamification),
-        pending_target_days:
-          typeof record.pending_target_days === "number" ? record.pending_target_days : null,
-        pending_timezone_iana:
-          typeof record.pending_timezone_iana === "string" ? record.pending_timezone_iana : null,
-        pending_effective_week_start:
-          typeof record.pending_effective_week_start === "string"
-            ? record.pending_effective_week_start
-            : null,
-        onboarding_completed_at:
-          typeof record.onboarding_completed_at === "string"
-            ? record.onboarding_completed_at
-            : null,
-      };
-      entry.preferences = next;
-      return next;
-    },
-    async listWeeklyPlans(userId) {
-      return ensureUserStore(userId).weeklyPlans.slice();
-    },
-    async createWeeklyPlan(userId, plan) {
-      const entry = ensureUserStore(userId);
-      const existing = entry.weeklyPlans.find(
-        (item) => item.week_start_date === plan.week_start_date,
-      );
-      if (existing) return existing;
-      const created: StudyRoutineWeeklyPlanRecord = {
-        id: crypto.randomUUID(),
-        user_id: userId,
-        week_start_date: String(plan.week_start_date),
-        week_end_date: String(plan.week_end_date),
-        target_days: Number(plan.target_days ?? DEFAULT_TARGET_DAYS),
-        timezone_iana: String(plan.timezone_iana ?? DEFAULT_TIMEZONE_IANA),
-        is_partial_first_week: Boolean(plan.is_partial_first_week),
-      };
-      entry.weeklyPlans.unshift(created);
-      return created;
-    },
-    async listSessionsForWeek(userId, weekStartDate, weekEndDate) {
-      return ensureUserStore(userId).sessions.filter(
-        (session) =>
-          session.status === "completed"
-          && session.completed_local_date !== null
-          && session.completed_local_date >= weekStartDate
-          && session.completed_local_date <= weekEndDate,
-      );
-    },
-    async listRecentSessions(userId, limit) {
-      return ensureUserStore(userId).sessions.slice(0, limit);
-    },
-    async findActiveSession(userId) {
-      return (
-        ensureUserStore(userId).sessions.find(
-          (session) =>
-            session.status === "planned"
-            || session.status === "in_progress"
-            || session.status === "interrupted",
-        ) ?? null
-      );
-    },
-    async findSessionByIdempotencyKey(userId, key) {
-      return (
-        ensureUserStore(userId).sessions.find((session) => session.idempotency_key === key)
-        ?? null
-      );
-    },
-    async findSessionByCompletionKey(userId, key) {
-      return (
-        ensureUserStore(userId).sessions.find(
-          (session) => session.completion_idempotency_key === key,
-        ) ?? null
-      );
-    },
-    async getSessionById(userId, sessionId) {
-      return ensureUserStore(userId).sessions.find((session) => session.id === sessionId) ?? null;
-    },
-    async createSessionWithActivities(userId, session, activities) {
-      const entry = ensureUserStore(userId);
-      const sessionId = crypto.randomUUID();
-      const created: StudyRoutineSessionRecord = {
-        id: sessionId,
-        user_id: userId,
-        weekly_plan_id: String(session.weekly_plan_id),
-        status: (session.status as StudyRoutineSessionRecord["status"]) ?? "in_progress",
-        budget_minutes: normalizeBudgetValue(session.budget_minutes),
-        estimated_minutes: Number(session.estimated_minutes ?? 10),
-        selection_mode: (session.selection_mode as StudyRoutineSessionRecord["selection_mode"]) ?? "recommended",
-        idempotency_key: String(session.idempotency_key),
-        completion_idempotency_key: null,
-        started_at: String(session.started_at),
-        last_activity_at: String(session.last_activity_at),
-        completed_at: null,
-        completed_local_date: null,
-        completed_week_start_date: null,
-        completed_timezone_iana: null,
-        activities: activities.map((activity) => ({
-          id: crypto.randomUUID(),
-          session_id: sessionId,
-          user_id: userId,
-          order_index: Number(activity.order_index ?? 0),
-          activity_type: "summary",
-          status: "pending",
-          topic_id: typeof activity.topic_id === "string" ? activity.topic_id : null,
-          topic_title: String(activity.topic_title),
-          discipline: String(activity.discipline),
-          section_id: typeof activity.section_id === "string" ? activity.section_id : null,
-          content_unit_id:
-            typeof activity.content_unit_id === "string" ? activity.content_unit_id : null,
-          activity_title: String(activity.activity_title),
-          estimated_minutes: Number(activity.estimated_minutes ?? 5),
-          evidence_kind: "self_declared",
-          completed_at: null,
-        })),
-      };
-      entry.sessions.unshift(created);
-      return created;
-    },
-    async updateSession(userId, sessionId, patch) {
-      const target = await this.getSessionById(userId, sessionId);
-      if (!target) throw new RoutineDomainError("Sessão não encontrada.", 404, "session_not_found");
-      Object.assign(target, patch);
-      return target;
-    },
-    async updateSessionActivity(userId, sessionId, activityId, patch) {
-      const target = await this.getSessionById(userId, sessionId);
-      const activity = target?.activities.find((item) => item.id === activityId);
-      if (!activity) throw new RoutineDomainError("Atividade não encontrada.", 404, "activity_not_found");
-      Object.assign(activity, patch);
-      return activity;
-    },
-    async completeSessionAtomically({
-      userId,
-      sessionId,
-      weeklyPlanId,
-      completedActivityIds,
-      completionIdempotencyKey,
-      completedAt,
-      completedLocalDate,
-      completedWeekStartDate,
-      completedTimezoneIana,
-    }) {
-      const target = await this.getSessionById(userId, sessionId);
-      if (!target) throw new RoutineDomainError("Sessão não encontrada.", 404, "session_not_found");
-      if (target.status === "completed") return target;
-      const completedSet = new Set(completedActivityIds);
-      for (const activity of target.activities) {
-        if (completedSet.has(activity.id)) {
-          activity.status = "completed";
-          activity.completed_at = completedAt;
-        }
-      }
-      target.status = "completed";
-      target.weekly_plan_id = weeklyPlanId ?? target.weekly_plan_id;
-      target.completion_idempotency_key = completionIdempotencyKey;
-      target.completed_at = completedAt;
-      target.completed_local_date = completedLocalDate;
-      target.completed_week_start_date = completedWeekStartDate;
-      target.completed_timezone_iana = completedTimezoneIana;
-      target.last_activity_at = completedAt;
-      return target;
-    },
-    async markLegacyProgressCompleted(userId, items) {
-      const entry = ensureUserStore(userId);
-      const validItems = items.filter(
-        (item) => Boolean(item.content_unit_id && item.section_id),
-      );
-      for (const item of validItems) {
-        entry.completedContentUnitIds.add(item.content_unit_id);
-      }
-
-      if (!supabase || validItems.length === 0) return;
-
-      const updatedAt = new Date().toISOString();
-      try {
-        await supabase.from("user_progress").upsert(
-          validItems.map((item) => ({
-            user_id: userId,
-            section_id: item.section_id,
-            content_unit_id: item.content_unit_id,
-            completed: true,
-            updated_at: updatedAt,
-          })),
-          { onConflict: "user_id,content_unit_id" },
-        );
-      } catch {
-        // Em fallback dev, o registro em memória garante continuidade mesmo se user_progress falhar.
-      }
-    },
-  };
-}
-
 export function createRoutineServiceForSupabase(supabase: SupabaseServerClient) {
   return createRoutineService(createSupabaseRoutineRepository(supabase));
 }
 
-export function createRoutineServiceForDevFallback(supabase?: SupabaseServerClient) {
-  return createRoutineService(createDevFallbackRepository(supabase));
+export function createRoutineServiceForDevFallback() {
+  return createRoutineService(createDevFallbackRepository());
 }
 
 export function sortRoutineTopics(topics: RoutineTopicInput[]): RoutineTopicInput[] {
@@ -500,12 +259,7 @@ export async function loadUserCompletedContentUnitIds(
   }
 
   if (isExplicitDevFallbackAllowed()) {
-    const devCompleted = getDevFallbackCompletedUnitIds(userId);
-    if (devCompleted) {
-      for (const contentUnitId of devCompleted) {
-        mergedIds.add(contentUnitId);
-      }
-    }
+    return mergeDevFallbackCompletedUnitIds(mergedIds, userId);
   }
 
   return mergedIds;
@@ -657,6 +411,7 @@ export async function loadDashboardRoutineState(input: {
     return {
       operationalEnabled: false,
       persistenceAvailable: false,
+      demoFallbackActive: false,
       snapshot: null,
       topicOptions: [],
     };
@@ -685,21 +440,19 @@ export async function loadDashboardRoutineState(input: {
     return {
       operationalEnabled: true,
       persistenceAvailable: true,
+      demoFallbackActive: false,
       snapshot,
       topicOptions,
     };
   } catch (error) {
     if (error instanceof RoutineSchemaUnavailableError) {
       if (isExplicitDevFallbackAllowed()) {
-        const mergedCompleted = new Set(input.completedContentUnitIds);
-        const devCompleted = getDevFallbackCompletedUnitIds(input.userId);
-        if (devCompleted) {
-          for (const contentUnitId of devCompleted) {
-            mergedCompleted.add(contentUnitId);
-          }
-        }
+        const mergedCompleted = mergeDevFallbackCompletedUnitIds(
+          input.completedContentUnitIds,
+          input.userId,
+        );
 
-        const devSnapshot = await createRoutineServiceForDevFallback(input.supabase).getSnapshot({
+        const devSnapshot = await createRoutineServiceForDevFallback().getSnapshot({
           userId: input.userId,
           topics: orderedTopics,
           completedContentUnitIds: mergedCompleted,
@@ -715,6 +468,7 @@ export async function loadDashboardRoutineState(input: {
         return {
           operationalEnabled: true,
           persistenceAvailable: true,
+          demoFallbackActive: true,
           snapshot: devSnapshot,
           topicOptions,
         };
@@ -723,6 +477,7 @@ export async function loadDashboardRoutineState(input: {
       return {
         operationalEnabled: true,
         persistenceAvailable: false,
+        demoFallbackActive: false,
         snapshot: buildReadOnlyFallbackSnapshot(input.userId),
         topicOptions,
       };
@@ -732,6 +487,7 @@ export async function loadDashboardRoutineState(input: {
     return {
       operationalEnabled: true,
       persistenceAvailable: false,
+      demoFallbackActive: false,
       snapshot: buildReadOnlyFallbackSnapshot(input.userId),
       topicOptions,
     };
@@ -741,6 +497,7 @@ export async function loadDashboardRoutineState(input: {
 export interface SettingsRoutineStatus {
   operationalEnabled: boolean;
   persistenceAvailable: boolean;
+  demoFallbackActive: boolean;
   hideGamification: boolean;
   needsOnboarding: boolean;
   targetDays: number;
@@ -754,6 +511,7 @@ export async function loadSettingsRoutineStatus(input: {
   const baseStatus: SettingsRoutineStatus = {
     operationalEnabled: isGamificationOperationalEnabled(),
     persistenceAvailable: true,
+    demoFallbackActive: false,
     hideGamification: false,
     needsOnboarding: true,
     targetDays: DEFAULT_TARGET_DAYS,
@@ -765,30 +523,35 @@ export async function loadSettingsRoutineStatus(input: {
     return baseStatus;
   }
 
-  const mapPrefsToStatus = (prefs: StudyRoutinePreferencesRecord | null): SettingsRoutineStatus =>
+  const mapPrefsToStatus = (
+    prefs: StudyRoutinePreferencesRecord | null,
+    demoFallbackActive: boolean,
+  ): SettingsRoutineStatus =>
     prefs
       ? {
           operationalEnabled: true,
           persistenceAvailable: true,
+          demoFallbackActive,
           hideGamification: prefs.hide_gamification,
           needsOnboarding: !prefs.onboarding_completed_at,
           targetDays: prefs.target_days,
           timezoneIana: prefs.timezone_iana,
         }
-      : baseStatus;
+      : {
+          ...baseStatus,
+          demoFallbackActive,
+        };
 
   try {
     const prefs = await createSupabaseRoutineRepository(input.supabase).getPreferences(
       input.userId,
     );
-    return mapPrefsToStatus(prefs);
+    return mapPrefsToStatus(prefs, false);
   } catch (error) {
     const schemaMissing = isRoutineSchemaError(error);
     if (schemaMissing && isExplicitDevFallbackAllowed()) {
-      const devPrefs = await createDevFallbackRepository(input.supabase).getPreferences(
-        input.userId,
-      );
-      return mapPrefsToStatus(devPrefs);
+      const devPrefs = await createDevFallbackRepository().getPreferences(input.userId);
+      return mapPrefsToStatus(devPrefs, true);
     }
 
     logRoutineServerError(
@@ -813,6 +576,7 @@ export async function loadStudyTopicRoutineState(input: {
     return {
       operationalEnabled: false,
       persistenceAvailable: false,
+      demoFallbackActive: false,
       snapshot: null,
     };
   }
@@ -859,20 +623,26 @@ export async function loadStudyTopicRoutineState(input: {
     return {
       operationalEnabled: true,
       persistenceAvailable: true,
+      demoFallbackActive: false,
       snapshot,
     };
   } catch (error) {
     if (error instanceof RoutineSchemaUnavailableError) {
       if (isExplicitDevFallbackAllowed()) {
-        const devSnapshot = await createRoutineServiceForDevFallback(input.supabase).getSnapshot({
+        const mergedCompleted = mergeDevFallbackCompletedUnitIds(
+          input.completedContentUnitIds,
+          input.userId,
+        );
+        const devSnapshot = await createRoutineServiceForDevFallback().getSnapshot({
           userId: input.userId,
           topics: [input.topic],
-          completedContentUnitIds: input.completedContentUnitIds,
+          completedContentUnitIds: mergedCompleted,
           visibleDisciplines: null,
         });
         return {
           operationalEnabled: true,
           persistenceAvailable: true,
+          demoFallbackActive: true,
           snapshot: devSnapshot,
         };
       }
@@ -880,6 +650,7 @@ export async function loadStudyTopicRoutineState(input: {
       return {
         operationalEnabled: true,
         persistenceAvailable: false,
+        demoFallbackActive: false,
         snapshot: buildReadOnlyFallbackSnapshot(input.userId),
       };
     }
@@ -888,6 +659,7 @@ export async function loadStudyTopicRoutineState(input: {
     return {
       operationalEnabled: true,
       persistenceAvailable: false,
+      demoFallbackActive: false,
       snapshot: buildReadOnlyFallbackSnapshot(input.userId),
     };
   }

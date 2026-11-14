@@ -114,6 +114,8 @@ test("páginas de Dashboard, Estudo e Configurações integram a rotina e mantê
   const studyClient = readWorkspaceFile("src/app/(study)/[topicId]/study-page-client.tsx");
   const settings = readWorkspaceFile("src/app/dashboard/configuracoes/page.tsx");
   const server = readWorkspaceFile("src/lib/gamification/server.ts");
+  const route = readWorkspaceFile("src/app/api/study-routine/route.ts");
+  const repository = readWorkspaceFile("src/lib/gamification/repository.mjs");
   const todayCard = readWorkspaceFile("src/components/gamification/today-study-card.tsx");
   const sessionBar = readWorkspaceFile("src/components/gamification/study-session-bar.tsx");
 
@@ -130,9 +132,30 @@ test("páginas de Dashboard, Estudo e Configurações integram a rotina e mantê
     "Fallback em memória nunca pode atuar em produção",
   );
   assert.ok(
-    server.includes("getDevFallbackCompletedUnitIds") &&
+    server.includes("mergeDevFallbackCompletedUnitIds") &&
+      server.includes("createDevFallbackRepository") &&
       server.includes("hydrateDashboardRecommendationIfNeeded"),
-    "Fallback dev deve hidratar recomendação e refletir conclusão em memória/progresso",
+    "Fallback dev deve permanecer isolado em memória e hidratar recomendação",
+  );
+  assert.equal(
+    server.includes("user_progress") && server.includes(".upsert("),
+    false,
+    "server.ts não deve executar upsert em user_progress no fallback dev",
+  );
+  assert.equal(
+    repository.includes("user_progress") && repository.includes(".upsert("),
+    false,
+    "repository.mjs não deve executar upsert direto em user_progress no fallback dev",
+  );
+  assert.ok(
+    server.includes("demoFallbackActive") && route.includes("demoFallbackActive"),
+    "Estado e API da rotina devem sinalizar demoFallbackActive explicitamente",
+  );
+  assert.ok(
+    todayCard.includes("Modo de demonstração local") &&
+      sessionBar.includes("Modo de demonstração local") &&
+      settings.includes("Modo de demonstração local"),
+    "UI deve exibir aviso discreto quando o modo de demonstração em memória estiver ativo",
   );
   assert.ok(
     todayCard.includes("optionsByBudget?.[selectedBudget]"),

@@ -42,6 +42,7 @@ import type { DashboardRoutineTopicOption } from "@/lib/gamification/server";
 interface TodayStudyCardProps {
   initialSnapshot: RoutineSnapshot;
   persistenceAvailable: boolean;
+  demoFallbackActive?: boolean;
   topicOptions: DashboardRoutineTopicOption[];
   availableDisciplines: string[];
 }
@@ -73,6 +74,7 @@ function getSessionStatusLabel(status: string): string {
 export function TodayStudyCard({
   initialSnapshot,
   persistenceAvailable,
+  demoFallbackActive = false,
   topicOptions,
   availableDisciplines,
 }: TodayStudyCardProps) {
@@ -81,8 +83,16 @@ export function TodayStudyCard({
     source: RoutineSnapshot;
     current: RoutineSnapshot;
   } | null>(null);
+  const [demoFallbackOverride, setDemoFallbackOverride] = useState<{
+    source: RoutineSnapshot;
+    value: boolean;
+  } | null>(null);
   const snapshot =
     snapshotOverride?.source === initialSnapshot ? snapshotOverride.current : initialSnapshot;
+  const isDemoFallback =
+    demoFallbackOverride?.source === initialSnapshot
+      ? demoFallbackOverride.value
+      : demoFallbackActive;
 
   const [budgetOverride, setBudgetOverride] = useState<{
     source: RoutineSnapshot;
@@ -188,6 +198,7 @@ export function TodayStudyCard({
 
     const data = (await response.json().catch(() => null)) as {
       error?: string;
+      demoFallbackActive?: boolean;
       snapshot?: RoutineSnapshot;
       session?: RoutineSnapshot["activeSession"];
       updatePlan?: {
@@ -202,6 +213,9 @@ export function TodayStudyCard({
       );
     }
 
+    if (typeof data.demoFallbackActive === "boolean") {
+      setDemoFallbackOverride({ source: initialSnapshot, value: data.demoFallbackActive });
+    }
     if (data.snapshot) {
       applySnapshotState(data.snapshot);
     }
@@ -431,11 +445,19 @@ export function TodayStudyCard({
         aria-label="Rotina semanal oculta"
         className="mt-6 flex flex-col justify-between gap-3 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] px-5 py-4 sm:flex-row sm:items-center"
       >
-        <div className="flex items-center gap-3">
-          <EyeOff size={18} className="shrink-0 text-[var(--text-muted)]" aria-hidden="true" />
-          <p className="text-sm text-[var(--text-secondary)]">
-            Os estímulos da rotina semanal estão ocultos. Seu histórico de estudos permanece salvo.
-          </p>
+        <div className="flex items-start gap-3">
+          <EyeOff size={18} className="mt-0.5 shrink-0 text-[var(--text-muted)]" aria-hidden="true" />
+          <div>
+            <p className="text-sm text-[var(--text-secondary)]">
+              Os estímulos da rotina semanal estão ocultos. Seu histórico de estudos permanece salvo.
+            </p>
+            {isDemoFallback && (
+              <p role="status" className="mt-1 text-xs text-[var(--text-muted)]">
+                Modo de demonstração local: os dados desta rotina ficam apenas em memória temporária
+                e não comprovam persistência no banco.
+              </p>
+            )}
+          </div>
         </div>
         <button
           type="button"
@@ -561,6 +583,17 @@ export function TodayStudyCard({
             Você pode navegar e estudar normalmente pelo acervo abaixo.
           </p>
         </div>
+      )}
+
+      {/* Aviso discreto do modo de demonstração em memória */}
+      {persistenceAvailable && isDemoFallback && (
+        <p
+          role="status"
+          className="mt-4 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] px-3.5 py-2 text-xs text-[var(--text-secondary)]"
+        >
+          Modo de demonstração local: os dados desta rotina ficam apenas em memória temporária e não
+          comprovam persistência no banco.
+        </p>
       )}
 
       {/* Feedback de sucesso ou erro com região live */}

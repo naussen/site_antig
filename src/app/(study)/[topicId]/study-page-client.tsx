@@ -217,6 +217,7 @@ export function StudyPageClient({
             <StudySessionBar
               initialSnapshot={routineState.snapshot}
               persistenceAvailable={routineState.persistenceAvailable}
+              demoFallbackActive={routineState.demoFallbackActive}
               topicId={topic.topic_id}
               topicTitle={topic.title}
               topicDiscipline={topic.discipline || "Geral"}

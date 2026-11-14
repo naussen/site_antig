@@ -187,6 +187,7 @@ export async function GET() {
     return jsonNoStore({
       operationalEnabled: state.operationalEnabled,
       persistenceAvailable: state.persistenceAvailable,
+      demoFallbackActive: state.demoFallbackActive,
       snapshot: state.snapshot,
     });
   } catch (error) {
@@ -233,8 +234,9 @@ export async function POST(request: Request) {
   const input = parsed.data;
 
   const executeWithService = async (useDevFallback: boolean) => {
+    const demoFallbackActive = useDevFallback;
     const service = useDevFallback
-      ? createRoutineServiceForDevFallback(access.supabase)
+      ? createRoutineServiceForDevFallback()
       : createRoutineServiceForSupabase(access.supabase);
 
     const [topics, completedContentUnitIds, visibleDisciplines] = await Promise.all([
@@ -286,6 +288,7 @@ export async function POST(request: Request) {
 
       return jsonNoStore({
         persistenceAvailable: true,
+        demoFallbackActive,
         updatePlan: result.updatePlan,
         snapshot,
       });
@@ -350,6 +353,7 @@ export async function POST(request: Request) {
 
       return jsonNoStore({
         persistenceAvailable: true,
+        demoFallbackActive,
         session: started.session,
         resumed: started.resumed,
         idempotent: started.idempotent,
@@ -388,6 +392,7 @@ export async function POST(request: Request) {
 
       return jsonNoStore({
         persistenceAvailable: true,
+        demoFallbackActive,
         session: updatedSession,
         snapshot,
       });
@@ -425,6 +430,7 @@ export async function POST(request: Request) {
 
       return jsonNoStore({
         persistenceAvailable: true,
+        demoFallbackActive,
         session: updatedSession,
         snapshot,
       });
@@ -466,6 +472,7 @@ export async function POST(request: Request) {
 
     return jsonNoStore({
       persistenceAvailable: true,
+      demoFallbackActive,
       session: completed.session,
       idempotent: completed.idempotent,
       weeklyProgress: completed.weeklyProgress,

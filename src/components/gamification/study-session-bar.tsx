@@ -26,6 +26,7 @@ import type {
 interface StudySessionBarProps {
   initialSnapshot: RoutineSnapshot;
   persistenceAvailable: boolean;
+  demoFallbackActive?: boolean;
   topicId: string;
   topicTitle: string;
   topicDiscipline: string;
@@ -47,6 +48,7 @@ function createClientKey(): string {
 export function StudySessionBar({
   initialSnapshot,
   persistenceAvailable,
+  demoFallbackActive = false,
   topicId,
   topicTitle,
   topicDiscipline,
@@ -58,8 +60,16 @@ export function StudySessionBar({
     source: RoutineSnapshot;
     current: RoutineSnapshot;
   } | null>(null);
+  const [demoFallbackOverride, setDemoFallbackOverride] = useState<{
+    source: RoutineSnapshot;
+    value: boolean;
+  } | null>(null);
   const snapshot =
     snapshotOverride?.source === initialSnapshot ? snapshotOverride.current : initialSnapshot;
+  const isDemoFallback =
+    demoFallbackOverride?.source === initialSnapshot
+      ? demoFallbackOverride.value
+      : demoFallbackActive;
 
   const [budgetOverride, setBudgetOverride] = useState<{
     source: RoutineSnapshot;
@@ -128,6 +138,7 @@ export function StudySessionBar({
 
     const data = (await response.json().catch(() => null)) as {
       error?: string;
+      demoFallbackActive?: boolean;
       snapshot?: RoutineSnapshot;
       session?: RoutineSnapshot["activeSession"];
       weeklyProgress?: WeeklyProgressSummary;
@@ -139,6 +150,9 @@ export function StudySessionBar({
       );
     }
 
+    if (typeof data.demoFallbackActive === "boolean") {
+      setDemoFallbackOverride({ source: initialSnapshot, value: data.demoFallbackActive });
+    }
     if (data.snapshot) {
       setSnapshotOverride({ source: initialSnapshot, current: data.snapshot });
       setBudgetOverride(null);
@@ -334,6 +348,15 @@ export function StudySessionBar({
       aria-label="Sessão guiada da rotina semanal"
       className="mb-6 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-4 shadow-[var(--shadow)] sm:p-5"
     >
+      {persistenceAvailable && isDemoFallback && (
+        <p
+          role="status"
+          className="mb-3 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] px-3 py-2 text-xs text-[var(--text-secondary)]"
+        >
+          Modo de demonstração local: os dados desta rotina ficam apenas em memória temporária e não
+          comprovam persistência no banco.
+        </p>
+      )}
       {/* Resumo discreto pós-conclusão */}
       {completionSummary ? (
         <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">

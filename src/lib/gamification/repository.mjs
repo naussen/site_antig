@@ -669,3 +669,287 @@ export function createSupabaseRoutineRepository(supabase) {
     },
   };
 }
+
+const DEV_FALLBACK_STORE_KEY = "__studyRoutineDevFallbackStore";
+
+/**
+ * @returns {Map<string, {
+ *   preferences: import("./session.d.mts").StudyRoutinePreferencesRecord | null;
+ *   weeklyPlans: import("./session.d.mts").StudyRoutineWeeklyPlanRecord[];
+ *   sessions: import("./session.d.mts").StudyRoutineSessionRecord[];
+ *   completedContentUnitIds: Set<string>;
+ * }>}
+ */
+function getDevFallbackStore() {
+  const host = /** @type {Record<string, unknown>} */ (globalThis);
+  if (!(host[DEV_FALLBACK_STORE_KEY] instanceof Map)) {
+    host[DEV_FALLBACK_STORE_KEY] = new Map();
+  }
+  return /** @type {Map<string, any>} */ (host[DEV_FALLBACK_STORE_KEY]);
+}
+
+/**
+ * @param {string} userId
+ */
+function ensureDevFallbackUserEntry(userId) {
+  const store = getDevFallbackStore();
+  let entry = store.get(userId);
+  if (!entry) {
+    entry = {
+      preferences: null,
+      weeklyPlans: [],
+      sessions: [],
+      completedContentUnitIds: new Set(),
+    };
+    store.set(userId, entry);
+  } else if (!(entry.completedContentUnitIds instanceof Set)) {
+    entry.completedContentUnitIds = new Set();
+  }
+  return entry;
+}
+
+/**
+ * @param {string} userId
+ * @returns {Set<string> | null}
+ */
+export function getDevFallbackCompletedUnitIds(userId) {
+  return getDevFallbackStore().get(userId)?.completedContentUnitIds ?? null;
+}
+
+/**
+ * @param {Iterable<string>} baseCompletedIds
+ * @param {string} userId
+ * @returns {Set<string>}
+ */
+export function mergeDevFallbackCompletedUnitIds(baseCompletedIds, userId) {
+  const merged = new Set(baseCompletedIds);
+  const devCompleted = getDevFallbackCompletedUnitIds(userId);
+  if (devCompleted) {
+    for (const contentUnitId of devCompleted) {
+      merged.add(contentUnitId);
+    }
+  }
+  return merged;
+}
+
+/**
+ * @param {string} [userId]
+ */
+export function resetDevFallbackStore(userId) {
+  const store = getDevFallbackStore();
+  if (typeof userId === "string" && userId.length > 0) {
+    store.delete(userId);
+  } else {
+    store.clear();
+  }
+}
+
+/**
+ * Repositório 100% em memória para demonstração local controlada.
+ * Não realiza leituras ou escritas no Supabase.
+ * @returns {import("./session.d.mts").RoutineRepository}
+ */
+export function createDevFallbackRepository() {
+  const createId = () => globalThis.crypto.randomUUID();
+
+  return {
+    async getPreferences(userId) {
+      return ensureDevFallbackUserEntry(userId).preferences;
+    },
+    async upsertPreferences(userId, record) {
+      const entry = ensureDevFallbackUserEntry(userId);
+      const next = {
+        user_id: userId,
+        target_days: Number(record.target_days ?? DEFAULT_TARGET_DAYS),
+        timezone_iana: String(record.timezone_iana ?? DEFAULT_TIMEZONE_IANA),
+        default_budget_minutes: normalizeBudgetValue(record.default_budget_minutes),
+        preferred_discipline:
+          typeof record.preferred_discipline === "string" ? record.preferred_discipline : null,
+        hide_gamification: Boolean(record.hide_gamification),
+        pending_target_days:
+          typeof record.pending_target_days === "number" ? record.pending_target_days : null,
+        pending_timezone_iana:
+          typeof record.pending_timezone_iana === "string" ? record.pending_timezone_iana : null,
+        pending_effective_week_start:
+          typeof record.pending_effective_week_start === "string"
+            ? record.pending_effective_week_start
+            : null,
+        onboarding_completed_at:
+          typeof record.onboarding_completed_at === "string"
+            ? record.onboarding_completed_at
+            : null,
+      };
+      entry.preferences = next;
+      return next;
+    },
+    async listWeeklyPlans(userId) {
+      return ensureDevFallbackUserEntry(userId).weeklyPlans.slice();
+    },
+    async createWeeklyPlan(userId, plan) {
+      const entry = ensureDevFallbackUserEntry(userId);
+      const existing = entry.weeklyPlans.find(
+        (/** @type {{ week_start_date: string }} */ item) =>
+          item.week_start_date === plan.week_start_date,
+      );
+      if (existing) return existing;
+      const created = {
+        id: createId(),
+        user_id: userId,
+        week_start_date: String(plan.week_start_date),
+        week_end_date: String(plan.week_end_date),
+        target_days: Number(plan.target_days ?? DEFAULT_TARGET_DAYS),
+        timezone_iana: String(plan.timezone_iana ?? DEFAULT_TIMEZONE_IANA),
+        is_partial_first_week: Boolean(plan.is_partial_first_week),
+      };
+      entry.weeklyPlans.unshift(created);
+      return created;
+    },
+    async listSessionsForWeek(userId, weekStartDate, weekEndDate) {
+      return ensureDevFallbackUserEntry(userId).sessions.filter(
+        (/** @type {import("./session.d.mts").StudyRoutineSessionRecord} */ session) =>
+          session.status === "completed"
+          && session.completed_local_date !== null
+          && session.completed_local_date >= weekStartDate
+          && session.completed_local_date <= weekEndDate,
+      );
+    },
+    async listRecentSessions(userId, limit) {
+      return ensureDevFallbackUserEntry(userId).sessions.slice(0, limit);
+    },
+    async findActiveSession(userId) {
+      return (
+        ensureDevFallbackUserEntry(userId).sessions.find(
+          (/** @type {import("./session.d.mts").StudyRoutineSessionRecord} */ session) =>
+            session.status === "planned"
+            || session.status === "in_progress"
+            || session.status === "interrupted",
+        ) ?? null
+      );
+    },
+    async findSessionByIdempotencyKey(userId, key) {
+      return (
+        ensureDevFallbackUserEntry(userId).sessions.find(
+          (/** @type {import("./session.d.mts").StudyRoutineSessionRecord} */ session) =>
+            session.idempotency_key === key,
+        ) ?? null
+      );
+    },
+    async findSessionByCompletionKey(userId, key) {
+      return (
+        ensureDevFallbackUserEntry(userId).sessions.find(
+          (/** @type {import("./session.d.mts").StudyRoutineSessionRecord} */ session) =>
+            session.completion_idempotency_key === key,
+        ) ?? null
+      );
+    },
+    async getSessionById(userId, sessionId) {
+      return (
+        ensureDevFallbackUserEntry(userId).sessions.find(
+          (/** @type {import("./session.d.mts").StudyRoutineSessionRecord} */ session) =>
+            session.id === sessionId,
+        ) ?? null
+      );
+    },
+    async createSessionWithActivities(userId, session, activities) {
+      const entry = ensureDevFallbackUserEntry(userId);
+      const sessionId = createId();
+      /** @type {import("./session.d.mts").StudyRoutineSessionRecord} */
+      const created = {
+        id: sessionId,
+        user_id: userId,
+        weekly_plan_id: String(session.weekly_plan_id),
+        status: /** @type {import("./session.d.mts").StudyRoutineSessionRecord["status"]} */ (
+          session.status ?? "in_progress"
+        ),
+        budget_minutes: normalizeBudgetValue(session.budget_minutes),
+        estimated_minutes: Number(session.estimated_minutes ?? 10),
+        selection_mode: /** @type {import("./session.d.mts").StudyRoutineSessionRecord["selection_mode"]} */ (
+          session.selection_mode ?? "recommended"
+        ),
+        idempotency_key: String(session.idempotency_key),
+        completion_idempotency_key: null,
+        started_at: String(session.started_at),
+        last_activity_at: String(session.last_activity_at),
+        completed_at: null,
+        completed_local_date: null,
+        completed_week_start_date: null,
+        completed_timezone_iana: null,
+        activities: activities.map((activity) => ({
+          id: createId(),
+          session_id: sessionId,
+          user_id: userId,
+          order_index: Number(activity.order_index ?? 0),
+          activity_type: "summary",
+          status: "pending",
+          topic_id: typeof activity.topic_id === "string" ? activity.topic_id : null,
+          topic_title: String(activity.topic_title),
+          discipline: String(activity.discipline),
+          section_id: typeof activity.section_id === "string" ? activity.section_id : null,
+          content_unit_id:
+            typeof activity.content_unit_id === "string" ? activity.content_unit_id : null,
+          activity_title: String(activity.activity_title),
+          estimated_minutes: Number(activity.estimated_minutes ?? 5),
+          evidence_kind: "self_declared",
+          completed_at: null,
+        })),
+      };
+      entry.sessions.unshift(created);
+      return created;
+    },
+    async updateSession(userId, sessionId, patch) {
+      const target = await this.getSessionById(userId, sessionId);
+      if (!target) throw new RoutineDomainError("Sessão não encontrada.", 404, "session_not_found");
+      Object.assign(target, patch);
+      return target;
+    },
+    async updateSessionActivity(userId, sessionId, activityId, patch) {
+      const target = await this.getSessionById(userId, sessionId);
+      const activity = target?.activities.find((item) => item.id === activityId);
+      if (!activity) {
+        throw new RoutineDomainError("Atividade não encontrada.", 404, "activity_not_found");
+      }
+      Object.assign(activity, patch);
+      return activity;
+    },
+    async completeSessionAtomically({
+      userId,
+      sessionId,
+      weeklyPlanId,
+      completedActivityIds,
+      completionIdempotencyKey,
+      completedAt,
+      completedLocalDate,
+      completedWeekStartDate,
+      completedTimezoneIana,
+    }) {
+      const target = await this.getSessionById(userId, sessionId);
+      if (!target) throw new RoutineDomainError("Sessão não encontrada.", 404, "session_not_found");
+      if (target.status === "completed") return target;
+      const completedSet = new Set(completedActivityIds);
+      for (const activity of target.activities) {
+        if (completedSet.has(activity.id)) {
+          activity.status = "completed";
+          activity.completed_at = completedAt;
+        }
+      }
+      target.status = "completed";
+      target.weekly_plan_id = weeklyPlanId ?? target.weekly_plan_id;
+      target.completion_idempotency_key = completionIdempotencyKey;
+      target.completed_at = completedAt;
+      target.completed_local_date = completedLocalDate;
+      target.completed_week_start_date = completedWeekStartDate;
+      target.completed_timezone_iana = completedTimezoneIana;
+      target.last_activity_at = completedAt;
+      return target;
+    },
+    async markLegacyProgressCompleted(userId, items) {
+      const entry = ensureDevFallbackUserEntry(userId);
+      const validItems = items.filter(
+        (item) => Boolean(item.content_unit_id && item.section_id),
+      );
+      for (const item of validItems) {
+        entry.completedContentUnitIds.add(item.content_unit_id);
+      }
+    },
+  };
+}

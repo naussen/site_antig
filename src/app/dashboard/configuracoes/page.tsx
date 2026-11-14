@@ -227,6 +227,12 @@ export default async function DashboardSettingsPage() {
                         ? "Status atual: aguardando configuração inicial no Dashboard."
                         : `Status atual: ativa no Dashboard (${routineStatus.targetDays} dia(s)/semana · fuso ${routineStatus.timezoneIana}).`}
                 </p>
+                {routineStatus.demoFallbackActive && (
+                  <p role="status" className="mt-1.5 text-xs leading-5" style={{ color: "var(--text-muted)" }}>
+                    Modo de demonstração local: os dados desta rotina ficam apenas em memória
+                    temporária e não comprovam persistência no banco.
+                  </p>
+                )}
               </div>
               <Link
                 href="/dashboard#rotina-semanal"

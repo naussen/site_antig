@@ -1848,3 +1848,191 @@ test("PostgreSQL real multi-conexão [P2 #3] & [P2 #1]: contenção real em pg_l
   );
   await assertWestwardTimezoneTransitionInDb(harness, userWestOne, userWestTwo);
 });
+
+test("rollback SQL documentado (REVOKE EXECUTE) e restauração (GRANT EXECUTE) preservam tabelas e dados", async () => {
+  const docContent = fs.readFileSync(
+    path.join(ROOT, "docs", "GAMIFICACAO_IMPLEMENTACAO.md"),
+    "utf8",
+  );
+  const revokeMatch = docContent.match(/```sql\s*(REVOKE EXECUTE ON FUNCTION[\s\S]*?;)\s*```/);
+  const grantMatch = docContent.match(/```sql\s*(GRANT EXECUTE ON FUNCTION[\s\S]*?;)\s*```/);
+
+  assert.ok(revokeMatch, "docs/GAMIFICACAO_IMPLEMENTACAO.md deve conter bloco SQL REVOKE EXECUTE");
+  assert.ok(grantMatch, "docs/GAMIFICACAO_IMPLEMENTACAO.md deve conter bloco SQL GRANT EXECUTE");
+
+  const revokeSql = revokeMatch[1];
+  const grantSql = grantMatch[1];
+
+  assert.ok(
+    revokeSql.includes(
+      "public.replace_study_routine_session_activity(UUID, UUID, UUID, TEXT, TEXT, TEXT, TEXT, TEXT, SMALLINT)",
+    ),
+    "REVOKE deve conter os 9 parâmetros exatos de replace_study_routine_session_activity (5 TEXT)",
+  );
+  assert.ok(
+    grantSql.includes(
+      "public.replace_study_routine_session_activity(UUID, UUID, UUID, TEXT, TEXT, TEXT, TEXT, TEXT, SMALLINT)",
+    ),
+    "GRANT deve conter os 9 parâmetros exatos de replace_study_routine_session_activity (5 TEXT)",
+  );
+
+  const rpcSignatures = [
+    "public.ensure_study_routine_weekly_plan(boolean)",
+    "public.save_study_routine_preferences(smallint, text, smallint, text, boolean, boolean)",
+    "public.create_study_routine_session(smallint, text, text, jsonb, boolean)",
+    "public.update_study_routine_session_status(uuid, text)",
+    "public.replace_study_routine_session_activity(uuid, uuid, uuid, text, text, text, text, text, smallint)",
+    "public.complete_study_routine_session(uuid, uuid[], text, uuid)",
+  ];
+
+  const harness = await createSeededPostgres();
+  try {
+    const clientA = harness.asUser(USER_A, "authenticated");
+    const serviceA = createRoutineService(createSupabaseRoutineRepository(clientA), {
+      now: () => new Date("2026-11-12T15:00:00.000Z"),
+    });
+
+    await serviceA.savePreferences({
+      userId: USER_A,
+      targetDays: 4,
+      timezoneIana: "America/Sao_Paulo",
+      defaultBudgetMinutes: 15,
+      hideGamification: false,
+    });
+    const started = await serviceA.startOrResumeSession({
+      userId: USER_A,
+      topics: makeTopicsFixture(),
+      completedContentUnitIds: new Set(),
+      budgetMinutes: 15,
+      idempotencyKey: "rollback-test-start-1",
+    });
+    const finished = await serviceA.completeSession({
+      userId: USER_A,
+      sessionId: started.session.id,
+      completedActivityIds: [started.session.activities[0].id],
+      completionIdempotencyKey: "rollback-test-complete-1",
+      topics: makeTopicsFixture(),
+    });
+
+    // Baseline de linhas antes do rollback
+    const baseline = await harness.withAdminTx(async (db) => {
+      const counts = await db.query(`
+        SELECT
+          (SELECT COUNT(*)::INT FROM public.user_study_routine_preferences WHERE user_id = $1) AS prefs,
+          (SELECT COUNT(*)::INT FROM public.study_routine_weekly_plans WHERE user_id = $1) AS plans,
+          (SELECT COUNT(*)::INT FROM public.study_routine_sessions WHERE user_id = $1) AS sessions,
+          (SELECT COUNT(*)::INT FROM public.study_routine_session_activities WHERE user_id = $1) AS activities,
+          (SELECT COUNT(*)::INT FROM public.user_progress WHERE user_id = $1 AND completed = true) AS progress
+      `, [USER_A]);
+      return counts.rows[0];
+    });
+    assert.ok(started.session.activities.length >= 1);
+    assert.deepEqual(baseline, {
+      prefs: 1,
+      plans: 1,
+      sessions: 1,
+      activities: started.session.activities.length,
+      progress: 1,
+    });
+
+    // Aplica o bloco exato de REVOKE EXECUTE documentado
+    await harness.withAdminTx((db) => db.query(revokeSql));
+
+    for (const sig of rpcSignatures) {
+      const privRes = await harness.withAdminTx((db) =>
+        db.query("SELECT has_function_privilege('authenticated', $1, 'EXECUTE') AS allowed", [sig]),
+      );
+      assert.equal(privRes.rows[0].allowed, false, `authenticated deve perder EXECUTE em ${sig}`);
+    }
+
+    // Chamadas diretas às 6 RPCs como authenticated devem falhar com 42501
+    const blockedCalls = await Promise.all([
+      clientA.rpc("ensure_study_routine_weekly_plan", { p_create_if_missing: false }),
+      clientA.rpc("save_study_routine_preferences", {
+        p_target_days: 5,
+        p_timezone_iana: null,
+        p_default_budget_minutes: null,
+        p_preferred_discipline: null,
+        p_clear_preferred_discipline: false,
+        p_hide_gamification: null,
+      }),
+      clientA.rpc("create_study_routine_session", {
+        p_budget_minutes: 15,
+        p_selection_mode: "recommended",
+        p_idempotency_key: "blocked-call",
+        p_activities: [],
+        p_replace_active: false,
+      }),
+      clientA.rpc("update_study_routine_session_status", {
+        p_session_id: finished.session.id,
+        p_status: "interrupted",
+      }),
+      clientA.rpc("replace_study_routine_session_activity", {
+        p_session_id: finished.session.id,
+        p_activity_id: started.session.activities[0].id,
+        p_content_unit_id: UNIT_CONST_2,
+        p_topic_id: "const-art5",
+        p_topic_title: "Direitos Fundamentais",
+        p_discipline: "Direito Constitucional",
+        p_section_id: "const-art5-sec-02",
+        p_activity_title: "Substituição",
+        p_estimated_minutes: 5,
+      }),
+      clientA.rpc("complete_study_routine_session", {
+        p_session_id: finished.session.id,
+        p_completed_activity_ids: [started.session.activities[0].id],
+        p_completion_idempotency_key: "blocked-complete",
+        p_weekly_plan_id: null,
+      }),
+    ]);
+
+    for (const [idx, res] of blockedCalls.entries()) {
+      assert.equal(
+        res.error?.code,
+        "42501",
+        `RPC #${idx + 1} (${rpcSignatures[idx]}) deve retornar 42501 após REVOKE`,
+      );
+    }
+
+    // Tabelas e dados existentes permanecem intactos e legíveis via SELECT RLS
+    const afterRevoke = await harness.withAdminTx(async (db) => {
+      const counts = await db.query(`
+        SELECT
+          (SELECT COUNT(*)::INT FROM public.user_study_routine_preferences WHERE user_id = $1) AS prefs,
+          (SELECT COUNT(*)::INT FROM public.study_routine_weekly_plans WHERE user_id = $1) AS plans,
+          (SELECT COUNT(*)::INT FROM public.study_routine_sessions WHERE user_id = $1) AS sessions,
+          (SELECT COUNT(*)::INT FROM public.study_routine_session_activities WHERE user_id = $1) AS activities,
+          (SELECT COUNT(*)::INT FROM public.user_progress WHERE user_id = $1 AND completed = true) AS progress
+      `, [USER_A]);
+      return counts.rows[0];
+    });
+    assert.deepEqual(afterRevoke, baseline);
+
+    const { data: readableSession, error: readSessionError } = await clientA
+      .from("study_routine_sessions")
+      .select("id, status")
+      .eq("id", finished.session.id)
+      .single();
+    assert.equal(readSessionError, null);
+    assert.equal(readableSession?.id, finished.session.id);
+    assert.equal(readableSession?.status, "completed");
+
+    // Executa o bloco documentado de restauração GRANT EXECUTE
+    await harness.withAdminTx((db) => db.query(grantSql));
+
+    for (const sig of rpcSignatures) {
+      const privRes = await harness.withAdminTx((db) =>
+        db.query("SELECT has_function_privilege('authenticated', $1, 'EXECUTE') AS allowed", [sig]),
+      );
+      assert.equal(privRes.rows[0].allowed, true, `authenticated deve recuperar EXECUTE em ${sig}`);
+    }
+
+    const restoredSave = await serviceA.savePreferences({
+      userId: USER_A,
+      hideGamification: true,
+    });
+    assert.equal(restoredSave.preferences.hide_gamification, true);
+  } finally {
+    await harness.db.close();
+  }
+});
