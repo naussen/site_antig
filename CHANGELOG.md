@@ -1,5 +1,11 @@
 # Changelog
 
+## Não publicado — MVP de rotina semanal e sessões curtas de estudo (Fases 1 e 2)
+
+- executado e registrado o diagnóstico da Fase 0 em `docs/GAMIFICACAO_DIAGNOSTICO.md`, definindo a numeração `052` da migration e o escopo restrito a Resumos ativos no MVP;
+- implementados domínio puro, calendário IANA com semana de segunda a domingo e primeira semana parcial (`src/lib/gamification/{config,calendar,session}.{mjs,d.mts}`), tipos de banco (`src/types/database.ts`), migration `supabase/migrations/052_create_study_routine_gamification.sql` (não aplicada remotamente) e checagens opcionais em `scripts/test-rls-two-users.mjs`;
+- implementados adaptador servidor (`src/lib/gamification/server.ts`), rota autenticada `/api/study-routine`, componentes `TodayStudyCard` e `StudySessionBar`, extensão aditiva em `use-section-progress.ts`, integrações em `/dashboard`, `/[topicId]` e `/dashboard/configuracoes`, guia operacional em `docs/GAMIFICACAO_IMPLEMENTACAO.md` e suíte `npm run test:gamification`.
+
 ## Não publicado — plano de gamificação para o Antigravity
 
 - documentados MVP de sessões curtas e metas semanais flexíveis, regras de calendário e conclusão, arquitetura, segurança, fases, critérios de aceite e testes;
