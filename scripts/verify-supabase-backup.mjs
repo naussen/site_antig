@@ -54,6 +54,24 @@ async function main() {
     assert.equal(manifest.format, "pro-resumos-logical-backup");
     assert.equal(manifest.version, 1);
 
+    assert.ok(manifest.schema_scope, "Manifesto sem metadados de schema_scope.");
+    assert.equal(manifest.schema_scope.catalog_verified, true, "O escopo do catálogo não foi verificado.");
+    assert.ok(
+      typeof manifest.schema_scope.catalog_source === "string" && manifest.schema_scope.catalog_source.length > 0,
+      "Origem do catálogo remoto não informada no manifesto.",
+    );
+    const exportedCount = Object.keys(manifest.table_counts).length;
+    assert.equal(
+      manifest.schema_scope.exported_tables_count,
+      exportedCount,
+      "Contagem de tabelas exportadas divergente no manifesto.",
+    );
+
+    for (const table of Object.keys(manifest.table_counts)) {
+      const fileEntry = manifest.files.find((f) => f.path === `database/${table}.jsonl`);
+      assert.ok(fileEntry, `Tabela "${table}" exportada não consta nos arquivos do manifesto.`);
+    }
+
     for (const file of manifest.files) {
       const path = safePayloadPath(payloadRoot, file.path);
       assert.equal(await sha256File(path), file.sha256, `${file.path}: hash divergente`);
@@ -76,6 +94,7 @@ async function main() {
     console.log(JSON.stringify({
       verified: true,
       created_at: manifest.created_at,
+      catalog_source: manifest.schema_scope.catalog_source,
       tables: Object.keys(manifest.table_counts).length,
       rows: Object.values(manifest.table_counts).reduce((sum, count) => sum + count, 0),
       missing_tables: manifest.schema_scope?.missing_tables?.length ?? 0,

@@ -29,28 +29,51 @@ export async function discoverPublicTables(migrationsDirectory) {
   return [...tables].sort((a, b) => a.localeCompare(b));
 }
 
-const MISSING_TABLE_CODES = new Set(["42P01", "PGRST205"]);
-const PERMISSION_ERROR_CODES = new Set(["42501", "PGRST301"]);
+function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
 
 export function isTableNotFoundError(error, tableName = "") {
   if (!error) return false;
-  const code = error.code ?? "";
-  if (MISSING_TABLE_CODES.has(code)) return true;
-  const message = (error.message ?? "").toLowerCase();
-  const name = tableName.toLowerCase();
+  const code = error.code ? String(error.code).trim() : "";
+
+  // 1. Códigos conhecidos que comprovadamente NÃO são ausência de tabela
+  if (code === "42703") return false; // undefined_column
+  if (code === "42501") return false; // insufficient_privilege
+  if (code === "PGRST301") return false; // JWT / unauthorized
+
+  // 2. Códigos conhecidos de ausência de tabela
+  if (code === "42P01") return true; // undefined_table (PostgreSQL)
+  if (code === "PGRST205") return true; // not found in schema cache (PostgREST)
+
+  // 3. Qualquer outro código conhecido não deve ser classificado como tabela ausente
+  if (code.length > 0) return false;
+
+  // 4. Sem código: análise textual estrita
+  const message = error.message ? String(error.message).trim() : "";
+  if (!message) return false;
+
+  // Se a mensagem mencionar coluna, NUNCA é erro de tabela ausente
+  if (/\bcolum(?:n|na)\b/i.test(message)) return false;
+
+  const name = tableName.trim();
+  if (name.length > 0) {
+    const escaped = escapeRegExp(name);
+    const relPattern = new RegExp(`\\b(?:relation|table)\\s+["']?(?:public\\.)?${escaped}["']?\\s+does not exist\\b`, "i");
+    const cachePattern = new RegExp(`could not find the (?:table|relation)\\s+['"]?(?:public\\.)?${escaped}['"]?\\s+in the schema cache\\b`, "i");
+    return relPattern.test(message) || cachePattern.test(message);
+  }
+
   return (
-    (name.length === 0 || message.includes(name) || message.includes(`public.${name}`)) &&
-    (message.includes("could not find the table") ||
-      message.includes("does not exist") ||
-      message.includes("schema cache") ||
-      message.includes("relation") && message.includes("does not exist"))
+    /\b(?:relation|table)\s+["']?(?:public\.)?[a-z_][a-z0-9_]*["']?\s+does not exist\b/i.test(message) ||
+    /could not find the (?:table|relation)\\s+['"]?(?:public\.)?[a-z_][a-z0-9_]*['"]?\\s+in the schema cache\b/i.test(message)
   );
 }
 
 export function isPermissionError(error) {
   if (!error) return false;
-  const code = error.code ?? "";
-  if (PERMISSION_ERROR_CODES.has(code)) return true;
+  const code = error.code ? String(error.code).trim() : "";
+  if (code === "42501" || code === "PGRST301") return true;
   const message = (error.message ?? "").toLowerCase();
   return (
     message.includes("permission denied") ||
@@ -61,11 +84,97 @@ export function isPermissionError(error) {
   );
 }
 
-export async function discoverRemotePublicTables(supabaseUrl, serviceRoleKey, timeoutMs = 10_000) {
-  if (!supabaseUrl || !serviceRoleKey) return null;
+async function queryPostgresCatalog(connectionString) {
+  const { Client } = await import("pg");
+  const client = new Client({ connectionString });
+  await client.connect();
   try {
-    const endpoint = new URL("/rest/v1/", supabaseUrl);
-    const response = await fetch(endpoint, {
+    const res = await client.query(`
+      SELECT table_name
+      FROM information_schema.tables
+      WHERE table_schema = 'public'
+        AND table_type = 'BASE TABLE'
+      ORDER BY table_name;
+    `);
+    return res.rows.map((row) => row.table_name);
+  } finally {
+    await client.end().catch(() => {});
+  }
+}
+
+export async function discoverRemoteCatalog(options = {}) {
+  // 1. Injeção direta de catálogo (mock / testes unitários)
+  if (options.catalogTablesOverride) {
+    const tables = [...new Set(options.catalogTablesOverride)].sort((a, b) => a.localeCompare(b));
+    return {
+      source: options.catalogSourceOverride || "override",
+      tables,
+    };
+  }
+
+  // 2. Conexão direta PostgreSQL (DATABASE_URL / SUPABASE_DB_URL / POSTGRES_URL)
+  const connectionString = options.databaseUrl || process.env.DATABASE_URL || process.env.SUPABASE_DB_URL || process.env.POSTGRES_URL;
+  if (connectionString) {
+    try {
+      const tables = await queryPostgresCatalog(connectionString);
+      if (!Array.isArray(tables) || tables.length === 0) {
+        throw new Error("Nenhuma tabela encontrada no schema public via conexão PostgreSQL.");
+      }
+      return {
+        source: "postgresql_catalog",
+        tables: [...new Set(tables)].sort((a, b) => a.localeCompare(b)),
+      };
+    } catch (error) {
+      throw new Error(`Falha ao consultar catálogo PostgreSQL via conexão direta: ${error instanceof Error ? error.message : String(error)}`);
+    }
+  }
+
+  // 3. Snapshot de catálogo administrativo verificado
+  const snapshotSource = options.catalogSnapshot || options.catalogSnapshotPath || process.env.PRO_BACKUP_CATALOG_SNAPSHOT;
+  if (snapshotSource) {
+    try {
+      let rawTables = snapshotSource;
+      if (typeof snapshotSource === "string") {
+        if (existsSync(snapshotSource)) {
+          rawTables = JSON.parse(await readFile(snapshotSource, "utf8"));
+        } else {
+          try {
+            rawTables = JSON.parse(snapshotSource);
+          } catch {
+            throw new Error(`Arquivo de snapshot de catálogo não encontrado: ${snapshotSource}`);
+          }
+        }
+      }
+      if (!Array.isArray(rawTables) || rawTables.length === 0) {
+        throw new Error("O snapshot de catálogo deve ser uma lista não-vazia de tabelas.");
+      }
+      for (const t of rawTables) {
+        if (typeof t !== "string" || !/^[a-z_][a-z0-9_]*$/i.test(t)) {
+          throw new Error(`Nome de tabela inválido no snapshot de catálogo: "${t}"`);
+        }
+      }
+      return {
+        source: "catalog_snapshot",
+        tables: [...new Set(rawTables)].sort((a, b) => a.localeCompare(b)),
+      };
+    } catch (error) {
+      throw new Error(`Falha ao carregar snapshot do catálogo: ${error instanceof Error ? error.message : String(error)}`);
+    }
+  }
+
+  // 4. Supabase PostgREST API
+  const supabaseUrl = options.supabaseUrl || process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceRoleKey = options.serviceRoleKey || process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!supabaseUrl || !serviceRoleKey) {
+    throw new Error("Nenhuma fonte de catálogo remoto configurada (DATABASE_URL, PRO_BACKUP_CATALOG_SNAPSHOT ou NEXT_PUBLIC_SUPABASE_URL/SUPABASE_SERVICE_ROLE_KEY).");
+  }
+
+  const timeoutMs = Number.isInteger(options.timeoutMs) && options.timeoutMs > 0 ? options.timeoutMs : 10_000;
+  const endpoint = new URL("/rest/v1/", supabaseUrl);
+  let response;
+  try {
+    const fetchFn = options.fetchOverride ?? fetch;
+    response = await fetchFn(endpoint, {
       method: "GET",
       headers: {
         apikey: serviceRoleKey,
@@ -74,31 +183,72 @@ export async function discoverRemotePublicTables(supabaseUrl, serviceRoleKey, ti
       },
       signal: AbortSignal.timeout(timeoutMs),
     });
-    if (!response.ok) return null;
-    const spec = await response.json();
-    const tables = new Set();
-    if (spec && typeof spec === "object") {
-      if (spec.definitions && typeof spec.definitions === "object") {
-        for (const name of Object.keys(spec.definitions)) {
-          if (/^[a-z_][a-z0-9_]*$/iu.test(name)) {
-            tables.add(name);
-          }
-        }
-      }
-      if (spec.paths && typeof spec.paths === "object") {
-        for (const path of Object.keys(spec.paths)) {
-          const match = path.match(/^\/([a-z_][a-z0-9_]*)$/iu);
-          if (match && match[1].toLowerCase() !== "rpc") {
-            tables.add(match[1]);
-          }
-        }
+  } catch (error) {
+    const isTimeout = error?.name === "TimeoutError" || error?.name === "AbortError";
+    if (isTimeout) {
+      throw new Error(`Timeout de ${timeoutMs}ms ao consultar catálogo remoto via PostgREST.`);
+    }
+    throw new Error(`Falha de rede ao consultar catálogo remoto via PostgREST: ${error instanceof Error ? error.message : String(error)}`);
+  }
+
+  if (response.status === 401 || response.status === 403) {
+    const statusText = response.statusText ? ` ${response.statusText}` : "";
+    throw new Error(`Falha de autenticação/permissão ao consultar catálogo remoto via PostgREST: HTTP ${response.status}${statusText}`);
+  }
+
+  if (!response.ok) {
+    const statusText = response.statusText ? ` ${response.statusText}` : "";
+    throw new Error(`Falha ao consultar catálogo remoto via PostgREST: HTTP ${response.status}${statusText}`);
+  }
+
+  let spec;
+  try {
+    spec = await response.json();
+  } catch {
+    throw new Error("Resposta inválida (não-JSON) ao consultar catálogo remoto via PostgREST.");
+  }
+
+  if (spec === null || typeof spec !== "object" || Array.isArray(spec)) {
+    throw new Error("Schema inesperado na resposta OpenAPI do catálogo remoto (objeto esperado).");
+  }
+
+  const hasDefinitions = spec.definitions && typeof spec.definitions === "object" && !Array.isArray(spec.definitions);
+  const hasPaths = spec.paths && typeof spec.paths === "object" && !Array.isArray(spec.paths);
+
+  if (!hasDefinitions && !hasPaths) {
+    throw new Error("Schema inesperado na resposta OpenAPI do catálogo remoto (definitions ou paths ausentes).");
+  }
+
+  const tables = new Set();
+  if (hasDefinitions) {
+    for (const name of Object.keys(spec.definitions)) {
+      if (/^[a-z_][a-z0-9_]*$/iu.test(name)) {
+        tables.add(name);
       }
     }
-    if (tables.size === 0) return null;
-    return [...tables].sort((a, b) => a.localeCompare(b));
-  } catch {
-    return null;
   }
+  if (hasPaths) {
+    for (const path of Object.keys(spec.paths)) {
+      const match = path.match(/^\/([a-z_][a-z0-9_]*)$/iu);
+      if (match && match[1].toLowerCase() !== "rpc") {
+        tables.add(match[1]);
+      }
+    }
+  }
+
+  if (tables.size === 0) {
+    throw new Error("Nenhuma tabela válida foi identificada na especificação OpenAPI do catálogo remoto.");
+  }
+
+  return {
+    source: "postgrest_openapi",
+    tables: [...tables].sort((a, b) => a.localeCompare(b)),
+  };
+}
+
+export async function discoverRemotePublicTables(supabaseUrl, serviceRoleKey, timeoutMs = 10_000) {
+  const result = await discoverRemoteCatalog({ supabaseUrl, serviceRoleKey, timeoutMs });
+  return result.tables;
 }
 
 export async function fetchTableRows(supabase, table, options = {}) {

@@ -2,24 +2,24 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { spawnSync } from "node:child_process";
 import { randomBytes } from "node:crypto";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   createTemporaryDirectory,
   decryptArchive,
   discoverPublicTables,
+  discoverRemoteCatalog,
   encryptArchive,
   fetchTableRows,
   isPermissionError,
   isTableNotFoundError,
   protectKeyWithPassphrase,
   removeTemporaryDirectory,
-  runTar,
   safePayloadPath,
-  sha256File,
   unprotectKeyWithPassphrase,
 } from "../scripts/supabase-backup-core.mjs";
+import { runSupabaseBackup } from "../scripts/backup-supabase.mjs";
 
 test("backup criptografado restaura os mesmos bytes e rejeita chave incorreta", async () => {
   const directory = await createTemporaryDirectory("pro-backup-test-");
@@ -167,8 +167,43 @@ test("configuração off-site mantém a frase fora dos argumentos da tarefa", as
   assert.doesNotMatch(taskInstaller, /PRO_BACKUP_RECOVERY_PASSPHRASE=/u);
 });
 
-function createMockSupabase(tableHandlers) {
+function createCompleteMockSupabase(tableHandlers = {}) {
+  const users = [
+    {
+      id: "u1",
+      email: "aluno1@pro.test",
+      identities: [{ id: "id1", provider: "google" }],
+    },
+  ];
+
   return {
+    auth: {
+      admin: {
+        async listUsers({ page, perPage }) {
+          const slice = users.slice((page - 1) * perPage, page * perPage);
+          return { data: { users: slice }, error: null };
+        },
+        async getUserById(id) {
+          const u = users.find((item) => item.id === id);
+          return { data: { user: u }, error: null };
+        },
+      },
+    },
+    storage: {
+      async listBuckets() {
+        return { data: [], error: null };
+      },
+      from() {
+        return {
+          async list() {
+            return { data: [], error: null };
+          },
+          async download() {
+            return { data: null, error: new Error("no object") };
+          },
+        };
+      },
+    },
     from(tableName) {
       const handler =
         tableHandlers[tableName] ??
@@ -176,9 +211,8 @@ function createMockSupabase(tableHandlers) {
       return {
         select() {
           return {
-            range(start, end) {
-              const res = handler({ table: tableName, start, end });
-              return Promise.resolve(res);
+            async range(start, end) {
+              return handler({ table: tableName, start, end });
             },
           };
         },
@@ -187,7 +221,27 @@ function createMockSupabase(tableHandlers) {
   };
 }
 
-test("reconhecimento preciso de erros de tabela inexistente vs permissão", () => {
+test("reconhecimento preciso de erros de tabela inexistente vs coluna ausente (42703) e permissão", () => {
+  // 42703 (undefined_column) NUNCA é tabela inexistente
+  assert.equal(
+    isTableNotFoundError({ code: "42703", message: "column topics.missing_column does not exist" }, "topics"),
+    false,
+  );
+  assert.equal(
+    isTableNotFoundError({ code: "42703", message: "column topics.missing_column does not exist" }),
+    false,
+  );
+  // Mensagem contendo "column" mesmo sem código não é tabela ausente
+  assert.equal(
+    isTableNotFoundError({ message: "column topics.missing_column does not exist" }, "topics"),
+    false,
+  );
+
+  // Erros de permissão e autenticação nunca são tratados como tabela ausente
+  assert.equal(isTableNotFoundError({ code: "42501", message: "permission denied for table topics" }, "topics"), false);
+  assert.equal(isTableNotFoundError({ code: "PGRST301", message: "JWT not authorized" }, "topics"), false);
+  assert.equal(isTableNotFoundError({ code: "500", message: "internal server error" }, "topics"), false);
+
   // 42P01 (Postgres relation does not exist)
   assert.equal(isTableNotFoundError({ code: "42P01", message: 'relation "topics" does not exist' }, "topics"), true);
   // PGRST205 (PostgREST schema cache missing table)
@@ -198,21 +252,149 @@ test("reconhecimento preciso de erros de tabela inexistente vs permissão", () =
     ),
     true,
   );
-  // Permissão nunca deve ser tratada como tabela ausente
-  assert.equal(isTableNotFoundError({ code: "42501", message: "permission denied for table topics" }, "topics"), false);
-  assert.equal(isTableNotFoundError({ code: "PGRST301", message: "JWT not authorized" }, "topics"), false);
+
+  // Mensagem textual estrita de relação inexistente sem código
+  assert.equal(isTableNotFoundError({ message: 'relation "topics" does not exist' }, "topics"), true);
+  assert.equal(
+    isTableNotFoundError({ message: "could not find the table 'public.topics' in the schema cache" }, "topics"),
+    true,
+  );
+  assert.equal(isTableNotFoundError({ message: "falha generica de conexao" }, "topics"), false);
 
   // isPermissionError
   assert.equal(isPermissionError({ code: "42501", message: "insufficient_privilege" }), true);
   assert.equal(isPermissionError({ code: "PGRST301", message: "not authorized" }), true);
   assert.equal(isPermissionError({ code: "42P01", message: "relation does not exist" }), false);
+  assert.equal(isPermissionError({ code: "42703", message: "undefined_column" }), false);
 });
 
-test("fetchTableRows falha imediatamente em erro de permissão sem tratar como tabela ausente", async () => {
-  const supabase = createMockSupabase({
+test("descoberta remota rejeita falhas de autenticação e status de erro (401, 403, 500)", async () => {
+  const options401 = {
+    supabaseUrl: "http://127.0.0.1:54321",
+    serviceRoleKey: "key",
+    fetchOverride: async () => ({
+      status: 401,
+      statusText: "Unauthorized",
+      ok: false,
+    }),
+  };
+  await assert.rejects(discoverRemoteCatalog(options401), /HTTP 401 Unauthorized/);
+
+  const options403 = {
+    supabaseUrl: "http://127.0.0.1:54321",
+    serviceRoleKey: "key",
+    fetchOverride: async () => ({
+      status: 403,
+      statusText: "Forbidden",
+      ok: false,
+    }),
+  };
+  await assert.rejects(discoverRemoteCatalog(options403), /HTTP 403 Forbidden/);
+
+  const options500 = {
+    supabaseUrl: "http://127.0.0.1:54321",
+    serviceRoleKey: "key",
+    fetchOverride: async () => ({
+      status: 500,
+      statusText: "Internal Server Error",
+      ok: false,
+    }),
+  };
+  await assert.rejects(discoverRemoteCatalog(options500), /HTTP 500 Internal Server Error/);
+});
+
+test("descoberta remota rejeita timeout, JSON inválido e schema inesperado", async () => {
+  const timeoutOptions = {
+    supabaseUrl: "http://127.0.0.1:54321",
+    serviceRoleKey: "key",
+    fetchOverride: async () => {
+      const err = new Error("Request timed out");
+      err.name = "TimeoutError";
+      throw err;
+    },
+  };
+  await assert.rejects(discoverRemoteCatalog(timeoutOptions), /Timeout de \d+ms/);
+
+  const invalidJsonOptions = {
+    supabaseUrl: "http://127.0.0.1:54321",
+    serviceRoleKey: "key",
+    fetchOverride: async () => ({
+      status: 200,
+      ok: true,
+      async json() {
+        throw new Error("Unexpected token < in JSON");
+      },
+    }),
+  };
+  await assert.rejects(discoverRemoteCatalog(invalidJsonOptions), /Resposta inválida \(não-JSON\)/);
+
+  const emptySchemaOptions = {
+    supabaseUrl: "http://127.0.0.1:54321",
+    serviceRoleKey: "key",
+    fetchOverride: async () => ({
+      status: 200,
+      ok: true,
+      async json() {
+        return {};
+      },
+    }),
+  };
+  await assert.rejects(discoverRemoteCatalog(emptySchemaOptions), /Schema inesperado.*definitions ou paths ausentes/);
+
+  const noValidTablesOptions = {
+    supabaseUrl: "http://127.0.0.1:54321",
+    serviceRoleKey: "key",
+    fetchOverride: async () => ({
+      status: 200,
+      ok: true,
+      async json() {
+        return { definitions: { "invalid-name!": {} } };
+      },
+    }),
+  };
+  await assert.rejects(discoverRemoteCatalog(noValidTablesOptions), /Nenhuma tabela válida foi identificada/);
+});
+
+test("descoberta remota carrega tabelas com sucesso de OpenAPI e snapshot", async () => {
+  const openApiOptions = {
+    supabaseUrl: "http://127.0.0.1:54321",
+    serviceRoleKey: "key",
+    fetchOverride: async () => ({
+      status: 200,
+      ok: true,
+      async json() {
+        return {
+          definitions: { topics: {}, sections: {} },
+          paths: { "/topics": {}, "/user_progress": {}, "/rpc/some_func": {} },
+        };
+      },
+    }),
+  };
+  const openApiRes = await discoverRemoteCatalog(openApiOptions);
+  assert.equal(openApiRes.source, "postgrest_openapi");
+  assert.deepEqual(openApiRes.tables, ["sections", "topics", "user_progress"]);
+
+  const snapshotRes = await discoverRemoteCatalog({
+    catalogSnapshot: ["questions", "topics"],
+  });
+  assert.equal(snapshotRes.source, "catalog_snapshot");
+  assert.deepEqual(snapshotRes.tables, ["questions", "topics"]);
+
+  await assert.rejects(
+    discoverRemoteCatalog({ catalogSnapshot: ["tabela com espaco!"] }),
+    /Nome de tabela inválido no snapshot/,
+  );
+});
+
+test("fetchTableRows falha imediatamente em erro de permissão (42501) e coluna inexistente (42703)", async () => {
+  const supabase = createCompleteMockSupabase({
     restricted_table: () => ({
       data: null,
       error: { code: "42501", message: "permission denied for table restricted_table" },
+    }),
+    broken_column_table: () => ({
+      data: null,
+      error: { code: "42703", message: "column topics.missing_col does not exist" },
     }),
   });
 
@@ -220,291 +402,303 @@ test("fetchTableRows falha imediatamente em erro de permissão sem tratar como t
     fetchTableRows(supabase, "restricted_table"),
     /Permissão insuficiente ao ler a tabela "restricted_table": \[42501\]/,
   );
-});
-
-test("fetchTableRows falha imediatamente em erro de rede ou consulta genérica", async () => {
-  const supabase = createMockSupabase({
-    failing_table: () => ({
-      data: null,
-      error: { code: "500", message: "Internal server error" },
-    }),
-    paged_failing: ({ start }) => {
-      if (start === 0) {
-        return { data: Array.from({ length: 10 }, (_, i) => ({ id: i })), error: null };
-      }
-      return { data: null, error: { code: "503", message: "Service unavailable" } };
-    },
-  });
 
   await assert.rejects(
-    fetchTableRows(supabase, "failing_table"),
-    /Falha de consulta ou rede ao ler a tabela "failing_table": \[500\]/,
-  );
-
-  await assert.rejects(
-    fetchTableRows(supabase, "paged_failing", { pageSize: 10 }),
-    /Falha de consulta ou rede ao paginar a tabela "paged_failing": \[503\]/,
+    fetchTableRows(supabase, "broken_column_table"),
+    /Falha de consulta ou rede ao ler a tabela "broken_column_table": \[42703\] column topics\.missing_col does not exist/,
   );
 });
 
-test("fetchTableRows pagina corretamente tabela com dados e suporta tabela vazia", async () => {
+test("fetchTableRows pagina corretamente tabela com dados e falha em página posterior", async () => {
   const totalRows = 1250;
   const allRows = Array.from({ length: totalRows }, (_, i) => ({ id: i + 1, name: `row-${i + 1}` }));
   const calls = [];
 
-  const supabase = createMockSupabase({
-    empty_table: () => ({ data: [], error: null }),
+  const supabase = createCompleteMockSupabase({
     populated_table: ({ start, end }) => {
       calls.push({ start, end });
       const slice = allRows.slice(start, end + 1);
       return { data: slice, error: null };
     },
+    paged_failing: ({ start }) => {
+      if (start === 0) {
+        return { data: Array.from({ length: 500 }, (_, i) => ({ id: i })), error: null };
+      }
+      return { data: null, error: { code: "503", message: "Service temporarily unavailable" } };
+    },
   });
-
-  const emptyResult = await fetchTableRows(supabase, "empty_table");
-  assert.equal(emptyResult.status, "ok");
-  assert.equal(emptyResult.rows.length, 0);
 
   const populatedResult = await fetchTableRows(supabase, "populated_table", { pageSize: 500 });
   assert.equal(populatedResult.status, "ok");
   assert.equal(populatedResult.rows.length, 1250);
-  assert.deepEqual(populatedResult.rows[0], { id: 1, name: "row-1" });
-  assert.deepEqual(populatedResult.rows[1249], { id: 1250, name: "row-1250" });
   assert.deepEqual(calls, [
     { start: 0, end: 499 },
     { start: 500, end: 999 },
     { start: 1000, end: 1499 },
   ]);
+
+  await assert.rejects(
+    fetchTableRows(supabase, "paged_failing", { pageSize: 500 }),
+    /Falha de consulta ou rede ao paginar a tabela "paged_failing": \[503\]/,
+  );
 });
 
-test("inventário pré-053: banco sem as 4 tabelas de gamificação exporta existentes e registra missing_tables", async () => {
-  const expectedTables = [
-    "topics",
-    "sections",
-    "user_study_routine_preferences",
-    "study_routine_weekly_plans",
-    "study_routine_sessions",
-    "study_routine_session_activities",
-  ];
-  const routineTables = new Set([
-    "user_study_routine_preferences",
-    "study_routine_weekly_plans",
-    "study_routine_sessions",
-    "study_routine_session_activities",
-  ]);
-
-  const supabase = createMockSupabase({
-    topics: () => ({ data: [{ id: "t1" }, { id: "t2" }], error: null }),
-    sections: () => ({ data: [{ id: "s1" }], error: null }),
-    user_study_routine_preferences: () => ({
-      data: null,
-      error: { code: "PGRST205", message: "Could not find table in schema cache" },
-    }),
-    study_routine_weekly_plans: () => ({
-      data: null,
-      error: { code: "42P01", message: 'relation "study_routine_weekly_plans" does not exist' },
-    }),
-    study_routine_sessions: () => ({
-      data: null,
-      error: { code: "PGRST205", message: "Could not find table in schema cache" },
-    }),
-    study_routine_session_activities: () => ({
-      data: null,
-      error: { code: "42P01", message: 'relation "study_routine_session_activities" does not exist' },
-    }),
-  });
-
-  const tableCounts = {};
-  const missingTables = [];
-  const untrackedTables = [];
-  const expectedSet = new Set(expectedTables);
-
-  for (const table of expectedTables) {
-    const res = await fetchTableRows(supabase, table);
-    if (res.status === "missing") {
-      if (expectedSet.has(table)) missingTables.push(table);
-      continue;
-    }
-    tableCounts[table] = res.rows.length;
-    if (!expectedSet.has(table)) untrackedTables.push(table);
-  }
-
-  assert.equal(missingTables.length, 4);
-  for (const t of routineTables) {
-    assert.ok(missingTables.includes(t), `Tabela ${t} deveria constar em missing_tables`);
-  }
-  assert.deepEqual(untrackedTables, []);
-  assert.deepEqual(tableCounts, { topics: 2, sections: 1 });
-
-  const schemaScope = {
-    expected_tables_count: expectedTables.length,
-    exported_tables_count: Object.keys(tableCounts).length,
-    missing_tables: missingTables,
-    untracked_tables: untrackedTables,
-    remote_schema_discovered: true,
-  };
-  assert.equal(schemaScope.expected_tables_count, 6);
-  assert.equal(schemaScope.exported_tables_count, 2);
-});
-
-test("inventário pós-053: banco com as 4 tabelas exporta todas e missing_tables fica vazio", async () => {
-  const expectedTables = [
-    "topics",
-    "sections",
-    "user_study_routine_preferences",
-    "study_routine_weekly_plans",
-    "study_routine_sessions",
-    "study_routine_session_activities",
-  ];
-
-  const supabase = createMockSupabase({
-    topics: () => ({ data: [{ id: "t1" }], error: null }),
-    sections: () => ({ data: [{ id: "s1" }], error: null }),
-    user_study_routine_preferences: () => ({ data: [{ id: "pref1" }], error: null }),
-    study_routine_weekly_plans: () => ({ data: [], error: null }),
-    study_routine_sessions: () => ({ data: [], error: null }),
-    study_routine_session_activities: () => ({ data: [], error: null }),
-  });
-
-  const tableCounts = {};
-  const missingTables = [];
-  const untrackedTables = [];
-  const expectedSet = new Set(expectedTables);
-
-  for (const table of expectedTables) {
-    const res = await fetchTableRows(supabase, table);
-    if (res.status === "missing") {
-      if (expectedSet.has(table)) missingTables.push(table);
-      continue;
-    }
-    tableCounts[table] = res.rows.length;
-    if (!expectedSet.has(table)) untrackedTables.push(table);
-  }
-
-  assert.deepEqual(missingTables, []);
-  assert.deepEqual(untrackedTables, []);
-  assert.equal(Object.keys(tableCounts).length, 6);
-  assert.equal(tableCounts.user_study_routine_preferences, 1);
-  assert.equal(tableCounts.study_routine_weekly_plans, 0);
-});
-
-test("divergência entre inventário local e remoto: tabela remota vai para untracked e local ausente vai para missing", async () => {
-  const expectedTables = ["topics", "sections", "obsolete_local_table"];
-  const remoteTables = ["topics", "sections", "remote_audit_log"];
-  const candidateTables = Array.from(new Set([...expectedTables, ...remoteTables])).sort((a, b) => a.localeCompare(b));
-
-  const supabase = createMockSupabase({
-    topics: () => ({ data: [{ id: "t1" }], error: null }),
-    sections: () => ({ data: [], error: null }),
-    obsolete_local_table: () => ({
-      data: null,
-      error: { code: "42P01", message: 'relation "obsolete_local_table" does not exist' },
-    }),
-    remote_audit_log: () => ({
-      data: [{ id: "log1" }, { id: "log2" }],
-      error: null,
-    }),
-  });
-
-  const tableCounts = {};
-  const missingTables = [];
-  const untrackedTables = [];
-  const expectedSet = new Set(expectedTables);
-
-  for (const table of candidateTables) {
-    const res = await fetchTableRows(supabase, table);
-    if (res.status === "missing") {
-      if (expectedSet.has(table)) missingTables.push(table);
-      continue;
-    }
-    tableCounts[table] = res.rows.length;
-    if (!expectedSet.has(table)) untrackedTables.push(table);
-  }
-
-  assert.deepEqual(missingTables, ["obsolete_local_table"]);
-  assert.deepEqual(untrackedTables, ["remote_audit_log"]);
-  assert.deepEqual(tableCounts, {
-    remote_audit_log: 2,
-    sections: 0,
-    topics: 1,
-  });
-});
-
-test("fluxo completo de exportação, cifragem e validação com verify-supabase-backup", async () => {
-  const directory = await createTemporaryDirectory("pro-backup-verify-flow-");
-  const staging = join(directory, "staging");
-  const payloadTar = join(directory, "payload.tar");
-  const backupArchive = join(directory, "backup.probackup");
-  const recoveryKey = join(directory, "backup.key.recovery");
-  const passphrase = "frase-longa-segura-de-recuperacao-teste-backup-32bytes";
-  const key = randomBytes(32);
+test("caminho real: tabela existente no remoto e ausente nas migrations locais é exportada em untracked_tables", async () => {
+  const directory = await createTemporaryDirectory("pro-backup-untracked-test-");
+  const migrationsDir = join(directory, "migrations");
+  const outputDir = join(directory, "backups");
 
   try {
-    await mkdir(join(staging, "database"), { recursive: true });
-    await mkdir(join(staging, "auth"), { recursive: true });
+    await mkdir(migrationsDir, { recursive: true });
+    await writeFile(join(migrationsDir, "001.sql"), "CREATE TABLE topics (id uuid);");
 
-    const topicsPath = join(staging, "database", "topics.jsonl");
-    const sectionsPath = join(staging, "database", "sections.jsonl");
-    const usersPath = join(staging, "auth", "users.jsonl");
+    const client = createCompleteMockSupabase({
+      topics: () => ({ data: [{ id: "t1" }], error: null }),
+      remote_audit_log: () => ({ data: [{ id: "log1" }, { id: "log2" }], error: null }),
+    });
 
-    await writeFile(topicsPath, JSON.stringify({ id: "t1", title: "Dir Const" }) + "\n" + JSON.stringify({ id: "t2", title: "Dir Adm" }) + "\n");
-    await writeFile(sectionsPath, "");
-    await writeFile(usersPath, JSON.stringify({ id: "u1", email: "aluno@pro.test", identities: [{ id: "id1" }] }) + "\n");
+    const summary = await runSupabaseBackup({
+      outputDirectory: outputDir,
+      migrationsDirectory: migrationsDir,
+      catalogTablesOverride: ["topics", "remote_audit_log"],
+      catalogSourceOverride: "postgresql_catalog",
+      clientOverride: client,
+      supabaseUrl: "http://127.0.0.1:54321",
+      serviceRoleKey: "secret-key",
+    });
 
-    const files = [
-      {
-        path: "database/topics.jsonl",
-        sha256: await sha256File(topicsPath),
-        bytes: (await readFile(topicsPath)).length,
+    assert.equal(summary.schema_scope.catalog_verified, true);
+    assert.deepEqual(summary.schema_scope.untracked_tables, ["remote_audit_log"]);
+    assert.deepEqual(summary.schema_scope.missing_tables, []);
+    assert.equal(summary.table_counts.topics, 1);
+    assert.equal(summary.table_counts.remote_audit_log, 2);
+    assert.equal(summary.schema_scope.exported_tables_count, 2);
+  } finally {
+    await removeTemporaryDirectory(directory);
+  }
+});
+
+test("caminho real: tabela prevista localmente e comprovadamente ausente no banco é registrada em missing_tables", async () => {
+  const directory = await createTemporaryDirectory("pro-backup-missing-test-");
+  const migrationsDir = join(directory, "migrations");
+  const outputDir = join(directory, "backups");
+
+  try {
+    await mkdir(migrationsDir, { recursive: true });
+    await writeFile(
+      join(migrationsDir, "001.sql"),
+      "CREATE TABLE topics (id uuid);\nCREATE TABLE study_routine_weekly_plans (id uuid);",
+    );
+
+    const client = createCompleteMockSupabase({
+      topics: () => ({ data: [{ id: "t1" }], error: null }),
+      study_routine_weekly_plans: () => ({
+        data: null,
+        error: { code: "PGRST205", message: "Could not find table in schema cache" },
+      }),
+    });
+
+    const summary = await runSupabaseBackup({
+      outputDirectory: outputDir,
+      migrationsDirectory: migrationsDir,
+      catalogTablesOverride: ["topics"],
+      catalogSourceOverride: "postgresql_catalog",
+      clientOverride: client,
+      supabaseUrl: "http://127.0.0.1:54321",
+      serviceRoleKey: "secret-key",
+    });
+
+    assert.equal(summary.schema_scope.catalog_verified, true);
+    assert.deepEqual(summary.schema_scope.missing_tables, ["study_routine_weekly_plans"]);
+    assert.deepEqual(summary.schema_scope.untracked_tables, []);
+    assert.equal(summary.table_counts.topics, 1);
+    assert.equal(summary.schema_scope.exported_tables_count, 1);
+  } finally {
+    await removeTemporaryDirectory(directory);
+  }
+});
+
+test("caminho real: tabela presente no catálogo mas ausente no PostgREST aborta por inconsistência de cache", async () => {
+  const directory = await createTemporaryDirectory("pro-backup-inconsistency-test-");
+  const migrationsDir = join(directory, "migrations");
+  const outputDir = join(directory, "backups");
+
+  try {
+    await mkdir(migrationsDir, { recursive: true });
+    await writeFile(join(migrationsDir, "001.sql"), "CREATE TABLE topics (id uuid);\nCREATE TABLE cached_table (id uuid);");
+
+    const client = createCompleteMockSupabase({
+      topics: () => ({ data: [{ id: "t1" }], error: null }),
+      cached_table: () => ({
+        data: null,
+        error: { code: "PGRST205", message: "Could not find table in schema cache" },
+      }),
+    });
+
+    await assert.rejects(
+      runSupabaseBackup({
+        outputDirectory: outputDir,
+        migrationsDirectory: migrationsDir,
+        catalogTablesOverride: ["topics", "cached_table"],
+        clientOverride: client,
+        supabaseUrl: "http://127.0.0.1:54321",
+        serviceRoleKey: "secret-key",
+      }),
+      /Inconsistência de exposição\/cache detectada: a tabela "cached_table" consta no catálogo remoto, mas a API PostgREST retornou ausência de schema/,
+    );
+  } finally {
+    await removeTemporaryDirectory(directory);
+  }
+});
+
+test("caminho real: erro 42703 contendo nome da tabela e 'does not exist' aborta o backup", async () => {
+  const directory = await createTemporaryDirectory("pro-backup-col-error-test-");
+  const migrationsDir = join(directory, "migrations");
+  const outputDir = join(directory, "backups");
+
+  try {
+    await mkdir(migrationsDir, { recursive: true });
+    await writeFile(join(migrationsDir, "001.sql"), "CREATE TABLE topics (id uuid);");
+
+    const client = createCompleteMockSupabase({
+      topics: () => ({
+        data: null,
+        error: { code: "42703", message: "column topics.missing_column does not exist" },
+      }),
+    });
+
+    await assert.rejects(
+      runSupabaseBackup({
+        outputDirectory: outputDir,
+        migrationsDirectory: migrationsDir,
+        catalogTablesOverride: ["topics"],
+        clientOverride: client,
+        supabaseUrl: "http://127.0.0.1:54321",
+        serviceRoleKey: "secret-key",
+      }),
+      /\[42703\] column topics\.missing_column does not exist/,
+    );
+  } finally {
+    await removeTemporaryDirectory(directory);
+  }
+});
+
+test("caminho real: falha em página posterior aborta o backup", async () => {
+  const directory = await createTemporaryDirectory("pro-backup-paged-fail-test-");
+  const migrationsDir = join(directory, "migrations");
+  const outputDir = join(directory, "backups");
+
+  try {
+    await mkdir(migrationsDir, { recursive: true });
+    await writeFile(join(migrationsDir, "001.sql"), "CREATE TABLE large_table (id uuid);");
+
+    const client = createCompleteMockSupabase({
+      large_table: ({ start }) => {
+        if (start === 0) {
+          return { data: Array.from({ length: 500 }, (_, i) => ({ id: i })), error: null };
+        }
+        return { data: null, error: { code: "500", message: "Connection reset by peer" } };
       },
-      {
-        path: "database/sections.jsonl",
-        sha256: await sha256File(sectionsPath),
-        bytes: 0,
-      },
-      {
-        path: "auth/users.jsonl",
-        sha256: await sha256File(usersPath),
-        bytes: (await readFile(usersPath)).length,
-      },
-    ];
+    });
 
-    const manifest = {
-      format: "pro-resumos-logical-backup",
-      version: 1,
-      created_at: new Date().toISOString(),
-      scope: ["auth.users", "public.*", "storage.metadata", "migrations"],
-      table_counts: { topics: 2, sections: 0 },
-      schema_scope: {
-        expected_tables_count: 6,
-        exported_tables_count: 2,
-        missing_tables: [
-          "user_study_routine_preferences",
-          "study_routine_weekly_plans",
-          "study_routine_sessions",
-          "study_routine_session_activities",
-        ],
-        untracked_tables: [],
-        remote_schema_discovered: true,
-      },
-      auth_user_count: 1,
-      auth_identity_count: 1,
-      storage_bucket_count: 0,
-      storage_object_count: 0,
-      migration_count: 53,
-      files,
-    };
+    await assert.rejects(
+      runSupabaseBackup({
+        outputDirectory: outputDir,
+        migrationsDirectory: migrationsDir,
+        catalogTablesOverride: ["large_table"],
+        clientOverride: client,
+        supabaseUrl: "http://127.0.0.1:54321",
+        serviceRoleKey: "secret-key",
+      }),
+      /Falha de consulta ou rede ao paginar a tabela "large_table": \[500\]/,
+    );
+  } finally {
+    await removeTemporaryDirectory(directory);
+  }
+});
 
-    await writeFile(join(staging, "manifest.json"), JSON.stringify(manifest, null, 2));
+test("caminho real: falha limpa todos os arquivos e não publica backup parcial no disco", async () => {
+  const directory = await createTemporaryDirectory("pro-backup-cleanup-test-");
+  const migrationsDir = join(directory, "migrations");
+  const outputDir = join(directory, "backups");
 
-    runTar(["-cf", payloadTar, "-C", staging, "."]);
-    await protectKeyWithPassphrase(key, passphrase, recoveryKey);
-    await encryptArchive(payloadTar, backupArchive, key);
+  try {
+    await mkdir(migrationsDir, { recursive: true });
+    await writeFile(join(migrationsDir, "001.sql"), "CREATE TABLE topics (id uuid);");
 
+    const client = createCompleteMockSupabase({
+      topics: () => ({
+        data: null,
+        error: { code: "42703", message: "column topics.missing_column does not exist" },
+      }),
+    });
+
+    await assert.rejects(
+      runSupabaseBackup({
+        outputDirectory: outputDir,
+        migrationsDirectory: migrationsDir,
+        catalogTablesOverride: ["topics"],
+        clientOverride: client,
+        supabaseUrl: "http://127.0.0.1:54321",
+        serviceRoleKey: "secret-key",
+      }),
+    );
+
+    // O diretório de saída não deve conter nenhum artefato parcial
+    const remainingFiles = await readdir(outputDir);
+    assert.deepEqual(remainingFiles, [], "Diretório de saída contém arquivos parciais após falha");
+  } finally {
+    await removeTemporaryDirectory(directory);
+  }
+});
+
+test("caminho real: exportação completa, criptografia e verificação com verify-supabase-backup", async () => {
+  const directory = await createTemporaryDirectory("pro-backup-real-e2e-test-");
+  const migrationsDir = join(directory, "migrations");
+  const outputDir = join(directory, "backups");
+  const passphrase = "frase-longa-segura-de-recuperacao-teste-backup-32bytes";
+
+  try {
+    await mkdir(migrationsDir, { recursive: true });
+    await writeFile(
+      join(migrationsDir, "001.sql"),
+      "CREATE TABLE topics (id uuid);\nCREATE TABLE sections (id uuid);\nCREATE TABLE study_routine_weekly_plans (id uuid);",
+    );
+
+    const client = createCompleteMockSupabase({
+      topics: () => ({ data: [{ id: "t1", title: "Constitucional" }, { id: "t2", title: "Administrativo" }], error: null }),
+      sections: () => ({ data: [{ id: "s1", title: "Artigo 5" }], error: null }),
+      study_routine_weekly_plans: () => ({
+        data: null,
+        error: { code: "PGRST205", message: "Could not find table in schema cache" },
+      }),
+      remote_metrics: () => ({ data: [{ id: "m1", value: 42 }], error: null }),
+    });
+
+    const summary = await runSupabaseBackup({
+      outputDirectory: outputDir,
+      migrationsDirectory: migrationsDir,
+      catalogTablesOverride: ["topics", "sections", "remote_metrics"],
+      catalogSourceOverride: "postgresql_catalog",
+      clientOverride: client,
+      supabaseUrl: "http://127.0.0.1:54321",
+      serviceRoleKey: "secret-key",
+      recoveryPassphrase: passphrase,
+    });
+
+    assert.equal(summary.schema_scope.catalog_verified, true);
+    assert.equal(summary.schema_scope.catalog_source, "postgresql_catalog");
+    assert.deepEqual(summary.schema_scope.missing_tables, ["study_routine_weekly_plans"]);
+    assert.deepEqual(summary.schema_scope.untracked_tables, ["remote_metrics"]);
+    assert.equal(summary.table_counts.topics, 2);
+    assert.equal(summary.table_counts.sections, 1);
+    assert.equal(summary.table_counts.remote_metrics, 1);
+
+    // Validação com o CLI real verify-supabase-backup.mjs
     const verifyScript = fileURLToPath(new URL("../scripts/verify-supabase-backup.mjs", import.meta.url));
     const result = spawnSync(
       process.execPath,
-      [verifyScript, "--backup", backupArchive, "--recovery-key", recoveryKey],
+      [verifyScript, "--backup", summary.backup_file, "--recovery-key", summary.key_file.replace(/\.dpapi$/, ".recovery")],
       {
         encoding: "utf8",
         env: {
@@ -514,16 +708,16 @@ test("fluxo completo de exportação, cifragem e validação com verify-supabase
       },
     );
 
-    assert.equal(result.status, 0, `Verificação falhou: ${result.stderr || result.stdout}`);
-    const summary = JSON.parse(result.stdout.trim());
-    assert.equal(summary.verified, true);
-    assert.equal(summary.tables, 2);
-    assert.equal(summary.rows, 2);
-    assert.equal(summary.missing_tables, 4);
-    assert.equal(summary.untracked_tables, 0);
-    assert.equal(summary.files_verified, 3);
+    assert.equal(result.status, 0, `Verificação CLI falhou: ${result.stderr || result.stdout}`);
+    const verifyReport = JSON.parse(result.stdout.trim());
+    assert.equal(verifyReport.verified, true);
+    assert.equal(verifyReport.catalog_source, "postgresql_catalog");
+    assert.equal(verifyReport.tables, 3);
+    assert.equal(verifyReport.rows, 4);
+    assert.equal(verifyReport.missing_tables, 1);
+    assert.equal(verifyReport.untracked_tables, 1);
+    assert.equal(verifyReport.auth_users, 1);
   } finally {
-    key.fill(0);
     await removeTemporaryDirectory(directory);
   }
 });

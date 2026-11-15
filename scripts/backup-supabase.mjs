@@ -1,12 +1,13 @@
 import { createHash, randomBytes } from "node:crypto";
 import { copyFile, mkdir, readdir, rename, rm, stat, writeFile } from "node:fs/promises";
 import { dirname, join, relative, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { createClient } from "@supabase/supabase-js";
 import {
   backupBaseName,
   createTemporaryDirectory,
   discoverPublicTables,
-  discoverRemotePublicTables,
+  discoverRemoteCatalog,
   encryptArchive,
   ensureDirectory,
   fetchTableRows,
@@ -76,12 +77,11 @@ function encodedObjectPath(bucketId, objectPath) {
   return join(
     "storage",
     encodeURIComponent(bucketId),
-    ...objectPath.split("/").map((part) => encodeURIComponent(part))
+    ...objectPath.split("/").map((part) => encodeURIComponent(part)),
   );
 }
 
-async function copyMigrations(stagingDirectory) {
-  const sourceDirectory = join(process.cwd(), "supabase", "migrations");
+async function copyMigrations(stagingDirectory, sourceDirectory = join(process.cwd(), "supabase", "migrations")) {
   const destinationDirectory = join(stagingDirectory, "migrations");
   await mkdir(destinationDirectory, { recursive: true });
   const files = (await readdir(sourceDirectory)).filter((name) => name.endsWith(".sql")).sort();
@@ -133,25 +133,39 @@ async function copyOffsite(files, destinationDirectory) {
   }
 }
 
-async function main() {
-  const outputDirectory = argumentValue("--output", DEFAULT_OUTPUT);
-  const migrationsDirectory = resolve(process.cwd(), "supabase", "migrations");
+export async function runSupabaseBackup(options = {}) {
+  const outputDirectory = options.outputDirectory || argumentValue("--output", DEFAULT_OUTPUT);
+  const migrationsDirectory = options.migrationsDirectory || resolve(process.cwd(), "supabase", "migrations");
   const expectedTables = await discoverPublicTables(migrationsDirectory);
-  const retentionDays = Number(argumentValue("--retention-days", DEFAULT_RETENTION_DAYS));
+  const retentionDays = Number(options.retentionDays || argumentValue("--retention-days", DEFAULT_RETENTION_DAYS));
   if (!Number.isInteger(retentionDays) || retentionDays < 7) {
     throw new Error("A retenção deve ser um número inteiro de pelo menos 7 dias.");
   }
 
-  const supabaseUrl = requiredEnvironment("NEXT_PUBLIC_SUPABASE_URL");
-  const serviceRoleKey = requiredEnvironment("SUPABASE_SERVICE_ROLE_KEY");
+  const supabaseUrl = options.supabaseUrl || requiredEnvironment("NEXT_PUBLIC_SUPABASE_URL");
+  const serviceRoleKey = options.serviceRoleKey || requiredEnvironment("SUPABASE_SERVICE_ROLE_KEY");
   const projectRef = new URL(supabaseUrl).hostname.split(".")[0];
-  const supabase = createClient(supabaseUrl, serviceRoleKey, {
+  const supabase = options.clientOverride || createClient(supabaseUrl, serviceRoleKey, {
     auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
   });
 
-  const remoteTables = await discoverRemotePublicTables(supabaseUrl, serviceRoleKey);
+  const catalogResult = await discoverRemoteCatalog({
+    supabaseUrl,
+    serviceRoleKey,
+    databaseUrl: options.databaseUrl || process.env.DATABASE_URL || process.env.SUPABASE_DB_URL || process.env.POSTGRES_URL,
+    catalogSnapshot: options.catalogSnapshot || argumentValue("--catalog-snapshot", process.env.PRO_BACKUP_CATALOG_SNAPSHOT),
+    catalogTablesOverride: options.catalogTablesOverride,
+    catalogSourceOverride: options.catalogSourceOverride,
+    fetchOverride: options.fetchOverride,
+    timeoutMs: options.timeoutMs,
+  });
+
+  const catalogTables = catalogResult.tables;
+  const catalogTablesSet = new Set(catalogTables);
+  const expectedSet = new Set(expectedTables);
+
   const candidateTables = Array.from(
-    new Set([...expectedTables, ...(remoteTables ?? [])]),
+    new Set([...expectedTables, ...catalogTables]),
   ).sort((a, b) => a.localeCompare(b));
 
   await ensureDirectory(outputDirectory);
@@ -169,15 +183,22 @@ async function main() {
     const tableCounts = {};
     const missingTables = [];
     const untrackedTables = [];
-    const expectedSet = new Set(expectedTables);
 
     for (const table of candidateTables) {
       const result = await fetchTableRows(supabase, table, { pageSize: PAGE_SIZE });
       if (result.status === "missing") {
+        if (catalogTablesSet.has(table)) {
+          throw new Error(
+            `Inconsistência de exposição/cache detectada: a tabela "${table}" consta no catálogo remoto, mas a API PostgREST retornou ausência de schema (${result.error?.code ?? "ausente"}). Recarregue o cache do PostgREST (NOTIFY pgrst, 'reload schema';) ou verifique as permissões de acesso da service_role.`,
+          );
+        }
+
         if (expectedSet.has(table)) {
           missingTables.push(table);
+          continue;
         }
-        continue;
+
+        throw new Error(`A tabela "${table}" retornou ausência e não consta no catálogo nem nas migrations locais.`);
       }
 
       tableCounts[table] = result.rows.length;
@@ -221,7 +242,7 @@ async function main() {
     }
     await writeJson(join(stagingDirectory, "storage", "objects.json"), storageObjects);
 
-    const migrationCount = await copyMigrations(stagingDirectory);
+    const migrationCount = await copyMigrations(stagingDirectory, migrationsDirectory);
     const payloadFiles = await hashPayloadFiles(stagingDirectory);
     const manifest = {
       format: "pro-resumos-logical-backup",
@@ -235,11 +256,13 @@ async function main() {
       ],
       table_counts: tableCounts,
       schema_scope: {
+        catalog_source: catalogResult.source,
+        catalog_verified: true,
         expected_tables_count: expectedTables.length,
+        discovered_tables_count: catalogTables.length,
         exported_tables_count: Object.keys(tableCounts).length,
         missing_tables: missingTables,
         untracked_tables: untrackedTables,
-        remote_schema_discovered: Boolean(remoteTables),
       },
       auth_user_count: users.length,
       auth_identity_count: users.reduce((count, user) => count + (user.identities?.length ?? 0), 0),
@@ -253,7 +276,7 @@ async function main() {
     runTar(["-cf", tarPath, "-C", stagingDirectory, "."]);
     const encryptionKey = randomBytes(32);
     protectKeyWithDpapi(encryptionKey, keyPath);
-    const recoveryPassphrase = process.env.PRO_BACKUP_RECOVERY_PASSPHRASE?.trim();
+    const recoveryPassphrase = options.recoveryPassphrase || process.env.PRO_BACKUP_RECOVERY_PASSPHRASE?.trim();
     if (recoveryPassphrase) {
       await protectKeyWithPassphrase(encryptionKey, recoveryPassphrase, recoveryKeyPath);
     }
@@ -273,7 +296,7 @@ async function main() {
       encoding: "utf8",
       flag: "wx",
     });
-    const offsiteDirectory = process.env.PRO_BACKUP_OFFSITE_DIRECTORY?.trim();
+    const offsiteDirectory = options.offsiteDirectory || process.env.PRO_BACKUP_OFFSITE_DIRECTORY?.trim();
     if (offsiteDirectory && !recoveryPassphrase) {
       throw new Error("Backup off-site exige PRO_BACKUP_RECOVERY_PASSPHRASE.");
     }
@@ -293,7 +316,7 @@ async function main() {
       );
     }
 
-    console.log(JSON.stringify(summary));
+    return summary;
   } catch (error) {
     await rm(backupPath, { force: true });
     await rm(keyPath, { force: true });
@@ -322,8 +345,12 @@ async function notifyBackupFailure() {
   }
 }
 
-main().catch(async (error) => {
-  console.error(error instanceof Error ? error.message : String(error));
-  await notifyBackupFailure();
-  process.exitCode = 1;
-});
+if (process.argv[1] && resolve(process.argv[1]) === resolve(fileURLToPath(import.meta.url))) {
+  runSupabaseBackup()
+    .then((summary) => console.log(JSON.stringify(summary)))
+    .catch(async (error) => {
+      console.error(error instanceof Error ? error.message : String(error));
+      await notifyBackupFailure();
+      process.exitCode = 1;
+    });
+}

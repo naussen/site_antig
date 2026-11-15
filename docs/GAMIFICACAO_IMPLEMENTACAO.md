@@ -113,7 +113,7 @@ O MVP implementa uma rotina semanal flexível (1 a 7 dias por semana) e sessões
        npm run backup:supabase
        ```
        O script retorna um JSON contendo o caminho do arquivo gerado (`backup_file`, e.g. `backups/supabase/pro-resumos-backup-YYYYMMDD-HHMMSS.probackup`).
-       *(Nota: o backup descobre o schema de origem e tolera banco anterior à migration 053, registrando as 4 tabelas futuras em `schema_scope.missing_tables` sem abortar a exportação das tabelas existentes).*
+       *(Nota: o backup descobre o catálogo de origem via fonte autoritativa — conexão PostgreSQL direta, snapshot verificado ou OpenAPI estrito. Falhas de catálogo como HTTP 401/403/500, timeout ou JSON inválido abortam o processo com erro explícito; tabelas futuras da migration 053 só são classificadas como ausentes mediante comprovação de não existência no catálogo remoto; tabelas que constem no catálogo mas retornem PGRST205 abortam por inconsistência de cache).*
      - Executar a verificação de integridade passando o arquivo exato recém-gerado:
        ```bash
        npm run backup:verify -- --backup "backups/supabase/pro-resumos-backup-YYYYMMDD-HHMMSS.probackup"
