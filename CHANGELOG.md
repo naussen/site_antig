@@ -1,5 +1,23 @@
 # Changelog
 
+## Integração da gamificação na main — 15/11/2026
+
+- integradas seletivamente rotina semanal e sessões curtas sobre a main atual, preservando Questões, Planner, autenticação e dependências de produção;
+- conciliados os testes de acesso da main com as negativas da rotina; integração aprovada em lint, tipagem, suíte completa e build;
+- migration remota e validação visual autenticada permanecem pendentes; o envio de código não ativa a persistência da rotina.
+
+## Não publicado — MVP de rotina semanal e sessões curtas de estudo (Fases 1 e 2)
+
+- executado e registrado o diagnóstico da Fase 0 em `docs/GAMIFICACAO_DIAGNOSTICO.md` e reconciliada a numeração da migration para `053_create_study_routine_gamification.sql` (após constatação de `052_create_launch_interests.sql` na `origin/main`), mantendo o escopo restrito a Resumos ativos no MVP;
+- implementados domínio puro, calendário IANA com semana de segunda a domingo e primeira semana parcial (`src/lib/gamification/{config,calendar,session}.{mjs,d.mts}`), preservação de agendamentos `pending_*` em atualizações parciais (`hideGamification`, orçamento/disciplina), ocultação pré-onboarding sem ativação indevida de plano e correção da janela de transição para fusos a oeste na segunda-feira (preservando a semana anterior enquanto o novo fuso ainda está no domingo, sem congelar meta antiga nem reescrever histórico);
+- implementados tipos de banco (`src/types/database.ts`), migration `supabase/migrations/053_create_study_routine_gamification.sql` (não aplicada remotamente) com revogação de DML direto para `authenticated`/`anon`, `SELECT` via RLS, triggers de invariantes/imutabilidade, `CONSTRAINT TRIGGER` deferida contra sessões vazias e 6 RPCs transacionais `SECURITY DEFINER`, além do repositório ESM `src/lib/gamification/repository.{mjs,d.mts}` e atualização de `scripts/test-rls-two-users.mjs`;
+- implementados adaptador servidor (`src/lib/gamification/server.ts`), rota autenticada `/api/study-routine`, componentes `TodayStudyCard` (com sincronização sem `useEffect` de rascunho/snapshot e prévia dinâmica por orçamento de `5`/`15`/`30` min via `optionsByBudget`) e `StudySessionBar` (com estado `Sessão pausada` e retomada direta pela barra), extensão aditiva em `src/hooks/use-section-progress.ts`, integrações em `/dashboard`, `/[topicId]` e `/dashboard/configuracoes` (com isolamento completo em memória quando `STUDY_ROUTINE_DEV_FALLBACK=1` está ativo, sem `upsert` em `user_progress`, aviso discreto de demonstração local via `demoFallbackActive` em UI/API/Configurações e avanço de recomendação alimentado pelo progresso em memória), documentação corrigida em `docs/GAMIFICACAO_IMPLEMENTACAO.md` diferenciando fallback em memória, PostgreSQL isolado e Supabase/PostgREST, fixtures SQL versionadas de `026` e `052` com verificação SHA-256 (`tests/fixtures/migrations/026_create_study_planner.sql` e `052_create_launch_interests.sql`) sem dependência de `origin/main` ou `.git`, rollback SQL (`REVOKE EXECUTE` com 5 `TEXT` em `replace_study_routine_session_activity`) e restauração (`GRANT EXECUTE`) testados em PostgreSQL isolado, dependências de desenvolvimento versionadas (`@electric-sql/pglite` e `pg` em `package.json`/`package-lock.json`) e suíte `npm run test:gamification` (34/34 testes aprovados no repositório e em cópia limpa sem `.git`, incluindo coexistência da migration `053` com fixtures `026` e `052`, isolamento do fallback e rollback/restauração SQL em PostgreSQL).
+
+## Não publicado — plano de gamificação para o Antigravity
+
+- documentados MVP de sessões curtas e metas semanais flexíveis, regras de calendário e conclusão, arquitetura, segurança, fases, critérios de aceite e testes;
+- mantidas implementação, migrations remotas e publicação fora desta entrega documental.
+
 ## Amostra pública e clareza do lançamento (14/11/2026)
 
 - Amostra gratuita de Constitucional com fonte oficial, leitura e questão autoral C/E interativa, sem login ou gravação de dados. Conferência automatizada identificada, sem atribuir revisão humana.

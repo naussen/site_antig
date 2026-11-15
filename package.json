@@ -33,7 +33,8 @@
     "test:planner": "node --test tests/study-planner.test.mjs",
     "test:visual": "playwright test",
     "test:visual:update": "playwright test --update-snapshots",
-    "test:rls-two-users": "node --env-file-if-exists=.env.local scripts/test-rls-two-users.mjs"
+    "test:rls-two-users": "node --env-file-if-exists=.env.local scripts/test-rls-two-users.mjs",
+    "test:gamification": "node --test tests/gamification-calendar.test.mjs tests/gamification-session.test.mjs tests/gamification-ui.test.mjs tests/gamification-postgres.test.mjs"
   },
   "dependencies": {
     "@dnd-kit/core": "^6.3.1",
@@ -71,6 +72,8 @@
     "eslint-config-next": "16.4.3",
     "supabase": "^2.109.1",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "pg": "^8.13.1",
+    "@electric-sql/pglite": "^0.5.16"
   }
 }

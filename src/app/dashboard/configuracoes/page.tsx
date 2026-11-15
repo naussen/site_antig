@@ -10,6 +10,7 @@ import {
   isMissingTableError,
 } from "@/lib/supabase/errors";
 import { requireContentAccess } from "@/lib/content-access";
+import { loadSettingsRoutineStatus } from "@/lib/gamification/server";
 import { START_PAGE_LEGIS, START_PAGE_NOTES, START_PAGE_RESUMOS, START_PAGE_SETTINGS } from "@/lib/user-start-page.mjs";
 
 export default async function DashboardSettingsPage() {
@@ -66,6 +67,11 @@ export default async function DashboardSettingsPage() {
   ].includes(savedStartPage ?? "")
     ? savedStartPage
     : START_PAGE_RESUMOS;
+
+  const routineStatus = await loadSettingsRoutineStatus({
+    supabase,
+    userId: user.id,
+  });
 
   return (
     <main className="min-h-screen px-4 py-6 sm:px-6 md:px-10 md:py-10" style={{ background: "var(--bg-primary)" }}>
@@ -180,6 +186,52 @@ export default async function DashboardSettingsPage() {
             </SavePreferencesButton>
           </div>
         </PreferencesForm>
+
+        {routineStatus.operationalEnabled && (
+          <section
+            aria-labelledby="config-rotina-titulo"
+            className="mt-6 rounded-3xl border p-5 sm:p-6"
+            style={{ background: "var(--bg-card)", borderColor: "var(--border)" }}
+          >
+            <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
+              <div>
+                <h2
+                  id="config-rotina-titulo"
+                  className="text-base font-bold"
+                  style={{ color: "var(--text-primary)" }}
+                >
+                  Rotina semanal e estímulos
+                </h2>
+                <p className="mt-1 text-xs leading-5" style={{ color: "var(--text-secondary)" }}>
+                  {!routineStatus.persistenceAvailable
+                    ? "Status atual: temporariamente indisponível neste ambiente."
+                    : routineStatus.hideGamification
+                      ? "Status atual: estímulos ocultos no Dashboard e nas páginas de estudo (histórico preservado)."
+                      : routineStatus.needsOnboarding
+                        ? "Status atual: aguardando configuração inicial no Dashboard."
+                        : `Status atual: ativa no Dashboard (${routineStatus.targetDays} dia(s)/semana · fuso ${routineStatus.timezoneIana}).`}
+                </p>
+                {routineStatus.demoFallbackActive && (
+                  <p role="status" className="mt-1.5 text-xs leading-5" style={{ color: "var(--text-muted)" }}>
+                    Modo de demonstração local: os dados desta rotina ficam apenas em memória
+                    temporária e não comprovam persistência no banco.
+                  </p>
+                )}
+              </div>
+              <Link
+                href="/dashboard#rotina-semanal"
+                className="inline-flex shrink-0 items-center justify-center rounded-xl border px-4 py-2.5 text-xs font-bold transition-colors hover:border-[var(--accent)]"
+                style={{
+                  borderColor: "var(--border)",
+                  background: "var(--bg-secondary)",
+                  color: "var(--text-primary)",
+                }}
+              >
+                Gerenciar rotina no Dashboard
+              </Link>
+            </div>
+          </section>
+        )}
       </div>
     </main>
   );
