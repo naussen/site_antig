@@ -183,6 +183,17 @@ test("páginas de Dashboard, Estudo e Configurações integram a rotina e mantê
 });
 
 test("migration 053 reconciliada, repositório usa RPCs transacionais e sem escrita direta", () => {
+  const pgTest = readWorkspaceFile("tests/gamification-postgres.test.mjs");
+  assert.equal(
+    pgTest.includes("origin/" + "main") || pgTest.includes("git show") || pgTest.includes("execFileSync"),
+    false,
+    "gamification-postgres.test.mjs não deve depender de histórico Git ou referência externa mutável",
+  );
+  assert.ok(
+    pgTest.includes("7eb374d01bd527f95c10501bd4e0c5febacb2115855a7915780f1719a85a9256") &&
+      pgTest.includes("fdb3933d300b7b0ab56cdb7f0885f080f3dbe9ad818338f2eeba854465f074e0"),
+    "gamification-postgres.test.mjs deve validar SHA-256 das fixtures SQL versionadas 026 e 052",
+  );
   assert.equal(
     fs.existsSync(path.join(ROOT, "supabase/migrations/052_create_study_routine_gamification.sql")),
     false,

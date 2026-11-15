@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
-import { execFileSync, spawn } from "node:child_process";
+import { spawn } from "node:child_process";
+import { createHash } from "node:crypto";
 import fs from "node:fs";
 import net from "node:net";
 import os from "node:os";
@@ -2037,15 +2038,37 @@ test("rollback SQL documentado (REVOKE EXECUTE) e restauração (GRANT EXECUTE) 
   }
 });
 
-test("migration 053 coexiste com 026 e 052 da origin/main sem conflito de objetos ou RLS", async () => {
-  const readMainMigration = (relativePath) =>
-    execFileSync("git", ["show", `origin/main:${relativePath}`], {
-      cwd: ROOT,
-      encoding: "utf8",
-    });
+const CANONICAL_MIGRATION_FIXTURES = {
+  m026: {
+    fixturePath: path.join(ROOT, "tests", "fixtures", "migrations", "026_create_study_planner.sql"),
+    sourcePath: "supabase/migrations/026_create_study_planner.sql",
+    canonicalFileCommit: "ac25c00332a955b0d4272979e3867ba9a85f5ecc",
+    originMainCommit: "7395ebb8c131fa4462713236a13e319084bf3c0b",
+    sha256: "7eb374d01bd527f95c10501bd4e0c5febacb2115855a7915780f1719a85a9256",
+  },
+  m052: {
+    fixturePath: path.join(ROOT, "tests", "fixtures", "migrations", "052_create_launch_interests.sql"),
+    sourcePath: "supabase/migrations/052_create_launch_interests.sql",
+    canonicalFileCommit: "779982e8fceff0125a77e45ce382cd37df91e02a",
+    originMainCommit: "7395ebb8c131fa4462713236a13e319084bf3c0b",
+    sha256: "fdb3933d300b7b0ab56cdb7f0885f080f3dbe9ad818338f2eeba854465f074e0",
+  },
+};
 
-  const migration026Sql = readMainMigration("supabase/migrations/026_create_study_planner.sql");
-  const migration052Sql = readMainMigration("supabase/migrations/052_create_launch_interests.sql");
+function readVerifiedCanonicalFixture(spec) {
+  const raw = fs.readFileSync(spec.fixturePath, "utf8").replace(/\r\n/g, "\n");
+  const digest = createHash("sha256").update(raw, "utf8").digest("hex");
+  assert.equal(
+    digest,
+    spec.sha256,
+    `Fixture ${path.basename(spec.fixturePath)} (${spec.sourcePath} @ ${spec.canonicalFileCommit}) deve manter SHA-256 ${spec.sha256}`,
+  );
+  return raw;
+}
+
+test("migration 053 coexiste com fixtures versionadas de 026 e 052 sem conflito de objetos ou RLS", async () => {
+  const migration026Sql = readVerifiedCanonicalFixture(CANONICAL_MIGRATION_FIXTURES.m026);
+  const migration052Sql = readVerifiedCanonicalFixture(CANONICAL_MIGRATION_FIXTURES.m052);
 
   const db = new PGlite();
   const harness = new PgliteHarness(db);

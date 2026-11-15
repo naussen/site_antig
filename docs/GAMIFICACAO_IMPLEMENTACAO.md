@@ -71,8 +71,20 @@ O MVP implementa uma rotina semanal flexível (1 a 7 dias por semana) e sessões
 | Camada | Escopo real validado | O que **comprova** | O que **não comprova** |
 | --- | --- | --- | --- |
 | **1. Fallback demonstrativo (`STUDY_ROUTINE_DEV_FALLBACK=1`)** | Estado exclusivamente em memória global do processo Node local (`repository.mjs`) | Contratos de UI/API em ambiente sem `053` aplicada, aviso discreto de demonstração e avanço da recomendação em memória sem gravar `user_progress` | Não comprova persistência entre reinícios, RLS, triggers, concorrência PostgreSQL nem schema remoto |
-| **2. PostgreSQL isolado (`PGlite` + PostgreSQL 18 nativo)** | Execução real da migration `053`, coexistência com `026` e `052` da `origin/main`, 6 RPCs `SECURITY DEFINER`, triggers, `pg_locks` multi-conexão e `REVOKE`/`GRANT` | Integridade DDL/DML, bloqueio `42501` sem RPC, isolamento entre `USER_A`/`USER_B`, contenção concorrente real, rollback e compatibilidade com o histórico canônico | Não exercita GoTrue real, PostgREST (`/rest/v1/*`) com cache HTTP nem cookies SSR de produção |
+| **2. PostgreSQL isolado (`PGlite` + PostgreSQL 18 nativo)** | Execução real da migration `053`, coexistência com fixtures versionadas de `026` e `052` (sem dependência de `origin/main`, `.git` ou rede), 6 RPCs `SECURITY DEFINER`, triggers, `pg_locks` multi-conexão e `REVOKE`/`GRANT` | Integridade DDL/DML, bloqueio `42501` sem RPC, isolamento entre `USER_A`/`USER_B`, contenção concorrente real, rollback e coexistência de objetos/RLS com as fixtures versionadas de `026` e `052` (não valida integralmente o histórico canônico `001`–`052`) | Não exercita GoTrue real, PostgREST (`/rest/v1/*`) com cache HTTP nem cookies SSR de produção |
 | **3. Supabase / PostgREST (homologação ou destino)** | Projeto Supabase gerenciado com `001`–`052` + `053`, GoTrue OAuth Google, PostgREST e script `scripts/test-rls-two-users.mjs` | Persistência real end-to-end, cache de schema PostgREST após `NOTIFY pgrst, 'reload schema';`, RLS com tokens JWT reais e smoke autenticado sem fallback | Neste workspace local não há Docker Supabase nem projeto de homologação separado configurado; produção não deve ser usada como ambiente de teste |
+
+## 3C. Fixtures SQL Versionadas e Status da Homologação Supabase
+
+- **Reprodutibilidade sem `origin/main` nem `.git`**: `tests/gamification-postgres.test.mjs` lê fixtures SQL versionadas no repositório e valida o digest SHA-256 (após normalização de fim de linha LF para neutralidade de checkout Windows/Linux), sem `git show`, acesso à rede ou repositório Git ativo.
+- **Escopo explícito do teste**: comprova exclusivamente coexistência de DDL, tabelas, funções, triggers e políticas RLS da migration `053` com as fixtures `026` e `052`; **não** comprova validação integral de todas as migrations canônicas (`001`–`052`).
+
+| Fixture versionada | Origem na `origin/main` (`7395ebb8c131fa4462713236a13e319084bf3c0b`) | Commit canônico do arquivo | Bytes (LF) | SHA-256 (LF) |
+| --- | --- | --- | --- | --- |
+| `tests/fixtures/migrations/026_create_study_planner.sql` | `supabase/migrations/026_create_study_planner.sql` | `ac25c00332a955b0d4272979e3867ba9a85f5ecc` | `7562` | `7eb374d01bd527f95c10501bd4e0c5febacb2115855a7915780f1719a85a9256` |
+| `tests/fixtures/migrations/052_create_launch_interests.sql` | `supabase/migrations/052_create_launch_interests.sql` | `779982e8fceff0125a77e45ce382cd37df91e02a` | `640` | `fdb3933d300b7b0ab56cdb7f0885f080f3dbe9ad818338f2eeba854465f074e0` |
+
+- **Status do ambiente Supabase de homologação**: indisponível localmente nesta máquina (`npx.cmd supabase status` retorna erro por ausência do daemon Docker `//./pipe/docker_engine`, apenas `.env.local` existe entre os arquivos `.env*` e não há projeto Supabase de homologação separado configurado no ambiente local). A aplicação remota e o smoke via PostgREST/GoTrue SSR permanecem pendentes de ambiente de homologação autorizado.
 
 | Dimensão | Ambiente isolado (`PGlite` + PostgreSQL 18.7) | Supabase remoto de destino | Impacto operacional |
 | --- | --- | --- | --- |
@@ -129,7 +141,9 @@ Todas as checagens abaixo foram executadas após a última edição da entrega n
 
 | Verificação | Resultado observado | Escopo e observações |
 | --- | --- | --- |
-| `npm.cmd run test:gamification` | 34/34 aprovados, 0 falhas, 0 ignorados | `gamification-calendar.test.mjs`, `gamification-session.test.mjs` (fallback em memória sem mutações Supabase), `gamification-ui.test.mjs` e `gamification-postgres.test.mjs` (PGlite + PostgreSQL 18 multi-conexão + `REVOKE`/`GRANT` + coexistência com `026` e `052` da `origin/main`) |
+| `npm.cmd run test:gamification` | 34/34 aprovados, 0 falhas, 0 ignorados | `gamification-calendar.test.mjs`, `gamification-session.test.mjs` (fallback em memória sem mutações Supabase), `gamification-ui.test.mjs` e `gamification-postgres.test.mjs` (PGlite + PostgreSQL 18 multi-conexão + `REVOKE`/`GRANT` + coexistência com fixtures versionadas de `026` e `052` verificadas por SHA-256, sem `origin/main` ou `.git`) |
+| Execução em cópia limpa sem `.git` (`node --test tests/gamification-*.test.mjs`) | 34/34 aprovados, 0 falhas, 0 ignorados | Cópia isolada em `%TEMP%` sem `.git` (`git rev-parse --is-inside-work-tree` falha com exit 128), sem `origin/main` e sem rede, usando fixtures SQL versionadas de `026` e `052` |
+| `npx.cmd eslint tests/gamification-postgres.test.mjs tests/gamification-ui.test.mjs` | Aprovado (0 erros, 0 warnings) | Executado após a edição final dos testes |
 | `npm.cmd run test:content` | 44/44 aprovados, 0 falhas, 0 ignorados | Contrato editorial e importação preservados |
 | `npm.cmd run test:api-auth` | 3/3 aprovados, 0 falhas, 0 ignorados | Autenticação admin |
 | `npm.cmd run test:auth` | 9/9 aprovados, 0 falhas, 0 ignorados | OAuth Google e guardas |
