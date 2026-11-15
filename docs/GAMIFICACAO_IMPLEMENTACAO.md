@@ -106,11 +106,21 @@ O MVP implementa uma rotina semanal flexível (1 a 7 dias por semana) e sessões
 2. **Preflight somente-leitura**:
    - Confirmar em `supabase_migrations.schema_migrations` que `050` e `052` existem e `053` ainda está ausente; confirmar `0` tabelas/RPCs de rotina em `pg_catalog` e presença integral dos pré-requisitos (`topics`, `sections`, `user_progress`, `update_updated_at_column()`, `private.has_active_content_access()`).
 3. **Backup lógico criptografado obrigatório pré-migration**:
-   - Executar no root autorizado do repositório:
+   - Executar no root autorizado do repositório (`C:\PRO\site`):
      - `npm run release:preflight:backup`
-     - `npm run backup:supabase`
-     - `npm run backup:verify`
-   - Registrar caminho e resumo de integridade do snapshot antes de qualquer DDL.
+     - Capturar a saída do backup:
+       ```bash
+       npm run backup:supabase
+       ```
+       O script retorna um JSON contendo o caminho do arquivo gerado (`backup_file`, e.g. `backups/supabase/pro-resumos-backup-YYYYMMDD-HHMMSS.probackup`).
+       *(Nota: o backup descobre o schema de origem e tolera banco anterior à migration 053, registrando as 4 tabelas futuras em `schema_scope.missing_tables` sem abortar a exportação das tabelas existentes).*
+     - Executar a verificação de integridade passando o arquivo exato recém-gerado:
+       ```bash
+       npm run backup:verify -- --backup "backups/supabase/pro-resumos-backup-YYYYMMDD-HHMMSS.probackup"
+       ```
+       *(Se utilizada a chave portável com frase, informar também `--recovery-key "backups/supabase/pro-resumos-backup-YYYYMMDD-HHMMSS.key.recovery"` e definir `PRO_BACKUP_RECOVERY_PASSPHRASE`).*
+   - Confirmar o resumo de integridade (`verified: true`, contagem de tabelas e linhas conferidas contra hashes SHA-256) antes de executar qualquer DDL.
+   - NUNCA executar `npm run backup:verify` sem o argumento `--backup`.
 4. **Execução transacional isolada apenas da `053` (sem `supabase db push` cego)**:
    - Não rodar `supabase db push` enquanto `051_normalize_boards_and_review_filter.sql` e `051_rollback.sql` permanecerem pendentes/duplicadas no diretório. Executar somente `supabase/migrations/053_create_study_routine_gamification.sql` envolta em transação única e registrar a versão `053` em `supabase_migrations.schema_migrations` (`version TEXT NOT NULL`, `name TEXT`):
      ```sql

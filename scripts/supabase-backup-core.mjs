@@ -29,6 +29,128 @@ export async function discoverPublicTables(migrationsDirectory) {
   return [...tables].sort((a, b) => a.localeCompare(b));
 }
 
+const MISSING_TABLE_CODES = new Set(["42P01", "PGRST205"]);
+const PERMISSION_ERROR_CODES = new Set(["42501", "PGRST301"]);
+
+export function isTableNotFoundError(error, tableName = "") {
+  if (!error) return false;
+  const code = error.code ?? "";
+  if (MISSING_TABLE_CODES.has(code)) return true;
+  const message = (error.message ?? "").toLowerCase();
+  const name = tableName.toLowerCase();
+  return (
+    (name.length === 0 || message.includes(name) || message.includes(`public.${name}`)) &&
+    (message.includes("could not find the table") ||
+      message.includes("does not exist") ||
+      message.includes("schema cache") ||
+      message.includes("relation") && message.includes("does not exist"))
+  );
+}
+
+export function isPermissionError(error) {
+  if (!error) return false;
+  const code = error.code ?? "";
+  if (PERMISSION_ERROR_CODES.has(code)) return true;
+  const message = (error.message ?? "").toLowerCase();
+  return (
+    message.includes("permission denied") ||
+    message.includes("insufficient_privilege") ||
+    message.includes("violates row-level security") ||
+    message.includes("not authorized") ||
+    message.includes("access denied")
+  );
+}
+
+export async function discoverRemotePublicTables(supabaseUrl, serviceRoleKey, timeoutMs = 10_000) {
+  if (!supabaseUrl || !serviceRoleKey) return null;
+  try {
+    const endpoint = new URL("/rest/v1/", supabaseUrl);
+    const response = await fetch(endpoint, {
+      method: "GET",
+      headers: {
+        apikey: serviceRoleKey,
+        Authorization: `Bearer ${serviceRoleKey}`,
+        Accept: "application/openapi+json, application/json",
+      },
+      signal: AbortSignal.timeout(timeoutMs),
+    });
+    if (!response.ok) return null;
+    const spec = await response.json();
+    const tables = new Set();
+    if (spec && typeof spec === "object") {
+      if (spec.definitions && typeof spec.definitions === "object") {
+        for (const name of Object.keys(spec.definitions)) {
+          if (/^[a-z_][a-z0-9_]*$/iu.test(name)) {
+            tables.add(name);
+          }
+        }
+      }
+      if (spec.paths && typeof spec.paths === "object") {
+        for (const path of Object.keys(spec.paths)) {
+          const match = path.match(/^\/([a-z_][a-z0-9_]*)$/iu);
+          if (match && match[1].toLowerCase() !== "rpc") {
+            tables.add(match[1]);
+          }
+        }
+      }
+    }
+    if (tables.size === 0) return null;
+    return [...tables].sort((a, b) => a.localeCompare(b));
+  } catch {
+    return null;
+  }
+}
+
+export async function fetchTableRows(supabase, table, options = {}) {
+  const pageSize = Number.isInteger(options.pageSize) && options.pageSize > 0 ? options.pageSize : 500;
+  const { data, error } = await supabase
+    .from(table)
+    .select("*")
+    .range(0, pageSize - 1);
+
+  if (error) {
+    if (isTableNotFoundError(error, table)) {
+      return { status: "missing", table, error };
+    }
+    if (isPermissionError(error)) {
+      const code = error.code ?? "42501";
+      const message = error.message ?? "permissão insuficiente";
+      throw new Error(`Permissão insuficiente ao ler a tabela "${table}": [${code}] ${message}`);
+    }
+    const code = error.code ?? "query_failed";
+    const message = error.message ?? "erro de consulta";
+    throw new Error(`Falha de consulta ou rede ao ler a tabela "${table}": [${code}] ${message}`);
+  }
+
+  const rows = [...(data ?? [])];
+  if (rows.length < pageSize) {
+    return { status: "ok", table, rows };
+  }
+
+  for (let offset = pageSize; ; offset += pageSize) {
+    const { data: pageData, error: pageError } = await supabase
+      .from(table)
+      .select("*")
+      .range(offset, offset + pageSize - 1);
+
+    if (pageError) {
+      if (isPermissionError(pageError)) {
+        const code = pageError.code ?? "42501";
+        const message = pageError.message ?? "permissão insuficiente";
+        throw new Error(`Permissão insuficiente ao paginar a tabela "${table}": [${code}] ${message}`);
+      }
+      const code = pageError.code ?? "query_failed";
+      const message = pageError.message ?? "erro de consulta";
+      throw new Error(`Falha de consulta ou rede ao paginar a tabela "${table}": [${code}] ${message}`);
+    }
+
+    rows.push(...(pageData ?? []));
+    if ((pageData?.length ?? 0) < pageSize) break;
+  }
+
+  return { status: "ok", table, rows };
+}
+
 function runPowerShell(script, extraEnv) {
   const result = spawnSync(
     "powershell.exe",

@@ -6,8 +6,10 @@ import {
   backupBaseName,
   createTemporaryDirectory,
   discoverPublicTables,
+  discoverRemotePublicTables,
   encryptArchive,
   ensureDirectory,
+  fetchTableRows,
   protectKeyWithDpapi,
   protectKeyWithPassphrase,
   removeTemporaryDirectory,
@@ -30,19 +32,6 @@ function requiredEnvironment(name) {
   const value = process.env[name]?.trim();
   if (!value) throw new Error(`Variável obrigatória ausente: ${name}`);
   return value;
-}
-
-async function selectAll(supabase, table) {
-  const rows = [];
-  for (let offset = 0; ; offset += PAGE_SIZE) {
-    const { data, error } = await supabase
-      .from(table)
-      .select("*")
-      .range(offset, offset + PAGE_SIZE - 1);
-    if (error) throw new Error(`${table}: ${error.code ?? "query_failed"}`);
-    rows.push(...(data ?? []));
-    if ((data?.length ?? 0) < PAGE_SIZE) return rows;
-  }
 }
 
 async function listAuthUsers(supabase) {
@@ -147,7 +136,7 @@ async function copyOffsite(files, destinationDirectory) {
 async function main() {
   const outputDirectory = argumentValue("--output", DEFAULT_OUTPUT);
   const migrationsDirectory = resolve(process.cwd(), "supabase", "migrations");
-  const publicTables = await discoverPublicTables(migrationsDirectory);
+  const expectedTables = await discoverPublicTables(migrationsDirectory);
   const retentionDays = Number(argumentValue("--retention-days", DEFAULT_RETENTION_DAYS));
   if (!Number.isInteger(retentionDays) || retentionDays < 7) {
     throw new Error("A retenção deve ser um número inteiro de pelo menos 7 dias.");
@@ -159,6 +148,11 @@ async function main() {
   const supabase = createClient(supabaseUrl, serviceRoleKey, {
     auth: { persistSession: false, autoRefreshToken: false, detectSessionInUrl: false },
   });
+
+  const remoteTables = await discoverRemotePublicTables(supabaseUrl, serviceRoleKey);
+  const candidateTables = Array.from(
+    new Set([...expectedTables, ...(remoteTables ?? [])]),
+  ).sort((a, b) => a.localeCompare(b));
 
   await ensureDirectory(outputDirectory);
   const baseName = backupBaseName();
@@ -173,10 +167,29 @@ async function main() {
 
   try {
     const tableCounts = {};
-    for (const table of publicTables) {
-      const rows = await selectAll(supabase, table);
-      tableCounts[table] = rows.length;
-      await writeJsonLines(join(stagingDirectory, "database", `${table}.jsonl`), rows);
+    const missingTables = [];
+    const untrackedTables = [];
+    const expectedSet = new Set(expectedTables);
+
+    for (const table of candidateTables) {
+      const result = await fetchTableRows(supabase, table, { pageSize: PAGE_SIZE });
+      if (result.status === "missing") {
+        if (expectedSet.has(table)) {
+          missingTables.push(table);
+        }
+        continue;
+      }
+
+      tableCounts[table] = result.rows.length;
+      await writeJsonLines(join(stagingDirectory, "database", `${table}.jsonl`), result.rows);
+
+      if (!expectedSet.has(table)) {
+        untrackedTables.push(table);
+      }
+    }
+
+    if (Object.keys(tableCounts).length === 0) {
+      throw new Error("Nenhuma tabela válida foi encontrada no banco de dados para exportação. Backup abortado.");
     }
 
     const users = await listAuthUsers(supabase);
@@ -221,6 +234,13 @@ async function main() {
         "Database functions, policies and schema are restored from the versioned migrations.",
       ],
       table_counts: tableCounts,
+      schema_scope: {
+        expected_tables_count: expectedTables.length,
+        exported_tables_count: Object.keys(tableCounts).length,
+        missing_tables: missingTables,
+        untracked_tables: untrackedTables,
+        remote_schema_discovered: Boolean(remoteTables),
+      },
       auth_user_count: users.length,
       auth_identity_count: users.reduce((count, user) => count + (user.identities?.length ?? 0), 0),
       storage_bucket_count: (buckets ?? []).length,
@@ -261,6 +281,18 @@ async function main() {
       await copyOffsite([backupPath, recoveryKeyPath, summaryPath], offsiteDirectory);
     }
     await enforceRetention(outputDirectory, retentionDays);
+
+    if (missingTables.length > 0) {
+      console.warn(
+        `[backup:aviso] ${missingTables.length} tabela(s) das migrations locais não existem no banco de origem (pendentes de aplicação): ${missingTables.join(", ")}`,
+      );
+    }
+    if (untrackedTables.length > 0) {
+      console.warn(
+        `[backup:aviso] ${untrackedTables.length} tabela(s) existentes no banco de origem não constam nas migrations locais: ${untrackedTables.join(", ")}`,
+      );
+    }
+
     console.log(JSON.stringify(summary));
   } catch (error) {
     await rm(backupPath, { force: true });

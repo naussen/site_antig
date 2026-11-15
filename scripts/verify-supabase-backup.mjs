@@ -78,6 +78,8 @@ async function main() {
       created_at: manifest.created_at,
       tables: Object.keys(manifest.table_counts).length,
       rows: Object.values(manifest.table_counts).reduce((sum, count) => sum + count, 0),
+      missing_tables: manifest.schema_scope?.missing_tables?.length ?? 0,
+      untracked_tables: manifest.schema_scope?.untracked_tables?.length ?? 0,
       auth_users: manifest.auth_user_count,
       auth_identities: authIdentityCount,
       storage_objects: manifest.storage_object_count,
