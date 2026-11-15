@@ -93,6 +93,8 @@ export function TodayStudyCard({
     demoFallbackOverride?.source === initialSnapshot
       ? demoFallbackOverride.value
       : demoFallbackActive;
+  const hasActivatedRoutine =
+    persistenceAvailable && !snapshot.needsOnboarding && Boolean(snapshot.currentPlan);
 
   const [budgetOverride, setBudgetOverride] = useState<{
     source: RoutineSnapshot;
@@ -103,7 +105,9 @@ export function TodayStudyCard({
       ? budgetOverride.value
       : snapshot.preferences.default_budget_minutes;
 
-  const [configOpen, setConfigOpen] = useState(initialSnapshot.needsOnboarding);
+  const [configOpen, setConfigOpen] = useState(
+    persistenceAvailable && initialSnapshot.needsOnboarding,
+  );
   const [pickerOpen, setPickerOpen] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
 
@@ -512,12 +516,22 @@ export function TodayStudyCard({
               <CalendarDays size={13} aria-hidden="true" />
               Rotina semanal flexível
             </span>
-            {weeklyProgress.isPartialFirstWeek && !snapshot.needsOnboarding && (
+            {!persistenceAvailable && (
+              <span className="inline-flex items-center rounded-full border border-[var(--callout-warning-border)] bg-[var(--callout-warning-bg)] px-2.5 py-0.5 text-xs font-semibold text-[var(--callout-warning-text)]">
+                Persistência pendente neste ambiente
+              </span>
+            )}
+            {persistenceAvailable && !hasActivatedRoutine && (
+              <span className="inline-flex items-center rounded-full border border-[var(--border)] bg-[var(--bg-secondary)] px-2.5 py-0.5 text-xs font-medium text-[var(--text-secondary)]">
+                Rotina ainda não ativada
+              </span>
+            )}
+            {hasActivatedRoutine && weeklyProgress.isPartialFirstWeek && (
               <span className="inline-flex items-center rounded-full border border-[var(--border)] bg-[var(--bg-secondary)] px-2.5 py-0.5 text-xs font-medium text-[var(--text-secondary)]">
                 Semana inicial parcial
               </span>
             )}
-            {weeklyProgress.goalReached && !snapshot.needsOnboarding && (
+            {hasActivatedRoutine && weeklyProgress.goalReached && (
               <span className="inline-flex items-center gap-1 rounded-full bg-[var(--status-success-bg)] px-2.5 py-0.5 text-xs font-bold text-[var(--status-success-text)]">
                 <Check size={12} aria-hidden="true" />
                 Meta semanal atingida
@@ -529,12 +543,24 @@ export function TodayStudyCard({
             id="rotina-semanal-titulo"
             className="mt-2.5 text-xl font-extrabold tracking-tight text-[var(--text-primary)] sm:text-2xl"
           >
-            {snapshot.needsOnboarding
-              ? "Configure seu ritmo semanal de estudo"
-              : "Seu estudo hoje"}
+            {!persistenceAvailable
+              ? "Rotina semanal temporariamente indisponível"
+              : snapshot.needsOnboarding
+                ? "Configure seu ritmo semanal de estudo"
+                : "Seu estudo hoje"}
           </h2>
 
-          {!snapshot.needsOnboarding && (
+          {!persistenceAvailable ? (
+            <p className="mt-1 text-sm text-[var(--text-secondary)]">
+              Enquanto a gravação da rotina não estiver ativa neste ambiente, o estudo convencional
+              pelos resumos e a marcação normal de seções continuam funcionando.
+            </p>
+          ) : !hasActivatedRoutine ? (
+            <p className="mt-1 text-sm text-[var(--text-secondary)]">
+              Você ainda não ativou uma rotina semanal nesta conta. Defina uma meta inicial abaixo ou
+              siga estudando livremente pelo acervo.
+            </p>
+          ) : (
             <p className="mt-1 text-sm text-[var(--text-secondary)]">
               <strong className="font-bold text-[var(--text-primary)]">
                 {weeklyProgress.completedDaysCount} de {weeklyProgress.targetDays} dias
@@ -553,7 +579,8 @@ export function TodayStudyCard({
             type="button"
             onClick={() => setConfigOpen((current) => !current)}
             aria-expanded={configOpen}
-            className="inline-flex items-center gap-1.5 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] px-3.5 py-2 text-xs font-bold text-[var(--text-primary)] transition-colors hover:border-[var(--accent)] motion-reduce:transition-none"
+            disabled={!persistenceAvailable || Boolean(busyAction)}
+            className="inline-flex items-center gap-1.5 rounded-xl border border-[var(--border)] bg-[var(--bg-secondary)] px-3.5 py-2 text-xs font-bold text-[var(--text-primary)] transition-colors hover:border-[var(--accent)] disabled:opacity-50 motion-reduce:transition-none"
           >
             <Settings2 size={14} aria-hidden="true" />
             {snapshot.needsOnboarding ? "Personalizar" : "Meta e fuso"}
@@ -571,17 +598,27 @@ export function TodayStudyCard({
         </div>
       </div>
 
-      {/* Aviso de persistência indisponível */}
+      {/* Aviso de persistência indisponível antes de solicitar preenchimento */}
       {!persistenceAvailable && (
         <div
           role="status"
           className="mt-4 flex items-start gap-3 rounded-2xl border border-[var(--callout-warning-border)] bg-[var(--callout-warning-bg)] p-4 text-sm text-[var(--callout-warning-text)]"
         >
           <AlertTriangle size={18} className="mt-0.5 shrink-0" aria-hidden="true" />
-          <p>
-            A persistência da rotina semanal está temporariamente indisponível neste ambiente.
-            Você pode navegar e estudar normalmente pelo acervo abaixo.
-          </p>
+          <div>
+            <p>
+              A persistência da rotina semanal está temporariamente indisponível neste ambiente. Por
+              isso, a configuração de metas e o salvamento de sessões ficam bloqueados até a
+              ativação do banco de dados, sem afetar seu acesso ao acervo abaixo.
+            </p>
+            <a
+              href="#library-title"
+              className="mt-2 inline-flex items-center gap-1 text-xs font-bold underline hover:opacity-80"
+            >
+              Ir para os resumos disponíveis
+              <ArrowRight size={13} aria-hidden="true" />
+            </a>
+          </div>
         </div>
       )}
 
@@ -617,7 +654,7 @@ export function TodayStudyCard({
       </div>
 
       {/* Indicador visual dos 7 dias (Seg a Dom) */}
-      {!snapshot.needsOnboarding && (
+      {hasActivatedRoutine && (
         <div className="mt-4">
           <ol
             aria-label="Dias estudados nesta semana"
@@ -673,11 +710,19 @@ export function TodayStudyCard({
       )}
 
       {/* Formulário de Onboarding / Edição de Meta e Fuso */}
-      {(snapshot.needsOnboarding || configOpen) && (
+      {((persistenceAvailable && snapshot.needsOnboarding) || configOpen) && (
         <form
           onSubmit={handleSavePreferences}
           className="mt-5 rounded-2xl border border-[var(--border)] bg-[var(--bg-secondary)] p-4 sm:p-5"
         >
+          {!persistenceAvailable && (
+            <p
+              role="status"
+              className="mb-4 rounded-xl border border-[var(--callout-warning-border)] bg-[var(--callout-warning-bg)] px-3.5 py-2.5 text-xs text-[var(--callout-warning-text)]"
+            >
+              O preenchimento destas preferências aguarda a ativação da persistência neste ambiente.
+            </p>
+          )}
           <div className="mb-4 flex items-start justify-between gap-3">
             <div>
               <h3 className="text-base font-bold text-[var(--text-primary)]">
@@ -693,7 +738,10 @@ export function TodayStudyCard({
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <fieldset
+            disabled={!persistenceAvailable || Boolean(busyAction)}
+            className="grid gap-4 sm:grid-cols-2 disabled:opacity-60"
+          >
             <div>
               <label
                 htmlFor="routine-target-days"
@@ -804,7 +852,7 @@ export function TodayStudyCard({
                 ))}
               </select>
             </div>
-          </div>
+          </fieldset>
 
           <div className="mt-5 flex flex-wrap items-center justify-end gap-2">
             {!snapshot.needsOnboarding && (
@@ -832,8 +880,8 @@ export function TodayStudyCard({
         </form>
       )}
 
-      {/* Área principal da sessão de hoje (somente após onboarding) */}
-      {!snapshot.needsOnboarding && (
+      {/* Área principal da sessão de hoje (somente após ativação da rotina) */}
+      {hasActivatedRoutine && (
         <div className="mt-5">
           {activeSession ? (
             <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg-secondary)] p-4 sm:p-5">

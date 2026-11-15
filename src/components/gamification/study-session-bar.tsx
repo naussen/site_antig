@@ -105,6 +105,8 @@ export function StudySessionBar({
     return null;
   }
 
+  const hasActivatedRoutine =
+    persistenceAvailable && !snapshot.needsOnboarding && Boolean(snapshot.currentPlan);
   const activeSession = snapshot.activeSession;
   const activeActivities = (activeSession?.activities ?? [])
     .slice()
@@ -348,6 +350,18 @@ export function StudySessionBar({
       aria-label="Sessão guiada da rotina semanal"
       className="mb-6 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-4 shadow-[var(--shadow)] sm:p-5"
     >
+      {!persistenceAvailable && (
+        <div
+          role="status"
+          className="mb-3 flex items-start gap-2 rounded-xl border border-[var(--callout-warning-border)] bg-[var(--callout-warning-bg)] px-3 py-2 text-xs text-[var(--callout-warning-text)]"
+        >
+          <AlertTriangle size={14} className="mt-0.5 shrink-0" aria-hidden="true" />
+          <p>
+            Persistência da rotina temporariamente indisponível; sua leitura e marcação normal
+            continuam funcionando.
+          </p>
+        </div>
+      )}
       {persistenceAvailable && isDemoFallback && (
         <p
           role="status"
@@ -406,9 +420,10 @@ export function StudySessionBar({
                 <CalendarDays size={12} aria-hidden="true" />
                 {activeSession.status === "interrupted"
                   ? "Sessão pausada"
-                  : "Sessão ativa"}{" "}
-                ({snapshot.weeklyProgress.completedDaysCount} de{" "}
-                {snapshot.weeklyProgress.targetDays} dias)
+                  : "Sessão ativa"}
+                {hasActivatedRoutine
+                  ? ` (${snapshot.weeklyProgress.completedDaysCount} de ${snapshot.weeklyProgress.targetDays} dias)`
+                  : ""}
               </span>
               <span className="inline-flex items-center gap-1 text-xs font-semibold text-[var(--text-secondary)]">
                 <Clock size={13} aria-hidden="true" />
@@ -584,12 +599,20 @@ export function StudySessionBar({
           <div className="flex items-center gap-2.5">
             <CalendarDays size={18} className="shrink-0 text-[var(--accent)]" aria-hidden="true" />
             <p className="text-sm text-[var(--text-secondary)]">
-              Rotina semanal:{" "}
-              <strong className="text-[var(--text-primary)]">
-                {snapshot.weeklyProgress.completedDaysCount} de{" "}
-                {snapshot.weeklyProgress.targetDays} dias
-              </strong>{" "}
-              nesta semana.
+              {!persistenceAvailable ? (
+                "Rotina semanal: persistência temporariamente indisponível neste ambiente."
+              ) : hasActivatedRoutine ? (
+                <>
+                  Rotina semanal:{" "}
+                  <strong className="text-[var(--text-primary)]">
+                    {snapshot.weeklyProgress.completedDaysCount} de{" "}
+                    {snapshot.weeklyProgress.targetDays} dias
+                  </strong>{" "}
+                  nesta semana.
+                </>
+              ) : (
+                `Rotina semanal ainda não ativada (meta sugerida: ${snapshot.preferences.target_days} dias/semana).`
+              )}
             </p>
           </div>
 
@@ -600,10 +623,11 @@ export function StudySessionBar({
                   key={minutes}
                   type="button"
                   aria-pressed={selectedBudget === minutes}
+                  disabled={!persistenceAvailable || Boolean(busyAction)}
                   onClick={() =>
                     setBudgetOverride({ source: initialSnapshot, value: minutes })
                   }
-                  className={`rounded-lg border px-2.5 py-1 text-xs font-bold ${
+                  className={`rounded-lg border px-2.5 py-1 text-xs font-bold disabled:opacity-50 ${
                     selectedBudget === minutes
                       ? "border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)]"
                       : "border-[var(--border)] bg-[var(--bg-secondary)] text-[var(--text-secondary)]"
@@ -628,13 +652,6 @@ export function StudySessionBar({
             </button>
           </div>
         </div>
-      )}
-
-      {!persistenceAvailable && (
-        <p className="mt-3 flex items-center gap-2 text-xs text-[var(--callout-warning-text)]">
-          <AlertTriangle size={14} aria-hidden="true" />
-          Persistência da rotina temporariamente indisponível; sua leitura e marcação normal continuam funcionando.
-        </p>
       )}
 
       <div aria-live="polite" className="mt-2 space-y-1.5">

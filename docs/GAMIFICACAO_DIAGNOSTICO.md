@@ -213,3 +213,30 @@ Triggers e restrições no banco (`SECURITY DEFINER`, `SET search_path = ''`):
   3. Diferentemente dos logins bem-sucedidos em produção (onde `exchangeCodeForSession` consome a linha de `auth.flow_state` e grava nova linha em `auth.sessions`), nas 3 tentativas locais o `auth_code` permaneceu **não consumido** (`auth_code IS NOT NULL`) em `auth.flow_state`, nenhuma sessão correspondente foi criada em `auth.sessions` e `src/app/auth/callback/route.ts` redirecionou para `/resumos/login?error=auth` (e não `?error=google_required`).
   4. Em PKCE (`@supabase/ssr` `0.12.0` + `@supabase/auth-js` `2.110.0`), `createBrowserClient` grava o verificador no cookie `sb-<ref>-auth-token-code-verifier` em `document.cookie` (`path: "/"`, `sameSite: "lax"`) na origem onde o botão "Continuar com Google" é clicado, e `exchangeCodeForSession(code)` no callback exige esse mesmo cookie na mesma origem (`localhost` × `localhost`, não `127.0.0.1` × `localhost`, nem fluxos concluídos em outro contexto/navegador sem o cookie PKCE).
 - **Inspeção em navegador local em 15/11/2026 (`a46c3b4`, `STUDY_ROUTINE_DEV_FALLBACK=1`)**: `http://localhost:3000/resumos/dashboard` redirecionou para `http://localhost:3000/resumos/login` (`AUTH_REQUIRED`, `0` cookies ativos, `0` erros de console e `0` overflow horizontal em `1280x800` e `360x780`). A validação visual autenticada da rotina semanal e sessões permanece pendente de login Google válido no mesmo contexto de navegador na origem `http://localhost:3000`.
+
+### 8.5. Análise da ausência da migration `051` e verificação dos pré-requisitos reais de `053`
+
+- **Situação da `051` na pasta e no banco remoto (`wbre***.supabase.co`)**:
+  - No diretório `supabase/migrations/` existem dois arquivos com prefixo `051_`: `051_normalize_boards_and_review_filter.sql` (normalização de bancas `Vunesp`/`FCC`/`CEBRASPE` em `public.questions` e inclusão do 11º parâmetro `p_review_filter` em `public.list_questions_filtered_v2`) e `051_rollback.sql` (restauração da assinatura de `050` e `047`).
+  - No catálogo remoto `supabase_migrations.schema_migrations` constam versões `001`–`050` e `052` (`create_launch_interests`, tabela com `version TEXT NOT NULL`, `statements TEXT[]`, `name TEXT`); `051` e `053` não constam aplicadas.
+- **Independência entre `051` e `053`**:
+  - A migration `053_create_study_routine_gamification.sql` não consulta, altera nem referencia `public.questions`, `public.list_questions_filtered_v2` ou `public.list_question_filters`.
+  - Validado em PGlite isolado (`tests/gamification-postgres.test.mjs`): com `026` e `052` aplicados e **sem `051`** (`to_regclass('public.questions') IS NULL`), `053` aplica integralmente todas as `4` tabelas, `7` índices, `13` triggers, `4` políticas RLS, `11` funções `private.*`, `6` RPCs `public.*` e suas permissões exatas.
+- **Pré-requisitos reais de `053` conferidos diretamente em `wbre***.supabase.co` (`pg_catalog` / `pg_attribute`)**:
+  - `auth.users` e `auth.uid()` -> existentes;
+  - `public.update_updated_at_column()` -> existente;
+  - `private.has_active_content_access()` -> existente;
+  - `public.topics` (`topic_id`, `discipline`, `title`, `sort_order`, `archived_at`) -> existente;
+  - `public.sections` (`section_id`, `topic_id`, `content_unit_id`, `title`, `sort_order`, `archived_at`) -> existente;
+  - `public.user_progress` (`user_id`, `section_id`, `content_unit_id`, `completed`, `updated_at` e constraint única `user_progress_user_content_unit_key`) -> existente.
+- **Impacto operacional**: todos os pré-requisitos reais de `053` já estão presentes no banco remoto, sem nenhuma dependência de `051`. Em contrapartida, pela coexistência de `051_normalize_boards_and_review_filter.sql` e `051_rollback.sql` em `supabase/migrations/` e por `051` aguardar janela própria do módulo de Questões, **não** se deve executar `supabase db push` cego; a ativação remota deve executar exclusivamente `053_create_study_routine_gamification.sql` em transação atômica e registrar apenas a versão `053` em `supabase_migrations.schema_migrations`.
+
+### 8.6. Teste autenticado em produção (`https://proconcursos.com.br/resumos`) e ajuste de estado indisponível
+
+- **Observado no teste autenticado do Codex em 15/11/2026 (produção com código `a46c3b4`, antes do ajuste de UI)**:
+  - `/resumos/dashboard` e `/resumos/dashboard/configuracoes` carregaram autenticados com degradação controlada: `GET /resumos/api/study-routine` retornou `persistenceAvailable: false`, `demoFallbackActive: false`, `needsOnboarding: true`, `currentPlan: null`, `activeSession: null`, `recommendation: null`.
+  - Temas Claro/Escuro/Sépia, navegação dashboard → preferências → resumo, notas, Mermaid com zoom e responsividade desktop/mobile (`360 px`) funcionaram sem overflow horizontal e sem alterar notas/progresso existentes.
+  - Defeito identificado na UI então publicada: `TodayStudyCard` abria controles de onboarding interativos antes do aviso de bloqueio e `StudySessionBar` exibia `"0 de 3 dias"` como se fosse histórico de rotina ativada.
+- **Correção aplicada nesta entrega (branch `docs/reconciliar-ativacao-gamificacao`, pendente de integração em `main`/deploy)**:
+  - `TodayStudyCard` e `StudySessionBar` agora exigem `hasActivatedRoutine = persistenceAvailable && !snapshot.needsOnboarding && Boolean(snapshot.currentPlan)` antes de exibir contagem semanal (`X de Y dias`) ou grade de dias;
+  - Quando `persistenceAvailable === false`, o aviso de bloqueio aparece no topo antes de qualquer formulário/controle, com acesso direto ao acervo (`#library-title`), sem abrir o onboarding e desabilitando seletores de preferência e orçamento.

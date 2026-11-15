@@ -216,3 +216,60 @@ test("migration 053 reconciliada, repositório usa RPCs transacionais e sem escr
   assert.ok(repository.includes('rpc("complete_study_routine_session"'));
   assert.equal(repository.includes("setTimeout"), false);
 });
+
+test("estado persistenceAvailable=false explica bloqueio antes do onboarding, desabilita controles e evita '0 de 3 dias' sem rotina ativa", () => {
+  const todayCard = readWorkspaceFile("src/components/gamification/today-study-card.tsx").replace(
+    /\r\n/g,
+    "\n",
+  );
+  const sessionBar = readWorkspaceFile("src/components/gamification/study-session-bar.tsx").replace(
+    /\r\n/g,
+    "\n",
+  );
+
+  for (const [label, content] of [
+    ["today-study-card.tsx", todayCard],
+    ["study-session-bar.tsx", sessionBar],
+  ]) {
+    assert.ok(
+      content.includes("const hasActivatedRoutine =") &&
+        content.includes("persistenceAvailable && !snapshot.needsOnboarding && Boolean(snapshot.currentPlan)"),
+      `${label} deve condicionar contagem semanal a rotina ativada com persistência disponível`,
+    );
+  }
+
+  assert.ok(
+    todayCard.includes("useState(\n    persistenceAvailable && initialSnapshot.needsOnboarding") ||
+      todayCard.includes("useState(persistenceAvailable && initialSnapshot.needsOnboarding)"),
+    "TodayStudyCard não deve abrir configuração por padrão quando persistenceAvailable é false",
+  );
+  assert.ok(
+    todayCard.includes("((persistenceAvailable && snapshot.needsOnboarding) || configOpen)") &&
+      todayCard.includes("<fieldset\n            disabled={!persistenceAvailable || Boolean(busyAction)}") &&
+      todayCard.includes('href="#library-title"'),
+    "TodayStudyCard deve ocultar/desabilitar campos de onboarding e preservar atalho ao acervo quando indisponível",
+  );
+  assert.ok(
+    todayCard.indexOf("A persistência da rotina semanal está temporariamente indisponível") <
+      todayCard.indexOf("<form"),
+    "TodayStudyCard deve explicar o bloqueio de persistência antes do formulário de onboarding",
+  );
+  assert.ok(
+    todayCard.includes(") : !hasActivatedRoutine ? (") &&
+      todayCard.indexOf(") : !hasActivatedRoutine ? (") <
+        todayCard.indexOf("{weeklyProgress.completedDaysCount} de {weeklyProgress.targetDays} dias") &&
+      todayCard.includes("{hasActivatedRoutine && (\n        <div className=\"mt-4\">"),
+    "TodayStudyCard deve exibir contagem semanal e grade de dias apenas quando hasActivatedRoutine for true",
+  );
+
+  assert.ok(
+    sessionBar.indexOf("Persistência da rotina temporariamente indisponível") <
+      sessionBar.indexOf("Iniciar sessão neste tópico"),
+    "StudySessionBar deve exibir o aviso de persistência indisponível antes dos controles de sessão",
+  );
+  assert.ok(
+    sessionBar.includes("Rotina semanal ainda não ativada") &&
+      sessionBar.includes("disabled={!persistenceAvailable || Boolean(busyAction)}"),
+    "StudySessionBar não deve exibir 0 de N dias antes da ativação e deve desabilitar controles quando indisponível",
+  );
+});

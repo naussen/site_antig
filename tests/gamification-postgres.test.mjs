@@ -2078,6 +2078,121 @@ test("migration 053 coexiste com fixtures versionadas de 026 e 052 sem conflito 
     await db.exec(migration052Sql);
     await db.exec(MIGRATION_053_SQL);
 
+    // Prova independência real de 051: 053 aplica e valida inventário integral sem public.questions
+    const inventoryRes = await db.query(`
+      SELECT
+        (to_regclass('public.questions') IS NULL) AS no_051_questions_table,
+        (SELECT COUNT(*)::INT FROM pg_class c JOIN pg_namespace n ON n.oid = c.relnamespace
+          WHERE n.nspname = 'public' AND c.relkind = 'r'
+            AND c.relname IN (
+              'user_study_routine_preferences',
+              'study_routine_weekly_plans',
+              'study_routine_sessions',
+              'study_routine_session_activities'
+            )) AS tables_count,
+        (SELECT COUNT(*)::INT FROM pg_indexes
+          WHERE schemaname = 'public'
+            AND indexname LIKE 'idx_study_routine_%') AS routine_indexes_count,
+        (SELECT COUNT(*)::INT FROM pg_trigger t
+          JOIN pg_class c ON c.oid = t.tgrelid
+          JOIN pg_namespace n ON n.oid = c.relnamespace
+          WHERE n.nspname = 'public'
+            AND NOT t.tgisinternal
+            AND c.relname IN (
+              'user_study_routine_preferences',
+              'study_routine_weekly_plans',
+              'study_routine_sessions',
+              'study_routine_session_activities'
+            )) AS triggers_count,
+        (SELECT COUNT(*)::INT FROM pg_policies
+          WHERE schemaname = 'public'
+            AND tablename IN (
+              'user_study_routine_preferences',
+              'study_routine_weekly_plans',
+              'study_routine_sessions',
+              'study_routine_session_activities'
+            )) AS policies_count,
+        (SELECT COUNT(*)::INT FROM pg_proc p
+          JOIN pg_namespace n ON n.oid = p.pronamespace
+          WHERE n.nspname = 'private'
+            AND p.proname IN (
+              'require_authenticated_routine_access',
+              'validate_routine_timezone',
+              'acquire_study_routine_user_lock',
+              'get_study_routine_session_json',
+              'enforce_study_routine_rpc_mutation_guard',
+              'enforce_study_routine_weekly_plan_immutability',
+              'enforce_study_routine_session_transitions',
+              'enforce_study_routine_activity_integrity',
+              'enforce_study_routine_session_row_has_activities',
+              'enforce_study_routine_activity_delete_keeps_session',
+              'sync_user_study_routine_week'
+            )) AS private_fns_count,
+        (SELECT COUNT(*)::INT FROM pg_proc p
+          JOIN pg_namespace n ON n.oid = p.pronamespace
+          WHERE n.nspname = 'public'
+            AND p.prosecdef = true
+            AND p.proname IN (
+              'ensure_study_routine_weekly_plan',
+              'save_study_routine_preferences',
+              'create_study_routine_session',
+              'update_study_routine_session_status',
+              'replace_study_routine_session_activity',
+              'complete_study_routine_session'
+            )) AS public_rpcs_count
+    `);
+    assert.deepEqual(inventoryRes.rows[0], {
+      no_051_questions_table: true,
+      tables_count: 4,
+      routine_indexes_count: 7,
+      triggers_count: 13,
+      policies_count: 4,
+      private_fns_count: 11,
+      public_rpcs_count: 6,
+    });
+
+    const tablePrivRes = await db.query(`
+      SELECT
+        bool_and(has_table_privilege('authenticated', format('public.%I', tbl), 'SELECT')) AS auth_select,
+        bool_or(has_table_privilege('authenticated', format('public.%I', tbl), 'INSERT')) AS auth_insert,
+        bool_or(has_table_privilege('authenticated', format('public.%I', tbl), 'UPDATE')) AS auth_update,
+        bool_or(has_table_privilege('authenticated', format('public.%I', tbl), 'DELETE')) AS auth_delete,
+        bool_or(has_table_privilege('anon', format('public.%I', tbl), 'SELECT')) AS anon_select
+      FROM unnest(ARRAY[
+        'user_study_routine_preferences',
+        'study_routine_weekly_plans',
+        'study_routine_sessions',
+        'study_routine_session_activities'
+      ]) AS tbl
+    `);
+    assert.deepEqual(tablePrivRes.rows[0], {
+      auth_select: true,
+      auth_insert: false,
+      auth_update: false,
+      auth_delete: false,
+      anon_select: false,
+    });
+
+    const rpcPrivRes = await db.query(`
+      SELECT
+        bool_and(has_function_privilege('authenticated', sig, 'EXECUTE')) AS auth_exec,
+        bool_and(has_function_privilege('service_role', sig, 'EXECUTE')) AS svc_exec,
+        bool_or(has_function_privilege('anon', sig, 'EXECUTE')) AS anon_exec
+      FROM unnest(ARRAY[
+        'public.ensure_study_routine_weekly_plan(boolean)',
+        'public.save_study_routine_preferences(smallint, text, smallint, text, boolean, boolean)',
+        'public.create_study_routine_session(smallint, text, text, jsonb, boolean)',
+        'public.update_study_routine_session_status(uuid, text)',
+        'public.replace_study_routine_session_activity(uuid, uuid, uuid, text, text, text, text, text, smallint)',
+        'public.complete_study_routine_session(uuid, uuid[], text, uuid)'
+      ]) AS sig
+    `);
+    assert.deepEqual(rpcPrivRes.rows[0], {
+      auth_exec: true,
+      svc_exec: true,
+      anon_exec: false,
+    });
+
     await db.query(
       `INSERT INTO auth.users (id, email) VALUES ($1, $2), ($3, $4)`,
       [USER_A, "compat.a@example.com", USER_B, "compat.b@example.com"],

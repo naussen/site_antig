@@ -86,23 +86,50 @@ O MVP implementa uma rotina semanal flexível (1 a 7 dias por semana) e sessões
 
 - **Status do ambiente Supabase de homologação**: indisponível localmente nesta máquina (`npx.cmd supabase status` retorna erro por ausência do daemon Docker `//./pipe/docker_engine`, apenas `.env.local` existe entre os arquivos `.env*` e não há projeto Supabase de homologação separado configurado no ambiente local). A aplicação remota e o smoke via PostgREST/GoTrue SSR permanecem pendentes de ambiente de homologação autorizado.
 
-| Dimensão | Ambiente isolado (`PGlite` + PostgreSQL 18.7) | Supabase remoto de destino | Impacto operacional |
+| Dimensão | Ambiente isolado (`PGlite` + PostgreSQL 18.7) | Supabase remoto de destino (`wbre***.supabase.co`) | Impacto operacional |
 | --- | --- | --- | --- |
 | **Autenticação e claims** | Schema `auth` mínimo e `request.jwt.claims` simulados via `set_config` | GoTrue gerenciado com Google OAuth (`provider = 'google'`) e MFA `aal2` para admins | O fluxo completo de sessão OAuth + cookies SSR depende de login Google válido |
-| **Histórico de migrations** | Bootstrap das tabelas pré-requisito + 2x `053` no banco `gamification_test` | Histórico `001`–`052` (inclui `026_create_study_planner.sql`, Questões `029`–`051` e `052_create_launch_interests.sql`) | `053` permanece sem colisão de numeração nem de nomes de tabelas/funções |
-| **Camada HTTP / PostgREST** | Chamadas SQL diretas às tabelas/RPCs pelo adaptador de teste | Exposição via PostgREST (`/rest/v1/*`) com cache de schema | Após aplicar a `053`, recarregar cache com `NOTIFY pgrst, 'reload schema';` |
-| **Permissões gerenciadas** | Papel `authenticated` criado localmente para simular usuário logado | Papéis `anon`, `authenticated`, `service_role` e triggers do projeto | Executar `node scripts/test-rls-two-users.mjs` após a `053` para validar no ambiente real |
+| **Histórico de migrations** | Bootstrap das tabelas pré-requisito + fixtures versionadas `026`/`052` + 2x `053` no banco `gamification_test` (sem `051`) | Histórico remoto atual contém `001`–`050` e `052` (`create_launch_interests`); `051` e `053` ausentes | `053` não depende de `051`; não executar `supabase db push` cego por coexistirem `051_normalize_boards_and_review_filter.sql` e `051_rollback.sql` na pasta |
+| **Camada HTTP / PostgREST** | Chamadas SQL diretas às tabelas/RPCs pelo adaptador de teste | Exposição via PostgREST (`/rest/v1/*`) com cache de schema | Após aplicar a `053`, recarregar cache com `NOTIFY pgrst, 'reload schema';` e confirmar via `GET` (não `HEAD`) |
+| **Permissões gerenciadas** | Papel `authenticated` criado localmente para simular usuário logado | Papéis `anon`, `authenticated`, `service_role` e triggers do projeto | Executar `npm run test:rls-two-users` após a `053` para validar no ambiente real |
 
-### Procedimento concreto de aplicação e smoke test (aguardando autorização operacional)
+### Estado da análise `051` × `053` e pré-requisitos reais verificados no remoto (`wbre***.supabase.co`)
 
-1. Confirmar que `supabase/migrations` remoto está em dia até `052_create_launch_interests.sql` e gerar snapshot/backup pré-migration.
-2. Aplicar `supabase/migrations/053_create_study_routine_gamification.sql` via Supabase CLI (`supabase db push` ou SQL Editor administrativo em transação).
-3. Executar `NOTIFY pgrst, 'reload schema';` para atualizar o catálogo do PostgREST.
-4. Verificar existência das 4 tabelas (`user_study_routine_preferences`, `study_routine_weekly_plans`, `study_routine_sessions`, `study_routine_session_activities`) e das 6 RPCs (`ensure_study_routine_weekly_plan`, `save_study_routine_preferences`, `create_study_routine_session`, `update_study_routine_session_status`, `replace_study_routine_session_activity`, `complete_study_routine_session`), confirmando apenas `SELECT` concedido a `authenticated` e zero privilégios a `anon`.
-5. Executar smoke automatizado com dois usuários reais contra o banco atualizado (sem `STUDY_ROUTINE_DEV_FALLBACK`):
-   `node scripts/test-rls-two-users.mjs`
-   Esperado: saída contendo `rotina: verificada nas 4 tabelas (SELECT RLS + bloqueio DML 42501) e RPCs` e limpeza das fixtures.
-6. Subir/acessar a prévia **sem** `STUDY_ROUTINE_DEV_FALLBACK=1`, entrar com conta Google autorizada e percorrer o roteiro completo: onboarding de meta/fuso, troca entre `5`/`15`/`30` min, seleção manual, início/pausa/recarregamento/retomada/conclusão de sessão, avanço da recomendação, histórico recente, alteração agendada de meta/fuso, ocultar/reexibir rotina, `/dashboard/configuracoes`, temas Light/Dark/Sepia e viewports desktop (`1280px`) e mobile (`360px`).
+- **Ausência da `051` sem impacto sobre `053`**: a migration `051_normalize_boards_and_review_filter.sql` altera `public.questions`, `public.list_questions_filtered_v2` e `public.list_question_filters` (módulo de Questões) e tem arquivo irmão `051_rollback.sql` no mesmo diretório `supabase/migrations/`. A migration `053_create_study_routine_gamification.sql` não referencia nenhum desses objetos e foi validada integralmente no PGlite isolado sem `051` (`to_regclass('public.questions') IS NULL`, criando `4` tabelas, `7` índices, `13` triggers, `4` políticas RLS, `11` funções `private.*` e `6` RPCs `public.*`).
+- **100% dos pré-requisitos reais da `053` confirmados no catálogo remoto (`pg_catalog` / `pg_attribute`)**: `auth.users`, `auth.uid()`, `public.update_updated_at_column()`, `private.has_active_content_access()`, `public.topics` (`topic_id`, `discipline`, `title`, `sort_order`, `archived_at`), `public.sections` (`section_id`, `topic_id`, `content_unit_id`, `title`, `sort_order`, `archived_at`) e `public.user_progress` (`user_id`, `section_id`, `content_unit_id`, `completed`, `updated_at` e `user_progress_user_content_unit_key`).
+- **Autorização pendente antes de escrita remota**: o projeto Supabase vinculado (`wbre***.supabase.co`) atende o ambiente de produção (`https://proconcursos.com.br/resumos`), não havendo projeto de homologação separado configurado neste ambiente local. A aplicação remota da `053` e testes de escrita em conta autorizada aguardam autorização operacional explícita para esse destino.
+
+### Procedimento concreto e transacional de aplicação no ambiente remoto (aguardando autorização explícita para `wbre***.supabase.co`)
+
+1. **Identificação do ambiente (sem expor segredos)**:
+   - Confirmar que `supabase/.temp/project-ref` e `NEXT_PUBLIC_SUPABASE_URL` apontam para o projeto vinculado (`wbre***.supabase.co`) e definir a conta/ambiente de validação sem usar dados pessoais de terceiros.
+2. **Preflight somente-leitura**:
+   - Confirmar em `supabase_migrations.schema_migrations` que `050` e `052` existem e `053` ainda está ausente; confirmar `0` tabelas/RPCs de rotina em `pg_catalog` e presença integral dos pré-requisitos (`topics`, `sections`, `user_progress`, `update_updated_at_column()`, `private.has_active_content_access()`).
+3. **Backup lógico criptografado obrigatório pré-migration**:
+   - Executar no root autorizado do repositório:
+     - `npm run release:preflight:backup`
+     - `npm run backup:supabase`
+     - `npm run backup:verify`
+   - Registrar caminho e resumo de integridade do snapshot antes de qualquer DDL.
+4. **Execução transacional isolada apenas da `053` (sem `supabase db push` cego)**:
+   - Não rodar `supabase db push` enquanto `051_normalize_boards_and_review_filter.sql` e `051_rollback.sql` permanecerem pendentes/duplicadas no diretório. Executar somente `supabase/migrations/053_create_study_routine_gamification.sql` envolta em transação única e registrar a versão `053` em `supabase_migrations.schema_migrations` (`version TEXT NOT NULL`, `name TEXT`):
+     ```sql
+     BEGIN;
+     -- Conteúdo integral de supabase/migrations/053_create_study_routine_gamification.sql
+     INSERT INTO supabase_migrations.schema_migrations (version, name)
+     VALUES ('053', 'create_study_routine_gamification')
+     ON CONFLICT (version) DO NOTHING;
+     COMMIT;
+     NOTIFY pgrst, 'reload schema';
+     ```
+5. **Pós-checagens obrigatórias (catálogo + HTTP `GET` + isolamento RLS)**:
+   - Conferir em `pg_catalog`: `4` tabelas (`user_study_routine_preferences`, `study_routine_weekly_plans`, `study_routine_sessions`, `study_routine_session_activities`), `7` índices `idx_study_routine_*`, `13` triggers não internos, `4` políticas RLS `FOR SELECT TO authenticated`, `11` funções `private.*`, `6` RPCs `public.*` (`SECURITY DEFINER`) e `0` privilégios para `anon` ou DML direto para `authenticated`.
+   - Conferir via `GET /rest/v1/user_study_routine_preferences?select=*&limit=1` e `/rest/v1/` OpenAPI que as 4 tabelas e 6 endpoints `/rpc/*` estão expostos sem `PGRST205`/`PGRST202` (nunca validar existência via `HEAD`).
+   - Executar smoke automatizado de dois usuários reais (sem `STUDY_ROUTINE_DEV_FALLBACK`):
+     `npm run test:rls-two-users`
+     Esperado: `rotina: verificada nas 4 tabelas (SELECT RLS + bloqueio DML 42501) e RPCs` e remoção integral das fixtures temporárias.
+6. **Validação ponta a ponta autenticada em conta autorizada (sem fallback)**:
+   - Com o deploy atualizado (contendo `docs/reconciliar-ativacao-gamificacao` integrado após aprovação), entrar com conta de teste Google autorizada e validar: onboarding (meta/fuso/disciplina/duração), troca dinâmica `5`/`15`/`30` min, seleção manual, início/pausa/recarregamento/retomada/conclusão de sessão, avanço de recomendação, histórico recente, alteração agendada para segunda-feira, ocultar/reexibir, `/resumos/dashboard/configuracoes`, temas Claro/Escuro/Sépia e viewports desktop (`1280px`) e mobile (`360px`).
 
 ### Rollback operacional preservando 100% dos dados (sem `DROP TABLE`)
 
@@ -176,8 +203,15 @@ Todas as checagens abaixo foram executadas após a última edição da entrega n
 
 ## Reconciliação da Ativação e Estado Verificado — 15/11/2026
 
+| Camada | Estado verificado em 15/11/2026 | Observações / Evidência |
+| --- | --- | --- |
+| **Código na `origin/main` (`a46c3b4`) + branch `docs/reconciliar-ativacao-gamificacao`** | Integrado na `main` (`a46c3b4`); ajustes de estado indisponível/rotina não ativada em `docs/reconciliar-ativacao-gamificacao` | `TodayStudyCard` e `StudySessionBar` corrigidos para não exibir `"0 de 3 dias"` antes da ativação e para explicar o bloqueio antes do onboarding; `35/35` em `test:gamification`, `291/295` em `test:release` (`4` ignorados por ausência de credenciais no runner), `lint` `0` erros, `typecheck` exit `0`, `build -- --webpack` `43/43` |
+| **Deploy em produção (`https://proconcursos.com.br/resumos`)** | Publicado em `a46c3b4` (Netlify) | `/resumos/api/health` responde `200`; `/resumos/api/study-routine` responde `401` sem sessão; com sessão (teste do Codex), `persistenceAvailable: false`, `needsOnboarding: true`, `currentPlan: null`; navegação, temas Claro/Escuro/Sépia, 360 px, notas e Mermaid operando |
+| **Estrutura no banco remoto (`wbre***.supabase.co`)** | **Pendente de aplicação autorizada da `053`** (`053` ausente) | Histórico remoto tem `001`–`050` e `052`; `051` ausente e sem dependência com `053`; 100% dos pré-requisitos reais de `053` confirmados em `pg_catalog`; `0/4` tabelas e `0/6` RPCs no remoto hoje; validação completa sem `051` aprovada em PostgreSQL isolado |
+| **Persistência autenticada real e smoke pós-`053`** | **Pendente de execução da `053` autorizada no banco** | Requer execução transacional autorizada de `053_create_study_routine_gamification.sql` + `NOTIFY pgrst, 'reload schema';` + `npm run test:rls-two-users` + smoke autenticado em conta de teste sem fallback |
+
 - **Publicação em produção confirmada (`a46c3b4`)**: `https://proconcursos.com.br/resumos/api/health` responde `200 OK` e `https://proconcursos.com.br/resumos/api/study-routine` responde `401 Unauthorized` sem sessão, confirmando que a integração na `origin/main` (`a46c3b4`) está publicada no Netlify. Com sessão ativa e sem a migration `053`, `/resumos/dashboard` degrada com segurança (`persistenceAvailable: false`) e `/resumos/api/study-routine` responde HTTP `503` controlado (`code: "schema_unavailable"`).
-- **Banco remoto reconciliado (`wbre***.supabase.co`, leitura direta no catálogo PostgreSQL)**: `supabase_migrations.schema_migrations` contém `001`–`050` e `052` (`053` ausente), e o catálogo `pg_catalog` confirma `0/4` tabelas, `0/7` índices, `0` constraints, `0/13` triggers, `0/4` políticas RLS, `0/11` funções `private.*` e `0/6` RPCs `public.*` da rotina. O catálogo OpenAPI do PostgREST (`/rest/v1/`) expõe `26` RPCs anteriores e nenhuma tabela ou `/rpc/*` da rotina.
+- **Banco remoto reconciliado (`wbre***.supabase.co`, leitura direta no catálogo PostgreSQL)**: `supabase_migrations.schema_migrations` (`version TEXT NOT NULL`, `statements TEXT[]`, `name TEXT`) contém `001`–`050` e `052` (`051` e `053` ausentes), e o catálogo `pg_catalog` confirma `0/4` tabelas, `0/7` índices, `0` constraints, `0/13` triggers, `0/4` políticas RLS, `0/11` funções `private.*` e `0/6` RPCs `public.*` da rotina. Em contrapartida, todos os pré-requisitos reais (`auth.users`, `auth.uid()`, `public.update_updated_at_column()`, `private.has_active_content_access()`, `public.topics`, `public.sections`, `public.user_progress` + `user_progress_user_content_unit_key`) já existem e `053` não depende de `051` (provado também no PGlite sem `public.questions`). O catálogo OpenAPI do PostgREST (`/rest/v1/`) expõe `26` RPCs anteriores e nenhuma tabela ou `/rpc/*` da rotina.
 - **Esclarecimento do falso positivo anterior de "4 tabelas acessíveis"**: consultas via `@supabase/supabase-js` com `.select("*", { count: "exact", head: true })` disparam HTTP `HEAD /rest/v1/<table>?select=*`, para o qual o PostgREST devolve HTTP `404` com corpo vazio, fazendo o cliente retornar `{ error: null }` mesmo para tabelas inexistentes. Consultas `GET` retornam `PGRST205` para todas as 4 tabelas, eliminando a hipótese de aplicação parcial da `053` ou defeito isolado de cache das 6 RPCs.
 - **Causa forense do `/resumos/login?error=auth` local**: em `auth.flow_state`, as 3 tentativas locais emitiram `auth_code` (`user_linked = true`) e atingiram `/resumos/auth/callback?code=...`, mas o `auth_code` permaneceu não consumido (`auth_code IS NOT NULL`) sem criar sessão em `auth.sessions`, por ausência/divergência do cookie PKCE `sb-<ref>-auth-token-code-verifier` no momento da troca em `exchangeCodeForSession`. Sessões de `https://proconcursos.com.br` não trafegam para `localhost`.
-- **Bloqueio de UI autenticada na inspeção em 15/11/2026 (`a46c3b4`, `STUDY_ROUTINE_DEV_FALLBACK=1`)**: `http://localhost:3000/resumos/dashboard` redirecionou para `http://localhost:3000/resumos/login` (`AUTH_REQUIRED`, `0` cookies, `0` erros de console e `0` overflow em `1280x800` e `360x780`). A ativação real em produção e o smoke pós-migration continuam aguardando autorização explícita para aplicar `supabase/migrations/053_create_study_routine_gamification.sql` e validar em conta autorizada (detalhes completos na seção 8 de `docs/GAMIFICACAO_DIAGNOSTICO.md`).
+- **Autorização necessária para concluir a ativação**: falta exclusivamente autorização explícita para executar o procedimento transacional da migration `053` no projeto Supabase vinculado (`wbre***.supabase.co`, mesmo banco utilizado por produção em `https://proconcursos.com.br/resumos`) — além de eventual autorização de integração em `main` e deploy após revisão das correções de UI em `docs/reconciliar-ativacao-gamificacao` (detalhes completos nas seções 3C acima e 8 de `docs/GAMIFICACAO_DIAGNOSTICO.md`).
