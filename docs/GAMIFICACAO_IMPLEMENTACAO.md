@@ -23,7 +23,7 @@ O MVP implementa uma rotina semanal flexível (1 a 7 dias por semana) e sessões
   - `src/types/database.ts`: interfaces e uniões tipadas para as tabelas e status da rotina.
   - `scripts/test-rls-two-users.mjs`: checagens opcionais atualizadas para `053` validando leitura isolada por RLS, rejeição `42501` de DML direto nas 4 tabelas, criação transacional via RPC autenticada, bloqueio por `chargeback`/entitlement e negativa cruzada entre dois usuários.
 - **Adaptador servidor, API e UI**:
-  - `src/lib/gamification/server.ts`: reexporta os adaptadores de `repository.mjs`, expõe `getApiContentAccess`, ordenação canônica (`sortRoutineTopics`), hidratação compartilhada (`hydrateDashboardRecommendationIfNeeded`), loader de configurações com suporte explícito ao fallback dev (`loadSettingsRoutineStatus`) e loaders de estado (`hydrateRoutineTopicsByIds`, `loadDashboardRoutineState`, `loadStudyTopicRoutineState`). No modo `STUDY_ROUTINE_DEV_FALLBACK=1` (`NODE_ENV !== "production"`), registra `completedContentUnitIds` em memória e tenta sincronizar `user_progress` ao concluir sessão.
+  - `src/lib/gamification/server.ts`: reexporta os adaptadores de `repository.mjs`, expõe `getApiContentAccess`, ordenação canônica (`sortRoutineTopics`), hidratação compartilhada (`hydrateDashboardRecommendationIfNeeded`), loader de configurações com suporte explícito ao fallback dev (`loadSettingsRoutineStatus`) e loaders de estado (`hydrateRoutineTopicsByIds`, `loadDashboardRoutineState`, `loadStudyTopicRoutineState`). No modo `STUDY_ROUTINE_DEV_FALLBACK=1` (`NODE_ENV !== "production"`), opera sobre `createDevFallbackRepository()` mantendo preferências, planos, sessões, conclusões e `completedContentUnitIds` exclusivamente em memória (`mergeDevFallbackCompletedUnitIds`), sem executar mutações (`insert`, `update`, `upsert`, `delete` ou RPCs de escrita) no Supabase.
   - `src/app/api/study-routine/route.ts`: endpoints `GET` e `POST` com `Cache-Control: no-store` e schema Zod `.strict()` discriminado pelas ações `save_preferences`, `start_session`, `update_session_status`, `replace_unavailable_activity` e `complete_session`.
   - `src/components/gamification/today-study-card.tsx`: card `Estudo de hoje` integrado em `src/app/dashboard/page.tsx`, sincronizando snapshot/rascunhos com `initialSnapshot` atualizado sem `useEffect` (`source: initialSnapshot`) e atualizando dinamicamente as seções sugeridas e estimativa de tempo ao alternar entre `5`, `15` e `30` minutos (`recommendation.optionsByBudget`).
   - `src/components/gamification/study-session-bar.tsx`: barra guiada em `src/app/(study)/[topicId]/study-page-client.tsx` com âncoras `#section-{id}`, estado explícito para sessão pausada (`Sessão pausada` + botão `Retomar sessão` + atalho `Dashboard`), sincronização sem `useEffect` com `initialSnapshot`, conclusão idempotente e atualização local via `markSectionsCompletedLocally` em `src/hooks/use-section-progress.ts`.
@@ -52,7 +52,7 @@ O MVP implementa uma rotina semanal flexível (1 a 7 dias por semana) e sessões
 - **Antes da aplicação da migration `053`**: `isRoutineSchemaError` detecta tabelas ou RPCs ausentes (`42P01`, `PGRST205`, `42883`, `PGRST202`), fazendo `GET`/`POST /api/study-routine` responderem HTTP `503` controlado e mantendo `/dashboard`, `/[topicId]` e `/dashboard/configuracoes` operacionais.
 - **Rollback operacional imediato (feature flag)**: `NEXT_PUBLIC_DISABLE_GAMIFICATION="true"` desabilita a rotina via `isGamificationOperationalEnabled`.
 - **Aplicação da migration**: `supabase/migrations/053_create_study_routine_gamification.sql` ainda **não** foi aplicada ao banco remoto neste incremento e depende de revisão e execução controlada fora desta entrega.
-- **Limitações do modo demonstrativo (`STUDY_ROUTINE_DEV_FALLBACK=1`)**: ativo apenas quando `NODE_ENV !== "production"` e a variável `STUDY_ROUTINE_DEV_FALLBACK="1"` está presente no processo do servidor local. Os dados de preferências, planos semanais, sessões e conclusões de rotina ficam apenas em memória global do processo Node (sendo descartados ao reiniciar o servidor) e **não** exercitam RLS, triggers nem RPCs no PostgreSQL/Supabase remoto. O progresso legado de seções (`user_progress`) só persiste no banco se o usuário autenticado tiver linha gravável no Supabase; caso contrário permanece em memória junto com o store demonstrativo.
+- **Limitações do modo demonstrativo (`STUDY_ROUTINE_DEV_FALLBACK=1`)**: ativo apenas quando `NODE_ENV !== "production"` e a variável `STUDY_ROUTINE_DEV_FALLBACK="1"` está presente no processo do servidor local. Todas as preferências, planos semanais, sessões e conclusões decorrentes da rotina demonstrativa permanecem exclusivamente na memória global do processo Node (descartadas ao reiniciar o servidor) e **não gravam progresso no Supabase** (o progresso anterior existente em `user_progress` é apenas consultado por `SELECT` e combinado em memória via `mergeDevFallbackCompletedUnitIds` para avançar a próxima recomendação, sem executar `upsert` nem apagar dados reais). Essa garantia limita-se à rotina demonstrativa (`/api/study-routine` em fallback) e não altera nem impede ações convencionais de estudo realizadas fora da rotina demonstrativa (como marcar ou desmarcar seções manualmente na página de estudo via `useSectionProgress`, criar notas ou aplicar realces). Quando ativo, a interface exibe aviso discreto de demonstração temporária, e seus resultados validam apenas fluxo de interface local, **não** comprovando RLS, triggers, RPCs ou persistência no Supabase.
 
 ---
 
@@ -66,7 +66,13 @@ O MVP implementa uma rotina semanal flexível (1 a 7 dias por semana) e sessões
 
 ---
 
-## 3B. Diferenças entre Ambiente Isolado e Supabase Remoto, Aplicação e Rollback
+## 3B. Diferenças entre Fallback, PostgreSQL Isolado e Supabase Remoto / Homologação
+
+| Camada | Escopo real validado | O que **comprova** | O que **não comprova** |
+| --- | --- | --- | --- |
+| **1. Fallback demonstrativo (`STUDY_ROUTINE_DEV_FALLBACK=1`)** | Estado exclusivamente em memória global do processo Node local (`repository.mjs`) | Contratos de UI/API em ambiente sem `053` aplicada, aviso discreto de demonstração e avanço da recomendação em memória sem gravar `user_progress` | Não comprova persistência entre reinícios, RLS, triggers, concorrência PostgreSQL nem schema remoto |
+| **2. PostgreSQL isolado (`PGlite` + PostgreSQL 18 nativo)** | Execução real da migration `053`, coexistência com `026` e `052` da `origin/main`, 6 RPCs `SECURITY DEFINER`, triggers, `pg_locks` multi-conexão e `REVOKE`/`GRANT` | Integridade DDL/DML, bloqueio `42501` sem RPC, isolamento entre `USER_A`/`USER_B`, contenção concorrente real, rollback e compatibilidade com o histórico canônico | Não exercita GoTrue real, PostgREST (`/rest/v1/*`) com cache HTTP nem cookies SSR de produção |
+| **3. Supabase / PostgREST (homologação ou destino)** | Projeto Supabase gerenciado com `001`–`052` + `053`, GoTrue OAuth Google, PostgREST e script `scripts/test-rls-two-users.mjs` | Persistência real end-to-end, cache de schema PostgREST após `NOTIFY pgrst, 'reload schema';`, RLS com tokens JWT reais e smoke autenticado sem fallback | Neste workspace local não há Docker Supabase nem projeto de homologação separado configurado; produção não deve ser usada como ambiente de teste |
 
 | Dimensão | Ambiente isolado (`PGlite` + PostgreSQL 18.7) | Supabase remoto de destino | Impacto operacional |
 | --- | --- | --- | --- |
@@ -123,7 +129,7 @@ Todas as checagens abaixo foram executadas após a última edição da entrega n
 
 | Verificação | Resultado observado | Escopo e observações |
 | --- | --- | --- |
-| `npm.cmd run test:gamification` | 33/33 aprovados, 0 falhas, 0 ignorados | `gamification-calendar.test.mjs`, `gamification-session.test.mjs` (inclui isolamento em memória do fallback sem mutações Supabase), `gamification-ui.test.mjs` e `gamification-postgres.test.mjs` (PGlite + PostgreSQL 18 multi-conexão + execução real dos blocos `REVOKE`/`GRANT`) |
+| `npm.cmd run test:gamification` | 34/34 aprovados, 0 falhas, 0 ignorados | `gamification-calendar.test.mjs`, `gamification-session.test.mjs` (fallback em memória sem mutações Supabase), `gamification-ui.test.mjs` e `gamification-postgres.test.mjs` (PGlite + PostgreSQL 18 multi-conexão + `REVOKE`/`GRANT` + coexistência com `026` e `052` da `origin/main`) |
 | `npm.cmd run test:content` | 44/44 aprovados, 0 falhas, 0 ignorados | Contrato editorial e importação preservados |
 | `npm.cmd run test:api-auth` | 3/3 aprovados, 0 falhas, 0 ignorados | Autenticação admin |
 | `npm.cmd run test:auth` | 9/9 aprovados, 0 falhas, 0 ignorados | OAuth Google e guardas |
@@ -131,15 +137,15 @@ Todas as checagens abaixo foram executadas após a última edição da entrega n
 | `npm.cmd run test:highlights` | 9/9 aprovados, 0 falhas, 0 ignorados | Realces e same-origin |
 | `npm.cmd run test:payments` | 14/14 aprovados, 0 falhas, 0 ignorados | Webhooks e cancelamento |
 | Demais 14 suítes em `tests/*.test.mjs` | 37/37 aprovados, 0 falhas, 0 ignorados | `content-import-governance`, `dashboard-navigation-a11y`, `dashboard-preferences-ux`, `gateway-rules`, `import-route-security`, `markdown-mermaid`, `mermaid-render-queue`, `mermaid-transition-labels`, `note-images`, `payment-logging`, `return-paths`, `security-headers`, `user-start-page`, `webhook-body-limit` |
-| Varredura estática / contratos em `gamification-ui.test.mjs` | Aprovada | Módulos `src/lib/gamification/*`, `src/app/api/study-routine/*`, `src/components/gamification/*` sem sinks inseguros ou escrita remota em fallback |
+| Varredura estática / contratos em `gamification-ui.test.mjs` | Aprovada | Módulos `src/lib/gamification/*`, `src/app/api/study-routine/*`, `src/components/gamification/*` e `docs/GAMIFICACAO_IMPLEMENTACAO.md` conformes |
 | `npx.cmd eslint src scripts tests` | Exit 0 (0 erros, 1 warning preexistente) | Warning preexistente em `scripts/content-admin.mjs:266:31` |
 | `npx.cmd tsc --noEmit` | Exit 0 | Tipagem global sem erros |
 | `npm.cmd run build -- --webpack` | Exit 0 | Build de produção concluído, `27/27` páginas estáticas e rota `ƒ /api/study-routine` |
-| `node --check scripts/test-rls-two-users.mjs` | Exit 0 | Sintaxe validada; execução contra Supabase remoto pendente da aplicação da `053` |
-| Inspeção em navegador (`http://127.0.0.1:3000`) | Parcial / Bloqueada para rotas autenticadas (`AUTH_REQUIRED`) | Nova checagem em `http://127.0.0.1:3000/resumos/dashboard` redirecionou para `/resumos/login` (HTTP 200); sem sessão Google OAuth ativa, os fluxos autenticados não foram executados |
+| `node --check scripts/test-rls-two-users.mjs` | Exit 0 | Sintaxe validada; `supabase status` sem Docker local nesta estação e sem projeto de homologação separado |
+| Inspeção em navegador (`http://127.0.0.1:3000/resumos/dashboard`) | Bloqueada para fluxos autenticados (`AUTH_REQUIRED`) | Servidor local ativo e sem overflow em `/resumos/login` (HTTP 200); sem sessão Google OAuth ativa, todos os fluxos autenticados permaneceram não executados |
 
-### Pendente de ambiente remoto e inspeção manual autenticada
+### Parecer atual e pendências para liberação
 
-- Login Google manual na prévia local (`http://127.0.0.1:3000/resumos/dashboard`) para inspeção visual autenticada ponta a ponta nos temas **Light**, **Dark** e **Sepia** (desktop `1280px` e mobile `360px`).
-- Aplicação controlada da migration `053_create_study_routine_gamification.sql` no Supabase (acima de `052_create_launch_interests.sql` já presente na `origin/main`).
-- Execução real de `scripts/test-rls-two-users.mjs` contra o projeto Supabase remoto após aplicação da `053` e smoke autenticado sem `STUDY_ROUTINE_DEV_FALLBACK`.
+- **Parecer atual:** **Apto para validação final** (não declarado concluído para produção enquanto penderem os itens abaixo).
+- **Prévia autenticada (ação manual necessária):** entrar com conta Google autorizada e assinatura ativa em `http://127.0.0.1:3000/resumos/login` e validar `/resumos/dashboard`, página de estudo e `/resumos/dashboard/configuracoes` nos temas **Light**, **Dark** e **Sepia** (desktop `1280px` e mobile `360px`).
+- **Homologação / aplicação da migration `053`:** aplicar `053_create_study_routine_gamification.sql` em ambiente Supabase de homologação/destino acima de `052_create_launch_interests.sql`, executar `NOTIFY pgrst, 'reload schema';`, rodar `npm.cmd run test:rls-two-users` e concluir smoke autenticado sem `STUDY_ROUTINE_DEV_FALLBACK`.

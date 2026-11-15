@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { spawn } from "node:child_process";
+import { execFileSync, spawn } from "node:child_process";
 import fs from "node:fs";
 import net from "node:net";
 import os from "node:os";
@@ -2032,6 +2032,102 @@ test("rollback SQL documentado (REVOKE EXECUTE) e restauração (GRANT EXECUTE) 
       hideGamification: true,
     });
     assert.equal(restoredSave.preferences.hide_gamification, true);
+  } finally {
+    await harness.db.close();
+  }
+});
+
+test("migration 053 coexiste com 026 e 052 da origin/main sem conflito de objetos ou RLS", async () => {
+  const readMainMigration = (relativePath) =>
+    execFileSync("git", ["show", `origin/main:${relativePath}`], {
+      cwd: ROOT,
+      encoding: "utf8",
+    });
+
+  const migration026Sql = readMainMigration("supabase/migrations/026_create_study_planner.sql");
+  const migration052Sql = readMainMigration("supabase/migrations/052_create_launch_interests.sql");
+
+  const db = new PGlite();
+  const harness = new PgliteHarness(db);
+  try {
+    await db.exec(BOOTSTRAP_SQL);
+    await db.exec(migration026Sql);
+    await db.exec(migration052Sql);
+    await db.exec(MIGRATION_053_SQL);
+
+    await db.query(
+      `INSERT INTO auth.users (id, email) VALUES ($1, $2), ($3, $4)`,
+      [USER_A, "compat.a@example.com", USER_B, "compat.b@example.com"],
+    );
+    await db.query(
+      `INSERT INTO private.test_entitlements (user_id, active) VALUES ($1, true), ($2, true)`,
+      [USER_A, USER_B],
+    );
+    await db.query(
+      `INSERT INTO public.topics (topic_id, discipline, title, sort_order, archived_at) VALUES
+        ('const-art5', 'Direito Constitucional', 'Direitos Fundamentais - Artigo 5º', 1, NULL)`,
+    );
+    await db.query(
+      `INSERT INTO public.sections (section_id, topic_id, content_unit_id, title, sort_order, archived_at) VALUES
+        ('const-art5-sec-01', 'const-art5', $1, 'Caput e igualdade', 1, NULL)`,
+      [UNIT_CONST_1],
+    );
+
+    const clientA = harness.asUser(USER_A, "authenticated");
+    const clientB = harness.asUser(USER_B, "authenticated");
+
+    // 026 (planner) continua operando para USER_A e isolado de USER_B
+    const { data: planInserted, error: plannerErr } = await clientA
+      .from("study_plans")
+      .insert({
+        user_id: USER_A,
+        title: "Plano Compatibilidade",
+        start_date: "2026-11-09",
+      })
+      .select()
+      .single();
+    assert.equal(plannerErr, null);
+    assert.equal(planInserted?.title, "Plano Compatibilidade");
+
+    // 053 (gamificação) opera em conjunto via RPCs para USER_A
+    const serviceA = createRoutineService(createSupabaseRoutineRepository(clientA), {
+      now: () => new Date("2026-11-12T15:00:00.000Z"),
+    });
+    const topicsCompat = [makeTopicsFixture()[0]];
+    await serviceA.savePreferences({
+      userId: USER_A,
+      targetDays: 3,
+      timezoneIana: "America/Sao_Paulo",
+      defaultBudgetMinutes: 5,
+      hideGamification: false,
+    });
+    const started = await serviceA.startOrResumeSession({
+      userId: USER_A,
+      topics: topicsCompat,
+      completedContentUnitIds: new Set(),
+      budgetMinutes: 5,
+      idempotencyKey: "compat-start-1",
+    });
+    const completed = await serviceA.completeSession({
+      userId: USER_A,
+      sessionId: started.session.id,
+      completedActivityIds: [started.session.activities[0].id],
+      completionIdempotencyKey: "compat-done-1",
+      topics: topicsCompat,
+    });
+    assert.equal(completed.session.status, "completed");
+
+    // 052 (launch_interests) mantém bloqueio de SELECT para authenticated
+    const launchRead = await clientA.from("launch_interests").select("*");
+    assert.equal(launchRead.error?.code, "42501");
+
+    // USER_B não lê registros de USER_A em nenhuma das tabelas
+    const bPlans = await clientB.from("study_plans").select("*");
+    const bRoutine = await clientB.from("study_routine_sessions").select("*");
+    assert.equal(bPlans.error, null);
+    assert.equal(bPlans.data?.length ?? 0, 0);
+    assert.equal(bRoutine.error, null);
+    assert.equal(bRoutine.data?.length ?? 0, 0);
   } finally {
     await harness.db.close();
   }

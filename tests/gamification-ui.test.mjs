@@ -157,6 +157,17 @@ test("páginas de Dashboard, Estudo e Configurações integram a rotina e mantê
       settings.includes("Modo de demonstração local"),
     "UI deve exibir aviso discreto quando o modo de demonstração em memória estiver ativo",
   );
+  const implDoc = readWorkspaceFile("docs/GAMIFICACAO_IMPLEMENTACAO.md");
+  assert.equal(
+    implDoc.includes("tenta sincronizar `user_progress` ao concluir sessão"),
+    false,
+    "GAMIFICACAO_IMPLEMENTACAO.md não deve afirmar escrita de fallback em user_progress",
+  );
+  assert.ok(
+    implDoc.includes("não gravam progresso no Supabase") &&
+      implDoc.includes("fora da rotina demonstrativa"),
+    "GAMIFICACAO_IMPLEMENTACAO.md deve explicitar isolamento do fallback e distinguir ações convencionais",
+  );
   assert.ok(
     todayCard.includes("optionsByBudget?.[selectedBudget]"),
     "TodayStudyCard deve atualizar prévia ao trocar orçamento (5, 15, 30 min)",
