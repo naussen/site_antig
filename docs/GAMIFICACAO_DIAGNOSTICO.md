@@ -169,3 +169,47 @@ Triggers e restrições no banco (`SECURITY DEFINER`, `SET search_path = ''`):
 | Revisão de erros de Questões | **Fora do MVP (Fase 3)** — módulo de Questões reside na `main` | Fase 3 |
 | Missões integradas Resumo + Lei + Questão | **Fora do MVP (Fase 4)** — `topic_legal_fragment_relations` = `0` | Fase 4 |
 | Conquistas opcionais / XP | **Fora do MVP (Fase 5)** | Fase 5 |
+
+---
+
+## 8. Reconciliação do Banco Remoto, Publicação e Auth Local — 15/11/2026
+
+> [!NOTE]
+> Verificação estritamente somente-leitura realizada em 15/11/2026 sobre `origin/main` (`a46c3b4`), o projeto Supabase vinculado `wbre***.supabase.co` (`C:\PRO\site\.env.local` e `supabase/.temp/project-ref` apontam para o mesmo projeto), a publicação `https://proconcursos.com.br/resumos` e a prévia local em `http://localhost:3000` (`STUDY_ROUTINE_DEV_FALLBACK=1` apenas no processo). Nenhuma migration remota foi aplicada nem houve alteração de credenciais, configuração OAuth ou dados de produção.
+
+### 8.1. Matriz de reconciliação: esperado (`053_create_study_routine_gamification.sql`) × encontrado no banco remoto (`wbre***.supabase.co`)
+
+| Objeto / Camada | Esperado na migration `053` | Encontrado no banco remoto (15/11/2026) | Divergência | Impacto operacional |
+| --- | --- | --- | --- | --- |
+| **Histórico `supabase_migrations.schema_migrations`** | Versão `053` (`create_study_routine_gamification`) registrada após `052` | Contém `001`–`050` e `052` (`create_launch_interests`); `051` e `053` ausentes | `053` não consta aplicada | Banco remoto ainda não recebeu a `053` |
+| **4 tabelas em `public`** | `user_study_routine_preferences`, `study_routine_weekly_plans`, `study_routine_sessions`, `study_routine_session_activities` | `0/4` encontradas em `pg_class` (`SELECT COUNT(*)` retorna `ERROR: 42P01`) | Ausentes no PostgreSQL remoto | Toda leitura/escrita da rotina cai no tratamento `RoutineSchemaUnavailableError` |
+| **7 índices (`idx_study_routine_*`)** | `idx_study_routine_weekly_plans_user_week`, `idx_study_routine_sessions_completion_key`, `idx_study_routine_sessions_one_active`, `idx_study_routine_sessions_user_week_completed`, `idx_study_routine_sessions_user_recent`, `idx_study_routine_activities_session`, `idx_study_routine_activities_user_unit` | `0/7` em `pg_indexes` | Ausentes | Dependentes da aplicação da `053` |
+| **Constraints (`PK`, `FK`, `UNIQUE`, `CHECK`)** | Chaves primárias/estrangeiras compostas e invariantes de status/fuso nas 4 tabelas | `0` em `pg_constraint` | Ausentes | Dependentes da aplicação da `053` |
+| **13 triggers nas 4 tabelas** | `4` `*_updated_at`, `4` `trigger_01_rpc_mutation_guard`, `3` triggers de imutabilidade/transições/integridade e `2` `CONSTRAINT TRIGGER ... DEFERRABLE INITIALLY DEFERRED` (`trigger_enforce_session_has_activities`, `trigger_enforce_activity_delete_keeps_session_nonempty`) | `0/13` em `pg_trigger` | Ausentes | Dependentes da aplicação da `053` |
+| **4 políticas RLS e privilégios** | `4` políticas `FOR SELECT TO authenticated` (`user_study_routine_preferences_select_own`, `study_routine_weekly_plans_select_own`, `study_routine_sessions_select_own`, `study_routine_activities_select_own`), `REVOKE ALL` de `PUBLIC`/`anon`/`authenticated`, `SELECT` para `authenticated`, DML para `service_role` | `0/4` em `pg_policies` | Ausentes | Dependentes da aplicação da `053` |
+| **11 funções `private.*` (guards / helpers)** | `require_authenticated_routine_access`, `validate_routine_timezone`, `acquire_study_routine_user_lock`, `get_study_routine_session_json`, `enforce_study_routine_rpc_mutation_guard`, `enforce_study_routine_weekly_plan_immutability`, `enforce_study_routine_session_transitions`, `enforce_study_routine_activity_integrity`, `enforce_study_routine_session_row_has_activities`, `enforce_study_routine_activity_delete_keeps_session`, `sync_user_study_routine_week` | `0/11` em `pg_proc` | Ausentes | Dependentes da aplicação da `053` |
+| **6 RPCs `public.*` (`SECURITY DEFINER`, `SET search_path = ''`)** | `ensure_study_routine_weekly_plan`, `save_study_routine_preferences`, `create_study_routine_session`, `update_study_routine_session_status`, `replace_study_routine_session_activity`, `complete_study_routine_session` (`GRANT EXECUTE TO authenticated, service_role`, validando acesso/entitlement) | `0/6` em `pg_proc` | Ausentes | Chamadas às RPCs retornam schema/função ausente |
+| **Exposição e cache OpenAPI PostgREST (`/rest/v1/`)** | 4 definições/caminhos de tabela + 6 endpoints `/rpc/*` expostos após reload de schema | HTTP `200` com `26` RPCs de migrations anteriores; `0` tabelas da rotina e `0` `/rpc/*` da rotina | Não expostas porque não existem no `pg_catalog` | `GET /rest/v1/<table>` retorna `PGRST205` (`404`) |
+
+### 8.2. Causa exata da discrepância observada entre "4 tabelas acessíveis" e "6 RPCs ausentes no OpenAPI"
+
+- Verificações anteriores via `@supabase/supabase-js` usando `.from(table).select("*", { count: "exact", head: true })` enviavam requisições HTTP `HEAD /rest/v1/<table>?select=*`.
+- Quando a tabela não existe no schema cache, o PostgREST responde ao `HEAD` com **HTTP `404` e corpo vazio (`""`)** (sem payload JSON). Como `@supabase/postgrest-js` não recebe JSON de erro no corpo da resposta `HEAD`, ele retorna `{ data: null, count: null, error: null }` — falso positivo reproduzível inclusive para nomes inexistentes arbitrários como `nonexistent_table_xyz_123`.
+- Em contrapartida, uma requisição `GET` (`admin.from(table).select("*").limit(1)`) recebe o JSON real de erro `{"code":"PGRST205","message":"Could not find the table 'public.user_study_routine_preferences' in the schema cache"}` para todas as 4 tabelas.
+- Portanto, **não houve aplicação parcial da migration `053` nem falha isolada de cache ou `GRANT` nas 6 RPCs**: a migration `053` ainda não foi aplicada no banco remoto (`0/4` tabelas, `0/13` triggers, `0/11` funções `private.*` e `0/6` RPCs no catálogo do PostgreSQL).
+
+### 8.3. Estado da publicação (`https://proconcursos.com.br/resumos`)
+
+- `GET https://proconcursos.com.br/resumos/api/health`: responde `200 OK` (`status: "ok"`, checks `database: "ok"` e `payment_reconciliation: "ok"`).
+- `GET https://proconcursos.com.br/resumos/api/study-routine` (sem sessão): responde `401 Unauthorized` (`{"error":"Sessão ausente ou expirada. Entre novamente com Google."}`, `Cache-Control: no-store`). Isso comprova que o código integrado na `origin/main` (`a46c3b4`) está publicado em produção no Netlify.
+- **Comportamento com sessão em produção enquanto a migration `053` não for aplicada**: como `NODE_ENV === "production"` impede `STUDY_ROUTINE_DEV_FALLBACK` e o banco remoto retorna `PGRST205`/`42P01`, `/resumos/dashboard` captura `RoutineSchemaUnavailableError` e degrada com segurança (`persistenceAvailable: false`), enquanto `/resumos/api/study-routine` responde HTTP `503` controlado (`code: "schema_unavailable"`), sem quebrar leitura de Resumos, Questões ou Planner.
+
+### 8.4. Diagnóstico forense do login local (`/resumos/login?error=auth`)
+
+- **Sessão pública × `localhost`**: os cookies SSR da sessão Google emitidos em `https://proconcursos.com.br` pertencem ao domínio público (`Secure`, `SameSite=Lax`) e nunca são enviados pelo navegador para `http://localhost:3000` ou `http://127.0.0.1:3000`.
+- **Evidências em `auth.flow_state`, `auth.sessions` e `.next/dev/trace`**:
+  1. Os redirects `http://localhost:3000/resumos/auth/callback` e `http://127.0.0.1:3000/resumos/auth/callback` são aceitos pela allowlist de URLs de retorno do GoTrue no projeto vinculado.
+  2. Nas 3 tentativas locais registradas (`2026-11-14 22:28:29Z` em `127.0.0.1:3000`, `2026-11-15 04:16:46Z` em `localhost:3000` e `2026-11-15 04:21:34Z` em `localhost:3000`), a autenticação Google gerou `auth_code` válido (`auth_code_issued_at` preenchido e `user_linked = true`) e o callback `/resumos/auth/callback?code=...` foi atingido no servidor local.
+  3. Diferentemente dos logins bem-sucedidos em produção (onde `exchangeCodeForSession` consome a linha de `auth.flow_state` e grava nova linha em `auth.sessions`), nas 3 tentativas locais o `auth_code` permaneceu **não consumido** (`auth_code IS NOT NULL`) em `auth.flow_state`, nenhuma sessão correspondente foi criada em `auth.sessions` e `src/app/auth/callback/route.ts` redirecionou para `/resumos/login?error=auth` (e não `?error=google_required`).
+  4. Em PKCE (`@supabase/ssr` `0.12.0` + `@supabase/auth-js` `2.110.0`), `createBrowserClient` grava o verificador no cookie `sb-<ref>-auth-token-code-verifier` em `document.cookie` (`path: "/"`, `sameSite: "lax"`) na origem onde o botão "Continuar com Google" é clicado, e `exchangeCodeForSession(code)` no callback exige esse mesmo cookie na mesma origem (`localhost` × `localhost`, não `127.0.0.1` × `localhost`, nem fluxos concluídos em outro contexto/navegador sem o cookie PKCE).
+- **Inspeção em navegador local em 15/11/2026 (`a46c3b4`, `STUDY_ROUTINE_DEV_FALLBACK=1`)**: `http://localhost:3000/resumos/dashboard` redirecionou para `http://localhost:3000/resumos/login` (`AUTH_REQUIRED`, `0` cookies ativos, `0` erros de console e `0` overflow horizontal em `1280x800` e `360x780`). A validação visual autenticada da rotina semanal e sessões permanece pendente de login Google válido no mesmo contexto de navegador na origem `http://localhost:3000`.

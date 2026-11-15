@@ -4,7 +4,10 @@
 
 - integradas seletivamente rotina semanal e sessões curtas sobre a main atual, preservando Questões, Planner, autenticação e dependências de produção;
 - conciliados os testes de acesso da main com as negativas da rotina; integração aprovada em lint, tipagem, suíte completa e build;
-- migration remota e validação visual autenticada permanecem pendentes; o envio de código não ativa a persistência da rotina.
+- verificada em 15/11/2026 a publicação da integração (`a46c3b4`) em `https://proconcursos.com.br/resumos/api/health` (200) e `/resumos/api/study-routine` (401 sem sessão), mantendo degradação controlada (`schema_unavailable` / HTTP 503) enquanto a migration `053` não for aplicada;
+- reconciliado por leitura direta o catálogo do banco remoto (`pg_catalog`, `schema_migrations` e OpenAPI `/rest/v1/`), confirmando `053` ausente (`0/4` tabelas, `0/13` triggers, `0/11` funções `private.*` e `0/6` RPCs) e explicando o falso positivo de requisições `HEAD` no `@supabase/postgrest-js` (`HTTP 404` vazio tratado como `{ error: null }` vs `PGRST205` no `GET`);
+- diagnosticado em `auth.flow_state` e `auth.sessions` que o `/resumos/login?error=auth` local decorreu de falha no `exchangeCodeForSession` por ausência/divergência do cookie PKCE `sb-<ref>-auth-token-code-verifier` no retorno ao callback local (`auth_code` emitido mas não consumido), além da separação normal de cookies entre `proconcursos.com.br` e `localhost`;
+- migration remota `053` e validação visual autenticada permanecem pendentes aguardando autorização e sessão Google local válida.
 
 ## Não publicado — MVP de rotina semanal e sessões curtas de estudo (Fases 1 e 2)
 
