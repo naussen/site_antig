@@ -1,5 +1,10 @@
 # Changelog
 
+## Publicação das correções de AFO — 17/11/2026
+
+- registradas em `docs/PUBLICACAO_AFO_2026-11-17.md` a aplicação autorizada ao banco de produção e a reconciliação de 48 seções, com cinco seções corrigidas e 100 flashcards preservados;
+- confirmada a correspondência entre o projeto Supabase usado pelo site público e o banco conferido; revisão editorial global permanece parcial, com smoke visual autenticado pendente.
+
 ## Integração da gamificação na main — 15/11/2026
 
 - integradas seletivamente rotina semanal e sessões curtas sobre a main atual, preservando Questões, Planner, autenticação e dependências de produção;
