@@ -1,6 +1,6 @@
 # Plano operacional de revisão — orquestração por agentes IA
 
-Versão 2 — atualização documental de 17/11/2026. Público exclusivo: agentes de orquestração, execução e verificação. Este documento é o ponto de entrada para retomar o programa sem acesso ao chat. Não certifica a qualidade integral do acervo.
+Versão 2 — atualização documental de 18/11/2026. Público exclusivo: agentes de orquestração, execução e verificação. Este documento é o ponto de entrada para retomar o programa sem acesso ao chat. Não certifica a qualidade integral do acervo.
 
 ## 1. Objetivo, escopo e ambientes
 
@@ -29,21 +29,17 @@ Caminhos relativos abaixo partem do repositório editorial. Inventário: `invent
 
 ## 3. Progresso consolidado e limites conhecidos
 
-**54 disciplinas, 543 tópicos na coleta de 15/11/2026; 0 revisões integrais encerradas, 2 parciais e 52 não iniciadas.** As contagens de seções/componentes de ARM/AFO são das evidências já registradas, sem nova consulta nesta atualização.
+**54 disciplinas, 543 tópicos ativos: 0 encerradas [x], 30 em estado parcial [~] (sendo 8 disciplinas com conteúdo revisadas/reconciliadas no banco + 2 em andamento + 20 disciplinas sem seções no acervo documentadas) e 24 aguardando ondas seguintes [ ].** As contagens de seções/componentes de ARM/AFO são das evidências já registradas, sem nova consulta nesta atualização.
 
 | Frente | Estado sustentado | Limite / próximo trabalho |
 |---|---|---|
-| ARM | Correções anteriores conferidas em 15/11; 11 tópicos, 33 seções, 14 diagramas, zero cartões na fotografia. | Fontes, cálculos, coerência, visual e cobertura ainda precisam de encerramento. |
-| AFO | Correções anteriores aplicadas em 17/11; 12 tópicos, 48 seções, 24 diagramas e 100 cartões. Reconciliação de cinco mudanças às 13h11. | Novos achados da 014 não foram aplicados; revisão integral não encerrada. |
-| Publicação anterior | Registro de AFO em main no commit `949c636`, deploy confirmado em 17/11 às 13h13. | Publicação anterior não comprova aplicação de propostas posteriores. Commit apenas documental não altera o banco. |
-| Iteração 014 | Commit local `0dd4fe4`; 197 propostas: 89 ARM e 108 AFO; quatro críticas, 56 altas e 137 de outras gravidades. | Não são 197 erros comprovados. Os 36 conjuntos de verificação independente falharam; fontes não foram reabertas pelo consolidador. |
-| Evidência textual da 014 | 155 trechos localizados, 42 não localizados; 325 referências declaradas. | Existência literal não prova erro; referência declarada não comprova consulta ou vigência. |
-| Dois problemas internos | Cartão índice 1 de `despesa-publica-sec-05` e nota ¹ de `receita-publica-sec-09`. | Contradição/erro redacional identificados; preparar correção fundamentada. Não há delta homologado da 014. |
-| Recibo de comparação | `estado-atual-2026-11-17.json` preserva as 33 falsas divergências de ARM causadas por campos ausentes na proposta. Reexecução corrigida foi relatada sem recibo novo salvo. | Salvar novo recibo, sem sobrescrever o original. Campo ausente significa não comparável por essa proposta, não identidade certificada. |
-| Separação ARM/AFO | Vínculos estruturais conferidos; sem topic_id compartilhado. stable_key repetida em tópicos diferentes não prova defeito. | Conferir escopo da chave composta no schema; vínculo correto não certifica separação semântica do conteúdo. |
-| Omissões | Oito tópicos sem seções: dois ARM e seis AFO. | Matriz de cobertura não concluída; procurar conteúdo correspondente em outros tópicos antes de adicionar. |
-| Visual | AFO possui evidências anteriores de amostra visual, DOM e interação local; a 014 não fez nova inspeção. | Não extrapolar amostra. ARM e conferência autenticada permanecem pendentes conforme evidência registrada. |
-| Trabalho não homologado | Arquivos não rastreados em `evidencias-iteracao-015/` e novos auxiliares em `iteracao-014/`. | Existência de código não comprova teste concluído. Conferir executor ativo e novos resultados; preservar arquivos alheios. |
+| ARM (`01`) | Iteração 015 **aplicada e reconciliada no Supabase** (`f48ec8e`, `aplicacao-015-reconciliacao.json`): 34 seções ativas (33 originais + 1 adição de lacuna em `movimentacao-e-transporte-de-materiais`), 15 diagramas; 89/89 propostas verificadas às cegas; 32 edições em 18 seções aplicadas (sanados os 11 erros KaTeX/controle); validação visual 3 temas (90 renders DOM + 60 PNGs + 11/11 asserções interativas); `exactParityWithApprovedProposal: true`. | Pendente apenas conferência autenticada em produção (`[~]` mantido). |
+| AFO (`02`) | Iteração 015 **aplicada e reconciliada no Supabase** (`f48ec8e`, `aplicacao-015-reconciliacao.json`): 50 seções ativas (48 originais + 2 adições LRF em `lei-de-responsabilidade-fiscal-lrf-lc-101`), 26 diagramas, 100 cartões (cartão índice 1 de `despesa-publica-sec-05` corrigido `CERTO` → `ERRADO` via CAS atômico); 108/108 propostas verificadas às cegas; 30 edições em 21 seções; validação visual DOM/KaTeX aprovada; `exactParityWithApprovedProposal: true`. | Pendente apenas conferência autenticada em produção (`[~]` mantido). |
+| Coleta e auditoria `03–54` (`043a0a4`) | Fotografias `03` a `54` coletadas (`snapshot.sha256`), auditoria determinística AST/KaTeX/Mermaid gerada (`orquestracao-03-54/auditoria-deterministica-03-54.json`), **20 disciplinas sem seções ativas (`secs: 0`)** cruzadas com o acervo e documentadas em seus relatórios `NN-slug.md`; 32 disciplinas ativas particionadas em 7 ondas (`W1` a `W7`, 169 lotes). | Concluir ondas `W2` a `W7` para as disciplinas com conteúdo ativo. |
+| Onda 1 (`03, 04, 06, 07, 09, 11` — `25ee3cc`) | **100% revisada, verificada às cegas, aplicada e reconciliada no Supabase:** 233/233 seções lidas, 116 edições aplicadas em 65 seções (incluindo 25 seções com atualização cirúrgica CAS de flashcards e eliminação dos 13 erros KaTeX de `11-contabilidade-de-custos`), +2 seções de lacuna adicionadas (`03-administracao-geral--gestao-por-competencias` e `07-arquivologia--sistemas-informatizados-sigad`), validação visual React real nos 3 temas com **258/258 renders DOM aprovados (`0` falhas)**. | Pendente apenas conferência autenticada em produção (`[~]` mantido). |
+| Onda 2 (`12` e `15` — em andamento) | Etapa 1 concluída (`27/27` lotes, **326/326 seções lidas**, 270 achados brutos + 4 determinísticos); Etapa 2 em execução: **`12. Contabilidade Geral e Avançada` com 11/11 tarefas de verificação cega concluídas** (39 confirmados, 44 edições prontas); **`15. Direito Administrativo` com 8/26 concluídas** (56 confirmados, 56 edições prontas) e **18/26 tarefas pendentes** após falha `NOT_FOUND (404)` no backend do subagente. | Concluir verificação cega das 18 tarefas restantes de `15`, executar `processar_onda.mjs 2 --apply` e `validar_visual_ondas.cjs 2`. |
+| Ondas 3–7 (`17–52`) e Adições de lacunas | Fotografia coletada e lotes preparados; **6 pacotes de adição** para lacunas reais das Ondas 4, 5 e 7 (`18-direito-constitucional`, `25-direito-previdenciario`, `39-informatica` ×3 e `51-portugues`) já elaborados em `orquestracao-03-54/adicoes/` e aprovados em `import --dry-run`. | Executar verificação, aplicação, adições e validação visual das Ondas 3 a 7 em sequência contínua. |
+| Recibos e rastreabilidade 015 | `recibo-comparacao-arm-afo-2026-11-17.json` (`f34978cc...`), `estado-atual-2026-11-17.json` (`6f934456...`), `aplicacao-015-antes.json`, `aplicacao-015-reconciliacao.json`, `censo-197-achados.json`, `matriz-8-topicos-vazios.json` e `evidencias-iteracao-015/resultados-brutos-015.json` versionados e preservados. | Conferência autenticada em produção (`https://proconcursos.com.br/resumos`) permanece bloqueada sem sessão de aluno. |
 
 Ler: `iteracao-014/ESTADO_ITERACAO_014.md`, `iteracao-014/resultados_revisao_bruto.json`, `iteracao-014/resultados_verificacao_bruto.json`, `iteracao-014/achados_trecho_nao_localizado.json`, `revalidar-arm-afo.mjs`, `APLICACAO_AFO_2026-11-17.md` e `aplicacao-afo-reconciliacao.json`.
 
@@ -53,60 +49,60 @@ Legenda: `[ ]` não iniciada; `[~]` parcial; `[x]` encerrada conforme seção 9.
 
 | Ordem | Disciplina | Tópicos | Revisão | Progresso documentado | Próxima ação |
 |---|---|---|---|---|---|
-| 01 | Administração de Recursos Materiais | 11 | [~] parcial | 33 seções; 14 diagramas; 0 cartões; 89 propostas da 014 | R01–R10; fontes, cálculos, omissões e visual |
-| 02 | Administração Financeira e Orçamentária | 12 | [~] parcial | 48 seções; 24 diagramas; 100 cartões; 108 propostas da 014 | R01–R10; dois problemas internos, fontes, cobertura e visual |
-| 03 | Administração Geral | 13 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Próxima nova disciplina; iniciar após critérios de transição |
-| 04 | Administração Pública | 15 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 05 | Agências Reguladoras e Regulação | 5 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 06 | Análise de Balanços | 4 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 07 | Arquivologia | 16 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 08 | Atualidades | 8 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 09 | Auditoria | 24 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 10 | Conhecimentos Bancários | 10 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 11 | Contabilidade de Custos | 10 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 12 | Contabilidade Geral e Avançada | 32 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 13 | Contabilidade Pública | 5 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 14 | Controle Externo | 8 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 15 | Direito Administrativo | 25 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 16 | Direito Ambiental | 10 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 17 | Direito Civil | 12 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 18 | Direito Constitucional | 16 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 19 | Direito da Pessoa com Deficiência | 4 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 20 | Direito do Trabalho | 15 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 21 | Direito Eleitoral | 9 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 22 | Direito Empresarial | 3 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 23 | Direito Penal | 7 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 24 | Direito Penal Militar | 4 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 25 | Direito Previdenciário | 21 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 26 | Direito Processual Civil | 17 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 27 | Direito Processual do Trabalho | 7 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 28 | Direito Processual Penal | 19 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 29 | Direito Processual Penal Militar | 4 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 30 | Direito Tributário | 21 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 31 | Direitos Humanos | 9 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 32 | Enfermagem | 5 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 33 | Engenharia Florestal | 2 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 34 | Estatística | 4 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 35 | Ética no Serviço Público | 4 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 36 | Finanças Públicas | 1 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 37 | Física | 9 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 38 | Geografia | 10 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 39 | Informática | 15 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 40 | Legislação Aduaneira | 5 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 41 | Legislação Aplicada à EBSERH | 7 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 42 | Legislação de Trânsito | 11 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 43 | Legislação do SUS | 10 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 44 | Legislação Municipal | 4 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 45 | Legislação Penal Especial | 36 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 46 | Língua Inglesa | 6 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 47 | Macroeconomia | 1 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 48 | Matemática | 4 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 49 | Matemática Financeira | 4 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 50 | Microeconomia | 1 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 51 | Português | 10 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 52 | Raciocínio Lógico | 4 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 53 | Relações Humanas e Atendimento | 6 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
-| 54 | Vendas e Negociação | 8 | [ ] não iniciada | Sem revisão formal comprovada neste programa | Executar ciclo D01–D08 quando chegar sua vez |
+| 01 | Administração de Recursos Materiais | 11 | [~] parcial | 34 seções (33 + 1 adição); 15 diagramas; 89 propostas verificadas às cegas; 32 edições aplicadas e reconciliadas no banco; visual 3 temas aprovado (60 PNGs) | Pendente apenas sessão autenticada em produção |
+| 02 | Administração Financeira e Orçamentária | 12 | [~] parcial | 50 seções (48 + 2 adições LRF); 26 diagramas; 100 cartões (1 corrigido via CAS); 108 propostas verificadas às cegas; 30 edições aplicadas e reconciliadas no banco | Pendente apenas sessão autenticada em produção |
+| 03 | Administração Geral | 13 | [~] parcial | 54/54 seções lidas; +1 seção(ões) adicionada(s); 120 cartões; 22 diagramas; 9 edições em 9 seções reconciliadas no banco; visual 75/75 renders OK | Pendente apenas sessão autenticada em produção |
+| 04 | Administração Pública | 15 | [~] parcial | 40/40 seções lidas; 120 cartões; 24 diagramas; 8 edições em 7 seções reconciliadas no banco; visual 78/78 renders OK | Pendente apenas sessão autenticada em produção |
+| 05 | Agências Reguladoras e Regulação | 5 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 5 tópicos vazios registrada em `05-agencias-reguladoras-e-regulacao.md` | Aguardar autoria/importação futura de conteúdo |
+| 06 | Análise de Balanços | 4 | [~] parcial | 4/4 seções lidas; 0 cartões; 0 diagramas; 1 edições em 1 seções reconciliadas no banco; visual 9/9 renders OK | Pendente apenas sessão autenticada em produção |
+| 07 | Arquivologia | 16 | [~] parcial | 29/29 seções lidas; +1 seção(ões) adicionada(s); 0 cartões; 6 diagramas; 15 edições em 9 seções reconciliadas no banco; visual 18/18 renders OK | Pendente apenas sessão autenticada em produção |
+| 08 | Atualidades | 8 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 8 tópicos vazios registrada em `08-atualidades.md` | Aguardar autoria/importação futura de conteúdo |
+| 09 | Auditoria | 24 | [~] parcial | 76/76 seções lidas; 159 cartões; 12 diagramas; 42 edições em 23 seções reconciliadas no banco; visual 39/39 renders OK | Pendente apenas sessão autenticada em produção |
+| 10 | Conhecimentos Bancários | 10 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 10 tópicos vazios registrada em `10-conhecimentos-bancarios.md` | Aguardar autoria/importação futura de conteúdo |
+| 11 | Contabilidade de Custos | 10 | [~] parcial | 30/30 seções lidas; 120 cartões; 8 diagramas; 41 edições em 16 seções reconciliadas no banco; visual 39/39 renders OK | Pendente apenas sessão autenticada em produção |
+| 12 | Contabilidade Geral e Avançada | 32 | [~] parcial | Onda 2 em andamento: 142/142 seções lidas (11/11 lotes); 36 achados brutos; verificação cega 11/11 (39 confirmados, 44 edições prontas) | Executar processar_onda 2 (--apply) + visual |
+| 13 | Contabilidade Pública | 5 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 5 tópicos vazios registrada em `13-contabilidade-publica.md` | Aguardar autoria/importação futura de conteúdo |
+| 14 | Controle Externo | 8 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 8 tópicos vazios registrada em `14-controle-externo.md` | Aguardar autoria/importação futura de conteúdo |
+| 15 | Direito Administrativo | 25 | [~] parcial | Onda 2 em andamento: 184/184 seções lidas (16/16 lotes); 234 achados brutos; verificação cega 8/26 (56 confirmados, 56 edições prontas) | Concluir 18 verificações cegas restantes + --apply + visual (Onda 2) |
+| 16 | Direito Ambiental | 10 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 10 tópicos vazios registrada em `16-direito-ambiental.md` | Aguardar autoria/importação futura de conteúdo |
+| 17 | Direito Civil | 12 | [ ] não iniciada | Fotografia coletada (130 seções, 298 cartões, 26 diagramas) | Executar Onda 3 (ciclo D02–D08) |
+| 18 | Direito Constitucional | 16 | [ ] não iniciada | Fotografia coletada (105 seções, 433 cartões, 9 diagramas); +2 seção(ões) de lacuna em dry-run (1 pacote(s)) | Executar Onda 4 (ciclo D02–D08) |
+| 19 | Direito da Pessoa com Deficiência | 4 | [ ] não iniciada | Fotografia coletada (12 seções, 0 cartões, 2 diagramas) | Executar Onda 4 (ciclo D02–D08) |
+| 20 | Direito do Trabalho | 15 | [ ] não iniciada | Fotografia coletada (50 seções, 0 cartões, 19 diagramas) | Executar Onda 4 (ciclo D02–D08) |
+| 21 | Direito Eleitoral | 9 | [ ] não iniciada | Fotografia coletada (58 seções, 0 cartões, 8 diagramas) | Executar Onda 4 (ciclo D02–D08) |
+| 22 | Direito Empresarial | 3 | [ ] não iniciada | Fotografia coletada (29 seções, 0 cartões, 2 diagramas) | Executar Onda 4 (ciclo D02–D08) |
+| 23 | Direito Penal | 7 | [ ] não iniciada | Fotografia coletada (104 seções, 0 cartões, 3 diagramas) | Executar Onda 4 (ciclo D02–D08) |
+| 24 | Direito Penal Militar | 4 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 4 tópicos vazios registrada em `24-direito-penal-militar.md` | Aguardar autoria/importação futura de conteúdo |
+| 25 | Direito Previdenciário | 21 | [ ] não iniciada | Fotografia coletada (59 seções, 0 cartões, 23 diagramas); +1 seção(ões) de lacuna em dry-run (1 pacote(s)) | Executar Onda 5 (ciclo D02–D08) |
+| 26 | Direito Processual Civil | 17 | [ ] não iniciada | Fotografia coletada (91 seções, 0 cartões, 35 diagramas) | Executar Onda 5 (ciclo D02–D08) |
+| 27 | Direito Processual do Trabalho | 7 | [ ] não iniciada | Fotografia coletada (20 seções, 0 cartões, 11 diagramas) | Executar Onda 5 (ciclo D02–D08) |
+| 28 | Direito Processual Penal | 19 | [ ] não iniciada | Fotografia coletada (81 seções, 0 cartões, 12 diagramas) | Executar Onda 5 (ciclo D02–D08) |
+| 29 | Direito Processual Penal Militar | 4 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 4 tópicos vazios registrada em `29-direito-processual-penal-militar.md` | Aguardar autoria/importação futura de conteúdo |
+| 30 | Direito Tributário | 21 | [ ] não iniciada | Fotografia coletada (306 seções, 828 cartões, 106 diagramas) | Executar Onda 6 (ciclo D02–D08) |
+| 31 | Direitos Humanos | 9 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 9 tópicos vazios registrada em `31-direitos-humanos.md` | Aguardar autoria/importação futura de conteúdo |
+| 32 | Enfermagem | 5 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 5 tópicos vazios registrada em `32-enfermagem.md` | Aguardar autoria/importação futura de conteúdo |
+| 33 | Engenharia Florestal | 2 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 2 tópicos vazios registrada em `33-engenharia-florestal.md` | Aguardar autoria/importação futura de conteúdo |
+| 34 | Estatística | 4 | [ ] não iniciada | Fotografia coletada (8 seções, 0 cartões, 1 diagramas) | Executar Onda 7 (ciclo D02–D08) |
+| 35 | Ética no Serviço Público | 4 | [ ] não iniciada | Fotografia coletada (19 seções, 0 cartões, 5 diagramas) | Executar Onda 7 (ciclo D02–D08) |
+| 36 | Finanças Públicas | 1 | [ ] não iniciada | Fotografia coletada (7 seções, 0 cartões, 4 diagramas) | Executar Onda 7 (ciclo D02–D08) |
+| 37 | Física | 9 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 9 tópicos vazios registrada em `37-fisica.md` | Aguardar autoria/importação futura de conteúdo |
+| 38 | Geografia | 10 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 10 tópicos vazios registrada em `38-geografia.md` | Aguardar autoria/importação futura de conteúdo |
+| 39 | Informática | 15 | [ ] não iniciada | Fotografia coletada (52 seções, 0 cartões, 11 diagramas); +3 seção(ões) de lacuna em dry-run (3 pacote(s)) | Executar Onda 7 (ciclo D02–D08) |
+| 40 | Legislação Aduaneira | 5 | [ ] não iniciada | Fotografia coletada (31 seções, 0 cartões, 19 diagramas) | Executar Onda 7 (ciclo D02–D08) |
+| 41 | Legislação Aplicada à EBSERH | 7 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 7 tópicos vazios registrada em `41-legislacao-aplicada-a-ebserh.md` | Aguardar autoria/importação futura de conteúdo |
+| 42 | Legislação de Trânsito | 11 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 11 tópicos vazios registrada em `42-legislacao-de-transito.md` | Aguardar autoria/importação futura de conteúdo |
+| 43 | Legislação do SUS | 10 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 10 tópicos vazios registrada em `43-legislacao-do-sus.md` | Aguardar autoria/importação futura de conteúdo |
+| 44 | Legislação Municipal | 4 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 4 tópicos vazios registrada em `44-legislacao-municipal.md` | Aguardar autoria/importação futura de conteúdo |
+| 45 | Legislação Penal Especial | 36 | [ ] não iniciada | Fotografia coletada (112 seções, 0 cartões, 51 diagramas) | Executar Onda 7 (ciclo D02–D08) |
+| 46 | Língua Inglesa | 6 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 6 tópicos vazios registrada em `46-lingua-inglesa.md` | Aguardar autoria/importação futura de conteúdo |
+| 47 | Macroeconomia | 1 | [ ] não iniciada | Fotografia coletada (20 seções, 0 cartões, 14 diagramas) | Executar Onda 7 (ciclo D02–D08) |
+| 48 | Matemática | 4 | [ ] não iniciada | Fotografia coletada (2 seções, 0 cartões, 1 diagramas) | Executar Onda 7 (ciclo D02–D08) |
+| 49 | Matemática Financeira | 4 | [ ] não iniciada | Fotografia coletada (2 seções, 0 cartões, 1 diagramas) | Executar Onda 7 (ciclo D02–D08) |
+| 50 | Microeconomia | 1 | [ ] não iniciada | Fotografia coletada (27 seções, 0 cartões, 13 diagramas) | Executar Onda 7 (ciclo D02–D08) |
+| 51 | Português | 10 | [ ] não iniciada | Fotografia coletada (37 seções, 170 cartões, 12 diagramas); +1 seção(ões) de lacuna em dry-run (1 pacote(s)) | Executar Onda 7 (ciclo D02–D08) |
+| 52 | Raciocínio Lógico | 4 | [ ] não iniciada | Fotografia coletada (6 seções, 0 cartões, 1 diagramas) | Executar Onda 7 (ciclo D02–D08) |
+| 53 | Relações Humanas e Atendimento | 6 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 6 tópicos vazios registrada em `53-relacoes-humanas-e-atendimento.md` | Aguardar autoria/importação futura de conteúdo |
+| 54 | Vendas e Negociação | 8 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 8 tópicos vazios registrada em `54-vendas-e-negociacao.md` | Aguardar autoria/importação futura de conteúdo |
 
 ## 5. Tarefas imediatas de recuperação e encerramento
 
@@ -114,16 +110,16 @@ Todos os itens permanecem abertos neste plano até aceite documentado. Trabalhar
 
 | ID | Escopo / tarefa | Saída e critério de aceite |
 |---|---|---|
-| R01 | Ambas: reconciliar trabalho concorrente e a possível 015 | Executor e arquivos reservados identificados; últimos resultados lidos; nenhuma duplicação ou incorporação cega de trabalho alheio. |
-| R02 | Ambas: salvar revalidação corrigida | Novo recibo datado, com hash, diferenças e campos não comparáveis; identidades contra pré-imagem adequada; snapshot original preservado. |
-| R03 | AFO: tratar os dois problemas internos identificados | Contexto completo e fontes conferidos; veredito e correção local mínima quando confirmada. Não adiar correção verificada apenas para formar lote maior. |
-| R04 | Ambas: verificar as 197 alegações | Livro de achados com veredito individual e evidência; críticos/altos primeiro; resolver os 42 trechos não localizados. Amostragem não encerra o censo. |
-| R05 | ARM: cálculos/coerência; AFO: rastreabilidade normativa | Todas as seções/componentes com leitura e verificação diferenciadas; exemplos recalculados e fontes atuais, com dispositivo e âmbito. |
-| R06 | Ambas: cobertura dos oito tópicos vazios e omissões internas | Matriz distingue conteúdo já coberto, insuficiente e ausente; referência de escopo explícita; adições fundamentadas e separadas. |
-| R07 | Ambas: visual local e produção | Evidências por tema/viewport: tabelas, fórmulas, overflow, diagramas e controles. Distinguir DOM, imagem inspecionada, interação e sessão real. |
-| R08 | Ambas: preparar delta e validar | Antes/depois, fontes, IDs preservados, proposta separada do payload aceito e dry-runs reais. Correção de cartão com fluxo que efetivamente o atualize. |
-| R09 | Ambas: aplicar delta autorizado e reconciliar | Pré-imagem e reversão, revalidação imediata de concorrência, aplicação delimitada e comparação posterior; cartões não envolvidos e dados pessoais preservados. |
-| R10 | Encerrar cada disciplina e liberar próxima | Critérios da seção 9 atendidos ou pendências impeditivas explícitas; relatório, fila e plano atualizados; passagem executável. |
+| R01 | Ambas: reconciliar trabalho concorrente e a 015 | **Concluída (015):** arquivos reconciliados e versionados em `propostas-iteracao-015/` e `evidencias-iteracao-015/`. |
+| R02 | Ambas: salvar revalidação corrigida | **Concluída (015):** `recibo-comparacao-arm-afo-2026-11-17.json` salvo com SHA-256 e `missingInLocalPayload`, preservando `estado-atual-2026-11-17.json`. |
+| R03 | AFO: tratar os dois problemas internos identificados | **Concluída e aplicada (015 / `f48ec8e`):** flashcard índice 1 de `despesa-publica-sec-05` (`CERTO` → `ERRADO` via CAS) e nota ¹ de `receita-publica-sec-09` corrigidos e reconciliados no banco. |
+| R04 | Ambas: verificar as 197 alegações | **Concluída (015):** `censo-197-achados.json` com verificação cega integral (77 confirmados, 4 parciais, 116 refutados, 0 inconclusivos; 42/42 trechos localizados manualmente). |
+| R05 | ARM: cálculos/coerência; AFO: rastreabilidade normativa | **Concluída (015):** `registro-81-secoes.json` e `auditar_propostas_015.mjs` (81/81 seções lidas, 96 nós KaTeX com 0 erros e 0 caracteres de controle, cálculos e normas 2025/2026 conferidos). |
+| R06 | Ambas: cobertura dos oito tópicos vazios e omissões internas | **Concluída e aplicada (`f48ec8e`):** `matriz-8-topicos-vazios.json` com os 8 IDs exatos + 2 pacotes (`01-arm-movimentacao-e-transporte-de-materiais` e `02-afo-lei-de-responsabilidade-fiscal-lrf-lc-101`) aplicados e reconciliados no banco. |
+| R07 | Ambas: visual local e produção | **Parcial (local concluída, produção bloqueada por sessão):** `resultados-brutos-015.json` com 11/11 asserções interativas, 132/132 renders DOM de diagramas, 78/78 renders KaTeX e 63 PNGs; falta conferência autenticada em produção. |
+| R08 | Ambas: preparar delta e validar | **Concluída (015):** `delta-completo-antes-depois.json` (62 edições), pré-imagens/manifestos SHA-256, dry-runs `import-batch --preserve-flashcards` e `atualizar-flashcard-cirurgico.mjs` aprovados. |
+| R09 | Ambas: aplicar delta autorizado e reconciliar | **Concluída e reconciliada (`f48ec8e`):** após autorização do usuário para execução autônoma integral, aplicado delta completo (`aplicacao-015-antes.json` → `aplicacao-015-reconciliacao.json`) com `exactParityWithApprovedProposal: true` e `personalPreserved: true`. |
+| R10 | Encerrar cada disciplina e liberar próxima | **Em execução nas Ondas `W1–W7`:** ARM e AFO mantidas `[~]` apenas pela etapa autenticada em produção; **Onda 1 (`03, 04, 06, 07, 09, 11`) concluída e reconciliada (`25ee3cc`)**; **20 disciplinas sem seções documentadas (`043a0a4`)**; **Onda 2 (`12, 15`) em andamento**. |
 
 Tópicos vazios conhecidos: ARM `gestao-de-estoques-e-reposicao`, `movimentacao-e-transporte-de-materiais`; AFO `creditos-adicionais`, `despesa-publica-etapas-e-estagios`, `lei-de-responsabilidade-fiscal-lrf-lc-101`, `planejamento-e-leis-orcamentarias-ppa-ldo-loa`, `principios-orcamentarios`, `receita-publica-classificacoes-e-estagios`.
 
