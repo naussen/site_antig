@@ -1,5 +1,10 @@
 # Changelog
 
+## Plano de revisão das disciplinas — 17/11/2026
+
+- consolidado em `docs/PLANO_REVISAO_DISCIPLINAS.md` o plano de revisão dos resumos: 54 disciplinas, ARM e AFO com revisão parcial, 52 não iniciadas e Administração Geral como próxima nova disciplina;
+- registrados estado de publicação de AFO, pendências de encerramento, critérios de cobertura e prompt da próxima iteração de ARM, sem alteração de conteúdo ou banco.
+
 ## Publicação das correções de AFO — 17/11/2026
 
 - registradas em `docs/PUBLICACAO_AFO_2026-11-17.md` a aplicação autorizada ao banco de produção e a reconciliação de 48 seções, com cinco seções corrigidas e 100 flashcards preservados;
