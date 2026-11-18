@@ -1,5 +1,10 @@
 # Changelog
 
+## Plano de orquestração da revisão editorial — 17/11/2026
+
+- atualizado `docs/PLANO_REVISAO_DISCIPLINAS.md` para versão 2, orientada a agentes IA, com todas as 54 disciplinas e progresso individualizado;
+- registrados evidências e limites da iteração 014, tarefas de retomada, coordenação, critérios de aceite e passagem de contexto; sem nova aplicação de conteúdo ou alteração de banco.
+
 ## Plano de revisão das disciplinas — 17/11/2026
 
 - consolidado em `docs/PLANO_REVISAO_DISCIPLINAS.md` o plano de revisão dos resumos: 54 disciplinas, ARM e AFO com revisão parcial, 52 não iniciadas e Administração Geral como próxima nova disciplina;
