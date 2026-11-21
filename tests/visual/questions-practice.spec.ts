@@ -75,3 +75,29 @@ test("revelar e fechar resposta não envia tentativa nem marca alternativa", asy
   await expect(page.getByRole("button", { name: "Ver resposta", exact: true })).toBeVisible();
   expect(rpcNames).toEqual(["get_question_answer"]);
 });
+
+test("Voltar e Avançar restauram os filtros e o resultado da lista", async ({ page }) => {
+  await page.route("**/rest/v1/rpc/list_questions_filtered_v2", (route) =>
+    route.fulfill({ json: { items: [], next_cursor: null, total_count: 0 } }),
+  );
+  await page.goto("landing/questions-visual-regression");
+  const question = page.getByRole("article", { name: "Questão 1", exact: true });
+  const identifier = page.getByLabel("ID da questão", { exact: true });
+  const empty = page.getByRole("heading", { name: "Nenhuma questão encontrada" });
+
+  await expect(question).toBeVisible();
+  await identifier.fill("visual:inexistente");
+  await page.getByRole("button", { name: "Filtrar", exact: true }).click();
+  await expect(empty).toBeVisible();
+  await expect(page).toHaveURL(/id=visual%3Ainexistente/);
+
+  await page.goBack();
+  await expect(question).toBeVisible();
+  await expect(identifier).toHaveValue("");
+  await expect(page).not.toHaveURL(/[?&]id=/);
+
+  await page.goForward();
+  await expect(empty).toBeVisible();
+  await expect(identifier).toHaveValue("visual:inexistente");
+  await expect(page).toHaveURL(/id=visual%3Ainexistente/);
+});

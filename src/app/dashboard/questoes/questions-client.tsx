@@ -37,6 +37,12 @@ interface PageSnapshot {
   start: number;
 }
 
+interface BrowserSnapshot extends PageSnapshot {
+  filters: QuestionFilters;
+  mode: 1 | 5;
+  pages: PageSnapshot[];
+}
+
 const EMPTY_FILTERS: QuestionFilters = {
   identifier: "",
   search: "",
@@ -52,8 +58,7 @@ function accuracy(correct: number, total: number) {
   return total > 0 ? Math.round((correct / total) * 100) : 0;
 }
 
-function syncUrlWithFilters(filters: QuestionFilters, currentMode: 1 | 5) {
-  if (typeof window === "undefined") return;
+function filtersUrl(filters: QuestionFilters, currentMode: 1 | 5, start: number) {
   const params = new URLSearchParams();
   if (filters.identifier) params.set("id", filters.identifier);
   if (filters.search) params.set("busca", filters.search);
@@ -64,10 +69,10 @@ function syncUrlWithFilters(filters: QuestionFilters, currentMode: 1 | 5) {
   if (filters.year) params.set("ano", filters.year);
   if (filters.review && filters.review !== "all") params.set("revisao", filters.review);
   if (currentMode === 5) params.set("modo", "5");
+  if (start > 0) params.set("posicao", String(start + 1));
 
   const query = params.toString();
-  const nextUrl = query ? `${window.location.pathname}?${query}` : window.location.pathname;
-  window.history.replaceState(null, "", nextUrl);
+  return query ? `${window.location.pathname}?${query}` : window.location.pathname;
 }
 
 export function QuestionsClient({
@@ -94,6 +99,39 @@ export function QuestionsClient({
   const contentRef = useRef<HTMLDivElement>(null);
   const initialPage = useRef(true);
   const busy = loading || cardOperations > 0;
+  const browserPages = useRef(new Map<string, BrowserSnapshot>());
+
+  useEffect(() => {
+    browserPages.current.set(window.location.href, {
+      filters: activeFilters, mode, result, start: pageStart, pages: history,
+    });
+  }, [activeFilters, mode, result, pageStart, history]);
+
+  useEffect(() => {
+    const restorePage = () => {
+      const snapshot = browserPages.current.get(window.location.href);
+      if (!snapshot) return;
+      requestId.current++;
+      setLoading(false);
+      setError(null);
+      setDraftFilters(snapshot.filters);
+      setActiveFilters(snapshot.filters);
+      setMode(snapshot.mode);
+      setResult(snapshot.result);
+      setPageStart(snapshot.start);
+      setHistory(snapshot.pages);
+    };
+    window.addEventListener("popstate", restorePage);
+    return () => window.removeEventListener("popstate", restorePage);
+  }, []);
+
+  function recordPage(filters: QuestionFilters, pageSize: 1 | 5, start: number) {
+    const url = filtersUrl(filters, pageSize, start);
+    if (new URL(url, window.location.href).href !== window.location.href) {
+      window.history.pushState(null, "", url);
+    }
+  }
+
 
   useEffect(() => {
     if (initialPage.current) {
@@ -116,6 +154,7 @@ export function QuestionsClient({
     start = 0,
     reset = false,
     remember = false,
+    record = false,
     slide = "next",
   }: {
     cursor?: string | null;
@@ -124,6 +163,7 @@ export function QuestionsClient({
     start?: number;
     reset?: boolean;
     remember?: boolean;
+    record?: boolean;
     slide?: "next" | "previous";
   } = {}) => {
     const currentRequest = ++requestId.current;
@@ -154,8 +194,8 @@ export function QuestionsClient({
       if (reset) {
         setHistory([]);
         setActiveFilters(filters);
-        syncUrlWithFilters(filters, pageSize);
       }
+      if (record) recordPage(filters, pageSize, start);
       setResult(nextResult);
       setPageStart(start);
       setMode(pageSize);
@@ -172,6 +212,7 @@ export function QuestionsClient({
   const showPrevious = () => {
     const previous = history.at(-1);
     if (!previous || busy) return;
+    recordPage(activeFilters, mode, previous.start);
     setHistory((current) => current.slice(0, -1));
     setResult(previous.result);
     setPageStart(previous.start);
@@ -181,7 +222,7 @@ export function QuestionsClient({
 
   const showNext = async () => {
     if (busy || !result.next_cursor) return;
-    await fetchPage({ cursor: result.next_cursor, start: pageStart + result.items.length, remember: true });
+    await fetchPage({ cursor: result.next_cursor, start: pageStart + result.items.length, remember: true, record: true });
   };
 
   const refreshAfterHide = async () => {
@@ -203,6 +244,7 @@ export function QuestionsClient({
     const loaded = await fetchPage({
       filters: cleanFilters,
       reset: true,
+      record: true,
     });
     if (loaded) setFiltersOpen(false);
   };
@@ -210,7 +252,7 @@ export function QuestionsClient({
   const clearFilters = () => {
     setDraftFilters(EMPTY_FILTERS);
     setFiltersOpen(false);
-    void fetchPage({ filters: EMPTY_FILTERS, reset: true });
+    void fetchPage({ filters: EMPTY_FILTERS, reset: true, record: true });
   };
 
   const toggleErrorNotebook = () => {
@@ -221,7 +263,7 @@ export function QuestionsClient({
       review: nextReview,
     };
     setDraftFilters(nextFilters);
-    void fetchPage({ filters: nextFilters, reset: true });
+    void fetchPage({ filters: nextFilters, reset: true, record: true });
   };
 
   const latestAccuracy = accuracy(stats.latest_correct, stats.answered_questions);
@@ -458,7 +500,7 @@ export function QuestionsClient({
               type="button"
               aria-pressed={mode === 1}
               disabled={busy}
-              onClick={() => void fetchPage({ pageSize: 1, reset: true })}
+              onClick={() => void fetchPage({ pageSize: 1, reset: true, record: true })}
               className={`min-h-10 flex-1 rounded-lg px-3 text-sm font-semibold transition sm:flex-none ${mode === 1 ? "bg-[var(--accent)] text-[var(--accent-contrast)]" : "text-[var(--text-secondary)] hover:bg-[var(--accent-soft)]"}`}
             >
               Uma por vez
@@ -467,7 +509,7 @@ export function QuestionsClient({
               type="button"
               aria-pressed={mode === 5}
               disabled={busy}
-              onClick={() => void fetchPage({ pageSize: 5, reset: true })}
+              onClick={() => void fetchPage({ pageSize: 5, reset: true, record: true })}
               className={`min-h-10 flex-1 rounded-lg px-3 text-sm font-semibold transition sm:flex-none ${mode === 5 ? "bg-[var(--accent)] text-[var(--accent-contrast)]" : "text-[var(--text-secondary)] hover:bg-[var(--accent-soft)]"}`}
             >
               5 por página
@@ -492,7 +534,7 @@ export function QuestionsClient({
                   onClick={() => {
                     const nextFilters = { ...activeFilters, review: "all" as const };
                     setDraftFilters(nextFilters);
-                    void fetchPage({ filters: nextFilters, reset: true });
+                    void fetchPage({ filters: nextFilters, reset: true, record: true });
                   }}
                   className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-xl bg-[var(--accent)] px-4 text-sm font-bold text-[var(--accent-contrast)]"
                 >

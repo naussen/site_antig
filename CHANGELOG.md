@@ -1,5 +1,9 @@
 # Changelog
 
+## Histórico do navegador em Questões — 21/11/2026
+
+- Voltar e Avançar restauram os filtros, o modo de visualização e a posição da lista durante a sessão da página.
+
 ## Plano de orquestração da revisão editorial — 17/11/2026
 
 - atualizado `docs/PLANO_REVISAO_DISCIPLINAS.md` para versão 2, orientada a agentes IA, com todas as 54 disciplinas e progresso individualizado;
