@@ -62,9 +62,9 @@ test("questions-client.tsx sincroniza URL (F07) e possui card interativo de Cade
   const clientSource = await read("src/app/dashboard/questoes/questions-client.tsx");
 
   // F07 - sincronização de URL
-  assert.match(clientSource, /function syncUrlWithFilters/);
-  assert.match(clientSource, /window\.history\.replaceState/);
-  assert.match(clientSource, /syncUrlWithFilters\(filters, pageSize\)/);
+  assert.match(clientSource, /params\.set\("id", filters\.identifier\)/);
+  assert.match(clientSource, /window\.history\.pushState/);
+  assert.match(clientSource, /window\.addEventListener\("popstate"/);
   assert.match(clientSource, /filters\.review !== "all" && \{ p_review_filter: filters\.review \}/);
 
   // F08 - Card interativo com a11y
