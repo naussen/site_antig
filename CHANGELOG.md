@@ -1,5 +1,9 @@
 # Changelog
 
+## Painel de estudos — 22/11/2026
+
+- A descrição da rotina semanal agora explica a sugestão de leitura e acompanha a disponibilidade de Questões e Legis.
+
 ## PRO Questões — 22/11/2026
 
 - Ocultado o identificador técnico no cartão e nos filtros. Os links diretos continuam abrindo a questão e a seleção pode ser removida por “Questão do link”.

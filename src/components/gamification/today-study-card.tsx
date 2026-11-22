@@ -1242,7 +1242,7 @@ export function TodayStudyCard({
       <div className="mt-4 flex flex-col gap-1 border-t border-[var(--border)] pt-3 text-xs text-[var(--text-muted)] sm:flex-row sm:items-center sm:justify-between">
         <p>{snapshot.accountOwnershipNotice}</p>
         <p>
-          Escopo atual: Resumos ativos. Leis, Questões e Flashcards dedicados entrarão nas próximas fases.
+          A rotina sugere sessões de leitura com base nos resumos disponíveis.
         </p>
       </div>
     </section>
