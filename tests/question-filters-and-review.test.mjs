@@ -22,7 +22,7 @@ test("migration 051 normaliza bancas (F06) e implementa filtro de revisão (F08)
 
   // F08 - 11º parâmetro e validação segura
   assert.match(migration051, /p_review_filter TEXT DEFAULT 'all'/);
-  assert.match(migration051, /v_review_filter NOT IN \('all', 'errors', 'marked', 'answered', 'unanswered'\)/);
+  assert.match(migration051, /v_review_filter NOT IN \('all', 'errors', 'marked', 'answered', 'unanswered', 'routine'\)/);
 
   // F08 - Isolamento rigoroso por auth.uid()
   assert.match(migration051, /current_user_id UUID := auth\.uid\(\);/);

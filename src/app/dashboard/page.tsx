@@ -385,6 +385,16 @@ export default async function DashboardPage({
           />
         )}
 
+        {routineState.persistenceAvailable && routineState.snapshot && !routineState.snapshot.needsOnboarding && !routineState.snapshot.preferences.hide_gamification && (
+          <Link href="/dashboard/questoes?revisao=routine&modo=5" className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] px-4 py-3 hover:border-[var(--accent)] focus-visible:outline-2 focus-visible:outline-[var(--accent)]">
+            <span className="min-w-0">
+              <strong className="block text-sm text-[var(--text-primary)]">Revisão do dia</strong>
+              <span className="text-sm text-[var(--text-secondary)]">Pratique até cinco questões que você errou em tentativas anteriores.</span>
+            </span>
+            <ArrowUpRight size={18} className="shrink-0 text-[var(--accent)]" aria-hidden="true" />
+          </Link>
+        )}
+
         {suggestedTopic &&
           suggestedProgress &&
           (!routineState.operationalEnabled ||

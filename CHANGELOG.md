@@ -1,5 +1,11 @@
 # Changelog
 
+## Rotina semanal e revisão de questões — 22/11/2026
+
+- A migration 053 foi aplicada. A API autenticada confirmou que a rotina de Resumos voltou a ter persistência.
+- A rotina oferece uma revisão opcional de até cinco questões publicadas com gabarito definitivo. A fila usa somente a última tentativa do aluno, exige que ela seja incorreta e tenha pelo menos 24 horas, e exclui questões ocultadas. A resposta usa o fluxo normal de tentativas de Questões.
+- A integração de Legis depende de vínculos editoriais explícitos. A consulta de produção registrou zero vínculos entre tópicos e fragmentos legais.
+
 ## Prática e revisão em PRO Questões — 22/11/2026
 
 - Adicionados atalhos para questões não respondidas, caderno de erros e marcadas. Os filtros aplicados podem ser removidos individualmente, respeitando dependências entre disciplina, tópico e subtópico.

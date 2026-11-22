@@ -6,7 +6,7 @@
 --    - 'CESPE', 'CESPE/UnB', 'CESPE | CEBRASPE', 'CESPE / CEBRASPE' -> 'CEBRASPE'
 -- 2. Atualização da RPC list_questions_filtered_v2:
 --    - Adiciona 11º parâmetro opcional p_review_filter TEXT DEFAULT 'all'
---      Valores permitidos: 'all', 'errors', 'marked', 'answered', 'unanswered'
+--      Valores permitidos: 'all', 'errors', 'marked', 'answered', 'unanswered', 'routine'
 --    - Suporte robusto a aliases de bancas em p_exam_board
 --    - Isolamento estrito por auth.uid() para tentativas e preferências
 -- 3. Atualização da RPC list_question_filters:
@@ -57,6 +57,7 @@ DECLARE
   identifier TEXT := nullif(btrim(p_question_identifier), '');
   identifier_uuid UUID;
   v_normalized_board TEXT := NULL;
+  v_page_limit INTEGER;
   v_review_filter TEXT := coalesce(nullif(btrim(p_review_filter), ''), 'all');
 BEGIN
   IF current_user_id IS NULL OR NOT private.has_active_content_access() THEN
@@ -71,9 +72,11 @@ BEGIN
      OR (p_subtopic_id IS NOT NULL AND char_length(p_subtopic_id) > 200)
      OR (p_exam_board IS NOT NULL AND char_length(p_exam_board) > 120)
      OR (p_exam_year IS NOT NULL AND p_exam_year NOT BETWEEN 1900 AND 2200)
-     OR (v_review_filter NOT IN ('all', 'errors', 'marked', 'answered', 'unanswered')) THEN
+     OR (v_review_filter NOT IN ('all', 'errors', 'marked', 'answered', 'unanswered', 'routine')) THEN
     RAISE EXCEPTION 'invalid question search parameters' USING ERRCODE = '22023';
   END IF;
+
+  v_page_limit := CASE WHEN v_review_filter = 'routine' THEN LEAST(p_limit, 5) ELSE p_limit END;
 
   IF identifier IS NOT NULL THEN
     BEGIN
@@ -155,7 +158,7 @@ BEGIN
       )
       AND (p_exam_year IS NULL OR question.exam_year = p_exam_year)
       AND (
-        p_include_hidden
+        (p_include_hidden AND v_review_filter <> 'routine')
         OR NOT EXISTS (
           SELECT 1
           FROM public.user_question_preferences AS preference
@@ -174,6 +177,17 @@ BEGIN
           ORDER BY attempt.answered_at DESC, attempt.id DESC
           LIMIT 1
         ) IS FALSE)
+        OR (v_review_filter = 'routine'
+          AND question.source_metadata->>'answer_status' IN ('definitivo', 'definitivo_alterado')
+          AND coalesce((
+            SELECT NOT attempt.is_correct AND attempt.answered_at <= now() - interval '24 hours'
+            FROM public.user_question_attempts AS attempt
+            WHERE attempt.user_id = current_user_id
+              AND attempt.question_id = question.id
+            ORDER BY attempt.answered_at DESC, attempt.id DESC
+            LIMIT 1
+          ), false)
+        )
         OR (v_review_filter = 'marked' AND EXISTS (
           SELECT 1
           FROM public.user_question_preferences AS preference
@@ -203,12 +217,12 @@ BEGIN
       WHERE anchor.id = p_after_id
     )
     ORDER BY question.created_at DESC, question.id DESC
-    LIMIT p_limit + 1
+    LIMIT v_page_limit + 1
   ), selected AS (
     SELECT *
     FROM page
     ORDER BY created_at DESC, id DESC
-    LIMIT p_limit
+    LIMIT v_page_limit
   ), items AS (
     SELECT
       question.id,
@@ -317,7 +331,7 @@ BEGIN
       FROM items
     ), '[]'::jsonb),
     'next_cursor', CASE
-      WHEN (SELECT count(*) FROM page) > p_limit THEN (
+      WHEN v_review_filter <> 'routine' AND (SELECT count(*) FROM page) > v_page_limit THEN (
         SELECT id::text
         FROM selected
         ORDER BY created_at, id
@@ -325,7 +339,10 @@ BEGIN
       )
       ELSE NULL
     END,
-    'total_count', (SELECT count(*) FROM filtered)
+    'total_count', CASE
+      WHEN v_review_filter = 'routine' THEN (SELECT count(*) FROM selected)
+      ELSE (SELECT count(*) FROM filtered)
+    END
   ) INTO result;
 
   RETURN result;

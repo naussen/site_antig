@@ -65,13 +65,14 @@ export default async function QuestionsPage(props: PageProps) {
     Number.isInteger(parsedYear) && parsedYear >= 1900 && parsedYear <= 2200
       ? parsedYear
       : null;
-  const initialMode: 1 | 5 = paramVal("modo") === "5" ? 5 : 1;
+  const initialMode: 1 | 5 = paramVal("modo") === "5" || paramVal("revisao") === "routine" ? 5 : 1;
   const rawReview = paramVal("revisao");
   const initialReview: QuestionReviewFilter =
     rawReview === "errors" ||
     rawReview === "marked" ||
     rawReview === "answered" ||
-    rawReview === "unanswered"
+    rawReview === "unanswered" ||
+    rawReview === "routine"
       ? rawReview
       : "all";
 

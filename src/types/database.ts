@@ -502,7 +502,7 @@ export interface QuestionFilterSubtopic {
   discipline_slug: string;
 }
 
-export type QuestionReviewFilter = 'all' | 'errors' | 'marked' | 'answered' | 'unanswered';
+export type QuestionReviewFilter = 'all' | 'errors' | 'marked' | 'answered' | 'unanswered' | 'routine';
 
 export interface QuestionFilterOptions {
   disciplines: QuestionFilterDiscipline[];

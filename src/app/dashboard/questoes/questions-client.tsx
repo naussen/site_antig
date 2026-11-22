@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight, Filter, Loader2, RotateCcw, Search, X } from "lucide-react";
 import { ProQuestionsLogo } from "@/components/brand/pro-questions-logo";
 import { createClient } from "@/lib/supabase/client";
@@ -59,6 +60,7 @@ const REVIEW_OPTIONS = [
   { value: "unanswered", label: "Não respondidas" },
   { value: "errors", label: "Caderno de erros" },
   { value: "marked", label: "Marcadas" },
+  { value: "routine", label: "Revisão do dia" },
 ] as const;
 
 function accuracy(correct: number, total: number) {
@@ -250,6 +252,7 @@ export function QuestionsClient({
     };
     const loaded = await fetchPage({
       filters: cleanFilters,
+      pageSize: cleanFilters.review === "routine" ? 5 : mode,
       reset: true,
       record: true,
     });
@@ -264,7 +267,7 @@ export function QuestionsClient({
 
   const applyQuickFilters = async (filters: QuestionFilters) => {
     if (busy) return;
-    const loaded = await fetchPage({ filters, reset: true, record: true });
+    const loaded = await fetchPage({ filters, pageSize: filters.review === "routine" ? 5 : mode, reset: true, record: true });
     if (loaded) setDraftFilters(filters);
   };
 
@@ -497,6 +500,7 @@ export function QuestionsClient({
               <option value="marked">Marcadas para revisão</option>
               <option value="answered">Já resolvidas</option>
               <option value="unanswered">Ainda não resolvidas</option>
+              <option value="routine">Revisão do dia</option>
             </select>
           </label>
           <div className="flex items-end gap-2 sm:col-span-2">
@@ -534,6 +538,14 @@ export function QuestionsClient({
               </button>
             ))}
           </div>
+          {activeFilters.review === "routine" && (
+            <div className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] px-3 py-2">
+              <p className="text-sm text-[var(--text-secondary)]">Até cinco questões cujo último erro ocorreu há pelo menos 24 horas.</p>
+              <Link href="/dashboard" className="inline-flex min-h-10 items-center text-sm font-semibold text-[var(--accent)] hover:underline">
+                Revisar mais tarde
+              </Link>
+            </div>
+          )}
           {appliedFilters.length > 0 && (
             <ul aria-label="Filtros aplicados" className="flex flex-wrap gap-2">
               {appliedFilters.map(({ key, label }) => (
@@ -559,7 +571,7 @@ export function QuestionsClient({
             <button
               type="button"
               aria-pressed={mode === 1}
-              disabled={busy}
+              disabled={busy || activeFilters.review === "routine"}
               onClick={() => void fetchPage({ pageSize: 1, reset: true, record: true })}
               className={`min-h-10 flex-1 rounded-lg px-3 text-sm font-semibold transition sm:flex-none ${mode === 1 ? "bg-[var(--accent)] text-[var(--accent-contrast)]" : "text-[var(--text-secondary)] hover:bg-[var(--accent-soft)]"}`}
             >
@@ -583,7 +595,9 @@ export function QuestionsClient({
 
         {result.items.length === 0 ? (
           <section className="mt-4 rounded-3xl border border-dashed border-[var(--border)] bg-[var(--bg-card)] px-6 py-12 text-center">
-            {activeFilters.review === "errors" ? (
+            {activeFilters.review === "routine" ? (
+              <h2 className="text-xl font-semibold text-[var(--text-primary)]">Nenhuma questão pronta para revisão</h2>
+            ) : activeFilters.review === "errors" ? (
               <>
                 <h2 className="text-xl font-semibold text-[var(--text-primary)]">Seu Caderno de Erros está limpo!</h2>
                 <p className="mx-auto mt-2 max-w-md text-sm text-[var(--text-secondary)]">

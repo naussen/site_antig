@@ -133,3 +133,17 @@ test("copia o link direto da questão sem filtros adicionais", async ({ page, co
   expect(new URL(link).pathname).toBe("/resumos/dashboard/questoes");
   expect(new URL(link).search).toBe("?id=visual%3Aplanilhas%3A084");
 });
+
+test("revisão do dia abre fila de cinco e permite deixar para depois", async ({ page }) => {
+  const calls: Array<Record<string, unknown>> = [];
+  await page.route("**/rest/v1/rpc/list_questions_filtered_v2", async (route) => {
+    calls.push(route.request().postDataJSON());
+    await route.fulfill({ json: { items: [], next_cursor: null, total_count: 0 } });
+  });
+  await page.goto("landing/questions-visual-regression", { waitUntil: "networkidle" });
+  await page.getByRole("group", { name: "Atalhos de prática e revisão" }).getByRole("button", { name: "Revisão do dia" }).click();
+  await expect(page.getByRole("heading", { name: "Nenhuma questão pronta para revisão" })).toBeVisible();
+  expect(calls).toEqual([expect.objectContaining({ p_review_filter: "routine", p_limit: 5, p_include_hidden: false })]);
+  await expect(page.getByRole("button", { name: "Uma por vez" })).toBeDisabled();
+  await expect(page.getByRole("link", { name: "Revisar mais tarde" })).toHaveAttribute("href", "/resumos/dashboard");
+});
