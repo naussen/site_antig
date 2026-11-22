@@ -24,7 +24,8 @@ WHERE exam_board = 'Fundação Carlos Chagas';
 
 UPDATE public.questions
 SET exam_board = 'CEBRASPE'
-WHERE exam_board IN ('CESPE', 'CESPE/UnB', 'CESPE | CEBRASPE', 'CESPE / CEBRASPE');
+WHERE exam_board IS DISTINCT FROM 'CEBRASPE'
+  AND lower(btrim(exam_board)) IN ('cebraspe', 'cespe', 'cespe/unb', 'cespe | cebraspe', 'cespe / cebraspe');
 
 -- 2. Recriação da RPC list_questions_filtered_v2 com suporte a review_filter e aliases de bancas
 DROP FUNCTION IF EXISTS public.list_questions_filtered_v2(INTEGER, UUID, TEXT, TEXT, TEXT, TEXT, INTEGER, BOOLEAN, TEXT);
@@ -165,13 +166,14 @@ BEGIN
       )
       AND (
         v_review_filter = 'all'
-        OR (v_review_filter = 'errors' AND EXISTS (
-          SELECT 1
+        OR (v_review_filter = 'errors' AND (
+          SELECT attempt.is_correct
           FROM public.user_question_attempts AS attempt
           WHERE attempt.user_id = current_user_id
             AND attempt.question_id = question.id
-            AND attempt.is_correct = false
-        ))
+          ORDER BY attempt.answered_at DESC, attempt.id DESC
+          LIMIT 1
+        ) IS FALSE)
         OR (v_review_filter = 'marked' AND EXISTS (
           SELECT 1
           FROM public.user_question_preferences AS preference

@@ -1,5 +1,11 @@
 # Changelog
 
+## Prática e revisão em PRO Questões — 22/11/2026
+
+- Adicionados atalhos para questões não respondidas, caderno de erros e marcadas. Os filtros aplicados podem ser removidos individualmente, respeitando dependências entre disciplina, tópico e subtópico.
+- Adicionada cópia do link direto da questão, sem carregar filtros do caderno.
+- Corrigida a migration 051 para usar a tentativa mais recente no caderno de erros e unificar capitalizações da banca CEBRASPE. O SQL de reversão fica fora da sequência de migrations.
+
 ## Histórico do navegador em Questões — 21/11/2026
 
 - Voltar e Avançar restauram os filtros, o modo de visualização e a posição da lista durante a sessão da página.

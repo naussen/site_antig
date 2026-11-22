@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ChevronLeft, ChevronRight, Filter, Loader2, RotateCcw, Search } from "lucide-react";
+import { ChevronLeft, ChevronRight, Filter, Loader2, RotateCcw, Search, X } from "lucide-react";
 import { ProQuestionsLogo } from "@/components/brand/pro-questions-logo";
 import { createClient } from "@/lib/supabase/client";
 import type {
@@ -53,6 +53,13 @@ const EMPTY_FILTERS: QuestionFilters = {
   year: "",
   review: "all",
 };
+
+const REVIEW_OPTIONS = [
+  { value: "all", label: "Todas" },
+  { value: "unanswered", label: "Não respondidas" },
+  { value: "errors", label: "Caderno de erros" },
+  { value: "marked", label: "Marcadas" },
+] as const;
 
 function accuracy(correct: number, total: number) {
   return total > 0 ? Math.round((correct / total) * 100) : 0;
@@ -255,22 +262,44 @@ export function QuestionsClient({
     void fetchPage({ filters: EMPTY_FILTERS, reset: true, record: true });
   };
 
-  const toggleErrorNotebook = () => {
+  const applyQuickFilters = async (filters: QuestionFilters) => {
     if (busy) return;
-    const nextReview: QuestionReviewFilter = activeFilters.review === "errors" ? "all" : "errors";
-    const nextFilters: QuestionFilters = {
-      ...activeFilters,
-      review: nextReview,
-    };
-    setDraftFilters(nextFilters);
-    void fetchPage({ filters: nextFilters, reset: true, record: true });
+    const loaded = await fetchPage({ filters, reset: true, record: true });
+    if (loaded) setDraftFilters(filters);
+  };
+
+  const toggleErrorNotebook = () => {
+    const review = activeFilters.review === "errors" ? "all" : "errors";
+    void applyQuickFilters({ ...activeFilters, review });
+  };
+
+  const removeFilter = (key: Exclude<keyof QuestionFilters, "review">) => {
+    const filters = { ...activeFilters, [key]: "" };
+    if (key === "discipline") filters.topic = "";
+    if (key === "discipline" || key === "topic") filters.subtopic = "";
+    void applyQuickFilters(filters);
   };
 
   const latestAccuracy = accuracy(stats.latest_correct, stats.answered_questions);
-  const activeFilterCount = Object.entries(activeFilters).filter(([key, val]) => {
-    if (key === "review") return val !== "all";
-    return Boolean(val);
-  }).length;
+  const filterLabels = {
+    identifier: "ID",
+    search: "Busca",
+    discipline: "Disciplina",
+    topic: "Tópico",
+    subtopic: "Subtópico",
+    board: "Banca",
+    year: "Ano",
+  } as const;
+  const activeValues = {
+    ...activeFilters,
+    discipline: filterOptions.disciplines.find(({ slug }) => slug === activeFilters.discipline)?.name ?? activeFilters.discipline,
+    topic: filterOptions.topics.find(({ topic_id }) => topic_id === activeFilters.topic)?.title ?? activeFilters.topic,
+    subtopic: filterOptions.subtopics?.find(({ id }) => id === activeFilters.subtopic)?.title ?? activeFilters.subtopic,
+  };
+  const appliedFilters = (Object.keys(filterLabels) as Array<keyof typeof filterLabels>)
+    .filter((key) => activeFilters[key])
+    .map((key) => ({ key, label: `${filterLabels[key]}: ${activeValues[key]}` }));
+  const activeFilterCount = appliedFilters.length + Number(activeFilters.review !== "all");
 
   const positionLabel = result.items.length === 0
     ? "Nenhuma questão neste filtro"
@@ -309,10 +338,6 @@ export function QuestionsClient({
             <div className="flex items-center gap-3">
               <ProQuestionsLogo tone="dark" />
               <h1 className="sr-only">Questões para praticar</h1>
-              <div className="hidden border-l border-white/20 pl-3 sm:block">
-                <p className="text-sm font-semibold text-white">Pratique com foco</p>
-                <p className="text-xs text-white/70">Resolva no seu ritmo e revise cada comentário.</p>
-              </div>
             </div>
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
               <div className="questions-stat rounded-lg border px-2.5 py-1.5">
@@ -493,6 +518,41 @@ export function QuestionsClient({
             </button>
           </div>
         </form>
+
+        <div className="mt-3 space-y-2">
+          <div role="group" aria-label="Atalhos de prática e revisão" className="flex flex-wrap gap-2">
+            {REVIEW_OPTIONS.map(({ value, label }) => (
+              <button
+                key={value}
+                type="button"
+                aria-pressed={activeFilters.review === value}
+                disabled={busy}
+                onClick={() => void applyQuickFilters({ ...activeFilters, review: value })}
+                className={`min-h-10 rounded-lg border px-3 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] disabled:opacity-60 ${activeFilters.review === value ? "border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--text-primary)]" : "border-[var(--border)] bg-[var(--bg-card)] text-[var(--text-secondary)] hover:border-[var(--accent)]"}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+          {appliedFilters.length > 0 && (
+            <ul aria-label="Filtros aplicados" className="flex flex-wrap gap-2">
+              {appliedFilters.map(({ key, label }) => (
+                <li key={key} className="min-w-0 max-w-full">
+                  <button
+                    type="button"
+                    aria-label={`Remover filtro ${label}`}
+                    title={label}
+                    disabled={busy}
+                    onClick={() => removeFilter(key)}
+                    className="inline-flex min-h-9 max-w-full items-center gap-1.5 rounded-full border border-[var(--border)] bg-[var(--bg-card)] px-3 text-xs font-semibold text-[var(--text-secondary)] hover:border-[var(--accent)] focus-visible:outline-2 focus-visible:outline-[var(--accent)] disabled:opacity-60"
+                  >
+                    <span className="truncate">{label}</span><X size={14} className="shrink-0" aria-hidden="true" />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
 
         <div className="mt-3 flex flex-col gap-3 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-3 sm:flex-row sm:items-center sm:justify-between">
           <div role="group" aria-label="Modo de visualização" className="inline-flex w-full rounded-xl border border-[var(--border)] p-1 sm:w-auto">

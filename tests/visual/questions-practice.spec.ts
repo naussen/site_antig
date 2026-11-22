@@ -10,7 +10,7 @@ for (const width of [320, 390, 1440]) {
       await expect(card).toBeVisible();
       await expect(page.locator("html")).toHaveAttribute("data-theme", theme);
       await expect(card.getByText("ID: visual:planilhas:084", { exact: true })).toBeVisible();
-      await expect(card.getByText("Tópico:", { exact: true })).toBeVisible();
+      await expect(card.getByRole("navigation", { name: "Caminho taxonômico da questão" })).toContainText("Planilhas");
       await expect(card.getByText("Assunto:", { exact: true })).toBeVisible();
       await expect(card.getByText("Texto-base", { exact: true })).toHaveCount(0);
       await expect(card.getByText("Enunciado", { exact: true })).toHaveCount(0);
@@ -100,4 +100,36 @@ test("Voltar e Avançar restauram os filtros e o resultado da lista", async ({ p
   await expect(empty).toBeVisible();
   await expect(identifier).toHaveValue("visual:inexistente");
   await expect(page).toHaveURL(/id=visual%3Ainexistente/);
+});
+
+test("atalhos mantêm filtros e a remoção atualiza somente o filtro escolhido", async ({ page }) => {
+  const calls: Array<Record<string, unknown>> = [];
+  await page.route("**/rest/v1/rpc/list_questions_filtered_v2", async (route) => {
+    calls.push(route.request().postDataJSON());
+    await route.fulfill({ json: { items: [], next_cursor: null, total_count: 0 } });
+  });
+  await page.goto("landing/questions-visual-regression");
+  await page.getByLabel("Buscar", { exact: true }).fill("colunas");
+  await page.getByRole("combobox", { name: "Ano", exact: true }).selectOption("2021");
+  await page.getByRole("button", { name: "Filtrar", exact: true }).click();
+  const shortcuts = page.getByRole("group", { name: "Atalhos de prática e revisão" });
+  await shortcuts.getByRole("button", { name: "Marcadas" }).click();
+  await expect(shortcuts.getByRole("button", { name: "Marcadas" })).toHaveAttribute("aria-pressed", "true");
+  expect(calls[1]).toMatchObject({ p_review_filter: "marked", p_exam_year: 2021, p_search: "colunas" });
+  await page.getByRole("button", { name: "Remover filtro Ano: 2021" }).click();
+  await expect(page.getByRole("button", { name: "Remover filtro Ano: 2021" })).toHaveCount(0);
+  expect(calls[2]).toMatchObject({ p_review_filter: "marked", p_exam_year: null, p_search: "colunas" });
+  await page.goBack();
+  await expect(page.getByRole("button", { name: "Remover filtro Ano: 2021" })).toBeVisible();
+  await expect(shortcuts.getByRole("button", { name: "Marcadas" })).toHaveAttribute("aria-pressed", "true");
+});
+
+test("copia o link direto da questão sem filtros adicionais", async ({ page, context }) => {
+  await context.grantPermissions(["clipboard-read", "clipboard-write"]);
+  await page.goto("landing/questions-visual-regression?ano=2021&modo=5", { waitUntil: "networkidle" });
+  await page.getByRole("button", { name: "Copiar link da questão" }).click();
+  await expect(page.getByRole("status")).toHaveText("Link copiado");
+  const link = await page.evaluate(() => navigator.clipboard.readText());
+  expect(new URL(link).pathname).toBe("/resumos/dashboard/questoes");
+  expect(new URL(link).search).toBe("?id=visual%3Aplanilhas%3A084");
 });

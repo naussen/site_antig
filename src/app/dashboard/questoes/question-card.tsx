@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Bookmark, CheckCircle2, EyeOff, Loader2, X, XCircle } from "lucide-react";
+import { Bookmark, CheckCircle2, EyeOff, Link2, Loader2, X, XCircle } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import { withSiteBasePath } from "@/lib/site-paths.mjs";
 import { createClient } from "@/lib/supabase/client";
 import { getAnswerStatusLabel, getQuestionPresentation } from "@/lib/questions/presentation.mjs";
 import type { QuestionAnswerResult, QuestionListItem, QuestionRevealResult } from "@/types/database";
@@ -66,6 +67,7 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
   const [answer, setAnswer] = useState<QuestionAnswerResult | null>(null);
   const [revealedAnswer, setRevealedAnswer] = useState<QuestionRevealResult | null>(null);
   const [markedForReview, setMarkedForReview] = useState(question.preference?.marked_for_review ?? false);
+  const [linkStatus, setLinkStatus] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const explanationMarkdown = answer?.explanation_markdown ?? revealedAnswer?.explanation_markdown;
@@ -135,6 +137,17 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
     }
   };
 
+  const copyQuestionLink = async () => {
+    const url = new URL(withSiteBasePath("/dashboard/questoes"), window.location.origin);
+    url.searchParams.set("id", question.external_id || question.id);
+    try {
+      await navigator.clipboard.writeText(url.href);
+      setLinkStatus("Link copiado");
+    } catch {
+      setLinkStatus("Não foi possível copiar o link");
+    }
+  };
+
   return (
     <article aria-label={`Questão ${position}`} className="question-card overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] shadow-[var(--shadow-lg)] sm:rounded-3xl">
       <div className="border-b border-[var(--border)] p-4 sm:p-5">
@@ -187,11 +200,13 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
             )}
             {question.subject && !question.topics.some((topic) => topic.title.trim().toLocaleLowerCase("pt-BR") === question.subject.trim().toLocaleLowerCase("pt-BR")) && <p className="break-words text-xs text-[var(--text-secondary)]"><span className="font-semibold">Assunto: </span>{question.subject}</p>}
           </div>
-          <div className="flex shrink-0 items-center gap-2">
+          <div className="flex shrink-0 flex-wrap items-center gap-2">
+            <button type="button" onClick={() => void copyQuestionLink()} aria-label="Copiar link da questão" title="Copiar link da questão" className="grid h-11 w-11 place-items-center rounded-xl border border-[var(--border)] text-[var(--text-muted)] transition hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:h-10 sm:w-10"><Link2 size={18} aria-hidden="true" /></button>
             <button type="button" disabled={loading} onClick={() => void updatePreference("review")} aria-label={markedForReview ? "Remover da revisão" : "Marcar para revisão"} title={markedForReview ? "Remover da revisão" : "Marcar para revisão"} className={`grid h-11 w-11 place-items-center rounded-xl border transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:h-10 sm:w-10 ${markedForReview ? "border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)]" : "border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--accent)]"}`}><Bookmark size={18} fill={markedForReview ? "currentColor" : "none"} /></button>
             <button type="button" disabled={loading} onClick={() => void updatePreference("hide")} className="inline-flex h-11 items-center gap-2 rounded-xl border border-[var(--border)] px-3 text-xs font-bold text-[var(--text-secondary)] transition hover:border-[var(--accent)] hover:text-[var(--accent)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] sm:h-10"><EyeOff size={17} /> Não mostrar mais</button>
           </div>
         </div>
+        <p role="status" className={linkStatus ? "mt-2 text-xs font-semibold text-[var(--text-secondary)]" : "sr-only"}>{linkStatus}</p>
         <div className="mt-5 text-base text-[var(--text-primary)] sm:text-[1.05rem]"><QuestionStatement sections={presentation.sections} /></div>
       </div>
 

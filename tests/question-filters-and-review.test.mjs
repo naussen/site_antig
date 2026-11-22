@@ -7,13 +7,13 @@ const read = (path) => readFile(new URL(`../${path}`, import.meta.url), "utf8");
 test("migration 051 normaliza bancas (F06) e implementa filtro de revisão (F08)", async () => {
   const [migration051, rollback051] = await Promise.all([
     read("supabase/migrations/051_normalize_boards_and_review_filter.sql"),
-    read("supabase/migrations/051_rollback.sql"),
+    read("supabase/scripts/rollback_051_question_review_filter.sql"),
   ]);
 
   // F06 - Normalização atômica de bancas
   assert.match(migration051, /UPDATE public\.questions\s+SET exam_board = 'Vunesp'\s+WHERE exam_board = 'VUNESP';/);
   assert.match(migration051, /UPDATE public\.questions\s+SET exam_board = 'FCC'\s+WHERE exam_board = 'Fundação Carlos Chagas';/);
-  assert.match(migration051, /UPDATE public\.questions\s+SET exam_board = 'CEBRASPE'\s+WHERE exam_board IN \('CESPE', 'CESPE\/UnB', 'CESPE \| CEBRASPE', 'CESPE \/ CEBRASPE'\);/);
+  assert.match(migration051, /WHERE exam_board IS DISTINCT FROM 'CEBRASPE'\s+AND lower\(btrim\(exam_board\)\) IN \('cebraspe', 'cespe', 'cespe\/unb', 'cespe \| cebraspe', 'cespe \/ cebraspe'\);/);
 
   // F06 - Aliases na RPC
   assert.match(migration051, /lower\(btrim\(p_exam_board\)\) = 'vunesp'/);
@@ -26,7 +26,7 @@ test("migration 051 normaliza bancas (F06) e implementa filtro de revisão (F08)
 
   // F08 - Isolamento rigoroso por auth.uid()
   assert.match(migration051, /current_user_id UUID := auth\.uid\(\);/);
-  assert.match(migration051, /attempt\.user_id = current_user_id[\s\S]*attempt\.is_correct = false/);
+  assert.match(migration051, /v_review_filter = \'errors\' AND \(\s*SELECT attempt\.is_correct[\s\S]*?attempt\.user_id = current_user_id\s+AND attempt\.question_id = question\.id\s+ORDER BY attempt\.answered_at DESC, attempt\.id DESC\s+LIMIT 1\s+\) IS FALSE/);
   assert.match(migration051, /preference\.user_id = current_user_id[\s\S]*preference\.marked_for_review_at IS NOT NULL/);
 
   // Segurança e Privilégio
