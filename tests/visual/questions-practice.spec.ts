@@ -9,7 +9,8 @@ for (const width of [320, 390, 1440]) {
       const card = page.getByRole("article", { name: "Questão 1", exact: true });
       await expect(card).toBeVisible();
       await expect(page.locator("html")).toHaveAttribute("data-theme", theme);
-      await expect(card.getByText("ID: visual:planilhas:084", { exact: true })).toBeVisible();
+      await expect(page.getByLabel("ID da questão")).toHaveCount(0);
+      await expect(card).not.toContainText("visual:planilhas:084");
       await expect(card.getByRole("navigation", { name: "Caminho taxonômico da questão" })).toContainText("Planilhas");
       await expect(card.getByText("Assunto:", { exact: true })).toBeVisible();
       await expect(card.getByText("Texto-base", { exact: true })).toHaveCount(0);
@@ -42,14 +43,15 @@ for (const width of [320, 390, 1440]) {
   }
 }
 
-test("filtro envia ID exato, mantém demais filtros e limpar remove o ID", async ({ page }) => {
+test("link direto mantém a questão ao filtrar e permite limpar a seleção", async ({ page }) => {
   const calls: Array<{ p_question_identifier: string | null; p_search: string | null; p_exam_year: number | null }> = [];
   await page.route("**/rest/v1/rpc/list_questions_filtered_v2", async (route) => {
     calls.push(route.request().postDataJSON());
     await route.fulfill({ json: { items: [], next_cursor: null, total_count: 0 } });
   });
-  await page.goto("landing/questions-visual-regression");
-  await page.getByLabel("ID da questão", { exact: true }).fill("  visual:planilhas:084  ");
+  await page.goto("landing/questions-visual-regression?id=visual%3Aplanilhas%3A084");
+  await expect(page.getByRole("button", { name: "Remover filtro Questão do link" })).toBeVisible();
+  await expect(page.locator("body")).not.toContainText("visual:planilhas:084");
   await page.getByLabel("Buscar", { exact: true }).fill("colunas");
   await page.getByRole("combobox", { name: "Ano", exact: true }).selectOption("2021");
   await page.getByRole("button", { name: "Filtrar", exact: true }).click();
@@ -82,24 +84,24 @@ test("Voltar e Avançar restauram os filtros e o resultado da lista", async ({ p
   );
   await page.goto("landing/questions-visual-regression");
   const question = page.getByRole("article", { name: "Questão 1", exact: true });
-  const identifier = page.getByLabel("ID da questão", { exact: true });
+  const search = page.getByLabel("Buscar", { exact: true });
   const empty = page.getByRole("heading", { name: "Nenhuma questão encontrada" });
 
   await expect(question).toBeVisible();
-  await identifier.fill("visual:inexistente");
+  await search.fill("inexistente");
   await page.getByRole("button", { name: "Filtrar", exact: true }).click();
   await expect(empty).toBeVisible();
-  await expect(page).toHaveURL(/id=visual%3Ainexistente/);
+  await expect(page).toHaveURL(/busca=inexistente/);
 
   await page.goBack();
   await expect(question).toBeVisible();
-  await expect(identifier).toHaveValue("");
-  await expect(page).not.toHaveURL(/[?&]id=/);
+  await expect(search).toHaveValue("");
+  await expect(page).not.toHaveURL(/[?&]busca=/);
 
   await page.goForward();
   await expect(empty).toBeVisible();
-  await expect(identifier).toHaveValue("visual:inexistente");
-  await expect(page).toHaveURL(/id=visual%3Ainexistente/);
+  await expect(search).toHaveValue("inexistente");
+  await expect(page).toHaveURL(/busca=inexistente/);
 });
 
 test("atalhos mantêm filtros e a remoção atualiza somente o filtro escolhido", async ({ page }) => {

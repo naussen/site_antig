@@ -153,7 +153,6 @@ export function QuestionCard({ question, position, onAnswered, onHidden, onBusyC
       <div className="border-b border-[var(--border)] p-4 sm:p-5">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div className="min-w-0 flex-1 space-y-2">
-            <p className="break-words text-sm font-bold text-[var(--text-primary)] [overflow-wrap:anywhere]">ID: {question.external_id}</p>
             <div className="flex flex-wrap items-center gap-2">
             <span className="rounded-full bg-[var(--bg-primary)] px-3 py-1 text-xs font-semibold text-[var(--text-secondary)]">Questão {position}</span>
             {question.disciplines.map((item) => <span key={item.slug} className="rounded-full bg-[var(--accent-soft)] px-3 py-1 text-xs font-bold text-[var(--accent)]">{item.name}</span>)}

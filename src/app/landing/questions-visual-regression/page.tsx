@@ -25,10 +25,12 @@ const question: QuestionListItem = {
   preference: null,
 };
 
-export default function QuestionsVisualRegressionPage() {
+export default async function QuestionsVisualRegressionPage({ searchParams }: { searchParams: Promise<{ id?: string }> }) {
   if (process.env.NODE_ENV === "production") notFound();
 
+  const { id } = await searchParams;
   return <QuestionsClient
+    initialFilters={{ identifier: id ?? "", search: "", discipline: "", topic: "", subtopic: "", board: "", year: "", review: "all" }}
     initialResult={{ items: [question], next_cursor: null, total_count: 1 }}
     initialStats={{ total_attempts: 0, answered_questions: 0, first_correct: 0, latest_correct: 0, error_notebook_count: 0, attempts_7d: 0, correct_7d: 0, attempts_30d: 0, correct_30d: 0, hidden_questions: 0, by_discipline: [] }}
     filterOptions={{ disciplines: [{ slug: "informatica", name: "Informática" }], topics: [{ topic_id: "planilhas", title: "Planilhas eletrônicas", discipline_slug: "informatica" }], boards: ["Banca de exemplo"], years: [2021] }}

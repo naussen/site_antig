@@ -285,7 +285,7 @@ export function QuestionsClient({
 
   const latestAccuracy = accuracy(stats.latest_correct, stats.answered_questions);
   const filterLabels = {
-    identifier: "ID",
+    identifier: "Questão do link",
     search: "Busca",
     discipline: "Disciplina",
     topic: "Tópico",
@@ -301,7 +301,7 @@ export function QuestionsClient({
   };
   const appliedFilters = (Object.keys(filterLabels) as Array<keyof typeof filterLabels>)
     .filter((key) => activeFilters[key])
-    .map((key) => ({ key, label: `${filterLabels[key]}: ${activeValues[key]}` }));
+    .map((key) => ({ key, label: key === "identifier" ? filterLabels.identifier : `${filterLabels[key]}: ${activeValues[key]}` }));
   const activeFilterCount = appliedFilters.length + Number(activeFilters.review !== "all");
 
   const positionLabel = result.items.length === 0
@@ -392,19 +392,6 @@ export function QuestionsClient({
           className={`${filtersOpen ? "grid" : "hidden"} mt-3 gap-3 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-3 shadow-[var(--shadow)] sm:grid sm:grid-cols-2 sm:p-4 xl:grid-cols-4`}
           aria-label="Filtros de questões"
         >
-          <label className="block sm:col-span-2">
-            <span className="text-xs font-semibold text-[var(--text-secondary)]">ID da questão</span>
-            <input
-              value={draftFilters.identifier}
-              onChange={(event) => setDraftFilters((current) => ({ ...current, identifier: event.target.value }))}
-              disabled={busy}
-              maxLength={160}
-              placeholder="Cole o ID completo exibido na questão ou seu UUID"
-              autoCapitalize="none"
-              spellCheck={false}
-              className="mt-1 h-11 w-full rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] px-3 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent)] focus:ring-2 focus:ring-[var(--accent-soft)]"
-            />
-          </label>
           <label className="block sm:col-span-2 xl:col-span-2">
             <span className="text-xs font-semibold text-[var(--text-secondary)]">Buscar</span>
             <span className="relative mt-1 block">

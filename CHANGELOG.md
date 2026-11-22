@@ -1,5 +1,9 @@
 # Changelog
 
+## PRO Questões — 22/11/2026
+
+- Ocultado o identificador técnico no cartão e nos filtros. Os links diretos continuam abrindo a questão e a seleção pode ser removida por “Questão do link”.
+
 ## Percurso integrado de AFO — 22/11/2026
 
 - A rotina de estudos oferece um percurso opcional entre o resumo da LOA, o art. 165, § 5º, no Legis e uma questão sobre os três orçamentos. O painel verifica a seção ativa, a versão publicada da norma e a questão acessível à conta.
