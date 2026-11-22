@@ -7,6 +7,12 @@ Escopo entregue: Fases 1 e 2 de `docs/PLANO_GAMIFICACAO_ANTIGRAVITY.md` (Fases 3
 
 ---
 
+## Atualização de 22/11/2026 em main
+
+A rotina usa a migration 053 para persistir a configuração. A revisão de Questões usa a 051 e seleciona até cinco questões da conta cuja última tentativa foi um erro há pelo menos 24 horas.
+
+A primeira missão integrada cobre a Lei Orçamentária Anual. O vínculo está em `src/components/gamification/loa-study-mission.tsx`. O painel confere a seção no catálogo visível, o § 5º do art. 165 na versão publicada da Constituição e a questão ligada ao tópico. Se algum item estiver indisponível, a rotina semanal continua disponível. Os links permitem estudar nos três módulos usando os respectivos controles de progresso. A expansão a novos assuntos requer vínculos individuais verificados.
+
 ## 1. Resumo Arquitetural e Endurecimento
 
 O MVP implementa uma rotina semanal flexível (1 a 7 dias por semana) e sessões curtas guiadas (`5`, `15` ou `30` minutos) operando exclusivamente sobre **Resumos ativos** (`archived_at IS NULL`), conforme constatado no diagnóstico da Fase 0 (`topic_legal_fragment_relations = 0`, `law_flashcards` publicados `= 0` e módulos de Questões e PRO Legis fora desta branch).

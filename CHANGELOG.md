@@ -1,5 +1,9 @@
 # Changelog
 
+## Percurso integrado de AFO — 22/11/2026
+
+- A rotina de estudos oferece um percurso opcional entre o resumo da LOA, o art. 165, § 5º, no Legis e uma questão sobre os três orçamentos. O painel verifica a seção ativa, a versão publicada da norma e a questão acessível à conta.
+
 ## Atualização de segurança — 22/11/2026
 
 - Atualizados Next.js e sua configuração ESLint para 16.4.6. O npm audit de produção retornou zero vulnerabilidades conhecidas.

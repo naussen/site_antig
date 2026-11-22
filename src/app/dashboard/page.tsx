@@ -36,6 +36,8 @@ import {
 } from "@/lib/supabase/errors";
 import { compareTopicsByOrigin } from "@/lib/topic-order";
 import { requireContentAccess } from "@/lib/content-access";
+import { Suspense } from "react";
+import { LoaStudyMission, loaSection, loaTopic } from "@/components/gamification/loa-study-mission";
 import { TodayStudyCard } from "@/components/gamification/today-study-card";
 import { loadDashboardRoutineState } from "@/lib/gamification/server";
 
@@ -275,6 +277,9 @@ export default async function DashboardPage({
     visibleDisciplines: preferredDisciplines,
   });
 
+  const routineActive = routineState.persistenceAvailable && routineState.snapshot && !routineState.snapshot.needsOnboarding && !routineState.snapshot.preferences.hide_gamification;
+  const loaAvailable = displayedTopics.some((topic) => topic.topic_id === loaTopic && topic.sections.some((section) => section.section_id === loaSection));
+
   const suggestedTopic =
     displayedTopics.find((topic) => {
       const percent = progressByTopic[topic.topic_id]?.percent ?? 0;
@@ -385,7 +390,7 @@ export default async function DashboardPage({
           />
         )}
 
-        {routineState.persistenceAvailable && routineState.snapshot && !routineState.snapshot.needsOnboarding && !routineState.snapshot.preferences.hide_gamification && (
+        {routineActive && (
           <Link href="/dashboard/questoes?revisao=routine&modo=5" className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] px-4 py-3 hover:border-[var(--accent)] focus-visible:outline-2 focus-visible:outline-[var(--accent)]">
             <span className="min-w-0">
               <strong className="block text-sm text-[var(--text-primary)]">Revisão do dia</strong>
@@ -393,6 +398,10 @@ export default async function DashboardPage({
             </span>
             <ArrowUpRight size={18} className="shrink-0 text-[var(--accent)]" aria-hidden="true" />
           </Link>
+        )}
+
+        {routineActive && loaAvailable && (
+          <Suspense fallback={null}><LoaStudyMission supabase={supabase} /></Suspense>
         )}
 
         {suggestedTopic &&
