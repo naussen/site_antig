@@ -1,5 +1,9 @@
 # Changelog
 
+## Atualização de segurança — 22/11/2026
+
+- Atualizados Next.js e sua configuração ESLint para 16.4.6. O npm audit de produção retornou zero vulnerabilidades conhecidas.
+
 ## Rotina semanal e revisão de questões — 22/11/2026
 
 - A migration 053 foi aplicada. A API autenticada confirmou que a rotina de Resumos voltou a ter persistência.
