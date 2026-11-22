@@ -1,5 +1,9 @@
 # Changelog
 
+## Revisão dos resumos — 22/11/2026
+
+O plano das 54 disciplinas registra o aceite de Direito Tributário e Direito Penal, a reconciliação das Ondas 1–4 e a fila da Onda 7.
+
 ## Painel de estudos — 22/11/2026
 
 - A descrição da rotina semanal agora explica a sugestão de leitura e acompanha a disponibilidade de Questões e Legis.
