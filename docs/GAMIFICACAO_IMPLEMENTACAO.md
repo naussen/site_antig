@@ -9,6 +9,8 @@ Escopo entregue: Fases 1 e 2 de `docs/PLANO_GAMIFICACAO_ANTIGRAVITY.md` (Fases 3
 
 ## Atualização de 22/11/2026 em main
 
+Revalidação de 23/11/2026: [recibo e limites atuais](GAMIFICACAO_REVALIDACAO_2026-11-23.md). O deploy publicado da Netlify foi confirmado em `4830b5c`, estado `ready`; as quatro tabelas da rotina existem no destino. Os resultados e pendências de 14–15/11 abaixo são históricos: a aplicação da migration 053 deixou de ser uma pendência. A conferência com conta de aluno foi dispensada pelo usuário no programa atual; esta revalidação não certifica uma nova inspeção visual autenticada.
+
 A rotina usa a migration 053 para persistir a configuração. A revisão de Questões usa a 051 e seleciona até cinco questões da conta cuja última tentativa foi um erro há pelo menos 24 horas.
 
 A primeira missão integrada cobre a Lei Orçamentária Anual. O vínculo está em `src/components/gamification/loa-study-mission.tsx`. O painel confere a seção no catálogo visível, o § 5º do art. 165 na versão publicada da Constituição e a questão ligada ao tópico. Se algum item estiver indisponível, a rotina semanal continua disponível. Os links permitem estudar nos três módulos usando os respectivos controles de progresso. A expansão a novos assuntos requer vínculos individuais verificados.
