@@ -29,7 +29,7 @@ Caminhos relativos abaixo partem do repositório editorial. Inventário: `invent
 
 ## 3. Progresso consolidado e limites conhecidos
 
-A fila inclui 54 disciplinas. Há 19 com aceite para a versão revisada do catálogo, 24 parciais (incluindo as 20 sem seções na fotografia) e 11 na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa. Corpus PRO Legis permanece fora do escopo; sua integração com a gamificação permanece autorizada.
+A fila inclui 54 disciplinas. Há 19 com aceite para a versão revisada do catálogo, 25 parciais (incluindo as 20 sem seções na fotografia) e 10 ainda não iniciadas na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa. Corpus PRO Legis permanece fora do escopo; sua integração com a gamificação permanece autorizada.
 
 | Frente | Última evidência | Trabalho seguinte |
 |---|---|---|
@@ -83,7 +83,7 @@ Legenda: `[ ]` não iniciada; `[~]` parcial; `[x]` encerrada conforme seção 9.
 | 36 | Finanças Públicas | 1 | [ ] não iniciada | Fotografia coletada (7 seções, 0 cartões, 4 diagramas) | Executar Onda 7 (ciclo D02–D08) |
 | 37 | Física | 9 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 9 tópicos vazios registrada em `37-fisica.md` | Aguardar autoria/importação futura de conteúdo |
 | 38 | Geografia | 10 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 10 tópicos vazios registrada em `38-geografia.md` | Aguardar autoria/importação futura de conteúdo |
-| 39 | Informática | 15 | [ ] não iniciada | Fotografia coletada (52 seções, 0 cartões, 11 diagramas); +3 seção(ões) de lacuna em dry-run (3 pacote(s)) | Executar Onda 7 (ciclo D02–D08) |
+| 39 | Informática | 15 | [~] parcial | Hardware: 3/52 seções revisadas, corrigidas e publicadas; 18/18 verificações locais; 15 tópicos/52 seções reconciliados. Três pacotes de lacuna ainda em dry-run. | Próximo tópico, até cinco seções; não reaplicar Hardware. Ver relatório 39. |
 | 40 | Legislação Aduaneira | 5 | [ ] não iniciada | Fotografia coletada (31 seções, 0 cartões, 19 diagramas) | Executar Onda 7 (ciclo D02–D08) |
 | 41 | Legislação Aplicada à EBSERH | 7 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 7 tópicos vazios registrada em `41-legislacao-aplicada-a-ebserh.md` | Aguardar autoria/importação futura de conteúdo |
 | 42 | Legislação de Trânsito | 11 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 11 tópicos vazios registrada em `42-legislacao-de-transito.md` | Aguardar autoria/importação futura de conteúdo |

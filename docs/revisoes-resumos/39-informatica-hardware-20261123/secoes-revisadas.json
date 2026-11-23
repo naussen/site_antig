@@ -1,0 +1,65 @@
+[
+  {
+    "section_id": "hardware-sec-01",
+    "content_unit_id": "f684e5de-f9b7-4d81-8fc6-c4cb06f2816d",
+    "stable_key": "cpu-unidade-central-de-processamento",
+    "topic_id": "hardware",
+    "title": "CPU: Unidade Central de Processamento",
+    "sort_order": 0,
+    "content_markdown": "O estudo do hardware abrange diversos componentes presentes em nosso cotidiano, como mouses, teclados, impressoras e scanners. Para otimizar o tempo de estudo, o foco deste material está concentrado nos componentes que frequentemente geram dúvidas ou confusões em provas.\n\nA **CPU (Central Processing Unit)**, ou processador, é o componente acoplado à placa-mãe responsável por controlar e coordenar todas as operações executadas pelo computador. No modelo didático de Von Neumann, instruções e dados compartilham a memória. Processadores modernos podem separar caches de instruções e dados. Entre os elementos básicos da CPU estão:\n\n*   **Unidade Lógica e Aritmética (ULA):** Encarregada de realizar as operações matemáticas e lógicas do sistema.\n*   **Unidade de Controle (UC):** Responsável por direcionar o fluxo de informações e instruções para as memórias.\n*   **Registradores:** Pequenas unidades de armazenamento internas à CPU, usadas para operandos, endereços e estado de execução. Caracterizam-se por serem **voláteis** (perdem os dados na ausência de energia).\n\nA largura de endereçamento determina um espaço teórico de endereços; não mede, isoladamente, a velocidade de processamento:\n*   **Processador de 32 bits:** Um espaço de endereços de 32 bits comporta até $2^{32}$ endereços, o equivalente a **4 GiB** se cada endereço identifica um byte. Limites de memória física e por processo dependem do sistema e do hardware.\n*   **Processador de 64 bits:** Um espaço de endereços de 64 bits comporta até $2^{64}$ endereços, o equivalente teórico a **16 EiB** se cada endereço identifica um byte. Implementações e sistemas operacionais usam limites menores; 64 bits não significa limite de 16 GB.",
+    "callouts": [
+      {
+        "text": "Os registradores são memórias extremamente rápidas localizadas dentro da própria CPU, mas são voláteis. Eles perdem todos os dados armazenados imediatamente quando a alimentação elétrica é interrompida.",
+        "type": "warning",
+        "title": "Volatilidade dos Registradores"
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "flowchart TD\n    CPU[CPU / Processador] --> UC[Unidade de Controle]\n    CPU --> ULA[Unidade Lógica e Aritmética]\n    CPU --> Reg[Registradores]\n    class CPU readableRoot;\n    class UC readableProcess;\n    class ULA,Reg readableItem;",
+    "archived_at": null,
+    "current_revision_id": "dda9045b-a11b-46bf-85af-0cd8fa096389"
+  },
+  {
+    "section_id": "hardware-sec-02",
+    "content_unit_id": "3b57be88-488d-4786-a11d-4447c1d71f58",
+    "stable_key": "memorias",
+    "topic_id": "hardware",
+    "title": "Memórias",
+    "sort_order": 1,
+    "content_markdown": "As memórias do computador possuem diferentes funções, velocidades e características de retenção de dados.\n\n### Tabela Comparativa de Tipos de Memória\n\n| Categoria | Memória Principal (RAM) | Memória Principal (ROM) | Memória Secundária |\n| :--- | :--- | :--- | :--- |\n| **Volatilidade** | Volátil (perde os dados ao desligar o computador) | Não volátil (retenção sem energia) | Não volátil (retenção sem energia) |\n| **Velocidade e Custo** | Muito rápida e de custo elevado | Desempenho e localização dependem da implementação | Mais lenta em comparação à RAM, mas de baixo custo por gigabyte |\n| **Função Principal** | Armazena temporariamente os dados dos programas em execução para uso da CPU | Armazena instruções básicas de inicialização do sistema | Retém grandes volumes de dados a longo prazo |\n| **Tecnologia / Exemplos** | Memória de acesso randômico que necessita de energia constante | ROM e variantes; firmware costuma usar memória flash regravável. CMOS mantido por bateria não equivale a ROM; CD-ROM/DVD-ROM são mídias de armazenamento secundário. | HD, SSD, pendrives, CDs e DVDs |\n\n### Memória Cache\nA **memória cache** é um tipo de memória de acesso randômico **volátil** e extremamente rápida. Sua função é armazenar os dados mais frequentemente utilizados pelo processador, evitando que a CPU precise acessar constantemente a memória RAM (que é mais lenta). A cache explora a localidade temporal e espacial dos acessos; pode conter instruções e dados. Os níveis disponíveis dependem do processador:\n*   **Cache L1 (Nível 1):** Integrada diretamente no mesmo chip do processador.\n*   **Cache L2 (Nível 2):** Nos processadores atuais costuma ser integrada ao processador; organização por núcleo ou compartilhada depende da arquitetura. Também pode existir cache L3.\n\n### Memória Virtual\nÉ a abstração de espaços de endereços dos processos e seu mapeamento para armazenamento físico. Páginas podem residir em RAM, ter respaldo em arquivo ou ser paginadas para armazenamento secundário. Não se resume a adicionar espaço de disco à RAM.",
+    "callouts": [
+      {
+        "title": "Endereço virtual e memória física",
+        "text": "Espaço virtual, RAM instalada e arquivo de paginação são grandezas diferentes. Memória virtual também oferece isolamento e gerenciamento de endereços.",
+        "type": "info"
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "9899d3f1-5eef-461a-944a-e74240bbedc7"
+  },
+  {
+    "section_id": "hardware-sec-03",
+    "content_unit_id": "81194f0d-7715-4246-b70a-8ae6dd167e52",
+    "stable_key": "placa-mae",
+    "topic_id": "hardware",
+    "title": "Placa-Mãe",
+    "sort_order": 2,
+    "content_markdown": "A placa-mãe é a placa de circuito principal que interliga todos os componentes do computador.\n\n*   **BIOS (Firmware):** É um **software** de firmware; sistemas atuais normalmente usam UEFI armazenado em memória flash regravável, enquanto BIOS designa a implementação tradicional. Ele é o sistema responsável por iniciar as operações básicas do computador. Suas funções incluem testar os componentes de hardware (como verificar o estado das memórias e a presença de dispositivos de entrada e saída) e iniciar o processo de boot. Em UEFI, o gerenciador de boot do firmware seleciona uma aplicação de inicialização, como o carregador do sistema operacional, que prossegue com a carga do sistema.\n*   **Barramento (Bus):** Conjunto de vias físicas e suportes de comunicação responsáveis por realizar a interconexão e a transmissão de dados entre a placa-mãe e os demais componentes do sistema.\n*   **Chipset:** Conjunto principal de circuitos integrados nativamente instalados na placa-mãe. Gerencia interfaces e comunicações segundo a arquitetura; controladores como o de memória podem estar integrados à CPU.",
+    "callouts": [
+      {
+        "title": "Firmware",
+        "text": "BIOS/UEFI são software de baixo nível armazenado em memória não volátil. Em plataformas atuais, o firmware pode ser atualizado; não é necessariamente ROM imutável.",
+        "type": "warning"
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "dd00971c-4554-456a-9df5-8d700f6ec993"
+  }
+]

@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-23 — Informática: Hardware
+
+- Publicadas três seções de Hardware com correções de endereçamento, memórias e BIOS/UEFI; pré-imagem, ensaio com rollback e proteção por revisão. Quinze tópicos/52 seções reconciliados; 18 verificações locais nos três temas e duas larguras.
+- Disciplina parcial: 49 seções e três pacotes de lacuna pendentes. Relatório e checkpoint em docs/revisoes-resumos/39-informatica-hardware-20261123; commit editorial local d49b109. Sem alteração de aplicação ou schema.
+
 ## 2026-11-23 — revisão editorial e revalidação da rotina
 
 - ARM e AFO com aceites individuais: 45/45 e 71/71 refutações reexaminadas; 23 tópicos e 84 seções reconciliados. Pacote constitucional pendente aplicado com controle de concorrência.

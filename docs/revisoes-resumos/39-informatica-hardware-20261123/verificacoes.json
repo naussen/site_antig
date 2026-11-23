@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-23",
+  "dry_run": {
+    "exit_code": 0,
+    "modules": 1,
+    "sections": 3,
+    "preserve_flashcards": true
+  },
+  "sql_rollback": {
+    "exit_code": 0,
+    "rows": [],
+    "boundary": "831484d17d7e05292a06cbff8275255c"
+  },
+  "render_first_pass": 18,
+  "render_stabilized": 18,
+  "proposal_sha256": "3de093a2f721d50bb7f809a064622fa0ddc9cd54ed18536063d20b63529e7a52",
+  "changes": [
+    "hardware-sec-01",
+    "hardware-sec-02",
+    "hardware-sec-03"
+  ],
+  "remaining_existing_sections": 49,
+  "gap_packages_not_applied": 3
+}
