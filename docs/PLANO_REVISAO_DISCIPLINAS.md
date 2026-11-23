@@ -1,6 +1,6 @@
 # Plano operacional de revisão — orquestração por agentes IA
 
-Versão 2 — atualização documental de 22/11/2026. Público exclusivo: agentes de orquestração, execução e verificação. Este documento é o ponto de entrada para retomar o programa sem acesso ao chat. Não certifica a qualidade integral do acervo.
+Versão 3 — atualização documental de 23/11/2026. Público exclusivo: agentes de orquestração, execução e verificação. Este documento é o ponto de entrada para retomar o programa sem acesso ao chat. Não certifica a qualidade integral do acervo.
 
 ## 1. Objetivo, escopo e ambientes
 
@@ -29,15 +29,15 @@ Caminhos relativos abaixo partem do repositório editorial. Inventário: `invent
 
 ## 3. Progresso consolidado e limites conhecidos
 
-A fila inclui 54 disciplinas. Há 16 com aceite para a versão revisada do catálogo, 26 parciais (incluindo as 20 sem seções na fotografia) e 12 na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa.
+A fila inclui 54 disciplinas. Há 19 com aceite para a versão revisada do catálogo, 24 parciais (incluindo as 20 sem seções na fotografia) e 11 na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa. Corpus PRO Legis permanece fora do escopo; sua integração com a gamificação permanece autorizada.
 
 | Frente | Última evidência | Trabalho seguinte |
 |---|---|---|
-| ARM e AFO | A iteração 015 foi publicada. A 016 reexamina os vereditos refutados. Em ARM foram tratados 45/45. Em AFO, consultar os recibos por tópico em `iteracao-016-arm-afo/`. | Consolidar o aceite de cada disciplina separadamente. |
+| ARM e AFO | Aceites individuais em 23/11: 45/45 e 71/71 refutações reexaminadas; 23 tópicos e 84 seções reconciliados. Checkpoint `f4fa492`, recibo `iteracao-016-arm-afo/aceite-20261123-identidades.json`. | Reabrir somente mediante alteração posterior ou achado específico. |
 | Ondas 1–4 | A reconciliação de 22/11 abrangeu 235, 326, 130 e 360 seções, respectivamente. Recuperada a ordem de 28 tópicos da Onda 2. Amostra visual de uma seção por disciplina com 90 verificações em três temas e duas larguras. Recibos em `orquestracao-03-54/aceite-ondas-1-4/`. | Restam os tópicos macro de 03, 04, 07 e 15. O recibo posterior de Penal substitui a referência histórica de 104 seções desta disciplina por 108. |
 | Onda 5 | 106 operações confirmadas, 64 tópicos e 251 seções reconciliados. Aceite das quatro disciplinas. | Consultar `orquestracao-03-54/saneamento-onda-5/reconciliacao-publicacao-onda5.json` antes de nova edição. |
 | Onda 6 | Publicados os ajustes de precisão e dois tópicos adicionais. Conferidos 23 tópicos e 327 seções. | Consultar `orquestracao-03-54/saneamento-onda-6/evidencias/fechamento/reconciliacao.json` e o aceite em 30-direito-tributario.md. |
-| Onda 7 | 12 disciplinas com seções na fila, primeira atribuição em Estatística. | Conferir checkpoints de cada lote e iniciar por 34. |
+| Onda 7 | Estatística publicada e reconciliada em 23/11: quatro tópicos e onze seções, oito correções e três adições, 66 verificações locais aprovadas. Onze disciplinas restantes em execução/fila. | Conferir checkpoints exclusivos por disciplina e reservas da retomada. |
 
 ## 4. Fila completa e progresso por disciplina
 
@@ -45,8 +45,8 @@ Legenda: `[ ]` não iniciada; `[~]` parcial; `[x]` encerrada conforme seção 9.
 
 | Ordem | Disciplina | Tópicos | Revisão | Progresso documentado | Próxima ação |
 |---|---|---|---|---|---|
-| 01 | Administração de Recursos Materiais | 11 | [~] parcial | 34 seções (33 + 1 adição); 15 diagramas; 89 propostas verificadas às cegas; 32 edições aplicadas e reconciliadas no banco; visual 3 temas aprovado (60 PNGs) | 45 de 45 vereditos reexaminados em ARM. Consolidar aceite da iteração 016. |
-| 02 | Administração Financeira e Orçamentária | 12 | [~] parcial | 50 seções (48 + 2 adições LRF); 26 diagramas; 100 cartões (1 corrigido via CAS); 108 propostas verificadas às cegas; 30 edições aplicadas e reconciliadas no banco | Concluir reexame de AFO na iteração 016 por tópico, com fontes e reconciliação. |
+| 01 | Administração de Recursos Materiais | 11 | [x] concluída | 34 seções e 15 diagramas; 45/45 refutações reexaminadas; identidades e conteúdo reconciliados em 23/11. | Aceite da versão publicada; ver relatório 01 e recibo da 016. |
+| 02 | Administração Financeira e Orçamentária | 12 | [x] concluída | 50 seções, 26 diagramas e 100 cartões; 71/71 refutações reexaminadas; 13+1 correções publicadas e reconciliadas nesta retomada. | Aceite da versão publicada; ver relatório 02 e recibo da 016. |
 | 03 | Administração Geral | 13 | [~] parcial | 54/54 seções lidas; +1 seção(ões) adicionada(s); 120 cartões; 22 diagramas; 9 edições em 9 seções reconciliadas no banco; visual 75/75 renders OK; saneamento Onda 1 aplicado e reconciliado (visual 167/167) | Conferir cobertura dos tópicos macro vazios e registrar cada decisão. |
 | 04 | Administração Pública | 15 | [~] parcial | 40/40 seções lidas; 120 cartões; 24 diagramas; 8 edições em 7 seções reconciliadas no banco; visual 78/78 renders OK; saneamento Onda 1 aplicado e reconciliado (visual 167/167) | Conferir cobertura dos tópicos macro vazios e registrar cada decisão. |
 | 05 | Agências Reguladoras e Regulação | 5 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 5 tópicos vazios registrada em `05-agencias-reguladoras-e-regulacao.md` | Aguardar autoria/importação futura de conteúdo |
@@ -78,7 +78,7 @@ Legenda: `[ ]` não iniciada; `[~]` parcial; `[x]` encerrada conforme seção 9.
 | 31 | Direitos Humanos | 9 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 9 tópicos vazios registrada em `31-direitos-humanos.md` | Aguardar autoria/importação futura de conteúdo |
 | 32 | Enfermagem | 5 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 5 tópicos vazios registrada em `32-enfermagem.md` | Aguardar autoria/importação futura de conteúdo |
 | 33 | Engenharia Florestal | 2 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 2 tópicos vazios registrada em `33-engenharia-florestal.md` | Aguardar autoria/importação futura de conteúdo |
-| 34 | Estatística | 4 | [ ] não iniciada | Fotografia coletada (8 seções, 0 cartões, 1 diagramas) | Primeira disciplina da Onda 7 atribuída. Conferir os oito registros antes da revisão. |
+| 34 | Estatística | 4 | [x] concluída | Oito seções corrigidas e três acrescentadas; quatro tópicos e onze seções reconciliados; 66/66 verificações locais nos três temas e duas larguras. | Aceite da versão publicada; relatório 34 e recibos preparacao-20261123-v2. |
 | 35 | Ética no Serviço Público | 4 | [ ] não iniciada | Fotografia coletada (19 seções, 0 cartões, 5 diagramas) | Executar Onda 7 (ciclo D02–D08) |
 | 36 | Finanças Públicas | 1 | [ ] não iniciada | Fotografia coletada (7 seções, 0 cartões, 4 diagramas) | Executar Onda 7 (ciclo D02–D08) |
 | 37 | Física | 9 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 9 tópicos vazios registrada em `37-fisica.md` | Aguardar autoria/importação futura de conteúdo |
@@ -115,7 +115,7 @@ R01–R09 registram a iteração 015. R10 acompanha o fechamento editorial atual
 | R07 | Visual | Validação local registrada em `evidencias-iteracao-015/resultados-brutos-015.json`. Sessão de aluno dispensada. |
 | R08 | Ambas: preparar delta e validar | **Concluída (015):** `delta-completo-antes-depois.json` (62 edições), pré-imagens/manifestos SHA-256, dry-runs `import-batch --preserve-flashcards` e `atualizar-flashcard-cirurgico.mjs` aprovados. |
 | R09 | Ambas: aplicar delta autorizado e reconciliar | **Concluída e reconciliada (`f48ec8e`):** após autorização do usuário para execução autônoma integral, aplicado delta completo (`aplicacao-015-antes.json` → `aplicacao-015-reconciliacao.json`) com `exactParityWithApprovedProposal: true` e `personalPreserved: true`. |
-| R10 | Encerrar por disciplina | Conferir os recibos da iteração 016. Registrar aceite individual com evidência de tratamento dos vereditos. |
+| R10 | Encerrar por disciplina | **Concluída em 23/11:** aceites individuais 01/02 e `iteracao-016-arm-afo/ACEITE_20261123.md`; 116/116 refutações tratadas e 84 seções reconciliadas. |
 
 Tópicos vazios na fotografia anterior à aplicação da iteração 015: ARM `gestao-de-estoques-e-reposicao`, `movimentacao-e-transporte-de-materiais`; AFO `creditos-adicionais`, `despesa-publica-etapas-e-estagios`, `lei-de-responsabilidade-fiscal-lrf-lc-101`, `planejamento-e-leis-orcamentarias-ppa-ldo-loa`, `principios-orcamentarios`, `receita-publica-classificacoes-e-estagios`.
 

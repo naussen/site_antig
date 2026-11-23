@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-23 — revisão editorial e revalidação da rotina
+
+- ARM e AFO com aceites individuais: 45/45 e 71/71 refutações reexaminadas; 23 tópicos e 84 seções reconciliados. Pacote constitucional pendente aplicado com controle de concorrência.
+- Estatística revisada e publicada no banco: oito seções corrigidas, três adicionadas e quatro tópicos/onze seções reconciliados; 66 verificações locais nos três temas e duas larguras.
+- Plano editorial sincronizado: 19 aceites, 24 parciais e 11 disciplinas da Onda 7 restantes. Snapshots e recibos integrais permanecem no repositório editorial local.
+- Questões/gamificação: 69 testes aprovados, incluindo PostgreSQL real e isolamento; deploy anterior 4830b5c confirmado ready, tabelas da rotina e destinos LOA conferidos em produção. Sem reaplicação de migration ou ampliação funcional. Limites em docs/GAMIFICACAO_REVALIDACAO_2026-11-23.md.
+
+
 ## Revisão dos resumos — 22/11/2026
 
 O plano das 54 disciplinas registra o aceite de Direito Tributário e Direito Penal, a reconciliação das Ondas 1–4 e a fila da Onda 7.
