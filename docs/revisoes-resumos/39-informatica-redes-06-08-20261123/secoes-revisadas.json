@@ -1,0 +1,65 @@
+[
+  {
+    "section_id": "redes-de-computadores-sec-06",
+    "content_unit_id": "4a8211fa-8841-4a95-b252-a7ed248cbf6a",
+    "stable_key": "arquitetura-tcp-ip",
+    "topic_id": "redes-de-computadores",
+    "title": "Arquitetura TCP/IP",
+    "sort_order": 5,
+    "content_markdown": "A **arquitetura TCP/IP** reúne protocolos usados na Internet. TCP e IP dão nome à família, que também inclui UDP e protocolos de aplicação.\n\nNo modelo de **quatro camadas**, de baixo para cima:\n\n| Camada | Função e exemplos |\n| --- | --- |\n| Rede (acesso à rede ou enlace) | Comunicação pela rede diretamente conectada; Ethernet e Wi-Fi. Neste modelo, abrange também aspectos físicos. |\n| Internet | Endereçamento e encaminhamento de datagramas entre redes; IP. |\n| Transporte | Comunicação entre processos nas extremidades, identificados por portas; TCP e UDP. |\n| Aplicação | Protocolos usados pelos serviços e aplicações; HTTP, DNS e SMTP. |\n\nO mnemônico **RITA** organiza essa sequência. Algumas apresentações didáticas usam cinco camadas ao separar física e enlace; isso não invalida o modelo de quatro camadas. O agrupamento TCP/IP não corresponde, camada por camada, às sete camadas OSI.",
+    "callouts": [],
+    "mnemonics": [
+      {
+        "key": "RITA",
+        "meaning": "Rede (Acesso à Rede), Internet, Transporte, Aplicação",
+        "description": "Mnemônico lido de baixo para cima para memorizar as 4 camadas da arquitetura TCP/IP."
+      }
+    ],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "67f507bc-67c5-4c80-a5a1-6303420528d2"
+  },
+  {
+    "section_id": "redes-de-computadores-sec-07",
+    "content_unit_id": "36151099-1bc3-42a3-ad07-2bbe6d856a79",
+    "stable_key": "protocolo-ip-e-enderecamento",
+    "topic_id": "redes-de-computadores",
+    "title": "Protocolo IP e endereçamento",
+    "sort_order": 6,
+    "content_markdown": "O **IP (Internet Protocol)** atua na camada Internet, levando datagramas entre redes conforme o endereçamento e o encaminhamento. Endereços IP identificam interfaces em determinado contexto; não são uma identidade permanente e universal de cada aparelho. A configuração pode ser manual ou usar mecanismos como DHCP: o IP, por si só, não distribui automaticamente endereços.\n\nO serviço é **sem conexão e de melhor esforço**: não garante entrega, ordem nem ausência de duplicação. Confiabilidade adicional depende dos protocolos das extremidades. O IP não oferece, por si só, controle de fluxo ou de congestionamento.\n\n### IPv4\n\nUsa **32 bits**, escritos normalmente em quatro octetos decimais de 0 a 255. Por exemplo, `10101010.01010101.11100111.10111101` corresponde a `170.85.231.189`.\n\nO comprimento total máximo do datagrama IPv4 é **65.535 bytes**, incluindo cabeçalho e dados, e não “64 kb”. A MTU do enlace costuma impor um limite menor por transmissão. Quando permitida, a fragmentação pode ocorrer na origem ou em roteadores; a remontagem ocorre no destino. Com a indicação de não fragmentar, um roteador não pode simplesmente fragmentar para contornar uma MTU menor.\n\nAs faixas privadas da RFC 1918 são:\n\n| Prefixo | Intervalo |\n| --- | --- |\n| 10.0.0.0/8 | 10.0.0.0 a 10.255.255.255 |\n| 172.16.0.0/12 | 172.16.0.0 a 172.31.255.255 |\n| 192.168.0.0/16 | 192.168.0.0 a 192.168.255.255 |\n\nEsses endereços podem ser reutilizados em redes privadas e não são globalmente alcançáveis na Internet pública. Os prefixos acima não devem ser confundidos com uma obrigação atual de usar as antigas classes A, B e C.\n\nEntre os endereços especiais, **0.0.0.0** representa endereço não especificado e pode aparecer como origem antes de sua configuração; **127.0.0.0/8** é reservado a loopback, não apenas 127.0.0.1; **255.255.255.255** é broadcast limitado ao enlace. O broadcast dirigido de uma sub-rede depende de seu prefixo: terminar em .255 não torna qualquer endereço automaticamente broadcast.\n\n### IPv6\n\nUsa **128 bits**, isto é, 2^128 possibilidades (aproximadamente 3,4 × 10^38). A escrita completa tem oito grupos hexadecimais de 16 bits. Zeros iniciais de um grupo podem ser omitidos; uma sequência de grupos zerados pode ser comprimida com `::`, no máximo uma vez no endereço. Exemplo reservado à documentação: `2001:db8::1`.\n\nO cabeçalho base tem **40 bytes**; o campo de comprimento da carga útil comporta até **65.535 bytes**, excluindo esse cabeçalho. Jumbogramas usam uma opção específica para cargas maiores. Portanto, os limites de IPv4 e IPv6 não são descritos corretamente por um único “64 kb”.\n\nNo IPv6, **roteadores não fragmentam**: a origem pode usar o cabeçalho de fragmentação, e o destino remonta. O IPv6 não possui broadcast; multicast atende funções que no IPv4 podem usar broadcast.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Melhor esforço e fragmentação",
+        "text": "IP não garante entrega nem ordem. No IPv4, origem e roteadores podem fragmentar quando permitido; no IPv6, somente a origem fragmenta. A remontagem ocorre no destino."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "196f4173-00c8-426e-b5d8-f1fab1311de9"
+  },
+  {
+    "section_id": "redes-de-computadores-sec-08",
+    "content_unit_id": "844e7a04-e839-49f5-bfd2-34ae2ddb77fd",
+    "stable_key": "protocolos-tcp-e-udp",
+    "topic_id": "redes-de-computadores",
+    "title": "Protocolos TCP e UDP",
+    "sort_order": 7,
+    "content_markdown": "**TCP e UDP** são protocolos da camada de transporte. Ambos usam portas para identificar os processos nas extremidades, mas oferecem serviços diferentes.\n\n| Aspecto | TCP | UDP |\n| --- | --- | --- |\n| Conexão | Orientado a conexão | Sem conexão no protocolo |\n| Unidade entregue à aplicação | Fluxo de bytes, sem preservar fronteiras das mensagens da aplicação | Datagramas, com fronteiras de mensagem preservadas |\n| Entrega e ordem | Oferece entrega confiável e ordenada, com detecção de perdas e retransmissão | Não garante entrega, ordem ou ausência de duplicação |\n| Controle | Possui mecanismos de controle de fluxo e congestionamento | Não os fornece por si só; a aplicação precisa tratar o congestionamento e a confiabilidade necessários |\n| Custo e latência | Estabelecimento de conexão, confirmações e retransmissões podem acrescentar custo | Evita esses mecanismos do TCP, mas isso não garante maior velocidade em qualquer situação |\n\nA confiabilidade do TCP não promete comunicação bem-sucedida diante de qualquer falha: a conexão pode terminar com erro. Também não fornece criptografia por si só; proteção como TLS é adicional.\n\nUDP é comum em aplicações de tempo real, que podem preferir descartar dados atrasados a retransmiti-los. A escolha depende dos requisitos da aplicação, não da regra absoluta “UDP é sempre mais rápido”. Um protocolo sobre UDP pode implementar confiabilidade e segurança: o QUIC é um exemplo. Serviços como DNS também podem usar TCP, além de UDP.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Escolha conforme a aplicação",
+        "text": "UDP não é sempre mais rápido, e TCP não fornece criptografia por si só. Uma aplicação sobre UDP pode acrescentar confiabilidade; latência e desempenho dependem da rede e do protocolo utilizado."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "5a8fdece-305b-470c-a431-235f42ab4bcd"
+  }
+]

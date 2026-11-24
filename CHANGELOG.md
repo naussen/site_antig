@@ -1,5 +1,10 @@
 # Changelog
 
+## 23/11/2026 — Revisão de Redes de Computadores 06–08
+
+- Publicadas três seções com proteção por revisão esperada, pré-imagem, dry-run e ensaio reversível. Corrigidos TCP/IP, IPv4/IPv6 e TCP/UDP; preservados RITA e lotes anteriores.
+- Reconciliação integral de 15 tópicos/52 seções; 18 verificações visuais. Cobertura editorial 21/52, quatro tópicos integrais; restam 31 seções e três lacunas em dry-run. Evidências em `docs/revisoes-resumos/39-informatica-redes-06-08-20261123/`. Nenhum código da aplicação alterado.
+
 ## 2026-11-23 — Informática: Redes de Computadores 01–05
 
 - Cinco seções, três callouts e um mapa corrigidos; tabelas de topologias e OSI recompostas nas seções próprias. Revisados abrangência, comutação, equipamentos e segurança Wi-Fi. Fórmula e mnemônico preservados.
