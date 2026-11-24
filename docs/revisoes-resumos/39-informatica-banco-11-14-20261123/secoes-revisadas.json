@@ -1,0 +1,74 @@
+[
+  {
+    "section_id": "banco-de-dados-sec-11",
+    "content_unit_id": "f67f364e-76f5-4e5a-afd0-033da01c7894",
+    "stable_key": "modelagem-dimensional",
+    "topic_id": "banco-de-dados",
+    "title": "Modelagem dimensional",
+    "sort_order": 10,
+    "content_markdown": "A **modelagem dimensional** organiza os dados para facilitar consultas e análises. Distingue fatos — observações ou eventos do negócio — de dimensões, que fornecem contexto para filtrar, agrupar e interpretar os fatos.\n\nO projeto deve declarar o **grão**, isto é, o que cada linha da tabela de fatos representa. Por exemplo: um item de venda, relacionado a produto, data e loja. O tamanho da tabela, por si só, não define se ela é de fatos ou de dimensão.\n\n* **Esquema estrela (star schema):** em sua forma básica, uma tabela de fatos ocupa o centro e se relaciona diretamente com tabelas de dimensões por chaves. As dimensões costumam reunir seus atributos descritivos em tabelas desnormalizadas. Um ambiente completo pode conter várias tabelas de fatos; a estrela básica não limita todo o DW a uma única tabela de fatos.\n* **Esquema floco de neve (snowflake):** uma ou mais dimensões são normalizadas em tabelas relacionadas. Exemplo: produto referencia subcategoria, que referencia categoria. Não basta acrescentar qualquer tabela à estrela para caracterizar um floco de neve; a diferença está na organização das dimensões.\n\nA escolha envolve requisitos de uso, redundância, manutenção e consultas. Nenhum dos esquemas garante melhor desempenho em toda implementação.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "fda6d80e-84b0-4b8f-a504-cb3ea85e1c89"
+  },
+  {
+    "section_id": "banco-de-dados-sec-12",
+    "content_unit_id": "490c8b48-349a-4aa9-9292-73e30cbaff94",
+    "stable_key": "data-mining",
+    "topic_id": "banco-de-dados",
+    "title": "Data mining",
+    "sort_order": 11,
+    "content_markdown": "**Data mining (mineração de dados)** aplica técnicas de estatística, aprendizado de máquina e reconhecimento de padrões para descobrir relações, tendências ou modelos potencialmente úteis em conjuntos de dados. Banco de dados e visualização apoiam esse trabalho.\n\nEntre as tarefas usuais estão:\n\n* **Classificação:** atribuir registros a classes previamente definidas.\n* **Agrupamento (clustering):** encontrar grupos por semelhança, sem partir necessariamente de classes conhecidas.\n* **Associação:** identificar relações de ocorrência, como produtos frequentemente comprados juntos.\n* **Predição:** estimar resultados a partir de padrões observados, com incerteza.\n\nUma consulta que retorna vendas de determinado mês não constitui, por si só, mineração de dados. Porém, SQL e consultas podem participar da preparação dos dados ou da aplicação de modelos; mineração não é definida pela proibição de usar queries.\n\nOs resultados exigem avaliação e interpretação à luz do problema e da qualidade dos dados. Encontrar uma associação não demonstra, por si só, causalidade nem garante utilidade para a decisão.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Mineração e consulta",
+        "text": "Uma consulta simples não equivale à descoberta de padrões. Consultas e SQL podem, porém, integrar um processo de mineração. Os resultados precisam ser avaliados; associação não prova causalidade."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "351d2122-ee46-44ae-a323-8689c106d115"
+  },
+  {
+    "section_id": "banco-de-dados-sec-13",
+    "content_unit_id": "970ac212-c616-49d1-8b86-1a006143fe32",
+    "stable_key": "bi-business-intelligence",
+    "topic_id": "banco-de-dados",
+    "title": "Bi – Business Intelligence",
+    "sort_order": 12,
+    "content_markdown": "**Business Intelligence (BI)** reúne processos, práticas e ferramentas para coletar, integrar, analisar e apresentar dados de modo a **apoiar a tomada de decisão**. Não se confunde com o próprio ato de decidir.\n\nSeus recursos podem incluir relatórios, indicadores, painéis e análises interativas, permitindo acompanhar resultados e investigar tendências. DW e Data Marts são fontes frequentes, mas não exclusivas; dados operacionais e outras fontes também podem ser utilizados conforme a arquitetura.\n\nExemplo: um painel que compara vendas por loja, produto e período ajuda a identificar variações e orientar uma investigação. O painel não explica automaticamente suas causas nem garante que a decisão tomada será correta. Qualidade, contexto e interpretação dos dados continuam necessários.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "8bcdb71e-77a1-402e-b9fe-c4257f35c015"
+  },
+  {
+    "section_id": "banco-de-dados-sec-14",
+    "content_unit_id": "6a50f697-ca97-406c-b3ec-b96eb952f6b9",
+    "stable_key": "oltp-x-olap",
+    "topic_id": "banco-de-dados",
+    "title": "Oltp X Olap",
+    "sort_order": 13,
+    "content_markdown": "**OLTP (Online Transaction Processing)** e **OLAP (Online Analytical Processing)** distinguem-se principalmente pelo objetivo e pelo perfil de processamento.\n\n* **OLTP:** prioriza transações operacionais, como registrar vendas, pagamentos e movimentações de estoque. Costuma executar muitas operações curtas, com inclusões, alterações e exclusões, exigindo integridade e controle de concorrência. A resposta rápida é importante, mas “online” não significa garantia universal de tempo real estrito. Consultas e relatórios operacionais podem apoiar decisões do dia a dia.\n* **OLAP:** prioriza consultas analíticas, agregações e comparação de dados por diferentes dimensões, como produto, local e tempo. É voltado a explorar informações e apoiar decisões. Não é definido por permitir apenas inserções: atualização, correção e manutenção dependem do sistema e da arquitetura.\n\nExemplo: o caixa do supermercado registra uma venda em um sistema OLTP. Analisar a evolução das vendas de toda a rede por região e mês é uma demanda típica de OLAP. Os registros operacionais têm valor para a análise; a separação de cargas pode facilitar consultas complexas sem sobrecarregar a operação.\n\nUm DW pode ser alimentado por ETL ou ELT, em lotes ou com atualização mais frequente. Carga diária é um exemplo de projeto, não requisito de OLAP. OLAP e DW também não são sinônimos: um se refere ao processamento analítico; o outro, à organização dos dados para análise.\n\n### Operações OLAP\n* **Drill-down:** aumentar o detalhe, como passar de Estado para Cidade em uma hierarquia geográfica definida.\n* **Roll-up:** agregar e reduzir o detalhe, como passar de Cidade para Estado.\n* **Slice:** fixar um valor de uma dimensão para obter um recorte, como analisar apenas o ano de 2026.\n* **Dice:** selecionar um subconjunto por critérios em várias dimensões, como certos produtos, regiões e períodos.\n* **Pivot (rotação):** reorganizar os eixos da apresentação, por exemplo trocar produtos nas linhas por produtos nas colunas.\n\nSlice e dice selecionam recortes; pivot muda a perspectiva de apresentação. Reorganizar linhas e colunas não é a definição de slice and dice.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Drill-down e roll-up",
+        "text": "Drill-down aumenta o detalhe: Estado → Cidade. Roll-up agrega: Cidade → Estado. Slice e dice recortam os dados; pivot reorganiza os eixos de apresentação."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "ee65b14c-fcec-41b5-8a1b-c908b35e8445"
+  }
+]

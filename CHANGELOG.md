@@ -1,5 +1,10 @@
 # Changelog
 
+## 23/11/2026 — Revisão de Banco de Dados 11–14
+
+- Publicadas quatro seções: corrigidos modelagem dimensional, mineração, BI e OLTP/OLAP, especialmente slice/dice versus pivot. Dois callouts alinhados; identidades e lotes anteriores preservados.
+- Pré-imagem, dry-run, rollback e proteção por revisão esperada; reconciliação 15/52 e outras 48 revisões intactas. Vinte e quatro verificações visuais. Banco de Dados fecha 14/14 nos três lotes. Informática parcial: 36/52, seis tópicos integrais; restam 16 seções e três lacunas. Evidências em `docs/revisoes-resumos/39-informatica-banco-11-14-20261123/`. Sem alteração de código da aplicação.
+
 ## 23/11/2026 — Revisão de Banco de Dados 06–10
 
 - Publicadas cinco seções: corrigidos tupla, relacionamentos, DW/DM, grão, abordagens e ETL/staging. Dois callouts alinhados e mapa ETL reparado; identidades e lotes anteriores preservados.
