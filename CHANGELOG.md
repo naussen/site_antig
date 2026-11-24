@@ -1,5 +1,10 @@
 # Changelog
 
+## 23/11/2026 — Revisão de Banco de Dados 06–10
+
+- Publicadas cinco seções: corrigidos tupla, relacionamentos, DW/DM, grão, abordagens e ETL/staging. Dois callouts alinhados e mapa ETL reparado; identidades e lotes anteriores preservados.
+- Pré-imagem, dry-run, rollback e proteção por revisão esperada; reconciliação 15/52 e outras 47 revisões intactas. Trinta verificações visuais, seis interações de mapa, três controles maliciosos e 49 testes de conteúdo aprovados. Cobertura 32/52; Banco de Dados 10/14. Restam 20 seções e três lacunas. Evidências em `docs/revisoes-resumos/39-informatica-banco-06-10-20261123/`. Sem alteração de código da aplicação.
+
 ## 23/11/2026 — Revisão de Banco de Dados 01–05
 
 - Publicadas cinco seções: corrigidos ACID, metadados, independência, modelagem, entidade fraca, tabelas, atributos e chaves. Quatro callouts alinhados; ACID e identidades preservados.

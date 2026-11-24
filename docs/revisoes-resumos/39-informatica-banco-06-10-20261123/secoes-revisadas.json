@@ -1,0 +1,89 @@
+[
+  {
+    "section_id": "banco-de-dados-sec-06",
+    "content_unit_id": "1aab55bc-eb7f-4fa4-8b3e-745ecec162f6",
+    "stable_key": "tupla-registro",
+    "topic_id": "banco-de-dados",
+    "title": "Tupla / Registro",
+    "sort_order": 5,
+    "content_markdown": "Uma **tupla** corresponde, na representação tabular do modelo relacional, a uma linha da tabela. Ela reúne **valores para os atributos** definidos no esquema, e não as definições dos atributos em si.\n\nExemplo didático: em uma tabela com as colunas “código”, “nome” e “peso”, uma linha pode conter os valores `42`, `Ana` e `68`. Essa linha é um registro; as colunas são os atributos. A unidade do peso e as restrições de cada coluna devem ser definidas no projeto.\n\nNo uso de SQL, “registro” ou “linha” é a correspondência prática usual. As propriedades de uma relação matemática não devem ser automaticamente atribuídas a qualquer tabela SQL.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "5790c105-54e9-4244-9d01-f35e6ba0408a"
+  },
+  {
+    "section_id": "banco-de-dados-sec-07",
+    "content_unit_id": "43109504-745b-4eb1-a46f-0ef25f871f3a",
+    "stable_key": "relacionamentos",
+    "topic_id": "banco-de-dados",
+    "title": "Relacionamentos",
+    "sort_order": 6,
+    "content_markdown": "No modelo entidade-relacionamento, um **relacionamento** associa ocorrências de entidades e pode ter atributos próprios. Seu nome costuma expressar uma ação, mas a representação gráfica depende da notação; não se resume a desenhar verbos.\n\n### Grau e restrições\nO grau indica a quantidade de tipos de entidade participantes: há relacionamentos unários (recursivos), binários, ternários e de grau maior. Binário é frequente, mas não um padrão obrigatório. Um relacionamento ternário não deve ser substituído automaticamente por três binários, pois isso pode perder restrições ou significado.\n\nRestrições entre relacionamentos também dependem do domínio: associações podem ser independentes, exigir a existência de outra ou ser mutuamente exclusivas. Coexistência não significa necessariamente ocorrência no mesmo instante. “Simultâneo = ida e volta” não é uma definição geral do modelo ER. Exemplos tributários ou a oposição CPF/CNPJ não estabelecem, por si sós, regras universais de relacionamento.\n\n### Cardinalidade e participação\nA cardinalidade máxima de um relacionamento binário expressa quantas ocorrências de um lado podem se associar a uma do outro:\n\n* **1:1:** no máximo uma em cada direção. Exemplo, sob regra expressa: cada departamento admite no máximo uma secretária, e cada secretária pertence a no máximo um departamento.\n* **1:N:** uma ocorrência pode se associar a várias do outro lado, enquanto cada ocorrência deste lado se associa a no máximo uma do primeiro. Exemplo: se o projeto determina um único professor responsável por disciplina, um professor pode ser responsável por várias disciplinas.\n* **M:N (ou N:N):** permite várias associações nos dois sentidos. Exemplo: um título pode ter vários autores e um autor pode escrever vários títulos.\n\nA **participação mínima** distingue opcionalidade (zero) de obrigatoriedade (ao menos uma). Uma indicação 1:N, sozinha, não informa se a associação é obrigatória. As letras M e N não precisam representar quantidades iguais.\n\n### Leitura de exemplos\n* **Secretária e departamento:** se cada secretária deve estar em exatamente um departamento, sua participação é obrigatória; se um departamento pode ter zero ou uma secretária, ele pode existir sem secretária. As duas regras formam o exemplo 1:1 acima, com mínimos distintos.\n* **Cliente e quarto:** considerando o histórico de hospedagens, um cliente pode ocupar vários quartos e um quarto pode receber vários clientes em períodos diferentes. Isso não determina a ocupação simultânea, que exige regras temporais adicionais.\n* **Aluno e disciplina:** quando vários alunos podem cursar várias disciplinas, a cardinalidade máxima é M:N. Obrigatoriedade, semestre e repetição de matrícula dependem do projeto.\n\nA posição dos símbolos e a leitura junto a cada entidade variam com a notação. Sem o diagrama e sua legenda, não se deve atribuir uma regra apenas à posição visual de um número.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "eb0fce50-0754-41cb-ab1f-31b8adc2c1ff"
+  },
+  {
+    "section_id": "banco-de-dados-sec-08",
+    "content_unit_id": "3772f646-1ad5-4bad-b36a-dcee59e07457",
+    "stable_key": "data-warehouse-dw-e-data-mart-dm",
+    "topic_id": "banco-de-dados",
+    "title": "Data Warehouse (Dw) e Data Mart (Dm)",
+    "sort_order": 7,
+    "content_markdown": "O **Data Warehouse (DW)** é um ambiente de dados preparado para consultas e análises que apoiam a decisão. Integra dados de fontes diversas, internas ou externas, e costuma manter histórico. A integração oferece uma visão coerente; não exige que todos os dados estejam em uma única máquina física.\n\nNa caracterização clássica, o DW é:\n\n* **Orientado por assunto:** organizado por temas relevantes, como vendas, estoque e clientes.\n* **Integrado:** concilia códigos, formatos, unidades e significados entre fontes. Por exemplo, medidas equivalentes em centímetros e metros devem ser convertidas de modo consistente. ETL é uma forma de integração; ELT também pode ser utilizado.\n* **Variante no tempo:** permite analisar os dados em seu contexto histórico, não apenas a situação operacional atual.\n* **Não volátil:** prioriza leitura analítica e preservação de histórico, em vez de alterações transacionais contínuas típicas de OLTP. Não significa proibição técnica absoluta de atualizar ou excluir: cargas, correções, retenção e manutenção continuam possíveis conforme o projeto.\n\n### Granularidade e grão dos dados\nO **grão** declara o que cada registro representa. Uma linha por item de venda é mais detalhada que uma linha com o total mensal por loja. Agregar os itens reduz o detalhe e pode impedir análises que dependam dos dados originais.\n\nUse expressões explícitas: **grão fino = maior detalhe**; **grão grosso = maior agregação**. A expressão isolada “maior granularidade” é usada com sentidos diferentes em materiais didáticos; não deve substituir a declaração do nível de detalhe.\n\nNa hierarquia geográfica **País → Estado → Cidade → Bairro**, avançar para a direita aumenta o detalhe espacial e reduz a agregação, desde que os níveis estejam definidos de forma consistente. Essa hierarquia, sozinha, não especifica o grão completo de uma tabela de fatos: ainda é preciso declarar o que cada linha mede e a que período se refere.\n\n### Data Mart (DM)\nÉ um conjunto de dados analíticos voltado a uma área ou finalidade, como vendas ou finanças. Pode ser **dependente**, alimentado por um DW corporativo, ou **independente**, alimentado diretamente por fontes operacionais ou externas. Portanto, nem todo Data Mart é obrigatoriamente um subconjunto previamente extraído de um DW.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Declare o grão",
+        "text": "Grão fino indica mais detalhe; grão grosso indica mais agregação. Declare o que cada linha representa e o período considerado, evitando depender da expressão ambígua “granularidade alta/baixa”."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "2771fb60-c445-4695-ab1b-9877e1349a79"
+  },
+  {
+    "section_id": "banco-de-dados-sec-09",
+    "content_unit_id": "6603967e-697c-4c30-9a42-959d9707a32e",
+    "stable_key": "abordagens-para-projeto-de-datawarehouse",
+    "topic_id": "banco-de-dados",
+    "title": "Abordagens para projeto de Datawarehouse",
+    "sort_order": 8,
+    "content_markdown": "São formas usuais de organizar a construção e a integração do ambiente analítico; não se resumem à ordem em que servidores são instalados.\n\n* **Bottom-up:** entrega incremental por processos de negócio ou áreas, com estruturas dimensionais integradas. Na abordagem Kimball, dimensões conformadas — definições comuns e consistentes, reutilizadas entre modelos — permitem integrar os resultados. Não é simplesmente juntar Data Marts isolados já prontos. A falta de planejamento comum dificulta a consolidação, mas não é uma consequência inevitável da abordagem.\n* **Top-down:** prioriza uma visão corporativa integrada e um DW central que pode alimentar Data Marts dependentes. Isso não exige concluir todo o universo de dados da organização antes de qualquer entrega útil. Tampouco determina que os Data Marts contenham apenas dados sumarizados: o detalhe depende dos requisitos.\n\nNas duas abordagens, integração, qualidade e definições comuns precisam ser planejadas. A escolha envolve prioridades, escopo e capacidade de entrega; nenhuma delas assegura sucesso apenas por sua denominação.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "80bf07fa-3149-4b90-8efa-30c679b0f210"
+  },
+  {
+    "section_id": "banco-de-dados-sec-10",
+    "content_unit_id": "469f1944-7a3f-44d9-89cb-d70513d6839b",
+    "stable_key": "etl-extract-transform-load",
+    "topic_id": "banco-de-dados",
+    "title": "Etl – Extract, Transform, Load",
+    "sort_order": 9,
+    "content_markdown": "**ETL** significa **Extract, Transform, Load**: extrair, transformar e carregar dados. A sequência descreve o tratamento dos dados no fluxo; diferentes lotes ou partições podem estar em etapas distintas ao mesmo tempo.\n\n* **Extract (extração):** coleta dados de fontes como bancos operacionais (OLTP), arquivos, serviços e sistemas em nuvem. A extração pode ser completa ou incremental, conforme o projeto.\n* **Transform (transformação):** aplica regras para preparar os dados para o destino, como limpeza, validação, padronização de unidades, tratamento de duplicações, junções e agregações. Por exemplo, medidas em $m^2$, $cm^2$ e $dm^2$ podem ser convertidas para $m^2$, ajustando também os valores numéricos, não apenas o rótulo da unidade.\n* **Load (carga):** grava os dados preparados no destino, que pode ser um DW, Data Mart ou outro repositório. Pode usar carga inicial, incremental ou outras estratégias compatíveis com o projeto.\n\n### Staging Area e ELT\nA **Staging Area** é uma área intermediária de trabalho que pode armazenar temporariamente dados extraídos e apoiar seu processamento. Sua organização e o local das transformações dependem da arquitetura; uma área persistida separada não é requisito universal de todo ETL.\n\nNo **ELT (Extract, Load, Transform)**, os dados são carregados antes da transformação principal, que ocorre no ambiente de destino. Não se deve inverter essa distinção por haver etapas auxiliares de limpeza ou transporte.\n\nO mapa abaixo apresenta um fluxo ETL simplificado, sem tornar obrigatória uma implementação específica de staging.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Staging Area",
+        "text": "É uma área intermediária que pode apoiar o armazenamento temporário e o processamento. Não é uma etapa obrigatória adicional ao ETL nem precisa existir como repositório persistido separado em toda arquitetura."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "flowchart TD\n A[\"Sistemas de origem: OLTP e arquivos\"] --> B[\"Extract: extração\"]\n B --> C[\"Transform: limpeza e padronização\"]\n C --> D[\"Load: carga no DW ou Data Mart\"]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "f3489d65-7a75-4280-b31f-3cf0e7559079"
+  }
+]
