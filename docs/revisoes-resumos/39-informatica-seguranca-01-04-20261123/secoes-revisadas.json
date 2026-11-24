@@ -1,0 +1,74 @@
+[
+  {
+    "section_id": "seguranca-da-informacao-sec-01",
+    "content_unit_id": "55ff3da0-7f45-47fa-9981-4172609b2ddb",
+    "stable_key": "principios-da-seguranca-da-informacao",
+    "topic_id": "seguranca-da-informacao",
+    "title": "Princípios da Segurança da Informação",
+    "sort_order": 0,
+    "content_markdown": "A segurança da informação busca preservar **confidencialidade, integridade e disponibilidade**. Autenticidade, não repúdio e conformidade complementam essa visão. São objetivos apoiados por controles técnicos e organizacionais, não garantias absolutas obtidas por um mecanismo isolado.\n\n| Princípio | Objetivo | Exemplos de controles e limites |\n| --- | --- | --- |\n| **Disponibilidade** | Acesso e uso oportunos e confiáveis por quem está autorizado. | Redundância, capacidade, recuperação e backups testados. Backup ajuda a recuperar; não impede toda interrupção ou exclusão. |\n| **Integridade** | Proteger contra alteração ou destruição indevida, admitindo mudanças autorizadas. | Restrições de acesso, MAC e assinaturas; hash comparado a referência confiável pode detectar mudanças. Integridade não prova a veracidade material de um dado. |\n| **Confidencialidade** | Preservar as restrições autorizadas de acesso e divulgação. | Controle de acesso e cifragem, conforme a ameaça. Não equivale a sigilo absoluto nem, isoladamente, a toda a proteção da privacidade. |\n| **Autenticidade** | Dar confiança na identidade ou origem declarada. | Autenticação e validação de certificados/assinaturas. Um certificado precisa ser validado e vinculado à operação; sua simples presença não autentica qualquer mensagem. |\n| **Irretratabilidade (não repúdio)** | Produzir evidências que apoiem a atribuição de origem ou de uma ação. | Assinaturas e registros verificáveis. A força da evidência depende da proteção das chaves, da validação e do contexto; não impede toda contestação nem decide automaticamente responsabilidade jurídica. |\n| **Conformidade (legalidade)** | Atender requisitos legais, regulatórios e políticas aplicáveis. | Governança, procedimentos, controles e auditorias. Uma auditoria isolada não garante cumprimento permanente. |\n\nUm mesmo controle pode apoiar vários objetivos. As proteções devem ser combinadas e avaliadas conforme os riscos.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "ab0daa8b-3ef0-4877-87db-bc071c2a34a1"
+  },
+  {
+    "section_id": "seguranca-da-informacao-sec-02",
+    "content_unit_id": "9e26fefd-8071-4c62-a385-3104f23bed74",
+    "stable_key": "criptografia",
+    "topic_id": "seguranca-da-informacao",
+    "title": "Criptografia",
+    "sort_order": 1,
+    "content_markdown": "A **criptografia** reúne técnicas para proteger informações. A **cifragem** transforma o conteúdo para restringir sua leitura a quem dispõe das chaves e condições necessárias; autenticação e integridade também podem ser apoiadas por mecanismos criptográficos.\n\n### Chaves simétricas e assimétricas\n* **Simétrica:** usa chave secreta compartilhada para cifrar e decifrar. A distribuição ou o estabelecimento da chave e sua proteção são essenciais; não é necessário transmitir a chave em claro entre as partes.\n* **Assimétrica (chave pública):** usa um par matematicamente relacionado. A chave pública pode ser divulgada; a privada deve ser protegida. É preciso assegurar que a chave pública pertence ao destinatário esperado.\n\nEm um esquema de cifragem de chave pública, cifra-se para o destinatário com sua chave pública, e a chave privada correspondente permite decifrar. Nem todo algoritmo assimétrico serve para cifrar: alguns são próprios de assinatura ou de estabelecimento de chaves. Protocolos híbridos combinam mecanismos assimétricos e simétricos, em vez de cifrar todo o tráfego diretamente com uma chave pública.\n\n### Função hash criptográfica\nProduz um resumo em bits, normalmente exibido em hexadecimal. Para uma função de saída fixa escolhida, o tamanho do resumo é fixo; isso não significa um valor único para toda entrada. **Colisões existem**: entradas distintas podem gerar o mesmo resumo.\n\nPropriedades desejadas incluem:\n* **Resistência à pré-imagem:** dado um resumo, ser computacionalmente inviável encontrar uma entrada correspondente.\n* **Resistência à segunda pré-imagem:** dada uma mensagem, ser inviável encontrar outra distinta com o mesmo resumo.\n* **Resistência a colisões:** ser inviável encontrar qualquer par de entradas distintas com o mesmo resumo.\n\nO efeito avalanche descreve a grande mudança esperada no resumo diante de pequena mudança na entrada; não significa que todos os bits necessariamente se invertam nem comprova, sozinho, a segurança de uma função.\n\nHash não é cifragem reversível. Um resumo isolado não autentica a origem: se um invasor puder substituir arquivo e resumo, a comparação não oferece a proteção pretendida. Use uma referência confiável ou mecanismos autenticados, como MAC ou assinatura, conforme a finalidade.\n\n### HTTPS\nÉ **HTTP protegido por TLS**. SSL é legado obsoleto, não alternativa atual equivalente. TLS protege os dados da aplicação entre os extremos da conexão, com confidencialidade e integridade; a autenticação depende da configuração e da validação das credenciais.\n\nHTTPS não garante que o site seja honesto nem protege dados já expostos nos dispositivos. Também não oculta necessariamente metadados, como os endereços IP envolvidos. O indicador visual varia entre navegadores: não é correto exigir sempre um cadeado fechado.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Sigilo com chave pública",
+        "text": "No esquema de cifragem assimétrica, usa-se a chave pública autêntica do destinatário para cifrar; a privada correspondente permite decifrar. Esse fluxo não deve ser confundido com assinatura. Nem todo algoritmo de chave pública realiza cifragem."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "a31c9243-db9a-49f5-8031-d23c3f76827c"
+  },
+  {
+    "section_id": "seguranca-da-informacao-sec-03",
+    "content_unit_id": "31f36dc4-f7a9-479c-b7fc-9391261bf3c2",
+    "stable_key": "assinatura-digital",
+    "topic_id": "seguranca-da-informacao",
+    "title": "Assinatura Digital",
+    "sort_order": 2,
+    "content_markdown": "A **assinatura digital** usa um algoritmo de assinatura e um par de chaves: a **privada produz a assinatura**, e a **pública permite verificá-la**, em relação aos dados assinados.\n\nUma assinatura válida permite detectar modificações nos dados e apoiar a autenticação de sua origem. Para atribuí-la a uma pessoa ou organização, também é necessário confiar no vínculo entre a chave pública e a identidade, por exemplo mediante certificado validado.\n\nAssinaturas podem fornecer evidências para **não repúdio**, mas não eliminam toda contestação: comprometimento da chave, validação e contexto da operação importam. O mecanismo técnico não determina sozinho os efeitos jurídicos.\n\n“Cifrar o hash com a chave privada” é uma simplificação que não descreve genericamente todos os algoritmos de assinatura. Hash e algoritmo de assinatura têm papéis próprios.\n\nAssinar não impede fisicamente que alguém altere uma cópia do documento; permite detectar alterações no conteúdo coberto pela assinatura durante a verificação. A assinatura, por si só, **não cifra o documento nem garante confidencialidade**.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Assinatura e confidencialidade",
+        "text": "A chave privada produz a assinatura e a pública a verifica, conforme o algoritmo. Assinar não cifra o documento nem impede a alteração de uma cópia: a verificação detecta mudanças nos dados assinados."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "08846845-f679-4755-be25-c08b7a91e0ad"
+  },
+  {
+    "section_id": "seguranca-da-informacao-sec-04",
+    "content_unit_id": "cabc7de0-8aef-42fe-8483-89b56664fdf8",
+    "stable_key": "certificado-digital",
+    "topic_id": "seguranca-da-informacao",
+    "title": "Certificado Digital",
+    "sort_order": 3,
+    "content_markdown": "O **certificado digital** vincula uma identidade ou sujeito a uma **chave pública**, conforme uma política de certificação. Em certificados X.509, há informações como sujeito, emissor, validade, chave pública e assinatura da autoridade emissora. **A chave privada do titular não integra o certificado público.**\n\nCertificado e assinatura de documento são objetos distintos. O certificado auxilia a verificar o vínculo da chave pública; a assinatura do documento é produzida com a chave privada correspondente.\n\nA validação considera cadeia de confiança, período pertinente, revogação, finalidade e restrições de uso. Possuir um arquivo de certificado não basta para confiar automaticamente em qualquer operação.\n\n### ICP-Brasil\nNa ICP-Brasil, uma **Autoridade Certificadora (AC)** credenciada emite certificados e disponibiliza informações de revogação. A **Autoridade de Registro (AR)** participa da identificação e validação do solicitante. A analogia de “cartório digital” é apenas didática; nem todo certificado existente na Internet pertence à ICP-Brasil.\n\n### Classificação tradicional e armazenamento\nAs séries tradicionais **A** e **S** referem-se, respectivamente, a assinatura e sigilo. Para interpretar materiais e questões sobre a classificação histórica:\n\n| Tipos históricos | Característica geral de geração e proteção da chave |\n| --- | --- |\n| **A1 / S1** | Geração e proteção em software; não restritas obrigatoriamente ao disco rígido de um computador. |\n| **A2 / S2** | Geração em software e armazenamento em cartão/token sem capacidade de gerar a chave, conforme os requisitos aplicáveis. |\n| **A3 / S3** | Uso de hardware criptográfico sujeito aos requisitos da ICP-Brasil. A3 também pode usar HSM remoto de prestador credenciado; não exige sempre token/cartão local. |\n| **A4 / S4** | Requisitos específicos de hardware e política. A distinção não deve ser reduzida universalmente a “mais bits” nem a um formato físico obrigatório. |\n\n“Nuvem” descreve uma forma de custódia/acesso à chave, não uma terceira categoria necessariamente oposta a A3.\n\n### Atualização normativa\nNa conferência de **23/11/2026**, a ICP-Brasil está em transição decorrente da Resolução CG ICP-Brasil nº 211/2024 e alterações posteriores. O modelo atualizado contempla assinatura de pessoa física (A3/A4), selo eletrônico de pessoa jurídica (SE-S/SE-H) e aplicações específicas (AE-S/AE-H), além de tipos próprios para outras finalidades.\n\nA tabela histórica não esgota a classificação atual. Não se deve concluir que todo tipo antigo já deixou de poder ser usado: há regras de transição. Em questões e aplicações, confira a data de referência, a política do certificado e os atos vigentes no [repositório oficial do ITI](https://repositorio.iti.gov.br/resolucoes/Resolucao179_DOC-ICP-04.htm).",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "flowchart TD\n A[\"Autoridade certificadora\"] --> B[\"Certificado: identidade e chave pública\"]\n B --> C[\"Validar cadeia, prazo, revogação e uso\"]\n C --> D[\"Confiança no vínculo conforme a política\"]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "003057c4-3b04-464e-9c22-8abd2a5fd74f"
+  }
+]

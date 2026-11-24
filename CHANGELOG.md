@@ -1,5 +1,10 @@
 # Changelog
 
+## 23/11/2026 — Revisão de Segurança da Informação 01–04
+
+- Publicadas quatro seções: corrigidos princípios, hash, HTTPS/TLS, assinatura e certificado, incluindo classificação histórica e transição ICP-Brasil. Dois callouts alinhados e mapa substituído por fluxo de certificado. Identidades e lotes anteriores preservados.
+- Pré-imagem, dry-run, rollback e revisão esperada; reconciliação 15/52 e outras 48 revisões intactas. Vinte e quatro verificações visuais, seis checagens de tabela, seis interações de mapa, três controles maliciosos e 49 testes aprovados. Informática parcial: 40/52, sete tópicos integrais; restam 12 seções e três lacunas. Evidências em `docs/revisoes-resumos/39-informatica-seguranca-01-04-20261123/`. Sem alteração de código da aplicação.
+
 ## 23/11/2026 — Revisão de Banco de Dados 11–14
 
 - Publicadas quatro seções: corrigidos modelagem dimensional, mineração, BI e OLTP/OLAP, especialmente slice/dice versus pivot. Dois callouts alinhados; identidades e lotes anteriores preservados.
