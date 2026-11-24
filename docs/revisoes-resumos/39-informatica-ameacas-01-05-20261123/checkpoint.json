@@ -1,0 +1,29 @@
+{
+  "date_local": "2026-11-23",
+  "scope": [
+    "ameacas-virtuais-sec-01",
+    "ameacas-virtuais-sec-02",
+    "ameacas-virtuais-sec-03",
+    "ameacas-virtuais-sec-04",
+    "ameacas-virtuais-sec-05"
+  ],
+  "published": true,
+  "cumulative_reviewed_sections": 9,
+  "complete_topics": 2,
+  "partial_topic": "ameacas-virtuais 5/9",
+  "existing_sections": 52,
+  "remaining_existing_sections": 43,
+  "gap_packages_pending": 3,
+  "dry_run_sections": 9,
+  "written_sections": 5,
+  "unaffected_sections": 47,
+  "sql_rollback": true,
+  "render_checks": 30,
+  "table_scroll_checks": 3,
+  "reconciliation": "reconciliacao.json",
+  "student_check": "dispensada",
+  "next_batch": "ameacas-virtuais-sec-06 a ameacas-virtuais-sec-09",
+  "editorial_commit": "9ae5de5",
+  "editorial_remote": null,
+  "full_evidence_local": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\39-informatica\\ameacas-01-05-20261123"
+}

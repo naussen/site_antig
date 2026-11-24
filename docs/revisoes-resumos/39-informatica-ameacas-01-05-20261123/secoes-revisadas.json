@@ -1,0 +1,94 @@
+[
+  {
+    "section_id": "ameacas-virtuais-sec-01",
+    "content_unit_id": "21472e71-701e-4944-9097-63b9a1a967ff",
+    "stable_key": "visao-geral-e-conceitos-de-rede",
+    "topic_id": "ameacas-virtuais",
+    "title": "Visão geral e conceitos de rede",
+    "sort_order": 0,
+    "content_markdown": "Uma intranet utiliza tecnologias da Internet para uso interno e restrito de uma organização. Pode conectar várias localidades e admitir acesso remoto autorizado; não se define como uma única rede local nem exige, por definição, cadastro em um servidor específico.\r\n\r\nA comunicação externa depende de conectividade e políticas de acesso, não apenas de usar os mesmos protocolos. Uma rede interna também pode sofrer ataques por contas comprometidas, falhas de configuração ou códigos maliciosos.\r\n\r\nAqui, o foco é reconhecer ameaças e mecanismos de proteção. A comparação completa entre Internet, intranet e extranet está no tópico Internet e Intranet, evitando repetir sua explicação neste módulo.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "24ea13aa-ad5d-4df7-bb2c-8869ad49e944"
+  },
+  {
+    "section_id": "ameacas-virtuais-sec-02",
+    "content_unit_id": "c267ff95-1923-44f5-a02f-198316152ed6",
+    "stable_key": "classificacao-das-ameacas-virtuais",
+    "topic_id": "ameacas-virtuais",
+    "title": "Classificação das ameaças virtuais",
+    "sort_order": 1,
+    "content_markdown": "Uma organização didática das ameaças distingue os grupos abaixo. Eles podem se sobrepor e não constituem uma classificação exaustiva ou universal.\r\n\r\n1. **Golpes e engenharia social:** incluem phishing, fraude do adiantamento de valores e golpes de comércio eletrônico. O furto de identidade pode ser consequência dessas práticas; boatos podem ser usados para enganar pessoas.\r\n2. **Técnicas de ataque e abuso:** incluem falsificação do remetente de e-mail (spoofing), força bruta, alteração indevida de páginas (defacement), negação de serviço (DoS) e sua forma distribuída (DDoS). Pharming desvia a navegação para destino fraudulento por meios técnicos. Varredura e captura de tráfego também podem ter uso legítimo quando autorizadas; não são ataques em qualquer contexto.\r\n3. **Códigos maliciosos:** incluem vírus, worms, trojans, spyware e ransomware. Backdoors e rootkits podem apoiar acesso indevido e ocultação. Neste contexto malicioso, bots permitem controle de dispositivos; uma botnet é a rede desses dispositivos, não um programa individual.\r\n\r\nUm mesmo incidente pode combinar grupos: uma mensagem de phishing pode induzir a instalação de um trojan, que incorpora o dispositivo a uma botnet. Phishing não é, por si só, um tipo de malware.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "c77f3c18-1998-4705-b2f7-db346ab2fef5"
+  },
+  {
+    "section_id": "ameacas-virtuais-sec-03",
+    "content_unit_id": "5bf16532-8add-4895-a872-29032142a8c2",
+    "stable_key": "virus-worms-phishing-e-pragas-virtuais",
+    "topic_id": "ameacas-virtuais",
+    "title": "Vírus, worms, phishing e pragas virtuais",
+    "sort_order": 2,
+    "content_markdown": "As categorias abaixo descrevem características distintas e podem aparecer combinadas no mesmo incidente.\r\n\r\n| Ameaça ou ferramenta | Característica principal |\r\n| :--- | :--- |\r\n| **Vírus** | Insere cópias em programas ou arquivos hospedeiros. A execução do conteúdo infectado permite sua atividade; não exige sempre ação direta e consciente do usuário. |\r\n| **Worm** | Autorreplica-se e propaga cópias entre dispositivos, frequentemente explorando vulnerabilidades. Não precisa inserir-se em um arquivo hospedeiro nem ser “autoprogramável”. A propagação pode consumir recursos. |\r\n| **Phishing** | Usa mensagens ou páginas enganosas para obter dados ou induzir ações. Um link para site falso não caracteriza, isoladamente, pharming. No pharming, meios técnicos desviam a navegação, por exemplo por adulteração de DNS ou do dispositivo. |\r\n| **Ransomware** | Impede o acesso a dados ou ao sistema e exige resgate, frequentemente usando criptografia. Pode ameaçar divulgar dados. Pagar não garante recuperação. |\r\n| **Backdoor** | Mecanismo que permite acesso indevido ao sistema, podendo facilitar o retorno do invasor por serviços criados ou modificados. |\r\n| **Trojan (cavalo de troia)** | Apresenta função aparentemente útil, mas executa funções ocultas, normalmente maliciosas. Não se define por autorreplicação e não é automaticamente um vírus. |\r\n| **Bot e botnet** | No contexto de malware, o bot recebe comandos para controlar o dispositivo comprometido. Pode ter propagação automática, mas isso não define todo bot. Botnet é uma rede de dispositivos controlados. “Bot” também tem usos legítimos fora desse contexto. |\r\n| **Spyware e keylogger** | Spyware monitora atividades e coleta informações. Keylogger registra teclas e pode ser usado para espionagem. Monitoramento autorizado e transparente não deve ser confundido automaticamente com espionagem maliciosa. |\r\n| **Rootkit** | Programas e técnicas voltados à ocultação e persistência de um invasor ou malware. Não é sinônimo de exploração inicial de vulnerabilidade. |\r\n| **Sniffer** | Ferramenta de captura de tráfego, com usos legítimos e maliciosos. A captura não revela automaticamente o conteúdo protegido por criptografia. |\r\n\r\n### Infecção, ativação e carga útil\r\n\r\nSão aspectos diferentes: infecção é o mecanismo de disseminação; ativação é a condição que desencadeia uma ação; carga útil é a ação além da propagação. Uma bomba lógica executa ação maliciosa quando uma condição é satisfeita; não é componente obrigatório de todo vírus.\r\n\r\nNão há fundamento aqui para uma regra universal de banca que transforme trojan em vírus. Em questões de prova, é necessário considerar o enunciado e a referência utilizada, sem generalizar um gabarito isolado.",
+    "callouts": [
+      {
+        "title": "Vírus e worm",
+        "type": "warning",
+        "text": "Vírus usa hospedeiro; worm propaga cópias sem precisar inserir-se em um arquivo hospedeiro. Não transforme a interação consciente do usuário em condição obrigatória de toda infecção viral."
+      },
+      {
+        "title": "Cavalo de troia e taxonomia",
+        "type": "info",
+        "text": "A função aparentemente útil encobre ações ocultas. Trojan e vírus não são sinônimos técnicos; uma questão isolada não estabelece regra universal de banca."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "dfda34de-3d9d-4bd0-b057-3a9444318937"
+  },
+  {
+    "section_id": "ameacas-virtuais-sec-04",
+    "content_unit_id": "b337db82-1acd-416a-a50b-e7b8f26112be",
+    "stable_key": "aplicativos-de-seguranca-e-geracoes-de-antivirus",
+    "topic_id": "ameacas-virtuais",
+    "title": "Aplicativos de segurança e gerações de antivírus",
+    "sort_order": 3,
+    "content_markdown": "Antivírus é o nome usual de ferramentas antimalware: podem detectar, bloquear ou remover diferentes códigos maliciosos, não apenas vírus. Nenhuma ferramenta garante detectar todas as ameaças; atualização e outras medidas de proteção continuam necessárias.\r\n\r\n### Classificação didática histórica de antivírus\r\n\r\nMateriais didáticos podem apresentar as quatro gerações abaixo. Essa numeração não é uma norma universal de mercado nem permite afirmar quais produtos atuais pertencem a uma única geração.\r\n\r\n1. **Escaneadores simples:** procuram padrões conhecidos, como assinaturas de código. Uma assinatura pode identificar um trecho, sem exigir comparação integral do arquivo.\r\n2. **Escaneadores heurísticos:** aplicam regras a características suspeitas para reconhecer ameaças, inclusive variantes sem assinatura específica. Heurística não se resume obrigatoriamente à comparação de comportamento durante uma execução real.\r\n3. **Armadilhas de atividade:** designação didática para observar ações durante a execução. Em produtos atuais, análise dinâmica também pode ocorrer em ambiente controlado, por emulação ou sandbox; não exige que o usuário execute o malware livremente no sistema protegido.\r\n4. **Proteção integrada (“proteção total”):** combina técnicas. O termo histórico não significa proteção absoluta.\r\n\r\nOs produtos atuais podem combinar assinaturas, heurísticas, análise comportamental, emulação, reputação e modelos de aprendizado de máquina. Essas técnicas coexistem e não formam fronteiras rígidas entre gerações. Podem ocorrer falsos positivos e falsos negativos.",
+    "callouts": [
+      {
+        "title": "Técnicas complementares",
+        "type": "info",
+        "text": "Heurística busca indícios; monitoramento comportamental observa ações. Emulação e sandbox permitem análise controlada. Combinar técnicas reduz riscos, mas não elimina erros de detecção."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "094f7b86-6d90-4450-a7ab-954832725b51"
+  },
+  {
+    "section_id": "ameacas-virtuais-sec-05",
+    "content_unit_id": "84bc73e7-b732-4c7e-9b87-19deef688a50",
+    "stable_key": "anti-spyware",
+    "topic_id": "ameacas-virtuais",
+    "title": "Anti-spyware",
+    "sort_order": 4,
+    "content_markdown": "O antispyware procura detectar, bloquear ou remover programas de espionagem, como keyloggers usados de forma maliciosa. Essa função pode integrar uma solução antimalware; a diferença em relação ao antivírus não é uma fronteira rígida entre produtos.\r\n\r\nAdware exibe publicidade. Nem todo programa com anúncios é spyware: coleta de dados, transparência, consentimento e comportamento do aplicativo precisam ser considerados. Ferramentas de segurança podem classificar certos adwares como aplicativos potencialmente indesejados, categoria que não se confunde automaticamente com malware.\r\n\r\nA existência de uma função antiespionagem integrada não exige instalar outro produto residente. Atualização, configuração e limitações da solução devem ser consideradas; a combinação indiscriminada de ferramentas não garante proteção maior.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "b570828f-9e34-4e20-9a35-b14e487835bb"
+  }
+]

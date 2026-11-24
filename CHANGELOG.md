@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-23 — Informática: Ameaças Virtuais 01–05
+
+- Cinco seções e três callouts revisados e publicados: intranet, taxonomia, vírus/worm/trojan, phishing/pharming, bots, antivírus e antispyware. IDs, títulos e ordem preservados; seções 06–09 e lotes anteriores não reaplicados.
+- Pré-imagem, dry-run e ensaio com rollback; publicação com revisão esperada e reconciliação integral de 15 tópicos/52 seções. Trinta verificações visuais e três de rolagem. Cobertura 9/52; 43 seções e três lacunas pendentes. Evidências em docs/revisoes-resumos/39-informatica-ameacas-01-05-20261123; commit editorial local 9ae5de5.
+
 ## 2026-11-23 — Informática: Internet e Intranet
 
 - Publicada uma seção com definição de intranet/extranet, distinção Internet/Web, permissões e protocolos; callout, tabela e mapa alinhados. Hardware preservado.
