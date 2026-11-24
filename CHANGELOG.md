@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-23 — Informática: Ameaças Virtuais 06–09
+
+- Quatro seções, três callouts e um mapa corrigidos e publicados: políticas/limites de firewall, proxy, VPN e IDS/IPS. Ameaças Virtuais com 9/9 seções revisadas nos dois lotes; demais tópicos preservados.
+- Pré-imagem, dry-run, ensaio com rollback e revisão esperada; reconciliação de 15 tópicos/52 seções, demais 48 intactas. 24 verificações visuais, seis testes de interação do mapa e três controles maliciosos. Informática parcial: 13/52 seções; 39 seções e três lacunas pendentes. Evidências em docs/revisoes-resumos/39-informatica-ameacas-06-09-20261123; commit editorial local 250cf16.
+
 ## 2026-11-23 — Informática: Ameaças Virtuais 01–05
 
 - Cinco seções e três callouts revisados e publicados: intranet, taxonomia, vírus/worm/trojan, phishing/pharming, bots, antivírus e antispyware. IDs, títulos e ordem preservados; seções 06–09 e lotes anteriores não reaplicados.

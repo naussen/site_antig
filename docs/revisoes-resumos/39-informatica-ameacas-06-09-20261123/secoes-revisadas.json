@@ -1,0 +1,80 @@
+[
+  {
+    "section_id": "ameacas-virtuais-sec-06",
+    "content_unit_id": "c11148fd-e75c-447f-9dd4-f7e889fd1935",
+    "stable_key": "firewall",
+    "topic_id": "ameacas-virtuais",
+    "title": "Firewall",
+    "sort_order": 5,
+    "content_markdown": "O firewall aplica uma política de segurança ao tráfego que passa pelo seu ponto de controle. Pode funcionar no próprio dispositivo ou entre redes, inclusive entre segmentos internos. É implementado por software, frequentemente executado em equipamento dedicado; não é restrito a um único formato físico.\r\n\r\nAs regras podem considerar endereços IP, protocolos, portas, estado das conexões e, conforme a solução, aplicações. Não se limitam a portas TCP: também podem tratar UDP, ICMP e outros tráfegos.\r\n\r\nA política deve definir permissões e bloqueios de entrada e de saída conforme os serviços necessários e os riscos. Liberar toda saída não é recomendação universal: pode permitir exfiltração de dados e comunicação de malware com seu controlador.\r\n\r\n### Limites\r\n\r\nO firewall não oferece garantia geral contra DDoS: um ataque pode saturar a conexão antes de alcançar o equipamento. A mitigação pode exigir ações no provedor e outros mecanismos. Também não substitui antimalware, atualizações e autenticação.\r\n\r\nEle pode ajudar a conter tráfego malicioso interno se estiver no caminho desse tráfego. Não inspeciona automaticamente comunicações que não o atravessam. Não há garantia de detectar um sniffer passivo apenas por ele existir; a detecção depende de sinais observáveis e das ferramentas disponíveis.",
+    "callouts": [
+      {
+        "title": "Política e alcance",
+        "type": "warning",
+        "text": "O firewall pode controlar tráfego de entrada, de saída e interno que atravesse seu ponto de inspeção. Não garante impedir todo DDoS, malware ou ataque interno."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "254f36b8-6b6a-438b-b9a9-bccc6d50eb17"
+  },
+  {
+    "section_id": "ameacas-virtuais-sec-07",
+    "content_unit_id": "a28eeb4c-d716-4581-a031-eb40241154ba",
+    "stable_key": "proxy",
+    "topic_id": "ameacas-virtuais",
+    "title": "Proxy",
+    "sort_order": 6,
+    "content_markdown": "Um proxy intermedeia comunicações. No proxy de encaminhamento (forward proxy), o cliente envia uma requisição ao intermediário, que a encaminha ao servidor de destino e devolve a resposta. Esse é um modo de acesso; nem toda navegação pela Internet passa por um proxy configurado pelo usuário ou pela organização.\r\n\r\nConforme a implementação, o proxy pode autenticar usuários, aplicar regras de acesso, registrar requisições e manter cache. Essas funções não são exclusivas dele: firewalls também aplicam políticas e podem incluir controles de aplicação.\r\n\r\nUm proxy reverso atua diante dos servidores, recebendo requisições dos clientes e encaminhando-as aos serviços internos. Pode apoiar distribuição de carga e cache. A distinção é o papel do intermediário; “proxy” não significa apenas controlar o comportamento de usuários de uma rede local.\r\n\r\nProxy e firewall são mecanismos complementares e podem coexistir na mesma solução. Não se deve concluir que proxy sempre faz filtragem de conteúdo nem que firewall só filtra portas TCP.",
+    "callouts": [
+      {
+        "title": "Proxy e firewall",
+        "type": "info",
+        "text": "Proxy intermedeia comunicações; firewall aplica política ao tráfego. Suas funções podem se sobrepor em produtos integrados. Nenhum deles se resume a uma regra exclusiva de comportamento ou a portas TCP."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "bf005052-6727-4244-a20a-3f5b37beb8f4"
+  },
+  {
+    "section_id": "ameacas-virtuais-sec-08",
+    "content_unit_id": "752dde30-7c2b-425b-a9f4-79f1ebd5a8a9",
+    "stable_key": "vpn-virtual-private-network",
+    "topic_id": "ameacas-virtuais",
+    "title": "VPN (Virtual Private Network)",
+    "sort_order": 7,
+    "content_markdown": "Uma VPN (Virtual Private Network, rede privada virtual) estabelece conectividade lógica sobre outra infraestrutura, frequentemente a Internet. Pode conectar unidades de uma organização ou permitir acesso remoto. O custo depende da implantação; não é necessariamente menor em todo cenário.\r\n\r\nNas VPNs com proteção criptográfica, autenticação e criptografia protegem o tráfego encaminhado entre os extremos do túnel, conforme o protocolo e a configuração. Tunelamento, por si só, não garante criptografia adequada. IKEv2/IPsec e soluções baseadas em TLS são exemplos atuais; PPTP é legado e não deve ser apresentado como referência de segurança recomendada.\r\n\r\n### Túnel completo e dividido\r\n\r\n- **Completo:** a rota padrão pode encaminhar o tráfego pela VPN, respeitadas as rotas e exceções configuradas.\r\n- **Dividido (split tunnel):** apenas os destinos ou fluxos selecionados passam pela VPN; os demais usam outra interface.\r\n\r\nA proteção do túnel não abrange automaticamente todo dado do dispositivo nem o percurso após a saída da VPN. HTTPS continua importante para proteger a comunicação com o serviço de destino.\r\n\r\nVPN não é garantia de anonimato. O provedor da conexão pode observar a ligação ao servidor VPN, e o operador da VPN passa a ocupar posição relevante de confiança. Contas, cookies e dispositivos comprometidos podem permitir identificação ou exposição de dados, mesmo com a VPN ativa.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "553212c0-5870-400d-a508-26ccc9e26558"
+  },
+  {
+    "section_id": "ameacas-virtuais-sec-09",
+    "content_unit_id": "10fafd57-f569-414f-8c07-b2035257e487",
+    "stable_key": "sistemas-ids-e-ips",
+    "topic_id": "ameacas-virtuais",
+    "title": "Sistemas IDS e IPS",
+    "sort_order": 8,
+    "content_markdown": "IDS e IPS distinguem-se principalmente pela função de detecção e pela capacidade de prevenção:\r\n\r\n- **IDS — Sistema de Detecção de Intrusão:** monitora tráfego ou eventos para identificar indícios de atividade suspeita, registrar e alertar. Um alerta não prova, sozinho, que uma intrusão ocorreu. Em uma implantação passiva de rede, o sensor observa cópias do tráfego; pode acionar respostas integradas a outros mecanismos, sem estar diretamente no caminho dos pacotes.\r\n- **IPS — Sistema de Prevenção de Intrusão:** além de detectar, pode tentar interromper ou bloquear atividade suspeita. Um IPS de rede normalmente atua em linha (inline), podendo descartar pacotes ou interromper conexões. A prevenção não garante bloquear todo ataque.\r\n\r\nHá soluções de rede e de host. Ambas dependem de visibilidade, regras e ajuste: falso positivo é atividade legítima sinalizada como suspeita; falso negativo é ameaça não identificada. Tráfego cifrado e posicionamento dos sensores podem limitar o que é observado.\r\n\r\nDetectar e prevenir não são sinônimos de funcionamento perfeito. Os alertas e bloqueios precisam ser analisados, inclusive para corrigir regras que afetem tráfego legítimo.",
+    "callouts": [
+      {
+        "title": "Detecção não é certeza",
+        "type": "warning",
+        "text": "IDS prioriza registro e alerta; IPS pode bloquear. Ambos podem gerar falsos positivos e falsos negativos, e respostas integradas não tornam todo IDS estritamente passivo."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "flowchart TD\n A[Monitoramento] --> B[IDS: registra e alerta]\n A --> C[IPS: detecta e pode bloquear]\n B --> D[Analisar evidências e ajustar]\n C --> D\n class A readableRoot;\n class B,C readableItem;\n class D readableProcess;",
+    "archived_at": null,
+    "current_revision_id": "3fc84fa9-ca78-4974-9e02-971e35b10ff4"
+  }
+]
