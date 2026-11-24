@@ -1,0 +1,107 @@
+[
+  {
+    "section_id": "banco-de-dados-sec-01",
+    "content_unit_id": "f65c8dde-bcb4-4c10-b119-206fcd1b3efe",
+    "stable_key": "banco-de-dados-e-sgbd",
+    "topic_id": "banco-de-dados",
+    "title": "Banco de dados e Sgbd",
+    "sort_order": 0,
+    "content_markdown": "### Banco de Dados (BD)\nÉ uma coleção organizada de dados relacionados, com coerência lógica e finalidade definida para atender às necessidades de seus usuários.\n\n#### Propriedades de transações (ACID)\nUma **transação** reúne operações tratadas como uma unidade de trabalho. ACID descreve propriedades transacionais, não uma definição obrigatória de qualquer coleção de dados:\n\n* **Atomicidade:** os efeitos da transação são confirmados em conjunto ou desfeitos em caso de abortamento: “tudo ou nada”. Isso não impede etapas internas durante sua execução.\n* **Consistência:** uma transação corretamente definida preserva as regras de integridade, levando o banco de um estado válido a outro. O SGBD verifica as restrições declaradas; não deduz sozinho todas as regras do negócio nem garante que dados sejam verdadeiros no mundo real.\n* **Isolamento:** controla os efeitos e a visibilidade entre transações concorrentes. As garantias dependem do nível de isolamento; nem todo nível equivale à execução serial. Isolamento não significa proibir a execução simultânea de transações.\n* **Durabilidade:** após a confirmação, os efeitos persistem conforme as garantias e a configuração de persistência do sistema, inclusive diante das falhas cobertas por seus mecanismos de recuperação. Outra transação pode modificar esses dados ou compensar uma operação; durabilidade não os torna imutáveis nem substitui backup.\n\n### SGBD (Sistema Gerenciador de Banco de Dados)\nÉ o software ou conjunto de softwares que permite definir estruturas, armazenar, consultar e modificar dados, além de oferecer recursos de administração, segurança e recuperação. Exemplos: Oracle Database, SQL Server, IBM Db2, PostgreSQL, MySQL e Access.\n\nO SGBD gerencia dados e **metadados**, isto é, descrições sobre os dados: nomes de tabelas e colunas, tipos e restrições. A definição de uma coluna como inteira, por exemplo, não impõe automaticamente que seus valores sejam não negativos; essa regra precisa ser especificada.\n\n### Sistema de Banco de Dados (SBD)\nAbrange o banco de dados, o SGBD e o ambiente que os utiliza, incluindo aplicações, hardware, usuários e procedimentos. BD e SGBD formam seu núcleo; a soma “SGBD + BD” é uma simplificação que não enumera todos esses componentes.\n\n### Dicionário de Dados\nÉ uma coleção de metadados sobre os elementos e estruturas do banco. Pode ser disponibilizado por catálogos e visões do sistema, com informações como nomes, tipos, relacionamentos e restrições.\n\nNão se deve defini-lo universalmente como um conjunto de tabelas somente de leitura. Operações de definição de estruturas atualizam os metadados pelos mecanismos controlados do SGBD; não se recomenda editar diretamente seus catálogos. Regras específicas, como nota entre 0 e 10, dependem de sua declaração e implementação.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Metadados",
+        "text": "Metadados descrevem estruturas, tipos e restrições. Uma coluna inteira não é automaticamente não negativa: essa regra precisa ser declarada."
+      }
+    ],
+    "mnemonics": [
+      {
+        "key": "ACID",
+        "meaning": "Atomicidade, Consistência, Isolamento e Durabilidade",
+        "description": "Os quatro requisitos fundamentais para garantir a confiabilidade das transações em um banco de dados."
+      }
+    ],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "bbdcf31e-9664-4bfd-80d3-1ccbaaf7489a"
+  },
+  {
+    "section_id": "banco-de-dados-sec-02",
+    "content_unit_id": "51b4311b-d9de-452b-9e33-c34dc7b2811a",
+    "stable_key": "nivel-de-abstracao-de-dados",
+    "topic_id": "banco-de-dados",
+    "title": "Nível de abstração de dados",
+    "sort_order": 1,
+    "content_markdown": "A arquitetura de **três esquemas** distingue níveis de descrição do banco de dados:\n\n* **Externo (visões dos usuários):** o nível mais alto de abstração. Descreve recortes dos dados adequados a usuários ou aplicações. Pode haver vários esquemas externos; “visão” aqui é um conceito arquitetural, não apenas o comando SQL de criação de uma view.\n* **Conceitual (lógico global):** descreve os dados, seus relacionamentos e restrições para o banco como um todo, sem detalhar sua organização física.\n* **Interno (físico):** descreve como os dados são armazenados e acessados, incluindo organização de arquivos e estruturas de acesso.\n\n### Independência de dados\nÉ a capacidade de alterar a descrição de um nível sem exigir mudanças no nível superior protegido pela abstração:\n\n* **Independência física:** mudanças no esquema interno sem exigir alteração do esquema conceitual. Exemplo: reorganizar arquivos ou acrescentar uma estrutura de acesso preservando a descrição lógica dos dados.\n* **Independência lógica:** mudanças no esquema conceitual sem exigir alteração dos esquemas externos e das aplicações que dependem deles, desde que seus contratos sejam preservados. Exemplo: acrescentar um atributo sem modificar uma visão que continua expondo os mesmos dados.\n\nOs mapeamentos entre níveis podem precisar de ajustes. Independência é um objetivo da arquitetura, não uma promessa de que qualquer alteração será transparente a todas as aplicações. Esses três esquemas não devem ser confundidos automaticamente com as etapas de modelagem conceitual, lógica e física.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Independência de dados",
+        "text": "Física: alterar o esquema interno preservando o conceitual. Lógica: alterar o conceitual preservando os esquemas externos e aplicações protegidos pela abstração. Mapeamentos podem precisar de ajustes."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "460864d9-a1cd-4d8c-a2c3-707bca6fe5c5"
+  },
+  {
+    "section_id": "banco-de-dados-sec-03",
+    "content_unit_id": "0d7dd848-7cd3-4660-8a3a-ebe67291aebc",
+    "stable_key": "modelagem-de-dados",
+    "topic_id": "banco-de-dados",
+    "title": "Modelagem de dados",
+    "sort_order": 2,
+    "content_markdown": "### Modelos conceitual, lógico e físico\n\n* **Conceitual:** representa o domínio e suas regras em alto nível, sem compromisso com um SGBD específico. Identifica entidades, relacionamentos e características relevantes; diagramas são uma forma usual de representação, não uma exigência de ferramenta.\n* **Lógico:** detalha as estruturas segundo o modelo de dados escolhido. No modelo relacional, especifica relações/tabelas, atributos, chaves e restrições. Não exige um produto SGBD específico nem ferramenta CASE; ferramentas podem auxiliar o trabalho.\n* **Físico:** traduz o projeto para a implementação no SGBD escolhido, detalhando tipos concretos, índices, organização de armazenamento e outras decisões técnicas. Nomes de colunas e tipos podem ser discutidos antes; sua presença isolada não define esta etapa.\n\nA terminologia e o detalhamento variam entre métodos e ferramentas. Aqui, a distinção central é entre domínio, estrutura lógica e implementação.\n\n### Modelagem Entidade-Relacionamento (MER)\nO modelo ER é uma representação conceitual de entidades, atributos, relacionamentos e restrições. Ele não se confunde com o modelo relacional: um projeto ER pode ser mapeado para tabelas, mas o diagrama não descreve por si só o armazenamento físico.\n\n* **Entidade:** algo relevante do domínio sobre o qual se registram dados. Cliente, Produto, Venda e Turma são exemplos usuais de tipos de entidade; um cliente específico é uma ocorrência.\n* **Entidade fraca:** na acepção clássica do modelo ER, não tem identificação completa independente da entidade proprietária. Sua identificação combina a chave da proprietária com um discriminador ou chave parcial. A participação no relacionamento identificador é obrigatória.\n\nExemplo: se o número de um item só é único dentro de um pedido, o item pode ser identificado por “número do pedido + número do item”. A dependência de existência, sozinha, não basta para caracterizar toda entidade fraca.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Níveis de modelagem",
+        "text": "Conceitual descreve o domínio; lógico detalha o modelo de dados; físico trata da implementação no SGBD. Ferramenta CASE não é requisito obrigatório."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "6a5526d3-97fe-4e45-bae7-7dd04e585498"
+  },
+  {
+    "section_id": "banco-de-dados-sec-04",
+    "content_unit_id": "42484533-b561-4bae-bb93-34df2f929558",
+    "stable_key": "tabela",
+    "topic_id": "banco-de-dados",
+    "title": "Tabela",
+    "sort_order": 3,
+    "content_markdown": "No modelo relacional, os dados são representados por **relações**. Uma tabela SQL é uma representação prática organizada em linhas e colunas: as linhas representam registros e as colunas descrevem atributos.\n\nUma tabela armazena os dados previstos no projeto, não necessariamente todas as informações sobre um objeto do mundo real. Um assunto pode ser distribuído entre várias tabelas relacionadas.\n\n**Relação do modelo relacional** não é sinônimo de **relacionamento do modelo ER**. O modelo ER é uma abstração conceitual que pode ser transformada em um projeto relacional.\n\nA relação matemática é um conjunto de tuplas, sem repetição de tuplas nem ordem intrínseca. Tabelas SQL podem admitir linhas repetidas se não houver restrições que as impeçam. A ordem de apresentação das linhas também não é garantida: em uma consulta SQL, é necessário especificar a ordenação quando ela for relevante.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "677c7a96-2201-446d-ae53-7e7fb3ba7b26"
+  },
+  {
+    "section_id": "banco-de-dados-sec-05",
+    "content_unit_id": "43f416c7-e1e9-476a-9a6b-2ce3367351f9",
+    "stable_key": "atributo-campo",
+    "topic_id": "banco-de-dados",
+    "title": "Atributo / Campo",
+    "sort_order": 4,
+    "content_markdown": "No modelo ER, um **atributo** descreve uma característica de uma entidade ou de um relacionamento. No projeto relacional, atributos são representados por colunas; o valor de uma coluna em uma linha é uma ocorrência desse atributo. Tipo, domínio e restrições delimitam os valores admitidos.\n\n`NULL` representa a ausência de um valor conhecido ou aplicável, conforme o contexto. Não deve ser definido genericamente como “valor vazio”; sua admissão depende das restrições.\n\n### Classificação de atributos\n* **Simples ou atômicos:** não são subdivididos em componentes significativos no modelo adotado. Exemplo: um código tratado como unidade.\n* **Compostos:** podem ser decompostos em componentes relevantes. Um endereço pode ser modelado com rua, número e bairro, mas não é obrigatoriamente composto em todo projeto.\n* **Monovalorados:** têm no máximo um valor para cada ocorrência da entidade, conforme as regras do domínio. Exemplo: uma data de nascimento registrada por pessoa.\n* **Multivalorados:** admitem vários valores para uma mesma ocorrência. Exemplo: telefones de uma pessoa quando o modelo aceita mais de um.\n\nComposição e quantidade de valores são critérios distintos: um atributo pode ser composto e monovalorado, ou composto e multivalorado. Não se conclui que endereço seja sempre multivalorado.\n\n### Chave primária (PK — Primary Key)\nÉ a chave escolhida para identificar unicamente cada linha. Há **no máximo uma chave primária por tabela**, que pode conter uma coluna ou várias colunas; neste último caso, é composta. Todos os seus componentes são não nulos, e a combinação de valores deve ser única.\n\nExemplo: em uma tabela de apartamentos de um único condomínio, “bloco + número do apartamento” pode ser uma PK composta, se identificar cada apartamento sem repetição. Isso não significa duas chaves primárias.\n\nNão existe regra geral de posicionar uma PK em um losango quando ela se aplica a duas entidades. A representação depende da notação ER e da estrutura modelada.\n\n### Chave candidata e chave alternativa\nUma chave candidata é um **conjunto mínimo de atributos** que identifica unicamente cada tupla: nenhum subconjunto próprio mantém essa identificação. Uma candidata é escolhida como primária; as demais são alternativas.\n\nSe CPF e código do funcionário forem, cada um, obrigatórios e únicos pelas regras do cadastro, ambos podem ser candidatos. Escolhido o código como PK, o CPF será uma chave alternativa. Um identificador não se torna chave apenas por seu nome.\n\n### Chave estrangeira (FK — Foreign Key)\nÉ uma coluna ou conjunto de colunas cujos valores devem corresponder a uma chave referenciada admitida pelo SGBD, geralmente uma PK ou uma chave com unicidade apropriada. Pode apontar para outra tabela ou para a própria tabela.\n\nA FK implementa integridade referencial; não é necessariamente única na tabela que referencia. Pode admitir `NULL`, conforme as restrições. Exemplo: várias linhas de pedidos podem referenciar o mesmo cliente.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Chave primária composta",
+        "text": "Uma tabela tem no máximo uma PK. Ela pode reunir várias colunas, todas não nulas, com combinação única. Várias colunas na PK não significam várias chaves primárias."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "811cbfc5-a8c7-4d29-8fe8-8f553ff7ce24"
+  }
+]

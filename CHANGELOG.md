@@ -1,5 +1,10 @@
 # Changelog
 
+## 23/11/2026 — Revisão de Banco de Dados 01–05
+
+- Publicadas cinco seções: corrigidos ACID, metadados, independência, modelagem, entidade fraca, tabelas, atributos e chaves. Quatro callouts alinhados; ACID e identidades preservados.
+- Pré-imagem, dry-run, rollback e proteção por revisão esperada; reconciliação integral 15/52 e outras 47 revisões intactas. Trinta verificações visuais. Cobertura 27/52; Banco de Dados 5/14. Restam 25 seções e três lacunas. Evidências em `docs/revisoes-resumos/39-informatica-banco-01-05-20261123/`. Sem alteração de código da aplicação.
+
 ## 23/11/2026 — Revisão de Teoria da Informação
 
 - Publicada uma seção com callout revisado e mapa preservado. Corrigidas classificação de dados e generalizações sobre informação/conhecimento/inteligência, sem reaplicar lotes anteriores.
