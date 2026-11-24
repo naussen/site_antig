@@ -1,0 +1,706 @@
+# 39 — Informática
+
+## Checkpoint vigente — 24/11/2026 — Três pacotes de lacuna publicados
+
+Escopo exclusivo: uma seção de cada pacote de Sistemas Operacionais, Ferramentas de Escritório e Conceitos de Internet/Navegadores/Pesquisa. **Três seções**, três callouts, três mnemônicos, três mapas e sete tabelas examinados integralmente; nenhum cartão. Mantidos `section_id`, `content_unit_id`, `stable_key`, título e ordem propostos. Preservados os títulos e a ordenação atuais dos três tópicos no catálogo, que diferiam dos títulos dos pacotes.
+
+**Publicação: zero updates e três inserts.** As 52 seções anteriores, incluindo todos os lotes publicados, não foram reaplicadas. Acervo passou de 52 para **55 seções**, com cobertura **55/55 seções existentes** e 14 tópicos com conteúdo revisado. Os três pacotes deixam de estar pendentes/dry-run. Informática permanece **parcial**: o catálogo contém 15 tópicos e ainda há um vazio, `redes-de-computadores-e-conectividade` (“Redes de Computadores e Conectividade”), fora destes pacotes. Não foi confundido com `redes-de-computadores`, já revisado/publicado, nem preenchido/arquivado/renomeado por suposição. Essa divergência só foi constatada no inventário, sem iniciar revisão de outra frente ou próximo lote.
+
+### Achados e correções
+
+| Pacote / seção 01 | Decisão aplicada |
+| --- | --- |
+| Sistemas Operacionais | NTFS/EFS separados de BitLocker; journaling não garante recuperar conteúdo nem substitui backup. Nomes proibidos e reservados contextualizados; diferença de caixa não é regra absoluta de Windows/Linux. Lixeira, arrastar e exclusão qualificados conforme contexto; exclusão não equivale a apagamento seguro. Atalhos contextualizados e encerramento do suporte geral do Windows 10 datado. Kernel/distribuição/shell separados; prompt não prova privilégio. FHS e links para /usr qualificados; permissões 750, x em diretório, sudo e sinais corrigidos. Callout/mnemônico alinhados; mapa compactado. |
+| Ferramentas de Escritório | OOXML também é padronizado; licença da suíte não se confunde com abertura do formato. Formatos usuais, macros/modelos e limitações de compatibilidade explicitados. Atalhos dependem de idioma/versão/configuração; retiradas afirmações universais diante de divergências na própria ajuda localizada do Word. Referências absolutas fixam na cópia, não impedem mudanças estruturais. Ponto e vírgula não é união universal; Calc documenta ~. Precedência explicada com parênteses. Funções, MED/MÉDIA, posição k e PROCX contextualizados; retirada imunidade a inserção de colunas. Mnemônico incorreto substituído e callout numérico conferido. |
+| Internet/Navegadores/Pesquisa | URL passou de formato supostamente canônico a exemplo; host/caminho/DNS qualificados. Query não determina GET e fragmento não integra alvo HTTP. Cookies/cache e limites da navegação privada corrigidos; downloads/favoritos podem permanecer. Atalhos restritos ao desktop Windows e navegação comum quando cabível. Operadores Google atuais separados de suporte universal em Google/Bing; retirados OR/barra vertical, intitle/inurl e related como lista garantida, sem negar toda existência histórica. Busca por tipo não equiparada universalmente a ext:. Callout/mnemônico alinhados e mapa simplificado. |
+
+Fontes originais: três JSONs de `orquestracao-03-54/adicoes/39-informatica--*.json`, apenas os nomes correspondentes aos três tópicos acima. Proposta ampla não rastreada serviu como contexto, não como prova de publicação ou autorização de reaplicar os outros lotes.
+
+### Fontes primárias conferidas em 24/11/2026
+
+Trechos pertinentes consultados, sem declarar leitura integral ou execução de todos os aplicativos. Atalhos não foram certificados em instalações locais de Office/LibreOffice.
+
+- Windows: [Case sensitivity](https://learn.microsoft.com/en-us/windows/wsl/case-sensitivity), [Naming Files](https://learn.microsoft.com/en-us/windows/win32/fileio/naming-a-file), [BitLocker](https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/), [EFS](https://learn.microsoft.com/en-us/windows/win32/fileio/file-encryption), [atalhos Windows](https://support.microsoft.com/en-us/accessibility/windows/keyboard-shortcuts-in-windows) e [fim do suporte geral Windows 10](https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/windows-10-support-has-ended-on-october-14-2025). Avisos genéricos de autorização do Learn não impediram leitura textual das páginas pertinentes. Não foi universalizada a data para todas as edições/programas estendidos.
+- Linux: manuais de projeto reproduzidos no man7, [chmod GNU](https://man7.org/linux/man-pages/man1/chmod.1.html), [kill](https://man7.org/linux/man-pages/man1/kill.1.html), [hierarquia](https://man7.org/linux/man-pages/man7/hier.7.html) e [Bash](https://man7.org/linux/man-pages/man1/bash.1.html). Acesso direto a páginas GNU teve timeout/429, página FHS teve bloqueio Anubis e sudo.ws bloqueou robô; não declarados como leituras integrais válidas. Hierarquia apresentada como referência sujeita à distribuição, não configuração obrigatória de toda máquina.
+- Escritório: [atalhos Word PT-BR](https://support.microsoft.com/pt-br/accessibility/word/keyboard-shortcuts-in-word), [atalhos gerais LibreOffice](https://help.libreoffice.org/latest/pt-BR/text/shared/04/01010000.html), [Writer](https://help.libreoffice.org/latest/pt-BR/text/swriter/04/01020000.html?DbPAR=WRITER), [operadores Calc](https://help.libreoffice.org/latest/pt-BR/text/scalc/01/04060199.html), [estatísticas/mediana Calc](https://help.libreoffice.org/latest/pt-BR/text/scalc/01/04060184.html), [referências relativas/absolutas](https://help.libreoffice.org/latest/pt/text/scalc/guide/relativ_absolut_ref.html), [funções estatísticas Excel](https://support.microsoft.com/pt-br/excel/statistical-functions-reference) e [PROCX](https://support.microsoft.com/pt-br/excel/functions/xlookup-function). Ajuda LibreOffice consultada identificava 26.8. Word localizado lista Ctrl+A tanto para abrir quanto para selecionar tudo em trechos diferentes e traz divergências de alinhamento; não foi fabricada uma tabela única “universal” para encobrir isso. A disponibilidade de PROCX foi lida na nota que exclui Excel 2016/2019, sem confiar só no cabeçalho “aplica-se a”.
+- Navegação/pesquisa: [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986.html), especialmente componentes e fragmento; [modo anônimo Chrome](https://support.google.com/chrome/answer/95464?hl=en), [atalhos Chrome](https://support.google.com/chrome/answer/157179?hl=en), [Edge](https://support.microsoft.com/en-us/edge/keyboard-shortcuts-in-microsoft-edge), [Firefox](https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly), [refinamento Google](https://support.google.com/websearch/answer/2466433) e [operadores Search Central](https://developers.google.com/search/docs/monitor-debug/search-operators). Sem executar buscas com dados pessoais nem garantir resultados completos por site:.
+
+Limites: comportamentos dependem da versão, localidade, sistema de arquivos, aplicativo e política. O material conserva foco de concurso e explicita os contextos, sem ampliar funcionalidades ou modificar configurações do computador.
+
+### Preparação, publicação e reconciliação
+
+**Versão publicada:** `orquestracao-03-54/saneamento-onda-7/39-informatica/lacunas-20261124-v3/`; executor `../lacunas-lote.mjs`. SHA-256: `94caa1be372a258ee7b0a52c664c0a536db3085f87319a1b9d30406a02446c70`.
+
+- Pré-imagem completa atual de 15 tópicos/52 seções preservada, paridade inicial com Transformação Digital e conferência adicional imediatamente antes da escrita. Três tópicos confirmados sem seção ativa ou arquivada; identidades propostas sem uso. Unicidades de unidade e chave estável conferidas no mecanismo existente de migrations, sem alterá-lo.
+- CLI recusou `--preserve-flashcards` por exigir seções já existentes. Usado o **modo normal de adição**, sem afrouxar validação; dry-run final aprovado para três tópicos/três seções. Não há cartões nos pacotes.
+- SQL de adição reutiliza transação existente, com **FOR UPDATE nos três tópicos**, comparação dos metadados esperados, exigência de continuarem vazios e constraints de unicidade das identidades. Zero updates, três inserts; catálogo não reescrito. Ensaio final com rollback aprovado. Dois ensaios negativos bloquearam catálogo divergente (v1) e tópico ocupado (v2), ambos desfeitos; proteção idêntica reaproveitada na v3, cuja diferença é só o tamanho da URL no conteúdo.
+- Publicação atômica somente da v3. Sem schema, segurança, aplicação, dependências, credenciais ou dados pessoais alterados. Consulta posterior confirmou novas revisões nas três seções.
+- Reconciliação remota integral aprovada: **15 tópicos/55 seções**, sem ausentes, extras ou divergências. As **52 revisões anteriores** e respectivos conteúdos preservados por asserção explícita. `target: preimagem` compara o estado esperado com as adições, não indica rollback.
+- **18 combinações visuais finais válidas:** três seções × Light/Dark/Sepia × 375/1200 px; 12 verificações da v2 reaproveitadas por igualdade integral das primeiras duas seções e seis da terceira refeitas na v3. **21 checagens de tabela no celular** e **18 interações de mapa** (zoom/restauração/overlay) incluídas. Três callouts e mnemônicos renderizados. Capturas representativas dos três temas, seções e tamanhos inspecionadas.
+- V1/v2 preservadas como preparação **não publicada**. Inspeção da ajuda Word motivou ressalvas adicionais na v2; o URL longo da terceira seção causava 11 px de overflow no celular em ambos os ensaios. A v3 encurtou exclusivamente esse exemplo; seis verificações refeitas sem overflow global/erro KaTeX. Composição e origem do aceite constam de `render-visual.json`; não se declara que todo o ensaio da v2 passou.
+- Três mapas aprovados pelo validador compartilhado e três controles maliciosos rejeitados na preparação final. **49/49 testes de conteúdo executados na v1**, reaproveitados por aplicação/validadores inalterados, com log copiado. Conferidos os cálculos de mediana, média exata, potências, contagem de intervalos e exemplo 750; isso não equivale a executar Excel/Calc. Sintaxe do executor, JSON, payload SQL e diff conferidos.
+- Harness com componentes reais/CSS de `questoes-experiencia-20261122`, sem certificação de navegação autenticada integral. Conta de aluno dispensada. Sem lint/build/audit/auth globais porque aplicação/dependências/segurança não mudaram. Falha local inicial de caminho relativo do executor corrigida antes de gerar pré-imagem/SQL; nenhuma escrita derivou dessa tentativa.
+
+Reprodução: CLI `import-batch <pasta v3/import> --dry-run` (sem preserve-flashcards); `node <pasta v3/validar-visual.cjs> <pasta v3/render.json>` refaz as 18 combinações. Recibos, pré-imagens e capturas preservados. Não reaplicar SQL concluído.
+
+Próximo prompt: “Diagnostique somente o tópico vazio Redes de Computadores e Conectividade, conforme relatório 39, sem duplicar ou reaplicar Redes já publicado. Registre a decisão e pare.”
+
+---
+
+## Checkpoint anterior — 24/11/2026 — Transformação Digital 01–03 publicadas
+
+Escopo exclusivo: `transformacao-digital-sec-01` a `transformacao-digital-sec-03`, examinadas integralmente, com um callout, uma tabela e um mapa. Sem cartões ou mnemônicos. Identidades, títulos e ordem preservados. Alterações restritas ao Markdown, callout e mapa 01. Nenhum lote anterior reaplicado.
+
+Cobertura acumulada: **52/52 seções existentes**, onze tópicos integrais com conteúdo. Transformação Digital **3/3** examinada neste lote. Restam **três pacotes de lacuna em dry-run**, não aplicados; Informática permanece **parcial**, sem declarar todos os 15 tópicos ou a disciplina concluídos. Próximo lote não iniciado.
+
+### Achados e correções
+
+| Seção | Decisão aplicada |
+| --- | --- |
+| 01 — Internet das Coisas | Incluídos atuadores e variedade de capacidades. Retirada exigência de IP próprio/acesso direto à internet pública; gateways e tecnologias não IP contextualizados. Corrigido “differentes”. Benefício energético qualificado. Callout deixou de atribuir ataques à “inteligência” ou ao IP e de confundir SSO, movimento entre sistemas e elevação de privilégios. Mapa deixou de fazer sensores derivarem de coleta e de ligar IP automaticamente a ataque; agora ilustra comunicação de dados/comandos, sem impor arquitetura única. |
+| 02 — Big Data | Definição ligada a características/requisitos e escalabilidade, sem limiar fixo ou impossibilidade universal dos bancos tradicionais. Incluídos semiestruturados e limites de qualidade/valor. Removida falsa equação “transações + interações + observações”, mantida a ideia de origens em prosa. BI não tratado como fonte obrigatória. Cinco Vs apresentados como classificação didática, com outras taxonomias; unidades GB/TB/PB corrigidas, velocidade não obriga tempo real. MapReduce não elimina gargalos; Hadoop separado em HDFS/YARN/MapReduce, sem confundir código aberto com operação sem custos ou solução única. |
+| 03 — Inteligência Artificial | Definição por entradas, objetivos e saídas, sem acerto/aprendizado contínuo ou simulação da mente obrigatórios. Tabela preservada e corrigida: sentido filosófico de forte/fraca separado do uso por abrangência; IA estreita não limitada a palavras-chave/regras fixas. Geração de poesia/música não prova sentimentos ou consciência; capacidade geral, consciência e julgamento moral são questões distintas. Acrescentados limites de IA generativa, erros, vieses e proteção de dados. |
+
+A proposta ampla não rastreada foi consultada somente nestas três seções; tinha correções parciais, mas preservava generalizações em Big Data e substituía o comparativo de IA por outra tabela. Foi usada apenas como diagnóstico. Nenhum pacote de lacuna ou conteúdo de outra frente foi revisado/aplicado neste lote.
+
+### Fontes primárias conferidas em 24/11/2026
+
+Consultados trechos pertinentes, sem declarar leitura integral de todos os documentos. Referências históricas fundamentam conceitos; não são novidades de 2026.
+
+- [NISTIR 8228 — texto oficial, junho/2019](https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8228.pdf), especialmente capacidades de transdução/rede e riscos: sensores/atuadores, interfaces, segurança e privacidade. [RFC 7452, seção 2.3, março/2015](https://www.rfc-editor.org/rfc/rfc7452.html#section-2.3): comunicação via gateway e dispositivos não IP. RFC informativa, não imposição de arquitetura universal.
+- [NIST SP 1500-1r2 — Definitions, outubro/2019](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1500-1r2.pdf), seções 3 e 5: escala, volume, variedade, velocidade, variabilidade e outras características. Documento da série 1500 registra perspectivas do grupo de trabalho; não foi tratado como lei ou taxonomia exclusiva. [Google Cloud — What is Big Data](https://cloud.google.com/learn/what-is-big-data): dados semiestruturados e Vs adicionais. Conteúdo conceitual aproveitado, sem copiar promessas comerciais de benefícios.
+- [Apache Hadoop — projeto e módulos](https://hadoop.apache.org/), [documentação current](https://hadoop.apache.org/docs/current/) e [MapReduce Tutorial](https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html): HDFS, YARN, MapReduce e processamento distribuído, inclusive divisão lógica e custos de memória/disco no shuffle. A documentação consultada identificava versão 3.5.0; nenhuma versão foi instalada ou fixada no resumo.
+- [OECD.AI — definição atualizada e explicação, 06/03/2024](https://oecd.ai/en/wonk/definition): entradas, objetivos explícitos/implícitos, saídas, aprendizagem e abordagens baseadas em conhecimento; adaptação após implantação varia. Não atribuída capacidade de aprender durante todo uso.
+- [Searle — Minds, Brains, and Programs (1980), reprodução do manuscrito](https://www.cs.uky.edu/~sgware/reading/papers/searle1980minds.pdf), página 2 do PDF: sentido filosófico forte/fraco. A cópia declara versão prévia e erros de OCR; consultada a distinção, sem transformar a tese filosófica do autor em consenso experimental.
+- [Butlin et al. — Consciousness in Artificial Intelligence (2023), resumo original](https://arxiv.org/abs/2308.08708): avaliação por indicadores derivados de teorias de consciência. Usado para separar debate científico e simples desempenho comportamental; não universalizada a avaliação de sistemas de 2023 como veredito sobre todos os modelos de 2026. [NIST AI 600-1 — Generative AI Profile, julho/2024](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf), riscos de confabulação, vieses e antropomorfização: geração de conteúdo não garante verdade nem demonstra consciência.
+
+Limitações: forte/fraca e número de Vs variam por referência/edital. O texto distingue sentidos e não resolve por afirmação categórica o debate sobre consciência. Não foram feitas recomendações comerciais, configuração de dispositivos ou alterações de segurança da aplicação.
+
+### Publicação e verificação
+
+Evidências: `orquestracao-03-54/saneamento-onda-7/39-informatica/digital-01-03-20261124/`; executor `../digital-01-03-lote.mjs`. SHA-256: `cf39886c7420393793f4c35e1c3cee8dd0aa83c521d06bfcbd5b9d3d9a63732b`.
+
+- Pré-imagem atual completa preservada: 15 tópicos/52 seções, com paridade inicial em relação à publicação de Sistemas de Informação. Dry-run do CLI aprovado para um tópico/três seções, preservando flashcards.
+- Ensaio SQL com rollback aprovado. Payload decodificado e conferido: exatamente três updates 01–03, nenhuma inserção, um mapa alterado. UTF-8 e retirada da expressão matemática imprópria conferidos.
+- Publicação atômica condicionada à revisão esperada e identidade permanente, com conferência/bloqueio de tópico ativo e timeout de lock existentes. Sem alteração de schema, segurança, aplicação, dependências, credenciais ou dados pessoais.
+- Reconciliação remota integral aprovada: 15 tópicos/52 seções sem ausentes, extras ou divergências; três novas revisões. Conteúdo e IDs de revisão das demais **49 seções preservados**, com asserção explícita. `target: preimagem` designa o estado esperado corrigido, não rollback.
+- **18/18 combinações visuais aprovadas:** três seções × Light/Dark/Sepia × 375/1200 px. Sem overflow global ou erro KaTeX. Incluídas três verificações de rolagem interna da tabela no celular e seis de zoom/restauração/overlay do mapa. Capturas das três seções, nos três temas e nos dois tamanhos, inspecionadas por amostra representativa.
+- Validador Mermaid compartilhado aprovou o mapa e rejeitou três controles maliciosos. **49/49 testes `npm run test:content` executados e aprovados neste lote.** Sintaxe do executor, JSON e diff conferidos.
+- Harness usa componentes reais e CSS compilado de `questoes-experiencia-20261122`; não certifica navegação autenticada integral. Conta de aluno dispensada. Sem lint/build/audit/auth globais, pois aplicação, dependências e segurança não foram alteradas. Não houve alteração de renderização quantitativa: a expressão sem validade técnica foi convertida em prosa.
+
+Reprodução: CLI `import-batch <pasta/import> --dry-run --preserve-flashcards`; `node <pasta/validar-visual.cjs> <pasta/render.json>`. Pré-imagem, recibos e capturas preservados. Não reaplicar SQL concluído.
+
+Próximo prompt: “Revise somente os três pacotes de lacuna de Informática, até cinco seções, conforme relatório 39. Preserve os lotes publicados, publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint anterior — 24/11/2026 — Sistemas de Informação 01 publicada
+
+Escopo exclusivo: `sistemas-de-informacao-sec-01`, “Fases e Etapas de Sistemas de Informação”, examinada integralmente, com um callout e um mapa. Sem cartões, mnemônicos ou tabelas. Identidades, título, ordem e os oito subtítulos preservados. Alterações restritas ao Markdown, callout e mapa. Nenhum lote anterior reaplicado.
+
+Cobertura acumulada: **49/52 seções existentes**, dez tópicos integrais. Sistemas de Informação **1/1** examinada neste lote. Restam **3 seções existentes** de Transformação Digital e três pacotes de lacuna em dry-run. Informática permanece parcial; próximo lote não iniciado.
+
+### Achados e correções
+
+- A sequência deixava de ser exemplo didático e parecia universal/garantidora. Explicitados sobreposição, iteração e entregas incrementais, conforme o modelo adotado.
+- Levantamento e análise diferenciados sem reduzir requisitos a funções: necessidades de interessados, qualidade, restrições, conflitos, viabilidade e critérios de verificação. O contraste “o que/como” foi preservado como distinção didática no callout, admitindo refinamento mútuo.
+- As três frentes do projeto deixaram de parecer taxonomia exaustiva. Implementação foi distinguida da transição para uso: aquisição, treinamento, migração e documentação dependem do contexto e podem se distribuir pelo ciclo.
+- Testes deixaram de prometer sistema livre de falhas ou ocorrer apenas no fim. Incluídos detecção de defeitos, redução de riscos, início antecipado e complementaridade entre verificação e validação.
+- Implantação não reduzida a instalação. Operação e manutenção podem coexistir; mudanças precisam de análise de impacto e testes pertinentes. Retirada de serviço mencionada como possibilidade do ciclo, sem criar nova seção ou renumerar o esquema.
+- Mapa original tinha quatro etapas e fazia projeto/implementação saírem paralelamente da análise. Substituído por síntese das oito etapas na ordem didática do texto. A primeira proposta, com oito caixas, exigia navegação para ver as etapas finais; a v2 compacta agrupa pares em quatro blocos, sem eliminar etapas. Texto explicita que o mapa não representa todos os retornos/sobreposições reais.
+
+A proposta ampla não rastreada foi consultada somente nesta seção: já qualificava sequência e testes, mas mantinha sobreposições e redação excessivamente absoluta em outros trechos. Não foi aplicada integralmente. Nenhum conteúdo de Transformação Digital ou de outra frente foi examinado.
+
+### Fontes primárias conferidas em 24/11/2026
+
+Consultados trechos pertinentes, sem declarar leitura integral dos documentos ou certificação normativa do material.
+
+- [NASA — SWE-019, Software Life Cycle, Handbook Ver B](https://swehb.nasa.gov/spaces/SWEHBVB/pages/32604451/SWE-019%2B-%2BSoftware%2BLife%2BCycle), orientação e exemplos de ciclos: não há modelo único adequado a todo projeto; requisitos, projeto, implementação, integração, testes, manutenção e evolução podem ser organizados de modos distintos. **Referência histórica explicitamente identificada como Ver B**, não a revisão normativa atual. O link para a Ver D retornou 403; seus detalhes não foram atribuídos como lidos.
+- [ISTQB — CTFL Syllabus v4.0.1, 15/09/2024](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf), princípios da seção 1.3 e ciclo de vida do capítulo 2: limites da evidência de testes, início precoce e adaptação ao contexto. Não foram copiados roteiros ou prometida ausência de defeitos. Fonte utilizada é **istqb.org**, não o site comercial semelhante `istqb.com` encontrado na busca.
+- [NIST — SP 800-218, SSDF 1.1, fevereiro/2022](https://csrc.nist.gov/pubs/sp/800/218/final) e [texto oficial](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-218.pdf): integração de práticas de segurança ao ciclo adotado, sem impor outro modelo nem prometer eliminação total de vulnerabilidades. Usado para qualificar segurança e riscos, não como taxonomia universal das oito etapas.
+- A busca na página oficial [IEEE Computer Society — SWEBOK Topics](https://www.computer.org/education/bodies-of-knowledge/software-engineering/topics) localizou requisitos, projeto, implementação e ciclo de vida. A abertura dessa página e da página de recursos retornou 403: não se declara leitura do guia integral nem conformidade com sua versão. Páginas específicas NASA de análise de requisitos/implementação também tiveram 403/timeout; não foram apresentadas como leitura integral válida.
+
+Limitação editorial: nomes e agrupamento das fases variam por autor e edital; os oito subtítulos existentes foram preservados como esquema didático. Não houve adoção de uma norma contratual específica ou ampliação para todos os tipos de sistemas de informação.
+
+### Publicação e verificação
+
+**Versão publicada:** `orquestracao-03-54/saneamento-onda-7/39-informatica/si-01-20261124-v2/`; executor `../si-01-lote.mjs`. SHA-256: `fae1a9f8274fa5010e6e493d7255923f93fad09705fc6d39d38522c83d072406`.
+
+- Pré-imagem atual completa de 15 tópicos/52 seções preservada, com paridade inicial em relação à publicação de TGS. Proposta, import e SQL exclusivos desta seção.
+- Dry-run final aprovado no CLI existente, um tópico/uma seção, preservando flashcards. Ensaio SQL final com rollback aprovado. SQL decodificado: um update, nenhuma inserção; igualdade dos demais campos entre proposta inicial/v2 conferida, com mudança somente do mapa. UTF-8 conferido.
+- Publicação atômica somente da v2, condicionada à revisão esperada e identidade permanente, com conferência/bloqueio do tópico ativo e timeout de lock existentes. Sem alteração de schema, segurança, aplicação, dependências, credenciais ou dados pessoais.
+- Reconciliação remota integral aprovada: 15 tópicos/52 seções sem ausentes, extras ou divergências; uma nova revisão. Conteúdo e IDs de revisão das demais **51 seções preservados**, com asserção explícita. `target: preimagem` designa o estado esperado corrigido, não rollback.
+- **6/6 combinações visuais finais aprovadas:** seção × Light/Dark/Sepia × 375/1200 px, sem overflow global ou erro KaTeX. Zoom, restauração e overlay exercitados nas seis combinações. Capturas finais de Light/mobile, Dark/desktop e Sepia/mobile inspecionadas; os quatro blocos com as oito etapas ficaram visíveis. Primeiro mapa preservado como diagnóstico, **não publicado e fora do aceite final**.
+- Validador Mermaid compartilhado aprovou o mapa final e rejeitou três controles maliciosos. **49/49 testes de conteúdo executados na preparação inicial** e reaproveitados na v2 porque aplicação e validadores não mudaram; log copiado com origem registrada no checkpoint. Não se declara segunda execução. Novo mapa recebeu validação de payload e seis testes visuais próprios.
+- Sintaxe do executor, JSON e diff verificados. Harness usa componentes reais e CSS compilado de `questoes-experiencia-20261122`; não certifica navegação autenticada integral. Conta de aluno dispensada. Sem lint/build/audit/auth globais, pois não houve alteração da aplicação ou de suas dependências/segurança.
+
+Reprodução: CLI `import-batch <pasta v2/import> --dry-run --preserve-flashcards`; `node <pasta v2/validar-visual.cjs> <pasta v2/render.json>`. Pré-imagens, recibos e capturas preservados. Não reaplicar SQL concluído.
+
+Próximo prompt: “Revise somente Transformação Digital 01–03, conforme relatório 39. Preserve os lotes publicados, publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint anterior — 24/11/2026 — Teoria Geral de Sistemas 01–03 publicadas
+
+Escopo exclusivo: `teoria-geral-de-sistemas-tgs-sec-01` a `teoria-geral-de-sistemas-tgs-sec-03`, examinadas integralmente com três callouts, uma tabela e um mapa. Não há cartões nem mnemônicos. Identidades, títulos, ordenação e campos preservados; alterações restritas ao conteúdo, callouts e mapa 01. Nenhum lote publicado reaplicado.
+
+Cobertura acumulada: **48/52 seções existentes**, nove tópicos integrais. Teoria Geral de Sistemas **3/3** examinada neste lote. Restam **4 seções existentes** e três pacotes de lacuna em dry-run. Informática permanece parcial.
+
+### Achados e correções
+
+| Seção | Decisão aplicada |
+| --- | --- |
+| 01 — Fundamentos | Separadas interdependência e sinergia positiva: ganho não é garantido. Hierarquia depende da fronteira e do nível de análise, sem decomposição infinita obrigatória. Abertura organizacional não foi universalizada para todo sistema nem descrita como intercâmbio infinito. Estrutura, objetivos, ambiente e restrições relacionados sem atribuir finalidade consciente a todo sistema. Callout alinhado. Mapa de composição corrigido: supersistema deixou de ser identificado automaticamente com meio ambiente; explicação no texto. |
+| 02 — Princípios da TGS | Expansionismo e síntese contextualizados como ideias da abordagem organizacional, complementares à análise. Teleologia explicada por fins/referências e realimentação, sem intenção consciente obrigatória. Removida equivalência universal com “causa necessária, mas insuficiente”; formulação confunde finalidade e condições de causalidade. Callout alinhado. |
+| 03 — Conceitos Importantes | Entropia física distinguida da analogia organizacional. Negentropia não apresentada como força ou garantia de sobrevivência; sinonímia com sintropia qualificada conforme literatura. Homeostase explicada como estabilidade dinâmica; heterostase diferenciada por novo estado estável e aplicação contextual. Feedback pode confirmar condições, não só indicar falhas, e não tem regra de retorno a uma etapa física determinada. Negativo/positivo distinguidos pelo sentido, sem julgamento bom/ruim ou promessa de melhoria. Tabela e callout alinhados. |
+
+A proposta ampla não rastreada foi consultada somente nestas três seções; continha correções parciais, mas preservava contradições na tabela e no destino do feedback. Não foi aplicada como lote. Inventário dos próximos tópicos consultado apenas por IDs, títulos e contagens: Sistemas de Informação tem uma seção; Transformação Digital, três. Conteúdo restante não revisado.
+
+### Fontes primárias conferidas em 24/11/2026
+
+Consultados os trechos pertinentes. Publicações clássicas fundamentam conceitos; não são apresentadas como novidades de 2026.
+
+- [Bertalanffy — An Outline of General System Theory (1950), reprodução do texto do autor](https://www.isnature.org/Events/2009/Summer/r/Bertalanffy1950-GST_Outline_SELECT.pdf), especialmente partes 1, 8 e 11: relações, sistemas abertos, estado estacionário e entropia. Usado com limites: terminologia termodinâmica histórica não foi transposta literalmente para organizações nem universalizada a todo regime físico.
+- [NASA — Systems Engineering Handbook, 2.0](https://www.nasa.gov/reference/2-0-fundamentals-of-systems-engineering/): propriedades e resultados das interconexões, integração, contexto, restrições e desempenho do todo. A definição orientada a objetivos de engenharia não foi atribuída a todos os sistemas naturais.
+- [Ackoff — From Mechanistic to Systemic Thinking (1993), transcrição da palestra do autor](https://organism.earth/library/document/mechanistic-to-systemic-thinking), trechos 35–42 e 48–52 minutos: síntese/análise, contexto e distinção produtor/produto. Esta última explica a referência histórica a condição necessária, mas insuficiente; não equivale a uma definição universal de teleologia. Consultada também a [página e resumo originais de Towards a System of Systems Concepts (1971)](https://pubsonline.informs.org/doi/abs/10.1287/mnsc.17.11.661), sem declarar acesso integral ao artigo. Outra cópia de PDF retornou timeout.
+- [Rosenblueth, Wiener e Bigelow — Behavior, Purpose and Teleology (1943), reprodução do artigo](https://pespmc1.vub.ac.be/books/Wiener-teleology.pdf), páginas 1–2 do PDF: comportamento orientado a objetivos e realimentação positiva/negativa. Não generalizada a afirmação histórica de que todo comportamento finalístico requer feedback negativo.
+- [Selye — The Stress of Life, edição revista, reprodução digital](https://raw.githubusercontent.com/peatysharing/bibliography/main/Hans%20Selye/1978%20-%20Hans%20Selye%20-%20The%20Stress%20Of%20Life.pdf), página 115 do PDF, passagem “The concept of heterostasis”: novo estado estável por intervenção nos mecanismos adaptativos. PDF lido diretamente com ferramenta local já instalada, pois o navegador rejeitou o tipo MIME. É texto do autor em hospedagem de terceiros, não orientação clínica. [Registro bibliográfico de Homeostasis and heterostasis (1973)](https://pubmed.ncbi.nlm.nih.gov/4705073/) conferido; sem resumo disponível e sem acesso ao artigo integral pelo editor. Não foi usado como se tivesse sido lido integralmente.
+
+Limitação editorial: sintropia e heterostase têm usos dependentes da referência. O texto explicita esse contexto; não pretende fixar uma terminologia única para todos os editais. Não foram reproduzidas recomendações médicas ou interpretações físicas sem esse limite.
+
+### Publicação e verificação
+
+Evidências: `orquestracao-03-54/saneamento-onda-7/39-informatica/tgs-01-03-20261124/`; executor `../tgs-01-03-lote.mjs`. SHA-256: `0ff5477a209cd90e9bd7e21e036627d6f15ccc1284c1e99849ed744db96466be`.
+
+- Pré-imagem atual completa preservada: 15 tópicos/52 seções, com paridade inicial em relação à versão de Nuvem publicada. Dry-run do CLI existente aprovado para um tópico/três seções, preservando flashcards.
+- Ensaio SQL com rollback aprovado. Payload SQL decodificado e conferido: exatamente três updates 01–03, nenhuma inserção, um mapa alterado. UTF-8 verificado explicitamente.
+- Publicação atômica com revisão esperada e identidade permanente, conferência/bloqueio de tópico ativo e timeout de lock do mecanismo existente. Nenhuma alteração de schema, segurança, dependências, código da aplicação, credenciais ou dados pessoais.
+- Reconciliação remota posterior integral aprovada: 15 tópicos/52 seções sem ausentes, extras ou divergências; três novas revisões. Conteúdo e IDs de revisão das demais **49 seções preservados**, com asserção explícita. `target: preimagem` designa comparação com estado esperado corrigido, não rollback.
+- **18/18 combinações visuais aprovadas:** três seções × Light/Dark/Sepia × 375/1200 px. Incluídas três verificações de rolagem interna da tabela no celular. Sem overflow global/erro KaTeX. Zoom, restauração e overlay do mapa exercitados nas seis combinações. Capturas representativas das três seções, dos três temas e dos dois tamanhos inspecionadas.
+- Validador Mermaid compartilhado aprovou o mapa e rejeitou três controles maliciosos. **49/49 testes `npm run test:content` executados e aprovados neste lote.** Sintaxe do executor e diff conferidos.
+- Harness usa componentes reais e CSS compilado de `questoes-experiencia-20261122`; não certifica navegação autenticada integral. Conta de aluno dispensada. Sem lint/build/audit/auth globais, pois a aplicação e suas dependências/segurança não foram alteradas. Tentativa inicial de leitura bibliográfica com `pypdf` indisponível substituída por `fitz` já instalado; nenhuma dependência adicionada.
+
+Reprodução: CLI `import-batch <pasta/import> --dry-run --preserve-flashcards`; `node <pasta/validar-visual.cjs> <pasta/render.json>`. Recibos, pré-imagem e capturas preservados. Não reaplicar SQL concluído.
+
+Próximo prompt: “Revise somente Sistemas de Informação 01, conforme relatório 39. Preserve os lotes publicados, publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint anterior — 24/11/2026 — Computação na Nuvem 01–05 publicadas
+
+Escopo exclusivo: `computacao-na-nuvem-cloud-computing-sec-01` a `computacao-na-nuvem-cloud-computing-sec-05`, examinadas integralmente com um callout, uma tabela e um diagrama. Nenhum cartão ou mnemônico existente. Identidades, títulos e ordem preservados. Lotes publicados anteriores não reaplicados.
+
+Cobertura acumulada: **45/52 seções existentes**, oito tópicos integrais. Computação na Nuvem **5/5** examinada neste lote. Restam **7 seções existentes** e três pacotes de lacuna em dry-run. Informática permanece parcial.
+
+### Achados e correções
+
+| Seção | Decisão aplicada |
+| --- | --- |
+| 01 — Conceito | Acesso por rede não limitado à internet pública. Consumo como serviço não obriga abandonar toda infraestrutura própria/licença; privada pode ser própria ou terceirizada. Virtualização isolada não define nuvem. Distinção armazenamento/computação preservada e callout simplificado. |
+| 02 — Características Essenciais | Autoatendimento parte do consumidor, não de inferência das necessidades pelo provedor. Clientes não limitados a navegador. Agrupamento explicado com localização em nível amplo e isolamento. Elasticidade não garante instantaneidade ou recursos físicos ilimitados. Mensuração não significa precisão absoluta/única forma de cobrança ou ausência de custos fixos. |
+| 03 — Modelos de Serviço | IaaS não entrega necessariamente hardware físico nem exige instalação manual em todo caso. Tabela agora diferencia oferta e controle em IaaS/PaaS/SaaS. SaaS pode usar cliente instalado; responsabilidades sobre dados/identidades/configuração permanecem. Retirados nomes genéricos/legados IBM SmartCloud e Windows Azure; usados serviços específicos e conferidos. Azure como marca não equivale a PaaS. |
+| 04 — Benefícios e Riscos | Ganhos de capacidade/economia/pessoal e segurança qualificados como potenciais. Incluídos responsabilidade compartilhada, custo variável, saída/migração, continuidade e governança. Interrupção não implica automaticamente perda de integridade ou mudança de titularidade. Retirada expressão imprecisa “empresa profissional”. Sem recomendação de compra ou estimativa financeira. |
+| 05 — Tipos de Nuvem | Privada definida por uso exclusivo, sem propriedade obrigatoriamente própria ou imunidade a acesso indevido. Pública não significa dados abertos. Comunitária mantém vínculo de interesses; híbrida pode combinar infraestruturas privadas/comunitárias/públicas distintas, não só pública+privada. Portabilidade exige integração. Mapa antigo de gênero/espécie estava deslocado e fazia processamento/bancos dependerem de armazenamento; substituído por síntese dos quatro modelos de implantação. |
+
+A primeira proposta de mapa corrigia a taxonomia, mas tinha ramos longos pouco legíveis no celular. Foi compactada na versão final com disposição lateral e rótulos curtos, preservando as explicações no texto. Não houve alteração do renderizador ou da interface compartilhada.
+
+### Fontes primárias conferidas em 24/11/2026
+
+Consultados os trechos pertinentes, sem atribuir leitura integral de todos os documentos. Publicações antigas fundamentam conceitos, não são apresentadas como novidades de 2026.
+
+- [NIST SP 800-145 — definição de nuvem](https://csrc.nist.gov/pubs/sp/800/145/final) e [texto oficial, seção 2, páginas 2–3](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf), de setembro/2011: definição, cinco características, três modelos de serviço e quatro de implantação. Classificação adotada explicitamente como referência; não como proibição de outras taxonomias comerciais. Sem impor internet pública, propriedade exclusiva ou combinação pública/privada como requisitos universais.
+- [NIST SP 800-146 — Synopsis and Recommendations](https://csrc.nist.gov/pubs/sp/800/146/final) e [texto oficial](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-146.pdf), de maio/2012, especialmente benefícios/riscos econômicos, continuidade e recomendações das seções 8–9: dependência de rede/provedor, portabilidade, disponibilidade e governança. Não usadas recomendações antigas de algoritmos, certificações ou produtos como orientação atual de implementação.
+- [Microsoft — responsabilidade compartilhada](https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility): divisão por IaaS/PaaS/SaaS, dados/identidades/configurações e exemplos. Regras contratuais concretas continuam dependentes do serviço; a matriz do Azure não foi universalizada como norma jurídica para todo fornecedor.
+- [Microsoft — modelos de nuvem](https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models): exemplos de privada/pública/híbrida e hospedagem terceirizada. A classificação completa e a definição mais ampla de híbrida são as do NIST; não foi reproduzida a promessa de controle/segurança total presente na comparação didática da página.
+- [AWS — Amazon EC2](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html), [Microsoft — Azure App Service](https://learn.microsoft.com/en-us/azure/app-service/overview), [Google — App Engine standard](https://docs.cloud.google.com/appengine/docs/standard/overview): exemplos atuais de serviços, sem recomendação comercial, preços ou SLA. SaaS Microsoft 365 e IaaS Azure Virtual Machines constam também na página de responsabilidade compartilhada. As páginas Microsoft tinham aviso genérico de autorização, mas conteúdo textual acessível. URL genérica AWS “what-is/cloud-computing” retornou 404 e não foi usada como leitura válida.
+
+Os exemplos de custos, riscos e implantação são explicativos. Nenhum recurso de nuvem real foi provisionado, contratado ou alterado. O tópico permanece sujeito ao vocabulário e à data do edital, sem pretensão de cobrir todo serviço comercial existente.
+
+### Publicação e verificação
+
+**Versão publicada:** `orquestracao-03-54/saneamento-onda-7/39-informatica/nuvem-01-05-20261124-v2/`; executor `../nuvem-01-05-lote.mjs`. SHA-256 final: `99e617822bfd9cbb4cb92fde67dd0f151ec995a7d81b27b553799eb22d8e98bf`.
+
+- Pré-imagem atual de 15 tópicos/52 seções preservada; paridade inicial com Segurança 01–04. Proposta ampla não rastreada consultada apenas no recorte deste tópico. Restante não aplicado.
+- Pasta `nuvem-01-05-20261124/` preserva a preparação inicial, seus testes e capturas; **não foi publicada**. Após ajuste exclusivamente no mapa 05, a v2 recebeu nova preparação, dry-run e ensaio com rollback. Igualdade integral das primeiras quatro seções e igualdade dos demais campos da quinta foram verificadas para reaproveitamento proporcional.
+- Dry-run final aprovado no CLI existente para um tópico/cinco seções, preservando flashcards. SQL decodificado e conferido: exatamente cinco updates 01–05, nenhuma inserção, um mapa alterado.
+- Publicação atômica somente da v2, condicionada a revisão esperada, identidade e tópico ativo pelo mecanismo existente. Sem schema, segurança, código da aplicação, dependências, credenciais ou dados pessoais alterados.
+- Reconciliação posterior integral aprovada: 15 tópicos/52 seções sem ausentes, extras ou divergências; cinco novas revisões. Conteúdo e IDs de revisão das demais **47 seções preservados**, com asserção explícita. `target: preimagem` compara o estado esperado corrigido, não indica rollback.
+- **30 combinações visuais válidas do estado final:** cinco seções × Light/Dark/Sepia × 375/1200 px; 24 verificações das seções 01–04 reaproveitadas por igualdade integral e seis da seção 05 refeitas para o mapa final. Incluídas três checagens de rolagem interna da tabela no celular. Sem overflow global/erro KaTeX; callout e mapa conferidos. Zoom, restauração e overlay exercitados nas seis combinações do mapa final. `render-visual.json` final registra composição e proveniência das verificações.
+- Uma fixture intermediária `render-mapa.json` foi gerada com leitura local sem UTF-8 explícito e produziu mojibake nas capturas. Foi **excluída do aceite** e substituída por `render-mapa-corrigido.json`; seis capturas corretas refeitas e inspecionadas. Conteúdo, import e SQL estavam íntegros; o erro não atingiu o banco. O recibo `render-mapa-visual.json` intermediário não é evidência de aceite, apesar das asserções geométricas aprovadas. Arquivos de diagnóstico preservados para rastreabilidade.
+- Validador Mermaid compartilhado aprovou o mapa final e rejeitou três controles maliciosos na preparação. **49/49 testes `npm run test:content` aprovados** na preparação inicial e reaproveitados porque aplicação/validadores não mudaram. A mudança do mapa teve validação atual do payload e teste visual específico. Log copiado à v2 com origem na pasta inicial; não se declara segunda execução da suíte.
+- Sintaxe do executor e diff verificados. Harness com componentes reais e CSS compilado de `questoes-experiencia-20261122`; não certifica navegação autenticada integral ou todos os editais. Conta de aluno dispensada. Sem lint/build/audit/auth globais, pois não houve mudança de aplicação/dependências/segurança.
+
+Reprodução: CLI `import-batch <pasta v2/import> --dry-run --preserve-flashcards`; `node <pasta v2/validar-visual.cjs> <pasta v2/render.json>` reproduz as 30 combinações completas; `render-mapa-corrigido.json` restringe às seis do mapa. Recibos preservados. Não reaplicar SQL concluído.
+
+Próximo prompt: “Revise somente Teoria Geral de Sistemas 01–03, conforme relatório 39. Preserve os lotes publicados, publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint anterior — 23/11/2026 — Segurança da Informação 01–04 publicadas
+
+Escopo exclusivo: `seguranca-da-informacao-sec-01` a `seguranca-da-informacao-sec-04`, examinadas integralmente com dois callouts, uma tabela de princípios e um mapa deslocado de assinatura na seção de certificado. Nenhum cartão ou mnemônico existente. Identidades, títulos e ordem preservados. Lotes anteriores não reaplicados.
+
+Cobertura acumulada: **40/52 seções existentes**, sete tópicos integrais. Segurança da Informação **4/4** examinada neste lote. Restam **12 seções existentes** e três pacotes de lacuna em dry-run. Informática permanece parcial.
+
+### Achados e correções
+
+| Seção | Decisão aplicada |
+| --- | --- |
+| 01 — Princípios | Retiradas garantias absolutas de disponibilidade, sigilo, verdade material e responsabilidade jurídica. Integridade admite alterações autorizadas e não equivale a “confiabilidade” em todo contexto. Não repúdio tratado como evidência, não impossibilidade de contestação. Autenticidade exige validação; conformidade requer controles contínuos. Tabela reorganizada em objetivo/controles/limites, removendo a classificação indevida de mecanismos como “exceções”. |
+| 02 — Criptografia | Diferenciadas cifragem, assinatura e estabelecimento de chaves; chave pública precisa ser autêntica e nem todo algoritmo assimétrico cifra. Hash não é único nem alfanumérico por natureza; colisões existem e resistências são computacionais. Explicitadas pré-imagem/segunda pré-imagem e limite do efeito avalanche; resumo isolado precisa de referência confiável. HTTPS atualizado para TLS, SSL legado e indicador visual variável; canal protegido não prova honestidade do site nem oculta todo metadado. Callout alinhado. |
+| 03 — Assinatura Digital | Privada produz/pública verifica, sem generalizar “cifragem do hash” a todos os algoritmos. Assinatura detecta alterações cobertas, mas não impede editar uma cópia e não cifra o documento por si só. Atribuição de identidade e não repúdio condicionados à validação/chave/contexto. Callout alinhado; não prometidos efeitos jurídicos automáticos. |
+| 04 — Certificado Digital | Certificado não contém a chave privada; associação de chave pública/identidade depende da política e validação. AC/AR distinguidas, ICP-Brasil não confundida com todos os certificados da Internet; corrigido “La emissão”. Armazenamento não limitado a HD/token/cartão: A3 pode ter HSM remoto. Tabela A/S explicitamente histórica; A4 não reduzido a mais bits. Acrescentada transição normativa para A3/A4 PF, SE PJ e AE, preservando distinção entre tipos e custódia em nuvem. Mapa anterior trazia “PRIVADA de Mar”, rótulos truncados e assinatura saindo diretamente do hash; substituído por fluxo próprio de emissão/validação do certificado. |
+
+Mantida a tabela de princípios e criada tabela comparativa para organizar as quatro linhas históricas já existentes. Nenhuma funcionalidade de criptografia, certificado ou autenticação da aplicação foi alterada. Não se trata de correção de segurança do software nem de revisão do corpus PRO Legis. Inventário do próximo tópico consultado apenas por IDs/títulos para delimitar cinco seções, sem leitura de conteúdo.
+
+### Fontes primárias conferidas em 23/11/2026
+
+Consultados trechos pertinentes e definições no seu contexto, sem atribuir leitura integral das publicações.
+
+- [NIST — Information Security](https://csrc.nist.gov/glossary/term/information_security) e [Confidentiality](https://csrc.nist.gov/glossary/term/confidentiality): confidencialidade, integridade, disponibilidade e restrições autorizadas. Exemplos de controles foram qualificados como apoio aos objetivos, sem prometer resultados absolutos.
+- [NIST — Hash Function](https://csrc.nist.gov/glossary/term/hash_function) e [Cryptographic Hash Function](https://csrc.nist.gov/glossary/term/cryptographic_hash_function): resumo em bits, tamanho de saída e resistência computacional. A primeira página foi recuperada com as definições; consultas posteriores à segunda tiveram timeout. Não se declara ausência matemática de colisões.
+- [NIST FIPS 186-5 — Digital Signature Standard, 03/02/2023](https://csrc.nist.gov/pubs/fips/186-5/final): assinatura, autenticação, detecção de alterações e evidência para não repúdio. Página informa nota de possíveis correções de 12/05/2025; não se certifica implementação de algoritmo. O texto não foi usado como fundamento de efeito jurídico automático.
+- [RFC 8446 — TLS 1.3](https://www.rfc-editor.org/rfc/rfc8446.html), de 2018, [RFC 7568 — SSLv3](https://www.rfc-editor.org/rfc/rfc7568.html), de 2015, e [Chromium — atualização do indicador de conexão](https://blog.chromium.org/2023/05/an-update-on-lock-icon.html), de 2023: canal TLS, obsolescência SSL e limite da associação entre ícone e confiança. O conteúdo do blog recuperado tinha extração limitada; não foi declarado teste do navegador publicado. Variação do indicador não determina o protocolo em uso por si só.
+- [RFC 5280 — X.509 e listas de revogação](https://www.rfc-editor.org/rfc/rfc5280.html), de 2008: certificado, chave pública, cadeia, uso e validação. Fonte de fundamentos, sem afirmar que o documento não recebeu atualizações posteriores.
+- [ITI — DOC-ICP-04 consolidado, versão 8.3](https://repositorio.iti.gov.br/resolucoes/Resolucao179_DOC-ICP-04.htm), especialmente itens 1.1.5–1.1.9 e 6.1/6.2: tipos históricos e redações alteradas pela Resolução 211/2024 e atos posteriores. O documento exibe redações antigas junto às novas; elas não foram lidas como regras simultâneas. Não se reduziu nível de segurança a contagem de bits.
+- [ITI — Certificação Digital](https://www.gov.br/iti/pt-br/acesso-a-informacao/perguntas-frequentes/certificacao-digital), especialmente quadro A1/A3 e pergunta 20: A3 em nuvem/HSM de prestador credenciado e participação da AR. [ITI — FAQ do Comitê Gestor](https://www.gov.br/iti/pt-br/assuntos/comite-gestor/perguntas-frequentes-cg-icp-brasil) e [catálogo oficial de resoluções](https://www.gov.br/iti/pt-br/assuntos/legislacao/resolucoes/resolucoes): transição para novos tipos. As FAQs apresentam recortes distintos de prazo (a FAQ geral menciona fevereiro/2029 para emissão PJ; a do CG menciona uso até 02/03/2029). Para não confundir emissão e uso ou antecipar descontinuação, o conteúdo registra a transição e remete aos atos/política, sem impor um prazo único a todos os tipos. Uma URL direta tentada para Resolução 211 não foi recuperada; alterações foram conferidas no consolidado oficial e FAQs.
+
+A tabela A/S é material histórico para leitura de questões, não uma lista exaustiva dos tipos atuais nem recomendação de aquisição. Requisitos e transição continuam sujeitos à data do edital/ato aplicável. Nenhuma credencial ou certificado real foi criado, instalado ou alterado.
+
+### Publicação e verificação
+
+Pasta exclusiva: `orquestracao-03-54/saneamento-onda-7/39-informatica/seguranca-01-04-20261123/`; executor `../seguranca-01-04-lote.mjs`. SHA-256: `a2f1dc98e814e9a3be34797cc5ede14ce41bbc4560fa33117a8bccefdc9d49b6`.
+
+- Pré-imagem atual de 15 tópicos/52 seções preservada; paridade inicial com Banco 11–14. Proposta ampla não rastreada consultada apenas neste tópico; demais itens não aplicados.
+- Dry-run do CLI existente aprovado: um tópico/quatro seções, preservando flashcards. SQL decodificado e conferido: exatamente quatro updates 01–04, nenhuma inserção, um mapa alterado.
+- Ensaio com rollback aprovado. Publicação atômica pelo mecanismo existente, condicionada à revisão esperada, identidade e tópico ativo. Sem schema, segurança, aplicação, dependências, credenciais ou dados pessoais alterados.
+- Reconciliação integral posterior aprovada: 15 tópicos/52 seções, sem ausentes, extras ou divergências; quatro novas revisões. Conteúdo e IDs de revisão das demais **48 seções preservados**, com asserção explícita. `target: preimagem` compara o estado esperado corrigido, não significa rollback.
+- **24/24 verificações visuais**: quatro seções × Light/Dark/Sepia × 375/1200 px. Incluídas seis checagens de rolagem interna das duas tabelas no celular. Sem overflow global ou erro KaTeX; tabelas largas mantêm navegação interna. Dois callouts e mapa conferidos em capturas; zoom, restauração e overlay exercitados nas seis combinações do mapa.
+- Validador Mermaid compartilhado aprovou o novo mapa e rejeitou três controles maliciosos. **49/49 testes `npm run test:content` aprovados**, repetidos pela mudança concreta de conteúdo Mermaid; saída preservada. Sintaxe do executor e diff verificados.
+- Harness com componentes reais e CSS compilado de `questoes-experiencia-20261122`; não certifica toda a navegação autenticada ou todos os editais. Conta de aluno dispensada. Sem lint/build/audit/auth globais porque não houve alteração de código, dependências ou controles de segurança da aplicação.
+
+Reprodução: CLI `import-batch <pasta/import> --dry-run --preserve-flashcards`; `node <pasta/validar-visual.cjs> <pasta/render.json>` na raiz editorial; `npm run test:content` no site. Recibos preservados. Não reaplicar SQL concluído.
+
+Próximo prompt: “Revise somente Computação na Nuvem 01–05, conforme relatório 39. Preserve os lotes publicados, publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint anterior — 23/11/2026 — Banco de Dados 11–14 publicadas
+
+Escopo exclusivo: `banco-de-dados-sec-11` a `banco-de-dados-sec-14`, examinadas integralmente com dois callouts. Nenhum cartão, mnemônico ou diagrama existente nessas quatro seções. Identidades, títulos e ordem preservados. Seções 01–10 e demais lotes publicados não reaplicados.
+
+Cobertura acumulada: **36/52 seções existentes**, seis tópicos integrais. Banco de Dados fecha **14/14** no conjunto dos três lotes delimitados, não por amostragem. Restam **16 seções existentes** e três pacotes de lacuna em dry-run. Informática permanece parcial.
+
+### Achados e correções
+
+| Seção | Decisão aplicada |
+| --- | --- |
+| 11 — Modelagem dimensional | Supridas definições de fatos/dimensões e grão para dar contexto à estrela. Tamanho não define tipo de tabela. Floco de neve caracterizado pela normalização de dimensões, não apenas por acrescentar tabelas. Diferenciada estrela básica de ambiente com múltiplos fatos; sem promessa universal de desempenho. |
+| 12 — Data mining | Mantida descoberta de padrões e distinção de consulta simples. Retirada interpretação de proibição de queries/SQL, que podem participar do processo. Acrescentadas tarefas usuais, avaliação e incerteza, sem prometer padrões úteis automaticamente nem inferir causalidade de associação. Retiradas caixas altas sem função didática; callout alinhado e desduplicado em relação à antiga repetição literal. |
+| 13 — BI | BI definido como processos/práticas/ferramentas para apoiar decisão, não como o ato de decidir. Fontes DW/DM contextualizadas sem exclusividade. Acrescentados exemplos concisos de recursos e limites de interpretação, sem ampliar funcionalidade da aplicação. |
+| 14 — OLTP × OLAP | Preservado contraste operacional/analítico, retiradas garantia universal de tempo real e desqualificação absoluta do valor decisório do OLTP. OLAP não implica somente inserção ou carga diária; separado de DW. Corrigido erro principal: slice/dice são recortes; troca de eixos é pivot. Drill-down/roll-up conferidos e preservados com exemplos. Callout ampliado para evitar a contradição anterior. |
+
+Não foram acrescentados diagramas ou cartões para preencher artificialmente o lote. Exemplos são didáticos, sem dados pessoais reais. As quatro seções receberam correções; nenhum outro tópico teve conteúdo examinado. O inventário de IDs/títulos de Segurança da Informação foi consultado apenas para delimitar o próximo prompt (quatro seções).
+
+### Fontes primárias conferidas em 23/11/2026
+
+Consultados trechos pertinentes das fontes autorais/institucionais abaixo; não se atribui leitura integral. Recomendações específicas de produto não foram universalizadas.
+
+- [Microsoft — Star schema e snowflake](https://learn.microsoft.com/en-us/power-bi/guidance/star-schema): fatos, dimensões, grão, estrela e normalização das dimensões no floco de neve. Conteúdo acessível apesar do aviso genérico de autorização no cabeçalho. Complemento autoral: [Ralph Kimball — Fact Tables, 05/11/2008](https://www.kimballgroup.com/2008/11/fact-tables/), declaração do grão e eventos de medição, usado como fundamento estável, não novidade de 2026.
+- [IBM — Data mining](https://www.ibm.com/think/topics/data-mining): tarefas usuais, preparação e avaliação dos resultados. [Oracle 19 — What Is Data Mining?](https://docs.oracle.com/en/database/oracle/oracle-database/19/dmcon/what-is-data-mining.html): modelos, consulta simples, avaliação e integração a ferramentas de query/relatórios. URLs tentadas na versão 26 não foram recuperadas; usada a página 19 acessível para fundamentos, sem recomendação de versão ou afirmação de que seja a mais recente. A equiparação KDD/mineração presente na página não foi adotada, pois o escopo não revisa essa taxonomia.
+- [NIST/SEMATECH — Scatter Plot, seção 1.3.3.26](https://www.itl.nist.gov/div898/handbook/eda/section3/scatterp.htm): associação observada não prova causalidade. Usado somente esse fundamento estatístico, sem acrescentar gráficos ao conteúdo.
+- [IBM — Business Intelligence](https://www.ibm.com/think/topics/business-intelligence): processos de coleta/gestão/análise, fontes e apresentação para apoiar estratégias e operações. Qualificações sobre decisão e qualidade são síntese editorial conservadora, sem prometer resultados.
+- [Microsoft — Online Analytical Processing](https://learn.microsoft.com/en-us/azure/architecture/data-guide/relational-data/online-analytical-processing), atualização indicada em 22/04/2025: perfil de carga, análise em tempo real e arquiteturas híbridas como contraponto a proibições absolutas. [IBM — OLAP](https://www.ibm.com/think/topics/olap), trechos sobre drill-down, roll-up, slice, dice e pivot: operações e exemplos. Não reproduzidas comparações absolutas de desempenho de produtos/implementações.
+
+### Publicação e verificação
+
+Pasta exclusiva: `orquestracao-03-54/saneamento-onda-7/39-informatica/banco-11-14-20261123/`; executor `../banco-11-14-lote.mjs`. SHA-256: `ec5f4f096125c913b7bbf4df821b72875f6076ea1f7c9da48cc0bbe9134f4782`.
+
+- Pré-imagem atual de 15 tópicos/52 seções preservada, em paridade inicial com Banco 06–10. Proposta ampla não rastreada consultada somente no recorte 11–14; demais itens não aplicados.
+- Dry-run do CLI existente aprovado com 14 seções por exigência de `--preserve-flashcards`. Seções 01–10 copiadas intactas apenas na validação. SQL decodificado e conferido: exatamente quatro updates 11–14, nenhuma inserção; não aplicada carga de 14 seções.
+- Ensaio transacional com rollback aprovado. Publicação atômica pelo mecanismo existente, condicionada a revisão esperada, identidade e tópico ativo. Sem schema, segurança, código da aplicação, dependências, credenciais ou dados pessoais alterados.
+- Reconciliação posterior integral aprovada: 15 tópicos/52 seções sem ausentes, extras ou divergências; quatro novas revisões. Conteúdo e IDs de revisão das demais **48 seções preservados**, com asserção explícita. `target: preimagem` compara o estado esperado já corrigido, não significa rollback.
+- **24/24 verificações visuais**: quatro seções × Light/Dark/Sepia × 375/1200 px, sem overflow global ou erro de fórmula. Dois callouts e capturas conferidos. Nenhum mapa presente ou alterado no lote.
+- Sintaxe do executor e diff conferidos. Os 49 testes de conteúdo já aprovados no lote 06–10 não foram repetidos: não houve mudança de contrato, validador, renderizador ou Mermaid. O novo payload passou pelo dry-run atual. Sem workflows globais/lint/build/audit/auth pela ausência de alterações de aplicação.
+- Harness com componentes reais e CSS compilado de `questoes-experiencia-20261122`; não certifica toda a navegação autenticada nem todos os editais. Conta de aluno dispensada.
+
+Reprodução: CLI `import-batch <pasta/import> --dry-run --preserve-flashcards`; `node <pasta/validar-visual.cjs> <pasta/render.json>` na raiz editorial. Recibos preservados. Não reaplicar SQL concluído.
+
+Próximo prompt: “Revise somente Segurança da Informação 01–04, conforme relatório 39. Preserve os lotes publicados, publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint anterior — 23/11/2026 — Banco de Dados 06–10 publicadas
+
+Escopo exclusivo: `banco-de-dados-sec-06` a `banco-de-dados-sec-10`, examinadas integralmente com dois callouts e um diagrama ETL. Nenhum cartão ou mnemônico existente no lote. Identidades, títulos e ordem preservados. Seções 01–05 e 11–14 não reaplicadas; 11–14 permanecem pendentes.
+
+Cobertura acumulada: **32/52 seções existentes**, cinco tópicos integrais e Banco de Dados **10/14**. Restam **20 seções existentes** e três pacotes de lacuna em dry-run. Informática permanece parcial.
+
+### Achados e correções
+
+| Seção | Decisão aplicada |
+| --- | --- |
+| 06 — Tupla / Registro | Esclarecido que a tupla reúne valores dos atributos, não as definições das colunas. Preservada equivalência didática com linha; acrescentado exemplo fictício simples com unidade/restrições dependentes do projeto. |
+| 07 — Relacionamentos | Corrigidos binário como padrão obrigatório, representação universal por verbos e “simultâneo = ida e volta”. Grau, atributos de relacionamento e restrições de coexistência separados; retirada classificação rígida sustentada por exemplos tributários inadequados, preservando as noções de independência, dependência e exclusividade como regras de domínio. Máximos separados de mínimos; mantidos exemplos 1:1, 1:N, M:N e secretária/departamento sob regras explícitas. Hospedagens contextualizadas no histórico; matrícula condicionada ao projeto. A seção anunciava leitura de diagrama inexistente: leitura reformulada em texto e condicionada à notação/legenda, sem inventar um diagrama. |
+| 08 — DW e DM | Integração lógica não confundida com única máquina. Mantidas quatro características clássicas; não volatilidade qualificada para não proibir manutenção, retenção ou correções. ETL não exclusivo, com referência a ELT. Data Mart pode ser dependente ou independente. Granularidade explicitada por grão fino/grosso e pelo significado de cada linha, evitando relação universal ambígua alta/baixa. Hierarquia País→Estado→Cidade→Bairro preservada em texto, sem fórmula matemática desnecessária; esclarecido que não define todo o grão do fato. Callout corrigido. |
+| 09 — Abordagens de DW | Bottom-up não reduzido a juntar silos; incluídas integração planejada e dimensões conformadas da abordagem Kimball. Top-down não exige concluir todos os dados corporativos antes de qualquer entrega e marts não são obrigatoriamente somente sumarizados. Retirada desvantagem inevitável de consolidação. |
+| 10 — ETL | Staging não imposta como repositório separado obrigatório; fases distinguidas de implementação e da execução paralela de partições. Mantidos exemplos com unidades quadradas, explicitando conversão numérica. Acrescentada distinção sucinta ELT. Corrigidos aspas/colchetes quebrados e rótulos fragmentados do mapa; fluxo simplificado sem staging obrigatório. Callout alinhado. |
+
+### Fontes primárias conferidas em 23/11/2026
+
+Consultados trechos pertinentes; não se declara leitura integral das publicações. Fontes antigas fundamentam conceitos estáveis, sem serem apresentadas como publicações de 2026.
+
+- University of Cape Town, notas autorais de ensino: [modelo relacional/tupla](https://www.cs.uct.ac.za/mit_notes/database/htmls/chp02.html) e [relacionamentos e participação](https://www.cs.uct.ac.za/mit_notes/database/htmls/chp06.html); [PostgreSQL — Table Basics](https://www.postgresql.org/docs/current/ddl-basics.html): linha/valores, modelos, cardinalidades e participação. Complemento: [OpenDSA/Virginia Tech — ERD Components](https://opendsa-server.cs.vt.edu/ODSA/Books/Database/html/ERDComponents.html), trechos textuais sobre grau, atributos e relacionamentos. Widgets do OpenDSA não usados como prova funcional.
+- [Database Management Systems — slides dos autores, capítulo 2](https://pages.cs.wisc.edu/~dbbook/openAccess/secondEdition/slides/slides2ed6-english/Chapter2-6.pdf): discussão binário/ternário e preservação de restrições. Texto extraído do PDF estava ilegível; uso limitado ao trecho indexado sobre escolha de representação. [Slides de Database System Concepts em Yale](https://codex.cs.yale.edu/avi/db-book/Previous-editions/db4/slide-dir/ch2-2.pdf) corroboram no índice a possibilidade de perder correspondência de instâncias; acesso direto retornou 502. Não se atribui leitura integral. Página de curso de Ontario Tech consultada foi excluída da fundamentação por expor geração por IA.
+- [Oracle Database 26 — DW Concepts](https://docs.oracle.com/en/database/oracle/oracle-database/26/dwhsg/introduction-data-warehouse-concepts.html): finalidade analítica, quatro características, integração, atualizações de carga e arquiteturas. A definição clássica de não volatilidade foi contextualizada com tarefas operacionais, sem negar seu propósito de preservar histórico. URLs iniciais com “warehousing” retornaram 404; o endereço correto acima foi recuperado.
+- [Oracle — Data Mart Concepts](https://docs.oracle.com/html/E10312_01/dm_concepts.htm), documentação histórica 10g: distinção entre marts dependentes/independentes. Não utilizados limites antigos de tamanho, prazos ou recomendações de produto.
+- [Ralph Kimball — Fact Tables, 05/11/2008](https://www.kimballgroup.com/2008/11/fact-tables/): declaração do grão e detalhe; o próprio texto também descreve fatos de snapshot acumulado atualizados, afastando a proibição técnica universal de alteração.
+- [Kimball Group — Enterprise DW Bus Architecture](https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/kimball-data-warehouse-bus-architecture/) e [Margy Ross — Differences of Opinion, 03/03/2004](https://www.kimballgroup.com/2004/03/differences-of-opinion/): integração por dimensões conformadas, entrega incremental, arquitetura corporativa e apresentação detalhada/sumarizada. Esta última é a perspectiva da coautora de Kimball sobre as duas abordagens, não documento escrito por Inmon.
+- [Microsoft — ETL/ELT, Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/data-guide/relational-data/etl): fases, transformações, staging frequente e processamento por partições; distinção ELT. Usado texto acessível apesar do aviso genérico de autorização no cabeçalho, sem universalizar produtos Azure.
+
+Exemplos são didáticos e condicionados às regras do domínio. A preferência por declarar o grão e não usar “granularidade alta/baixa” isoladamente é uma decisão editorial de clareza; não se promete que todos os editais empreguem a mesma convenção. Nenhuma regra tributária foi revisada ou publicada neste lote.
+
+### Publicação e verificação
+
+Pasta exclusiva: `orquestracao-03-54/saneamento-onda-7/39-informatica/banco-06-10-20261123/`; executor `../banco-06-10-lote.mjs`. SHA-256: `5eb0793e9dcbc3ae24f528bf924297dd5ae606ce7fbe5a3c887ee94b8bd3e0e4`.
+
+- Pré-imagem atual de 15 tópicos/52 seções preservada; paridade inicial com o resultado de Banco 01–05. Proposta ampla não rastreada consultada somente nas seções deste lote, sem aplicação dos demais itens.
+- Dry-run existente aprovado com 14 seções por exigência de `--preserve-flashcards`; demais nove copiadas intactas apenas para validação. SQL decodificado: exatamente cinco updates 06–10, nenhuma inserção; nenhuma carga de 14 seções aplicada.
+- Ensaio com rollback aprovado; publicação atômica condicionada a revisão esperada, identidade e tópico ativo pelo mecanismo existente. Sem schema, segurança, código da aplicação, dependências, credenciais ou dados pessoais alterados.
+- Reconciliação integral posterior aprovada: 15 tópicos/52 seções, sem ausentes, extras ou divergências; cinco novas revisões. Conteúdo e IDs de revisão das demais **47 seções preservados**, com asserção explícita. `target: preimagem` compara o estado esperado corrigido, não indica rollback.
+- **30/30 verificações visuais**: cinco seções × Light/Dark/Sepia × 375/1200 px, sem overflow global ou erro KaTeX. Fórmulas de unidades e dois callouts conferidos. Mapa ETL renderizado e exercitado com zoom, restauração e overlay nas seis combinações; validador compartilhado aprovou o payload e rejeitou três controles maliciosos.
+- **49/49 testes `npm run test:content` aprovados** no worktree limpo do site, incluindo contrato e segurança Mermaid; saída preservada em `test-content.txt`. Sintaxe do executor e diff conferidos.
+- Harness com componentes reais e CSS compilado de `questoes-experiencia-20261122`; não certifica toda a navegação autenticada ou todos os editais. Conta de aluno dispensada. Sem lint/build/audit/auth globais, pois não houve alteração de renderizador, aplicação, dependências ou autenticação; esta é revisão editorial, não correção de segurança da aplicação.
+
+Reprodução: CLI `import-batch <pasta/import> --dry-run --preserve-flashcards`; `node <pasta/validar-visual.cjs> <pasta/render.json>` na raiz editorial; `npm run test:content` no site. Recibos preservados. Não reaplicar SQL concluído.
+
+Próximo prompt: “Revise somente Banco de Dados 11–14, conforme relatório 39. Preserve os lotes publicados, publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint anterior — 23/11/2026 — Banco de Dados 01–05 publicadas
+
+Escopo exclusivo: `banco-de-dados-sec-01` a `banco-de-dados-sec-05`, examinadas integralmente com quatro callouts e um mnemônico ACID. Nenhum cartão ou diagrama existente. Identidades, títulos, ordem e ACID preservados. Seções 06–14 não revisadas nem reaplicadas.
+
+Cobertura acumulada: **27/52 seções existentes**, cinco tópicos integrais e Banco de Dados **5/14**. Restam **25 seções existentes** e três pacotes de lacuna em dry-run. Informática permanece parcial.
+
+### Achados e correções
+
+| Seção | Decisão aplicada |
+| --- | --- |
+| 01 — Banco de dados e Sgbd | ACID definido como propriedades transacionais, não requisitos de qualquer BD. Corrigidas impossibilidade de concorrência e durabilidade como irreversibilidade absoluta; consistência vinculada a restrições e transação correta. Diferenciados tipo inteiro e restrição não negativa. Dicionário não limitado universalmente a tabelas somente de leitura; metadados atualizados por operações controladas. Soma SGBD+BD contextualizada como núcleo, removendo fórmula categórica contraditória com a descrição do ambiente. Removida tabela genérica “consulte as seções” sem conteúdo didático. Exemplos de regras rígidas de telefone/sexo substituídos por restrição de nota; lista de SGBDs mantida com exemplos atuais, sem Paradox legado. Callout alinhado. |
+| 02 — Abstração | Esclarecidos esquemas externo, conceitual e interno. Retirada expressão ambígua “nível seguinte”; distinguidas independência física/lógica e necessidade de ajustar mapeamentos. Não prometida transparência para qualquer mudança. Visão arquitetural diferenciada de view SQL e das etapas de modelagem. Callout alinhado. |
+| 03 — Modelagem | Retirada obrigação de CASE e de SGBD específico no modelo lógico. Implementação física não definida apenas por nomes/tipos de colunas. ER separado de relacional; tipo/ocorrência de entidade distinguidos. Entidade fraca descrita pela identificação com proprietária/chave parcial e participação obrigatória; dependência de existência isolada é insuficiente. Callout alinhado. |
+| 04 — Tabela | Relação pertence ao modelo relacional, não ao MER. Corrigida promessa de uma tabela armazenar tudo sobre um elemento. Diferenciada relação matemática de tabela SQL quanto a repetição e ordem, sem ampliar para comandos de consulta. |
+| 05 — Atributo / Campo | Atributos simples/compostos e mono/multivalorados dependem do modelo; endereço não é sempre composto/multivalorado. NULL distinguido de “valor vazio”. Corrigida multiplicidade de PK: uma restrição por tabela, possivelmente composta. Retirada regra inventada de PK no losango. Candidata como conjunto mínimo; alternativas e exemplos condicionados às regras do cadastro. FK pode ser composta, autorreferente, não única e nullable conforme restrições; referência não limitada exclusivamente a PK. Callout alinhado. |
+
+### Fontes primárias conferidas em 23/11/2026
+
+Consultados trechos pertinentes, sem atribuir leitura integral das publicações. Documentação de produto fundamenta exemplos de implementação, não regras universais sobre todo SGBD.
+
+- PostgreSQL, documentação corrente: [transações](https://www.postgresql.org/docs/current/tutorial-transactions.html), [níveis de isolamento](https://www.postgresql.org/docs/current/transaction-iso.html), [restrições](https://www.postgresql.org/docs/current/ddl-constraints.html), [catálogos](https://www.postgresql.org/docs/current/catalogs.html) e [tabelas](https://www.postgresql.org/docs/current/ddl-basics.html). Atomicidade/durabilidade, concorrência, metadados, PK/FK/NULL e ausência de ordem implícita. Não houve alteração da versão do banco de produção.
+- [Microsoft Learn — PK e FK](https://learn.microsoft.com/en-us/sql/relational-databases/tables/primary-and-foreign-key-constraints?view=sql-server-ver17): unicidade, composição e uma PK por tabela. Usado conteúdo acessível da página, apesar de aviso genérico de autorização no cabeçalho; não se atribuem limites específicos do SQL Server a outros sistemas.
+- [IBM — Data Modeling](https://www.ibm.com/think/topics/data-modeling) e [IRS — Database Design Techniques and Deliverables](https://www.irs.gov/irm/part2/irm_02-005-013), especialmente item 2.5.13.5 de 12/12/2024: modelagem lógica independente de produto, física e variação terminológica entre métodos.
+- Notas autorais de ensino da University of Cape Town: [arquitetura de três esquemas](https://www.cs.uct.ac.za/mit_notes/database/htmls/chp01.html), [modelo relacional](https://www.cs.uct.ac.za/mit_notes/database/htmls/chp02.html) e [ER, chaves e entidade fraca](https://www.cs.uct.ac.za/mit_notes/database/htmls/chp06.html). Material acadêmico de fundamentos. O trecho de independência física contém aparente lapso “not transparent”, contraditório com o parágrafo anterior; não foi reproduzido como regra. Aplicou-se a distinção conceitual confirmada pela arquitetura e pelos exemplos.
+- [OpenDSA/Virginia Tech — ERD Basic Components](https://opendsa-server.cs.vt.edu/ODSA/Books/Database/html/ERDComponents.html), material com atualização indicada em 05/03/2023: atributos compostos/multivalorados, tipo/ocorrência e identificação fraca. Consultado texto acessível; widgets interativos exibiam erro e não foram usados como evidência de funcionamento. Página alternativa de Loyola sobre ER retornou 403, não usada como leitura acessível.
+
+Exemplos de notas, apartamentos e itens de pedido são didáticos e condicionados ao domínio. Não foram criadas tabelas, entidades ou restrições reais no banco de produção.
+
+### Publicação e verificação
+
+Pasta exclusiva: `orquestracao-03-54/saneamento-onda-7/39-informatica/banco-01-05-20261123/`; executor `../banco-01-05-lote.mjs`. SHA-256: `37592af9314ed991e69bebf65ffd46f067a5b7a3cb690d20f179f8af300c0440`.
+
+- Pré-imagem atual de 15 tópicos/52 seções preservada; paridade inicial com o resultado de Teoria da Informação. Proposta ampla não rastreada consultada apenas em 01–05, sem aplicar os outros itens.
+- Dry-run aprovado pelo CLI existente com 14 seções por exigência de `--preserve-flashcards`. Seções 06–14 copiadas intactas apenas para validação. SQL decodificado e conferido: exatamente cinco updates 01–05, nenhuma inserção; não aplicada carga de 14 seções.
+- Ensaio transacional com rollback aprovado; publicação atômica pelo mecanismo existente condicionada a revisão esperada, identidade e tópico ativo. Nenhuma alteração de schema, segurança, aplicação, dependência, credencial ou dado pessoal.
+- Reconciliação posterior integral: 15 tópicos/52 seções sem ausentes, extras ou divergências; cinco novas revisões. Conteúdo e IDs de revisão das demais **47 seções preservados**, com asserção explícita. Rótulo `target: preimagem` compara o estado esperado corrigido, não significa rollback.
+- **30/30 verificações visuais**: cinco seções × Light/Dark/Sepia × 375/1200 px, sem overflow global ou erro de fórmula. Quatro callouts e ACID conferidos. Nenhum Mermaid alterado ou presente no lote; não repetidos testes de mapas já válidos.
+- Harness local com componentes reais e CSS compilado de `questoes-experiencia-20261122`; não certifica toda a navegação autenticada ou todos os editais. Conta de aluno dispensada. Sintaxe do executor e diff verificados; sem lint/build globais porque código e contratos da aplicação não mudaram.
+
+Reprodução: CLI `import-batch <pasta/import> --dry-run --preserve-flashcards`; `node <pasta/validar-visual.cjs> <pasta/render.json>` na raiz editorial. Recibos preservados. Não reaplicar SQL concluído.
+
+Próximo prompt: “Revise somente Banco de Dados 06–10, conforme relatório 39. Preserve os lotes publicados, publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint anterior — 23/11/2026 — Teoria da Informação publicada
+
+Escopo exclusivo: `teoria-da-informacao-sec-01` — Dado, Informação, Conhecimento e Inteligência. Examinados integralmente texto, callout e diagrama; nenhum cartão ou mnemônico existente. Identidades, título, ordem e código do mapa preservados. Nenhum lote anterior reaplicado.
+
+Cobertura acumulada: **22/52 seções existentes**, cinco tópicos integrais. Teoria da Informação **1/1**. Restam **30 seções existentes** e três pacotes de lacuna em dry-run. Informática permanece parcial.
+
+### Achados e correções
+
+- A sequência dado–inteligência era apresentada como explicação universal e automática do entendimento humano. Passou a ser explicitamente um modelo didático da gestão da informação, preservando o recorte temático da seção.
+- Dados semiestruturados eram confundidos com campos livres e estrutura estabelecida apenas depois. Corrigidos para organização por chaves, hierarquia ou marcações, com exemplos JSON/XML e possibilidade de esquema de validação.
+- Dados não estruturados eram definidos como totalmente sem estrutura, com predominância atual não quantificada. Corrigida a distinção entre esquema tabular e formato interno; retirada a generalização sem contexto. Exemplo rígido de telefone numérico/nome limitado substituído por tabela didática de matrícula, data e nota.
+- Retirada proibição absoluta de informação conter conclusões. Conhecimento tácito/explicito esclarecido, sem reduzir conhecimento a armazenamento de informação.
+- Inteligência distinguida da própria decisão/execução. Removidas garantias de precisão e vantagem; acrescentado exemplo didático integrado e alinhado o callout. Mapa linear mantido como síntese da sequência, contextualizado no texto e callout como modelo didático.
+
+### Fontes primárias conferidas em 23/11/2026
+
+- [IBM — What is Data?](https://www.ibm.com/think/topics/data): material autoral do fabricante, trechos de definição e classificação (structured, semi-structured e unstructured). Fundamenta organização, exemplos e coexistência de tipos; não usado para estimar proporção universal de dados.
+- [ENAGRO — Gestão do Conhecimento](https://enagro.agricultura.gov.br/gestao-do-conhecimento/gestao-do-conhecimento-1): página institucional publicada em 14/04/2020 e modificada em 15/04/2020, recuperada nesta conferência. Evidência da abordagem adotada pelo órgão sobre experiência, conhecimento tácito/explicito e mobilização para a ação; a página referencia autores, não foi apresentada como pesquisa original desses autores.
+- [ABIN — Memórias da Pandemia](https://www.gov.br/abin/pt-br/centrais-de-conteudo/publicacoes/memorias-da-pandemia/memorias-da-pandemia-1/@@download/file): trecho indexado oficial distingue assessoramento de decisão. Complemento: [Doutrina da Atividade de Inteligência (2023)](https://www.gov.br/abin/pt-br/centrais-de-conteudo/publicacoes/doutrina/Doutrina-da-Atividade-de-Inteligencia-2023), trecho indexado sobre produção e difusão para assessorar. A página direta e o PDF da doutrina exigiram desafio antirobô; não se declara leitura integral desses documentos. Uso restrito ao assessoramento no contexto institucional, sem universalizar doutrina de inteligência de Estado para toda organização.
+
+As formulações sobre inexistência de automatismo, fronteiras flexíveis e ausência de garantia são qualificações editoriais conservadoras da síntese adotada. O exemplo de notas é didático, não dado empírico. Não foi ampliado o tópico para teoria matemática da informação nem outros conteúdos ausentes do recorte coletado.
+
+### Publicação e verificação
+
+Pasta exclusiva: `orquestracao-03-54/saneamento-onda-7/39-informatica/teoria-informacao-20261123/`; executor `../teoria-informacao-lote.mjs`. SHA-256: `44c05a05aabaf751c646a0c41a011017e11dbc9afe21d829907fc7d4ceb31c9f`.
+
+- Pré-imagem atual de 15 tópicos/52 seções preservada, em paridade inicial com Redes 06–08. Proposta ampla não rastreada consultada somente nesta seção, sem aplicar os demais itens.
+- Dry-run do CLI existente aprovado para um tópico/uma seção, preservando flashcards. SQL decodificado e conferido: exatamente um update, nenhuma inserção.
+- Ensaio transacional com rollback aprovado. Publicação atômica condicionada à revisão esperada, identidade e tópico ativo, pelo mecanismo existente. Sem schema, aplicação, dependências, credenciais ou dados pessoais alterados.
+- Reconciliação integral posterior: 15 tópicos/52 seções, sem ausentes, extras ou divergências; uma nova revisão. Conteúdo e IDs de revisão das demais **51 seções preservados**, com asserção explícita no executor. O rótulo `target: preimagem` usa o estado esperado já corrigido e não indica rollback.
+- **6/6 verificações visuais**: Light/Dark/Sepia × 375/1200 px, sem overflow global ou erro de fórmula. Mapa preservado exercitado com zoom, restauração e overlay nas seis combinações; callout e capturas conferidos. Nenhuma alteração Mermaid para justificar repetir testes maliciosos já válidos.
+- Harness local com componentes reais e CSS compilado de `questoes-experiencia-20261122`; não certifica a navegação autenticada integral. Conta de aluno dispensada. Sintaxe do executor e diff verificados; sem lint/build globais porque código e contratos da aplicação não mudaram.
+
+Reprodução: CLI `import-batch <pasta/import> --dry-run --preserve-flashcards`; `node <pasta/validar-visual.cjs> <pasta/render.json>` na raiz editorial. Recibos imutáveis preservados. Não reaplicar SQL concluído.
+
+Próximo prompt: “Revise somente Banco de Dados 01–05, conforme relatório 39. Preserve os lotes publicados, publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint anterior — 23/11/2026 — Redes de Computadores 06–08 publicadas
+
+Escopo exclusivo: `redes-de-computadores-sec-06` a `redes-de-computadores-sec-08`, examinadas integralmente com dois callouts e um mnemônico RITA. Nenhum cartão ou diagrama existente nessas seções. Identidades, títulos, ordem e mnemônico preservados; três tabelas incluídas para organizar o conteúdo e suprir a comparação TCP/UDP anunciada e ausente.
+
+Cobertura acumulada: **21/52 seções existentes**, quatro tópicos integrais, incluindo Redes de Computadores **8/8** nos dois lotes. Restam **31 seções existentes** e três pacotes de lacuna em dry-run. Informática permanece parcial. Hardware, Internet/Intranet, Ameaças Virtuais e Redes 01–05 não foram reaplicados.
+
+### Achados e correções
+
+| Seção | Decisão aplicada |
+| --- | --- |
+| 06 — Arquitetura TCP/IP | Contextualizado o modelo de quatro camadas e sua diferença em relação ao agrupamento didático em cinco. Acrescentadas funções/exemplos por camada, sem equivalência mecânica com OSI. RITA conferido e preservado. |
+| 07 — IP e endereçamento | Corrigida atribuição automática de endereços ao IP e identificação permanente de dispositivo. Separadas fragmentação IPv4/IPv6 e limites em bytes: 65.535 no total IPv4, carga útil IPv6 e exceção de jumbogramas. Preservado exemplo binário correto. Faixas privadas expressas por prefixos; corrigidos 0.0.0.0, loopback /8, broadcast e dependência da máscara. IPv6 com compressão, exemplo reservado à documentação e ausência de broadcast. Callout alinhado. |
+| 08 — TCP e UDP | Suprida tabela ausente. Diferenciados fluxo de bytes/datagramas, conexão, entrega/ordem e controle de fluxo/congestionamento. Retirada oposição absoluta entre confiabilidade e velocidade. Explicitados limites de falha, criptografia adicional e protocolos sobre UDP; callout alinhado. |
+
+### Fontes primárias conferidas em 23/11/2026
+
+Consultados os trechos pertinentes das especificações, não a integralidade de cada RFC. Datas abaixo são das publicações; a conferência é desta revisão.
+
+- [RFC 1122 (1989)](https://www.rfc-editor.org/rfc/rfc1122.html): arquitetura, camadas e melhor esforço. Agrupamento em cinco camadas apresentado como convenção didática, não novo padrão obrigatório.
+- [RFC 791 (1981)](https://www.rfc-editor.org/rfc/rfc791.html): IPv4, comprimento total e fragmentação; [RFC 2131 (1997)](https://www.rfc-editor.org/rfc/rfc2131.html): configuração por DHCP.
+- [RFC 1918 (1996)](https://www.rfc-editor.org/rfc/rfc1918.html) e [registro IANA de IPv4 especial](https://www.iana.org/assignments/iana-ipv4-special-registry/): faixas privadas e endereços especiais. O registro consultado indica atualização em 09/10/2025.
+- [RFC 8200 (2017)](https://www.rfc-editor.org/rfc/rfc8200.html), [RFC 4291 (2006)](https://www.rfc-editor.org/rfc/rfc4291.html), [RFC 2675 (1999)](https://www.rfc-editor.org/rfc/rfc2675.html) e [RFC 3849 (2004)](https://www.rfc-editor.org/rfc/rfc3849.html): IPv6, interfaces/sintaxe, fragmentação, jumbogramas e prefixo de documentação.
+- [RFC 9293 (2022)](https://www.rfc-editor.org/rfc/rfc9293.html), [RFC 768 (1980)](https://www.rfc-editor.org/rfc/rfc768.html), [RFC 8085 (2017)](https://www.rfc-editor.org/rfc/rfc8085.html) e [RFC 9000 (2021)](https://www.rfc-editor.org/rfc/rfc9000.html): TCP, UDP, responsabilidades da aplicação e QUIC. RFC 9293 usada como especificação atual de TCP, em vez da substituída RFC 793.
+
+### Publicação e verificação
+
+Pasta exclusiva: `orquestracao-03-54/saneamento-onda-7/39-informatica/redes-06-08-20261123/`; executor `../redes-06-08-lote.mjs`. SHA-256: `4b5dc6bbc259d9bc589c90efb0caa1c5fd865f6032c478842046194dc9ba7cbc`.
+
+- Pré-imagem atual de 15 tópicos/52 seções preservada e paridade inicial com o resultado de Redes 01–05. Propostas amplas não rastreadas não aplicadas.
+- Dry-run aprovado com oito seções por exigência de `--preserve-flashcards`; 01–05 intactas apenas na validação. SQL decodificado e conferido: exatamente três updates 06–08, nenhuma inserção.
+- Ensaio com rollback aprovado; publicação atômica pelo mecanismo existente, condicionada a revisão/identidade e tópico ativo. Sem alteração de schema, aplicação, dependências, credenciais ou dados pessoais.
+- Reconciliação posterior integral aprovada: 15 tópicos/52 seções sem ausentes, extras ou divergências; três novas revisões. Demais 49 seções preservadas. O rótulo genérico `target: preimagem` compara o estado esperado já corrigido, não indica rollback.
+- **18/18 verificações visuais**: três seções × Light/Dark/Sepia × 375/1200 px, incluindo nove checagens de tabela no celular. Sem overflow global nem erro de fórmula. Tabelas largas usam rolagem interna, exercitada pelo harness; callouts e RITA conferidos em capturas. Nenhum Mermaid alterado, portanto sem repetição de testes de mapas já válidos.
+- Harness local com componentes reais e CSS compilado de `questoes-experiencia-20261122`; conta de aluno dispensada. Não certifica toda a navegação autenticada nem todos os editais. Sem lint/build globais porque código/contratos não mudaram; sintaxe do executor e diff verificados.
+
+Reprodução: `import-batch <pasta/import> --dry-run --preserve-flashcards` pelo CLI do site; `node <pasta/validar-visual.cjs> <pasta/render.json>` na raiz editorial. Recibos preservados. Não reaplicar SQL concluído.
+
+Próximo prompt: “Revise somente Teoria da Informação, conforme relatório 39, até cinco seções. Preserve os lotes publicados, publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint anterior — 23/11/2026 — Redes de Computadores 01–05 publicadas
+
+Escopo exclusivo: `redes-de-computadores-sec-01` a `redes-de-computadores-sec-05`, com texto integral, três callouts, um diagrama, um mnemônico e tabelas. Nenhum cartão existente. As tabelas de topologias e OSI estavam indevidamente na seção 01; foram corrigidas e recompostas nas seções próprias 03 e 05. A seção 01 passou a conter apenas abrangência/classificação. Resultado: três tabelas e a fórmula de malha preservada em seu contexto correto. Identidades, títulos, ordem e mnemônico mantidos.
+
+Cobertura acumulada: **18/52 seções existentes**, três tópicos integrais e Redes de Computadores **5/8**. Restam **34 seções existentes** e três pacotes de lacuna em dry-run. As seções Redes 06–08 não foram revisadas ou reaplicadas neste lote. Informática permanece parcial.
+
+### Achados e correções
+
+| Seção | Decisão aplicada |
+| --- | --- |
+| 01 — Dimensão | Removido limite universal de LAN a 10 km. Distinguida abrangência de tecnologia WLAN e de topologia. Relocadas as duas tabelas alheias ao assunto, sem excluir os temas do tópico. |
+| 02 — Comutação | Circuito reserva recursos, sem exigir fio físico exclusivo. Mensagem inteira distinguida de pacote; diferenciados datagramas e circuitos virtuais. Retiradas analogias que tratavam todas as modalidades de pacotes como datagramas e a reunião ordenada como garantia automática. Callout e mapa alinhados; mapa sem rótulos quebrados palavra por palavra. |
+| 03 — Topologias | Suprida tabela anunciada mas ausente na seção, recuperando o conteúdo deslocado. Corrigidas topologias híbridas como únicas possíveis, falha inevitável de anel, melhor desempenho/imunidade da malha e colisão como característica universal. Fórmula N(N−1)/2 preservada para malha completa simples bidirecional; exemplo de quatro nós validado: seis enlaces. Callout da estrela qualificado para redundância. |
+| 04 — Equipamentos | Modem não limitado a discado; roteador condicionado à tabela/política. Switch aprende MAC e admite flooding; hub repete sinais. AP não é sinônimo de repetidor. Corrigidos nome de WPA2, AES como algoritmo, CCMP-128 e fragilidade de WEP como falha de projeto, não simples tamanho de chave. Acrescentada referência atual a WPA3, sem prometer segurança absoluta. Callout alinhado. |
+| 05 — OSI | Recomposta tabela das sete camadas, corrigindo SQL/ZIP como exemplos de sessão, confiabilidade universal de transporte, fragmentação/segmentação e protocolos forçados a uma única camada. Independência de implementação condicionada aos serviços/interfaces preservados. Agrupamento rede/usuário mantido como recurso didático, sem determinar hardware/software. Mnemônico conferido e preservado. |
+
+### Fontes primárias conferidas em 23/11/2026
+
+- [ITU-T X.200 (1994), página oficial](https://www.itu.int/rec/T-REC-X.200-199407-I/en), com status “In force”, e [texto oficial em PDF](https://www.itu.int/rec/dologin_pub.asp?id=T-REC-X.200-199407-I%21%21PDF-E&lang=s&type=items): modelo OSI e serviços de camadas. O primeiro acesso ao PDF com outro parâmetro de idioma falhou; o endereço acima foi recuperado. Complemento de implementação: [Oracle — OSI](https://docs.oracle.com/cd/E19504-01/802-5886/intro-45828/index.html). Consultados trechos pertinentes, sem atribuir leitura integral das publicações.
+- [RFC 768 — UDP](https://www.rfc-editor.org/rfc/rfc768.html) e [RFC 9293 — TCP](https://www.rfc-editor.org/rfc/rfc9293.html): diferenças de entrega/ordem e transporte. Fontes de 1980 e 2022, sem apresentá-las como novas publicações de 2026.
+- [Cisco — campus LAN/WLAN](https://www.cisco.com/c/en/us/td/docs/solutions/CVD/Campus/cisco-campus-lan-wlan-design-guide.html): abrangência contextual e campus; [Cisco — topologias](https://www.cisco.com/site/us/en/learn/topics/networking/what-is-network-topology.html) e [IBM — topologias](https://www.ibm.com/think/topics/network-topology): organização física/lógica, redundância e limites. Material autoral dos fabricantes, sem universalizar produtos ou modelos de implantação.
+- [Cisco — WAN e tecnologias de comutação](https://www.cisco.com/c/en/us/td/docs/routers/ios-xe/lan-wan/lan-wan/m_wan-lserv-overview-xe.html): circuitos, pacotes e tecnologias históricas com circuitos virtuais. O glossário IBM de z/OS retornou 403 no acesso direto e não foi tratado como leitura integral acessível.
+- [Cisco — tabela MAC e flooding](https://www.cisco.com/c/en/us/td/docs/switches/lan/c9000/lyr2-fwd/cdp-lldp-mac-udld/cdp-lldp-mac-udld-configuration-guide/configure-mac.html), [access point](https://www.cisco.com/c/en/us/support/docs/smb/wireless/cisco-small-business-100-series-wireless-access-points/smb5530-set-up-a-wireless-network-using-a-wireless-access-point-wap.html) e [modem a cabo](https://www.cisco.com/en/US/docs/cable/modems/ubr904/installation/guide/cmprodo.html): características dos dispositivos. Documentação antiga usada apenas para fundamentos estáveis; sem recomendar equipamentos legados.
+- [Apple — segurança de roteadores/APs](https://support.apple.com/en-us/102766) e [Microsoft — algoritmos DOT11](https://learn.microsoft.com/en-us/windows/win32/nativewifi/dot11-cipher-algorithm): WPA2/AES, WPA3, CCMP-128 e opções legadas inseguras. [NIST SP 800-48r1](https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-48r1.pdf) usado somente como explicação histórica de WEP/IV: está explicitamente retirado desde 2018 e não fundamenta recomendação atual de configuração.
+
+### Publicação e verificação
+
+Pasta exclusiva: `orquestracao-03-54/saneamento-onda-7/39-informatica/redes-01-05-20261123/`; executor `../redes-01-05-lote.mjs`. SHA-256 da proposta: `7d9de49ddd019f2807e3e8c27af3a81a5e62b40e7e3a51612b2b1ce5231495bd`.
+
+- Pré-imagem atual de 15 tópicos/52 seções preservada; paridade inicial com o resultado após Ameaças 06–09. Propostas amplas não rastreadas não aplicadas.
+- Dry-run aprovado pelo CLI existente com oito seções para satisfazer `--preserve-flashcards`. Seções 06–08 copiadas intactas somente na validação. SQL conferido com exatamente cinco updates, nenhuma inserção; não foi aplicada carga de oito seções.
+- Ensaio transacional com rollback aprovado; publicação atômica condicionada a revisão, identidade e tópico ativo, usando o mecanismo existente. Nenhum schema, código da aplicação, dependência, credencial ou dado pessoal alterado.
+- Reconciliação integral posterior: 15 tópicos/52 seções sem ausentes, extras ou divergências; cinco novas revisões. Demais 47 seções preservadas. Rótulo genérico `target: preimagem` usa o estado esperado já corrigido como entrada, não significa rollback.
+- 30/30 verificações locais: cinco seções × Light/Dark/Sepia × 375/1200 px. Incluídas nove checagens de rolagem interna das três tabelas no celular. Mapa com zoom/restauração/overlay exercitados nas seis combinações; validador compartilhado aprovou o código e rejeitou três controles maliciosos. Fórmula renderizada sem erro e mnemônico visualizado. Sem overflow global. Tabelas e mapa extenso usam navegação interna no celular; layout compartilhado preservado.
+- Harness com componentes reais e CSS compilado de `questoes-experiencia-20261122`; conta de aluno dispensada. Isso não certifica toda a navegação autenticada. Sem lint/build globais porque a aplicação e os contratos não mudaram. Sintaxe do executor e diff verificados. Esta revisão não certifica cobertura de todos os editais possíveis.
+
+Reprodução: CLI do site `import-batch <pasta deste lote/import> --dry-run --preserve-flashcards`; na raiz editorial, `node <pasta deste lote/validar-visual.cjs> <pasta deste lote/render.json>`. `reconcile` é somente leitura, mas o recibo existente é imutável. Não reaplicar SQL concluído.
+
+Próximo prompt: “Revise somente Redes de Computadores 06–08, conforme relatório 39. Preserve os lotes publicados, publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint anterior — 23/11/2026 — Ameaças Virtuais 06–09 publicadas
+
+Escopo exclusivo: `ameacas-virtuais-sec-06` a `ameacas-virtuais-sec-09`, examinadas integralmente com três callouts e um diagrama estruturado; nenhum cartão, mnemônico ou tabela. As quatro seções foram corrigidas e publicadas. Ameaças Virtuais completa **9/9** no ciclo dos dois lotes, sem reaplicar 01–05. Cobertura acumulada comprovada de Informática: **13/52 seções em três tópicos integrais**. Restam **39 seções existentes** e três pacotes de lacuna em dry-run; disciplina parcial.
+
+### Achados e correções
+
+| Seção | Correção aplicada |
+| --- | --- |
+| 06 — Firewall | Corrigidos controle limitado a TCP/perímetro, ausência de política, liberação irrestrita de saída como regra geral e garantias contra DDoS. Explicitados tráfego interno que cruza o controle, política de entrada/saída, limites de visibilidade e ausência de garantia para detectar sniffer passivo. Callout alinhado. |
+| 07 — Proxy | Qualificados encaminhamento e funções dependentes da implementação. Corrigida navegação sempre intermediada e separação exclusiva de políticas entre proxy/firewall; acrescentado proxy reverso para suprir omissão relevante, sem expandir para configuração operacional. Callout alinhado. |
+| 08 — VPN | Retiradas economia universal, criptografia de todo tráfego e anonimato garantidos. Diferenciados túnel completo/dividido, extremos protegidos, importância de HTTPS e confiança no operador. PPTP qualificado como legado não recomendado; citados exemplos atuais. Nenhum callout novo. |
+| 09 — IDS/IPS | IDS passa a indicar suspeita, sem provar intrusão; qualificadas implantação passiva, resposta integrada e prevenção inline. Acrescentados falsos positivos/negativos e limitações de observação. Atualizado callout e substituído mapa de um único título por distinção funcional de detecção/prevenção e análise. |
+
+Sem exclusão de seção ou mudança de identidade, título ou ordem. O mapa anterior não acrescentava informação ao título; a substituição elimina essa redundância. Não foi identificada outra omissão que justificasse ampliar este lote.
+
+### Fontes primárias conferidas em 23/11/2026
+
+- [NIST SP 800-41r1 — firewalls e políticas](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf), especialmente política inbound/outbound e tipos de filtragem. Documento de 2009 usado para fundamentos; complementado pela [documentação atual Windows Firewall](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/windows-firewall/), sem universalizar padrões de um produto.
+- [RFC 9110, seção 3.7 — intermediários](https://www.rfc-editor.org/rfc/rfc9110.html#section-3.7): proxy e gateway/proxy reverso, encaminhamento e cache.
+- [Microsoft — protocolos VPN](https://learn.microsoft.com/en-us/windows-server/remote/remote-access/configure-vpn-protocols) e [roteamento VPN](https://learn.microsoft.com/en-us/windows/security/operating-system-security/network-security/vpn/vpn-routing): PPTP/L2TP não recomendados, alternativas e túnel completo/dividido. Exemplos de implementação, não exclusividade de Windows.
+- [NIST SP 800-77r1 — VPN IPsec](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-77r1.pdf): proteção e riscos dos extremos; [FTC — limitações de aplicativos VPN](https://www.ftc.gov/business-guidance/blog/2018/02/market-vpn-app) e [CSA Singapore — uso de VPN pessoal](https://www.csa.gov.sg/alerts-and-advisories/advisories/ad-2024-011/): confiança no operador e limites de privacidade. Fontes institucionais de 2020, 2018 e 2024 recuperadas nesta data, sem apresentá-las como novas publicações de 2026.
+- [NIST SP 800-94 — IDPS](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-94.pdf), seções de detecção, falsos positivos/negativos e sensores passivos/inline; complementado pelos verbetes CSRC [IDS](https://csrc.nist.gov/glossary/term/intrusion_detection_system) e [IPS](https://csrc.nist.gov/glossary/term/intrusion_prevention_system). Fundamentos de 2007, não levantamento do mercado atual. Consultados os trechos pertinentes, sem alegação de leitura integral das publicações.
+
+A página oficial do SP 800-94 informa que a revisão preliminar de 2012 foi retirada e não se tornou publicação final. Foi usado o documento final de 2007 apenas para fundamentos, com essa limitação temporal explícita.
+
+### Publicação e verificação
+
+Pasta exclusiva: `orquestracao-03-54/saneamento-onda-7/39-informatica/ameacas-06-09-20261123/`; executor: `../ameacas-06-09-lote.mjs`. SHA-256 da proposta: `0b4e2927afaaa8e309db4cdbd5045d1e3159f57fc383b2fcc6ddc80f6b2a3b33`.
+
+- Pré-imagem atual de 15 tópicos/52 seções preservada. Estado inicial coincidiu com o resultado do lote 01–05, incluindo Hardware e Internet/Intranet. Propostas amplas não rastreadas não foram aplicadas.
+- CLI: dry-run aprovado com nove seções para satisfazer o contrato de `--preserve-flashcards`; 01–05 copiadas intactas apenas para validação. Conferência do SQL confirmou quatro updates (06–09), nenhuma inserção. Não houve aplicação do payload de nove seções.
+- Ensaio SQL com rollback aprovado. Publicação atômica com metadados do tópico protegidos e comparação dos IDs de revisão/identidade. Recibos `ensaio-recibo.txt` e `aplicacao-recibo.txt`; nenhuma migration, dependência, credencial, código da aplicação ou dado pessoal alterado.
+- Reconciliação posterior integral: 15 tópicos/52 seções sem ausentes, extras ou divergências; quatro novas revisões. Demais 48 seções preservadas. `target: preimagem` é rótulo do comparador genérico alimentado pelo estado esperado já corrigido, não indicação de rollback.
+- 24/24 verificações locais (quatro seções × Light/Dark/Sepia × 375/1200 px); capturas examinadas. Nenhum overflow global ou erro KaTeX. Zoom, restauração e abrir/fechar overlay exercitados nas seis combinações do mapa da seção 09. Mermaid válido no validador compartilhado, que rejeitou três controles maliciosos. Sem alteração do renderizador ou de suas regras de segurança.
+- Componentes reais e CSS compilado da worktree `questoes-experiencia-20261122`. Conta de aluno dispensada; validação local não certifica toda navegação autenticada. Sem lint/build globais: aplicação e contrato não mudaram. Sintaxe do executor e diff verificados.
+
+Reprodução: CLI do site `import-batch <pasta deste lote/import> --dry-run --preserve-flashcards`; na raiz editorial, `node <pasta deste lote/validar-visual.cjs> <pasta deste lote/render.json>`. Executor `reconcile` é somente leitura, mas o recibo existente é imutável. Não reaplicar SQL já concluído.
+
+Próximo prompt: “Revise somente Redes de Computadores, seções 01–05, conforme relatório 39. Preserve os três tópicos já publicados, publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint anterior — 23/11/2026 — Ameaças Virtuais 01–05 publicadas
+
+Escopo exclusivo: `ameacas-virtuais-sec-01` a `ameacas-virtuais-sec-05`, examinadas integralmente com três callouts e uma tabela. Nenhum cartão, mnemônico ou diagrama existente nessas cinco seções. Não foram criados componentes extras. As seções 06–09 continuam pendentes; seus textos não foram revisados neste lote. Cobertura acumulada: **9/52 seções em três tópicos**, sendo Hardware e Internet/Intranet integrais e Ameaças Virtuais **5/9**. Restam **43 seções existentes** e três pacotes de lacuna em dry-run. Disciplina parcial.
+
+### Achados e decisões
+
+| Seção | Correções publicadas |
+| --- | --- |
+| 01 — Visão geral | Retiradas restrições indevidas da intranet a uma única LAN e a cadastro em servidor específico. Conexão externa condicionada a conectividade e políticas. Reduzida duplicação conceitual com o tópico Internet e Intranet e acrescentado vínculo com ameaças internas. |
+| 02 — Classificação | Grupos apresentados como organização didática não exaustiva, com sobreposição. Separados golpe, técnica e malware; botnet definida como rede. Varredura e captura não são necessariamente ataques quando autorizadas. |
+| 03 — Tipos | Corrigidas ação consciente obrigatória para vírus, worm “autoprogramável”, phishing versus pharming, promessa de recuperação após resgate, trojan como vírus por suposta regra da banca e exemplo comercial sem fundamento. Qualificados bot, spyware, rootkit e sniffer. Separados infecção, ativação e carga útil; bomba lógica não é componente obrigatório de todo vírus. Reorganizada a tabela para eliminar pontuação/itens concatenados e alinhados os dois callouts. |
+| 04 — Antivírus | Mantida a classificação histórica de quatro gerações como recurso didático, sem alegar norma de mercado ou prevalência atual. Corrigidas fronteiras rígidas da heurística, análise dinâmica e “proteção total”. Registradas combinação atual de técnicas e limitações; callout atualizado. |
+| 05 — Antispyware | Retirada fronteira rígida de produtos e classificação automática de todo adware como spyware. Diferenciados publicidade, espionagem e aplicativos potencialmente indesejados. Função integrada não exige instalação redundante de produto residente. |
+
+### Fontes primárias — conferência em 23/11/2026
+
+- [CERT.br — fascículo Códigos Maliciosos](https://cartilha.cert.br/fasciculos/codigos-maliciosos/fasciculo-codigos-maliciosos.pdf), versão disponível no índice atual: tipos de malware, bot/botnet, espionagem e antimalware. As antigas URLs `/malware/`, `/golpes/` e `/ataques/` retornaram 404; não foram tratadas como fontes acessíveis.
+- [NIST SP 800-83r1](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-83r1.pdf), seções 2.1/2.2: categorias clássicas, ataques combinados e ferramentas. Documento histórico de 2013 usado para conceitos, complementado pelas fontes atuais; não foi apresentado como catálogo completo de ameaças de 2026.
+- NIST CSRC: [intranet](https://csrc.nist.gov/glossary/term/intranet), [phishing](https://csrc.nist.gov/glossary/term/phishing), [pharming](https://csrc.nist.gov/glossary/term/pharming), [trojan](https://csrc.nist.gov/glossary/term/trojan_horse), [bomba lógica](https://csrc.nist.gov/glossary/term/logic_bomb) e [sniffer](https://csrc.nist.gov/glossary/term/sniffer). Consultados os verbetes pertinentes, sem atribuir leitura integral das normas referenciadas por eles.
+- Microsoft: [motores de proteção](https://learn.microsoft.com/en-us/defender-endpoint/adv-tech-of-mdav), [monitoramento comportamental](https://learn.microsoft.com/en-us/defender-endpoint/behavior-monitor) e [critérios de malware/aplicativos indesejados](https://learn.microsoft.com/en-us/defender-xdr/criteria): heurística, emulação, sandbox, combinação de técnicas, consentimento e limitações. Exemplos atuais de implementação, sem universalizar a arquitetura do produto.
+
+Não foi encontrada evidência primária para a alegação geral sobre CESPE nem para a prevalência de uma “4ª geração” no mercado; essas afirmações foram retiradas. A numeração histórica preexistente permanece expressamente didática.
+
+### Publicação, verificação e limites
+
+Pasta exclusiva: `orquestracao-03-54/saneamento-onda-7/39-informatica/ameacas-01-05-20261123/`; executor: `../ameacas-01-05-lote.mjs`. SHA-256 das cinco seções propostas: `effdeb2860c05bb74e85f0d1acacb8b1bcd9e18c0f19872cbbe1fef0f7c9e782`.
+
+- Pré-imagem atual preservada com 15 tópicos e 52 seções. Leitura inicial coincidiu com o resultado após Internet/Intranet. Propostas amplas não rastreadas não foram aplicadas.
+- Dry-run aprovado pelo CLI existente. Para `--preserve-flashcards`, o validador exige as nove seções do tópico: o payload contém as cinco corrigidas e cópias intactas de 06–09. Isso é validação de contrato, não revisão nem aplicação das quatro restantes. `aplicar.sql` contém exatamente cinco updates e nenhuma inserção; IDs conferidos antes de executar.
+- Ensaio transacional com rollback aprovado. Publicação em produção condicionada aos IDs de revisão, identidade e tópico ativo, com proteção do catálogo, usando o mecanismo existente. Não houve schema, dependência, credencial, código do site ou dado pessoal alterado.
+- Reconciliação posterior integral: 15 tópicos/52 seções sem ausências, extras ou divergências, e cinco novas revisões. Demais 47 seções, incluindo Hardware, Internet/Intranet e Ameaças 06–09, preservadas. O rótulo genérico `target: preimagem` usa como entrada o estado esperado já corrigido.
+- 30/30 verificações locais: cinco seções × Light/Dark/Sepia × 375/1200 px. Três verificações adicionais confirmaram rolagem horizontal funcional da tabela em 375 px, com capturas da extremidade direita. Sem overflow global nem erros KaTeX. A tabela extensa mantém a navegação horizontal interna no celular; isso não foi convertido em alteração de layout fora do lote.
+- Nenhum Mermaid alterado; testes de zoom/overlay não se aplicam a estas cinco seções. Harness usa componentes e CSS compilado da worktree `questoes-experiencia-20261122`. Conta de aluno dispensada; não certifica navegação autenticada completa. Lint/build globais não repetidos, pois aplicação e validadores não mudaram. Sintaxe do executor e diff verificados.
+
+Para testar: no site, `node --env-file=.env.local scripts/content-admin.mjs import-batch <pasta deste lote/import> --dry-run --preserve-flashcards`. Na raiz editorial, `node <pasta deste lote/validar-visual.cjs> <pasta deste lote/render.json>`; rolagem: `node <pasta deste lote/validar-rolagem.cjs> <pasta deste lote/render-scroll.json>`. Reconciliação é somente leitura, mas o recibo existente não deve ser sobrescrito. Não reaplicar SQL concluído.
+
+Próximo prompt: “Revise somente Ameaças Virtuais, seções 06–09, conforme relatório 39. Preserve Hardware, Internet/Intranet e Ameaças 01–05. Publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint anterior — 23/11/2026 — Internet e Intranet publicado
+
+Escopo: somente `internet-e-intranet-sec-01`, próximo tópico após Hardware na ordem do catálogo; uma seção, um callout, uma tabela e um diagrama, todos examinados integralmente. Não há cartões nem mnemônicos. Cobertura acumulada comprovada: **4/52 seções existentes em 2/15 tópicos**. Restam **48 seções** e três pacotes de lacuna em dry-run; disciplina parcial. Hardware não foi reaplicado.
+
+### Achados e correções deste lote
+
+- Omissão confirmada: o tópico “Internet e Intranet” só explicava Internet. Acrescentadas definições de intranet e extranet, exemplos e comparação por finalidade/controle de acesso. Nenhum tópico ou seção novo foi criado.
+- Generalização incorreta: conectividade não concede acesso a qualquer recurso. Explicitadas permissões e autenticação por serviço.
+- Confusão de protocolos: HTTP/HTTPS não são requisitos de toda comunicação Internet. Separadas família TCP/IP, transporte e aplicação, e Web como um serviço da Internet.
+- Contradição entre título, tabela, callout e mapa: alinhados os quatro componentes. A tabela anterior repetia uma única definição; agora compara os três conceitos. O mapa anterior reforçava acesso público sem ressalvas e misturava protocolos; substituído por três ramos paralelos, sem falsa sequência ou hierarquia de inclusão.
+- Diferenciadas classificação de acesso e extensão geográfica; admitido acesso remoto autorizado à intranet, sem impor VPN como único mecanismo. Sem outras omissões relevantes identificadas dentro desta seção; não certifica cobertura integral de edital.
+
+### Fontes primárias conferidas em 23/11/2026
+
+- [NIST — intranet](https://csrc.nist.gov/glossary/term/intranet) e [extranet](https://csrc.nist.gov/glossary/term/extranet): definições de uso interno e comunicação com parceiros; contexto CNSSI 4009-2022.
+- [RFC 9110 — HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html): protocolo de aplicação, HTTP/HTTPS e autenticação; consultados os trechos pertinentes, sem afirmar leitura integral.
+- [RFC 9000 — QUIC](https://www.rfc-editor.org/rfc/rfc9000.html): exemplo atual de transporte sobre UDP, refutando a necessidade universal de TCP em toda aplicação. O conteúdo publicado limita-se a TCP/UDP, sem ampliar para aula de QUIC.
+- [RFC 4949 — glossário](https://www.rfc-editor.org/rfc/rfc4949.html): apoio terminológico para Internet/redes privadas; documento informativo histórico, complementado pelas definições NIST atuais e pelos padrões HTTP/QUIC.
+
+### Publicação, verificação e reprodução
+
+Pasta exclusiva: `orquestracao-03-54/saneamento-onda-7/39-informatica/internet-intranet-20261123/`; executor: `../internet-intranet-lote.mjs`. SHA-256 da proposta: `91a9c7dc36f20429edcbce8938545bf89961047d61802c07c9b6a4773cf4f57b`.
+
+- Leitura inicial: 15 tópicos/52 seções, com paridade ao estado após Hardware. Preservada pré-imagem atual com revisão da seção selecionada. Propostas amplas não rastreadas continuaram fora da aplicação.
+- Dry-run do CLI existente aprovado: um módulo/uma seção, `--preserve-flashcards`; recibo `dry-run.txt`. Mermaid válido e três controles maliciosos rejeitados pelo validador compartilhado, sem alterar segurança.
+- Ensaio SQL com rollback aprovado (`ensaio-recibo.txt`). Publicação transacional com bloqueio de catálogo e comparação de `current_revision_id`, identidade e tópico; nenhuma migration, credencial, dependência ou aplicação alterada. Recibo `aplicacao-recibo.txt`.
+- Reconciliação de produção: 15 tópicos/52 seções sem diferenças do esperado; nova revisão da seção confirmada. As outras 51 seções, inclusive Hardware, permaneceram idênticas. `target: preimagem` é o rótulo do comparador alimentado com o estado esperado já corrigido, não indicação de rollback.
+- Visual: 6/6 combinações Light/Dark/Sepia × 375/1200 px, com componentes reais da worktree `questoes-experiencia-20261122`; zoom, restauração e abrir/fechar overlay exercitados nas seis. Capturas inspecionadas; sem erro de fórmula ou overflow global. Tabela e mapa usam navegação interna no celular. Repetida somente a captura necessária para aguardar a animação do mapa após fechar o overlay; conteúdo não foi alterado nessa repetição.
+- Conta de aluno dispensada. Harness local não certifica toda navegação autenticada. Sem lint/build globais, pois nenhum código da aplicação mudou. Sintaxe do executor e `git diff --check` verificados.
+
+Para testar: no site, `node --env-file=.env.local scripts/content-admin.mjs import-batch <pasta deste lote/import> --dry-run --preserve-flashcards`. Na raiz editorial, `node <pasta deste lote/validar-visual.cjs> <pasta deste lote/render.json>`. Reconciliação é somente leitura, mas seu recibo é imutável: reexecução não deve sobrescrever o arquivo existente. Não executar `aplicar.sql` novamente.
+
+Próximo prompt: “Resumos — Informática: revise somente Ameaças Virtuais, seções 01–05 e seus componentes, preservando as seções 06–09 para outro lote. Consulte o relatório 39; não reaplique Hardware nem Internet e Intranet. Confira estado atual, fundamente, publique com proteção de concorrência, reconcilie e pare.”
+
+---
+
+## Checkpoint de 23/11/2026 — Hardware publicado; disciplina parcial
+
+Um único agente. Escopo integral do tópico `hardware`: `hardware-sec-01`, `hardware-sec-02`, `hardware-sec-03`; três callouts, um Mermaid, uma tabela, duas expressões matemáticas; nenhum cartão ou mnemônico. Todos foram examinados. Não foi retomada outra frente.
+
+Diagnóstico: propostas amplas não rastreadas em `orquestracao-03-54/saneamento-onda-7/39-informatica/` e `preparacao-v2/` eram preparação, não recibos de aplicação. O estado atual confirmou os erros anteriores de Hardware. Nenhuma dessas cargas amplas foi executada. A fotografia original foi preservada.
+
+## Achados e correções aplicadas
+
+| Seção | Achados e decisão |
+| --- | --- |
+| CPU | Erro material: 64 bits não equivale a 16 GB. Corrigidos espaço teórico de 16 EiB e 4 GiB para 32 bits com endereçamento por byte; separados limites práticos e velocidade de processamento. Qualificado o modelo didático de Von Neumann e retirada a equiparação de registradores com o ritmo do processador. Callout e mapa coerentes, preservados. |
+| Memórias | Corrigidas mistura entre CMOS, ROM e mídia óptica, permanência absoluta dos dados, L2 normalmente externa e definição de memória virtual como mera extensão da RAM em disco. Acrescentadas ressalvas de implementação, L3, instruções/dados e localidade. Atualizado o callout sobre espaços de endereços. Tabela preservada. |
+| Placa-mãe | Atualizados BIOS tradicional versus UEFI, firmware regravável e distinção entre firmware e carregador do SO. Corrigida atribuição de todo fluxo de dados ao chipset, pois controladores podem estar na CPU. Atualizado callout. |
+
+Não identificada redundância que justificasse excluir seção ou componente. Omissões relevantes tratadas dentro desses três registros; isso não certifica cobertura integral de edital.
+
+## Fontes primárias — conferência em 23/11/2026
+
+- [Microsoft — espaços virtuais](https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/virtual-address-spaces): tradução de endereços, isolamento, paginação e limites teóricos versus implementados.
+- [Intel — caches L1 e L2, datasheet de arquitetura](https://edc.intel.com/content/www/us/en/design/products/platforms/details/raptor-lake-s/13th-generation-core-processors-datasheet-volume-1-of-2/006/ia-cores-level-1-and-level-2-caches/): caches de instruções/dados, níveis internos e organização específica. Documento de família, não promessa universal para toda CPU.
+- [Intel — BIOS e UEFI](https://www.intel.com/content/www/us/en/gaming/resources/how-to-update-bios.htm): firmware, POST, atualização e UEFI em equipamentos atuais.
+- [UEFI 2.11 — visão geral](https://uefi.org/specs/UEFI/2.11/02_Overview.html) e [gerenciador de boot](https://uefi.org/specs/UEFI/2.11/03_Boot_Manager.html): carregamento de aplicações e carregadores. Conteúdo conferido nos resultados oficiais indexados; abertura direta retornou 403. Complementado pela documentação Microsoft e Intel acessível, sem alegação de leitura integral da especificação.
+
+## Persistência e verificação
+
+Evidências exclusivas em `orquestracao-03-54/saneamento-onda-7/39-informatica/hardware-20261123/` e executor `../hardware-lote.mjs`.
+
+- Pré-imagem atual preservada com 15 tópicos e 52 seções, incluindo IDs de revisão. Payload publicado SHA-256 `3de093a2f721d50bb7f809a064622fa0ddc9cd54ed18536063d20b63529e7a52`.
+- Dry-run do CLI existente aprovado: um tópico, três seções, preservação de cartões. Ensaio SQL em transação com rollback aprovado; recibos consolidados em `verificacoes.json`.
+- Publicação atômica no banco configurado de produção, condicionada a `current_revision_id`, identidade permanente e tópico ativo, com bloqueio compartilhado dos metadados do tópico. SQL reaproveita o mecanismo existente; nenhuma migration, credencial, dependência ou código da aplicação mudou.
+- Reconciliação posterior integral: 15 tópicos/52 seções, sem ausentes, extras ou divergências; três revisões novas. IDs, títulos, ordem, cartões, mnemônicos e diagrama preservados. `target: preimagem` é rótulo do comparador genérico, alimentado com o estado esperado já corrigido.
+- 18/18 verificações locais: três seções × Light/Dark/Sepia × 375/1200 px. Capturas finais aguardam estabilização da animação; a primeira passagem capturava opacidade transitória. Sem erro KaTeX nem overflow global do artigo. Tabela usa rolagem interna no celular; mapa mantém controles e navegação interna existentes.
+- Harness usa os componentes reais e CSS compilado da worktree `questoes-experiencia-20261122`. É validação local da apresentação, não atestado de navegação autenticada em produção. Conferência com conta de aluno dispensada. Lint/build globais não executados: sem alteração de aplicação. Não repetidos workflows globais.
+
+Reprodução proporcional: CLI `import-batch <pasta hardware-20261123/import> --dry-run --preserve-flashcards`; `node hardware-20261123/validar-visual.cjs <hardware-20261123/render.json>` a partir da raiz editorial. `node --env-file=C:/PRO/site/.env.local <hardware-lote.mjs> reconcile` é somente leitura, mas o recibo imutável existente impede sobrescrita. Não executar SQL de aplicação novamente.
+
+## Pendências e próximo lote
+
+Cobertura comprovada nesta retomada: 3/52 seções existentes e 1/15 tópicos. Restam 49 seções existentes nos demais tópicos e três pacotes de lacuna em dry-run, não aplicados. As propostas amplas continuam sem aceite desta revisão. Não marcar a disciplina concluída.
+
+Prompt: “Resumos — Informática: execute somente o próximo tópico pendente, até cinco seções, com todos os componentes. Leia o relatório 39 e este checkpoint; não reaplique Hardware. Confira banco e propostas não rastreadas, fundamente, valide, publique com proteção de concorrência e reconcilie. Atualize os registros e pare.”

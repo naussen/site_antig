@@ -1,0 +1,77 @@
+[
+  {
+    "section_id": "sistemas-operacionais-windows-e-linux-sec-01",
+    "content_unit_id": "a1b2c3d4-3939-4a2b-8c3d-000000003903",
+    "stable_key": "windows-10-11-ntfs-atalhos-e-linux-fhs-permissoes-comandos",
+    "topic_id": "sistemas-operacionais-windows-e-linux",
+    "title": "Windows 10/11 (NTFS, Explorador e Atalhos) versus Linux (Kernel, FHS, Permissões e Shell)",
+    "sort_order": 0,
+    "content_markdown": "O **sistema operacional** gerencia processos, memória, arquivos, dispositivos e acesso a recursos. Linux é o kernel; uma distribuição reúne o kernel, ferramentas e outros componentes. O shell, como Bash, interpreta comandos e não é o próprio kernel.\n\n### 1. Microsoft Windows 10 e Windows 11: Sistema de Arquivos, Regras de Nomes e Atalhos\n\n* **NTFS:** oferece permissões por ACL, auditoria, cotas e journaling. Journaling ajuda a recuperar a consistência do sistema de arquivos; não substitui backup nem garante recuperar todo conteúdo. EFS cifra arquivos/pastas quando disponível; **BitLocker cifra volumes** e é um recurso do Windows, não propriedade exclusiva de NTFS.\n* **Nomes no uso comum de APIs Windows:** não admitem os caracteres `\\ / : * ? \" < >` e a barra vertical. Também há nomes reservados, como `CON` e `NUL`, e outras restrições. O padrão não distingue maiúsculas/minúsculas; diretórios NTFS podem ser configurados para distinguir, com possíveis limitações nos aplicativos.\n* **Explorador:** arrastar normalmente move dentro da mesma unidade e copia entre unidades; teclas modificadoras, origem e destino podem alterar o efeito. `Delete` pode enviar à Lixeira; tipo de unidade, tamanho, configuração e aplicativo podem impedir esse uso. `Shift+Delete` dispensa a Lixeira, mas não equivale a apagamento seguro irrecuperável.\n\n| Atalho no Windows | Ação usual |\n| --- | --- |\n| `Win+E` / `Win+D` / `Win+L` | Explorador / mostrar ou ocultar área de trabalho / bloquear sessão |\n| `Win+V` | Histórico da área de transferência, quando habilitado |\n| `Win+Shift+S` / `Win+I` / `Win+Tab` | Captura de tela / Configurações / Visão de Tarefas |\n| `Ctrl+Shift+Esc` | Abre diretamente o Gerenciador de Tarefas |\n| `Ctrl+Alt+Delete` | Tela de opções de segurança |\n\nAtalhos e recursos dependem da versão/configuração. O suporte gratuito geral do Windows 10 terminou em **14/10/2025**; programas de atualizações estendidas e edições especiais têm condições próprias. A presença no edital não torna a versão atualmente suportada.\n\n### 2. Sistema Operacional Linux: Arquitetura, Diretórios (FHS), Permissões e Comandos\n\nEm sistemas de arquivos Linux usuais, nomes distinguem maiúsculas/minúsculas, mas o comportamento depende do sistema de arquivos e da montagem. `/` separa caminhos; nomes iniciados por ponto são convencionalmente ocultos. O prompt é configurável: `#` costuma indicar root e `$` usuário comum, sem provar sozinho os privilégios efetivos.\n\nDiretórios de referência: `/` é a raiz; `/etc` guarda configurações; `/home`, diretórios pessoais comuns; `/root`, o diretório pessoal usual de root; `/var`, dados variáveis; `/tmp`, temporários. `/bin` e `/sbin` são locais tradicionais de executáveis essenciais; distribuições atuais podem usar links para `/usr/bin` e `/usr/sbin`.\n\n**Permissões tradicionais:** r=4, w=2 e x=1, em grupos de dono/grupo/outros. `chmod 750 relatorio.sh` atribui rwx ao dono, r-x ao grupo e nenhuma permissão aos outros. Em diretórios, x significa busca/travessia; ACLs e outros controles também podem influenciar o acesso.\n\n| Comando | Função e limite |\n| --- | --- |\n| `ls -la`, `pwd`, `cd` | Lista incluindo nomes ocultos/detalhes; mostra diretório atual; muda diretório no shell |\n| `cp`, `mv`, `rm` | Copia; move/renomeia; remove. `rm -rf` remove recursivamente e força sem confirmação usual; não contorna permissões nem significa apagamento seguro |\n| `mkdir`, `rmdir`, `touch` | Cria diretório; remove diretório vazio; atualiza tempos ou cria arquivo ausente, conforme opções |\n| `cat`, `grep`, `find` | Exibe/concatena conteúdo; seleciona linhas por padrão; procura no sistema de arquivos |\n| `chmod`, `chown`, `sudo` | Ajusta modo; dono/grupo; executa como outro usuário autorizado pela política, frequentemente root |\n| `ps aux`, `top`, `kill` | Lista processos; monitora; envia sinais. `kill -9` envia SIGKILL, sem permitir limpeza pelo processo; não é a primeira opção para encerramento normal |",
+    "callouts": [
+      {
+        "title": "Padrão não é regra universal",
+        "type": "warning",
+        "text": "Windows costuma ignorar diferença de caixa; diretórios NTFS podem ser configurados. Linux depende também do sistema de arquivos. Ctrl+Shift+Esc é o atalho direto do Gerenciador de Tarefas."
+      }
+    ],
+    "mnemonics": [
+      {
+        "key": "r=4, w=2, x=1",
+        "meaning": "7=rwx; 5=r-x; 0=---. Em 750: dono 7, grupo 5, outros 0.",
+        "description": "Modo tradicional de permissões. Em diretórios, x permite travessia/busca; outros controles podem restringir o acesso."
+      }
+    ],
+    "flashcards": [],
+    "mermaid_mindmap": "graph TD\n A[Sistema operacional] --> B[Processos e memória]\n A --> C[Arquivos e acesso]\n C --> D[Windows / Linux]\n class A readableRoot;\n class B,C,D readableItem;"
+  },
+  {
+    "section_id": "ferramentas-de-escritorio-office-e-libreoffice-sec-01",
+    "content_unit_id": "a1b2c3d4-3939-4a2b-8c3d-000000003902",
+    "stable_key": "microsoft-office-vs-libreoffice-formatos-planilhas-e-atalhos",
+    "topic_id": "ferramentas-de-escritorio-office-e-libreoffice",
+    "title": "Suítes Microsoft Office (365) versus LibreOffice: Formatos, Atalhos e Fórmulas de Planilhas",
+    "sort_order": 0,
+    "content_markdown": "Microsoft Office/Microsoft 365 e LibreOffice oferecem aplicativos de texto, planilhas e apresentações. Formatos e atalhos dependem do aplicativo, idioma, versão e ambiente desktop/Web; use o recorte indicado pelo edital.\n\n### 1. Comparativo de Aplicativos, Extensões Padrão e Modelos\n\n| Finalidade | Microsoft: documento / com macros / modelo sem macros | LibreOffice: ODF / modelo |\n| --- | --- | --- |\n| Texto | Word: `.docx` / `.docm` / `.dotx` | Writer: `.odt` / `.ott` |\n| Planilha | Excel: `.xlsx` / `.xlsm` / `.xltx` | Calc: `.ods` / `.ots` |\n| Apresentação | PowerPoint: `.pptx` / `.pptm` / `.potx` | Impress: `.odp` / `.otp` |\n\nEsses são formatos usuais, não os únicos suportados. ODF é um padrão aberto; OOXML também é padronizado. O licenciamento da suíte é uma questão distinta. Importar/exportar não garante identidade de formatação, macros ou funções.\n\n#### Divergências de Atalhos: Word e LibreOffice Writer\n\n| Ação | Word desktop: convenções PT-BR encontradas em versões/localizações | Writer desktop: padrões usuais no Windows |\n| --- | --- | --- |\n| Salvar / abrir | `Ctrl+B` / `Ctrl+A` em convenções localizadas; outras instalações usam `Ctrl+S` / `Ctrl+O` | `Ctrl+S` / `Ctrl+O` |\n| Selecionar tudo | A ajuda atual lista `Ctrl+A`; confirme versão/configuração | `Ctrl+A` |\n| Negrito / itálico / sublinhado | `Ctrl+N` / `Ctrl+I` / `Ctrl+S` em convenções localizadas | `Ctrl+B` / `Ctrl+I` / `Ctrl+U` |\n| Centralizar / justificar | Confirme a instalação: a ajuda localizada traz divergências; não universalize a combinação | `Ctrl+E` / `Ctrl+J` |\n\nNão combine essas listas como se houvesse configuração única. A documentação localizada do Word contém diferenças entre seções; confirme versão, comandos de menu e personalização. Copiar/aplicar formatação por teclado também varia; não confunda colar texto simples com colar formatação.\n\n### 2. Planilhas Eletrônicas (Excel e Calc): Referências, Operadores e Funções\n\n* **Ao copiar fórmulas:** `A1` ajusta linha e coluna; `$A$1` fixa ambas; `$A1` fixa coluna; `A$1` fixa linha. Isso não impede ajustes estruturais quando linhas/colunas são inseridas, movidas ou excluídas. F4 pode alternar o tipo da referência durante edição, conforme versão/configuração.\n* **Intervalo:** `A1:B3` inclui seis células. O separador de argumentos costuma ser `;` em configurações PT-BR, mas depende da localidade. Não é um operador universal de união: o Calc documenta `~` para união de referências.\n* **Precedência:** não presuma equivalência em todos os aplicativos/modos. Parênteses tornam a intenção explícita: `=-(2^2)` resulta em -4; `=(-2)^2`, em 4.\n\n| Função em nomes localizados | Finalidade |\n| --- | --- |\n| `SOMA`, `MÉDIA`, `MED` | Soma, média aritmética, mediana; MED não é MÉDIA |\n| `MAIOR(intervalo;k)`, `MENOR(intervalo;k)` | Valor na posição k da ordenação; `MÁXIMO`/`MÍNIMO` não recebem k |\n| `CONT.NÚM`, `CONT.VALORES` | Contam números / valores não vazios. Textos vazios produzidos por fórmula e tipos de dados exigem atenção |\n| `CONT.SE`, `SOMASE` | Contagem / soma condicionadas por critério |\n| `SE(teste;se_verdadeiro;se_falso)` | Escolha de resultado conforme teste |\n| `PROCV(...;FALSO)` | Procura correspondência exata na primeira coluna da matriz e retorna coluna à direita, nos modos usuais |\n| `PROCX` | Pode procurar/retornar em direções diferentes, com correspondência exata padrão; depende da versão, não está no Excel 2016/2019 |\n\nOs nomes e separadores podem mudar com idioma/configuração. Não presuma que uma função nova exista em todas as versões do Calc ou do Excel. PROCX reduz dependência de índice numérico fixo de coluna, mas não torna a planilha imune a referências inválidas.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Mediana, média e posição k",
+        "text": "MED(10;2;100) retorna 10. MÉDIA(10;2;100) é 112/3, aproximadamente 37,33. MAIOR exige a posição k; MÁXIMO encontra o maior valor sem esse argumento. Confira nomes e separadores da instalação."
+      }
+    ],
+    "mnemonics": [
+      {
+        "key": ": delimita intervalo; $ fixa referência",
+        "meaning": "A1:C3 abrange nove células; $A$1 fixa coluna e linha ao copiar.",
+        "description": "O ponto e vírgula costuma separar argumentos em PT-BR; não o memorize como união universal de células."
+      }
+    ],
+    "flashcards": [],
+    "mermaid_mindmap": "graph TD\n A[Suítes de escritório] --> B[Texto e apresentações]\n A --> C[Planilhas]\n C --> D[Referências e funções]\n class A readableRoot;\n class B,C,D readableItem;"
+  },
+  {
+    "section_id": "conceitos-de-internet-navegadores-e-pesquisa-sec-01",
+    "content_unit_id": "a1b2c3d4-3939-4a2b-8c3d-000000003901",
+    "stable_key": "url-navegadores-modo-anonimo-atalhos-e-operadores-de-busca",
+    "topic_id": "conceitos-de-internet-navegadores-e-pesquisa",
+    "title": "Estrutura de URL, Navegadores Web, Modo Anônimo e Operadores de Pesquisa Avançada",
+    "sort_order": 0,
+    "content_markdown": "Esta seção complementa o tópico de Internet/Intranet com URLs, navegação privada e pesquisa. Exemplos de atalhos referem-se a navegadores desktop no Windows; versões, políticas e personalizações podem alterar o comportamento.\n\n### 1. Estrutura de uma URL\n\nExemplo: `https://exemplo.com:443/p?q=1#s`.\n\n* **Esquema:** `https` usa TLS; `http` não oferece essa proteção por si só. Portas padrão são 443 e 80, respectivamente; uma porta explícita pode ser diferente.\n* **Autoridade/host:** pode conter nome de domínio ou endereço IP e uma porta. Subdomínio, domínio e sufixo não são campos obrigatórios de toda URL. Nomes podem ser resolvidos pelo DNS, com cache e outras formas de resolução; nem todo acesso exige uma nova consulta DNS.\n* **Caminho:** identifica o recurso no servidor; não precisa corresponder a uma pasta física.\n* **Query, após `?`:** dados de consulta; pares chave/valor separados por `&` são convenção comum. Sua presença não determina o método HTTP: também pode acompanhar POST e outros métodos.\n* **Fragmento, após `#`:** interpretado pelo cliente, por exemplo para localizar uma seção ou por uma aplicação Web. Não integra o alvo da requisição HTTP enviado ao servidor.\n\n### 2. Navegadores Web, Cookies, Cache e Navegação Anônima\n\n**Cookies** mantêm pequenos dados associados a sites e podem apoiar sessões e preferências. Não precisam existir como arquivos de texto individuais; há cookies de sessão e persistentes. **Cache** reutiliza respostas/recursos conforme regras de validade, não apenas imagens e scripts.\n\nA navegação privada separa a sessão e evita conservar seu histórico de navegação e dados temporários de sites após o encerramento das janelas privadas, conforme o navegador. **Downloads e favoritos criados podem permanecer**. Isso não oculta automaticamente o IP ou a atividade dos sites, empregador/escola ou provedor. HTTPS protege o conteúdo em trânsito, mas não elimina todos os metadados observáveis. Reabrir guia fechada pode não se aplicar às guias privadas.\n\n| Ação no Windows | Chrome | Edge | Firefox |\n| --- | --- | --- | --- |\n| Nova janela privada | `Ctrl+Shift+N` | `Ctrl+Shift+N` | `Ctrl+Shift+P` |\n| Reabrir guia fechada, em navegação comum | `Ctrl+Shift+T` | `Ctrl+Shift+T` | `Ctrl+Shift+T` |\n| Recarregar ignorando cache | `Ctrl+F5` ou `Ctrl+Shift+R` | `Ctrl+F5` | `Ctrl+F5` |\n| Histórico / downloads | `Ctrl+H` / `Ctrl+J` | `Ctrl+H` / `Ctrl+J` | `Ctrl+H` / `Ctrl+J` |\n| Adicionar favorito | `Ctrl+D` | `Ctrl+D` | `Ctrl+D` |\n\n### 3. Operadores de Pesquisa Avançada\n\nA sintaxe depende do buscador. Não transfira automaticamente todo operador do Google para o Bing ou vice-versa.\n\n| Exemplo documentado para Google | Finalidade |\n| --- | --- |\n| `\"termo exato\"` | Busca a expressão exata |\n| `concurso -municipal` | Exclui o termo indicado após menos |\n| `site:gov.br concurso` | Restringe ao site/domínio indicado; resultados não são inventário completo de tudo o que existe no domínio |\n| `filetype:pdf edital` | Filtra por tipo de arquivo; não trate `ext:` como sinônimo universal |\n\nNão coloque espaço entre `site:`/`filetype:` e seu valor, nem entre menos e o termo excluído. Operadores históricos, como `related:`, podem deixar de ser suportados; confirme a ajuda atual do buscador em vez de decorar uma lista universal.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Privacidade e sintaxe dependem do contexto",
+        "text": "Modo privado não é anonimato de rede. No Windows, Firefox usa Ctrl+Shift+P; Chrome e Edge usam Ctrl+Shift+N. Em site: e filetype:, mantenha o valor junto aos dois-pontos."
+      }
+    ],
+    "mnemonics": [
+      {
+        "key": "Firefox: P de Privativa",
+        "meaning": "No Windows: Firefox Ctrl+Shift+P; Chrome/Edge Ctrl+Shift+N.",
+        "description": "Atalhos de novas janelas privadas em navegadores desktop; não generalizar para outros sistemas operacionais."
+      }
+    ],
+    "flashcards": [],
+    "mermaid_mindmap": "graph TD\n A[Navegação e pesquisa] --> B[Sessão privada]\n A --> C[Operadores]\n B --> D[Não é anonimato]\n class A readableRoot;\n class B,C,D readableItem;"
+  }
+]

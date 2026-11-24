@@ -1,5 +1,10 @@
 # Changelog
 
+## 24/11/2026 — Revisão dos três pacotes de lacuna de Informática
+
+- Publicadas três novas seções: Windows/Linux, Office/LibreOffice e Internet/Navegadores/Pesquisa, com três callouts/mnemônicos/mapas e sete tabelas revisados. Preservadas identidades e metadados atuais dos tópicos.
+- Somente v3 aplicada, com zero updates/três inserts, pré-imagem, bloqueio dos tópicos, catálogo esperado, exigência de vazio, unicidade, dry-run, rollback e dois controles negativos. Reconciliação 15/55 com todas as 52 revisões anteriores intactas. Aceite final de 18 combinações (12 reaproveitadas/6 refeitas), 21 checagens de tabela, 18 interações de mapa e 49 testes de conteúdo. Informática parcial: 55/55 seções e 14 tópicos com conteúdo; resta tópico vazio Redes de Computadores e Conectividade fora do lote. Evidências em `docs/revisoes-resumos/39-informatica-lacunas-20261124/`; commit editorial local `cdcf41e` (repositório sem remote). Sem alteração de código da aplicação.
+
 ## 24/11/2026 — Revisão de Transformação Digital 01–03
 
 - Publicadas três seções: corrigidos IoT/IP/gateway, Big Data/Vs/MapReduce/Hadoop e IA forte/fraca/consciência. Callout, tabela e mapa alinhados; falsa equação convertida em prosa. Identidades e lotes anteriores preservados.
