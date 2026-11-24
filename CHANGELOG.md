@@ -1,5 +1,10 @@
 # Changelog
 
+## 24/11/2026 — Revisão de Transformação Digital 01–03
+
+- Publicadas três seções: corrigidos IoT/IP/gateway, Big Data/Vs/MapReduce/Hadoop e IA forte/fraca/consciência. Callout, tabela e mapa alinhados; falsa equação convertida em prosa. Identidades e lotes anteriores preservados.
+- Pré-imagem, dry-run, rollback e revisão esperada; reconciliação 15/52 e demais 49 revisões intactas. Dezoito combinações visuais, três checagens de tabela, seis interações de mapa, três controles maliciosos e 49 testes de conteúdo. Cobertura 52/52 existentes, onze tópicos com conteúdo; Informática continua parcial por três pacotes de lacuna pendentes. Evidências em `docs/revisoes-resumos/39-informatica-digital-01-03-20261124/`; commit editorial local `583bce3` (repositório sem remote). Sem alteração de código da aplicação.
+
 ## 24/11/2026 — Revisão de Sistemas de Informação 01
 
 - Publicada uma seção: corrigidos ciclo de vida, requisitos/projeto, implementação/implantação e limites dos testes. Oito subtítulos preservados; callout alinhado e mapa completado/compactado.

@@ -1,0 +1,53 @@
+[
+  {
+    "section_id": "transformacao-digital-sec-01",
+    "content_unit_id": "ab9b7883-da23-4912-95d9-9d55e1db3c46",
+    "stable_key": "internet-das-coisas-iot",
+    "topic_id": "transformacao-digital",
+    "title": "Internet das Coisas (IoT)",
+    "sort_order": 0,
+    "content_markdown": "A **Internet das Coisas** (*Internet of Things* — IoT) conecta objetos físicos com capacidade de sensoriamento e/ou atuação, processamento e comunicação. Sensores captam condições do ambiente; atuadores executam ações, como abrir uma válvula. Nem todo dispositivo precisa reunir todas essas funções com a mesma complexidade.\n\nA comunicação pode ser direta ou intermediada por um **gateway**, que integra redes ou protocolos. Nem todo objeto precisa ter endereço IP próprio ou acesso direto à internet pública; há soluções que usam redes locais e tecnologias não IP.\n\nExemplos de aplicações:\n\n* **Controle remoto:** acionamento de lâmpadas por aplicativo;\n* **Integração de equipamentos:** coordenação entre diferentes aparelhos;\n* **Gestão de energia:** medição e análise do consumo para apoiar eficiência, sem garantir economia em toda implantação.\n\nA utilidade depende da aplicação, da qualidade dos dados e da integração. O mapa ilustra comunicação e uso de dados/comandos, sem impor uma arquitetura única.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Segurança e privacidade em IoT",
+        "text": "Falhas, credenciais fracas e atualizações insuficientes podem expor dispositivos e dados. Controle de acesso, atualizações e segmentação ajudam a reduzir riscos. Movimento entre sistemas e elevação de privilégios são problemas distintos; não decorrem automaticamente de SSO ou de ter endereço IP."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph TD\n A[\"Objeto IoT<br/>Sensor ou atuador\"] <--> B[Processamento]\n B <--> C[\"Rede / gateway\"]\n C <--> D[Aplicações]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "3c790c1e-e073-41a6-9e31-1bff21c1169c"
+  },
+  {
+    "section_id": "transformacao-digital-sec-02",
+    "content_unit_id": "eb9c14a0-326c-4e9e-bb60-c022995d4b52",
+    "stable_key": "big-data",
+    "topic_id": "transformacao-digital",
+    "title": "Big Data",
+    "sort_order": 1,
+    "content_markdown": "**Big Data** envolve conjuntos de dados cujas características, como volume, variedade, velocidade e variabilidade, exigem arquiteturas escaláveis para armazenamento, processamento e análise eficientes. Não existe um tamanho fixo em bytes que defina todos os casos; o desafio depende também dos recursos e requisitos da aplicação.\n\n* **Composição:** pode incluir dados estruturados, semiestruturados (como documentos JSON) e não estruturados (como áudio e vídeo).\n* **Objetivo:** extrair informações úteis para apoiar decisões e outras aplicações. Mais dados não garantem qualidade, causalidade ou valor.\n\nTransações, interações e observações são exemplos de origens de dados. Sua soma não é uma fórmula técnica de Big Data.\n\n### Big Data Analytics\nÉ a aplicação de métodos analíticos a esses dados. Fontes possíveis incluem sistemas transacionais, logs, mídias sociais e dispositivos IoT. BI pode consumir e apresentar resultados; não é sinônimo de Big Data nem sua fonte obrigatória. Processamento pode ocorrer em lotes ou em fluxos, conforme a necessidade.\n\n### Os 5 V's do Big Data\nUma classificação didática frequente reúne cinco Vs; há outras taxonomias, inclusive a que destaca variabilidade:\n\n* **Volume:** quantidade de dados. GB, TB e PB indicam múltiplos decimais de bytes; b minúsculo indica bits.\n* **Variedade:** diversidade de estruturas, formatos e fontes.\n* **Velocidade:** ritmo de geração, chegada e necessidade de processamento; tempo real não é requisito universal.\n* **Veracidade:** qualidade, confiabilidade e incerteza dos dados; não é garantia automática de verdade.\n* **Valor:** utilidade obtida para um objetivo, que precisa ser avaliada.\n\n### Tecnologias de Processamento\n* **MapReduce:** modelo que organiza processamento em tarefas de mapeamento e redução, tipicamente sobre pares chave/valor. Permite paralelismo, mas não elimina limites de disco, rede ou coordenação.\n* **Hadoop:** conjunto de projetos de código aberto. HDFS oferece armazenamento distribuído; YARN gerencia recursos e execução; Hadoop MapReduce implementa processamento nesse ecossistema. Hadoop não é sinônimo de Big Data nem sua única solução. Licença aberta não elimina custos de infraestrutura, operação ou suporte.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "addc116c-eeda-4b03-9d7f-1429b59755f5"
+  },
+  {
+    "section_id": "transformacao-digital-sec-03",
+    "content_unit_id": "15e4a6f2-7517-4482-9a89-294b813c1a68",
+    "stable_key": "inteligencia-artificial-ia",
+    "topic_id": "transformacao-digital",
+    "title": "Inteligência Artificial (IA)",
+    "sort_order": 2,
+    "content_markdown": "Um **sistema de inteligência artificial** infere, a partir de entradas e de objetivos explícitos ou implícitos, como produzir saídas, como previsões, conteúdo, recomendações ou decisões. Há abordagens baseadas em conhecimento e em aprendizagem de máquina. Nem todo sistema aprende continuamente durante o uso, interpreta dados corretamente ou reproduz o funcionamento da mente humana.\n\n### Comparativo: IA Forte vs. IA Fraca\nOs termos têm usos diferentes em filosofia e na classificação de capacidades. É necessário identificar o sentido adotado:\n\n| Critério | IA Forte | IA Fraca |\n| :--- | :--- | :--- |\n| **Sentido filosófico** | Tese de que um sistema adequadamente programado poderia ter compreensão e estados mentais genuínos. É uma posição em debate. | Uso de programas como instrumentos para simular ou estudar capacidades, sem exigir a tese de uma mente genuína. |\n| **Uso didático por capacidade** | Às vezes empregada para inteligência geral, com atuação ampla em diferentes tarefas. Esse uso não equivale automaticamente a consciência. | Frequentemente associada à IA estreita, voltada a tarefas ou domínios delimitados. Pode usar modelos aprendidos complexos. |\n| **Operação e exemplos** | Gerar poesia ou música, isoladamente, não demonstra compreensão genuína, sentimentos ou consciência. | Classificação de imagens, recomendações e assistentes podem usar aprendizagem de máquina; não se limitam a palavras-chave e respostas fixas. |\n| **Limites da classificação** | Abrangência de capacidades, consciência e julgamento moral são questões distintas. | “Fraca” não significa baixa capacidade de cálculo ou simplicidade técnica. |\n\n**IA generativa** produz conteúdo, como texto, imagem e áudio. Essa capacidade não comprova consciência nem garante verdade. Saídas podem conter erros, conteúdo inventado e vieses; devem ser avaliadas no contexto de uso, com proteção dos dados utilizados.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "330feedb-24c2-421e-b5dd-19d5bd5d171a"
+  }
+]
