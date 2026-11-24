@@ -1,0 +1,23 @@
+[
+  {
+    "section_id": "internet-e-intranet-sec-01",
+    "content_unit_id": "3d75b635-4f24-49b4-bdc0-123b63531a80",
+    "stable_key": "conceitos-e-diferencas",
+    "topic_id": "internet-e-intranet",
+    "title": "Conceitos e Diferenças",
+    "sort_order": 0,
+    "content_markdown": "### Internet\r\n\r\nA Internet é uma rede mundial de redes interconectadas que usam a família de protocolos TCP/IP. A conectividade permite alcançar serviços publicados, conforme o roteamento e as políticas de acesso de cada rede. Isso não torna todos os recursos públicos ou dispensa autorização: um serviço acessível pela Internet pode exigir autenticação e assinatura.\r\n\r\nA Web é um dos serviços que utilizam a Internet. HTTP e HTTPS são usados na comunicação Web; correio eletrônico e outros serviços podem empregar protocolos de aplicação diferentes. Não é necessário usar HTTP ou HTTPS para toda comunicação pela Internet. TCP/IP designa uma família de protocolos: o protocolo de transporte usado depende da aplicação, podendo ser TCP ou UDP, por exemplo.\r\n\r\n### Intranet e extranet\r\n\r\nUma intranet é uma rede voltada ao uso interno de uma organização, normalmente privada, que utiliza tecnologias da Internet. Pode oferecer portais, documentos e aplicações internas. Ela não precisa ficar limitada a um prédio nem estar desconectada da Internet: o acesso remoto autorizado pode ocorrer por mecanismos como VPN, conforme a política da organização.\r\n\r\nUma extranet permite a troca controlada de dados e o acesso a recursos entre a organização e parceiros externos autorizados, como fornecedores. Isso não equivale a liberar toda a intranet ao público.\r\n\r\n| Conceito | Acesso e finalidade | Exemplo |\r\n| :--- | :--- | :--- |\r\n| Internet | Interconexão global; cada serviço define suas permissões | Site público ou serviço com login |\r\n| Intranet | Uso interno da organização, com acesso restrito | Portal de servidores e documentos internos |\r\n| Extranet | Compartilhamento controlado com parceiros externos | Portal de pedidos para fornecedores autorizados |\r\n\r\nO critério central dessa comparação é a finalidade e o controle de acesso. Intranet e extranet podem usar os mesmos protocolos e aplicações da Internet; não são sinônimos de LAN e WAN. A localização física, isoladamente, não determina a classificação.",
+    "callouts": [
+      {
+        "title": "Protocolos e permissões",
+        "type": "info",
+        "text": "HTTP/HTTPS servem à Web; não são obrigatórios para todo uso da Internet. Usar tecnologias da Internet não torna uma intranet pública nem elimina a necessidade de autorização."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "flowchart TD\n A[Redes e acesso] --> B[Internet: interconexão global]\n A --> C[Intranet: uso interno]\n A --> D[Extranet: parceiros autorizados]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "39e9aaf5-b0bd-4b44-ae38-abdab37ebac8"
+  }
+]

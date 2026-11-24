@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-23 — Informática: Internet e Intranet
+
+- Publicada uma seção com definição de intranet/extranet, distinção Internet/Web, permissões e protocolos; callout, tabela e mapa alinhados. Hardware preservado.
+- Dry-run, ensaio com rollback e proteção por revisão; 15 tópicos/52 seções reconciliados, seis combinações visuais com zoom/overlay e três controles maliciosos rejeitados. Cobertura acumulada 4/52 seções em 2/15 tópicos; 48 seções e três lacunas pendentes. Relatório e checkpoint em docs/revisoes-resumos/39-informatica-internet-intranet-20261123; commit editorial local b11f8cf.
+
 ## 2026-11-23 — Informática: Hardware
 
 - Publicadas três seções de Hardware com correções de endereçamento, memórias e BIOS/UEFI; pré-imagem, ensaio com rollback e proteção por revisão. Quinze tópicos/52 seções reconciliados; 18 verificações locais nos três temas e duas larguras.
