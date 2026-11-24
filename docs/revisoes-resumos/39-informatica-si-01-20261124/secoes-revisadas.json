@@ -1,0 +1,23 @@
+[
+  {
+    "section_id": "sistemas-de-informacao-sec-01",
+    "content_unit_id": "64bc368a-879a-4acc-becd-c1e97cf636a7",
+    "stable_key": "fases-e-etapas-de-sistemas-de-informacao",
+    "topic_id": "sistemas-de-informacao",
+    "title": "Fases e Etapas de Sistemas de Informação",
+    "sort_order": 0,
+    "content_markdown": "O desenvolvimento e a gestão de um sistema de informação envolvem atividades desde a identificação de necessidades até a operação e a manutenção. A sequência abaixo é uma organização didática: atividades podem se sobrepor, repetir e produzir entregas incrementais, conforme o modelo de ciclo de vida adotado.\n\n### 1. Levantamento de Requisitos\nBusca compreender problemas, objetivos, usuários, demais interessados e restrições. Entrevistas, observação e outras técnicas ajudam a identificar necessidades. A viabilidade das alternativas também deve ser avaliada; as necessidades podem ser refinadas ao longo do projeto.\n\n### 2. Análise de Requisitos\nExamina, organiza e especifica requisitos, resolvendo ambiguidades e conflitos e verificando sua viabilidade. Inclui funções, atributos de qualidade e restrições, com critérios que permitam verificar seu atendimento. O foco didático é **o que** o sistema deve atender; não apenas uma lista de funcionalidades.\n\n### 3. Projeto\nDefine **como** organizar a solução para atender aos requisitos. Entre os aspectos considerados estão:\n* **Interface com o usuário:** interação, acessibilidade e apresentação;\n* **Dados:** estruturas, armazenamento e acesso;\n* **Processos e componentes:** responsabilidades, interfaces e regras de funcionamento.\n\nEssas frentes não esgotam o projeto: arquitetura, integrações e segurança também precisam ser consideradas. A separação entre requisitos e projeto é útil, mas há influência e refinamento mútuos.\n\n### 4. Implementação\nConcretiza o projeto por desenvolvimento, configuração, integração ou aquisição dos componentes necessários, conforme a solução. Inclui documentação técnica e testes dos componentes e de sua integração. Treinamento e conversão de dados devem ser planejados, mas não são obrigatoriamente realizados nesta mesma etapa em todo modelo.\n\n### 5. Testes\nObtêm evidências sobre o atendimento aos requisitos e às necessidades dos usuários e ajudam a detectar defeitos e reduzir riscos. Testes não provam ausência de todos os defeitos. Seu planejamento e a revisão de requisitos podem começar cedo; testar não é uma atividade restrita ao fim da implementação. Verificação e validação se complementam.\n\n### 6. Entrega e Implantação\nDisponibilizam a solução no ambiente previsto para uso. Podem envolver configuração, migração e conferência de dados, treinamento, aceitação e transição do sistema anterior. A implantação pode ocorrer gradualmente, conforme o plano e os riscos; não se reduz a instalar programas.\n\n### 7. Operação\nÉ o uso cotidiano do sistema para apoiar atividades e processos da organização, com suporte e monitoramento. Pode ocorrer simultaneamente à manutenção e à preparação de novas versões.\n\n### 8. Manutenção\nAbrange correções, adaptações a mudanças de ambiente e evolução do sistema. Alterações exigem análise de impacto, atualização da documentação e testes pertinentes. O ciclo de vida também pode incluir retirada de serviço, embora ela não seja uma etapa numerada deste esquema.\n\nO mapa resume a organização didática das atividades. Não representa uma ordem universal obrigatória nem todas as sobreposições e retornos possíveis.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Requisitos e projeto",
+        "text": "Requisitos expressam necessidades, qualidades e restrições; projeto organiza a solução para atendê-los. “O que” e “como” são uma distinção didática, com refinamento mútuo."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph TD\n A[\"1. Levantamento<br/>2. Análise\"] --> B[\"3. Projeto<br/>4. Implementação\"]\n B --> C[\"5. Testes<br/>6. Implantação\"]\n C --> D[\"7. Operação<br/>8. Manutenção\"]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "ebadec55-6ffa-4b00-bb8b-0ec481324af6"
+  }
+]

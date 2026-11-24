@@ -1,5 +1,10 @@
 # Changelog
 
+## 24/11/2026 — Revisão de Sistemas de Informação 01
+
+- Publicada uma seção: corrigidos ciclo de vida, requisitos/projeto, implementação/implantação e limites dos testes. Oito subtítulos preservados; callout alinhado e mapa completado/compactado.
+- Somente v2 aplicada com pré-imagem, dry-run, rollback e revisão esperada; reconciliação 15/52 e demais 51 revisões intactas. Seis combinações visuais finais com zoom/overlay, três controles maliciosos e 49 testes de conteúdo da preparação inicial. Informática parcial: 49/52, dez tópicos integrais; restam 3 seções e três lacunas. Evidências em `docs/revisoes-resumos/39-informatica-si-01-20261124/`; commit editorial local `033838c` (repositório sem remote). Sem alteração de código da aplicação.
+
 ## 24/11/2026 — Revisão de Teoria Geral de Sistemas 01–03
 
 - Publicadas três seções: corrigidas sinergia, abertura, teleologia, entropia, homeostase/heterostase e realimentação. Três callouts, tabela e mapa de composição alinhados; identidades e lotes anteriores preservados.
