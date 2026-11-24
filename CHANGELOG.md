@@ -1,5 +1,10 @@
 # Changelog
 
+## 24/11/2026 — Revisão de Computação na Nuvem 01–05
+
+- Publicadas cinco seções: corrigidos conceito, características, modelos de serviço/implantação e responsabilidade compartilhada. Callout/tabela alinhados e mapa compactado para celular. Identidades e lotes anteriores preservados.
+- Somente v2 aplicada, com pré-imagem, dry-run, rollback e revisão esperada; reconciliação 15/52 e demais 47 revisões intactas. Aceite visual final de 30 combinações (24 reaproveitadas/6 refeitas), três checagens de tabela, seis interações de mapa e 49 testes de conteúdo. Informática parcial: 45/52, oito tópicos integrais; restam 7 seções e três lacunas. Evidências em `docs/revisoes-resumos/39-informatica-nuvem-01-05-20261124/`. Sem alteração de código da aplicação.
+
 ## 23/11/2026 — Revisão de Segurança da Informação 01–04
 
 - Publicadas quatro seções: corrigidos princípios, hash, HTTPS/TLS, assinatura e certificado, incluindo classificação histórica e transição ICP-Brasil. Dois callouts alinhados e mapa substituído por fluxo de certificado. Identidades e lotes anteriores preservados.

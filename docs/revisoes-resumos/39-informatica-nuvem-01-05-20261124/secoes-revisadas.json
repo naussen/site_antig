@@ -1,0 +1,83 @@
+[
+  {
+    "section_id": "computacao-na-nuvem-cloud-computing-sec-01",
+    "content_unit_id": "dfc40294-8ed4-4477-91d4-2092ab9c3a94",
+    "stable_key": "conceito",
+    "topic_id": "computacao-na-nuvem-cloud-computing",
+    "title": "Conceito",
+    "sort_order": 0,
+    "content_markdown": "A **computação em nuvem (cloud computing)** é um modelo de acesso sob demanda, por rede, a recursos computacionais compartilhados e configuráveis, que podem ser provisionados e liberados rapidamente com pouco esforço de gerenciamento ou interação com o provedor.\n\nInclui processamento, armazenamento, redes, plataformas e aplicações. A internet é um meio comum de acesso, mas não um requisito universal: uma nuvem privada também pode ser acessada por rede interna.\n\nConsumir recursos como serviços pode reduzir a necessidade de infraestrutura local. Isso não obriga toda organização a abandonar equipamentos próprios ou licenças; uma nuvem privada pode usar infraestrutura própria ou de terceiros.\n\nVirtualização e hospedagem de máquinas virtuais podem apoiar a nuvem, mas sua presença isolada não caracteriza todo o modelo. Armazenamento em nuvem é uma possibilidade entre várias, não sinônimo de computação em nuvem.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Gênero vs. Espécie",
+        "text": "Armazenamento em nuvem é uma das capacidades oferecidas. Computação em nuvem também pode fornecer processamento, redes, plataformas e aplicações; não se reduz a guardar arquivos."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "7a9a228a-4aa9-438c-8d49-28ad4e4cf30f"
+  },
+  {
+    "section_id": "computacao-na-nuvem-cloud-computing-sec-02",
+    "content_unit_id": "09c16376-16e0-4bc5-b25f-19970ac89cf7",
+    "stable_key": "caracteristicas-essenciais",
+    "topic_id": "computacao-na-nuvem-cloud-computing",
+    "title": "Características Essenciais",
+    "sort_order": 1,
+    "content_markdown": "Na definição de referência do **NIST**, o modelo de computação em nuvem tem cinco características essenciais:\n\n* **Autoatendimento sob demanda:** o consumidor provisiona capacidades conforme a necessidade, sem interação humana com o provedor a cada solicitação. Não exige que o provedor adivinhe o que o usuário quer.\n* **Amplo acesso à rede:** capacidades acessíveis por mecanismos padronizados, com diferentes clientes, como celulares e computadores. O acesso pode usar navegador, aplicativo ou interface de programação; requisitos locais dependem do serviço.\n* **Agrupamento de recursos (resource pooling):** recursos físicos e virtuais são alocados dinamicamente entre consumidores. Em geral, não se controla a localização física exata, mas pode haver escolha em nível mais amplo, como região. Compartilhar infraestrutura não significa permitir acesso aos dados de outros clientes.\n* **Elasticidade rápida:** permite ampliar e reduzir capacidades de acordo com a demanda, em alguns casos automaticamente. Os recursos podem parecer ilimitados ao consumidor, mas existem limites físicos, cotas e condições de provisionamento; não é garantia de resposta instantânea.\n* **Serviço mensurado:** uso monitorado, controlado e relatado em unidades adequadas ao serviço, oferecendo transparência ao consumidor e ao provedor. Medição não determina, sozinha, um único modelo de cobrança ou ausência de custos fixos.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "6802ef32-47f8-470a-b085-ca5fdaf0b0ec"
+  },
+  {
+    "section_id": "computacao-na-nuvem-cloud-computing-sec-03",
+    "content_unit_id": "70c29aae-26ef-4ef4-a2b5-35e06e583b4d",
+    "stable_key": "modelos-de-servico",
+    "topic_id": "computacao-na-nuvem-cloud-computing",
+    "title": "Modelos de Serviço",
+    "sort_order": 2,
+    "content_markdown": "Os três modelos de referência distinguem o que é oferecido e a divisão de controle entre consumidor e provedor:\n\n| Critério | IaaS — Infraestrutura como Serviço | PaaS — Plataforma como Serviço | SaaS — Software como Serviço |\n| --- | --- | --- | --- |\n| **Oferta** | Processamento, armazenamento, rede e outros recursos fundamentais, frequentemente como máquinas virtuais. | Ambiente gerenciado para implantar e executar aplicações, com ferramentas e serviços suportados. | Aplicações do provedor prontas para uso. |\n| **Controle do consumidor** | Administra sistemas operacionais e aplicações, além das configurações de rede e armazenamento permitidas; não administra a infraestrutura física subjacente. | Administra as aplicações implantadas e configurações permitidas; o provedor gerencia a plataforma e o sistema operacional subjacente. | Usa e configura a aplicação dentro das opções oferecidas; o provedor gerencia a aplicação e sua infraestrutura. |\n| **Exemplos** | Amazon EC2; Azure Virtual Machines. | Azure App Service; Google App Engine. | Microsoft 365. |\n\nIaaS não significa entregar fisicamente servidores ao cliente. PaaS não elimina desenvolvimento, configuração da aplicação ou gestão dos dados. SaaS pode ser acessado por navegador ou cliente compatível, inclusive aplicativo instalado; não implica ausência universal de instalação local.\n\nA responsabilidade é **compartilhada** e varia por serviço e contrato. Identidades, permissões, dados e configurações continuam exigindo atenção do consumidor mesmo quando o provedor gerencia mais camadas. Uma marca de nuvem, como Microsoft Azure, pode oferecer serviços em vários modelos; ela não é, por si só, um único exemplo de PaaS.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "58d0051e-1a7e-4b3d-9985-04b2251fb98a"
+  },
+  {
+    "section_id": "computacao-na-nuvem-cloud-computing-sec-04",
+    "content_unit_id": "6c252427-5948-4697-b73a-c94cd7e38b1d",
+    "stable_key": "beneficios-e-riscos",
+    "topic_id": "computacao-na-nuvem-cloud-computing",
+    "title": "Benefícios e Riscos",
+    "sort_order": 3,
+    "content_markdown": "Os benefícios da nuvem são **potenciais** e dependem da arquitetura, do contrato e da operação.\n\n### Benefícios\n* **Agilidade e ajuste de capacidade:** provisionar e liberar recursos conforme a necessidade, dentro dos limites do serviço.\n* **Uso de serviços gerenciados:** transferir parte da operação de infraestrutura ao provedor, permitindo que a equipe se concentre em aplicações e necessidades do negócio. Isso não elimina toda a equipe de TI.\n* **Economia de escala e flexibilidade:** podem reduzir investimento inicial e melhorar o uso da capacidade. Economia total não é automática: consumo, licenciamento, tráfego e gestão influenciam o resultado.\n* **Recursos de resiliência e proteção:** redundância, monitoramento e controles gerenciados podem apoiar disponibilidade e segurança, desde que contratados, configurados e utilizados adequadamente.\n\n### Riscos e cuidados\n* **Responsabilidade compartilhada:** avaliar o provedor não basta. Configurações, permissões, identidades e proteção dos dados sob controle do cliente também importam.\n* **Interrupções e conectividade:** falhas de rede ou de serviços podem impedir o acesso. Requisitos de recuperação, cópias de segurança e continuidade devem ser planejados e testados; nuvem não é garantia de indisponibilidade zero.\n* **Dependência do fornecedor:** formatos, APIs e serviços proprietários podem dificultar migração ou saída. Planeje exportação, recuperação dos dados e encerramento do contrato.\n* **Desempenho e custo variáveis:** latência, limites de capacidade e aumento de consumo ou de transferência podem alterar a experiência e os gastos.\n* **Governança e localização:** requisitos de acesso, retenção, residência dos dados e conformidade precisam ser avaliados para o caso concreto. Uma interrupção não implica automaticamente perda de integridade ou mudança de titularidade dos dados.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "e691f534-7c1c-44ca-a1d4-bc5d2492b0a7"
+  },
+  {
+    "section_id": "computacao-na-nuvem-cloud-computing-sec-05",
+    "content_unit_id": "0ca26721-43f2-4710-9f00-5af673cfdcc4",
+    "stable_key": "tipos-de-nuvem",
+    "topic_id": "computacao-na-nuvem-cloud-computing",
+    "title": "Tipos de Nuvem",
+    "sort_order": 4,
+    "content_markdown": "Os **modelos de implantação** distinguem quem pode usar a infraestrutura e como ela é organizada. Não se confundem com os modelos de serviço IaaS, PaaS e SaaS.\n\n* **Nuvem privada:** provisionada para uso exclusivo de uma organização, que pode ter vários consumidores internos. Pode ser de propriedade, gestão ou operação da própria organização, de terceiros ou de uma combinação, dentro ou fora de suas instalações. Uso exclusivo não torna a nuvem imune a falhas de configuração ou acesso indevido.\n* **Nuvem pública:** provisionada para uso aberto ao público em geral, conforme condições do serviço. Isso não significa que os dados dos clientes sejam públicos nem que qualquer pessoa possa acessar qualquer recurso sem autorização.\n* **Nuvem comunitária:** provisionada para uso exclusivo de uma comunidade de organizações com preocupações comuns, como missão, segurança ou requisitos de conformidade. Pode ser operada por integrantes, terceiros ou combinação, dentro ou fora de suas instalações.\n* **Nuvem híbrida:** composição de duas ou mais infraestruturas distintas — privadas, comunitárias ou públicas — que preservam sua identidade e são conectadas por tecnologia que permite portabilidade de dados e aplicações. A combinação pública/privada é um caso comum, não a única possibilidade da definição de referência.\n\nA integração híbrida exige projeto e compatibilidade; portabilidade não é automática apenas porque dois ambientes foram contratados. O mapa sintetiza os quatro modelos de implantação.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "flowchart LR\n A[\"Implantação\"] --> B[\"Privada\"]\n A --> C[\"Pública\"]\n A --> D[\"Comunitária\"]\n A --> E[\"Híbrida\"]\n class A readableRoot;\n class B,C,D,E readableItem;",
+    "archived_at": null,
+    "current_revision_id": "1c1ef85d-674d-4f7d-b310-394f06ce5163"
+  }
+]
