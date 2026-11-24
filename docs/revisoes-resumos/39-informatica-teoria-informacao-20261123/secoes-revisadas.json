@@ -1,0 +1,23 @@
+[
+  {
+    "section_id": "teoria-da-informacao-sec-01",
+    "content_unit_id": "24c88d16-f4df-4935-b422-e7b731b52ea5",
+    "stable_key": "dado-informacao-conhecimento-e-inteligencia",
+    "topic_id": "teoria-da-informacao",
+    "title": "Dado, Informação, Conhecimento e Inteligência",
+    "sort_order": 0,
+    "content_markdown": "Neste resumo, **Dado**, **Informação**, **Conhecimento** e **Inteligência** são apresentados como uma sequência didática da gestão da informação, que destaca a agregação de contexto, interpretação e utilidade para a decisão. Não se trata de uma transformação automática nem de uma classificação única para todas as áreas.\n\n### Dado\nÉ um registro de fatos, observações ou medidas, representado por números, palavras, símbolos, imagens ou outros formatos. Sua interpretação depende do contexto. Quanto à organização, distinguem-se:\n\n* **Estruturados:** seguem um esquema definido, com campos e tipos estabelecidos. Exemplo: tabela de resultados com matrícula, data da prova e nota em colunas próprias.\n* **Semiestruturados:** possuem elementos de organização, como chaves, hierarquias ou marcações, sem exigir o mesmo esquema tabular rígido. JSON e XML são exemplos usuais. Um campo de texto livre, isoladamente, não torna o conteúdo semiestruturado; esses formatos também podem ter esquemas de validação.\n* **Não estruturados:** não se organizam diretamente em campos de um esquema tabular predefinido para a análise, como o conteúdo de textos livres, imagens, áudios e vídeos. Isso não significa ausência absoluta de estrutura: um arquivo continua tendo formato e organização interna.\n\nA classificação considera a forma como os dados se organizam e são tratados. Uma tabela com um campo de comentário livre pode combinar componentes estruturados e não estruturados.\n\n### Informação\nÉ o dado organizado e contextualizado de modo a ter significado e relevância para uma finalidade. Pode resultar de processamento, comparação ou síntese. Não existe uma regra geral segundo a qual informação nunca apresente conclusões; o ponto central é o significado atribuído aos dados em determinado contexto.\n\n### Conhecimento\nEnvolve interpretação e compreensão da informação, articuladas à experiência e à aprendizagem, permitindo avaliar situações e orientar a ação. Não se limita a armazenar ou reunir informações. Distinguem-se:\n\n* **Tácito:** incorporado à experiência e às habilidades das pessoas; pode ser difícil de expressar e documentar integralmente. Exemplo: a habilidade prática de reconhecer uma falha pelo comportamento de um equipamento.\n* **Explícito (ou codificado):** pode ser formalizado, registrado e compartilhado, como em manuais, procedimentos e documentos.\n\nEssas formas podem se complementar na aprendizagem e no trabalho.\n\n### Inteligência\nNo contexto organizacional adotado aqui, envolve analisar e integrar dados, informações e conhecimentos para compreender um cenário e **assessorar a tomada de decisão**. Pode apoiar a identificação de oportunidades, riscos e alternativas; não se confunde com a própria decisão ou com sua execução, nem garante precisão ou vantagem em qualquer situação.\n\n**Exemplo didático:** notas individuais são dados; a média da turma contextualiza esses registros como informação; interpretar os erros à luz do conteúdo e da experiência contribui para o conhecimento; integrar essa análise a prioridades e recursos para recomendar uma intervenção apoia a decisão. O exemplo ilustra o modelo, sem tornar rígidas as fronteiras entre os conceitos.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Agregação de valor e contexto",
+        "text": "A sequência Dado → Informação → Conhecimento → Inteligência é didática. Contextualizar e interpretar exige análise e avaliação da qualidade dos registros; não ocorre automaticamente. Inteligência assessora a decisão, sem garantir seu resultado."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "flowchart TD\n    A[Dado] --> B[Informação]\n    B --> C[Conhecimento]\n    C --> D[Inteligência]\n    class A readableRoot;\n    class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "d3dfc526-d8fc-4a12-9144-e95cbb363edb"
+  }
+]

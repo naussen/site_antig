@@ -1,5 +1,10 @@
 # Changelog
 
+## 23/11/2026 — Revisão de Teoria da Informação
+
+- Publicada uma seção com callout revisado e mapa preservado. Corrigidas classificação de dados e generalizações sobre informação/conhecimento/inteligência, sem reaplicar lotes anteriores.
+- Pré-imagem, dry-run, rollback e proteção por revisão esperada; reconciliação integral 15/52 e outras 51 revisões intactas. Seis verificações visuais com mapa. Cobertura 22/52, cinco tópicos integrais; restam 30 seções e três lacunas. Evidências em `docs/revisoes-resumos/39-informatica-teoria-informacao-20261123/`. Sem alteração de código da aplicação.
+
 ## 23/11/2026 — Revisão de Redes de Computadores 06–08
 
 - Publicadas três seções com proteção por revisão esperada, pré-imagem, dry-run e ensaio reversível. Corrigidos TCP/IP, IPv4/IPv6 e TCP/UDP; preservados RITA e lotes anteriores.
