@@ -1,0 +1,101 @@
+[
+  {
+    "section_id": "redes-de-computadores-sec-01",
+    "content_unit_id": "ce2b7974-e707-488c-badd-965cc71fc2a2",
+    "stable_key": "dimensao-de-redes",
+    "topic_id": "redes-de-computadores",
+    "title": "Dimensão de redes",
+    "sort_order": 0,
+    "content_markdown": "Uma rede interconecta dispositivos para troca de informações e compartilhamento de recursos. A classificação de abrangência é contextual: não existe um limite universal de 10 km para toda LAN.\n\n| Classe | Abrangência ou característica típica |\n| :--- | :--- |\n| LAN (Local Area Network) | Rede local de uma residência, escritório, edifício ou ambiente próximo. |\n| WLAN (Wireless LAN) | LAN com comunicação sem fio, como Wi-Fi; é uma distinção de tecnologia, não uma faixa geográfica separada. |\n| CAN (Campus Area Network) | Interliga redes de um campus ou conjunto de prédios. Aqui, CAN significa rede de campus. |\n| MAN (Metropolitan Area Network) | Atende uma área metropolitana. |\n| WAN (Wide Area Network) | Interliga redes em áreas extensas, como diferentes cidades e países. |\n\nAbrangência, topologia e meio de transmissão são critérios diferentes. As topologias e as camadas OSI são explicadas nas seções próprias deste tópico.",
+    "callouts": [],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "64ad2681-b9af-404a-9873-9b9fc9f5cc81"
+  },
+  {
+    "section_id": "redes-de-computadores-sec-02",
+    "content_unit_id": "39998e16-2b4f-47ba-bfc3-53a6d08f49ea",
+    "stable_key": "comutacao-de-circuito-e-comutacao-de-pacote",
+    "topic_id": "redes-de-computadores",
+    "title": "Comutação de circuito e comutação de pacote",
+    "sort_order": 1,
+    "content_markdown": "A comutação organiza o encaminhamento da comunicação pela rede.\n\n- **Circuitos:** há estabelecimento prévio e reserva de recursos ao longo do circuito. Esses recursos podem ser compartilhados fisicamente por multiplexação; não é obrigatório um fio exclusivo para cada comunicação. A telefonia convencional comutada é um exemplo histórico.\n- **Mensagens:** a mensagem inteira é a unidade armazenada e encaminhada entre nós intermediários. Isso pode exigir espera e armazenamento de mensagens grandes.\n- **Pacotes:** os dados são divididos em unidades menores, que compartilham enlaces. Na modalidade por datagramas, como IP, não se estabelece um circuito para cada comunicação. Os pacotes podem seguir rotas diferentes, sofrer perdas ou chegar fora de ordem. Tecnologias de circuitos virtuais estabelecem ou utilizam previamente um caminho lógico; isso não as transforma em comutação de circuitos com reserva física exclusiva.\n\nA distinção central é a forma de encaminhamento e de uso dos recursos. Uma conexão TCP estabelecida sobre IP não equivale a um circuito telefônico reservado. Entrega ordenada e recuperação de perdas dependem dos protocolos e serviços empregados, não são garantidas por toda rede de pacotes.",
+    "callouts": [
+      {
+        "title": "Datagramas e garantias",
+        "type": "info",
+        "text": "Em redes de datagramas, pacotes podem seguir rotas diferentes, perder-se ou chegar fora de ordem. Ordenação e recuperação dependem dos protocolos utilizados; não são garantias universais da comutação de pacotes."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "flowchart TD\n A[Comutação] --> B[Circuitos: reserva de recursos]\n A --> C[Mensagens: unidade inteira]\n A --> D[Pacotes]\n D --> E[Datagramas]\n D --> F[Circuitos virtuais]\n class A readableRoot;\n class B,C,D readableProcess;\n class E,F readableItem;",
+    "archived_at": null,
+    "current_revision_id": "4b624cac-1e81-47d1-951e-3115fc448527"
+  },
+  {
+    "section_id": "redes-de-computadores-sec-03",
+    "content_unit_id": "e6539e97-f2e6-4925-b505-77ddce4dcc7d",
+    "stable_key": "topologias-de-rede",
+    "topic_id": "redes-de-computadores",
+    "title": "Topologias de rede",
+    "sort_order": 2,
+    "content_markdown": "A topologia descreve a organização física ou lógica das conexões. Redes podem usar uma topologia ou combinar várias em uma topologia híbrida; a disposição física não determina, por si só, o funcionamento lógico.\n\n| Topologia | Características e limites |\n| :--- | :--- |\n| Estrela | As estações ligam-se ao elemento central. Uma falha em um enlace de estação costuma afetar aquela estação; falha do centro pode interromper a comunicação das estações ligadas a ele. |\n| Barramento (barra) | Usa meio compartilhado. No Ethernet clássico compartilhado, pode haver colisões. A ruptura do meio pode comprometer o segmento; baixo custo e fácil expansão dependem da implantação. |\n| Anel | Conexões em ciclo. Uma falha pode interromper um anel simples; anel duplo e mecanismos de desvio/redundância podem manter a comunicação. |\n| Malha | Oferece múltiplas conexões e caminhos alternativos, com custo adicional. Não assegura desempenho máximo, ausência de congestionamento ou imunidade a falhas. |\n\nEm uma malha completa simples, com enlaces bidirecionais entre cada par de nós, o total de enlaces é $\\frac{N(N-1)}{2}$. Com quatro nós, são seis enlaces. Em uma estrela com quatro estações e um centro, há quatro enlaces de estação.\n\nColisões dependem do meio e do método de acesso. Ethernet comutado em full duplex não deve ser confundido com o Ethernet clássico compartilhado.",
+    "callouts": [
+      {
+        "title": "Estrela simples e redundância",
+        "type": "warning",
+        "text": "A falha do elemento central pode interromper a estrela simples. Redundância pode reduzir esse risco; a falha de uma estação não equivale à falha do centro."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "b312f2be-cec3-4c10-a227-f78cc3de9ddc"
+  },
+  {
+    "section_id": "redes-de-computadores-sec-04",
+    "content_unit_id": "b83ebd32-05a5-43b1-8933-192d4e943676",
+    "stable_key": "equipamentos-de-rede-e-seguranca",
+    "topic_id": "redes-de-computadores",
+    "title": "Equipamentos de rede e segurança",
+    "sort_order": 3,
+    "content_markdown": "### Equipamentos de rede\n\n- **Modem:** realiza modulação e demodulação de sinais conforme a tecnologia de acesso. O modem discado usa a linha telefônica; o cable modem usa a infraestrutura de cabo. Modem não significa apenas o equipamento da antiga conexão discada.\n- **Roteador:** encaminha pacotes entre redes conforme sua tabela de rotas e políticas. A rota selecionada depende das informações e critérios disponíveis; não há garantia de melhor caminho global em qualquer situação.\n- **Switch:** na comutação Ethernet de camada 2, aprende endereços MAC e encaminha quadros conforme a tabela e a VLAN. Unicast de destino desconhecido e broadcast podem ser difundidos às portas pertinentes, exceto a de entrada; não envia todo quadro apenas a uma porta.\n- **Hub:** repete sinais para as demais portas, sem aprender endereços MAC. O meio é compartilhado e pode haver colisões; ele não toma a decisão de encaminhamento de um switch.\n- **Access point:** permite a conexão de estações sem fio à rede de distribuição, frequentemente uma LAN cabeada. Alguns equipamentos também suportam repetição, mas o AP não se define como simples repetidor.\n\n### Segurança Wi-Fi\n\nWEP (Wired Equivalent Privacy) é legado e inseguro por falhas de projeto e uso dos vetores de inicialização; não porque toda chave de 128 bits seja fraca.\n\nWPA2 significa Wi-Fi Protected Access 2. No uso de CCMP com AES, a chave de cifragem tem 128 bits. AES é um algoritmo, não um protocolo de rede. Modo, autenticação, senha e configuração também importam; WPA2 não garante segurança absoluta.\n\nWPA3 introduz melhorias e deve ser considerado quando compatível. WEP e TKIP são opções legadas inseguras. O tamanho de uma chave, isoladamente, não basta para comparar a segurança das soluções.",
+    "callouts": [
+      {
+        "title": "Switch não encaminha sempre para uma só porta",
+        "type": "warning",
+        "text": "O switch aprende MACs e pode encaminhar unicast conhecido à porta correspondente. Broadcast e unicast desconhecido podem sofrer flooding na VLAN. O hub apenas repete sinais."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "31537f2a-1355-4443-8703-da61b183f379"
+  },
+  {
+    "section_id": "redes-de-computadores-sec-05",
+    "content_unit_id": "38314e4d-939d-42f4-b6a6-8fcb21a011ba",
+    "stable_key": "modelo-osi-iso",
+    "topic_id": "redes-de-computadores",
+    "title": "Modelo OSI/ISO",
+    "sort_order": 4,
+    "content_markdown": "OSI (Open Systems Interconnection) é um modelo de referência de arquitetura em sete camadas, não um protocolo único. A referência ISO/IEC 7498-1 também corresponde à recomendação ITU-T X.200.\n\nCada camada oferece serviços à camada superior e utiliza os da inferior. A separação permite mudar uma implementação sem exigir mudanças nas outras quando os serviços e interfaces contratados são preservados; não garante independência perante qualquer alteração.\n\n| Camada | Função de referência |\n| :--- | :--- |\n| 7 — Aplicação | Serviços de comunicação utilizados pelas aplicações. HTTP, DNS e SMTP são exemplos de protocolos de aplicação da pilha Internet. |\n| 6 — Apresentação | Representação e conversão da sintaxe dos dados; pode abranger codificação, compressão e transformações como criptografia. |\n| 5 — Sessão | Organização e sincronização do diálogo entre aplicações. SQL e ZIP não são exemplos genéricos de protocolos desta camada. |\n| 4 — Transporte | Comunicação fim a fim. TCP oferece fluxo de bytes ordenado e confiável; UDP não garante entrega e ordem por si só. Não confundir segmentação de transporte com fragmentação IP. |\n| 3 — Rede | Endereçamento lógico e encaminhamento entre redes, como no IP. |\n| 2 — Enlace | Quadros e comunicação no enlace; Ethernet utiliza endereços MAC. Detecção de erro não implica correção ou entrega garantida em toda tecnologia. |\n| 1 — Física | Sinais e transmissão de bits no meio, com características elétricas, ópticas ou de rádio. |\n\nA divisão em camadas de suporte à rede (1–3), transporte (4) e funções superiores (5–7) é uma ajuda didática. Não determina, isoladamente, quais funções precisam ser implementadas em hardware ou software.\n\nProtocolos reais nem sempre correspondem a uma única camada desse modelo. Ethernet e Wi-Fi incluem especificações físicas e de enlace; TLS não deve ser reduzido a uma correspondência universal e exclusiva com a camada 6. A pilha TCP/IP não reproduz sete camadas separadas.",
+    "callouts": [],
+    "mnemonics": [
+      {
+        "key": "Fui Em Recife Transportar Seis Apresentadores de Aplicação",
+        "meaning": "Física, Enlace, Rede, Transporte, Sessão, Apresentação, Aplicação",
+        "description": "Mnemônico para memorizar a ordem das 7 camadas do modelo OSI/ISO da base (camada 1) até o topo (camada 7)."
+      }
+    ],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "55e8d23c-e19d-408f-92bf-eab8d9e4bbcf"
+  }
+]

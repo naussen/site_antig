@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-23 — Informática: Redes de Computadores 01–05
+
+- Cinco seções, três callouts e um mapa corrigidos; tabelas de topologias e OSI recompostas nas seções próprias. Revisados abrangência, comutação, equipamentos e segurança Wi-Fi. Fórmula e mnemônico preservados.
+- Pré-imagem, dry-run, rollback e publicação com revisão esperada; reconciliação de 15 tópicos/52 seções sem divergências, demais 47 preservadas. Trinta verificações visuais incluindo nove de rolagem, seis testes de interação do mapa e três controles maliciosos. Informática parcial: 18/52 seções; 34 seções e três lacunas pendentes. Evidências em docs/revisoes-resumos/39-informatica-redes-01-05-20261123; commit editorial local 0819b51.
+
 ## 2026-11-23 — Informática: Ameaças Virtuais 06–09
 
 - Quatro seções, três callouts e um mapa corrigidos e publicados: políticas/limites de firewall, proxy, VPN e IDS/IPS. Ameaças Virtuais com 9/9 seções revisadas nos dois lotes; demais tópicos preservados.
