@@ -1,0 +1,65 @@
+[
+  {
+    "section_id": "teoria-geral-de-sistemas-tgs-sec-01",
+    "content_unit_id": "a40125bf-c2c0-4e9d-9eff-8151df05a5b2",
+    "stable_key": "fundamentos",
+    "topic_id": "teoria-geral-de-sistemas-tgs",
+    "title": "Fundamentos",
+    "sort_order": 0,
+    "content_markdown": "Um **sistema** é um conjunto de elementos inter-relacionados. As relações entre as partes ajudam a explicar propriedades do conjunto que não aparecem na análise isolada de cada componente. **Sinergia positiva** designa um ganho da atuação conjunta; não é um resultado garantido de todo sistema.\n\nNa aplicação organizacional da Teoria Geral de Sistemas, destacam-se três ideias:\n\n* **Sistemas podem integrar sistemas maiores:** Um sistema pode conter subsistemas e fazer parte de um supersistema. A delimitação depende do objeto e do nível de análise, sem exigir uma decomposição infinita.\n* **Sistemas abertos interagem com o ambiente:** Organizações recebem recursos e informações e produzem bens, serviços e outros resultados. Isso não significa intercâmbio infinito nem que todo modelo de sistema seja aberto.\n* **Estrutura e funcionamento estão relacionados:** A organização das partes e suas relações condicionam as funções e o desempenho. Nas organizações, a análise considera também objetivos, ambiente e restrições.\n\n### A Organização sob a Ótica da TGS\n\n* **Sistema composto:** Departamentos e processos são analisados pelas suas interdependências; melhorar uma parte isoladamente não assegura melhorar o todo.\n* **Sistema aberto:** A organização influencia e é influenciada por clientes, fornecedores e outras condições externas.\n\nO mapa representa níveis de composição. **Ambiente** é o que fica fora da fronteira escolhida e interage com o sistema; não é sinônimo automático de supersistema.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Sinergia e interação",
+        "text": "Propriedades do conjunto dependem das relações entre as partes. Sinergia positiva é uma possibilidade, não uma garantia."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph TD\n    Supersistema[Supersistema] --> Sistema[Sistema]\n    Sistema --> SubsistemaA[Subsistema A]\n    Sistema --> SubsistemaB[Subsistema B]\n    class Supersistema readableRoot;\n    class Sistema,SubsistemaA,SubsistemaB readableItem;",
+    "archived_at": null,
+    "current_revision_id": "7a3e33f5-9b8f-4c8a-8d83-dee4e05a26f6"
+  },
+  {
+    "section_id": "teoria-geral-de-sistemas-tgs-sec-02",
+    "content_unit_id": "fd7d0594-cbcd-4c3e-b297-4b109f642641",
+    "stable_key": "principios-da-tgs",
+    "topic_id": "teoria-geral-de-sistemas-tgs",
+    "title": "Princípios da TGS",
+    "sort_order": 1,
+    "content_markdown": "Três ideias ajudam a compreender a abordagem sistêmica na análise organizacional:\n\n* **Expansionismo:** Examina o fenômeno no contexto de um conjunto mais amplo e de suas relações, evitando explicá-lo apenas por componentes isolados.\n* **Pensamento Sintético:** Busca compreender o papel da parte no funcionamento do todo. Complementa a análise das partes, sem dispensá-la.\n* **Teleologia:** Interpreta o comportamento em relação a fins ou objetivos. Em sistemas de controle, a realimentação pode orientar ajustes em relação a uma referência; isso não pressupõe intenção consciente da máquina.\n\nA perspectiva teleológica não transforma uma finalidade futura em causa que atua retroativamente. Tampouco estabelece uma regra universal segundo a qual toda causa seria necessária, mas insuficiente para produzir um efeito. Essa formulação mistura finalidade com condições lógicas de causalidade.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Finalidade e causalidade",
+        "text": "Teleologia relaciona comportamento e objetivos. Não define uma regra universal de causa necessária, mas insuficiente."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "6eb96936-2ef3-4973-9da4-c4eb69172872"
+  },
+  {
+    "section_id": "teoria-geral-de-sistemas-tgs-sec-03",
+    "content_unit_id": "3e6105eb-d468-4234-bc47-dc291647e9e9",
+    "stable_key": "conceitos-importantes",
+    "topic_id": "teoria-geral-de-sistemas-tgs",
+    "title": "Conceitos Importantes",
+    "sort_order": 2,
+    "content_markdown": "Os conceitos abaixo distinguem manutenção, adaptação e realimentação. Analogias organizacionais não equivalem automaticamente às grandezas físicas de mesmo nome.\n\n| Conceito | Definição / Funcionamento | Exceção ou Particularidade |\n| :--- | :--- | :--- |\n| **Entropia** | Na termodinâmica, é uma grandeza física. Na análise organizacional, aparece como analogia para desorganização e perda de capacidade. | A segunda lei refere-se ao aumento ou conservação da entropia total de um sistema isolado; não determina desgaste inevitável de cada parte de um sistema aberto. |\n| **Negentropia / Sintropia** | Negentropia é usada para explicar a manutenção de organização mediante trocas com o ambiente. Sintropia aparece em parte da literatura organizacional com sentido semelhante. | Não são uma força mágica nem garantia de sobrevivência. Ordem local pode ser mantida sem violar a segunda lei; os usos dos termos variam entre autores. |\n| **Homeostase** | Autorregulação que mantém variáveis em faixas compatíveis com o funcionamento, frequentemente por feedback negativo. | Estabilidade dinâmica não significa imobilidade ou ausência de variações. |\n| **Heterostase** | Designa adaptação com estabelecimento de um novo estado estável, em contraste com a simples manutenção das condições anteriores. | O termo tem origem fisiológica e uso contextual; sua aplicação organizacional é uma analogia, não uma lei universal. |\n\n> **Feedback / Realimentação:** Informação sobre a saída ou o desempenho retorna ao mecanismo de controle e pode influenciar o funcionamento posterior. Pode confirmar condições ou indicar desvios; não implica melhoria automática nem obrigação de retornar a uma etapa física específica.\n\nO **feedback negativo** contrapõe-se a desvios; o **positivo** reforça uma variação. Esses nomes indicam o sentido da realimentação, não um julgamento de valor. Estabilidade depende também da dinâmica e dos atrasos do sistema.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Sentido da realimentação",
+        "text": "Feedback negativo contrapõe-se a desvios; positivo reforça variações. Nenhum dos nomes significa, por si só, bom ou ruim."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "7088dec8-1037-4505-a3f9-635d90b81c70"
+  }
+]

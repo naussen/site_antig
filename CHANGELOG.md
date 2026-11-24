@@ -1,5 +1,10 @@
 # Changelog
 
+## 24/11/2026 — Revisão de Teoria Geral de Sistemas 01–03
+
+- Publicadas três seções: corrigidas sinergia, abertura, teleologia, entropia, homeostase/heterostase e realimentação. Três callouts, tabela e mapa de composição alinhados; identidades e lotes anteriores preservados.
+- Pré-imagem, dry-run, rollback e publicação por revisão esperada; reconciliação 15/52 e demais 49 revisões intactas. Dezoito combinações visuais, três checagens de tabela, seis interações de mapa, três controles maliciosos e 49 testes de conteúdo. Informática parcial: 48/52, nove tópicos integrais; restam 4 seções e três lacunas. Evidências em `docs/revisoes-resumos/39-informatica-tgs-01-03-20261124/`; commit editorial local `4c92819` (repositório sem remote). Sem alteração de código da aplicação.
+
 ## 24/11/2026 — Revisão de Computação na Nuvem 01–05
 
 - Publicadas cinco seções: corrigidos conceito, características, modelos de serviço/implantação e responsabilidade compartilhada. Callout/tabela alinhados e mapa compactado para celular. Identidades e lotes anteriores preservados.
