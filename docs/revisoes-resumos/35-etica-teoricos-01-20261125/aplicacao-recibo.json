@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "steps": [
+    {
+      "op_id": "etica-aspectos-teoricos-sec-01",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "56ea63de-1cfe-4337-94c9-5c9e36bc7673"
+    }
+  ],
+  "post": {
+    "ok": true,
+    "target": "saneado",
+    "expectedTopics": 4,
+    "expectedSections": 19,
+    "topics": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "sections": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  }
+}

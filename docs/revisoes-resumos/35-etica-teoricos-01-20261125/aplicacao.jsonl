@@ -1,0 +1,4 @@
+{"at":"2026-11-25T14:14:50.416Z","event":"start","mode":"apply","manifest_sha256":"0479aa2231265d79268e447a2651ff1b419f7c472c755fb6e633fbd4af78a0ff"}
+{"at":"2026-11-25T14:14:50.569Z","event":"step","op_id":"etica-aspectos-teoricos-sec-01","status":"started","revision_before":"cc7d9f0a-3ea7-4b34-bb1c-057be4899c2a"}
+{"at":"2026-11-25T14:14:50.750Z","event":"step","op_id":"etica-aspectos-teoricos-sec-01","status":"confirmed","rowsAffected":1,"revision_after":"56ea63de-1cfe-4337-94c9-5c9e36bc7673"}
+{"at":"2026-11-25T14:14:50.905Z","event":"finish","status":"completed","steps":[{"op_id":"etica-aspectos-teoricos-sec-01","status":"confirmed","rowsAffected":1,"revision_after":"56ea63de-1cfe-4337-94c9-5c9e36bc7673"}],"post":{"ok":true,"target":"saneado","expectedTopics":4,"expectedSections":19,"topics":{"missing":[],"extra":[],"changed":[]},"sections":{"missing":[],"extra":[],"changed":[]}}}

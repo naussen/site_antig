@@ -1,0 +1,14 @@
+✔ aplica e reconcilia 106 operações, e rollback restaura base (86.6904ms)
+✔ preflight com base alterada ou token ausente impede escrita (54.858ms)
+✔ CAS interrompe concorrência e permite reverter somente confirmação anterior (53.8838ms)
+✔ timeout antes ou depois permanece indeterminado, com leitura independente (84.0839ms)
+✔ rollback recusa revisão posterior mesmo com conteúdo idêntico (52.606ms)
+✔ SHA diferente impede qualquer chamada de escrita (18.665ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 456.4068

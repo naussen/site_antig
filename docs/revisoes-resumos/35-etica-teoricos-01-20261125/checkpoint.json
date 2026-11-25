@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-25",
+  "status": "publicado_reconciliado",
+  "discipline": "Ética no Serviço Público",
+  "topic_id": "etica-aspectos-teoricos",
+  "section_ids": [
+    "etica-aspectos-teoricos-sec-01"
+  ],
+  "components": {
+    "callouts": 3,
+    "flashcards": 0,
+    "mnemonics": 0,
+    "maps": 0
+  },
+  "content_findings_corrected": 15,
+  "revision": {
+    "section_id": "etica-aspectos-teoricos-sec-01",
+    "current_revision_id": "56ea63de-1cfe-4337-94c9-5c9e36bc7673"
+  },
+  "manifest_sha256": "0479aa2231265d79268e447a2651ff1b419f7c472c755fb6e633fbd4af78a0ff",
+  "after_sha256": "0b25555f2ac5940d0629aa5b7c23018f9abb10e957f179957feaf4e878f70512",
+  "stages": {
+    "proposal": true,
+    "dry_run": true,
+    "negative_cas_rows": 0,
+    "preflight": true,
+    "applied_rows": 1,
+    "reconciled": true,
+    "visual_combinations": 6,
+    "content_tests": 49,
+    "executor_tests": 6
+  },
+  "preserved_other_revision_ids": 18,
+  "discipline_complete": false,
+  "reviewed_sections": 1,
+  "remaining_sections": 18,
+  "empty_topics": [
+    "decreto-1171-1994",
+    "etica-cidadania-e-democracia"
+  ],
+  "student_check": "dispensado",
+  "application_changes": false,
+  "macroeconomia": "preservada_sem_reaplicacao",
+  "limitations": [
+    "Tema1000: tese final não localizada no registro oficial consultado; votos/pauta não tratados como decisão final",
+    "CNJ abertura403: texto oficial indexado e confirmação STF usados",
+    "ENAP PDF timeout: metadados/resumo e referência autoral complementar, sem reprodução do PDF",
+    "visual local com renderizadores e CSS idênticos ao checkout publicado; não é smoke de aluno"
+  ],
+  "stop": true,
+  "editorial_commit": "6a896fac8e9069ba12bfe7cd4dfdbfe4302da9fe",
+  "editorial_remote": null,
+  "local_evidence": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\35-etica-no-servico-publico\\teoricos-01-20261125"
+}

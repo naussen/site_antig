@@ -1,3 +1,7 @@
+## 2026-11-25 — Ética: publicação parcial da seção teórica
+
+- Publicada somente Ética (Aspectos Teóricos), seção01 e três callouts: 15 correções, CAS por revisão com pré-imagem/diário, teste negativo e reconciliação sem divergências. Outras18 revisões preservadas; seis visuais e55 testes aprovados. Disciplina parcial; Macroeconomia preservada. Editorial `6a896fa`, relatório35 e checkpoint espelhados. Sem alteração de aplicação.
+
 ## 2026-11-25 — diagnóstico do próximo lote de Resumos
 
 - Registro documental de Ética (Aspectos Teóricos), seção 01 e três callouts (relatório 35; editorial `9866980`). Leitura de catálogo e conteúdo sem escrita; propostas antigas não aplicadas. Macroeconomia preservada. Revisão e publicação de conteúdo continuam pendentes.
