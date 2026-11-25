@@ -1,0 +1,128 @@
+{
+  "checked_date_local": "2026-11-24",
+  "scope": "Somente trechos pertinentes; nao leitura integral de manuais",
+  "sources": [
+    {
+      "title": "ABS: teoria dos indices de precos",
+      "url": "https://www.abs.gov.au/statistics/detailed-methodology-information/concepts-sources-methods/producer-and-international-trade-price-indexes-concepts-sources-and-methods/2022/chapter-3-technical-methodology/price-index-theory",
+      "sections": [
+        "06"
+      ],
+      "use": "Formulas de Laspeyres, Paasche e Fisher"
+    },
+    {
+      "title": "Eurostat: medidas de volume",
+      "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Building_the_System_of_National_Accounts_-_volume_measures",
+      "sections": [
+        "06"
+      ],
+      "use": "Pares preco/volume e encadeamento"
+    },
+    {
+      "title": "Eurostat: contas setoriais anuais",
+      "url": "https://ec.europa.eu/eurostat/cache/metadata/en/tipsnf_esms.htm",
+      "sections": [
+        "07"
+      ],
+      "use": "Poupanca, transferencias de capital, investimento e ativos nao produzidos"
+    },
+    {
+      "title": "BCB: nota explicativa de fevereiro de 2026",
+      "url": "https://www.bcb.gov.br/content/estatisticas/notas_metodologicas/balanco_pagamentos/bpm6/Nota%20Explicativa%20-%20Indicadores%20do%20Setor%20Externo.pdf",
+      "sections": [
+        "08"
+      ],
+      "use": "Confirmacao atual de BPM6 no Brasil"
+    },
+    {
+      "title": "BCB: nota BPM6 1, novembro 2014",
+      "url": "https://www.bcb.gov.br/content/estatisticas/notas_metodologicas/balanco_pagamentos/bpm6/nm1bpm6p.pdf",
+      "sections": [
+        "08"
+      ],
+      "use": "Estrutura, migrantes, sinais e PII"
+    },
+    {
+      "title": "BCB: nota BPM6 2, abril 2015",
+      "url": "https://www.bcb.gov.br/content/estatisticas/notas_metodologicas/balanco_pagamentos/bpm6/nm2bpm6p.pdf",
+      "sections": [
+        "08"
+      ],
+      "use": "Bens, servicos, propriedade intelectual e rendas"
+    },
+    {
+      "title": "BCB: nota BPM6 3, abril 2015",
+      "url": "https://www.bcb.gov.br/content/estatisticas/notas_metodologicas/balanco_pagamentos/bpm6/nm3bpm6p.pdf",
+      "sections": [
+        "08"
+      ],
+      "use": "Direto, divida intercompanhia e lucros reinvestidos"
+    },
+    {
+      "title": "BEA: conceitos e metodos, setembro 2026",
+      "url": "https://bea.gov/sites/default/files/2026-09/BEA-International-Economic-Accounts-Concepts-and-Methods.pdf",
+      "sections": [
+        "08"
+      ],
+      "use": "Residencia, capitulo 6, paragrafos 6.6 a 6.17; sem transpor regras nacionais americanas"
+    },
+    {
+      "title": "FMI: FAQ BPM5/BPM6",
+      "url": "https://www.imf.org/external/pubs/ft/bop/2007/bpm6faq.pdf",
+      "sections": [
+        "08"
+      ],
+      "use": "EO = CF - CC - CK"
+    },
+    {
+      "title": "FMI: reservas internacionais, capitulo 2",
+      "url": "https://www.imf.org/external/np/sta/ir/IRProcessWeb/pdf/chapter2.pdf",
+      "sections": [
+        "08"
+      ],
+      "use": "Disponibilidade/controle, categorias e posicao no FMI"
+    },
+    {
+      "title": "Federal Reserve: Grande Depressao",
+      "url": "https://www.federalreservehistory.org/essays/great-depression",
+      "sections": [
+        "08"
+      ],
+      "use": "Multiplas crises, respostas monetarias e reformas de 1932/1933"
+    },
+    {
+      "title": "BLS: calculo da remuneracao real",
+      "url": "https://www.bls.gov/opub/hom/ces/calculation.htm",
+      "sections": [
+        "09"
+      ],
+      "use": "Equacao 15: remuneracao nominal / indice-base 100 vezes 100"
+    },
+    {
+      "title": "Keynes 1936: capitulo 3",
+      "url": "https://www.hetwebsite.net/het/texts/keynes/gt/chap03.htm",
+      "sections": [
+        "08",
+        "10"
+      ],
+      "use": "Texto original reproduzido em acervo HET; demanda efetiva e equilibrio com desemprego"
+    },
+    {
+      "title": "Keynes 1936: capitulo 18",
+      "url": "https://www.hetwebsite.net/het/texts/keynes/gt/chap18.htm",
+      "sections": [
+        "10"
+      ],
+      "use": "Expectativas, juros, moeda e limites de expansao"
+    },
+    {
+      "title": "Keynes 1936: capitulo 19",
+      "url": "https://www.hetwebsite.net/het/texts/keynes/gt/chap19.htm",
+      "sections": [
+        "09"
+      ],
+      "use": "Critica a garantia de pleno emprego por salarios flexiveis"
+    }
+  ],
+  "access_limits": "Manual CPI/FMI retornou 403/404; substituido por ABS/Eurostat acessiveis. Capitulos BPM6/FMI retornaram 403; BCB e BEA 2026 usados para residencia/classificacao. Nenhuma adocao de BPM7 presumida."
+}

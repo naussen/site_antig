@@ -1,5 +1,10 @@
 # Changelog
 
+## 24/11/2026 — Revisão de Macroeconomia 06–10
+
+- Publicadas cinco seções: índices de preços/inflação, identidades e financiamento, balanço de pagamentos no BPM6, salário real e demanda efetiva. Corrigidas generalizações sobre pleno emprego e narrativa da crise de 1929; seis callouts/quatro mapas e duas tabelas alinhados. Preservados títulos, identidades, ordem, cartões/mnemônicos e demais quinze seções, incluindo 01–05 publicados.
+- Pré-imagem, dry-run de 20 seções (contrato), cinco updates atômicos com revisão esperada/bloqueio de tópico, rollback e controle negativo na última seção. Reconciliação integral 1/20, cinco revisões novas/quinze intactas. 30 combinações visuais finais (6 reaproveitadas/24 refeitas), seis checagens de tabela, 24 interações de mapa e 14 cálculos aprovados. Reaproveitados 49 testes com código inalterado; conta de aluno dispensada. Sem alteração de aplicação/schema/segurança. Parcial 10/20, restam 11–20. Evidências em `docs/revisoes-resumos/47-macroeconomia-06-10-20261124/`; commit editorial `4621161` (repositório sem remote).
+
 ## 24/11/2026 — Revisão de Macroeconomia 01–05
 
 - Publicadas cinco seções de contas nacionais, poupança e mensuração do PIB: corrigidos salários públicos/investimento, sinais externos, residência e bases de valoração; exemplos fictícios e seis callouts/cinco mapas alinhados. IDs, títulos, ordem, cartões/mnemônicos e demais quinze seções preservados.

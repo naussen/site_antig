@@ -1,0 +1,112 @@
+[
+  {
+    "section_id": "macroeconomia-sec-06",
+    "content_unit_id": "7b6e420d-c826-443c-8ed3-66be55ae01af",
+    "stable_key": "metodos-para-se-calcular-o-indice-de-inflacao",
+    "topic_id": "macroeconomia",
+    "title": "Métodos para Se Calcular o Índice de Inflação",
+    "sort_order": 5,
+    "content_markdown": "Índices de preços resumem variações de preços de um conjunto de produtos. A taxa de inflação mede a variação de um índice entre períodos, não o seu nível isolado. A cobertura e a ponderação importam: deflator do PIB e índice de preços ao consumidor medem universos diferentes.\n\nNas fórmulas, $i$ identifica cada produto; $p$ é preço; $q$, quantidade; $0$, período-base; $t$, período atual. As somas abrangem os mesmos produtos comparáveis.\n\n### Deflator do PIB\nCom medidas nominal e de volume compatíveis e índice-base 100:\n\n$$\nD_t=100\\frac{PIB^N_t}{PIB^R_t}\n$$\n\nNo exemplo didático de preços-base fixos, PIB nominal usa $p_{i,t}q_{i,t}$ e PIB real usa $p_{i,0}q_{i,t}$. Nesse caso, o deflator corresponde ao índice de preços de Paasche. Essa equivalência não deve ser estendida sem ressalvas a toda série oficial encadeada.\n\n### Laspeyres (quantidades da base)\n\n$$\nL_t=100\\frac{\\sum_i p_{i,t}q_{i,0}}{\\sum_i p_{i,0}q_{i,0}}\n$$\n\nCompara o custo da cesta-base aos preços atuais com seu custo aos preços-base. Não é, em geral, PIB nominal dividido por PIB real do mesmo período.\n\n### Paasche (quantidades atuais)\n\n$$\nP_t=100\\frac{\\sum_i p_{i,t}q_{i,t}}{\\sum_i p_{i,0}q_{i,t}}\n$$\n\nReavalia a cesta atual aos dois conjuntos de preços. Aqui $P_t$ designa o índice de Paasche, não produto nem um preço individual.\n\n### Fisher\nÉ a média geométrica de Laspeyres e Paasche calculados para os mesmos períodos e na mesma base:\n\n$$\nF_t=\\sqrt{L_tP_t}\n$$\n\n### Exemplo fictício\n\n| Bem | Preço base | Quantidade base | Preço atual | Quantidade atual |\n| --- | ---: | ---: | ---: | ---: |\n| A | 10 | 10 | 12 | 8 |\n| B | 20 | 5 | 22 | 6 |\n\nO custo da cesta-base passa de 200 para 230: $L_t=115$. A cesta atual custa 228 aos preços atuais e 200 aos preços-base: $P_t=114$. Logo, $F_t\\approx114{,}50$. Os resultados representam aumentos de 15%, 14% e aproximadamente 14,50% em relação à base, respectivamente.\n\nPara qualquer índice comparável $J$, a inflação entre $t-1$ e $t$ é:\n\n$$\n\\pi_t=100\\left(\\frac{J_t}{J_{t-1}}-1\\right)\n$$\n\nSe o índice passa de 120 para 126, a inflação é 5%, e não 6%. Um índice em base 100 é um número-índice; sua diferença em pontos não equivale automaticamente à variação percentual.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Cesta e base dos índices",
+        "text": "Laspeyres usa quantidades da base; Paasche, quantidades atuais; Fisher é a média geométrica de ambos na mesma base. A inflação entre dois períodos é a variação percentual do índice, não seu nível nem apenas a diferença em pontos."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph LR\n A[Índices de preços] --> B[\"Laspeyres: cesta-base\"]\n A --> C[\"Paasche: cesta atual\"]\n A --> D[\"Fisher: média geométrica\"]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "dd5cd725-4564-452d-a49c-6eedcf76e88e"
+  },
+  {
+    "section_id": "macroeconomia-sec-07",
+    "content_unit_id": "d2bf0681-6d98-499b-9535-4171c53daafc",
+    "stable_key": "identidades-macroeconomicas-fundamentais",
+    "topic_id": "macroeconomia",
+    "title": "Identidades Macroeconômicas Fundamentais",
+    "sort_order": 6,
+    "content_markdown": "### Produto, renda e despesa realizada\nCom período, cobertura e valoração compatíveis, o produto gerado corresponde à renda gerada na produção e à despesa final realizada. Isso não iguala automaticamente PIB à renda nacional disponível nem à demanda **planejada**.\n\nNa identidade $PIB=C+G+I+X-M$, $C$ é consumo privado; $G$, consumo final do governo; $I$, formação bruta de capital pública e privada; $X,M$, exportações e importações de bens e serviços. Estoques não planejados integram a despesa realizada. Desejos de poupar e investir não precisam coincidir antes dos ajustes de renda e produção.\n\n### Capacidade e necessidade de financiamento\nNo modelo simplificado sem transferências de capital e aquisições líquidas de ativos não produzidos, um setor com poupança $S$ superior ao investimento $I$ apresenta capacidade de financiamento; com $S<I$, necessidade de financiamento. Use ambos brutos ou ambos líquidos, com cobertura compatível.\n\nNas contas completas, esses outros fluxos também importam. Uma expressão da conta de capital é:\n\n$$\nB=S+TK-I-ANP\n$$\n\n$B$ é capacidade (+) ou necessidade (−) de financiamento; $TK$, transferências de capital líquidas recebidas; $ANP$, aquisições menos alienações de ativos não financeiros não produzidos. Assim, comparar apenas S e I não resolve todos os casos oficiais.\n\n### Déficit público no modelo simplificado\nSepare poupança e investimento privados ($S_p,I_p$) e governamentais ($S_g,I_g$). Com $S_{ext}=-CC$ como poupança externa, sendo CC o saldo corrente externo:\n\n$$\nI_p+I_g=S_p+S_g+S_{ext}\n$$\n\nReorganizando:\n\n$$\nI_g-S_g=(S_p-I_p)+S_{ext}\n$$\n\nO lado esquerdo é a necessidade de financiamento do governo **nesse modelo**. Não é uma definição universal de déficit orçamentário, primário ou nominal: indicadores fiscais dependem de perímetro e metodologia.\n\nExemplo fictício: $I_g=70$, $S_g=20$, $S_p=100$, $I_p=80$ e $S_{ext}=30$. A necessidade do governo é 50, compatível com saldo privado 20 e poupança externa 30.\n\nA identidade é uma restrição contábil agregada; não identifica quem emprestou diretamente ao governo nem determina o instrumento. A contrapartida financeira pode envolver aumento de passivos ou redução de ativos. Poupança externa não significa necessariamente empréstimo externo; superávit privado não implica exclusivamente compra de títulos públicos.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Identidade não determina o instrumento",
+        "text": "Ig − Sg = (Sp − Ip) + S_ext vale com as simplificações declaradas. Não transforma todo déficit público em dívida externa nem identifica os credores ou as causas econômicas do financiamento."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph LR\n A[Contas compatíveis] --> B[\"Produto e renda gerada\"]\n A --> C[\"Despesa realizada\"]\n A --> D[\"Saldos de financiamento\"]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "9d0661f9-657c-48fd-8f69-e01444a84b6d"
+  },
+  {
+    "section_id": "macroeconomia-sec-08",
+    "content_unit_id": "aab0f8e8-1964-4838-a47e-d90df9340499",
+    "stable_key": "balanco-de-pagamentos",
+    "topic_id": "macroeconomia",
+    "title": "Balanço de Pagamentos",
+    "sort_order": 7,
+    "content_markdown": "### Conceito\nO balanço de pagamentos (BP) registra sistematicamente transações econômicas entre residentes e não residentes durante um período: é uma medida de **fluxos**. Não é o estoque de reservas nem a Posição de Investimento Internacional (PII). Esta registra posições de ativos e passivos externos em uma data.\n\n### Registro sistemático das transações\nPartidas dobradas associam a cada transação registros de igual valor. Há operações sem pagamento em dinheiro, como doações em bens e lucros reinvestidos. Crédito/débito contábil não pode ser reduzido a entrada/saída efetiva de divisas.\n\nNas contas corrente e de capital, créditos incluem exportações e rendas/transferências a receber; débitos incluem importações e rendas/transferências a pagar. Na apresentação BPM6, receitas e despesas costumam ser mostradas positivas, subtraindo-se despesas para obter o saldo. A conta financeira tem convenção própria, descrita adiante.\n\nO BCB divulga o BP brasileiro em dólares dos EUA, mas não há regra universal impondo essa moeda a todos os países ou às próprias transações.\n\n### Residente e não residente\nA referência é o centro de interesse econômico predominante no território econômico, não a cidadania ou a intenção subjetiva isolada. A atuação ou permanência por um ano ou mais é referência operacional, com exceções, como estudantes e agentes diplomáticos.\n\nUma empresa produtora residente no Brasil pode ter controlador estrangeiro; sua residência estatística não é determinada pela nacionalidade dos sócios.\n\n### Estrutura sintética do balanço de pagamentos\nNeste resumo, usa-se a apresentação BPM6 adotada pelo BCB.\n\n| Conta | Conteúdo principal |\n| --- | --- |\n| Transações correntes (CC) | Bens, serviços, renda primária e renda secundária |\n| Conta de capital (CK) | Transferências de capital e ativos não financeiros não produzidos |\n| Conta financeira (CF) | Transações com ativos/passivos financeiros, inclusive ativos de reserva |\n| Erros e omissões líquidos (EO) | Diferença estatística necessária à conciliação das contas |\n\n### Estrutura analítica\n\n#### Balança comercial de bens\nExportações menos importações de **bens**, com valoração FOB (na fronteira da economia exportadora). O transporte e o seguro além dessa fronteira são tratados separadamente; sua classificação também depende da residência dos prestadores. O registro do comércio de bens segue mudança de propriedade econômica, com ajustes e exceções metodológicos, não apenas passagem física pela alfândega.\n\nEm contas nacionais, $X-M$ normalmente inclui **bens e serviços**. Déficit apenas na balança de bens não basta para concluir déficit nas transações correntes ou hiato de recursos em bens e serviços.\n\n#### Balança de serviços\nInclui transportes, viagens, seguros, serviços financeiros, computação/informação e cobranças pelo uso de propriedade intelectual, entre outros. Juros de investimentos não se confundem com a remuneração de um serviço financeiro; pode haver decomposição de juros para identificar serviços financeiros indiretamente medidos.\n\n#### Renda primária\nRegistra remuneração de empregados entre residentes/não residentes, renda de investimentos (juros, dividendos e lucros reinvestidos) e outras rendas primárias previstas na metodologia. O principal de um empréstimo e sua amortização pertencem à conta financeira.\n\nSe $RPL$ é renda primária líquida recebida, a renda líquida enviada é $RLEE=-RPL$. Não são dois nomes para o mesmo saldo com sinal idêntico.\n\n#### Renda secundária\nRegistra transferências correntes, como transferências pessoais entre residentes de economias diferentes. Transferências de capital ficam na CK. A finalidade e a natureza da operação importam: nem toda doação ou bolsa tem classificação automática apenas por seu nome.\n\n#### Saldo em transações correntes\nCom X e M abrangendo bens e serviços e TCL representando transferências correntes líquidas recebidas:\n\n$$\nCC=X-M+RPL+TCL\n$$\n\nCom conceitos compatíveis, $S_{ext}=-CC$. Portanto, déficit corrente implica poupança externa positiva; superávit, negativa. CC não se reduz a X − M quando há rendas ou transferências correntes líquidas com o exterior.\n\n#### Conta de capital\nInclui transferências de capital, como perdão de dívida, e aquisições/alienações de ativos não financeiros não produzidos, como certas marcas comerciais. A simples mudança de residência de uma pessoa não constitui transação de BP de seus bens preexistentes no BPM6. Não classifique toda patente em CK: produtos de pesquisa e desenvolvimento têm tratamento próprio, distinto de ativos não produzidos.\n\n### Conta financeira e reservas internacionais\nA CF distingue investimento direto, investimento em carteira, derivativos (exceto reservas) e opções de ações para empregados, outros investimentos e ativos de reserva.\n\n- **Direto:** participação no capital, lucros reinvestidos e dívida intercompanhia, observadas as relações e exceções da metodologia. Reinvestimento tem registro de renda primária e contrapartida financeira; não é automaticamente “outros investimentos”.\n- **Carteira:** ações e títulos de dívida fora das categorias direto/reservas; juros e dividendos são rendas, não o principal aplicado.\n- **Derivativos:** instrumentos como swaps, opções e futuros, segundo suas características.\n- **Outros investimentos:** empréstimos, depósitos, créditos comerciais e outros instrumentos não classificados nas demais categorias.\n- **Ativos de reserva:** categoria própria, não subitem genérico de outros investimentos.\n\nO saldo financeiro é aquisição líquida de ativos menos incidência líquida de passivos. Aumento de ativo e aumento de passivo são registrados positivos em suas respectivas colunas; o saldo os subtrai. Definindo A e L como esses fluxos líquidos:\n\n$$\nCF=A-L\n$$\n\n$$\nCC+CK+EO=CF\n$$\n\nExemplo fictício sem erros: déficit corrente de 20, CK zero, aquisição de ativos zero e aumento de passivos de 20 produzem $CF=-20$, conciliando as contas. O sinal negativo desse saldo indica captação líquida, não necessariamente saída de divisas.\n\nReservas compreendem ativos externos sob controle e prontamente disponíveis às autoridades monetárias, incluindo ouro monetário, DES, posição de reserva no FMI e ativos em moeda estrangeira elegíveis. Crédito comercial em atraso não vira reserva por ser recebível no exterior. Posição de reserva no FMI não equivale a todo o valor da quota nem a um direito irrestrito de sacar além dela sem condições.\n\nTransações com reservas integram a CF. Variação do estoque também pode decorrer de preços e câmbio; não é toda registrada no BP. Não se deve igualar um “saldo total” indefinido ao negativo do estoque de reservas.\n\n### Clássicos x Keynes — contexto e limites\n- **1776:** publicação de *A riqueza das nações*, de Adam Smith. A tradição clássica reúne autores distintos; a Lei de Say não é sinônimo de toda a obra de Smith.\n- **1929 e anos 1930:** a quebra da bolsa e as crises bancárias/monetárias integraram a Grande Depressão. Não há explicação única por “superprodução”, nem ausência absoluta de medidas estatais: houve respostas e reformas, inclusive bancárias em 1932–1933.\n- **1936:** Keynes publica *A teoria geral do emprego, do juro e da moeda*, analisando a possibilidade de equilíbrio com desemprego.\n\nNo modelo clássico simplificado, flexibilidade de preços/salários favorece ajustes; pleno emprego não significa ausência de todo desemprego. A análise keynesiana contesta a garantia de demanda suficiente ao pleno emprego. Esses são modelos e debates, não etapas históricas em que uma lei econômica passou automaticamente a reger toda a economia. As seções seguintes detalham salários e demanda efetiva.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Renda, principal e reservas",
+        "text": "Juros e dividendos são renda primária; aplicação e amortização do principal são transações financeiras. Ativos de reserva constituem categoria própria; seu estoque não é o saldo do BP."
+      },
+      {
+        "type": "info",
+        "title": "Residência e convenção de sinais",
+        "text": "Residência econômica não é nacionalidade nem intenção isolada. No BPM6, CF = aquisição líquida de ativos − incidência líquida de passivos; crédito/débito não equivale a toda entrada/saída de moeda."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "34e2efc8-4af9-4b54-947b-9db76480f7b1"
+  },
+  {
+    "section_id": "macroeconomia-sec-09",
+    "content_unit_id": "d8a8e600-72c0-4e45-a26b-5ce9fadaf440",
+    "stable_key": "o-papel-do-governo-e-a-rigidez-de-salarios",
+    "topic_id": "macroeconomia",
+    "title": "O Papel do Governo e a Rigidez de Salários",
+    "sort_order": 8,
+    "content_markdown": "### Papel do governo e emprego\nNa análise keynesiana, insuficiência de demanda pode sustentar desemprego. Políticas de estabilização podem atuar sobre a atividade, mas seus efeitos dependem das condições econômicas, dos instrumentos e da capacidade produtiva. Salário mínimo ou outra norma isolada não garante pleno emprego.\n\n### Salário nominal e salário real\nO salário nominal $W$ é a remuneração expressa em moeda corrente por um período ou unidade de trabalho. Não é necessariamente o valor líquido creditado na conta, após descontos.\n\nO salário real representa o poder de compra. Se $P$ é um índice de preços na base **1**, com cobertura adequada ao objetivo da comparação:\n\n$$\nW_{real}=\\frac{W}{P}\n$$\n\nSe o índice $IP$ estiver na base **100**, a remuneração em preços do período-base será:\n\n$$\nW_{real}=100\\frac{W}{IP}\n$$\n\nExemplo fictício: salário nominal de 3.000 com IP = 100 e de 3.300 com IP = 110 corresponde, nos dois períodos, a 3.000 em preços-base. A alta nominal de 10% apenas compensou a alta de preços de 10%. Compare remunerações com a mesma duração/jornada e índices compatíveis.\n\nDividir o salário pelo preço de um único bem mede quantas unidades daquele bem podem ser compradas, não o poder de compra sobre uma cesta geral.\n\n### Rigidez salarial e alcance do modelo\nModelos keynesianos de curto prazo frequentemente admitem ajuste lento de salários nominais e/ou preços. Isso não implica salário real fixo: se W não muda e o nível de preços aumenta, W/P cai.\n\nA análise de Keynes não se resume à proibição de reduzir salários. Mesmo salários nominais mais flexíveis não asseguram, por si sós, demanda suficiente ao pleno emprego; reduções salariais podem afetar renda, gasto e expectativas. Não há regra universal de que qualquer intervenção estatal elimine o desemprego.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Nominal rígido não é real constante",
+        "text": "W/P mede poder de compra com índice-base 1; para índice-base 100, use 100W/IP. A rigidez nominal não congela o salário real, e a flexibilidade salarial não garante pleno emprego por si só."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph LR\n A[Salários] --> B[\"Nominal: moeda corrente\"]\n A --> C[\"Real: poder de compra\"]\n A --> D[\"Ajustes dependem do modelo\"]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "5498612d-dd95-4a3e-a73a-74a71cad3624"
+  },
+  {
+    "section_id": "macroeconomia-sec-10",
+    "content_unit_id": "3ffa9680-bf2c-41fa-a5c9-c4c809a27a9a",
+    "stable_key": "a-lei-da-demanda-efetiva",
+    "topic_id": "macroeconomia",
+    "title": "A Lei da Demanda Efetiva",
+    "sort_order": 9,
+    "content_markdown": "### Princípio da demanda efetiva\nEm Keynes, o emprego depende das receitas que os empresários esperam obter em relação aos custos de ofertar a produção. Demanda efetiva é o valor da demanda agregada no encontro das funções de demanda e oferta agregadas de seu modelo. Esse ponto pode ocorrer **abaixo do pleno emprego**.\n\n“Demanda cria oferta” é um atalho incompleto: não é uma lei que transforme qualquer desejo de compra em produção ilimitada. Demanda sem poder de compra e expectativas de receitas não bastam; custos e recursos disponíveis também condicionam decisões.\n\n### Produção, emprego e limites\nUm aumento de gasto pode estimular produção e emprego quando existem recursos ociosos e as demais condições permitem. A expansão não conduz automaticamente ao pleno emprego. Gargalos, capacidade produtiva e reajustes de preços podem limitar o efeito real.\n\nNo curto prazo, versões didáticas keynesianas destacam ajustes lentos de preços/salários. Isso não equivale a negar efeitos de oferta ou a afirmar consenso universal sobre todas as versões da teoria.\n\n### Políticas econômicas\nA política fiscal pode atuar por gastos, tributos e transferências; a política monetária, conduzida pela autoridade monetária, afeta condições de financiamento e gasto. Os resultados dependem de expectativas, reação dos agentes e condições financeiras/produtivas. Não há garantia de que qualquer expansão alcance pleno emprego.\n\nA Lei de Say e o princípio da demanda efetiva expressam construções teóricas distintas. A identidade contábil entre produção, renda gerada e despesa realizada não prova que a demanda planejada será suficiente para empregar todos os recursos.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Equilíbrio pode ter desemprego",
+        "text": "O princípio da demanda efetiva admite equilíbrio abaixo do pleno emprego. Aumento de demanda pode elevar atividade com ociosidade, mas custos, expectativas e limites de oferta impedem a conclusão automática de pleno emprego."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph LR\n A[Demanda efetiva] --> B[\"Receitas esperadas\"]\n A --> C[\"Custos e capacidade\"]\n A --> D[\"Produção e emprego\"]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "39f9d320-0bad-4566-8900-aa73c16ce9b6"
+  }
+]

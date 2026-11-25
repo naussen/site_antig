@@ -91,7 +91,7 @@ Legenda: `[ ]` não iniciada; `[~]` parcial; `[x]` encerrada conforme seção 9.
 | 44 | Legislação Municipal | 4 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 4 tópicos vazios registrada em `44-legislacao-municipal.md` | Aguardar autoria/importação futura de conteúdo |
 | 45 | Legislação Penal Especial | 36 | [ ] não iniciada | Fotografia coletada (112 seções, 0 cartões, 51 diagramas) | Executar Onda 7 (ciclo D02–D08) |
 | 46 | Língua Inglesa | 6 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 6 tópicos vazios registrada em `46-lingua-inglesa.md` | Aguardar autoria/importação futura de conteúdo |
-| 47 | Macroeconomia | 1 | [~] parcial | 01–05 publicadas/reconciliadas; 5/20 seções, 6 callouts e 5 mapas revisados; 30 combinações visuais e 49 testes; relatório 47 | Revisar somente 06–10 em próximo lote; restam 06–20. |
+| 47 | Macroeconomia | 1 | [~] parcial | 01–10 publicadas/reconciliadas; 10/20 seções, 12 callouts e 9 mapas revisados; 60 combinações visuais finais cumulativas; 49 testes de conteúdo válidos reaproveitados; relatório 47 | Revisar somente 11–15 em próximo lote; restam 11–20. |
 | 48 | Matemática | 4 | [ ] não iniciada | Fotografia coletada (2 seções, 0 cartões, 1 diagramas) | Executar Onda 7 (ciclo D02–D08) |
 | 49 | Matemática Financeira | 4 | [ ] não iniciada | Fotografia coletada (2 seções, 0 cartões, 1 diagramas) | Executar Onda 7 (ciclo D02–D08) |
 | 50 | Microeconomia | 1 | [ ] não iniciada | Fotografia coletada (27 seções, 0 cartões, 13 diagramas) | Executar Onda 7 (ciclo D02–D08) |
