@@ -1,0 +1,8 @@
+{"at":"2026-11-25T15:49:28.873Z","event":"start","mode":"apply","manifest_sha256":"d339e37f4107528bdad4a1f822306925a5a471c7f81f2086b72c20041bc65890"}
+{"at":"2026-11-25T15:49:29.068Z","event":"step","op_id":"legislacao-sec-05","status":"started","revision_before":"95422dc6-4ffb-4e66-a305-b57f0c3da7fd"}
+{"at":"2026-11-25T15:49:29.413Z","event":"step","op_id":"legislacao-sec-05","status":"confirmed","rowsAffected":1,"revision_after":"bde753c1-ba76-4ab7-9534-8fa00c6a26e5"}
+{"at":"2026-11-25T15:49:29.416Z","event":"step","op_id":"legislacao-sec-07","status":"started","revision_before":"647d2617-2b4a-4281-86ae-f4d5d479429b"}
+{"at":"2026-11-25T15:49:29.530Z","event":"step","op_id":"legislacao-sec-07","status":"confirmed","rowsAffected":1,"revision_after":"2e0f5e2b-b790-4cb5-8681-4496da037531"}
+{"at":"2026-11-25T15:49:29.532Z","event":"step","op_id":"legislacao-sec-09","status":"started","revision_before":"c410ee2a-9f8e-49b1-b3ca-c40658cc6769"}
+{"at":"2026-11-25T15:49:29.625Z","event":"step","op_id":"legislacao-sec-09","status":"confirmed","rowsAffected":1,"revision_after":"0cf0f4e2-1d2c-45ad-b450-a3b5477fb7d0"}
+{"at":"2026-11-25T15:49:29.835Z","event":"finish","status":"completed","steps":[{"op_id":"legislacao-sec-05","status":"confirmed","rowsAffected":1,"revision_after":"bde753c1-ba76-4ab7-9534-8fa00c6a26e5"},{"op_id":"legislacao-sec-07","status":"confirmed","rowsAffected":1,"revision_after":"2e0f5e2b-b790-4cb5-8681-4496da037531"},{"op_id":"legislacao-sec-09","status":"confirmed","rowsAffected":1,"revision_after":"0cf0f4e2-1d2c-45ad-b450-a3b5477fb7d0"}],"post":{"ok":true,"target":"saneado","expectedTopics":4,"expectedSections":19,"topics":{"missing":[],"extra":[],"changed":[]},"sections":{"missing":[],"extra":[],"changed":[]}}}

@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-25",
+  "status": "revisado_publicado_reconciliado",
+  "reviewed_sections": [
+    "legislacao-sec-05",
+    "legislacao-sec-06",
+    "legislacao-sec-07",
+    "legislacao-sec-08",
+    "legislacao-sec-09"
+  ],
+  "changed_sections": [
+    "legislacao-sec-05",
+    "legislacao-sec-07",
+    "legislacao-sec-09"
+  ],
+  "unchanged_without_new_revision": [
+    "legislacao-sec-06",
+    "legislacao-sec-08"
+  ],
+  "components": {
+    "callouts": 9,
+    "tables": 1,
+    "flashcards": 0,
+    "mnemonics": 0,
+    "maps": 0
+  },
+  "manifest_sha256": "d339e37f4107528bdad4a1f822306925a5a471c7f81f2086b72c20041bc65890",
+  "revisions": [
+    {
+      "section_id": "legislacao-sec-05",
+      "current_revision_id": "bde753c1-ba76-4ab7-9534-8fa00c6a26e5"
+    },
+    {
+      "section_id": "legislacao-sec-07",
+      "current_revision_id": "2e0f5e2b-b790-4cb5-8681-4496da037531"
+    },
+    {
+      "section_id": "legislacao-sec-09",
+      "current_revision_id": "0cf0f4e2-1d2c-45ad-b450-a3b5477fb7d0"
+    }
+  ],
+  "preserved_revision_ids": 16,
+  "previous_batches_preserved": true,
+  "dry_run_sections": 18,
+  "scope_review_sections": 5,
+  "validation": {
+    "reused_content_tests": 49,
+    "reused_executor_tests": 6,
+    "negative_cas_rows": 0,
+    "visual_combinations": 30,
+    "table_checks": 6,
+    "reconciled": true
+  },
+  "application": "três CAS sequenciais do executor existente com pré-imagem/preflight/diário; sem transação única de lote",
+  "jurisprudence": [
+    "ADI7156 decisão28/05/2026 efeitos ex tunc ressalvada coisa julgada",
+    "ADI7236 interpretação conforme art1§8 decisão28/05/2026; conclusão01/07/2026",
+    "Tema1199 dolo e regime temporal"
+  ],
+  "source_limit": "Decisões de julgamento e andamentos oficiais recuperados integralmente; acórdão autônomo não localizado. Sem inferência de modulação adicional.",
+  "application_changes": false,
+  "discipline_complete": false,
+  "cumulative_reviewed": 10,
+  "remaining_sections": 9,
+  "empty_topics_pending": 2,
+  "student_check": "dispensado",
+  "stop": true,
+  "editorial_commit": "e6a79c7",
+  "editorial_remote": null,
+  "local_evidence": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\35-etica-no-servico-publico\\legislacao-05-09-20261125"
+}

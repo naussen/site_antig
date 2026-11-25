@@ -1,3 +1,7 @@
+## 2026-11-25 — Ética: revisão de Legislação05–09
+
+- Cinco seções examinadas;05/07/09 corrigidas/publicadas com CAS e reconciliadas;06/08 preservadas sem nova revisão. Atualização jurisprudencial em fontes primárias,30 visuais aprovados e49+6 testes válidos reutilizados. Progresso parcial10/19; lotes anteriores preservados. Relatório35/checkpoint/recibos espelhados; editorial `e6a79c7`. Sem alteração de aplicação.
+
 ## 2026-11-25 — diagnóstico de Ética, Legislação05–09
 
 - Recorte de cinco seções e nove callouts; relatório35/checkpoint/achados/fontes espelhados. Somente leitura, cinco seções já revisadas preservadas; sem publicação de conteúdo. Progresso permanece5/19. Editorial `20c700b`.
