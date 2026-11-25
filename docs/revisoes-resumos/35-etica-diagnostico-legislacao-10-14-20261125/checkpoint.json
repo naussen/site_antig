@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-25",
+  "status": "diagnostico_concluido_revisao_pendente",
+  "scope": {
+    "topic_id": "legislacao",
+    "section_ids": [
+      "legislacao-sec-10",
+      "legislacao-sec-11",
+      "legislacao-sec-12",
+      "legislacao-sec-13",
+      "legislacao-sec-14"
+    ],
+    "components": {
+      "callouts": 9,
+      "flashcards": 0,
+      "mnemonics": 0,
+      "maps": 3
+    }
+  },
+  "selected_sha256": "dd364f10ebd7db1835df2261b9b8d9aa281a37e266d4287b76d17f18c84f0769",
+  "revisions": [
+    {
+      "section_id": "legislacao-sec-10",
+      "current_revision_id": "52b6a02b-02f2-4755-9e04-59e910bebb44"
+    },
+    {
+      "section_id": "legislacao-sec-11",
+      "current_revision_id": "f05938fa-4c8e-4705-8d80-641a01e5dbb6"
+    },
+    {
+      "section_id": "legislacao-sec-12",
+      "current_revision_id": "5af1be48-3ed2-4e49-85b6-6e454ac86773"
+    },
+    {
+      "section_id": "legislacao-sec-13",
+      "current_revision_id": "41b3915a-7648-4964-bf16-26244c42d5b6"
+    },
+    {
+      "section_id": "legislacao-sec-14",
+      "current_revision_id": "7792eb47-96fb-41e5-a364-eb762ae913dd"
+    }
+  ],
+  "previous_10_reviewed_preserved": true,
+  "all19_match_last_reconciled_state": true,
+  "database_writes": 0,
+  "content_changed": false,
+  "cumulative_reviewed": 10,
+  "discipline_complete": false,
+  "total_pending_sections": 9,
+  "outside_scope_pending_sections": 4,
+  "empty_topics_pending": 2,
+  "old_proposals": "preservadas_sem_aplicacao",
+  "stop": true
+}
