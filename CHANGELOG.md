@@ -1,5 +1,10 @@
 # Changelog
 
+## 24/11/2026 — Conciliação cadastral de Redes em Informática
+
+- Arquivado o tópico vazio pelo mecanismo existente e criado alias para Redes canônico. Um vínculo de questão foi transferido, mantendo metadados/data; registro histórico e duas associações disciplinares preservados. Nenhum resumo criado ou republicado.
+- Pré-imagem, comparação/bloqueios de concorrência, rollback com validações diferidas e ensaio negativo aprovados. Reconciliação de 14 tópicos ativos/55 seções, todas as 55 revisões e hashes/vínculos de 14 questões preservados. Filtro autenticado manteve proteção; conta de aluno dispensada. Informática encerrada [x] somente na fotografia integral registrada. Evidências em `docs/revisoes-resumos/39-informatica-conciliacao-redes-20261124/`; commit editorial local `5ab7c2a` (sem remote). Sem alteração de aplicação/schema/segurança.
+
 ## 24/11/2026 — Diagnóstico do tópico vazio de Redes em Informática
 
 - Confirmado tópico ativo sem seções, inclusive arquivadas, e sem redirecionamento, distinto de Redes de Computadores publicado com oito seções. Decisão: não criar resumo duplicado, preservar IDs e manter apenas pendência de conciliação cadastral com escopo próprio.
