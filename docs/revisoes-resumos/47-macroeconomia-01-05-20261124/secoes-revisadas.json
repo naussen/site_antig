@@ -1,0 +1,112 @@
+[
+  {
+    "section_id": "macroeconomia-sec-01",
+    "content_unit_id": "e4d48de0-aad8-4e48-b235-a4b9f0f5b725",
+    "stable_key": "contas-nacionais-agregados-macroeconomicos",
+    "topic_id": "macroeconomia",
+    "title": "Contas Nacionais - Agregados Macroeconômicos",
+    "sort_order": 0,
+    "content_markdown": "### Renda (Y)\nProduto e renda gerada na produção são duas formas de observar o mesmo processo, desde que período, território econômico, valoração e tratamento bruto/líquido sejam compatíveis. Isso não iguala automaticamente PIB, renda nacional e renda disponível.\n\nNa decomposição didática, trabalho recebe salários; capital, juros; terra, aluguéis; atividade empresarial, lucros. A soma $Y=w+j+a+l$ exige categorias sem sobreposição e convenções compatíveis. Não é a fórmula completa do PIB oficial. Royalties também não formam uma quinta parcela universal: seu tratamento depende do direito/serviço remunerado.\n\n### Consumo final\nNeste bloco, $C$ representa consumo privado, incluindo instituições sem fins de lucro a serviço das famílias quando incorporadas ao agregado; $G$, consumo final do governo. Assim, consumo final total é $C+G$.\n\n**G não é todo desembolso do governo.** A remuneração dos servidores participa do custo dos serviços públicos produzidos; não é investimento só por ser salário público. Aquisição de máquinas e construção para uso produtivo do governo integram formação de capital. Benefícios em dinheiro são transferências, não compras diretas de produção corrente. Financiamentos, como empréstimos estudantis, não devem ser classificados automaticamente como transferências.\n\n### Despesa / Demanda\nCom $I$ como formação bruta de capital pública e privada e $X,M$ como exportações e importações de bens e serviços:\n\n$$PIB=C+G+I+X-M$$\n\nÉ uma identidade de despesa **realizada**. Demanda planejada pode diferir da produção; variação não planejada de estoques participa do ajuste contábil. Importações são deduzidas para retirar produção externa já incluída nos gastos, não por serem necessariamente prejudiciais.\n\n### Absorção interna\n\n$$AI=C+G+I$$\n\nLogo, $PIB-AI=X-M$. Aqui $Y$ só pode substituir PIB se essa for sua definição no modelo; renda nacional disponível inclui outros fluxos externos. Sem comércio externo, $X=M=0$ e $AI=PIB$.\n\n### Investimento\nÉ formação de capital, não compra de qualquer ativo financeiro nem garantia de aumento imediato da produção.\n\n$$I=FBCF+VE+OV$$\n\nFBCF é formação bruta de capital fixo; VE, variação de estoques; OV, aquisições líquidas de objetos de valor, quando contempladas. Em exercícios que omitem OV, usa-se $I=FBCF+VE$.\n\nAtivos fixos incluem construções, máquinas e certos produtos de propriedade intelectual. Formação líquida desconta o consumo de capital fixo (depreciação econômica). A compra de um ativo usado entre residentes não recria seu valor no PIB; serviços correntes de intermediação podem contar. Uma máquina usada importada pode entrar na formação de capital e nas importações, sem criar produção doméstica desse bem.\n\nA variação de estoques registra entradas menos saídas, com ajustes de valoração: $VE=E_f-E_i$ é uma simplificação a preços compatíveis, sem incluir mera valorização do estoque.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Salários públicos e investimento",
+        "text": "Aqui G é consumo final do governo. Salários integram o custo dos serviços públicos; formação de capital público integra I. Transferências em dinheiro não são compras diretas de produção corrente."
+      },
+      {
+        "type": "warning",
+        "title": "Ativos usados e financeiros",
+        "text": "Revenda entre residentes não recria o valor do ativo no PIB; serviços da transação podem contar. Ativo importado pode entrar em I e em M. Compra de título financeiro não é formação de capital produtivo por si só."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph LR\n A[PIB] --> B[\"C + G\"]\n A --> C[I]\n A --> D[\"X - M\"]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "a41e6dc3-d64c-4540-a4ca-5cd61a8faa56"
+  },
+  {
+    "section_id": "macroeconomia-sec-02",
+    "content_unit_id": "94ea415c-65d3-436d-a3e8-971af4954337",
+    "stable_key": "poupanca-s",
+    "topic_id": "macroeconomia",
+    "title": "Poupança (S)",
+    "sort_order": 1,
+    "content_markdown": "### Poupança interna e externa\nPoupança é a parcela da renda disponível não consumida no período: um **fluxo**, não o estoque de dinheiro ou patrimônio. Para a economia nacional, usando valores brutos compatíveis:\n\n$$S_n=RNDB-C-G$$\n\n$S_n$ é poupança nacional (interna), RNDB é renda nacional disponível bruta e $C+G$ é consumo final. A poupança privada inclui famílias e empresas, não apenas famílias.\n\n### Poupança do setor privado e do governo\nNo modelo simplificado que desconsidera rendas e transferências líquidas com o exterior, tome $Y=PIB$, $T$ como tributos líquidos de transferências, $C$ como consumo privado e $G$ como consumo governamental:\n\n$$S_p=Y-T-C$$\n\n$$S_g=T-G$$\n\n$$S_n=S_p+S_g=Y-C-G$$\n\nEssas expressões são próprias desse modelo; não substituem todas as contas institucionais oficiais. Nas contas do governo, poupança resulta do uso da renda disponível corrente. Receitas incluem tributos, contribuições e rendas de propriedade; despesas correntes não se limitam a G. Juros são renda de propriedade, não transferências correntes por definição; subsídios também têm classificação específica.\n\n### Poupança com necessidade de financiamento\nPoupança positiva pode coexistir com necessidade de financiamento quando a formação de capital supera os recursos disponíveis. Não basta comparar investimento com consumo G. Em um exemplo sem outras operações de capital, governo com poupança 100 e investimento 150 precisa financiar 50. “Déficit orçamentário” depende da metodologia e não é sinônimo universal de poupança negativa.\n\n### Poupança externa\nDefina $CC$ como saldo das transações correntes: exportações líquidas de bens/serviços mais rendas primárias líquidas recebidas ($RPL$) e transferências correntes líquidas recebidas ($TCL$):\n\n$$CC=X-M+RPL+TCL$$\n\n$$S_{ext}=-CC$$\n\nEquivalentemente, se $RLEE=-RPL$:\n\n$$S_{ext}=M-X+RLEE-TCL$$\n\nTransferências correntes recebidas reduzem a poupança externa; enviadas a aumentam, mantido o restante constante. Transferências de capital pertencem a outra conta e não são sinônimo de déficit corrente.\n\nCom conceitos e cobertura compatíveis, a relação entre formação bruta de capital e poupança é:\n\n$$I=S_n+S_{ext}$$\n\nSe $CC<0$, há uso de poupança externa; se $CC>0$, $S_{ext}<0$. Financiamento pode envolver dívida, participação em capital ou redução de ativos externos. O déficit corrente não é, por si só, o estoque de passivo externo líquido nem implica necessariamente novo empréstimo.\n\nImportações maiores ou exportações menores elevam $S_{ext}$ **mantidos os demais componentes constantes**; não se trata de previsão causal automática sobre toda a economia.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Poupança externa é fluxo",
+        "text": "S_ext = -CC. Transferências correntes recebidas reduzem S_ext; enviadas a elevam, mantido o restante constante. Déficit corrente não equivale a estoque de passivo ou apenas a novos empréstimos."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph LR\n A[Investimento] --> B[Poupança nacional]\n A --> C[\"Externa: -CC\"]\n class A readableRoot;\n class B,C readableItem;",
+    "archived_at": null,
+    "current_revision_id": "7f93d81a-1382-468c-a45a-764c3f8efe15"
+  },
+  {
+    "section_id": "macroeconomia-sec-03",
+    "content_unit_id": "d3eb8b31-95a7-4722-a066-c9e487ec6588",
+    "stable_key": "produto-p",
+    "topic_id": "macroeconomia",
+    "title": "Produto (P)",
+    "sort_order": 2,
+    "content_markdown": "O produto é uma medida de **fluxo** de produção em um período, dentro da fronteira definida pelas contas nacionais. Nem toda produção é vendida: há imputações e produção não mercantil, como serviços públicos avaliados por custos.\n\n### Produto interno x produto nacional\n\n| Conceito | Critério |\n| --- | --- |\n| Interno | Produção de unidades produtoras residentes no território econômico; não depende da cidadania dos proprietários |\n| Nacional | Renda primária apropriada pelos residentes, considerando relações com o resto do mundo; residência econômica não é nacionalidade |\n\nA medida moderna de renda nacional bruta é RNB, correspondente ao conceito historicamente denominado PNB. Com $RPL$ como renda primária líquida recebida do exterior:\n\n$$RNB=PIB+RPL$$\n\nSe $RLEE$ é renda líquida **enviada** ao exterior, $RLEE=-RPL$ e $RNB=PIB-RLEE$. Transferências correntes líquidas entram na passagem para renda nacional disponível, não nessa mesma parcela de renda primária.\n\n### Produto líquido x produto bruto\n\n$$PIN=PIB-CCF$$\n\nCCF é consumo de capital fixo, aproximação econômica da depreciação; não é necessariamente a despesa contábil/fiscal registrada pela empresa. A mesma distinção bruto/líquido aplica-se à renda nacional, com bases compatíveis.\n\n### Custo de fatores, preços básicos e preços de mercado\n\n| Base de valoração | Característica |\n| --- | --- |\n| Custo de fatores | Convenção didática que exclui impostos líquidos de subsídios sobre produção/importação; não confundir com preços básicos |\n| Preços básicos | Valoração usual do valor adicionado por atividade; exclui impostos sobre produtos e inclui subsídios sobre produtos |\n| Preços de mercado | Valoração do PIB, obtida somando aos valores adicionados básicos os impostos líquidos de subsídios sobre produtos |\n\nA fórmula didática $P_{pm}=P_{cf}+II-sub$ exige que “II” e “sub” tenham cobertura coerente de tributos e subsídios sobre produção/importação. Não é uma conversão por qualquer soma de tributos, nem autoriza usar “preço básico” como sinônimo de custo de fatores. A fórmula operacional pela produção é apresentada na seção seguinte.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Residência econômica, não cidadania",
+        "text": "RNB = PIB + renda primária líquida recebida. Se RLEE significa renda líquida enviada, subtrai-se RLEE. Use conceitos e valorações compatíveis."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph LR\n A[Mensuração] --> B[\"Interno / nacional\"]\n A --> C[\"Bruto / líquido\"]\n A --> D[Valoração]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "cc240973-ac89-4567-9050-ae8bea70b1fe"
+  },
+  {
+    "section_id": "macroeconomia-sec-04",
+    "content_unit_id": "d065e009-5a1d-4eef-a3ec-05a6462b0d29",
+    "stable_key": "calculo-do-produto",
+    "topic_id": "macroeconomia",
+    "title": "Cálculo do Produto",
+    "sort_order": 3,
+    "content_markdown": "### Ótica do produto\nEvite dupla contagem: não some indiscriminadamente vendas de insumos e bens finais. Para cada atividade:\n\n$$VAB_{pb}=VP_{pb}-CI_{pc}$$\n\nVAB é valor adicionado bruto; VP, valor da produção a preços básicos (pb); CI, consumo intermediário a preços de comprador (pc). Agregando atividades e definindo $T_p$ e $Sub_p$ como impostos e subsídios sobre produtos:\n\n$$PIB_{pm}=\\sum VAB_{pb}+T_p-Sub_p$$\n\nNão se deve calcular valor adicionado a custo de fatores misturando produção a preços de mercado com consumo intermediário em outra base de valoração.\n\n### Ótica da renda\n\n$$\n\\begin{aligned}\nPIB_{pm}={}&RE+EOB+RMB\\\\\n&+T_{pi}-Sub_{pi}\n\\end{aligned}\n$$\n\nRE é remuneração dos empregados, incluindo contribuições sociais dos empregadores; EOB, excedente operacional bruto; RMB, rendimento misto bruto. $T_{pi}-Sub_{pi}$ são impostos líquidos de subsídios sobre a produção e importação, não apenas sobre produtos.\n\nEOB não é simplesmente o lucro contábil líquido: é um saldo da geração da renda antes de usos como pagamentos de rendas de propriedade. O rendimento misto ocorre quando não se separa claramente remuneração do trabalho e do capital em empresas não constituídas em sociedade pertencentes às famílias. Não é qualquer rendimento de toda pessoa autônoma.\n\n### Ótica da despesa\n\n$$PIB=C+G+I+X-M$$\n\nC e G são consumo final privado e governamental; I é formação bruta de capital total; X e M são exportações e importações de bens e serviços. As três óticas são conceitualmente equivalentes com período, cobertura e valoração compatíveis. Estimativas podem apresentar discrepâncias estatísticas ou passar por conciliação; igualdade conceitual não elimina problemas de mensuração.\n\n### Carga tributária bruta\nCom $RT$ como receita tributária do perímetro/metodologia adotados:\n\n$$CTB(\\%)=100\\frac{RT}{PIB_{pm}}$$\n\nA carga inclui categorias como contribuições sociais conforme a metodologia. Não deve ser reduzida universalmente a duas parcelas chamadas impostos diretos e indiretos. O fator 100 é necessário para exprimir a razão em porcentagem.\n\n### Carga tributária líquida\nUma convenção didática desconta subsídios e transferências selecionadas da receita tributária. Definindo $Sub$ e $Tr$ segundo a referência:\n\n$$CTL(\\%)=100\\frac{RT-Sub-Tr}{PIB_{pm}}$$\n\nO “líquido” dessa convenção não significa deduzir depreciação. Não se confunde automaticamente com resultado primário, saldo nominal ou um indicador oficial de definição única. Exemplo fictício: PIB 1.000, RT 300, subsídios 10 e transferências 90 resultam em CTB de 30% e CTL de 20% nessa convenção.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Três óticas compatíveis",
+        "text": "Produção, renda e despesa descrevem o mesmo PIB conceitual. Bases de valoração precisam ser coerentes; discrepâncias de medição não tornam as identidades leis sobre demanda planejada."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph LR\n A[PIB] --> B[Produção]\n A --> C[Renda]\n A --> D[Despesa]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "3e235831-74db-446c-a7c7-d829bcfdd890"
+  },
+  {
+    "section_id": "macroeconomia-sec-05",
+    "content_unit_id": "cefd26cb-19d2-4d9b-ae07-bab63ad11513",
+    "stable_key": "produto-real-x-produto-nominal",
+    "topic_id": "macroeconomia",
+    "title": "Produto Real X Produto Nominal",
+    "sort_order": 4,
+    "content_markdown": "### PIB nominal\nUsa preços correntes. Para bens/serviços $i$, preços $p_{i,t}$ e quantidades $q_{i,t}$ do período $t$, uma representação simplificada é:\n\n$$PIB^N_t=\\sum_i p_{i,t}q_{i,t}$$\n\nVariação nominal combina efeitos de preços e volume; não mede sozinha crescimento real.\n\n### PIB real\nUma medida de base fixa usa preços de um período-base $0$:\n\n$$PIB^R_t=\\sum_i p_{i,0}q_{i,t}$$\n\nA fórmula ilustra o conceito; índices oficiais de volume podem usar ponderações móveis e encadeamento. Não significa que toda série oficial mantenha eternamente os mesmos preços, nem que seus componentes encadeados sejam sempre aditivos.\n\n### Exemplo fictício de base fixa\n\n| Bem | Preço base | Quantidade base | Preço atual | Quantidade atual |\n| --- | ---: | ---: | ---: | ---: |\n| A | 10 | 10 | 12 | 12 |\n| B | 20 | 5 | 22 | 6 |\n\nNo período-base, PIB nominal e real são 200. No atual, nominal é $12\\times12+22\\times6=276$; real a preços-base é $10\\times12+20\\times6=240$. Aumento nominal: 38%; aumento real: 20%.\n\nPara medidas compatíveis, o deflator implícito, com base 100, é:\n\n$$D_t=100\\frac{PIB^N_t}{PIB^R_t}$$\n\nNo exemplo, o deflator é 115. Isso indica aumento de 15% no índice implícito de preços, não crescimento real de 15%. O deflator do PIB não é automaticamente igual ao índice de preços ao consumidor.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Nominal, volume e preços",
+        "text": "Nominal combina preços e quantidades; medidas de volume isolam o efeito de preços segundo sua metodologia. Base fixa é um exemplo, não descrição de toda série encadeada."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph LR\n A[PIB] --> B[Nominal]\n A --> C[Volume real]\n class A readableRoot;\n class B,C readableItem;",
+    "archived_at": null,
+    "current_revision_id": "7e529214-feac-486a-8097-7e9724d29c4e"
+  }
+]

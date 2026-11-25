@@ -1,5 +1,10 @@
 # Changelog
 
+## 24/11/2026 — Revisão de Macroeconomia 01–05
+
+- Publicadas cinco seções de contas nacionais, poupança e mensuração do PIB: corrigidos salários públicos/investimento, sinais externos, residência e bases de valoração; exemplos fictícios e seis callouts/cinco mapas alinhados. IDs, títulos, ordem, cartões/mnemônicos e demais quinze seções preservados.
+- Pré-imagem, dry-run, rollback, bloqueios e revisões esperadas; controle negativo rejeitado. Reconciliação de um tópico/20 seções com cinco revisões novas e quinze intactas. 30 combinações visuais finais (24 reaproveitadas/6 refeitas), nove checagens de tabela, 30 interações de mapa, cálculos e 49 testes aprovados. Conta de aluno dispensada; sem alteração de aplicação/schema. Parcial 5/20, restam 06–20. Evidências em `docs/revisoes-resumos/47-macroeconomia-01-05-20261124/`; commit editorial `8ebc1b4` (repositório sem remote).
+
 ## 24/11/2026 — Conciliação cadastral de Redes em Informática
 
 - Arquivado o tópico vazio pelo mecanismo existente e criado alias para Redes canônico. Um vínculo de questão foi transferido, mantendo metadados/data; registro histórico e duas associações disciplinares preservados. Nenhum resumo criado ou republicado.

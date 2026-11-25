@@ -1,6 +1,6 @@
 # Plano operacional de revisão — orquestração por agentes IA
 
-Versão 3 — atualização documental de 23/11/2026. Público exclusivo: agentes de orquestração, execução e verificação. Este documento é o ponto de entrada para retomar o programa sem acesso ao chat. Não certifica a qualidade integral do acervo.
+Versão 3 — atualização documental de 24/11/2026. Público exclusivo: agentes de orquestração, execução e verificação. Este documento é o ponto de entrada para retomar o programa sem acesso ao chat. Não certifica a qualidade integral do acervo.
 
 ## 1. Objetivo, escopo e ambientes
 
@@ -29,7 +29,7 @@ Caminhos relativos abaixo partem do repositório editorial. Inventário: `invent
 
 ## 3. Progresso consolidado e limites conhecidos
 
-A fila inclui 54 disciplinas. Há 19 com aceite para a versão revisada do catálogo, 25 parciais (incluindo as 20 sem seções na fotografia) e 10 ainda não iniciadas na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa. Corpus PRO Legis permanece fora do escopo; sua integração com a gamificação permanece autorizada.
+A fila inclui 54 disciplinas. Há 20 com aceite para a versão revisada do catálogo, 25 parciais (incluindo as 20 sem seções na fotografia) e 9 ainda não iniciadas na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa. Corpus PRO Legis permanece fora do escopo; sua integração com a gamificação permanece autorizada.
 
 | Frente | Última evidência | Trabalho seguinte |
 |---|---|---|
@@ -91,7 +91,7 @@ Legenda: `[ ]` não iniciada; `[~]` parcial; `[x]` encerrada conforme seção 9.
 | 44 | Legislação Municipal | 4 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 4 tópicos vazios registrada em `44-legislacao-municipal.md` | Aguardar autoria/importação futura de conteúdo |
 | 45 | Legislação Penal Especial | 36 | [ ] não iniciada | Fotografia coletada (112 seções, 0 cartões, 51 diagramas) | Executar Onda 7 (ciclo D02–D08) |
 | 46 | Língua Inglesa | 6 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 6 tópicos vazios registrada em `46-lingua-inglesa.md` | Aguardar autoria/importação futura de conteúdo |
-| 47 | Macroeconomia | 1 | [ ] não iniciada | Fotografia coletada (20 seções, 0 cartões, 14 diagramas) | Executar Onda 7 (ciclo D02–D08) |
+| 47 | Macroeconomia | 1 | [~] parcial | 01–05 publicadas/reconciliadas; 5/20 seções, 6 callouts e 5 mapas revisados; 30 combinações visuais e 49 testes; relatório 47 | Revisar somente 06–10 em próximo lote; restam 06–20. |
 | 48 | Matemática | 4 | [ ] não iniciada | Fotografia coletada (2 seções, 0 cartões, 1 diagramas) | Executar Onda 7 (ciclo D02–D08) |
 | 49 | Matemática Financeira | 4 | [ ] não iniciada | Fotografia coletada (2 seções, 0 cartões, 1 diagramas) | Executar Onda 7 (ciclo D02–D08) |
 | 50 | Microeconomia | 1 | [ ] não iniciada | Fotografia coletada (27 seções, 0 cartões, 13 diagramas) | Executar Onda 7 (ciclo D02–D08) |
