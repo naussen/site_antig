@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-25",
+  "status": "revisado_publicado_reconciliado",
+  "reviewed_sections": [
+    "legislacao-sec-01",
+    "legislacao-sec-02",
+    "legislacao-sec-03",
+    "legislacao-sec-04"
+  ],
+  "changed_sections": [
+    "legislacao-sec-01",
+    "legislacao-sec-02",
+    "legislacao-sec-03"
+  ],
+  "section04": "conferida_sem_necessidade_de_correcao_sem_nova_revisao",
+  "components": {
+    "callouts": 6,
+    "maps": 2,
+    "flashcards": 0,
+    "mnemonics": 0
+  },
+  "manifest_sha256": "1e63ff00bf0039a535ae3188adeeef98ea37a3f26355438cf21954b698382c4f",
+  "revisions": [
+    {
+      "section_id": "legislacao-sec-01",
+      "current_revision_id": "8cfa3e84-9205-447b-a3f4-e09f420b8660"
+    },
+    {
+      "section_id": "legislacao-sec-02",
+      "current_revision_id": "61f3ea82-65e1-438e-a8b8-1a59e574d612"
+    },
+    {
+      "section_id": "legislacao-sec-03",
+      "current_revision_id": "4d0d7ab7-e98c-47ba-b59b-b604ac9b7c57"
+    }
+  ],
+  "preserved_revision_ids": 16,
+  "theoretical_section_preserved": true,
+  "dry_run_sections": 18,
+  "scope_review_sections": 4,
+  "dry_run_reason": "contrato integral do tópico para preservar cartões; fora do recorte sem mudanças",
+  "validation": {
+    "content_tests": 49,
+    "malicious_mermaid_rejected": 3,
+    "negative_cas_rows": 0,
+    "visual_combinations": 24,
+    "map_zoom_overlay_checks": 12,
+    "reconciled": true
+  },
+  "application": "três CAS sequenciais do executor existente com pré-imagem, preflight, diário sincronizado e reconciliação; sem transação única entre as três",
+  "application_changes": false,
+  "discipline_complete": false,
+  "cumulative_reviewed": 5,
+  "remaining_sections": 14,
+  "empty_topics_pending": 2,
+  "student_check": "dispensado",
+  "stop": true,
+  "editorial_commit": "0b416d4",
+  "editorial_remote": null,
+  "local_evidence": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\35-etica-no-servico-publico\\legislacao-01-04-20261125"
+}

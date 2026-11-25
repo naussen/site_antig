@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-25T14:34:38.467Z",
+  "reviewed_sections": 4,
+  "changed_sections": 3,
+  "callouts": 6,
+  "maps": 2,
+  "maliciousRejected": 3,
+  "preserved_sections": 16,
+  "concurrency": "createStore.cas + apply de executar-onda5.mjs; três CAS sequenciais com diário e reconciliação",
+  "manifest_sha256": "1e63ff00bf0039a535ae3188adeeef98ea37a3f26355438cf21954b698382c4f",
+  "after_sha256": "b781a9b7a0098ccd5b2bc95916009e60f942fbf99e664a45e4675bb53e3c1dda",
+  "theoretical_section_preserved": true,
+  "dry_run_sections": 18,
+  "dry_run_full_topic_reason": "CLI exige cobertura completa para preservar cartões; somente três operações CAS previstas no manifesto."
+}

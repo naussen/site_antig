@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-25T14:36:25.992Z",
+  "ok": true,
+  "target": "saneado",
+  "expectedTopics": 4,
+  "expectedSections": 19,
+  "topics": {
+    "missing": [],
+    "extra": [],
+    "changed": []
+  },
+  "sections": {
+    "missing": [],
+    "extra": [],
+    "changed": []
+  },
+  "preserved_revision_ids": 16,
+  "theoretical_section_preserved": true,
+  "section04_preserved_without_write": true,
+  "revisions": [
+    {
+      "section_id": "legislacao-sec-01",
+      "current_revision_id": "8cfa3e84-9205-447b-a3f4-e09f420b8660"
+    },
+    {
+      "section_id": "legislacao-sec-02",
+      "current_revision_id": "61f3ea82-65e1-438e-a8b8-1a59e574d612"
+    },
+    {
+      "section_id": "legislacao-sec-03",
+      "current_revision_id": "4d0d7ab7-e98c-47ba-b59b-b604ac9b7c57"
+    }
+  ],
+  "after_sha256": "2f577e12378cc848452408b06d48919a7b69c80a6fd67748be368249ce6d349a"
+}

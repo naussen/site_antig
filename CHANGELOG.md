@@ -1,3 +1,7 @@
+## 2026-11-25 — Ética: revisão de Legislação01–04
+
+- Quatro seções examinadas, três corrigidas/publicadas com CAS e reconciliadas;04 preservada sem nova revisão. Seis callouts/dois mapas conferidos,49 testes e24 visuais aprovados. Teórica preservada; progresso parcial5/19. Relatório35/checkpoint/recibos espelhados; editorial `0b416d4`. Sem alteração de aplicação.
+
 ## 2026-11-25 — diagnóstico de Ética, Legislação01–04
 
 - Recorte documental de quatro seções, seis callouts e dois mapas; nenhuma alteração de conteúdo nem escrita no banco. Seção teórica publicada conferida e preservada; progresso permanece1/19. Relatório35 e checkpoint espelhados; editorial `83f7d81`.
