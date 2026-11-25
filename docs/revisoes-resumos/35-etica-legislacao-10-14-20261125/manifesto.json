@@ -1,0 +1,177 @@
+{
+  "schemaVersion": "onda5-preparacao-v1",
+  "mode": "preparacao_local",
+  "base_sha256": "548881a98fb39974f0a92918b3e5c31d55d5527f382dc8394e72a390dfe27568",
+  "topics": 4,
+  "sections": 19,
+  "operations": [
+    {
+      "op_id": "legislacao-sec-10",
+      "content_unit_id": "4499ae57-1387-43ff-8524-f3680ed1febb",
+      "topic_id": "legislacao",
+      "expected_before_sha256": "3bb82e6fe0862d95efbe47bd5c178c9486a2ca1a1e742de442d514f7f85d65f6",
+      "expected_after_sha256": "51d99e2f4da9fefda5acac22e5882a33fa49e69ca3a453e4eb1f66e0d5c5a9eb",
+      "before": {
+        "content_markdown": "No que tange à caracterização dos atos de improbidade administrativa, devem ser observadas as seguintes condições relativas ao aspecto patrimonial:\n\n* **Inobservância de formalidades:** Caso ocorra mera inobservância das formalidades legais, sem que se verifique a perda patrimonial efetiva, não haverá a imposição de obrigação de ressarcimento. Essa medida visa evitar o enriquecimento sem causa das entidades passivas.\n* **Perda patrimonial em atividade econômica:** A mera ocorrência de perda patrimonial decorrente do livre desenvolvimento da atividade econômica não caracteriza ato de improbidade administrativa, exceto se restar comprovada a prática de ato doloso com essa finalidade específica.\n\n### Atos que Atentam Contra os Princípios da Administração Pública\n\nConstituem atos de improbidade administrativa que atentam contra os deveres de honestidade, imparcialidade e legalidade as seguintes condutas:\n\n* Revelar fato ou circunstância de que tem ciência em razão das atribuições e que deva permanecer em segredo, propiciando beneficiamento por informação privilegiada ou colocando em risco a segurança da sociedade e do Estado;\n* Negar publicidade aos atos oficiais, exceto em razão de sua imprescindibilidade para a segurança da sociedade e do Estado ou de outras hipóteses legais;\n* Deixar de prestar contas quando esteja obrigado a fazê-lo, desde que disponha das condições para isso, com vistas a ocultar irregularidades;\n* Revelar ou permitir que chegue ao conhecimento de terceiro, antes da respectiva divulgação oficial, teor de medida política ou econômica capaz de afetar o preço de mercadoria, bem ou serviço;\n* Descumprir as normas relativas à celebração, fiscalização e aprovação de contas de parcerias firmadas pela administração pública com entidades privadas;\n* **Nepotismo:** Nomear cônjuge, companheiro ou parente em linha reta, colateral ou por afinidade, até o 3º grau, inclusive, da autoridade nomeante ou de servidor da mesma pessoa jurídica investido em cargo de direção, chefia ou assessoramento, para o exercício de cargo em comissão ou de confiança ou, ainda, de função gratificada na administração pública direta e indireta em qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios, compreendido o ajuste mediante designações recíprocas (nepotismo cruzado). Não configura improbidade a mera nomeação ou indicação política, sendo necessária a aferição de dolo com finalidade ilícita;\n* Praticar, no âmbito da administração pública e com recursos do erário, ato de publicidade que contrarie o disposto na Constituição Federal de 1988, de forma a promover inequívoco enaltecimento do agente público e personalização de atos, de programas, de obras, de serviços ou de campanhas dos órgãos públicos.",
+        "callouts": [
+          {
+            "text": "A mera nomeação ou indicação política de parente não configura automaticamente ato de improbidade administrativa. É indispensável a comprovação de dolo com finalidade ilícita para a caracterização da conduta.",
+            "type": "warning",
+            "title": "Nepotismo e Dolo Específico"
+          },
+          {
+            "text": "Prejuízos decorrentes do livre desenvolvimento da atividade econômica não caracterizam improbidade, salvo se comprovada a intenção dolosa de causar o dano.",
+            "type": "info",
+            "title": "Perda em Atividade Econômica"
+          }
+        ]
+      },
+      "after": {
+        "content_markdown": "No que tange à caracterização dos atos de improbidade administrativa, devem ser observadas as seguintes condições relativas ao aspecto patrimonial:\n\n* **Inobservância de formalidades:** Caso ocorra mera inobservância das formalidades legais, sem que se verifique a perda patrimonial efetiva, não haverá a imposição de obrigação de ressarcimento. Essa medida visa evitar o enriquecimento sem causa das entidades passivas.\n* **Perda patrimonial em atividade econômica:** A mera ocorrência de perda patrimonial decorrente do livre desenvolvimento da atividade econômica não caracteriza ato de improbidade administrativa, exceto se restar comprovada a prática de ato doloso com essa finalidade específica.\n\n### Atos que Atentam Contra os Princípios da Administração Pública\n\nO art. 11 tipifica condutas dolosas que violam honestidade, imparcialidade e legalidade. Exige-se finalidade de proveito ou benefício indevido e lesividade relevante ao bem jurídico tutelado, além dos demais requisitos legais. Abaixo estão algumas hipóteses; a frustração do caráter concorrencial, já comparada na seção anterior, também integra o rol legal. A mera ilegalidade não basta.\n\n* Revelar fato ou circunstância de que tem ciência em razão das atribuições e que deva permanecer em segredo, propiciando beneficiamento por informação privilegiada ou colocando em risco a segurança da sociedade e do Estado;\n* Negar publicidade aos atos oficiais, exceto em razão de sua imprescindibilidade para a segurança da sociedade e do Estado ou de outras hipóteses legais;\n* Deixar de prestar contas quando esteja obrigado a fazê-lo, desde que disponha das condições para isso, com vistas a ocultar irregularidades;\n* Revelar ou permitir que chegue ao conhecimento de terceiro, antes da respectiva divulgação oficial, teor de medida política ou econômica capaz de afetar o preço de mercadoria, bem ou serviço;\n* Descumprir as normas relativas à celebração, fiscalização e aprovação de contas de parcerias firmadas pela administração pública com entidades privadas;\n* **Nepotismo:** Nomear cônjuge, companheiro ou parente em linha reta, colateral ou por afinidade, até o 3º grau, inclusive, da autoridade nomeante ou de servidor da mesma pessoa jurídica investido em cargo de direção, chefia ou assessoramento, para o exercício de cargo em comissão ou de confiança ou, ainda, de função gratificada na administração pública direta e indireta em qualquer dos Poderes da União, dos Estados, do Distrito Federal e dos Municípios, compreendido o ajuste mediante designações recíprocas (nepotismo cruzado). Não configura improbidade a mera nomeação ou indicação política, sendo necessária a aferição de dolo com finalidade ilícita;\n* Praticar, no âmbito da administração pública e com recursos do erário, ato de publicidade que contrarie o art. 37, § 1º, da Constituição Federal, de forma a promover inequívoco enaltecimento do agente público e personalização de atos, de programas, de obras, de serviços ou de campanhas dos órgãos públicos.",
+        "callouts": [
+          {
+            "text": "A mera nomeação ou indicação política não caracteriza automaticamente improbidade: são necessários dolo com finalidade ilícita, tipicidade e os demais requisitos da LIA. Isso não torna toda nomeação de parente lícita nem afasta outros controles jurídicos.",
+            "type": "warning",
+            "title": "Nepotismo e Dolo Específico"
+          },
+          {
+            "text": "Prejuízos decorrentes do livre desenvolvimento da atividade econômica não caracterizam improbidade, salvo se comprovada a intenção dolosa de causar o dano.",
+            "type": "info",
+            "title": "Perda em Atividade Econômica"
+          }
+        ]
+      }
+    },
+    {
+      "op_id": "legislacao-sec-11",
+      "content_unit_id": "bc66646a-3801-4fbc-9f17-e7c5c6659185",
+      "topic_id": "legislacao",
+      "expected_before_sha256": "54237ed52c64f164853ebd299c10181b33f79514f569e816a9783002661e7fb1",
+      "expected_after_sha256": "34a79a4768beb0ec1392a54296e32620e4a3a22b2bb5f71ba5e21767820ad241",
+      "before": {
+        "content_markdown": "A aplicação das sanções previstas na Lei de Improbidade Administrativa (LIA) submete-se às seguintes regras gerais:\n\n* **Modo de aplicação:** As sanções podem ser aplicadas de forma isolada ou cumulativa, a depender da gravidade do fato praticado.\n* **Momento da execução:** As penas só poderão ser executadas após o trânsito em julgado da sentença condenatória.\n* **Independência de dano:** A aplicação das sanções independe da ocorrência de efetivo dano ao patrimônio público, salvo no que diz respeito à pena de ressarcimento e às hipóteses de prejuízo ao erário.\n* **Independência de julgamento de contas:** A aplicação das sanções independe da aprovação ou rejeição das contas pelo Tribunal ou Conselho de Contas competente.\n* **Menor ofensa:** Nos casos em que houver menor ofensa aos bens jurídicos tutelados, poderá ser aplicada apenas a pena de multa, sem prejuízo do ressarcimento do dano e da perda dos valores obtidos.\n* **Súmula 651 do STJ:** Compete à autoridade administrativa aplicar a servidor público a pena de demissão em razão da prática de improbidade, independentemente de prévia condenação, por autoridade judiciária, à perda da função pública.\n\n### Tabela Comparativa de Sanções por Tipo de Ato\n\n| Sanção / Medida | Enriquecimento Ilícito | Prejuízo ao Erário | Atentam contra Princípios |\n| :--- | :--- | :--- | :--- |\n| **Perda de bens ou valores acrescidos ilicitamente** | Aplicável | Aplicável, se houver acréscimo ilícito | Não aplicável |\n| **Perda da função pública** ; *(Apenas após trânsito em julgado)* | Aplicável, podendo atingir demais vínculos | Aplicável, atingindo apenas o vínculo que o agente detinha na época da infração | Não aplicável |\n| **Suspensão dos direitos políticos** ; *(Apenas após trânsito em julgado)* | Até 14 anos ; *(Limite: 20 anos)* | Até 12 anos ; *(Limite: 20 anos)* | Não aplicável |\n| **Multa civil** ; *(Pode ser aumentada até 2x pelo juiz se a situação econômica do réu for ineficaz para reprovação e prevenção)* | Equivalente ao acréscimo patrimonial | Equivalente ao valor do dano | Até 24 vezes a remuneração |\n| **Proibição de contratar ou receber benefícios fiscais/creditícios** ; *(Excepcionalmente, por motivos relevantes, pode extrapolar o ente lesado, preservando a função social da PJ)* | Até 14 anos ; *(Limite: 20 anos)* | Até 12 anos ; *(Limite: 20 anos)* | Até 4 anos ; *(Limite: 20 anos)* |\n| **Ressarcimento integral do dano patrimonial** | Aplicável, se houver efetivo dano | Aplicável | Aplicável, se houver efetivo dano |\n\n*Nota sobre a suspensão dos direitos políticos:* Para a contagem do prazo de suspensão dos direitos políticos, computa-se retroativamente o intervalo decorrido entre a decisão colegiada e o trânsito em julgado da sentença condenatória.",
+        "callouts": [
+          {
+            "text": "As penas de perda da função pública e de suspensão dos direitos políticos só podem ser executadas após o trânsito em julgado da sentença condenatória.",
+            "type": "warning",
+            "title": "Trânsito em Julgado Necessário"
+          },
+          {
+            "text": "No Enriquecimento Ilícito, a perda da função pública pode atingir outros vínculos do agente. No Prejuízo ao Erário, atinge apenas o vínculo que o agente detinha na época da infração.",
+            "type": "warning",
+            "title": "Diferença na Perda da Função Pública"
+          },
+          {
+            "text": "A administração pública pode demitir o servidor por improbidade administrativa em processo administrativo disciplinar, sem necessidade de esperar a condenação judicial de perda da função pública.",
+            "type": "info",
+            "title": "Súmula 651 do STJ"
+          }
+        ]
+      },
+      "after": {
+        "content_markdown": "A aplicação das sanções da Lei de Improbidade Administrativa (LIA) exige observar a lei e o controle de constitucionalidade realizado pelo STF, especialmente nas ADIs 7.156 e 7.236, julgadas em 2026.\n\n* **Modo de aplicação:** Sanções isoladas ou cumulativas, conforme a gravidade do fato.\n* **Execução judicial:** As sanções do art. 12 somente podem ser executadas após o trânsito em julgado da condenação (§ 9º). Afastamento cautelar e demissão disciplinar têm regimes próprios e não se confundem com essa execução.\n* **Dano e contas:** A aplicação das sanções independe de dano efetivo, ressalvados o ressarcimento e os tipos do art. 10. Também independe de aprovação ou rejeição de contas pelo órgão de controle interno, Tribunal ou Conselho de Contas, sem dispensar a análise das provas e dos fundamentos da conduta (art. 21).\n* **Menor ofensa:** Na hipótese do art. 12, § 5º, a sanção limita-se à multa, sem prejuízo do ressarcimento e da perda dos valores obtidos, quando cabíveis; não é uma dispensa automática de reparação.\n* **Súmula 651 do STJ:** A autoridade administrativa pode aplicar demissão por improbidade no regime disciplinar, independentemente de prévia condenação judicial à perda da função. Deve observar o processo e as garantias aplicáveis.\n\n### Sanções por Tipo de Ato — Art. 12\n\n| Sanção / medida | Enriquecimento ilícito (art. 9º) | Prejuízo ao erário (art. 10) | Princípios (art. 11) |\n| :--- | :--- | :--- | :--- |\n| Perda de bens ou valores acrescidos ilicitamente | Aplicável | Aplicável, se houver acréscimo ilícito | Não prevista no inciso III |\n| Perda da função pública | Aplicável; observar extensão dos vínculos pelo STF | Aplicável; observar extensão dos vínculos pelo STF | Não prevista no inciso III |\n| Suspensão dos direitos políticos | Até **14 anos** | Até **12 anos** | Não prevista no inciso III |\n| Multa civil | Equivalente ao acréscimo patrimonial | Equivalente ao dano | Até **24 vezes** a remuneração percebida pelo agente |\n| Proibição de contratar ou receber benefícios/incentivos fiscais ou creditícios | Até **14 anos** | Até **12 anos** | Até **4 anos** |\n| Ressarcimento do dano patrimonial | Se houver dano efetivo | Exige dano efetivo | Dano não é requisito do tipo; observar reparação cabível se houver |\n\n### Regras que Complementam a Tabela\n\n* **Vínculos funcionais:** O STF afastou as restrições do art. 12, § 1º, que limitavam a perda da função e reservavam excepcionalmente sua extensão ao enriquecimento ilícito. A extensão aos demais vínculos é poder-dever, podendo ser afastada excepcionalmente mediante fundamentação, consideradas as circunstâncias e a gravidade. Não subsiste a regra de que, no art. 10, apenas o vínculo da época da infração pode ser atingido.\n* **Multa:** Pode ser aumentada até o **dobro**, se o valor calculado for ineficaz para reprovação e prevenção em razão da situação econômica do réu (art. 12, § 2º). A regra se refere ao valor da multa, não ao aumento de todas as penas.\n* **Alcance da proibição:** O STF declarou inconstitucional o art. 12, § 4º. Não repetir como regra vigente que atingir outros entes públicos depende da excepcionalidade prevista nesse dispositivo. O alcance da sanção deve constar da decisão judicial fundamentada, observada a disciplina aplicável e os efeitos econômicos e sociais.\n* **Suspensão dos direitos políticos:** O art. 12, § 10, que mandava computar retroativamente o intervalo entre decisão colegiada e trânsito em julgado, foi declarado inconstitucional. Não há esse desconto automático.\n* **Unificação:** Os máximos da tabela são os de cada tipo. O teto de **20 anos** do art. 18-A é regra de unificação para suspensão de direitos políticos e proibição de contratar ou receber incentivos; não aumenta os máximos individuais nem se aplica indistintamente a toda sanção.\n",
+        "callouts": [
+          {
+            "text": "As penas de perda da função pública e de suspensão dos direitos políticos só podem ser executadas após o trânsito em julgado da sentença condenatória.",
+            "type": "warning",
+            "title": "Trânsito em Julgado Necessário"
+          },
+          {
+            "type": "warning",
+            "title": "Perda da Função e Demais Vínculos",
+            "text": "Nas hipóteses dos arts. 9º e 10, observar a decisão do STF sobre extensão da perda da função aos demais vínculos como poder-dever, com exceção fundamentada. Não vale a restrição automática do prejuízo ao erário apenas ao vínculo da época da infração."
+          },
+          {
+            "text": "A administração pública pode demitir o servidor por improbidade administrativa em processo administrativo disciplinar, sem necessidade de esperar a condenação judicial de perda da função pública.",
+            "type": "info",
+            "title": "Súmula 651 do STJ"
+          }
+        ]
+      }
+    },
+    {
+      "op_id": "legislacao-sec-12",
+      "content_unit_id": "92e9102c-b1cf-4559-abb1-9faa65a4bd2f",
+      "topic_id": "legislacao",
+      "expected_before_sha256": "e79af6168bf655bd7743a0b9d3134f49515c53127f5bcc35f6ad40f8293e2c93",
+      "expected_after_sha256": "06fa03545479ffeddffe17ff223e62db324795308d793737d01d2e4408458676",
+      "before": {
+        "content_markdown": "No caso de continuidade de ilícito, o juiz promoverá a aplicação da maior sanção cabível, aumentada de 1/3, ou a soma das penas, devendo prevalecer aquela que for mais benéfica ao réu.\n\nPara garantir a instrução processual ou evitar a prática de novos ilícitos, a autoridade judicial poderá determinar o afastamento do cargo do agente público, sob as seguintes condições:\n* Prazo de até 90 dias, prorrogável uma única vez por igual período;\n* Sem prejuízo da remuneração do cargo.",
+        "callouts": [
+          {
+            "text": "O afastamento cautelar do cargo é sempre sem prejuízo da remuneração e possui prazo máximo de 90 dias, admitindo uma única prorrogação por igual período.",
+            "type": "warning",
+            "title": "Afastamento Remunerado e Prazo"
+          }
+        ],
+        "mermaid_mindmap": "flowchart TD\n    A[\"Afastamento Cautelar\"] --> B[\"Prazo: Até 90 dias\"]\n    A --> C[\"Prorrogação:<br/>Uma<br/>única<br/>vez<br/>por<br/>igual<br/>período\"]\n    A --> D[\"Remuneração:<br/>Mantida<br/>integralmente\"]\n    class A readableRoot;\n    class B readableImportant;\n    class C,D readableItem;"
+      },
+      "after": {
+        "content_markdown": "### Unificação de Sanções — Art. 18-A\nA requerimento do réu, na fase de cumprimento da sentença, o juiz unifica sanções com outras já impostas em outros processos, observando:\n* Continuidade de ilícito: maior sanção aplicada acrescida de **1/3**, ou soma das penas, conforme o resultado mais benéfico ao réu.\n* Novos atos ilícitos pelo mesmo sujeito: soma das sanções.\n* Na unificação, suspensão de direitos políticos e proibição de contratar ou receber incentivos fiscais/creditícios observam o limite máximo de **20 anos**. Esse teto não transforma o máximo individual de cada tipo em 20 anos.\n\n### Afastamento Cautelar — Art. 20, §§ 1º e 2º\nA autoridade judicial competente pode afastar o agente do cargo, emprego ou função quando necessário à instrução processual ou para evitar a iminente prática de novos ilícitos.\n* Prazo de até **90 dias**, prorrogável uma única vez por igual prazo, mediante decisão motivada.\n* Sem prejuízo da remuneração.\n* É medida cautelar, não execução antecipada da perda da função pública.\n",
+        "callouts": [
+          {
+            "text": "O afastamento cautelar judicial não se confunde com a pena de perda da função. É sem prejuízo da remuneração, por até 90 dias, com uma prorrogação por igual prazo mediante decisão motivada, presentes os fundamentos legais.",
+            "type": "warning",
+            "title": "Afastamento Remunerado e Prazo"
+          }
+        ],
+        "mermaid_mindmap": "flowchart TD\n    A[\"Afastamento cautelar judicial\"] --> B[\"Instrução necessária ou<br/>novos ilícitos iminentes\"]\n    A --> C[\"Até 90 dias<br/>uma prorrogação por igual prazo<br/>decisão motivada\"]\n    A --> D[\"Sem prejuízo<br/>da remuneração\"]\n    A --> E[\"Não é execução antecipada<br/>da perda da função\"]\n"
+      }
+    },
+    {
+      "op_id": "legislacao-sec-13",
+      "content_unit_id": "8bd6b711-93fe-48b0-bd04-7dc82830c8d5",
+      "topic_id": "legislacao",
+      "expected_before_sha256": "fac6658200c02d54d9b707a8fade251fdc7c2206110b75fb342002b967810430",
+      "expected_after_sha256": "c586bf78fbeac86fe73adc5a3f306df0278ddb9a4cada39a3341839c3a3873d5",
+      "before": {
+        "content_markdown": "As sanções por improbidade administrativa são independentes das sanções penais, civis e administrativas, bem como do ressarcimento integral do dano patrimonial, caso este seja efetivo. Contudo, as sanções e reparações de dano eventualmente aplicadas em outras esferas deverão ser compensadas com as sanções aplicadas na ação de improbidade.\n\nAs sentenças proferidas nas esferas civil e penal produzirão efeitos em relação à ação de improbidade administrativa quando concluírem pela:\n* Inexistência da conduta; ou\n* Negativa de autoria.\n\nAdemais, a absolvição criminal em ação que discuta os mesmos fatos, desde que confirmada por decisão colegiada, impede o trâmite da ação de improbidade administrativa.",
+        "callouts": [
+          {
+            "text": "A absolvição criminal só impede o trâmite da ação de improbidade se for confirmada por decisão colegiada (tribunal) e discutir os mesmos fatos.",
+            "type": "warning",
+            "title": "Absolvição Criminal e Colegiado"
+          },
+          {
+            "text": "Para evitar o enriquecimento sem causa do Estado, valores pagos a título de ressarcimento ou sanção em outras esferas devem ser compensados na ação de improbidade.",
+            "type": "info",
+            "title": "Compensação de Sanções"
+          }
+        ],
+        "mermaid_mindmap": "flowchart TD\n    A[\"Comunicação de Esferas\"] --> B[\"Sentença<br/>Civil/Penal<br/>vincula<br/>se:\"]\n    A --> C[\"Absolvição<br/>Criminal<br/>Colegiada\"]\n    B --> B1[\"Inexistência da conduta\"]\n    B --> B2[\"Negativa de autoria\"]\n    C --> C1[\"Impede<br/>o<br/>trâmite<br/>da<br/>ação<br/>de<br/>improbidade\"]\n    class A readableRoot;\n    class B,C,B1,B2,C1 readableItem;"
+      },
+      "after": {
+        "content_markdown": "### Independência e Comunicações Legais\nAs sanções por improbidade coexistem com as responsabilidades penal, civil e administrativa, mas há comunicações previstas em lei. A demissão disciplinar pode ser aplicada independentemente de prévia perda judicial da função, conforme a Súmula 651 do STJ.\n\n* **Ressarcimento:** A reparação pelos mesmos fatos deve deduzir os valores já ressarcidos nas instâncias criminal, civil e administrativa (art. 12, § 6º), evitando reparação em duplicidade.\n* **Sanções de outras esferas:** O art. 21, § 5º, prevê sua compensação com as sanções da LIA. É necessário examinar a correspondência e a incidência legal no caso; não se presume equivalência entre toda espécie de pena.\n* **Sentenças civis e penais:** Produzem efeitos na ação de improbidade quando concluem pela inexistência da conduta ou pela negativa de autoria (art. 21, § 3º).\n\n### Decisão Criminal — Controle do Art. 21, § 4º\nNas ADIs 7.156 e 7.236, o STF delimitou que a decisão criminal transitada em julgado, pelos mesmos fatos, impede a ação de improbidade nas hipóteses de:\n* Inexistência comprovada do fato (CPP, art. 386, I);\n* Comprovação de que o réu não concorreu para a infração (CPP, art. 386, IV);\n* Reconhecimento das situações do art. 65 do CPP: estado de necessidade, legítima defesa, estrito cumprimento de dever legal ou exercício regular de direito.\n\nA mesma compreensão alcança absolvição, rejeição da denúncia e preclusão do arquivamento proposto pelo Ministério Público, ressalvada a hipótese do art. 18 do CPP, nos termos do julgamento. Não basta uma absolvição colegiada por qualquer fundamento; insuficiência de prova, isoladamente, não equivale a comprovação da inexistência do fato ou da não participação.\n",
+        "callouts": [
+          {
+            "type": "warning",
+            "title": "Decisão Criminal: Hipóteses Delimitadas",
+            "text": "Não basta absolvição colegiada pelos mesmos fatos. Conforme o STF, observar decisão criminal transitada em julgado e as hipóteses do CPP, arts. 65, 386, I e IV, sem ampliar a comunicação automaticamente a todo fundamento de absolvição."
+          },
+          {
+            "text": "A reparação pelos mesmos fatos deve descontar o que já foi ressarcido, evitando duplicidade. A compensação de sanções de outras esferas exige análise de sua correspondência e da regra legal aplicável; não é conversão automática de qualquer pena em qualquer outra.",
+            "type": "info",
+            "title": "Compensação de Sanções"
+          }
+        ],
+        "mermaid_mindmap": "flowchart TD\n    A[\"Comunicação da decisão criminal\"] --> B[\"Mesmos fatos e<br/>trânsito em julgado\"]\n    B --> C[\"Inexistência comprovada do fato<br/>CPP 386 I\"]\n    B --> D[\"Não participação comprovada<br/>CPP 386 IV\"]\n    B --> E[\"Hipóteses do CPP 65<br/>necessidade, legítima defesa<br/>dever legal ou exercício de direito\"]\n    C --> F[\"Impede ação de improbidade<br/>nos termos do julgamento do STF\"]\n    D --> F\n    E --> F\n"
+      }
+    },
+    {
+      "op_id": "legislacao-sec-14",
+      "content_unit_id": "895153b9-dfd1-4c0c-8224-031b17d89bd9",
+      "topic_id": "legislacao",
+      "expected_before_sha256": "1baf4c6707b8b8c80e3436de47df192393f447a50afcbd6886b8da3ddd8cf1a1",
+      "expected_after_sha256": "d87e36d0f9d74cf532eb6cef6995e137eaa50621f812b80ece5a8fde310f96d1",
+      "before": {
+        "content_markdown": "Na aplicação de sanções às pessoas jurídicas, deverão ser considerados os efeitos econômicos e sociais das penalidades, de modo a viabilizar a manutenção de suas atividades.\n\n### Princípio do Non Bis In Idem\nAs sanções aplicadas à pessoa jurídica com base na Lei de Improbidade Administrativa e na Lei Anticorrupção deverão observar o princípio constitucional do *non bis in idem*.",
+        "mermaid_mindmap": "flowchart TD\n    A[\"Sanções a Pessoas Jurídicas\"] --> B[\"Preservação da Atividade\"] \n    A --> C[\"Non Bis In Idem\"]\n    B --> B1[\"Considerar<br/>efeitos<br/>econômicos<br/>e<br/>sociais\"]\n    C --> C1[\"Harmonização<br/>entre<br/>LIA<br/>e<br/>Lei<br/>Anticorrupção\"]\n    class A readableRoot;\n    class B,C,B1,C1 readableItem;"
+      },
+      "after": {
+        "content_markdown": "Na aplicação de sanções às pessoas jurídicas, deverão ser considerados os efeitos econômicos e sociais das penalidades, de modo a viabilizar a manutenção de suas atividades.\n\n### Princípio do Non Bis In Idem\nAs sanções aplicadas à pessoa jurídica com base na Lei de Improbidade Administrativa e na Lei Anticorrupção deverão observar o princípio constitucional do *non bis in idem*.\n\n### Regra Específica de Duplicidade — Art. 3º, § 2º\nAs sanções da LIA não se aplicam à pessoa jurídica quando o mesmo ato de improbidade também for sancionado como ato lesivo à Administração Pública na Lei nº 12.846/2013. Não basta mencionar genericamente a harmonização das duas leis: deve-se verificar a incidência dessa regra específica, juntamente com o art. 12, § 7º. Considerar efeitos econômicos e sociais não significa imunidade da empresa à responsabilização.\n",
+        "mermaid_mindmap": "flowchart TD\n    A[\"Responsabilização da pessoa jurídica\"] --> B[\"Considerar efeitos<br/>econômicos e sociais<br/>art. 12 parágrafo 3\"]\n    A --> C[\"Verificar mesmo ato<br/>também sancionado pela<br/>Lei 12.846/2013\"]\n    C -->|Sim| D[\"Incide art. 3 parágrafo 2<br/>não aplicar sanções da LIA à PJ\"]\n    A --> E[\"Respeitar non bis in idem<br/>art. 12 parágrafo 7\"]\n"
+      }
+    }
+  ],
+  "manifest_sha256": "8f62e5cfff04cceb49206552213efb2c06ecde8ed14ff57f8f200b897ccc344c"
+}

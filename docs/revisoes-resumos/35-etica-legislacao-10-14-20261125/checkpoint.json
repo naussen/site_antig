@@ -1,0 +1,68 @@
+{
+  "date": "2026-11-25",
+  "status": "revisado_publicado_reconciliado",
+  "section_ids": [
+    "legislacao-sec-10",
+    "legislacao-sec-11",
+    "legislacao-sec-12",
+    "legislacao-sec-13",
+    "legislacao-sec-14"
+  ],
+  "changed_sections": 5,
+  "components": {
+    "callouts": 9,
+    "maps": 3,
+    "tables": 1,
+    "flashcards": 0,
+    "mnemonics": 0
+  },
+  "manifest_sha256": "8f62e5cfff04cceb49206552213efb2c06ecde8ed14ff57f8f200b897ccc344c",
+  "revisions": [
+    {
+      "section_id": "legislacao-sec-10",
+      "current_revision_id": "b025c222-ac98-4f48-8929-dbe15d07de6f"
+    },
+    {
+      "section_id": "legislacao-sec-11",
+      "current_revision_id": "70555732-e572-4104-b445-afb39fa9c543"
+    },
+    {
+      "section_id": "legislacao-sec-12",
+      "current_revision_id": "e2929add-9584-42b9-b015-594b1d5b8e80"
+    },
+    {
+      "section_id": "legislacao-sec-13",
+      "current_revision_id": "a490d1c4-6f67-40db-81ab-1da3fddc75d4"
+    },
+    {
+      "section_id": "legislacao-sec-14",
+      "current_revision_id": "f0f01247-445c-4a47-9410-f804075be15e"
+    }
+  ],
+  "preserved_revision_ids": 14,
+  "previous_10_reviewed_preserved": true,
+  "dry_run_sections": 18,
+  "validation": {
+    "content_tests": 49,
+    "reused_executor_tests": 6,
+    "malicious_rejected": 3,
+    "negative_cas_rows": 0,
+    "visual_combinations": 30,
+    "zoom_overlay": 18,
+    "table_checks": 6,
+    "reconciled": true
+  },
+  "application": "cinco CAS sequenciais existentes por identidade/revisão com pré-imagem, preflight e diário sincronizado; não transação única de lote",
+  "jurisprudence": "dispositivos colegiados oficiais das ADIs7156/7236 em24/25junho2026, distinguindo votos anteriores; Súmula651 STJ",
+  "source_limit": "RTFs oficiais integrais preservados; acórdão autônomo não localizado; não inferidos efeitos adicionais.",
+  "application_changes": false,
+  "discipline_complete": false,
+  "cumulative_reviewed": 15,
+  "remaining_sections": 4,
+  "empty_topics_pending": 2,
+  "student_check": "dispensado",
+  "stop": true,
+  "editorial_commit": "9879d60",
+  "editorial_remote": null,
+  "local_evidence": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\35-etica-no-servico-publico\\legislacao-10-14-20261125"
+}
