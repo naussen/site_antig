@@ -1,0 +1,114 @@
+{
+  "checkedAt": "2026-11-25T00:36:54.907Z",
+  "scope": "redes-de-computadores-e-conectividade",
+  "readOnly": true,
+  "topics": [
+    {
+      "topic_id": "redes-de-computadores",
+      "title": "Redes de Computadores",
+      "discipline": "Informática",
+      "sort_order": 4,
+      "created_at": "2026-09-13T01:36:56.136348+00:00",
+      "archived_at": null
+    },
+    {
+      "topic_id": "redes-de-computadores-e-conectividade",
+      "title": "Redes de Computadores e Conectividade",
+      "discipline": "Informática",
+      "sort_order": null,
+      "created_at": "2026-10-25T20:02:56.014427+00:00",
+      "archived_at": null
+    }
+  ],
+  "sections": [
+    {
+      "section_id": "redes-de-computadores-sec-01",
+      "topic_id": "redes-de-computadores",
+      "title": "Dimensão de redes",
+      "content_unit_id": "ce2b7974-e707-488c-badd-965cc71fc2a2",
+      "current_revision_id": "710cdbb1-c1e0-4b57-ad10-1ed92a486d58",
+      "archived_at": null
+    },
+    {
+      "section_id": "redes-de-computadores-sec-02",
+      "topic_id": "redes-de-computadores",
+      "title": "Comutação de circuito e comutação de pacote",
+      "content_unit_id": "39998e16-2b4f-47ba-bfc3-53a6d08f49ea",
+      "current_revision_id": "0f3ed5f6-3740-4b80-91be-79a25648eb7d",
+      "archived_at": null
+    },
+    {
+      "section_id": "redes-de-computadores-sec-03",
+      "topic_id": "redes-de-computadores",
+      "title": "Topologias de rede",
+      "content_unit_id": "e6539e97-f2e6-4925-b505-77ddce4dcc7d",
+      "current_revision_id": "548ee1f9-7a9c-4284-b40d-2ba3da83a910",
+      "archived_at": null
+    },
+    {
+      "section_id": "redes-de-computadores-sec-04",
+      "topic_id": "redes-de-computadores",
+      "title": "Equipamentos de rede e segurança",
+      "content_unit_id": "b83ebd32-05a5-43b1-8933-192d4e943676",
+      "current_revision_id": "7efe4245-b44f-40c0-8fe5-4f669150b203",
+      "archived_at": null
+    },
+    {
+      "section_id": "redes-de-computadores-sec-05",
+      "topic_id": "redes-de-computadores",
+      "title": "Modelo OSI/ISO",
+      "content_unit_id": "38314e4d-939d-42f4-b6a6-8fcb21a011ba",
+      "current_revision_id": "6bb00edc-d5e0-4e31-ac76-8c1fff749b6f",
+      "archived_at": null
+    },
+    {
+      "section_id": "redes-de-computadores-sec-06",
+      "topic_id": "redes-de-computadores",
+      "title": "Arquitetura TCP/IP",
+      "content_unit_id": "4a8211fa-8841-4a95-b252-a7ed248cbf6a",
+      "current_revision_id": "9557f686-e0b9-425e-b54d-844950158447",
+      "archived_at": null
+    },
+    {
+      "section_id": "redes-de-computadores-sec-07",
+      "topic_id": "redes-de-computadores",
+      "title": "Protocolo IP e endereçamento",
+      "content_unit_id": "36151099-1bc3-42a3-ad07-2bbe6d856a79",
+      "current_revision_id": "2612949e-2b41-4f98-ba7b-2458b833edb3",
+      "archived_at": null
+    },
+    {
+      "section_id": "redes-de-computadores-sec-08",
+      "topic_id": "redes-de-computadores",
+      "title": "Protocolos TCP e UDP",
+      "content_unit_id": "844e7a04-e839-49f5-bfd2-34ae2ddb77fd",
+      "current_revision_id": "6a4b2ada-08c2-4a8f-b3e1-c122575c3f98",
+      "archived_at": null
+    }
+  ],
+  "redirects": [],
+  "parity": {
+    "ok": true,
+    "target": "preimagem",
+    "expectedTopics": 15,
+    "expectedSections": 55,
+    "topics": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "sections": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  },
+  "unchangedRevisionCount": 55,
+  "revisionFingerprint": "231f6933e4d39e4c50a0430c70261839fd8942270cfa4c2dda461cc54ea33ff0",
+  "decision": "Não criar conteúdo duplicado. Preservar tópico vazio e tratar como candidato à conciliação cadastral; título amplo não comprova lacuna editorial inédita.",
+  "limitations": [
+    "Sem prova de execução da migração local 037, que está não rastreada.",
+    "Sem conclusão sobre ausência histórica absoluta de conteúdo.",
+    "Dados pessoais não consultados; arquivamento, redirecionamento ou fusão não executados."
+  ]
+}

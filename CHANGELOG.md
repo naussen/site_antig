@@ -1,5 +1,10 @@
 # Changelog
 
+## 24/11/2026 — Diagnóstico do tópico vazio de Redes em Informática
+
+- Confirmado tópico ativo sem seções, inclusive arquivadas, e sem redirecionamento, distinto de Redes de Computadores publicado com oito seções. Decisão: não criar resumo duplicado, preservar IDs e manter apenas pendência de conciliação cadastral com escopo próprio.
+- Diagnóstico somente de leitura: comparação 15/55 e todas as 55 revisões preservadas, sem publicação/escrita de conteúdo. Informática parcial por cadastro, não por lacuna editorial inédita demonstrada. Relatório/evidências em `docs/revisoes-resumos/39-informatica-diagnostico-redes-vazio-20261124/`; commit editorial local `8d1e53b` (sem remote). Nenhuma alteração de aplicação ou migration.
+
 ## 24/11/2026 — Revisão dos três pacotes de lacuna de Informática
 
 - Publicadas três novas seções: Windows/Linux, Office/LibreOffice e Internet/Navegadores/Pesquisa, com três callouts/mnemônicos/mapas e sete tabelas revisados. Preservadas identidades e metadados atuais dos tópicos.
