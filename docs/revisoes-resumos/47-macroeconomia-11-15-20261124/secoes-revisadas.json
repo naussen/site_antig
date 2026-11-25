@@ -1,0 +1,117 @@
+[
+  {
+    "section_id": "macroeconomia-sec-11",
+    "content_unit_id": "6295c311-5736-4e40-aa26-927113816739",
+    "stable_key": "modelo-keynesiano-simplificado",
+    "topic_id": "macroeconomia",
+    "title": "Modelo Keynesiano Simplificado",
+    "sort_order": 10,
+    "content_markdown": "### Equilíbrio e despesa planejada\nO modelo keynesiano simplificado determina a produção/renda de curto prazo com preços dados e capacidade ociosa. O equilíbrio do mercado de bens ocorre quando a produção $Y$ coincide com a despesa **planejada** $E^{plan}$:\n\n$$\nY=E^{plan}\n$$\n\n$$\nE^{plan}=C+I^{plan}+G+X-M\n$$\n\nC é consumo privado; G, consumo final do governo; X e M, exportações e importações de bens e serviços. O investimento planejado inclui formação de capital pública e privada, inclusive a acumulação de estoques desejada. No caso fechado, X e M são zero.\n\nA identidade contábil de despesa **realizada** inclui o investimento efetivo em estoques e vale também fora do equilíbrio comportamental. Igualar produto e despesa realizada não demonstra que os planos dos agentes foram atendidos.\n\n### Estoques planejados e involuntários\nO investimento em estoques pode ser decomposto em parcela planejada e parcela não planejada:\n\n$$\n\\Delta E=\\Delta E^{plan}+\\Delta E^{u}\n$$\n\nAqui $\\Delta E$ é variação de estoques, não a despesa planejada $E^{plan}$; o sobrescrito u indica parcela involuntária. Em termos compatíveis de valor e período:\n\n$$\n\\Delta E^{u}=Y-E^{plan}\n$$\n\n- Se $Y>E^{plan}$, há acumulação involuntária positiva. As firmas tendem a rever produção e emprego para baixo, mantidas as demais condições.\n- Se $Y<E^{plan}$, há redução involuntária de estoques; as firmas podem ampliar a produção.\n- No equilíbrio, $\\Delta E^{u}=0$. A variação **total** pode ser positiva se houver acumulação planejada. Estoque existente não precisa ser zero.\n\nExemplo fictício: produção 100 e despesa planejada 90 geram acúmulo involuntário de 10. Já produção e despesa planejada iguais a 100 podem coexistir com investimento planejado em estoques de 8: nesse caso, a variação total é 8 e a involuntária é zero.\n\n### Demanda, recessão e política econômica\nO modelo descreve como insuficiência de gasto pode reduzir produção com recursos ociosos. Não explica toda recessão como erro de planejamento de estoques, nem garante recuperação por qualquer aumento de G. Alterações fiscais, consumo, investimento, expectativas e condições de financiamento podem mudar o equilíbrio. Choques de oferta e limites produtivos exigem análise além deste modelo de preços dados.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Equilíbrio não exige variação total nula",
+        "text": "É a parcela involuntária dos estoques que se anula no equilíbrio. A variação total pode incluir acumulação planejada; nem estoque total zero nem “tudo foi consumido” são condições gerais."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "08dd0aa6-aafb-4fce-9707-57cb3ad5eadb"
+  },
+  {
+    "section_id": "macroeconomia-sec-12",
+    "content_unit_id": "bd5d0658-7e2e-4ab8-b0cc-bd95e19f2580",
+    "stable_key": "determinacao-da-renda-nacional-de-equilibrio",
+    "topic_id": "macroeconomia",
+    "title": "Determinação da Renda Nacional de Equilíbrio",
+    "sort_order": 11,
+    "content_markdown": "### O que o modelo determina\nA cruz keynesiana determina o nível de produção/renda de equilíbrio no mercado de bens. Esse nível pode ficar abaixo do pleno emprego. A política de estabilização é uma aplicação do modelo, não uma garantia de que todo equilíbrio alcançará pleno emprego.\n\nNeste bloco, Y representa o produto/renda interna gerada. Chamá-lo também de renda nacional ou disponível exige convenções adicionais sobre fluxos externos e valoração, como nas contas nacionais já estudadas.\n\n### Premissas econômicas e simplificações contábeis\n1. **Curto prazo e preços dados:** as firmas podem atender a maior demanda usando recursos ociosos. Não se afirma que os preços fiquem constantes em toda situação ou para sempre.\n2. **Juros tratados como dados:** o efeito de suas alterações sobre investimento é deixado de lado nesta etapa. IS-LM incorpora explicitamente a interação entre juros, renda e mercado monetário.\n3. **Comportamento do gasto:** consumo, tributos, investimento e comércio exterior precisam de funções ou hipóteses declaradas. A versão mais básica usa investimento autônomo; extensões admitem componentes induzidos pela renda.\n4. **Depreciação:** supor consumo de capital fixo zero permite aproximar medidas brutas e líquidas; é uma simplificação possível, não requisito de toda versão keynesiana.\n5. **Rendas externas:** RPL = 0 significa renda primária líquida recebida do exterior nula. Como RLEE = −RPL, os dois saldos são zero nesse caso. Isso não elimina exportações/importações nem transferências correntes externas. Para igualar também renda disponível ao produto, esses outros fluxos precisam ser tratados.\n6. **Tributação e valoração:** exercícios podem suprimir tributos sobre produtos e subsídios para simplificar a passagem entre valorações, ou usar apenas uma função de tributos sobre renda. São convenções do exercício, não afirmações sobre a arrecadação real nem hipóteses universais do modelo.\n\n### Como usar em questões\nIdentifique se a economia é aberta/fechada, o que é exógeno e como T, I e M são definidos. Parâmetro não informado não deve ser automaticamente zerado: use as hipóteses expressas e a versão solicitada; se faltarem dados essenciais, registre a insuficiência.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Saldo de renda externa não é economia fechada",
+        "text": "RPL = RLEE = 0 apenas zera a renda primária líquida externa. Comércio e transferências correntes ainda podem existir. Economia fechada é uma hipótese distinta."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "78c8bbf3-d85b-48df-8de6-53160aa774ea"
+  },
+  {
+    "section_id": "macroeconomia-sec-13",
+    "content_unit_id": "2fa6ac59-e0a8-459c-b1cd-850dca8728c9",
+    "stable_key": "fundamentacao-matematica-do-modelo",
+    "topic_id": "macroeconomia",
+    "title": "Fundamentação Matemática do Modelo",
+    "sort_order": 12,
+    "content_markdown": "### Funções e variáveis\nUse valores reais e períodos compatíveis. Nesta extensão, juros e preços são dados; $a$ é a sensibilidade do investimento à renda, evitando confundi-la com a taxa de juros usada adiante.\n\n| Componente | Função do exemplo linear | Definição |\n| --- | --- | --- |\n| Consumo | $C=C_0+cY_d$ | C0: parcela autônoma; c: propensão marginal a consumir |\n| Renda disponível | $Y_d=Y-T+R_0$ | R0: transferências autônomas às famílias |\n| Tributos | $T=T_0+tY$ | T0: parcela autônoma; t: alíquota marginal do modelo |\n| Investimento planejado | $I=I_0+aY$ | I0: componente autônomo; a: componente induzido |\n| Governo e exportações | $G=G_0$; $X=X_0$ | Componentes exógenos nesta versão |\n| Importações | $M=M_0+mY$ | M0: parcela autônoma; m: propensão marginal a importar |\n\nAdotam-se $0<c<1$, $0\\leq t<1$ e $a,m\\geq0$, além da condição de estabilidade explicitada abaixo. Na versão básica sem investimento induzido, a = 0. M possui componente autônomo e componente induzido; não é inteiramente “não autônomo”. Não zere T, t ou m sem hipótese que o justifique.\n\n### Poupança e propensões médias\nA poupança privada disponível nesse modelo é:\n\n$$\nS_p=Y_d-C=-C_0+(1-c)Y_d\n$$\n\nA propensão marginal a poupar é $1-c$. Para renda disponível positiva, as propensões médias são C/Yd e Sp/Yd e somam 1; não precisam ficar ambas entre zero e um. Se C0 = 20, c = 0,8 e Yd = 50, então C = 60 e Sp = −10: as médias são 1,2 e −0,2. Com Yd = 0, as razões médias são indefinidas. Não confunda essa poupança privada com a poupança nacional após incorporar o governo.\n\n### Renda de equilíbrio e multiplicador\nSubstitua as funções em $Y=C+I+G+X-M$. Defina o gasto autônomo líquido A e a inclinação b da despesa planejada:\n\n$$\n\\begin{aligned}\nA={}&C_0-cT_0+cR_0\\\\\n&+I_0+G_0+X_0-M_0\n\\end{aligned}\n$$\n\n$$\nb=c(1-t)+a-m\n$$\n\n$$\nY^*=\\frac{A}{1-b}\n$$\n\n$$\nK=\\frac{1}{1-c(1-t)-a+m}\n$$\n\nO asterisco indica equilíbrio. Para a interpretação usual de um ajuste simples estável, use $0\\leq b<1$: a despesa induzida aumenta menos que a renda. Denominador zero não fornece equilíbrio finito determinado por essa fórmula; não trate qualquer conjunto de parâmetros como admissível.\n\nMantidos os parâmetros e os demais componentes:\n- Aumento de C0, I0, G0 ou X0 tem multiplicador **K**.\n- Aumento de M0 tem multiplicador **−K**: importações entram com sinal negativo.\n- Aumento de T0 tem multiplicador **−cK**; aumento de R0, **cK**.\n\nExemplo fictício: c = 0,75; t = 0,20; a = m = 0,10; C0 = 20; T0 = 10; R0 = 0; I0 = 30; G0 = 50; X0 = 40; M0 = 10. Obtêm-se A = 122,5, b = 0,6, K = 2,5 e Y* = 306,25. Elevar G0 em 10 aumenta a renda de equilíbrio em 25; elevar T0 em 10 a reduz em 18,75, sob essas hipóteses.\n\n### Consequências e condições\n**Orçamento equilibrado:** no caso básico fechado, juros dados, a = t = m = 0, elevar G0 e o tributo fixo T0 no mesmo valor gera multiplicador conjunto 1. Na extensão acima, igualar apenas essas alterações autônomas gera $(1-c)K$, que não é necessariamente 1. Se t > 0, a arrecadação total também reage à renda; a igualdade das parcelas autônomas não basta para igualar a variação total de receita e despesa.\n\n**Intensidade fiscal:** neste modelo e para 0 < c < 1, compare magnitudes: $|K|>|-cK|$. Os efeitos de gasto, tributo fixo e transferência têm sinais e canais distintos. Não se conclui que qualquer política de gasto seja sempre superior a qualquer redistribuição.\n\n**Hiatos:** gasto planejado acima do necessário para sustentar o produto de pleno emprego indica pressão inflacionária quando a oferta não consegue responder. Gasto insuficiente indica hiato recessivo. O modelo de preços fixos não calcula sozinho a inflação; ajustes fiscais são possibilidades condicionais, não prescrições únicas.\n\n**Paradoxo da parcimônia:** com recursos ociosos e investimento autônomo dado, reduzir consumo autônomo pode contrair a renda sem aumentar a poupança agregada realizada. O resultado depende da reação de investimento, governo e setor externo; não é uma condenação geral à poupança.\n\n### Modelo keynesiano generalizado (IS-LM)\nIS-LM determina simultaneamente Y e a taxa de juros r. Na versão tradicional, mantém preços dados e oferta nominal de moeda exógena. Não identifica automaticamente o equilíbrio com pleno emprego.\n\n### Curva IS\nRepresenta equilíbrio no mercado de bens. Com investimento sensível ao custo de financiamento, juros maiores reduzem o gasto e a renda de equilíbrio, mantidas as condições. Isso é movimento **ao longo** da IS, não a definição de crowding-out. Este ocorre, por exemplo, quando expansão fiscal eleva juros e desloca parte do investimento privado.\n\nGastos, tributos e expectativas podem deslocar a IS. Em economia aberta, exportações/importações também dependem de câmbio, renda externa e outros fatores; suas alterações não são todas “política fiscal”.\n\n### Curva LM\nRepresenta equilíbrio entre oferta e demanda de moeda em termos reais. Demanda de moeda cresce com renda e cai com juros, nas hipóteses usuais. Renda/juros são coordenadas da curva; mudança exógena da oferta real ou da preferência por liquidez pode deslocá-la. Transferir recursos entre moeda e títulos é uma escolha de carteira, não formação de capital produtivo por si só.\n\n### Equilíbrio e deslocamentos\nCom IS decrescente e LM crescente, preços/expectativas dados e sem outras reações:\n\n| Deslocamento isolado | Y de equilíbrio | r de equilíbrio |\n| --- | --- | --- |\n| IS para a direita | Aumenta | Aumenta |\n| IS para a esquerda | Diminui | Diminui |\n| LM para a direita/baixo | Aumenta | Diminui |\n| LM para a esquerda/cima | Diminui | Aumenta |\n\nSão resultados da configuração usual. Casos-limite e outras regras de política alteram a resposta; a seção seguinte explicita esses limites.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Orçamento equilibrado exige hipóteses",
+        "text": "Multiplicador conjunto 1 vale no caso básico fechado, com tributo fixo, juros dados e sem investimento induzido. Na extensão, alterações iguais de G0 e T0 geram (1 − c)K; arrecadação proporcional também reage à renda."
+      },
+      {
+        "type": "info",
+        "title": "Poupança desejada e realizada",
+        "text": "Com investimento dado e demanda insuficiente, a tentativa agregada de poupar mais pode reduzir a renda sem elevar a poupança realizada. Propensões médias também podem mostrar consumo maior que a renda disponível e poupança negativa."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph LR\n A[\"IS-LM\"] --> B[\"IS: mercado de bens\"]\n A --> C[\"LM: mercado de moeda\"]\n A --> D[\"Renda e juros simultâneos\"]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "49acfeca-e67f-413f-ad0e-62625a0df971"
+  },
+  {
+    "section_id": "macroeconomia-sec-14",
+    "content_unit_id": "39a436a8-000c-4c99-8c97-39378bc08c3d",
+    "stable_key": "is-lm-na-economia-fechada",
+    "topic_id": "macroeconomia",
+    "title": "IS-LM Na Economia Fechada",
+    "sort_order": 13,
+    "content_markdown": "Na economia fechada, o equilíbrio do mercado de bens exige:\n\n$$\nY=C+I+G\n$$\n\nY é produção/renda; C, consumo privado; I, formação de capital planejada pública e privada; G, consumo final do governo. Na versão tradicional IS-LM, preços são dados e a oferta de moeda é exógena; o equilíbrio pode ocorrer com desemprego.\n\n### Curva IS e política fiscal\nAumento de G, redução de tributos ou aumento de transferências às famílias podem elevar o gasto planejado e deslocar a IS para a direita. Os movimentos opostos tendem a deslocá-la para a esquerda. No caso usual, LM crescente faz os juros subirem na expansão fiscal, reduzindo parte do investimento privado: crowding-out parcial.\n\nEfeitos dependem de parâmetros, financiamento, reação monetária e expectativas. Não classifique todo deslocamento da IS como ação direta do governo.\n\n### Curva LM\nDefina $M_s$ como oferta nominal de moeda, P como nível de preços e $B=M_s/P$ como oferta real. Aumento de B desloca a LM para direita/baixo; maior preferência por liquidez, à mesma renda e juros, para esquerda/cima. Mudança da demanda de moeda provocada pela própria variação de Y/r é movimento ao longo da curva, não um choque exógeno de preferência.\n\n| Choque exógeno isolado | Resposta usual com IS decrescente/LM crescente |\n| --- | --- |\n| Aumento da oferta real de moeda | Y aumenta; juros caem |\n| Redução da oferta real de moeda | Y diminui; juros sobem |\n| Menor preferência por liquidez | Y aumenta; juros caem |\n| Maior preferência por liquidez | Y diminui; juros sobem |\n\n### Efeitos fiscal e monetário: casos-limite\nA comparação abaixo é **dentro do modelo**, mantendo as demais hipóteses; não é uma escala universal de eficácia de políticas.\n\n| Configuração da LM | Expansão fiscal | Expansão monetária convencional |\n| --- | --- | --- |\n| Horizontal: armadilha de liquidez | Pode elevar Y sem alta de juros enquanto o equilíbrio permanecer nesse trecho | Moeda adicional é absorvida sem reduzir juros; efeito usual por esse canal é nulo |\n| Crescente: caso intermediário | Eleva Y e juros, com crowding-out parcial | Eleva Y e reduz juros, nas condições usuais |\n| Vertical: demanda de moeda sem sensibilidade a juros | Não altera Y dado B; juros ajustam e há crowding-out completo no caso padrão | Aumento de B eleva Y conforme demanda por moeda; juros dependem da IS |\n\nTaxa baixa, isoladamente, não prova armadilha de liquidez. A horizontalidade é um caso-limite de alta sensibilidade da demanda por moeda aos juros; não significa que expectativas, crédito ou toda política monetária não convencional sejam irrelevantes. LM vertical não demonstra pleno emprego: descreve uma hipótese monetária, não uma condição do mercado de trabalho. Também não é obrigatório que a economia atravesse três trechos em sequência.\n\n### Exemplo numérico de IS-LM\nConsidere as equações fictícias, com Y, G e B em unidades reais do exemplo e r expresso em pontos percentuais (4 representa 4%):\n\n$$\nY=400+2G-50r\n$$\n\n$$\nB=0{,}5Y-25r\n$$\n\nA primeira é a IS; a segunda, a LM. Substitua uma na outra para obter juros e renda simultaneamente.\n\n| Cenário | G | B | r | Y |\n| --- | ---: | ---: | ---: | ---: |\n| Inicial | 300 | 300 | 4 | 800 |\n| Fiscal | 350 | 300 | 5 | 850 |\n| Monetária | 300 | 350 | 3 | 850 |\n\nPor exemplo, inicialmente $800=400+2(300)-50(4)$ e $300=0{,}5(800)-25(4)$. Na expansão fiscal, G aumenta 50 e Y aumenta 50; se os juros fossem mantidos em 4, a IS isolada daria Y = 900, mas isso exigiria acomodação monetária. Não atribua o multiplicador do mercado de bens, com juros fixos, ao equilíbrio IS-LM sem verificar a LM.\n\n```quant-chart\n{\"type\": \"bar\", \"title\": \"IS-LM: produto\", \"description\": \"Fonte: exemplo calculado.\", \"x_axis\": \"Cenário\", \"y_axis\": \"Y (unid. fict.)\", \"data\": [{\"label\": \"Base\", \"value\": 800}, {\"label\": \"Fiscal\", \"value\": 850}, {\"label\": \"Moeda\", \"value\": 850}]}\n```\n\nNo gráfico, Base indica o inicial, Fiscal a expansão de G e Moeda a expansão de B. Ele compara os três equilíbrios calculados; não é série temporal nem estimativa empírica. As expansões fiscal e monetária são cenários alternativos, cada uma em relação ao inicial.",
+    "callouts": [
+      {
+        "type": "warning",
+        "title": "Limite da armadilha de liquidez",
+        "text": "No trecho horizontal, moeda adicional pode não reduzir juros pelo canal convencional; expansão fiscal pode elevar Y sem crowding-out por juros. Não estenda isso a toda política monetária nem presuma pleno emprego."
+      },
+      {
+        "type": "info",
+        "title": "LM vertical não é pleno emprego",
+        "text": "A verticalidade representa demanda de moeda insensível aos juros. No modelo padrão, expansão fiscal desloca investimento sem alterar Y dado o saldo monetário real. Nada disso prova que todos os recursos estejam empregados."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": null,
+    "archived_at": null,
+    "current_revision_id": "9a6d818d-ca9d-47d4-83c8-9dcc4837dace"
+  },
+  {
+    "section_id": "macroeconomia-sec-15",
+    "content_unit_id": "bfb0b7d3-3442-4b8a-a62f-c660665a4b15",
+    "stable_key": "is-lm-na-economia-aberta",
+    "topic_id": "macroeconomia",
+    "title": "IS-LM Na Economia Aberta",
+    "sort_order": 14,
+    "content_markdown": "### Economia aberta e hipótese do modelo\nNa identidade de despesa, X e M abrangem bens e serviços:\n\n$$\nY=C+I+G+X-M\n$$\n\nC é consumo privado; I, formação de capital; G, consumo final do governo. Para estudar políticas e câmbio, usa-se aqui a versão estática **Mundell–Fleming**, extensão de IS-LM a uma pequena economia aberta.\n\n### Pressupostos\n- Preços internos/externos dados e recursos ociosos no horizonte de análise.\n- Economia pequena, sem influência sobre renda e juros mundiais; isso é hipótese distinta de mobilidade perfeita.\n- Mobilidade perfeita de capitais, ativos substitutos, ausência de prêmio de risco e de depreciação cambial esperada. Só com essas condições a versão simplificada usa $r=r^*$, juros domésticos iguais aos externos.\n- Demanda de moeda depende de renda e juros; desvalorização real eleva exportações líquidas no mecanismo assumido. Defina e como moeda doméstica por unidade estrangeira: aumento de e é depreciação doméstica.\n\nEm modelos com expectativa de depreciação ou risco, mobilidade alta não implica igualdade simples dos juros. Os resultados abaixo não devem ser transplantados para qualquer país ou regime real.\n\n### Efeitos no produto: regimes extremos\nConsidere expansões isoladas, mantendo as demais hipóteses:\n\n| Política | Câmbio fixo mantido pela autoridade | Câmbio flexível sem intervenção |\n| --- | --- | --- |\n| Fiscal: maior G | Y aumenta; entradas de capital induzem compra de reservas e expansão monetária que acomoda a maior demanda de moeda | Y não aumenta no caso extremo: apreciação reduz exportações líquidas, compensando o impulso fiscal |\n| Monetária: tentativa de maior oferta de moeda | Não há aumento duradouro de Y: saída de capitais/pressão depreciativa leva à venda de reservas e reversão da expansão | Y aumenta: depreciação estimula exportações líquidas, com juros retornando ao nível externo |\n| Cambial: desvalorização da paridade | Pode elevar Y se melhora exportações líquidas e a política monetária acomoda a nova paridade | A autoridade não escolhe simultaneamente uma paridade fixa; o câmbio ajusta-se endogenamente nessa hipótese de flutuação pura |\n\nSob câmbio fixo e perfeita mobilidade, a defesa da paridade limita a autonomia monetária; não se pressupõe esterilização permanente capaz de anular esse ajuste. Sob flutuação pura, a oferta de moeda é dada pela política e o câmbio absorve parte dos choques.\n\n“Eficaz/ineficaz” refere-se ao efeito sobre Y nessa versão extrema, não a aprovação de uma política nem garantia de pleno emprego. Produtos, emprego e bem-estar não são a mesma variável; impactos sobre emprego exigem hipótese adicional sobre produção e trabalho. Mobilidade imperfeita, expectativas, prêmios de risco, restrições de reservas e regimes intermediários podem alterar as conclusões.",
+    "callouts": [
+      {
+        "type": "info",
+        "title": "Mobilidade perfeita não basta para r = r*",
+        "text": "A igualdade simples exige também as hipóteses sobre risco e depreciação esperada. Os resultados de política dependem do regime cambial e das demais condições do modelo; não são universais."
+      }
+    ],
+    "mnemonics": [],
+    "flashcards": [],
+    "mermaid_mindmap": "graph LR\n A[\"Economia aberta\"] --> B[\"Câmbio fixo\"]\n A --> C[\"Câmbio flexível\"]\n A --> D[\"Mobilidade perfeita\"]\n class A readableRoot;\n class B,C,D readableItem;",
+    "archived_at": null,
+    "current_revision_id": "76b71bab-5166-4149-9642-599575ed501f"
+  }
+]

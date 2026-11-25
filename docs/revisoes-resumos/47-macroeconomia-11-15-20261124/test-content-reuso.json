@@ -1,0 +1,21 @@
+{
+  "passed": 49,
+  "rerun": false,
+  "reason": "mesmos arquivos de CLI, testes e segurança Mermaid desde o teste aprovado no commit d65584a; somente conteúdo e documentação alterados",
+  "validated_commit": "d65584a",
+  "files_sha256": {
+    "scripts/content-admin.mjs": "d148aeace4a33a150a3236e530aa1f4b0809f67cf0dca0330a9301b2043bcbb2",
+    "tests/content-admin.test.mjs": "003d15b0ef207aaf7f03c738de9bf3d6ee06bcdafca8df4a2508d8254940fb38",
+    "src/lib/mermaid/security.mjs": "69748ee9b360757b8a6d6a49cb25a3c5ca37b99f545fe0990ab71881541f06d6"
+  },
+  "original_receipt": "../contas-01-05-20261124-v3/test-content.txt",
+  "compared_paths": [
+    "src",
+    "scripts",
+    "tests",
+    "package.json",
+    "package-lock.json"
+  ],
+  "all_compared_paths_unchanged": true,
+  "verified_head": "8949f02"
+}

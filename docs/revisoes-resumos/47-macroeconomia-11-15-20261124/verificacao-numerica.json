@@ -1,0 +1,190 @@
+{
+  "ok": true,
+  "checks_count": 32,
+  "checks": [
+    {
+      "name": "estoque involuntario",
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "name": "estoque total pode ser planejado",
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "name": "consumo com poupanca negativa",
+      "actual": 60.0,
+      "expected": 60
+    },
+    {
+      "name": "poupanca negativa",
+      "actual": -10.0,
+      "expected": -10
+    },
+    {
+      "name": "propensao media consumo",
+      "actual": 1.2,
+      "expected": 1.2
+    },
+    {
+      "name": "propensao media poupanca",
+      "actual": -0.2,
+      "expected": -0.2
+    },
+    {
+      "name": "inclinacao",
+      "actual": 0.6000000000000001,
+      "expected": 0.6
+    },
+    {
+      "name": "multiplicador",
+      "actual": 2.5000000000000004,
+      "expected": 2.5
+    },
+    {
+      "name": "autonomo",
+      "actual": 122.5,
+      "expected": 122.5
+    },
+    {
+      "name": "renda equilibrio",
+      "actual": 306.25000000000006,
+      "expected": 306.25
+    },
+    {
+      "name": "substituicao independente na despesa",
+      "actual": 306.25000000000006,
+      "expected": 306.25000000000006
+    },
+    {
+      "name": "efeito gasto 10",
+      "actual": 25.000000000000004,
+      "expected": 25
+    },
+    {
+      "name": "efeito tributo 10",
+      "actual": -18.750000000000004,
+      "expected": -18.75
+    },
+    {
+      "name": "efeito transferencia 10",
+      "actual": 18.750000000000004,
+      "expected": 18.75
+    },
+    {
+      "name": "efeito importacao autonoma 10",
+      "actual": -25.000000000000004,
+      "expected": -25
+    },
+    {
+      "name": "variacao conjunta autonoma G T",
+      "actual": 6.250000000000001,
+      "expected": 6.25
+    },
+    {
+      "name": "orcamento equilibrado caso basico",
+      "actual": 10.0,
+      "expected": 10
+    },
+    {
+      "name": "denominador nulo inadmissivel",
+      "actual": 0.0,
+      "expected": 0
+    },
+    {
+      "name": "Inicial juros",
+      "actual": 4.0,
+      "expected": 4
+    },
+    {
+      "name": "Inicial renda",
+      "actual": 800.0,
+      "expected": 800
+    },
+    {
+      "name": "Inicial mercado bens",
+      "actual": 0.0,
+      "expected": 0
+    },
+    {
+      "name": "Inicial mercado moeda",
+      "actual": 300.0,
+      "expected": 300
+    },
+    {
+      "name": "Fiscal juros",
+      "actual": 5.0,
+      "expected": 5
+    },
+    {
+      "name": "Fiscal renda",
+      "actual": 850.0,
+      "expected": 850
+    },
+    {
+      "name": "Fiscal mercado bens",
+      "actual": 0.0,
+      "expected": 0
+    },
+    {
+      "name": "Fiscal mercado moeda",
+      "actual": 300.0,
+      "expected": 300
+    },
+    {
+      "name": "Monetaria juros",
+      "actual": 3.0,
+      "expected": 3
+    },
+    {
+      "name": "Monetaria renda",
+      "actual": 850.0,
+      "expected": 850
+    },
+    {
+      "name": "Monetaria mercado bens",
+      "actual": 0.0,
+      "expected": 0
+    },
+    {
+      "name": "Monetaria mercado moeda",
+      "actual": 350.0,
+      "expected": 350
+    },
+    {
+      "name": "fiscal com juros fixos",
+      "actual": 900,
+      "expected": 900
+    },
+    {
+      "name": "moeda necessaria a juros fixos",
+      "actual": 350.0,
+      "expected": 350
+    }
+  ],
+  "chart_points_match_equations": true,
+  "scenarios": [
+    {
+      "name": "Inicial",
+      "G": 300,
+      "B": 300,
+      "r": 4.0,
+      "Y": 800.0
+    },
+    {
+      "name": "Fiscal",
+      "G": 350,
+      "B": 300,
+      "r": 5.0,
+      "Y": 850.0
+    },
+    {
+      "name": "Monetaria",
+      "G": 300,
+      "B": 350,
+      "r": 3.0,
+      "Y": 850.0
+    }
+  ]
+}

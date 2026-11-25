@@ -1,5 +1,10 @@
 # Changelog
 
+## 24/11/2026 — Revisão de Macroeconomia 11–15
+
+- Publicadas cinco seções do modelo keynesiano/IS-LM: corrigidos estoques involuntários, premissas, propensões médias, sinais/condições dos multiplicadores, crowding-out e casos-limite. Preenchida tabela Mundell–Fleming com hipóteses e substituído gráfico arbitrário por barras derivadas de equações. Sete callouts/dois mapas, seis tabelas e um gráfico conferidos; preservadas identidades, títulos, ordem, cartões/mnemônicos e demais quinze seções, incluindo 01–10.
+- Somente v2 aplicada com pré-imagem, revisão esperada, bloqueio do tópico, dry-run contratual de 20 seções, rollback e controle negativo na última seção. Reconciliação integral 1/20: cinco revisões novas/quinze intactas. 32 cálculos, 30 combinações visuais finais (24 reaproveitadas/6 refeitas), 18 checagens de tabela, 12 interações de mapa e seis gráficos/tooltip aprovados; três controles Mermaid e três de gráfico rejeitados. Reaproveitados 49 testes com código inalterado; conta de aluno dispensada. Sem alteração de aplicação/schema/segurança. Parcial 15/20, restam 16–20. Evidências em `docs/revisoes-resumos/47-macroeconomia-11-15-20261124/`; commit editorial `b8f38df` (repositório sem remote).
+
 ## 24/11/2026 — Revisão de Macroeconomia 06–10
 
 - Publicadas cinco seções: índices de preços/inflação, identidades e financiamento, balanço de pagamentos no BPM6, salário real e demanda efetiva. Corrigidas generalizações sobre pleno emprego e narrativa da crise de 1929; seis callouts/quatro mapas e duas tabelas alinhados. Preservados títulos, identidades, ordem, cartões/mnemônicos e demais quinze seções, incluindo 01–05 publicados.
