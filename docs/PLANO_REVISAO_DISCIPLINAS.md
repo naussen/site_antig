@@ -79,7 +79,7 @@ Legenda: `[ ]` não iniciada; `[~]` parcial; `[x]` encerrada conforme seção 9.
 | 32 | Enfermagem | 5 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 5 tópicos vazios registrada em `32-enfermagem.md` | Aguardar autoria/importação futura de conteúdo |
 | 33 | Engenharia Florestal | 2 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 2 tópicos vazios registrada em `33-engenharia-florestal.md` | Aguardar autoria/importação futura de conteúdo |
 | 34 | Estatística | 4 | [x] concluída | Oito seções corrigidas e três acrescentadas; quatro tópicos e onze seções reconciliados; 66/66 verificações locais nos três temas e duas larguras. | Aceite da versão publicada; relatório 34 e recibos preparacao-20261123-v2. |
-| 35 | Ética no Serviço Público | 4 | [ ] não iniciada | Fotografia coletada (19 seções, 0 cartões, 5 diagramas) | Executar Onda 7 (ciclo D02–D08) |
+| 35 | Ética no Serviço Público | 4 | [ ] revisão pendente | Diagnóstico 25/11: 19 seções atuais; recorte de 1 seção e 3 callouts, sem aplicação; relatório 35 | Revisar somente Ética (Aspectos Teóricos), seção 01; preservar 18 seções e dois tópicos vazios |
 | 36 | Finanças Públicas | 1 | [ ] não iniciada | Fotografia coletada (7 seções, 0 cartões, 4 diagramas) | Executar Onda 7 (ciclo D02–D08) |
 | 37 | Física | 9 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 9 tópicos vazios registrada em `37-fisica.md` | Aguardar autoria/importação futura de conteúdo |
 | 38 | Geografia | 10 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 10 tópicos vazios registrada em `38-geografia.md` | Aguardar autoria/importação futura de conteúdo |

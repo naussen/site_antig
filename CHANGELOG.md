@@ -1,3 +1,7 @@
+## 2026-11-25 — diagnóstico do próximo lote de Resumos
+
+- Registro documental de Ética (Aspectos Teóricos), seção 01 e três callouts (relatório 35; editorial `9866980`). Leitura de catálogo e conteúdo sem escrita; propostas antigas não aplicadas. Macroeconomia preservada. Revisão e publicação de conteúdo continuam pendentes.
+
 # Changelog
 
 ## 25/11/2026 — Macroeconomia 16–20 e aceite do acervo delimitado
