@@ -1,0 +1,114 @@
+{
+  "checked_date_local": "2026-11-25",
+  "scope": "Somente trechos pertinentes e metadados primarios; nao leitura integral de manuais/relatorios",
+  "sources": [
+    {
+      "title": "BCB: base monetaria restrita, metadado SGS 1788",
+      "url": "https://dadosabertos.bcb.gov.br/dataset/1788-sgs",
+      "sections": [
+        "16"
+      ],
+      "use": "Base como passivo monetario: moeda em circulacao e reservas bancarias"
+    },
+    {
+      "title": "BCB: meios de pagamento amplos, metadado SGS 27842",
+      "url": "https://dadosabertos.bcb.gov.br/dataset/27842-sgs",
+      "sections": [
+        "16"
+      ],
+      "use": "Composicao M1–M4, cobertura de fundos e regras estatisticas"
+    },
+    {
+      "title": "BCB: Estatisticas monetarias e credito, 29/10/2026",
+      "url": "https://www.bcb.gov.br/content/estatisticas/hist_estatisticasmonetariascredito/202610_Texto_de_estatisticas_monetarias_e_de_credito.pdf",
+      "sections": [
+        "16"
+      ],
+      "use": "Secao 3: componentes/terminologia atuais; nenhum valor real importado"
+    },
+    {
+      "title": "Bank of England: Money creation in the modern economy, 2014",
+      "url": "https://www.bankofengland.co.uk/quarterly-bulletin/2014/q1/money-creation-in-the-modern-economy",
+      "sections": [
+        "16"
+      ],
+      "use": "Depositos criados por credito e limites do multiplicador mecanico; sem transpor normas britanicas"
+    },
+    {
+      "title": "BCB: Transmissao da Politica Monetaria por meio do Credito, 2026",
+      "url": "https://www.bcb.gov.br/content/publicacoes/outras_pub_alfa/relatorio_canal_transmissao_politica_monetaria.pdf",
+      "sections": [
+        "16",
+        "18",
+        "19"
+      ],
+      "use": "Sumario executivo e canais: juros, credito, expectativas e defasagens"
+    },
+    {
+      "title": "BCB: Politica cambial",
+      "url": "https://www.bcb.gov.br/estabilidadefinanceira/politicacambial",
+      "sections": [
+        "17"
+      ],
+      "use": "Regime brasileiro flutuante e intervencoes; trecho indexado consultado; pagina direta depende de JavaScript"
+    },
+    {
+      "title": "BCB: Relatorio de Inflacao, junho 2006, capitulo 3",
+      "url": "https://www.bcb.gov.br/content/ri/relatorioinflacao/200606/RELINF200606-ri200606c3p.pdf",
+      "sections": [
+        "16"
+      ],
+      "use": "Mecanica historica de reservas/esterilizacao; nao usado como politica ou dado atual"
+    },
+    {
+      "title": "Planalto: Constituicao, art. 164 §§1 e 2",
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm",
+      "sections": [
+        "16"
+      ],
+      "use": "Vedacao de emprestimos ao Tesouro e distincao de compra/venda de titulos; sem alteracao do corpus PRO Legis"
+    },
+    {
+      "title": "BCB: nota metodologica BPM6 1, 2014",
+      "url": "https://www.bcb.gov.br/content/estatisticas/notas_metodologicas/balanco_pagamentos/bpm6/nm1bpm6p.pdf",
+      "sections": [
+        "17",
+        "18"
+      ],
+      "use": "Conciliacao BP e saldo CF = aquisicao liquida ativos - incidencia liquida passivos"
+    },
+    {
+      "title": "MIT 14.02 aula 18, 2004",
+      "url": "https://web.mit.edu/14.02/www/S04/lecture18.pdf",
+      "sections": [
+        "18"
+      ],
+      "use": "Paridade descoberta com expectativas e cotacao; fonte metodologica, nao previsao"
+    },
+    {
+      "title": "BCB: Estudo Especial 26/2018, repasse cambial",
+      "url": "https://www.bcb.gov.br/conteudo/relatorioinflacao/EstudosEspeciais/Repasse_cambial_sob_a_otica_de_um_modelo_semiestrutural.pdf",
+      "sections": [
+        "19"
+      ],
+      "use": "Repasse condicionado a expectativas, ciclo e margens; sem coeficiente empirico introduzido"
+    },
+    {
+      "title": "FMI: Real Exchange Rates, Luis Catao, 2019",
+      "url": "https://www.imf.org/en/publications/fandd/issues/series/back-to-basics/real-exchange-rates",
+      "sections": [
+        "20"
+      ],
+      "use": "q = E P*/P, PPC e limites; exemplo ficticio derivado independentemente"
+    },
+    {
+      "title": "FMI Working Paper 04/85, Juan Sole, 2004",
+      "url": "https://www.imf.org/-/media/websites/imf/imported-full-text-pdf/external/pubs/ft/wp/2004/_wp0485.pdf",
+      "sections": [
+        "20"
+      ],
+      "use": "Analise de defesa de paridade e custos; artigo de autor, nao receita ou posicao oficial universal do FMI"
+    }
+  ],
+  "access_limits": "Nota tecnica BCB 48/2018 retornou timeout; substituida por metadados acessiveis e nota estatistica 2026. Algumas paginas BCB diretas exigem JavaScript: somente trechos oficiais indexados tratados como consultados. PDF PPC/BCB 2002 tem extracao textual corrompida e nao foi base substantiva; FMI acessivel usado."
+}

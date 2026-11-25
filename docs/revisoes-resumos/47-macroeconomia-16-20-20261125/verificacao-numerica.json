@@ -1,0 +1,171 @@
+{
+  "ok": true,
+  "checks_count": 33,
+  "checks": [
+    {
+      "name": "M1",
+      "actual": 100,
+      "expected": 100
+    },
+    {
+      "name": "BM",
+      "actual": 36,
+      "expected": 36
+    },
+    {
+      "name": "caixa e reservas BC",
+      "actual": 16,
+      "expected": 16
+    },
+    {
+      "name": "c",
+      "actual": 0.2,
+      "expected": 0.2
+    },
+    {
+      "name": "d",
+      "actual": 0.8,
+      "expected": 0.8
+    },
+    {
+      "name": "c mais d",
+      "actual": 1.0,
+      "expected": 1
+    },
+    {
+      "name": "r",
+      "actual": 0.2,
+      "expected": 0.2
+    },
+    {
+      "name": "kappa",
+      "actual": 0.25,
+      "expected": 0.25
+    },
+    {
+      "name": "k razao direta",
+      "actual": 2.7777777777777777,
+      "expected": 2.7777777777777777
+    },
+    {
+      "name": "k c rd",
+      "actual": 2.7777777777777772,
+      "expected": 2.7777777777777777
+    },
+    {
+      "name": "k forma d",
+      "actual": 2.7777777777777786,
+      "expected": 2.7777777777777777
+    },
+    {
+      "name": "k forma kappa",
+      "actual": 2.7777777777777777,
+      "expected": 2.7777777777777777
+    },
+    {
+      "name": "sem numerario publico",
+      "actual": 5.0,
+      "expected": 5
+    },
+    {
+      "name": "r igual um",
+      "actual": 1.0,
+      "expected": 1
+    },
+    {
+      "name": "todo dinheiro com publico",
+      "actual": 1.0,
+      "expected": 1
+    },
+    {
+      "name": "saque preserva M1",
+      "actual": 100,
+      "expected": 100
+    },
+    {
+      "name": "saque preserva BM",
+      "actual": 36,
+      "expected": 36
+    },
+    {
+      "name": "credito novo eleva M1",
+      "actual": 150,
+      "expected": 150
+    },
+    {
+      "name": "pagamento principal reduz M1",
+      "actual": 80,
+      "expected": 80
+    },
+    {
+      "name": "transferencia poupanca M1",
+      "actual": 80,
+      "expected": 80
+    },
+    {
+      "name": "transferencia poupanca M2",
+      "actual": 110,
+      "expected": 110
+    },
+    {
+      "name": "conversao cambial",
+      "actual": 500,
+      "expected": 500
+    },
+    {
+      "name": "alta cotacao direta pct",
+      "actual": 10.000000000000009,
+      "expected": 10
+    },
+    {
+      "name": "queda cotacao inversa pct",
+      "actual": -9.090909090909093,
+      "expected": -9.090909090909092
+    },
+    {
+      "name": "CF passivos 30",
+      "actual": -20,
+      "expected": -20
+    },
+    {
+      "name": "CF passivos 40",
+      "actual": -30,
+      "expected": -30
+    },
+    {
+      "name": "PPC absoluta inicial",
+      "actual": 5.0,
+      "expected": 5
+    },
+    {
+      "name": "q inicial",
+      "actual": 1.0,
+      "expected": 1
+    },
+    {
+      "name": "PPC relativa exata",
+      "actual": 5.196078431372549,
+      "expected": 5.196078431372549
+    },
+    {
+      "name": "taxa depreciacao exata pct",
+      "actual": 3.9215686274509887,
+      "expected": 3.92156862745098
+    },
+    {
+      "name": "q final constante",
+      "actual": 1.0,
+      "expected": 1
+    },
+    {
+      "name": "aproximacao inflacao diferencial pct",
+      "actual": 3.9999999999999996,
+      "expected": 4
+    },
+    {
+      "name": "MV igual PY",
+      "actual": 400,
+      "expected": 400
+    }
+  ]
+}

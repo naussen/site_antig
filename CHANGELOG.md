@@ -1,5 +1,11 @@
 # Changelog
 
+## 25/11/2026 — Macroeconomia 16–20 e aceite do acervo delimitado
+
+- Publicadas cinco seções: moeda/base/agregados e multiplicador, criação/destruição de M1, política/instrumentos/balanços, regimes e juros/câmbio, repasse inflacionário, crises e PPC. Oito callouts/três mapas e oito tabelas conferidos. IDs, títulos, ordem, cartões/mnemônicos e quinze revisões anteriores, incluindo 01–15, preservados.
+- Somente v2 aplicada com pré-imagem, revisão esperada/bloqueio de tópico, dry-run contratual de 20 seções, rollback e controle negativo na última seção. Reconciliação integral 1/20; 33 cálculos, 30 combinações finais (24 reaproveitadas/6 refeitas), 24 checagens de tabela e 18 interações de mapa aprovados, além de detalhe de fórmulas 16. Reaproveitados 49 testes com código inalterado; aluno dispensado. Sem alteração de aplicação/schema/segurança/corpus PRO Legis.
+- Censo dos quatro lotes com hashes/revisões atuais: 20/20 seções, 27 callouts, 14 mapas, um gráfico e 120 combinações finais cumulativas, sem IDs ausentes/duplicados. Matriz explícita e aceite [x] restrito ao acervo/versão, não a edital ou conteúdo futuro. Evidências em `docs/revisoes-resumos/47-macroeconomia-16-20-20261125/`; commit editorial `add17b0` (sem remote). Nenhuma outra frente iniciada.
+
 ## 24/11/2026 — Revisão de Macroeconomia 11–15
 
 - Publicadas cinco seções do modelo keynesiano/IS-LM: corrigidos estoques involuntários, premissas, propensões médias, sinais/condições dos multiplicadores, crowding-out e casos-limite. Preenchida tabela Mundell–Fleming com hipóteses e substituído gráfico arbitrário por barras derivadas de equações. Sete callouts/dois mapas, seis tabelas e um gráfico conferidos; preservadas identidades, títulos, ordem, cartões/mnemônicos e demais quinze seções, incluindo 01–10.
