@@ -1,3 +1,7 @@
+## 2026-11-25 — diagnóstico de Ética, Legislação01–04
+
+- Recorte documental de quatro seções, seis callouts e dois mapas; nenhuma alteração de conteúdo nem escrita no banco. Seção teórica publicada conferida e preservada; progresso permanece1/19. Relatório35 e checkpoint espelhados; editorial `83f7d81`.
+
 ## 2026-11-25 — Ética: publicação parcial da seção teórica
 
 - Publicada somente Ética (Aspectos Teóricos), seção01 e três callouts: 15 correções, CAS por revisão com pré-imagem/diário, teste negativo e reconciliação sem divergências. Outras18 revisões preservadas; seis visuais e55 testes aprovados. Disciplina parcial; Macroeconomia preservada. Editorial `6a896fa`, relatório35 e checkpoint espelhados. Sem alteração de aplicação.
