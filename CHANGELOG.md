@@ -1,3 +1,7 @@
+## 2026-11-26 — Finanças Públicas01–04 revisadas
+
+- Quatro seções examinadas;01/02/04 publicadas com CAS e reconciliadas,03 aceita sem edição. Externalidades, governança/Coase e assimetria/concorrência corrigidos; quatro callouts/três mapas atualizados.24 visuais efetivos,18 zoom/overlay,44 testes aprovados.05–07, vínculos e Ética aceita20/20 preservados. Relatório36/checkpoint/fontes/recibos espelhados; editorial `d1f5318`. Avanço4/7; fila22[x]/25[~]/7[ ]; nenhum próximo lote iniciado.
+
 ## 2026-11-26 — diagnóstico de Finanças Públicas01–04
 
 - Relatório36/recorte de quatro seções sobre falhas de mercado registrado:6 callouts,3 mapas e1 tabela;05–07 fora do lote. Propostas locais antigas sem publicação comprovada e divergentes do banco atual. Zero escrita no banco; Ética aceita preservada,20 conteúdos/revisões iguais. Achados/fontes/checkpoint espelhados; editorial `8cf2b9a`. Sem início de revisão/publicação ou alteração de aplicação.

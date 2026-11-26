@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-26",
+  "status": "revisado_publicado_reconciliado",
+  "discipline": "Finanças Públicas",
+  "reviewed_sections": [
+    "financas-publicas-sec-01",
+    "financas-publicas-sec-02",
+    "financas-publicas-sec-03",
+    "financas-publicas-sec-04"
+  ],
+  "changed_sections": [
+    "financas-publicas-sec-01",
+    "financas-publicas-sec-02",
+    "financas-publicas-sec-04"
+  ],
+  "unchanged_reviewed_section": "financas-publicas-sec-03",
+  "components": {
+    "texts_reviewed": 4,
+    "callouts_reviewed": 6,
+    "callouts_changed": 4,
+    "maps_changed": 3,
+    "table_reviewed_unchanged": 1,
+    "flashcards": 0,
+    "mnemonics": 0
+  },
+  "manifest_sha256": "c20692765e95e05e20061cdc8d3867736dde65121f91df800d8dd0bee8a5ea4e",
+  "after_sha256": "f4ec1f47a5131188d527d4676fba885de0b91e7a11d8772730ee3426cb7e0535",
+  "revisions": [
+    {
+      "section_id": "financas-publicas-sec-01",
+      "current_revision_id": "4376a511-7605-4066-822c-a0eec3aad7ae"
+    },
+    {
+      "section_id": "financas-publicas-sec-02",
+      "current_revision_id": "61bd363e-1312-4415-ae75-2f5e311c7dbb"
+    },
+    {
+      "section_id": "financas-publicas-sec-04",
+      "current_revision_id": "93a8d85e-1182-4f3a-8979-f6984babf629"
+    }
+  ],
+  "preserved_financas_revision_ids": 4,
+  "sections05_07_preserved": true,
+  "section03_preserved_without_new_revision": true,
+  "ethics20_contents_and_revisions_preserved": true,
+  "ethics_report_sha256": "60b7d2d035a5734a01457ef5a1778fbf0e6bbc0ca9f3bda3399663af72d5881b",
+  "bindings_preserved": true,
+  "dry_run_sections": 7,
+  "scope_review_sections": 4,
+  "validation": {
+    "content_tests_passed": 44,
+    "malicious_mermaid_rejected": 3,
+    "negative_cas_rows": 0,
+    "visual_combinations_effective": 24,
+    "visual_reused_v1": 18,
+    "visual_rerun_v2": 6,
+    "zoom_overlay": 18,
+    "table_checks": 6,
+    "reconciled": true
+  },
+  "application": "três CAS sequenciais existentes por identidade/revisão com pré-imagem/preflight/diário sincronizado; não uma transação única entre as três",
+  "active_version": "secoes-01-04-20261126-v2",
+  "prior_preparation": "../secoes-01-04-20261126, sem aplicação; mesmas01/02/03 e ajuste textual final em04",
+  "skills_used": [
+    "exatas, conteúdo/formulação/tabela/diagramas; sem alterar renderizador"
+  ],
+  "application_changes": false,
+  "student_check": "dispensado; visual local não é smoke autenticado",
+  "cumulative_reviewed": 4,
+  "total_active_sections": 7,
+  "remaining_sections": [
+    "financas-publicas-sec-05",
+    "financas-publicas-sec-06",
+    "financas-publicas-sec-07"
+  ],
+  "discipline_complete": false,
+  "stop": true,
+  "editorial_commit": "d1f5318a74a9af92dd6452ab28747c4f0768a995",
+  "editorial_remote": "sem remoto",
+  "local_evidence_path": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\36-financas-publicas\\secoes-01-04-20261126-v2",
+  "documentation_only": true
+}

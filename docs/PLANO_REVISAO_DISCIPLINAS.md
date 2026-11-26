@@ -29,7 +29,7 @@ Caminhos relativos abaixo partem do repositório editorial. Inventário: `invent
 
 ## 3. Progresso consolidado e limites conhecidos
 
-A fila inclui 54 disciplinas. Há 22 com aceite para a versão revisada do catálogo, 24 parciais (incluindo as 20 sem seções na fotografia) e 8 ainda não iniciadas na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa. Corpus PRO Legis permanece fora do escopo; sua integração com a gamificação permanece autorizada.
+A fila inclui 54 disciplinas. Há 22 com aceite para a versão revisada do catálogo, 25 parciais (incluindo as 20 sem seções na fotografia) e 7 ainda não iniciadas na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa. Corpus PRO Legis permanece fora do escopo; sua integração com a gamificação permanece autorizada.
 
 | Frente | Última evidência | Trabalho seguinte |
 |---|---|---|
@@ -80,7 +80,7 @@ Legenda: `[ ]` não iniciada; `[~]` parcial; `[x]` encerrada conforme seção 9.
 | 33 | Engenharia Florestal | 2 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 2 tópicos vazios registrada em `33-engenharia-florestal.md` | Aguardar autoria/importação futura de conteúdo |
 | 34 | Estatística | 4 | [x] concluída | Oito seções corrigidas e três acrescentadas; quatro tópicos e onze seções reconciliados; 66/66 verificações locais nos três temas e duas larguras. | Aceite da versão publicada; relatório 34 e recibos preparacao-20261123-v2. |
 | 35 | Ética no Serviço Público | 3 ativos (4 físicos) | [x] aceita para a fotografia | 20/20 seções,37 callouts/5 mapas; seis lotes e120 visuais válidos consolidados;20 revisões/vínculos/alias preservados; zero vazios ativos | Encerrada para a versão do relatório35; sem certificar edital ou reaplicar conteúdo. Nenhum próximo lote iniciado. |
-| 36 | Finanças Públicas | 1 | [ ] diagnóstico delimitado | SELECT confirmou7 seções; recorte01–04:4 textos,6 callouts,3 mapas/1 tabela; propostas antigas sem recibo de publicação | Revisar somente01–04;05–07 reservadas para depois; preservar Ética aceita; relatório36 |
+| 36 | Finanças Públicas | 1 | [~] parcial | 4/7 revisadas;01/02/04 publicadas/reconciliadas com CAS,03 intacta;24 visuais efetivos,18 zoom/overlay,44 testes; Ética20/20 preservada | Restam05–07; não reaplicar01–04; relatório36 |
 | 37 | Física | 9 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 9 tópicos vazios registrada em `37-fisica.md` | Aguardar autoria/importação futura de conteúdo |
 | 38 | Geografia | 10 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 10 tópicos vazios registrada em `38-geografia.md` | Aguardar autoria/importação futura de conteúdo |
 | 39 | Informática | 15 | [x] encerrada no escopo | aceite 24/11 para a fotografia conciliada: 55/55 seções, 14 tópicos ativos (15 na coleta). Cadastro vazio de Redes arquivado com alias; um vínculo de questão transferido com metadados preservados. 55 revisões intactas e 14 vínculos reconciliados; relatório 39. | Encerrada para esta versão; não reaplicar lotes. Nenhuma próxima frente iniciada. |

@@ -1,0 +1,56 @@
+
+> site@0.1.0 test:content
+> node --test tests/content-admin.test.mjs
+
+✔ alteração editorial preserva identidade e não exige manifesto (1.3169ms)
+✔ arquivamento é bloqueado sem manifesto (0.4802ms)
+✔ manifesto de divisão cobre origem, destinos e estratégia pessoal (3.585ms)
+✔ manifesto rejeita destino não declarado e estratégia ausente (0.961ms)
+✔ relatório inclui dados pessoais afetados e restauração (0.3053ms)
+✔ aceita o mesmo contrato básico da API de importação (3.5048ms)
+✔ rejeita flashcard sem questão rastreável e aceita C/E com fonte válida (2.0748ms)
+✔ identifica análise estatística sem excluir flashcard C/E de conteúdo (0.9023ms)
+✔ repara somente o ruído Mermaid repetido observado no log (0.5353ms)
+✔ reduz ordinais repetidos somente no nó correspondente da linha do tempo (0.6101ms)
+✔ lê CSV de duas colunas com vírgulas e aspas escapadas (0.421ms)
+✔ converte pergunta e assertiva anexadas para o padrão C/E (0.6792ms)
+✔ repara flashcard anexado que expôs gabarito no enunciado (0.345ms)
+✔ classifica flashcards de Português em seções temáticas (3.1415ms)
+✔ classifica flashcards de Contabilidade nas seções temáticas (1.5587ms)
+✔ classifica flashcards de Auditoria nas seções temáticas (1.3974ms)
+✔ classifica flashcards de Administração Pública nas seções temáticas (1.1595ms)
+✔ preserva flashcards legados sem afrouxar o validador padrão (0.5683ms)
+✔ modo de preservação não aceita seção sustentada apenas por flashcard (0.3963ms)
+✔ modo de preservação exige inventário e identidade permanente exatos (0.3129ms)
+✔ classifica flashcards de Administração Geral nas seções temáticas (1.6634ms)
+✔ rejeita topic_id com palavras fragmentadas por hífens (0.3263ms)
+✔ preserva topic_id legado coerente mesmo quando difere do título (0.1986ms)
+✔ não infere fragmentação a partir de título legado com mojibake (0.6435ms)
+✔ mantém os 30 redirects de topic_id únicos e inclui o caso reportado (0.1327ms)
+✔ aplica valores opcionais compatíveis com a API (1.2147ms)
+✔ aceita identidade permanente e deixa ordenação independente do section_id (0.3137ms)
+✔ rejeita identidade parcial ou duplicada sem quebrar payload legado (0.5164ms)
+✔ aceita Mermaid estático e preserva quebra visual permitida (0.3282ms)
+✔ rejeita interações, protocolos executáveis e HTML em Mermaid (0.9266ms)
+✔ rejeita section_id duplicado no mesmo arquivo (0.2653ms)
+✔ rejeita section_id fora da sequência canônica (0.1973ms)
+✔ rejeita título de seção duplicado sem diferenciar caixa ou acento (0.2097ms)
+✔ rejeita título descritivo em caixa alta e preserva siglas (0.4332ms)
+✔ rejeita DOUTINA e seção sem conteúdo útil (0.6378ms)
+✔ rejeita payload sem seções (0.2491ms)
+✔ normaliza argumentos textuais e rejeita vazio (0.1265ms)
+✔ operações destrutivas exigem confirmação literal (0.1346ms)
+✔ lote exige exatamente um entre dry-run e apply (0.1299ms)
+✔ lote preserva o prefixo numérico do arquivo, inclusive com lacunas (0.1199ms)
+✔ monta tópico com ordem apenas quando fornecida pelo lote (0.113ms)
+✔ lote rejeita topic_id repetido entre arquivos (0.2476ms)
+✔ lote rejeita section_id repetido entre módulos (0.1508ms)
+✔ lote rejeita ordem repetida dentro da mesma disciplina (0.1909ms)
+ℹ tests 44
+ℹ suites 0
+ℹ pass 44
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 361.0142
