@@ -1,3 +1,7 @@
+## 2026-11-26 — Finanças Públicas05–07 revisadas
+
+- Três seções examinadas, corrigidas, publicadas com CAS e reconciliadas: incidência racional e hipóteses de tributação na05, estabilizadores automáticos/medidas anticíclicas na06 e convenções de sinal, conciliação estoque-fluxo e séries históricas2009 na07. Cinco callouts/um mapa/quatro gráficos/quatro tabelas conferidos;18 visuais finais,6 zoom/overlay,24 checagens de tabela e4 gráficos aprovados;44 testes reutilizados.01–04, vínculos e Ética aceita20/20 preservados. Relatório36/checkpoint/fontes/recibos espelhados; editorial `569acdf`. Avanço editorial7/7 (disciplina mantida[~] até aceite documental consolidado); fila22[x]/25[~]/7[ ]; nenhum próximo lote iniciado.
+
 ## 2026-11-26 — diagnóstico de Finanças Públicas05–07
 
 - Recorte de3 seções,5 callouts,1 mapa,4 gráficos e4 tabelas registrado no relatório36; inconsistências tributárias/números da05 e sinais/conceitos históricos da07 documentados;06 com núcleo correto. SELECT confirmou7 conteúdos/revisões e Ética20/20 preservados. Zero escrita/publicação de conteúdo; avanço4/7 mantido. Evidências/checkpoint/fontes espelhados; editorial `c23e6dd`. Sem início da revisão ou próximo lote.

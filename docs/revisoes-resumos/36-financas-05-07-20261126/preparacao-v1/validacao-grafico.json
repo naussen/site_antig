@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "sharedSchema": true,
+  "validCharts": 4,
+  "invalidRejected": 4,
+  "charts": [
+    {
+      "section_id": "financas-publicas-sec-05",
+      "title": "Quantidade de equilíbrio antes e depois da tributação",
+      "type": "line",
+      "points": 4,
+      "values": [
+        2000,
+        1800,
+        1860.47,
+        1873.68
+      ]
+    },
+    {
+      "section_id": "financas-publicas-sec-05",
+      "title": "Elasticidade e perda de peso morto",
+      "type": "bar",
+      "points": 2,
+      "values": [
+        1,
+        2
+      ]
+    },
+    {
+      "section_id": "financas-publicas-sec-06",
+      "title": "Ciclo econômico sem política estabilizadora",
+      "type": "line",
+      "points": 7,
+      "values": [
+        0,
+        3,
+        0,
+        -3,
+        0,
+        3,
+        0
+      ]
+    },
+    {
+      "section_id": "financas-publicas-sec-06",
+      "title": "Ciclo econômico suavizado",
+      "type": "line",
+      "points": 7,
+      "values": [
+        0,
+        1,
+        0,
+        -1,
+        0,
+        1,
+        0
+      ]
+    }
+  ]
+}

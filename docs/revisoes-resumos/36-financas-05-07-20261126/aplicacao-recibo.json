@@ -1,0 +1,39 @@
+{
+  "status": "completed",
+  "steps": [
+    {
+      "op_id": "financas-publicas-sec-05",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "baad7270-0704-41e7-a4dc-309cc3ebadbd"
+    },
+    {
+      "op_id": "financas-publicas-sec-06",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "233c64ca-02d3-47ba-8267-47e360364776"
+    },
+    {
+      "op_id": "financas-publicas-sec-07",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "d55d317f-f0a1-4147-b4b3-8cb24124ebf9"
+    }
+  ],
+  "post": {
+    "ok": true,
+    "target": "saneado",
+    "expectedTopics": 1,
+    "expectedSections": 7,
+    "topics": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "sections": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  }
+}

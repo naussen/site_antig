@@ -1,0 +1,81 @@
+{
+  "checked_on": "2026-11-26",
+  "sources": [
+    {
+      "id": "bcb_manual_2019",
+      "title": "Banco Central do Brasil — Manual de Estatísticas Fiscais (maio/2019)",
+      "url": "https://www.bcb.gov.br/content/estatisticas/Documents/notas_metodologicas/estatisticas-fiscais/estatisticasfiscais.pdf",
+      "checked_date": "2026-11-26",
+      "relevant_sections": "Caps. 2 (pp. 8–10: abrangência do SPNF, exclusão de Petrobras em 2009 e Eletrobras em 2010, DBGG vs. DLSP e operações compromissadas), 3 (pp. 12–15: DLSP, NFSP nominal/primário/operacional, encerramento da série operacional em dez./2009, juros nominais por competência e demais fluxos por caixa), 5 (pp. 32–35: sinais da NFSP com déficit positivo, RN = variação da DLSP menos ajustes, encerramento da série com desvalorização cambial em 2009), 6 e 7 (pp. 37–40: ajustes metodológicos/paridade, caixa-competência, privatização como alienação abatida do fluxo e reconhecimento de dívidas/esqueletos).",
+      "application": "Seção 07: uniformização de sinais (saldo vs. NFSP), eliminação de dupla dedução de ajustes em RN = NFSP - AP, distinção DBGG vs. DLSP, abrangência, regime caixa/competência, contextualização histórica das séries encerradas em 2009, distinção entre atualização monetária e imposto inflacionário, e tratamento correto de privatizações. Usado estritamente como referência metodológica oficial, sem apresentar exemplos históricos como conjuntura atual."
+    },
+    {
+      "id": "tesouro_rtn",
+      "title": "Secretaria do Tesouro Nacional — Resultado do Tesouro Nacional (RTN)",
+      "url": "https://www.gov.br/tesouronacional/pt-br/estatisticas-fiscais-e-planejamento/resultado-do-tesouro-nacional-rtn",
+      "checked_date": "2026-11-26",
+      "relevant_sections": "Página institucional da STN (atualizada em 30/07/2026): consolidação mensal acima da linha do resultado primário do Governo Central (Tesouro Nacional, Previdência Social/RGPS e Banco Central) pelo confronto direto entre fluxos de ingressos e saídas, em contraste com a apuração abaixo da linha pelo BCB.",
+      "application": "Seção 07: distinção institucional entre apuração acima da linha (STN / Governo Central, convenção de saldo com superávit positivo) e abaixo da linha (BCB / Setor Público Consolidado)."
+    },
+    {
+      "id": "tesouro_ctb_2025",
+      "title": "Tesouro Transparente — Carga Tributária do Governo Geral (Boletim 2025)",
+      "url": "https://www.tesourotransparente.gov.br/publicacoes/carga-tributaria-do-governo-geral/2025/114",
+      "checked_date": "2026-11-26",
+      "relevant_sections": "Apresentação metodológica do boletim oficial: definição da Carga Tributária Bruta do Governo Geral (Governo Central, Estados e Municípios) expressa como razão em percentual do PIB.",
+      "application": "Seção 07: distinção entre arrecadação tributária absoluta em moeda e o indicador de Carga Tributária Bruta em % do PIB, sem incorporar números conjunturais ao resumo."
+    },
+    {
+      "id": "camara_cf88_atualizada",
+      "title": "Câmara dos Deputados — Constituição da República Federativa do Brasil de 1988 (texto atualizado)",
+      "url": "https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-normaatualizada-pl.html",
+      "checked_date": "2026-11-26",
+      "relevant_sections": "Art. 164, caput, §§ 1º e 2º (competência exclusiva do BCB para emitir moeda, vedação de empréstimos diretos ou indiretos ao Tesouro Nacional, e compra/venda de títulos para regular oferta de moeda ou juros); art. 153, VIII e § 6º, VI (possibilidade de alíquotas específicas ou ad valorem em tributação seletiva).",
+      "application": "Seções 05 e 07: compatibilização da emissão monetária e do endividamento com a vedação constitucional brasileira (art. 164, § 1º) e qualificação de tributos seletivos (específicos ou ad valorem) sem expandir para reforma tributária geral."
+    },
+    {
+      "id": "camara_lei_4320",
+      "title": "Câmara dos Deputados — Lei nº 4.320/1964 (norma atualizada)",
+      "url": "https://www2.camara.leg.br/legin/fed/lei/1960-1969/lei-4320-17-marco-1964-376590-normaatualizada-pl.html",
+      "checked_date": "2026-11-26",
+      "relevant_sections": "Arts. 11 e 12: classificação das Despesas de Capital em Investimentos, Inversões Financeiras e Transferências de Capital (incluindo amortização da dívida).",
+      "application": "Seção 07: ressalva na identidade macroeconômica simplificada para não tratar gastos orçamentários de capital como sinônimo estrito de formação bruta de capital fixo (investimento)."
+    },
+    {
+      "id": "us_treasury_ota8",
+      "title": "U.S. Department of the Treasury — Bradford & Rosen, The Optimal Taxation of Commodities and Income (OTA Paper 8, Dec. 1975 / Mar. 1976)",
+      "url": "https://home.treasury.gov/system/files/131/WP-8.pdf",
+      "checked_date": "2026-11-26",
+      "relevant_sections": "Section II (Optimal Commodity Taxation, pp. 5–11, eqs. 8 e 9): ausência de tributos lump-sum, preços ao produtor fixos (retornos constantes / oferta perfeitamente elástica), consumidor representativo e derivação da regra da elasticidade inversa (t_r = delta / E_rr) apenas sob a hipótese forte de elasticidades cruzadas nulas (demandas independentes); Section III e IV (pp. 12–21): tensão entre eficiência e objetivos distributivos/equidade horizontal.",
+      "application": "Seção 05: explicitação das hipóteses da regra inversa de Ramsey e qualificação do trade-off entre eficiência e equidade. Usado como referência teórica seminal, não como recomendação normativa atual."
+    },
+    {
+      "id": "openstax_incidencia_3e",
+      "title": "OpenStax — Principles of Economics 3e, Section 5.3 (Elasticity and Pricing) & Section 3.5 (Demand, Supply, and Efficiency)",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/5-3-elasticity-and-pricing",
+      "checked_date": "2026-11-26",
+      "relevant_sections": "Elasticity and Tax Incidence: divisão econômica do ônus tributário entre consumidores e produtores conforme elasticidades relativas da demanda e da oferta (lado mais inelástico arca com maior parcela), sem repasse integral automático; perda de peso morto em mercados competitivos sem falhas.",
+      "application": "Seção 05: distinção entre incidência legal e econômica, qualificação do repasse nos tributos indiretos, relação entre elasticidades e perda de peso morto, e contextualização das áreas de excedente."
+    },
+    {
+      "id": "openstax_escolhas_redistr",
+      "title": "OpenStax — Principles of Economics 2e Appendix B (Indifference Curves) & 3e Sections 15.5 (Government Policies to Reduce Income Inequality) and 30.2 (Taxation)",
+      "url": "https://openstax.org/books/principles-economics-2e/pages/b-indifference-curves",
+      "checked_date": "2026-11-26",
+      "relevant_sections": "Appendix B: decomposição entre efeito substituição e efeito renda nas escolhas consumo e trabalho-lazer; 15.5 e 30.2: redistribuição por tributos progressivos, transferências e gastos sociais; distinção entre tributos progressivos, proporcionais e regressivos, alíquota média (efetiva) e alíquota marginal.",
+      "application": "Seção 05: síntese curta da função distributiva (tributos, transferências e serviços públicos), distinção alíquota média vs. marginal, comparação excise vs. lump-sum com receita equivalente e efeito renda, e ambiguidade teórica entre efeito renda e substituição na oferta de trabalho."
+    },
+    {
+      "id": "openstax_stabilizers_3e",
+      "title": "OpenStax — Principles of Economics 3e, Section 30.5 (Automatic Stabilizers)",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/30-5-automatic-stabilizers",
+      "checked_date": "2026-11-26",
+      "relevant_sections": "Distinção entre política fiscal discricionária (alterações deliberadas em gastos e tributos) e estabilizadores automáticos (como seguro-desemprego e imposto de renda progressivo, que reagem automaticamente às oscilações do produto e da renda).",
+      "application": "Seção 06: inclusão de um parágrafo conciso exemplificando estabilizadores automáticos e medidas discricionárias expansionistas/contracionistas na função estabilizadora, preservando gráficos e mapa mental."
+    }
+  ],
+  "limitations": [
+    "O portal do Planalto (planalto.gov.br) redefiniu a conexão TCP e o portal da OCDE (Consumption Tax Trends 2020) e PDFs diretos do FMI retornaram HTTP 403 na abertura automatizada; não se alega leitura dessas URLs bloqueadas. Foram utilizadas fontes primárias oficiais e acadêmicas abertas integralmente verificadas em 26/11/2026: Câmara dos Deputados (CF/1988 atualizada, inclusive EC 132/2023 para alíquotas específicas e ad valorem, e Lei 4.320/1964), Manual de Estatísticas Fiscais do BCB (PDF integral), páginas oficiais da STN/Tesouro Transparente, U.S. Treasury OTA Paper 8 (PDF integral) e OpenStax Principles of Economics.",
+    "Tabelas escalonadas e alíquotas exemplificativas na seção 05 foram expressamente identificadas como hipotéticas/ilustrativas, sem certificar alíquotas estaduais ou faixas vigentes do IRPF."
+  ]
+}

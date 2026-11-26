@@ -1,0 +1,88 @@
+{
+  "status": "revisado_e_tratado",
+  "checked_on": "2026-11-26",
+  "scope": "Finanças Públicas 05–07",
+  "components_examined": {
+    "texts": 3,
+    "callouts": 5,
+    "mermaid_maps": 1,
+    "quant_charts": 4,
+    "tables": 4,
+    "flashcards": 0,
+    "mnemonics": 0
+  },
+  "findings": [
+    {
+      "id": "FP-05-01",
+      "section": "financas-publicas-sec-05",
+      "severity": "alta",
+      "verdict": "confirmado",
+      "summary": "Inconsistência numérica nos exemplos de incidência ad valorem (por dentro e por fora) entre equações, texto, tabela e quant-chart.",
+      "resolution": "Recalculados em precisão racional integral (Python Fraction): específico mantido (pc=6,40; pp=5,50; Q=1.800; R=1.620,00; ônus 0,40 e 0,50); ad valorem 10% por dentro sincronizado (pc=270/43≈6,2791; pp=243/43≈5,6512; Q=80.000/43≈1.860,465116; R=2.160.000/1.849≈1.168,199027; ônus 12/43 e 15/43); ad valorem 10% por fora sincronizado (pc=594/95≈6,2526; pp=108/19≈5,6842; Q=35.600/19≈1.873,684211; R=384.480/361≈1.065,041551; ônus 24/95 e 6/19). Atualizados equações, texto, tabela comparativa e quant-chart.",
+      "sources": ["openstax_incidencia_3e"]
+    },
+    {
+      "id": "FP-05-02",
+      "section": "financas-publicas-sec-05",
+      "severity": "alta",
+      "verdict": "confirmado",
+      "summary": "Tabela afirmava que a alíquota marginal do lump-sum decresce com a renda; definição imprecisa de progressividade/proporcionalidade e equidade.",
+      "resolution": "Corrigida a distinção algébrica: para T(y)=K, alíquota marginal dT/dy = 0 e alíquota média K/y decrescente; incluída linha do sistema proporcional na tabela (média = marginal = t); esclarecido que progressividade exige alíquota média crescente (marginal acima da média, podendo subir em degraus por faixas) e qualificada a relação entre proporcionalidade, valores absolutos pagos e critérios normativos de equidade vertical.",
+      "sources": ["openstax_escolhas_redistr", "us_treasury_ota8"]
+    },
+    {
+      "id": "FP-05-03",
+      "section": "financas-publicas-sec-05",
+      "severity": "media",
+      "verdict": "confirmado",
+      "summary": "Comparação entre excise e lump-sum omitia igualdade de receita, tratava neutralidade como ausência de efeito renda e restringia excise a tributo unitário.",
+      "resolution": "Explicitada no texto e no callout 1 a condição de arrecadação equivalente sobre o consumidor, a presença de efeito renda no lump-sum (neutralidade restrita aos preços relativos) e a possibilidade de excises adotarem alíquotas específicas ou ad valorem.",
+      "sources": ["openstax_escolhas_redistr", "camara_cf88_atualizada"]
+    },
+    {
+      "id": "FP-05-04",
+      "section": "financas-publicas-sec-05",
+      "severity": "media",
+      "verdict": "confirmado",
+      "summary": "Generalizações sobre repasse integral de indiretos, perda de peso morto, regra inversa de Ramsey, pico de Laffer, oferta de trabalho, título duplicado e áreas A–D sem diagrama.",
+      "resolution": "Diferenciada incidência legal de econômica (sem repasse automático integral); ressalvado tributo corretivo em externalidades; explicitadas as hipóteses da regra inversa de Ramsey (ausência de lump-sum, custos constantes e elasticidades cruzadas nulas) no texto e no callout 2; diferenciado máximo de arrecadação na Curva de Laffer de ótimo de bem-estar; afastada a dedução automática entre ES e ER apenas pelo nível de renda; removido título duplicado de Laffer; contextualizadas as áreas A–D como referência ao diagrama clássico de excedentes; declarados hipotéticos os exemplos numéricos de alíquotas/faixas; incluída síntese curta da função distributiva (tributos, transferências e serviços públicos) e referência ao art. 164, § 1º, da CF/1988.",
+      "sources": ["us_treasury_ota8", "openstax_incidencia_3e", "openstax_escolhas_redistr", "camara_cf88_atualizada"]
+    },
+    {
+      "id": "FP-06-01",
+      "section": "financas-publicas-sec-06",
+      "severity": "baixa",
+      "verdict": "parcialmente_confirmado",
+      "summary": "Núcleo conceitual, callout, mapa Mermaid e os dois gráficos conceituais estavam corretos, faltando apenas menção objetiva a estabilizadores automáticos e medidas discricionárias.",
+      "resolution": "Preservados integralmente o callout, o mapa Mermaid e os dois gráficos estruturados conceituais; acrescentado apenas um parágrafo conciso distinguindo estabilizadores automáticos (tributação progressiva e seguro-desemprego) de política fiscal discricionária expansionista e contracionista, sem reproduzir o conteúdo de Macroeconomia.",
+      "sources": ["openstax_stabilizers_3e"]
+    },
+    {
+      "id": "FP-07-01",
+      "section": "financas-publicas-sec-07",
+      "severity": "alta",
+      "verdict": "confirmado",
+      "summary": "Alternância não anunciada de sinal entre saldo (Receitas - Despesas) e NFSP (Despesas - Receitas), omissão de juros líquidos/regime/abrangência e dupla dedução potencial em RN = NFSP - AP.",
+      "resolution": "Explicitadas as duas convenções de sinal (saldo com superávit positivo vs. NFSP com déficit positivo), preservando o exemplo prático 360 - 400 = -40 (saldo) / +40 (NFSP); especificados juros nominais líquidos por competência, fluxos primários por caixa e abrangências (Governo Central na STN vs. SPNF consolidado no BCB); substituída RN = NFSP - AP por NFSP_nominal = ΔDLSP - AJ, com exemplo numérico reconciliado.",
+      "sources": ["bcb_manual_2019", "tesouro_rtn"]
+    },
+    {
+      "id": "FP-07-02",
+      "section": "financas-publicas-sec-07",
+      "severity": "alta",
+      "verdict": "confirmado",
+      "summary": "Equiparação estrita entre dívida e soma de déficits, privatização listada como estoque permanente de ativo, correção monetária equiparada a imposto inflacionário, ausência de distinção DBGG vs. DLSP e omissão do encerramento das séries operacionais e com desvalorização cambial em 2009.",
+      "resolution": "Diferenciados DLSP e DBGG, fluxos fiscais e ajustes de estoque (cambiais, reconhecimentos de passivos e privatização como alienação de ativo que reduz a DLSP sem integrar o resultado fiscal); contextualizadas expressamente como históricas as séries de resultado operacional e de NFSP com desvalorização cambial (encerradas pelo BCB em 2009); desfeita a confusão entre correção monetária da dívida e imposto inflacionário; alinhados os dois callouts.",
+      "sources": ["bcb_manual_2019"]
+    },
+    {
+      "id": "FP-07-03",
+      "section": "financas-publicas-sec-07",
+      "severity": "media",
+      "verdict": "confirmado",
+      "summary": "Arrecadação absoluta confundida com CTB em % do PIB, identidade simplificada tratando gastos de capital como sinônimo de investimento, títulos descritos como aumento da poupança pública e afirmação categórica 'não aumenta a inflação'.",
+      "resolution": "Distinguida arrecadação em moeda de CTB em % do PIB; qualificadas as identidades macroeconômicas simplificadas (mesma unidade, consolidação sem dupla contagem e diferença entre investimento e despesas orçamentárias de capital da Lei 4.320/1964); esclarecido que venda de títulos é financiamento do déficit (não elevação da poupança corrente pública) e qualificado seu efeito inflacionário condicional; preservada a vedação do art. 164, § 1º, da CF/1988.",
+      "sources": ["tesouro_ctb_2025", "camara_lei_4320", "camara_cf88_atualizada", "bcb_manual_2019"]
+    }
+  ]
+}

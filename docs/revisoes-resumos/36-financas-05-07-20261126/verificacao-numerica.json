@@ -1,0 +1,189 @@
+{
+  "checked_on": "2026-11-26",
+  "method": "Aritmética racional exata (Python fractions.Fraction), sem arredondamento intermediário.",
+  "initial_equilibrium": {
+    "pe": 6,
+    "qe": 2000
+  },
+  "tax_incidence": [
+    {
+      "case": "especifico_0_90",
+      "pc": {
+        "exact": "32/5",
+        "decimal_7": 6.4,
+        "decimal_4": 6.4,
+        "decimal_2": 6.4
+      },
+      "pp": {
+        "exact": "11/2",
+        "decimal_7": 5.5,
+        "decimal_4": 5.5,
+        "decimal_2": 5.5
+      },
+      "quantity": {
+        "exact": "1800/1",
+        "decimal_6": 1800.0,
+        "decimal_2": 1800.0
+      },
+      "unit_tax": {
+        "exact": "9/10",
+        "decimal_7": 0.9,
+        "decimal_4": 0.9
+      },
+      "revenue": {
+        "exact": "1620/1",
+        "decimal_6": 1620.0,
+        "decimal_2": 1620.0
+      },
+      "consumer_burden": {
+        "exact": "2/5",
+        "decimal_7": 0.4,
+        "decimal_4": 0.4
+      },
+      "producer_burden": {
+        "exact": "1/2",
+        "decimal_7": 0.5,
+        "decimal_4": 0.5
+      },
+      "deadweight_loss": {
+        "exact": "90/1",
+        "decimal_6": 90.0
+      }
+    },
+    {
+      "case": "ad_valorem_por_dentro_10pct",
+      "pc": {
+        "exact": "270/43",
+        "decimal_7": 6.2790698,
+        "decimal_4": 6.2791,
+        "decimal_2": 6.28
+      },
+      "pp": {
+        "exact": "243/43",
+        "decimal_7": 5.6511628,
+        "decimal_4": 5.6512,
+        "decimal_2": 5.65
+      },
+      "quantity": {
+        "exact": "80000/43",
+        "decimal_6": 1860.465116,
+        "decimal_2": 1860.47
+      },
+      "unit_tax": {
+        "exact": "27/43",
+        "decimal_7": 0.627907,
+        "decimal_4": 0.6279
+      },
+      "revenue": {
+        "exact": "2160000/1849",
+        "decimal_6": 1168.199027,
+        "decimal_2": 1168.2
+      },
+      "consumer_burden": {
+        "exact": "12/43",
+        "decimal_7": 0.2790698,
+        "decimal_4": 0.2791
+      },
+      "producer_burden": {
+        "exact": "15/43",
+        "decimal_7": 0.3488372,
+        "decimal_4": 0.3488
+      },
+      "deadweight_loss": {
+        "exact": "81000/1849",
+        "decimal_6": 43.807463
+      }
+    },
+    {
+      "case": "ad_valorem_por_fora_10pct",
+      "pc": {
+        "exact": "594/95",
+        "decimal_7": 6.2526316,
+        "decimal_4": 6.2526,
+        "decimal_2": 6.25
+      },
+      "pp": {
+        "exact": "108/19",
+        "decimal_7": 5.6842105,
+        "decimal_4": 5.6842,
+        "decimal_2": 5.68
+      },
+      "quantity": {
+        "exact": "35600/19",
+        "decimal_6": 1873.684211,
+        "decimal_2": 1873.68
+      },
+      "unit_tax": {
+        "exact": "54/95",
+        "decimal_7": 0.5684211,
+        "decimal_4": 0.5684
+      },
+      "revenue": {
+        "exact": "384480/361",
+        "decimal_6": 1065.041551,
+        "decimal_2": 1065.04
+      },
+      "consumer_burden": {
+        "exact": "24/95",
+        "decimal_7": 0.2526316,
+        "decimal_4": 0.2526
+      },
+      "producer_burden": {
+        "exact": "6/19",
+        "decimal_7": 0.3157895,
+        "decimal_4": 0.3158
+      },
+      "deadweight_loss": {
+        "exact": "12960/361",
+        "decimal_6": 35.900277
+      }
+    }
+  ],
+  "reference_match": {
+    "por_dentro_pc_6_2790698": true,
+    "por_dentro_q_1860_465116": true,
+    "por_dentro_rev_1168_199027": true,
+    "por_fora_pc_6_2526316": true,
+    "por_fora_q_1873_684211": true,
+    "por_fora_rev_1065_041551": true
+  },
+  "progressive_examples": {
+    "income_3500": {
+      "tax": 675,
+      "avg_pct_2dec": 19.29,
+      "marginal_pct": 25
+    },
+    "income_4000": {
+      "tax": 750,
+      "avg_pct_2dec": 18.75,
+      "marginal_pct": 25
+    }
+  },
+  "regressive_example": {
+    "tax_amount": 170,
+    "share_5000_pct": 3.4,
+    "share_20000_pct": 0.85
+  },
+  "lump_sum_algebra": {
+    "formula": "T(y) = K (K > 0)",
+    "marginal_rate": "dT/dy = 0",
+    "average_rate": "T(y)/y = K/y (decrescente para y > 0)"
+  },
+  "fiscal_examples_sec07": {
+    "above_the_line": {
+      "revenues": 360,
+      "expenses": 400,
+      "primary_balance": -40,
+      "primary_nfsp": 40
+    },
+    "below_the_line_reconciliation": {
+      "delta_dlsp": 100,
+      "net_adjustments": 30,
+      "nominal_nfsp": 70,
+      "nominal_interest": 50,
+      "primary_nfsp": 20,
+      "nominal_balance": -70,
+      "primary_balance": -20
+    }
+  }
+}
