@@ -29,7 +29,7 @@ Caminhos relativos abaixo partem do repositório editorial. Inventário: `invent
 
 ## 3. Progresso consolidado e limites conhecidos
 
-A fila inclui 54 disciplinas. Há 21 com aceite para a versão revisada do catálogo, 25 parciais (incluindo as 20 sem seções na fotografia) e 8 ainda não iniciadas na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa. Corpus PRO Legis permanece fora do escopo; sua integração com a gamificação permanece autorizada.
+A fila inclui 54 disciplinas. Há 22 com aceite para a versão revisada do catálogo, 24 parciais (incluindo as 20 sem seções na fotografia) e 8 ainda não iniciadas na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa. Corpus PRO Legis permanece fora do escopo; sua integração com a gamificação permanece autorizada.
 
 | Frente | Última evidência | Trabalho seguinte |
 |---|---|---|
@@ -79,7 +79,7 @@ Legenda: `[ ]` não iniciada; `[~]` parcial; `[x]` encerrada conforme seção 9.
 | 32 | Enfermagem | 5 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 5 tópicos vazios registrada em `32-enfermagem.md` | Aguardar autoria/importação futura de conteúdo |
 | 33 | Engenharia Florestal | 2 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 2 tópicos vazios registrada em `33-engenharia-florestal.md` | Aguardar autoria/importação futura de conteúdo |
 | 34 | Estatística | 4 | [x] concluída | Oito seções corrigidas e três acrescentadas; quatro tópicos e onze seções reconciliados; 66/66 verificações locais nos três temas e duas larguras. | Aceite da versão publicada; relatório 34 e recibos preparacao-20261123-v2. |
-| 35 | Ética no Serviço Público | 3 ativos (4 físicos) | [~] parcial | Complemento cidadania/democracia1seção/2callouts publicado/reconciliado;20/20 seções ativas,19 revisões anteriores/vínculos/alias preservados;6 visuais;0 vazios | Aceite documental consolidado da fotografia ainda não emitido; sem reaplicar conteúdo; relatório35 |
+| 35 | Ética no Serviço Público | 3 ativos (4 físicos) | [x] aceita para a fotografia | 20/20 seções,37 callouts/5 mapas; seis lotes e120 visuais válidos consolidados;20 revisões/vínculos/alias preservados; zero vazios ativos | Encerrada para a versão do relatório35; sem certificar edital ou reaplicar conteúdo. Nenhum próximo lote iniciado. |
 | 36 | Finanças Públicas | 1 | [ ] não iniciada | Fotografia coletada (7 seções, 0 cartões, 4 diagramas) | Executar Onda 7 (ciclo D02–D08) |
 | 37 | Física | 9 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 9 tópicos vazios registrada em `37-fisica.md` | Aguardar autoria/importação futura de conteúdo |
 | 38 | Geografia | 10 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 10 tópicos vazios registrada em `38-geografia.md` | Aguardar autoria/importação futura de conteúdo |

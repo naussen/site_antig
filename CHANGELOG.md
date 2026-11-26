@@ -1,3 +1,7 @@
+## 2026-11-25 — aceite documental de Ética no Serviço Público
+
+- Aceite da fotografia integral:3 tópicos ativos/20 seções,37 callouts/5 mapas; seis lotes e120 visuais válidos consolidados. SELECT confirmou20 conteúdos/revisões, cadastros/vínculos/alias preservados; zero vazios ativos. Nenhuma escrita ou reaplicação no banco. Relatório35/matriz/checkpoint espelhados; editorial `0a27cb2`. Fila22[x]/24[~]/8[ ]; nenhum próximo lote iniciado.
+
 ## 2026-11-25 — complemento de cidadania e democracia
 
 - Uma seção/dois callouts publicados com inclusão transacional protegida; dry-run, rollback e negativos de catálogo/ocupação aprovados. Três tópicos/20 seções reconciliados,19 revisões e vínculos/alias anteriores preservados. Seis visuais aprovados;49 testes válidos reutilizados. Relatório35/checkpoint/recibos/fontes espelhados; editorial `b1975a4`. Zero tópicos ativos vazios; aceite documental consolidado não emitido neste lote. Sem alteração de aplicação.

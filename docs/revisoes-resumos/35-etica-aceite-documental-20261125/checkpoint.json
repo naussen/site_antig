@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-25",
+  "status": "aceite_documental_consolidado_da_fotografia",
+  "discipline": "Ética no Serviço Público",
+  "report": "35-etica-no-servico-publico.md",
+  "scope": "três tópicos ativos/20 seções; quatro cadastros físicos, um arquivado com alias",
+  "discipline_complete": true,
+  "completion_scope": "versão e fotografia dos lotes documentados, sem certificação de edital ou atualização permanente",
+  "totals": {
+    "sections": 20,
+    "topics_active": 3,
+    "topics_physical": 4,
+    "callouts": 37,
+    "maps": 5,
+    "flashcards": 0,
+    "mnemonics": 0,
+    "visual_passed": 120,
+    "corrected": 16,
+    "unchanged": 3,
+    "added": 1
+  },
+  "database_writes": 0,
+  "content_changes": 0,
+  "content_reapplied": false,
+  "publication": "somente documentação; conteúdo já publicado em lotes anteriores",
+  "parity": {
+    "ok": true,
+    "target": "preimagem",
+    "expectedTopics": 3,
+    "expectedSections": 20,
+    "topics": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "sections": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  },
+  "current_revision_ids_preserved": 20,
+  "revision_fingerprint": "9611958b5550da62fd0fb0f66ff2ed16cef9a1adfd1dc94f9e76718a48f1f760",
+  "bindings_and_physical_catalog_preserved": true,
+  "empty_active_topics": 0,
+  "decision": "aceite [x] da fotografia integral:16 seções corrigidas,3 conferidas sem edição,1 complemento adicionado; conciliação cadastral preservada",
+  "proof": "matriz-aceite.json associa cada uma das20 identidades/revisões ao lote, recibo e visual; sem lacuna ou sobreposição",
+  "validation_this_batch": [
+    "SELECT e comparação integral de conteúdos/revisões",
+    "comparação de catálogo físico, vínculos e alias",
+    "sintaxe/JSON/diff e contagens da fila"
+  ],
+  "validation_reused": "120 combinações visuais válidas dos seis lotes; testes de conteúdo/executor, dry-runs e proteção/reconciliação próprios de cada publicação; nada repetido sem mudança",
+  "limits": [
+    "Conta de aluno dispensada; não houve smoke autenticado.",
+    "Fontes e limites jurisprudenciais/editoriais permanecem os documentados em cada lote, com data25/11/2026; nenhuma nova revisão jurídica neste aceite.",
+    "Não representa cobertura integral de qualquer edital nem garantia para alterações futuras.",
+    "Propostas/SQL antigos não rastreados preservados; não são versão vigente e não foram executados."
+  ],
+  "queue_after": {
+    "accepted": 22,
+    "partial": 24,
+    "not_started": 8
+  },
+  "stop": true,
+  "next_batch_started": false,
+  "editorial_commit": "0a27cb2c2404d884df8593718eb08640e4c7ce04",
+  "editorial_remote": "sem remoto",
+  "local_evidence_path": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\35-etica-no-servico-publico\\aceite-documental-20261125",
+  "documentation_only": true
+}

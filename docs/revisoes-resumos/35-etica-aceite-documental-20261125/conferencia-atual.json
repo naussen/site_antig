@@ -1,0 +1,61 @@
+{
+  "checked_at": "2026-11-26T02:53:56.511Z",
+  "database_writes": 0,
+  "parity": {
+    "ok": true,
+    "target": "preimagem",
+    "expectedTopics": 3,
+    "expectedSections": 20,
+    "topics": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "sections": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  },
+  "revision_ids_preserved": 20,
+  "revision_fingerprint": "9611958b5550da62fd0fb0f66ff2ed16cef9a1adfd1dc94f9e76718a48f1f760",
+  "content_fingerprint": "16466672d5ef9770c80e893ecfcaf573e56b9192cbc45b3dc20b72b39d14cf79",
+  "topics": [
+    {
+      "topic_id": "etica-aspectos-teoricos",
+      "discipline": "Ética no Serviço Público",
+      "title": "Ética (Aspectos Teóricos)",
+      "sort_order": 1,
+      "archived_at": null,
+      "sections": 1
+    },
+    {
+      "topic_id": "etica-cidadania-e-democracia",
+      "discipline": "Ética no Serviço Público",
+      "title": "Ética, Moral, Cidadania e Democracia",
+      "sort_order": null,
+      "archived_at": null,
+      "sections": 1
+    },
+    {
+      "topic_id": "legislacao",
+      "discipline": "Ética no Serviço Público",
+      "title": "Legislação",
+      "sort_order": 2,
+      "archived_at": null,
+      "sections": 18
+    }
+  ],
+  "empty_topics": [],
+  "bindings_and_physical_catalog_preserved": true,
+  "decree_redirect_preserved": true,
+  "archived_topics": [
+    {
+      "topic_id": "decreto-1171-1994",
+      "title": "Código de Ética Profissional (Decreto nº 1.171/1994)",
+      "archived_at": "2026-11-26T01:13:49.271341+00:00"
+    }
+  ],
+  "questions_relations_count": 45,
+  "discipline_relations_count": 4
+}

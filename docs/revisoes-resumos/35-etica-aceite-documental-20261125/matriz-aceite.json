@@ -1,0 +1,477 @@
+{
+  "date": "2026-11-25",
+  "mode": "consolidacao_documental_sem_revisao_editorial_nova",
+  "totals": {
+    "sections": 20,
+    "topics_active": 3,
+    "topics_physical": 4,
+    "callouts": 37,
+    "maps": 5,
+    "flashcards": 0,
+    "mnemonics": 0,
+    "visual_passed": 120,
+    "corrected": 16,
+    "unchanged": 3,
+    "added": 1
+  },
+  "batches": [
+    {
+      "batch": "teoricos-01-20261125",
+      "sections": 1,
+      "visual_passed": 6,
+      "reconciled": true,
+      "application_receipt": true,
+      "checkpoint_status": "publicado_reconciliado",
+      "evidence_hashes": {
+        "checkpoint.json": "85d17cdf4ea4f09b459a46ce7a8d8890837bcceb840c470a16afd475a46eee11",
+        "secoes-revisadas.json": "d645a47132874b568b936764b6f62ccf231e651b9dfe87745096650ebffb92fa",
+        "reconciliacao.json": "c5f5b4dd81c47f9e0ae49153ac71a6ee674a13e945298658ec2e825f26163796",
+        "render-visual.json": "a4ac18b55061371ccad8d599e7084f7a5e2cfc30d5ca50b3dbe50b19795fd93e",
+        "fontes.json": "de563ff47f41877de992ff5d6c0628aa234610ce05158b0b520a56a648c84162",
+        "aplicacao-recibo.json": "0cfa7581ccf873644a659165039d27e8cd8a41a32821ba31c71f19b3adcbd32b"
+      }
+    },
+    {
+      "batch": "legislacao-01-04-20261125",
+      "sections": 4,
+      "visual_passed": 24,
+      "reconciled": true,
+      "application_receipt": true,
+      "checkpoint_status": "revisado_publicado_reconciliado",
+      "evidence_hashes": {
+        "checkpoint.json": "e7f254eeb95fbb1c992d5d741c7f476fe74204dce0fa77c096a9cd6a7854b860",
+        "secoes-revisadas.json": "01f57997c69152fb7edab03785043c2328bacb6d86c10a6daa422f7e6cdeb9b0",
+        "reconciliacao.json": "5422c9ac419d0b0b7e47811d85746852a2aa524305cfd276d0e5a09bcefe5aa6",
+        "render-visual.json": "34dea04781032bfb7b1aaf406a44f23b01e7eb0197eae7dadf90c02a4f43c606",
+        "fontes.json": "d9881469d9db0240153413efbf80084485704dd2c226cd4a5b7cc9e00f1aa232",
+        "aplicacao-recibo.json": "7ef163db27dc5a3d5f39d0beb6478f0f5a1c9f4a15a39bca3093e288cf463edf"
+      }
+    },
+    {
+      "batch": "legislacao-05-09-20261125",
+      "sections": 5,
+      "visual_passed": 30,
+      "reconciled": true,
+      "application_receipt": true,
+      "checkpoint_status": "revisado_publicado_reconciliado",
+      "evidence_hashes": {
+        "checkpoint.json": "1b8b47e0cee2e5027e951514f75affc9ed1b842c623858dd6b3354f303728cc9",
+        "secoes-revisadas.json": "ba3a0e8456c984fd4a6164a68adb4e4dedf258932d883df4107fe940d91182a9",
+        "reconciliacao.json": "78e78eecb581c4559e78215f98ab155e99ed07cd1910084aff5985b930ef2bd3",
+        "render-visual.json": "1607d762e0aabb40c831c6f9ee85662bb89c26b9f67dbf361c1a083df95257a9",
+        "fontes.json": "9fff47e837b270d82a4d0f09841f00a7273b39be77d45fb0a9b7e5cf20acd89d",
+        "aplicacao-recibo.json": "d4032f32768f8194444610622da93d2c600d7b2310cf65ec884ab6c509edb4da"
+      }
+    },
+    {
+      "batch": "legislacao-10-14-20261125",
+      "sections": 5,
+      "visual_passed": 30,
+      "reconciled": true,
+      "application_receipt": true,
+      "checkpoint_status": "revisado_publicado_reconciliado",
+      "evidence_hashes": {
+        "checkpoint.json": "26c4812483bbbec708c7561f6b3ec32ec820f25b795c493276d8ea1b6ae4880c",
+        "secoes-revisadas.json": "ebb26d653001f9a98c02ae1f128f581f508b060f53795c49e770f21e8fecd022",
+        "reconciliacao.json": "5848ad12e8cdaf8e69cbb914fb060bd192ed079ef3905a303ef792890017322d",
+        "render-visual.json": "1e20e6cf3b9ce4b02c5823f8858b0469c9522936006936690e30f1bc21f2b87f",
+        "fontes.json": "442c3168dfe8e1afa560c469bacbfff63fd4bb50c9aeafbfe9c5b7bf937e0b09",
+        "aplicacao-recibo.json": "65f57e590b683ae2fed03229f4be3a8ba021c01c50d9cc850cd70aa3bd1d67f4"
+      }
+    },
+    {
+      "batch": "legislacao-15-18-20261125",
+      "sections": 4,
+      "visual_passed": 24,
+      "reconciled": true,
+      "application_receipt": true,
+      "checkpoint_status": "revisado_publicado_reconciliado",
+      "evidence_hashes": {
+        "checkpoint.json": "da97d0ac5e3153b27253312b50231c3129a9a3262ebbe18e8679b66a0e69a119",
+        "secoes-revisadas.json": "172761326e50a13974b2bd2d715b1d68ff1cfb39a0a901d844246d772750653d",
+        "reconciliacao.json": "61ccf79394fa1621e6785d30067cb293411feb104bb22095b0c4d4c98baf54d8",
+        "render-visual.json": "601f7bf909586225b6d66544f462e72db9ec543c36acc83bad5c47a14e867bc7",
+        "fontes.json": "6141872d986f2f68bc460a988eeda7326da8c55228bef898a5c091f302357f41",
+        "aplicacao-recibo.json": "e3f3a6ba0b71e2228509244ca7b243cd6673f3c714c41975f774cd08553d6593"
+      }
+    },
+    {
+      "batch": "cidadania-democracia-01-20261125",
+      "sections": 1,
+      "visual_passed": 6,
+      "reconciled": true,
+      "application_receipt": true,
+      "checkpoint_status": "complemento_revisado_publicado_reconciliado",
+      "evidence_hashes": {
+        "checkpoint.json": "16e33f039626b3cc7813c7b09448358ea29a12914be039d7b2ba8aced828809c",
+        "secoes-revisadas.json": "e4a5248a56ace4c733f6dbc2000fa072eb0b65ab2d82f1a4ed0c1811569051a9",
+        "reconciliacao.json": "638f2225fa3bae9eefc43ad9b6473992493c30223932c905622dd0b7f071e720",
+        "render-visual.json": "b740f8514c38887d0e6ece3601990cad05fb4dd86f32c39f44ec54467fa4e242",
+        "fontes.json": "190d72a12661d10d7bf186539841598c521334769f626f895ca0501c99d8e0ed",
+        "aplicacao-recibo.json": "51f420ebebd213e10345f24cc939ec750c9068df650b1012473971ff581c6c30"
+      }
+    }
+  ],
+  "sections": [
+    {
+      "section_id": "etica-aspectos-teoricos-sec-01",
+      "topic_id": "etica-aspectos-teoricos",
+      "title": "Nepotismo e Princípios Constitucionais da Publicidade e Eficiência",
+      "content_unit_id": "46be1bfe-bcc5-4443-b45b-10855e0f1d2f",
+      "stable_key": "nepotismo-e-principios-constitucionais-da-publicidade-e-eficiencia",
+      "current_revision_id": "56ea63de-1cfe-4337-94c9-5c9e36bc7673",
+      "content_sha256": "0b25555f2ac5940d0629aa5b7c23018f9abb10e957f179957feaf4e878f70512",
+      "review_batch": "teoricos-01-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 3,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-01",
+      "topic_id": "legislacao",
+      "title": "Decreto 1.171/94 – Código de Ética do Servidor Civil do Executivo Federal",
+      "content_unit_id": "288df14d-64ab-4312-bfbd-941cb07e2074",
+      "stable_key": "decreto-1-171-94-codigo-de-etica-do-servidor-civil-do-executivo-federal",
+      "current_revision_id": "8cfa3e84-9205-447b-a3f4-e09f420b8660",
+      "content_sha256": "7d0e92ff118707c2716a8ff6d051c5ba6df1f2203e6a6dbc94312a1bde8fb825",
+      "review_batch": "legislacao-01-04-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 2,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-02",
+      "topic_id": "legislacao",
+      "title": "Decreto 6.029/07 – Sistema de Gestão de Ética Pública",
+      "content_unit_id": "ebcb84fa-1deb-4568-ae17-4fa8552c1779",
+      "stable_key": "decreto-6-029-07-sistema-de-gestao-de-etica-publica",
+      "current_revision_id": "61f3ea82-65e1-438e-a8b8-1a59e574d612",
+      "content_sha256": "9b3b8341b9ed11498a56229e0d0b005e27062d0424f45e5b50e7a2668df9e6db",
+      "review_batch": "legislacao-01-04-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 1,
+        "maps": 1,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-03",
+      "topic_id": "legislacao",
+      "title": "Decreto 1.171/94 – Comissões de Ética",
+      "content_unit_id": "45933648-e63f-4cc0-bd21-38f8baa2e1a7",
+      "stable_key": "decreto-1-171-94-comissoes-de-etica",
+      "current_revision_id": "4d0d7ab7-e98c-47ba-b59b-b604ac9b7c57",
+      "content_sha256": "f5b80e0b90c107d7f8cc82cb3adc6c6403dc79c055fc89f143b84bc4815f97aa",
+      "review_batch": "legislacao-01-04-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 2,
+        "maps": 1,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-04",
+      "topic_id": "legislacao",
+      "title": "Comissão de Ética Pública (CEP)",
+      "content_unit_id": "e93dd3f9-251c-4033-96ef-f6a13e08122c",
+      "stable_key": "comissao-de-etica-publica-cep",
+      "current_revision_id": "10b0b3e4-98f1-42b7-8524-2c7c71e18b4f",
+      "content_sha256": "42214c607911eb966f7ed252f53f407d7962290312a2edbf02d64412ec4fa4b5",
+      "review_batch": "legislacao-01-04-20261125",
+      "disposition": "conferida_sem_edicao",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 1,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-05",
+      "topic_id": "legislacao",
+      "title": "Lei 8.429/92 – Lei de Improbidade Administrativa",
+      "content_unit_id": "7b3c38ae-8da6-4b99-bc6b-45c80df21d14",
+      "stable_key": "lei-8-429-92-lei-de-improbidade-administrativa",
+      "current_revision_id": "bde753c1-ba76-4ab7-9534-8fa00c6a26e5",
+      "content_sha256": "e322bc5ee439ced85de67eab9c72b87f676d5e589b48ab6b3fb2c0b6ed42e7a1",
+      "review_batch": "legislacao-05-09-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 2,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-06",
+      "topic_id": "legislacao",
+      "title": "Responsabilidade Sucessória na Lei de Improbidade Administrativa",
+      "content_unit_id": "3a0dd9c0-9938-4a75-bad7-dfdffb62eadc",
+      "stable_key": "responsabilidade-sucessoria-na-lei-de-improbidade-administrativa",
+      "current_revision_id": "1d61f66d-4aad-4f95-996a-feeba969ab44",
+      "content_sha256": "b4a20935a4abe7b9efdf91059115c646e2b446e54ba2dcd4ccc40dab2e94e630",
+      "review_batch": "legislacao-05-09-20261125",
+      "disposition": "conferida_sem_edicao",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 2,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-07",
+      "topic_id": "legislacao",
+      "title": "Elemento Subjetivo dos Atos de Improbidade Administrativa",
+      "content_unit_id": "fc89f1c6-2c69-4d67-9210-25d7cfe0b005",
+      "stable_key": "elemento-subjetivo-dos-atos-de-improbidade-administrativa",
+      "current_revision_id": "2e0f5e2b-b790-4cb5-8681-4496da037531",
+      "content_sha256": "a264692d3fe6bb7cabd64cffd4bd7c083cae419dd20783aa6f9885e0acf6f103",
+      "review_batch": "legislacao-05-09-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 2,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-08",
+      "topic_id": "legislacao",
+      "title": "Espécies de Atos de Improbidade Administrativa",
+      "content_unit_id": "038c126c-e8bc-45ac-9f2e-7a23abf091a0",
+      "stable_key": "especies-de-atos-de-improbidade-administrativa",
+      "current_revision_id": "d9c58043-06f7-46c3-a0b1-7178f8f59ef3",
+      "content_sha256": "ad2f61ef826379cd44c1ab12e83322afd9b9f1750bab915bbc2764c2a4fd7b85",
+      "review_batch": "legislacao-05-09-20261125",
+      "disposition": "conferida_sem_edicao",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 1,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-09",
+      "topic_id": "legislacao",
+      "title": "Distinção Prática de Condutas: Enriquecimento Ilícito (EI) x Prejuízo ao Erário (PE)",
+      "content_unit_id": "88589ee3-f88a-48de-a1de-729a2592c108",
+      "stable_key": "distincao-pratica-de-condutas-enriquecimento-ilicito-ei-x-prejuizo-ao-erario-pe",
+      "current_revision_id": "0cf0f4e2-1d2c-45ad-b450-a3b5477fb7d0",
+      "content_sha256": "879c051f172ba85516454923897f7e7308e2ce0c3f758eb8e9678dfb188aef40",
+      "review_batch": "legislacao-05-09-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 2,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-10",
+      "topic_id": "legislacao",
+      "title": "Atos de Improbidade Administrativa (Continuação)",
+      "content_unit_id": "4499ae57-1387-43ff-8524-f3680ed1febb",
+      "stable_key": "atos-de-improbidade-administrativa-continuacao",
+      "current_revision_id": "b025c222-ac98-4f48-8929-dbe15d07de6f",
+      "content_sha256": "51d99e2f4da9fefda5acac22e5882a33fa49e69ca3a453e4eb1f66e0d5c5a9eb",
+      "review_batch": "legislacao-10-14-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 2,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-11",
+      "topic_id": "legislacao",
+      "title": "Penas e Sanções",
+      "content_unit_id": "bc66646a-3801-4fbc-9f17-e7c5c6659185",
+      "stable_key": "penas-e-sancoes",
+      "current_revision_id": "70555732-e572-4104-b445-afb39fa9c543",
+      "content_sha256": "34a79a4768beb0ec1392a54296e32620e4a3a22b2bb5f71ba5e21767820ad241",
+      "review_batch": "legislacao-10-14-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 3,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-12",
+      "topic_id": "legislacao",
+      "title": "Efeitos das Sanções e Afastamento do Cargo",
+      "content_unit_id": "92e9102c-b1cf-4559-abb1-9faa65a4bd2f",
+      "stable_key": "efeitos-das-sancoes-e-afastamento-do-cargo",
+      "current_revision_id": "e2929add-9584-42b9-b015-594b1d5b8e80",
+      "content_sha256": "06fa03545479ffeddffe17ff223e62db324795308d793737d01d2e4408458676",
+      "review_batch": "legislacao-10-14-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 1,
+        "maps": 1,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-13",
+      "topic_id": "legislacao",
+      "title": "Improbidade Administrativa e Demais Esferas",
+      "content_unit_id": "8bd6b711-93fe-48b0-bd04-7dc82830c8d5",
+      "stable_key": "improbidade-administrativa-e-demais-esferas",
+      "current_revision_id": "a490d1c4-6f67-40db-81ab-1da3fddc75d4",
+      "content_sha256": "c586bf78fbeac86fe73adc5a3f306df0278ddb9a4cada39a3341839c3a3873d5",
+      "review_batch": "legislacao-10-14-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 2,
+        "maps": 1,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-14",
+      "topic_id": "legislacao",
+      "title": "Responsabilização de Pessoa Jurídica",
+      "content_unit_id": "895153b9-dfd1-4c0c-8224-031b17d89bd9",
+      "stable_key": "responsabilizacao-de-pessoa-juridica",
+      "current_revision_id": "f0f01247-445c-4a47-9410-f804075be15e",
+      "content_sha256": "d87e36d0f9d74cf532eb6cef6995e137eaa50621f812b80ece5a8fde310f96d1",
+      "review_batch": "legislacao-10-14-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 1,
+        "maps": 1,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-15",
+      "topic_id": "legislacao",
+      "title": "Declaração de Bens",
+      "content_unit_id": "61650836-4428-43d8-8b48-02066e3ac7ec",
+      "stable_key": "declaracao-de-bens",
+      "current_revision_id": "ec9d65d4-76a8-437a-81d0-ce63a9e2839b",
+      "content_sha256": "a66d55e9a29932a7115c7ece1c932dac75cf0e14d76ce89f8be17996ebec23b3",
+      "review_batch": "legislacao-15-18-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 1,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-16",
+      "topic_id": "legislacao",
+      "title": "Procedimento Administrativo e Processo Judicial",
+      "content_unit_id": "843f0a29-3805-45f0-8139-4a8bdedfcbc1",
+      "stable_key": "procedimento-administrativo-e-processo-judicial",
+      "current_revision_id": "ae240df6-63d8-4fbb-b339-a698231f93e2",
+      "content_sha256": "bb0e31adb5dd0445f54de0f25ffc2fa8ba6dac4c4b94b6e3ba94dd011ddcde77",
+      "review_batch": "legislacao-15-18-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 2,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-17",
+      "topic_id": "legislacao",
+      "title": "Procedimento",
+      "content_unit_id": "e53e3943-603a-41a9-982e-715a987f4b78",
+      "stable_key": "procedimento",
+      "current_revision_id": "8817d15f-860f-4ee4-a929-c54e8b4bd3db",
+      "content_sha256": "d2d41c48d380b9ca9d59b89dd3f9efa4b3233f4af3b0f50c278c910666ec39ca",
+      "review_batch": "legislacao-15-18-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 3,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "legislacao-sec-18",
+      "topic_id": "legislacao",
+      "title": "Suspensão e Interrupção do Prazo",
+      "content_unit_id": "956fb623-bb07-4e87-aad9-ec86e699ae68",
+      "stable_key": "suspensao-e-interrupcao-do-prazo",
+      "current_revision_id": "3379fbb5-ba2e-4ba5-9cd7-4d4aaee0c432",
+      "content_sha256": "0d0c3a192c6add16decae16f6eb9e880c9e1aa4fbd1eda5418ee59a6903d3931",
+      "review_batch": "legislacao-15-18-20261125",
+      "disposition": "corrigida_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 2,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    },
+    {
+      "section_id": "etica-cidadania-e-democracia-sec-01",
+      "topic_id": "etica-cidadania-e-democracia",
+      "title": "Ética, cidadania e democracia — aplicação ao serviço público",
+      "content_unit_id": "849d34da-695b-5c66-8349-755c0d53b1c2",
+      "stable_key": "etica-cidadania-e-democracia-fundamentos-20261123",
+      "current_revision_id": "be1a87a0-6b94-4d21-9d3b-8ef4fc242245",
+      "content_sha256": "11f4ba9510d693cce91b47089d670696756a05be73981d539a505b00b4c913fb",
+      "review_batch": "cidadania-democracia-01-20261125",
+      "disposition": "adicionada_publicada",
+      "visual_combinations": 6,
+      "components": {
+        "callouts": 2,
+        "maps": 0,
+        "flashcards": 0,
+        "mnemonics": 0
+      }
+    }
+  ]
+}
