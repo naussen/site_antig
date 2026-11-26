@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-25",
+  "status": "revisado_publicado_reconciliado",
+  "section_ids": [
+    "legislacao-sec-15",
+    "legislacao-sec-16",
+    "legislacao-sec-17",
+    "legislacao-sec-18"
+  ],
+  "changed_sections": 4,
+  "components": {
+    "callouts_examined": 8,
+    "callouts_changed": 4,
+    "maps": 0,
+    "flashcards": 0,
+    "mnemonics": 0
+  },
+  "manifest_sha256": "100e4cea1aa12620f2afe8860947b7bde46a23bea04293f422809b843d5d9106",
+  "after_sha256": "8d04f953fcfedf08f511f0902f9ce69583f23fa13897182aed783350d91eae95",
+  "revisions": [
+    {
+      "section_id": "legislacao-sec-15",
+      "current_revision_id": "ec9d65d4-76a8-437a-81d0-ce63a9e2839b"
+    },
+    {
+      "section_id": "legislacao-sec-16",
+      "current_revision_id": "ae240df6-63d8-4fbb-b339-a698231f93e2"
+    },
+    {
+      "section_id": "legislacao-sec-17",
+      "current_revision_id": "8817d15f-860f-4ee4-a929-c54e8b4bd3db"
+    },
+    {
+      "section_id": "legislacao-sec-18",
+      "current_revision_id": "3379fbb5-ba2e-4ba5-9cd7-4d4aaee0c432"
+    }
+  ],
+  "preserved_revision_ids": 15,
+  "previous_15_reviewed_preserved": true,
+  "dry_run_sections": 18,
+  "actual_updated_sections": 4,
+  "validation": {
+    "reused_content_tests": 49,
+    "reused_executor_tests": 6,
+    "malicious_rejected": 3,
+    "negative_cas_rows": 0,
+    "visual_combinations": 24,
+    "visual_passed": 24,
+    "reconciled": true,
+    "manual_captures": [
+      "15-light-375",
+      "17-dark-1200",
+      "18-sepia-375"
+    ],
+    "diff_check": "Aprovado nos arquivos editoriais/JSON/scripts; espaços finais dos RTFs/andamentos oficiais preservados para manter bytes/hashes, excluídos da checagem de whitespace."
+  },
+  "application": "quatro CAS sequenciais existentes por identidade/revisão com pré-imagem, preflight e diário sincronizado; não transação única de lote",
+  "jurisprudence": "ADIs7156/7236 dispositivos24/06 e01/07/2026; ADIs7042/43 mérito31/08/2022; STJ Acordo nos EAREsp102585/RS; Temas1199/897",
+  "source_limit": "RTFs oficiais integrais e Informativo1225; acórdão autônomo2026 não localizado; sem inferir termo inicial adicional do teto20anos ou modulação não decidida",
+  "application_changes": false,
+  "discipline_complete": false,
+  "cumulative_reviewed": 19,
+  "total_active_sections": 19,
+  "remaining_sections": 0,
+  "empty_topics_pending": 2,
+  "empty_topic_ids": [
+    "decreto-1171-1994",
+    "etica-cidadania-e-democracia"
+  ],
+  "student_check": "dispensado",
+  "next_scope": "somente diagnóstico do tópico vazio decreto-1171-1994; não iniciado",
+  "stop": true,
+  "editorial_commit": "087ac70d7f095079f554426c1c3d3cf5acc182dd",
+  "editorial_remote": "sem remoto",
+  "local_evidence_path": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\35-etica-no-servico-publico\\legislacao-15-18-20261125",
+  "publication": "conteúdo publicado e reconciliado no Supabase; este commit publica documentação, não deploy de aplicação"
+}

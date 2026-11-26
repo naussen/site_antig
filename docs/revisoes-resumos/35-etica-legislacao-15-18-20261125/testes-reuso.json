@@ -1,0 +1,13 @@
+{
+  "rerun": false,
+  "content_tests": 49,
+  "executor_tests": 6,
+  "content_source": "../legislacao-10-14-20261125/test-content.txt",
+  "content_sha256": "fa14a0bc03e7d2044fbd0984a01817d904907ee76cb14e6b9fade02a1a6f8ea4",
+  "executor_source": "../teoricos-01-20261125/test-cas.txt",
+  "executor_sha256": "3d52fc7b51fe4984c0f6511bd7cc3493b1faa8aeb3746941fcaecba62d7838c1",
+  "executor_mjs_sha256": "7240dccfdbab3ae344c286247e850a40da30b7cd013797d7721f497bcdd9780c",
+  "application_diff_since": "6696af7",
+  "application_diff": "",
+  "reason": "Renderizadores, validadores, executor e testes sem mudanças; novo payload validado por manifesto, dry-run, CAS negativo e visual. Não repetidos testes globais válidos."
+}

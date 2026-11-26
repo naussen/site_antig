@@ -1,0 +1,45 @@
+{
+  "status": "completed",
+  "steps": [
+    {
+      "op_id": "legislacao-sec-15",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "ec9d65d4-76a8-437a-81d0-ce63a9e2839b"
+    },
+    {
+      "op_id": "legislacao-sec-16",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "ae240df6-63d8-4fbb-b339-a698231f93e2"
+    },
+    {
+      "op_id": "legislacao-sec-17",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "8817d15f-860f-4ee4-a929-c54e8b4bd3db"
+    },
+    {
+      "op_id": "legislacao-sec-18",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "3379fbb5-ba2e-4ba5-9cd7-4d4aaee0c432"
+    }
+  ],
+  "post": {
+    "ok": true,
+    "target": "saneado",
+    "expectedTopics": 4,
+    "expectedSections": 19,
+    "topics": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "sections": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  }
+}

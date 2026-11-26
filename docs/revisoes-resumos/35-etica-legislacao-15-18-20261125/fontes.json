@@ -1,0 +1,65 @@
+{
+  "checked_on": "2026-11-25",
+  "urls": [
+    "https://portal.stf.jus.br/processos/abaAndamentos.asp?incidente=6396615&imprimir=true",
+    "https://portal.stf.jus.br/processos/downloadTexto.asp?id=6903437&ext=RTF",
+    "https://portal.stf.jus.br/processos/downloadTexto.asp?id=6909981&ext=RTF",
+    "https://portal.stf.jus.br/processos/abaAndamentos.asp?incidente=6475588&imprimir=true",
+    "https://portal.stf.jus.br/processos/downloadTexto.asp?id=6903438&ext=RTF",
+    "https://portal.stf.jus.br/processos/downloadTexto.asp?id=6909982&ext=RTF",
+    "https://portal.stf.jus.br/processos/abaAndamentos.asp?incidente=6315635&imprimir=true",
+    "https://portal.stf.jus.br/processos/downloadTexto.asp?id=5632189&ext=RTF",
+    "https://www.planalto.gov.br/ccivil_03/leis/l8429.htm",
+    "https://www.stf.jus.br/arquivo/informativo/documento/informativo1225.htm",
+    "https://sv03.stj.jus.br/SCON/GetInteiroTeorDoAcordao?dt_publicacao=06%2F04%2F2022&num_registro=201102369460",
+    "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4652910&numeroProcesso=843989&numeroTema=1199",
+    "https://portal.stf.jus.br/jurisprudenciaRepercussao/verAndamentoProcesso.asp?classeProcesso=RE&incidente=4670950&numeroProcesso=852475&numeroTema=897",
+    "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+  ],
+  "decisions": [
+    "ADIs7156/7236: dispositivos24/06 e01/07/2026, não votos isolados",
+    "ADIs7042/7043: mérito31/08/2022",
+    "STJ Acordo nos EAREsp102585/RS,09/03/2022,DJe06/04/2022",
+    "Temas1199 e897 STF"
+  ],
+  "limits": [
+    "RTFs oficiais integrais preservados; acórdão autônomo das ADIs2026 não localizado. Não inventados termo inicial do teto20anos ou modulação adicional.",
+    "Art16§§3/4/10: efeitos ex nunc expressos no dispositivo.",
+    "Extração auxiliar de andamentos contém artefatos de codificação; conferir em conjunto com RTF e Informativo oficial."
+  ],
+  "artifacts": [
+    {
+      "file": "adi7042-andamentos.txt",
+      "sha256": "f6d46858d8a044f0d020b854a4a5b198ae15e38e4866e175e79c89ee8add94b2"
+    },
+    {
+      "file": "adi7042-decisao-merito.rtf",
+      "sha256": "f778201c5e87714088a6221ea8138351c2f4250f02d3d356a76a22379f590f28"
+    },
+    {
+      "file": "adi7156-andamentos.txt",
+      "sha256": "1b6418e463771ccb7fb56abfda4808faff363d85b0465d61aee4a569932f8a4a"
+    },
+    {
+      "file": "adi7156-decisao-6903437.rtf",
+      "sha256": "9d06c45ed1ab4097ab8e46290670647489e93a086f5df5546367ce82a3a6fe3b"
+    },
+    {
+      "file": "adi7156-decisao-6909981.rtf",
+      "sha256": "6dfb8d1b73585ef604426e0845009c69a7f97c4ecf0aa61516b703352bf1e8b4"
+    },
+    {
+      "file": "adi7236-andamentos.txt",
+      "sha256": "2ba79ed9944f3c49b1d638395e8d722b160e5a3339187722f92299112299ffd3"
+    },
+    {
+      "file": "adi7236-decisao-6903438.rtf",
+      "sha256": "998e22af61c86e8eaef40332216e9bd8564eba353cf216519dae1015d6ae8dc2"
+    },
+    {
+      "file": "adi7236-decisao-6909982.rtf",
+      "sha256": "9d997b0bbfba9cb344994246a41b7da512d89c8385c711a1472ce2a4e9ade9eb"
+    }
+  ],
+  "constitutional_basis": "CF art5 LIV/LV: devido processo, contraditório e ampla defesa"
+}
