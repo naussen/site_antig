@@ -1,0 +1,19 @@
+{
+  "mechanism": "transação SQL adaptada do lote Redes/relatório39; RPC archive_content_topic e alias existentes",
+  "sql_sha256": "13205a0d8b225c35f48ece857b0242e4e2d79b6fb0cf79d1c4044f79d8794b52",
+  "locks": [
+    "dois tópicos FOR UPDATE",
+    "19 seções FOR UPDATE",
+    "vínculos de questões e disciplina FOR UPDATE"
+  ],
+  "guards": [
+    "catálogo e vínculos iguais à pré-imagem",
+    "conteúdo/revisões iguais à pré-imagem",
+    "ausência de novas dependências na origem",
+    "ausência de alias concorrente",
+    "15 transferências esperadas; zero seção arquivada",
+    "constraints imediatas antes de commit/rollback"
+  ],
+  "personal_data": "apenas contagens de atividades; nenhuma linha pessoal exportada ou alterada",
+  "questions": "IDs e hashes, sem exportar enunciados"
+}

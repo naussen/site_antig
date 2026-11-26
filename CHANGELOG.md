@@ -1,3 +1,7 @@
+## 2026-11-25 — conciliação do cadastro Decreto1171
+
+- Origem vazia arquivada com alias para Legislação;15 vínculos de questões transferidos com metadados intactos. Ensaio com rollback e negativo aprovados;3 tópicos ativos/19 revisões e18 hashes/vínculos reconciliados. Nenhum resumo criado/movido/republicado. Relatório35/checkpoint/evidências espelhados; editorial `14f75fa`. Disciplina parcial por um tópico vazio remanescente; sem alteração de aplicação.
+
 ## 2026-11-25 — diagnóstico do tópico vazio Decreto1171
 
 - Relatório35: assunto presente em Legislação01/03, complemento02; não criar resumo duplicado. Candidato à conciliação cadastral para Legislação, não aplicada. Zero escrita no banco,19 revisões preservadas. Decisão/checkpoint/SELECT espelhados; editorial `fbdd415`. Disciplina parcial por dois cadastros vazios ativos.

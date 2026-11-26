@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-25",
+  "status": "cadastro_conciliado_aplicado_reconciliado",
+  "scope": "decreto-1171-1994",
+  "destination": "legislacao",
+  "active_topics_before": 4,
+  "active_topics_after": 3,
+  "physical_topics": 4,
+  "active_sections": 19,
+  "preserved_revisions": 19,
+  "content_changes": 0,
+  "sections_created": 0,
+  "sections_moved": 0,
+  "sections_archived": 0,
+  "topic_archived": {
+    "topic_id": "decreto-1171-1994",
+    "title": "Código de Ética Profissional (Decreto nº 1.171/1994)",
+    "created_at": "2026-10-25T20:02:56.014427+00:00",
+    "discipline": "Ética no Serviço Público",
+    "sort_order": null,
+    "archived_at": "2026-11-26T01:13:49.271341+00:00",
+    "archived_by": null,
+    "archived_reason": "Conciliação cadastral: Decreto1171 já coberto em Legislação01/03, complemento02. Quinze vínculos de questões transferidos com metadados preservados. Relatório35,25/11/2026."
+  },
+  "redirect": {
+    "old_topic_id": "decreto-1171-1994",
+    "new_topic_id": "legislacao",
+    "created_at": "2026-11-26T01:13:49.271341+00:00"
+  },
+  "relations_transferred": 15,
+  "destination_relations": 18,
+  "overlap": 0,
+  "question_hashes_preserved": 18,
+  "discipline_relations_preserved": 2,
+  "relation_metadata_preserved": true,
+  "sql_sha256": "13205a0d8b225c35f48ece857b0242e4e2d79b6fb0cf79d1c4044f79d8794b52",
+  "transaction": "BEGIN/COMMIT; bloqueios e comparação exata da pré-imagem; RPC e alias existentes; constraints imediatas",
+  "validation": {
+    "dry_run_rollback": true,
+    "negative_concurrency_rejected": true,
+    "preflight_state_preserved": true,
+    "reconciled": true,
+    "json_diff_checked": true
+  },
+  "student_check": "dispensado; sem smoke autenticado",
+  "application_changes": false,
+  "discipline_complete": false,
+  "cumulative_reviewed": 19,
+  "empty_topics_remaining": [
+    "etica-cidadania-e-democracia"
+  ],
+  "next_scope": "diagnóstico isolado do outro tópico vazio, não iniciado",
+  "stop": true,
+  "editorial_commit": "14f75faf55ea5891ca71a7318034b64caad7ebf9",
+  "editorial_remote": "sem remoto",
+  "local_evidence_path": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\35-etica-no-servico-publico\\conciliacao-decreto-1171-20261125",
+  "documentation_only": true
+}

@@ -1,0 +1,20 @@
+{
+  "checked_on": "2026-11-25",
+  "type": "fontes primárias do contrato/cadastro, sem alteração jurídica",
+  "sources": [
+    "catalogo-recibo.json: FK e colunas topic_id reais",
+    "contratos-recibo.json: constraints/índices e triggers reais",
+    "funcoes-recibo.json: archive_content_topic e validação diferida",
+    "vinculos-recibo.json: contagens antes; sem exportar dados pessoais",
+    "preimagem-vinculos.json e vinculos-depois.json: metadados e hashes",
+    "rota de estudo existente: topic_id_redirects quando tópico não ativo"
+  ],
+  "route_path": "C:\\PRO\\site\\.worktrees\\informatica-hardware-20261123\\src\\app\\(study)\\[topicId]\\page.tsx",
+  "route_sha256": "376bc67e562260c5dff404f9d16b159693b948715819214ca89dfe057d9d5389",
+  "precedent": "../../39-informatica/conciliacao-redes-20261124/transacao-template.sql adaptado ao recorte35",
+  "legal_sources": "não reabertas: conteúdo jurídico já publicado preservado integralmente",
+  "limits": [
+    "Sem smoke autenticado de aluno; dispensa mantida.",
+    "Sem nova aplicação/dependência/schema/RLS; nenhum deploy necessário."
+  ]
+}
