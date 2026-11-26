@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-25",
+  "status": "diagnostico_concluido_lacuna_parcial_registrada",
+  "scope": "etica-cidadania-e-democracia",
+  "database_writes": 0,
+  "content_changes": 0,
+  "sections_created": 0,
+  "catalog_changes": 0,
+  "content_publication": false,
+  "target_sections_including_archived": 0,
+  "active_topics": 3,
+  "active_sections": 19,
+  "preserved_revisions": 19,
+  "revision_fingerprint": "d934e0c8a57e571eb534dfa148b73b652d6502c51f81c59ab1f661fb82612425",
+  "previous_decree_redirect_preserved": true,
+  "reviewed_for_coverage": {
+    "published_sections": 3,
+    "callouts": 6,
+    "maps": 1,
+    "flashcards": 0,
+    "mnemonics": 0,
+    "local_unpublished_proposal": 1
+  },
+  "local_candidate_sha256": "35d7842a6cfc4dd6a69176a7fb3bf83bdab5e4222c6260d8d7456c78f763b735",
+  "decision": "manter cadastro; complemento futuro de1seção focado em cidadania/democracia, sem repetir ética/moral",
+  "parity": {
+    "ok": true,
+    "target": "preimagem",
+    "expectedTopics": 3,
+    "expectedSections": 19,
+    "topics": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "sections": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  },
+  "validation": "SELECT/paridade19 revisões e alias prévio; sintaxe/JSON/diff documental. Sem escrita/aplicação/interface: dry-run/CAS/visual/lint/build não aplicáveis e não repetidos.",
+  "bindings_inventory": "não realizado; não presumida ausência; nenhum vínculo alterado",
+  "cumulative_reviewed": 19,
+  "empty_topics_remaining": 1,
+  "discipline_complete": false,
+  "student_check": "dispensado",
+  "stop": true,
+  "editorial_commit": "92bfe4942659decd704e47c675cfbd70c19e20a4",
+  "editorial_remote": "sem remoto",
+  "local_evidence_path": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\35-etica-no-servico-publico\\diagnostico-cidadania-democracia-20261125",
+  "documentation_only": true
+}

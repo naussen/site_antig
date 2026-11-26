@@ -1,3 +1,7 @@
+## 2026-11-25 — diagnóstico de cidadania e democracia
+
+- Relatório35: sobreposição parcial de ética/moral; manter cadastro e delimitar complemento futuro de uma seção de cidadania/democracia, sem duplicar conteúdo. Proposta local antiga não aplicada. Zero escrita no banco,19 revisões e alias anterior preservados. Decisão/checkpoint/SELECT espelhados; editorial `92bfe49`. Disciplina parcial.
+
 ## 2026-11-25 — conciliação do cadastro Decreto1171
 
 - Origem vazia arquivada com alias para Legislação;15 vínculos de questões transferidos com metadados intactos. Ensaio com rollback e negativo aprovados;3 tópicos ativos/19 revisões e18 hashes/vínculos reconciliados. Nenhum resumo criado/movido/republicado. Relatório35/checkpoint/evidências espelhados; editorial `14f75fa`. Disciplina parcial por um tópico vazio remanescente; sem alteração de aplicação.

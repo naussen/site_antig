@@ -1,0 +1,46 @@
+{
+  "scope": "etica-cidadania-e-democracia",
+  "decision": "manter cadastro ativo; preparar futuramente somente complemento de cidadania e democracia",
+  "classification": "sobreposição parcial, com lacuna de desenvolvimento próprio de cidadania/democracia; não duplicata integral",
+  "overlap": [
+    {
+      "section_id": "etica-aspectos-teoricos-sec-01",
+      "coverage": "ética/moral/princípios/valores/virtude; princípios administrativos e aplicação pública"
+    },
+    {
+      "section_id": "legislacao-sec-01",
+      "coverage": "deontologia, deveres/vedações e conduta do servidor"
+    },
+    {
+      "section_id": "legislacao-sec-02",
+      "coverage": "gestão de ética/comissões e possibilidade de provocação"
+    }
+  ],
+  "gap": "Ausência de desenvolvimento próprio dos fundamentos de cidadania/democracia e mecanismos de participação; aplicação ética e menções indiretas a controle não substituem esse desenvolvimento.",
+  "next_batch": {
+    "estimated_sections": 1,
+    "destination": "etica-cidadania-e-democracia",
+    "provisional_focus": "Cidadania e democracia: participação e controle social no serviço público",
+    "axes": [
+      "cidadania e direitos/deveres, sem reduzi-la ao voto",
+      "soberania popular, representação e participação direta; noções de plebiscito/referendo/iniciativa",
+      "participação do usuário e controle social; relação com ética sem repetir o texto já publicado"
+    ],
+    "avoid": [
+      "repetir definições de ética/moral/valores",
+      "republicar princípios administrativos, nepotismo ou publicidade",
+      "duplicar deveres/vedações e sistema de comissões",
+      "transformar o lote em curso integral de direito eleitoral"
+    ],
+    "local_candidate_identity": {
+      "section_id": "etica-cidadania-e-democracia-sec-01",
+      "content_unit_id": "849d34da-695b-5c66-8349-755c0d53b1c2",
+      "stable_key": "etica-cidadania-e-democracia-fundamentos-20261123"
+    },
+    "local_candidate_status": "apenas proposta; não importar automaticamente; preservar identidade candidata se reaproveitada após revisão e nova conferência de unicidade",
+    "components": "nenhum componente novo criado neste diagnóstico; avaliar junto ao texto em lote próprio"
+  },
+  "database_action": "nenhuma; não arquivar/redirecionar/fundir por equivalência apenas parcial",
+  "discipline_complete": false,
+  "stop": true
+}
