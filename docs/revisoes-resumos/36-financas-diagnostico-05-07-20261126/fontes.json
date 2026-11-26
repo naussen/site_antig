@@ -1,0 +1,63 @@
+{
+  "checked_on": "2026-11-26",
+  "sources": [
+    {
+      "id": "bcb",
+      "title": "BCB — Manual de Estatísticas Fiscais, maio2019",
+      "url": "https://www.bcb.gov.br/content/estatisticas/Documents/notas_metodologicas/estatisticas-fiscais/estatisticasfiscais.pdf",
+      "scope": "07: conceitos, sinais, ajustes, séries encerradas em2009; manual metodológico histórico consultado na data, não boletim conjuntural."
+    },
+    {
+      "id": "tesouro",
+      "title": "Tesouro Nacional — Resultado do Tesouro Nacional",
+      "url": "https://www.gov.br/tesouronacional/pt-br/estatisticas-fiscais-e-planejamento/resultado-do-tesouro-nacional-rtn",
+      "scope": "07: Governo Central e resultado primário acima da linha; página indexada consultada, sem usar referência antiga àEC95 como regra atual."
+    },
+    {
+      "id": "ctb",
+      "title": "Tesouro — Carga Tributária do Governo Geral2025",
+      "url": "https://www.tesourotransparente.gov.br/publicacoes/carga-tributaria-do-governo-geral/2025/114",
+      "scope": "07: carga em percentual doPIB, distinguir arrecadação absoluta; sem incorporar percentuais conjunturais ao resumo."
+    },
+    {
+      "id": "incidencia",
+      "title": "OpenStax — Elasticity and Pricing",
+      "url": "https://openstax.org/books/principles-economics-2e/pages/5-3-elasticity-and-pricing",
+      "scope": "05: cunha e incidência econômica conforme elasticidades, sem repasse integral automático."
+    },
+    {
+      "id": "escolha",
+      "title": "OpenStax — Indifference Curves",
+      "url": "https://openstax.org/books/principles-economics-2e/pages/b-indifference-curves",
+      "scope": "05: efeitos renda/substituição e restrição orçamentária; não determina dominância apenas pela renda."
+    },
+    {
+      "id": "ramsey",
+      "title": "U.S. Treasury — The Optimal Taxation of Commodities and Income, OTA8,1975/1976",
+      "url": "https://home.treasury.gov/system/files/131/WP-8.pdf",
+      "scope": "05: hipótese de elasticidades cruzadas nulas na regra inversa; teoria histórica, não recomendação de alíquota brasileira atual."
+    },
+    {
+      "id": "excise",
+      "title": "OECD — Consumption Tax Trends2020, Selected Excise Duties",
+      "url": "https://www.oecd.org/en/publications/consumption-tax-trends-2020_152def2d-en/full-report/component-7.html",
+      "scope": "05: excises específicos e ad valorem; não usar tabelas2020 como alíquotas vigentes."
+    },
+    {
+      "id": "estabilizacao",
+      "title": "World Bank — Fiscal Policy",
+      "url": "https://www.worldbank.org/ext/en/topic/fiscal-policy-and-growth/fiscal-policy",
+      "scope": "06: estabilizadores automáticos e medidas discricionárias; descrição oficial indexada consultada, página renderizada incompleta."
+    },
+    {
+      "id": "cf164",
+      "title": "STF — Constituição, art164",
+      "url": "https://portal.stf.jus.br/constituicao-supremo/artigo.asp?abrirArtigo=164&abrirBase=CF",
+      "scope": "05/07: emissão e vedação de empréstimos doBCB aoTesouro; texto oficial indexado consultado."
+    }
+  ],
+  "limitations": [
+    "IMF Fiscal Policy e eLibrary sobreRamsey/Laffer retornaram403 na abertura; resultados indexados não tratados como leitura integral. Preferidas fontes primárias alternativas abertas.",
+    "Não conferidas alíquotas brasileiras atuais: exemplos devem ser rotulados hipotéticos; atualização normativa específica fica para revisão se necessária."
+  ]
+}

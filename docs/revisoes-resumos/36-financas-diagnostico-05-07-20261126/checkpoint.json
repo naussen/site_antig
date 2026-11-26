@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-26",
+  "status": "diagnosticado_recorte_registrado",
+  "scope": "Finanças Públicas05–07",
+  "reviewed_total_unchanged": "4/7",
+  "database_writes": 0,
+  "corrections": 0,
+  "content_publications": 0,
+  "published01_04_preserved": true,
+  "ethics20_contents_and_revisions_preserved": true,
+  "ethics_report_sha256": "60b7d2d035a5734a01457ef5a1778fbf0e6bbc0ca9f3bda3399663af72d5881b",
+  "counts_unchanged": {
+    "accepted": 22,
+    "partial": 25,
+    "pending": 7
+  },
+  "not_run": [
+    "importação",
+    "dry-run",
+    "CAS",
+    "render visual",
+    "lint/build",
+    "workflow global"
+  ],
+  "next_action": "Revisar05–07 somente mediante próximo pedido; conferir fontes/modelos, pré-imagem eCAS antes de qualquer escrita; reconciliar; parar.",
+  "stop": true,
+  "editorial_commit": "c23e6dd964605d5a49de053f27e006ef6268eafc",
+  "editorial_repository": "C:/PRO/revisoes-resumos",
+  "editorial_remote": null,
+  "documentation_only": true
+}

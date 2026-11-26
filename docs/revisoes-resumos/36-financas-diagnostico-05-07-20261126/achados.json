@@ -1,0 +1,121 @@
+{
+  "status": "diagnostico_sem_correcao",
+  "findings": [
+    {
+      "section": "05",
+      "priority": "alta",
+      "title": "Cálculos e gráfico/tabela divergentes",
+      "diagnosis": "Ad valorem por dentro: p=270/43, q=80000/43 e arrecadação≈1168,1990. Por fora: p=594/95, q=35600/19 e arrecadação≈1065,0416. Texto usa q1875/arrecadação1065 e tabela1065,38; arredondamentos intermediários comprometem coerência. Específico e exemplos675/750 corretos. Recalcular em precisão completa, arredondar só apresentação e sincronizar gráfico, tabela e ônus.",
+      "source_ids": [
+        "incidencia"
+      ]
+    },
+    {
+      "section": "05",
+      "priority": "alta",
+      "title": "Alíquotas média/marginal e equidade",
+      "diagnosis": "Tabela afirma que marginal de lump-sum decresce: para T(y)=K, marginal=0 e média=K/y. Progressividade exige média crescente, não marginal estritamente crescente em toda faixa. Tributo proporcional pode cobrar valores absolutos diferentes e não viola necessariamente equidade vertical. Não atribuir justiça automaticamente ao rótulo progressivo. Contraexemplos algébricos próprios, sem alteração aplicada.",
+      "source_ids": [
+        "escolha"
+      ]
+    },
+    {
+      "section": "05",
+      "priority": "media",
+      "title": "Preferência entre excise e lump-sum sem comparação definida",
+      "diagnosis": "Texto e callout omitem equalização de arrecadação/restrição e tomam curvas quebradas como garantia de indiferença. Conferir modelo de receita equivalente; lump-sum elimina distorção de preços relativos no modelo, mas pode mudar consumo por efeito renda. Excise pode ser específico ou ad valorem.",
+      "source_ids": [
+        "escolha",
+        "excise"
+      ]
+    },
+    {
+      "section": "05",
+      "priority": "media",
+      "title": "Incidência, eficiência eRamsey absolutizadas",
+      "diagnosis": "Repasse de tributos indiretos não é necessariamente integral; depende de elasticidades. Perda de peso morto requer hipóteses, pois tributo corretivo pode melhorar eficiência. Explicitar condições da regra inversa e elasticidade relevante; eficiência/equidade não impõem perda adicional em qualquer reforma. Bens inelásticos não são necessariamente essenciais.",
+      "source_ids": [
+        "incidencia",
+        "ramsey"
+      ]
+    },
+    {
+      "section": "05",
+      "priority": "media",
+      "title": "Laffer, oferta de trabalho e papel distributivo",
+      "diagnosis": "Pico de arrecadação não prova ótimo de bem-estar; não inferir ES<ER para pobres e ES>ER para ricos apenas pela renda. Qualificar efeitos da alíquota marginal. Título distributivo carece de síntese sobre transferências/gastos e distribuição após tributos. TítuloLaffer duplicado, um deles antecipa tabela de incidência; referências a áreasA–D sem figura correspondente. Exemplos deIR/CIDE/ICMS devem ser declarados hipotéticos.",
+      "source_ids": [
+        "escolha",
+        "estabilizacao"
+      ]
+    },
+    {
+      "section": "05",
+      "priority": "media",
+      "title": "Financiamento e limites brasileiros",
+      "diagnosis": "Lista separa títulos internos/empréstimos externos de modo excessivo e apresenta emissão como instrumento comum sem ressalva brasileira, já presente na07. Compatibilizar sem duplicar explicação extensa.",
+      "source_ids": [
+        "cf164"
+      ]
+    },
+    {
+      "section": "06",
+      "priority": "baixa",
+      "title": "Núcleo correto com complemento breve possível",
+      "diagnosis": "Texto/callout/mapa coerentes: fiscal e monetária para suavizar flutuações. Gráficos conceituais explicitam ausência de escala empírica e não prometem eliminar ciclos; preservar. Acrescentar se necessário exemplos curtos de expansão/restrição e estabilizadores automáticos, sem reproduzirMacroeconomia publicada. Não é erro o encaminhamento à disciplina, mas falta referência concreta de estudo.",
+      "source_ids": [
+        "estabilizacao"
+      ]
+    },
+    {
+      "section": "07",
+      "priority": "alta",
+      "title": "Sinais e nomes de resultado incompatíveis",
+      "diagnosis": "Início usa receitas-despesas e depois RN=despesas-receitas sem anunciar mudança de sinal. Separar saldo(superávit positivo) de necessidade(déficit positivo); juros devem ser líquidos e abrangência/regime explicitados. FórmulaRN=NFSP-AP exige revisão: NFSP nominal já exclui ajustes.",
+      "source_ids": [
+        "bcb",
+        "tesouro"
+      ]
+    },
+    {
+      "section": "07",
+      "priority": "alta",
+      "title": "Dívida, ajustes e conceitos históricos",
+      "diagnosis": "Dívida não é mera soma de déficits: distinguir estoque bruto/líquido e reconciliação com ajustes. AP/VC linha a linha precisam definições não ambíguas; RNCDC diz manter câmbio interno enquanto descrição deVC duplo não identifica cobertura. Resultado operacional e séries com desvalorização têm divulgação encerrada em2009 segundo manualBCB; rotular como históricos, sem apresentá-los como painel corrente.",
+      "source_ids": [
+        "bcb"
+      ]
+    },
+    {
+      "section": "07",
+      "priority": "media",
+      "title": "Carga, poupança e financiamento",
+      "diagnosis": "Distinguir arrecadação em reais de carga tributária usualmente%PIB;CTL/poupança são identidades simplificadas que exigem unidades e ausência de dupla contagem de transferências. Venda de títulos é financiamento, não aumento automático da poupança pública; frase não aumenta inflação é categórica e deve ser qualificada. Privatização não é estoque genérico de ativo; não confundir correção monetária com imposto inflacionário.",
+      "source_ids": [
+        "ctb",
+        "bcb",
+        "estabilizacao"
+      ]
+    },
+    {
+      "section": "07",
+      "priority": "baixa",
+      "title": "Preservar distinções válidas",
+      "diagnosis": "Fluxo versus estoque, exemplo360-400=-40 e ressalva de emissão/vedação aoBCB têm núcleo válido. Callout de fluxo/estoque deve abandonar equivalência estrita entre dívida e déficits acumulados; callout acima/abaixo da linha deve ser conferido junto à abrangência adotada.",
+      "source_ids": [
+        "bcb",
+        "cf164"
+      ]
+    }
+  ],
+  "decision": "Revisar somente05–07 em lote futuro; não executar pacote antigo nem reaplicar01–04.06 pode ser aceita sem edição se revisão confirmar suficiência.",
+  "components_examined": {
+    "texts": 3,
+    "callouts": 5,
+    "maps": 1,
+    "quant_charts": 4,
+    "tables_in05": 4,
+    "flashcards": 0,
+    "mnemonics": 0
+  }
+}

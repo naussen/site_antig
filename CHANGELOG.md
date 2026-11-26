@@ -1,3 +1,7 @@
+## 2026-11-26 — diagnóstico de Finanças Públicas05–07
+
+- Recorte de3 seções,5 callouts,1 mapa,4 gráficos e4 tabelas registrado no relatório36; inconsistências tributárias/números da05 e sinais/conceitos históricos da07 documentados;06 com núcleo correto. SELECT confirmou7 conteúdos/revisões e Ética20/20 preservados. Zero escrita/publicação de conteúdo; avanço4/7 mantido. Evidências/checkpoint/fontes espelhados; editorial `c23e6dd`. Sem início da revisão ou próximo lote.
+
 ## 2026-11-26 — Finanças Públicas01–04 revisadas
 
 - Quatro seções examinadas;01/02/04 publicadas com CAS e reconciliadas,03 aceita sem edição. Externalidades, governança/Coase e assimetria/concorrência corrigidos; quatro callouts/três mapas atualizados.24 visuais efetivos,18 zoom/overlay,44 testes aprovados.05–07, vínculos e Ética aceita20/20 preservados. Relatório36/checkpoint/fontes/recibos espelhados; editorial `d1f5318`. Avanço4/7; fila22[x]/25[~]/7[ ]; nenhum próximo lote iniciado.

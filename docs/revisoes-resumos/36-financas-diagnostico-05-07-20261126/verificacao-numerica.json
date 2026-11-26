@@ -1,0 +1,111 @@
+{
+  "method": "Frações racionais; soluções das equações presentes no conteúdo atual, sem alterar conteúdo.",
+  "results": [
+    {
+      "type": "especifico",
+      "consumer_price": {
+        "exact": "32/5",
+        "decimal": 6.4
+      },
+      "producer_price": {
+        "exact": "11/2",
+        "decimal": 5.5
+      },
+      "quantity": {
+        "exact": "1800",
+        "decimal": 1800.0
+      },
+      "unit_tax": {
+        "exact": "9/10",
+        "decimal": 0.9
+      },
+      "revenue": {
+        "exact": "1620",
+        "decimal": 1620.0
+      },
+      "consumer_burden": {
+        "exact": "2/5",
+        "decimal": 0.4
+      },
+      "producer_burden": {
+        "exact": "1/2",
+        "decimal": 0.5
+      }
+    },
+    {
+      "type": "ad_valorem_por_dentro",
+      "consumer_price": {
+        "exact": "270/43",
+        "decimal": 6.27906976744186
+      },
+      "producer_price": {
+        "exact": "243/43",
+        "decimal": 5.651162790697675
+      },
+      "quantity": {
+        "exact": "80000/43",
+        "decimal": 1860.4651162790697
+      },
+      "unit_tax": {
+        "exact": "27/43",
+        "decimal": 0.627906976744186
+      },
+      "revenue": {
+        "exact": "2160000/1849",
+        "decimal": 1168.1990265008112
+      },
+      "consumer_burden": {
+        "exact": "12/43",
+        "decimal": 0.27906976744186046
+      },
+      "producer_burden": {
+        "exact": "15/43",
+        "decimal": 0.3488372093023256
+      }
+    },
+    {
+      "type": "ad_valorem_por_fora",
+      "consumer_price": {
+        "exact": "594/95",
+        "decimal": 6.252631578947368
+      },
+      "producer_price": {
+        "exact": "108/19",
+        "decimal": 5.684210526315789
+      },
+      "quantity": {
+        "exact": "35600/19",
+        "decimal": 1873.6842105263158
+      },
+      "unit_tax": {
+        "exact": "54/95",
+        "decimal": 0.5684210526315789
+      },
+      "revenue": {
+        "exact": "384480/361",
+        "decimal": 1065.0415512465374
+      },
+      "consumer_burden": {
+        "exact": "24/95",
+        "decimal": 0.25263157894736843
+      },
+      "producer_burden": {
+        "exact": "6/19",
+        "decimal": 0.3157894736842105
+      }
+    }
+  ],
+  "valid_examples": {
+    "progressive3500_tax": 675,
+    "average_percent_3500": 19.28571428571429,
+    "progressive4000_tax": 750,
+    "average_percent_4000": 18.75,
+    "hypothetical_indirect_tax": 170,
+    "weight5000_percent": 3.4,
+    "weight20000_percent": 0.85
+  },
+  "counterexamples": {
+    "lump_sum": "T(y)=K: T marginal=0; média=K/y decrescente paraK>0,y>0",
+    "proportional": "T(y)=0,1y: valores absolutos distintos para rendas distintas; média e marginal constantes."
+  }
+}
