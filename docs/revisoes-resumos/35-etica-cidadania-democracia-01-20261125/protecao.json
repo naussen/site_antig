@@ -1,0 +1,6 @@
+{
+  "mechanism": "template SQL existente hardware/lacunas39: FOR UPDATE no tópico, ausência de seção ativa/arquivada e unicidade; guardas adicionais das19 pré-imagens",
+  "sql_sha256": "f9d9d4085a863f4cbe6e774fe453b9ed887a10a6efa2f9a0c670e97e90e3c833",
+  "transaction": "BEGIN/COMMIT, constraints imediatas, uma inclusão sem upsert",
+  "dry_run_note": "Primeira tentativa com --preserve-flashcards recusada por exigir igualdade exata com seções ativas; em tópico vazio, dry-run sem a flag é o contrato aplicável. Novo payload sem cartões; nenhuma escrita pelo CLI."
+}

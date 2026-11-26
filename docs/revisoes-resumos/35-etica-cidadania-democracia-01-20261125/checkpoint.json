@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-25",
+  "status": "complemento_revisado_publicado_reconciliado",
+  "scope": "etica-cidadania-e-democracia-sec-01",
+  "content_unit_id": "849d34da-695b-5c66-8349-755c0d53b1c2",
+  "stable_key": "etica-cidadania-e-democracia-fundamentos-20261123",
+  "additions": 1,
+  "updates": 0,
+  "components": {
+    "callouts": 2,
+    "maps": 0,
+    "flashcards": 0,
+    "mnemonics": 0
+  },
+  "revisions": [
+    {
+      "section_id": "etica-cidadania-e-democracia-sec-01",
+      "current_revision_id": "be1a87a0-6b94-4d21-9d3b-8ef4fc242245"
+    }
+  ],
+  "sql_sha256": "f9d9d4085a863f4cbe6e774fe453b9ed887a10a6efa2f9a0c670e97e90e3c833",
+  "after_sha256": "e72e1e5adbeffa129cc0c32eb50fedb7d46c55c441605339fd52f5fd4bcd0010",
+  "preserved_revisions": 19,
+  "bindings_and_catalog_preserved": true,
+  "active_topics": 3,
+  "physical_topics": 4,
+  "active_sections": 20,
+  "empty_topics": 0,
+  "validation": {
+    "dry_run_cli": true,
+    "dry_run_transaction_rollback": true,
+    "negative_catalog": true,
+    "negative_occupied_topic": true,
+    "preflight": true,
+    "visual_combinations": 6,
+    "manual_captures": [
+      "Light375",
+      "Dark1200",
+      "Sepia375"
+    ],
+    "reused_content_tests": 49,
+    "reconciled": true
+  },
+  "concurrency": "Transação BEGIN/COMMIT adaptada do template existente; tópico FOR UPDATE, ausência de qualquer seção, identidade única e19 pré-imagens/revisões; constraints imediatas",
+  "application_changes": false,
+  "student_check": "dispensado; visual local não é smoke autenticado",
+  "cumulative_reviewed": 20,
+  "remaining_active_sections": 0,
+  "discipline_complete": false,
+  "remaining": "aceite documental consolidado da fotografia20/20 não emitido neste lote; nenhuma outra seção/lote iniciado",
+  "stop": true,
+  "editorial_commit": "b1975a48e88f7427b5ba98de521a71eb7f44196d",
+  "editorial_remote": "sem remoto",
+  "local_evidence_path": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\35-etica-no-servico-publico\\cidadania-democracia-01-20261125",
+  "documentation_only": true
+}

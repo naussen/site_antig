@@ -1,0 +1,9 @@
+{
+  "content_tests": 49,
+  "rerun": false,
+  "source": "../legislacao-10-14-20261125/test-content.txt",
+  "sha256": "fa14a0bc03e7d2044fbd0984a01817d904907ee76cb14e6b9fade02a1a6f8ea4",
+  "application_diff_since": "6696af7",
+  "application_diff": "",
+  "reason": "Aplicação, renderizadores e validadores sem mudanças. Novo payload validado pelo CLI em dry-run e inclusão por ensaios transacionais positivos/negativos, visual e reconciliação. Não alegados testes CAS de atualização para esta inclusão."
+}

@@ -1,0 +1,15 @@
+{
+  "visual_passed": 6,
+  "visual_after_sha256": "e72e1e5adbeffa129cc0c32eb50fedb7d46c55c441605339fd52f5fd4bcd0010",
+  "cli_dry_run_passed": true,
+  "positive_rollback_passed": true,
+  "negative_catalog_rejected": true,
+  "negative_occupied_rejected": true,
+  "preflight_passed": true,
+  "manual_captures": [
+    "Light375",
+    "Dark1200",
+    "Sepia375"
+  ],
+  "sql_sha256": "f9d9d4085a863f4cbe6e774fe453b9ed887a10a6efa2f9a0c670e97e90e3c833"
+}

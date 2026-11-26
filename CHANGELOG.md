@@ -1,3 +1,7 @@
+## 2026-11-25 — complemento de cidadania e democracia
+
+- Uma seção/dois callouts publicados com inclusão transacional protegida; dry-run, rollback e negativos de catálogo/ocupação aprovados. Três tópicos/20 seções reconciliados,19 revisões e vínculos/alias anteriores preservados. Seis visuais aprovados;49 testes válidos reutilizados. Relatório35/checkpoint/recibos/fontes espelhados; editorial `b1975a4`. Zero tópicos ativos vazios; aceite documental consolidado não emitido neste lote. Sem alteração de aplicação.
+
 ## 2026-11-25 — diagnóstico de cidadania e democracia
 
 - Relatório35: sobreposição parcial de ética/moral; manter cadastro e delimitar complemento futuro de uma seção de cidadania/democracia, sem duplicar conteúdo. Proposta local antiga não aplicada. Zero escrita no banco,19 revisões e alias anterior preservados. Decisão/checkpoint/SELECT espelhados; editorial `92bfe49`. Disciplina parcial.
