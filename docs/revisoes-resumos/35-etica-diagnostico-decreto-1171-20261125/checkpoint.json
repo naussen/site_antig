@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-25",
+  "status": "diagnostico_concluido_decisao_registrada_sem_aplicacao",
+  "scope": "decreto-1171-1994",
+  "database_writes": 0,
+  "sections_created": 0,
+  "catalog_changes": 0,
+  "content_publication": false,
+  "reviewed_for_coverage": [
+    "legislacao-sec-01",
+    "legislacao-sec-02",
+    "legislacao-sec-03"
+  ],
+  "components": {
+    "texts": 3,
+    "callouts": 5,
+    "maps": 2,
+    "flashcards": 0,
+    "mnemonics": 0
+  },
+  "target_section_count_including_archived": 0,
+  "target_redirects": 0,
+  "parity": {
+    "ok": true,
+    "target": "preimagem",
+    "expectedTopics": 4,
+    "expectedSections": 19,
+    "topics": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "sections": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  },
+  "preserved_revision_ids": 19,
+  "revision_fingerprint": "d934e0c8a57e571eb534dfa148b73b652d6502c51f81c59ab1f661fb82612425",
+  "decision": "não duplicar; candidato à conciliação cadastral para legislacao, não executada",
+  "references_inventory": "pendente para eventual lote de conciliação; não presumida ausência",
+  "cumulative_reviewed": 19,
+  "total_active_sections": 19,
+  "empty_topics": 2,
+  "discipline_complete": false,
+  "tests": "SELECT/paridade19 revisões; JSON/diff documental. Sem edição de conteúdo ou aplicação: dry-run, CAS, visual, lint/build não aplicáveis e não repetidos.",
+  "next_scope": "somente conciliação do cadastro decreto-1171-1994 se solicitada; não iniciada",
+  "stop": true,
+  "editorial_commit": "fbdd4159be117440e179708b09a44be9218ce50d",
+  "editorial_remote": "sem remoto",
+  "local_evidence_path": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\35-etica-no-servico-publico\\diagnostico-decreto-1171-20261125",
+  "documentation_only": true
+}

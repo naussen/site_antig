@@ -1,0 +1,31 @@
+{
+  "scope": "decreto-1171-1994",
+  "decision": "não criar resumo duplicado; candidato à conciliação cadastral com destino legislacao",
+  "classification": "redundância temática cadastral, não evidência de lacuna inédita",
+  "coverage": [
+    {
+      "section_id": "legislacao-sec-01",
+      "covers": "objeto/abrangência; regras deontológicas, deveres e vedações em seleção declarada; conceito de servidor",
+      "components": "2 callouts; sem mapa"
+    },
+    {
+      "section_id": "legislacao-sec-03",
+      "covers": "comissões: constituição, abrangência, membros, atribuições, censura e garantias, com Decreto6029",
+      "components": "2 callouts e1 mapa"
+    },
+    {
+      "section_id": "legislacao-sec-02",
+      "covers": "complemento: Sistema de Gestão da Ética e comissões, Decreto6029",
+      "components": "1 callout e1 mapa"
+    }
+  ],
+  "execution": "somente diagnóstico documental; nenhuma alteração no banco",
+  "next_batch_requirements": [
+    "Inventariar referências e vínculos do tópico e destino sem expor dados pessoais.",
+    "Conferir mecanismos existentes de arquivamento/redirecionamento e limites da relação tópico/subtópico.",
+    "Preservar IDs/19 revisões e vínculos; pré-imagem e proteção de concorrência; reconciliação após eventual escrita.",
+    "Não criar seções, mover resumos ou presumir inexistência de vínculos."
+  ],
+  "discipline_complete": false,
+  "other_empty_topic": "etica-cidadania-e-democracia não diagnosticado neste lote"
+}

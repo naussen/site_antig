@@ -1,3 +1,7 @@
+## 2026-11-25 — diagnóstico do tópico vazio Decreto1171
+
+- Relatório35: assunto presente em Legislação01/03, complemento02; não criar resumo duplicado. Candidato à conciliação cadastral para Legislação, não aplicada. Zero escrita no banco,19 revisões preservadas. Decisão/checkpoint/SELECT espelhados; editorial `fbdd415`. Disciplina parcial por dois cadastros vazios ativos.
+
 ## 2026-11-25 — Ética: revisão de Legislação15–18
 
 - Quatro seções publicadas com CAS e reconciliadas; oito callouts examinados e quatro corrigidos. Jurisprudência atual conferida; dry-run/CAS negativo/24 visuais aprovados,49+6 testes válidos reutilizados. Quinze revisões anteriores preservadas. Relatório35/checkpoint/recibos/fontes espelhados; editorial `087ac70`. Avanço19/19 seções ativas, disciplina parcial por dois tópicos vazios. Sem mudança de aplicação.
