@@ -1,0 +1,79 @@
+{
+  "scope": [
+    "financas-publicas-sec-01",
+    "financas-publicas-sec-02",
+    "financas-publicas-sec-03",
+    "financas-publicas-sec-04"
+  ],
+  "fully_examined": true,
+  "components": {
+    "texts": 4,
+    "callouts": 6,
+    "maps": 3,
+    "tables": 1,
+    "flashcards": 0,
+    "mnemonics": 0
+  },
+  "findings": [
+    {
+      "section": "01",
+      "confirmed": [
+        "Agricultura/oferta/preço não demonstra por si externalidade técnica positiva; separar efeito de preço de benefício externo não internalizado",
+        "Compras públicas são despesas, não fonte de financiamento",
+        "Intervenção estatal apresentada como necessária/automática sem considerar desenho e limites"
+      ],
+      "review_pending": [
+        "Comparações sociais/privadas devem explicitar grandezas marginais e externalidade de produção ou consumo; qualificar callout negativo",
+        "Mapa mistura fluxos reais/monetários sem legenda; conferir empréstimos Governo→MercadoFinanceiro e sentido/conteúdo de importações/exportações"
+      ]
+    },
+    {
+      "section": "02",
+      "confirmed": [
+        "Tragédia dos comuns reduzida a falta de sentimento de propriedade; não distingue livre acesso de propriedade comum com governança",
+        "Mapa afirma que presença de custos inviabiliza Coase de forma absoluta"
+      ],
+      "preserve_or_qualify": "Enunciado textual/callout de direitos definidos e baixos custos é ponto de partida válido; avaliar hipóteses e evitar repetir proposta antiga sem revisar"
+    },
+    {
+      "section": "03",
+      "current_strengths": [
+        "Distingue bens públicos puros de meritórios e rodovias congestionadas/pedagiadas",
+        "Tabela rivalidade/exclusão e carona conceitualmente consistentes"
+      ],
+      "review_pending": [
+        "Conferir convenção de semipúblicos e exemplos de meritórios/demeritórios",
+        "Não exclusão como característica econômica/técnica no modelo, sem confundir com titularidade estatal"
+      ],
+      "decision": "Não reescrever automaticamente; poderá ser conferida sem edição se fontes e visual confirmarem"
+    },
+    {
+      "section": "04",
+      "confirmed": [
+        "Seleção adversa não é mero risco de comprar qualidade indesejada; explicitar informação oculta e seleção de tipos",
+        "Salário eficiência apresentado como exemplo do problema sem distinguir mecanismo de incentivo",
+        "Monopolistas/oligopolistas não escolhem preço e quantidade independentemente de demanda/concorrência",
+        "Custos fixos altos não bastam para definir monopólio natural; considerar economias/subaditividade na demanda relevante",
+        "Intervenção/regulação tratadas como solução automática"
+      ],
+      "review_pending": [
+        "Contextualizar questionários, garantias, multas e juros como instrumentos, não soluções universais",
+        "Separar função alocativa da estabilizadora na menção a inflação/desemprego",
+        "Conferir mapas de antes/depois como simplificação didática"
+      ],
+      "confirmed_correct": "Prazo20anos da patente de invenção desde depósito corresponde ao art40, sem afirmar exclusividade elimina risco de P&D"
+    }
+  ],
+  "stages": {
+    "proposal": "há cinco propostas locais antigas, somente01/02/04 pertencem ao recorte",
+    "validation": "capturas/ensaio antigos são de proposta, não aceite atual",
+    "database_application": "não comprovada por recibo; estado atual coincide com pré-imagem antiga e difere das cinco propostas",
+    "reconciliation": "somente SELECT comparativo neste diagnóstico",
+    "publication": "nenhuma neste lote"
+  },
+  "remaining": [
+    "05 Função Distributiva e Tributação",
+    "06 Função Estabilizadora ou Anticíclica",
+    "07 Déficit e Dívida Pública"
+  ]
+}

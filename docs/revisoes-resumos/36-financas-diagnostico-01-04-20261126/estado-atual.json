@@ -1,0 +1,230 @@
+{
+  "checked_at": "2026-11-26T14:47:58.805Z",
+  "date": "2026-11-26",
+  "mode": "diagnostico_somente_select",
+  "database_writes": 0,
+  "topics": [
+    {
+      "topic_id": "financas-publicas",
+      "discipline": "Finanças Públicas",
+      "title": "Finanças Públicas",
+      "sort_order": 1,
+      "archived_at": null
+    }
+  ],
+  "total_sections": 7,
+  "selected_sections": [
+    {
+      "section_id": "financas-publicas-sec-01",
+      "content_unit_id": "7c1f38ed-7292-47d4-9ca5-9d4395abdc1f",
+      "stable_key": "externalidades",
+      "topic_id": "financas-publicas",
+      "title": "Externalidades",
+      "sort_order": 0,
+      "content_markdown": "### Fluxo Circular da Renda Expandido\n\nO fluxo circular da renda expandido ilustra as interações macroeconômicas entre os diferentes agentes de uma economia: Famílias (*Households*), Empresas (*Firms*), Governo (*Government*) e o Resto do Mundo (*Rest of world*), conectados por meio do Mercado de Fatores (*Factor markets*), Mercado de Bens e Serviços (*Goods and services markets*) e Mercado Financeiro (*Financial markets*).\n\n*   **Famílias (*Households*):** Recebem renda na forma de salários, lucros, juros e aluguéis (*Wages, profit, interest, rent*) vindos do Mercado de Fatores. Essa renda é destinada ao consumo (*Consumer spending*), à poupança privada (*Private savings*) direcionada ao Mercado Financeiro, e ao pagamento de impostos (*Taxes*) deduzidos os recebimentos de transferências governamentais (*Government transfers*).\n*   **Governo (*Government*):** Arrecada tributos (*Taxes*) e realiza transferências (*Government transfers*). Suas despesas são financiadas por meio de compras governamentais de bens e serviços (*Government purchases of goods and services*) e, quando necessário, por empréstimos governamentais (*Government borrowing*) obtidos no Mercado Financeiro.\n*   **Empresas (*Firms*):** Direcionam receitas para o Mercado de Fatores como salários, dividendos, juros e aluguéis (*Wages, dividends, interest, rent*). Financiam seus investimentos (*Investment*) recorrendo ao Mercado Financeiro por meio de empréstimos e emissão de ações (*Borrowing and stock issues by firms*). Suas receitas provêm do consumo das famílias, das compras do governo, dos investimentos e das exportações líquidas.\n*   **Resto do Mundo (*Rest of world*):** Interage com a economia doméstica por meio de importações (*Imports*), exportações (*Exports*), empréstimos externos e venda de ações (*Foreign borrowing and sales of stock*), além de empréstimos estrangeiros e compra de ações (*Foreign lending and purchases of stock*).\n\n---\n\n### Funções do Governo na Economia\n\nO Estado atua na economia por meio de três funções clássicas:\n\n*   **Função Alocativa:** Promoção de ajustamentos na alocação de recursos. Envolve a provisão de bens e serviços de utilidade pública e a intervenção governamental em mercados imperfeitos.\n*   **Função Distributiva:** Ajustes na distribuição de renda (conceituada informalmente como \"função Robin Hood\", que consiste em retirar recursos das classes de maior poder aquisitivo e transferi-los para as de menor poder). Está associada a instrumentos como tributação progressiva, subsídios, transferências, salário mínimo e renúncias fiscais.\n*   **Função Estabilizadora:** Manutenção da estabilidade econômica, buscando garantir um alto nível de emprego e preços estáveis (controle da inflação). Para isso, o governo utiliza políticas macroeconômicas (fiscal e monetária) associadas a variáveis como emprego, renda, inflação, taxa de câmbio, contas externas, endividamento e juros.\n\n---\n\n### Função Alocativa - Falhas de Mercado\n\n*   **Eficiência Econômica:** Trata-se de um conceito teórico que ocorre quando não há possibilidade de melhorar a situação de um agente econômico sem que, simultaneamente, piore a situação de outro (critério conhecido como Ótimo de Pareto). Sob as hipóteses do modelo de concorrência perfeita e na ausência de falhas de mercado, o equilíbrio competitivo pode alcançar eficiência de Pareto.\n*   **Mercados Imperfeitos:** São mercados ineficientes que apresentam falhas de mercado. Nessas situações, o mecanismo de preços (interação entre Oferta e Demanda) não consegue alocar os recursos de maneira eficiente, o que requer a atuação do Estado.\n\nAs falhas de mercado que justificam a intervenção governamental são:\n\na) Externalidades  \nb) Bens públicos  \nc) Falhas de informação  \nd) Mercados incompletos  \ne) Riscos pesados  \nf) Falhas na competição (poder de mercado)  \ng) Existência de desemprego e inflação\n\n\n## Externalidades\n\nAs externalidades são os efeitos gerados pelas ações de um agente econômico que recaem sobre outros agentes que não participam diretamente da referida ação.\n\n### Externalidades Positivas (economias externas)\nOcorrem quando a ação individual gera, de forma involuntária, um benefício para a sociedade. Devido a essa característica, tais ações devem ser incentivadas.\n* **Condição:** Benefícios Sociais > Benefícios Privados ou Custo Social < Custo Privado\n* **Exemplo:** Agricultura e redução da inflação. Altas produções geram altas ofertas e, *coeteris paribus*, tendem a reduzir o preço dos produtos, reduzindo a inflação. Para incentivar a produção e, consequentemente, aumentar a oferta, o Governo poderia, por exemplo, subsidiar a produção.\n\n### Externalidades Negativas (deseconomias externas)\nOcorrem quando uma ação individual gera um custo social. Por esse motivo, essas ações devem ser desincentivadas.\n* **Condição:** Custos Sociais > Custos Privados ou Benefícios Sociais < Benefícios Privados\n* **Exemplo:** Emissão de poluentes. As indústrias geram, naturalmente, poluição, que é prejudicial à saúde pública. O governo poderia, por exemplo, impor impostos e multas, o que gera aumento do custo e, logo, do preço, desincentivando a produção e reduzindo a oferta.",
+      "callouts": [
+        {
+          "text": "As externalidades representam falhas de mercado porque os custos ou benefícios sociais gerados pela produção/consumo não são incorporados nos preços privados de mercado.",
+          "type": "info",
+          "title": "Conceito de Externalidade"
+        },
+        {
+          "text": "Em provas, lembre-se de que na externalidade negativa o Custo Social é maior que o Custo Privado, o que leva o mercado a produzir uma quantidade maior do que o socialmente ótimo.",
+          "type": "warning",
+          "title": "Condição de Externalidade Negativa"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [],
+      "mermaid_mindmap": "flowchart LR\n    H[\"Famílias\"] -->|\"Trabalho\"| F[\"Empresas\"]\n    F -->|\"Renda\"| H\n    H -->|\"Consumo\"| M[\"Mercado de bens e serviços\"]\n    M -->|\"Receita\"| F\n    H -->|\"Tributos\"| G[\"Governo\"]\n    G -->|\"Transferências\"| H\n    G -->|\"Compras públicas\"| M\n    H -->|\"Poupança\"| MF[\"Mercado financeiro\"]\n    MF -->|\"Financiamento\"| F\n    G -->|\"Empréstimos\"| MF\n    F -->|\"Exportações\"| RM[\"Resto do mundo\"]\n    RM -->|\"Importações\"| M",
+      "archived_at": null,
+      "current_revision_id": "34163223-06c6-45b7-aa4e-4f5cedc14f24"
+    },
+    {
+      "section_id": "financas-publicas-sec-02",
+      "content_unit_id": "f51bb4c2-d35f-47f6-b5ff-b09c5723cd09",
+      "stable_key": "causas-das-externalidades",
+      "topic_id": "financas-publicas",
+      "title": "Causas das Externalidades",
+      "sort_order": 1,
+      "content_markdown": "1. **Ausência de direitos de propriedade:** A lógica fundamental deste ponto reside no fato de que, se o agente não possui o sentimento de propriedade sobre um bem, ele não terá a preocupação de cuidar dele. Este fenômeno é conhecido como \"A tragédia dos comuns\".\n   * **Exemplo:** Se todos os carros fossem públicos, a ausência do sentimento de propriedade faria com que não houvesse preocupação em realizar a manutenção dos veículos. Isso geraria um prejuízo (externalidade negativa) para as outras pessoas que também utilizam os carros, as quais poderiam, por exemplo, utilizar um veículo com o freio estragado.\n2. **Custos de Transação:** Conforme o Teorema de Coase, com direitos de propriedade bem definidos e custos de transação nulos, a negociação privada pode internalizar a externalidade e alcançar uma alocação eficiente. A distribuição dos ganhos, porém, depende da atribuição inicial dos direitos e do poder de barganha.",
+      "callouts": [
+        {
+          "text": "Com direitos de propriedade bem definidos e custos de transação nulos ou desprezíveis, a negociação privada pode internalizar a externalidade. A distribuição dos ganhos ainda depende da atribuição inicial dos direitos e do poder de barganha.",
+          "type": "tip",
+          "title": "Teorema de Coase"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [],
+      "mermaid_mindmap": "flowchart TD\n    A[\"Causas das Externalidades\"] --> B[\"Ausência<br/>de<br/>Direitos<br/>de<br/>Propriedade\"]\n    A --> C[\"Presença<br/>de<br/>Custos<br/>de<br/>Transação\"]\n    B --> D[\"Tragédia dos Comuns\"]\n    C --> E[\"Inviabiliza Teorema de Coase\"]\n    class A readableRoot;\n    class B,C,D,E readableItem;",
+      "archived_at": null,
+      "current_revision_id": "52ccdc66-01b6-4d4a-9c99-b573219c7feb"
+    },
+    {
+      "section_id": "financas-publicas-sec-03",
+      "content_unit_id": "ee815f42-f147-4b7d-aa0d-cdc623945c15",
+      "stable_key": "bens-publicos",
+      "topic_id": "financas-publicas",
+      "title": "Bens Públicos",
+      "sort_order": 2,
+      "content_markdown": "Os bens públicos puros são caracterizados por duas propriedades simultâneas:\n\n* **NÃO RIVAL:** A utilização por uma pessoa não reduz a quantidade disponível para as demais; para um bem público puro, o custo marginal de atender um usuário adicional é nulo ou desprezível enquanto não houver congestionamento.\n  * **Exemplo:** Defesa nacional. Uma pessoa adicional protegida não reduz a proteção disponível às demais.\n* **NÃO EXCLUDENTES:** Significa que os indivíduos não podem ser privados do usufruto do bem ou serviço, mesmo que não tenham participado do seu financiamento.\n\n**Exemplos de bem público:**\n* Iluminação pública\n* Defesa nacional\n\nRodovias não são, necessariamente, bens públicos puros: podem ser excludentes quando há pedágio e tornam-se rivais quando congestionadas.\n\n### Por que os bens públicos são falhas de mercado?\nA não exclusão permite que pessoas usufruam do bem sem pagar por ele, comportamento conhecido como *free rider* (carona). Como cada indivíduo tem incentivo para ocultar sua disposição a pagar, o mercado privado tende a ofertar quantidade inferior à socialmente desejável.\n\n| | EXCLUDENTE | NÃO EXCLUDENTE |\n| :--- | :--- | :--- |\n| **RIVAL** | Bem PRIVADO | Bem COMUM |\n| **NÃO RIVAL** | Bem de clube ou pedagiado | Bem PÚBLICO PURO |\n\n### Bens semipúblicos, meritórios e demeritórios\nBens semipúblicos possuem apenas uma das duas características dos bens públicos puros. Já as categorias meritória e demeritória refletem uma avaliação social sobre estímulo ou desestímulo ao consumo, não a classificação por rivalidade e exclusão:\n\n* **a) Bens meritórios:** O poder público entende que seu consumo produz benefícios sociais relevantes e, por isso, pode ofertá-los ou subsidiá-los.\n  * **Exemplos:** saúde e educação.\n* **b) Bens demeritórios:** São aqueles que o governo considera nocivos e, consequentemente, atua para inibir a sua produção.\n  * **Exemplo:** Drogas.",
+      "callouts": [
+        {
+          "text": "A não exclusão permite que indivíduos usufruam do bem sem pagar por ele. Esse incentivo ao comportamento de carona tende a causar suboferta privada e pode justificar provisão, financiamento ou regulação pública.",
+          "type": "warning",
+          "title": "O Problema do Carona (Free Rider)"
+        },
+        {
+          "text": "Bens meritórios são definidos pelo benefício social atribuído ao seu consumo; bens públicos puros são definidos por não rivalidade e não exclusão. As classificações não são equivalentes.",
+          "type": "info",
+          "title": "Bens Meritórios vs. Públicos"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [],
+      "mermaid_mindmap": null,
+      "archived_at": null,
+      "current_revision_id": "1b78f70e-14ed-4c77-b915-82cc4facd02a"
+    },
+    {
+      "section_id": "financas-publicas-sec-04",
+      "content_unit_id": "f7a676c6-c071-4791-b4b6-8898a2076d61",
+      "stable_key": "informacoes-assimetricas-entre-as-partes",
+      "topic_id": "financas-publicas",
+      "title": "Informações Assimétricas (Entre as Partes)",
+      "sort_order": 3,
+      "content_markdown": "A assimetria de informação ocorre quando dois ou mais agentes econômicos estabelecem entre si uma transação na qual uma das partes envolvidas detém informações qualitativas ou quantitativas superiores às da outra parte. Esse fenômeno manifesta-se em dois momentos distintos:\n\n*   **Seleção Adversa (Antes da transação):**\n    *   **Conceito:** Representa a chance de a escolha realizada não possuir a qualidade desejada, uma vez que uma das partes não conhece a real procedência do objeto ou serviço, gerando desconfiança por parte de quem detém menor conhecimento.\n    *   **Soluções:** Aplicação de questionários, certificados de qualidade, garantias, taxas de juros diferenciadas, multas, entre outros mecanismos.\n    *   **Exemplos:** A compra de um automóvel usado; a contratação de um seguro de saúde (situação em que o contratante pode omitir a existência de uma doença pré-existente).\n\n*   **Risco Moral (*moral hazard* - Depois da transação):**\n    *   **Conceito:** Ocorre quando uma das partes de uma negociação toma decisões que o parceiro não consegue observar diretamente, o que pode afetar negativamente os benefícios que esse parceiro recebe.\n    *   **Soluções:** Monitoramento constante, estabelecimento de incentivos e cobrança de franquias, medidas que induzem os comportamentos desejados.\n    *   **Exemplos:** Seguros de carros (situação em que o indivíduo adota um comportamento desleixado com o veículo após a assinatura do contrato); a concessão de salário eficiência.\n\n---\n\n### A Teoria da Agência\n\nA Teoria da Agência surge quando um indivíduo (denominado principal) deseja alcançar um determinado objetivo e, para isso, delega a outrem (denominado agente) o poder de decisão como meio para atingir essa meta. \n\nO problema de agência se estabelece quando o agente passa a perseguir seus próprios objetivos em detrimento dos objetivos definidos pelo principal.\n\n*   **Exemplo:** Um indivíduo (principal) contrata um pintor (agente) para pintar a sua sala (objetivo). O agente, contudo, realiza o trabalho de qualquer forma, sem o devido zelo, com o único propósito de receber o pagamento.\n*   **Desafios do principal:** O principal enfrenta o desafio inicial de separar os tipos de agentes entre bons e ruins (evitando a Seleção Adversa) e, posteriormente, o desafio de manter o nível de esforço do agente contratado (evitando o Risco Moral).\n\n---\n\n### Outras Falhas de Mercado (Menos Cobradas em Provas)\n\nEm mercados competitivos (caracterizados como atomizados), há a presença de muitos produtores e muitos consumidores, sendo o preço definido estritamente pela relação entre oferta e demanda. No entanto, ocorrem desvios desse modelo:\n\n#### Poder de Mercado\n*   **Falha:** Nos mercados não competitivos, como oligopólios e monopólios, as empresas detêm o poder de determinar unilateralmente os preços e as quantidades dos bens e serviços.\n*   **Soluções:** O governo deve combater essas práticas por meio da regulação dos mercados (atuação de Agências Reguladoras) e da limitação de fusões e aquisições (atuação do Cade), entre outras medidas.\n\n#### Monopólio Natural\n*   **Falha:** Ocorre quando os custos fixos de produção são extremamente elevados, de modo que apenas uma única firma deve operar no mercado para obter rendimentos de escala adequados.\n*   **Soluções:** Diante da impossibilidade de concorrência, cabe ao governo regular este mercado ou assumir diretamente a responsabilidade pela produção.\n*   **Exemplos:** Distribuidoras de energia elétrica, serviços de água e esgoto.\n\n#### Mercados Incompletos\n*   **Falha:** Situação em que há pessoas demandando determinados produtos e serviços, porém as empresas não os ofertam, mesmo que o custo de produção esteja abaixo do preço que os consumidores estariam dispostos a pagar. Isso ocorre devido à instabilidade do ambiente econômico, político, social ou de crédito.\n*   **Soluções:** O governo deve intervir oferecendo linhas de crédito (como as disponibilizadas pelo BNDES), assumindo diretamente o fornecimento do bem ou serviço, ou fomentando a atuação do setor privado.\n\n#### Desemprego e Inflação\n*   **Combate:** O enfrentamento dessas falhas pode ser realizado tanto pela Política Alocativa quanto pela Política Estabilizadora:\n    *   **Alocativa:** Representa uma intervenção direta do governo na economia.\n    *   **Estabilizadora:** Atua por meio da aplicação de políticas macroeconômicas governamentais.\n\n#### Riscos Pesados\n*   **Falha:** Trata-se de operações que envolvem alto risco financeiro e tecnológico, o que inibe o investimento voluntário por parte das empresas privadas.\n*   **Atuação governamental:** O governo atua no sentido de reduzir ou suavizar o risco envolvido.\n*   **Exemplo:** As indústrias farmacêuticas realizam investimentos elevados em pesquisa. As patentes reduzem parte desse risco ao conferir exclusividade temporária; no Brasil, a patente de invenção vigora por **20 anos** contados do depósito, nos termos da Lei nº 9.279/1996.",
+      "callouts": [
+        {
+          "text": "A Seleção Adversa ocorre ANTES da assinatura do contrato (ex: omitir doença pré-existente no plano de saúde). O Risco Moral ocorre DEPOIS do contrato assinado (ex: dirigir de forma imprudente por ter seguro total).",
+          "type": "warning",
+          "title": "Seleção Adversa vs. Risco Moral"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [],
+      "mermaid_mindmap": "flowchart TD\n    A[\"Assimetria de Informação\"] --> B[\"Seleção<br/>Adversa<br/>Antes<br/>da<br/>transação\"]\n    A --> C[\"Risco<br/>Moral<br/>Depois<br/>da<br/>transação\"]\n    B --> D[\"Ex:<br/>Carro<br/>usado<br/>/<br/>Doença<br/>oculta\"]\n    C --> E[\"Ex:<br/>Direção<br/>imprudente<br/>pós-seguro\"]\n    class A readableRoot;\n    class B,C,D,E readableItem;",
+      "archived_at": null,
+      "current_revision_id": "949d599d-928e-4804-8605-b2128a71e330"
+    }
+  ],
+  "remaining_sections": [
+    {
+      "section_id": "financas-publicas-sec-05",
+      "title": "Função Distributiva e Tributação",
+      "current_revision_id": "ef57bd26-905d-4d21-9a3a-3303361ced44"
+    },
+    {
+      "section_id": "financas-publicas-sec-06",
+      "title": "Função Estabilizadora Ou Anticíclica",
+      "current_revision_id": "56e74b96-2831-4f51-8cb1-c3141fc2c903"
+    },
+    {
+      "section_id": "financas-publicas-sec-07",
+      "title": "Déficit e Dívida Pública",
+      "current_revision_id": "c7e458f4-c0d9-4c5c-9fbb-a263c486553c"
+    }
+  ],
+  "current_revisions": [
+    {
+      "section_id": "financas-publicas-sec-01",
+      "current_revision_id": "34163223-06c6-45b7-aa4e-4f5cedc14f24"
+    },
+    {
+      "section_id": "financas-publicas-sec-02",
+      "current_revision_id": "52ccdc66-01b6-4d4a-9c99-b573219c7feb"
+    },
+    {
+      "section_id": "financas-publicas-sec-03",
+      "current_revision_id": "1b78f70e-14ed-4c77-b915-82cc4facd02a"
+    },
+    {
+      "section_id": "financas-publicas-sec-04",
+      "current_revision_id": "949d599d-928e-4804-8605-b2128a71e330"
+    },
+    {
+      "section_id": "financas-publicas-sec-05",
+      "current_revision_id": "ef57bd26-905d-4d21-9a3a-3303361ced44"
+    },
+    {
+      "section_id": "financas-publicas-sec-06",
+      "current_revision_id": "56e74b96-2831-4f51-8cb1-c3141fc2c903"
+    },
+    {
+      "section_id": "financas-publicas-sec-07",
+      "current_revision_id": "c7e458f4-c0d9-4c5c-9fbb-a263c486553c"
+    }
+  ],
+  "local_preimage_parity": [
+    {
+      "section_id": "financas-publicas-sec-01",
+      "same_content": true,
+      "same_revision": true
+    },
+    {
+      "section_id": "financas-publicas-sec-02",
+      "same_content": true,
+      "same_revision": true
+    },
+    {
+      "section_id": "financas-publicas-sec-03",
+      "same_content": true,
+      "same_revision": true
+    },
+    {
+      "section_id": "financas-publicas-sec-04",
+      "same_content": true,
+      "same_revision": true
+    },
+    {
+      "section_id": "financas-publicas-sec-05",
+      "same_content": true,
+      "same_revision": true
+    },
+    {
+      "section_id": "financas-publicas-sec-06",
+      "same_content": true,
+      "same_revision": true
+    },
+    {
+      "section_id": "financas-publicas-sec-07",
+      "same_content": true,
+      "same_revision": true
+    }
+  ],
+  "local_proposals": [
+    {
+      "section_id": "financas-publicas-sec-01",
+      "same_as_current": false
+    },
+    {
+      "section_id": "financas-publicas-sec-02",
+      "same_as_current": false
+    },
+    {
+      "section_id": "financas-publicas-sec-04",
+      "same_as_current": false
+    },
+    {
+      "section_id": "financas-publicas-sec-05",
+      "same_as_current": false
+    },
+    {
+      "section_id": "financas-publicas-sec-07",
+      "same_as_current": false
+    }
+  ],
+  "components": {
+    "callouts": 6,
+    "maps": 3,
+    "flashcards": 0,
+    "mnemonics": 0
+  },
+  "ethics_acceptance_preserved": {
+    "sections": 20,
+    "all_contents_and_revisions_equal": true,
+    "acceptance_file_unchanged": true
+  },
+  "scope": "Finanças Públicas01–04: externalidades, causas, bens públicos e informação assimétrica; restantes05–07 fora do lote"
+}

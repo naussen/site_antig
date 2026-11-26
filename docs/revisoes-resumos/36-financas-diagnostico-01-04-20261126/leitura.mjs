@@ -1,0 +1,15 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+import {createClient} from 'file:///C:/PRO/site/node_modules/@supabase/supabase-js/dist/index.mjs';
+import {fetchState} from '../../../saneamento-onda-5/manifesto-preparacao-onda5.mjs';
+import {normalizeSectionContent,sha256} from '../../../saneamento-onda-4/manifesto_saneamento_onda4.mjs';
+const folder=import.meta.dirname,read=n=>JSON.parse(fs.readFileSync(`${folder}/${n}`,'utf8'));
+const sb=createClient(process.env.NEXT_PUBLIC_SUPABASE_URL,process.env.SUPABASE_SERVICE_ROLE_KEY,{auth:{persistSession:false,autoRefreshToken:false}});
+const [actual,ethics]=await Promise.all([fetchState(sb,[{discipline:'Finanças Públicas'}]),fetchState(sb,[{discipline:'Ética no Serviço Público'}])]);
+const accepted=read('../../35-etica-no-servico-publico/aceite-documental-20261125/matriz-aceite.json');assert.equal(ethics.sections.length,20);
+for(const row of accepted.sections){const s=ethics.sections.find(x=>x.section_id===row.section_id);assert.ok(s);assert.equal(s.current_revision_id,row.current_revision_id);assert.equal(sha256(normalizeSectionContent(s)),row.content_sha256);}
+assert.equal(actual.topics.length,1);assert.equal(actual.sections.length,7);
+const selected=actual.sections.filter(s=>[1,2,3,4].some(n=>s.section_id===`financas-publicas-sec-0${n}`));assert.equal(selected.length,4);
+const local=read('../preimagem.json'),proposals=read('../secoes-revisadas.json');
+const same=(a,b)=>sha256(normalizeSectionContent(a))===sha256(normalizeSectionContent(b));
+const result={checked_at:new Date().toISOString(),date:'2026-11-26',mode:'diagnostico_somente_select',database_writes:0,topics:actual.topics,total_sections:actual.sections.length,selected_sections:selected,remaining_sections:actual.sections.filter(s=>!selected.includes(s)).map(({section_id,title,current_revision_id})=>({section_id,title,current_revision_id})),current_revisions:actual.sections.map(({section_id,current_revision_id})=>({section_id,current_revision_id})),local_preimage_parity:actual.sections.map(s=>({section_id:s.section_id,same_content:same(s,local.sections.find(x=>x.section_id===s.section_id)),same_revision:s.current_revision_id===local.sections.find(x=>x.section_id===s.section_id).current_revision_id})),local_proposals:proposals.map(p=>({section_id:p.section_id,same_as_current:actual.sections.some(s=>s.section_id===p.section_id&&same(p,s))})),components:{callouts:selected.reduce((n,s)=>n+s.callouts.length,0),maps:selected.filter(s=>s.mermaid_mindmap).length,flashcards:selected.reduce((n,s)=>n+s.flashcards.length,0),mnemonics:selected.reduce((n,s)=>n+s.mnemonics.length,0)},ethics_acceptance_preserved:{sections:20,all_contents_and_revisions_equal:true,acceptance_file_unchanged:true},scope:'Finanças Públicas01–04: externalidades, causas, bens públicos e informação assimétrica; restantes05–07 fora do lote'};
+fs.writeFileSync(`${folder}/estado-atual.json`,JSON.stringify(result,null,2)+'\n',{flag:'wx'});console.log(JSON.stringify({...result,selected_sections:selected.map(({section_id,title})=>({section_id,title}))}));

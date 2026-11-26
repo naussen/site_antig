@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-26",
+  "status": "diagnostico_concluido_recorte_registrado_sem_aplicacao",
+  "discipline": "Finanças Públicas",
+  "report": "36-financas-publicas.md",
+  "section_ids": [
+    "financas-publicas-sec-01",
+    "financas-publicas-sec-02",
+    "financas-publicas-sec-03",
+    "financas-publicas-sec-04"
+  ],
+  "rationale": "quatro seções coerentes de falhas de mercado;05–07 formam recorte posterior, sem exceder limite",
+  "components": {
+    "texts": 4,
+    "callouts": 6,
+    "maps": 3,
+    "tables": 1,
+    "flashcards": 0,
+    "mnemonics": 0
+  },
+  "database_writes": 0,
+  "content_changes": 0,
+  "reviewed_and_accepted_sections": 0,
+  "total_active_sections": 7,
+  "remaining_outside_scope": [
+    {
+      "section_id": "financas-publicas-sec-05",
+      "title": "Função Distributiva e Tributação",
+      "current_revision_id": "ef57bd26-905d-4d21-9a3a-3303361ced44"
+    },
+    {
+      "section_id": "financas-publicas-sec-06",
+      "title": "Função Estabilizadora Ou Anticíclica",
+      "current_revision_id": "56e74b96-2831-4f51-8cb1-c3141fc2c903"
+    },
+    {
+      "section_id": "financas-publicas-sec-07",
+      "title": "Déficit e Dívida Pública",
+      "current_revision_id": "c7e458f4-c0d9-4c5c-9fbb-a263c486553c"
+    }
+  ],
+  "current_revisions": [
+    {
+      "section_id": "financas-publicas-sec-01",
+      "current_revision_id": "34163223-06c6-45b7-aa4e-4f5cedc14f24"
+    },
+    {
+      "section_id": "financas-publicas-sec-02",
+      "current_revision_id": "52ccdc66-01b6-4d4a-9c99-b573219c7feb"
+    },
+    {
+      "section_id": "financas-publicas-sec-03",
+      "current_revision_id": "1b78f70e-14ed-4c77-b915-82cc4facd02a"
+    },
+    {
+      "section_id": "financas-publicas-sec-04",
+      "current_revision_id": "949d599d-928e-4804-8605-b2128a71e330"
+    },
+    {
+      "section_id": "financas-publicas-sec-05",
+      "current_revision_id": "ef57bd26-905d-4d21-9a3a-3303361ced44"
+    },
+    {
+      "section_id": "financas-publicas-sec-06",
+      "current_revision_id": "56e74b96-2831-4f51-8cb1-c3141fc2c903"
+    },
+    {
+      "section_id": "financas-publicas-sec-07",
+      "current_revision_id": "c7e458f4-c0d9-4c5c-9fbb-a263c486553c"
+    }
+  ],
+  "old_preimage_matches": true,
+  "old_proposals_published": false,
+  "ethics_acceptance_preserved": {
+    "sections": 20,
+    "all_contents_and_revisions_equal": true,
+    "acceptance_file_unchanged": true
+  },
+  "ethics_report_sha256": "60b7d2d035a5734a01457ef5a1778fbf0e6bbc0ca9f3bda3399663af72d5881b",
+  "discipline_complete": false,
+  "queue_status": "[ ] revisão/publicação não iniciadas; diagnóstico delimitado",
+  "validation": "SELECT, leitura integral de quatro seções/componentes, fontes primárias, sintaxe/JSON/diff. Sem dry-run, escrita, visual ou testes globais.",
+  "stop": true,
+  "editorial_commit": "8cf2b9a5dd58789ddb2ac45307fde3a16e650487",
+  "editorial_remote": "sem remoto",
+  "local_evidence_path": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\36-financas-publicas\\diagnostico-01-04-20261126",
+  "documentation_only": true
+}

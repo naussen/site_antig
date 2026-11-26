@@ -1,6 +1,6 @@
 # Plano operacional de revisão — orquestração por agentes IA
 
-Versão 3 — atualização documental de 25/11/2026. Público exclusivo: agentes de orquestração, execução e verificação. Este documento é o ponto de entrada para retomar o programa sem acesso ao chat. Não certifica a qualidade integral do acervo.
+Versão 3 — atualização documental de 26/11/2026. Público exclusivo: agentes de orquestração, execução e verificação. Este documento é o ponto de entrada para retomar o programa sem acesso ao chat. Não certifica a qualidade integral do acervo.
 
 ## 1. Objetivo, escopo e ambientes
 
@@ -80,7 +80,7 @@ Legenda: `[ ]` não iniciada; `[~]` parcial; `[x]` encerrada conforme seção 9.
 | 33 | Engenharia Florestal | 2 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 2 tópicos vazios registrada em `33-engenharia-florestal.md` | Aguardar autoria/importação futura de conteúdo |
 | 34 | Estatística | 4 | [x] concluída | Oito seções corrigidas e três acrescentadas; quatro tópicos e onze seções reconciliados; 66/66 verificações locais nos três temas e duas larguras. | Aceite da versão publicada; relatório 34 e recibos preparacao-20261123-v2. |
 | 35 | Ética no Serviço Público | 3 ativos (4 físicos) | [x] aceita para a fotografia | 20/20 seções,37 callouts/5 mapas; seis lotes e120 visuais válidos consolidados;20 revisões/vínculos/alias preservados; zero vazios ativos | Encerrada para a versão do relatório35; sem certificar edital ou reaplicar conteúdo. Nenhum próximo lote iniciado. |
-| 36 | Finanças Públicas | 1 | [ ] não iniciada | Fotografia coletada (7 seções, 0 cartões, 4 diagramas) | Executar Onda 7 (ciclo D02–D08) |
+| 36 | Finanças Públicas | 1 | [ ] diagnóstico delimitado | SELECT confirmou7 seções; recorte01–04:4 textos,6 callouts,3 mapas/1 tabela; propostas antigas sem recibo de publicação | Revisar somente01–04;05–07 reservadas para depois; preservar Ética aceita; relatório36 |
 | 37 | Física | 9 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 9 tópicos vazios registrada em `37-fisica.md` | Aguardar autoria/importação futura de conteúdo |
 | 38 | Geografia | 10 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 10 tópicos vazios registrada em `38-geografia.md` | Aguardar autoria/importação futura de conteúdo |
 | 39 | Informática | 15 | [x] encerrada no escopo | aceite 24/11 para a fotografia conciliada: 55/55 seções, 14 tópicos ativos (15 na coleta). Cadastro vazio de Redes arquivado com alias; um vínculo de questão transferido com metadados preservados. 55 revisões intactas e 14 vínculos reconciliados; relatório 39. | Encerrada para esta versão; não reaplicar lotes. Nenhuma próxima frente iniciada. |

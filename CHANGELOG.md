@@ -1,3 +1,7 @@
+## 2026-11-26 — diagnóstico de Finanças Públicas01–04
+
+- Relatório36/recorte de quatro seções sobre falhas de mercado registrado:6 callouts,3 mapas e1 tabela;05–07 fora do lote. Propostas locais antigas sem publicação comprovada e divergentes do banco atual. Zero escrita no banco; Ética aceita preservada,20 conteúdos/revisões iguais. Achados/fontes/checkpoint espelhados; editorial `8cf2b9a`. Sem início de revisão/publicação ou alteração de aplicação.
+
 ## 2026-11-25 — aceite documental de Ética no Serviço Público
 
 - Aceite da fotografia integral:3 tópicos ativos/20 seções,37 callouts/5 mapas; seis lotes e120 visuais válidos consolidados. SELECT confirmou20 conteúdos/revisões, cadastros/vínculos/alias preservados; zero vazios ativos. Nenhuma escrita ou reaplicação no banco. Relatório35/matriz/checkpoint espelhados; editorial `0a27cb2`. Fila22[x]/24[~]/8[ ]; nenhum próximo lote iniciado.
