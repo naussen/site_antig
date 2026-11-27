@@ -1,0 +1,110 @@
+{
+  "scope": [
+    "jurisdicao-aduaneira-sec-01",
+    "jurisdicao-aduaneira-sec-02",
+    "jurisdicao-aduaneira-sec-03",
+    "jurisdicao-aduaneira-sec-04",
+    "jurisdicao-aduaneira-sec-05"
+  ],
+  "topic_id": "jurisdicao-aduaneira",
+  "topic_title": "Jurisdição Aduaneira",
+  "fully_examined": true,
+  "components": {
+    "texts": 5,
+    "callouts": 11,
+    "maps": 1,
+    "tables": 0,
+    "quant_charts": 0,
+    "flashcards": 0,
+    "mnemonics": 1
+  },
+  "findings": [
+    {
+      "section": "01",
+      "section_id": "jurisdicao-aduaneira-sec-01",
+      "title": "Administração Aduaneira e Alfandegamento",
+      "confirmed": [
+        "Administração Aduaneira e Callout 1 afirmam taxativamente que o controle aduaneiro é ininterrupto e que a fiscalização não possui essa característica: os arts. 15 e 16 do Decreto nº 6.759/2009 (e art. 36 do DL nº 37/1966) dispõem que a fiscalização aduaneira poderá ser ininterrupta, em horários determinados ou eventual, enquanto a distinção entre controle aduaneiro (permanente sobre comércio exterior) e modalidades de exercício da fiscalização nos locais/recintos é doutrinária/operacional e não deve contradizer a própria modalidade 'ininterrupta' descrita na seção 02.",
+        "Alfandegamento apresenta a licitação como requisito geral obrigatório de todo alfandegamento ('O ato ocorre após a realização do devido procedimento licitatório'): pelo art. 13, § 2º, do Decreto nº 6.759/2009, a conclusão prévia de licitação e o cumprimento contratual condicionam especificamente os casos de permissão ou concessão de serviços públicos (como portos secos), não todo recinto alfandegado (ex.: terminais privativos, lojas francas ou remessas postais em regimes próprios).",
+        "Descumprimento de requisitos técnicos e operacionais (arts. 13-A, 728, III, 'b', e 735-C do Decreto nº 6.759/2009; Lei nº 12.350/2010, arts. 37 e 38) omite o regime sancionador escalonado (advertência, suspensão na reincidência em 365 dias e multa diária de R$ 10.000,00 após notificação sem saneamento) e trata genericamente como simples multa imediata.",
+        "Zona Primária exemplifica 'Área terrestre nos aeroportos alfandegados (por exemplo, as Lojas Francas)', misturando a delimitação física do art. 3º, I, 'b', com o alfandegamento específico de recintos de lojas francas na zona primária de porto ou aeroporto previsto no art. 9º, parágrafo único, do Decreto nº 6.759/2009.",
+        "Mapa Mermaid ('Recintos Alfandegados') encadeia linearmente etapa_1 → etapa_2 → etapa_3 → etapa_4 → etapa_5 como se Concessão (imóvel da União) e Permissão (imóvel de terceiros) fossem etapas sucessivas de um único fluxo, quando pelo art. 12, parágrafo único, do Decreto nº 6.759/2009 são regimes alternativos de outorga conforme a titularidade do imóvel, além de reduzir 'Recintos Alfandegados' apenas ao Porto Seco."
+      ],
+      "review_pending": [
+        "Precisar na Zona Primária de pontos de fronteira que se trata da 'área terrestre' demarcada pela autoridade aduaneira local (art. 3º, I, 'c', do Decreto nº 6.759/2009) e incluir 'animais' ao lado de mercadorias, veículos e pessoas na ZVA (art. 4º, caput), bem como a possibilidade de medidas específicas para determinado local e vigência temporária (art. 4º, § 1º, II e III).",
+        "Qualificar na atribuição dos PAPF (art. 5º, I a III, do Decreto nº 6.759/2009) que o embarque, desembarque ou trânsito de viajantes procedentes do exterior ou a ele destinados também se submete ao controle aduaneiro quanto a bens/bagagens (sem prejuízo da polícia marítima, aeroportuária e de fronteiras exercida pela Polícia Federal nos termos do art. 144, § 1º, III, da CF/1988).",
+        "Registrar no Porto Seco o fundamento legal (Lei nº 9.074/1995, art. 1º, VI e § 2º, e ADI 3.497/STF sobre prazo máximo de até 25 anos prorrogável por até 10 anos, precedido de licitação) sem expandir indevidamente para regimes de armazenagem do tópico 04."
+      ],
+      "confirmed_correct": "Território aduaneiro equivalente a todo o território nacional (art. 2º); ZPE como zona primária para efeito de controle aduaneiro (art. 3º, § 1º, e Lei nº 11.508/2007, art. 1º, parágrafo único); águas territoriais e espaço aéreo na zona secundária (art. 3º, II); extensão da jurisdição às ACIs sem ampliar território nacional (art. 3º, § 5º); abrangência municipal integral da ZVA (art. 4º, § 3º); vedação de porto seco na ZP de portos e aeroportos alfandegados (art. 11, § 1º, e IN RFB nº 2.111/2022) e exceção de dutos/linhas de transmissão ligados ao exterior (art. 8º, parágrafo único)."
+    },
+    {
+      "section": "02",
+      "section_id": "jurisdicao-aduaneira-sec-02",
+      "title": "Fiscalização Aduaneira",
+      "confirmed": [
+        "Modalidade 'Horários determinados' afirma que o AFRFB 'acorda e combina previamente o horário de atuação com o depositário da mercadoria': contraria frontalmente o art. 16, § 1º, do Decreto nº 6.759/2009 (e art. 36, § 1º, do DL nº 37/1966, com redação da Lei nº 10.833/2003), segundo o qual 'A administração aduaneira determinará os horários e as condições de realização dos serviços aduaneiros', tratando-se de ato unilateral da Administração (com ressarcimento de serviço extraordinário fora do expediente normal pelo § 2º), e não acordo negocial com o depositário.",
+        "Modalidade 'Eventual' restringe o conceito a 'fiscalização realizada a posteriori, ou seja, após a ocorrência dos fatos geradores': no art. 16, caput, do Decreto nº 6.759/2009, 'eventual' designa a modalidade não permanente/esporádica de presença fiscal nos PAPF e recintos alfandegados conforme o movimento ou interesse fiscal, não se confundindo exclusivamente com revisão aduaneira ou auditoria pós-desembaraço.",
+        "Obrigação de guarda documental cita genericamente 'o importador, o exportador ou o adquirente': pelo art. 18, caput, do Decreto nº 6.759/2009 (Lei nº 10.833/2003, art. 70), trata-se especificamente do 'adquirente de mercadoria importada por sua conta e ordem' (estendendo-se pelo § 5º aos demais intervenientes, inclusive encomendante, despachante, transportador, agente de carga e depositário, conforme art. 71 da Lei nº 10.833/2003)."
+      ],
+      "review_pending": [
+        "Explicitar na competência exclusiva de tributos de comércio exterior a supervisão e execução por Auditor-Fiscal da RFB (art. 15, parágrafo único, do Decreto nº 6.759/2009) e na precedência aduaneira (art. 17, caput e §§ 1º e 2º) a abrangência também a 'outras áreas nas quais se autorize carga e descarga de mercadorias, ou embarque e desembarque de viajante' e à 'saída' e 'unidades de carga', no que interessar à Fazenda Nacional."
+      ],
+      "confirmed_correct": "Precedência da autoridade aduaneira nos PAPF, recintos alfandegados e ZVA com dever de auxílio imediato e colaboração das demais autoridades (art. 17, §§ 1º e 2º) e distinção entre guarda de documentos relativos às transações pelo prazo decadencial (art. 18, caput) e conservação dos livros obrigatórios e comprovantes de lançamentos até a prescrição dos créditos tributários (art. 21, parágrafo único; CTN, art. 195, parágrafo único)."
+    },
+    {
+      "section": "03",
+      "section_id": "jurisdicao-aduaneira-sec-03",
+      "title": "Controle Aduaneiro de Veículos",
+      "confirmed": [
+        "Texto e Callout 2 afirmam sem ressalva que 'Todos os veículos estão sujeitos ao controle aduaneiro, inclusive aqueles que transportem chefes de Estado e os veículos militares' ('mesmo os veículos militares e os que transportam chefes de Estado'): o art. 67 do Decreto nº 6.759/2009 (e art. 43 do DL nº 37/1966) dispõe expressamente que 'O disposto neste Título aplica-se também aos veículos militares, quando utilizados no transporte de mercadoria', não prevendo sujeição irrestrita de belonaves/aeronaves militares fora do transporte de mercadoria nem menção literal a chefes de Estado no dispositivo.",
+        "Subseção 'Proibições' e Callout 1 unificam as proibições dos arts. 27 e 28 como se todas gerassem indistintamente pena de perdimento de qualquer veículo: pelo art. 688 do Decreto nº 6.759/2009 (art. 104 do DL nº 37/1966), (a) o simples 'estacionar' fora de local habilitado é proibido no art. 27, I, mas o perdimento do art. 688, II, exige operação de descarga de mercadoria estrangeira ou carga de mercadoria nacional/nacionalizada fora de local habilitado; (b) o desvio de rota sem motivo justificado punível com perdimento do veículo no art. 688, VI, restringe-se expressamente ao 'veículo terrestre utilizado no trânsito de mercadoria estrangeira' (além de a faculdade de propor rota alternativa pertencer ao beneficiário do trânsito aduaneiro no art. 332, e não ao art. 27, III); (c) a aproximação para transbordo no art. 688, III, exige atracação a navio ou colocação de qualquer veículo 'na zona primária' nas proximidades de outro, sendo 'um deles procedente do exterior ou a ele destinado', sem observância das normas legais; e (d) omite-se o inciso II do art. 27 / art. 688, I (trafegar em situação ilegal quanto às normas de transporte internacional) e o perdimento cumulativo da mercadoria nos casos dos incisos II, III e VI (art. 688, § 1º).",
+        "Subseção 'Exceções' afirma 'É permitido o transbordo de veículos nas seguintes situações' e restringe o item 3 a 'Veículos autorizados': o parágrafo único do art. 28 excepciona tais veículos da proibição de aproximação/transbordo de pessoa ou mercadoria (não 'transbordo de veículos'), e o inciso III refere-se especificamente aos veículos 'autorizados para utilização em operações portuárias ou aeroportuárias, inclusive de transporte de passageiros e tripulantes'."
+      ],
+      "review_pending": [
+        "Especificar que a autorização excepcional de entrada/saída por PAPF não alfandegado compete ao 'titular da unidade aduaneira jurisdicionante, em casos justificados' (art. 26, § 2º, do Decreto nº 6.759/2009)."
+      ],
+      "confirmed_correct": "Regra de entrada/saída por PAPF alfandegado, extensão do controle desde o ingresso até a efetiva saída abrangendo mercadorias, outros bens a bordo e bagagens (art. 26, caput e § 1º) e possibilidade de acompanhamento fiscal quando conveniente aos interesses da Fazenda Nacional (art. 30)."
+    },
+    {
+      "section": "04",
+      "section_id": "jurisdicao-aduaneira-sec-04",
+      "title": "Conhecimento de Carga / Embarque",
+      "confirmed": [
+        "Afirma como regra absoluta 'existindo um conhecimento de carga para cada contrato de frete celebrado', sem distinguir conhecimento único, conhecimentos agregados/desconsolidados (master/house emitidos por transportador/agente de carga, art. 31, § 2º, do Decreto nº 6.759/2009) nem a regra fiscal correlata do art. 555 (uma única DI por conhecimento, salvo exceções da RFB).",
+        "Na correção do conhecimento de carga (art. 46 do Decreto nº 6.759/2009), omite que: (a) a carta de correção é dirigida à 'autoridade aduaneira do local de descarga' e, se aceita, 'implicará correção do manifesto' (caput); (b) o atendimento tempestivo ou até o desembaraço 'não elide o exame de mérito do pleito' pela autoridade aduaneira (§ 3º); e (c) os procedimentos para correção podem ser realizados 'de forma eletrônica', conforme disciplinado pela RFB (§ 4º, acrescido pelo Decreto nº 10.550/2020, operacionalizado nos sistemas eletrônicos de carga/CCT)."
+      ],
+      "review_pending": [
+        "Qualificar no texto e no Callout 1 que somente o conhecimento de carga 'original, ou documento de efeito equivalente', constitui prova de posse ou de propriedade da mercadoria para efeitos fiscais (art. 554, caput, do Decreto nº 6.759/2009; DL nº 37/1966, art. 46)."
+      ],
+      "confirmed_correct": "Obrigatoriedade de o conhecimento de carga identificar a unidade de carga em que a mercadoria amparada esteja contida (art. 42, § 2º) e ausência de denúncia espontânea na carta de correção apresentada após o início do despacho até o desembaraço (art. 46, § 2º)."
+    },
+    {
+      "section": "05",
+      "section_id": "jurisdicao-aduaneira-sec-05",
+      "title": "Manifesto de Carga",
+      "confirmed": [
+        "Subseção 'Conferência Final' escreve 'extravio (-) ou acréscimo (+) de mercadoria (avaria)', tratando avaria como sinônimo de extravio/acréscimo: nos arts. 53 e 658 do Decreto nº 6.759/2009 (e art. 649), extravio (falta) e acréscimo são diferenças quantitativas de volume/mercadoria apuradas na conferência final do manifesto, ao passo que avaria é dano/quebra/violação/diferença de peso sofrido pelo volume ou mercadoria (art. 63, § 1º).",
+        "Omissão de volume afirma genericamente 'Caso ocorra a omissão de volume, esta poderá ser suprida...': omite o requisito legal indispensável do art. 48 do Decreto nº 6.759/2009 — somente pode ser suprida 'Se objeto de conhecimento regularmente emitido'.",
+        "Callout 2 acrescenta o adjetivo 'improrrogável' ('prazo improrrogável de 24 horas') ao dever de apresentação de embarcação de recreio, aeronave particular ou veículo de competição que entrar por seus próprios meios: o art. 66 do Decreto nº 6.759/2009 prevê 'no prazo de vinte e quatro horas' perante a unidade aduaneira do local habilitado de entrada, sem o vocábulo 'improrrogável'.",
+        "Fluxo item 3 generaliza que 'As operações de carga, descarga ou transbordo somente poderão ocorrer depois de prestadas as informações (entrega dos documentos)': no art. 32, parágrafo único, do Decreto nº 6.759/2009 (art. 37, § 2º, do DL nº 37/1966), essa regra literal refere-se a 'embarcações procedentes do exterior' e à prestação eletrônica/formal das informações do art. 31, não necessariamente entrega física de papéis."
+      ],
+      "review_pending": [
+        "Precisar no art. 43 que deve haver tantos manifestos quantos forem os locais no exterior em que tiver recebido carga 'para cada ponto de descarga no território aduaneiro'; na busca aduaneira (art. 36), que na suspeita de falsa declaração de conteúdo determina-se a descarga 'de volume ou de unidade de carga, para a devida verificação, lavrando-se termo'; e na saída do veículo antes da conclusão fiscal (art. 64, § 1º), que o termo de responsabilidade é firmado 'pelo representante do transportador, no País'."
+      ],
+      "confirmed_correct": "Prevalência do conhecimento sobre o manifesto em divergências com possibilidade de correção de ofício do manifesto (art. 47); documentos complementares do art. 42, caput e § 1º; declaração negativa de carga na falta de manifesto em relação a ponto de escala no exterior (art. 43, parágrafo único); conserto, pesagem e anotação pelo depositário de volume avariado e adoção de cautelas/isolamento (art. 63, §§ 1º e 2º); busca em veículo precedida de comunicação verbal ou escrita inclusive antes das informações do art. 31 (art. 34, caput e § 1º); veículo como garantia dos débitos fiscais e multas aplicadas ao transportador ou condutor (art. 64, caput); e mnemônico 'MANYfesto' pedagogicamente coerente com a reunião de conhecimentos listados no art. 44, III."
+    }
+  ],
+  "stages": {
+    "proposal": "nenhuma proposta local antiga ou pré-imagem paralela encontrada para a disciplina 40; arquivos W7--40-legislacao-aduaneira--b01..b03.json são lotes brutos de coleta",
+    "validation": "nenhuma validação visual executada nesta etapa sem edição; único mapa Mermaid do recorte passou em getMermaidSecurityIssue",
+    "database_application": "zero escritas; todas as 31 seções do banco coincidem 100% em conteúdo normalizado com o snapshot de 18/11/2026",
+    "reconciliation": "SELECT comparativo confirmou 5 tópicos/31 seções de Legislação Aduaneira, 7/7 de Finanças Públicas aceita e 20/20 de Ética aceita",
+    "publication": "nenhuma publicação de conteúdo neste lote"
+  },
+  "remaining_topics": [
+    "tributos-incidentes-no-comercio-exterior (6 seções)",
+    "controle-aduaneiro-de-mercadorias (7 seções)",
+    "regimes-aduaneiros (12 seções)",
+    "infracoes-e-penalidades-aduaneiras (1 seção)"
+  ]
+}

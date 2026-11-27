@@ -1,3 +1,7 @@
+## 2026-11-26 — diagnóstico de Legislação Aduaneira: Jurisdição Aduaneira01–05
+
+- Relatório40 e recorte do Tópico1 completo (`jurisdicao-aduaneira`, seções01–05) registrados:5 textos,11 callouts,1 mapa Mermaid e1 mnemônico confrontados com fontes primárias oficiais (CF/88, Decreto6759/2009, DL37/1966, Leis10833/2003,12350/2010,9074/1995,11508/2007, CTN, Manual RFB e ADI3497/STF);26 seções dos tópicos02–05 fora do lote. SELECT confirmou5 tópicos/31 seções iguais ao snapshot18/11, sem propostas locais antigas. Zero escrita no banco; Finanças Públicas7/7 e Ética20/20 aceitas preservadas. Achados/fontes/checkpoint espelhados; editorial `4e7c3f1`. Fila23[x]/24[~]/7[ ]; sem início de revisão/publicação ou alteração de aplicação.
+
 ## 2026-11-26 — aceite documental de Finanças Públicas
 
 - Aceite da fotografia integral:1 tópico ativo/7 seções(6 corrigidas/publicadas e1 conferida sem edição),11 callouts,4 mapas,4 gráficos estruturados e5 tabelas; dois lotes e42 visuais válidos consolidados. Retificado `quant_charts_changed` para2 nos registros derivados e espelhos da05(dados/descrição no primeiro e descrição no segundo), preservando recibos históricos. SELECT confirmou7 conteúdos/revisões, cadastros/vínculos e Ética20/20 preservados; zero vazios ativos e nenhuma escrita/reaplicação no banco. Relatório36/matriz/checkpoint espelhados; editorial `e2aa1b8`. Fila23[x]/24[~]/7[ ]; nenhum próximo lote iniciado.

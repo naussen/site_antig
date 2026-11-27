@@ -1,0 +1,363 @@
+{
+  "date": "2026-11-26",
+  "status": "diagnostico_concluido_recorte_registrado_sem_aplicacao",
+  "discipline": "Legislação Aduaneira",
+  "report": "40-legislacao-aduaneira.md",
+  "topic_id": "jurisdicao-aduaneira",
+  "topic_title": "Jurisdição Aduaneira",
+  "section_ids": [
+    "jurisdicao-aduaneira-sec-01",
+    "jurisdicao-aduaneira-sec-02",
+    "jurisdicao-aduaneira-sec-03",
+    "jurisdicao-aduaneira-sec-04",
+    "jurisdicao-aduaneira-sec-05"
+  ],
+  "rationale": "tópico 1 completo e coerente (Jurisdição Aduaneira, cinco seções: arts. 2º a 68, 554–556, 658 e 688 do Decreto nº 6.759/2009); demais quatro tópicos (26 seções) reservados para lotes posteriores, respeitando o teto de um tópico ou até cinco seções",
+  "components": {
+    "texts": 5,
+    "callouts": 11,
+    "maps": 1,
+    "tables": 0,
+    "quant_charts": 0,
+    "flashcards": 0,
+    "mnemonics": 1
+  },
+  "database_writes": 0,
+  "content_changes": 0,
+  "reviewed_and_accepted_sections": 0,
+  "total_active_topics": 5,
+  "total_active_sections": 31,
+  "remaining_outside_scope": [
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-01",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "Conceitos Iniciais",
+      "sort_order": 0,
+      "current_revision_id": "2d8e2133-c799-476e-928d-827296971e4e"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-02",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "Lançamento, Pagamento, Compensação e Restituição",
+      "sort_order": 1,
+      "current_revision_id": "374a54e6-65a5-4875-baf0-1d51fa01fc39"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-03",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "Isenções",
+      "sort_order": 2,
+      "current_revision_id": "d21a3c83-702b-477a-8fea-f98037b157bb"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-04",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "Hipóteses de Não Tributação da Importação",
+      "sort_order": 3,
+      "current_revision_id": "6138c5b9-3a6f-4bbb-bf7d-c5c2db0dde30"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-05",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "PIS-Importação e Cofins-Importação",
+      "sort_order": 4,
+      "current_revision_id": "130fe9db-23eb-47bb-9b9e-1018c186f719"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-06",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "PIS e Cofins na Importação de Cigarro",
+      "sort_order": 5,
+      "current_revision_id": "06ffe376-d254-406c-b33b-180b9e922ddb"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-01",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Instrução da Declaração de Importação (DI)",
+      "sort_order": 0,
+      "current_revision_id": "1b2f5a16-56fa-48f0-8582-9bd0fe10f8d8"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-02",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Fluxo do Despacho de Importação",
+      "sort_order": 1,
+      "current_revision_id": "4213dc83-5d90-4960-97b0-b35d48f6b20b"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-03",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Conferência Aduaneira",
+      "sort_order": 2,
+      "current_revision_id": "57e43df4-2575-4624-938d-6ceb1b279281"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-04",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Desembaraço Aduaneiro",
+      "sort_order": 3,
+      "current_revision_id": "22f7ae50-875a-4bca-a673-172bc2466b18"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-05",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Entrega das Mercadorias Pelo Depositário",
+      "sort_order": 4,
+      "current_revision_id": "d02e0753-c202-4cf2-a97d-85672a31e48f"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-06",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Despacho de Exportação",
+      "sort_order": 5,
+      "current_revision_id": "4ba5708f-8874-43e9-b7d5-fa285e7cf7d3"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-07",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Controle e Despacho na Exportação",
+      "sort_order": 6,
+      "current_revision_id": "3c8c7aea-69f4-45f4-9f3e-742a608f331a"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-01",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Tipos de Regimes Aduaneiros",
+      "sort_order": 0,
+      "current_revision_id": "012b8683-f29f-4e17-a250-c19fc50c13f4"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-02",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Mercadorias Dispensadas de Procedimento de Trânsito",
+      "sort_order": 1,
+      "current_revision_id": "4e8b5b47-13e7-44fe-b48b-44c092377c42"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-03",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Drawback",
+      "sort_order": 2,
+      "current_revision_id": "41b0f85a-49eb-491f-a8aa-bfe3d02bd11e"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-04",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Operações Especiais de Drawback",
+      "sort_order": 3,
+      "current_revision_id": "b44e497a-7cd4-4642-9155-356468683091"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-05",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Admissão Temporária para Aperfeiçoamento Ativo",
+      "sort_order": 4,
+      "current_revision_id": "bd2b326f-96d0-42b7-b8df-9d4452e94536"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-06",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Entreposto Aduaneiro",
+      "sort_order": 5,
+      "current_revision_id": "fa42f107-366b-4033-aea8-8dbeba1a87f6"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-07",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Disposições Comuns e Recof",
+      "sort_order": 6,
+      "current_revision_id": "3b366781-ddb7-49f9-994b-0d9b65606f16"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-08",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Exportação Temporária e Aperfeiçoamento Passivo",
+      "sort_order": 7,
+      "current_revision_id": "c879f013-0813-4e66-b649-76b6d73c8421"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-09",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Repetro, Repex, Reporto e Recom",
+      "sort_order": 8,
+      "current_revision_id": "fb394511-5241-4990-99fd-2b5c7606b6c2"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-10",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Regimes Aduaneiros Aplicados em ÁReas Especiais",
+      "sort_order": 9,
+      "current_revision_id": "b8c15539-93bb-4ffb-bc05-b9e9d04a8c96"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-11",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Zona Franca de Manaus – Zfm",
+      "sort_order": 10,
+      "current_revision_id": "d32f8540-ff57-4351-9a51-e43546ed7ace"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-12",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Zonas de Processamento de Exportação – Zpe",
+      "sort_order": 11,
+      "current_revision_id": "4d623348-03e5-4ecc-bd11-6e1741adffae"
+    },
+    {
+      "section_id": "infracoes-e-penalidades-aduaneiras-sec-01",
+      "topic_id": "infracoes-e-penalidades-aduaneiras",
+      "title": "Infrações, Multas e Sanções Administrativas",
+      "sort_order": 0,
+      "current_revision_id": "9fd241dd-804a-4342-b661-7b55e8f08aea"
+    }
+  ],
+  "current_revisions": [
+    {
+      "section_id": "jurisdicao-aduaneira-sec-01",
+      "current_revision_id": "6d33aa32-8acf-4373-a9c7-58769f828885"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-02",
+      "current_revision_id": "49912f7b-8794-4be0-927a-9b3584bd10f5"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-03",
+      "current_revision_id": "5553ee79-89a6-4a98-8f5a-1eb8e20cd89a"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-04",
+      "current_revision_id": "a0e50e54-ebba-4944-895e-78538c0c1219"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-05",
+      "current_revision_id": "c7252625-37fb-4bc8-afdd-1262fae21b1f"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-01",
+      "current_revision_id": "2d8e2133-c799-476e-928d-827296971e4e"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-02",
+      "current_revision_id": "374a54e6-65a5-4875-baf0-1d51fa01fc39"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-03",
+      "current_revision_id": "d21a3c83-702b-477a-8fea-f98037b157bb"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-04",
+      "current_revision_id": "6138c5b9-3a6f-4bbb-bf7d-c5c2db0dde30"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-05",
+      "current_revision_id": "130fe9db-23eb-47bb-9b9e-1018c186f719"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-06",
+      "current_revision_id": "06ffe376-d254-406c-b33b-180b9e922ddb"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-01",
+      "current_revision_id": "1b2f5a16-56fa-48f0-8582-9bd0fe10f8d8"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-02",
+      "current_revision_id": "4213dc83-5d90-4960-97b0-b35d48f6b20b"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-03",
+      "current_revision_id": "57e43df4-2575-4624-938d-6ceb1b279281"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-04",
+      "current_revision_id": "22f7ae50-875a-4bca-a673-172bc2466b18"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-05",
+      "current_revision_id": "d02e0753-c202-4cf2-a97d-85672a31e48f"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-06",
+      "current_revision_id": "4ba5708f-8874-43e9-b7d5-fa285e7cf7d3"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-07",
+      "current_revision_id": "3c8c7aea-69f4-45f4-9f3e-742a608f331a"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-01",
+      "current_revision_id": "012b8683-f29f-4e17-a250-c19fc50c13f4"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-02",
+      "current_revision_id": "4e8b5b47-13e7-44fe-b48b-44c092377c42"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-03",
+      "current_revision_id": "41b0f85a-49eb-491f-a8aa-bfe3d02bd11e"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-04",
+      "current_revision_id": "b44e497a-7cd4-4642-9155-356468683091"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-05",
+      "current_revision_id": "bd2b326f-96d0-42b7-b8df-9d4452e94536"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-06",
+      "current_revision_id": "fa42f107-366b-4033-aea8-8dbeba1a87f6"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-07",
+      "current_revision_id": "3b366781-ddb7-49f9-994b-0d9b65606f16"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-08",
+      "current_revision_id": "c879f013-0813-4e66-b649-76b6d73c8421"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-09",
+      "current_revision_id": "fb394511-5241-4990-99fd-2b5c7606b6c2"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-10",
+      "current_revision_id": "b8c15539-93bb-4ffb-bc05-b9e9d04a8c96"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-11",
+      "current_revision_id": "d32f8540-ff57-4351-9a51-e43546ed7ace"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-12",
+      "current_revision_id": "4d623348-03e5-4ecc-bd11-6e1741adffae"
+    },
+    {
+      "section_id": "infracoes-e-penalidades-aduaneiras-sec-01",
+      "current_revision_id": "9fd241dd-804a-4342-b661-7b55e8f08aea"
+    }
+  ],
+  "snapshot_20261118_matches_all_31": true,
+  "old_proposals_found": false,
+  "old_proposals_published": false,
+  "financas_acceptance_preserved": {
+    "sections": 7,
+    "all_contents_and_revisions_equal": true,
+    "acceptance_file_sha256": "8b6ddb663c3cd3c3bb7a857811cba7cade9895e07c379f74843e07774f4e08d2",
+    "report_36_sha256": "0883f25aaf8fc3f731f94786ac4f25a138be2a01eeeac007962a0e03293979ea"
+  },
+  "ethics_acceptance_preserved": {
+    "sections": 20,
+    "all_contents_and_revisions_equal": true,
+    "acceptance_file_sha256": "17f9b0f6f4701249452bfce25a927bd460340910986ce7adbf6d75a148a9240a",
+    "report_35_sha256": "60b7d2d035a5734a01457ef5a1778fbf0e6bbc0ca9f3bda3399663af72d5881b"
+  },
+  "discipline_complete": false,
+  "queue_status": "[ ] revisão/publicação não iniciadas; diagnóstico delimitado",
+  "validation": "SELECT em tempo real, leitura integral das cinco seções e de todos os seus componentes (5 textos, 11 callouts, 1 mapa Mermaid e 1 mnemônico), confrontação com fontes primárias oficiais em 26/11/2026 e checagem de sintaxe/JSON/diff. Sem dry-run, escrita, CAS, visual ou testes globais.",
+  "stop": true,
+  "editorial_commit": "4e7c3f1b2ad956c5fa2eb45c3c38e27f37194419",
+  "editorial_remote": "sem remoto",
+  "local_evidence_path": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\40-legislacao-aduaneira\\diagnostico-jurisdicao-01-05-20261126",
+  "documentation_only": true
+}

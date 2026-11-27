@@ -1,0 +1,570 @@
+{
+  "checked_at": "2026-11-27T01:55:57.415Z",
+  "date": "2026-11-26",
+  "mode": "diagnostico_somente_select",
+  "database_writes": 0,
+  "discipline": "Legislação Aduaneira",
+  "topics": [
+    {
+      "topic_id": "jurisdicao-aduaneira",
+      "discipline": "Legislação Aduaneira",
+      "title": "Jurisdição Aduaneira",
+      "sort_order": 1,
+      "archived_at": null,
+      "active_sections": 5,
+      "callouts": 11,
+      "maps": 1,
+      "mnemonics": 1,
+      "flashcards": 0
+    },
+    {
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "discipline": "Legislação Aduaneira",
+      "title": "Tributos Incidentes no Comércio Exterior",
+      "sort_order": 2,
+      "archived_at": null,
+      "active_sections": 6,
+      "callouts": 12,
+      "maps": 3,
+      "mnemonics": 3,
+      "flashcards": 0
+    },
+    {
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "discipline": "Legislação Aduaneira",
+      "title": "Controle Aduaneiro de Mercadorias",
+      "sort_order": 3,
+      "archived_at": null,
+      "active_sections": 7,
+      "callouts": 11,
+      "maps": 6,
+      "mnemonics": 0,
+      "flashcards": 0
+    },
+    {
+      "topic_id": "regimes-aduaneiros",
+      "discipline": "Legislação Aduaneira",
+      "title": "Regimes Aduaneiros",
+      "sort_order": 4,
+      "archived_at": null,
+      "active_sections": 12,
+      "callouts": 26,
+      "maps": 8,
+      "mnemonics": 1,
+      "flashcards": 0
+    },
+    {
+      "topic_id": "infracoes-e-penalidades-aduaneiras",
+      "discipline": "Legislação Aduaneira",
+      "title": "Infrações e Penalidades Aduaneiras",
+      "sort_order": 5,
+      "archived_at": null,
+      "active_sections": 1,
+      "callouts": 3,
+      "maps": 1,
+      "mnemonics": 0,
+      "flashcards": 0
+    }
+  ],
+  "archived_topics": 0,
+  "archived_sections": 0,
+  "total_sections": 31,
+  "relations": {
+    "question_topic_relations": 0,
+    "topic_discipline_relations": 5,
+    "topic_id_redirects": 0
+  },
+  "historical_artifacts": {
+    "snapshot_captured_at": "2026-11-18T03:04:24.135Z",
+    "all_31_equal_to_snapshot_20261118": true,
+    "all_31_equal_to_batch_inputs_b01_b03": true,
+    "local_old_proposals_found": false,
+    "note": "W7--40-legislacao-aduaneira--b01..b03.json agrupam 11+7+13 seções como insumo bruto de coleta; não são propostas revisadas nem autorizam lote acima de cinco seções."
+  },
+  "selected_topic": "jurisdicao-aduaneira",
+  "selected_sections": [
+    {
+      "section_id": "jurisdicao-aduaneira-sec-01",
+      "content_unit_id": "d6071f01-52c8-4182-80f6-aa04dc341647",
+      "stable_key": "administracao-aduaneira-e-alfandegamento",
+      "topic_id": "jurisdicao-aduaneira",
+      "title": "Administração Aduaneira e Alfandegamento",
+      "sort_order": 0,
+      "content_markdown": "Este tópico apresenta as regras essenciais de jurisdição aduaneira.\n\n### Território Aduaneiro\nO Território Aduaneiro (TA) equivale a todo o Território Nacional.\n\n### Zona Primária (ZP)\nA Zona Primária compreende os locais por onde cargas, pessoas e veículos entram no Território Aduaneiro. Ela é constituída por:\n* Área terrestre ou aquática, contínua ou descontínua, nos portos alfandegados;\n* Área terrestre nos aeroportos alfandegados (por exemplo, as Lojas Francas);\n* Pontos de Fronteira alfandegados;\n* Zona de Processamento de Exportação (ZPE), para efeitos de controle aduaneiro.\n\n### Zona Secundária (ZS)\nA Zona Secundária compreende:\n* O restante do Território Aduaneiro;\n* As Águas Territoriais;\n* O Espaço Aéreo.\n\n### Áreas de Controle Integrado (ACI)\nAs Áreas de Controle Integrado (ACI) são estabelecidas entre os países do Mercosul e o Brasil, caracterizando-se como um enclave aduaneiro. \n* **Atenção:** A ACI não expande o Território Aduaneiro, apenas amplia a jurisdição aduaneira.\n\n### Jurisdição Aduaneira\n\n#### Zona de Vigilância Aduaneira (ZVA)\nA Zona de Vigilância Aduaneira (ZVA) é a orla marítima ou a faixa de fronteira onde a permanência ou a circulação de bens, veículos e pessoas ficam sujeitas a condições, restrições e proibições específicas estabelecidas pela administração.\n* **a) Cuidado:** A ZVA não se confunde com a Zona Primária.\n* **b)** O ato de demarcação, de competência do Ministro da Fazenda, poderá ser de caráter geral ou específico em relação a determinados segmentos da orla ou da faixa de fronteira.\n* **c)** A ZVA compreende a totalidade do município demarcado, mesmo que uma parte do território municipal fique situada fora dos limites físicos da faixa ou da orla.\n\n#### Portos, Aeroportos e Pontos de Fronteira Alfandegados – PAPF\nOs PAPF são alfandegados por meio de ato declaratório para que neles possam ocorrer, sob controle aduaneiro, as seguintes atividades:\n* Estacionamento ou trânsito de veículos (sob controle da Receita Federal do Brasil - RFB);\n* Carga, descarga, armazenagem ou passagem de mercadorias (sob controle da Receita Federal do Brasil - RFB);\n* Embarque, desembarque ou trânsito de viajantes (sob controle da Polícia Federal).\n\n### Administração Aduaneira\nConforme estabelece o Artigo 237 da Constituição Federal de 1988 (CF/88), a fiscalização e o controle sobre o comércio exterior, que são essenciais à defesa dos interesses fazendários nacionais, serão exercidos pelo Ministério da Fazenda. Cabe destacar que o controle aduaneiro é ininterrupto, ao passo que a fiscalização não possui essa característica de interrupção contínua.\n\n### Alfandegamento\nO alfandegamento consiste no ato declaratório emitido pela autoridade aduaneira — a Secretaria da Receita Federal do Brasil (RFB) — que autoriza a realização das operações de controle aduaneiro em determinado local. \n\nPara que o alfandegamento ocorra, devem ser observadas as seguintes condições e requisitos:\n* **Habilitação prévia:** O alfandegamento será necessariamente precedido da habilitação ao tráfego internacional, a ser concedida pelas autoridades competentes em matéria de transporte.\n* **Fiel depositário:** O interessado deve, obrigatoriamente, assumir a condição de fiel depositário da mercadoria que estiver sob sua guarda.\n* **Infraestrutura:** Devem ser atendidas as condições de instalação do órgão de fiscalização e de infraestrutura adequadas.\n* **Regularidade fiscal:** É necessária a comprovação da regularidade fiscal do interessado (seja ele concessionário ou permissionário).\n* **Recursos:** Deve haver disponibilidade de recursos humanos e de materiais por parte da fiscalização.\n* **Licitação:** O ato ocorre após a realização do devido procedimento licitatório.\n\nComo regra geral, a entrada ou a saída de mercadorias do território nacional somente poderá efetuar-se em Portos, Aeroportos e Pontos de Fronteira (PAPF) alfandegados. A exceção a essa regra aplica-se às mercadorias conduzidas por meio de linhas de transmissão, dutos e outros casos específicos, conforme definido em ato normativo da RFB.\n\n### Recintos Alfandegados\nOs recintos alfandegados são áreas declaradas pela autoridade aduaneira, localizadas na Zona Primária (ZP) ou na Zona Secundária (ZS), destinadas a permitir, sob controle aduaneiro, a movimentação, a armazenagem e o despacho de mercadorias, bagagens ou Remessa Postal Internacional (RPI).\n\n* **Descumprimento de Requisitos:** O descumprimento dos requisitos exigidos ensejará a aplicação de multa. O recolhimento dessa multa não garante ao infrator o direito à operação regular, assim como não prejudica a aplicação de sanções administrativas, de outras penalidades cabíveis ou da Representação Fiscal para Fins Penais.\n\n#### Porto Seco\nOs portos secos caracterizam-se como recintos alfandegados de **uso público**, sujeitos às seguintes regras de instalação e outorga:\n* **Localização:** Nunca poderão ser instalados na Zona Primária (ZP) de portos e aeroportos alfandegados; contudo, a instalação em pontos de fronteira é permitida.\n* **Concessão:** Será adotado o regime de concessão quando o imóvel pertencer à União, sendo o processo precedido de obra pública.\n* **Permissão:** Será adotado o regime de permissão quando o imóvel utilizado não for de propriedade da União.",
+      "callouts": [
+        {
+          "text": "O controle aduaneiro é ininterrupto, enquanto a fiscalização aduaneira não possui essa característica de continuidade ininterrupta obrigatória.",
+          "type": "warning",
+          "title": "Diferença Temporal de Atuação"
+        },
+        {
+          "text": "Os portos secos nunca poderão ser instalados na Zona Primária de portos e aeroportos alfandegados. No entanto, a instalação em pontos de fronteira é expressamente permitida.",
+          "type": "warning",
+          "title": "Vedação de Localização do Porto Seco"
+        },
+        {
+          "text": "A entrada ou saída de mercadorias por vias não alfandegadas é admitida excepcionalmente para transporte via dutos, linhas de transmissão e outros casos autorizados pela RFB.",
+          "type": "info",
+          "title": "Exceção ao Ingresso por PAPF Alfandegado"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [],
+      "mermaid_mindmap": "flowchart TB\n    inicio[\"Recintos Alfandegados\"]\n    etapa_1[\"01 · Uso Público: Porto Seco\"]\n    inicio --> etapa_1\n    etapa_2[\"02<br/>·<br/>Imóvel<br/>da<br/>União:<br/>Concessão\"]\n    etapa_1 --> etapa_2\n    etapa_3[\"03<br/>·<br/>Imóvel<br/>de<br/>Terceiros:<br/>Permissão\"]\n    etapa_2 --> etapa_3\n    etapa_4[\"04<br/>·<br/>Proibido<br/>na<br/>ZP<br/>de<br/>Portos/Aeroportos\"]\n    etapa_3 --> etapa_4\n    etapa_5[\"05<br/>·<br/>Permitido<br/>em<br/>Pontos<br/>de<br/>Fronteira\"]\n    etapa_4 --> etapa_5\n    class inicio readableRoot;\n    class etapa_1,etapa_2,etapa_3,etapa_4,etapa_5 readableProcess;",
+      "archived_at": null,
+      "current_revision_id": "6d33aa32-8acf-4373-a9c7-58769f828885",
+      "content_sha256": "d30474262536247823d207bcb49434bd0ffefa2bbb88898dda3d460da4816eb2",
+      "mermaid_security_issue": null
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-02",
+      "content_unit_id": "8756110a-b97a-40b5-8747-9a3db10627f8",
+      "stable_key": "fiscalizacao-aduaneira",
+      "topic_id": "jurisdicao-aduaneira",
+      "title": "Fiscalização Aduaneira",
+      "sort_order": 1,
+      "content_markdown": "A fiscalização aduaneira nos Portos, Aeroportos e Pontos de Fronteira (PAPF) e recintos alfandegados poderá ser exercida de três formas distintas:\n1. **Ininterrupta**: ocorre de maneira contínua, como se observa no setor de bagagens e em portos com funcionamento de 24 horas;\n2. **Horários determinados**: o Auditor-Fiscal da Receita Federal do Brasil (AFRFB) acorda e combina previamente o horário de atuação com o depositário da mercadoria;\n3. **Eventual**: consiste na fiscalização realizada a posteriori, ou seja, após a ocorrência dos fatos geradores.\n\nA autoridade aduaneira possui precedência sobre as demais autoridades nos PAPF, nos recintos alfandegados e na Zona de Vigilância Aduaneira (ZVA). Essa precedência implica:\n1. A obrigação, por parte das demais autoridades, de prestar auxílio imediato à autoridade aduaneira sempre que este for requisitado;\n2. A atribuição de disciplinar a entrada, a permanência e a movimentação de pessoas, veículos e mercadorias, sem prejuízo da competência de outras autoridades.\n\nO importador, o exportador ou o adquirente possuem obrigações específicas quanto à guarda de documentos e registros:\n1. Manter os documentos comerciais e fiscais pelo prazo decadencial;\n2. Manter os livros fiscais e os comprovantes dos lançamentos até que ocorra a prescrição dos créditos tributários correspondentes.",
+      "callouts": [
+        {
+          "text": "A autoridade aduaneira tem precedência sobre as demais autoridades (como sanitária, de segurança ou de transporte) nos PAPF, recintos alfandegados e na ZVA, devendo estas prestar auxílio imediato quando requisitado.",
+          "type": "warning",
+          "title": "Precedência Aduaneira"
+        },
+        {
+          "text": "Documentos comerciais e fiscais devem ser guardados pelo prazo decadencial. Já os livros fiscais e comprovantes de lançamentos devem ser mantidos até a prescrição dos créditos tributários.",
+          "type": "info",
+          "title": "Prazos Diferenciados de Guarda"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [],
+      "mermaid_mindmap": null,
+      "archived_at": null,
+      "current_revision_id": "49912f7b-8794-4be0-927a-9b3584bd10f5",
+      "content_sha256": "05c9031b3188c28cf04df4bf1fb708840c7d4f23e3c19c8a571ecd7a2b1023c0",
+      "mermaid_security_issue": null
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-03",
+      "content_unit_id": "dcdfeca6-2b7a-4ac6-9a69-46a510cbd88a",
+      "stable_key": "controle-aduaneiro-de-veiculos",
+      "topic_id": "jurisdicao-aduaneira",
+      "title": "Controle Aduaneiro de Veículos",
+      "sort_order": 2,
+      "content_markdown": "A entrada ou a saída de veículos no território nacional só poderá ocorrer em PAPF alfandegados (Zona Primária).\n* **Excepcionalmente**: poderá ser concedida autorização para entrada ou saída por PAPF não alfandegado;\n* **Abrangência**: o controle aduaneiro será exercido desde o ingresso do veículo até a sua efetiva saída, estendendo-se também às mercadorias, aos bens e às bagagens transportadas;\n* **Acompanhamento**: a autoridade aduaneira poderá determinar, a seu critério, o acompanhamento fiscal do veículo.\n\nTodos os veículos estão sujeitos ao controle aduaneiro, inclusive aqueles que transportem chefes de Estado e os veículos militares.\n\n### Proibições\nAs seguintes condutas são proibidas e puníveis com a **pena de perdimento** do veículo:\n* Estacionar ou efetuar operações de carga, descarga ou transbordo fora de local habilitado;\n* Desviar o veículo da rota autorizada sem motivo justificado (sendo permitido ao condutor propor rota alternativa);\n* Colocar o veículo nas proximidades de outro, de modo a tornar possível o transbordo de pessoas ou de mercadorias.\n\n### Exceções\nÉ permitido o transbordo de veículos nas seguintes situações:\n1. Veículos de guerra, salvo se estiverem sendo utilizados no transporte comercial;\n2. Veículos de repartições públicas, desde que estejam em serviço no exato momento;\n3. Veículos autorizados, inclusive os de transporte de passageiros e de tripulantes;\n4. Veículos que estejam prestando ou recebendo socorro no momento da ação.",
+      "callouts": [
+        {
+          "text": "Estacionar fora de local habilitado, desviar de rota sem justificativa ou aproximar-se de outro veículo para transbordo ilegal são condutas sujeitas à severa pena de perdimento do veículo.",
+          "type": "warning",
+          "title": "Pena de Perdimento do Veículo"
+        },
+        {
+          "text": "Não há imunidade de controle aduaneiro para veículos oficiais: mesmo os veículos militares e os que transportam chefes de Estado estão sujeitos ao controle aduaneiro.",
+          "type": "info",
+          "title": "Sujeição Universal ao Controle"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [],
+      "mermaid_mindmap": null,
+      "archived_at": null,
+      "current_revision_id": "5553ee79-89a6-4a98-8f5a-1eb8e20cd89a",
+      "content_sha256": "de779808aa55f2fc7043f45268a2b13f0a723d6e8809e47dcc1e6f0cdb8442df",
+      "mermaid_security_issue": null
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-04",
+      "content_unit_id": "3a6322f0-7f23-4255-a989-0bd88f87ef10",
+      "stable_key": "conhecimento-de-carga-embarque",
+      "topic_id": "jurisdicao-aduaneira",
+      "title": "Conhecimento de Carga / Embarque",
+      "sort_order": 3,
+      "content_markdown": "O conhecimento de carga ou de embarque possui as seguintes características e funções:\n* Materializa o contrato de frete, existindo um conhecimento de carga para cada contrato de frete celebrado;\n* Serve como prova de posse ou de propriedade da mercadoria;\n* Deve identificar obrigatoriamente a unidade de carga na qual a mercadoria por ele amparada está contida.\n\n### Correção do Conhecimento de Carga\nA retificação de informações deve ser feita por meio de carta de correção dirigida pelo emitente à autoridade aduaneira. Se a carta for aceita pela autoridade, a correção será efetivada, observando-se os seguintes prazos e efeitos:\n* **Antes do início do despacho**: a carta de correção e o conhecimento de carga a ser corrigido devem ser apresentados previamente;\n* **Após o início do despacho até o desembaraço**: a carta de correção poderá ser apreciada pela autoridade aduaneira, contudo, a sua apresentação não implicará denúncia espontânea por parte do contribuinte.",
+      "callouts": [
+        {
+          "text": "A apresentação de carta de correção após o início do despacho aduaneiro e até o desembaraço não configura denúncia espontânea por parte do contribuinte.",
+          "type": "warning",
+          "title": "Ausência de Denúncia Espontânea"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [],
+      "mermaid_mindmap": null,
+      "archived_at": null,
+      "current_revision_id": "a0e50e54-ebba-4944-895e-78538c0c1219",
+      "content_sha256": "d9a14f43c3e03f9c7a6f0d057ad0d27bc332a10bb8fe0f15b74c1e4868645d10",
+      "mermaid_security_issue": null
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-05",
+      "content_unit_id": "a85d03ff-9ce0-401c-8c96-b6776c1e3c73",
+      "stable_key": "manifesto-de-carga",
+      "topic_id": "jurisdicao-aduaneira",
+      "title": "Manifesto de Carga",
+      "sort_order": 4,
+      "content_markdown": "### Manifesto de Carga\nO manifesto de carga consiste em uma reunião de Conhecimentos (Dica! MANYfesto). Havendo divergência entre o Manifesto e o Conhecimento, prevalecerá o conhecimento, por ser mais detalhado, sendo que a correção do MANIFESTO poderá ser realizada de ofício.\n\nO responsável pelo veículo tem o dever de apresentar o manifesto, a cópia dos conhecimentos, a lista de sobressalentes e as provisões de bordo. Quando for o caso, deverá apresentar também a relação das unidades vazias existentes a bordo, bem como a declaração de acréscimo de volume ou mercadoria.\n\nDevem existir tantos manifestos quantos forem os locais, situados no exterior, nos quais o veículo tiver recebido carga. A não apresentação de manifesto equivale a uma declaração negativa de carga.\n\nCaso ocorra a omissão de volume, esta poderá ser suprida por meio da apresentação da mercadoria sob declaração escrita do responsável pelo veículo, desde que isso ocorra antes que a autoridade aduaneira tome conhecimento do fato.\n\n#### Conferência Final\nTrata-se da apuração de responsabilidade quanto a extravio (-) ou acréscimo (+) de mercadoria (avaria), realizada por meio do confronto do manifesto com os registros, informatizados ou não, de descarga ou armazenamento.\n\n#### Fluxo\n1. O transportador presta as devidas informações à Secretaria da Receita Federal do Brasil (RFB);\n2. É emitido o respectivo termo de entrada do veículo;\n3. As operações de carga, descarga ou transbordo somente poderão ocorrer depois de prestadas as informações (entrega dos documentos);\n4. A mercadoria descarregada será registrada tanto pelo transportador quanto pelo depositário.\n\n* **Avaria:** Será objeto de conserto e pesagem, devendo o depositário realizar a devida anotação no registro de descarga.\n* **Atenção!** A autoridade aduaneira poderá determinar a adoção de cautelas fiscais e o isolamento, inclusive nos casos de extravio ou de avaria.\n\n#### Busca Aduaneira\nTem como finalidade prevenir e reprimir infrações à legislação aduaneira. Pode ser realizada a qualquer tempo, inclusive em momento anterior à prestação das informações (termo de entrada do veículo). A busca aduaneira será precedida de comunicação, que poderá ser feita de forma verbal ou por escrito. Na hipótese de existirem indícios de falsa declaração de conteúdo, a autoridade aduaneira poderá determinar a descarga do veículo.\n\n### Disposições Finais\nO veículo será tomado como garantia dos débitos fiscais, o que inclui as multas aplicadas ao transportador ou ao condutor. \n\nEnquanto os procedimentos fiscais não estiverem concluídos, a autoridade aduaneira poderá permitir a saída do veículo, mediante a assinatura de termo de responsabilidade.\n\nO responsável por embarcação de recreio, aeronave particular ou veículo de competição que entrar no País por seus próprios meios deverá apresentar-se no prazo de 24 horas, para que sejam adotados os procedimentos aduaneiros pertinentes.",
+      "callouts": [
+        {
+          "text": "Havendo divergência entre o Manifesto de Carga e o Conhecimento de Carga, prevalecerá sempre o Conhecimento, por ser o documento mais detalhado.",
+          "type": "warning",
+          "title": "Prevalência em Divergências"
+        },
+        {
+          "text": "O responsável por embarcação de recreio, aeronave particular ou veículo de competição que entrar no País por seus próprios meios deve apresentar-se no prazo improrrogável de 24 horas.",
+          "type": "warning",
+          "title": "Prazo de Apresentação Obrigatória"
+        },
+        {
+          "text": "O próprio veículo transportador é tomado legalmente como garantia para o pagamento dos débitos fiscais e multas aplicadas ao transportador ou condutor.",
+          "type": "info",
+          "title": "Veículo como Garantia"
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "MANYfesto",
+          "meaning": "Muitos (Many) Conhecimentos reunidos",
+          "description": "Mnemônico para lembrar que o Manifesto de Carga é a consolidação/reunião de vários conhecimentos de carga daquela viagem."
+        }
+      ],
+      "flashcards": [],
+      "mermaid_mindmap": null,
+      "archived_at": null,
+      "current_revision_id": "c7252625-37fb-4bc8-afdd-1262fae21b1f",
+      "content_sha256": "e17cd2270f5ec5d0b2fe9a4011bfa21ca15842fc00e3aba7411c1865a61e273e",
+      "mermaid_security_issue": null
+    }
+  ],
+  "remaining_sections": [
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-01",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "Conceitos Iniciais",
+      "sort_order": 0,
+      "current_revision_id": "2d8e2133-c799-476e-928d-827296971e4e"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-02",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "Lançamento, Pagamento, Compensação e Restituição",
+      "sort_order": 1,
+      "current_revision_id": "374a54e6-65a5-4875-baf0-1d51fa01fc39"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-03",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "Isenções",
+      "sort_order": 2,
+      "current_revision_id": "d21a3c83-702b-477a-8fea-f98037b157bb"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-04",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "Hipóteses de Não Tributação da Importação",
+      "sort_order": 3,
+      "current_revision_id": "6138c5b9-3a6f-4bbb-bf7d-c5c2db0dde30"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-05",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "PIS-Importação e Cofins-Importação",
+      "sort_order": 4,
+      "current_revision_id": "130fe9db-23eb-47bb-9b9e-1018c186f719"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-06",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "PIS e Cofins na Importação de Cigarro",
+      "sort_order": 5,
+      "current_revision_id": "06ffe376-d254-406c-b33b-180b9e922ddb"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-01",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Instrução da Declaração de Importação (DI)",
+      "sort_order": 0,
+      "current_revision_id": "1b2f5a16-56fa-48f0-8582-9bd0fe10f8d8"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-02",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Fluxo do Despacho de Importação",
+      "sort_order": 1,
+      "current_revision_id": "4213dc83-5d90-4960-97b0-b35d48f6b20b"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-03",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Conferência Aduaneira",
+      "sort_order": 2,
+      "current_revision_id": "57e43df4-2575-4624-938d-6ceb1b279281"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-04",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Desembaraço Aduaneiro",
+      "sort_order": 3,
+      "current_revision_id": "22f7ae50-875a-4bca-a673-172bc2466b18"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-05",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Entrega das Mercadorias Pelo Depositário",
+      "sort_order": 4,
+      "current_revision_id": "d02e0753-c202-4cf2-a97d-85672a31e48f"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-06",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Despacho de Exportação",
+      "sort_order": 5,
+      "current_revision_id": "4ba5708f-8874-43e9-b7d5-fa285e7cf7d3"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-07",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "title": "Controle e Despacho na Exportação",
+      "sort_order": 6,
+      "current_revision_id": "3c8c7aea-69f4-45f4-9f3e-742a608f331a"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-01",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Tipos de Regimes Aduaneiros",
+      "sort_order": 0,
+      "current_revision_id": "012b8683-f29f-4e17-a250-c19fc50c13f4"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-02",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Mercadorias Dispensadas de Procedimento de Trânsito",
+      "sort_order": 1,
+      "current_revision_id": "4e8b5b47-13e7-44fe-b48b-44c092377c42"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-03",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Drawback",
+      "sort_order": 2,
+      "current_revision_id": "41b0f85a-49eb-491f-a8aa-bfe3d02bd11e"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-04",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Operações Especiais de Drawback",
+      "sort_order": 3,
+      "current_revision_id": "b44e497a-7cd4-4642-9155-356468683091"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-05",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Admissão Temporária para Aperfeiçoamento Ativo",
+      "sort_order": 4,
+      "current_revision_id": "bd2b326f-96d0-42b7-b8df-9d4452e94536"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-06",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Entreposto Aduaneiro",
+      "sort_order": 5,
+      "current_revision_id": "fa42f107-366b-4033-aea8-8dbeba1a87f6"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-07",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Disposições Comuns e Recof",
+      "sort_order": 6,
+      "current_revision_id": "3b366781-ddb7-49f9-994b-0d9b65606f16"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-08",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Exportação Temporária e Aperfeiçoamento Passivo",
+      "sort_order": 7,
+      "current_revision_id": "c879f013-0813-4e66-b649-76b6d73c8421"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-09",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Repetro, Repex, Reporto e Recom",
+      "sort_order": 8,
+      "current_revision_id": "fb394511-5241-4990-99fd-2b5c7606b6c2"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-10",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Regimes Aduaneiros Aplicados em ÁReas Especiais",
+      "sort_order": 9,
+      "current_revision_id": "b8c15539-93bb-4ffb-bc05-b9e9d04a8c96"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-11",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Zona Franca de Manaus – Zfm",
+      "sort_order": 10,
+      "current_revision_id": "d32f8540-ff57-4351-9a51-e43546ed7ace"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-12",
+      "topic_id": "regimes-aduaneiros",
+      "title": "Zonas de Processamento de Exportação – Zpe",
+      "sort_order": 11,
+      "current_revision_id": "4d623348-03e5-4ecc-bd11-6e1741adffae"
+    },
+    {
+      "section_id": "infracoes-e-penalidades-aduaneiras-sec-01",
+      "topic_id": "infracoes-e-penalidades-aduaneiras",
+      "title": "Infrações, Multas e Sanções Administrativas",
+      "sort_order": 0,
+      "current_revision_id": "9fd241dd-804a-4342-b661-7b55e8f08aea"
+    }
+  ],
+  "current_revisions": [
+    {
+      "section_id": "jurisdicao-aduaneira-sec-01",
+      "current_revision_id": "6d33aa32-8acf-4373-a9c7-58769f828885"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-02",
+      "current_revision_id": "49912f7b-8794-4be0-927a-9b3584bd10f5"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-03",
+      "current_revision_id": "5553ee79-89a6-4a98-8f5a-1eb8e20cd89a"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-04",
+      "current_revision_id": "a0e50e54-ebba-4944-895e-78538c0c1219"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-05",
+      "current_revision_id": "c7252625-37fb-4bc8-afdd-1262fae21b1f"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-01",
+      "current_revision_id": "2d8e2133-c799-476e-928d-827296971e4e"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-02",
+      "current_revision_id": "374a54e6-65a5-4875-baf0-1d51fa01fc39"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-03",
+      "current_revision_id": "d21a3c83-702b-477a-8fea-f98037b157bb"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-04",
+      "current_revision_id": "6138c5b9-3a6f-4bbb-bf7d-c5c2db0dde30"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-05",
+      "current_revision_id": "130fe9db-23eb-47bb-9b9e-1018c186f719"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-06",
+      "current_revision_id": "06ffe376-d254-406c-b33b-180b9e922ddb"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-01",
+      "current_revision_id": "1b2f5a16-56fa-48f0-8582-9bd0fe10f8d8"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-02",
+      "current_revision_id": "4213dc83-5d90-4960-97b0-b35d48f6b20b"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-03",
+      "current_revision_id": "57e43df4-2575-4624-938d-6ceb1b279281"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-04",
+      "current_revision_id": "22f7ae50-875a-4bca-a673-172bc2466b18"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-05",
+      "current_revision_id": "d02e0753-c202-4cf2-a97d-85672a31e48f"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-06",
+      "current_revision_id": "4ba5708f-8874-43e9-b7d5-fa285e7cf7d3"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-07",
+      "current_revision_id": "3c8c7aea-69f4-45f4-9f3e-742a608f331a"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-01",
+      "current_revision_id": "012b8683-f29f-4e17-a250-c19fc50c13f4"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-02",
+      "current_revision_id": "4e8b5b47-13e7-44fe-b48b-44c092377c42"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-03",
+      "current_revision_id": "41b0f85a-49eb-491f-a8aa-bfe3d02bd11e"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-04",
+      "current_revision_id": "b44e497a-7cd4-4642-9155-356468683091"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-05",
+      "current_revision_id": "bd2b326f-96d0-42b7-b8df-9d4452e94536"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-06",
+      "current_revision_id": "fa42f107-366b-4033-aea8-8dbeba1a87f6"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-07",
+      "current_revision_id": "3b366781-ddb7-49f9-994b-0d9b65606f16"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-08",
+      "current_revision_id": "c879f013-0813-4e66-b649-76b6d73c8421"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-09",
+      "current_revision_id": "fb394511-5241-4990-99fd-2b5c7606b6c2"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-10",
+      "current_revision_id": "b8c15539-93bb-4ffb-bc05-b9e9d04a8c96"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-11",
+      "current_revision_id": "d32f8540-ff57-4351-9a51-e43546ed7ace"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-12",
+      "current_revision_id": "4d623348-03e5-4ecc-bd11-6e1741adffae"
+    },
+    {
+      "section_id": "infracoes-e-penalidades-aduaneiras-sec-01",
+      "current_revision_id": "9fd241dd-804a-4342-b661-7b55e8f08aea"
+    }
+  ],
+  "components": {
+    "texts": 5,
+    "callouts": 11,
+    "maps": 1,
+    "tables": 0,
+    "quant_charts": 0,
+    "flashcards": 0,
+    "mnemonics": 1
+  },
+  "financas_acceptance_preserved": {
+    "sections": 7,
+    "all_contents_and_revisions_equal": true,
+    "acceptance_file_sha256": "8b6ddb663c3cd3c3bb7a857811cba7cade9895e07c379f74843e07774f4e08d2",
+    "report_36_sha256": "0883f25aaf8fc3f731f94786ac4f25a138be2a01eeeac007962a0e03293979ea"
+  },
+  "ethics_acceptance_preserved": {
+    "sections": 20,
+    "all_contents_and_revisions_equal": true,
+    "acceptance_file_sha256": "17f9b0f6f4701249452bfce25a927bd460340910986ce7adbf6d75a148a9240a",
+    "report_35_sha256": "60b7d2d035a5734a01457ef5a1778fbf0e6bbc0ca9f3bda3399663af72d5881b"
+  },
+  "scope": "Legislação Aduaneira — Tópico 1 completo (jurisdicao-aduaneira, seções 01–05): Administração Aduaneira e Alfandegamento, Fiscalização Aduaneira, Controle Aduaneiro de Veículos, Conhecimento de Carga/Embarque e Manifesto de Carga; demais 4 tópicos (26 seções) reservados para lotes futuros."
+}
