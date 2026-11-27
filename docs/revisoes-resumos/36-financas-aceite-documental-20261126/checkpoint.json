@@ -1,0 +1,81 @@
+{
+  "date": "2026-11-26",
+  "status": "aceite_documental_consolidado_da_fotografia",
+  "discipline": "Finanças Públicas",
+  "report": "36-financas-publicas.md",
+  "scope": "um tópico ativo/físico e 7/7 seções ativas; zero tópicos vazios ou arquivados",
+  "discipline_complete": true,
+  "completion_scope": "versão e fotografia dos dois lotes documentados (01–04 e 05–07), sem certificação de edital ou atualização permanente",
+  "totals": {
+    "sections": 7,
+    "topics_active": 1,
+    "topics_physical": 1,
+    "callouts": 11,
+    "callouts_changed": 8,
+    "maps": 4,
+    "maps_changed": 3,
+    "quant_charts": 4,
+    "quant_charts_changed": 2,
+    "tables": 5,
+    "flashcards": 0,
+    "mnemonics": 0,
+    "visual_passed": 42,
+    "corrected": 6,
+    "unchanged": 1,
+    "added": 0
+  },
+  "quant_charts_changed_resolution": "Retificado de 1 para 2 nos registros derivados e espelhos de 05–07: em financas-publicas-sec-05, o gráfico 0 ('Quantidade de equilíbrio antes e depois da tributação') alterou data e description, e o gráfico 1 ('Elasticidade e perda de peso morto') alterou description ('em mercado sem falhas'); os 2 gráficos de financas-publicas-sec-06 permaneceram inalterados. Recibos primários históricos preservados.",
+  "database_writes": 0,
+  "content_changes": 0,
+  "content_reapplied": false,
+  "publication": "somente consolidação documental; conteúdo já publicado e reconciliado nos lotes secoes-01-04-20261126-v2 e secoes-05-07-20261126-v2",
+  "parity": {
+    "ok": true,
+    "target": "preimagem",
+    "expectedTopics": 1,
+    "expectedSections": 7,
+    "topics": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "sections": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  },
+  "current_revision_ids_preserved": 7,
+  "revision_fingerprint": "e6803df9907e56ebe0a4141c793b2a150d42d0ef0b0cb0cc00e11f2905cac399",
+  "content_fingerprint": "6e6a5759344431d20da720bcf5a98bb46a57d8449d4e6a4c33a256333b552022",
+  "bindings_and_physical_catalog_preserved": true,
+  "empty_active_topics": 0,
+  "ethics20_contents_and_revisions_preserved": true,
+  "ethics_revision_fingerprint": "9611958b5550da62fd0fb0f66ff2ed16cef9a1adfd1dc94f9e76718a48f1f760",
+  "decision": "aceite [x] da fotografia integral: 6 seções corrigidas/publicadas/reconciliadas (01, 02, 04, 05, 06, 07) e 1 seção conferida sem edição (03)",
+  "proof": "matriz-aceite.json associa cada uma das 7 identidades/revisões ao lote, recibo, componentes e visual, incluindo auditoria explícita dos 4 gráficos estruturados (2 alterados na 05); união exata sem lacunas ou sobreposições",
+  "validation_this_batch": [
+    "SELECT somente leitura e comparação integral de 7 conteúdos/revisões de Finanças Públicas e 20 de Ética no Serviço Público",
+    "comparação de catálogo físico, vínculos (question_topic_relations e topic_discipline_relations) e redirecionamentos",
+    "auditoria estrutural antes/depois dos 4 quant-charts e retificação dos registros derivados",
+    "sintaxe, JSONs, diff documental e recálculo exato das 54 disciplinas da fila"
+  ],
+  "validation_reused": "42 combinações visuais válidas dos dois lotes (24 + 18), 24 verificações de zoom/overlay (18 + 6), 30 checagens de tabela (6 + 24), validação de 4 quant-charts e 44 testes de conteúdo; dry-runs, CAS e reconciliações próprios de cada publicação; nada reexecutado sem mudança de código ou conteúdo",
+  "limits": [
+    "Conferência com conta de aluno dispensada; não houve smoke autenticado em produção.",
+    "Fontes primárias e limites documentados em 26/11/2026 nos lotes 01–04 e 05–07 permanecem vigentes (exemplos tributários declaradamente hipotéticos; referência metodológica histórica do BCB contextualizada).",
+    "O aceite vale estritamente para a versão/fotografia registrada (content_fingerprint 6e6a5759344431d20da720bcf5a98bb46a57d8449d4e6a4c33a256333b552022) e não certifica cobertura integral de qualquer edital nem alterações futuras.",
+    "Propostas/SQLs antigos não rastreados e alterações preexistentes (workflow_onda.py e checkout principal do site) permanecem intocados."
+  ],
+  "queue_after": {
+    "accepted": 23,
+    "partial": 24,
+    "not_started": 7
+  },
+  "stop": true,
+  "next_batch_started": false,
+  "editorial_commit": "e2aa1b80fd84efd45754471f4ce40e12445f9958",
+  "editorial_remote": "sem remoto",
+  "local_evidence_path": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\36-financas-publicas\\aceite-documental-20261126",
+  "documentation_only": true
+}

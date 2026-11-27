@@ -1,0 +1,41 @@
+{
+  "checked_at": "2026-11-27T00:47:06.683Z",
+  "database_writes": 0,
+  "parity": {
+    "ok": true,
+    "target": "preimagem",
+    "expectedTopics": 1,
+    "expectedSections": 7,
+    "topics": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "sections": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  },
+  "revision_ids_preserved": 7,
+  "revision_fingerprint": "e6803df9907e56ebe0a4141c793b2a150d42d0ef0b0cb0cc00e11f2905cac399",
+  "content_fingerprint": "6e6a5759344431d20da720bcf5a98bb46a57d8449d4e6a4c33a256333b552022",
+  "topics": [
+    {
+      "topic_id": "financas-publicas",
+      "discipline": "Finanças Públicas",
+      "title": "Finanças Públicas",
+      "sort_order": 1,
+      "archived_at": null,
+      "sections": 7
+    }
+  ],
+  "empty_topics": [],
+  "bindings_and_physical_catalog_preserved": true,
+  "archived_topics": [],
+  "redirects_count": 0,
+  "questions_relations_count": 1,
+  "discipline_relations_count": 1,
+  "ethics20_contents_and_revisions_preserved": true,
+  "ethics_revision_fingerprint": "9611958b5550da62fd0fb0f66ff2ed16cef9a1adfd1dc94f9e76718a48f1f760"
+}

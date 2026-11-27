@@ -29,7 +29,7 @@ Caminhos relativos abaixo partem do repositório editorial. Inventário: `invent
 
 ## 3. Progresso consolidado e limites conhecidos
 
-A fila inclui 54 disciplinas. Há 22 com aceite para a versão revisada do catálogo, 25 parciais (incluindo as 20 sem seções na fotografia) e 7 ainda não iniciadas na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa. Corpus PRO Legis permanece fora do escopo; sua integração com a gamificação permanece autorizada.
+A fila inclui 54 disciplinas. Há 23 com aceite para a versão revisada do catálogo, 24 parciais (incluindo as 20 sem seções na fotografia) e 7 ainda não iniciadas na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa. Corpus PRO Legis permanece fora do escopo; sua integração com a gamificação permanece autorizada.
 
 | Frente | Última evidência | Trabalho seguinte |
 |---|---|---|
@@ -37,7 +37,7 @@ A fila inclui 54 disciplinas. Há 22 com aceite para a versão revisada do catá
 | Ondas 1–4 | A reconciliação de 22/11 abrangeu 235, 326, 130 e 360 seções, respectivamente. Recuperada a ordem de 28 tópicos da Onda 2. Amostra visual de uma seção por disciplina com 90 verificações em três temas e duas larguras. Recibos em `orquestracao-03-54/aceite-ondas-1-4/`. | Restam os tópicos macro de 03, 04, 07 e 15. O recibo posterior de Penal substitui a referência histórica de 104 seções desta disciplina por 108. |
 | Onda 5 | 106 operações confirmadas, 64 tópicos e 251 seções reconciliados. Aceite das quatro disciplinas. | Consultar `orquestracao-03-54/saneamento-onda-5/reconciliacao-publicacao-onda5.json` antes de nova edição. |
 | Onda 6 | Publicados os ajustes de precisão e dois tópicos adicionais. Conferidos 23 tópicos e 327 seções. | Consultar `orquestracao-03-54/saneamento-onda-6/evidencias/fechamento/reconciliacao.json` e o aceite em 30-direito-tributario.md. |
-| Onda 7 | Estatística publicada e reconciliada em 23/11: quatro tópicos e onze seções, oito correções e três adições, 66 verificações locais aprovadas. Onze disciplinas restantes em execução/fila. | Conferir checkpoints exclusivos por disciplina e reservas da retomada. |
+| Onda 7 | Estatística (23/11), Informática (24/11), Macroeconomia (25/11), Ética (25/11) e Finanças Públicas (26/11) publicadas, reconciliadas e aceitas nas fotografias documentadas. Sete disciplinas restantes na fila. | Conferir checkpoints exclusivos por disciplina e reservas da retomada. |
 
 ## 4. Fila completa e progresso por disciplina
 
@@ -80,7 +80,7 @@ Legenda: `[ ]` não iniciada; `[~]` parcial; `[x]` encerrada conforme seção 9.
 | 33 | Engenharia Florestal | 2 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 2 tópicos vazios registrada em `33-engenharia-florestal.md` | Aguardar autoria/importação futura de conteúdo |
 | 34 | Estatística | 4 | [x] concluída | Oito seções corrigidas e três acrescentadas; quatro tópicos e onze seções reconciliados; 66/66 verificações locais nos três temas e duas larguras. | Aceite da versão publicada; relatório 34 e recibos preparacao-20261123-v2. |
 | 35 | Ética no Serviço Público | 3 ativos (4 físicos) | [x] aceita para a fotografia | 20/20 seções,37 callouts/5 mapas; seis lotes e120 visuais válidos consolidados;20 revisões/vínculos/alias preservados; zero vazios ativos | Encerrada para a versão do relatório35; sem certificar edital ou reaplicar conteúdo. Nenhum próximo lote iniciado. |
-| 36 | Finanças Públicas | 1 | [~] parcial | 7/7 revisadas nos dois lotes(01–04 e05–07); seis publicadas/reconciliadas com CAS,03 intacta;42 visuais cumulativos(24+18),24 zoom/overlay,4 gráficos validados; Ética20/20 preservada | Consolidar aceite documental da fotografia7/7 sem reaplicar conteúdo; relatório36 |
+| 36 | Finanças Públicas | 1 | [x] aceita para a fotografia | 7/7 seções(6 corrigidas/publicadas com CAS,1 conferida sem edição),11 callouts,4 mapas,4 gráficos(2 alterados na05) e5 tabelas; dois lotes e42 visuais válidos consolidados;7 revisões/vínculos e Ética20/20 preservados; zero vazios ativos | Encerrada para a versão do relatório36; sem certificar edital ou reaplicar conteúdo. Nenhum próximo lote iniciado. |
 | 37 | Física | 9 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 9 tópicos vazios registrada em `37-fisica.md` | Aguardar autoria/importação futura de conteúdo |
 | 38 | Geografia | 10 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 10 tópicos vazios registrada em `38-geografia.md` | Aguardar autoria/importação futura de conteúdo |
 | 39 | Informática | 15 | [x] encerrada no escopo | aceite 24/11 para a fotografia conciliada: 55/55 seções, 14 tópicos ativos (15 na coleta). Cadastro vazio de Redes arquivado com alias; um vínculo de questão transferido com metadados preservados. 55 revisões intactas e 14 vínculos reconciliados; relatório 39. | Encerrada para esta versão; não reaplicar lotes. Nenhuma próxima frente iniciada. |

@@ -1,3 +1,7 @@
+## 2026-11-26 — aceite documental de Finanças Públicas
+
+- Aceite da fotografia integral:1 tópico ativo/7 seções(6 corrigidas/publicadas e1 conferida sem edição),11 callouts,4 mapas,4 gráficos estruturados e5 tabelas; dois lotes e42 visuais válidos consolidados. Retificado `quant_charts_changed` para2 nos registros derivados e espelhos da05(dados/descrição no primeiro e descrição no segundo), preservando recibos históricos. SELECT confirmou7 conteúdos/revisões, cadastros/vínculos e Ética20/20 preservados; zero vazios ativos e nenhuma escrita/reaplicação no banco. Relatório36/matriz/checkpoint espelhados; editorial `e2aa1b8`. Fila23[x]/24[~]/7[ ]; nenhum próximo lote iniciado.
+
 ## 2026-11-26 — Finanças Públicas05–07 revisadas
 
 - Três seções examinadas, corrigidas, publicadas com CAS e reconciliadas: incidência racional e hipóteses de tributação na05, estabilizadores automáticos/medidas anticíclicas na06 e convenções de sinal, conciliação estoque-fluxo e séries históricas2009 na07. Cinco callouts/um mapa/quatro gráficos/quatro tabelas conferidos;18 visuais finais,6 zoom/overlay,24 checagens de tabela e4 gráficos aprovados;44 testes reutilizados.01–04, vínculos e Ética aceita20/20 preservados. Relatório36/checkpoint/fontes/recibos espelhados; editorial `569acdf`. Avanço editorial7/7 (disciplina mantida[~] até aceite documental consolidado); fila22[x]/25[~]/7[ ]; nenhum próximo lote iniciado.
