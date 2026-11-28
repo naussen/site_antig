@@ -1,0 +1,133 @@
+{
+  "date": "2026-11-28",
+  "status": "diagnostico_concluido_recorte_registrado_sem_aplicacao",
+  "discipline": "Legislação Aduaneira",
+  "report": "40-legislacao-aduaneira.md",
+  "topic_id": "tributos-incidentes-no-comercio-exterior",
+  "topic_title": "Tributos Incidentes no Comércio Exterior",
+  "section_ids": [
+    "tributos-incidentes-no-comercio-exterior-sec-01",
+    "tributos-incidentes-no-comercio-exterior-sec-02",
+    "tributos-incidentes-no-comercio-exterior-sec-03",
+    "tributos-incidentes-no-comercio-exterior-sec-04"
+  ],
+  "remaining_in_topic": [
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-05",
+      "title": "PIS-Importação e Cofins-Importação",
+      "sort_order": 4,
+      "current_revision_id": "130fe9db-23eb-47bb-9b9e-1018c186f719"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-06",
+      "title": "PIS e Cofins na Importação de Cigarro",
+      "sort_order": 5,
+      "current_revision_id": "06ffe376-d254-406c-b33b-180b9e922ddb"
+    }
+  ],
+  "rationale": "O tópico possui 6 seções (acima do limite de 5 por lote). As seções 01–04 formam unidade temática fechada sobre Imposto de Importação (conceitos, fato gerador, sujeição passiva, base de cálculo, alíquotas e regimes MNI/RTS/RTE/RTU), lançamento/pagamento/compensação/restituição/Ex-Tarifário, isenções objetivas e subjetivas, hipóteses de não tributação da importação, Imposto de Exportação, incentivos fiscais na exportação e IPI-Importação. As seções 05 e 06 tratam especificamente de PIS/Pasep-Importação e Cofins-Importação (regra geral e cigarros + CIDE-Combustíveis + Taxa Siscomex) e ficam reservadas juntas para o lote seguinte, evitando cindir as contribuições sobre importação.",
+  "components": {
+    "texts": 4,
+    "callouts": 9,
+    "maps": 3,
+    "tables": 2,
+    "formulas": 2,
+    "quant_charts": 0,
+    "flashcards": 0,
+    "mnemonics": 1
+  },
+  "database_writes": 0,
+  "content_changes": 0,
+  "reviewed_and_accepted_sections_cumulative": 5,
+  "diagnosed_not_reviewed_sections_this_batch": 4,
+  "total_active_topics": 5,
+  "total_active_sections": 31,
+  "published_topic1_preserved": {
+    "topic_id": "jurisdicao-aduaneira",
+    "sections": 5,
+    "all_contents_and_revisions_equal": true,
+    "after_topic1_sha256": "284f568991282352426481f2052119f28ba900dd6cd9eabf48273442394020a4",
+    "revisions": [
+      {
+        "section_id": "jurisdicao-aduaneira-sec-01",
+        "current_revision_id": "2b41dcb4-0f87-4f71-9184-aa1324c7cc8c"
+      },
+      {
+        "section_id": "jurisdicao-aduaneira-sec-02",
+        "current_revision_id": "9e14f5c0-6045-4ff0-8fab-ec9fd2298335"
+      },
+      {
+        "section_id": "jurisdicao-aduaneira-sec-03",
+        "current_revision_id": "ad6a6d16-be25-409a-95f7-e819ae969c59"
+      },
+      {
+        "section_id": "jurisdicao-aduaneira-sec-04",
+        "current_revision_id": "bcf80c15-664e-45ca-931c-5cde74cd6007"
+      },
+      {
+        "section_id": "jurisdicao-aduaneira-sec-05",
+        "current_revision_id": "df8835a9-f7f5-435d-a7da-46e49502156f"
+      }
+    ]
+  },
+  "selected_revisions": [
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-01",
+      "content_unit_id": "9e51168c-c325-4c60-88e2-4fde406b0050",
+      "stable_key": "conceitos-iniciais",
+      "current_revision_id": "2d8e2133-c799-476e-928d-827296971e4e",
+      "content_sha256": "6a34eff180af3fb0758fe7aa24e9d879142ca0042267beab9dcc7fea750fcecb"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-02",
+      "content_unit_id": "4fb16c28-fd72-4a18-bfc4-97988117c3fd",
+      "stable_key": "lancamento-pagamento-compensacao-e-restituicao",
+      "current_revision_id": "374a54e6-65a5-4875-baf0-1d51fa01fc39",
+      "content_sha256": "42a94fcee4c18f3281a6f7e123f34947351422fa48dc43050f2eb5f8e323f4c3"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-03",
+      "content_unit_id": "2fef33bc-93cb-492f-b5a9-baa275ca2b2c",
+      "stable_key": "isencoes",
+      "current_revision_id": "d21a3c83-702b-477a-8fea-f98037b157bb",
+      "content_sha256": "3b8494a03cde70dac496b443b8cbf426fd8c3e4031ce1e6df51f39f48bb926d0"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-04",
+      "content_unit_id": "eb0fe167-959a-4965-b75b-502856ad9572",
+      "stable_key": "hipoteses-de-nao-tributacao-da-importacao",
+      "current_revision_id": "6138c5b9-3a6f-4bbb-bf7d-c5c2db0dde30",
+      "content_sha256": "dd22e64e2cd891fdba5b5f8c45b890187376f205b48d86b6f50232b68e9c4966"
+    }
+  ],
+  "other_topics_outside_scope": {
+    "topics": [
+      "controle-aduaneiro-de-mercadorias",
+      "regimes-aduaneiros",
+      "infracoes-e-penalidades-aduaneiras"
+    ],
+    "sections": 20,
+    "all_equal_to_snapshot_and_reconciled_revisions": true
+  },
+  "full_discipline_sha256": "d95bcba0a9b8976162b716308d89e92cc2cee61a59deffa6e29662255301dc98",
+  "financas_acceptance_preserved": {
+    "sections": 7,
+    "all_contents_and_revisions_equal": true,
+    "acceptance_file_sha256": "8b6ddb663c3cd3c3bb7a857811cba7cade9895e07c379f74843e07774f4e08d2",
+    "report_36_sha256": "0883f25aaf8fc3f731f94786ac4f25a138be2a01eeeac007962a0e03293979ea"
+  },
+  "ethics_acceptance_preserved": {
+    "sections": 20,
+    "all_contents_and_revisions_equal": true,
+    "acceptance_file_sha256": "17f9b0f6f4701249452bfce25a927bd460340910986ce7adbf6d75a148a9240a",
+    "report_35_sha256": "60b7d2d035a5734a01457ef5a1778fbf0e6bbc0ca9f3bda3399663af72d5881b"
+  },
+  "queue_counts": {
+    "accepted": 23,
+    "partial": 25,
+    "not_started": 6
+  },
+  "next_authorized_step": "revisar exclusivamente Tributos Incidentes no Comércio Exterior, seções 01–04, preservando Jurisdição Aduaneira 01–05 publicada, as seções 05–06 e demais tópicos, Finanças Públicas e Ética aceitas",
+  "stop": true,
+  "editorial_commit": "fadf8d877494e0622b3e0e70b489c17a9721b5b0"
+}

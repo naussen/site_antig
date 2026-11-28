@@ -1,0 +1,372 @@
+{
+  "checked_at": "2026-11-28T03:29:14.969Z",
+  "date": "2026-11-28",
+  "mode": "diagnostico_somente_select",
+  "database_writes": 0,
+  "discipline": "Legislação Aduaneira",
+  "selected_topic": "tributos-incidentes-no-comercio-exterior",
+  "selected_topic_title": "Tributos Incidentes no Comércio Exterior",
+  "topic_total_sections": 6,
+  "selected_count": 4,
+  "remaining_in_topic_count": 2,
+  "rationale": "O tópico possui 6 seções (acima do teto de 5). As seções 01–04 formam um bloco coeso sobre Imposto de Importação (conceitos, fato gerador, sujeição passiva, base de cálculo, alíquotas e regimes RTS/RTE/RTU/MNI), lançamento/pagamento/compensação/restituição/Ex-Tarifário, isenções objetivas/subjetivas e hipóteses de não tributação + Imposto de Exportação + incentivos à exportação + IPI-Importação. As seções 05 e 06 (PIS/Cofins-Importação geral e em cigarros + CIDE-Combustíveis + Taxa Siscomex) permanecem juntas para o lote seguinte do tópico, evitando cindir PIS/Cofins-Importação.",
+  "selected_sections": [
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-01",
+      "content_unit_id": "9e51168c-c325-4c60-88e2-4fde406b0050",
+      "stable_key": "conceitos-iniciais",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "Conceitos Iniciais",
+      "sort_order": 0,
+      "content_markdown": "### Produto Estrangeiro, Nacional e Nacionalizado\n\n*   **Nacional:** Refere-se aos produtos produzidos no país que cumprem as regras de origem.\n*   **Nacionalizado:** É o produto importado em caráter definitivo. Esse status independe de despacho para consumo, o que significa que independe do pagamento do tributo ou do reconhecimento de sua dispensa. Considera-se que a nacionalização ocorre na data do embarque, conforme o conhecimento de carga.\n*   **Desnacionalizado:** Trata-se do produto que foi exportado em caráter definitivo.\n*   **Estrangeiro:** É o produto originário do exterior (que passou por transformação substancial), independentemente de apresentar ou não ânimo de definitividade.\n\n### Reimportação, Reexportação e Mercadoria Considerada Estrangeira\n\n*   **Reimportação:** Consiste no retorno de mercadoria que não saiu do país a título definitivo. Esta operação não constitui fato gerador do Imposto de Importação (II).\n*   **Reexportação:** Consiste na saída de mercadoria que não entrou no país a título definitivo, como ocorre nos casos de admissão temporária.\n*   **Mercadoria Considerada Estrangeira:** É a mercadoria desnacionalizada que retorna ao país.\n\n---\n\n### Fato Gerador\n\nO fato gerador material do Imposto de Importação é a entrada de mercadoria estrangeira no território aduaneiro.\n\n*   Não se deve confundir o fato gerador com o \"registro da Declaração de Importação (DI)\". O fato gerador apenas se aperfeiçoa com o registro da DI.\n*   O imposto incide sobre a mercadoria que conste como importada e cujo extravio tenha sido verificado, ressalvadas as bagagens e as Remessas Postais Internacionais (RPI).\n*   O extravio é admitido até o limite de 1% para cargas a granel. A incidência do imposto inclui bagagens e bens enviados como presente, amostra ou a título gratuito.\n\nO fato gerador temporal, que define o momento em que se considera ocorrido o fato gerador, varia conforme as seguintes situações:\n\n| Momento de Ocorrência (Data) | Situações Aplicáveis |\n| :--- | :--- |\n| **Data do registro da Declaração de Importação (DI)** | Mercadoria submetida a despacho para consumo (importação definitiva), inclusive: a) Sob regime suspensivo de tributação; b) Remessa Postal Internacional (RPI) sujeita ao Regime de Importação Comum (RIC). |\n| **Data do lançamento do crédito tributário** | a) RPI não sujeitas ao RIC; b) Bagagem, acompanhada ou desacompanhada; c) Mercadoria constante de manifesto cujo extravio ou avaria tenha sido verificado; d) Mercadoria não objeto de DI que tenha sido consumida, revendida ou não localizada. |\n| **Data do registro do Requerimento de Admissão Temporária (RAT)** | Utilização econômica sob o Regime de Admissão Temporária (RAT) para Utilização Econômica, sempre que houver suspensão dos tributos incidentes. |\n| **Data do vencimento do prazo de permanência em recinto alfandegado** | Aplica-se quando esgotados os prazos para o registro da DI: ▪ Até 90 dias da descarga, se em recinto alfandegado de Zona Primária (ZP). ▪ Até 45 dias após o prazo de permanência em recinto alfandegado de Zona Secundária (ZS), que é de 75 dias, totalizando 120 dias. *Observação:* Em ambas as hipóteses, a DI deve ser registrada antes de aplicada a pena de perdimento. Se a pena de perdimento for aplicada, não há incidência do Imposto de Importação. |\n\nSUJEITO PASSIVO\n\n### Contribuinte\n* **IMPORTADOR**: aquele que promove a entrada de mercadoria estrangeira no Território Aduaneiro (TA).\n* **DESTINATÁRIO de RPI**: por exemplo, em compras realizadas pelo AliExpress.\n* **ADQUIRENTE de mercadoria entrepostada**: situação em que a tributação permanece suspensa até o momento da aquisição.\n\n### RESPONSÁVEL (II + Multas)\n* **Transportador**: em relação à mercadoria procedente do exterior ou que esteja sob controle aduaneiro.\n* **Depositário**: a pessoa que for incumbida da custódia de mercadoria sob controle aduaneiro.\n\n### RESPONSÁVEL SOLIDÁRIO (Sem benefício de ordem)\n* O expedidor e o Operador de Transporte Multimodal (OTM).\n* O representante, estabelecido no País, do transportador estrangeiro (visto que este não possui CNPJ).\n* O adquirente, na hipótese de importação realizada por sua conta e ordem, por intermédio de pessoa jurídica importadora.\n* O adquirente ou cessionário de mercadoria que seja beneficiada com isenção ou redução do Imposto de Importação (II).\n* O encomendante que adquire mercadoria de procedência estrangeira por meio de pessoa jurídica importadora.\n* O beneficiário de regime aduaneiro suspensivo que seja destinado à industrialização para posterior exportação.\n\n*Responsáveis solidários pelo PIS/PASEP-Importação e COFINS-Importação.\n\n### Base de Cálculo\n* **Para alíquotas ad-valorem:** BC = VALOR ADUANEIRO (tem como base o valor CIF)\n* **Para alíquotas específicas:** BC = quantidade na unidade de medida (ex: m³ ou Kg)\n\n| ALÍQUOTA | REGRA |\n| :--- | :--- |\n| **Alíquota Geral** | Tarifa Externa Comum na data do FG |\n| **Acordo Internacional** | = Alíquota do acordo, salvo se alíq. Brasileira mais favorável |\n| **EXCEÇÕES GATT** | = Alíquota do GATT, salvo se alíq. ALADI mais favorável |\n| **[RTS] [RTE] [RTU]** | Alíquota será definida pela CAMEX |\n\n### Regimes de Tributação\n\n#### MNI (Mercadorias Não-Identificadas)\nAplica-se em casos de extravio, consumo ou DESCRIÇÃO genérica (Atenção: difere de classificação genérica).\n* **a) Alíquota:** 80% relativa ao II, IPI, PIS/Cofins-Importação e AFRMM;\n* **b) Base de Cálculo:** arbitada estatisticamente (MEDIANA...)\n\n#### RTS (Regime de Tributação Simplificada)\nPermite a CLASSIFICAÇÃO genérica de RPI (até U$ 3.000 FOB, para PF ou PJ):\n* **a) Alíquota do II:** 60% (BC inclui Frete + Seguro).\n* **b) Isenção:** IPI, PIS/Cofins-Importação e de II, se até U$ 50,00 se envio PF para PF (via Correios).\n* **c) Redução:** 0,00% de II se destinatário PF de medicamentos (até U$ 10.000).\n\n#### RTE (Regime de Tributação Especial)\nAplica-se a BAGAGEM ou bens adquiridos em LOJAS FRANCAS de CHEGADA.\n\n* **Limite via marítima ou aérea:** U$ 1.000\n* **Limite via terrestre, fluvial ou lacustre:** U$ 500\n\n* **a) Alíquota do II:** 50% do valor que exceder os limites\n* **b) Isenção:** IPI, PIS/Cofins-Importação\n* **c) Base de Cálculo:** valor que exceder o limite de isenção\n\n#### RTU (Regime de Tributação Unificada)\nAplica-se à importação por via TERRESTRE e de bens PROCEDENTES do Paraguai, mediante pagamento unificado.\n* **a) Alíquota:** 25% relativa ao II, IPI, PIS/Cofins-Importação (na lei consta 42,25%)\n* **b) Limite:** R$ 110.000/ano, podendo haver limites quantitativos\n* **c) ICMS:** PODE ser incluído, mediante convênio\n* **d) Beneficiários:** microempresa varejista optante pelo Simples\n\n**Vedações:** mercadorias não destinadas ao consumidor final, armas e munições, fogos de artifícios e explosivos, bebidas e cigarros, veículos, embarcações (incluindo partes e peças), medicamentos, pneus, bens usados, ou com importação suspensa ou proibida.",
+      "callouts": [
+        {
+          "text": "Se a pena de perdimento for aplicada à mercadoria que esgotou o prazo de permanência em recinto alfandegado, não há incidência do Imposto de Importação.",
+          "type": "warning",
+          "title": "Pena de Perdimento e Imposto de Importação"
+        },
+        {
+          "text": "A nacionalização do produto importado em caráter definitivo independe de despacho para consumo (pagamento ou dispensa de tributo) e considera-se ocorrida na data do embarque.",
+          "type": "info",
+          "title": "Nacionalização vs Despacho para Consumo"
+        },
+        {
+          "text": "O RTS (Regime de Tributação Simplificada) permite a CLASSIFICAÇÃO genérica de remessas, enquanto o MNI (Mercadorias Não-Identificadas) aplica-se a casos de DESCRIÇÃO genérica.",
+          "type": "tip",
+          "title": "Diferença entre RTS e MNI"
+        }
+      ],
+      "mnemonics": [
+        {
+          "key": "ClaSSSificação e PoSSStal",
+          "meaning": "RTS (Regime de Tributação Simplificada)",
+          "description": "Mnemônico para lembrar que o RTS permite a classificação genérica e aplica-se a remessas postais (RPI)."
+        }
+      ],
+      "flashcards": [],
+      "mermaid_mindmap": "flowchart TB\n    inicio[\"Produto no Comércio Exterior\"]\n    etapa_1[\"01<br/>·<br/>Nacional<br/>Produzido<br/>no<br/>país\"]\n    inicio --> etapa_1\n    etapa_2[\"02<br/>·<br/>Nacionalizado<br/>Importado<br/>definitivo\"]\n    etapa_1 --> etapa_2\n    etapa_3[\"03<br/>·<br/>Desnacionalizado<br/>Exportado<br/>definitivo\"]\n    etapa_2 --> etapa_3\n    etapa_4[\"04<br/>·<br/>Estrangeiro<br/>Origem<br/>externa\"]\n    etapa_3 --> etapa_4\n    class inicio readableRoot;\n    class etapa_1,etapa_2,etapa_3,etapa_4 readableProcess;",
+      "archived_at": null,
+      "current_revision_id": "2d8e2133-c799-476e-928d-827296971e4e",
+      "content_sha256": "6a34eff180af3fb0758fe7aa24e9d879142ca0042267beab9dcc7fea750fcecb",
+      "tables_count": 2,
+      "formulas_count": 0,
+      "mermaid_security_issue": null
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-02",
+      "content_unit_id": "4fb16c28-fd72-4a18-bfc4-97988117c3fd",
+      "stable_key": "lancamento-pagamento-compensacao-e-restituicao",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "Lançamento, Pagamento, Compensação e Restituição",
+      "sort_order": 1,
+      "content_markdown": "### Lançamento\nO lançamento ocorre por homologação, cujo prazo decadencial é de 5 anos contados a partir do registro da Declaração de Importação (DI).\n\n### Pagamento\nO pagamento deve ser efetuado na data do registro da DI, exceto se outro momento for fixado pelo Ministério da Fazenda. Para valores expressos em moeda estrangeira, a conversão cambial é realizada com base na data do fato gerador (FG).\n\n### Compensação\nA compensação constitui uma hipótese de extinção do crédito tributário. Ela pode ser realizada com débitos próprios relativos a tributos administrados pela Secretaria Especial da Receita Federal do Brasil (RFB). Contudo, eventual crédito não poderá ser utilizado no momento do registro da DI.\n\n### Restituição\nA restituição do indébito é cabível nas seguintes situações:\n* **a)** Erro de cálculo, de alíquota, do valor aduaneiro ou da quantidade de mercadoria;\n* **b)** Reforma, anulação, revogação ou rescisão de decisão condenatória;\n* **c)** Admissão Temporária para utilização econômica cujo benefício não tenha sido gozado;\n* **d)** Contribuinte que, à época do fato gerador, era beneficiário ou havia preenchido os requisitos para isenção ou redução geral;\n* **e)** Extravio ou avaria, hipótese em que a restituição independerá de prévia indenização da importância devida à Fazenda Nacional.\n\nA restituição acarreta a devolução proporcional dos juros e das penalidades pecuniárias (restringindo-se estas às multas de mora). O procedimento poderá ser realizado de ofício, a requerimento do interessado ou mediante utilização do crédito. \n\nO protesto do importador deve ser apresentado antes da saída da mercadoria do recinto alfandegado, salvo quando, a critério da autoridade aduaneira, houver inequívoca demonstração do alegado.\n\n---\n\n### Isenções e Reduções\nAs isenções ou reduções de tributos aduaneiros decorrem de lei ou de ato internacional.\n\n#### Requisitos Cumulativos\nPara a concessão dos benefícios, exige-se o cumprimento cumulativo dos seguintes requisitos:\n1. **Inexistência de similar nacional:** verificada mediante consulta pública realizada pelo Departamento de Operações de Comércio Exterior (DECEX) para constatar se há no Brasil mercadoria com qualidade, preço e prazo de entrega equivalentes àquela que pleiteia a isenção;\n2. **Transporte em embarcação nacional:** se a mercadoria for transportada por via marítima, o navio deve ser de bandeira brasileira;\n3. **Regularidade fiscal:** comprovação de quitação de tributos federais.\n\nO reconhecimento da isenção ou da redução não gera direito adquirido. O benefício será revogado de ofício caso o beneficiário deixe de atender aos requisitos exigidos, procedendo-se à cobrança do crédito tributário acrescido de juros de mora e, em caso de dolo ou simulação, de penalidade.\n\n#### Redução (Ex-Tarifário)\nO regime de Ex-Tarifário consiste em uma redução temporária e objetiva da alíquota do Imposto de Importação (II) para 2% ou 0%, incidente sobre bens de capital (BK) e de informática e telecomunicação (BIT) definidos na Tarifa Externa Comum (TEC).\n\n* **Inexistência de produção nacional:** exige-se a inexistência de produção nacional equivalente, critério que difere do exame de similaridade convencional;\n* **Vigência:** o benefício tem vigência de 2 anos. Decorrido esse período, o bem importado poderá ser alienado sem a necessidade de pagamento prévio do II;\n* **Concessão:** é outorgado por meio de resolução da Câmara de Comércio Exterior (CAMEX);\n* **Aplicação geral:** a redução do II estende-se a qualquer pessoa que venha a importar bem idêntico àquele contemplado pelo Ex-Tarifário.",
+      "callouts": [
+        {
+          "text": "Eventual crédito tributário do importador NÃO poderá ser utilizado para compensação no momento do registro da Declaração de Importação (DI).",
+          "type": "warning",
+          "title": "Compensação no Registro da DI"
+        },
+        {
+          "text": "O protesto do importador deve ser apresentado antes da saída da mercadoria do recinto alfandegado, salvo se houver inequívoca demonstração do alegado aceita pela autoridade.",
+          "type": "warning",
+          "title": "Protesto do Importador"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [],
+      "mermaid_mindmap": "flowchart TD\n    A[\"Requisitos Cumulativos\"] --> B[\"Inexistência<br/>de<br/>similar<br/>nacional\"]\n    A --> C[\"Transporte<br/>em<br/>embarcação<br/>nacional\"]\n    A --> D[\"Regularidade fiscal\"]\n    class A readableRoot;\n    class B,C,D readableItem;",
+      "archived_at": null,
+      "current_revision_id": "374a54e6-65a5-4875-baf0-1d51fa01fc39",
+      "content_sha256": "42a94fcee4c18f3281a6f7e123f34947351422fa48dc43050f2eb5f8e323f4c3",
+      "tables_count": 0,
+      "formulas_count": 0,
+      "mermaid_security_issue": null
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-03",
+      "content_unit_id": "2fef33bc-93cb-492f-b5a9-baa275ca2b2c",
+      "stable_key": "isencoes",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "Isenções",
+      "sort_order": 2,
+      "content_markdown": "### Isenções Objetivas\n\nAs isenções objetivas ficam condicionadas à comprovação posterior do efetivo emprego dos bens, sendo o imposto exigido a partir da data de registro da Declaração de Importação (DI) caso a condição não seja cumprida. Essas regras aplicam-se também ao IPI-Importação.\n\n1. **Livros, jornais, periódicos e o papel destinado à sua impressão**: amparados por imunidade.\n2. **Amostras e Remessas Postais Internacionais (RPI)**: desde que sem valor comercial.\n3. **Regime de Tributação Simplificada (RTS)**: RPI e encomendas aéreas internacionais destinadas a pessoa física, no valor de até U$ 3.000,00 (limite de U$ 50,00 se a remessa ocorrer de pessoa física para pessoa física).\n4. **Regime de Tributação Especial (RTE)**: bagagem de viajantes procedentes do exterior ou da Zona Franca de Manaus (ZFM).\n5. **Regime de Tributação Especial (RTE)**: bens adquiridos em loja franca instalada no País.\n6. **Drawback-isenção**: bens importados sob este regime aduaneiro especial.\n7. **Áreas de Livre Comércio**: bens importados por meio destas áreas.\n8. **ZFM e Amazônia Ocidental**: importações efetuadas diretamente para estas regiões.\n9. **Aeronaves e embarcações**: partes, peças e componentes destinados ao seu reparo, revisão e manutenção.\n10. **Conservação e modernização de embarcações**: partes, peças e componentes importados destinados a essas atividades ou à conversão de embarcações.\n11. **Tratamento e pesquisa de saúde**: medicamentos destinados ao tratamento da AIDS e instrumental científico para pesquisa da Síndrome da Deficiência Imunológica Adquirida (SDIA).\n12. **Objetos de arte**: recebidos em doação por museus (observa-se que há incidência de IPI-importação).\n13. **Urna eletrônica**.\n14. **Premiações e eventos esportivos**: bens recebidos como premiação em evento no exterior ou destinados à utilização em evento esportivo oficial no País.\n15. **Desportistas**: bens importados por desportistas, utilizados em evento oficial e recebidos em doação.\n16. **Treinamento olímpico**: equipamentos e materiais destinados, exclusivamente, ao treinamento de atletas brasileiros para olimpíadas.\n17. **Eventos internacionais**: mercadorias destinadas ao consumo em congressos, feiras, exposições internacionais e eventos assemelhados.\n18. **Insumos e alimentos**: gêneros alimentícios de primeira necessidade, fertilizantes, defensivos agrícolas e matérias-primas para a sua produção no País.\n19. **Cidades fronteiriças**: bens trazidos do exterior no comércio característico dessas localidades, destinados ao uso ou consumo pessoal.\n20. **Doações diplomáticas**: mercadorias doadas por Representações Diplomáticas para venda em feiras, bazares e eventos beneficentes.\n\n### Isenções Subjetivas\n\n1. **Entes federativos**: União, Estados, Distrito Federal, Municípios, Territórios e suas respectivas autarquias (amparados por imunidade).\n2. **Entidades sociais e sindicais**: partidos políticos, instituições de educação e de assistência social sem fins lucrativos, e sindicatos dos trabalhadores (amparados por imunidade).\n3. **Pesquisa científica**: instituições de ciência e tecnologia, cientistas e pesquisadores (amparados por imunidade).\n4. **Museus**: desde que instituídos e mantidos pelo Poder Público.\n5. **Corpo diplomático**: missões diplomáticas, repartições consulares de caráter permanente e seus respectivos integrantes.\n6. **Organismos internacionais**: representações de organismos internacionais permanentes dos quais o Brasil seja membro, bem como seus respectivos integrantes.\n\n### Transferência de propriedade ou cessão de uso a qualquer título\n\nA transferência de propriedade ou a cessão de uso, a qualquer título, de bens importados com isenção obriga ao prévio pagamento do imposto. \n\nPara o cálculo do tributo devido, o Imposto de Importação (II) será reduzido proporcionalmente à depreciação do bem em função do tempo decorrido, prazo este contado a partir da data do registro da Declaração de Importação (DI). Não estarão sujeitos a essa depreciação os bens que, por sua natureza, aumentam de valor com o tempo.\n\n**Exceções:**\nA exigência de pagamento prévio do imposto e a cobrança proporcional não se aplicam após decorridos 3 anos do registro da Declaração de Importação (DI).",
+      "callouts": [
+        {
+          "text": "A transferência de propriedade ou cessão de uso de bens importados com isenção antes de decorridos 3 anos do registro da DI exige o pagamento prévio do imposto, calculado proporcionalmente à depreciação do bem.",
+          "type": "warning",
+          "title": "Transferência de Bens Isentos"
+        },
+        {
+          "text": "Objetos de arte recebidos em doação por museus possuem isenção do Imposto de Importação, mas há incidência de IPI-Importação.",
+          "type": "info",
+          "title": "Objetos de Arte para Museus"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [],
+      "mermaid_mindmap": "flowchart TD\n    A[\"Isenções Aduaneiras\"] --> B[\"Objetivas<br/>Focadas<br/>no<br/>bem/finalidade\"]\n    A --> C[\"Subjetivas<br/>Focadas<br/>no<br/>importador\"]\n    B --> D[\"Exige comprovação posterior\"]\n    C --> E[\"Entes, diplomatas e museus\"]\n    class A readableRoot;\n    class B,C,D,E readableItem;",
+      "archived_at": null,
+      "current_revision_id": "d21a3c83-702b-477a-8fea-f98037b157bb",
+      "content_sha256": "3b8494a03cde70dac496b443b8cbf426fd8c3e4031ce1e6df51f39f48bb926d0",
+      "tables_count": 0,
+      "formulas_count": 1,
+      "mermaid_security_issue": null
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-04",
+      "content_unit_id": "eb0fe167-959a-4965-b75b-502856ad9572",
+      "stable_key": "hipoteses-de-nao-tributacao-da-importacao",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "title": "Hipóteses de Não Tributação da Importação",
+      "sort_order": 3,
+      "content_markdown": "As hipóteses em que não ocorre a tributação na importação são classificadas em três categorias fundamentais:\n\n* **ÑFG**: Não ocorrência de Fato Gerador;\n* **ÑE**: Mercadoria Não Estrangeira;\n* **ÑI**: Não Incidência.\n\nAbaixo estão detalhadas as situações específicas e os respectivos tributos que deixam de ser exigidos (II, IPI, PIS e Cofins) de acordo com cada cenário:\n\n### Casos de ÑFG (Não Fato Gerador) ou ÑE (Mercadoria Não Estrangeira)\n\nPara os tributos **II, IPI, PIS e Cofins**, configuram-se como ÑFG ou ÑE as seguintes situações:\n\n* Mercadoria enviada em consignação e que não foi vendida imediatamente APÓS o término do prazo de 720 dias;\n* Mercadoria devolvida por defeito técnico, para fins de reparo ou para sua substituição;\n* Retorno de mercadoria motivado por modificações na sistemática de importação por parte do país importador;\n* Retorno de mercadoria decorrente de guerra ou calamidade pública;\n* Retorno de mercadoria por outros fatores alheios à vontade do exportador;\n* Mercadoria estrangeira que, embora corretamente descrita nos documentos de importação, chegar ao País por erro inequívoco ou comprovado de expedição, desde que seja redestinada ou devolvida ao exterior.\n\n### Casos de Isenção, Reposição e Devolução antes do Desembaraço\n\nPara os tributos **II, IPI, PIS e Cofins**, aplicam-se as seguintes regras:\n\n* Mercadoria estrangeira idêntica, em igual quantidade e valor, que se destine especificamente à reposição de outra mercadoria importada anteriormente e que tenha se revelado, após o respectivo desembaraço aduaneiro, defeituosa ou imprestável;\n* Embarcações construídas no Brasil e transferidas por matriz de empresa brasileira de navegação para subsidiária integral estabelecida no exterior, quando retornarem ao registro brasileiro, permanecendo como propriedade da mesma empresa nacional de origem;\n* Mercadoria estrangeira devolvida para o exterior ANTES do registro da Declaração de Importação (DI) (neste caso específico, aplica-se apenas para **IPI, PIS e Cofins**).\n\n### Casos de Destruição, Perdimento, Atividade Pesqueira e Outros\n\nPara os tributos **II, IPI, PIS e Cofins**, ocorrem as seguintes hipóteses de não tributação:\n\n* Mercadoria estrangeira que for destruída, sob controle aduaneiro e sem qualquer ônus para a Fazenda Nacional, ANTES de ser realizado o seu desembaraço;\n* Mercadoria estrangeira que for objeto da pena de perdimento, exceto nas situações em que a mercadoria não for localizada, ou quando já tiver sido consumida ou revendida;\n* Mercadoria estrangeira em trânsito de PASSAGEM que tenha sido ACIDENTALMENTE DESTRUÍDA;\n* Pescado capturado FORA do território do País por empresa localizada no Brasil, desde que a operação cumpra integralmente as normas que regulam a atividade pesqueira (neste caso específico, aplica-se apenas para **II e IPI**);\n* Retorno de mercadoria em regime de Exportação Temporária, AINDA QUE haja o descumprimento das condições do regime (caracterizando reimportação);\n* Bens importados diretamente por Entidades Beneficentes de Assistência Social.\n\n---\n\n### Regras Gerais de Isenção, Redução e Prazos\n\n* **Vedação por Reciprocidade:** A concessão de isenção ou de redução de tributos não poderá, em nenhuma hipótese, ser concedida em decorrência de reciprocidade de tratamento (aplicável aos itens 5 e 6).\n* **Prazo de Liberação do Tributo:** Após o transcurso do prazo de 05 anos contados do registro da Declaração de Importação (DI), os demais casos (itens 1 a 4) ficarão definitivamente livres do tributo.\n* **Igualdade de Tratamento:** Este benefício estende-se à pessoa ou à entidade que goze de igual tratamento tributário.\n\nMERCADORIA ÑE \nMERCADORIA ESTRANGEIRA, MAS OCORRE ÑI \nCuidado! Algo quando exportado para realizar um serviço, ao retornar ao País, sofrerá incidência do II, salvo no caso de Exportação Temporária. Portanto a questão deve mencionar expressamente exportação temporária.\n\nLegislação Aduaneira \n\nIE – IMPOSTO DE EXPORTAÇÃO \n\n### Incidência \nA incidência ocorre sobre mercadoria nacional ou nacionalizada que seja destinada ao exterior. A CAMEX (Câmara de Comércio Exterior) relacionará quais são essas mercadorias.\n\n### Fato Gerador\n* **FG Material / Espacial:** Consiste na saída da mercadoria do Território Aduaneiro. \n* **FG Temporal (cálculo):** Configura-se na data do Registro de Exportação (RE). Cabe ressaltar que o RE não se confunde com o início do despacho aduaneiro.\n\n### Base de Cálculo\nA base de cálculo é o preço normal que a mercadoria, ou sua similar, alcançaria ao tempo da exportação, sob condições de livre concorrência no mercado internacional. O preço FOB (Free on Board) ou o preço posto na fronteira servem como indicativos. \n* **Difícil apuração ou suscetível de oscilações:** Nesses casos, a CAMEX fixará critérios específicos ou estabelecerá uma pauta de valor mínimo (VMINIMO).\n* **Preço mínimo:** O preço deve ser maior ou igual ao custo de aquisição ou de produção, acrescido dos impostos e contribuições incidentes, mais uma margem de lucro de 15%.\n\n### Alíquota\n* **Regra:** A alíquota padrão é de 30%.\n* **Alteração:** Ato do Poder Executivo (por meio de resolução da Camex) poderá majorar ou reduzir essa alíquota, respeitando o limite máximo permitido de 150%.\n\n### Contribuinte \nO contribuinte do imposto é o exportador, considerado como qualquer pessoa que promova a saída de mercadoria do Território Aduaneiro.\n\n### Pagamento\nA forma e o prazo de pagamento são fixados pelo Ministro da Fazenda, que poderá determinar a exigibilidade do imposto antes da efetiva saída da mercadoria. Adicionalmente, a CAMEX poderá dispensar a cobrança do IE em função do destino da mercadoria.\n\nINCENTIVOS FISCAIS NA EXPORTAÇÃO \n\n### Imunidades \n\n#### ICMS\nNão incidirá sobre operações que destinem mercadorias para o exterior, nem sobre serviços prestados a destinatários situados no exterior. É assegurada a manutenção e o aproveitamento do montante do imposto que foi cobrado nas operações e prestações anteriores.\n\n#### Ipi\nNão incidirá nas operações que destinem produtos industrializados ao exterior, sendo assegurada a manutenção e o aproveitamento do crédito correspondente.\n\n#### Contribuições Sociais e Cide\nNão incidem sobre as receitas decorrentes de exportação (como, por exemplo, a transferência de crédito de ICMS-exportação e as variações cambiais).\n\nDrawback \nNão é um benefício fiscal, mas sim um incentivo fiscal. Em suma, há desoneração nas importações e aquisições no mercado doméstico, utilizadas como insumo para a produção de bens para exportação. \n\nEmpresas Comerciais Exportadoras (“Tradings”)  \nNa compra de mercadorias no mercado interno realizada por trading para fins de exportação, aplicam-se todos os incentivos fiscais aplicáveis às exportações. \n\nMercadoria Exportada que Permanece no País (“Exportação Ficta”)  \nTrata-se da exportação de produtos nacionais sem que tenha ocorrido sua saída efetiva do território aduaneiro. Um caso famoso foi o da aquisição de plataformas de petróleo pela Petrobrás (Repetro). \n\nSimples Nacional  \nAs receitas de exportação são apuradas de maneira separada, ocorrendo uma redução de tributos a serem recolhidos com amparo no Simples Nacional, inclusive sobre as vendas realizadas por meio de empresa comercial exportadora ou de sociedade de propósito específico.\n\nLegislação Aduaneira \n\nIPI – IMPOSTO SOBRE PRODUTO INDUSTRIALIZADO (IMPORTAÇÃO) \n\n**Fato Gerador**\n* Ocorre no DESEMBARAÇO de produtos industrializados de PROCEDÊNCIA estrangeira. \n* Considera-se ocorrido o desembaraço da mercadoria que constar como importada e cujo extravio tenha sido verificado, inclusive se estiver sob regime suspensivo. \n* Atenção! O recolhimento ocorre no registro da Declaração de Importação (DI). Assim, se entre o registro da DI e o desembaraço ocorrer, por exemplo, uma redução de alíquota do IPI, caberá restituição, uma vez que o fato gerador é o desembaraço.\n\n**Base de Cálculo**\n* Corresponde ao valor que servir ou que serviria de Base de Cálculo (BC) do Imposto de Importação (II), acrescido do próprio II e dos encargos cambiais: \n  $$\\text{BC} = \\text{Valor Aduaneiro} + \\text{II} + \\text{Encargos Cambiais} - \\text{depreciação}$$\n* Atenção! Os descontos incondicionais NÃO fazem parte da base de cálculo.\n\n**Alíquota**\n* Regra: alíquotas constantes na Tabela de Incidência do IPI (TIPI). No caso de Mercadorias Não Identificadas, a alíquota aplicável será de 50%.\n\n**Contribuinte**\n* O IMPORTADOR, em relação ao fato gerador decorrente do desembaraço aduaneiro. \n* Atenção! INCIDE IPI na importação de veículos por Pessoas Físicas.\n\n**Isenções**\n* Aplica-se às MESMAS isenções subjetivas e objetivas do II (EXCETO para “Objetos de arte...”). \n* Aplica-se ao Regime de Tributação Simplificada (RTS) e ao Regime de Tributação Especial (RTE).",
+      "callouts": [
+        {
+          "text": "Bens exportados para a prestação de serviços no exterior sofrem incidência do Imposto de Importação (II) ao retornarem ao País, exceto se a operação tiver sido expressamente realizada sob o regime de Exportação Temporária.",
+          "type": "warning",
+          "title": "Retorno de Mercadoria e Incidência de II"
+        },
+        {
+          "text": "O fato gerador do IPI-Importação ocorre no desembaraço aduaneiro, embora o recolhimento seja feito no registro da DI. Se houver redução de alíquota entre o registro da DI e o desembaraço, cabe restituição ao contribuinte.",
+          "type": "warning",
+          "title": "Fato Gerador do IPI na Importação"
+        }
+      ],
+      "mnemonics": [],
+      "flashcards": [],
+      "mermaid_mindmap": null,
+      "archived_at": null,
+      "current_revision_id": "6138c5b9-3a6f-4bbb-bf7d-c5c2db0dde30",
+      "content_sha256": "dd22e64e2cd891fdba5b5f8c45b890187376f205b48d86b6f50232b68e9c4966",
+      "tables_count": 0,
+      "formulas_count": 1,
+      "mermaid_security_issue": null
+    }
+  ],
+  "remaining_in_topic": [
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-05",
+      "title": "PIS-Importação e Cofins-Importação",
+      "sort_order": 4,
+      "current_revision_id": "130fe9db-23eb-47bb-9b9e-1018c186f719",
+      "content_sha256": "ce119e6d7b3d370b943ca4ba1e4d2bb8981b41d783c79170420415fd7a5aed56"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-06",
+      "title": "PIS e Cofins na Importação de Cigarro",
+      "sort_order": 5,
+      "current_revision_id": "06ffe376-d254-406c-b33b-180b9e922ddb",
+      "content_sha256": "5be81bed75da8b767273e75c68b20f923b85da56ea32ae6a8070ac56ae90d19c"
+    }
+  ],
+  "published_topic1_preserved": {
+    "topic_id": "jurisdicao-aduaneira",
+    "sections": 5,
+    "all_contents_and_revisions_equal": true,
+    "after_topic1_sha256": "284f568991282352426481f2052119f28ba900dd6cd9eabf48273442394020a4"
+  },
+  "remaining_other_topics_preserved": {
+    "topics": [
+      "controle-aduaneiro-de-mercadorias",
+      "regimes-aduaneiros",
+      "infracoes-e-penalidades-aduaneiras"
+    ],
+    "sections": 20,
+    "all_equal_to_snapshot_and_reconciled_revisions": true
+  },
+  "relations": {
+    "question_topic_relations": 0,
+    "topic_discipline_relations": 5,
+    "topic_id_redirects": 0
+  },
+  "historical_artifacts": {
+    "topic2_all_6_equal_to_snapshot_20261118": true,
+    "topic2_all_6_equal_to_b01_raw_input": true,
+    "local_old_proposals_for_topic2": false,
+    "untracked_in_discipline_40": [
+      "orquestracao-03-54/saneamento-onda-7/40-legislacao-aduaneira/jurisdicao-01-05-20261126/capturas/",
+      "orquestracao-03-54/saneamento-onda-7/40-legislacao-aduaneira/jurisdicao-01-05-20261126/import/"
+    ],
+    "untracked_note": "Apenas capturas locais PNG e pasta de dry-run do lote já publicado Jurisdição 01–05; zero propostas pendentes para Tributos no Comércio Exterior."
+  },
+  "components": {
+    "texts": 4,
+    "callouts": 9,
+    "maps": 3,
+    "tables": 2,
+    "formulas": 2,
+    "quant_charts": 0,
+    "flashcards": 0,
+    "mnemonics": 1
+  },
+  "current_revisions": [
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-01",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "current_revision_id": "1b2f5a16-56fa-48f0-8582-9bd0fe10f8d8"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-02",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "current_revision_id": "4213dc83-5d90-4960-97b0-b35d48f6b20b"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-03",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "current_revision_id": "57e43df4-2575-4624-938d-6ceb1b279281"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-04",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "current_revision_id": "22f7ae50-875a-4bca-a673-172bc2466b18"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-05",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "current_revision_id": "d02e0753-c202-4cf2-a97d-85672a31e48f"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-06",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "current_revision_id": "4ba5708f-8874-43e9-b7d5-fa285e7cf7d3"
+    },
+    {
+      "section_id": "controle-aduaneiro-de-mercadorias-sec-07",
+      "topic_id": "controle-aduaneiro-de-mercadorias",
+      "current_revision_id": "3c8c7aea-69f4-45f4-9f3e-742a608f331a"
+    },
+    {
+      "section_id": "infracoes-e-penalidades-aduaneiras-sec-01",
+      "topic_id": "infracoes-e-penalidades-aduaneiras",
+      "current_revision_id": "9fd241dd-804a-4342-b661-7b55e8f08aea"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-01",
+      "topic_id": "jurisdicao-aduaneira",
+      "current_revision_id": "2b41dcb4-0f87-4f71-9184-aa1324c7cc8c"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-02",
+      "topic_id": "jurisdicao-aduaneira",
+      "current_revision_id": "9e14f5c0-6045-4ff0-8fab-ec9fd2298335"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-03",
+      "topic_id": "jurisdicao-aduaneira",
+      "current_revision_id": "ad6a6d16-be25-409a-95f7-e819ae969c59"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-04",
+      "topic_id": "jurisdicao-aduaneira",
+      "current_revision_id": "bcf80c15-664e-45ca-931c-5cde74cd6007"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-05",
+      "topic_id": "jurisdicao-aduaneira",
+      "current_revision_id": "df8835a9-f7f5-435d-a7da-46e49502156f"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-01",
+      "topic_id": "regimes-aduaneiros",
+      "current_revision_id": "012b8683-f29f-4e17-a250-c19fc50c13f4"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-02",
+      "topic_id": "regimes-aduaneiros",
+      "current_revision_id": "4e8b5b47-13e7-44fe-b48b-44c092377c42"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-03",
+      "topic_id": "regimes-aduaneiros",
+      "current_revision_id": "41b0f85a-49eb-491f-a8aa-bfe3d02bd11e"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-04",
+      "topic_id": "regimes-aduaneiros",
+      "current_revision_id": "b44e497a-7cd4-4642-9155-356468683091"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-05",
+      "topic_id": "regimes-aduaneiros",
+      "current_revision_id": "bd2b326f-96d0-42b7-b8df-9d4452e94536"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-06",
+      "topic_id": "regimes-aduaneiros",
+      "current_revision_id": "fa42f107-366b-4033-aea8-8dbeba1a87f6"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-07",
+      "topic_id": "regimes-aduaneiros",
+      "current_revision_id": "3b366781-ddb7-49f9-994b-0d9b65606f16"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-08",
+      "topic_id": "regimes-aduaneiros",
+      "current_revision_id": "c879f013-0813-4e66-b649-76b6d73c8421"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-09",
+      "topic_id": "regimes-aduaneiros",
+      "current_revision_id": "fb394511-5241-4990-99fd-2b5c7606b6c2"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-10",
+      "topic_id": "regimes-aduaneiros",
+      "current_revision_id": "b8c15539-93bb-4ffb-bc05-b9e9d04a8c96"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-11",
+      "topic_id": "regimes-aduaneiros",
+      "current_revision_id": "d32f8540-ff57-4351-9a51-e43546ed7ace"
+    },
+    {
+      "section_id": "regimes-aduaneiros-sec-12",
+      "topic_id": "regimes-aduaneiros",
+      "current_revision_id": "4d623348-03e5-4ecc-bd11-6e1741adffae"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-01",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "current_revision_id": "2d8e2133-c799-476e-928d-827296971e4e"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-02",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "current_revision_id": "374a54e6-65a5-4875-baf0-1d51fa01fc39"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-03",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "current_revision_id": "d21a3c83-702b-477a-8fea-f98037b157bb"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-04",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "current_revision_id": "6138c5b9-3a6f-4bbb-bf7d-c5c2db0dde30"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-05",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "current_revision_id": "130fe9db-23eb-47bb-9b9e-1018c186f719"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-06",
+      "topic_id": "tributos-incidentes-no-comercio-exterior",
+      "current_revision_id": "06ffe376-d254-406c-b33b-180b9e922ddb"
+    }
+  ],
+  "full_discipline_sha256": "d95bcba0a9b8976162b716308d89e92cc2cee61a59deffa6e29662255301dc98",
+  "financas_acceptance_preserved": {
+    "sections": 7,
+    "all_contents_and_revisions_equal": true,
+    "acceptance_file_sha256": "8b6ddb663c3cd3c3bb7a857811cba7cade9895e07c379f74843e07774f4e08d2",
+    "report_36_sha256": "0883f25aaf8fc3f731f94786ac4f25a138be2a01eeeac007962a0e03293979ea"
+  },
+  "ethics_acceptance_preserved": {
+    "sections": 20,
+    "all_contents_and_revisions_equal": true,
+    "acceptance_file_sha256": "17f9b0f6f4701249452bfce25a927bd460340910986ce7adbf6d75a148a9240a",
+    "report_35_sha256": "60b7d2d035a5734a01457ef5a1778fbf0e6bbc0ca9f3bda3399663af72d5881b"
+  }
+}
