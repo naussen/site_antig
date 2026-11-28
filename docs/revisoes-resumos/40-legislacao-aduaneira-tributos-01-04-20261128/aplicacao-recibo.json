@@ -1,0 +1,45 @@
+{
+  "status": "completed",
+  "steps": [
+    {
+      "op_id": "tributos-incidentes-no-comercio-exterior-sec-01",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "8f7e4f46-ac22-43e8-b77c-505f51ff6aed"
+    },
+    {
+      "op_id": "tributos-incidentes-no-comercio-exterior-sec-02",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "17c3c5d1-4c14-4fed-86ef-8cfa46e7e353"
+    },
+    {
+      "op_id": "tributos-incidentes-no-comercio-exterior-sec-03",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "f9f69210-2bc8-4e7b-be88-f24d65bd13cd"
+    },
+    {
+      "op_id": "tributos-incidentes-no-comercio-exterior-sec-04",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "783b655a-e50a-4142-b38d-0d6094213ab3"
+    }
+  ],
+  "post": {
+    "ok": true,
+    "target": "saneado",
+    "expectedTopics": 5,
+    "expectedSections": 31,
+    "topics": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "sections": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  }
+}

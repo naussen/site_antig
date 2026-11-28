@@ -1,0 +1,32 @@
+{
+  "at": "2026-11-28T04:39:22.575Z",
+  "topic_id": "tributos-incidentes-no-comercio-exterior",
+  "scope_section_ids": [
+    "tributos-incidentes-no-comercio-exterior-sec-01",
+    "tributos-incidentes-no-comercio-exterior-sec-02",
+    "tributos-incidentes-no-comercio-exterior-sec-03",
+    "tributos-incidentes-no-comercio-exterior-sec-04"
+  ],
+  "reviewed_sections": 4,
+  "changed_sections": 4,
+  "unchanged_reviewed_sections": 0,
+  "callouts_reviewed": 9,
+  "callouts_changed": 9,
+  "maps_reviewed": 3,
+  "maps_changed": 3,
+  "tables_reviewed": 2,
+  "tables_changed": 2,
+  "formulas_reviewed": 2,
+  "formulas_changed": 2,
+  "mnemonics_reviewed": 1,
+  "mnemonics_changed": 0,
+  "maliciousRejected": 4,
+  "preserved_sections_outside_scope": 27,
+  "topic1_jurisdicao_5_preserved": true,
+  "topic2_remaining_05_06_preserved": true,
+  "financas_7_preserved": true,
+  "ethics_20_preserved": true,
+  "concurrency": "createStore.cas + apply de executar-onda5.mjs; quatro CAS sequenciais por identidade e current_revision_id com diário sincronizado e reconciliação integral de 31 seções",
+  "manifest_sha256": "7b12fe3fe47a3ba2d8d9502e9a31342f0eb004aa9c6fe019fa8960c1f03d4c03",
+  "after_sha256": "9d1bfe7f960c2d9c98fb0d330835efff8a1ddfe51e68797d37fd44880fa95dbd"
+}

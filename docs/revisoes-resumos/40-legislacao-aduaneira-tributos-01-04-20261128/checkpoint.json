@@ -1,0 +1,117 @@
+{
+  "date": "2026-11-28",
+  "sources_checked_on": "2026-11-28",
+  "status": "revisado_publicado_reconciliado_parcial",
+  "discipline": "Legislação Aduaneira",
+  "report": "40-legislacao-aduaneira.md",
+  "topic_id": "tributos-incidentes-no-comercio-exterior",
+  "topic_title": "Tributos Incidentes no Comércio Exterior",
+  "reviewed_sections": [
+    "tributos-incidentes-no-comercio-exterior-sec-01",
+    "tributos-incidentes-no-comercio-exterior-sec-02",
+    "tributos-incidentes-no-comercio-exterior-sec-03",
+    "tributos-incidentes-no-comercio-exterior-sec-04"
+  ],
+  "changed_sections": [
+    "tributos-incidentes-no-comercio-exterior-sec-01",
+    "tributos-incidentes-no-comercio-exterior-sec-02",
+    "tributos-incidentes-no-comercio-exterior-sec-03",
+    "tributos-incidentes-no-comercio-exterior-sec-04"
+  ],
+  "unchanged_reviewed_sections": [],
+  "remaining_in_topic": [
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-05",
+      "title": "PIS-Importação e Cofins-Importação",
+      "current_revision_id": "130fe9db-23eb-47bb-9b9e-1018c186f719"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-06",
+      "title": "PIS e Cofins na Importação de Cigarro",
+      "current_revision_id": "06ffe376-d254-406c-b33b-180b9e922ddb"
+    }
+  ],
+  "components": {
+    "texts_reviewed": 4,
+    "texts_changed": 4,
+    "callouts_reviewed": 9,
+    "callouts_changed": 9,
+    "maps_reviewed": 3,
+    "maps_changed": 3,
+    "tables_reviewed": 2,
+    "tables_changed": 2,
+    "formulas_reviewed": 2,
+    "formulas_changed": 2,
+    "mnemonics_reviewed": 1,
+    "mnemonics_changed": 0,
+    "quant_charts_reviewed": 0,
+    "flashcards": 0
+  },
+  "manifest_sha256": "7b12fe3fe47a3ba2d8d9502e9a31342f0eb004aa9c6fe019fa8960c1f03d4c03",
+  "after_tributos_01_04_sha256": "03e3e247fb8965ae8d8978823c1cb1ea1562cc09375e3e60f2ba7b0f79dfbc0a",
+  "full_discipline_sha256": "e6282c504ee4f17dab2fffeb904d90714df76950b686f94477ecdd1f7c88c76c",
+  "revisions": [
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-01",
+      "content_unit_id": "9e51168c-c325-4c60-88e2-4fde406b0050",
+      "current_revision_id": "8f7e4f46-ac22-43e8-b77c-505f51ff6aed",
+      "content_sha256": "939627c44ec864ab2f0325a4fc220d0583e63862b6f96b6c9b494dee6238ca8a"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-02",
+      "content_unit_id": "4fb16c28-fd72-4a18-bfc4-97988117c3fd",
+      "current_revision_id": "17c3c5d1-4c14-4fed-86ef-8cfa46e7e353",
+      "content_sha256": "f49cbd810052f5bf0013586fd626f001b7869587c6a123521cc3f3f959986544"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-03",
+      "content_unit_id": "2fef33bc-93cb-492f-b5a9-baa275ca2b2c",
+      "current_revision_id": "f9f69210-2bc8-4e7b-be88-f24d65bd13cd",
+      "content_sha256": "e4b37018d44b3f0f2338528de01c1fcbb31b11af1951c85efa6090df20c283d1"
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-04",
+      "content_unit_id": "eb0fe167-959a-4965-b75b-502856ad9572",
+      "current_revision_id": "783b655a-e50a-4142-b38d-0d6094213ab3",
+      "content_sha256": "d82fa9e8edecf7bca809956e12cee0121e629ddf7ab91aba882c4c62af5d9c94"
+    }
+  ],
+  "preserved_outside_scope_revision_ids": 27,
+  "topic1_jurisdicao_5_preserved": true,
+  "financas7_contents_and_revisions_preserved": true,
+  "financas_report_sha256": "0883f25aaf8fc3f731f94786ac4f25a138be2a01eeeac007962a0e03293979ea",
+  "ethics20_contents_and_revisions_preserved": true,
+  "ethics_report_sha256": "60b7d2d035a5734a01457ef5a1778fbf0e6bbc0ca9f3bda3399663af72d5881b",
+  "bindings_preserved": true,
+  "dry_run_sections": 6,
+  "scope_review_sections": 4,
+  "validation": {
+    "content_tests_passed_reused": 44,
+    "malicious_mermaid_rejected": 4,
+    "negative_cas_rows": 0,
+    "visual_combinations_effective": 24,
+    "zoom_overlay": 18,
+    "reconciled": true
+  },
+  "application": "quatro CAS sequenciais existentes por identidade/revisão esperada (createStore.cas + apply) com pré-imagem integral de 31 seções, preflight final, diário sincronizado (aplicacao.jsonl) e reconciliação independente; não constitui transação única entre as quatro seções",
+  "active_version": "tributos-01-04-20261128",
+  "application_changes": false,
+  "student_check": "dispensado; visual local não é smoke autenticado",
+  "cumulative_reviewed": 9,
+  "total_active_sections": 31,
+  "remaining_unreviewed": [
+    "tributos-incidentes-no-comercio-exterior (seções 05–06: 2 seções)",
+    "controle-aduaneiro-de-mercadorias (7 seções)",
+    "regimes-aduaneiros (12 seções)",
+    "infracoes-e-penalidades-aduaneiras (1 seção)"
+  ],
+  "discipline_complete": false,
+  "queue_status": "[~] parcial (9/31 seções revisadas/publicadas/reconciliadas; restam 22 seções pendentes)",
+  "queue_counts": {
+    "accepted": 23,
+    "partial": 25,
+    "not_started": 6
+  },
+  "stop": true,
+  "editorial_commit": "e17aa55779d3e899cad86d5631b90b76702de64e"
+}

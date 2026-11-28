@@ -1,0 +1,77 @@
+{
+  "checked_on": "2026-11-28",
+  "scope": [
+    "tributos-incidentes-no-comercio-exterior-sec-01",
+    "tributos-incidentes-no-comercio-exterior-sec-02",
+    "tributos-incidentes-no-comercio-exterior-sec-03",
+    "tributos-incidentes-no-comercio-exterior-sec-04"
+  ],
+  "independent_verification_of_mp_1357_2026": {
+    "act": "Medida Provisória nº 1.357, de 12/05/2026",
+    "status_on_2026_11_28": "Encerrada por conversão na Lei Ordinária nº 15.502, de 10/09/2026 (DOU Extra-A de 10/09/2026), após prorrogação pelo Ato do Presidente da Mesa do CN nº 55, de 03/07/2026.",
+    "editorial_treatment": "A MP nº 1.357/2026 NÃO é citada como medida provisória vigente; cita-se a Lei nº 15.502, de 10/09/2026 (lei de conversão em vigor que alterou o Decreto-Lei nº 1.804/1980, art. 1º, §§ 2º e 2º-B a 2º-G, e arts. 1º-A, 1º-B e 3º-A), ao lado da Lei nº 14.902/2024 e da Portaria MF nº 1.342/2026 aplicável ao Programa Remessa Conforme desde 12/05/2026."
+  },
+  "sections": [
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-01",
+      "disposition": "corrigida_e_publicada",
+      "corrections_applied": [
+        "Nacionalização e Callout 2 corrigidos: vinculada ao regular despacho aduaneiro para consumo e desembaraço aduaneiro (mediante pagamento ou dispensa legal — DL nº 37/1966, arts. 44 e 51; Decreto nº 6.759/2009, arts. 212, § 1º, 542, 543 e 571), afastando a falsa ocorrência na data do embarque.",
+        "Mapa Mermaid reconstruído em árvore ramificada coerente (Qualificação da Mercadoria -> Nacional e Estrangeira; Estrangeira -> Nacionalizada pelo despacho para consumo; Nacional/Nacionalizada -> Desnacionalizada pela exportação definitiva), sem classes legadas indefinidas.",
+        "Fato gerador e tabela temporal corrigidos: ressalva do art. 72, § 2º, ajustada para 'malas e remessas postais internacionais' (e não bagagens); tolerância de 1% em granel explicitada com perda integral quando excedido 1% no II (art. 72, § 4º) vs. cobrança só do excedente no IPI (art. 238, § 4º); excluída 'avaria' do lançamento por extravio no art. 73, II, 'c' (Decreto nº 8.010/2013; Lei nº 12.350/2010, art. 40); e precisada a 'declaração de admissão temporária para utilização econômica' com pagamento proporcional (arts. 73, IV, e 373).",
+        "Sujeição passiva atualizada pela LC nº 227, de 13/01/2026 (art. 176, vigente desde a publicação pelo art. 182, III): adquirente dos bens no exterior como contribuinte na importação por conta e ordem (DL nº 37/1966, art. 31, parágrafo único) e PJ que registra a DI em seu nome e encomendante predeterminado como responsáveis solidários (art. 32, parágrafo único, III e IV), registrando nota comparativa com o texto infralegal anterior dos arts. 104 a 106 do Decreto nº 6.759/2009.",
+        "Base de cálculo, tabela de alíquotas e regimes MNI/RTS/RTE/RTU corrigidos: exclusão da capatazia interna destacada do valor aduaneiro (art. 77, II, Decreto nº 11.090/2022); afastada a competência da CAMEX sobre RTS/RTE/RTU; MNI corrigido de '80% e mediana' para '50% de II e 50% de IPI sobre a média por kg + 2 desvios-padrão' (arts. 98 e 240, parágrafo único; Callout 3 atualizado); RTS atualizado para valor aduaneiro até US$ 3.000,00 com as Leis nº 14.902/2024 e nº 15.502/2026 e regras do PRC desde 12/05/2026 (0% até US$ 50,00; 60% com dedução de US$ 30,00 acima de US$ 50,00; histórico de 01/08/2024 a 11/05/2026); RTE precisado com a cota adicional autônoma em loja franca de chegada (US$ 1.000,00 aérea/marítima e US$ 500,00 terrestre); e RTU contextualizado com Lei nº 11.898/2009 (42,25% originais reduzidos para 25% pelo Decreto nº 6.956/2009) e diferimento das alterações da LC nº 214/2025 para 1º/01/2027."
+      ],
+      "preserved": [
+        "Prazos de 90 dias (ZP) e 120 dias/75+45 (ZS) e não incidência na pena de perdimento quando localizada a mercadoria (Callout 1).",
+        "Distinção entre classificação genérica (RTS) e descrição genérica (MNI) e mnemônico 'ClaSSSificação e PoSSStal' integralmente preservado.",
+        "Parâmetros estruturais do RTU (via terrestre do Paraguai, limite anual de R$ 110.000,00, ME optante pelo Simples, adesão ao ICMS por convênio e rol de mercadorias vedadas do art. 102-A, § 2º)."
+      ]
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-02",
+      "disposition": "corrigida_e_publicada",
+      "corrections_applied": [
+        "Lançamento integrado com o art. 44, parágrafo único, do DL nº 37/1966 (incluído pela LC nº 214/2025, vigente desde 1º/01/2026: confissão de dívida na DI e constituição do crédito tributário), ao lado da revisão aduaneira em 5 anos (art. 638, § 2º, I) e ressalva cambial da Lei nº 15.502/2026 para compras em plataformas habilitadas no RTS.",
+        "Restituição e Protesto (texto e Callout 2) corrigidos: devolução proporcional de juros de mora e penalidades pecuniárias calculadas sobre o imposto pago, não restritas às multas de mora (Decreto nº 6.759/2009, art. 111; CTN, art. 167, caput), e delimitação do protesto a erro de quantidade/qualidade ou avaria (art. 112, parágrafo único).",
+        "Requisitos Cumulativos, Mapa Mermaid e Ex-Tarifário corrigidos: incluídas as exceções expressas dos arts. 118, 119, parágrafo único, 201, 210, § 3º, e 211, I, e retificada no Ex-Tarifário (Lei nº 3.244/1957, art. 4º) a distinção entre vigência do ato objetivo da CAMEX/GECEX e inalienabilidade de isenções subjetivas."
+      ],
+      "preserved": [
+        "Pagamento no registro da DI e conversão cambial na data do fato gerador como regra geral (arts. 88 e 107).",
+        "Vedação de compensação no momento do registro da DI (Lei nº 9.430/1996, art. 74, § 3º, II; Decreto nº 6.759/2009, art. 113; Callout 1).",
+        "Desnecessidade de prévia indenização para restituição em extravio/avaria (art. 112, caput) e ausência de direito adquirido na isenção condicionada (art. 121)."
+      ]
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-03",
+      "disposition": "corrigida_e_publicada",
+      "corrections_applied": [
+        "Eliminado o bug de KaTeX (dois '$' não escapados na mesma linha) e corrigido o item do RTS (US$ 3.000,00 é teto do regime; isenção/alíquota zero de II aplica-se até US$ 50,00 nas hipóteses regulamentadas e até US$ 10.000,00 para medicamentos PF).",
+        "Separadas Imunidades Constitucionais de impostos (CF, art. 150, VI, 'a' a 'd': livros/jornais/periódicos/papel, entes públicos, templos, partidos, sindicatos de trabalhadores e educação/assistência social sem fins lucrativos) das Isenções Legais, corrigindo o erro direto que atribuía imunidade a ICTs, cientistas e pesquisadores (isenção legal das Leis nº 8.010/1990 e nº 8.032/1990; Callout 2).",
+        "Incluídos nos objetos de arte doados os museus mantidos por outras entidades culturais reconhecidas como de utilidade pública (art. 180, parágrafo único) e qualificado como benefício histórico exaurido em 31/12/2015 o treinamento olímpico do art. 8º da Lei nº 10.451/2002 / art. 186-A.",
+        "Corrigidos no texto, no Callout 1 e no Mapa Mermaid os prazos de liberação definitiva do II na transferência/cessão de bens isentos (art. 124, parágrafo único, II e III): 3 anos EXCLUSIVAMENTE para missões diplomáticas, repartições consulares e organismos internacionais permanentes (e seus integrantes), e 5 anos para todos os demais casos, reintegrando as regras de igual tratamento tributário (art. 126) e reciprocidade diplomática (art. 141) que estavam órfãs na seção 04."
+      ],
+      "preserved": [
+        "Condição de comprovação posterior do efetivo emprego nas isenções vinculadas à destinação (art. 132).",
+        "Redução proporcional à depreciação a partir do registro da DI e exclusão de bens que aumentam de valor com o tempo (art. 125, caput e § 2º).",
+        "Incidência de IPI-Importação sobre objetos de arte recebidos em doação por museus (art. 245, I)."
+      ]
+    },
+    {
+      "section_id": "tributos-incidentes-no-comercio-exterior-sec-04",
+      "disposition": "corrigida_e_publicada",
+      "corrections_applied": [
+        "Reorganizadas com precisão legal as hipóteses de mercadoria não considerada estrangeira (art. 70, I a VI: consignação 'não vendida no prazo autorizado', defeito técnico, sistemática, guerra/calamidade, fatores alheios e pescado), não fato gerador (art. 74, II: retorno de exportação temporária ainda que descumprido o regime) e não incidência (art. 71, I a VII: erro inequívoco de expedição descrito nos 'documentos de transporte' e devolução antes do registro da DI aplicando-se expressamente também ao II pelo art. 71, IV; Callout 1 atualizado).",
+        "Removidos os fragmentos órfãos da seção 03 ('itens 5 e 6', 'itens 1 a 4') e os cabeçalhos brutos de rascunho.",
+        "No Imposto de Exportação, corrigida a competência para dispensar a cobrança em função do destino (normas editadas pelo Ministro de Estado da Fazenda, e não pela CAMEX — art. 216, § 2º) e registrada a operacionalização do registro de exportação pela DU-E.",
+        "Adicionada seção explícita diferenciando a vigência tributária em 2026 (II, IE, IPI, PIS/Cofins e ICMS vigentes; CBS 0,9% e IBS 0,1% compensáveis — ADCT art. 125) das regras futuras de transição em 1º/01/2027 (CBS, Imposto Seletivo imune na exportação, extinção de PIS/Cofins e IPI reduzido a zero salvo ZFM — ADCT art. 126) e em 2029–2033 (transição e extinção do ICMS pelo IBS, mantendo imunidade e créditos nas exportações — CF arts. 149-B e 156-A, § 1º, III).",
+        "No IPI-Importação, corrigida a fórmula em display math para 'BC = Valor Aduaneiro + II + Encargos Cambiais' (explicando separadamente a exclusão de valor depreciado apenas quando houver avaria, art. 237, § 2º) e fundamentada a incidência sobre veículo importado por pessoa física para uso próprio no Tema 643/STF (RE 723.651; Callout 2)."
+      ],
+      "preserved": [
+        "Núcleo do Imposto de Exportação: incidência sobre mercadoria nacional/nacionalizada relacionada pela CAMEX, fato gerador na saída do território aduaneiro, base pelo preço normal, pauta mínima pela CAMEX, piso legal de custo + impostos + contribuições + 15% (art. 214, § 2º), alíquota padrão de 30% e teto de 150% (art. 215) e contribuinte exportador (art. 217).",
+        "Imunidades atuais de exportação (ICMS, IPI e contribuições sociais/CIDE), drawback, tradings (180 dias, arts. 228–232), exportação ficta (art. 233) e Simples Nacional.",
+        "Fato gerador do IPI-Importação no desembaraço com recolhimento no registro da DI (arts. 238 e 242), desembaraço ficto no extravio (art. 238, § 1º), alíquota de 50% no MNI (art. 240, parágrafo único) e extensão das isenções do II salvo objetos de arte doados a museus e incluídos RTS/RTE (art. 245)."
+      ]
+    }
+  ]
+}
