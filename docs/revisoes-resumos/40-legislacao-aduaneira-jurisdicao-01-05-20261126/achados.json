@@ -1,0 +1,77 @@
+{
+  "checked_on": "2026-11-26",
+  "scope": [
+    "jurisdicao-aduaneira-sec-01",
+    "jurisdicao-aduaneira-sec-02",
+    "jurisdicao-aduaneira-sec-03",
+    "jurisdicao-aduaneira-sec-04",
+    "jurisdicao-aduaneira-sec-05"
+  ],
+  "topic_id": "jurisdicao-aduaneira",
+  "topic_title": "Jurisdição Aduaneira",
+  "independent_confirmation": true,
+  "sections": [
+    {
+      "section_id": "jurisdicao-aduaneira-sec-01",
+      "disposition": "corrigida",
+      "applied_corrections": [
+        "Harmonizada a distinção entre jurisdição/sujeição permanente ao controle aduaneiro em todo o território aduaneiro (CF/88, art. 237; Decreto nº 6.759/2009, art. 15) e as modalidades legais de exercício da fiscalização presencial nos PAPF e recintos alfandegados — ininterrupta, em horários determinados ou eventual (art. 16), eliminando a contradição entre o texto/Callout 1 da seção 01 e a seção 02.",
+        "Delimitada a exigência de conclusão prévia de procedimento licitatório e cumprimento contratual aos casos de permissão ou concessão de serviços públicos (art. 13, § 2º, do Decreto nº 6.759/2009), detalhando também os requisitos técnicos/operacionais e possibilidade de dispensa motivada pela RFB (art. 13-A).",
+        "Corrigido o regime sancionador por descumprimento de requisitos técnicos e operacionais de recintos alfandegados: advertência, suspensão na reincidência em 365 dias (ou não saneamento nos prazos legais) e multa de R$ 10.000,00/dia (Decreto nº 6.759/2009, arts. 728, III, 'b', e 735-C; Lei nº 12.350/2010, arts. 37 e 38).",
+        "Deslocada a referência às lojas francas para recinto alfandegado em Zona Primária (art. 9º, parágrafo único), precisada a 'área terrestre' dos pontos de fronteira (art. 3º, I, 'c'), incluídos 'animais', medidas locais e vigência temporária na ZVA (art. 4º, caput e § 1º), qualificado o controle aduaneiro de bens/bagagens de viajantes nos PAPF sem prejuízo da competência da Polícia Federal (art. 5º, III; CF/88, art. 144, § 1º, III) e acrescentado o prazo máximo de até 25 anos prorrogável por até 10 anos dos portos secos precedidos de licitação, sem prorrogação automática (Lei nº 9.074/1995, art. 1º, VI e § 2º; ADI 3.497/STF).",
+        "Reestruturado o mapa Mermaid ('Recintos Alfandegados') em árvore ramificada (Zona Primária vs. Porto Seco, com ramos independentes para localização, concessão precedida de obra pública em imóvel da União e permissão em imóvel não pertencente à União), removendo o falso encadeamento linear entre Concessão e Permissão e comandos class legados."
+      ],
+      "preserved_elements": [
+        "Equivalência entre Território Aduaneiro e Território Nacional (art. 2º); ZPE como Zona Primária para controle aduaneiro (art. 3º, § 1º; Lei nº 11.508/2007, art. 1º, parágrafo único); Águas Territoriais e Espaço Aéreo na Zona Secundária (art. 3º, II); extensão da jurisdição às ACIs sem ampliar o território nacional (art. 3º, § 5º); abrangência integral do Município atravessado na ZVA (art. 4º, § 3º); exceção de linhas de transmissão e dutos ligados ao exterior (art. 8º, parágrafo único); e vedação de porto seco na ZP de portos e aeroportos alfandegados (art. 11, § 1º)."
+      ]
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-02",
+      "disposition": "corrigida",
+      "applied_corrections": [
+        "Corrigido erro material em 'Horários determinados': substituída a afirmação de acordo/combinação prévia entre AFRFB e depositário pela determinação unilateral dos horários e condições pela administração aduaneira, com ressarcimento pelo interessado no atendimento extraordinário fora do expediente normal (art. 16, §§ 1º e 2º, do Decreto nº 6.759/2009; DL nº 37/1966, art. 36, §§ 1º e 2º).",
+        "Corrigida a definição de fiscalização 'Eventual' como atuação não contínua/esporádica nos locais e recintos conforme movimento ou interesse fiscal, diferenciando-a da revisão aduaneira pós-desembaraço do art. 638.",
+        "Explicitações de completude legal: supervisão e execução privativa por AFRFB na fiscalização de tributos sobre comércio exterior (art. 15, parágrafo único); alcance da precedência aduaneira a outras áreas autorizadas, saída e unidades de carga (art. 17, caput e §§ 1º e 2º); especificação do 'adquirente de mercadoria importada por sua conta e ordem', extensão aos demais intervenientes e dever de comunicação à RFB em até 48 horas em caso de sinistro (art. 18, caput e §§ 2º e 5º; Lei nº 10.833/2003, arts. 70 e 71)."
+      ],
+      "preserved_elements": [
+        "Precedência da autoridade aduaneira com obrigação de auxílio imediato nos PAPF/recintos e colaboração na ZVA (art. 17) e distinção entre prazo decadencial para documentos das transações (art. 18) e prazo prescricional para conservação dos livros obrigatórios e comprovantes de lançamentos (art. 21, parágrafo único; CTN, art. 195, parágrafo único)."
+      ]
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-03",
+      "disposition": "corrigida",
+      "applied_corrections": [
+        "Corrigidos texto e Callout 2 quanto aos veículos militares e chefes de Estado: conforme o art. 67 do Decreto nº 6.759/2009 (art. 43 do DL nº 37/1966), as normas do Título II aplicam-se aos veículos militares especificamente 'quando utilizados no transporte de mercadoria', removendo a generalização irrestrita sem amparo no dispositivo.",
+        "Separadas com precisão as proibições gerais ao condutor (arts. 27 e 28) das hipóteses taxativas de pena de perdimento do veículo por dano ao Erário (art. 688 do Decreto nº 6.759/2009; art. 104 do DL nº 37/1966) no texto e no Callout 1: (i) situação ilegal de transporte internacional (inc. I); (ii) operação de descarga de mercadoria estrangeira ou carga de nacional/nacionalizada fora de local habilitado, e não simples estacionamento isolado (inc. II); (iii) atracação ou aproximação na Zona Primária envolvendo veículo procedente do exterior ou a ele destinado (inc. III); (iv) desvio injustificado de rota restrito ao veículo terrestre utilizado no trânsito de mercadoria estrangeira, esclarecendo que a rota alternativa proposta por beneficiário pertence ao trânsito aduaneiro do art. 329, § 1º (inc. VI); (v) condução de mercadoria sujeita a perdimento com demonstração da responsabilidade do proprietário em procedimento regular (inc. V e § 2º; Súmula 138/TFR); e (vi) perdimento cumulativo da mercadoria nos incisos II, III e VI (art. 688, § 1º).",
+        "Corrigida a redação das exceções do art. 28, parágrafo único (exceções à proibição de aproximação para transbordo de pessoa ou mercadoria, e não 'transbordo de veículos', especificando 'operações portuárias ou aeroportuárias' no item 3) e indicada a competência do titular da unidade aduaneira jurisdicionante no art. 26, § 2º."
+      ],
+      "preserved_elements": [
+        "Regra de ingresso/saída por PAPF alfandegado, extensão do controle desde o ingresso até a efetiva saída sobre veículo, mercadorias, bens a bordo e bagagens (art. 26, caput e § 1º), acompanhamento fiscal (art. 30) e os quatro incisos de exceção do art. 28, parágrafo único."
+      ]
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-04",
+      "disposition": "corrigida",
+      "applied_corrections": [
+        "Qualificada a relação entre conhecimento de carga e contrato de transporte diante de conhecimentos agregados/desconsolidados (master/house em cargas consolidadas por agente de carga — art. 31, § 2º) e da regra fiscal de uma DI por conhecimento salvo exceções da RFB (art. 555), explicitando que constitui prova de posse ou propriedade o conhecimento 'original, ou documento de efeito equivalente' (art. 554, caput).",
+        "Completados os requisitos da carta de correção no art. 46 do Decreto nº 6.759/2009: endereçamento à autoridade aduaneira do local de descarga e efeito corretivo sobre o manifesto se aceita (caput), manutenção do exame de mérito pela autoridade aduaneira (§ 3º, refletido também no Callout 1) e possibilidade de realização de forma eletrônica conforme disciplinado pela RFB (§ 4º, incluído pelo Decreto nº 10.550/2020)."
+      ],
+      "preserved_elements": [
+        "Identificação obrigatória da unidade de carga (art. 42, § 2º), apresentação antes do início do despacho acompanhada do conhecimento (§ 1º) e ausência de denúncia espontânea na apresentação após o início do despacho até o desembaraço (§ 2º)."
+      ]
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-05",
+      "disposition": "corrigida",
+      "applied_corrections": [
+        "Desfeita na Conferência Final a equiparação indevida entre extravio/acréscimo e avaria, distinguindo extravio (falta) e acréscimo (excesso) apurados no confronto do manifesto (arts. 53, 649, II e III, e 658) de avaria enquanto prejuízo sofrido pela mercadoria ou seu envoltório (art. 649, I; art. 63, § 1º).",
+        "Acrescentado no suprimento espontâneo da omissão de volume em manifesto o requisito legal indispensável 'Se objeto de conhecimento regularmente emitido' (art. 48) e a ineficácia fiscal de ressalvas excludentes de responsabilidade (art. 49).",
+        "Removido do Callout 2 o adjetivo extrapolado 'improrrogável' (ausente do art. 66 do Decreto nº 6.759/2009) e precisado no texto e no Callout 2 o comparecimento 'à unidade aduaneira do local habilitado de entrada, no prazo de 24 horas'.",
+        "Precisados os dispositivos sobre pluralidade de manifestos 'para cada ponto de descarga no território aduaneiro' (art. 43), prestação de informações também por agente de carga e operador portuário e restrição literal de carga/descarga/transbordo em embarcações procedentes do exterior antes das informações do art. 31 (arts. 31 e 32, parágrafo único), descarga 'de volume ou de unidade de carga, para a devida verificação, lavrando-se termo' na suspeita de falsa declaração (art. 36) e assinatura do termo de responsabilidade 'pelo representante do transportador, no País' na saída antecipada do veículo (art. 64, § 1º, refletido também no Callout 3)."
+      ],
+      "preserved_elements": [
+        "Prevalência do conhecimento sobre o manifesto com possibilidade de correção de ofício do manifesto (art. 47 e Callout 1), documentos apresentados pelo responsável pelo veículo (art. 42), declaração negativa de carga (art. 43, parágrafo único), conserto/pesagem/anotação de avaria e cautelas/isolamento (art. 63, §§ 1º e 2º), busca aduaneira precedida de comunicação verbal ou escrita inclusive antes das informações (art. 34), veículo como garantia de débitos e multas (art. 64, caput) e mnemônico 'MANYfesto' preservado integralmente."
+      ]
+    }
+  ]
+}

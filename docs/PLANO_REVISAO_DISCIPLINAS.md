@@ -1,6 +1,6 @@
 # Plano operacional de revisão — orquestração por agentes IA
 
-Versão 3 — atualização documental de 26/11/2026. Público exclusivo: agentes de orquestração, execução e verificação. Este documento é o ponto de entrada para retomar o programa sem acesso ao chat. Não certifica a qualidade integral do acervo.
+Versão 3 — atualização documental de 27/11/2026. Público exclusivo: agentes de orquestração, execução e verificação. Este documento é o ponto de entrada para retomar o programa sem acesso ao chat. Não certifica a qualidade integral do acervo.
 
 ## 1. Objetivo, escopo e ambientes
 
@@ -29,7 +29,7 @@ Caminhos relativos abaixo partem do repositório editorial. Inventário: `invent
 
 ## 3. Progresso consolidado e limites conhecidos
 
-A fila inclui 54 disciplinas. Há 23 com aceite para a versão revisada do catálogo, 24 parciais (incluindo as 20 sem seções na fotografia) e 7 ainda não iniciadas na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa. Corpus PRO Legis permanece fora do escopo; sua integração com a gamificação permanece autorizada.
+A fila inclui 54 disciplinas. Há 23 com aceite para a versão revisada do catálogo, 25 parciais (incluindo as 20 sem seções na fotografia e Legislação Aduaneira em andamento com 5/31) e 6 ainda não iniciadas na fila da Onda 7. A conferência com conta de aluno foi dispensada em todo o programa. Corpus PRO Legis permanece fora do escopo; sua integração com a gamificação permanece autorizada.
 
 | Frente | Última evidência | Trabalho seguinte |
 |---|---|---|
@@ -37,7 +37,7 @@ A fila inclui 54 disciplinas. Há 23 com aceite para a versão revisada do catá
 | Ondas 1–4 | A reconciliação de 22/11 abrangeu 235, 326, 130 e 360 seções, respectivamente. Recuperada a ordem de 28 tópicos da Onda 2. Amostra visual de uma seção por disciplina com 90 verificações em três temas e duas larguras. Recibos em `orquestracao-03-54/aceite-ondas-1-4/`. | Restam os tópicos macro de 03, 04, 07 e 15. O recibo posterior de Penal substitui a referência histórica de 104 seções desta disciplina por 108. |
 | Onda 5 | 106 operações confirmadas, 64 tópicos e 251 seções reconciliados. Aceite das quatro disciplinas. | Consultar `orquestracao-03-54/saneamento-onda-5/reconciliacao-publicacao-onda5.json` antes de nova edição. |
 | Onda 6 | Publicados os ajustes de precisão e dois tópicos adicionais. Conferidos 23 tópicos e 327 seções. | Consultar `orquestracao-03-54/saneamento-onda-6/evidencias/fechamento/reconciliacao.json` e o aceite em 30-direito-tributario.md. |
-| Onda 7 | Estatística (23/11), Informática (24/11), Macroeconomia (25/11), Ética (25/11) e Finanças Públicas (26/11) publicadas, reconciliadas e aceitas nas fotografias documentadas. Sete disciplinas restantes na fila. | Conferir checkpoints exclusivos por disciplina e reservas da retomada. |
+| Onda 7 | Estatística (23/11), Informática (24/11), Macroeconomia (25/11), Ética (25/11) e Finanças Públicas (26/11) publicadas, reconciliadas e aceitas nas fotografias documentadas; Legislação Aduaneira em andamento (5/31 em 27/11) e seis disciplinas restantes na fila. | Conferir checkpoints exclusivos por disciplina e reservas da retomada. |
 
 ## 4. Fila completa e progresso por disciplina
 
@@ -84,7 +84,7 @@ Legenda: `[ ]` não iniciada; `[~]` parcial; `[x]` encerrada conforme seção 9.
 | 37 | Física | 9 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 9 tópicos vazios registrada em `37-fisica.md` | Aguardar autoria/importação futura de conteúdo |
 | 38 | Geografia | 10 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 10 tópicos vazios registrada em `38-geografia.md` | Aguardar autoria/importação futura de conteúdo |
 | 39 | Informática | 15 | [x] encerrada no escopo | aceite 24/11 para a fotografia conciliada: 55/55 seções, 14 tópicos ativos (15 na coleta). Cadastro vazio de Redes arquivado com alias; um vínculo de questão transferido com metadados preservados. 55 revisões intactas e 14 vínculos reconciliados; relatório 39. | Encerrada para esta versão; não reaplicar lotes. Nenhuma próxima frente iniciada. |
-| 40 | Legislação Aduaneira | 5 | [ ] diagnóstico delimitado | SELECT confirmou5 tópicos/31 seções iguais ao snapshot18/11 (zero propostas antigas); recorte Tópico1 `jurisdicao-aduaneira`01–05:5 textos,11 callouts,1 mapa e1 mnemônico | Revisar somente `jurisdicao-aduaneira`01–05;26 seções dos tópicos02–05 reservadas para depois; preservar Finanças7/7 e Ética20/20 aceitas; relatório40 |
+| 40 | Legislação Aduaneira | 5 | [~] parcial | 5/31 seções revisadas, corrigidas, publicadas com CAS e reconciliadas no Tópico1 (`jurisdicao-aduaneira`01–05:5 textos,11 callouts,1 mapa e1 mnemônico;30 visuais e6 zoom/overlay aprovados);26 seções dos tópicos02–05, Finanças7/7 e Ética20/20 preservadas | Diagnosticar somente o próximo lote coerente (Tópico2 `tributos-incidentes-no-comercio-exterior`, até5 seções); relatório40 |
 | 41 | Legislação Aplicada à EBSERH | 7 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 7 tópicos vazios registrada em `41-legislacao-aplicada-a-ebserh.md` | Aguardar autoria/importação futura de conteúdo |
 | 42 | Legislação de Trânsito | 11 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 11 tópicos vazios registrada em `42-legislacao-de-transito.md` | Aguardar autoria/importação futura de conteúdo |
 | 43 | Legislação do SUS | 10 | [~] parcial | Fotografia coletada; 0 seções ativas no acervo; matriz de 10 tópicos vazios registrada em `43-legislacao-do-sus.md` | Aguardar autoria/importação futura de conteúdo |

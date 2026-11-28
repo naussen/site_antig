@@ -1,0 +1,20 @@
+{
+  "at": "2026-11-27T02:22:08.331Z",
+  "topic_id": "jurisdicao-aduaneira",
+  "reviewed_sections": 5,
+  "changed_sections": 5,
+  "unchanged_reviewed_sections": 0,
+  "callouts_reviewed": 11,
+  "callouts_changed": 11,
+  "maps_reviewed": 1,
+  "maps_changed": 1,
+  "mnemonics_reviewed": 1,
+  "mnemonics_changed": 0,
+  "maliciousRejected": 4,
+  "preserved_sections_outside_scope": 26,
+  "financas_7_preserved": true,
+  "ethics_20_preserved": true,
+  "concurrency": "createStore.cas + apply de executar-onda5.mjs; cinco CAS sequenciais por identidade e current_revision_id com diário sincronizado e reconciliação integral de 31 seções",
+  "manifest_sha256": "cb149b18c1e697e9d20e5aad7dbee4c6d2a53e10abe453c660471b95d27ad6b1",
+  "after_sha256": "158b1135b5c57966806e2d934fe38e17bd430052e6a2c6495544e9be5428a482"
+}

@@ -1,0 +1,51 @@
+{
+  "status": "completed",
+  "steps": [
+    {
+      "op_id": "jurisdicao-aduaneira-sec-01",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "2b41dcb4-0f87-4f71-9184-aa1324c7cc8c"
+    },
+    {
+      "op_id": "jurisdicao-aduaneira-sec-02",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "9e14f5c0-6045-4ff0-8fab-ec9fd2298335"
+    },
+    {
+      "op_id": "jurisdicao-aduaneira-sec-03",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "ad6a6d16-be25-409a-95f7-e819ae969c59"
+    },
+    {
+      "op_id": "jurisdicao-aduaneira-sec-04",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "bcf80c15-664e-45ca-931c-5cde74cd6007"
+    },
+    {
+      "op_id": "jurisdicao-aduaneira-sec-05",
+      "status": "confirmed",
+      "rowsAffected": 1,
+      "revision_after": "df8835a9-f7f5-435d-a7da-46e49502156f"
+    }
+  ],
+  "post": {
+    "ok": true,
+    "target": "saneado",
+    "expectedTopics": 5,
+    "expectedSections": 31,
+    "topics": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    },
+    "sections": {
+      "missing": [],
+      "extra": [],
+      "changed": []
+    }
+  }
+}

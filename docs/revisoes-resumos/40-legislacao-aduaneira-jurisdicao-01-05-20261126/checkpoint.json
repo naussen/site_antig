@@ -1,0 +1,112 @@
+{
+  "date": "2026-11-27",
+  "sources_checked_on": "2026-11-26",
+  "status": "revisado_publicado_reconciliado_parcial",
+  "discipline": "Legislação Aduaneira",
+  "report": "40-legislacao-aduaneira.md",
+  "topic_id": "jurisdicao-aduaneira",
+  "topic_title": "Jurisdição Aduaneira",
+  "reviewed_sections": [
+    "jurisdicao-aduaneira-sec-01",
+    "jurisdicao-aduaneira-sec-02",
+    "jurisdicao-aduaneira-sec-03",
+    "jurisdicao-aduaneira-sec-04",
+    "jurisdicao-aduaneira-sec-05"
+  ],
+  "changed_sections": [
+    "jurisdicao-aduaneira-sec-01",
+    "jurisdicao-aduaneira-sec-02",
+    "jurisdicao-aduaneira-sec-03",
+    "jurisdicao-aduaneira-sec-04",
+    "jurisdicao-aduaneira-sec-05"
+  ],
+  "unchanged_reviewed_sections": [],
+  "components": {
+    "texts_reviewed": 5,
+    "texts_changed": 5,
+    "callouts_reviewed": 11,
+    "callouts_changed": 11,
+    "maps_reviewed": 1,
+    "maps_changed": 1,
+    "mnemonics_reviewed": 1,
+    "mnemonics_changed": 0,
+    "tables_reviewed": 0,
+    "quant_charts_reviewed": 0,
+    "flashcards": 0
+  },
+  "manifest_sha256": "cb149b18c1e697e9d20e5aad7dbee4c6d2a53e10abe453c660471b95d27ad6b1",
+  "after_topic1_sha256": "284f568991282352426481f2052119f28ba900dd6cd9eabf48273442394020a4",
+  "full_discipline_sha256": "d95bcba0a9b8976162b716308d89e92cc2cee61a59deffa6e29662255301dc98",
+  "revisions": [
+    {
+      "section_id": "jurisdicao-aduaneira-sec-01",
+      "content_unit_id": "d6071f01-52c8-4182-80f6-aa04dc341647",
+      "current_revision_id": "2b41dcb4-0f87-4f71-9184-aa1324c7cc8c",
+      "content_sha256": "1eac635489c043356f1ddec626e9a72fceef945a66fdde2ce6c49ab987ac8273"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-02",
+      "content_unit_id": "8756110a-b97a-40b5-8747-9a3db10627f8",
+      "current_revision_id": "9e14f5c0-6045-4ff0-8fab-ec9fd2298335",
+      "content_sha256": "67eb979cdc0274e072f0006320570e378b19c942104f2a11ba996f5885977517"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-03",
+      "content_unit_id": "dcdfeca6-2b7a-4ac6-9a69-46a510cbd88a",
+      "current_revision_id": "ad6a6d16-be25-409a-95f7-e819ae969c59",
+      "content_sha256": "4a6336af4ee602f815d9531de18fa2892ff06fd2b1ac7235d3639b10affa71b4"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-04",
+      "content_unit_id": "3a6322f0-7f23-4255-a989-0bd88f87ef10",
+      "current_revision_id": "bcf80c15-664e-45ca-931c-5cde74cd6007",
+      "content_sha256": "3bfa6431aad92aeb4b2400fe8303c7099eca6bc49b2282bb905bed9363b03a36"
+    },
+    {
+      "section_id": "jurisdicao-aduaneira-sec-05",
+      "content_unit_id": "a85d03ff-9ce0-401c-8c96-b6776c1e3c73",
+      "current_revision_id": "df8835a9-f7f5-435d-a7da-46e49502156f",
+      "content_sha256": "d7446a8268415af06760c22302057fd79fef2bd2b1f74cf1e0371aea5276b76c"
+    }
+  ],
+  "preserved_outside_scope_revision_ids": 26,
+  "financas7_contents_and_revisions_preserved": true,
+  "financas_report_sha256": "0883f25aaf8fc3f731f94786ac4f25a138be2a01eeeac007962a0e03293979ea",
+  "ethics20_contents_and_revisions_preserved": true,
+  "ethics_report_sha256": "60b7d2d035a5734a01457ef5a1778fbf0e6bbc0ca9f3bda3399663af72d5881b",
+  "bindings_preserved": true,
+  "dry_run_sections": 5,
+  "scope_review_sections": 5,
+  "validation": {
+    "content_tests_passed_reused": 44,
+    "malicious_mermaid_rejected": 4,
+    "negative_cas_rows": 0,
+    "visual_combinations_effective": 30,
+    "zoom_overlay": 6,
+    "reconciled": true
+  },
+  "application": "cinco CAS sequenciais existentes por identidade/revisão esperada (createStore.cas + apply) com pré-imagem integral de 31 seções, preflight final, diário sincronizado (aplicacao.jsonl) e reconciliação independente; não constitui transação única entre as cinco seções",
+  "active_version": "jurisdicao-01-05-20261126",
+  "application_changes": false,
+  "student_check": "dispensado; visual local não é smoke autenticado",
+  "cumulative_reviewed": 5,
+  "total_active_sections": 31,
+  "remaining_topics": [
+    "tributos-incidentes-no-comercio-exterior (6 seções)",
+    "controle-aduaneiro-de-mercadorias (7 seções)",
+    "regimes-aduaneiros (12 seções)",
+    "infracoes-e-penalidades-aduaneiras (1 seção)"
+  ],
+  "discipline_complete": false,
+  "queue_status": "[~] parcial (5/31 seções revisadas/publicadas/reconciliadas; restam 4 tópicos / 26 seções)",
+  "queue_counts": {
+    "accepted": 23,
+    "partial": 25,
+    "not_started": 6
+  },
+  "stop": true,
+  "editorial_commit": "c9d99ca3738f4e5d855e99041ca3ef53600f21ce",
+  "editorial_remote": "sem remoto",
+  "local_evidence_path": "C:\\PRO\\revisoes-resumos\\orquestracao-03-54\\saneamento-onda-7\\40-legislacao-aduaneira\\jurisdicao-01-05-20261126",
+  "documentation_mirror": true
+}
